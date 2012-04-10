@@ -1,0 +1,215 @@
+=Introduction=
+
+This article is focused on providing clear, simple, actionable guidance for providing Access Control security in your applications.
+
+==What is Access Control / Authorization?==
+
+Authorization is the process where requests to access a particular resource should be granted or denied. It should be noted that authorization is not equivalent to authentication - as these terms and their defininitions are frequently confused.
+
+Access Control is the method or mechanism of authorization to enfore that requests to a system resource or functionality should be granted.
+
+'''Role Based Access Control (RBAC)''' is commonly used to manage permissions within an application. Permissions are assigned to users in a many to many relationship.
+
+'''Discretioinary Access Control (DAC)''' is commonly used to manage permissions within an operating system.
+
+'''Mandatory Access Control (MAC)''' is a classification based system of objects and subjects. To "write up", a subject's clearance level must be dominated by the object being written to the system. To "read down", a subject's clearance level must govern the security level of the object being read. In this system, a subject may be able to write to an object, but will never be able to read it. This prevents malicious software from being able to leak data from different classification levels.  "Write up" prevents leakage from high to low. 
+(See the [http://csrc.nist.gov/publications/history/dod85.pdf Orange Book] for more information about classification levels and confidentiality controls in "DAC" and "MAC".)
+
+=Attacks on Access Control=
+
+Vertical Access Control Attacks - A standard user accessing administration functionality
+
+Horizontal Access Control attacks - Same role, but accessing another user's private data
+
+Business Logic Access Control Attacks - Abuse of one or more linked activities that collectively realize a business objective
+
+=Access Control Issues=
+*Many applications used the "All or Nothing" approach - Once authenticated, all users have equal privileges
+
+*Authorization Logic often relies on Security by Obscurity (STO) by assuming:
+**Users will not find unlinked or hidden paths or functionality
+**Users will not find and tamper with "obscured" client side parameters (i.e. "hidden" form fields, cookies, etc.)
+	
+*Applications with multiple permission levels/roles often increases the possibility of conflicting permission sets resulting in unanticipated privileges
+
+*Many administrative interfaces require only a password for authentication
+*Shared accounts combined with a lack of auditing and logging make it extremely difficult to differentiate between malicious and honest administrators
+*Administrative interfaces are often not designed as “secure” as user-level interfaces given the assumption that administrators are trusted users
+*Authorization/Access Control relies on client-side information (e.g., hidden fields)
+	
+     <input type="text" name="fname" value="Derek">
+     <input type="text" name="lname" value="Jeter">
+     <input type="hidden" name="usertype" value="admin">
+
+=Access Control Anti-Patterns=
+
+*Hard-coded role checks in application code
+*Lack of centralized access control logic
+*Untrusted data driving access control decisions
+*Access control that is "open by default"
+*Lack of addressing horizontal access control in a standardized way (if at all)
+*Access control logic that needs to be manually added to every endpoint in code
+
+==Hard Coded Roles==
+
+  if (user.isManager() ||
+      user.isAdministrator() ||
+      user.isEditor() ||
+      user.isUser()) {
+      //execute action
+  }
+
+'''Hard Codes Roles can create several issues including:'''
+
+*Making the policy of an application difficult to "prove" for audit or Q/A purposes 
+*Causing new code to be pushed each time an access control policy needs to be changed. 
+*They are fragile and easy to make mistakes
+
+==Order Specific Operations==
+
+Imagine the following parameters
+
+  http://example.com/buy?action=chooseDataPackage
+  http://example.com/buy?action=customizePackage
+  http://example.com/buy?action=makePayment
+  http://example.com/buy?action=downloadData
+
+'''Can an attacker control the sequence?'''
+
+'''Can an attacker abuse this with concurency?'''
+
+==Never Depend on Untrusted Data==
+
+*Never trust user data for access control decisions
+*Never make access control decisions in JavaScript
+*Never depend on the order of values sent from the client
+*Never make authorization decisions based solely on
+**hidden fields
+**cookie values
+**form parameters
+**URL parameters
+**anything else from the request
+ 
+
+=Attacking Access Controls=
+
+*Elevation of privileges
+*Disclosure of confidential data - Compromising admin-level accounts often result in access to a user's confidential data
+*Data tampering - Privilege levels do not distinguish users who can only view data and users permitted to modify data
+
+=Testing for Broken Access Control=
+
+*Attempt to access administrative components or functions as an anonymous or regular user
+**Scour HTML source for “interesting” hidden form fields
+**Test web accessible directory structure for names like admin, administrator, manager, etc (i.e. attempt to directly browse to “restricted” areas)
+*Determine how administrators are authenticated. Ensure that adequate authentication is used and enforced
+*For each user role, ensure that only the appropriate pages or components are accessible for that role.
+*Login as a low-level user, browse history for a higher level user’s cache, load the page to see if the original authorization is passed to a previous session.
+*If able to compromise administrator-level account, test for all other common web application vulnerabilities (poor input validation, privileged database access, etc)
+
+=Defenses Against Access Control Attacks=
+
+*Implement role based access control to assign permissions to application users for vertical access control requirements
+*Implement data-contextual access control to assign permissions to application users in the context of specific data items for horizontal access control requirements
+*Avoid assigning permissions on a per-user basis
+*Perform consistent authorization checking routines on all application pages
+*Where applicable, apply DENY privileges last, issue ALLOW privileges on a case-by-case basis
+*Where possible restrict administrator access to machines located on the local area network (i.e. it’s best to avoid remote administrator access from public facing access points)
+*Log all failed access authorization requests to a secure location for review by administrators
+*Perform reviews of failed login attempts on a periodic basis
+*Utilize the strengths and functionality provided by the SSO solution you chose
+
+=Best Practices=
+
+==Best Practice: Code to the Activity==
+
+   if (AC.hasAccess(ARTICLE_EDIT)) {
+       //execute activity
+   }
+*Code it once, never needs to change again
+*Implies policy is persisted/centralized in some way
+*Avoid assigning permissions on a per-user basis
+*Requires more design/work up front to get right
+
+==Best Practice: Centralized ACL Controller==
+
+*Define a centralized access controller
+      ACLService.isAuthorized(ACTION_CONSTANT)
+      ACLService.assertAuthorized(ACTION_CONSTANT)
+*Access control decisions go through these simple API’s
+*Centralized logic to drive policy behavior and persistence
+*May contain data-driven access control policy information
+*Policy language needs to support ability to express both access rights and prohibitions
+
+==Best Practice: Using a Centralized Access Controller==
+
+*In Presentation Layer
+
+       if (isAuthorized(VIEW_LOG_PANEL))
+       {
+          Here are the logs
+          <%=getLogs();%/>
+       }
+	
+*In Controller
+
+       try (assertAuthorized(DELETE_USER))
+       {
+          deleteUser();
+       }
+
+==Best Practice: Verifying policy server-side==
+
+*Keep user identity verification in session
+*Load entitlements server side from trusted sources
+*Force authorization checks on ALL requests
+**JS file, image, AJAX and FLASH requests as well!
+**Force this check using a filter if possible
+
+=SQL Integrated Access Control=
+
+'''Example Feature'''
+
+    http://mail.example.com/viewMessage?msgid=2356342
+
+'''This SQL would be vulnerable to tampering'''
+
+  select * from messages where messageid = 2356342
+
+'''Ensure the owner is referenced in the query!'''
+
+  select * from messages where messageid = 2356342 AND messages.message_owner = 
+
+=Access Control Positive Patterns=
+
+*Code to the activity, not the role
+*Centralize access control logic
+*Design access control as a filter
+*Deny by default, fail securely
+*Build centralized access control mechanism
+*Apply same core logic to presentation and server-side access control decisions
+*Determine access control through Server-side trusted data
+
+=Data Contextual Access Control=
+
+'''Data Contextual / Horizontal Access Control API examples'''
+
+    ACLService.isAuthorized(EDIT_ORG, 142)
+    ACLService.assertAuthorized(VIEW_ORG, 900)
+
+Long Form
+
+    isAuthorized(user, EDIT_ORG, Organization.class, 14)
+	
+*Essentially checking if the user has the right role in the context of a specific object
+*Centralize access control logic
+*Protecting data at the lowest level!
+
+= Related Articles  =
+
+{{Cheatsheet_Navigation}}
+
+=Authors and Primary Editors=
+
+Jim Manico - jim [at] owasp dot org
+Fred Donovan - fred.donovan [at] owasp dot org

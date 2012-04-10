@@ -1,0 +1,69 @@
+{{Template:Vulnerability}}
+{{Template:Fortify}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+Attackers can spoof DNS entries. Do not rely on DNS names for security.
+
+Many DNS servers are susceptible to spoofing attacks, so you should assume that your software will someday run in an environment with a compromised DNS server. If attackers are allowed to make DNS updates (sometimes called DNS cache poisoning), they can route your network traffic through their machines or make it appear as if their IP addresses are part of your domain. Do not base the security of your system on DNS names.
+
+
+==Risk Factors==
+TBD
+
+==Examples==
+
+The following code sample uses a DNS lookup in order to decide whether or not an inbound request is from a trusted host. If an attacker can poison the DNS cache, they can gain trusted status.
+
+  String ip = request.getRemoteAddr();
+  InetAddress addr = InetAddress.getByName(ip);
+  if (addr.getCanonicalHostName().endsWith("trustme.com")) {
+     trusted = true;
+  }
+
+IP addresses are more reliable than DNS names, but they can also be spoofed. Attackers can easily forge the source IP address of the packets they send, but response packets will return to the forged IP address. To see the response packets, the attacker has to sniff the traffic between the victim machine and the forged IP address. In order to accomplish the required sniffing, attackers typically attempt to locate themselves on the same subnet as the victim machine. Attackers may be able to circumvent this requirement by using source routing, but source routing is disabled across much of the Internet today. In summary, IP address verification can be a useful part of an authentication scheme, but it should not be the single factor required for authentication.
+Free DNS against DNS poisoning
+http://name-space.com/switch
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* [[:Category:Authentication]]
+
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Authentication Vulnerability]]
+[[Category:Java]]
+[[Category:Implementation]]
+[[Category:Code Snippet]]
+[[Category:API Abuse]]
+[[Category:Vulnerability]]

@@ -1,0 +1,39 @@
+==The OWASP Folksonomy Approach to Organizing Application Security==
+
+There are many different ways of organizing all the different aspects of application security. [[Application security taxonomies|Attempts]] to force these topics into a strict taxonomy have failed because there are too many dimensions to the problem. Organizing the information by a single factor -- the type of programming flaw, for example -- confuses and eliminates all the useful information from the other dimensions.
+
+At OWASP, we have adopted the [http://en.wikipedia.org/wiki/Folksonomy folksonomy] tagging approach to solving this problem. We simply tag our articles with a number of different categories. You can use these category to help get different views into the complex, interconnected set of topics that is application security.
+
+Each article is tagged with as many of the following tags as reasonably apply:
+
+{| border="1" cellspacing="0" cellpadding="5" align="center"
+| Type of Article
+| [[:Category:Principle|Principle]], [[:Category:Threat|Threat]], [[:Category:Attack|Attack]], [[:Category:Vulnerability|Vulnerability]], [[:Category:Countermeasure|Countermeasure]], [[:Category:Code Snippet|Code Snippet]], [[:Category:How To|How To]], [[:Category:Activity|Activity]]
+|- 
+| Level of Abstraction
+| [[:Category:Implementation|Implementation]], [[:Category:Design|Design]], [[:Category:Architecture|Architecture]], [[:Category:Business|Business]]
+|- 
+| Countermeasures
+| [[:Category:Authentication|Authentication]], [[:Category:Session Management|Session Management]], [[:Category:Access Control|Access Control]], [[:Category:Validation|Validation]], [[:Category:Encoding|Encoding]], [[:Category:Error Handling|Error Handling]], [[:Category:Logging|Logging]], [[:Category:Encryption|Encryption]], [[:Category:Quotas|Quotas]]
+|- 
+| Likelihood Factors
+| [[:Category:Attractiveness|Attractiveness]], [[:Category:Tools Required|Tools Required]], [[:Category:Expertise Required|Expertise Required]]
+|- 
+| Business Impact Factors
+| [[:Category:Confidentiality|Confidentiality]], [[:Category:Integrity|Integrity]], [[:Category:Availability|Availability]], [[:Category:Accountability|Accountability]], [[:Category:Non-Repudiation|Non-Repudiation]]
+|- 
+| Application Platforms
+| [[:Category:Java|Java]], [[:Category:.NET|.NET]], [[:Category:PHP|PHP]], [[:Category:C|C/C++]]
+|- 
+| Software Lifecycle Activites
+| [[:Category:Planning|Planning]], [[:Category:Requirements|Requirements]], [[:Category:Architecture|Architecture]], [[:Category:Design|Design]], [[:Category:Implementation|Implementation]], [[:Category:Test|Test]],  [[:Category:Deployment|Deployment]], [[:Category:Operation|Operation]], [[:Category:Maintenance|Maintenance]]
+|- 
+| Application Security Activites
+| [[:Category:Threat Modeling|Threat Modeling]], [[:Category:Security Architecture|Security Architecture]], [[:Category:Security Requirements|Security Requirements]], [[:Category:Secure Coding|Secure Coding]], [[:Category:Penetration Testing|Penetration Testing]], [[:Category:OWASP Code Review Project|Code Review]], [[:Category:Secure Deployment|Secure Deployment]]
+|- 
+| Vulnerability Analysis Technique
+| [[:Category:Vulnerability Scanning|Vulnerability Scanning]], [[:Category:Penetration Testing|Penetration Testing]], [[:Category:Static Analysis|Static Analysis]], [[:Category:Code Review|Code Review]]
+|- 
+| Other Application Security Categories
+| [[:Category:Role|Role]], [[:Category:Tool|Tool]]
+|}

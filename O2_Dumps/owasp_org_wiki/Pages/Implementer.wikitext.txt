@@ -1,0 +1,12 @@
+{{Template:SecureSoftware}}
+
+==Role Description==
+Traditionally, application development is handled in an ad-hoc manner, and it is the implementer who must carry the bulk of the security expertise. Ultimately, this is because — in ad-hoc development — developers double as designers.
+
+In a highly structured development environment, most implementers should be building to specification and conferring with designers when there are undocumented considerations. In such an environment, the security responsibilities of a developer are fairly minimal — primarily following coding standards and documenting the system well enough to make it easier for third parties to determine whether the software is as secure as it should be. Sometimes the documentation will be aimed at the end-users, helping to ensure that they know how to use the product securely.
+
+For developers who perform any design tasks, we strongly recommend understanding designer activities by reading Appendices A and B and reviewing the Vulnerability database (Vulnerability View).
+
+[[Category:Role]]
+[[Category:CLASP Role]]
+[[Category:OWASP CLASP Project]]

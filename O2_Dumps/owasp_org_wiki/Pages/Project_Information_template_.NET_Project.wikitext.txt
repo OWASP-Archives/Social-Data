@@ -1,0 +1,36 @@
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP .NET Project''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|The project will contain information, materials and software that are relevant to building secure .NET web applications and services. The goal of the project is to provide deep content for all roles related to .NET web applications and services including:
+* Architectural guidance,
+* Developer tools, information and checklists,
+* IT professional content (for those that deploy and maintain .NET websites),
+* Penetration testing resources,
+* Incident response resources. 
+The OWASP .NET Project Leader will actively recruit .NET contributors, including personnel from Microsoft, but others throughout the .NET ecosystem. Including experts from communities from large companies to ISVs, from enterprise architects to ALT.NET developers will be important for the overall reach of the OWASP .NET project. Other communities to consider include developers who use Mono (.NET for Linux), including Moonlight (Silverlight for Linux).
+The OWASP .NET Project Leader will actively contribute to the OWASP projects that require .NET resources, by recruiting resources or contributing to the project. 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project key Information'''
+ | style="width:14%; background:#cccccc" align="center"|Project Leader<br>[[User:Daniel Brzozowski|'''Daniel Brzozowski''']]
+ | style="width:15%; background:#cccccc" align="center"|Project Contributors<br>(if any)
+ | style="width:10%; background:#cccccc" align="center"|Mailing list<br>[https://lists.owasp.org/mailman/listinfo/owasp-dotnet '''Subscribe here''']<br>[mailto:owasp-dotnet(at)lists.owasp.org@lists.owasp.org '''Use here''']
+| style="width:17%; background:#cccccc" align="center"|License<br>[http://creativecommons.org/licenses/by-sa/3.0/ '''Creative Commons Attribution Share Alike 3.0''']
+ | style="width:14%; background:#cccccc" align="center"|Project Type<br>[http://www.owasp.org/index.php/Category:OWASP_Project#tab=Release_Quality_Projects '''Documentation''']
+ | style="width:15%; background:#cccccc" align="center"|Sponsors<br>[[OWASP Summer of Code 2008|'''OWASP SoC 08''']]  
+ |}
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|
+[[:Category:OWASP_Project_Assessment#Release_Quality_Documentation_Criteria|'''Release Quality''']]<br>[[:OWASP .NET Project - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="center"|
+[http://www.owasp.org/images/0/00/OWASP_dotNet_2008.pptx OWASP .Net Project PowerPoint Presentation]<br>[https://www.owasp.org/index.php/Category:OWASP_.NET_Project OWASP .NET]<br>[http://owasprox.blogspot.com/ Tracking Blog for OWASP .NET Project Lead]
+ | style="width:29%; background:#cccccc" align="center"|
+[[:Category:OWASP Top Ten Project|OWASP Top Ten Project]]<br>[[OWASP Testing Guide]]<br>[[.Net Assembly Analyzer]]<br>[[OWASP WebGoat Project]]<br>[[OWASP WebScarab Project]]<br>[http://code.google.com/p/owasp-net-content/  OWASP .NET Content Project]
+ |}

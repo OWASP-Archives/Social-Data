@@ -1,0 +1,2 @@
+To prevent Regular Expression injections use http://java.sun.com/j2se/1.5.0/docs/api/java/util/regex/Pattern.html#quote(java.lang.String)<br/>
+Example can be found at: http://www.talios.com/bad_testing_habits.htm

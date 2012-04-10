@@ -1,0 +1,18 @@
+'''Description'''
+
+See how an attacker can use our recent discovery of File-Upload vulnerability in Gmail-Lite to 0wn the entire box. This is to teach developers how a flaw in web application is evil.In this movie, you should learn: 1) Attacker bypasses Firewall by making victim machine connecting back to him via port 80 2) He bypasses WebServer level restrictions on dangerous APIs such as system, exec ...etc by using backtick operator (`) to execute any commands he wants.
+Size: 6.39 MB 
+
+
+'''Download:'''
+
+http://yehg.net/lab/pr0js/files.php/0wning_the_box_via_WebAppFlaw.zip
+
+
+'''Updates'''
+
+Thanks to this movie, the patch has been made.
+The php backtick (`) operator has been sent to jail successfully. 
+When you work on jailed-php server, you will get "shell exec" disabled message.
+
+[[Category:Non-OWASP_Trainings]]

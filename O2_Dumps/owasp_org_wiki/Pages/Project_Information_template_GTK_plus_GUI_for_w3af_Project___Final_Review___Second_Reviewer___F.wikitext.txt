@@ -1,0 +1,62 @@
+[[Project Information:template GTK plus GUI for w3af Project|Clik here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''FINAL REVIEW''' 
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART I''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#GTK+ GUI for w3af project|GTK + GUI for w3af Project's Deliveries & Objectives]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#GTK+ GUI for w3af project|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+The project is fully completed within the time schedule. The progress of development, bugfixes and implementing (new) enhancements can be found at [https://sourceforge.net/pm/task.php?group_id=170274&set=custom&group_project_id=56282&_assigned_to=0&_status=2&SUBMIT=Browse w3af sourceforge project page here], and the details [https://sourceforge.net/tracker2/?group_id=170274&atid=853652 here].
+According the description in [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#GTK+ GUI for w3af project|'''the assumed ones''']] I'm missing a proper documentation. With "proper" I mean that the tool comes with good online documention and a separate PDF file. But both seem to be slightly outdated, and the version to be found at the w3af sourceforge project page is outdated too.
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#GTK+ GUI for w3af project|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+The project is completed 100% (if we do not count the missing final update of the documentation:). Well done!
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+Advices go to the users to use the tool and make enhancement request (if any). Andres and Facundo are very responsive and most likely implement useful improvements right away.
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART II''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Assessment Criteria
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[:Category:OWASP Project Assessment|OWASP Project Assessment Criteria]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Alpha Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+All criterias are satisfied.
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Beta Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+All criterias are satisfied.
+According the OWASP Project Assessment Methodology ''Beta Quality OWASP Tools'' the "About Box" misses the release date.
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+3. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Release Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+ |-  
+ | style="width:25%; background:#7B8ABD" align="center"|
+4. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+|}

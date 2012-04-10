@@ -1,0 +1,104 @@
+This is a starter page.  I just wanted to get some of the material we had put together on this issue out in a forum where folks could start working on it.  Feel free to stomp all over my initial content ('''dan AT denimgroup.com''')  Join the discussion on the [https://lists.owasp.org/mailman/listinfo/owasp-cmm mail list].
+
+== Goals ==
+
+<ul>
+<li>Create a maturity model for use in evaluating organizations' application security practices.</li>
+<li>Use other maturity models such as CMMi as guidelines, but focus on creating standards immediately useful to the application security community.</li>
+</ul>
+
+== Overview ==
+
+Organizations and teams vary in the practices they use to promote security in the applications they develop and deploy.  There are a number of stakeholders who have a vested interest in understanding the level of maturity of these practices:
+<ul>
+<li>Internal security and audit groups need to know the degree to which development teams are upholding and promoting security policies</li>
+<li>Purchasing organizations need to understand the level of security to expect from software systems they procure from vendors.</li>
+</ul>
+
+The Application Security Maturity Model (ASMM) is intended to provide a structured model against which development organizations can be evaluated so that these stakeholders can have an appropriate understanding of the security state of systems being produced.
+
+== Current Material ==
+
+The SEI CMMi has five levels:
+<ol>
+<li>Initial</li>
+<li>Managed</li>
+<li>Defined</li>
+<li>Quantitatively Managed</li>
+<li>Optimizing</li>
+</ol>
+
+
+The work we have done thusfar on an ASMM resulted in four levels.  (We did not intentionally set out to make our ASMM a direct analog to the SEI CMMi.  If folks want to bring ASMM more directly in-line with CMMi then this could be modified.  Also if it makes more sense to have 3 or 5 or 22 levels then this can be modified as well.  These are simply based on the useful distinctions we have made thusfar between the practices the organizations we work with have adopted and their results)  Our levels include:
+
+<ol>
+<li>Nothing</li>
+<li>Ad Hoc</li>
+<li>Controlled</li>
+<li>Optimizing (probably an inappropriate name at this point; must have had CMMi on the brain...)</li>
+</ol>
+
+
+What we have been looking at were a number of factors within an organization that were indicative of how seriously they were taking application security and the resources they have decided to devote to these concerns.  Some of these include:
+
+<ul>
+<li>How well does the organization understand its application portfolio?</li>
+<li>How does the organization use automated tools?</li>
+<li>When are security concerns addressed in the process?</li>
+<li>Is the organization reactive or proactive?</li>
+<li>Who within the organization is responsible for application security?</li>
+<li>How many internal personnel have application security as a significant, declared part of their job responsibilities?</li>
+<li>How are developers and other participants trained in application security?</li>
+<li>Is the organization's approach to application security risk qualitative or quantitative?</li>
+</ul>
+
+
+A rough breakdown of the levels follows:
+
+[[Image:asmm_levels_small.png]]
+
+'''(L0) Nothing'''
+
+<ul>
+<li>The application portfolio is largely unknown.  Understanding the organization's application attack surface requires discussions with many people distributed throughout many parts of the organization</li>
+<li>Any audit or compliance check results in a massive "fire drill" effort</li>
+</ul>
+
+
+'''(L1) Ad Hoc'''
+
+<ul>
+<li>A rough order of magnitude is known for the size of the application portfolio.</li>
+<li>There is some use of automated tools (typically black-box assessment scanning tools run by external consultants or security team personnel).  These scans typically result in significant findings of serious defects such as XSS and SQL injection</li>
+<li>Any documented processes or practices are focused on "security features" rather than "secure features" and are only followed sporadically</li>
+</ul>
+
+
+'''(L2) Controlled'''
+
+<ul>
+<li>The size of the application portfolio is mostly known</li>
+<li>High-value application undergo regular, systematic reviews including some manual testing</li>
+<li>Processes and practices are not solely focused on "security features" versus "secure features" and are typically followed</li>
+<li>Developers receive some training in secure design and development techniques</li>
+</ul>
+
+
+'''(L3) Optimizing'''
+
+<ul>
+<li>The application portfolio is known and documented and applications are categorized and ranked by their security significance</li>
+<li>The level of review for applications is based on their value and security significance</li>
+<li>High-value applications undergo regular, systematic reviews including manual testing</li>
+<li>Developers are trained in secure coding and design principles</li>
+<li>Security is discussed and addressed through the project development and product acquisition process</li>
+</ul>
+
+
+== Future Development ==
+
+We have some more data on characteristics of the different levels and other practices but I need to sanitize that before pushing it up.  Everything I have uploaded is very early stage, so please feel free to comment and modify as appropriate.
+
+== Project Contributors ==
+
+Dan Cornell '''dan AT denimgroup.com''' put this initial page together.  Feel free to jump in with edits and comments!

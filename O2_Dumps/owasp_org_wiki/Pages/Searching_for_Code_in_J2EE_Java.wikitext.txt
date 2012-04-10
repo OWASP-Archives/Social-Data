@@ -1,0 +1,222 @@
+{{LinkBar
+  | useprev=PrevLink | prev=Crawling Code | lblprev=
+  | usemain=MainLink | main=OWASP Code Review Guide Table of Contents | lblmain=Table of Contents
+  | usenext=NextLink | next=Searching for Code in Classic ASP | lblnext=
+}}
+__TOC__
+
+==Input and Output Streams==
+These are used to read data into one’s application. They may be potential entry points into an application. The entry points may be from an external source and must be investigated. These may also be used in path traversal attacks or DoS attacks. 
+
+Java.io <br>
+java.util.zip <br>
+java.util.jar <br>
+FileInputStream <br>
+ObjectInputStream <br>
+FilterInputStream <br>
+PipedInputStream <br>
+SequenceInputStream <br>
+StringBufferInputStream <br>
+BufferedReader <br>
+ByteArrayInputStream <br>
+CharArrayReader <br>
+File <br>
+ObjectInputStream <br>
+PipedInputStream <br>
+StreamTokenizer <br>
+getResourceAsStream <br>
+java.io.FileReader <br>
+java.io.FileWriter <br>
+java.io.RandomAccessFile <br>
+java.io.File <br>
+java.io.FileOutputStream <br>
+mkdir <br>
+renameTo <br>
+
+==Servlets==
+These API calls may be avenues for parameter, header, URL, and cookie tampering, HTTP Response Splitting and information leakage. They should be examined closely as many of such APIs obtain the parameters directly from HTTP requests. 
+
+javax.servlet.* <br>
+getParameterNames<br>
+getParameterValues<br>
+getParameter<br>
+getParameterMap<br>
+getScheme<br>
+getProtocol<br>
+getContentType<br>
+getServerName<br>
+getRemoteAddr<br>
+getRemoteHost<br>
+getRealPath<br>
+getLocalName<br>
+getAttribute<br>
+getAttributeNames<br>
+getLocalAddr<br>
+getAuthType<br>
+getRemoteUser<br>
+getCookies<br>
+isSecure<br>
+HttpServletRequest<br>
+getQueryString<br>
+getHeaderNames<br>
+getHeaders<br>
+getPrincipal<br>
+getUserPrincipal<br>
+isUserInRole<br>
+getInputStream<br>
+getOutputStream<br>
+getWriter<br>
+addCookie<br>
+addHeader<br>
+setHeader<br>
+setAttribute<br>
+putValue<br>
+javax.servlet.http.Cookie<br>
+getName<br>
+getPath<br>
+getDomain<br>
+getComment<br>
+getMethod<br>
+getPath<br>
+getReader<br>
+getRealPath<br>
+getRequestURI<br>
+getRequestURL<br>
+getServerName<br>
+getValue<br>
+getValueNames<br>
+getRequestedSessionId<br>
+
+==Cross Site Scripting==
+javax.servlet.ServletOutputStream.print <br>
+javax.servlet.jsp.JspWriter.print <br>
+java.io.PrintWriter.print <br>
+
+==Response Splitting==
+javax.servlet.http.HttpServletResponse.sendRedirect <br>
+addHeader, setHeader <br>
+
+==Redirection== 
+sendRedirect <br>
+setStatus <br>
+addHeader, setHeader <br>
+
+==SQL & Database==
+Searching for Java Database related code this list should help you pinpoint classes/methods which are involved in the persistence layer of the application being reviewed. 
+
+jdbc <br>
+executeQuery <br>
+select <br>
+insert <br>
+update <br>
+delete <br>
+execute <br>
+executestatement <br>
+createStatement <br>
+java.sql.ResultSet.getString <br>
+java.sql.ResultSet.getObject <br>
+java.sql.Statement.executeUpdate <br>
+java.sql.Statement.executeQuery <br>
+java.sql.Statement.execute <br>
+java.sql.Statement.addBatch <br>
+java.sql.Connection.prepareStatement <br>
+java.sql.Connection.prepareCall <br>
+
+==SSL==
+Looking for code which utilises SSL as a medium for point to point encryption. The following fragments should indicate where SSL functionality has been developed. 
+
+com.sun.net.ssl <br>
+SSLContext <br>
+SSLSocketFactory <br>
+TrustManagerFactory <br>
+HttpsURLConnection <br>
+KeyManagerFactory <br>
+
+==Session Management==
+getSession <br>
+invalidate <br>
+getId  <br>
+
+==Legacy Interaction==
+Here we may be vulnerable to command injection attacks or OS injection attacks. Java linking to the native OS can cause serious issues and potentially give rise to total server compromise. 
+
+java.lang.Runtime.exec <br>
+java.lang.Runtime.getRuntime <br>
+
+==Logging==
+We may come across some information leakage by examining code below contained in one’s application. 
+
+java.io.PrintStream.write <br>
+log4j <br>
+jLo <br>
+Lumberjack <br>
+MonoLog <br>
+qflog <br>
+just4log <br>
+log4Ant <br>
+JDLabAgent <br>
+
+==Architectural Analysis==
+If we can identify major architectural components within that application (right away) it can help narrow our search, and we can then look for known vulnerabilities in those components and frameworks: 
+
+<nowiki>### Ajax </nowiki><br>
+XMLHTTP <br>
+
+<nowiki>### Struts </nowiki><br>
+org.apache.struts <br>
+
+<nowiki>### Spring </nowiki><br>
+org.springframework <br>
+
+<nowiki>### Java Server Faces (JSF) </nowiki><br>
+import javax.faces <br>
+
+<nowiki>### Hibernate </nowiki><br>
+import org.hibernate <br>
+
+<nowiki>### Castor </nowiki><br>
+org.exolab.castor <br>
+
+<nowiki>### JAXB </nowiki><br>
+javax.xml <br>
+
+<nowiki>### JMS </nowiki><br>
+JMS <br>
+
+==Generic Keywords==
+Developers say the darnedest things in their source code. Look for the following keywords as pointers to possible software vulnerabilities: 
+
+Hack <br>
+Kludge <br>
+Bypass <br>
+Steal <br>
+Stolen <br>
+Divert <br>
+Broke <br>
+Trick <br>
+FIXME <br>
+ToDo <br>
+Password <br>
+Backdoor <br>
+
+==WEB 2.0==
+'''Ajax and JavaScript'''
+
+Look for Ajax usage, and possible JavaScript issues: 
+
+document.write <br>
+eval <br>
+document.cookie <br>
+window.location <br>
+document.URL <br>
+
+==XMLHTTP==
+window.createRequest
+
+{{LinkBar
+  | useprev=PrevLink | prev=Crawling Code | lblprev=
+  | usemain=MainLink | main=OWASP Code Review Guide Table of Contents | lblmain=Table of Contents
+  | usenext=NextLink | next=Searching for Code in Classic ASP | lblnext=
+}}
+
+[[Category:OWASP Code Review Project]]

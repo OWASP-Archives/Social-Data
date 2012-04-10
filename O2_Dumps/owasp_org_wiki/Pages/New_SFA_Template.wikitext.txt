@@ -1,0 +1,36 @@
+'''Security Focus Area'''
+
+==Overview==
+For topic NAME, provide an overview description of the problem. 
+
+==Threat Modeling==
+* Talk about the threat modeling ingredients(PTAVC) and discuss their relationship using threat modeling language
+* Talk about the various factors on its likelihood, impact and severity
+
+==Related Security Activities==
+
+Note: This section should be included near the top in each of the 4 interrelated Vulnerability Area/Guide pages, except the one that refers to the document it is contained in should be removed. i.e., if this section is dropped into a Testing Guide page, then the link to the Testing for NAME should be removed.
+
+===Description of NAME Vulnerabilities===
+
+See the OWASP article on [[NAME]] Vulnerabilities.
+
+===How to Avoid NAME Vulnerabilities===
+
+See the [[:Category:OWASP Guide Project|OWASP Development Guide]] article on how to [[Guide to NAME|Avoid NAME]] Vulnerabilities.
+
+===How to Review Code for NAME Vulnerabilities===
+
+See the [[:Category:OWASP Code Review Project|OWASP Code Review Guide]] article on how to [[Reviewing Code for NAME|Review Code for NAME]] Vulnerabilities.
+
+===How to Test for NAME Vulnerabilities===
+
+See the [[:Category:OWASP Testing Project|OWASP Testing Guide]] article on how to [[Testing for NAME|Test for NAME]] Vulnerabilities.
+
+Links to other articles as appropriate.
+
+== To learn more ==
+* Link to Top 10 or other articles
+
+[[Category:Security Focus Area]]
+__NOTOC__

@@ -1,0 +1,116 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+Associative lists should always have unique keys, since having non-unique keys can often be mistaken for an error.
+
+'''Consequences'''
+
+Unspecified.
+
+'''Exposure period'''
+
+* Design: The use of a safe data structure could be used.
+
+'''Platform'''
+
+* Languages: Although alists generally are used only in languages like Common Lisp - due to the functionality overlap with hash tables - an alist could appear in a language like C or C++.
+* Operating platforms: Any
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Medium
+
+'''Likelihood   of exploit'''
+
+Low
+
+
+A duplicate key entry - if the ''alist'' is designed properly - could be used as a constant time replace function. However, duplicate key entries could be inserted by mistake. Because of this ambiguity, duplicate key entries in an association list are not recommended and should not be allowed.
+
+
+==Risk Factors==
+
+TBD
+
+
+==Examples==
+
+In Python:
+
+<pre>
+alist = []
+while (foo()):
+  #now assume there is a string data with a key basename
+  queue.append(basename,data)
+queue.sort()
+</pre>
+
+Since basename is not necessarily unique, this may not sort how one would like it to be.
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+* Design: Use a hash table instead of an alist.
+* Design: Use an alist which checks the uniqueness of hash keys with each entry before inserting the entry.
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:General Logic Error Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

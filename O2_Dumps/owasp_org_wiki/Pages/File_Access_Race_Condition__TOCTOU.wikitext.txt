@@ -1,0 +1,83 @@
+{{Template:Stub}}
+{{Template:Vulnerability}}
+{{Template:Fortify}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+The window of time between when a file property is checked and when the file is used can be exploited to launch a privilege escalation attack.
+
+File access race conditions, known as time-of-check, time-of-use (TOCTOU) race conditions, occur when:
+
+* The program checks a property of a file, referencing the file by name. 
+* The program later performs a filesystem operation using the same filename and assumes that the previously-checked property still holds.
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+The following code is from a program installed setuid root. The program performs certain file operations on behalf of non-privileged users, and uses access checks to ensure that it does not use its root privileges to perform operations that should otherwise be unavailable the current user. The program uses the access() system call to check if the person running the program has permission to access the specified file before it opens the file and performs the necessary operations.
+
+<pre>
+	if(!access(file,W_OK)) {
+		f = fopen(file,"w+");
+	        operate(f);
+		...
+	}
+	else {
+	fprintf(stderr,"Unable to open file %s.\n",file);
+	}
+</pre>
+
+The call to access() behaves as expected, and returns 0 if the user running the program has the necessary permissions to write to the file, and -1 otherwise. However, because both access() and fopen() operate on filenames rather than on file handles, there is no guarantee that the file variable still refers to the same file on disk when it is passed to fopen() that it did when it was passed to access(). If an attacker replaces file after the call to access() with a symbolic link to a different file, the program will use its root privileges to operate on the file even if it is a file that the attacker would otherwise be unable to modify. By tricking the program into performing an operation that would otherwise be impermissible, the attacker has gained elevated privileges.
+
+This type of vulnerability is not limited to programs with root privileges. If the application is capable of performing any operation that the attacker would not otherwise be allowed perform, then it is a possible target.
+
+The window of vulnerability for such an attack is the period of time between when the property is tested and when the file is used. Even if the use immediately follows the check, modern operating systems offer no guarantee about the amount of code that will be executed before the process yields the CPU. Attackers have a variety of techniques for expanding the length of the window of opportunity in order to make exploits easier, but even with a small window, an exploit attempt can simply be repeated over and over until it is successful.
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD
+
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Synchronization and Timing Vulnerability]]
+[[Category:Authorization Vulnerability]]
+[[Category:C]]
+[[Category:Implementation]]
+[[Category:Code Snippet]]
+[[Category:File System]]
+[[Category:Vulnerability]]

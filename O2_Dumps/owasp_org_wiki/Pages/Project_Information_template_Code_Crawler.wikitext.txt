@@ -1,0 +1,43 @@
+----
+
+{| border="0" align="center" style="width: 100%;"
+|-
+! align="center" style="background: rgb(64, 88, 160) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; color: white;" colspan="8" | <font color="white">'''PROJECT IDENTIFICATION'''</font>
+|-
+| align="center" style="background: rgb(123, 138, 189) none repeat scroll 0% 0%; width: 15%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | '''Project Name''' 
+| align="left" style="background: rgb(204, 204, 204) none repeat scroll 0% 0%; width: 85%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" colspan="7" | <font color="black">'''OWASP Code Crawler Project'''</font>
+|-
+| align="center" style="background: rgb(123, 138, 189) none repeat scroll 0% 0%; width: 15%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | '''Short Project Description''' 
+| align="left" style="background: rgb(204, 204, 204) none repeat scroll 0% 0%; width: 85%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" colspan="7" | A tool aimed at assisting code review practitioners. It is a static code review tool which searches for key topics within .NET and J2EE/JAVA code. The aim of the tool is to accompany the OWASP Code review Guide and to implement a total code review solution for "everyone"; Where "everyone" means "more" companies performing secure software activities.
+|-
+| align="center" style="background: rgb(123, 138, 189) none repeat scroll 0% 0%; width: 15%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | '''Key Project Information''' 
+| align="center" style="background: rgb(204, 204, 204) none repeat scroll 0% 0%; width: 14%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | Project Leader<br>[[User:Alessio.marziali|'''Alessio Marziali''']] 
+| align="center" style="background: rgb(204, 204, 204) none repeat scroll 0% 0%; width: 15%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | Project Contributors<br><br>Sasikumar Ganesan<br> 
+| align="center" style="background: rgb(204, 204, 204) none repeat scroll 0% 0%; width: 10%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | Mailing list<br>[https://lists.owasp.org/mailman/listinfo/owasp-code-crawler '''Subscribe here''']<br>[mailto:owasp-code-crawler(at)lists.owasp.org '''Use here'''] 
+| align="center" style="background: rgb(204, 204, 204) none repeat scroll 0% 0%; width: 17%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | 
+License<br>[http://creativecommons.org/licenses/by-sa/3.0/ '''Creative Commons Attribution Share Alike 3.0'''] 
+
+| align="center" style="background: rgb(204, 204, 204) none repeat scroll 0% 0%; width: 14%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | 
+Project Type<br>[http://www.owasp.org/index.php/Category:OWASP_Project#tab=Beta_Status_Projects '''Tool'''] 
+
+| align="center" style="background: rgb(204, 204, 204) none repeat scroll 0% 0%; width: 15%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | Sponsor<br>[[OWASP Summer of Code 2008|'''OWASP SoC 08''']]
+|}
+
+{| border="0" align="center" style="width: 100%;"
+|-
+! align="center" style="background: rgb(123, 138, 189) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; color: white;" | <font color="black">'''Release Status'''</font> 
+! align="center" style="background: rgb(123, 138, 189) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; color: white;" | <font color="black">'''Main Links'''</font> 
+! align="center" style="background: rgb(123, 138, 189) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; color: white;" | <font color="black">'''Related Projects'''</font>
+|-
+| align="center" style="background: rgb(204, 204, 204) none repeat scroll 0% 0%; width: 29%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | 
+'''[[:Category:OWASP Project Assessment#Beta_Quality_Tool_Criteria|Beta Quality]]'''<br>[[:Category:OWASP Code Crawler Project - Assessment Frame|Please see here for complete information.]] 
+
+| align="center" style="background: rgb(204, 204, 204) none repeat scroll 0% 0%; width: 42%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | 
+[https://www.owasp.org/images/6/61/OWASP_CodeCrawler_Presentation.ppt CodeCrawler PPT Presentation]<br>[http://www.cyphersec.com/software_archive/OWASP_Code_Crawler.zip ][http://codeplex.codeplex.com/ OWASP Code Crawler Development's website (Codeplex)]<br>[http://codecrawler.codeplex.com/Release/ProjectReleases.aspx Download Code Crawler (Binary)] 
+
+| align="center" style="background: rgb(204, 204, 204) none repeat scroll 0% 0%; width: 29%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | 
+[[:Category:OWASP Code Review Project|OWASP Code Review Guide]] 
+
+|}
+
+----

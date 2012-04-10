@@ -1,0 +1,19 @@
+{{LinkBar
+  | useprev=PrevLink | prev=The Owasp Code Review Scoring System | lblprev=
+  | usemain=MainLink | main=OWASP Code Review Guide Table of Contents | lblmain=Table of Contents
+  | usenext=NextLink | next= | lblnext=
+}}
+
+==References==
+
+# Brian Chess and Gary McGraw.  "Static Analysis for Security," ''IEEE Security & Privacy'' 2(6), 2004, pp. 76-79.
+# M. E. Fagan.  "Design and Code Inspections to Reduce Errors in Program Development," ''IBM Systems J.'' 15(3), 1976, pp. 182-211.
+# Tom Gilb and Dorothy Graham.  ''Software Inspection''.  Addison-Wesley, Wokingham, England, 1993.
+# Michael Howard and David LeBlanc.  ''Writing Secure Code, 2nd edition''.  Microsoft Press, Redmond, WA, 2003.
+# Gary McGraw.  ''Software Security''.  Addison-Wesley, Boston, MA, 2006.
+# Diomidis Spinellis.  ''Code Reading: The Open Source Perspective''.  Addison-Wesley, Boston, MA, 2003.
+# John Viega and Gary McGraw.  ''Building Secure Software: How to Avoid Security Problems the Right Way.''  Addison-Wesley, Boston, MA, 2001.
+# Karl E. Wiegers.  ''Peer Reviews in Software''.  Addison-Wesley, Boston, MA, 2002.
+
+
+[[Category:OWASP Code Review Project]]

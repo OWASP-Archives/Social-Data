@@ -1,0 +1,40 @@
+[[Category:OWASP_Sqlibench_Project|Clik here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#SQL_Injector_Benchmarking_Project_.28SQLiBENCH.29|Sqlibench Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#SQL_Injector_Benchmarking_Project_.28SQLiBENCH.29|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| 
+
+50% of the project's been finished as expected. I couldn't go through all steps in the documentation yet to see if it works as expected. Although documentation to build up the benchmarking is well written and detailed enough.  
+
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#SQL_Injector_Benchmarking_Project_.28SQLiBENCH.29|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+
+50% of all over the project and 100% of the first part completed. Apparently creating videos was also in this part of the project which I don't see it's really necessary since the documentation is fairly easy to follow.  
+ |- 
+|-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+
+I really like the professional presentation of the project and detailed documentation. 
+
+My humble recommendations are:
+
+* I couldn't locate any of the source code in Google code SVN, it'd be nice to put all source such as presentation PHP into there (as well as any other sql files or script).
+* Presentation format looks quite nice. It'd be nice to have another static big matrix to see overview of the results.
+* Is there any plan to prepare a documentation to benchmark new tools? So other people can contribute as well as SQLI tool developers might find it quite useful.
+
+|}

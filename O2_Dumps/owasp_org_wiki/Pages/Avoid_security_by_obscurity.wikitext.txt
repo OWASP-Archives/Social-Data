@@ -1,0 +1,40 @@
+{{Template:Principle}}
+
+{{Template:Stub}}
+<br>
+[[Category:OWASP ASDR Project]]
+
+==Description==
+
+Security through obscurity is the reliance on the secrecy of the implementation of a system or components of a system to keep it secure. Security though obscurity is a weak security control, and nearly always fails when it is the only control. This is not to say that keeping secrets is a bad idea, but that the design or logic of the security control should be based on open and known principles. For example, in a cryptographic system, only the key should be required to remain secret (i.e., it should not rely on keeping the algorithm secret in order to remain secure).
+
+==Examples==
+
+===Obscurity Through Alternate Port Bindings===
+
+Using an alternate port number for an otherwise insecure network service (e.g., Telnet listening on port 1025) as a method of hiding the fact that the service is listening on the server is an ineffective security control. Most network scanners would easily fingerprint the service on that alternate port number. Instead, a known secure network service should be used like Secure Shell (SSH).
+
+===Obscurity Through Closed Source Code===
+
+The security of an application should not rely upon knowledge of the source code being kept secret.  Hiding things like hard-coded passwords and otherwise vulnerable code by not releasing the source code is a poor security control (see the [[Assume attackers have source code]] Principle for more information). The security should instead rely on a well understood and open design including reasonable password policies, defense in depth, business transaction limits, solid network architecture, and fraud and audit controls. A practical counter-example to relying on obscurity of source code as a security control is Linux. Linux’s source code is widely available, and yet when properly secured, Linux is a hardy, secure and robust operating system.
+[[Category:FIXME|The article that is linked has been recommended for deletion by someone. Need to either remove the link here, or rewrite the pragraph so it has whatever info the reader needs from the article marked for deletion]]
+
+==Related [[Vulnerabilities]]==
+
+* [[Leftover Debug Code]]
+* [[ASP.NET Misconfigurations]]
+* [[Hard-Coded Password]]
+* [[Password Management: Hardcoded Password]]
+
+==Related [[Controls]]==
+
+TBD
+* [[Controls 1]]
+[[Category:FIXME|need content]]
+
+==References==
+
+* [http://www.petitcolas.net/fabien/kerckhoffs/#english Auguste Kerckhoffs, ‘La cryptographie militaire’]
+
+
+[[Category:Principle]]

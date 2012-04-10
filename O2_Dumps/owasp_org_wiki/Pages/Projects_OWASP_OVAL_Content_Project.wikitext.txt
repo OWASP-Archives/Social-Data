@@ -1,0 +1,46 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Project About</noinclude>
+| project_name = OWASP OVAL Content Project
+| project_home_page =OWASP OVAL Content Project
+
+| project_description = 
+*The purpose of this project is to create OVAL content to enable any OVAL compatible tool find security issues which can be represented in a standard format. 
+*More about OVAL  from [http://oval.mitre.org/about/ MITRE website]:
+*Open Vulnerability and Assessment Language (OVAL®) is an international, information security, community standard to promote open and publicly available security content, and to standardize the transfer of this information across the entire spectrum of security tools and services.	
+**This project will strive to create OVAL content (which are simply XML files) for common security mis-configurations. For example, refer to http://www.codeproject.com/KB/web-security/web-based-applications.aspx for list of top 10 Application Security Vulnerabilities in Web.config Files which may impact any ASP.NET web application. Each of these security settings can be tested easily by writing corresponding OVAL checks. In this particular case, xmlfilecontent_item can be used.
+**There are already free tools (OVAL Interpreters) available which can be readily used to check content conforming to OVAL standard. 
+**OVAL community is quite active and there is fast amount of content available in OVAL repository maintained at MITRE website.
+**By providing standard OWASP reviewed OVAL content to general public, this project goal is to make it easier for anyone involved in finding  configuration related vulnerabilities in any web application platform   
+
+| project_license =  [http://creativecommons.org/licenses/by-sa/3.0/ Creative Commons Attribution ShareAlike 3.0 license] 
+
+| leader_name1 = Gaurav Kumar 
+| leader_email1 = gk@pivotalsecurity.com
+| leader_username1 = Gaurav_Kumar
+
+| contributor_name[1-10] = 
+| contributor_email[1-10] = 
+| contributor_username[1-10] = 
+
+| pamphlet_link = 
+
+| presentation_link =
+
+| mailing_list_name = https://lists.owasp.org/mailman/listinfo/owasp-oval-content
+
+| project_road_map = https://www.owasp.org/index.php/Projects/OWASP_OVAL_Content_Project/Roadmap
+
+
+
+| links_url1 = http://oval.mitre.org/about/ 
+| links_name1 = MITRE website
+
+| links_url[2-10] = 
+| links_name[2-10] = 
+
+| release_1 = 
+| release_2 = 
+| release_3 =
+| release_4 =
+<!--- The line below is for GPC usage only. Please do not edit it --->
+| project_about_page = Projects/OWASP OVAL Content Project
+}}

@@ -1,0 +1,109 @@
+''Sent to owasp-all mailing list on 8th Jan 2007''
+
+==== OWASP Newsletter #1 – December 1st 2006 to December 31st 2006 ====
+
+'''Welcome to 2007 from all of us at OWASP!'''
+
+I would like to take a moment to welcome you all to our first edition of the OWASP newsletter and introduce myself. My name is Aaron Holmes and I have had the pleasure of working on the OWASP website as part of the OWASP Autumn of Code (AoC) 2006. It has been a rewarding and educational experience for myself, and I feel OWASP has benefited greatly by the many excellent projects which have been developed and advanced through the AoC 2006 program. With all this activity and excitement, we have decided that we should produce and distribute a regular newsletter to keep everyone up to date on the direction of OWASP and our many great projects. We invite your feedback and news submissions which can be submitted to aholmes@owasp.org and dinis.cruz@owasp.net. Enjoy!
+
+In the next newsletter we will take a deeper look to the AoC projects and explain how they can benefit you.
+
+Until next week, happy coding!
+
+Aaron M. Holmes
+OWASP Newsletter Editor and Website Developer
+
+==== OWASP Autumn of Code (AoC) update ====
+
+The end of 2006 marks an important time for OWASP with the successful completion of the Autumn of Code 2006. Four of the nine original projects have been completed and are now officially closed. The completed projects include [[:Category:OWASP CAL9000 Project|CAL9000]], [[OWASP SiteGenerator]], [[OWASP Report Generator]], the [[Testing_Guide]], and the [[OWASP Autumn of Code 2006 - Projects: Website and Branding | Owasp.org Website and Branding project]]. Additionally, three other projects are up for completion and will be finalized in the very near future; including [[:Category:OWASP Pantera Web Assessment Studio Project|Pantera]] (Web Assessment Studio Project), [[OWASP Autumn of Code 2006 - Projects: Web Goat | new WebGoat lessons]], and [[OWASP Autumn of Code 2006 - Projects: Owasp .Net Tools | OWASP Tiger]] (formally named Owasp.net Tools). The remaining two projects, [[OWASP Autumn of Code 2006 - Projects: WebScarab NG | WebScarab NX]] and [[OWASP Autumn of Code 2006 - Projects: Live CD | LiveCD]] have been granted 2 month project extensions. 
+
+All projects have seen great developments which have been made possible by the hard work and efforts of our AoC participants, project leaders, community members and owasp membership fees (used to pay the AoC sponsorships)
+
+==== Featured Projects: ORG and OSG ====
+
+[[OWASP Report Generator]] (ORG) and [[OWASP Site Generator]](OSG) are projects that have recently been updated through the Autumn of Code.  
+
+[[OWASP Report Generator]] (ORG) is designed for security consultants and aims to aid the creation, management and reporting of security audits (i.e. penetration testing, security assessments, etc). With ORG you can centrally manage and track security assessments projects, while reducing considerably the time spent on non-testing activities. ORG allows for the easy (using Altova's Authentic XML WYSIWYG editor) and quick: a) record/document findings, b) create reports in multiple formats and c) track the findings till they are fixed (additional features: Image copy and paste, Nmap import, plug-in extension,automatic xsd schema verification, archiving and data exports). All data is stored in XML files and all reports (in HTML, PDF, Powerpoint or Excel) are created using XSL transformations.
+
+[[OWASP Site Generator]](OSG) is a teaching tool that can be used to create dynamic sites build from a predefined list of vulnerabilities (data stored in XML files and new dinamic websites loaded in seconds).  This allows for security trainers to show specific examples of problems and for developers to look at real vulnerable code. It also will allow the assessment of the effectiveness of Web Application Security Scanners and Web Application Firewalls.
+
+==== Latest additions to the WIKI ====
+
+* '''New WIKI pages'''
+** [[PDF Attack Filter for Java EE]] - This is a filter to block XSS attacks on PDF files served by Java EE applications.
+** [[CSRF Guard]]
+** [[Books that reference OWASP]]
+
+* '''Relevant WIKI Page edits'''
+** [[:Category:OWASP Stinger Project|OWASP Stinger Project]] and [[OWASP Validation Project]]
+** [[Cross-Site Request Forgery]]
+** [[Business Justification for Application Security Assessment]]
+** [[OWASP Code Review Guide Table of Contents]]
+** [[A Tale of Two Systems]]
+** [[Category:OWASP Pantera Web Assessment Studio Project|OWASP Pantera Web Assessment Studio Project]]
+** [[How to write a new WebGoat lesson]]
+** [[How to test session identifier strength with WebScarab]]
+** [[Source Code Analysis Tools]]
+
+* '''Presentations on Chapters:'''
+** Dec 06, [[Chicago]], [http://wittys.com/owasp/OWASP_Chicago_Thomas_Ptacek.pdf Webapps In Name Only] by Thomas Ptacek, Matasano Security, [http://wittys.com/owasp/cscott-Stronger%20Web%20Authentication-v1.0.ppt Token-less strong authentication for web applications: A Security Review] by Cory Scott, ABN AMRO
+** Dec 06, [[Helsinki]],[http://www.owasp.org/images/7/7c/Owasp-olli.pdf Analyzing Threats] by Olli Wiren 
+** Nov 06, [[Virginia (Northern Virginia)]], [http://www.owasp.org/index.php/Image:OWASP_Presentation_Nov._9_2006.ppt Web site attack treads] by Jim Young, Websense Inc.  and  [http://www.pascarello.com/presentation/owasp/HackingFun.zip Investigating Ajax and JavaScript Security] by Eric Pascarello
+** Nov 06, [[Phoenix]], [http://www.stachliu.com/presentations/webapp0day/index.html Discovering Web Application Vulnerabilities with Google CodeSearch] by Jon Rose
+** Oct 06, [[Rochester]], [http://rd1.net/owasp/2006-10-16_owasp-presentation.ppt The first of the OWASP top ten: unvalidated input], by Steve Buck 
+
+* '''OWASP Testing Project''': Here are just a couple links from the 2nd version of the [[OWASP Testing Project]] whose ToC is  here: [[OWASP Testing Guide v2 Table of Contents]]
+** [[Testing: Spidering and googling]]
+** [[Testing for Application Discovery]] 
+** [[Testing for Bypassing Authentication Schema  (OWASP-AT-005)|Testing for Bypassing Authentication Schema]]
+** [[Testing for Error Code]]
+** [[Buffer Overruns and Overflows]]
+
+==== OWASP Community (from [[OWASP Community | here]] on owasp.org) ====
+OWASP related events, such as chapter meetings, OWASP conferences, get-togethers, and OWASP sponsored events. 
+* '''Jan 23 (18:00h) - [[Belgium|Belgium chapter meeting]]'''
+
+* '''Jan 17 (18:30h) - [[Denver|Denver chapter meeting]]'''
+
+* '''Jan 15 (18:00h) - [[Rochester|Rochester chapter meeting]]'''
+
+* '''Jan 11 (18:00h) - [[Netherlands|Netherlands chapter meeting]]'''
+
+* '''Jan 11 (18:30h) - [[Phoenix|Phoenix chapter meeting]]'''
+
+* '''Jan 10 (18:00h) - [[Toronto|Toronto chapter meeting]]'''
+
+* '''Jan 9 (18:00h) - [[Virginia (Northern Virginia)|Washington DC (N. VA) chapter meeting]]'''
+
+==== OWASP News Headlines (from [[OWASP News|here]] on owasp.org) ====
+*  '''Jan 2 - [http://books.google.com/books?as_q=owasp&num=100&btnG=Google+Search&as_epq=&as_oq=&as_eq=&as_libcat=0&as_brr=0&as_vt=&as_auth=&as_pub=&as_drrb=c&as_miny=&as_maxy=&as_isbn= The Best Security Books Reference OWASP]''' - There are over 50 security books that reference OWASP. Many of the authors are contributing to OWASP, speaking at our conferences, and participating in our chapters. Some of the books just recommend OWASP, but many are structured around OWASP, and others have whole chapters dedicated to our tools. 
+
+* '''Nov 28 - [http://www.owasp.org/index.php/OWASP_JBroFuzz JBroFuzz 0.3 Released]''' - This version adds a more stable core, length updating for fuzzed POST requests and allows you to specify your own fuzz vectors in a separate file. 
+
+* '''Nov 26 - [http://www.owasp.org/index.php/OWASP_Report_Generator OWASP Report Generator 0.88 Released]''' - A tool for security consultants that supports the documentation and reporting of security vulnerabilities discovered during security audits. 
+
+* '''Nov 26 - [http://www.owasp.org/index.php/OWASP_Site_Generator OWASP Site Generator v.70 Released]''' - A tool that allows the creating of dynamic websites based on XML files and predefined vulnerabilities (some simple, some complex) for testing application security tools. 
+
+* '''Nov 14 - [http://www.owasp.org/index.php/Category:OWASP_Project Three great new OWASP projects]'''
+** [http://www.owasp.org/index.php/Category:OWASP_Encoding_Project OWASP Encoding Project] A nice encoding library that supports Java, .NET, PHP, Python, Perl, JavaScript, and Ajax. 
+** [http://www.owasp.org/index.php/Category:OWASP_WSFuzzer_Project OWASP WSFuzzer Project] A fuzzing tool for Web Services to support penetration testing efforts. 
+** [http://www.owasp.org/index.php/Category:OWASP_Insecure_Web_App_Project OWASP Insecure Web App Project] A realistic but insecure Java EE web application for use in learning and testing tools.
+
+* '''Nov 12 - [http://www.owasp.org/google/results.html New OWASP App Security Search Engine]''' - We're beta-testing a new Google-powered search engine for application security. The engine indexes the OWASP site and all the other sites dedicated to application security on the Internet.
+
+* '''Nov 7 - [http://www.owasp.org/index.php/Special:Statistics OWASP Hits Two-Million Page Views]''' - Thank you all for your support! We serve approximately 1/2 million page views every month.
+
+==== Application Security News (from [[Application Security News| here]] on owasp.org) ====
+
+*''' Jan 3 - [http://www.gnucitizen.org/blog/danger-danger-danger/ XSS in ALL sites with PDF download]''' - Critical XSS flaw that is trivial to exploit here in all but the very latest browsers. Attackers simply have to add a script like #attack=javascript:alert(document.cookie); to ANY URL that ends in .pdf (or streams a PDF). Solution is to not use PDF's or for Adobe to patch the planet. 
+
+* '''Dec 14 - [http://jeremiahgrossman.blogspot.com/2006/12/i-know-if-youre-logged-in-anywhere.html JavaScript error handler leaks information]''' - An attacker can find out whether you're logged into your favorite website or not. They include a script tag where the src attribute doesn't point to a script, but instead to a page on your favorite websites. Based on the error the script parser generates when trying to parse the HTML of the page that's returned, the attacker can tell whether you're logged in or not. Should extend to access control easily. Protect yourself with CSRF protection. 
+
+* '''Dec 13 - [http://www.washingtonpost.com/wp-dyn/content/article/2006/12/12/AR2006121200173.html UCLA spins massive breach]''' - Why not just say what measures you've really taken? Are all developers trained? Do you do code review and security testing? "Jim Davis, UCLA's chief information officer, said a computer trespasser used a program designed to exploit an undetected software flaw to bypass all security measures and gain access to the restricted database that contains information on about 800,000 current and former students, faculty and staff, as well as some student applicants and parents of students or applicants who applied for financial aid. 'In spite of our diligence, a sophisticated hacker found and exploited a subtle vulnerability in one of hundreds of applications,' Davis said in the statement." 
+
+* '''Dec 10 - [http://news.com.com/Security+Bites+Podcast+MySpace,+Apple+in+patch+snafu/2324-12640_3-6142120.html MySpace and Apple mess]''' - MySpace and Apple show how NOT to handle security incidents (see also [http://blog.washingtonpost.com/securityfix/2006/12/how_not_to_distribute_security_1.html How Not to Distribute Security Patches]) 
+
+* '''Dec 2 - [http://blogs.oracle.com/security/2006/11/27#a39 Oracle blames security researchers]''' - "We do not credit security researchers who disclose the existence of vulnerabilities before a fix is available. We consider such practices, including disclosing 'zero day' exploits, to be irresponsible." So the question on everybody's mind - is the Oracle Software Security Assurance program real? Or are David Litchfield and Cesar Cerrudo right that Emperor has no clothes?
+
+
+__NOEDITSECTION__

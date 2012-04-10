@@ -1,0 +1,71 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Poor Logging Practice]]
+
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+==Description==
+
+It is a poor logging practice to use multiple loggers rather than logging levels in a single class.
+
+Good logging practice dictates the use of a single logger that supports different logging levels for each class.
+
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+The following code errantly declares multiple loggers.
+
+<pre>
+	public class MyClass {
+	  private final static Logger good =     
+				Logger.getLogger(MyClass.class);
+	  private final static Logger bad =     
+				Logger.getLogger(MyClass.class);
+	  private final static Logger ugly =     
+				Logger.getLogger(MyClass.class);
+	  ...
+	}
+
+</pre>
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+Note: A reference to related [http://cwe.mitre.org/ CWE] or [http://capec.mitre.org/ CAPEC] article should be added when exists. Eg:
+
+* [http://cwe.mitre.org/data/definitions/79.html CWE 79].
+* http://www.link1.com
+* [http://www.link2.com Title for the link2]
+
+
+
+__NOTOC__

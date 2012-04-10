@@ -1,0 +1,140 @@
+==Status==
+Released 14/1/2008
+
+==Author==
+Pierre Parrend
+
+== An example with OSGi bundles ==
+
+The OSGi platform provides support for the life cycle of bundles, from installation through execution to removal. This implies that the security for OSGi must be considered along the whole life-cycle, and in particular that the deployment is taken into account.
+
+Security implies three main aspects:
+* Integrity,
+* Authentication,
+* and Confidentiality.
+
+The [http://osgi.org/osgi_technology/download_specs.asp?section=2 OSGi specification] propose to enforce the first two properties: Integrity and Authentication, that can not be considered separately. In fact, guaranteeing integrity without authentication means that anybody can provide the data, and authentication without integrity means that anybody can change the data. Confidentiality is not considered, because it implies that security unaware systems are excluded.
+
+We present here the principles of secure deployment, the threats that exist, and the solution proposed by the OSGi specification. The structure of a signed bundle as well as the algorithm for signing and validating a bundle are shown.
+* Threats to the Deployment
+* Structure of a signed bundle
+* Algorithms for bundle signature
+* Conclusion
+* Links
+
+These mechanisms are derived from the [http://java.sun.com/j2se/1.3/docs/guide/jar/jar.html Jar archive specification], and can be applied to any type of data or code archive that is transfered over an unsecure network.
+
+== Threats to the Deployment ==
+
+Major security threats during deployment are of three types. The first type is the presence of malicious bundle publication servers.
+The second type of deployment threats is man-in-the-middle attack. Such an attacker can modify the bundle, or fully substitute the loaded bundle by another one. In both cases the client platform installs then executes some code without being able to do any assumption about the code quality or reliability.
+The third type of threats is the possibility that exists for an attacker to access and modify ( = to tamper) the stored data used by the component platform.
+
+<p align=center>
+[[Image:Component-deployment-pbs_lt.png]]
+</p>
+
+So as to protect the component platform from the first two threats, it is necessary to control that the bundle publishers are trustworthy, and that loaded bundles have not been tampered with during the transfer over an untrusted network, such as the Internet.
+Jar specifications (bundles are specific Jar archives) propose to sign archive so as to guarantee such properties.
+OSGi specifications propose additional restrictions to signing, notably by forbidding uncomplete archive signing, which allows a third party to add resources to an archive without invalidating the signature.
+
+== Structure of a signed bundle ==
+
+Because of the particular constraints on the signature of a bundle, it is necessary to store it and all related resources in the bundle itself. Moreover, it is mandatory that multiple signers can sign the same bundle.
+
+<p align=center>
+[[Image:Bundle-signed-example lt.png]]
+</p>
+
+The Manifest file of the archive (1) contains the hash value of each resource in the archive. To support several signers, the digital signature is applied not directly on the Manifest file, but on a so-called `Signature File' (2), which is specific to each signer. A hash value of the Manifest file must be included. The digital signature of this Signature File is stored along with data that are necessary for its validation in a CMS file of type `signed-data' which is named `Signature Block File' (3).
+
+This structure of a signed bundle will be enlightened by a simple example of the HelloWorld bundle, whose signer is named PIERREP. This bundle contains three classes: HelloWorldActivator (the activator, or starter, of the bundle), HelloWorldInterface (the definition of the HelloWorldInterface service that is provided by the bundle), and HelloWorldImpl (the implementation of the above mentioned service).
+
+The meta-data of the bundle are the following. First, the Manifest file, MANIFEST.MF, which contains meta-data specific to OSGi bundles, as well as the hash value of all resources. Secondly, the Signature File, PIERRE.SF, contains the hash value of the Manifest file. Thirdly, the Signature Block File, PIERRE.DSA, is a CMS file that contains the digital signature of the Signature File, and the public key certificate of the signer. They must be stored in this order (and before all other resources) in the bundle archive.
+
+<table style="font-family: helvetica; font-size: 8pt" 
+border="1" align="center">
+	<tr align="cen	ter">
+		<td><b>Bundle File</b></td>
+		<td><b>Example</b></td>
+		<td><b>Content</b></td>
+	</tr>
+	<tr>
+
+	 <td>
+	   <table border=0 style="font-family: helvetica; font-size: 8pt" >
+		<tr><td>Manifest File</td></tr>
+		<tr><td>Signature File</td></tr>
+		<tr><td>Signature Block</td></tr>
+	   </table>
+	 </td>
+
+	 <td>
+	   <table border=0 style="font-family: helvetica; font-size: 8pt" >
+		<tr><td>MANIFEST.MF</td></tr>
+		<tr><td>PIERREP.SF</td></tr>
+		<tr><td>PIERREP.DSA</td></tr>
+	   </table>
+	 </td>
+
+	 <td>
+	   <table border=0 style="font-family: helvetica; font-size: 8pt" >
+		<tr><td>Hash value for each resource in archive</td></tr>
+		<tr><td>Hash value for the Manifest File</td></tr>
+		<tr><td>Digital Signature of the Signature File</td></tr>
+	   </table>
+	 </td>
+
+	</tr>
+</table>
+
+== Algorithms for bundle signature ==
+
+The process of signing bundle must create bundle meta-data that are compliant with presented specifications.
+Not only the meta-data content must be valid, but several other constraints must also be considered:
+the order of resources in the archive and the exhaustiveness of identified resources.
+
+== Bundle Signature Generation ==
+
+<p align=center>
+[[Image:Signature-algorithm lt.png]]
+</p>
+
+The main steps of bundle signature generation are the following.
+
+* First, the public/private key pair must be available before signing. This is the initialization phase.
+* Next, the manifest file, MANIFEST.MF, is generated. It contains the name of every resource in the bundle along with their hash value.
+* Then, the Signature file is generated. It contains the hash value of the manifest file.
+* The Signature Block File is generated, and contains the digital signature of the Signature File, and the public key certificate of the signer.
+* Lastly, the whole archive is generated, the meta-data are sorted first, and then the other resources.
+
+
+== Bundle Signature Validation ==
+
+<p align=center>
+[[Image:Validation-algorithm lt.png]]
+</p>
+
+* The process of bundle signature validation is symmetric to the signature generation one. First, the entity that checks the signature needs to authenticate the signer, that is to say to check whether it knows its public key certificate or it is capable of establishing a Certificate Path between this public key certificate and a certificate he knows. If the signer can not be authenticated, it is not worth trying to verify the signature, because anybody can build a valid signature.
+* The second step of the validation of bundle signature is the verification of the correct order of the resources in the archive. As already mentioned, the first files must be in this order the Manifest file, the Signature File and the Signature Block File. All other resources come afterwards.
+* The third step is the validation of the coherence of the meta-data files. The Signature Block File must contain a valid digital signature of the Signature File by the signer. The Signature File must contain the correct hash value for the manifest file. The Manifest file must contain the hash value for all resources of the archive, without exception, and without omission.
+* When these three steps are checked and valid, the signature of the bundle is valid. Should any of the criteria not be met, the bundle signature is not valid.
+
+== Conclusion ==
+
+Securing the deployment of components implies to protect the execution platform from malicious component publishers, and from potential modifications of the components after their publication.
+Such protection is achieved in the case of OSGi bundles by the signature of the bundles, which is based on digital signature and enables to store the signature itself and related data inside the bundle itself.
+The protection of bundles is done through two steps.
+First, the bundle is signed by a bundle publisher that is publicly known.
+Secondly, the bundle signature is validated just before being installed, so as to check that the signature is valid and that the bundle has not suffered modifications.
+
+== Links ==
+
+* [http://www.rzo.free.fr/parrend06deployment.php INRIA Technical report: Secure Component Deployment in the OSGi(tm) Release 4 Platform]
+* [http://java.sun.com/j2se/1.3/docs/guide/jar/jar.html Jar Specifications]
+* [http://osgi.org/osgi_technology/download_specs.asp?section=2 OSGi Specifications]
+
+[[Category:OWASP Java Project]]
+[[Category:Countermeasure]]
+[[Category:Deployment]]
+[[Category: Control]]

@@ -1,0 +1,37 @@
+'''Why should I use this tool?'''
+
+x5s was first and foremost designed to find encoding and character transformation issues that can lead to XSS vulnerability, and present them in a visual way where they could be reviewed with a quickness. Many tools exist for testing Web-applications to find cross-site scripting bugs. There are browser plugins, Web-scanners, and static code analyzers. We use whatever suits us in a given situation and produces the output we're interested in receiving. We developed x5s for penetration testers and other security-minded persons who already know how to find and exploit an XSS vulnerability. The tool has a slightly different bent than other tools we've used. 
+
+It's main goals include:
+* Automate finding the encoding issues that can lead to XSS. 
+* Identify where character transformations occur by injecting multibyte characters such as higher Unicode code points and non-shortest form character encodings.
+
+Injecting probes to find encoding issues makes sense for finding XSS hotspots, but why should you be concerned with character transformations? '''Bypassing an XSS filter''' would be a big problem for any application. By detecting where characters transform, x5s can help you identify where your filters might be bypassed when special characters or encodings are used.
+
+It does not inject any XSS payloads in testing. It simply injects canaries - test strings which include a single-character probe. x5s will replay a new request for each user-controlled input parameter an application accepts. In this way each parameter gets tainted and tested independently of the others.
+
+We wanted to automate the tedious testing process of injecting probes into every input parameter of a Web-app, followed by trying to figure out how that probe was later emitted by the Web-app. However, we did not want to rely on a fully automated scan. Instead we wanted some control and insight into each test case. Was it encoded safely or not? Was it transformed into something else? Was it replaced or dropped? In some cases, testing for XSS involves what can be over-simplified as a 3-step process: 
+* Test user-controlled input using special characters like <, >, ', and ". 
+* Review how the output encodes the special characters. 
+* Inject a full XSS payload to validate that a vulnerability exists.
+
+x5s will automate the first two steps of this process. This has been useful in saving time and effort, and in reducing the potential problem areas to a small, manageable set of 'hot-spots'. Once a hot-spot has been identified, the pen-tester can perform the final step of validation.
+
+[http://xss.codeplex.com/documentation#extend Extensibility] was intended as well, so that new request parsers could be included in x5s. So in addition to JSON, and traditional form data, new or custom protocols can be considered and used in testing. The character mappings used in the test case configuration are also extensible, by modifying the XML file that ships with x5s.
+
+'''Quickstart Tutorial'''
+
+We build tools that work for us and when making them available to the public, realize that everyone else can't read our minds when trying to figure them out. This tutorial aims to walk you through a simple use case and get you started.
+
+'''How does it work?'''
+
+The x5s tool will automate testing all of the GET and POST input parameters on the target application, then present the findings in a grid-display for quick visual analysis. The tool goes further by auto-injecting special characters (e.g. higher Unicode, overlong UTF-8) to detect transformations that could lead to XSS. x5s has an extensible design allowing for custom request parsers to be quickly implemented. For example, if the target application uses some custom XHR request format that resembles a hybrid between JSON and RPC, you could implement a parser so all of those inputs would be properly tested.
+
+The x5s tool does not crawl or spider a website. It relies on you browsing and interacting with the site through your favorite Web browser, using Fiddler as a proxy. In this way, all complex Web 2.0 communications are preserved, and x5s will get to see all of the query string parameters, form fields, and JSON parameters as they happen for real. The downside is that you need to be sure to exercise all pages and functionality in your site in order to gain a high level of coverage. Typically this is not a problem for vendors who have automated Web-testing infrastructure already in place. In these cases, just run Fiddler and x5s and your automation in conjunction to gain the coverage you desire.
+
+x5s auto-injects canaries which include single-character probes in attempt to detect how those probes were later encoded or transformed. The probes include but extend beyond traditional ASCII, being sure to test cases where Internationalized software might transform or map special Unicode characters to other ASCII representations:
+* ASCII characters like <, >, ', and " 
+* Unicode characters that may transform (case, normalize, best-fit map) to the above ASCII characters 
+* Non-shortest form UTF-8 encoded versions of the above ASCII characters
+
+x5s provides several benefits by including each of these test cases. For one, it automates significant portions of the traditional XSS testing process. Beyond that, it leverages special Unicode characters and non-shortest form UTF-8 encodings to test string handling in Internationalized software.

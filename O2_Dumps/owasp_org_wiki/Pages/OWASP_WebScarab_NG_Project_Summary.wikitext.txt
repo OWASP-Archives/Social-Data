@@ -1,0 +1,7 @@
+'''Welcome to the WebScarab (Next Generation) Project'''
+[[Image:OWASP_WebScarab_logo.gif |thumb | WebScarab-NG logo]]
+WebScarab-NG is a complete rewrite of the old WebScarab application, with a special focus on making the application more user-friendly. To this end, WebScarab-NG makes use of the [http://spring-rich-c.sourceforge.net/ Spring Rich Client Platform ] to provide the user interface features. By using the Spring Rich Client Platform, WebScarab-NG automatically gains things like default buttons, keyboard shortcuts, support for internationalisation, etc.
+
+Another new feature is that session information is now written into a database, rather than into hundreds or thousands of individual files. This makes disk space utilisation and things like archiving of sessions a lot easier.
+
+Ultimately, WebScarab-NG will have all the significant functionality that the old WebScarab had, although it will be reorganised quite significantly, in order to make the application more user friendly.

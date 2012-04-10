@@ -1,0 +1,14 @@
+{{Top_10_2010:TopTemplate|usenext=NextLink|next=-Broken Authentication and Session Management|useprev=PrevLink|prev=-Cross Site Request Forgery|usemain=MainLink|main=}} 
+
+{{Top_10_2010:SubsectionColoredTemplate|What changed from 2007 to 2010?|
+The threat landscape for Internet applications changes with advances by attackers, new technology, and increasingly complex systems. To keep pace, we update the OWASP Top 10 periodically. In this 2010 release, we made three significant changes:
+#We clarified that the Top 10 is about the Top 10 Risks, not the Top 10 most common weaknesses. See the details on the “Understanding Application Security Risk” page below.
+#We changed our ranking methodology to estimate risk, instead of relying solely on the frequency of the associated weakness. This affects the ordering of the Top 10 somewhat, as you can see in the table below.
+#We replaced two items on the list with two new items:
+:* ADDED: A6 – Security Misconfiguration. This issue was A10 in the Top 10 from 2004: Insecure Configuration Management, but was dropped because it wasn’t thought of as a software issue. However, from an organizational risk and prevalence perspective, it clearly merits re-inclusion in the Top 10, and so now it’s back.
+:* ADDED: A8 – Unvalidated Redirects and Forwards. This issue is making its debut in the Top 10. The evidence shows that this relatively unknown issue is widespread and can cause significant damage.
+:* REMOVED: A3 – Malicious File Execution. This is still a significant problem in many different environments. However, its prevalence in 2007 was inflated by large numbers of PHP applications with this problem. PHP is now shipped with more default security, lowering the prevalence of this problem.
+:* REMOVED: A6 – Information Leakage and Improper Error Handling. This issue is extremely prevalent, but the impact of disclosing stack trace and error message information is typically minimal.}}
+
+{{Top_10_2010:ToDoTemplate|Can we add plus/minus for added/removed.}}
+<br> {{Top_10_2010:BottomTemplate|usenext=NextLink|next=-Broken Authentication and Session Management|useprev=PrevLink|prev=-Cross Site Request Forgery|usemain=MainLink|main=}}

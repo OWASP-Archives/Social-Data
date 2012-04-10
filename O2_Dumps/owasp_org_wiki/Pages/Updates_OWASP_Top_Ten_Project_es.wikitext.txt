@@ -1,0 +1,64 @@
+;¿Que hay de nuevo?
+:OWASP ha recorrido un largo camino desde que la última lista fuer publicada en Enero de 2003.  Esta actualización incorpora todas las discuciones, puntos de vista, opiniones y debates en la comunidad OWASP de los ultimos 12 meses.  En general, ha habido mejoras menores a todas las secciones de la lista y solo algunos cambios mayores:
+
+;Alineación a WAS-XML
+:Uno de los proyectos que inició en 2003 es el comité técnico de seguridad en aplicaciones Web (WAS TC por sus siglas en inglés) en OASIS. El propósito de el WAS TC es producir un esquema de clasificación para vulnerabilidades en aplicaciones Web, un modelo para proveer lineamientos para los ratings de las amenazas, impacto y riesgos. En un equema para describir las condiciones en seguridad Web que pueden ser usadas por herramientas de pruebas y protección. El proyecto de las 10 mayores de OWASP ha usado el WAS TC  como referencia para reclasificar la lista y proveer una solución estandarizada sobre vulnerabilidades de seguridad en aplicaciones Web. El listado de WAS define un lenguaje estandar para discutir la seguridad en aplicaciones web, y nosotros adoptamos ese vocabulario aqui.
+
+;Adición de negación de servicio
+:La única categoria de alto nivel que cambió fue la adición de A9 Negación de Servicio a la lista. Nuestra investigación mostro que un amplio espectro de organizaciones son susceptibles a este tipo de ataque. Basándonos en al probabilidad un ataque de negación de servicio y las consecuencias si el ataque es exitoso, hemos determinado que merece ser incluida en la lista. Para acomodar este nuevo tema, hemos combinado el A9 Fallas de administración remota del año padaso en la categoria A2 Control de acceso disfuncional dado que es un caso especial de esa categoría. Creemos que es apropiado, dado que los tipos de fallas en A2 son regularmente las mismas que en A9 y requieren el mismo tipo de remediación.
+
+La tabla abajo ilustra la relación entre la nueva lista, la lista del año pasado y la lista del WAS TC.
+
+{| width="95%" border="1" cellpadding="4" align="center" bgcolor="eeeeff"
+|- class="mainText2"
+|
+<div align="center">'''Nueva lista de las 10 mayores 2004'''</div>
+|
+<div align="center">'''Lista de las 10 mayores 2003'''</div>
+|
+<div align="center">'''Nueva lista de WAS'''</div>
+|- class="mainText2"
+| A1 Entradas no validadas
+| A1 Parámetros no validados
+| Validación de entradas
+|- class="mainText2"
+| A2 Control de Accesso Disfuncional
+| A2 Control de Accesso Disfuncional<br /> (A9 Fallas de administración remota)
+| Control de Acceso
+|- class="mainText2"
+| A3 Autentificación y manejo de sesiones disfuncional
+| A3 Cuentas y manejo de sesiones disfuncional
+| Antentificación y manejo de sesiones
+|- class="mainText2"
+| A4 Fallas de Secuencias de Comandos en Sitios Cruzados (XSS)
+| A4 Fallas de Secuencias de Comandos en Sitios Cruzados (XSS)
+| Validación de entradas -> Secuencia de Comandos en Sitios Cruzados (XSS)
+|- class="mainText2"
+| A5 Desbordamientos de Memoria
+| A5 Desbordamientos de Memoria
+| Desbordamientos de Memoria
+|- class="mainText2"
+| A6 Fallas de Inyección
+| A6 Fallas de inyección de comandos
+| Validación de Entrada -> Inyección
+|- class="mainText2"
+| A7 Manejo inapropiado de errores
+| A7 Problemas de manejo de errores
+| Manejo de Errores
+|- class="mainText2"
+| A8 Almacenamiento Inseguro
+| A8 Uso inseguro de criptografía
+| Protección de Datos
+|- class="mainText2"
+| A9 Negación de Servicio
+| N/A
+| Disponibilidad
+|- class="mainText2"
+| A10 Gestión Insegura de Configuraciones
+| A10 Fallas de configuraciones en servidores Web y de applicación
+| Gestión de configuración de la aplicación<br /> Gestión de configuración de infraestructura
+|}
+
+[[Category:OWASP Top Ten Project]]
+
+__NOEDITSECTION__

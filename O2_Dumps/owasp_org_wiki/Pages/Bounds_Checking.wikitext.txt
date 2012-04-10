@@ -1,0 +1,91 @@
+{{Template:Stub}}
+
+{{Template:Control}}
+<br>
+[[Category:OWASP ASDR Project]]
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+==Description==
+
+A control (countermeasure or security control) is a protection mechanism that prevents, deters, or detects attacks, or prevents or reduces vulnerabilities.
+
+# Start with a one-sentence description of the control
+# How does the countermeasure work?
+# What are some examples of implementations of the control (steer clear of specific products)
+
+
+==Risk Factors==
+
+* Talk about the [[OWASP Risk Rating Methodology|factors]] that this control affects
+* What effect does this countermeasure have on the attack or vulnerability?
+* Does this control reduce the technical or business impact?
+
+
+==Difficulty to Implement==
+
+* Discuss the typical difficulty of implementing this control, emphasizing the factors that make it easier or harder
+* Steer clear of language/platform specific information here
+
+
+==Examples==
+
+===Short example name===
+: A short example description, small picture, or sample code with [http://www.site.com links]
+
+===Short example name===
+: A short example description, small picture, or sample code with [http://www.site.com links]
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==References==
+
+TBD
+
+[[Category:FIXME|
+
+
+In addition, one should classify control based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Control]]</nowiki>
+
+Availability Control
+
+Authorization Control
+
+Authentication Control
+
+Concurrency Control
+
+Configuration Control
+
+Cryptographic Control
+
+Encoding Control
+
+Error Handling Control
+
+Input Validation Control
+
+Logging and Auditing Control
+
+Session Management Control]]
+
+__NOTOC__
+
+[[Category:Control]]

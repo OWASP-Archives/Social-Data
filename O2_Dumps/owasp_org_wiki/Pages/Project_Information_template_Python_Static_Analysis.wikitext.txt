@@ -1,0 +1,33 @@
+----
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Python Static Analysis Project''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|During 2007 Dmitry Kozlov, Igor Konnov and Georgy Klimov prototyped taint-style static analysis for Python web applications. This tool is based on Pixy project. It is able to find input validation security vulnerabilities in Python-based web applications. This tool is currently in alfa release. It supports limited subset of Python: functions, modules, classes and data structures, but not generators, comprehensions, lambda-functions etc. And it has support only mod_python web applications.  
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Key Project Information'''
+ | style="width:14%; background:#cccccc" align="center"|Project Leader<br>[[User:Gaklimov|'''Georgy Klimov''']]
+ | style="width:16%; background:#cccccc" align="center"|Project Contributors<br>[[:User:Ddk|'''Dmitry Kozlov''']]<br>[mailto:igor.konnov(at)gmail.com '''Igor Konnov'''] 
+ | style="width:10%; background:#cccccc" align="center"|Mailing list<br>[https://lists.owasp.org/mailman/listinfo/owasp-python-static-analysis '''Subscribe here''']<br>[mailto:Owasp-Python-Static-Analysis@lists.owasp.org '''Use here''']
+| style="width:16%; background:#cccccc" align="center"|
+License<br>[http://www.gnu.org/licenses/old-licenses/gpl-2.0.html '''GNU General Public License v2''']
+ | style="width:14%; background:#cccccc" align="center"|
+Project Type<br>[[:Category:OWASP_Project#Alpha Status Projects|'''Tool''']]
+ | style="width:15%; background:#cccccc" align="center"|Sponsor<br>[[OWASP Summer of Code 2008|'''OWASP SoC 08''']]
+ |}
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|
+Provisory '''[[:Category:OWASP Project Assessment#Alpha Quality Tool Criteria|Alpha Quality]]'''<br>[[:Category:OWASP Python Static Analysis Project - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="center"|
+[http://code.google.com/p/owasp-python-static-analysis/ Google code SVN] 
+ | style="width:29%; background:#cccccc" align="center"|
+[[SpoC 007 - Python Tainted Mode|OWASP Python Tainted Mode]]
+ |}
+----

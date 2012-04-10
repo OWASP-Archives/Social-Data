@@ -1,0 +1,68 @@
+== '''DNIe-3: Vulnerabilidades de seguridad en los componentes cliente de las aplicaciones web basadas en el DNIe''' ==
+
+* '''Fecha de inicio''': Febrero 2012
+
+* '''Descripción''': El propósito del tercer subproyecto de OWASP DNIe, ''"Vulnerabilidades de seguridad en los componentes cliente de las aplicaciones web basadas en el DNIe"'' (DNIe-3), es proporcionar información y detalles técnicos de las vulnerabilidades más comunes en los componentes cliente (controles ActiveX y applets Java) de las aplicaciones web que utilizan el DNIe para la autenticación de usuarios, y para los procesos de creación y verificación de firmas.
+
+* '''Objetivo''': El objetivo principal es reflejar las vulnerabilidades más comunes en los componentes cliente de las aplicaciones web que hacen uso del DNIe. El análisis se centra en todo tipo de vulnerabilidades en los componentes cliente (controles ActiveX y applets Java) de las aplicaciones web en dos áreas diferenciadas: vulnerabilidades que afectan a la interacción del componente cliente con la propia aplicación web y su funcionamiento, y vulnerabilidades adicionales del componente cliente que reducen la seguridad del sistema del usuario dónde han sido instalados. Esta información permitirá a la comunidad española de seguridad y desarrollo de aplicaciones web conocer las vulnerabilidades y errores de seguridad presentes actualmente en componentes cliente disponibles en entornos reales, y así poder evitarlas mediante la aplicación de las recomendaciones y mejores prácticas asociadas (qué serán detalladas en una actividad futura).
+
+''NOTA'': Los resultados de estas vulnerabilidades han sido obtenidos tras la realización de diferentes actividades de investigación sobre los componentes cliente de aplicaciones web españolas que hacen uso del DNIe, tanto en el sector público (Administraciones Públicas o AAPP) como en el sector privado (financiero, seguros, infraestructuras, telecomunicaciones, etc).
+
+* '''Alcance''': Esta actividad se centra en evaluar todo tipo de vulnerabilidades asociadas a los componentes clientes de las aplicaciones web que hacen uso del DNIe. Los componentes comúnmente utilizados, applets Java y controles ActiveX, pueden disponer tanto de capacidades de '''autentificación''' del usuario mediante el DNIe u otros certificados, como de '''creación y verificación de firma electrónica'''. Todos ellos se incluyen en esta actividad y serán objeto de análisis, independientemente de su funcionalidad.
+
+* '''Resultados''': En primer lugar es necesario identificar la lista de componentes cliente utilizados habitualmente en las aplicaciones web que hacen uso del DNIe, tanto comerciales como gratuitos o de código abierto. La información de las vulnerabilidades de seguridad más comunes en aplicaciones web basadas en el DNIe serán publicadas en la página web del proyecto OWASP DNIe en forma de presentaciones, guías o documentos que ayuden a entender las debilidades y riesgos de seguridad de estas aplicaciones web. Adicionalmente, el proyecto facilitará a los investigadores de seguridad la publicación responsable de vulnerabilidades (''responsible full disclosure'') específicas existentes en componentes desarrollados por terceros.
+
+* '''Participación''': El proyecto OWASP DNIe invita a la comunidad de seguridad y desarrollo de aplicaciones web que hacen uso del DNIe a participar en esta actividad, compartiendo sus conocimientos, vulnerabilidades identificadas, herramientas de auditoría, mejores prácticas para incrementar la seguridad de estas aplicaciones, etc, a través de la [https://lists.owasp.org/mailman/listinfo/owasp-spain lista de correo electrónico del capítulo español de OWASP], o contactando directamente con José A. Guasch (jaguasch -AT- gmail.com).
+
+== '''RESULTADOS DNIe-3''': Vulnerabilidades de seguridad en los componentes cliente de las aplicaciones web basadas en el DNIe  ==
+
+''Próximamente...''
+
+La seguridad de las aplicaciones web basadas en el DNIe será analizada durante la conferencia [https://www.rootedcon.es Rooted CON 2012] que se celebrará  en Madrid del 1-3 de marzo de 2012, y en concreto en la ponencia [http://www.rootedcon.es/index.php/ponencias/ "Seguridad de aplicaciones web basadas en el DNIe"] impartida por Raúl Siles y José A. Guasch.
+
+=== Listado de componentes cliente que hacen uso del DNIe  ===
+
+El listado que aparece a continuación se ha obtenido recopilando información de diversas fuentes, entre las que destacan:
+
+* [https://zonatic.usatudni.es/es/aplicaciones/catalogo-de-aplicaciones.html Catálogo de aplicaciones que utilizan DNI-e en zonatic]
+* [http://cert.inteco.es/solutionSearcher/Catalogo_STIC/Catalogo/Busqueda_de_Soluciones/?postAction=solutionSearchList&idSolutionCategory=1&solutionType=P Soluciones de Autenticación y certificación digital en Inteco]
+
+{| class="wikitable" border="1"
+|+ Componentes cliente para la realización de operaciones con DNI-e y certificados digitales (A-Z)
+! Componente/Plataforma !! Fabricante
+|-
+| '''@firma''' || [http://www.mpt.es Ministerio de Política Territorial y Administración Pública]
+|-
+| '''Componente de la AEAT''' || [http://www.agenciatributaria.es Agencia Estatal de Administración Tributaria (AEAT)]
+|-
+| '''CryptoSign''' || [http://www.realsec.com/ Realsec]
+|-
+| '''eSigna WebSite''' || [http://www.indenova.com/ inDenova]
+|-
+| '''id@zki''' || [http://www.izenpe.com/ IZENPE]
+|-
+| '''OpenSignX (TrustedX)''' || [http://www.safelayer.com/es Safelayer Secure Communications, S.A.]
+|-
+| '''SIAVal (eAS/Trusted Signature Platform)''' || [http://www.sia.es/ Sistemas Informáticos Abiertos]
+|-
+| '''smartAPPLET''' || [http://www.bit4id.com/es/ bit4id Ibérica S.L.]
+|-
+| '''viafirma''' || [http://www.viafirma.com/ Viafirma S.L.]
+|-
+| '''WebSigner (ASF-Firma)''' || [http://www.tb-solutions.com/ TB-Solutions Advanced Technologies, S.L.]
+|-
+|}
+
+
+=== Vulnerabilidades comunes en componentes cliente que hacen uso del DNIe ===
+
+''...Próximamente...''
+
+=== Vulnerabilidades específicas de componentes cliente que hacen uso del DNIe (''boletines de seguridad'') ===
+
+''...Próximamente...''
+
+
+== OWASP DNIe  ==
+
+Esta actividad o subproyecto (DNIe-3) forma parte del proyecto [https://www.owasp.org/index.php/Spain/Projects/DNIe OWASP DNIe].

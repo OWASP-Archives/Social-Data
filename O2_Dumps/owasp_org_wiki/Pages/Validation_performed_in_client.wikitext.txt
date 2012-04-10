@@ -1,0 +1,78 @@
+{{Template:Stub}}
+{{Template:Vulnerability}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+Performing validation in client side code, generally JavaScript, provides no protection for server-side code.  An attacker can simply disable JavaScript, use telnet, or use a security testing proxy such as [[:Category:OWASP WebScarab Project|WebScarab]] to bypass the client side validation.
+
+'''Consequences'''
+* Unvalidated input corrupts business logic (XSS, injection, etc...)
+
+'''Exposure period'''
+* Design phase
+
+'''Platform'''
+* Languages: any
+* Operating platforms: any
+
+'''Required resources'''
+* None
+
+'''Severity'''
+Very high -- allows malicious input to be used in business logic.
+
+'''Likelihood of exploit'''
+Very likely
+
+Client-side validation is widely used, but is not security relevant. The only advantage of client-side validation, from a security perspective, is that intrusion detection may be more effective. Because only pre-validated input should arrive at an application (assuming JavaScript is enabled), it can be assumed that any bad input represents an attack.  The application can respond much more harshly if it knows that it is under attack. Some responses might be session invalidation, logging, or notification to an administrator.
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+TBD
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+Validation must be performed in the business layer.
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Input Validation Vulnerability]]
+[[Category:Range and Type Error Vulnerability]]
+[[Category:Vulnerability]]

@@ -1,0 +1,117 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+Running sizeof() on a malloced pointer type will always return the wordsize/8. 
+
+'''Consequences'''
+
+Authorization: This error can often cause one to allocate a buffer much smaller than what is needed and therefore other problems like a buffer overflow can be caused.
+
+'''Exposure period'''
+
+Implementation: This is entirely an implementation flaw.
+
+'''Platform'''
+
+* Languages: C or C++
+* Operating platforms: Any
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood of exploit'''
+
+High
+
+One can in fact use the sizeof() of a pointer as useful information. An obvious case is to find out the wordsize on a platform. More often than not, the appearance of sizeof(pointer)    
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+In C/C++:
+
+<pre>
+#include <stdiob.h>
+
+int main(){
+  void *foo;
+  printf("%d\n",sizeof(foo)); //this will return wordsize/4
+  return 0;
+}
+</pre>
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+
+==Related [[Controls]]==
+
+* Implementation: Unless one is trying to leverage running sizeof() on a pointer type to gain some platform independence or if one is mallocing a variable on the stack, this should not be done.
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:General Logic Error Vulnerability]]
+[[Category:OWASP_CLASP_Project]]
+[[Category:Implementation]]

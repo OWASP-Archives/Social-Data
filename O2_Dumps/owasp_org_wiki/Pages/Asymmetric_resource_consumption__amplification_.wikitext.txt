@@ -1,0 +1,74 @@
+{{Template:Attack}}
+<br>
+[[Category:OWASP ASDR Project]]
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+==Description==
+
+An attacker can force a victim to consume more resources than should be allowed for the attacker's level of access. The program can
+potentially fail to release or incorrectly release a system resource.
+A resource is not properly cleared and made available for re-use.
+
+==Risk Factors==
+TBD
+
+==Examples ==
+
+===Example 1===
+The following method never closes the file handle it opens. The Finalize() method for StreamReader eventually calls Close(), but there
+is no guarantee how long it is going to take before the Finalize() method is invoked. In fact, there is no guarantee that Finalize() will ever be invoked. In a busy environment, this can result in the VM using up all of its available file handles.
+<pre>
+private void processFile(string fName) {
+ StreamWriter sw = new
+ StreamWriter(fName);
+ string line;
+ while ((line = sr.ReadLine()) != null) processLine(line);
+}
+</pre>
+After using up all handles (file descriptors) the VM may become very unstable, slow, and  may stop working
+deterministically comparing to its previous state.
+
+===Example 2===
+Under normal conditions, the following C# code executes a database query, processes the results returned by the database, and closes the allocated SqlConnection object. But if an exception occurs while executing the SQL or processing the results, the SqlConnection object is not closed. If this happens often enough, the database runs out of available cursors and is not able to execute any more SQL queries.
+
+C# Example:
+<pre>
+...
+SqlConnection conn = new SqlConnection(connString);
+SqlCommand cmd = new SqlCommand(queryString);
+cmd.Connection = conn; conn.Open();
+SqlDataReader rdr = cmd.ExecuteReader();
+HarvestResults(rdr);
+conn.Connection.Close();
+...
+</pre>
+The number of concurent connections to the databases is often lower than maximum number of possible handles for the system to use.
+It makes easier to locate application bottlenecks and use them to stop the application or make it unstable.
+
+===Example 3===
+If application which can handle N concurent connections doesn't implement an appropriate mechanism to disconnect clients e.g. TIMEOUTs,
+then it's very easy to disable it by establishing close to N connections. Additionally, the connections should simulate work with the
+application using its protocol untill exhaustion of the available resources.
+
+==Related [[Threat Agents]]==
+* TBD
+
+==Related [[Attacks]]==
+* [[Account lockout attack]]
+* [[Denial of Service]]
+
+==Related [[Vulnerabilities]]==
+TBD
+
+==Related [[Controls]]==
+* [[Memory Management]]
+* [[Resource Locking]]
+
+==References==
+* http://cwe.mitre.org/data/definitions/404.html
+
+
+[[Category:Resource_Depletion]]
+[[Category:Attack]]

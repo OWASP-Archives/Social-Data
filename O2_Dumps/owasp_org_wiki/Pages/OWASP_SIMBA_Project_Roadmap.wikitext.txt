@@ -1,0 +1,11 @@
+*The first release of SIMBA, on December 1st 2011, will contain a set of authentication and authorization checks, session management and a flex manager for administration. In the second and third release the focus will be on WS security support, like SAML, REST and further WS-security standards.  These features are needed to use SIMBA effective in SOA and Cloud application.  Also integration with ESAPI will be on the priority list.   Biometrics support and identity card authentication checks will be integrated. 
+As already mentioned in the project overview, hopefully proactive work can be done to secure future vulnerabilities better.
+*SIMBA will be developed and improved in an agile way.  By using sprints the community will try to release a new version in timeframes of 3 to 6 months.  
+*What may be the most important is not the set of features but the ideas behind SIMBA, the reason it was born.
+**A secure UAM tool that is simple and lightweight
+**No configuration nightmare
+**You determine your own security model; we deliver possible building blocks and information about when and how to use them.
+**Every developer should be capable of setting up and configuring SIMBA, you don't need to be a security expert to use SIMBA
+**Clear audit logging and archiving
+**Easy management of user data
+**An UAM tool should be affordable

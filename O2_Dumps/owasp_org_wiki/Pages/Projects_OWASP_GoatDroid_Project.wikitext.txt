@@ -1,0 +1,48 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Project About</noinclude>
+| project_name = OWASP GoatDroid Project
+| project_home_page = OWASP_Mobile_Security_Project
+| project_description = 
+*The OWASP GoatDroid Project pays homage to the OWASP WebGoat Project. It is a fully functional and self-contained environment for learning more about vulnerabilities and security issues for the Android platform.
+*The initial release is of alpha-level maturity and contains a fully functional functional RESTful web service and an Android application to get started. Future releases will add new applications and services, and will expand upon the current codebase to provide new and increasingly difficult to discover security flaws.
+*The entire application and framework is Java based. There is no need to install an external web server or container. Each web service runs on embedded Jetty instances and uses the Jersey implementation of JAX-RS.
+*In the first release, solutions will not be provided. You are encouraged to figure out where the holes are and determine the best way to mitigate them. The next release will include the solutions for version 1.
+*You can download the project via Google Code: http://code.google.com/p/owasp-goatdroid/
+ 
+| project_license =
+
+| leader_name1 = Jack Mannino 
+| leader_email1 = Jack@nvisiumsecurity.com
+| leader_username1 = Jack Mannino
+
+| leader_name[2-10] = 
+| leader_email[2-10] = 
+| leader_username[2-10] = 
+
+| contributor_name1 = Gunnar Peterson
+| contributor_email1 = 
+| contributor_username1 = 
+
+| contributor_name2 = John Steven
+| contributor_email2 =  john.steven@owasp.org
+| contributor_username2 = John Steven
+
+| pamphlet_link = 
+
+| presentation_link =
+
+| mailing_list_name = https://lists.owasp.org/mailman/listinfo/owasp-mobile-security-project
+
+| project_road_map = https://www.owasp.org/index.php/Projects/OWASP_GoatDroid_Project/Roadmap
+
+| links_url[1-10] = 
+
+| links_name[1-10] = 
+
+| release_1 = 
+| release_2 = 
+| release_3 =
+| release_4 =
+
+<!--- The line below is for GPC usage only. Please do not edit it --->
+| project_about_page = Projects/OWASP GoatDroid Project
+}}

@@ -1,0 +1,31 @@
+{{Template: <includeonly>{{{1}}}</includeonly><noinclude>Release About</noinclude>
+| project_name = OWASP Zed Attack Proxy Project
+| project_home_page = OWASP Zed Attack Proxy Project
+| release_name = ZAP 1.3.4
+| release_date = 05/11/2011
+
+| release_description = 
+
+'''This release is a bugfix and usability release. Compared to older releases, the 1.3.x branch includes the following significant changes:'''
+
+* Fuzzing: Strings in a response can now be fuzzed to try to find vulnerabilities. Anti CRSF tokens can be detected and automatically regenerated when fuzzing. This functionality is based on code from the OWASP JBroFuzz project.
+* Dynamic SSL certificates: The support for SSL connections was improved and simplified. User's can now create their own root certificate and distribute this into their HTTP clients.
+* Daemon mode: Starting ZAP with the "-daemon" command line option will cause it to run in the background in 'headless' mode, meaning that no UI is displayed.
+* API: An initial API has been implemented in XML, JSON and HTML.
+* Beanshell integration: The BeanShell is an interactive Java shell that can be used to execute BeanShell scripts. BeanShell integration in OWASP ZAP enables you to write scripts using the ZAP functions and data set.
+* Full internationalisation: All displayed strings are now fully internationalised.
+* Localisation: Out of the box support for the following languages: English, Brazilian Portuguese, Chinese, French, German, Greek, Indonesian, Japanese, Polish, Spanish
+
+| release_license = [http://www.apache.org/licenses/LICENSE-2.0 Apache License 2.0]
+| release_download_link = http://code.google.com/p/zaproxy/downloads/list
+
+| leader_name1 = Psiinon
+| leader_email1 = psiinon@gmail.com
+| leader_username1 = Psiinon
+
+| leader_name2 = Axel Neumann
+| leader_email2 = a.c.neumann@gmail.com
+| leader_username2 = Axel Neumann
+
+| release_notes = http://code.google.com/p/zaproxy/wiki/HelpReleases1_3_4
+}}

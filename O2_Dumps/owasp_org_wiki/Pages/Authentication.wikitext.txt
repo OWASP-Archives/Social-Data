@@ -1,0 +1,52 @@
+{{Template:Control}}
+{{Template:Stub}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+==Description==
+[[Category:FIXME|this is from the Account Lockout Attack article, delete if not needed.
+
+Build an authentication mechanism, which will block account after N tries for a given IP address, from which log in attempt was conducted.
+
+To minimize the possibility of blocking an owner's account we may take under consideration other characteristics like User-Agent or X_FORWARDED_FOR (if it's present).
+
+Moreover, after N login attempts, but before blocking the account, we may include additional verification by comparing data entered by
+the user and data displayed to him/her on the picture (CAPTCHA).
+
+Such approach should slow down, limit log in attempts only to the valid user or even prevent conducting unwanted attempts generally.]]
+
+==Risk Factors==
+* 
+
+==Difficulty to Implement==
+
+* 
+
+==Examples==
+
+===Short example name===
+: 
+
+===Short example name===
+: 
+
+==Related [[Attacks]]==
+
+* 
+
+==Related [[Vulnerabilities]]==
+
+* 
+
+==Related [[Controls]]==
+
+* 
+
+==References==
+
+* [[Guide to Authentication]]
+
+__NOTOC__
+
+[[Category:Control]]
+[[Category:Authentication Control]]

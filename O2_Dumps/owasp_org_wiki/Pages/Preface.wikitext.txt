@@ -1,0 +1,8 @@
+{{Delete}}
+
+While manual code reviews can find security flaws in code, they suffer from two problems.  Manual code reviews are slow, covering 100-200 lines per hour on average.<br>  
+Also, there are hundreds of security flaws to look for in code, while humans can only keep about seven items in memory at once.  Source code analysis tools can search a program for hundreds of different security flaws at once at a rate far greater than any human can review code.<br>However, these tools don't eliminate the need for a human reviewer, as they produce both false positive and false negative results.
+
+
+
+[[Category:OWASP Code Review Project]]

@@ -1,0 +1,86 @@
+{{Template:SecureSoftware}}
+{{Template:Vulnerability}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+Performing a key exchange without verifying the identity of the entity being communicated with will preserve the integrity of the information sent between the two entities; this will not, however, guarantee the identity of end entity.
+
+'''Consequences'''
+
+* Authentication: No authentication takes place in this process, bypassing an assumed protection of encryption
+* Confidentiality: The encrypted communication between a user and a trusted host may be subject to a "man-in-the-middle" sniffing attack
+
+'''Exposure period'''
+
+* Design: Proper authentication should be included in the system design.
+* Design: Use a language which provides an interface to safely handle this exchange.
+* Implementation: If use of SSL (or similar) is simply mandated by design and requirements, it is the implementor's job to properly use the API and all its protections.
+
+'''Platform'''
+
+* Languages: Any language which does not provide a framework for key exchange.
+* Operating platforms: All
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood of exploit'''
+
+High
+
+Key exchange without entity authentication may lead to a set of attacks known as "man-in-the-middle" attacks. These attacks take place through the impersonation of a trusted server by a malicious server. If the user skips or ignores the failure of authentication, the server may request authentication information from the user and then use this information with the true server to either sniff the legitimate traffic between the user and host or simply to log in manually with the user's credentials.
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+Many systems have used Diffie-Hellman key exchange without authenticating the entities exchanging keys, leading to man-in-the-middle attacks. Many people using SSL/TLS skip the authentication (often unknowingly).
+
+==Related [[Attacks]]==
+
+* [[Man-in-the-middle attack]]
+
+==Related [[Vulnerabilities]]==
+
+* [[Failure to follow chain of trust in certificate validation]]
+* [[Failure to validate host-specific certificate data]]
+* [[Failure to validate certificate expiration]]
+* [[Failure to check for certificate revocation]]
+
+==Related [[Controls]]==
+
+* Design: Ensure that proper authentication is included in the system design.
+* Implementation: Understand and properly implement all checks necessary to ensure the identity of entities involved in encrypted communications. 
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD
+
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Protocol Errors]]
+[[Category:OWASP_CLASP_Project]]
+[[Category:Cryptographic Vulnerability]]
+[[Category:Vulnerability]]

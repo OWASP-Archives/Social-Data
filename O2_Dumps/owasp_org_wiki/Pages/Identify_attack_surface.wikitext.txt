@@ -1,0 +1,43 @@
+{{Template:SecureSoftware}}
+
+==Overview==
+
+Purpose:	
+
+* Specify all entry points to a program in a structured way to facilitate analysis.
+
+Role:
+
+* Designer
+
+Frequency:
+
+* As needed; usually once after design, and ongoing during elaboration.
+
+The attack surface can be defined explicitly in requirements, but is generally defined in the threat model document.
+
+==Identify system entry points ==
+
+The system attack surface is the collection of possible entry points for an attacker. Generally, when performing a network-level design, one will already have defined the components with which an attacker can interact, giving the highest-level notion of entry points.
+
+In this task, define the specific mechanisms through which anyone could interact with the application regardless of their role in the system. For example, document all network ports opened, all places where the file system is touched, any local UI elements, any inter-procedural communication points, and any public methods that can be called externally while the program is running.
+
+For each entry point, provide an unambiguous description and a unique identifier. Generally, this information - as well as the supporting information collected below - can be stored in a table-based format much like a requirements matrix.
+
+Program entry points should be documented as they are identified. Often, as a project transitions from specification to elaboration, entry points become more granular. This increased granularity should be handled by defining attack surfaces hierarchically. For example, data communication over a network port will have a corresponding handler in the code where input from the network socket is read and will sometimes have multiple handlers. Such handlers should be identified as input points that are parented under the specific network socket. 
+
+Another example is a web application. There may be one or more ports that are entry points, and there may be multiple web pages on the port that are entry points. Also, each web page may have one or more forms that are entry points.
+
+==Map roles to entry points ==
+
+For each point in the attack surface, identify all roles that could possibly access the entry point. This should map to trust boundaries previously defined - i.e., all entry points in the same trust boundary should have the same set of roles attached. Otherwise, ensure that there really is a control enforcing access control to the resource and update trust boundaries appropriately. 
+
+==Map resources to entry points ==
+
+For each entry point, document the resources that should be accessible from that entry point - and capabilities that should be accessible if the system is specified to this level. This will facilitate building data flow diagrams, if part of your process. It will also facilitate security analysis - as will data flow diagrams, if available.
+
+
+[[Category:Activity]]
+[[Category:CLASP Activity]]
+[[Category:BP3 Capture security requirements]]
+[[Category:OWASP_CLASP_Project]]

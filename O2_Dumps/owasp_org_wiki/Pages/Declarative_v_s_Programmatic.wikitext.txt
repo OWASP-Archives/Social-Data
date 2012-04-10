@@ -1,0 +1,15 @@
+You can restrict access to servlets and other resources in a Web Application by using security constraints. Security constraints are defined in the Web Application deployment descriptor (web.xml). There are three basic types of security constraints:
+
+    * Constraining resources by roles and/or resource
+    * Secure Sockets Layer (SSL) encryption
+    * Programmatic authorization
+
+Roles can be mapped to a principal. Specific resources can be constrained by matching a URL pattern to a resource in a Web Application. You can also use Secure Sockets Layer (SSL) as a security constraint.
+
+You can perform authorization programmatically, using one of the following methods of the HttpServletRequest interface:
+
+    * getRemoteUser()
+    * isUserInRole()
+    * getUserPrincipal()
+
+For more information see the javax.servlet API.

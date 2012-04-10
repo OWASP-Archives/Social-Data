@@ -1,0 +1,121 @@
+{{Template:SecureSoftware}}
+{{Template:Vulnerability}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+Non-final public fields should be avoided, if possible, as the code is easily tamperable.
+
+'''Consequences'''
+
+* Integrity: The object could potentially be tampered with.
+* Confidentiality: The object could potentially allow the object to be read.
+
+'''Exposure period'''
+
+* Implementation: This flaw is a simple logic issue, introduced entirely at implementation time.
+
+'''Platform'''
+
+* Languages: Java, C++
+* Operating platforms: Any
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Medium
+
+'''Likelihood of exploit'''
+
+High
+
+
+If a field is non-final and public, it can be changed once their value is set by any function which has access to the class which contains the field.
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+In C++:
+
+<pre>
+public int password r = 45;
+</pre>
+
+In Java:
+
+<pre>
+public String r = new String("My Password");
+</pre>
+
+Now this field is readable from any function and can be changed by any function.
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* Implementation: Make any non-final field private.
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:General Logic Error Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

@@ -1,0 +1,16 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>OWASP Training Managers Applicants</noinclude>
+|-
+| Applicant_Name = Applicant 3 <!--Please replace 'Applicant 3' by your name (REQUIRED field)-->
+| Applicant_Email = <!--Please replace all this text by your email address (REQUIRED field)-->
+| Applicant_Wiki_Username = <!--Please replace this text by your wiki username (REQUIRED field)-->
+| Curriculum_Vitae_url = <!--Please replace all this text by your CV's web link  (REQUIRED field)-->
+
+| Application_Letter_url = <!--Please replace all this text by your Application Letter's web link  (OPTIONAL field - choose between this field and the following one)-->
+
+| Application_Letter_text = <!--Please replace all this text with a Application Letter (OPTIONAL field - choose between this field and the previous one)-->
+
+<!--##### Please DON'T or replace/edit these variables ##### --> 
+| applicant_name_mask = Application_3 
+| applicant_home_page = OWASP_Request_for_Proposals/Training_Manager/Application_3
+| application_home_page = OWASP_Request_for_Proposals/Training_Manager
+}}

@@ -1,0 +1,39 @@
+----
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT INFORMATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Web Application Scanner Specification Project'''
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|
+There will always be a "gap" between the types of attacks that can be performed and those which can be found by an automated scanner. This project will attempt to outline some of those shortcomings and offer a plan for comparing and/or building web application vulnerability scanners. The project will also include feature suggestions beneficial to advanced users.
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|
+'''Key Project Information'''
+ | style="width:14%; background:#cccccc" align="center"|
+Project Leader<br>[mailto:coreylebleu@gmail.com '''Corey LeBleu''']
+ | style="width:15%; background:#cccccc" align="center"|
+Project Contibutors<br>(if any)
+ | style="width:10%; background:#cccccc" align="center"|
+Mailing List<br>[https://lists.owasp.org/mailman/admin/owasp-web-app-scanner-specification-project '''Subscribe here''']<br>[mailto:owasp-web-app-scanner-specification-project@lists.owasp.org '''Use here''']
+ | style="width:17%; background:#cccccc" align="center"|
+License<br>[http://creativecommons.org/licenses/by-sa/3.0/ '''Creative Commons Attribution Share Alike 3.0''']
+ | style="width:14%; background:#cccccc" align="center"|
+Project Type<br>[[:Category:OWASP_Project#Alpha_Status_Projects|'''Document''']]
+ | style="width:15%; background:#cccccc" align="center"|
+Sponsors<br>if any, add link
+ |}
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|
+'''[[:Category:OWASP Project Assessment#Alpha Quality Documentation Criteria|Apha Quality]]'''<br>[[:OWASP Web Application Scanner Specification Project - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="center"|
+* add link(s)
+ | style="width:29%; background:#cccccc" align="center"|
+*  if any, add link(s)
+ |}
+----

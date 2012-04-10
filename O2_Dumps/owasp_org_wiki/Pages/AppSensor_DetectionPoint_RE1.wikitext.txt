@@ -1,0 +1,10 @@
+Here is some sample code that can be used to detect RE1. 
+
+<pre>
+
+//the execution of this line will create an exception if an attack is found - ie. something like TRACE is the request method (valid, but not for this app)
+boolean isValid = AttackDetectorUtils.verifyValidRequestMethod(myServletRequest, AttackDetectorUtils.POST); 
+if (! isValid) {
+    notify user ...&nbsp;???
+}
+</pre>

@@ -1,0 +1,60 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Project About</noinclude>
+
+| project_name = OWASP Secure Web Application Framework Manifesto
+
+| project_home_page = OWASP Secure Web Application Framework Manifesto
+
+| project_description =
+The Secure Web Application Framework Manifesto is a document detailing a specific set of security requirements for developers of web application frameworks to adhere to. The goal is to help develop more secure applications from the start. The manifesto centers around the following beliefs:
+* Frameworks that are ‘secure by default’ will yield a dramatic reduction in the number of common web application security vulnerabilities.
+* Application security experts should provide, on a regularly basis, updated guidance to framework developers on how to incorporate mechanisms to avoid newly discovered vulnerabilities.
+
+| project_license = [http://creativecommons.org/licenses/by-sa/3.0/ Creative Commons Attribution ShareAlike 3.0 license]
+
+| leader_name1 = Rohit Sethi 
+| leader_email1 = rohit.sethi@owasp.org
+| leader_username1 = rksethi 
+
+| leader_name2 = Yuk Fai Chan 
+| leader_email2 = yuk.fai.chan@owasp.org
+| leader_username2 = Yuk Fai Chan
+
+| contributor_name1 = Tom Aratyn 
+| contributor_email1 = tom.aratyn@owasp.org 
+| contributor_username1 = 
+
+| contributor_name2 = Sahba Kazerooni 
+| contributor_email2 = sahba.kazerooni@owasp.org  
+| contributor_username2 = Skazerooni
+
+| contributor_name3 = Patrick Szeto 
+| contributor_email3 = patrick.szeto@owasp.org  
+| contributor_username3 =
+
+| pamphlet_link = 
+
+| presentation_link =  
+
+| mailing_list_name = https://lists.owasp.org/mailman/listinfo/owasp-swaf-manifesto
+
+| project_road_map = http://www.owasp.org/index.php/OWASP_Secure_Web_Application_Framework_Manifesto/Roadmap
+
+| links_url1 = http://labs.securitycompass.com/ 
+
+| links_name1 = SECCOM LABS 
+
+| links_url2 = http://www.owasp.org/index.php/Projects/OWASP_Secure_Web_Application_Framework_Manifesto/Releases/Current/Manifesto
+| links_name2 = OWASP Secure Web Application Framework Manifesto (Wiki Format)
+
+| release_1 = SWAF Manifesto v0.08
+
+| release_2 = 
+
+| release_3 =
+
+| release_4 =
+
+<!--- The line below is for GPC usage only. Please do not edit it --->
+| project_about_page = Projects/OWASP Secure Web Application Framework Manifesto
+
+}}

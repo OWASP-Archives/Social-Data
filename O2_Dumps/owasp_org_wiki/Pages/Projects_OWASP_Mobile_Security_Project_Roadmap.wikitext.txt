@@ -1,0 +1,61 @@
+__NOTOC__ 
+
+== Overview  ==
+
+The OWASP Mobile Security Project is a centralized resource intended to give developers and security teams the resources they need to build and maintain secure mobile applications. Through the project, our goal is to classify mobile security risks and provide developmental controls to reduce their impact or likelihood of exploitation. 
+
+Our primary focus is at the application layer. While we take into consideration the underlying mobile platform and carrier inherent risks when threat modeling and building controls, we are targeting the areas that the average developer can make a difference. Additionally, we focus not only on the mobile applications deployed to end user devices, but also on the broader server-side infrastructure which the mobile apps communicate with. We focus heavily on the integration between the mobile application, remote authentication services, and cloud platform-specific features. 
+
+== Project Components  ==
+
+<u>'''In Progress'''</u> 
+
+'''''Threat Model''''' 
+
+*Platform-agnostic mobile threat model 
+*Platform-/technology specific elements 
+*Threats (e.g. App-store Curators or Carriers) 
+*Attack Surface (e.g. Android IPC or Apple iCloud) 
+*Define and trace ''who'' attacks ''what'', ''where'' and ''how''<br>
+
+'''''Top 10 Mobile Risks''''' 
+
+*Intended to raise awareness and help prioritize security efforts 
+*Presented in a platform-agnostic format 
+*Focuses on areas of risk instead of specific vulnerabilities
+
+'''''Top 10 Mobile Controls''''' 
+
+*10 controls that solve many problems 
+*Platform-agnostic where possible 
+*Can be used as a checklist
+
+'''''Platform-Specific Guidance''''' 
+
+*Build around the Top 10 Risks and Controls 
+*Explains how an issue pertains to a specific platform 
+*Provides good and bad code examples
+
+'''''Training''''' 
+
+*GoatDroid- A fully self-contained training environment for performing security testing against Android applications. &nbsp;Includes several Android apps, embedded RESTful web services, databases, and a GUI featuring several tools for automating common testing tasks. 
+*iGoat- A modular training platform for iOS applications. &nbsp;iGoat includes an XCode project that can be loaded into the iOS simulator for live testing of apps. &nbsp;Developers can apply code fixes and instantly observe the results to demonstrate their effectiveness.
+
+'''''Cheat Sheets''''' 
+
+*Easy to consume, straight-to-the-point tutorials 
+*Practical guidance for a variety of issues and mobile platforms
+
+'''''Security Testing Methodologies''''' 
+
+*Approaches for static and dynamic security analysis 
+*Covers what to look for and how to look for it
+
+<br> 
+
+<u>'''Future Initiatives'''</u> 
+
+*Formal Secure Development Guide 
+*Secure Libraries (ESAPI for Android, ESAPI for iOS, etc.)
+
+<br>

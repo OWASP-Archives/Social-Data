@@ -1,0 +1,38 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Project About</noinclude>
+| project_name = OWASP Exams Project
+| project_home_page = OWASP Exams Project
+
+| project_description =
+The OWASP Exams project will establish the model by which the OWASP community can create and distribute CC-licensed exams for use by educators. The purpose of the exams is to improve the effectiveness of OWASP training through the use of exams as a means of measurement and student progress tracking. The project will include creation of a set of CC-licensed exams, a model for exam usage, and a roadmap for future exam creation. 
+
+The exams may be distributed either in text format as well as in Moodle (an open source LMS) format so that they can be re-purposed for use in any system or an educator can use them directly in Moodle to administer exams to students. Ideally the exams will be tied to OWASP Academies learning blocks so that there is good learning and training content that can be used to motivate the usage of the exams.
+
+| project_license = [http://creativecommons.org/licenses/by-sa/3.0/ CC Share Alike 3.0] for documentantion & [http://www.gnu.org/licenses/gpl-3.0.html GPL v3] for code
+
+| leader_name1 = Jason Taylor 
+| leader_email1 = jason.taylor@owasp.org
+| leader_username1 = Jason Taylor
+
+| contributor_name[1-10] = 
+| contributor_email[1-10] = 
+| contributor_username[1-10] = 
+
+| pamphlet_link = 
+
+| presentation_link =
+
+| mailing_list_name = https://lists.owasp.org/mailman/listinfo/owasp-exams
+
+| project_road_map = http://www.owasp.org/index.php/Projects/OWASP_Exams_Project/Roadmap
+
+| links_url1 = http://www.owaspa.org/moodle/ 
+| links_name1 = OWASP Academies Moodle server
+
+| release_1 = 
+| release_2 = 
+| release_3 =
+| release_4 =
+<!--- The line below is for GPC usage only. Please do not edit it --->
+| project_about_page = Projects/OWASP Exams Project
+
+}}

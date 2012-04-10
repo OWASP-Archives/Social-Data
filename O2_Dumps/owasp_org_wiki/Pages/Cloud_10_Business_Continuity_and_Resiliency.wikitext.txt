@@ -1,0 +1,47 @@
+Business Continuity is the activity an organization performs to ensure
+that critical business functions are available to the customers,
+suppliers, regulators, and other entities that must have access to
+those functions. These activities include many daily chores such as
+project management, system backups, change control, and help
+desk. Resiliency is the property of a system to adapt itself to the
+consequences of a catastrophic failure caused by natural or man-made
+events.
+
+The business continuity is the responsibility of an organization that
+operates in a non-cloud environment. The planning and execution of
+business continuity is owned by the organization. Since the
+organization owns the entire IT infrastructure, it has the knowledge
+and the resources needed to develop an effective business continuity
+plan.
+
+In case of an organization using a cloud, the responsibility of
+business continuity gets delegated to the cloud provider. The
+organization loses control over how business continuity is planned for
+and executed. This creates a risk to the organization of not having
+appropriate business continuity in the case of a disaster. To mitigate
+this risk, the organization using a cloud should do the following:
+
+1. Ensure customer Recovery Time Objectives (RTOs) are fully
+understood and defined in contractual relationships.
+
+2. Confirm that the cloud provider has an existing Business Continuity
+Policy approved by the provider’s board of directors.
+
+3. Check if the cloud provider has an active management support and a
+periodic review of the Business Continuity Program.
+
+4. Verify whether the cloud provider's Business Continuity Program is
+certified and/or mapped to internationally recognized standards such
+as BS 25999.
+
+Instead of a risk, if an organization itself lacks a business
+continuity strategy, and decides to use a cloud provider that has a
+well defined business continuity strategy, the organization benefits
+from the use of the cloud.
+
+Real-world incident: Windows Azure, Microsoft's cloud computing
+platform, suffered an outage over a weekend in March, 2009. If your
+organization was using this service, how would the outage have
+affected the organization's ability to conduct business? Microsoft
+would own the responsibility to fix the issue and not the IT team of
+your organization.

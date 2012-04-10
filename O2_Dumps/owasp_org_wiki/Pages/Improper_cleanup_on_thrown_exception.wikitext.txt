@@ -1,0 +1,111 @@
+{{Template:SecureSoftware}}
+{{Template:Vulnerability}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+Causing a change in flow, due to an exception, can often leave the code in a bad state.
+
+'''Consequences'''
+
+* Implementation: The code could be left in a bad state.
+
+'''Exposure period'''
+
+* Implementation: Many logic errors can lead to this condition. 
+
+'''Platform'''
+
+* Languages: Java, C, C# or any language which can throw an exception.
+* Operating platforms: Any
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Medium
+
+'''Likelihood of exploit'''
+
+Medium
+
+Often, when functions or loops become complicated, some level of cleanup in the beginning to the end is needed. Often, since exceptions can disturb the flow of the code, one can leave a code block in a bad state. 
+
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+In C++/Java:
+
+<pre>
+public class foo {
+  public static final void main( String args[] ) {
+        boolean returnValue;
+        returnValue=doStuff();
+  }
+  public static final boolean doStuff( ) {
+        boolean threadLock;
+        boolean truthvalue=true;
+
+        try {
+                while(//check some condition){
+                        threadLock=true;
+                        //do some stuff to truthvalue
+                        threadLock=false;
+                }
+        } catch (Exception e){
+                System.err.println("You did something bad");
+                        if (something) return truthvalue;
+        }
+        return  truthvalue;
+  }
+}
+</pre>
+
+In this case, you may leave a thread locked accidentally.
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* Implementation: If one breaks from a loop or function by throwing an exception, make sure that cleanup happens or that you should exit the program. Use throwing exceptions sparsely. 
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Error Handling Vulnerability]]
+[[Category:General Logic Error Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

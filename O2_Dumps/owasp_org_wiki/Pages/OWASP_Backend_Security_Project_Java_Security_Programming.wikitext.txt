@@ -1,0 +1,954 @@
+= Overview =
+
+It is well known that one of the most dangerous classes of attack is the SQL Injection since it takes advantage of backend application weaknesses. In the following paragraphs and code examples, we will try to provide some basic knowledge to understand how to protect backend applications from SQL Injection and from other common attacks. As a matter of fact, there are other classes of attacks, less known than SQL Injection but as much dangerous. Depending on the application and on the SQL Server configuration, on the network design and on the AAA schemas, the impact of these classes of attacks could be mitigated. 
+
+==  Examples of codes vulnerable to SQL Injection ==
+
+Consider the following snippet of code,it is an old fashioned, but still used way, to obtain a connection to the database server ... and
+much more ...
+
+ '''snippet 1'''<nowiki>
+
+			...
+
+		Properties properties = new Properties();
+      		properties.load(new FileInputStream("database.props"));
+      
+		String username = properties.getProperty("DatabaseUser");
+		String password = properties.getProperty("DatabasePassword");
+		String databaseName = properties.getProperty("DatabaseName");
+                String databaseAddress = properties.getProperty("DatabaseAddress");
+
+		String param = req.getParameter("param");
+
+			...
+
+		String sqlQuery = "select * from someveryimportantable where param='"+param+"'";
+
+		try {
+
+		Connection connection = DriverManager.getConnection("jdbc:mysql://"+databaseAddress+"/"+ databaseName,"root ", "secret");
+                Statement statement = connection.createStatement();
+                ResultSet resultSet = statement.executeQuery(sqlQuery);
+
+			while(resultSet.next()){
+
+				/* Code to display data */
+
+			}
+
+		} catch (SQLException e) {
+			
+			/* Code to manage exception goes here*/
+
+		} finally {
+			try {
+				if(connection != null)
+					connection.close();
+			} catch(SQLException e) {}
+		}
+			...
+
+</nowiki>
+
+ '''database.props'''<nowiki>
+
+
+#
+# Database connection properties file
+#
+
+DatabaseUser=root
+DatabasePassword=r00tpassword
+DatabaseAddress=secretlocation.owasp.org
+DatabaseName=owasp
+
+</nowiki>
+
+Consider the following snippet of code
+
+ '''snippet 2'''<nowiki>
+			...
+
+		Connection connection = null;
+		Statement statement = null;
+		ResultSet resultSet = null;
+		
+		String username = req.getParameter("username");
+		String password = req.getParameter("password");
+		
+			...
+
+		String sqlQuery = "select username, password from users where username='"+username+"' and password ='"+password+"'"; 
+		
+		try {
+			connection = dataSource.getConnection();
+			statement = connection.createStatement();
+			resultSet = statement.executeQuery(sqlQuery);
+
+			if(resultSet.next()){
+				/* Code to manage succesfull authentication goes here */
+			}else{
+				/* Code to manage failed authentication */
+			}
+			
+		} catch (SQLException e) {
+			
+			/* Code to manage exception goes here*/
+
+		} finally {
+			try {
+				if(connection != null)
+					connection.close();
+			} catch(SQLException e) {}
+		}
+
+			...
+
+</nowiki>
+
+The code above contains the following weaknesses: 
+
+* In the first example:
+** A misconfigured server could allow an attacker to access the properties file;
+** The user which establishes the connection to the database server is "root" ( intended as full administrative privileges), if the code running on the server has some vulnerabilities, an attacker could backup\destroy\do whatever he\she likes with all the databases hosted by the database server; 
+** Depending on the value of the parameter exploited, an attacker could be able to dump our database. 
+* In the second example an attacker can bypass the authentication mechanism providing a string like "user' OR '1'='1"
+
+==  Examples of codes vulnerable to LDAP Injection ==
+
+Consider the following snippet of code
+
+  '''snippet 3'''<nowiki>
+                ...
+
+    	String group = null;
+    	DirContext directoryContext = null;
+    	Hashtable<String, String> env = new Hashtable<String, String>();
+    	
+    	env.put(Context.INITIAL_CONTEXT_FACTORY,"com.sun.jndi.ldap.LdapCtxFactory");
+    	env.put(Context.PROVIDER_URL, "ldap://ldapserver.owasp.org:389");
+    	env.put(Context.SECURITY_AUTHENTICATION, "simple");
+    	env.put(Context.SECURITY_PRINCIPAL, "cn=Manager");
+    	env.put(Context.SECURITY_CREDENTIALS, "ld4pp455w0rd");
+
+                ...
+
+    	try {
+
+    	    directoryContext = new InitialDirContext(env);
+    	    group = req.getParameter("group");
+    	    Object someObject = directoryContext.lookup( "ou=" + group );
+
+                ...
+
+    	} catch (NamingException e) {
+
+    	    /* Code to manage exception goes here*/
+
+    	} finally {
+    	            try {
+			        directoryContext.close();
+			} catch (NamingException e) {}
+    	}
+
+                ...
+</nowiki>
+The code above contains the following weaknesses: 
+
+*The authentication scheme is set to "simple", this means that the DN and the password are sent as plain text over a non encrypted channel
+*No check is provided on the group parameter, so any LDAP valid string, supplied as input value by an attacker, will change the behaviour of the software.
+
+==  Examples of codes vulnerable to arbitrary command execution ==
+
+Consider the following snippet of code:
+
+   ''' snippet 4 '''<nowiki>
+
+                ...
+
+		try {
+
+			String host = req.getParameter("host");
+			
+			String[] cmd = {
+					"/bin/sh",
+					"-c",
+					"ping -c 1 " + host
+					};
+			
+			Process p = Runtime.getRuntime().exec(cmd);
+			
+			InputStreamReader inputStreamReader = new InputStreamReader(p.getInputStream());
+			BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+			String line = null;
+			
+			while((line = bufferedReader.readLine()) != null){
+				/* Code to display data goes here */
+			}
+
+                        ...
+
+			p.destroy();
+			
+			
+		} catch (IOException e) {
+
+			/* Code to mange exception goes here */
+
+		}
+
+                ...
+</nowiki>
+
+In the code above no validation is provided to the host parameters. If an attacker supplies as input the ';' character followed by some shell command, this command will be executed after the ping command. Depending on the server configuration, an attacker could be able to obtain the full administrative privilege on it.
+
+= Description =
+
+The examples of vulnerabilities provided in the previous paragraphs show how easy it is to produce vulnerable code. It's also easy to deduce, standing on the same examples, that the various injection attacks are possible thanks to insufficient (or not existing) checks on the input supplied by users or thanks to processes influenced by users. The following sections will show how to prevent injections attacks.
+
+== JAVA preventing SQL Injection ==
+
+Using different technologies, a Java application can connect to backend databases or manage the interactions with it through:
+
+* The JNI custom classes used to:
+** wrap around the database system library;
+** connect to databases that are not supported by Java (few cases);
+* The Java API, without any interaction with framework or application server;
+* The resources exported by the application server;
+* The API of a framework (Hibernate, Ojb, Torque).
+
+Depending on the environment (WEB, console, etc.) of the backend application and on the way the application connects and executes the queries to the database server, there are different strategies to prevent SQL Injection attacks. They can be implemented, mainly, by fixing the vulnerable codes as mentioned in the examples and by introducing of some data validation frameworks.
+
+===  DBMS authentication credentials ===
+
+The authentication credentials disclosure is the first vulnerability identified in the examples. If an attacker is able to retrieve the properties file, s/he has access to all the sensitive information related to the database server. Thus, if your backend application needs to store these informations into external files, be sure that your systems are configured to prevent the access from the "outside world" to any sensitive local resources. Depending on your system architecture, there are different strategies to protect sensitive files. Let's thake the following example: if your backend application is a web application configured with an Apache web server acting as frontend and a Tomcat container as backend, you can configure either Apache web server or Tomcat container, where resides your web application, in the following way:
+
+* Deny directory listing. Since some sensitive information could be revealed if directory listing is enabled, it's a good practice to disable it. On Apache webserver you can disable it by:
+** Removing the mod_autoindex from apache compilation or configuration
+** Disable the mod_autoindex on specific directory
+
+ '''Deny directory listing on apache webserver (httpd.conf or your included config file)'''<nowiki>
+
+...
+
+<Location /owasp>
+Options -Indexes
+</Location />
+
+...
+</nowiki>
+
+On tomcat container you can disable it in the following way:
+
+ '''Deny directory listing on tomcat (web.xml)'''<nowiki>
+
+...
+<init-param>
+        <param-name>listings</param-name>
+        <param-value>false</param-value>
+</init-param> 
+...
+</nowiki>
+
+* Deny access to *.properties files, on apache webserver
+
+ '''Deny access to *.properties file on apache webserver (httpd.conf or your included config file)'''<nowiki>
+
+...
+
+<Files ~ "\.properties$">
+        Order allow,deny
+        Deny from all
+</Files>
+
+...
+
+or 
+
+...
+
+<FilesMatch "\.properties$">
+        Order allow,deny
+        Deny from all
+</FilesMatch>
+
+...
+</nowiki>
+
+* On tomcat container you can limit the access from certain ips, to some context:
+
+ '''Deny access to context directory on tomcat container '''<nowiki>
+
+...
+
+<Context path="/owasp/res" ...>
+  <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127.0.0.1" deny=""/>
+</Context>
+
+...
+</nowiki>
+
+A better way to access DBMS credential is to use it through Context resource. On Tomcat container you can store the credential, and use them from code in the following way:
+
+ '''mysql context example'''<nowiki>
+
+<Context path="/owasp" docBase="owasp" reloadable="true" crossContext="true">
+
+  <Resource name="jdbc/owasp" auth="Container" type="javax.sql.DataSource"
+               maxActive="100" maxIdle="30" maxWait="10000"
+               username="owasp" password="$0w45p;paSSword#" driverClassName="com.mysql.jdbc.Driver"
+               url="jdbc:mysql://secretlocation.owasp.org:3306/owasp?autoReconnect=true"/>
+
+</Context>
+</nowiki>
+
+ '''java connection from context example'''<nowiki>
+
+		...
+		
+		InitialContext context = null;
+		DataSource dataSource = null;
+		Connection connection = null;
+		
+		try {
+			context = new InitialContext();
+			dataSource = ( DataSource ) context.lookup( "java:comp/env/jdbc/owasp" );
+			connection = dataSource.getConnection();
+			
+			...
+			
+		} catch (NamingException e) {
+			/* Code to manage exception goes here */
+		} catch (SQLException e) {
+			/* Code to manage exception goes here */
+		}
+
+		...
+</nowiki>
+
+=== Prepared Statements ===
+
+The prepared Statement is a parameterized query and is implemented in java through the class PreparedStatement (java.sql.PreparedStatement innovative eh ;) ). While the PreparedStatement class was introduced to increase the java code independence from underlying database (eg. in a SQL statement the way various databases use quote may differ) and to boost the database performances, they're also useful to prevent SQL Injection. Some of the benefits of using the PreparedStatement class is the input parameters escaping and validation. Let's consider the first code snippet, prepared statement could be used in the following way:
+
+  '''PreparedStatement Example'''<nowiki>
+
+                ...
+
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		ResultSet resultSet = null;
+		
+		String username = req.getParameter("username");
+		String password = req.getParameter("password");
+		
+			...
+
+		String sqlQuery = "select username, password from users where username=? and password =? "; 
+
+		try {
+			connection = dataSource.getConnection();
+			preparedStatement = connection.prepareStatement(sqlQuery);
+			preparedStatement.setString(1, username);
+			preparedStatement.setString(2, password);
+			resultSet = preparedStatement.executeQuery();
+
+			if(resultSet.next()){
+				/* Code to manage succesfull authentication goes here */
+			}else{
+				/* Code to manage failed authentication */
+			}
+			
+		} catch (SQLException e) {
+			
+			/* Code to manage exception goes here*/
+
+		} finally {
+			try {
+				if(connection != null)
+					connection.close();
+			} catch(SQLException e) {}
+		}
+
+                ...
+</nowiki>
+
+=== Logging errors ===
+
+Sometimes, it happens that classified information is disclosed due to lack in the error logging or to a way for debugging the application: 
+
+*error pages generated automatically by the servlet container or by the application server may contain sensitive information regarding database schema
+*the messages containing errors are embedded into the displayed page
+
+To avoid this kind of information disclosure, correctly exceptions and the way your logs are stored and accessed by the application should be managed. As general rule, the end user should not be notified of any problem in the application.
+
+Java provides several interfaces to enable the logging on an application. The way preferred by the author is to manage application logging through log4j. A quick and dirty way to use it is the following:
+
+  '''Log4J Example'''<nowiki>
+
+		File file = null;
+		FileOutputStream fileOutputStream = null;
+		String pattern = null;
+		PatternLayout patternLayout = null;
+		WriterAppender writerAppender = null;
+		Logger logger = null;
+		
+                ...
+
+		try {
+			
+			file = new File("owaspbe.log");
+			fileOutputStream = new FileOutputStream(file);
+			pattern = "%d{ISO8601} %5p - %m %n";
+			patternLayout = new PatternLayout(pattern);
+			writerAppender = new WriterAppender(patternLayout, fileOutputStream);
+			logger = Logger.getLogger(Logger.class.getName());
+			logger.setLevel(Level.ALL);
+			logger.addAppender(writerAppender);
+			
+		} catch (FileNotFoundException e) {
+
+			/* code to manage exception goes here */
+			
+		} catch (Exception e){
+			
+			/* code to manage exception goes here */
+			
+		}
+
+                ...
+
+		logger.info("LOG4J Example");
+		logger.debug("Debug Message");
+		logger.error("Error Message");
+</nowiki>
+
+A better way to use log4j in an application, is to configure it through its properties file log4j.properties. In the following example log4j will log to stdout:
+
+  '''Log4J.properties Example'''<nowiki>
+
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.Target=System.out
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern=%d{ISO8601} %5p - %m %n
+log4j.rootLogger=all, stdout
+</nowiki>
+
+  '''Java code to use log4j with properties'''<nowiki>
+
+                Logger logger = null;
+                logger = Logger.getLogger(Logger.class.getName());
+                ...
+
+		logger.info("LOG4J Example");
+		logger.debug("Debug Message");
+		logger.error("Error Message");
+
+                ...
+</nowiki>
+
+Consider the PreparedStatement code example, one of the way to integrate the logging is the following:
+
+  '''PreparedStatement with logging Example'''<nowiki>
+
+                ...
+
+                Logger logger = null;
+                logger = Logger.getLogger(Logger.class.getName());
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		ResultSet resultSet = null;
+		
+		String username = req.getParameter("username");
+		String password = req.getParameter("password");
+		
+			...
+
+		String sqlQuery = "select username, password from users where username=? and password =? "; 
+
+		try {
+			connection = dataSource.getConnection();
+			preparedStatement = connection.prepareStatement(sqlQuery);
+			preparedStatement.setString(1, username);
+			preparedStatement.setString(2, password);
+			resultSet = preparedStatement.executeQuery();
+
+			if(resultSet.next()){
+                                logger.info("User <"+username+"> logged in");
+
+				/* Code to manage succesfull authentication goes here */
+			}else{
+                                logger.error("Username <"+username+"> not authenticated ");
+
+				/* Code to manage failed authentication */
+			}
+			
+		} catch (SQLException e) {
+			logger.error("SQLException: " + e.message);
+
+			/* Code to manage exception goes here*/
+
+		} finally {
+			try {
+				if(connection != null)
+					connection.close();
+			} catch(SQLException e) {}
+		}
+
+                ...
+</nowiki>
+
+In the same way is possible to protect the configuration file, as well as to protect the log file. Depending on the system architecture, is important to configure webserver or application server to prevent the access to log file too.
+
+=== Data Validation ===
+
+In each application the developers have to manage the input data supplyed by users or processes. In the case of web application the data can be supplied through a GET or through a POST variable. To accept the input data, and thus to proceed with the operation on it, the application must validate its value and determinate whether the data is safe or not. As a general rule an application should always validate input and output values. Is recommendable to adopt a "White list" approach: if the information supplied does not match the criteria, it must be rejected. The criteria depend on the input, therefore each class of input requires its own criteria. Some example criteria are listed below:
+
+* Data Type: The type of data supplied must match the type we expect.
+* Data Length: The data must satisfy the expected lenght, minimum and maximum lenght should be checked
+* Data Value: The meaning of data supplied must match what we expect, if we expect an e-mail address, the variable can contain only a valid e-mail address.
+
+A typical Data Validation workflow will be:
+
+* Get the data to be validated
+* Check for the type
+* Check the size in bytes to avoid errors when dealing with databases, trasmission protocols, binary files and so on
+* Check if data contains a valid value
+* Log anomaly in the upper class
+
+
+'''Numeric Data'''
+
+If is needed to validate numeric data, typically integer, it is possible to use the following steps:
+
+*Retrieve data
+*Use the Integer class to validate data retrieved
+*Check if the value is in the range the application can manage
+*Raise exception if data does not match requested criteria
+
+The same steps can be used for String and Binary data validation
+
+  '''Numeric data validation example in a web application'''<nowiki>
+
+		...
+		
+		String intParam = req.getParameter("param");
+		int param = 0;
+		
+		...
+		
+		try{
+			param = Integer.parseInt(intParam);
+		
+			if (param > APPLICATION_MAX_INT || param < APPLICATION_MIN_INT){
+				throw new DataValidationException(intParam);
+			}
+			
+		}catch (NumberFormatException e){
+
+			/* code to manage exception goes here */
+			
+			...
+			
+			throw new DataValidationException(e);
+			
+		}
+
+               ...
+</nowiki>
+
+'''String Data'''
+
+String data must be validated defining criteria to satisfy what is expected the data supplied. It could contain:
+
+*email
+*Url
+*String (Name, Surname ...)
+*Phone numbers
+*Date, time
+
+and so on
+
+In the following examples is shown how to use the regular expression to validate an email address
+
+   '''Java code to validate email address'''<nowiki>
+		...
+
+		String mailParam =  req.getParameter("param");
+
+		String expression =
+			"^[\\w-]+(?:\\.[\\w-]+)*@(?:[\\w-]+\\.)+[a-zA-Z]{2,7}$";
+		Pattern pattern = Pattern.compile(expression);
+
+		try{
+			Matcher matcher = pattern.matcher(mailParam);
+
+			if (!matcher.matches()){
+				throw new DataValidationException(mailParam);
+			}
+
+                        ...
+
+		}catch (Exception e){
+			
+			...
+			/* Code to manage exception goes here */
+			
+			throw new DataValidationException(e);
+		}
+
+        ...
+
+</nowiki>
+
+The same result can be achieved using the "Apache Commons Validator Framework".
+
+   '''Java code to validate email address (Apache Commons Validator Framework)'''<nowiki>
+
+        ...
+
+        EmailValidator emailValidator = EmailValidator.getInstance();
+	String mailParam =  req.getParameter("param");
+
+        ...
+
+		try{
+			if (!validator.isValid(mailParam)){
+				throw new DataValidationException(mailParam);
+			}
+
+                        ...
+
+		}catch (Exception e){
+			
+			...
+			/* Code to manage exception goes here */
+			
+			throw new DataValidationException(e);
+		}
+        
+        ...
+
+</nowiki>
+
+The "Apache Commons Validator Framework" provides other useful classes to validate input data supplied to the backend application, like UrlValidator, CreditCardValidator and much more. If the backend application is a web application based on the Struts framework, consider using the Struts Validator Framework.
+
+'''Binary Data'''
+
+Some backend application have to manage binary data. To validate this kind of data you've to retrieve the information from a binary blob, and validate the primitive types of each expected structure. Consider the following structure:
+
+byte[4] Magic Number - Value: 0x0c 0x0a 0x0f 0x0e<br> - required
+byte    Length       - Length of the entire "Message"<br> - required
+string  Message      - Message<br>
+
+The first validation could be done on the minimum length of the supplied structure: five bytes (four for the magic number and one byte for the message length), than is possible to check the validity of the magic number and then check for the length of the message field (maximum 0xff - 0x05)
+
+== JAVA preventing LDAP Injection ==
+
+=== LDAP Authentication ===
+
+In the vulnerable example following, the authentication scheme used is the "simple". This example is insecure because plain text credentials are transmitted over an unencrypted channel as said before. In the following example is used the same scheme over an SSL encrypted channel: 
+
+   '''LDAP over SSL'''<nowiki>
+
+                ...
+
+    	String group = null;
+    	DirContext directoryContext = null;
+    	Hashtable<String, String> env = new Hashtable<String, String>();
+    	
+    	env.put(Context.INITIAL_CONTEXT_FACTORY,"com.sun.jndi.ldap.LdapCtxFactory");
+    	env.put(Context.PROVIDER_URL, "ldaps://ldapsslserver.owasp.org:636/o=Owasp");
+    	env.put(Context.SECURITY_AUTHENTICATION, "simple");
+    	env.put(Context.SECURITY_PRINCIPAL, "cn=Manager, ou=Backend, o=Owasp");
+    	env.put(Context.SECURITY_CREDENTIALS, "ld4pp455w0rd");
+
+                ...
+
+    	try {
+
+    	    directoryContext = new InitialDirContext(env);
+                ...
+
+    	} catch (NamingException e) {
+
+    	    /* Code to manage exception goes here*/
+
+    	} finally {
+    	            try {
+			        directoryContext.close();
+			} catch (NamingException e) {}
+    	}
+
+                ...
+</nowiki>
+
+If the use a strong authentication method is needed, java provides the SASL Authentication schema. SASL supports several authentication mechanisms. In the following example the MD5-DIGEST is used :
+
+   ''' MD5-DIGEST Java LDAP Authentication '''<nowiki>
+                ...
+
+    	String group = null;
+    	DirContext directoryContext = null;
+    	Hashtable<String, String> env = new Hashtable<String, String>();
+    	
+    	env.put(Context.INITIAL_CONTEXT_FACTORY,"com.sun.jndi.ldap.LdapCtxFactory");
+    	env.put(Context.PROVIDER_URL, "ldap://ldapserver.owasp.org:389/o=Owasp");
+    	env.put(Context.SECURITY_AUTHENTICATION, "DIGEST-MD5");
+    	env.put(Context.SECURITY_PRINCIPAL, "dn:cn=Manager, ou=Backend, o=Owasp ");
+    	env.put(Context.SECURITY_CREDENTIALS, "ld4pp455w0rd");
+
+                ...
+
+    	try {
+
+    	    directoryContext = new InitialDirContext(env);
+
+                ...
+
+    	} catch (NamingException e) {
+
+    	    /* Code to manage exception goes here*/
+
+    	} finally {
+    	            try {
+			        directoryContext.close();
+			} catch (NamingException e) {}
+    	}
+
+                ...
+</nowiki>
+
+=== LDAP Authentication Credentials ===
+
+The same techniques described in the previous sections to store the SQL credentials, can be used to store the LDAP one.
+
+=== Data Validation ===
+
+LDAP Injection causes are the same of SQL Injection: leaking in data validation allow to access arbitrary data. For example, considering the first ldap code example, a way to fix it is allowing only alphanumeric group sequences. This kind of validation could be done using regular expression:
+
+   '''Alphanumeric validation'''<nowiki>
+
+                        ...
+
+		String expression = "[a-zA-Z0-9]+$";	
+		Pattern pattern = Pattern.compile(expression);
+
+		try{
+    	                group = req.getParameter("group");
+			Matcher matcher = pattern.matcher(group);
+
+			if (!matcher.matches()){
+				throw new DataValidationException(group);
+			}
+
+                        Object someObject = directoryContext.lookup( "ou=" + group );
+
+                        ...
+
+		}catch (Exception e){
+			
+			/* Code to manage exception goes here */
+			
+			throw new DataValidationException(e);
+		}
+
+                        ...
+</nowiki>
+
+The above example is really restrictive, in real life it may be needed other charachter not included in the range identified by the regular expression. As a general rule, all the input data containing characters that may alter the LDAP Query behavior should be rejected. In the range of characters to reject must be included the logical operator ( |, &, !), the comparsion operator ( =, <, >, ~), special character ( (, ), *, \, NUL ) and all the other characters used in LDAP query syntax including colon and semicolon.
+
+=== Logging errors ===
+
+As for the SQL Injection, one of the way to integrate logging in the LDAP example is the following:
+
+   '''Log4j.properties example'''<nowiki>
+
+log4j.appender.APPENDER_FILE=org.apache.log4j.RollingFileAppender
+log4j.appender.APPENDER_FILE.File=owaspbe_ldap.log
+log4j.appender.APPENDER_FILE.MaxFileSize=512KB
+log4j.appender.APPENDER_FILE.MaxBackupIndex=2
+log4j.appender.APPENDER_FILE.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern=%d{ISO8601} %5p - %m %n
+log4j.rootLogger=all, APPENDER_FILE
+</nowiki>
+
+   '''LDAP Example with logging'''<nowiki>
+
+                ...
+
+        Logger logger = null;
+        logger = Logger.getLogger(Logger.class.getName());
+    	String group = null;
+    	DirContext directoryContext = null;
+    	Hashtable<String, String> env = new Hashtable<String, String>();
+    	
+    	env.put(Context.INITIAL_CONTEXT_FACTORY,"com.sun.jndi.ldap.LdapCtxFactory");
+    	env.put(Context.PROVIDER_URL, "ldap://ldapserver.owasp.org:389/o=Owasp");
+    	env.put(Context.SECURITY_AUTHENTICATION, "DIGEST-MD5");
+    	env.put(Context.SECURITY_PRINCIPAL, "dn:cn=Manager, ou=Backend, o=Owasp ");
+    	env.put(Context.SECURITY_CREDENTIALS, "ld4pp455w0rd");
+
+                ...
+
+    	try {
+
+    	    directoryContext = new InitialDirContext(env);
+
+            logger.info("Connected to ldap");
+
+                ...
+
+    	} catch (NamingException e) {
+            logger.error("NamingException: " + e.message);
+
+    	    /* Code to manage exception goes here*/
+
+    	} finally {
+    	            try {
+			        directoryContext.close();
+			} catch (NamingException e) {}
+    	}
+
+                ...
+
+</nowiki>
+
+== JAVA preventing Arbitrary Command execution ==
+
+To prevent the arbitrary command execution is possible to use the same techniques showed for SQL and LDAP injection prevention. As a general rule reject any input data containg shell arguments.
+
+=== Data validation ===
+
+As discussed in other paragraphs, data validation for string variable must be applied to the scope of the variable itself. Standing on the vulnerable code in the snippet 4, remember to validate that the supplied parameter is a valid ip address. Is possible to do this in the following way:
+
+  '''Validatin IP Address to void command execution'''<nowiki>
+
+                ...
+
+		try {
+
+			String host = req.getParameter("host");
+
+			String expression = 
+				    /* From O'Reilly's Mastering Regular Expressions */ 
+				
+				    "([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\.([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\." +
+			            "([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\.([01]?\\d\\d?|2[0-4]\\d|25[0-5])";
+			
+			Pattern pattern = Pattern.compile(expression);
+			Matcher matcher = pattern.matcher(host);
+
+			if (!matcher.matches()){
+                                throw new DataValidationException(host);
+			}
+			
+			String[] cmd = {
+					"/bin/sh",
+					"-c",
+					"ping -c 1 " + host
+					};
+			
+			Process p = Runtime.getRuntime().exec(cmd);
+			
+			InputStreamReader inputStreamReader = new InputStreamReader(p.getInputStream());
+			BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+			String line = null;
+			
+			while((line = bufferedReader.readLine()) != null){
+				/* Code to display data goes here */
+			}
+
+                        ...
+
+			p.destroy();
+			
+			
+		} catch (IOException e) {
+
+			/* Code to mange exception goes here */
+
+		}
+
+                ...
+</nowiki>
+
+In this specific case, a more complicated regular expression or an if/then check could be implemented to invalidate, for example, the addresses of our internal network. Using the above expression, the risk of an information exposure affecting the other internal server reachable from backend servers is high.
+
+=== Logging errors ===
+
+As for the other section, here an example that shows a way to integrate log4j with the fixed code:
+
+   '''Command execution with log4j'''<nowiki>
+                ...
+
+		try {
+                        Logger logger = null;
+                        logger = Logger.getLogger(Logger.class.getName());
+
+			String host = req.getParameter("host");
+
+			String expression = 
+				    /* From O'Reilly's Mastering Regular Expressions */ 
+				
+				    "([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\.([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\." +
+			            "([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\.([01]?\\d\\d?|2[0-4]\\d|25[0-5])";
+			
+			Pattern pattern = Pattern.compile(expression);
+			Matcher matcher = pattern.matcher(host);
+
+			if (!matcher.matches()){
+                                throw new DataValidationException(host);
+			}
+			
+			String[] cmd = {
+					"/bin/sh",
+					"-c",
+					"ping -c 1 " + host
+					};
+			
+                        
+			Process p = Runtime.getRuntime().exec(cmd);
+			
+			InputStreamReader inputStreamReader = new InputStreamReader(p.getInputStream());
+			BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+			String line = null;
+			
+			while((line = bufferedReader.readLine()) != null){
+				/* Code to display data goes here */
+			}
+
+			InputStreamReader errorStreamReader = new InputStreamReader(p.getErrorStream());
+			BufferedReader bufferedError = new BufferedReader(errorStreamReader);
+			
+			while ((line = bufferedError.readLine()) != null){
+				logger.error("Application Error Line: " + line);
+			}
+                        ...
+
+			p.destroy();
+			
+			
+		} catch (IOException e) {
+                        logger.error("IOException: " + e.message );
+
+			/* Code to mange exception goes here */
+		}
+
+                ...
+</nowiki>
+
+= References & Further reading =
+
+OWASP: http://www.owasp.org/index.php/OWASP_Guide_Project<br>
+SUN Java: http://java.sun.com/javase/6/docs/api/<br>
+SUN Java: http://java.sun.com/javaee/5/docs/api/<br>
+SUN Java: http://java.sun.com/docs/books/tutorial/jndi/ldap/index.html<br>
+Apache Commons Validator Framework: http://commons.apache.org/validator/<br>
+Apache log4J: http://logging.apache.org/log4j/<br>
+Apache Tomcat: http://tomcat.apache.org/<br>
+Apache Webserver: http://www.apache.org/<br>
+O'Reilly Mastering Regular Expressions, Jeffrey E. F. Friedl - ISBN 10: 1-56592-257-3 | ISBN 13: 9781565922570<br>
+The Web Application Hacker's Handbook, Dafydd Stuttard, Marcus Pinto - ISBN-10: 0470170778 | ISBN-13: 978-0470170779<br>
+The Art of Software Security Assessment, Mark Dowd, John McDonald, Justin Schuh - ISBN-10: 0321444426 | ISBN-13: 978-0321444424<br>

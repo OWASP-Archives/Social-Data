@@ -1,0 +1,37 @@
+== OWASP Podcast #86: Mobile Security ==
+
+=== Participants ===
+Kevin Mahaffey <br/>
+: [http://www.linkedin.com/pub/kevin-mahaffey/3/356/726 linkedin]
+[[User:Jack_Mannino|Jack Mannino]] <br/>
+: [http://jack-mannino.blogspot.com blog] <br/>
+: [http://www.linkedin.com/pub/jack-mannino/7/2b7/562 linkedin]
+[[User:Chris_Wysopal | Chris Wysopal]] <br/>
+: [http://www.veracode.com/about/chris-wysopal.html profile]
+: [http://www.linkedin.com/in/wysopal linkedin]
+
+=== Transcript ===
+You are listening to the Open Web Application Security Project with your host Jim Manico. <br/><br/>
+
+You are listening to the Open Web Application Security Project and this is OWASP Podcast Number 86. And this is the OWASP Mobile Security Round Table. And now our guests: <br/>
+
+Jack
+: Hi this is Jack Maninno, ... for OWASP of and CEO of nVisium Security 
+
+Kevin
+: Hi this is Kevin Mahaffey, from .... security. 
+
+Chris
+: Hi this is Chris Wysopal, co founder and CTO of Veracode, and I love the mobile application security.  <br/><br/>
+
+Jim
+: So Gentleman last we all met face to face at the OWASP Portugal summit, and I can ... all the threat against mobile, all the defensive coding technique we need the mobile platform is frankly no different than any other web application. Allright Chris, you're up. Care to comment? 
+
+Chris
+: Allright I'll take one that Jim. You know, I think the threats are very similar. I mean, every threat model is different. One server app is different with another app even some web apps are different from other apps. So I will agree that in general are the same but there are several differences based on the framework, the operating system, and what the application are really trying to do. We see certain threat vectors, sort of unique enhance mobile devices because of they used. I would say location information is very different mobile devices 24 hours a day, than location information of desktop. Well we have laptops. But it's not really quite the same. In general I would say 80% are correct.
+
+Jack
+: Let me see. So I agreed that, yes. In general I say the same. You're gonna always have client-server architecture. But the thing is you take web browser. and you have the same origin policy. You know you have protection, they not breakable but they really not. But look at the Android platform, that platform is build on enterprise communication, it's built on one application can invoked and talk to another. So you start to see types of blended threat. You start throwin more exotic technologies that are gonna big in the next few years, ... communications. You start throwing these things. You start drawing these things, Like Chris saying, very-very different threat model, ... I don't think we tend ... we're gonna see it yet. 
+
+Jim
+: So Jack, what about cryptographic storage? Is there any way to do high assurance low risk cryptographic storage on a mobile device? Especially new platform against the platform it self? Especially new platforms that has significant vulnerabilities against the platform itself. Both in the cases on the iOS and the Android?

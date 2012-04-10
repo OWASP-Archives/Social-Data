@@ -1,0 +1,42 @@
+{{Template:Stub}}
+Every '''[[Business Impact]]''' should follow this template.
+
+{{Template:Business Impact}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+==Description==
+
+A business impact is the damage that results from a successful security breach. This should be the highest level impact to the business, not a glorified technical impact.
+# Start with a one-sentence description of the business impact
+# Describe the damage done to the business - money, loss of life, reputation, loss of customers, compliance, legal exposure
+# Is the damage immediate or spread over a time period?
+
+
+==Risk Factors==
+
+* Talk about the [[OWASP Risk Rating Methodology|factors]] that govern this business impact
+* Try to be clear about the factors that make this impact serious
+
+
+==Examples==
+
+===Short example name===
+: A short example description, small picture, or sample code with [http://www.site.com links]
+
+===Short example name===
+: A short example description, small picture, or sample code with [http://www.site.com links]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+* http://www.link1.com
+* [http://www.link2.com Title for the link2]
+
+[[Category:Non-compliance]]

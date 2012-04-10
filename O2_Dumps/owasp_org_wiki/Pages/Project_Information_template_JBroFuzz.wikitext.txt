@@ -1,0 +1,43 @@
+----
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT INFORMATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP JBroFuzz Project'''
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|
+This project is a stateless network protocol fuzzer that emerged from the needs of penetration testing. Written in Java, it allows for the identification of certain classess of security vulnerabilities, by means of creating malformed data and having the network protocol in question consume the data. 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|
+'''Key Project Information'''
+ | style="width:14%; background:#cccccc" align="center"|
+Project Leader<br>[mailto:yiannis@owasp.org '''Subere''']
+ | style="width:15%; background:#cccccc" align="center"|
+Project Contibutors<br>''(if any)'' 
+| style="width:10%; background:#cccccc" align="center"|
+Mailing List<br>[https://lists.owasp.org/mailman/listinfo/owasp-jbrofuzz '''Subscribe''']
+ | style="width:17%; background:#cccccc" align="center"|
+License<br>[http://creativecommons.org/licenses/by-sa/3.0/ '''Creative Commons Attribution Share Alike 3.0''']
+ | style="width:14%; background:#cccccc" align="center"|
+Project Type<br>[https://www.owasp.org/index.php/Category:OWASP_Project#tab=Alpha_Status_Projects'''Tool''']
+ | style="width:15%; background:#cccccc" align="center"|
+Sponsors<br>[[OWASP Spring Of Code 2007|'''OWASP SpoC 07''']]
+ |}
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|
+'''[[:Category:OWASP Project Assessment#Alpha Quality Tool Criteria|Apha Quality]]'''<br>[[:OWASP JBroFuzz Project - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="center"|
+* [http://video.google.co.uk/videoplay?docid=6388655108193715653&q=jbrofuzz  Video Tutorial] - medium quality (to watch)<br>
+* [http://sourceforge.net/project/showfiles.php?group_id=180679&package_id=209088&release_id=461300 Video Tutorial] - high quality (to download)<br>
+* [http://www.sourceforge.net/projects/jbrofuzz Latest version of JBroFuzz]<br>
+* [http://jbrofuzz.svn.sourceforge.net/viewvc/jbrofuzz/ Java Documenation, the source code and the latest build]<br>
+* [http://java.sun.com/ To run the JBroFuzz's application you need Java 1.6 Runtime Environment]<br>
+* (If appropriate, more links to be added)
+ | style="width:29%; background:#cccccc" align="center"|
+*  if any, add link(s)
+ |}

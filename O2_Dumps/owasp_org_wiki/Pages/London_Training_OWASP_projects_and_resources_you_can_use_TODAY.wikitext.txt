@@ -1,0 +1,372 @@
+This training event is provided by the [[London | OWASP London chapter]]
+
+==== Training - May, 28th, 2010 ====
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>OWASP Training</noinclude>
+| Course_designation = [[Image:Owasp banner4.gif]]
+| Course_Overview_Goal 
+=&nbsp;
+*Apart from OWASP's Top 10, most [[:Category:OWASP_Project|OWASP Projects]] are not widely used and understood. In most cases this is not due to lack of quality and usefulness of those Document & Tool projects, but due to a lack of understanding of where they fit in an Enterprise's security ecosystem or in the Web Application Development Life-cycle.
+
+*This course aims to change that by providing a selection of mature and enterprise ready projects together with practical examples of how to use them.
+
+*If you are interested in participating in the hands on portion of the course, please bring a laptop.
+
+*All OWASP Training Material can be downloaded from [http://code.google.com/p/owasp-training/downloads/list here].
+&nbsp;
+| Date = May, 28th, 2010
+| Venue = 
+[http://maps.google.co.uk/maps?f=q&source=s_q&hl=en&geocode=&q=London+SE1+9EQ,+uk&sll=51.513977,-0.121279&sspn=0.020778,0.077162&ie=UTF8&hq=&hnear=London+SE1+9EQ,+United+Kingdom&ll=51.505404,-0.092611&spn=0.011059,0.038581&z=15 Lloyds TSB, 5th Floor Seminar Room, Red Lion Court, London SE1 9EQ]. Note that the Lloyd's TSB building is not well signposted, but is located on the Thames between the Financial Times building (at Southwark Bridge) and the Anchor pub. Closest tubes are London Bridge (walk west along the river) and Mansion House (cross Southwark Bridge).
+| Price = Free
+| Course_Registration_url = http://www.eventbrite.com/event/679936709
+| Course_Registration_name = Course Registration
+| Modules = 
+
+{{Template:Training_Module_Row_View
+| Time = 09h00 (30m)
+| Module_Name = Guided tour of OWASP Projects
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_Project
+| Trainer = [[user:Dinis.cruz|Dinis Cruz]] 
+| Presentation_Name = Tour of OWASP’s projects
+| Presentation_Link = http://www.owasp.org/index.php/File:OWASP_India_-_Tour_of_OWASP_projects.ppt  
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 09h30 (90m)
+| Module_Name = OWASP Top 10 
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project
+| Trainer = [[User:Fabio.e.cerullo|Fabio Cerullo]]
+| Presentation_Name = OWASP Top 10
+| Presentation_Link = http://www.owasp.org/images/c/cb/OWASP_Top_10_-_2010_rc1.pdf  
+}}
+
+{{Template:Training Module Row Break
+| Time = 11h00 (15m)
+| Break_Reason = Coffee Break
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 11h15 (45m)
+| Module_Name = OWASP Testing Guide
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_Testing_Project
+| Trainer = [[user:Mmeucci|Matteo Meucci]] (Project Leader) 
+| Presentation_Name = Testing Guide Overview - PPT File
+| Presentation_Link = http://www.owasp.org/images/2/2c/OWASP_EU_Summit_2008_OWASP_Testing_Guide_v3.ppt  
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 12h00 (20m)
+| Module_Name = OWASP WebScarab Project
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_WebScarab_Project
+| Trainer = [[User:Clerkendweller|Colin Watson]]
+| Presentation_Name = PPT Presentation
+| Presentation_Link = http://www.owasp.org/index.php/File:Owasp-training-2010-webscarab-2.ppt
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 12h20 (20m)
+| Module_Name = OWASP Code Crawler Project
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_Code_Crawler
+| Trainer = [[User:Alessio.marziali|Alessio Marziali]] (Project Leader)
+| Presentation_Name = PPT Presentation 
+| Presentation_Link = https://www.owasp.org/images/6/61/OWASP_CodeCrawler_Presentation.ppt  
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 12h40 (20m)
+| Module_Name = OWASP DirBuster Project
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_DirBuster_Project
+| Trainer = [[user:Sittinglittleduck|James Fisher]] (Project Leader)
+| Presentation_Name = PPT Presentation
+| Presentation_Link = http://www.owasp.org/images/e/e5/Dirbuster-training-may-2010.ppt  
+}}
+
+{{Template:Training Module Row Break
+| Time = 13h00 (60m)
+| Break_Reason = Lunch
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 14h00 (20m)
+| Module_Name = OWASP WebGoat Project
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_WebGoat_Project
+| Trainer = [[User:Knoblochmartin|Martin Knobloch]] 
+| Presentation_Name = WebGoat v5 Presentation
+| Presentation_Link = http://www.owasp.org/images/5/55/OWASP_WebGoat.ppt  
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 14h20 (30m)
+| Module_Name = OWASP ESAPI 
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API
+| Trainer = [[User:Fabio.e.cerullo|Fabio Cerullo]]  
+| Presentation_Name = OWASP ESAPI - PPT File
+| Presentation_Link = http://owasp-esapi-java.googlecode.com/files/OWASP%20ESAPI.ppt 
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 14h50 (20m)
+| Module_Name = OWASP Software Assurance Maturity Model
+| Module_Link = http://www.owasp.org/index.php/Category:Software_Assurance_Maturity_Model
+| Trainer = [[:User:David Harper|David Harper]]  
+| Presentation_Name = SAMM - PPT File
+| Presentation_Link = http://www.owasp.org/images/d/df/OpenSAMM.pdf  
+}}
+
+{{Template:Training Module Row Break
+| Time = 15h10 (20m)
+| Break_Reason = Coffee Break
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 15h30 (90m)
+| Module_Name = OWASP Code Review Project
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_Code_Review_Project
+| Trainer = [[User:EoinKeary|Eoin Keary]] (Project Leader)
+| Presentation_Name = OWASP Code Review - PPT File
+| Presentation_Link = https://www.owasp.org/images/5/59/Code_Review_Eoin.pptx  
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 17h00 (30m)
+| Module_Name = OWASP O2 Platform
+| Module_Link = http://www.owasp.org/index.php/OWASP_O2_Platform
+| Trainer = [[user:Dinis.cruz|Dinis Cruz]] (Project Leader)
+| Presentation_Name = What is the OWASP O2 Platform
+| Presentation_Link = http://www.o2-ounceopen.com/files-binaries-source-and-demo/old-documents-and-presentations/OWASP_O2_Platform_-_AppSec_Ireland_Sep_2009.pdf 
+}}
+}}
+
+==== Pictures & Videos/May ====
+{{Template:OWASP Training Pictures }}
+
+{{Template:OWASP_Training_Pictures_View 
+| Media_File1 = {{#ev:youtube|sfrbbPgpJa4}}
+| Media_File2 = {{#ev:youtube|dPWHwMoSPr8}} 
+}}
+
+{{Template:OWASP_Training_Pictures_View 
+| Media_File1 = {{#ev:youtube|BljnX2k-54A}}
+| Media_File2 = [[Image:P1020048.JPG|425px]] 
+}}
+
+{{Template:OWASP_Training_Pictures_View 
+| Media_File1 = [[Image:P1010998.JPG|425px]]
+| Media_File2 = [[Image:P1020083.JPG|425px]]
+}}
+
+{{Template:OWASP_Training_Pictures_View 
+| Media_File1 = [[Image:P1020010.JPG|425px]]
+| Media_File2 = [[Image:P1020052.JPG|425px]]
+}}
+
+{{Template:OWASP_Training_Pictures_View 
+| Media_File1 = [[Image:P1020079.JPG|425px]]
+| Media_File2 = [[Image:P1020005.JPG|425px]]
+}}
+
+{{Template:OWASP_Training_Pictures_View 
+| Media_File1 = [[Image:P1020041.JPG|425px]]
+| Media_File2 = [[Image:P1020009.JPG|425px]]
+}}
+
+|}
+
+==== Pictures & Videos/April ====
+{{Template:OWASP Training Pictures }}
+
+{{Template:OWASP_Training_Pictures_View 
+| Media_File1 = {{#ev:youtube|pYp-kJTrzCE}}
+| Media_File2 = {{#ev:youtube|eRRwaAmKhVg}} 
+}}
+
+{{Template:OWASP_Training_Pictures_View 
+| Media_File1 = {{#ev:youtube|XeEyx7xefpo}}
+| Media_File2 =  [[Image:007.JPG|425px]]
+}}
+
+|}
+
+==== Latest News ====
+{{Template:OWASP_Training_News
+| Updates =
+&nbsp;
+* 27th May 2010 - [http://docs.google.com/View?id=dcn8962c_87h2wcxjdx Joining instructions - OWASP training day, 28th May 2010]
+* 26th May 2010 - The registration process has now been closed and 33 out 35 tickets were taken! Also, up to 15 Lloyd's employees will attend the course.  
+* 25th May 2010 - Only 4 spaces remaining > RSVP closes Wednesday 3pm, so get signed up now!
+* 24th May 2010 - Only 8 spaces remaining > RSVP closes Wednesday 3pm, so get signed up now!  
+* 18th May 2010 - A set of 50 course places has initially been offered; only 13 are still to be taken.
+* 04th May 2010 - The May Course registration has now been opened.
+* 19th April 2010 - The May Course registration will open very soon.  
+* 15th April 2010 - [http://docs.google.com/View?id=dcn8962c_76ghjdkjgq Joining instructions - OWASP training day, 16th April 2010]
+[[Image:Training Cloud.JPG|425px]][[Image:Training Cloud 2.JPG|425px]]
+
+&nbsp;
+}}
+
+==== OWASP Internals ====
+===== Training Concept =====
+
+We are proposing a Chapters driven model with local Chapter organization in which the courses are free for OWASP members, the contents are OWASP projects focused and the costs are supported by a mix of funding i.e. local chapter budget, external sponsorship, trainers sponsorship i.e. trip and/or accommodation paid by themselves and local chapter members’ sponsorship i.e. taking trainers in as guests.
+
+===== Training Methodologies =====
+* Course Evaluation Form - [http://www.owasp.org/images/6/60/2_Course_Evaluation_Form_%282%29.pdf PDF] and [http://www.owasp.org/images/c/ca/2_Course_Evaluation_Form.doc Word] Files
+
+===== Sponsorship Opportunities =====
+*[http://docs.google.com/View?id=dcn8962c_77jvz3s2c2 OWASP Training Sponsorship - UK/Draft still under work]
+
+===== London Training Specifics =====
+*[https://spreadsheets.google.com/ccc?key=0An4Puwz7EA41dGhjRXBOaVdzWjkzckdxM2IxdDhjZ0E&hl=en OWASP London Training Course’s Financials] 
+*[http://spreadsheets.google.com/pub?key=tVo97PmDAcUdwF6rjv0tfvA&output=html London Training's Logistics&Costs]
+
+===== FAQ Section =====
+*Why are these Training Courses OWASP members only? 
+
+==== Training Logos ====
+{{Template:OWASP Training Pictures }}
+
+{{Template:OWASP_Training_Pictures_View 
+| Media_File1 = '''PROPOSAL 1A'''[[Image:Logo 1A.JPG]]
+| Media_File2 = '''PROPOSAL 1B'''[[Image:Logo 1B.JPG]]
+}}
+
+{{Template:OWASP_Training_Pictures_View 
+| Media_File1 =  '''PROPOSAL 2'''[[Image:Logo 2.JPG]]
+| Media_File2 =  '''PROPOSAL 3'''[[Image:Logo 3.JPG]]
+}}
+
+{{Template:OWASP_Training_Pictures_View 
+| Media_File1 =  '''PROPOSAL 4'''[[Image:Logo 4.JPG]]
+| Media_File2 =  
+
+}}
+
+|}
+
+==== Training - April, 16th, 2010 (Closed)====
+
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>OWASP Training</noinclude>
+| Course_designation = OWASP projects and resources you can use TODAY. All OWASP Training Material can be downloaded from [http://code.google.com/p/owasp-training/downloads/list here] 
+| Course_Overview_Goal 
+=&nbsp;
+*Apart from OWASP's Top 10, most [[:Category:OWASP_Project|OWASP Projects]] are not widely used and understood. In most cases this is not due to lack of quality and usefulness of those Document & Tool projects, but due to a lack of understanding of where they fit in an Enterprise's security ecosystem or in the Web Application Development Life-cycle.
+
+*This course aims to change that by providing a selection of mature and enterprise ready projects together with practical examples of how to use them.
+
+*The course will be very practical where demonstration and hands-on exercises will be provided for the tools covered.
+
+*If you are interested in participating in the hands on portion of the course, please bring a laptop.
+&nbsp;
+| Date = April, 16th, 2010
+| Venue = 
+[http://maps.google.co.uk/maps?f=q&source=s_q&hl=en&q=Waterside,+Speedbird+Way,+Harmondsworth,+West+Drayton,+Middlesex+UB7+0GA,+United+Kingdom&sll=51.491742,-0.256068&sspn=0.00847,0.018132&ie=UTF8&cd=1&geocode=FfqVEQMdv4H4_w&split=0&hq=&hnear=Waterside,+Speedbird+Way,+Harmondsworth,+West+Drayton,+Middlesex+UB7+0GA,+United+Kingdom&z=16 BA Headquarters (Waterside near Heathrow). British Airways plc, Speedbird Way, Harmondworth, UB7 0GA]. Buses from Terminal 5 to Waterside. Visitor car parking passes available.Canteen also available at lunchtime.
+*NOTE 1: Anyone intending to travel on the staff buses ([http://www.box.net/shared/20q22ooi9h See Timetable]) MUST have a hardcopy of an letter with their full name as this will need to be shown to the bus driver to allow them to travel - To claim this authorization letter please contact [mailto:paulo.coimbra@owasp.org OWASP Project Manager]. 
+*NOTE 2: Car travellers must Drive into the VISITORS lane and stop at the security post. Your car registration & name will be checked against the list (hence you must provide these to [mailto:paulo.coimbra@owasp.org us beforehand]) and you'll be directed to the visitors car park. Please state you are staying all day. Make your way to reception and ask for Amanda Warren (x 85025 or mobile number: 07808 717410). You will then be issued with a pass & escorted to the meeting room. 
+| Price = Free
+| Course_Registration_url = Closed - <!-- http://www.eventbrite.com/event/614421752 -->
+| Course_Registration_name = Course Registration 
+| Modules = 
+
+{{Template:Training_Module_Row_View
+| Time = 09h00 (75m)
+| Module_Name = Guided tour of OWASP Projects
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_Project
+| Trainer = [[user:Dinis.cruz|Dinis Cruz]] 
+| Presentation_Name = Tour of OWASP’s projects
+| Presentation_Link = http://www.owasp.org/index.php/File:OWASP_India_-_Tour_of_OWASP_projects.ppt  
+}}
+
+{{Template:Training Module Row Break
+| Time = 10h15 (15m)
+| Break_Reason = Coffee Break
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 10h30 (150m)
+| Module_Name = OWASP Top 10 
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project
+| Trainer = [[User:Clerkendweller|Colin Watson]] 
+| Presentation_Name = OWASP Top 10 rc1 - PDF File
+| Presentation_Link = http://www.owasp.org/index.php/File:Owasp-training-2010-topten2010-1.pdf
+}}
+
+{{Template:Training Module Row Break
+| Time = 13h00 (60m)
+| Break_Reason = Lunch
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 14h00 (20m)
+| Module_Name = OWASP Testing Guide
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_Testing_Project
+| Trainer = [[user:Dinis.cruz|Dinis Cruz]]
+| Presentation_Name = Testing Guide - PPT File
+| Presentation_Link = http://www.owasp.org/images/2/2c/OWASP_EU_Summit_2008_OWASP_Testing_Guide_v3.ppt  
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 14h20 (20m)
+| Module_Name = OWASP WebGoat Project
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_WebGoat_Project
+| Trainer = [[user:Dinis.cruz|Dinis Cruz]] 
+| Presentation_Name = WebGoat v5 Presentation
+| Presentation_Link = http://www.owasp.org/images/5/55/OWASP_WebGoat.ppt
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 14h40 (40m)
+| Module_Name = OWASP WebScarab Project
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_WebScarab_Project
+| Trainer = [[User:Clerkendweller|Colin Watson]]
+| Presentation_Name = WebScarab Demonstration
+| Presentation_Link = http://www.owasp.org/index.php/File:Owasp-training-2010-webscarab-slides.pdf  
+}}
+
+{{Template:Training Module Row Break
+| Time = 15h20 (25m)
+| Break_Reason = Coffee Break
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 15h45 (50m)
+| Module_Name = OWASP ESAPI 
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API
+| Trainer = [[user:Dinis.cruz|Dinis Cruz]]
+| Presentation_Name = OWASP ESAPI - PPT File
+| Presentation_Link = http://owasp-esapi-java.googlecode.com/files/OWASP%20ESAPI.ppt  
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 16h35 (20m)
+| Module_Name = OWASP Software Assurance Maturity Model
+| Module_Link = http://www.owasp.org/index.php/Category:Software_Assurance_Maturity_Model
+| Trainer = [[User:Clerkendweller|Colin Watson]] 
+| Presentation_Name = SAMM - PPT File
+| Presentation_Link = http://www.owasp.org/images/8/83/OWASP_OpenSAMM.ppt  
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 16h55 (20m)
+| Module_Name = OWASP Code Review Project
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_Code_Review_Project
+| Trainer = [[user:Dinis.cruz|Dinis Cruz]]
+| Presentation_Name = OWASP Code Review - PPT File
+| Presentation_Link = https://www.owasp.org/images/5/59/Code_Review_Eoin.pptx  
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 17h15 (30m)
+| Module_Name = OWASP O2 Platform
+| Module_Link = http://www.owasp.org/index.php/OWASP_O2_Platform
+| Trainer = [[user:Dinis.cruz|Dinis Cruz]] (Project Leader)
+| Presentation_Name = What is the OWASP O2 Platform
+| Presentation_Link = http://www.o2-ounceopen.com/files-binaries-source-and-demo/old-documents-and-presentations/OWASP_O2_Platform_-_AppSec_Ireland_Sep_2009.pdf  
+}}
+
+}}
+
+
+__NOTOC__
+<headertabs/>
+
+
+[[Category:OWASP_Training|Training]]

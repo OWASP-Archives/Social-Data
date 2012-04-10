@@ -1,0 +1,36 @@
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT INFORMATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Application Security Verification Standard (ASVS) Project''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|
+[[Image:Asvs-bannerbug.JPG|200px|right]]Whereas the OWASP Top Ten Project is a tool that provides web application security awareness, the OWASP "Application Security Verification Standard" (also known as "ASVS") is a commercially-workable open standard that defines ranges in coverage and levels of rigor that can be used to perform application security verifications. It is the very first standard that OWASP has published! 
+*The '''OWASP ASVS Web Application Edition''' can be used to establish a level of confidence in the security of web applications. It is currently available in English.
+*The '''OWASP ASVS Web Service Edition''' can be used to establish a level of confidence in the security of web services. It is currently under development and is not yet available for release.
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Key Project Information'''
+ | style="width:14%; background:#cccccc" align="center"|Project Leader<br>[[User:Mike.boberski|'''Mike Boberski''']]
+ | style="width:15%; background:#cccccc" align="center"|Project Contributors<br>[[User:Jeff Williams|'''Jeff Williams''']]<br>[[User:Wichers|'''Dave Wichers''']]
+ | style="width:11%; background:#cccccc" align="center"|Mailing List<br>[https://lists.owasp.org/mailman/listinfo/owasp-application-security-verification-standard '''Subscribe here''']<br>[mailto:Owasp-Application-Security-Verification-Standard(at)lists.owasp.org '''Use here''']
+ | style="width:16%; background:#cccccc" align="center"|Licensed under<br>[http://creativecommons.org/licenses/by-sa/3.0/ '''Creative Commons Attribution ShareAlike 3.0''']
+ | style="width:14%; background:#cccccc" align="center"| Project Type<br>[[:Category:OWASP_Project#Beta_Status_Projects|'''Documentation''']]
+ | style="width:15%; background:#cccccc" align="center"|Sponsors<br>[http://www.aspectsecurity.com/ '''Aspect Security''']<br>[http://www.boozallen.com/ '''Booz Allen Hamilton''']<br>[[:OWASP Summer of Code 2008|'''OWASP SoC 08''']]
+ |}
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|'''Web Application Edition''' release version: [[:Category:OWASP_Project_Assessment#Beta_Quality_Documentation_Criteria|'''Beta''']]<br>[[:Project Information:template Application Security Verification Standard - Proposal - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="center"|
+'''About OWASP ASVS''': [http://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#OWASP_ASVS_Presentation_Downloads '''Powerpoint'''].<br>
+'''Download free''': [http://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#OWASP_ASVS_Beta_Downloads Word] and [http://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#OWASP_ASVS_Beta_Downloads PDF].
+ | style="width:29%; background:#cccccc" align="center"|[http://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project OWASP Top Ten]<br>[http://www.owasp.org/index.php/Category:OWASP_Legal_Project OWASP Legal Project]<br>[http://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API OWASP Enterprise Security API (ESAPI)]
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Latest Project News''' 
+ | colspan="7" style="width:85%; background:#FFDF80" align="left"|
+*'''Updated Article:''' [http://www.owasp.org/index.php/How_to_bootstrap_your_SDLC_with_verification_activities How to bootstrap your SDLC with verification activities]
+*'''New Announcement:''' OWASP ASVS has been integrated into the [[OWASP Secure Software Contract Annex]] in the [[OWASP Legal Project]]
+ |}

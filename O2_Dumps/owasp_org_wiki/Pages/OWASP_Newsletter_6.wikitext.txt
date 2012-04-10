@@ -1,0 +1,112 @@
+''Sent to owasp-all mailing list on 23th Feb 2007'' __NOEDITSECTION__
+==  OWASP Newsletter #6 (6-Mar-2007) ==
+Welcome to the 6th OWASP Newsletter, again filled with the latest OWASP and Web Application Security updates.
+
+If you have any content to add to the next edition, feel free to add it directly to its WIKI page ([[OWASP Newsletter 7]]).
+
+As Dinis is very busy this week, I helped him out with this Newsletter.
+
+Sebastien Deleersnyder
+
+Belgium Chapter Leader
+
+== Featured Item: OWASP Autumn of Code 2006 finished! ==
+All the OWASP Autumn of Code 2006 projects are completed. Congratulations to all contributors and project leaders!
+* [[OWASP_Autumn_of_Code_2006_-_Projects:_WebScarab_NG|WebScarab NG]]: A working beta version is now available for WebScaraB which implements a complete new user interface and is much more usable and practical (although still doesn't have all features from the current version)
+* [[OWASP_Autumn_of_Code_2006_-_Projects:_Live_CD|Live CD]]: The Live CD is a valuable addition to the OWASP collection, since it allows the easy access, use and testing of several OWASP tools and documents
+* [[OWASP_Autumn_of_Code_2006_-_Projects:_CAL9000|CAL9000]]: A new version of CAP 9000 is now released containing several new features and with extended support for more browsers
+* [[OWASP_Autumn_of_Code_2006_-_Projects:_SiteGenerator_and_ORG|SiteGenerator and ORG]] :Both [[OWASP Report Generator]](ORG) and [[OWASP Site Generator]] (OSG) receive large number of enhancements. In ORG tons of small/medium bugs were fixed and several new major features where added (in addition to an update to .NET 2.0). In OSG, HttpModule was re-implemented to use TCP, several nasty bugs were fixed and new OSG vulnerabilities where added.
+* [[OWASP_Autumn_of_Code_2006_-_Projects:_Pantera|Pantera]]: Simon delivered a new version of Pantera which contains several new features and is more optimized
+* [[OWASP_Autumn_of_Code_2006_-_Projects:_Web_Goat|Web Goat]]: 12 new lessons where added to WebGoat (for example: DOM/XML Injection, JSON Injection, Cross-Site Request Forgery , HTTP Splitting, etc..)
+* [[OWASP_Autumn_of_Code_2006_-_Projects:_Testing_Guide|Testing Guide]]:The previous Guide was greatly enhanced where large portions were re-writen and new material added. This Guide is an important addition to the OWASP catalogue.
+* [[OWASP_Autumn_of_Code_2006_-_Projects:_Owasp_.Net_Tools|Owasp .Net Tools]]: The OWASP .Net tools SAM'SHE and ANSA are in integrated into a new client server architecture which contains a 'built from scratch' client application which 'consumes' the results from the .Net tests. This new tools (called OWASP Tiger) could be the beginning of a standard vulnerability collector.
+* [[OWASP_Autumn_of_Code_2006_-_Projects:_Website_and_Branding|Owasp Website]]: Multiple sections of OWASP.org website where re-organized (for example the Projects Page), the OWASP newsletter was created and several pages received improvements in their layout
+More details on [http://www.owasp.org/index.php/OWASP_Autumn_Of_Code_2006 OWASP Autumn Of Code 2006]. We are also just about to lauch the "SpoC 007" (do you get the joke?), which is the OWASP Spring of Code 2007.
+
+== Featured Project: XML Gateway Eval Project ==
+This [http://www.owasp.org/index.php/Category:OWASP_XML_Security_Gateway_Evaluation_Criteria_Project OWASP Project] defines an open standard for evaluating XML Security Gateways. This criteria will provide the OWASP community a set of standard evaluation criteria to assess the functionality and quality of XML Security Gateways. The main driver for this project is to reduce the confusion and complexity in assessing the strengths and weaknesses of solutions in this the XML Security space, and enlightening the community as to the utility of XML Security Gateways to deliver a number of valuable security services. 
+
+== Latest additions to the WIKI ==
+The [http://blogs.owasp.org/ OWASP Blogs] have been integrated in the OWASP web site.<br>
+Do not hesitate to start your own Web Application Security blog.
+
+==== New Pages====
+* [[Hacking Java Clients]]
+* [[OWASP Testing Guide Presentations]]
+* [[InfoSecurity Milano 2007]]
+* [[:Category:OWASP Education Project|OWASP Education Project]]
+* [[Mark O'Neill]]
+* [[OWASP Education Presentation|consolidation page of OWASP presentations]]
+* [[J2EE_Bad_Practices:_JSP_Expressions|J2EE Bad Practices: JSP Expressions]]
+
+==== Updated pages==== 
+Updated chapter pages:
+* [[New Jersey]]
+* [[Virginia (Northern Virginia)]]
+* [[Germany]]
+* [[San Francisco]]
+* [[Ottawa]]
+* [[London]]
+* [[Boston‎]]
+* [[France]]
+* [[Helsinki‎]]
+Other pages:
+* [[:Category:OWASP Sprajax Project|OWASP Sprajax Project]]
+* [[Appendix A: Testing Tools]]
+* [[Access Control In Your J2EE Application]]
+* [[Hashing Java]]
+* [[How to add validation logic to HttpServletRequest‎]]
+* [[OWASP Autumn of Code 2006 - Project Completion]]
+* [[:Category:OWASP XML Security Gateway Evaluation Criteria Project|OWASP XML Security Gateway Evaluation Criteria Project]]
+
+
+==== New Documents & Presentations from chapters==== 
+* [http://www.disenchant.ch/blog/files/presentations/pres_20070206_04_svetsch_xss_worms.pdf XSS and XSS Worms (Sven Vetsch)] from the [[Switzerland|Switzerland]] Chapter.<br>
+For a complete list of chapter presentations see [[OWASP_Education_Presentation|the online table of presentations]].
+
+==== Latest Blog entries==== 
+* [http://blogs.owasp.org/diniscruz/2007/03/05/roadmap-to-a-partial-trust-managed-code-world/ Roadmap to a Partial Trust Managed Code world]
+* [http://blogs.owasp.org/diniscruz/2007/03/05/security-awareness-modes-the-day-microsoft-changes/ 'Security Awareness Modes' & the 'day Microsoft changes']
+* [http://blogs.owasp.org/diniscruz/2007/03/05/on-microsofts-lack-of-partial-trust-managed-code-ptmc-focus-and-ideas-for-the-future/ On Microsoft’s lack of Partial Trust Managed Code (PTMC) focus and ideas for the future]
+* [http://blogs.owasp.org/diniscruz/2007/03/05/software-security-and-quality-blog/ Software Security and Quality Blog]
+* [http://blogs.owasp.org/diniscruz/2007/03/03/simple-backdoor-on-wordpress/ Simple Backdoor on WordPress]
+* [http://blogs.owasp.org/seba/2007/03/03/ipod/ iPod]
+* [http://blogs.owasp.org/dre/2007/02/27/re-writing-exploits/| Re-writing Exploits]
+* [http://blogs.owasp.org/seba/2007/02/22/javascript-badware/| JavaScript Badware]
+
+==== OWASP Community====
+* Apr 17 (18:00h) - [[Rochester|Rochester chapter meeting]]
+* Apr 12 (18:00h) - [[Netherlands|Netherlands chapter meeting]]
+* Apr 11 (18:00h) - [[Toronto|Toronto chapter meeting]]
+* Apr 10 (18:00h) - [[Virginia (Northern Virginia)|Washington DC (N. VA) chapter meeting]]
+* Apr 4 (18:30h) - [[Boston|Boston chapter meeting]]
+* Apr 3 (18:00h) - [[Melbourne|Melbourne chapter meeting]]
+* Mar 28 (11:30h) - [[San Antonio|San Antonio chapter meeting]]
+* Mar 22 (18:00h) - [[London|London chapter meeting]]
+* Mar 21-22 - [[Belgium#OWASP_Top_10_2007_Update_.28Infosecurity_Belgium.2C_21_.26_.2622_Mar_2007.29|Belgium@InfoSecurity]]
+* Mar 20 (18:00h) - [[Rochester|Rochester chapter meeting]]
+* Mar 14 (18:00h) - [[Toronto|Toronto chapter meeting]]
+* Mar 14 (18:00h) - [[Chicago|Chicago chapter meeting]]
+* Mar 13 (18:00h) - [[Virginia (Northern Virginia)|Washington DC (N. VA) chapter meeting]]
+* Mar 8 (18:00h) - [[Ottawa|Ottawa Chapter Meeting]] 
+* Mar 7 (18:30h) - [[Boston|Boston chapter meeting]]
+* Mar 7 (18:30h) - [[Kansas City|Kansas City chapter meeting]]
+* Mar 6 (18:30h) - [[Philadelphia|Philadelphia chapter meeting]]
+* Mar 6 (18:30h) - [[San Francisco|San Francisco and San Jose chapter meeting]]
+* Mar 6 (18:00h) - [[Melbourne|Melbourne chapter meeting]]
+* Mar 5 (11:00h) - [[New Jersey|New Jersey chapter meeting]]
+
+==== Application Security News ==== 
+* '''Mar 2 - [http://wordpress.org/development/2007/03/upgrade-212/ Wordpress (popular blog software) backdoored]'''
+:"Long story short: If you downloaded WordPress 2.1.1 within the past 3-4 days, your files may include a security exploit that was added by a cracker, and you should upgrade all of your files to 2.1.2 immediately."
+* '''Mar 1 - [http://www.php-security.org/ the Month of PHP Bugs "formerly known as March"]'''
+:"This initiative is an effort to improve the security of PHP. However we will not concentrate on problems in the PHP language that might result in insecure PHP applications, but on security vulnerabilities in the PHP core."
+* '''Feb 26 - [http://www.securityfocus.com/infocus/1888 Building Secure Applications: Consistent Logging]'''
+:SecurityFocus article, "This article examines the dismal state of application-layer logging as observed from the authors’ years of experience in performing source code security analysis on millions of lines of code."
+* '''Feb 26 - [http://www.honeynet.org/papers/webapp/index.html Know your Enemy: Web Application Threats]'''
+:A long paper on web application security threats released by honeynet.org. "This paper focuses on application threats against common web applications. After reviewing the fundamentals of a typical attack, we will go on to describe the trends we have observed and to describe the research methods that we currently use to observe and monitor these threats."
+
+== OWASP references in the Media==
+* [http://sev.prnewswire.com/computer-electronics/20070302/CLF05902032007-1.html WhiteHat Security Chief Technology Officer Jeremiah Grossman to Present at OWASP Philadelphia Meeting]
+* [http://www.professionalsecuritytesters.org/modules.php?name=News&file=article&sid=766 ANNOUNCING THE OWASP TESTING GUIDE]
+* [http://www.securityfocus.com/infocus/1888| Building Secure Applications: Consistent Logging]

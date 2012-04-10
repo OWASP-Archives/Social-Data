@@ -1,0 +1,61 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Failure to follow guideline/specification]]
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+
+==Description==
+
+The program violates the Enterprise JavaBeans specification by listening on a socket or accept connections on a socket.
+However it can act as a network socket client.
+
+The Enterprise JavaBeans specification requires that every bean provider follow a set of programming guidelines designed to ensure that the bean will be portable and behave consistently in any EJB container [1].
+
+In this case, the program violates the following EJB guideline:
+
+  "An enterprise bean must not attempt to listen on a socket, accept connections on a socket, or use a socket for multicast."
+
+A requirement that the specification justifies in the following way:
+
+  "The EJB architecture allows an enterprise bean instance to be a network socket client, but it does not allow it to be 
+  a network server. Allowing the instance to become a network server would conflict with the basic function of the 
+  enterprise bean – to serve the EJB clients."
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+TBD
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+* [1] Enterprise JavaBeans 2.1 Specification. Sun Microsystems. http://java.sun.com/products/ejb/docs.html.

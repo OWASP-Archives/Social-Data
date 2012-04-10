@@ -1,0 +1,57 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Failure to follow guideline/specification]]
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+==Description==
+
+This looks like an effort to override a common Java method, but it probably does not have the intended effect.
+
+This method's name is similar to a common Java method name, but it is either spelled incorrectly or the argument list causes it to not override the intended method.
+
+==Risk Factors==
+TBD
+
+==Examples ==
+
+The following method is meant to override Object.equals():
+
+<pre>
+	public boolean equals(Object obj1, Object obj2) {
+	  ...
+	}
+</pre>
+
+But since Object.equals() only takes a single argument, the method above is never called.
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD

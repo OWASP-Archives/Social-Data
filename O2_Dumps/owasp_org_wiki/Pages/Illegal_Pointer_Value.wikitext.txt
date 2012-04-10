@@ -1,0 +1,98 @@
+{{Template:Vulnerability}}
+{{Template:Fortify}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+This function can return a pointer to memory outside of the buffer to be searched. Subsequent operations on the pointer may have unintended consequences.
+
+This function can return a pointer to memory outside the bounds of the buffer to be searched under either of the following circumstances:
+
+* An attacker can control the contents of the buffer to be searched 
+* An attacker can control the value for which to search 
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+The following short program uses an untrusted command line argument as the search buffer in a call to rawmemchr().
+
+<pre>
+	int main(int argc, char** argv) {
+	  char* ret = rawmemchr(argv[0], 'x');
+	  printf("%s\n", ret);
+	} 
+</pre>
+
+The program is meant to print a substring of argv[0], but it may end up printing some portion of memory above argv[0].
+
+This issue is similar to a string termination error, where the programmer relies on a character array to contain a null terminator.
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Buffer Overflow]]
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Implementation]]
+[[Category:C]]
+[[Category:Code Snippet]]
+[[Category:Range and Type Error Vulnerability]]
+[[Category:Vulnerability]]

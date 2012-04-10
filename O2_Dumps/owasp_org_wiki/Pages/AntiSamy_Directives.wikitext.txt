@@ -1,0 +1,78 @@
+This page explains the purpose of the "directives" in AntiSamy policy files, and what support they have in different versions.<br>
+
+{| width="85%" height="215" cellspacing="3" cellpadding="3" border="1" summary="This table shows the &quot;directives" in AntiSamy policy files, their purpose, and what versions support them" style=""
+|-
+! align="center" | Directive<br>
+! align="center" | Type<br>
+! align="center" | Default Value<br>(in Java)<br>
+! align="center" | Supported in AntiSamy Java?<br>
+! align="center" | Supported in AntiSamy .NET?<br>
+|-
+| '''useXHTML<br>'''When this feature is on, AntiSamy will output the sanitized data in XHTML&nbsp;format as opposed to just regular HTML. <br>
+| align="center" | boolean<br>
+| align="center" | false<br>
+| align="center" | Yes<br>
+| align="center" | No<br>
+|-
+| '''omitXMLDeclaration'''<br>When "useXHTML" is turned on, AntiSamy will automatically prepend the XML header. Enabling this feature will tell AntiSamy not to do that.<br>
+| align="center" | boolean<br>
+| align="center" | true<br>
+| align="center" | Yes<br>
+| align="center" | No<br>
+|-
+| '''formatOutput'''<br>When enabled, AntiSamy will automatically format the output according to some basic rules and indentation. Kind of like "pretty print."<br>
+| align="center" | boolean<br>
+| align="center" | true<br>
+| align="center" | Yes<br>
+| align="center" | No<br>
+|-
+| '''maxInputSize'''<br>This directive specifies the maximum size (in bytes) of user input before it's validated.<br>
+| align="center" | integer<br>
+| align="center" | 100K<br>
+| align="center" | Yes<br>
+| align="center" | No<br>
+|-
+| '''embedStyleSheets'''<br>When the developer chooses to allow CSS, this directive will specify whether or not remote stylesheets found referenced in the user's input will be pulled down and embedded into the current user input.<br>
+| align="center" | boolean<br>
+| align="center" | false<br>
+| align="center" | Yes<br>
+| align="center" | No<br>
+|-
+| '''maxStyleSheetImports'''<br>This feature allows developers to specify how many remote stylesheets can be downloaded from any one input.
+| align="center" | integer
+| align="center" | 1
+| align="center" | Yes
+| align="center" | No
+|-
+| '''connectionTimeout'''<br>When "embedStyleSheets" is enabled, this timeout value (in milliseconds)&nbsp;will be used when fetching the offsite resource in question. This should be used to prevent validation threads from blocking when connecting to 3rd party systems that may purposefully act really, really slowly.<br>
+| align="center" | integer<br>
+| align="center" | 1K<br>
+| align="center" | Yes<br>
+| align="center" | No<br>
+|-
+| '''preserveComments'''<br>When enabled, AntiSamy will keep HTML comments supplied in the input.<br>
+| align="center" | boolean<br>
+| align="center" | false<br>
+| align="center" | Yes<br>
+| align="center" | No<br>
+|-
+| '''nofollowAnchors'''<br>When enabled, AntiSamy will append ''rel="nofollow"'' attributes to all anchor&nbsp;(&lt;a&gt;) tags supplied in the input. This is useful for telling search engines not to associate your site with sites that are under the control of your users.<br>
+| align="center" | boolean<br>
+| align="center" | false<br>
+| align="center" | Yes<br>
+| align="center" | No<br>
+|-
+| '''validateParamAsEmbed'''<br>When enabled, AntiSamy will treat attributes of &lt;embed&gt; tags in the policy the same as any &lt;param&gt; tags nested inside the the &lt;embed&gt;. This allows users to, according to policy, pass in data in either of those two methods with equal security. This is needed for sites that allow users to supply videos, etc.
+| align="center" | boolean<br>
+| align="center" | false<br>
+| align="center" | Yes<br>
+| align="center" | No<br>
+|-
+| '''preserveSpace'''<br>When enabled, this feature is intended to preserve spaces as specified in the input without normalization. Right now it only works as according to [http://xerces.apache.org/xerces-j/apiDocs/org/apache/xml/serialize/OutputFormat.html#setPreserveSpace%28boolean%29 this method].
+| align="center" | boolean
+| align="center" | false
+| align="center" | Yes
+| align="center" | No
+|}
+<br>
+<br><br>

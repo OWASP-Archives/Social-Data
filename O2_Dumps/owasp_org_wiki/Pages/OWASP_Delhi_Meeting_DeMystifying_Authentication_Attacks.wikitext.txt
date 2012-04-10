@@ -1,0 +1,7 @@
+Authentication plays a vital role in the security of web applications. When a user provides his login name and password to validate and prove his identity, the application assigns the user explicit privileges to the system, based on the identity established by the supplied credentials.
+
+However, there can be many weaknesses in an application that might be exposing the information and resources at the server side. Vulnerabilities like clear-text transmission of passwords, replay attacks, poor 'Forgot password' implementation, poor 'Reset password' implementation, reversible encryption, Back-back-refresh trick, error handling, etc. can be serious threats to the application.
+
+By Gaining experience from auditing a number of diverse web applications, Gunwant Singh has learnt considerably in identifying the core cause of these flaws and has extensive experience in testing and help mitigating these attacks from the root.
+
+Gunwant Singh will share his knowledge on the workings and mitigation of these flaws. He will also discuss some interesting facts on CAPTCHA issues, information leakage etc.

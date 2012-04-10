@@ -1,0 +1,49 @@
+{| align="right" class="wikitable"
+|-
+! .NET Security Quick Reference
+|- 
+| 
+*[[OWASP WebGoat Project]]<br />
+|-
+|}
+==.NET Penetration Testing==
+Plan, Discover, Attack and Report - this section is for tools, checklists and references for penetration testing .NET web applications and services.
+
+===Areas of Concern===
+*Planning the hack
+
+*Ethically hacking
+
+*Attack Vectors
+
+*Intelligence gathering
+
+*Reporting
+
+===Blogs, Articles & Projects===
+[[OWASP .NET Vulnerability Research]]
+
+[http://blogs.msdn.com/hackers/ MSDN Hackers]
+
+[http://msdn.microsoft.com/en-us/magazine/cc507646.aspx MSDN Magazine: Security Briefs: Penetration Testing]
+
+[http://blogs.microsoft.co.il/blogs/alikl/archive/2006/12/29/Wrong-Way-To-Do-Penetration-Testing.aspx Wrong Way to Do Penetration Testing]
+
+===Online Media (Podcasts, Webcasts, Presentations, eBooks etc.)===
+[http://msevents.microsoft.com/CUI/WebCastEventDetails.aspx?culture=en-US&EventID=1032308087&CountryCode=US MSDN Webcast: Penetration Testing with Visual Studio Team System and Fortify Security Tester]
+
+[http://www.hackerz.ir/e-books/Penetration%20Testing%20For%20Web%20Applications%20Part%201.pdf Penetration Testing for Web Applications Part 1 (PDF)] link broken 2011.05.04 14.14 PM (GMT+7)
+
+[http://www.hackerz.ir/e-books/Penetration%20Testing%20For%20Web%20Applications%20Part%202.pdf Penetration Testing for Web Applications Part 2 (PDF)] link broken 2011.05.04 14.14 PM (GMT+7)
+
+===References===
+[http://www.owasp.org/index.php/Rooting_The_CLR Rooting the CLR (Draft)]
+
+[http://csrc.nist.gov/publications/nistpubs/800-42/NIST-SP800-42.pdf NIST 800-42 Guideline on Network Security Testing]
+
+[http://www.isecom.org/osstmm ISECOM Open Source Security Testing Methodology Manual]
+
+[http://www.oissg.org/issaf/index.php OISSG Information Systems Security Assessment Framework (ISSAF)]
+
+===Tools===
+[http://www.owasp.org/index.php/Source_Code_Audit_Tools Source Code Audit Tools]

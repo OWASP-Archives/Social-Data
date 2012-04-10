@@ -1,0 +1,93 @@
+{{Top_10_2007:TopTemplate|usenext=NextLink|next=-Revelación de Información y Gestión Incorrecta de Errores|useprev=PrevLink|prev=-Referencia Insegura y Directa a Objetos|usemain=MainLink|main=}}
+
+Las vulnerabilidades de falsificación de petición en sitios cruzados no son un ataque nuevo, pero son simples y devastadores. Un ataque CSRF fuerza el navegador validado de una víctima a enviar una petición a una aplicación Web vulnerable, la cual entonces realiza la acción elegida a través de la víctima.
+
+Esta vulnerabilidad está extremadamente extendida, ya que cualquier aplicación que: 
+
+* No dispone de pruebas de autorización para acciones vulnerables.
+* Procesará una acción si se pueden pasar credenciales predefinidas en la petición (por ejemplo. http://www.example.com/admin/doSomething.ctl?username=admin&passwd=admin). 
+* Peticiones autorizadas basadas únicamente en credenciales que son automáticamente presentadas como la cookie de sesión si está actualmente conectado en la aplicación, o con la funcionalidad "Recuérdame" si no lo está, o un testigo de Kerberos si forma parte de una intranet integrada con una autenticación con Active Directory 
+
+está en riesgo. Desgraciadamente, hoy, la mayoría de las aplicaciones Web confían únicamente en las credenciales presentadas automáticamente tales como cookies de sesión, credenciales de autenticación básica, dirección IP de origen, certificados SSL, o credenciales de dominio Windows.
+
+Esta vulnerabilidad es también conocida por otros nombres en inglés como Session Riding, One-Click Attacks, Cross Site Reference Forgery, Hostile Linking y Automation Attack. El acrónimo XSRF es también usado frecuentemente. OWASP y MITRE han estandarizado el término Cros Site Request Forgery CSRF.
+
+==Entornos Afectados==
+
+Todos los entornos de aplicación Web son vulnerables a CSRF.
+
+==Vulnerabilidad==
+
+Un ataque CSRF típico contra un foro puede hacer que un usuario invoque alguna función, tal como la página de desconexión de la aplicación. La siguiente etiqueta en cualquier página Web vista por la víctima generará una petición que le hará salir de la aplicación: 
+
+ <nowiki><img src="http://www.example.com/logout.php"></nowiki>
+
+Si un banco en línea permitiera a su aplicación procesar peticiones, tales como transferencia de fondos, podría permitir un ataque similar: 
+
+ <nowiki><img src="http://www.example.com/transfer.do?frmAcct=document.form.frmAcct</nowiki> &toAcct=4345754&toSWIFTid=434343&amt=3434.43">
+
+Jeremiah Grossman en su conferencia de la BlackHat 2006 donde hablaba sobre [http://www.whitehatsec.com/presentations/whitehat_bh_pres_08032006.tar.gz Hacking de sitios de Intranet desde el exterior], demostró que es posible forzar a un usuario a realizar cambios en su router DSL sin su consentimiento; incluso aún si el usuario no conoce que el router DSL tiene una interfaz Web. Jeremiah utilizó el nombre predeterminado de la cuenta para realizar el ataque. 
+
+Todos estos ataques funcionan porque las credenciales de autorización del usuario (típicamente la cookie de sesión) es automáticamente incluida en tales peticiones por el navegador, incluso aunque el atacante no hubiera suministrado la credencial. 
+
+Si la etiqueta que contiene el ataque puede ser anotado (enviado a un foro o weblog) de una aplicación vulnerable, entonces la probabilidad de encontrar víctimas ya conectadas incrementa significativamente, similar al incremento del riesgo entre defectos XSS almacenados y reflejados. No es necesario que exista una vulnerabilidad XSS para que un ataque CSRF funcione, aunque cualquier aplicación con vulnerabilidad XSS es también susceptible a CSRF porque un ataque CSRF puede explotar la vulnerabilidad XSS para robar cualquier credencial suministrada de manera no automática que puede darse para proteger contra un ataque CSRF. Muchos gusanos de aplicación han usado una combinación de ambas técnicas. 
+
+Cuando se trabaja en la defensa de los ataques CSRF, debe enfocarse también en la eliminación de las vulnerabilidades XSS de su aplicación ya que tales defectos pueden ser usados para rodear todas las defensas contra CSRF que pueda colocar. 
+
+==Verificando la seguridad==
+
+El objetivo es verificar que la aplicación está protegida ante ataques CSRF mediante la generación y posterior solicitud de un identificador que no es enviado de forma automática por el navegador Web.
+
+Enfoques automáticos: Hoy en día pocos analizadores automáticos tienen la capacidad de detectar vulnerabilidades CSRF, aunque la detección sea posible para motores de escaneo suficientemente capaces. Sin embargo, si su escáner detecta una vulnerabilidad de secuencia de comandos en sitios cruzados y no dispone de protecciones anti-CSRF, es muy probable que tenga el riesgo de ataques CSRF.
+
+Enfoques manuales: Las pruebas de intrusión son una manera rápida de verificar si la protección contra ataques CSRF está en su sitio. Para verificar que el mecanismo es fuerte y debidamente implementado, la evaluación del código fuente es la acción más efectiva.
+
+==Protección==
+
+Las aplicaciones deben asegurarse de que no dependen de aplicaciones o testigos suministrados automáticamente por los navegadores. La única solución es utilizar un testigo a medida que el navegador no pueda "recordar" e y por lo tanto incluir automáticamente en un ataque CSRF. 
+
+Las siguientes estrategias deberían ser inherentes en todas las aplicaciones Web:
+
+* '''Asegurarse que no existen vulnerabilidades XSS en su aplicación'''. (ver A1 - Secuencia de Comandos en Sitios Cruzados) 
+* '''Introducir testigos aleatorios "a la medida" en cada formulario y URL que no sean automáticamente presentados por el navegador'''. Por ejemplo, 
+
+ <nowiki><form action="/transfer.do" method="post"></nowiki>
+ <nowiki><input type="hidden" name="8438927730" value="43847384383"></nowiki>
+ ...
+ <nowiki></form></nowiki>
+
+y entonces verificar que el testigo suministrado es correcto para el usuario actual. Tales testigos pueden ser únicos para una función particular o página para ese usuario, o simplemente único para la sesión global. Cuanto más enfocado esté un testigo a una función particular y/o a un conjunto particular de datos, más fuerte será la protección, pero también más complicada de construir y mantener. 
+
+* '''Para datos delicados o transacciones de gran valor, re-autenticar o utilizar firmado de transacción''' para asegurar que la petición es verdadera. Configure mecanismos externos como e-mail o contacto telefónico para verificar las peticiones o notificar al usuario de la petición. 
+* '''No utilice peticiones GET (URLs) para datos delicados o realizar transacciones de valor.''' Utilice únicamente métodos POST cuando procese datos delicados del usuario. Sin embargo, la URL puede contener el testigo aleatorio que crea una única URL, la cual hace que el CSRF sea casi imposible de realizar. 
+* '''El método POST aislado es una protección insuficiente'''. Debe también combinarlo con testigos aleatorios, autenticación externa o re-autenticación para proteger apropiadamente contra CSRF.
+* En ASP.NET, configura un ViewStateUserKey. (Ver referencias). Esto proporciona un tipo similar de chequeo que un testigo aleatorio tal y como se describió arriba. 
+
+Mientras estas sugerencias disminuirán su exposición considerablemente, ataques CSRF avanzados pueden evitar muchas de esas restricciones. La técnica más efectiva es el uso de testigos únicos, y eliminar todas las vulnerabilidades XSS de la aplicación.
+
+==Ejemplos==
+
+* [http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0192 http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0192] 
+* [http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-5116 http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-5116] 
+* MySpace Samy Interview: [http://blog.outer-court.com/archive/2005-10-14-n81.html http://blog.outer-court.com/archive/2005-10-14-n81.html] 
+* An attack which uses Quicktime to perform CSRF attacks [http://www.computerworld.com/action/article.do?command=viewArticleBasic&articleId=9005607&intsrc=hm_list http://www.computerworld.com/action/article.do?command=viewArticleBasic&articleId=9005607&intsrc=hm_list] 
+
+== Artículos Relacionados ==
+* [[Cross-Site Request Forgery|CSRF]]
+* [[Testing for CSRF  (OWASP-SM-005)|Probando CSRF]]
+* [[CSRF Guard]]
+* [[PHP CSRF Guard|CSRF Guard para PHP]]
+
+==Referencias==
+
+* CWE: CWE-352 (Cross-Site Request Forgery)
+* WASC Threat Classification: No direct mapping, but the following is a close match:[http://www.webappsec.org/projects/threat/classes/abuse_of_functionality.shtml http://www.webappsec.org/projects/threat/classes/abuse_of_functionality.shtml] 
+* OWASP CSRF, [http://www.owasp.org/index.php/Cross-Site_Request_Forgery http://www.owasp.org/index.php/Cross-Site_Request_Forgery]
+* OWASP Testing Guide, [https://www.owasp.org/index.php/Testing_for_CSRF https://www.owasp.org/index.php/Testing_for_CSRF] 
+* OWASP CSRF Guard, [http://www.owasp.org/index.php/CSRF_Guard http://www.owasp.org/index.php/CSRF_Guard] 
+* OWASP PHP CSRF Guard, [http://www.owasp.org/index.php/PHP_CSRF_Guard http://www.owasp.org/index.php/PHP_CSRF_Guard] 
+* RSnake, "What is CSRF?", [http://ha.ckers.org/blog/20061030/what-is-csrf/ http://ha.ckers.org/blog/20061030/what-is-csrf/] 
+* Jeremiah Grossman, slides and demos of "Hacking Intranet sites from the outside" http://www.whitehatsec.com/presentations/whitehat_bh_pres_08032006.tar.gz
+* Microsoft, ViewStateUserKey details, [http://msdn2.microsoft.com/en-us/library/ms972969.aspx#securitybarriers_topic2 http://msdn2.microsoft.com/en-us/library/ms972969.aspx#securitybarriers_topic2] 
+
+{{Top_10_2007:BottomTemplate|usenext=NextLink|next=-Revelación de Información y Gestión Incorrecta de Errores|useprev=PrevLink|prev=-Referencia Insegura y Directa a Objetos|usemain=MainLink|main=}}

@@ -1,0 +1,79 @@
+== ESAPI control coverage of CWEs ==
+
+This page covers the relationships between ESAPI controls and the [http://cwe.mitre.org/ CWE] entries that are eliminated or reduced by the application of those controls.
+
+* Validation
+** [http://cwe.mitre.org/data/definitions/20.html CWE-20]: Insufficient Input Validation
+** [http://cwe.mitre.org/data/definitions/116.html CWE-116]: Insufficient Output Sanitization
+** [http://cwe.mitre.org/data/definitions/228.html CWE-228]: Failure to Handle Syntactically Invalid Structure
+
+* Canonicalization
+** [http://cwe.mitre.org/data/definitions/22.html CWE-22]: Path Traversal
+** [http://cwe.mitre.org/data/definitions/41.html CWE-41]: Failure to Resolve Path Equivalence
+** [http://cwe.mitre.org/data/definitions/178.html CWE-178]: Failure to Resolve Case Sensitivity
+
+* Encoding
+** [http://cwe.mitre.org/data/definitions/113.html CWE-113]: Failure to Sanitize CRLF Sequences in HTTP Headers (aka 'HTTP Response Splitting')
+** [http://cwe.mitre.org/data/definitions/79.html CWE-79]: Failure to Sanitize Directives in a Web Page (aka 'Cross-site scripting' (XSS))
+** [http://cwe.mitre.org/data/definitions/89.html CWE-89]: Failure to Sanitize Data within SQL Queries (aka 'SQL Injection')
+
+* Authentication
+** [http://cwe.mitre.org/data/definitions/287.html CWE-287]: Insufficient Authentication
+
+* Session Management
+** [http://cwe.mitre.org/data/definitions/488.html CWE-488]: Data Leak Between Sessions
+** [http://cwe.mitre.org/data/definitions/613.html CWE-613]: Insufficient Session Expiration
+** [http://cwe.mitre.org/data/definitions/384.html CWE-384]: Session Fixation
+** [http://cwe.mitre.org/data/definitions/614.html CWE-614]: Sensitive Cookie in HTTPS Session Without "Secure" Attribute
+** [http://cwe.mitre.org/data/definitions/352.html CWE-352]: Cross-Site Request Forgery (CSRF)
+
+* Access Control
+** [http://cwe.mitre.org/data/definitions/639.html CWE-639]: Access Control Bypass Through User-Controlled Key
+** [http://cwe.mitre.org/data/definitions/285.html CWE-285]: Missing or Inconsistent Access Control
+** [http://cwe.mitre.org/data/definitions/647.html CWE-647]: Use of Non-Canonical URL Paths for Authorization Decisions
+
+* Encryption
+** [http://cwe.mitre.org/data/definitions/311.html CWE-311]: Failure to Encrypt Sensitive Data
+** [http://cwe.mitre.org/data/definitions/649.html CWE-649]: Reliance on Obfuscation or Encryption of Security-Relevant Inputs without Integrity Checking
+** [http://cwe.mitre.org/data/definitions/323.html CWE-323]: Reusing a Nonce, Key Pair in Encryption
+** [http://cwe.mitre.org/data/definitions/327.html CWE-327]: Use of a Broken or Risky Cryptographic Algorithm
+
+* Randomizer
+** [http://cwe.mitre.org/data/definitions/330.html CWE-330]: Use of Insufficiently Random Values
+
+* Error Handling
+** [http://cwe.mitre.org/data/definitions/209.html CWE-209]: Error Message Information Leaks
+** [http://cwe.mitre.org/data/definitions/392.html CWE-392]: Failure to Report Error in Status Code
+
+* Logging
+** [http://cwe.mitre.org/data/definitions/222.html CWE-222]: Truncation of Security-relevant Information
+** [http://cwe.mitre.org/data/definitions/117.html CWE-117]: Incorrect Output Sanitization for Logs
+** [http://cwe.mitre.org/data/definitions/532.html CWE-532]: Information Leak Through Log Files
+
+* Intrusion Detection
+
+* HTTP Protection
+
+* Utilities
+
+* Filters
+
+== Considerations for the Mapping ==
+
+The mapping is notional; it is not complete.
+
+Just because a feature is mapped to a CWE, does not mean that the feature covers all child nodes of that CWE.
+
+It would be useful to map individual API names, not just features.
+
+== Gap Analysis ==
+
+The CWE team has a capability for providing a "coverage graph" that highlights the location of a subset of CWEs within the context of an entire CWE hierarchy.  This could be used to conduct a gap analysis to see which CWEs are not addressed by ESAPI, which would be useful to ESAPI consumers as well as identifying possible future requirements for ESAPI itself.  See the graphical depictions of the [http://cwe.mitre.org/data/pdfs.html CWE OWASP Top Ten views] for examples.
+
+== Method ==
+
+Only CWE identifiers associated with weaknesses were reviewed.  (Some CWE entries are arbitrary categories that organize weaknesses instead of being weaknesses themselves).
+Only the most abstract CWE identifiers were mapped, implying that lower-level variants are also covered (based on the hierarchy imposed by CWE-1000, the research view, which has a different hierarchical structure than CWE-699, the developer view).
+
+As of December 2008, there are two different approaches for conducting mappings: "literal" in which you only map to a CWE if it is specifically mentioned or addressed, and "implied"  in which you map to a CWE if it is associated with general concepts.  For example, the API functions for output encoding can imply some protection against  SQL injection, XSS, and others. 
+The initial CWE/ESAPI mapping was implied.

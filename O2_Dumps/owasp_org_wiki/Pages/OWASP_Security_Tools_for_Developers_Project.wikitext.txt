@@ -1,0 +1,79 @@
+==== Home  ====
+
+{| width="100%"
+|-
+! width="66%" | 
+! width="33%" | 
+|- valign="top"
+| 
+This project is focused on defining, designing, developing and configuring security tools for software development teams and their end-to-end software development process. While any reference material or code produced will be focused an open source stack and Agile development techniques,&nbsp;the concepts should be able to be easily applied to other styles of software engineering.&nbsp; 
+
+Most people accept that tools can only effectively be applied to a fraction of software issues where the fraction is generally increasing but at a relatively conservative pace. Tools are however an important and widely adopted part of the process needed to produce functional, stable, reliable and scalable software where security is one attribute.&nbsp;Most development teams invest heavily in tools to improve their process and maintain end-to-end development environments including managing requirements and user stories, IDE's, test management, source code management, version control, continuous intregration, deployment and monitoring. 
+
+Most security tools today are written by and for security people who often (understandably)&nbsp;have a different lens and different needs from software developers and development teams. 
+
+This project is operating under the belief that infusing security into the development teams work-flow through effective tools will have a significant impact on improving the security quality of the code they produce.<br> 
+
+You can think of it as a project for developers by developers to improver software quality through better tooling that just so happens to be about security.&nbsp; 
+
+| 
+[[Image:Owasp std.png]] 
+
+|}
+
+{| width="100%"
+|-
+! width="33%" | 
+! width="33%" | 
+! width="33%" | 
+|- valign="top"
+| 
+== Wanna get involved?  ==
+
+[[Image:Asvs-bulb.jpg]]'''....join the discussion [https://lists.owasp.org/mailman/listinfo/owasp-std mailing list]''' 
+
+While the project is open to all we are particularly looking for developers who will actively contribute code. We are especially interested in any developers that have experience in customizing Jenkins, extending Git, unit testing frameworks or customizing mangement tools like ScrumDo. We are also interested in any developers interested in extending behaviour driven development testing frameworks like JBehave.&nbsp; 
+
+Join the mailing list, hang out and say hi or contact the project leader&nbsp;[mailto:mark@curphey.com?subject=OWASP%20STD%20Project Mark Curphey]. 
+
+*[https://lists.owasp.org/mailman/listinfo/owasp-std mailing list]
+
+| 
+== What exactly are you producing?  ==
+
+[[Image:Asvs-bulb.jpg]]'''....the 50,000 ft plan''' 
+
+The project is still in its infancy but the plan is to produce the following: 
+
+*Reference Architecture 
+*Reference Implementation
+
+As part of those two key areas we expect to build or customize tools and develop configuration guides for particular technologies. While we don't yet know exactly what that will include it may include IDE plugins or extensions to common testing frameworks to make integrating security tests easier. &nbsp;<br> 
+
+| 
+== How are you doing this?  ==
+
+[[Image:Asvs-bulb.jpg]]&nbsp;'''....by being Agile of course!''' 
+
+We are planning to run the project like an Agile software project itself by building a backlog and running sprints. We may even try and use Google Hangouts for video stand-up meetings! 
+
+Our current timeline looks like: 
+
+*August - Project Planning 
+*September - Sprint 1 
+*October - Sprint 2 
+*November - Sprint 3 
+*December - Sprint 4
+
+In due course (when we have a backlog) we will publish a roadmap.&nbsp; 
+
+|}
+
+==== Project About  ====
+
+{{:Projects/OWASP Security Tools for Developers Project | Project About}} 
+
+
+__NOTOC__ <headertabs /> 
+
+[[Category:OWASP_Project|Security Tools for Developers Project]] [[Category:OWASP_Tool]] [[Category:OWASP_Alpha_Quality_Tool]]

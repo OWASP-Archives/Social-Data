@@ -1,0 +1,906 @@
+__TOC__
+
+
+===Introduction===
+Threat modeling is an approach for analyzing the security of an application. It is a structured approach that enables you to identify, quantify, and address the security risks associated with an application. Threat modeling is not an approach to reviewing code, but it does complement the security code review process. The inclusion of threat modeling in the SDLC can help to ensure that applications are being developed with security built-in from the very beginning. This, combined with the documentation produced as part of the threat modeling process, can give the reviewer a greater understanding of the system. This allows the reviewer to see where the entry points to the application are and the associated threats with each entry point. The concept of threat modeling is not new but there has been a clear mindset change in recent years. Modern threat modeling looks at a system from a potential attacker's perspective, as opposed to a defender's viewpoint. Microsoft have been strong advocates of the process over the past number of years. They have made threat modeling a core component of their SDLC, which they claim to be one of the reasons for the increased security of their products in recent years. 
+
+When source code analysis is performed outside the SDLC, such as on existing applications, the results of the threat modeling help in reducing the complexity of the source code analysis by promoting an in-depth first approach vs. breadth first approach. Instead of reviewing all source code with equal focus, you can prioritize the security code review of components whose threat modeling has ranked with high risk threats. 
+
+The threat modeling process can be decomposed into 3 high level steps:
+
+'''Step 1:''' Decompose the Application. 
+The first step in the threat modeling process is concerned with gaining an understanding of the application and how it interacts with external entities. This involves creating use-cases to understand how the application is used, identifying entry points to see where a potential attacker could interact with the application, identifying assets i.e. items/areas that the attacker would be interested in, and identifying trust levels which represent the access rights that the application will grant to external entities. This information is documented in the Threat Model document and it is also used to produce data flow diagrams (DFDs) for the application. The DFDs show the different paths through the system, highlighting the privilege boundaries. 
+
+'''Step 2:''' Determine and rank threats.
+Critical to the identification of threats is using a threat categorization methodology. A threat categorization such as STRIDE can be used, or the Application Security Frame (ASF) that defines threat categories such as Auditing & Logging, Authentication, Authorization, Configuration Management, Data Protection in Storage and Transit, Data Validation, Exception Management. The goal of the threat categorization is to help identify threats both from the attacker (STRIDE) and the defensive perspective (ASF). DFDs produced in step 1 help to identify the potential threat targets from the attacker's perspective, such as data sources, processes, data flows, and interactions with users. These threats can be identified further as the roots for threat trees; there is one tree for each threat goal. From the defensive perspective, ASF categorization helps to identify the threats as weaknesses of security controls for such threats. Common threat-lists with examples can help in the identification of such threats. Use and abuse cases can illustrate how existing protective measures could be bypassed, or where a lack of such protection exists. The determination of the security risk for each threat can be determined using a value-based risk model such as DREAD or a less subjective qualitative risk model based upon general risk factors (e.g. likelihood and impact).
+
+'''Step 3:''' Determine countermeasures and mitigation.
+A lack of protection against a threat might indicate a vulnerability whose risk exposure could be mitigated with the implementation of a countermeasure. Such countermeasures can be identified using threat-countermeasure mapping lists. Once a risk ranking is assigned to the threats, it is possible to sort threats from the highest to the lowest risk, and prioritize the mitigation effort, such as by responding to such threats by applying the identified countermeasures. The risk mitigation strategy might involve evaluating these threats from the business impact that they pose and reducing  the risk. Other options might include taking the risk, assuming the business impact is acceptable because of compensating controls, informing the user of the threat, removing the risk posed by the threat completely, or the least preferable option, that is, to do nothing. 
+
+Each of the above steps are documented as they are carried out. The resulting document is the threat model for the application. This guide will use an example to help explain the concepts behind threat modeling. The same example will be used throughout each of the 3 steps as a learning aid. The example that will be used is a college library website. At the end of the guide we will have produced the threat model for the college library website. Each of the steps in the threat modeling process are described in detail below.
+
+== Decompose the Application ==
+The goal of this step is to gain an understanding of the application and how it interacts with external entities. This goal is achieved by information gathering and documentation. The information gathering process is carried out using a clearly defined structure, which ensures the correct information is collected. This structure also defines how the information should be documented to produce the Threat Model. 
+
+==Threat Model Information==
+The first item in the threat model is the information relating to the threat model. 
+This must include the the following:
+
+# '''Application Name''' - The name of the application.
+# '''Application Version''' - The version of the application.
+# '''Description''' - A high level description of the application.
+# '''Document Owner''' - The owner of the threat modeling document. 
+# '''Participants''' - The participants involved in the threat modeling process for this application.
+# '''Reviewer''' - The reviewer(s) of the threat model.<br/>
+Example:<br/>
+[[Category:FIXME|the list above includes an Application name, but the example does not have one]]
+
+<table align="center" cellspacing="1" CELLPADDING="7">
+
+<tr bgcolor="#cccccc">
+<th colspan="2" align="center">Threat Model Information</th>
+</tr>
+
+<tr bgcolor="#cccccc">
+<th align="left">Application Version:</th>
+<td>1.0</td>
+</tr>
+
+<tr bgcolor="#dddddd">
+<th align="left"> Description:</th>
+<td>The college library website is the first implementation of a website to provide librarians and library patrons (students and college staff) with online services. 
+As this is the first implementation of the website, the functionality will be limited. There will be three users of the application: <br/>
+1. Students<br/>
+2. Staff<br/>
+3. Librarians<br/>
+Staff and students will be able to log in and search for books, and staff members can request books. Librarians will be able to log in, add books, add users, and search for books.</td>
+</tr>
+
+<tr bgcolor="#cccccc">
+<th align="left">Document Owner:</th>
+<td>David Lowry</td>
+</tr>
+
+
+<tr bgcolor="#dddddd">
+<th align="left">Participants:</th>
+<td>David Rook</td>
+</tr>
+
+<tr bgcolor="#cccccc">
+<th align="left">Reviewer:</th>
+<td>Eoin Keary</td>
+</tr>
+
+</table>
+<br/>
+
+==External Dependencies==
+External dependencies are items external to the code of the application that may pose a threat to the application. These items are typically still within the control of the organization, but possibly not within the control of the development team. The first area to look at when investigating external dependencies is how the application will be deployed in a production environment, and what are the requirements surrounding this. This involves looking at how the application is or is not intended to be run. For example if the application is expected to be run on a server that has been hardened to the organization's hardening standard and it is expected to sit behind a firewall, then this information should be documented in the external dependencies section. External dependencies should be documented as follows:
+
+# '''ID''' - A unique ID assigned to the external dependency.
+# '''Description''' - A textual description of the external dependency.
+<br/>
+Example:
+<br/>
+<table align="center" cellspacing="1" CELLPADDING="7">
+
+<tr bgcolor="#cccccc">
+<th colspan="2" align="center">External Dependencies</th>
+</tr>
+
+<tr bgcolor="#cccccc">
+<th>ID</th>
+<th>Description</th>
+</tr>
+
+<tr bgcolor="#dddddd">
+<td>1</td>
+<td>The college library website will run on a Linux server running Apache.  This server will be hardened as per the college's server hardening standard. This includes the application of the latest operating system and application security patches.</td>
+</tr>
+
+<tr bgcolor="#cccccc">
+<td>2</td>
+<td>The database server will be MySQL and it will run on a Linux server. This server will be hardened as per the college's server hardening standard. This will include the application of the lastest operating system and application security patches.</td>
+</tr>
+
+<tr bgcolor="#dddddd">
+<td>3</td>
+<td>The connection between the Web Server and the database server will be over a private network.</td>
+</tr>
+
+<tr bgcolor="#cccccc">
+<td>4</td>
+<td>The Web Server is behind a firewall and the only communication available is TLS.</td>
+</tr>
+
+
+</table>
+<br/>
+
+==Entry Points==
+Entry points define the interfaces through which potential attackers can interact with the application or supply it with data. In order for a potential attacker to attack an application, entry points must exist. Entry points in an application can be layered, for example each web page in a web application may contain multiple entry points. Entry points should be documented as follows: 
+
+#  '''ID''' - A unique ID assigned to the entry point. This will be used to cross reference the entry point with any threats or vulnerabilities that are identified. In the case of layer entry points, a major.minor notation should be used.
+# '''Name''' - A descriptive name identifying the entry point and its purpose.
+# '''Description''' - A textual description detailing the interaction or processing that occurs at the entry point.
+# '''Trust Levels''' - The level of access required at the entry point is documented here. These will be cross referenced with the trusts levels defined later in the document.
+<br/>
+Example:
+<br/>
+<table align="center" cellspacing="1" CELLPADDING="7">
+
+<tr bgcolor="#cccccc">
+<th colspan="4" align="center">Entry Points</th>
+</tr>
+
+<tr bgcolor="#cccccc">
+<th width="5%">ID</th>
+<th width="15%">Name</th>
+<th width="45%">Description</th>
+<th width="25%">Trust Levels</th>
+</tr>
+
+<tr bgcolor="#dddddd">
+<td>1</td>
+<td>HTTPS Port</td>
+<td>The college library website will be only be accessible via TLS. All pages within the college library website are layered on this entry point.</td>
+<td>(1) Anonymous Web User<br/>
+(2) User with Valid Login Credentials<br/>
+(3) User with Invalid Login Credentials<br/>
+(4) Librarian<br/>
+</tr>
+
+<tr bgcolor="#cccccc">
+<td>1.1</td>
+<td>Library Main Page</td>
+<td>The splash page for the college library website is the entry point for all users.</td>
+<td>(1) Anonymous Web User<br/>
+(2) User with Valid Login Credentials<br/>
+(3) User with Invalid Login Credentials<br/>
+(4) Librarian<br/>
+</tr>
+
+<tr bgcolor="#dddddd">
+<td>1.2</td>
+<td>Login Page</td>
+<td>Students, faculty members and librarians must log in to the college library website before they can carry out any of the use cases.</td>
+<td>(1) Anonymous Web User<br/>
+(2) User with Login Credentials<br/>
+(3) User with Invalid Login Credentials<br/>
+(4) Librarian<br/>
+</td>
+</tr>
+
+<tr bgcolor="#cccccc">
+<td>1.2.1</td>
+<td>Login Function</td>
+<td>The login function accepts user supplied credentials and compares them with those in the database.</td>
+<td>
+(2) User with Valid Login Credentials<br/>
+(3) User with Invalid Login Credentials<br/>
+(4) Librarian</td>
+</tr>
+
+<tr bgcolor="#dddddd">
+<td>1.3</td>
+<td>Search Entry Page</td>
+<td>The page used to enter a search query.</td>
+<td>
+(2) User with Valid Login Credentials<br/>
+(4) Librarian</td>
+</tr>
+
+</table>
+<br/>
+
+==Assets==
+The system must have something that the attacker is interested in; these items/areas of interest are defined as assets. Assets are essentially threat targets, i.e. they are the reason threats will exist. Assets can be both physical assets and abstract assets. For example, an asset of an application might be a list of clients and their personal information; this is a physical asset. An abstract asset might be the reputation of an organsation. Assets are documented in the threat model as follows: 
+
+# '''ID''' - A unique ID is assigned to identify each asset. This will be used to cross reference the asset with any threats or vulnerabilities that are identified.
+# '''Name''' - A descriptive name that clearly identifies the asset.
+# '''Description''' - A textual description of what the asset is and why it needs to be protected.
+# '''Trust Levels''' - The level of access required to access the entry point is documented here. These will be cross referenced with the trust levels defined in the next step.
+<br/>
+Example:
+<br/>
+<table align="center" cellspacing="1" CELLPADDING="7">
+
+<tr bgcolor="#cccccc">
+<th colspan="4" align="center">Assets</th>
+</tr>
+
+<tr bgcolor="#cccccc">
+<th width="5%">ID</th>
+<th width="15%">Name</th>
+<th width="55%">Description</th>
+<th width="25%">Trust Levels</th>
+</tr>
+
+<tr bgcolor="#cccccc">
+<td>1</td>
+<td>Library Users and Librarian</td>
+<td>Assets relating to students, faculty members, and librarians.</td>
+<td></td>
+</tr>
+
+<tr bgcolor="#dddddd">
+<td>1.1</td>
+<td>User Login Details</td>
+<td>The login credentials that a student or a faculty member will use to log into the College Library website.</td>
+<td>
+(2) User with Valid Login Credentials<br/>
+(4) Librarian <br/>
+(5) Database Server Administrator <br/>
+(7) Web Server User Process<br/>
+(8) Database Read User<br/>
+(9) Database Read/Write User
+</td></tr>
+
+<tr bgcolor="#dddddd">
+<td>1.2</td>
+<td>Librarian Login Details</td>
+<td>The login credentials that a Librarian will use to log into the College Library website.</td>
+<td>
+(4) Librarian <br/>
+(5) Database Server Administrator <br/>
+(7) Web Server User Process<br/>
+(8) Database Read User<br/>
+(9) Database Read/Write User
+</td></tr>
+
+<tr bgcolor="#dddddd">
+<td>1.3</td>
+<td>Personal Data</td>
+<td>The College Library website will store personal information relating to the students, faculty members, and librarians.</td>
+<td>
+(4) Librarian <br/>
+(5) Database Server Administrator <br/>
+(6) Website Administrator <br/>
+(7) Web Server User Process<br/>
+(8) Database Read User<br/>
+(9) Database Read/Write User
+
+</td></tr>
+
+
+<tr bgcolor="#cccccc">
+<td>2</td>
+<td>System</td>
+<td>Assets relating to the underlying system.</td>
+<td></td>
+</tr>
+
+<tr bgcolor="#dddddd">
+<td>2.1</td>
+<td>Availability of College Library Website</td>
+<td>The College Library website should be available 24 hours a day and can be accessed by all students, college faculty members, and librarians.</td>
+<td>
+(5) Database Server Administrator <br/>
+(6) Website Administrator <br/>
+</td>
+</tr>
+
+<tr bgcolor="#dddddd">
+<td>2.2</td>
+<td>Ability to Execute Code as a Web Server User</td>
+<td>This is the ability to execute source code on the web server as a web server user.</td>
+<td>
+(6) Website Administrator <br/>
+(7) Web Server User Process <br/>
+</td>
+</tr>
+
+
+<tr bgcolor="#dddddd">
+<td>2.3</td>
+<td>Ability to Execute SQL as a Database Read User</td>
+<td>This is the ability to execute SQL select queries on the database, and thus retrieve any information stored within the College Library database.</td>
+<td>
+(5) Database Server Administrator<br/>
+(8) Database Read User<br/>
+(9) Database Read/Write User<br/>
+</td>
+</tr>
+
+<tr bgcolor="#dddddd">
+<td>2.4</td>
+<td>Ability to Execute SQL as a Database Read/Write User</td>
+<td>This is the ability to execute SQL. Select, insert, and update queries on the database and thus have read and write access to any information stored within the College Library database.</td>
+<td>
+(5) Database Server Administrator<br/>
+(9) Database Read/Write User<br/>
+</td>
+</tr>
+
+<tr bgcolor="#cccccc">
+<td>3</td>
+<td>Website</td>
+<td>Assets relating to the College Library website.</td>
+<td></td>
+</tr>
+
+<tr bgcolor="#dddddd">
+<td>3.1</td>
+<td>Login Session</td>
+<td>This is the login session of a user to the College Library website. This user could be a student, a member of the college faculty, or a Librarian.</td>
+<td>
+(2) User with Valid Login Credentials<br/>
+(4) Librarian<br/>
+</td>
+</tr>
+
+<tr bgcolor="#dddddd">
+<td>3.2</td>
+<td>Access to the Database Server</td>
+<td>Access to the database server allows you to administer the database, giving you full access to the database users and all data contained within the database.</td>
+<td>
+(5) Database Server Administrator<br/>
+</td>
+</tr>
+
+<tr bgcolor="#dddddd">
+<td>3.3</td>
+<td>Ability to Create Users</td>
+<td>The ability to create users would allow an individual to create new users on the system. These could be student users, faculty member users, and librarian users.</td>
+<td>
+(4) Librarian<br/>
+(6) Website Administrator<br/>
+</td>
+</tr>
+
+<tr bgcolor="#dddddd">
+<td>3.4</td>
+<td>Access to Audit Data</td>
+<td>The audit data shows all audit-able events that occurred within the College Library application by students, staff, and librarians.</td>
+<td>
+(6) Website Administrator<br/>
+</td>
+</tr>
+
+</table>
+
+<br/>
+
+==Trust Levels==
+Trust levels represent the access rights that the application will grant to external entities. The trust levels are cross referenced with the entry points and assets. This allows us to define the access rights or privileges required at each entry point, and those required to interact with each asset. Trust levels are documented in the threat model as follows: 
+
+# '''ID''' - A unique number is assigned to each trust level. This is used to cross reference the trust level with the entry points and assets.
+# '''Name''' - A descriptive name that allows you to identify the external entities that have been granted this trust level.
+# '''Description''' - A textual description of the trust level detailing the external entity who has been granted the trust level.
+<br/>
+Example:
+<br/>
+<table align="center" cellspacing="1" CELLPADDING="7">
+
+<tr bgcolor="#cccccc">
+<th colspan="4" align="center">Trust Levels</th>
+</tr>
+
+<tr bgcolor="#cccccc">
+<th width="5%">ID</th>
+<th width="25%">Name</th>
+<th width="70%">Description</th>
+</tr>
+
+<tr bgcolor="#dddddd">
+<td>1</td>
+<td>Anonymous Web User</td>
+<td>A user who has connected to the college library website but has not provided valid credentials.</td>
+</tr>
+
+<tr bgcolor="#cccccc">
+<td>2</td>
+<td>User with Valid Login Credentials</td>
+<td>A user who has connected to the college library website and has logged in using valid login credentials.</td>
+</tr>
+
+<tr bgcolor="#cccccc">
+<td>3</td>
+<td>User with Invalid Login Credentials</td>
+<td>A user who has connected to the college library website and is attempting to log in using invalid login credentials.</td>
+</tr>
+
+<tr bgcolor="#dddddd">
+<td>4</td>
+<td>Librarian</td>
+<td>The librarian can create users on the library website and view their personal information.</td>
+</tr>
+
+<tr bgcolor="#cccccc">
+<td>5</td>
+<td>Database Server Administrator</td>
+<td>The database server administrator has read and write access to the database that is used by the college library website.</td>
+</tr>
+
+<tr bgcolor="#dddddd">
+<td>6</td>
+<td>Website Administrator</td>
+<td>The Website administrator can configure the college library website.</td>
+</tr>
+
+<tr bgcolor="#cccccc">
+<td>7</td>
+<td>Web Server User Process</td>
+<td>This is the process/user that the web server executes code as and authenticates itself against the database server as.</td>
+</tr>
+
+<tr bgcolor="#dddddd">
+<td>8</td>
+<td>Database Read User</td>
+<td>The database user account used to access the database for read access.</td>
+</tr>
+
+<tr bgcolor="#cccccc">
+<td>9</td>
+<td>Database Read/Write User</td>
+<td>The database user account used to access the database for read and write access.</td>
+</tr>
+</table>
+<br/>
+
+==Data Flow Diagrams==
+All of the information collected allows us to accurately model the application through the use of Data Flow Diagrams (DFDs). The DFDs will allow us to gain a better understanding of the application by providing a visual representation of how the application processes data. The focus of the DFDs is on how data moves through the application and what happens to the data as it moves. DFDs are hierarchical in structure, so they can be used to decompose the application into subsystems and lower-level subsystems. The high level DFD will allow us to clarify the scope of the application being modeled. The lower level iterations will allow us to focus on the specific processes involved when processing specific data. There are a number of symbols that are used in DFDs for threat modeling. These are described below:
+
+'''External Entity'''<br/>
+The external entity shape is used to represent any entity outside the application that interacts with the application via an entry point.<br/><br/>
+[[Image:DFD_external_entity.gif]]
+<br/><br/>
+
+'''Process'''<br/>
+The process shape represents a task that handles data within the application. The task may process the data or perform an action based on the data.<br/><br/>
+[[Image:DFD_process.gif]]
+<br/><br/>
+
+'''Multiple Process'''<br/>
+The multiple process shape is used to present a collection of subprocesses. The multiple process can be broken down into its subprocesses in another DFD.<br/><br/>
+[[Image:DFD_multiple_process.gif]]
+<br/><br/>
+
+'''Data Store'''<br/>
+The data store shape is used to represent locations where data is stored. Data stores do not modify the data, they only store data.<br/><br/>
+[[Image:DFD_data_store.gif]]
+<br/><br/>
+
+
+'''Data Flow'''<br/>
+The data flow shape represents data movement within the application. The direction of the data movement is represented by the arrow.<br/><br/>
+[[Image:DFD_data_flow.gif]]
+<br/><br/>
+'''Privilege Boundary'''<br/>
+The privilege boundary shape is used to represent the change of privilege levels as the data flows through the application.<br/><br/>
+[[Image:DFD_privilge_boundary.gif]]
+<br/><br/>
+
+
+
+===Example===
+<br/> '''Data Flow Diagram for the College Library Website'''
+<br/><br/>
+[[Image:Data flow1.jpg]]
+<br/><br/>
+'''User Login Data Flow Diagram for the College Library Website'''
+<br/><br/>
+[[Image:Data flow2.jpg]]
+<br/><br/>
+
+== Determine and Rank Threats ==
+===Threat Categorization===
+The first step in the determination of threats is adopting a threat categorization. A threat categorization provides a set of threat categories with corresponding examples so that threats can be systematically identified in the application in a structured and repeatable manner. 
+
+====STRIDE====
+A threat categorization such as STRIDE is useful in the identification of threats by classifying attacker goals such as:
+*Spoofing
+*Tampering
+*Repudiation
+*Information Disclosure
+*Denial of Service
+*Elevation of Privilege.
+
+A threat list of generic threats organized in these categories with examples and the affected security controls is provided in the following table:
+
+<br/>
+<table align="center" cellspacing="1" CELLPADDING="7">
+
+<tr bgcolor="#cccccc">
+<th colspan="4" align="center">STRIDE Threat List</th>
+</tr>
+
+<tr bgcolor="#cccccc">
+<th>Type</th>
+<th>Examples</th>
+<th>Security Control</th>
+</tr>
+
+<tr bgcolor="#cccccc">
+<td>Spoofing</td>
+<td>Threat action aimed to illegally access and use another user's credentials, such as username and password.</td>
+<td>Authentication</td>
+</tr>
+
+<tr bgcolor="#cccccc">
+<td>Tampering</td>
+<td>Threat action aimed to maliciously change/modify persistent data, such as persistent data in a database, and the alteration of data in transit between two computers over an open network, such as the Internet.</td>
+<td>Integrity</td>
+</tr>
+
+<tr bgcolor="#dddddd">
+<td>Repudiation</td>
+<td>Threat action aimed to perform illegal operations in a system that lacks the ability to trace the prohibited operations.</td>
+<td>Non-Repudiation</td> 
+</tr>
+
+<tr bgcolor="#cccccc">
+<td>Information disclosure</td>
+<td>Threat action to read a file that one was not granted access to, or to read data in transit. </td>
+<td>Confidentiality</td> 
+</tr>
+
+<tr bgcolor="#dddddd">
+<td>Denial of service</td>
+<td>Threat aimed to deny access to valid users, such as by making a web server temporarily unavailable or unusable. 
+</td>
+<td>Availability</td>
+</tr>
+
+<tr bgcolor="#cccccc">
+<td>Elevation of privilege</td>
+<td>Threat aimed to gain privileged access to resources for gaining unauthorized access to information or to compromise a system.</td>
+<td>Authorization</td>
+
+</table>
+<br/>
+
+==Security Controls==
+Once the basic threat agents and business impacts are understood, the review team should try to identify the set of controls that could prevent these threat agents from causing those impacts.  The primary focus of the code review should be to ensure that these security controls are in place, that they work properly, and that they are correctly invoked in all the necessary places. The checklist below can help to ensure that all the likely risks have been considered.
+
+'''Authentication:'''
+*Ensure all internal and external connections (user and entity) go through an appropriate and adequate form of authentication. Be assured that this control cannot be bypassed. 
+*Ensure all pages enforce the requirement for authentication. 
+*Ensure that whenever authentication credentials or any other sensitive information is passed, only accept the information via the HTTP “POST” method and will not accept it via the HTTP “GET” method. 
+*Any page deemed by the business or the development team as being outside the scope of authentication should be reviewed in order to assess any possibility of security breach. 
+*Ensure that authentication credentials do not traverse the wire in clear text form. 
+*Ensure development/debug backdoors are not present in production code. 
+
+'''Authorization: '''
+*Ensure that there are authorization mechanisms in place. 
+*Ensure that the application has clearly defined the user types and the rights of said users. 
+*Ensure there is a least privilege stance in operation. 
+*Ensure that the Authorization mechanisms work properly, fail securely, and cannot be circumvented. 
+*Ensure that authorization is checked on every request. 
+*Ensure development/debug backdoors are not present in production code. 
+
+'''Cookie Management: '''
+*Ensure that sensitive information is not comprised. 
+*Ensure that unauthorized activities cannot take place via cookie manipulation. 
+*Ensure that proper encryption is in use. 
+*Ensure secure flag is set to prevent accidental transmission over “the wire” in a non-secure manner. 
+*Determine if all state transitions in the application code properly check for the cookies and enforce their use. 
+*Ensure the session data is being validated. 
+*Ensure cookies contain as little private information as possible. 
+*Ensure entire cookie is encrypted if sensitive data is persisted in the cookie. 
+*Define all cookies being used by the application, their name, and why they are needed. 
+
+'''Data/Input Validation: '''
+*Ensure that a DV mechanism is present. 
+*Ensure all input that can (and will) be modified by a malicious user such as HTTP headers, input fields, hidden fields, drop down lists, and other web components are properly validated. 
+*Ensure that the proper length checks on all input exist. 
+*Ensure that all fields, cookies, http headers/bodies, and form fields are validated. 
+*Ensure that the data is well formed and contains only known good chars if possible. 
+*Ensure that the data validation occurs on the server side. 
+*Examine where data validation occurs and if a centralized model or decentralized model is used. 
+*Ensure there are no backdoors in the data validation model. 
+*'''Golden Rule: All external input, no matter what it is, is examined and validated. '''
+
+'''Error Handling/Information leakage: '''
+*Ensure that all method/function calls that return a value have proper error handling and return value checking. 
+*Ensure that exceptions and error conditions are properly handled. 
+*Ensure that no system errors can be returned to the user. 
+*Ensure that the application fails in a secure manner. 
+*Ensure resources are released if an error occurs. 
+
+'''Logging/Auditing: '''
+*Ensure that no sensitive information is logged in the event of an error. 
+*Ensure the payload being logged is of a defined maximum length and that the logging mechanism enforces that length. 
+*Ensure no sensitive data can be logged; e.g. cookies, HTTP “GET” method, authentication credentials. 
+*Examine if the application will audit the actions being taken by the application on behalf of the client (particularly data manipulation/Create, Update, Delete (CUD) operations). 
+*Ensure successful and unsuccessful authentication is logged. 
+*Ensure application errors are logged. 
+*Examine the application for debug logging with the view to logging of sensitive data. 
+
+'''Cryptography: '''
+*Ensure no sensitive data is transmitted in the clear, internally or externally. 
+*Ensure the application is implementing known good cryptographic methods. 
+
+'''Secure Code Environment: '''
+*Examine the file structure. Are any components that should not be directly accessible available to the user?
+*Examine all memory allocations/de-allocations. 
+*Examine the application for dynamic SQL and determine if it is vulnerable to injection. 
+*Examine the application for “main()” executable functions and debug harnesses/backdoors.
+*Search for commented out code, commented out test code, which may contain sensitive information. 
+*Ensure all logical decisions have a default clause. 
+*Ensure no development environment kit is contained on the build directories. 
+*Search for any calls to the underlying operating system or file open calls and examine the error possibilities. 
+
+'''Session Management: '''
+*Examine how and when a session is created for a user, unauthenticated and authenticated. 
+*Examine the session ID and verify if it is complex enough to fulfill requirements regarding strength. 
+*Examine how sessions are stored: e.g. in a database, in memory etc. 
+*Examine how the application tracks sessions. 
+*Determine the actions the application takes if an invalid session ID occurs. 
+*Examine session invalidation. 
+*Determine how multithreaded/multi-user session management is performed. 
+*Determine the session HTTP inactivity timeout. 
+*Determine how the log-out functionality functions.
+
+==Threat Analysis==
+The prerequisite in the analysis of threats is the understanding of the generic definition of risk that is the probability that a threat agent will exploit a vulnerability to cause an impact to the application. From the perspective of risk management, threat modeling is the systematic and strategic approach for identifying and enumerating threats to an application environment with the objective of minimizing risk and the associated impacts. 
+
+Threat analysis as such is the identification of the threats to the application, and involves the analysis of each aspect of the application functionality and architecture and design to identify and classify potential weaknesses that could lead to an exploit. 
+
+In the first threat modeling step, we have modeled the system showing data flows, trust boundaries, process components, and entry and exit points. An example of such modeling is shown in the Example: Data Flow Diagram for the College Library Website. 
+
+Data flows show how data flows logically through the end to end, and allows the identification of affected components through critical points (i.e. data entering or leaving the system, storage of data) and the flow of control through these components. Trust boundaries show any location where the level of trust changes. Process components show where data is processed, such as web servers, application servers, and database servers. Entry points show where data enters the system (i.e. input fields, methods) and exit points are where it leaves the system (i.e. dynamic output, methods), respectively. Entry and exit points define a trust boundary. 
+
+Threat lists based on the STRIDE model are useful in the identification of threats with regards to the attacker goals. For example, if the threat scenario is attacking the login, would the attacker brute force the password to break the authentication? If the threat scenario is to try to elevate privileges to gain another user’s privileges, would the attacker try to perform forceful browsing? 
+
+It is vital that all possible attack vectors should be evaluated from the attacker’s point of view. For this reason, it is also important to consider entry and exit points, since they could also allow the realization of certain kinds of threats. For example, the login page allows sending authentication credentials, and the input data accepted by an entry point has to validate for potential malicious input to exploit vulnerabilities such as SQL injection, cross site scripting, and buffer overflows. Additionally, the data flow passing through that point has to be used to determine the threats to the entry points to the next components along the flow. If the following components can be regarded critical (e.g. the hold sensitive data), that entry point can be regarded more critical as well. In an end to end data flow, for example, the input data (i.e. username and password) from a login page, passed on without validation,  could be exploited for a SQL injection attack to manipulate a query for breaking the authentication or to modify a table in the database. 
+
+Exit points might serve as attack points to the client (e.g. XSS vulnerabilities) as well for the realization of information disclosure vulnerabilities. For example, in the case of exit points from components handling confidential data (e.g. data access components), exit points lacking security controls to protect the confidentiality and integrity can lead to disclosure of such confidential information to an unauthorized user. 
+
+In many cases threats enabled by exit points are related to the threats of the corresponding entry point. In the login example, error messages returned to the user via the exit point might allow for entry point attacks, such as account harvesting (e.g. username not found), or SQL injection (e.g. SQL exception errors). 
+
+From the defensive perspective, the identification of threats driven by security control categorization such as ASF, allows a threat analyst to focus on specific issues related to weaknesses (e.g. vulnerabilities) in security controls. Typically the process of threat identification involves going through iterative cycles where initially all the possible threats in the threat list that apply to each component are evaluated. 
+
+At the next iteration, threats are further analyzed by exploring the attack paths, the root causes (e.g. vulnerabilities, depicted as orange blocks) for the threat to be exploited, and the necessary mitigation controls (e.g. countermeasures, depicted as green blocks). A threat tree as shown in figure 2 is useful to perform such threat analysis 
+
+[[Image:Threat_Graph.gif|Figure 2: Threat Graph]]
+
+Once common threats, vulnerabilities, and attacks are assessed, a more focused threat analysis should take in consideration use and abuse cases. By thoroughly analyzing the use scenarios, weaknesses can be identified that could lead to the realization of a threat. Abuse cases should be identified as part of the security requirement engineering activity. These abuse cases can illustrate how existing protective measures could be bypassed, or where a lack of such protection exists. A use and misuse case graph for authentication is shown in figure below:
+
+[[Image:UseAndMisuseCase.jpg|640px|Figure 3: Use and Misuse Case]]
+
+Finally, it is possible to bring all of this together by determining the types of threat to each component of the decomposed system. This can be done by using a threat categorization such as STRIDE or ASF, the use of threat trees to determine how the threat can be exposed by a vulnerability, and use and misuse cases to further validate the lack of a countermeasure to mitigate the threat.
+
+To apply STRIDE to the data flow diagram items the following table can be used: 
+
+TABLE
+
+==Ranking of Threats==
+Threats can be ranked from the perspective of risk factors. By determining the risk factor posed by the various identified threats, it is possible to create a prioritized list of threats to support a risk mitigation strategy, such as deciding on which threats have to be mitigated first. Different risk factors can be used to determine which threats can be ranked as High, Medium, or Low risk. In general, threat risk models use different factors to model risks such as those shown in figure below:
+
+
+[[Image:Riskfactors.JPG|Figure 3: Risk Model Factors]]
+
+==DREAD==
+In the Microsoft DREAD threat-risk ranking model, the technical risk factors for impact are Damage and Affected Users, while the ease of exploitation factors are Reproducibility, Exploitability and Discoverability. This risk factorization allows the assignment of values to the different influencing factors of a threat. To determine the ranking of a threat, the threat analyst has to answer basic questions for each factor of risk, for example: 
+
+*For Damage: How big would the damage be if the attack succeeded?
+*For Reproducibility: How easy is it to reproduce an attack to work?
+*For Exploitability: How much time, effort, and expertise is needed to exploit the threat?
+*For Affected Users: If a threat were exploited, what percentage of users would be affected?
+*For Discoverability: How easy is it for an attacker to discover this threat?
+
+By referring to the college library website it is possible to document sample threats releated to the use cases such as: 
+
+'''Threat: Malicious user views confidential information of students, faculty members and librarians.'''
+# '''Damage potential:''' Threat to reputation as well as financial and legal liability:8
+# '''Reproducibility:'''  Fully reproducible:10
+# '''Exploitability:'''   Require to be on the same subnet or have compromised a router:7
+# '''Affected users:'''   Affects all users:10
+# '''Discoverability:'''  Can be found out easily:10
+
+Overall DREAD score: (8+10+7+10+10) / 5 = 9
+
+In this case having 9 on a 10 point scale is certainly an high risk threat
+
+==Generic Risk Model==
+A more generic risk model takes into consideration the Likelihood (e.g. probability of an attack) and the Impact (e.g. damage potential): 
+
+'''Risk = Likelihood x Impact'''
+
+The likelihood or probability is defined by the ease of exploitation, which mainly depends on the type of threat and the system characteristics, and by the possibility to realize a threat, which is determined by the existence of an appropriate countermeasure.  
+
+The following is a set of considerations for determining ease of exploitation: 
+# Can an attacker exploit this remotely? 
+# Does the attacker need to be authenticated?
+# Can the exploit be automated?
+
+The impact mainly depends on the damage potential and the extent of the impact, such as the number of components that are affected by a threat. 
+
+Examples to determine the damage potential are:
+# Can an attacker completely take over and manipulate the system?  
+# Can an attacker gain administration access to the system?
+# Can an attacker crash the system? 
+# Can the attacker obtain access to sensitive information such as secrets, PII
+
+Examples to determine the number of components that are affected by a threat:
+# How many data sources and systems can be impacted?
+# How “deep” into the infrastructure can the threat agent go?
+
+These examples help in the calculation of the overall risk values by assigning qualitative values such as High, Medium and Low to Likelihood and Impact factors. In this case, using qualitative values, rather than numeric ones like in the case of the DREAD model, help avoid the ranking becoming overly subjective.
+
+==Countermeasure Identification==
+The purpose of the countermeasure identification is to determine if there is some kind of protective measure (e.g. security control, policy measures) in place that can prevent each threat previosly identified via threat analysis from being realized. Vulnerabilities are then those threats that have no countermeasures. Since each of these threats has been categorized either with STRIDE or ASF, it is possible to find appropriate countermeasures in the application within the given category. 
+
+Provided below is a brief and limited checklist which is by no means an exhaustive list for identifying countermeasures for specific threats. 
+ 
+Example of countermeasures for ASF threat types are included in the following table: 
+
+<table align="center" cellspacing="1" CELLPADDING="7">
+<tr bgcolor="#cccccc">
+<th colspan="4" align="center">ASF Threat & Countermeasures List</th>
+</tr>
+
+<tr bgcolor="#cccccc">
+<th>Threat Type</th>
+<th>Countermeasure</th>
+</tr>
+
+<tr bgcolor="#cccccc">
+<td>Authentication</td>
+<td>
+#Credentials and authentication tokens are protected with encryption in storage and transit
+#Protocols are resistant to brute force, dictionary, and replay attacks
+#Strong password policies are enforced
+#Trusted server authentication is used instead of SQL authentication
+#Passwords are stored with salted hashes
+#Password resets do not reveal password hints and valid usernames
+#Account lockouts do not result in a denial of service attack
+</td>
+</tr>
+
+<tr bgcolor="#cccccc">
+<td>Authorization</td>
+<td>
+#Strong ACLs are used for enforcing authorized access to resources
+#Role-based access controls are used to restrict access to specific operations
+#The system follows the principle of least privilege for user and service accounts
+#Privilege separation is correctly configured within the presentation, business and data access layers</td>
+</tr>
+
+<tr bgcolor="#cccccc">
+<td>Configuration Management</td>
+<td>
+#Least privileged processes are used and service accounts with no administration capability
+#Auditing and logging of all administration activities is enabled
+#Access to configuration files and administrator interfaces is restricted to administrators
+</td>
+</tr>
+<tr bgcolor="#cccccc">
+<td>Data Protection in Storage and Transit</td>
+<td>
+#Standard encryption algorithms and correct key sizes are being used
+#Hashed message authentication codes (HMACs) are used to protect data integrity
+#Secrets (e.g. keys, confidential data ) are cryptographically protected both in transport and in storage
+#Built-in secure storage is used for protecting keys
+#No credentials and sensitive data are sent in clear text over the wire
+</td>
+</tr>
+<tr bgcolor="#cccccc">
+<td>Data Validation / Parameter Validation</td>
+<td>
+#Data type, format, length, and range checks are enforced
+#All data sent from the client is validated
+#No security decision is based upon parameters (e.g. URL parameters) that can be manipulated
+#Input filtering via white list validation is used
+#Output encoding is used
+</td>
+</tr>
+<tr bgcolor="#cccccc">
+<td>Error Handling and Exception Management</td>
+<td>
+#All exceptions are handled in a structured manner
+#Privileges are restored to the appropriate level in case of errors and exceptions
+#Error messages are scrubbed so that no sensitive information is revealed to the attacker
+
+</td>
+</tr>
+<tr bgcolor="#cccccc">
+<td>User and Session Management</td>
+<td>
+#No sensitive information is stored in clear text in the cookie
+#The contents of the authentication cookies is encrypted
+#Cookies are configured to expire
+#Sessions are resistant to replay attacks
+#Secure communication channels are used to protect authentication cookies
+#User is forced to re-authenticate when performing critical functions
+#Sessions are expired at logout
+</td>
+</tr>
+<tr bgcolor="#cccccc">
+<td>Auditing and Logging</td>
+<td>
+#Sensitive information (e.g. passwords, PII) is not logged
+#Access controls (e.g. ACLs) are enforced on log files to prevent un-authorized access
+#Integrity controls (e.g. signatures) are enforced on log files to provide non-repudiation
+#Log files provide for audit trail for sensitive operations and logging of key events
+#Auditing and logging is enabled across the tiers on multiple servers
+</td>
+</tr>
+</table>
+
+When using STRIDE, the following threat-mitigation table can be used to identify techniques that can be employed to mitigate the threats.
+
+<table align="center" cellspacing="1" CELLPADDING="7">
+<tr bgcolor="#cccccc">
+<th colspan="4" align="center">STRIDE Threat & Mitigation Techniques List</th>
+</tr>
+
+<tr bgcolor="#cccccc">
+<th>Threat Type</th>
+<th>Mitigation Techniques</th>
+</tr>
+
+<tr bgcolor="#cccccc">
+<td>Spoofing Identity</td>
+<td>
+#Appropriate authentication
+#Protect secret data
+#Don't store secrets
+</td>
+</tr>
+<tr bgcolor="#cccccc">
+<td>Tampering with data</td>
+<td>
+#Appropriate authorization
+#Hashes
+#MACs
+#Digital signatures
+#Tamper resistant protocols
+</td>
+</tr>
+<tr bgcolor="#cccccc">
+<td>Repudiation</td>
+<td>
+#Digital signatures
+#Timestamps
+#Audit trails
+</td>
+</tr>
+<tr bgcolor="#cccccc">
+<td>Information Disclosure</td>
+<td>
+#Authorization
+#Privacy-enhanced protocols
+#Encryption
+#Protect secrets
+#Don't store secrets
+</td>
+</tr>
+<tr bgcolor="#cccccc">
+<td>Denial of Service</td>
+<td>
+#Appropriate authentication
+#Appropriate authorization
+#Filtering
+#Throttling
+#Quality of service
+</td>
+</tr>
+<tr bgcolor="#cccccc">
+<td>Elevation of privilege</td>
+<td>
+#Run with least privilege
+</td>
+</tr>
+</table>
+
+Once threats and corresponding countermeasures are identified it is possible to derive a threat profile with the following criteria:
+
+# '''Non mitigated threats:''' Threats which have no countermeasures and represent vulnerabilities that can be fully exploited and cause an impact 
+# '''Partially mitigated threats:''' Threats partially mitigated by one or more countermeasures which represent vulnerabilities that can only partially be exploited and cause a limited impact 
+# '''Fully mitigated threats:''' These threats have appropriate countermeasures in place and do not expose vulnerability and cause impact
+
+===Mitigation Strategies===
+The objective of risk management is to reduce the impact that the exploitation of a threat can have to the application. This can be done by responding to a theat with a risk mitigation strategy. In general there are five options to mitigate threats 
+# '''Do nothing:''' for example, hoping for the best
+# '''Inform about the risk:''' for example, warning user population about the risk
+# '''Mitigate the risk:''' for example, by putting countermeasures in place
+# '''Accept the risk:''' for example, after evaluating the impact of the exploitation (business impact)
+# '''Transfer the risk:''' for example, through contractual agreements and insurance
+
+The decision of which strategy is most appropriate depends on the impact an exploitation of a threat can have, the likelihood of its occurrence, and the costs for transferring (i.e. costs for insurance) or avoiding (i.e. costs or losses due redesign) it. That is, such decision is based on the risk a threat poses to the system. Therefore, the chosen strategy does not mitigate the threat itself but the risk it poses to the system. Ultimately the overall risk has to take into account the business impact, since this is a critical factor for the business risk management strategy. One strategy could be to fix only the vulnerabilities for which the cost to fix is less than the potential business impact derived by the exploitation of the vulnerability. Another strategy could be to accept the risk when the loss of some security controls (e.g. Confidentiality, Integrity, and Availability) implies a small degradation of the service, and not a loss of a critical business function. In some cases, transfer of the risk to another service provider might also be an option. 
+
+[[Category:OWASP Code Review Project]]
+[[Category:Threat_Modeling]]

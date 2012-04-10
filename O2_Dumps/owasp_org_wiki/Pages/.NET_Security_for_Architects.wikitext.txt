@@ -1,0 +1,53 @@
+{| align="right" class="wikitable"
+|-
+! OWASP .NET Quick Reference
+|- 
+| 
+*[[OWASP Code Review Project]]<br />
+*[[OWASP Testing Guide]]<br />
+|-
+|}
+==.NET Security for Architects==
+Security concerns must be addressed at the architectural level.  This section is to provide tools and guidance for the .NET architect.
+
+===Areas of Concern===
+
+*[[.NET Application Lifecycle | .NET Application Lifecycle]]
+
+*[[.NET Conceptual Architecture | Conceptual Architectures for .NET Web Applications and Services]]
+
+*[[.NET Identity Metasystem | Identity and Trust Architectural Concerns in .NET]]
+
+*[[.NET Threat Modeling | Security Requirements & Threat Modeling]]
+
+*[[.NET Design Review | Design Review and Checklists]]
+
+*[[Separating Roles - Build Systems and Software Promotion]]
+
+*[[Data Loss Prevention Concerns]]
+
+===Articles & Projects===
+
+[http://msdn2.microsoft.com/en-us/library/yedba920.aspx ASP.NET Security Architecture]
+
+[http://msdn2.microsoft.com/en-us/library/ms998404.aspx Security Engineering]
+
+[http://www.developer.com/design/article.php/3607471 Solutions to SOA Security]
+
+[http://en.wikipedia.org/wiki/WS-%2A Web Service Specifications]
+
+[http://www.codeplex.com/WCFSecurity Security Guidance for Windows Communication Foundation]
+
+===References===
+
+[http://www.iasahome.org/web/home/home International Association of Software Architects]
+
+[http://msdn2.microsoft.com/en-us/practices/default.aspx Patterns and Practices]
+
+[http://channel9.msdn.com/wiki/default.aspx/SecurityWiki.HomePage Patterns and Practices Security Wiki]
+
+[http://www.microsoft.com/downloads/details.aspx?familyid=2412c443-27f6-4aac-9883-f55ba5b01814&displaylang=en&Hash=4fZb2FzZ7%2bmaj0VqoUbFZzzw0WW5%2bxWjK3XBVit5eX%2b%2bB90vmLtZlAstlNg9cRu6Pg%2b50DNCMhGT6ADei7DgFg%3d%3d Microsoft Security Development Lifecycle 3.2]
+
+
+===Tools===
+[http://www.microsoft.com/downloads/details.aspx?familyid=59888078-9daf-4e96-b7d1-944703479451&displaylang=en Microsoft Threat Analysis & Modeling v2.1.2]

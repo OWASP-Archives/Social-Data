@@ -1,0 +1,83 @@
+== Next Chapter Meeting: January 19th, 2012 ==
+
+The next OWASP Chicago chapter will be on '''January 19th, 2012''' from 6PM to approximately 9:30PM. Space for the meeting is being graciously provided by Morningstar at their [http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=22+West+Washington+Street+Chicago,+IL+60602&aq=&sll=37.0625,-95.677068&sspn=30.599615,68.554688&ie=UTF8&hq=&hnear=22+W+Washington+St,+Chicago,+Illinois+60602&z=16 downtown Chicago headquarters location] (22 West Washington Street Chicago, IL 60602). 
+
+'''You must RSVP for this event''' by sending an email to [mailto:vitaly.mclain@gmail.com Vitaly McLain]. Please try to include "OWASP" in the subject, and send your name no later than 4PM on January 18th. When you arrive, you will need to sign in with security in the lobby of the building, who will direct you to the cafeteria for refreshments. We will then move to the Auditorium for talks. The meeting is open to everyone and is free to attend!
+
+The schedule is as follows:
+
+* 6:00PM - 6:30PM - Refreshments
+* 6:30PM - ~9:30PM - Talks!
+
+==Agenda==
+
+'''Speakers''':
+
+* '''Abraham Kang - DOM-based XSS and output encoding'''
+
+An interactive presentation that intends to turn all of the listeners of the presentation into XSS experts and help them understand how to mitigate XSS properly using output encoding.
+
+* '''Luca Carettoni - From CVE-2010-0738 to the recent JBoss worm'''
+
+Being a widely deployed enterprise application server, JBoss has always been a juicy target for attackers. Security vulnerabilities and misconfigurations in critical components, such as the infamous JMX-console, can be exploited in order to execute arbitrary code and harm the confidentiality, integrity and availability of the entire system. Our quick journey through JBoss insecurity will start from the analysis of a critical authentication bypass flaw to the recent JBoss worm which affected numerous installations worldwide. This presentation will also cover practical aspects on how to detect misconfigurations and secure your application server. Slides here: [[File:OWASP3011_Luca.pdf‎]]
+   
+Also, follow (and/or DM us) on twitter @owaspchicago
+
+We'll firm up the evening's agenda as the date nears.
+
+== General Information ==
+
+Anyone in our area interested in information security is welcome to attend. Our meetings are informal and encourage open discussion of all aspects of application security. We invite attendees to give short presentations about specific topics.
+
+Make sure you sign up for the mailing list to receive meeting announcements.
+
+We have a mailing list at: https://lists.owasp.org/mailman/listinfo/owasp-chicago
+
+If you have any questions about the Chicago chapter, please send an email to our chapter leaders [mailto:mtracy@matasano.com Mike Tracy] or [mailto:jason@wittys.com Jason Witty.] Any questions about the January meeting please contact [mailto:vitaly.mclain@gmail.com Vitaly McLain].
+
+
+==Presentation abstracts==
+
+== Presentation Archives ==
+
+Bad Cocktail: Spear Phishing - Mike Zusman - Presentation slides [https://www.owasp.org/images/6/60/Zusman_Chicago_2008.pdf here]
+
+Making Money on the Web The Blackhat Way - Jeremiah Grossman - Presentation slides [https://www.owasp.org/images/2/24/Grossman_Chicago_2008.pdf here]
+
+Extreme Client-Side Exploitation - Nate McFeters - Presentation slides [http://www.blackhat.com/presentations/bh-usa-08/McFeters_Carter_Heasman/BH_US_08_Mcfeters_Carter_Heasman_Extreme_Client-Side_Exploitation.pdf here]
+
+Automated Thrash Testing - Andre Gironda - Presentation slides [http://www.owasp.org/images/3/32/Auto-thrash-testing.pdf here]<BR>
+
+Defeating Information Leak Prevention - Eric Monti - Presentation slides [https://www.owasp.org/images/4/4a/OWASP-CHI07-Defeating_Extrusion_Detection.pdf here]<BR>
+
+
+'''[http://wittys.com/owasp/OWASP_Chicago_Thomas_Ptacek.pdf]Webapps In Name Only'''
+Thomas Ptacek, Matasano Security
+
+Where modern network architecture meets legacy application design, we get "The Port 80 Problem": vendors wrapping every conceivable network protocol in a series of POSTs and calling them "safe". These "Webapps In Name Only" are a nightmare for application security specialists.
+
+In this talk, we'll discuss, with case studies, how tools from protocol reverse engineering can be brought to bear on web application security, covering the following areas:
+
+- Locating and Decompiling Java and .NET Code
+- Structure and Interpretation of Binary Protocols in HTTP
+- Protocol Debugging Tools
+- Web App Crypto Tricks
+
+'''[http://wittys.com/owasp/cscott-Stronger%20Web%20Authentication-v1.0.ppt]Token-less strong authentication for web applications: A Security Review'''
+Cory Scott, ABN AMRO
+
+A short presentation on the threat models and attack vectors for token-less schemes used to reduce the risk of password-only authentication, but yet do not implement "true" two-factor technologies for logistical costs or user acceptance reasons. We'll go over how device fingerprinting and IP geo-location work and discuss the pros and cons of the solutions. 
+
+
+
+<paypal>Chicago</paypal>
+
+==== Chicago OWASP Chapter Leaders ====
+[mailto:mtracy@matasano.com Mike Tracy]
+
+[mailto:jason@wittys.com Jason Witty]
+
+__NOTOC__
+<headertabs/>
+[[Category:OWASP Chapter]]
+[[Category:Illinois]]

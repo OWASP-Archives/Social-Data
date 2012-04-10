@@ -1,0 +1,249 @@
+==== Main  ====
+
+= Overview  =
+
+[[Image:OWASP Mantra Security Framework.jpg|right|200px|OWASP Mantra Security Framework.jpg]]<br> 
+
+*Mantra is a collection of free and open source tools integrated into a web browser, which can become handy for students, penetration testers, web application developers,security professionals etc. It is portable, ready-to-run, compact and follows the true spirit of free and open source software. 
+*Mantra is lite, flexible, portable and user friendly with a nice graphical user interface. You can carry it in memory cards, flash drives, CD/DVDs, etc. It can be run natively on Linux, Windows and Mac platforms. It can also be installed on to your system within minutes. Mantra is absolutely free of cost and takes no time for you to set up.
+
+== Main Links  ==
+
+'''[http://getmantra.com/download/index.html Download Mantra - Security Framework]'''<br> 
+
+*[http://www.youtube.com/watch?v=GBFxVAM3DLQ Conference Video 1] 
+*[http://www.youtube.com/watch?v=bKACEDWKeyM Conference Video 2] 
+*[http://www.youtube.com/watch?v=qpVHWVOPHTk Conference Video 3]
+
+*[http://chmag.in/article/feb2011/mantra-%E2%80%93-free-and-open-source-security-framework Article/Publication ]
+
+<br> 
+
+= Project Goals  =
+
+#Create an ecosystem for hackers based on browser 
+#To bring the attention of security people to the potential of a browser based security platform 
+#Provide easy to use and portable platform for demonstrating common web based attacks( read training ) 
+#To associate with other security tools/products to make a better environment. Eg: 
+##It can be a nice addition to security distribution OSs like OWASP Live CD 
+##It can be used to solve basic levels of CTF contests 
+##It can associate with projects like DVWA to showcase attacks 
+##It can bring functions like crawler, SQL injection scanner etc by installing extensions.
+
+
+<br> 
+
+= Tools  =
+<br/>" A sword never kills anybody; it is a tool in the killer's hand." - Lucius Annaeus Seneca<br/><br/>
+Mantra is a powerful set of tools to make the attacker's task easier. The beta version of Mantra Security Toolkit contains following tools built onto it. Moreover Mantra follows the guidelines and structure of [http://firecat.fr/ FireCAT ] which makes it even more accessible. You can also always suggest any tools/ scripts that you would like see in the next release.<br/>
+
+== Tools ==
++'''Information Gathering'''
+
+- ''Flagfox''<br/>
+- ''JSView''<br/>
+- ''PassiveRecon''<br/>
+- ''Facebook search''<br/>
+- ''People Search Engine''<br/>
+- ''View Dependencies''<br/>
+- ''Link Sidebar''
+
++'''Editors'''
+
+- ''JSView''<br/>
+- ''Firebug''
+
++'''Network Utilities'''
+
+- ''FireFTP''<br/>
+- ''DNS Cache''<br/>
+- ''SQLite Manager''<br/>
+- ''HTTP Fox''<br/>
+- ''FireSSH''
+
++'''Miscellaneous'''
+
+- ''Greasemonkey''<br/>
+- ''Greasefire''<br/>
+- ''CacheToggle''<br/>
+- ''URL Flipper''<br/>
+- ''Event Spy''<br/>
+- ''Firebug Autocompleter''<br/>
+- ''FirePHP''<br/>
+- ''FireRainbow''<br/>
+- ''Flashbug''<br/>
+- ''Illuminations for Developers''<br/>
+- ''In line Code Finder for Firebug''<br/>
+- ''Inspect Context''<br/>
+- ''Inspector Widget''<br/>
+- ''Inspect This''<br/>
+- ''Scriptish''<br/>
+- ''Session Manager''<br/>
+- ''Stacked Inspector''
+
++'''Application Auditing'''
+
+- ''Hackbar''<br/>
+- ''RESTClient''<br/>
+- ''Tamper Data''<br />
+- ''Live HTTP Headers''<br/>
+- ''RefControl''<br/>
+- ''User Agent Switcher''<br/>
+- ''Web Developer''<br/>
+- ''DOM Inspector''<br/>
+- ''Inspect This''<br/>
+- ''Formfox''<br/>
+- ''SQL Inject Me''<br/>
+- ''XSS Me''<br/>
+- ''Cookies Manager+''<br/>
+- ''Firecookie''<br/>
+- ''Autofill Forms''<br/>
+- ''Cookie Monster''<br/>
+- ''Fireforce''<br/>
+- ''Groundspeed''<br/>
+- ''Http Requester''<br/>
+- ''Modify Headers''<br/>
+- ''Poster''<br/>
+- ''Ref Spoof''<br/>
+- ''SeleniumExpertSeleniumIDE''<br/>
+- ''SeleniumIDE''<br/>
+- ''SOAClient''<br/>
+- ''Websecurify''
+
++'''Proxy'''
+
+- ''FoxyProxy''<br/>
+- ''HttpFox''<br/>''
+- ''Proxy Tool''
+
+
+
+
+= News =
+<br/>
+[http://www.computerweekly.com/blogs/open-source-insider/2011/10/free-software-testing-on-usb-for-students-to-web-developers-with-mantra.html Computer Weekly Article]<br/>
+[http://getmantra.com/forums/Thread-owasp-mantra-c0c0n-11-and-appseclatam-11-release OWASP Mantra - c0c0n 11 and AppSecLatam 11 Release]<br/>
+[http://www.ekoparty.org/2011/workshops/owasp-mantra-security-framework.php Mantra at Ekoparty Security Conference]<br/>
+[https://www.owasp.org/images/d/dc/OWASP-Mantra_BAires-Argentina.ppt Mantra at OWASP LatamTour - Buenos Aires, Argentina]<br/>
+Getting secure with Mantra: An open source penetration testing kit - 1. [http://www.computerworld.com.au/article/392346/getting_secure_mantra_an_open_source_penetration_testing_kit/?uts_source=taxonomyfeed&utm_medium=rss Computer World] 2. [http://www.cio.com.au/article/392346/getting_secure_mantra_an_open_source_penetration_testing_kit/ CIO] 3. [http://www.techworld.com.au/article/392346/getting_secure_mantra_an_open_source_penetration_testing_kit/ Tech World] 4. [http://www.cso.com.au/article/392346/getting_secure_mantra_an_open_source_penetration_testing_kit/?uts_source=taxonomyfeed&utm_medium=rss CSO]<br/>
+[http://link.brightcove.com/services/player/bcpid1078581830001?bclid=1077362296001&bctid=1078245078001 Searchsecurity Screencast]<br/>
+[http://getmantra.com/forums/Thread-mantra-in-matriux-upcoming-release-leaked Mantra in Matriux Security Distribution]<br/>
+[http://getmantra.com/forums/Thread-mantra-in-backtrack-5 Mantra in Backtrack 5 - Penetration Testing Distribution]<br/>
+[http://www.facebook.com/photo.php?fbid=185544081485201&set=a.170788249627451.33033.170787489627527&type=1&ref=nf Mantra – Free and Open Source Security Framework' - published in India's first hacking magazine ClubHack Mag]<br/>
+[http://clubhack.com/2010/speakers/ ClubHACK 2010 Mantra release]
+
+= Contributors =
+<br/>
+"It is purpose that created us, purpose that connects us, purpose that pulls us, that guides us, that drives us, that binds us, it is purpose that defines us." - Agent Smith<br/><br/>
+'''Project Leaders'''<br/>
+[[User:Abhi_M_Balakrishnan|Abhi M Balakrishnan]]<br/>
+[[User:Yashartha_Chaturvedi|Yashartha Chaturvedi]]<br/>
+[[User:Gokul_C_Gopinath|Gokul C Gopinath]]<br/><br/>
+
+'''Other Members'''<br/>
+[[User:Maximiliano_Soler|Maximiliano Soler]]<br/>
+Gopu C Gopinath<br/>
+
+= Download  =
+<br/>
+" All things are difficult before they are easy." - Thomas Fuller <br/><br/>
+'''OWASP Mantra Security Toolkit - Beta 0.81 code named Armada'''<br/>
+
+{|
+|'''Platform'''
+|'''Details'''
+|'''Links'''
+|-
+|'''Linux 32 bit'''
+|MD5: e4c94e433a2e99cad0d8bea4aaf9fc08
+|[http://sourceforge.net/projects/getmantra/files/Mantra%20Security%20Toolkit/Armada%20-%200.81%20Beta/OWASP%20Mantra%20-%20Armada%2032%20bit%20Linux%20fixed.zip/download Mirror 1] [http://getmantra.googlecode.com/files/OWASP%20Mantra%20-%20Armada%2032%20bit%20Linux%20fixed.zip Mirror 2] [http://burnbit.com/torrent/184854/OWASP_Mantra_Armada_32_bit_Linux_fixed_zip Torrent]
+|-
+|'''Linux 64 bit'''
+|MD5: 8e16d3fede90168e23fbd0489c58b80f
+|[http://sourceforge.net/projects/getmantra/files/Mantra%20Security%20Toolkit/Armada%20-%200.81%20Beta/OWASP%20Mantra%20-%20Armada%2064%20bit%20Linux%20fixed.zip/download Mirror 1] [http://getmantra.googlecode.com/files/OWASP%20Mantra%20-%20Armada%2064%20bit%20Linux%20fixed.zip Mirror 2] [http://burnbit.com/torrent/184851/OWASP_Mantra_Armada_64_bit_Linux_fixed_zip Torrent]
+|-
+|'''Windows'''
+|MD5: 80450610eb86871e68f410335cae5f01
+|[http://sourceforge.net/projects/getmantra/files/Mantra%20Security%20Toolkit/Armada%20-%200.81%20Beta/OWASP%20Mantra%20-%20Armada%20Win.exe/download Mirror 1] [http://getmantra.googlecode.com/files/OWASP%20Mantra%20-%20Armada%20Win.exe Mirror 2] [http://burnbit.com/download/183928/OWASP_Mantra_Armada_Win_exe Torrent]
+|-
+|'''Macintosh'''
+|MD5: f256cf80a94ce960a90c441eb4b00ce0
+|[http://sourceforge.net/projects/getmantra/files/Mantra%20Security%20Toolkit/Armada%20-%200.81%20Beta/OWASP%20Mantra%20-%20Armada%20Mac.zip/download Mirror 1] [http://getmantra.googlecode.com/files/OWASP%20Mantra%20-%20Armada%20Mac.zip Mirror 2] [http://burnbit.com/download/183927/OWASP_Mantra_Armada_Mac_zip Torrent]
+|-
+|'''Source'''
+|MD5: af9a3b960b56a94a7c6227d62d674bea
+|[http://sourceforge.net/projects/getmantra/files/Mantra%20Security%20Toolkit/Armada%20-%200.81%20Beta/OWASP%20Mantra%20-%20Armada%20Source.7z/download Mirror 1] [http://getmantra.googlecode.com/files/OWASP%20Mantra%20-%20Armada%20Source.7z Mirror 2] [http://burnbit.com/torrent/183979/OWASP_Mantra_Armada_Source_7z Torrent] 
+|}
+
+ [[Category:OWASP_Download]]
+
+
+= Project About =
+
+{{:Projects/OWASP Mantra - Security Framework | Project About}} 
+
+
+= Resources =
+<br/>
+
+'''Project Pamphlets'''<br/>
+
+[http://www.owasp.org/images/e/e4/OWASP_Mantra-An_Introduction.pdf Project Pamphlet 1]<br/><br/>
+
+'''Project Presentations'''<br/>
+
+[http://www.owasp.org/index.php/File:OWASP_Mantra-An_Introduction.pptx Project Presentation 1]<br/>
+[https://www.owasp.org/images/d/dc/OWASP-Mantra_BAires-Argentina.ppt Project Presentation  2]<br/><br/>
+
+'''Text Tutorials'''<br/>
+
+[http://getmantra.com/forums/Thread-introducing-passiverecon-by-justin-morehouse Introducing PassiveRecon by Justin Morehouse]<br/>
+[http://getmantra.com/forums/Thread-introducing-groundspeed-by-felipe Introducing Groundspeed by Felipe]<br/>
+[http://getmantra.com/forums/Thread-introducing-link-sidebar-by-varun-n Introducing Link Sidebar by Varun N]<br/>
+[http://getmantra.com/forums/Thread-introducing-proxytool-by-robert-rade Introducing ProxyTool by Robert Rade]<br/>
+[http://getmantra.com/forums/Thread-introducing-httpfox-by-martin-theimer Introducing HttpFox by Martin Theimer]<br/>
+[http://getmantra.com/forums/Thread-how-to-make-your-own-search-bar-item How to make your own search bar item]<br/>
+[http://getmantra.com/forums/Thread-how-to-use-moc-crawler How to use MoC crawler]<br/>
+[http://getmantra.com/forums/Thread-switching-between-languages-and-locales Switching between languages and locales]<br/>
+[http://getmantra.com/forums/Thread-running-mantra-and-firefox-together Running Mantra and Firefox together]<br/>
+[http://getmantra.com/forums/Thread-login-form-bypass-using-mantra-security-toolkit Login Form Bypass using Mantra Security Toolkit]<br/>
+[http://getmantra.com/forums/Thread-advanced-sql-injection-tutorial-complete-website-rooting Advanced SQL Injection Tutorial - Complete website rooting]<br/>
+[http://getmantra.com/forums/Thread-manual-crawling Manual Crawling]<br/>
+[http://getmantra.com/forums/Thread-introducing-flagfox Introducing Flagfox]<br/><br/>
+
+'''Video Tutorials'''<br/>
+
+[http://link.brightcove.com/services/player/bcpid1078581830001?bclid=1077362296001&bctid=1078245078001 SearchSecurity Screencast]<br/>
+ClubHACK 2010 - [http://www.youtube.com/watch?v=GBFxVAM3DLQ 1] [http://www.youtube.com/watch?v=bKACEDWKeyM 2] [http://www.youtube.com/watch?v=qpVHWVOPHTk 3]<br/>
+[http://www.youtube.com/watch?v=yTbB42sR208 Broken Authentication Demonstration]<br/>
+[http://www.youtube.com/watch?v=o1WVx6eYE-M Broken Session Demonstration]<br/>
+[http://www.youtube.com/watch?v=vvPeskadF-s Insecure Direct Object References Demonstration]<br/>
+[http://www.youtube.com/watch?v=NK3S-nwiGwA Cross Site Scripting Demonstration]<br/>
+[http://www.youtube.com/watch?v=p94ssETMbQ0& Introduction + How to use Mantra Security Toolkit]<br/>
+[http://www.youtube.com/watch?v=fxHlthnVJpA Introduction to Mantra (Arabic)]<br/>
+[http://www.youtube.com/watch?v=exyUAGseifI Introducing FoxyProxy (Arabic)]
+[http://www.youtube.com/watch?v=vFcY584Wmw0 OWASP Mantra - URL Shortener Script SQL Injection Vulnerability]
+[http://www.youtube.com/watch?v=CRJkGZlV6Vk OWASP Mantra and LAMP Security CTF 6]
+[http://www.youtube.com/watch?v=aPk5vCqh-2k OWASP Mantra and Who Wants to be a Millionaire]
+[http://www.youtube.com/watch?v=0lPz24Z7Q_4 OWASP Mantra - One File CMS - Failure to Restrict URL Access]
+
+
+==== Links ====
+<br/>
+[http://www.getmantra.com/index.html Main Website]<br/>
+[http://www.getmantra.com/forums/ Discussion Forums]<br/>
+[http://www.facebook.com/getmantra/ Facebook Page]<br/>
+[http://getmantra.tumblr.com/ Tumblr]<br/>
+[http://twitter.com/getmantra Twitter]<br/>
+[http://vimeo.com/getmantra Vimeo]<br/>
+[http://sourceforge.net/projects/getmantra/ Sourceforge]<br/>
+[http://code.google.com/p/getmantra/ Google Code]<br/>
+[http://www.youtube.com/getmantra Youtube]
+[http://mantralooks.blogspot.in/ Artworks]
+[http://mantragallery.blogspot.com/ Wallpapers]
+
+
+__NOTOC__ <headertabs /> 
+
+[[Category:OWASP_Tool]] [[Category:OWASP_Alpha_Quality_Tool]] [[Category:OWASP_Project|Mantra - Security Framework]]
+[[Category:OWASP Download]]

@@ -1,0 +1,66 @@
+[[Project Information:template Testing Guide 3.0|Clik here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''FINAL REVIEW''' 
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART I''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Testing Project v3 Roadmap|OWASP Testing Project V3.0 Project's Deliveries & Objectives]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Testing Project v3 Roadmap|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+The project team accomlished all of it's tasks in a timely manner.
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Testing Project v3 Roadmap|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+100%
+ |- 
+
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+My concern was with the flow of the language as you move from section to section. This, of course, is a direct byproduct of having different authors for different sections and thier different writing styles.  In a couple of spots it made the guide a little  "disjointed" in it's style and delivery. should this be addressed in a future project or ongoing update?
+
+Likewise, Some authors offered detailed samples of using tools and syntax to test for the vulnerability while others offered general discriptions of how to test.  As we move forward perhaps we could look at standardizing this by maybe adding a detailed sample test that could address each vulnerability.  
+
+Or, another code project moving forward would be to create a test checklist based on the testing guide.  I think it would be of benefit to many, including those new to web application pen testing.
+ |-
+ | style="width:25%; background:white" align="center"|'''PART II''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Assessment Criteria
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[:Category:OWASP Project Assessment|OWASP Project Assessment Criteria]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Alpha Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+None that I know of.
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Beta Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+None
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+3. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Release Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+I concur with Nam.  A pdf document and a presentation are still needed. 
+ |-  
+ | style="width:25%; background:#7B8ABD" align="center"|
+4. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+|}

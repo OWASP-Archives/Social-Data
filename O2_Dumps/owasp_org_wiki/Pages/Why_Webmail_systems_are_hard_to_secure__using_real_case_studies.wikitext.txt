@@ -1,0 +1,5 @@
+'''Why Webmail systems are hard to secure--using real case studies'''
+
+'''Charmi Lin, (Taiwan Information & Communication Security Technology Center, this is Taiwan gov's no. 1 security special forces, they issue many CVEs each year, and have many 0-day and newest threat intelligence) (40 min)'''
+
+Using real case studies, this talk will describe why Webmail systems are very hard to secure. The nature of Web-based email systems require that content from arbitrary senders be outputted on behalf of the webmail website. This makes it extremely difficult to avoid OWASP Top 10 in Webmail systems. Even if vulnerabilities are identified, they are often addressed improperly, creating more vulnerabilities or leaving the original ones unfixed. This talk will use OWASP Top 10 as a guide to review real-world case studies in order to explain this situation, and suggest best practices (also contrasting OWASP Top 10).

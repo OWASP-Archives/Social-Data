@@ -1,0 +1,116 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+Integer coercion refers to a set of flaws pertaining to the type casting, extension, or truncation of primitive data types.
+
+'''Consequences'''
+
+* Availability: Integer coercion often leads to undefined states of execution resulting in infinite loops or crashes.
+* Access Control: In some cases, integer coercion errors can lead to exploitable buffer overflow conditions, resulting in the execution of arbitrary code.
+* Integrity: Integer coercion errors result in an incorrect value being stored for the variable in question.
+
+'''Exposure period'''
+
+* Requirements specification: A language which throws exceptions on ambiguous data casts might be chosen.
+* Design: Unnecessary casts are brought about through poor design of function interaction
+* Implementation: Lack of knowledge on the effects of data casts is the primary cause of this flaw
+
+'''Platform'''
+
+* Language: C, C++, Assembly
+* Platform: All
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood of exploit'''
+
+Medium
+
+Several flaws fall under the category of integer coercion errors. For the most part, these errors in and of themselves result only in availability and data integrity issues. However, in some circumstances, they may result in other, more complicated security related flaws, such as buffer overflow conditions.
+
+
+
+==Risk Factors==
+
+TBD
+
+
+==Examples==
+
+See the Examples section of the problem type ''Unsigned to signed conversion error'' for an example of integer coercion errors.
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Signed to unsigned conversion error]]
+* [[Unsigned to signed conversion error]]
+* [[Truncation error]]
+* [[Sign extension error]]
+
+==Related [[Controls]]==
+
+* Requirements specification: A language which throws exceptions on ambiguous data casts might be chosen.
+* Design: Design objects and program flow such that multiple or complex casts are unnecessary
+* Implementation: Ensure that any data type casting that you must used is entirely understood in order to reduce the plausibility of error in use.
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Range and Type Error Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

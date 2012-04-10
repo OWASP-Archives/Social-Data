@@ -1,0 +1,63 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Unsafe Mobile Code]]
+
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+==Description==
+
+The program violates secure coding principles for mobile code by declaring a member variable public but not final.
+
+All public member variables in an Applet and in classes used by an Applet should be declared final to prevent an attacker from manipulating or gaining unauthorized access to the internal state of the Applet.
+
+For more details about mobile code and its security concerns, please see [[:Category:Unsafe Mobile Code]].
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+The following Java Applet code mistakenly declares a member variable public but not final.
+
+<pre>
+	public final class urlTool extends Applet {
+		public URL url;
+		...
+	}
+</pre>
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+__NOTOC__

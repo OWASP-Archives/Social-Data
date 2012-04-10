@@ -1,0 +1,64 @@
+[[Category:OWASP_Sqlibench_Project|Clik here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#SQL_Injector_Benchmarking_Project_.28SQLiBENCH.29|Sqlibench Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#SQL_Injector_Benchmarking_Project_.28SQLiBENCH.29|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+The project reached its objectives. There were some optional features such as videos, integrating OWASP site generator etc. However I don't think these actually effects the overall outcome and the main objectives of the project. Also there were some nice additions to the project such as online version of the results in an interactively browsable way, really detailed documentation (with screenshots and everything), results in one nice PDF matrix, XML output, quite tidy Google Code Project Page etc.
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#SQL_Injector_Benchmarking_Project_.28SQLiBENCH.29|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+The project deliveries and objectives completed 100%. 
+ |- 
+|-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+I think keeping vulnerable applications source code in the SVN repository can make life easier for everyone, although it's not that important since there is a nice package to download.
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART II''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+'''Assessment Criteria'''
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[:Category:OWASP Project Assessment|OWASP Project Assessment Criteria]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Alpha Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+None
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Beta Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+Since this project is different than 'a tool', it requires slightly different approach to asses. Such as where to put an 'about box' or 'help'. In interactive criteria interface?, into the documents? or into the vulnerable application itself?  Like there is no single installer but there is really well documented process to follow. Overall I believe that the application is got more than Beta Quality.
+
+
+
+
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+3. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Release Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+Beta Quality comments apply to here as well. As far as I know there are some presentations regarding the whole project within the OWASP Turkey Chapter although I couldn't find them in Google Code downloads. As soon as the project page updated with all related documents and user friendly introduction to the project (a summary and easy access to up to date results/matrix) it'll reach the OWASP's Release Quality.
+ |-  
+ | style="width:25%; background:#7B8ABD" align="center"|
+4. Please do use the right hand side column to provide advice and make work suggestions. 
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+I assume this will be done after the reviews get finished, but for the records "Update the project page."
+|}

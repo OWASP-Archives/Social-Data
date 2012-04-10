@@ -1,0 +1,38 @@
+[[Category:Israel]]
+== At Watchfire, Herzliya, Wednesday, September 5th 2007, 16:45 ==
+
+[[Image:OWASP_IL_global_security_week_logo.jpg|left|200px]][[Image:OWASP_IL_Sponsor_Watchfire.jpg‎|right]]
+The 8th meeting of OWASP IL, The Israeli Chapter of OWASP, was held at Watchfire offices in Herzliya on Wednesday, September 5th at 17:00. Watchfire also sponsored the event. The meeting was part of [http://www.owasp.org/index.php/OWASP_Week_September_2007 OWASP week], a worldwide OWASP week of conferences on Privacy in the 21st Century which is in turn OWASP contribution to the [http://www.globalsecurityweek.com/ Global Security Week].
+
+
+The agenda of the meeting was:
+
+<big>'''[[media:OWASP_IL_8_OWASP_Introduction.pdf|OWASP Updates]]'''</big>
+
+
+<big>'''[[media:OWASP_IL_8_Dangling_Pointer.pdf‎|Straight from Blackhat: Dangling Pointers]]'''</big>
+
+Jonathan Afek, Senior Security Researcher, [http://www.watchfire.com Watchfire]
+
+Jonthan will bring to us his acclaimed Blackhat presentation. Dangling pointers are a common programming error, but even OWASP experts assumed, until now, that exploiting this vulnerability can lead only to crashes and therefore only to denial of service attacks (see [http://www.owasp.org/index.php/Using_freed_memory OWASP vulnerability guide]). The research team at Watchfire proved that dangling pointers can be exploited to take control of a vulnerable system, elevating the severity of dangling pointers.
+
+The presentation will explain the vulnerability and demonstrate a real exploit of the vulnerability using IIS as an example.
+
+
+
+<big>'''[[media:OWASP_IL_8_Evasive_Crimeware_attacks_Business_drivers_and_Proposed.pdf‎|Evasive Crimeware attacks, Business drivers, and Proposed Defense]]'''</big>
+
+Iftach Amit, Director Security Research, [http://www.finjan.com Finjan]
+
+Any web based attack requires a business model in order to spread. As the director of research for Finjan, Iftach monitors the highly successful web attacks focusing on client abuse and malware installation and the community that creates them. In the presentation Iftach will share with us his research findings.
+
+The presentation will cover the business drivers of client side attack vectors, explore recent examples of such attacks with an eye-opening review of the attacker community and its operation methods, and conclude with a technical discussion of the cat and mouse game between cutting edge solutions and ever advancing attack vectors.
+
+
+<big>'''[[media:OWASP_IL_8_JavaScript_Agent_Injection.pdf‎|JavaScript Agent Injection as a solution for client side browser vulnerabilities]]'''</big>
+
+Ofer Shezaf, OWASP IL Leader; CTO, Breach Security, [http://www.breach.com Breach Security]
+
+As we have seen in Iftach's presentation, clients are not very secure. While we, as web site owners, may not be directly responsible, this situation is just as much a problem for us: law might hold us responsible and the conquered and potentially trusted client may pose a risk to our web site. Good examples of problems which blurs the lines between client and server are the [http://www.gnucitizen.org/blog/universal-pdf-xss-after-party/ Universal PDF XSS] and [http://en.wikipedia.org/wiki/Cross-site_request_forgery Cross Site Request Forgery].
+
+Content Injection is a method proposed by Ivan Ristic, the creator of [http://www.modsecurity.org ModSecurity] to enable a Web Application Firewall to protect against this family of problems. The presentation will explain this novel method and build on it to offer some practical recipes for protection against client side problems.

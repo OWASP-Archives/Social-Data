@@ -1,0 +1,40 @@
+'''OWASP Tiger''' es una aplicación Windows originalmente pensada para ser usada para automatizar el proceso de probar varias cuestiones de seguridad conocidas para ASP.NET. Sin embargo, es mucho mas versátil que eso: le puede ayudar a construir y enviar peticiones HTTP, recibir y analizar las respuestas, compararlas contra un conjunto de condiciones para producir “alertas”, notificaciones de que algo esta mal con la(s) aplicación(es) o servicio(s) que están siendo probados.
+==Objetivos==
+Los objetivos de Tiger son bastante simples:
+* '''Proporcionar una forma simple de crear peticiones HTTP o HTTPS.''' Puede definir estas con una GUI muy fácil de usar.
+* '''Proporcionar una forma simple, pero flexible de analizar las respuestas automáticamente.''' Puede definir conjuntos de reglas que van a ser aplicadas a las respuestas usando un editor de condiciones amigable.
+* '''Permitir el fácil compartimiento y reutilización de pruebas.''' Puede salvar sus proyectos de prueba, enviarlos a otros usuarios de Tiger e inclusive crear plantillas en las cuales se pueden basar nuevos proyectos de Tiger.
+
+
+[[Image:new_project_dialog.png]]
+
+''Figura 1: Nuevo proyecto de Tiger''
+
+
+[[Image:condition_complete.png]]
+
+''Figura 2: Editor de condiciones de Tiger''
+
+
+[[Image:tiger_hover_info.png]]
+
+''Figura 3: Examinando los resultados de la prueba
+
+==Descarga==
+[http://sourceforge.net/project/downloading.php?group_id=64424&use_mirror=osdn&filename=Tiger_ASP_NET_Module.zip&97209405 Modulo de ASP.Net] – Actualizado el 2/17/2007
+
+[http://sourceforge.net/project/downloading.php?group_id=64424&use_mirror=osdn&filename=TigerClient.zip&2780900 Cliente de Tiger para Windows] – Actualizado el 2/17/2007
+
+Puede descargar el código fuente de Tiger desde [http://code.google.com/p/owasp-code-central/source Google code].
+
+==Instrucciones de instalación==
+Tiger requiere el .NET Framework 2.0 para ser instalado. Si no lo tiene descárguelo [http://www.microsoft.com/downloads/details.aspx?FamilyID=0856EACB-4362-4B0D-8EDD-AAB15C5E04F5&displaylang=en aquí (arquitectura x86)].
+
+==Manual de usuario==
+El manual de usuario de Tiger esta disponible [[Tiger User Manual|aquí]] (en ingles).
+==Desarrollo futuro==
+Esperamos que el desarrollo futuro de OWASP Tiger sea doble:
+* Tiger
+* Plantillas del proyecto para varias aplicaciones Web bien conocidas (es decir, su portal favorito, foro, blog, etc.)
+==Colaboradores del proyecto==
+Tiger es desarrollado por Boris Maletic, bajo el patrocinio de OWASP Autumn of Code 2006. El proyecto es dirigido por Dinis Cruz.

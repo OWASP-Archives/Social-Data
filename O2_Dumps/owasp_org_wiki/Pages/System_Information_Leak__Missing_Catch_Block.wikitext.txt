@@ -1,0 +1,87 @@
+{{template:CandidateForDeletion}}
+ #REDIRECT [[Information Leakage]]
+
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+==Description==
+
+If a Servlet fails to catch all exceptions, it may reveal debugging information that will help an adversary form a plan of attack.
+
+When a Servlet throws an exception, the default error response the Servlet container sends back to the user typically includes debugging information. This information is of great value to an attacker. For example, a stack trace might show the attacker a malformed SQL query string, the type of database being used, and the version of the application container. This information enables the attacker to target known vulnerabilities in these components.
+
+
+
+==Risk Factors==
+
+TBD
+
+
+==Examples==
+
+===Example 1===
+
+In the following method a DNS lookup failure will cause the Servlet to throw an exception.
+
+<pre>
+	protected void doPost (HttpServletRequest req,                 
+						HttpServletResponse res)
+				  throws IOException {
+		String ip = req.getRemoteAddr();
+		InetAddress addr = InetAddress.getByName(ip);
+		...
+		out.println("hello " + addr.getHostName());
+	}
+</pre>
+
+===Example 2===
+
+The following method will throw a NullPointerException if the parameter "name" is not part of the request.
+
+<pre>
+	protected void doPost (HttpServletRequest req,                 
+						HttpServletResponse res)
+				  throws IOException {
+		String name = getParameter("name");
+		...
+		out.println("hello " + name.trim());
+	}
+</pre>
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+A good error handling mechanism always tries to capture all exceptions and returns a generic error message that does not reveal any details about the error and the application. Depending on the platform and container the application is running on, there can be different options.
+* Set a generic custom error page for all unhandled exceptions at the container level. (Normally, this is set in the configuration file.) The generic custom error page should have a simple error message that does not reveal any details about the exception happened.
+** In ASP.NET, it is the customError tag in the web.config file
+* Use an global error handler to capture all unhandled exceptions. 
+** In ASP.NET, it is the Application_Error sub in the global.asax file.
+* Handle the error in the page level
+** In ASP.NET, it is the Page_Error sub on the aspx page or associated codebehind page
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD

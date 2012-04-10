@@ -1,0 +1,312 @@
+=O que pode ser feito?=
+
+Tendo em vista a importância do tema, é imperativo que o governo brasileiro atue no
+desenvolvimento de um mercado capaz de produzir software com um nível de segurança adequado
+ao seu uso e à criticidade das informações que processa ou armazena. Em seguida, listamos
+algumas recomendações do que pode ser feito para melhorar o panorama da segurança de software
+no Brasil.
+
+Nós acreditamos que as ações aqui propostas tem o potencial para melhorar a segurança dos
+sistemas utilizados por milhões de pessoas e também para fomentar uma indústria pujante, capaz de
+colocar o Brasil na vanguarda mundial, gerando prosperidade para o país.
+
+==Por legisladores==
+
+O atual mercado de software apresenta incentivos que privilegiam as funcionalidades em detrimento
+da segurança. Como consequência, todos acabam vítimas da falta de segurança existente hoje no
+ambiente da Internet. É necessário que o governo atue de forma a criar incentivos para a adoção de
+práticas seguras no desenvolvimento de sistemas e para responsabilizar pessoas e organizações que
+não tratem adequadamente os aspectos de segurança de aplicações.
+
+Algumas sugestões de ações são:
+
+===Permitir e incentivar pesquisas sobre ataques e defesas cibernéticas===
+
+As punições aos criminosos digitais são extremamente necessárias e a posição defendida pelo
+OWASP não é a criação de mecanismos para a proteção de atividades ilegais ou nocivas à
+sociedade. No entanto, o OWASP percebe que algumas iniciativas de legislar a respeito de crimes
+eletrônicos podem também dificultar atividades legítimas e necessárias de pesquisas de
+vulnerabilidades de segurança.
+
+Entendemos que a legislação deve focar na intenção, criminalizando atividades que objetivem causar
+danos à sociedade e permitindo atividades de pesquisa, que beneficiam a sociedade pela criação de
+conhecimento crucial para a melhora da segurança dos sistemas.
+
+===Requerer a publicação de avaliações de segurança===
+
+A disseminação de informações a respeito de vulnerabilidades de segurança é essencial para permitir
+que a sociedade se proteja de ataques que explorem estas falhas. Hoje sabemos que os criminosos
+digitais participam de redes de troca de informações e têm amplo acesso a descrições de falhas e
+novas técnicas de ataque. Ou seja, os criminosos tem hoje mais acesso às informações do que as
+equipes responsável pela manutenção da segurança das redes de provedores, empresas ou do
+governo.
+
+Num paralelo com o setor de aviação, onde as falhas são investigadas a fundo e os resultados das
+investigações são publicados, é importante que as falhas encontradas em sistemas informatizados e
+os descritivos dos ataques sofridos pelas organizações públicas e privadas sejam amplamente
+divulgados, permitindo a toda a sociedade aprender com os problemas já ocorridos de forma a
+evoluir o estado da segurança dos sistemas dos quais dependemos.
+
+===Criar uma agência para tratar os aspectos de divulgação de falhas de segurança===
+
+Com a publicação de leis exigindo a divulgação das falhas de segurança, será importante regular
+esta atividade. Sugerimos a criação de uma agência governamental especializada para regular e gerir
+as atividades de troca de informações sobre vulnerabilidades de segurança de forma ética e
+responsável, inclusive com poder para punir pessoas e organizações que atuem de forma nociva à
+sociedade.
+
+===Exigir o cumprimento de requisitos mínimos de segurança em contratos governamentais===
+
+O poder de compra do Estado não pode ser ignorado e deve ser usado em favor da sociedade. Com
+relação à segurança de software, o governo pode definir critérios mínimos de segurança e exigir
+qualificação e o uso de técnicas de proteção nos sistemas fornecidos ao governo. Um aspecto
+importante é a possibilidade de responsabilizar os fornecedores em caso de falhas na segurança dos
+sistemas.
+
+===Responsabilizar organizações que não tratem com diligência os aspectos de segurança de aplicações===
+
+Assim como os fornecedores governamentais, quaisquer organizações devem ser legalmente
+responsáveis pela segurança dos sistemas que operam ou comercializam. A legislação deve prever a
+possibilidade de punição para as organizações que não tomarem providências adequadas para
+garantir a segurança de seus sistemas. Os fornecedores das tecnologias utilizadas devem ter
+responsabilidade solidária e objetiva, nos moldes do Código de Defesa do Consumidor.
+
+===Exigir que a administração pública tenha acesso às atualizações de segurança de qualquer software durante a sua vida útil===
+
+É imperativo que os sistemas utilizados pelos órgãos públicos estejam atualizados com todas as
+correções de segurança, de forma que não sejam afetados por vulnerabilidades já conhecidas.
+
+Desta forma, é necessária legislação que determine que a administração pública tenha acesso às
+correções de segurança dos sistemas que utilizar enquanto durar a vida útil desses sistemas e
+independentemente da existência de contratos de manutenção.
+
+===Exigir a abertura do código fonte de aplicativos utilizados pela administração pública cuja vida útil tenha terminado===
+
+É bastante comum que fabricantes de software restrinjam o tempo de vida útil de seus sistemas,
+principalmente por causa do lançamento de novas versões desses mesmos sistemas. Ao final da
+vida útil definida para um software, os fabricantes deixam de publicar atualizações e correções de
+segurança, o que aumenta o risco das organizações que ainda dependem dessas versões.
+
+É também bastante comum em órgãos governamentais o uso de sistemas que já foram
+abandonados pelos fabricantes mas que atendem às necessidades de administração pública. Para
+permitir que o governo se proteja em caso de falhas nesses sistemas, é necessária a criação de
+legislação que obrigue os fabricantes a tornar disponível o código fonte desses sistemas para que a
+administração pública tenha a possibilidade de realizar as manutenções de segurança necessárias,
+uma vez que o próprio fabricante não vai mais manter o sistema. O fabricante pode também escolher
+disponibilizar a versão mais atual do software, desde que não haja custo para o erário.
+
+===Eliminar licenças de software que isentam os fabricantes da responsabilidade com a segurança de seus produtos===
+
+Muitas das licenças de software utilizadas atualmente restringem a responsabilidade do fabricante do
+software em caso de falhas de segurança. É importante haver legislação que impeça um fabricante
+de software de se eximir da responsabilidade pela segurança dos produtos que comercializa.
+Para evitar distorções no mercado de software, a responsabilidade dos fabricantes pode ser limitada
+ao valor pago pelo sistema.
+
+==Por órgãos de defesa do consumidor==
+
+Nosso entendimento é que a proteção das informações dos clientes faz parte das práticas
+necessárias de proteções do consumidor, assim como o fornecimento de sistemas livres de defeitos,
+em especial defeitos que possam comprometer a segurança de seus usuários. Assim, as entidades
+de defesa do consumidor podem e devem atuar de forma a melhorar o panorama de segurança para
+os consumidores.
+
+Sugerimos as seguintes ações:
+
+===Atuar para restringir o uso de licenças de software abusivas===
+
+Esta ação é similar e complementar ao item "Eliminar licenças de software que isentam os fabricantes
+da responsabilidade com a segurança de seus produtos", descrito acima.
+
+===Exigir que os fabricantes divulguem informações inteligíveis sobre o nível de segurança de seus produtos e/ou serviços===
+
+Assim como os fabricantes de produtos eletro-eletrônicos precisam divulgar as informações sobre consumo de energia de seus produtos, o consumidor tem o direito de saber sobre as características e o nível de segurança proporcionado pelos sistemas informatizados que utiliza.
+
+É imperativa a criação de um sistema que permita aos consumidores verificar o nível de segurança provido como parte de seu processo de decisão de consumo. Tal sistema permitiria diminuir as externalidades perversas do mercado de software e criaria incentivos para que os produtores de software melhorem a segurança de seus produtos, além de atender ao Código de Defesa do Consumidor que, em seu [http://www.planalto.gov.br/ccivil_03/Leis/L8078.htm art. 31], determina que as ofertas de produtos ou serviços devem apresentar informações sobre os riscos que apresentam à segurança dos consumidores.
+
+Hoje existem poucos mecanismos capazes de transformar os dados sobre a segurança de sistemas em informações que o consumidor final seja capaz de compreender. Os mecanismos existentes atualmente precisam ser aprimorados para que possam fornecer informações melhores aos consumidores.
+
+===Exigir um nível adequado de segurança de sistemas que lidem com dados que possam afetar a privacidade dos consumidores ou cidadãos===
+
+Muitas organizações coletam dados de seus clientes durante seus relacionamentos de negócio, mas
+nem sempre protegem esses dados de forma adequada. É necessária a definição de procedimentos
+mínimos de proteção das informações coletadas dos consumidores e a responsabilização das
+organizações públicas ou privadas que não protegerem as informações adequadamente. Os
+vazamentos de informações pessoais devem ser passíveis de punição e devem ser amplamente
+divulgados. Em particular, todas as pessoas potencialmente afetadas pelo vazamento devem ser
+alertadas do fato e de suas possíveis consequências.
+
+===Definir que os consumidores devem ser informados dos possíveis usos dos dados inseridos em sistemas ou sites===
+
+Não apenas as organizações devem proteger os dados que coletam dos consumidores, mas
+também os consumidores devem saber todos os possíveis usos das informações coletadas. Assim,
+é necessário que todas as organizações públicas e privadas tenham a obrigação de divulgar todos
+os usos possíveis para os dados coletados, inclusive usos futuros. Qualquer alteração na política de
+uso dos dados deve ser previamente informada e explicitamente aceita pelos consumidores.
+
+===Estabelecer campanhas de conscientização de segurança para os consumidores===
+
+Além das ações que exijam que os fabricantes de software ajam de forma responsável para com os
+consumidores, é importante também capacitar os usuários de sistemas informatizados dos riscos
+inerentes ao uso desses sistemas.
+
+Assim como é importante a realização de campanhas de conscientização de segurança no trânsito
+ou de controle de doenças como a dengue, é importante conscientizar os internautas sobre os riscos
+e atitudes que advém de um mundo cada vez mais conectado. As campanhas devem tratar de
+temas como os riscos de informar dados pessoais em sites desconhecidos ou dos cuidados que
+cada pessoa deve ter com seu computador pessoal para evitar que este se torne uma arma nas
+mãos de criminosos digitais.
+
+==Por órgãos de controle==
+
+Os órgãos de controle podem e devem exigir dos setores que regulam a adoção de práticas
+adequadas de segurança de aplicações. Esses órgãos deveriam definir regulamentos que favoreçam
+o uso de técnicas de segurança no desenvolvimento de sistemas. Assim, as ações sugeridas são:
+
+===Definir claramente as responsabilidades com relação aos aspectos de segurança de aplicações===
+
+Toda organização deve ser responsável pela segurança dos seus sistemas e esta responsabilidade
+deve ser claramente definida. Os órgãos de controle devem, sempre que possível, incluir a
+responsabilidade de manter a segurança dos sistemas de informação como parte de seus
+regulamentos. Deve haver previsão de punição em casos em que não haja segurança adequada nos
+sistemas.
+
+===Verificar e auditar para garantir que práticas adequadas de segurança são adotadas===
+
+Sempre que possível, as auditorias ou verificações realizadas devem incluir itens que permitam avaliar
+se as práticas de segurança de aplicações foram adotadas adequadamente. Entendemos que as
+auditorias são uma oportunidade para melhorar as práticas adotadas pelas organizações e os órgãos
+de controle devem se preparar para exigir a manutenção de níveis adequados de segurança nos
+sistemas das entidades auditadas.
+
+Existem alguns modelos que podem balizar as práticas de auditoria de segurança de sistemas, como
+o [http://www.sse-cmm.org/ SSE-CMM] (Systems Security Engineering Capability Maturity Model), o [http://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project OWASP ASVS]
+(Application Security Verification Standard) ou o [http://www.opensamm.org/ SAMM] (Software Assurance Maturity Model)
+
+===Inserir os aspectos de segurança de aplicações em seus regulamentos e/ou recomendações setoriais===
+
+Muitos órgãos de controle publicam regulamentos ou recomendações para os setores que regulam.
+É importante que estes regulamentos ou recomendações incluam aspectos de segurança de
+aplicações e que indiquem claramente a necessidade de incluir os requisitos de segurança em
+contratos com os fornecedores.
+
+===Facilitar a criação de um mercado de seguros para a segurança de aplicações===
+
+Assim como é importante a responsabilização por falhas na manutenção de níveis adequados de
+segurança, é igualmente importante a criação de um mercado de seguros para a segurança de
+aplicações.
+
+Um mercado de seguros possibilita a transferência de parte dos riscos ligados à segurança para uma
+seguradora, ao mesmo tempo que tende a aumentar os custos de seguro para as entidades que não
+possuem um tratamento adequado dos aspectos de segurança dos seus sistemas. Junto com
+mecanismos de responsabilização, um mercado de seguros funcionando adequadamente produz
+incentivos para que as organizações aumentem o seu nível de segurança.
+
+===Requerer o uso de conexões criptografadas (SSL) para aplicações web===
+
+Muitos dos ataques existentes atualmente só são possíveis porque algumas organizações não usam
+nem mesmo os mecanismos de segurança disponíveis. Um desses mecanismos é o protocolo SSL,
+que permite a codificação dos dados transmitidos entre o navegador do usuário e os servidores do
+sistema web de forma segura, garantindo o sigilo e a autenticidade das informações.
+Assim, uma medida simples e efetiva para melhorar a segurança dos sistemas web é exigir que os
+dados sejam transmitidos de forma segura pela Internet.
+
+==Por órgãos de ensino e pesquisa==
+
+A capacitação de mão de obra é essencial para fazer o país avançar em uma área intimamente ligada
+à tecnologia. Para que haja um mercado de segurança de aplicações pujante, é necessária a
+formação de um contingente adequado de especialistas, tanto nos aspectos de ataque quanto nos
+aspectos de defesa da infraestrutura. A formação de uma força de trabalho adequada deve ser dar
+pela inclusão da área de segurança nos conteúdos das universidades e também pela formação de
+pesquisadores capazes de propor novas técnicas e metodologias que avancem esta área do
+conhecimento. Também é necessária uma interação das instituições de ensino e pesquisa com a
+indústria para o repasse e produtização de tecnologias.
+
+As ações sugeridas para instituições de ensino e pesquisa são:
+
+===Inclusão das boas práticas de segurança de aplicações no conteúdo dos cursos===
+
+É essencial que todos os profissionais de tecnologia da informação tenham conhecimento das
+práticas básicas de segurança e a inclusão dessas informações nos conteúdos dos cursos da área é
+a melhor forma de atingir esse objetivo.
+
+Os estudantes dos níveis básico e médio também precisam aprender sobre os perigos do mundo
+virtual. Nesses níveis de ensino, o foco deve ser nos riscos envolvidos no uso de sistemas ou sites
+web, como redes sociais ou sites de comércio eletrônico. Os aspectos éticos do uso da Internet
+também devem ser enfatizados.
+
+===Definição de cursos avançados para formação de mão-de-obra na área===
+
+Além das práticas básicas que devem ser de conhecimento de todos os profissionais da área, é
+necessária a formação de especialistas em segurança de software para que o país possa
+desenvolver uma indústria de segurança pujante e geradora de riquezas para o país.
+
+===Fomentar e financiar pesquisas sobre segurança de aplicações===
+
+A geração de conhecimento na área também é essencial para que o país possa assumir a vanguarda
+mundial em segurança de aplicações. E a única forma de aumentar a geração de conhecimento é
+fomentar e financiar pesquisas na área, sejam elas desenvolvidas por entidades públicas ou privadas.
+O fomento da geração de conhecimento e tecnologias nas empresas é de suma importância para a
+criação no país de um mercado de segurança de aplicações capaz de criar produtos e tecnologias
+avançados e inovadores.
+
+===Promover a formação de profissionais capazes de atuar com ética e responsabilidade===
+
+Todo o processo de formação de profissionais e pesquisadores na área de segurança deve priorizar
+os aspectos éticos e a atuação responsável. A formação ética deve ser parte essencial da formação
+desses profissionais.
+
+==Por todos os órgãos públicos==
+
+Qualquer órgão público pode contribuir para melhorar o atual estado de coisas, seja com
+conscientização e capacitação, seja utilizando o seu poder de compra de forma a favorecer
+empresas que tratem adequadamente os aspectos de segurança de aplicações.
+
+As ações sugeridas para todos os órgãos públicos são:
+
+===Financiar validações e correções de segurança para sistemas de código aberto===
+
+Muitos órgãos públicos usam sistemas de código aberto como parte de sua infraestrutura de
+tecnologia da informação. Assim, é essencial para essas organizações que estes sistemas de código
+aberto sejam seguros e confiáveis. Os órgãos públicos deveriam investir na avaliação da segurança
+dos sistemas de código aberto que adotam, na correção das falhas de segurança encontradas e na
+divulgação responsável tanto das falhas quanto das correções.
+
+Desta forma, os órgãos públicos prestam um serviço à sociedade com a melhora da segurança de
+seus próprios sistemas e dos sistemas de terceiros.
+
+===Promover o uso de tecnologias e metodologias de segurança de aplicações===
+Todo órgão público deveria exigir e promover o uso de tecnologias e metodologias de
+desenvolvimento seguro de aplicações, tanto internamente quanto por seus fornecedores.
+
+Deve ser de responsabilidade de cada órgão garantir que seus sistemas tenham um nível adequado
+de segurança e que as técnicas adequadas são utilizadas no desenvolvimento dos seus sistemas
+informatizados.
+
+===Promover e permitir testes de segurança de forma responsável mas aberta===
+
+Os testes de segurança são uma das principais ferramentas para encontrar falhas de segurança em
+sistemas informatizados. Todo órgão público deveria estabelecer um programa que permita a
+pesquisadores de segurança realizar testes em seus sistemas com o objetivo de encontrar as falhas
+e saná-las com a maior brevidade possível.
+
+Ressaltamos que os testes devem ser feitos de forma ética e responsável e devem ser encarados
+como uma forma de colaboração para a melhoria dos sistemas governamentais. Acreditamos que os
+criminosos digitais já realizam seus próprios testes nos sistemas de forma velada, ao contrário dos
+pesquisadores com legitimas intenções de melhoria dos sistemas. Essa realidade dá uma vantagem
+aos criminosos com relação aos responsáveis pela segurança dos sistemas. A melhor forma de
+equilibrar essa disputa é facilitar a atuação dos pesquisadores e profissionais de segurança de forma
+a permitir que as falhas sejam encontradas e divulgadas de forma adequada ao invés de servirem
+como moeda de troca nos submundos digitais.
+
+===Promover treinamento e conscientização dos gestores para os desafios da segurança na web===
+
+Todos os órgãos públicos devem se preocupar com a segurança de seus sistemas e esta
+preocupação deve fazer parte do direcionamento dado pela alta administração de cada órgão.
+Assim, é importante que os gestores de todos os órgãos participem de sessões de treinamento e
+conscientização neste sentido.
+
+O Departamento de Segurança da Informação e Comunicações do Gabinete de Segurança
+Institucional da Presidência da República tem feito um excelente trabalho de conscientização dos
+funcionários públicos federais e este trabalho deve ser valorizado e levado às esferas estadual e
+municipal.

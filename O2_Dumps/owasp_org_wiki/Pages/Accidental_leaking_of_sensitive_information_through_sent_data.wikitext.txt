@@ -1,0 +1,73 @@
+#REDIRECT [[Information Leakage]]
+{{template:CandidateForDeletion}}
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+==Description==
+
+The accidental leaking of sensitive information through sent data refers to the transmission of data which is either sensitive in and of itself, or useful in the further exploitation of the system through standard data channels.
+
+'''Consequences'''
+*	Confidentiality: Data leakage results in the compromise of data confidentiality.
+
+'''Exposure period'''
+*	Requirements specification: Information output may be specified in the requirements documentation.
+*	Implementation: The final decision as to what data is sent is made at implementation time.
+
+'''Platform'''
+*	Languages: All
+*	Platforms: All
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Low
+
+'''Likelihood   of exploit'''
+
+Undefined.
+
+'''Avoidance and mitigation'''
+
+*	Requirements specification: Specify data output such that no sensitive data is sent.
+*	Implementation: Ensure that any possibly sensitive data specified in the requirements is verified with designers to ensure that it is either a calculated risk or mitigated elsewhere.
+
+Accidental data leakage occurs in several places and can essentially be defined as unnecessary data leakage. Any information that is not necessary to the functionality should be removed in order to lower both the overhead and the possibility of security sensitive data being sent.
+
+==Risk Factors==
+TBD
+
+==Examples==
+The following is an actual MySQL error statement:
+
+<pre>
+Warning: mysql_pconnect(): 
+Access denied for user: 'root@localhost' (Using password: N1nj4) in /usr/local/www/wi-data/includes/database.inc on line 4
+</pre>
+
+
+==Related [[Attacks]]==
+* [[Attack 1]]
+* [[Attack 2]]
+TBD
+
+
+==Related [[Vulnerabilities]]==
+
+==Related [[Controls]]==
+* [[Control 1]]
+* [[Control 2]]
+TBD
+
+==Related [[Technical Impacts]]==
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+TBD
+
+
+==References==
+TBD

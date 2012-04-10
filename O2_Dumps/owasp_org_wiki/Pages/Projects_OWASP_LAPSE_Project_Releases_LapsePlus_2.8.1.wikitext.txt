@@ -1,0 +1,31 @@
+{{Template: <includeonly>{{{1}}}</includeonly><noinclude>Release About</noinclude>
+| project_name = OWASP LAPSE Project
+
+| project_home_page = OWASP LAPSE Project
+
+| release_name = LapsePlus 2.8.1
+
+| release_date = March 2011
+
+| release_description = LAPSE+ is a security scanner for detecting vulnerabilities of untrusted data injection in Java EE Applications. It has been developed as a plugin for Eclipse Java Development Environment, working specifically with Eclipse Helios and Java 1.6 or higher. LAPSE+ is based on the GPL software LAPSE, developed by the SUIF Compiler Group of Stanford University. This new release of the plugin developed by Evalues Lab of Universidad Carlos III de Madrid provides more features to analyze the propagation of the malicious data through the application and includes the identification of new vulnerabilities.
+
+| release_license = [http://www.gnu.org/licenses/gpl-3.0-standalone.html GNU General Public License v3]
+
+| release_download_link = http://evalues.es/downloads/owasp/LapsePlus_2.8.1.jar
+
+| leader_name1 = Pablo Martín Pérez
+| leader_email1 = pablo.perez@owasp.org
+| leader_username1 = Pablo Martín Pérez
+
+| leader_name2 = José María Sierra Cámara
+| leader_email2 = jose.maria.sierra@owasp.org
+| leader_username2 =
+
+
+| release_notes = http://www.owasp.org/index.php/Projects/OWASP_LAPSE_Project/Releases/LapsePlus_2.8.1/Notes
+| links_url1 = http://evalues.es/downloads/owasp/LapsePlus_Tutorial.pdf
+| links_name1 = Tutorial for the installation and use of LAPSE+.
+| links_url2 = http://evalues.es/index.php/es/owasp-lapse-project.html
+| links_name2 = Project's web page
+
+}}

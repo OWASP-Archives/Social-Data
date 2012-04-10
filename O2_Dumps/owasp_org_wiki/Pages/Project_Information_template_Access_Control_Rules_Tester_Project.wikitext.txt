@@ -1,0 +1,41 @@
+----
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Access Control Rules Tester Project''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"| Often web applications contain sensitive data and provide functionality which should be protected from unauthorized access. Explicit access control policies can be leveraged for validating the access control, but, unfortunately, these policies are rarely defined in case of web applications. It is known that access control flaws in web applications may be revealed with black-box analysis, but the existing “differential analysis” approach has certain limitations. We believe that taking the state of the web application into account could help to overcome the limitations of exiting approach. 
+This project proposes a novel approach to black-box web application testing, which utilizes a use-case graph. The graph contains classes of actions within the web application and their dependencies. By traversing the graph and applying differential analysis at each step of the traversal, it is possible to improve the accuracy of the method. This idea was implemented in the tool AcCoRuTe (Access Control Rules Tester). 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Key Project Information'''
+ | style="width:14%; background:#cccccc" align="center"|Project Leader<br>[[User:Petand|'''Andrew Petukhov''']]
+ | style="width:15%; background:#cccccc" align="center"|Project Contributors<br>George Noseevich
+ | style="width:10%; background:#cccccc" align="center"|Mailing List<br>[https://lists.owasp.org/mailman/listinfo/owasp-access-control-rules-tester-project '''Subscribe here''']<br>[mailto:owasp-access-control-rules-tester-project@lists.owasp.org '''Use here''']
+ | style="width:17%; background:#cccccc" align="center"|License<br>[http://www.gnu.org/licenses/old-licenses/gpl-2.0.html '''GNU General Public License v2''']
+ | style="width:14%; background:#cccccc" align="center"|Project Type<br>[[:Category:OWASP_Project#Beta_Status_Projects|'''Tool''']]
+ | style="width:15%; background:#cccccc" align="center"|Sponsors<br>[[OWASP Summer of Code 2008|'''OWASP SoC 08''']] 
+ |}
+
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|
+'''[[:Category:OWASP_Project_Assessment#Beta_Quality_Tool_Criteria|Beta Quality]]'''<br>[[:Access Control Rules Tester Project - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="center"|
+Version 1.1
+----------------------------------------
+[http://accorute.googlecode.com/files/syssec2011-slides.pdf PPT Presentation from the 1st SysSec Workshop (an updated method presented)]<br>
+[http://accorute.googlecode.com/files/syssec2011-slides.pdf A paper from the 1st SysSec Workshop with an updated method described]<br>
+[http://code.google.com/p/accorute/source/checkout A new codebase can be checked out here]<br>
+
+Version 1.0
+----------------------------------------
+[http://accorute.googlecode.com/files/OWASP_EU_Summit_2008_AcCoRuTe.ppt PPT Presentation from OWASP EU Summmit 2009]<br>[http://accorute.googlecode.com/files/BusinessLogicVulnerabilities.pdf What are business logic vulnerabilities? - An attempt to define their scope]<br>[http://accorute.googlecode.com/files/AcCoRuTe.pdf AcCoRuTe approach described]<br>[http://code.google.com/p/accorute/ Google Code Project page]<br>[http://accorute.googlecode.com/files/AcCoRuTe-1.0.0.zip AcCoRuTe version 1.0.0 binaries]<br>[http://accorute.googlecode.com/files/AcCoRuTe-1.0.0-userguide.pdf AcCoRuTe User Guide]
+ | style="width:29%; background:#cccccc" align="center"|
+If any, add link here
+ |}
+----

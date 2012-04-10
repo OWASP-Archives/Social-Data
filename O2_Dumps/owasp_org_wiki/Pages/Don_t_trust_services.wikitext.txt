@@ -1,0 +1,55 @@
+{{Template:Principle}}
+
+{{Template:Stub}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+<br>
+[[Category:OWASP ASDR Project]]
+
+
+==Description==
+
+Services can refer to any external system.
+
+Many organizations utilize the processing capabilities of third party partners, who likely have differing security policies and postures than they do. It is unlikely that you can influence or control any external third party, whether they are home users or major suppliers or partners. 
+
+Therefore, implicit trust of externally run systems is not warranted. All external systems should be treated in a similar fashion. 
+
+For example, a loyalty program provider provides data that is used by Internet Banking, providing the number of reward points and a small list of potential redemption items. However, the data should be checked to ensure that it is safe to display to end users, and that the reward points are a positive number, and not improbably large. 
+
+==Examples==
+
+===Short example name===
+: A short example description, small picture, or sample code with [http://www.site.com links]
+
+===Short example name===
+: A short example description, small picture, or sample code with [http://www.site.com links]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* [[Controls 1]]
+* [[Controls 2]]
+
+
+==References==
+
+* http://www.link1.com
+* [http://www.link2.com Title for the link2]
+
+
+
+__NOTOC__
+
+==Overview==
+
+
+
+[[Category:Principle]]

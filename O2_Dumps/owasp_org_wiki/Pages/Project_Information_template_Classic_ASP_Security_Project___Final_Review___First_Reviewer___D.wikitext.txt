@@ -1,0 +1,55 @@
+[[Project Information:template Classic ASP Security Project|Clik here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''FINAL REVIEW''' 
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART I''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications#OWASP Classic ASP Security Project|OWASP Classic ASP Security Project's Deliveries & Objectives]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#OWASP Classic ASP Security Project|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|Looks like all objectives have been meet (documents seems there and some of them were even tested), i was unable to test all of them in deep in order to verify full functionality. I dont have the full platform needed to test it at this point in time.
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#OWASP Classic ASP Security Project|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| The tool itself looks like on the right path, altough as the author mentions it's not ready to be deployed. 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| Documentation (user manual and installation tool) would be a big step to jump into a proper Beta release. I hope Juan can find some help out there to finish this good looking project!
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART II''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Assessment Criteria
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[:Category:OWASP Project Assessment|OWASP Project Assessment Criteria]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Alpha Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| The repository in google, the rest seems done (although not in deep level of detail)
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Beta Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| More work is needed to achieve beta quality. It would look to me, documentation is minimum and could be a bit more elaborated, gaining pretty much of a beta quality (installer are not applicable on this tool).
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+3. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Release Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| N/A since Beta has not been reached.
+ |-  
+ | style="width:25%; background:#7B8ABD" align="center"|
+4. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| My suggestion is to try to find people who would like to work on the project, since it's not much what is missing to finalize it.
+|}

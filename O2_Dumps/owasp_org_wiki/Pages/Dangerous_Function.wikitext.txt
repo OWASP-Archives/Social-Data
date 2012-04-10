@@ -1,0 +1,157 @@
+{{Template:Vulnerability}}
+{{Template:Fortify}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+Functions that cannot be used safely should never be used.
+
+Certain functions behave in dangerous ways regardless of how they are used. Functions in this category were often implemented without taking security concerns into account.
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+* C functions that don't check the size of the destination buffers, such as gets(), strcpy(), strcat(), printf() 
+
+* The gets() function is unsafe because it does not perform bounds checking on the size of its input. An attacker can easily send arbitrarily-sized input to gets() and overflow the destination buffer.
+
+* The >> operator is unsafe to use when reading into a character buffer because it does not perform bounds checking on the size of its input. An attacker can easily send arbitrarily-sized input to the >> operator and overflow the destination buffer.
+
+===Example program ===
+See this simple C program :
+
+main()
+{
+        char  buffer[25];
+        
+        printf("\nEnter Text : ");
+        gets(buffer);
+}
+
+It appears to be correct, but it posesses a security problem.  If you enter a short piece of text such as "Hello", the above program works fine.  But if the entered value is longer than the allocated buffer, such as the text "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", the program may crash due to a segfault, or otherwise behave inappropriately.
+
+===What happens when the above program runs===
+
+cmain() calls the main() procedure.
+
+'''In Assembly''' 
+<pre>
+_cmain proc far           /* In C, all function names begins with an underscore */
+
+xx
+
+call _main
+
+xx
+
+_cmain endp
+
+_main proc 
+
+mov ebp, esp
+add ebp, 19h               /* 19h = 25 dec.  Creates buffer array in the stack frame */
+lea eax, strEnterText      /* Gets the address of the string "\nEnter Text : " */
+push eax                   /* pushes this address to stack for printf function */
+
+call _printf               /* calls the printf function */
+
+
+push ebp                   /* pushes the address of the buffer array */
+
+call _gets                 /* calls gets()  */
+
+   /* The gets function stores the entered charecter from stdin to memory pointed by ebp  */
+
+   /*  if the number of charecter got from stdin is greater than the SIZE of the buffer */
+ 
+   /* the buffer overflow occurs. */
+
+xxx
+
+_main endp
+</pre>
+
+As return addresses of all functions are stored on the stack, if the buffer array is overflowed, then the returned address of the functions may be overwritten by the user inputed data.
+
+
+===How this program can be exploited===
+
+Once the bounds of the array are known, text can be entered so that the return address on the stack is overwritten to point to a 
+different location in memory which the program is not supposed to access at that time, such as other malicious code.
+
+The length of the buffer could be easily discovered through trial-and-error.
+
+You should never use a function which extracts data from the user without no bounds checking.
+A better alternative is "fgets".
+
+To get input from stdin use this:
+
+<pre>
+fgets(buffer,25,stdin);
+</pre>
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Implementation]]
+[[Category:C]]
+[[Category:Use of Dangerous API]]
+[[Category:API Abuse]]
+[[Category:Vulnerability]]

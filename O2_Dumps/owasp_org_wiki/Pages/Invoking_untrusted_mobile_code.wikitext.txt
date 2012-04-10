@@ -1,0 +1,119 @@
+{{Template:SecureSoftware}}
+{{Template:Vulnerability}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+This process will download external source or binaries and execute it.
+
+'''Consequences'''
+
+Unspecified.
+
+'''Exposure period'''
+
+Implementation: This flaw is a simple logic issue, introduced entirely at implementation time.
+
+'''Platform'''
+
+Languages: Java and C++
+
+Operating platform: Any
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Medium
+
+'''Likelihood of exploit'''
+
+Medium
+
+This is an unsafe practice and should not be performed unless one can use some type of cryptographic protection to assure that the mobile code has not been altered.
+
+
+
+==Risk Factors==
+
+* Talk about the [[OWASP Risk Rating Methodology|factors]] that make this vulnerability likely or unlikely to actually happen
+* Discuss the technical impact of a successful exploit of this vulnerability
+* Consider the likely [business impacts] of a successful attack
+
+
+==Examples==
+
+In Java:
+
+<pre>
+URL[] classURLs= new URL[]{new URL("file:subdir/")};
+URLClassLoader loader = nwe URLClassLoader(classURLs);
+Class loadedClass = Class.forName("loadMe", true, loader);
+</pre>
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Cross-site Scripting (XSS)]]
+
+
+==Related [[Controls]]==
+
+* Implementation: Avoid doing this without proper cryptographic safeguards.
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Range and Type Error Vulnerability]]
+[[Category:OWASP_CLASP_Project]]
+[[Category:Code Snippet]]
+[[Category:Java]]

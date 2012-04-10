@@ -1,0 +1,133 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+The referrer field (actually spelled 'referer') in HTTP requests can be easily modified and, as such, is not a valid means of message integrity checking.
+
+'''Consequences'''
+
+* Authorization: Actions, which may not be authorized otherwise, can be carried out as if they were validated by the server referred to.
+* Accountability: Actions may be taken in the name of the server referred to.
+
+'''Exposure period'''
+
+* Design: Authentication methods are generally chosen during the design phase of development.
+
+'''Platform'''
+
+* Languages: All
+* Operating platforms: All
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood of exploit'''
+
+Very High
+
+The referrer field in HTML requests can be simply modified by malicious users, rendering it useless as a means of checking the validity of the request in question. In order to usefully check if a given action is authorized, some means of strong authentication and method protection must be used.
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+In C/C++:
+
+<pre>
+sock= socket(AF_INET, SOCK_STREAM, 0); 
+...
+bind(sock, (struct sockaddr *)&server, len) 
+...
+while (1)
+newsock=accept(sock, (struct sockaddr *)&from, &fromlen);
+pid=fork();
+if (pid==0) {
+  n = read(newsock,buffer,BUFSIZE);
+...
+if (buffer+...==Referer: http://www.foo.org/dsaf.html)
+//do stuff
+</pre>
+
+In Java:
+
+<pre>
+public class httpd extends Thread{
+  Socket cli;
+  public httpd(Socket serv){
+    cli=serv;
+    start();
+  }
+  public static void main(String[]a){
+  ...
+  ServerSocket serv=new ServerSocket(8181);
+  for(;;){
+    new h(serv.accept());
+  ...
+   public void run(){
+     try{
+       BufferedReader reader
+         =new BufferedReader(new InputStreamReader(cli.getInputStream()));
+       //if i contains a the proper referer.
+ 
+      DataOutputStream o= 
+         new DataOutputStream(c.getOutputStream());
+      ... 
+</pre>
+
+In J2EE:
+
+Any J2EE program that uses
+<pre>
+HttpServletRequest.getHeader("referer")
+</pre>
+to make a decision is also vulnerable.
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Trusting self-reported IP address]]
+
+
+
+==Related [[Controls]]==
+
+* Design: Use other means of authorization that cannot be simply spoofed.
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Authentication Vulnerability]]
+[[Category:Authorization Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

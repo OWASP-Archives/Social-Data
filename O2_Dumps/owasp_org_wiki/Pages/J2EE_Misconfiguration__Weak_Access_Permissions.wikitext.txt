@@ -1,0 +1,71 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Least Privilege Violation]]
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+==Description==
+
+Permission to invoke EJB methods should not be granted to the ANYONE role.
+
+If the EJB deployment descriptor contains one or more method permissions that grant access to the special ANYONE role, it indicates that access control for the application has not been fully thought through or that the application is structured in such a way that reasonable access control restrictions are impossible.
+
+
+==Risk Factors==
+
+* Talk about the [[OWASP Risk Rating Methodology|factors]] that make this vulnerability likely or unlikely to actually happen
+* Discuss the technical impact of a successful exploit of this vulnerability
+* Consider the likely [business impacts] of a successful attack
+
+
+==Examples==
+
+The following deployment descriptor grants ANYONE permission to invoke the Employee EJB's method named getSalary().
+
+<pre>
+	<ejb-jar>
+		...
+		<assembly-descriptor>
+			<method-permission>
+				<role-name>ANYONE</role-name>
+				<method>
+					<ejb-name>Employee</ejb-name>
+					<method-name>getSalary</method-name>
+			</method-permission>
+		</assembly-descriptor>
+		...
+	</ejb-jar>
+</pre>
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* [[:Category:Access Control]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD
+
+
+
+__NOTOC__

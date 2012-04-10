@@ -1,0 +1,29 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>OWASP Training Modules</noinclude>
+| Module_designation = [[:OWASP Secure Coding Practices - Quick Reference Guide|OWASP Secure Coding Practices - Quick Reference Guide]]
+| Module_Overview_Goal = This document provides a quick high level reference for secure coding practices. 
+
+It is technology agnostic and defines a set of general software security coding practices, in a checklist format, that can be integrated into the development lifecycle. Implementation of these practices will mitigate most common software vulnerabilities.  
+
+
+| Content = &nbsp;
+The Secure Coding Practices Quick Reference Guide is a technology agnostic set of general software security coding practices, in a comprehensive checklist format, that can be integrated into the development lifecycle. At only 17 pages long, it is easy to read and digest.
+
+The focus is on secure coding requirements, rather then on vulnerabilities and exploits. It is designed to serve as a quick reference or review for the developers, as opposed to being a tool for the security community.
+
+It includes a brief overview of security and risk principles, a glossary of important application security related terminology and links to useful resources.
+
+&nbsp;
+| Material =
+* [http://www.owasp.org/images/3/35/Flyer_Secure_Coding_Practices_Quick_Reference_Guide_V2.pdf OWASP Secure Coding Practices - Quick Reference Guide (PDF)]
+* [http://www.owasp.org/images/5/54/Secure_Coding_Practices_Quick_Ref_5.ppt Secure Coding Practices (PPT)]
+
+Latest version:
+* [http://www.owasp.org/index.php/File:Secure_Coding_Practices_Quick_Ref_5_-_Miguel_Almeida.odp Secure Coding Practices (IBWAS'10)]
+<br>
+*[http://www.vimeo.com/18031071 Video of the session presented at IBWAS'10 Training Day, 16th Dec 2010]
+&nbsp;
+}}
+
+
+
+[[Category:OWASP_Training|Training]]

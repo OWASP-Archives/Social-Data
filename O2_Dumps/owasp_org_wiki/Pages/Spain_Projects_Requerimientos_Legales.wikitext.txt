@@ -1,0 +1,62 @@
+== Especificación de Requisitos legales para las aplicaciones Web ==
+La finalidad de este proyecto es extraer aquellos aspectos de la legislación española que tienen repercusión sobre la especificación de requisitos de las aplicaciones Web, generando como resultado una "Especificación de Requisitos Legales para Aplicaciones Web" base. Esta especificación base debe servir tanto para construir aplicaciones como para evaluar su seguridad a posteriori.
+
+== Planificación ==
+El plan de trabajo del proyecto es el siguiente:
+# Suscripción al grupo de trabajo y establecimiento de la infraestructura de colaboración (Julio y Agosto de 2008).
+# Identificación de las leyes y reglamentos que pueden afectar a la especificación de requisitos de una aplicación Web (15 de Septiembre - 1 de Octubre de 2008). 
+# Identificación, dentro de esas leyes o reglamentos, de los artículos que pueden traducirse en requisitos para una aplicación Web.
+# Traducción de dichos artículos en una especificación de requisitos base, adaptable según la naturaleza de la aplicación.
+
+== Aportaciones y participación ==
+Si su intención es colaborar de forma activa, solicite su participación a través de la lista [https://lists.owasp.org/mailman/listinfo/owasp-spain OWASP-Spain]. Con objeto de facilitar la coordinación del grupo de trabajo, las incorporaciones se harán efectivas sólo entre iteraciones del proyecto. También puede utilizar la dirección '''owasp-req''' en el dominio '''listas.uclm.es''' para enviar sus comentarios, preguntas o sugerencias.
+== Miembros ==
+Las personas que componen el grupo de trabajo dedicado a este proyecto son:
+* Luís Calero Martín. Director técnico. [http://www.pentest.es Pentest Barcelona].
+* Carles Basteiro Bertolí. Abogado Departamento Nuevas Tecnologías. [http://www.pique-aa.com Piqué Abogados Asociados].
+* Evangelino Valverde Álvarez. Analista de Sistemas. [http://www.uclm.es Universidad de Castilla-La Mancha].
+* Elena Galván Fernández. Directora técnica. [http://escert.upc.edu esCERT-UPC Universitat Politècnica de Catalunya].
+* Carlos Cazorla Maestro. Consultor de Seguridad (Sistemas de Seguridad y Administración Pública). [http://www.thalesgroup.com Thales].
+* Jorge Hoya Cicero. Técnico programador. [http://www.unican.es Universidad de Cantabria].
+* Vicente Aguilera Díaz. Director de Auditoría. [http://www.isecauditors.com Internet Security Auditors]. [https://www.owasp.org/index.php/Spain/ OWASP Spain Chapter Leader].
+* Javier García. Administrador de Sistemas. [http://www.um.es Universidad de Murcia].
+* Jose Francisco Hidalgo. Responsable de Seguridad. [http://www.um.es Universidad de Murcia].
+* Marco A. Peña. Director de Tecnología e Innovación. [http://www.tataki.es TATAKI]. Perito Informático. [http://www.enginyeriainformatica.cat COEINF].
+* Isidoro Legido Martínez. Consultor Informático espcializado en Seguridad e Integración.
+
+== Normativa que pueden afectar a la especificación de requisitos de una aplicación Web ==
+==== Normativa española relacionada con Internet ====
+* '''LEY 34/2002''', de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico.
+* '''LEY 56/2007''', de 28 de diciembre, de Medidas de Impulso de la Sociedad de la Información.
+* '''LEY 7/1998''', de 13 de abril, sobre Condiciones Generales de la Contratación.
+* '''LEY 7/1996''' de Ordenación del Comercio Minorista.
+* '''LEY 32/2003''', de 3 de noviembre, General de Telecomunicaciones.
+* '''LEY 25/2007''', de 18 de octubre, de conservación de datos relativos a las comunicaciones electrónicas y a las redes públicas de comunicaciones.
+* '''LEY 59/2003''', de 19 de diciembre, de firma electrónica.
+* '''LEY 11/2007''', de 22 de junio, de Acceso Electrónico de los Ciudadanos a los Servicios Públicos.
+* '''REAL DECRETO 209/2003''', de 21 de febrero, por el que se regulan los registros y las notificaciones telemáticas, así como la utilización de medios telemáticos para la sustitución de la aportación de certificados por los ciudadanos.
+* '''ORDEN PRE/1551/2003''', de 10 de junio, por la que se desarrolla la disposición final primera del REAL DECRETO 209/2003, de 21 de febrero, por el que se regulan los registros y las notificaciones telemáticas, así como la utilización de medios telemáticos para sustituir la aportación de certificados por los ciudadanos.)
+* '''LEY 22/2007''', de 11 de julio, sobre comercialización a distancia de servicios financieros destinados a los consumidores.
+* '''REAL DECRETO 424/2005''' de Condiciones de prestación de servicios de comunicaciones electrónicas.
+* '''REAL DECRETO 1163/2005''' que regula el distintivo público de confianza en los servicios de la sociedad de la información y comercio electrónico.
+* '''REAL DECRETO LEGISLATIVO 1/1996''', de 12 de abril, por el que se aprueba el texto refundido de la LEY de Propiedad Intelectual, regularizando, aclarando y armonizando las disposiciones legales vigentes sobre la materia.
+* '''ORDEN ITC/1542/2005''' Plan Nacional de nombres de dominio.
+* '''LEY ORGÁNICA 15/1999''', de 13 de diciembre, de Protección de Datos de Carácter Personal.
+* '''REAL DECRETO 1720/2007''', de 21 de Diciembre, por el que se desarrolla la LEY de Protección de datos de Carácter Personal.
+* '''LEY ORGÁNICA 18/1994''', de 23 de diciembre, por la que se modifica el Código Penal en lo referente al secreto de las comunicaciones.
+==== Normativa española relacionada con la facturación electrónica ====
+* '''REAL DECRETO 1496/2003''', de 28 de noviembre, (BOE 29-11-2003) por el que se aprueba el Reglamento por el que se regulan las obligaciones de facturación, y se modifica el Reglamento del Impuesto sobre el Valor Añadido.
+* '''ORDEN EHA/962/2007''', de 10 de abril, por la que se desarrollan determinadas disposiciones sobre facturación telemática y conservación electrónica de facturas, contenidas en el REAL DECRETO 1496/2003, de 28 de noviembre, por el que se aprueba el reglamento por el que se regulan las obligaciones de facturación.
+* '''ORDEN HAC/1181/2003''', de 12 de mayo, (BOE 15-05-2003) por la que se establecen normas específicas sobre el uso de la firma electrónica en las relaciones tributarias por medios electrónicos, informáticos y telemáticos con la Agencia Estatal de Administración Tributaria.
+* '''REAL DECRETO 263/1996''', de 16 de febrero, por el que se regula la utilización de técnicas electrónicas, informáticas y telemáticas por la Administración General del Estado (BOE núm. 52, de 29.2.1996).
+* '''ORDEN PRE/2971/2007''', de 5 de octubre, sobre la expedición de facturas por medios electrónicos cuando el destinatario de las mismas sea la Administración General del Estado u organismos públicos vinculados o dependientes de aquélla y sobre la presentación ante la Administración General del Estado o sus organismos públicos vinculados o dependientes de facturas expedidas entre particulares. (BOE n. 247 de 15/10/2007)
+==== Leyes en desarrollo ====
+* '''LEY 30/2007''', de 30 de octubre, de Contratos del Sector Público.
+* '''REAL DECRETO 84/2007''', de 26 de enero, sobre implantación en la Administración de Justicia del sistema informático de telecomunicaciones Lexnet para la presentación de escritos y documentos, el traslado de copias y la realización de actos de comunicación procesal por medios telemáticos.
+==== Normativa Comunitaria relacionada con Internet ====
+* '''DIRECTIVA 1999/93/CE''' del Parlamento Europeo y Consejo, de 13 de diciembre de 1999, por el que se establece un marco comunitario para la firma electrónica.
+* '''DIRECTIVA 2000/31/CE''' sobre el comercio electrónico.
+* '''DIRECTIVA 2001/115/CE''' del consejo de 20 de diciembre de 2001 por la que se modifica la directiva 77/388/CEE con objeto de simplificar, modernizar y armonizar las condiciones impuestas a la facturación en relación con el impuesto sobre el valor añadido.
+* '''DIRECTIVA 2002/58/CE''' sobre la Privacidad y las Comunicaciones Electrónicas.
+* '''DIRECTIVA 1995/46/CE''' del Parlamento Europeo y del Consejo, de 24 de octubre de 1995, relativa a la protección de les personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos.
+* '''DIRECTIVA 2002/58/CE''' del Parlamento Europeo y del Consejo, de 12 de julio de 2002, relativa al tratamiento de los datos personales y a la protección de la intimidad en el sector de les comunicaciones electrónicas.

@@ -1,0 +1,36 @@
+{{Template:Attack}}
+<br>
+[[Category:OWASP ASDR Project]]
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+==Description==
+
+In an account lockout attack, the attacker attempts to lock out all user accounts, typically by failing login more times than the threshold defined by the authentication system. For example, if users are locked out of their accounts after three failed login attempts, an attacker can lock out their account for them simply by failing login three times. This attack can result in a large scale denial of service attack if all user accounts are locked out, especially if the amount of work required to reset the accounts is signficant.
+
+==Risk Factors==
+TBD
+
+==Examples ==
+
+===eBay attack===
+:Account lockout attacks are used to exploit authentication systems that are susceptible to denial of service. A famous example of this type of attack is eBay's. eBay used to display the user id of the highest bidder (in the meantime they changed their way of working).  In the final minutes of the auction, one of the bidders could try to log in as the highest bidder three times. After three incorrect log in attempts, eBay password throttling would kick in and lock out the highest bidder's account for some time.  An attacker could then make their own bid and their victim would not have a chance to place a counter bid because they would be locked out. Thus an attacker could win the auction.
+
+==Related [[Threat Agents]]==
+* [[:Category:Authentication]]
+
+==Related [[Attacks]]==
+* [[Brute force attack]]
+
+==Related [[Vulnerabilities]]==
+TBD
+
+==Related [[Controls]]==
+* [[Authentication]]
+
+==References==
+TBD
+
+[[Category:Abuse of Functionality]]
+[[Category:Exploitation of Authentication]]
+[[Category: Attack]]

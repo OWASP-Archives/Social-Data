@@ -1,0 +1,161 @@
+{| style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:#b3b3b3; color:white"|<font color="black">'''Working Sessions Operational Rules''' - [[:Working Sessions Methodology|'''Please see here the general frame of rules''']].
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:#4058A0; color:white"|<font color="white">'''WORKING SESSION IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Work Session Name'''
+ | colspan="6" style="width:85%; background:#cccccc" align="left"|<font color="black">'''ISWG Web Application Framework Security'''
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Work Session Description''' 
+ | colspan="6" style="width:85%; background:#cccccc" align="left"|Generate
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Related Projects (if any)''' 
+ | colspan="6" style="width:85%; background:#cccccc" align="left"|Brainstorming on how to introduce more useful security into our web application frameworks
+OWASP ISWG (Intrinsic Security Working Group) - Web Application Framework Security
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|'''Email Contacts & Roles'''
+ | style="width:25%; background:#cccccc" align="center"|'''Chair'''<br>[mailto:arshan.dabirsiaghi(at)aspectsecurity.com '''Arshan Dabirsiaghi'''] 
+ | style="width:25%; background:#cccccc" align="center"|'''Secretary'''<br>[mailto:kuai.hinojosa(at)owasp.org '''Kuai Hinojosa''']
+ | style="width:25%; background:#cccccc" align="center"|'''Mailing list'''<br>[https://lists.owasp.org/mailman/listinfo/owasp-iswg-web-application-framework-security '''Subscription Page''']
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:#4058A0; color:white"|<font color="white">'''WORKING SESSION SPECIFICS''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Objectives'''
+ | colspan="6" style="width:85%; background:#cccccc" align="left"|<font color="black">
+*  Discuss gaps and patterns in gaps in security coverage across frameworks,
+* Discuss possible solutions for security areas. 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|'''Venue/Date&Time/Model'''
+ | style="width:25%; background:#cccccc" align="center"|'''Venue'''<br>[[:OWASP EU Summit 2008|OWASP EU Summit Portugal 2008]] 
+ | style="width:25%; background:#cccccc" align="center"|'''Date&Time'''<br>November 5, 2008 <br>Time 9:00AM
+ | style="width:25%; background:#cccccc" align="center"|'''Discussion Model'''<br>"Participants + Attendees"
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:white; color:white"|<font color="black">
+ |}
+
+{|style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:#4058A0; color:white"|<font color="white">'''WORKING SESSION OPERATIONAL RESOURCES''' 
+ |-
+ | style="width:100%; background:#cccccc" align="center"|Projector, whiteboards, markers, Internet connectivity, power 
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:white; color:white"|<font color="black">
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:#4058A0; color:white"|<font color="white">'''WORKING SESSION ADDITIONAL DETAILS''' 
+ |-
+ | style="width:100%; background:#cccccc" align="left"|
+* '''Related resources:''' [[OWASP_Working_Session_-_Browser_Security_Letters]]
+* '''Frameworks to invite:''' .NET, J2EE, Spring, Struts, ASP.NET MVC, RoR, PHP, etc.
+** 10 Oct: "Open Letter to Frameworks (version for open mailing lists)" sent to
+*** Ruby-on-Rails Core mailing list
+*** Springnet Developer mailing list
+*** Struts Dev mailing list
+
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|'''WORKING SESSION OUTCOMES''' 
+ |-
+ | style="width:7%; background:#6C82B5" align="center"|Statements, Initiatives or Decisions 
+ | style="width:46%; background:#b3b3b3" align="center"|'''Proposed by Working Group''' 
+ | style="width:47%; background:#b3b3b3" align="center"|'''Approved by OWASP Board'''
+ |-
+ | style="width:7%; background:#7B8ABD" align="center"|
+ | style="width:46%; background:#C2C2C2" align="center"|Actionable advice for each individual frameworks . 
+ | style="width:47%; background:#C2C2C2" align="center"|After the Board Meeting - fill in here. 
+ |-
+ | style="width:7%; background:#7B8ABD" align="center"|
+ | style="width:46%; background:#C2C2C2" align="center"|Identify points-of-contact for frameworks. 
+ | style="width:47%; background:#C2C2C2" align="center"|After the Board Meeting - fill in here. 
+ |}
+== Working Session Participants ==
+(Add you name by editing this table. On your the right, just above the this frame, you have the option to edit)
+{| style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:#4058A0; color:white"|<font color="white">'''WORKING SESSION PARTICIPANTS''' 
+ |-
+ | style="width:7%; background:#7B8ABD" align="center"|
+ | style="width:15%; background:#cccccc" align="center"|'''Name'''
+ | style="width:15%; background:#cccccc" align="center"|'''Company'''
+ | style="width:63%; background:#cccccc" align="center"|'''Notes & reason for participating, issues to be discussed/addressed'''
+ |-
+ | style="width:7%; background:#7B8ABD" align="center"| -
+ | style="width:15%; background:#cccccc" align="center"| TDB (Officially Invited by OWASP)
+ | style="width:15%; background:#cccccc" align="center"| http://forums.asp.net/Themes/fan/images/roleicons/dff6f773-6732-4cd8-addf-42a8ab367d22.gif
+ | style="width:63%; background:#cccccc" align="center"| Official Representative from Microsoft's ASP.NET team
+ |-
+ | style="width:7%; background:#7B8ABD" align="center"| -
+ | style="width:15%; background:#cccccc" align="center"| TDB (Officially Invited by OWASP)
+ | style="width:15%; background:#cccccc" align="center"| http://metawidget.sourceforge.net/media/logo-struts.gif
+ | style="width:63%; background:#cccccc" align="center"| Official Representative from Apache Struts team
+ |-
+ | style="width:7%; background:#7B8ABD" align="center"| -
+ | style="width:15%; background:#cccccc" align="center"| TDB (Officially Invited by OWASP)
+ | style="width:15%; background:#cccccc" align="center"| http://boedesign.com/wp-content/themes/bd5/images/cakephp.gif
+ | style="width:63%; background:#cccccc" align="center"| Official Representative from CakePHP team
+ |-
+ | style="width:7%; background:#7B8ABD" align="center"| -
+ | style="width:15%; background:#cccccc" align="center"| TDB (Officially Invited by OWASP) 
+ | style="width:15%; background:#cccccc" align="center"| http://www.tutorialized.com/upload/20070625154105_rails.jpg
+ | style="width:63%; background:#cccccc" align="center"| Official Representative from Ruby-on-Rails team
+ |-
+ | style="width:7%; background:#7B8ABD" align="center"| -
+ | style="width:15%; background:#cccccc" align="center"| TDB (Officially Invited by OWASP)
+ | style="width:15%; background:#cccccc" align="center"| http://www.springframework.net/doc-1.1-M1/reference/html/images/xdev-spring_logo.jpg
+ | style="width:63%; background:#cccccc" align="center"| Official Representative from Spring.NET team
+ |-
+ | style="width:7%; background:#7B8ABD" align="center"|1
+ | style="width:15%; background:#cccccc" align="center"|Mario Heiderich
+ | style="width:15%; background:#cccccc" align="center"|Independent
+ | style="width:63%; background:#cccccc" align="center"|General Expertise
+ |-
+ | style="width:7%; background:#7B8ABD" align="center"|2
+ | style="width:15%; background:#cccccc" align="center"|Gareth Heyes
+ | style="width:15%; background:#cccccc" align="center"|Independent
+ | style="width:63%; background:#cccccc" align="center"|General Expertise
+ |-
+ | style="width:7%; background:#7B8ABD" align="center"|3
+ | style="width:15%; background:#cccccc" align="center"|Marcin Wielgoszewski
+ | style="width:15%; background:#cccccc" align="center"|Protiviti
+ | style="width:63%; background:#cccccc" align="center"|Participant
+|-
+ | style="width:7%; background:#7B8ABD" align="center"|4
+ | style="width:15%; background:#cccccc" align="center"|Adam Baso
+ | style="width:15%; background:#cccccc" align="center"|Symantec
+ | style="width:63%; background:#cccccc" align="center"|Participant
+|-
+ | style="width:7%; background:#7B8ABD" align="center"|5
+ | style="width:15%; background:#cccccc" align="center"|Giorgio Fedon
+ | style="width:15%; background:#cccccc" align="center"|Minded Security
+ | style="width:63%; background:#cccccc" align="center"|Participant
+|-
+ | style="width:7%; background:#7B8ABD" align="center"|6
+ | style="width:15%; background:#cccccc" align="center"|Colin Watson
+ | style="width:15%; background:#cccccc" align="center"| Watson Hall
+ | style="width:63%; background:#cccccc" align="center"|Participant
+|-
+ | style="width:7%; background:#7B8ABD" align="center"|7
+ | style="width:15%; background:#cccccc" align="center"|Esteban Ribicic
+ | style="width:15%; background:#cccccc" align="center"|HP
+ | style="width:63%; background:#cccccc" align="center"|Participant
+|-
+ | style="width:7%; background:#7B8ABD" align="center"|8
+ | style="width:15%; background:#cccccc" align="center"| Daniele Bellucci
+ | style="width:15%; background:#cccccc" align="center"| Communication Valley
+ | style="width:63%; background:#cccccc" align="center"| Partecipant
+|-
+ | style="width:7%; background:#7B8ABD" align="center"|9
+ | style="width:15%; background:#cccccc" align="center"|
+ | style="width:15%; background:#cccccc" align="center"|
+ | style="width:63%; background:#cccccc" align="center"|
+|-
+ | style="width:7%; background:#7B8ABD" align="center"|10
+ | style="width:15%; background:#cccccc" align="center"|
+ | style="width:15%; background:#cccccc" align="center"|
+ | style="width:63%; background:#cccccc" align="center"|
+ |}
+If needed add here more lines.
+
+[[Category:OWASP_Working_Session]]

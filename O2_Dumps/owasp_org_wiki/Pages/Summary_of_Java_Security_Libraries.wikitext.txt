@@ -1,0 +1,148 @@
+== What is this page for?  ==
+
+This page contains a table of Java security libraries and indicates which security features each library supports. 
+
+The plan is to use this information to work backwards to create a 'decision tree' which will allow Java developers to decide which security libraries would be the most suitable for their requirements. 
+
+It is at a ''very'' early stage, and will almost certainly contain many mistakes and omissions. Please feel free to correct these yourself, or contact [http://www.owasp.org/index.php/User:Psiinon Psiinon] to correct them on your behalf. 
+
+== Java Security Libraries  ==
+
+{| border="1" align="center" width="80%" cellspacing="1" cellpadding="1"
+|-
+! scope="col" | Name and link<br> 
+! scope="col" | Updated<br> 
+! scope="col" | AU<br> 
+! scope="col" | AC<br> 
+! scope="col" | CF<br> 
+! scope="col" | CR<br> 
+! scope="col" | IV<br> 
+! scope="col" | OE<br> 
+! scope="col" | SM<br> 
+! scope="col" | XM<br> 
+! scope="col" | XS<br>
+|-
+| [http://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project AntiSami]<br> 
+| align="center" | 2011<br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | &nbsp;Y<br> 
+| align="center" | Y<br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | <br>
+|-
+| [http://santuario.apache.org/ Apache Santuarrio]<br> 
+| align="center" | 2011<br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | &nbsp;Y<br> 
+| align="center" | <br>
+|-
+| [http://shiro.apache.org/ Apache Shiro]<br> 
+| align="center" | 2011<br> 
+| align="center" | Y<br> 
+| align="center" | Y<br> 
+| align="center" | &nbsp;?<br> 
+| align="center" | Y<br> 
+| align="center" | &nbsp;?<br> 
+| align="center" | Y<br> 
+| align="center" | Y<br> 
+| align="center" | &nbsp;?<br> 
+| align="center" | Y<br>
+|-
+| [http://www.bouncycastle.org/ Bouncy Castle]<br> 
+| align="center" | 2011<br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | Y<br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | <br>
+|-
+| [http://www.owasp.org/index.php/Category:OWASP_CSRFGuard_Project CSRFGuard]<br> 
+| align="center" | &nbsp;?<br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | Y<br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | <br>
+|-
+| [http://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API ESAPI]<br> 
+| align="center" | 2010<br> 
+| align="center" | Y<br> 
+| align="center" | Y<br> 
+| align="center" | &nbsp;?<br> 
+| align="center" | Y<br> 
+| align="center" | Y<br> 
+| align="center" | Y<br> 
+| align="center" | &nbsp;?<br> 
+| align="center" | <br> 
+| align="center" | Y<br>
+|-
+| [http://www.jasypt.org/ Jasypt]<br> 
+| align="center" | 2010<br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | Y<br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | <br>
+|-
+| [http://sourceforge.net/projects/jguard/ iGuard]<br> 
+| align="center" | 2011<br> 
+| align="center" | Y<br> 
+| align="center" | Y<br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | <br>
+|-
+| [http://www.sapia-oss.org/projects/vlad/ Vlad]<br> 
+| align="center" | &nbsp;?<br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | Y<br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | <br> 
+| align="center" | <br>
+|}
+
+<br> 
+
+== Security Features Key  ==
+
+*AU Authentication 
+*AC Authorization / Access Control 
+*CF Anti CSRF 
+*CR Cryptography 
+*IV Input Validation 
+*OE Output encoding 
+*SM Session management 
+*XM XML security 
+*XS XSS protection
+
+[[Category:OWASP_Java_Project]]

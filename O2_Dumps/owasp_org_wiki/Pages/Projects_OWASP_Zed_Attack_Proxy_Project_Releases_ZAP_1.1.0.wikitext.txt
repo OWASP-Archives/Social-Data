@@ -1,0 +1,29 @@
+{{Template: <includeonly>{{{1}}}</includeonly><noinclude>Release About</noinclude>
+| project_name = OWASP Zed Attack Proxy Project
+| project_home_page = OWASP Zed Attack Proxy Project
+| release_name = ZAP 1.1.0
+| release_date = 02/12/2010
+
+| release_description = 
+
+'''This release includes the following significant changes:'''
+
+* [http://code.google.com/p/zaproxy/wiki/HelpStartConceptsBruteforce Brute Force scanner] c/o the OWASP DirBuster project
+* [http://code.google.com/p/zaproxy/wiki/HelpStartConceptsPortscan Port scanner]
+* [http://code.google.com/p/zaproxy/wiki/HelpUiTabsAscan Active Scan tab]
+* Enhancements to the [http://code.google.com/p/zaproxy/wiki/HelpUiTabsSpider Spider tab] 
+* Smartcard support c/o Andiparos
+* A new 'Attack' menu
+* More internationalisation (all main tabs and menu items)
+* Localisation: Brazilian Portuguese, German, Polish and Spanish
+
+
+| release_license = [http://www.apache.org/licenses/LICENSE-2.0 Apache License 2.0]
+| release_download_link = http://code.google.com/p/zaproxy/downloads/list
+
+| leader_name1 = Psiinon
+| leader_email1 = psiinon@gmail.com
+| leader_username1 = Psiinon
+
+| release_notes = http://www.owasp.org/index.php/Projects/OWASP_Zed_Attack_Proxy_Project/Releases/ZAP_1.1.0/Notes
+}}

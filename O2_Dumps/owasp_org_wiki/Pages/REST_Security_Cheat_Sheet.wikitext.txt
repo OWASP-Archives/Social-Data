@@ -1,0 +1,33 @@
+= Introduction =
+
+[http://en.wikipedia.org/wiki/Representational_state_transfer REST] or REpresentational State Transfer is a means of expressing specific entities in a system by URL path elements, REST is not an architecture but it is an architectural style to build services on top of the Web. REST allows interaction with a web-based system via simplified URL's rather than complex request body or <tt>POST</tt> parameters to request specific items from the system. This document serves as a guide (although not exhaustive) of best practices to help REST-based services.
+
+= Check Authorization for User-Specific Entities =
+
+While REST is useful for targeting specific entities in the system, the URL itself should not be the only authorizing token for sensitive entities (such as account transactions, personally-identifying information, etc.). Proper authentication should take place, and the token for authorization should be sent as a cookie. Furthermore, no Personally-Identifiable Information (such as bank-account number, credit card number, etc.) should be used as a parameter to request an entity. See the [DOR (Direct Object Reference) Prevention Cheat Sheet] for strategies for preventing Direct Object Reference weaknesses.
+
+= Whitelist-Only Response Types =
+
+It is common for REST services to allow multiple response types (e.g. <tt>application/xml</tt> or <tt>application/json</tt>, and the client specifies the preferred order of response types by the <tt>Accept</tt> header in the request. '''Do NOT''' simply copy the <tt>Accept</tt> header to the <tt>Content-type</tt> header of the response. Reject the request (ideally with a <tt>406 Not Acceptable</tt> response) if the <tt>Accept</tt> header does not specifically contain one of the allowable types.
+
+Because there are many MIME types for the typical response types, it's important to document for clients specifically which MIME types should be used.
+
+= Whitelist Allowable Methods =
+
+It is common with RESTful services to allow multiple methods for a given URL for different operations on that entity. For example, a <tt>GET</tt> request might read the entity while <tt>POST</tt> would update an existing entity, <tt>PUT</tt> would create a new entity, and <tt>DELETE</tt> would delete an existing entity. It is important for the service to properly restrict the allowable verbs such that only the allowed verbs will work, all others return a proper response code (for example, a <tt>403 Forbidden</tt>).
+
+In Java EE in particular, this can be difficult to implement properly. See [https://www.aspectsecurity.com/wp-content/plugins/download-monitor/download.php?id=18 Bypassing Web Authentication and Authorization with HTTP Verb Tampering] for an explanation of this common misconfiguration.
+
+= Non-REST Authentication =
+
+Authentication for a REST-based service should not take place by passing the user ID and password in path elements of the URL. URL's are commonly cached by browsers, proxies, etc. so sensitive information should not be included directly in the URL.
+
+= Related Articles =
+
+{{Cheatsheet_Navigation}}
+
+= Authors and Primary Editors  =
+
+First Last - first.last [at] owasp.org<br/>
+
+[[Category:Cheatsheets]]

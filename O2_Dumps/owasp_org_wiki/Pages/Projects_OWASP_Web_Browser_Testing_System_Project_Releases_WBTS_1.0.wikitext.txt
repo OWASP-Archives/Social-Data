@@ -1,0 +1,35 @@
+{{Template: <includeonly>{{{1}}}</includeonly><noinclude>Release About</noinclude>
+
+| project_name = OWASP Web Browser Testing System Project
+
+| project_home_page = OWASP Web Browser Testing System Project
+
+| release_name = WBTS 1.0
+
+| release_date = N/A 
+
+| release_description = 
+Currently WBTS is being re-written see: http://code.google.com/p/wbts/ to track it's progress!
+
+WBTS-beta has been used to help researchers find the following bugs:<br>
+Chrome:<br>
+1. [http://code.google.com/p/chromium/issues/detail?id=53001 Ability to read cross domain image data using toDataURL and getImageData via createPattern]<br>
+Opera:<br>
+1. [http://www.opera.com/support/kb/view/971/ Cross-domain checks may be bypassed, allowing limited data theft using CSS]<br>
+BlackBerry: <br>
+1. Waiting for update on CSS Bug... <br>
+2. Waiting for update on Header Injection Bug... <br>
+3. Waiting for update Same Origin Policy Bypass Bug... <br>
+
+The previous (beta) release license was GNUv3, this has been changed to MIT for the next release.<br>
+If you wish to download the BETA release you can get it here: http://code.google.com/p/wbts/downloads/detail?name=wbts.20100924.beta.zip&can=2&q=
+
+| release_license = MIT License [http://www.opensource.org/licenses/mit-license.php]
+| release_download_link = http://wbts.googlecode.com/svn/trunk/
+
+| leader_name1 = Isaac Dawson 
+| leader_email1 = isaac.dawson@gmail.com
+| leader_username1 = 
+
+| release_notes = http://www.owasp.org/index.php/Projects/OWASP_Web_Browser_Testing_System_Project/Releases/WBTS_1.0/Notes
+}}

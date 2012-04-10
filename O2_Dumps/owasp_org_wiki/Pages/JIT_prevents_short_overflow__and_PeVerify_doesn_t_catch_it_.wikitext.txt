@@ -1,0 +1,94 @@
+With this code:
+
+ using System;
+
+ namespace Owasp
+ {
+    class byteStackSize
+    {
+        public static void Main()
+        {
+            int iInt = 0xffff;
+            short sShort = 0xff;
+            byte bByte = 0x12;
+            short sShort2 = 0xBB;
+            sShort++;            
+            Console.WriteLine(sShort.ToString());
+            sShort = 0xAAA;
+            Console.WriteLine("Values: " + iInt.ToString() + " - " + sShort.ToString() + " - " + bByte + " - " + sShort2);
+        }
+    }
+ }
+
+I compiled and edited the IL so that I assigned 0xAAAAA to sShort:
+
+    before:
+          IL_0026:  ldc.i4     0xaaa
+          IL_002b:  stloc.1
+
+    after
+
+          IL_0026:  ldc.i4     0xaaaaa
+          IL_002b:  stloc.1
+
+Reflector will confirm that the change was successfully ILASMed:
+
+ public static void Main()
+ {
+      int num1 = 0xffff;
+      short num2 = 0xff;
+      byte num3 = 0x12;
+      short num4 = 0xbb;
+      num2 = (short) (num2 + 1);
+      Console.WriteLine(num2.ToString());
+      num2 = 0xaaaaa;
+      object[] objArray1 = new object[] { "Values: ", num1.ToString(), " - ", num2.ToString(), " - ", num3, " - ", num4 } ;
+      Console.WriteLine(string.Concat(objArray1));
+ }
+
+but if we look at the actual Assembly code that is created by the JIT we will see that it is clever and doesn't overflow the sShort with my value (note: a short's maximum value is 0xffff):
+
+ ; end of prologue
+  ; IL_0000: ldc.i4 0x0000FFFF
+  ; IL_0005: stloc.0
+  0x6D5249A: C745FCFFFF0000 MOV      DWORD PTR [EBP-0x4],0xFFFF   ; VAR:0x4
+  ; IL_0006: ldc.i4 0x000000FF
+  ; IL_000B: stloc.1
+  ; IL_000C: ldc.i4.s 0x12
+  ; IL_000E: stloc.2
+  ; IL_000F: ldc.i4 0x000000BB
+  ; IL_0014: stloc.3
+  0x6D524A1: C745F8FF000000 MOV      DWORD PTR [EBP-0x8],0xFF     ; VAR:0x8
+  ; IL_0015: ldloc.1
+  ; IL_0016: ldc.i4.1
+  ; IL_0017: add
+  ; IL_0018: conv.i2
+  ; IL_0019: stloc.1
+  0x6D524A8: 0FBF45F8       MOVSX    EAX,WORD PTR [EBP-0x8]       ; VAR:0x8
+  0x6D524AC: 40             INC      EAX                          
+  0x6D524AD: 668945F8       MOV      WORD PTR [EBP-0x8],AX        ; VAR:0x8
+  ; IL_001A: ldloca.s 0x01
+  ; IL_001C: call  System.Int16::ToString()
+  ; IL_0021: call  System.Console::WriteLine()
+  0x6D524B1: 6A00           PUSH     0x0                          
+  0x6D524B3: 8D4DF8         LEA      ECX,DWORD PTR [EBP-0x8]      ; VAR:0x8
+  0x6D524B6: 33D2           XOR      EDX,EDX                      
+  0x6D524B8: FF15C42CD606   CALL     DWORD PTR [0x6D62CC4]        
+  0x6D524BE: 8B0D2C20B705   MOV      ECX,DWORD PTR [0x5B7202C]    
+  0x6D524C4: 8BD0           MOV      EDX,EAX                      
+  0x6D524C6: 8B01           MOV      EAX,DWORD PTR [ECX]          
+  0x6D524C8: FF90D8000000   CALL     DWORD PTR [EAX+0xD8]         
+  ; IL_0026: ldc.i4 0x000AAAAA
+  ; IL_002B: stloc.1
+  0x6D524CE: C745F8AAAAFFFF MOV      DWORD PTR [EBP-0x8],0xFFFFAAAA; VAR:0x8
+
+What is very interesting is that PeVerify doesn't catch this, which I would expected it to do.
+
+So here is a good example of the CLR and the JIT doing the right thing and enforcing type safety.
+
+Note that in the real stack (i.e. the unmanaged one) the types byte, short and int are 32 bits long, where in the managed stack they are 1 element:
+
+''“...It is important to realize that the stack of the execution engine is a logical stack. The slements of the stack are not any particular size, such as 32 bits, or 64 bits (On the JVM, stack elements are 32 bits, and pushing a long makes the stack deeper by 2!). Thus each element of the stack may be one of the primitive types, or a reference,or even the value of a whole stuct”...
+page 26 of [http://www.amazon.co.uk/exec/obidos/ASIN/0130622966/qid%3D1136863713/202-2628812-9833408 Compiling for the .Net Common Language Runtime (CLR)]"''
+
+[[Category:OWASP .NET Project]]

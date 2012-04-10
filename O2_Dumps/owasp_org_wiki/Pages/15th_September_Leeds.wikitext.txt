@@ -1,0 +1,72 @@
+'''Date:''' Wednesday 15th September  Kindly sponsored by Sigma Infosec Consultants http://www.sigma-infosec.co.uk
+
+RSVP your ticket for this event http://www.eventbrite.com/event/842723609
+
+'''Location:''' Novotel Leeds, 4 Whitehall Quay, Leeds, LS1 4HR
+
+
+'''Schedule: 18:00 for 18:15 start'''
+
+'''18:20 - 18:30'''
+
+OWASP Chapter introduction. OWASP values and membership. Chapter information. 
+
+''Jason Alexander - OWASP Leeds/Northern Chapter Board Member''
+
+'''18:30 - 19:30''' 
+
+Context Application Tool CAT
+
+Context Application Tool (CAT) is a tool for performing manual web application penetration testing.  The presentation will show the main features of CAT with demonstrations of where CAT can perform tests that other tools currently available cannot and how CAT empowers the user to create more complex test cases to further explore the boundaries of the application. The focus of CAT is on manual penetration testing and not on automated web VA scanning.  Also a sneak preview of the current features that are currently in development an due to be release late this year.
+
+The presentation will start with an overview of the new CAT application and demonstrating how the tool can be used in all aspects of manual web application testing.  The aim to provide delegates with a high level understand of the capability of CAT, covering the following core areas:
+
+-Request Repeater – Used for repeating a single request
+-Proxy – Classic Inline proxy including
+-Fuzzer – Allows for batch of tests to be sent to a server for brute forcing, parameter fuzzing, forced browsing etc.
+-Log – View a list of requests to sort, search repeat etc.  Allows for a sequence of requests to be repeated and modified.
+-Authentication Checker – Two synchronised proxies which can be used to check authentication and authorisation controls.
+-SSL Checker  – Request a specific page with various SSL ciphers and versions.
+-Notepad – A text/RTF editor which can be used as a scratch pad for conversions etc.
+-Web Browser – An integrated web browser with proxy pre-configured based on the Internet Explorer’s rendering engine.
+ 
+Covering the following features:
+
+-Uses Internet Explorer’s rendering engine for accurate HTML representation
+-Supports many different types of text conversations including: URL, Base64, Hex, Unicode, HTML/XML, SQL and JavaScript no Quotes
+-Integrated SQL Injection and XSS Detection
+-Synchronised Proxies for Authentication and Authorisation checking
+-Faster due to HTTP connection caching
+-SSL Version and Cipher checker using OpenSSL including HTTP response not only SSL handshake
+-Greater flexibility for importing/exporting logs and saving projects
+-Tabbed Interface allowing for multiple tools at once e.g. multiple repeaters and different logs
+-The ability to repeat and modify a sequence of requests (particular useful in SSO testing
+
+Then the presentation will focus on a few examples where CAT allows for testing which was previously particularly difficult, these include:
+
+1. Using project based tabbed interface which allows for great control and organisation for larger projects
+2. Assisted authorisation and authenticated checking use synchronised proxies and cookie fixation
+3. Testing of multi-stage and multi-host Single Sign On solutions
+4. LDAP timing attacks using HTTP/HTTPS connection caching
+5. How CAT encodings can be used to bypass Web Application Firewalls
+6. Clickjacking Testing
+ 
+Finally a sneak preview of the new features that are being developed including the new DB exploitation panel.
+
+''Michael Jordon - Principal Security consultant, Context Information Security '' 
+
+'''19:30 - until finish'''
+
+How I met your girlfriend - Presented at Blackhat Vegas 2010
+
+The discovery and execution of entirely new classes of attacks executed from the Web in order to meet your girlfriend. This includes newly discovered attacks including HTML5 client-side XSS (without XSS hitting the server!), PHP session hijacking and weak random numbers (accurately guessing PHP session cookies), browser protocol confusion (turning a browser into an SMTP server), firewall and NAT penetration via Javascript (turning your router against you), remote iPhone Google Maps hijacking (iPhone penetration combined with HTTP man-in-the-middle), extracting extremely accurate geolocation information from a Web browser (not using IP geolocation), and more
+
+''Samy Kamkar - Internationally renowned security researcher''
+
+'''Speaker Bio's'''
+
+''Michael Jordon'' - Michael Jordon is a principal security consultant for Context Information Security.  He has over 10 years experience as a software developer and security consultant.  His speciality is within application security and secure software development.
+He is the principal developer of Context App Tool (CAT) the web application penetration testing tool.  He is CREST application certified, a member of the SSDP committee and has a degree in Software Engineering.  He has release advisories include vulnerabilities in Outlook Web Access, Citrix, Squirrel Mail and Sophos Anti-Virus.  He has previously talked at conferences include CREST Conference, ISSD and InfoSecurity Europe
+
+''Samy Kamkar'' - Samy Kamkar is best known for the Samy worm, the first XSS worm, infecting over one million users on MySpace in less than 24 hours. A co-founder of Fonality, Inc., an IP PBX company, Samy previously led the development of all top-level domain name server software and systems for Global Domains International (.ws).
+In the past 10 years, Samy has focused on evolutionary and genetic algorithmic software development, Voice over IP software development, automated security and vulnerability research in network security, reverse engineering, and network gaming. When not strapped behind the Matrix, Samy can be found stunt driving, getting involved in local community service projects, and continuing his focus on staying out of jail.

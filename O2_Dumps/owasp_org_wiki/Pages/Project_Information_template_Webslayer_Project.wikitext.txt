@@ -1,0 +1,56 @@
+{| style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="6" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Webslayer Project'''  
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="6" style="width:85%; background:#cccccc" align="left"| 
+WebSlayer is a tool designed for brute forcing Web Applications, it can be used to discover not linked  resources (directories, servlets, scripts, etc), brute force GET and POST parameters, brute force forms parameters (User/Password),  fuzzing, etc.
+
+The tools has a powerful payload generator and a easy and flexible results analyzer.
+
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Email Contacts'''
+ | style="width:14%; background:#cccccc" align="center"|Project Leader<br>[mailto:cmartorella(at)edge-security.com '''Christian Martorella''']
+ | style="width:14%; background:#cccccc" align="center"|Project Contributors<br>[mailto:cdelojo(at)edge-security.com '''Carlos del Ojo''']
+ | style="width:14%; background:#cccccc" align="center"|[https://lists.owasp.org/mailman/listinfo/owasp-webslayer-project '''Mailing List/Subscribe''']<br>[mailto:owasp-webslayer-project@lists.owasp.org '''Mailing List/Use''']
+ | style="width:14%; background:#cccccc" align="center"|First Reviewer<br>[mailto:andres@neurofuzz.com '''Andres Andreu''']
+ | style="width:14%; background:#cccccc" align="center"|Second Reviewer<br>[mailto:name(at)name '''TBD''']<br>
+ | style="width:15%; background:#cccccc" align="center"|OWASP Board Member<br>(if applicable)<br>[mailto:name(at)name '''Name&Email''']
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="6" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT MAIN LINKS''' 
+ |-
+ | style="width:100%; background:#cccccc" align="center"|
+[http://www.edge-security.com/webslayer.php - The tool's url]
+
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="6" align="center" style="background:#4058A0; color:white"|<font color="white">'''RELATED PROJECTS''' 
+ |-
+ | style="width:100%; background:#cccccc" align="center"|
+* If any, add link.
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="6" align="center" style="background:#4058A0; color:white"|<font color="white">'''SPONSORS & GUIDELINES''' 
+ |-
+ | style="width:50%; background:#cccccc" align="center"|Sponsor name, if applicable  
+ | style="width:50%; background:#cccccc" align="center"|[[:Category:OWASP Webslayer Project Roadmap|'''Guidelines/Roadmap''']]
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="5" align="center" style="background:#4058A0; color:white"|ASSESSMENT AND REVIEW PROCESS
+ |-
+ | style="width:15%; background:#6C82B5" align="center"|'''Review/Reviewer''' 
+ | style="width:21%; background:#b3b3b3" align="center"|'''Author's Self Evaluation'''<br>(applicable for Alpha Quality & further) 
+ | style="width:21%; background:#b3b3b3" align="center"|'''First Reviewer'''<br>(applicable for Alpha Quality & further)
+ | style="width:21%; background:#b3b3b3" align="center"|'''Second Reviewer'''<br>(applicable for Beta Quality & further)
+ | style="width:22%; background:#b3b3b3" align="center"|'''OWASP Board Member'''<br>(applicable just for Release Quality) 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''First Review''' 
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Not yet''' (To update)<br>---------<br>Which status has been reached?<br>'''Alpha Status''' - (To update)<br>---------<br>[[Project Information:template Webslayer Project - First Review - Self Evaluation - A|See&Edit: First Review/SelfEvaluation (A)]]
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Not yet''' (To update)<br>---------<br>Which status has been reached?<br>'''Alpha Status''' - (To update)<br>---------<br>[[Project Information:template Webslayer Project - First Review - First Reviewer - B|See&Edit: First Review/1st Reviewer (B)]]
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes/No''' (To update)<br>---------<br>Which status has been reached?<br>'''Alpha Status''' - (To update)<br>---------<br>[[Project Information:template Webslayer Project - First Review - Second Reviewer - C|See&Edit: First Review/2nd Reviewer (C)]]
+ | style="width:22%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes/No''' (To update)<br>---------<br>Which status has been reached?<br>'''Alpha Status''' - (To update)<br>---------<br>[[Project Information:template Webslayer Project - First Review - OWASP Board Member - D|See/Edit: First Review/Board Member (D)]]
+ |-
+ |}

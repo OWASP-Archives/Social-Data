@@ -1,0 +1,98 @@
+==Intro==
+==Categories of Requirements==
+===Frameworks and stacks===
+#A secure, robust, flexible, easily supportable framework shall be chosen
+#A secure, robust, enterprise-worthy platform stack shall be chosen
+#Widely recognized and well-documented APIs (such as the [http://www.owasp.org/index.php/ESAPI#tab=Home ESAPI]) shall be leveraged to ensure speed, consistency, and baseline security of the application 
+#Secure coding practices including security training and reviews shall be incorporated into each phase of development
+===Application Security===
+#NO PASSWORDS EMBEDDED IN CODE! REALLY!
+#Input validation
+##Whitelisting when possible
+##Blacklisting by exception
+##Escaping output
+#Session controls
+#Anti-trojan design considerations
+##Email/SMS/telephone confirmation
+##2-factor authentication
+##Transfer timing controls
+##Number of simultaneous sessions permitted
+##Detection of simultaneous sessions from different continents
+====Authentication considerations====
+=====Application=====
+#See [[File:OWASP_Application_Security_Requirements_-_Identification_and_Authorisation_v0.1_(DRAFT).doc]]
+
+=====Management and administration tools=====
+#2-Factor Authentication
+====Anti-fraud and business logic flaw considerations====
+
+===Encryption Requirements===
+====Encryption of Data at rest====
+====Encryption of Data in transit====
+====Encryption of Data while processing====
+====Encryption and obfuscation of code====
+====Hash functions====
+#Code signing
+#Message Digests
+====Whatever Bruce Schneier says====
+====Encryption of Remote Administration and Content Management tools====
+
+===Compliance===
+====PCI DSS====
+#Current requirements
+#[http://www.owasp.org/index.php/Top_10 OWASP Top 10]
+#WAF Integration considerations
+#Ongoing testing considerations
+====GLBA====
+#Ain't it embarrassing that you do banking on-line but have NO IDEA what standards your bank is supposed to adhere to for safekeeping of YOUR money?!?
+#Go ahead, list some requirements
+====HIPAA====
+====Basel II====
+====National Compliance Requirements====
+#Privacy Policy
+#Logging and log retention
+#Content archiving and retention
+#Protection of minors
+====State/Province Compliance Requirements====
+====Municipality Compliance Requirments====
+====Compliance with existing contracts and business obligations====
+===Auditability===
+====Logging====
+Each transaction shall be available for review in detail for a period of no less than one year.  Transactions shall be traceable to the username, IP address, and time within 1/100th of a second.  
+#Application
+#OS, Webserver, and Database Logging
+#Firewall, WAF, and other security device logging
+#Event Triggers
+##Periodic log reviews
+##Event-driven log analysis
+###Employee termination
+###Suspected breach
+###Honeypot trigger
+
+===Additional Security Considerations===
+Steps shall be taken to ensure that support staff reduce the likelihood and are aware of attempted compromise, tampering, fraud, physical theft, of denial of service.
+#Decoys, Honeypots, and other devices for detection and delay
+#Network, Hardware, Physical, OS, Platform, and Framework Considerations
+##Network Security Considerations
+##Hardware Security Considerations
+##Physical Security Considerations
+##OS Security Considerations
+###Hardening standards
+#Platform Security Considerations
+##Hardening standards
+##Configuration management and auditing
+##Patching
+###All components shall be compatible and capable of being fully patched within 30 days of a component security patch release
+##Minimized attack surface
+###Removal of all demo code
+###Changing of all default passwords
+###Robots.txt and passive crawler considerations
+
+====Operational Security Considerations====
+#Clean desk policy
+#Bonding of outsourced/off-shored Developers
+#Need to know
+#Trade secrets
+#Posting questions to help, support, and user forums
+#Customer Service Identification and Authenticaion considerations
+##Distinguishing a legitimate user from a social-engineering scam-artist

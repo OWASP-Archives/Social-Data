@@ -1,0 +1,21 @@
+17. Web Services -> 17.2 WSDL Scanning
+
+(This sublesson was not formally solved by the project)
+
+=== Lesson overview ===
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution === 
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information. 
+
+=== Strategy ===
+
+This WebGoat lesson demonstrates WSDL Scanning to get credit card information. The vulnerability is that the attacker can call a Web Service directly; in this case, it is 'getCreditCard'. The attacker retrieves the WSDL, observes the parameters of a normal request 'id=101&SUBMIT=Submit', then intercepts and manipulates the parameters to call the function directly: 'id=101&field=getCreditCard&SUBMIT=Submit'
+
+A ModSecurity solution is straightforward: don't allow a user to directly call a specific set of Web Services - in our case 'getCreditCard' - by blocking on the request if that value for the 'field' parameter appears.
+
+=== Implementation === 
+
+None

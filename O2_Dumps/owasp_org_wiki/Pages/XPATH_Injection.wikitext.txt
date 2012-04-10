@@ -1,0 +1,143 @@
+{{Template:Attack}}
+<br>
+[[Category:OWASP ASDR Project]]
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+==Description==
+Similar to [[SQL Injection]], XPath Injection attacks occur when a web site uses user-supplied information to construct an XPath query for XML data.  By sending intentionally malformed information into the web site, an attacker can find out how the XML data is structured, or access data that he may not normally have access to.  He may even be able to elevate his privileges on the web site if the XML data is being used for authentication (such as an XML based user file).
+
+Querying XML is done with XPath, a type of simple descriptive statement that allows the XML query to locate a piece of information.  Like SQL, you can specify certain attributes to find, and patterns to match.  When using XML for a web site it is common to accept some form of input on the query string to identify the content to locate and display on the page.  This input '''must''' be sanitized to verify that it doesn't mess up the XPath query and return the wrong data.
+
+XPath is a standard language; its notation/syntax is always implementation independent, which means the attack may be automated.
+There are no different dialects as it takes place in requests to the SQL databeses.
+
+Because there is no level access control it's possible to get the entire document. We won't encounter any limitations as we may know from SQL injection attacks.
+
+==Risk Factors==
+TBD
+
+
+==Examples ==
+
+We'll use this xml snippet for the examples.
+
+<pre>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;Employees&gt;
+   &lt;Employee ID="1"&gt;
+      &lt;FirstName&gt;Arnold&lt;/FirstName&gt;
+      &lt;LastName&gt;Baker&lt;/LastName&gt;
+      &lt;UserName&gt;ABaker&lt;/UserName&gt;
+      &lt;Password&gt;SoSecret&lt;/Password&gt;
+      &lt;Type&gt;Admin&lt;/Type&gt;
+   &lt;/Employee&gt;
+   &lt;Employee ID="2"&gt;
+      &lt;FirstName&gt;Peter&lt;/FirstName&gt;
+      &lt;LastName&gt;Pan&lt;/LastName&gt;
+      &lt;UserName&gt;PPan&lt;/UserName&gt;
+      &lt;Password&gt;NotTelling&lt;/Password&gt;
+      &lt;Type&gt;User&lt;/Type&gt;
+   &lt;/Employee&gt;
+&lt;/Employees&gt;
+</pre>
+
+Suppose we have a user authentication system on a web page that used a data file of this sort to login users.  Once a username and password have been supplied the software might use XPath to look up the user:
+
+<pre>
+VB:
+Dim FindUserXPath as String
+FindUserXPath = "//Employee[UserName/text()='" & Request("Username") & "' And 
+        Password/text()='" & Request("Password") & "']"
+
+C#:
+String FindUserXPath;
+FindUserXPath = "//Employee[UserName/text()='" + Request("Username") + "' And 
+        Password/text()='" + Request("Password") + "']";
+</pre>
+
+With a normal username and password this XPath would work, but an attacker may send a bad username and password and get an XML node selected without knowing the username or password, like this:
+
+<pre>
+Username: blah' or 1=1 or 'a'='a
+Password: blah
+
+FindUserXPath becomes //Employee[UserName/text()='blah' or 1=1 or 
+        'a'='a' And Password/text()='blah']
+
+Logically this is equivalent to:
+        //Employee[(UserName/text()='blah' or 1=1) or 
+        ('a'='a' And Password/text()='blah')]
+</pre>
+
+In this case, only the first part of the XPath needs to be true.  The password part becomes irrelevant, and the UserName part will match ALL employees because of the "1=1" part.
+
+Just like SQL injection, in order to protect yourself you must escape single quotes (or double quotes) if your application uses them.  
+
+<pre>
+VB:
+Dim FindUserXPath as String
+FindUserXPath = "//Employee[UserName/text()='" & Request("Username").Replace("'", "&apos;") & "' And 
+        Password/text()='" & Request("Password").Replace("'", "&apos;") & "']"
+
+C#:
+String FindUserXPath;
+FindUserXPath = "//Employee[UserName/text()='" + Request("Username").Replace("'", "&apos;") + "' And 
+        Password/text()='" + Request("Password").Replace("'", "&apos;") + "']";
+</pre>
+
+Another <strong>better</strong> mitigation option is to use a precompiled XPath[http://www.tkachenko.com/blog/archives/000385.html].  Precompiled XPaths are already preset before the program executes, rather than created on the fly <strong>after</strong> the user's input has been added to the string.  This is a better route because you don't have to worry about missing a character that should have been escaped.
+
+==Related [[Threat Agents]]==
+* [[:Category:Command execution]]
+* [[SQL_Injection]]
+* [[LDAP_injection]]
+* [[Server-Side_Includes_%28SSI%29_Injection]]
+
+==Related [[Attacks]]==
+* [[Blind_SQL_Injection]]
+* [[Blind_XPath_Injection]]
+
+==Related [[Vulnerabilities]]==
+* [[:Category: Input Validation Vulnerability]]
+
+==Related [[Controls]]==
+* [[:Category:Input Validation]]
+* [[Input Validation]]
+* [[Output Validation]]
+* [[Static Code Analysis]]
+[[Category:FIXME|this was the text that was here before we added the links. Can it be deleted?
+
+Just like SQL injection, in order to protect yourself you must escape single quotes (or double quotes) if your application uses them.
+
+VB:
+<pre>
+Dim FindUserXPath as String
+FindUserXPath = "//Employee[UserName/text()='" &
+Request("Username").Replace("'", "&apos;") & "' And
+       Password/text()='" & Request("Password").Replace("'", "&apos;") & "']"
+</pre>
+C#:
+<pre>
+String FindUserXPath;
+FindUserXPath = "//Employee[UserName/text()='" +
+Request("Username").Replace("'", "&apos;") + "' And
+       Password/text()='" + Request("Password").Replace("'", "&apos;") + "']";
+</pre>
+
+Another better mitigation option is to use a precompiled XPath[1]. Precompiled XPaths are already preset before the program executes,
+rather than created on the fly after the user's input has been added to the string. This is a better route because you don't have to worry about missing a character that should have been escaped.
+
+Use of parameterized XPath queries - Parameterization causes the input to be restricted to certain domains, such as strings or integers, and any input outside such domains is considered invalid and the query fails.
+
+Use of custom error pages - Attackers can glean information about the nature of queries from descriptive error messages. Input validation must be coupled with customized error pages that inform about an error without disclosing information about the database or application.]]
+
+==References==
+TBD
+[[Category:FIXME|need links]]
+
+[[Category: Injection]]
+
+[[Category:Attack]]
+[[Category:Injection Attack]]

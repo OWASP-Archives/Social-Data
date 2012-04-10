@@ -1,0 +1,73 @@
+13.  Insecure Configuration -> 13.1  Forced Browsing
+
+=== Lesson overview ===
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution === 
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information. 
+
+=== Strategy ===
+
+The easiest way to mitigate the lesson would be to block all accesses to '/WebGoat/conf' and its derivatives in the <font face="Courier New">'<LocationMatch>'</font> tag but that would be too easy.
+
+Instead, we'll will make it a little more complicated and block access the the 'conf' directory only if the visitor is coming from the forced browser lesson page. 
+
+=== Implementation === 
+
+The lesson is mitigated partially by the ruleset 'rulefile_13_insecure-configuration.conf':
+
+<pre>
+<LocationMatch "^/WebGoat/attack$">
+
+  SecRule ARGS:menu "!@eq 1400" "t:none,skip:2"
+
+  # Set a session variable to mitigate if next request the user will try to  
+  #   access the '/WebGoat/conf' file which is checked in rulefile00_initialize.conf
+  SecAction "pass,log,initcol:session=%{SESSIONID}, \ 
+    setvar:session.lesson13=1, \ 
+    msg:'Setting session.lesson13=1 from rulefile_13_insecure-configuration.conf'"
+
+  SecAction "allow:request,t:none, \ 
+    msg:'Returning; nothing bad on this page (rulefile_13).'"
+</LocationMatch>
+</pre>
+
+
+We are setting a session toggle switch (first the collection has to be loaded with 'initcol') which says "this page is coming from Lesson 13".
+
+The tricky part is in 'rulefile_00_initialize.conf':
+
+<pre>
+<LocationMatch "^/.*$">
+  # Check session variable to see if the the user is trying to access the  
+  #  '/WebGoat/conf' file which is set in rulefile13_initialize.conf 
+  #  (Lesson 13 - Insecure Configuration -> Forced Browsing); if '/WebGoat/conf' 
+  #  is being attempted to be accessed from other lessons, we don't want to block 
+  #  it with ModSecurity.
+  # In real life, this is a lot of overhead - loading the collection for 
+  #  every request - but it's done to illustrate the use of collections
+
+  SecAction "log,initcol:session=%{SESSIONID},msg:'getting session.lesson13 DEBUG4'"
+  SecRule SESSION:LESSON13 "@eq 1" "chain,deny,log,auditlog, \ 
+    msg:'Insecure Configuration',tag:'WEB_ATTACK/INSECURE_CONFIGURATION', \ 
+    severity:'3',redirect:/_error_pages_/lesson13-1.html" 
+  SecRule REQUEST_FILENAME "^/WebGoat/conf$" "t:none"
+</LocationMatch>
+</pre>
+
+
+The comments are fairly self-explanatory. The LocationMatch section is processed only if the HTTP request does not have an URL of '/WebGoat/attack' (which is highly unusual in WebGoat because of the way it is set up) from its LocationMatch section located before this in the initialization file. First, we check that if the request came from Lesson 13, then if so, we check if the '/WebGoat/conf' directory was requested and deny the request if those conditions are met.
+
+One more thing that we have to take care of: when the request is not coming from Lesson 13, we want to toggle off the session variable (otherwise, once it is set it will be on all of the time for the rest of the session). At the end of the initialization section for the LocationMatch section for '/WebGoat/attack', we insert the rule:
+
+<pre>
+  # If we are not in the 'Insecure Configuration -> Forced Browsing' lesson, 
+  #   then toggle the session variable
+  SecRule ARGS:menu "!@eq 1400" "nolog,setvar:session.lesson13=0"
+</pre>
+
+which takes care of this. 
+
+It's informative to examine the initialization file in its entirety: in this rule, it was not necessary to load the session collection with 'initcol', while in the previous one - in a different LocationMatch section but in the same phase (2) and the same file, it is necessary to load the collection with 'initcol'.  Also, note that to access the session variable in the 'rulefile_13_insecure-configuration.conf' file, even though the HTTP request, the LocationMatch section, and the phase is the same, it is necessary to load the collection with 'initcol'. Perhaps because it is in a different file? The documentation is not clear on this, so a rule of thumb is to always check the debug to make sure that the session variable is being set if there are problems with it. The error message "cannot set variable because the collection does not exist" means that 'initcol' must be used.

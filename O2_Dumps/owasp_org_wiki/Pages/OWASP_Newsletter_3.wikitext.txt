@@ -1,0 +1,107 @@
+''Sent to owasp-all mailing list on 22th Jan 2007''
+
+== '''OWASP Newsletter #3 – January 16th 2006 to January 22th 2007''' ==
+
+Welcome to OWASP Newsletter #3. I would like to start by asking you all to be a little bit more active on [:Category:OWASP Project|OWASP projects] (note that the webpages the www.owasp.org website are WIKI pages which you can edit directly (all you need is an account which you can create in 1 minute)). 
+
+We need more feedback on our tools, more comments on our documents and more development in our projects (if you want to collaborate but are not sure how, drop me an email and I will channel your energies to a relevant active project).
+
+The [[OWASP student projects]] page was updated with more project ideas and I added a new section to this newsletter called 'OWASP projects that need your help' in order to give you a heads up on projects that need help (if you are a project leader, please feel free to add your requests to the next version of the newsletter). Remember that OWASP is a Open Community that is made by its members (and the more you contribute the more you and your company will benefit).
+
+I would like to give a big welcome to our new [[Portuguese|chapter from my home country Portugal]], say that the latest Beta version of [[:Category:OWASP Live CD Project|OWASP Live CD]] is now released and ready for your tests, and that projects like the [[OWASP Java Project]] (featured below) are producing amazing material but need more collaboration (and let's not even talk about the [[OWASP .NET Project]] which I am supposed to managing and is currently going nowhere (with some noble exceptions (Mike and Boris thx)). 
+
+We also updated the [[How OWASP Works]] page to reflect the current structure of the Owasp Board and to show what we are thinking of doing in the future.
+
+If all goes as planned, next week we will be releasing the 'Release Candidate 1' version of the OWASP Top 10 2007 document which we want you all to take a good look at (the plan is to have a wide peer review and only release the final version when it is ready)
+
+As normal you can find below the links to the latest WIKI changes (with a new section for 'Interesting Discussion Threads' on our mailing lists)
+
+And don't forget, if you want something to appear in the next version, please add it to [[OWASP Newsletter 4]]
+
+Dinis Cruz 
+
+Chief OWASP Evangelist 
+
+London, UK
+
+== OWASP projects that need your help ==
+
+* [[:Category:OWASP Java Project|Java Project]]: Convert Mark Petrovic's article [http://www.onjava.com/pub/a/onjava/2007/01/03/discovering-java-security-requirements.html Discovering a Java Application's Security Requirements] into the WIKI (contact Stephen de Vries if you are interested)
+* [[:Category:OWASP .NET Project|.NET Project]]: Add PDP GnuCitizen [http://www.gnucitizen.org/projects/attackapi AttackAPI] to [[OWASP Site Generator]] and convert the php files into ASP.NET
+* [[OWASP Testing Project v2.0 - Review Guidelines| OWASP Testing Project v2.0]] - Now that the The OWASP Testing Guide v2.0 has reached the 'Release Candidate 1 milestone, the time has come to make sure that everything is 100% and that there is nothing major missing (review process ends on the 10th of Feb).
+* [[OWASP WebScarab NG Project]] - New version is already very usable and we need your feedback
+* Online Questionaires: I (Dinis) want to do a OWASP wide survey, what solution should I use to create, deploy and manage it?
+* WordPress guru needed: Our blogs (http://blogs.owasp.org/) still looks miserable. We need somebody to help Mide de Libero to sort it out (and while you're there get a feed to put on owasp.org and the next version of the OWASP newsletter)
+
+== Featured Project: OWASP Java Project ==
+
+The [[:Category:OWASP Java Project|OWASP Java Project]]'s goal is to enable Java and J2EE developers to build secure applications efficiently. See the OWASP Java Project Roadmap for more information on our plans.
+
+Some links from [[OWASP Java Table of Contents]]:
+
+* [[How to perform HTML entity encoding in Java]] to prevent Cross Site Scripting attacks
+* [[JAAS Tomcat Login Module]] - an example of how to implement a time delayed JAAS login module in Tomcat
+* [[Securing tomcat | Securing Apache Tomcat]] - a guide for deployers on how to secure Apache Tomcat
+* [[Hashing Java| Hashing in Java]] - how to securely implement cryptographic hashing in Java
+* [[Java Security Resources]] 
+* Just a couple more: [[How to add validation logic to HttpServletRequest]],[[Declarative Access Control in Java]], [[Protecting code archives with digital signatures]], [[JAAS Timed Login Module]]
+
+== Featured Project: OWASP Live CD ==
+
+The  BETA Release of OWASP LiveCD ready for testing.
+
+This distro is Beta Version 0.8 named "LabRat" and is part of the OWASP Autumn of Code sponsorship. The distro is focused on providing all of OWASP tools and documents on a bootable CD. The goal is to have a portable distro that can be used by professional penetration testers,security admins, Students, or anyone interested in computer security to perform work,training, or research. All you have to do is burn the .ISO to DVD or start under Vmware/Virtual PC and you will have a full Linux desktop environment loaded with OWASP tools and documents.
+
+The distro can be downloaded from the [http://packetfocus.com/hackos/AOC_Labrat-ALPHA-0008.iso PacketFocus website] (800mb).
+
+== Latest additions to the WIKI ==
+
+==== New Pages ====
+* [[PDF Attack Filter for Apache mod rewrite]] - PDF Attack Filter for Apache mod rewrite, served by Apache with mod_rewrite installed.
+* [[Struts XSLT Viewer]]
+* [[Reviewing code for XSS issues]]
+* [[OWASP WebScarab NG Project Technical Info]], if you want to know what is happening under the hood of the new version of [[OWASP WebScarab NG Project]]
+* with some content [[Portuguese]] (new chapter), [[All clients can be reverse engineered, monitored, and modified]], [[Native Methods]], [[Long long ago...]], [[Java applet code review]]
+
+==== Updated pages ====
+* [[OWASP student projects]] - Updated with new ideas for projects
+* [[How OWASP Works]] - Updated information on OWASP's board current structure and future plans
+* [[Phoenix/Tools]]
+* [[San_Francisco]]
+* With Minor updates: [[Bytecode obfuscation]], [[Chapters Assigned]], [[:Category:OWASP Top Ten Project|OWASP Top Ten Project]]]
+
+==== Latest Blog entries ====
+* on [http://blogs.owasp.org/orizon/ Orizon post]
+** [http://blogs.owasp.org/orizon/2007/01/22/parsing-freedom/| Parsing freedom]
+
+==== Interesting Discussion Threads ====
+* in [http://lists.owasp.org/mailman/listinfo/owasp-testing Owasp-testing]
+**[http://lists.owasp.org/pipermail/owasp-testing/2007-January/001324.html|Code Review project and Code-Scanning-Tool(s)] 
+** [http://lists.owasp.org/pipermail/owasp-testing/2007-January/001349.html|OSSTMM manual] and [http://lists.owasp.org/pipermail/owasp-testing/2007-January/001384.html| OSSTMM manual, followup by Pete about OSS]
+
+==== OWASP Community ====
+*Feb 15 (18:00h) - [[Seattle|Seattle chapter meeting]]
+*Feb 13 (18:00h) - [[Ireland|Ireland chapter meeting]]
+*Feb 6 (18:00h) - [[Melbourne|Melbourne chapter meeting]]
+*Jan 31 (15:00h) - [[Mumbai|Mumbai chapter meeting]]
+*Jan 30 (11:30h) - [[Austin|Austin chapter meeting]]
+*Jan 25 (18:00h) - [[San Francisco| San Francisco chapter meeting]]
+*Jan 25 (14:30h) - [[Italy#October_25th.2C_2007_-_Isaca_Rome|Italy@ISACA Rome]]
+*Jan 24 (17:30h) - [[Israel#6th_OWASP_IL_meeting:_Wednesday.2C_January_24th_2007|6th OWASP Israel chapter meeting]]
+*Jan 23 (18:00h) - [[Belgium|Belgium chapter meeting]]
+
+==== Application Security News  ====
+
+* [http://jeremiahgrossman.blogspot.com/2007/01/web-application-security-professionals.html  Web Application Security Professionals Survey (Jan. 2007)] -  Jeremiah Grossman just released his survey with lots of very interesting data. Make sure you check out section '11) Top 3 web application security resources' which is a nice database of the most popular vulnerability assessment tools and knowledge resources (#1 was RSnake's Blog, and #2 was OWASP :) )
+
+* [http://www.securityfocus.com/news/11436?ref=rss Don't take security advice from the devil you know!] - He lies. Especially about security flaws. This article notes an increase in vulnerabilities found in open source packages and concludes that... "For the personal sites and the mom-and-pop stores that rely on the software, it certainly affects them," Martin said. "But larger companies likely aren't affected."  Right.
+
+* [http://www.scmagazine.com/asia/news/article/626120/hackers-attack-moneygram-international-server-breach-personal-info-80000-customers/ Hackers attack MoneyGram International server, breach personal info of 80,000 customers]''' - A MoneyGram International server has been breached, allowing cybercrooks access to the personal information of nearly 80,000 people. Hackers accessed the server through the web sometime last month, the money-transfer company said in a statement released on Friday. 
+
+* Also worth a read: [http://sylvanvonstuppe.blogspot.com/2007/01/rude-awakening.html A Rude Awakening] , [http://sylvanvonstuppe.blogspot.com/2007/01/rude-awakening.html Making Security Rewarding] [http://www.onjava.com/lpt/a/6844 Discovering a Java Application's Security Requirements], [http://www.darkreading.com/document.asp?doc_id=115110&WT.svl=news1_1 Security Startups Make Debut], [http://www.eweek.com/article2/0,1895,2085461,00.asp Source Code Specialist Fortify to Buy Secure Software] , [http://myappsecurity.blogspot.com/2007/01/ajax-sniffer-prrof-of-concept.html Ajax Sniffer - Prrof of concept], [http://portal.spidynamics.com/blogs/msutton/ Decoding the Google Blacklist], [http://newsroom.eworldwire.com/view_release.php?id=16273 Visual WebGui Announces The Dot.Net Answer To Google's GWT]
+
+== OWASP references in the Media ==
+
+* [http://builder.com.com/5100-6374_14-6151493.html?part=rss&subj=bldr Lock it down: Use the OWASP Top Ten to secure your Web applications -- Part 1], Builder.com, Jan 19, 2007
+
+__NOEDITSECTION__

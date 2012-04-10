@@ -1,0 +1,63 @@
+{{Template:SecureSoftware}}
+
+==Overview==
+
+Purpose:	
+
+* Provide a structured foundation for understanding the security requirements of a system.
+
+Role:
+
+* Architect
+
+Frequency:
+
+* As necessary; generally, once per iteration.
+
+
+
+==Identify network-level design ==
+
+Describe the architecture of the system from the perspective of the network. Particularly, identify any components that could possibly be located on different logical platforms. For example, client software should be identified, as well as middleware and any database. If there is both middleware and a database, which might possibly live on a separate machine, they should be identified as logically separate.
+
+As part of denoting components, denote trust boundaries. For example, the firewall is often a trust boundary - the client machines on the outside are less trustworthy. Individual hosts are often trust boundaries, and many multi-user systems can have multiple trust boundaries internally. Trust boundaries should be mapped to system roles that can be granted that level of trust.
+
+A network-level design should be codified with a diagram in order to facilitate communication. This should be the same kind of diagram one would put on a whiteboard when asked about the architecture. The document should be kept up-to-date with changes and additions to the architecture. Particularly, as you identify protection mechanisms for resources and data links, you should annotate the diagram with these mechanisms.
+
+==Identify data resources ==
+
+Identify data resources that may be used by a program. In conjunction with the next activity, this should ultimately be broken down into individual capabilities related to each resource. When the information is known, break down each resource as granularly as possible - e.g., by identifying individual database tables, instead of simply the database as a whole.
+
+This information should be documented separately to facilitate analysis, but may be incorporated directly into business requirements.
+
+Sample resources include:
+
+*	Databases and database tables
+
+*	Configuration files
+
+*	Cryptographic key stores
+
+*	ACLs 
+
+*	Registry keys
+
+*	Web pages (static and dynamic)
+
+*	Audit logs
+
+*	Network sockets / network media
+
+*	IPC, Services, and RPC resources
+
+*	Any other files and directories
+
+*	Any other memory resource
+
+'''Note:''' Network media is a resource of its own. Data resources will often be stored in memory, placed onto a wire, received in memory on the other end, and then stored on disk. In such a scenario, we often will not want to address the security of the data in a vacuum, but instead in the context of the resource the data is inhabiting. In the network media, we need to specify how to protect that data when it traverses the media, which may be done generically or specifically to the media.
+
+
+[[Category:Activity]]
+[[Category:CLASP Activity]]
+[[Category:BP3 Capture security requirements]]
+[[Category:OWASP_CLASP_Project]]

@@ -1,0 +1,171 @@
+''Sent to owasp-all mailing list on 31st Jan 2007''
+
+==OWASP Newsletter #4 (31-Jan-07)==
+
+Welcome to OWASP Newsletter #4
+
+; '''[[Top 10 2007|OWASP Top 10 2007 RC1]]'''
+: As mentioned last week, we finally got the new version RC1 (Release Candidate 1) of the OWASP Top 10 out for review, criticism and comment. We take all comments very seriously (see[http://sylvanvonstuppe.blogspot.com/2007/01/owasp-top-10-2007-update-rc1.html Sylvan von Stuppe], so please do spend the time to check this version and speak up your mind.
+
+; '''[[OWASP WebGoat Project|WebGoat]]'''
+: See below for a feature on one of our longest and most famous projects, which has released WebGoat 5.0 RC1  containing a bunch of new lessons created via an [[Owasp_Autumn_Of_Code_2006|OWASP Autumn of Code]] sponsorship.
+
+; '''OWASP Grants'''
+: Talking about the AoC (Autumn of Code), if all goes well we will close it officially next week, and will announce the SpoC. SpoC has you must be guessing by now, is the OWASP Spring of Code (still with no connection with Google's Summer of Code) :) 
+
+; '''Support for Non-Profits'''
+: As you can see on the updated pages section, we also made a small change in our membership criteria, where we changed the 'Educational Members' category to be 'Educational and Non-Profit Members'.
+
+; '''RSA Meetup'''
+: If you are going to the RSA conference next week, drop a line to Brian Bertacini from the San Jose OWASP Chapter for details on an OWASP get-together.
+
+'''Recommended Reading'''
+* The brilliant [[:Image:OWASP Testing Guide Presentation.zip|OWASP Testing Guide Presentation]]
+* [http://blogs.owasp.org/seba/2007/01/29/sdlc-for-the-geek/ SDLC for the “Geek”],[http://blogs.owasp.org/seba/2007/01/23/cross-chapter-cooperation/ Cross-Chapter cooperation]
+* [http://blogs.owasp.org/dacort/2007/01/31/reporting-web-vulns/ Reporting Web Vulns]
+* the [http://www.waterfall2006.com/ Waterfall 2006] conference (I think next year I will be doing a presentation on 'Security by Obscurity, don't advertise (or link to) your site' :)
+* http://www.securitybullshit.com - ''"Humorous look at an industry spinning out of control"'' by the uncompromising Mark Curphey
+
+Don't forget, if you want something to appear in the next version, please add it to [[OWASP Newsletter 5]]. 
+
+Dinis Cruz 
+
+Chief OWASP Evangelist 
+
+London, UK
+
+== OWASP projects that need your help ==
+* [[Top 10 2007|OWASP Top 10 2007 RC1]] - Convert the Word (or PDF) file to wiki pages on owasp.org (open to all since anybody can edit the owasp.org website).
+* [[Top 10 2007|OWASP Top 10 2007 RC1]] - We are opening review of the Top 10 2007 until February 28, 2007. Please review the document and provide feedback to the owasp-topten@lists.owasp.org mail list. If you cannot make public submissions or feedback but still wish to make your voice heard, please mail vanderaj (at) owasp.org. '''Please note: This document is not to be used or referenced until after its release.'''
+* [[OWASP Testing Project v2.0 - Review Guidelines| OWASP Testing Project v2.0]] - Now that the The OWASP Testing Guide v2.0 has reached the 'Release Candidate 1 milestone, the time has come to make sure that everything is 100% and that there is nothing major missing (review process ends on the 10th of Feb).
+* Online Questionaires: I (Dinis) want to do a OWASP wide survey, what solution should I use to create, deploy and manage it?
+* WordPress guru needed: Our blogs (http://blogs.owasp.org/) still looks miserable. We need somebody to help Mike de Libero to sort it out (and while you're there get a feed to put on owasp.org and the next version of the OWASP newsletter)
+
+== Featured Project: WebGoat 5.0 RC1 ==
+'''WebGoat Overview'''
+
+[[:Category:OWASP WebGoat Project|WebGoat]] is a deliberately insecure J2EE web application maintained by OWASP designed to teach web application security lessons. In each lesson, users must demonstrate their understanding of a security issue by exploiting a real vulnerability in the WebGoat application. For example, in one of the lessons the user must use SQL injection to steal fake credit card numbers. The application is a realistic teaching environment, providing users with hints and code to further explain the lesson.
+
+To get started, read the [http://www.owasp.org/index.php/WebGoat_User_and_Install_Guide_Table_of_Contents|WebGoat User and Install Guide]
+
+
+'''WebGoat 5.0 Release Candidate 1'''
+
+Thursday January 17th, WebGoat 5.0 Release Candidate 1 was released. Special thanks to the many people who have sent comments and suggestions and those who have put in the effort to contribute their time to this release.
+
+The 5.0 release would not have been possible without the efforts of Sherif Koussa and [[Owasp_Autumn_Of_Code_2006|OWASP Autumn of Code 2006]].
+
+This version can be downloaded from OWASP's Sourceforce repository: [http://sourceforge.net/project/showfiles.php?group_id=64424&package_id=61824 WebGoat 5.0 RC1]
+
+Please send all comments to webgoat AT g2-inc DOT com regarding this release candidate. 
+
+== Featured Item: OWASP Documentation Projects ==
+
+I wrote this on an email the other day, and realized that it was a good list of our best documentation projects: 
+
+* [[:Category:OWASP Top Ten Project|OWASP Top Ten Project]] "The OWASP Top Ten provides a powerful awareness document for web application security. The OWASP Top Ten represents a broad consensus about what the most critical web application security flaws are. Project members include a variety of security experts from around the world who have shared their expertise to produce this list"
+* [[:Category:OWASP Guide Project|OWASP Guide Project]] "The Guide is aimed at architects, developers, consultants and auditors and is a comprehensive manual for designing, developing and deploying secure web applications."
+* [[:Category:OWASP AppSec FAQ Project|OWASP AppSec FAQ Project]] "This FAQ answers some of the questions that developers have about Web Application Security. This FAQ is not specific to a particular platform or language. It addresses the common threats to web applications and are applicable to any platform."
+* [[:Category:OWASP Testing Project|OWASP Testing Guide]] "This project's goal is to create a "best practices" penetration testing framework which users can implement in their own organizations and a "low level" penetration testing guide that describes how to find certain issues."
+* [[:Category:OWASP CLASP Project|OWASP CLASP Project]] "CLASP (Comprehensive, Lightweight Application Security Process) provides a well-organized and structured approach for moving security concerns into the early stages of the software development lifecycle, whenever possible."
+* [[:Category:OWASP Honeycomb Project|OWASP Honeycomb Project]] "In the Honeycomb project, OWASP is assembling the most comprehensive and integrated guide ever attempted to the fundamental building blocks of application security (principles, threats, attacks, vulnerabilities, and countermeasures) through collaborative community efforts."
+* [[:Category:OWASP Application Security Assessment Standards Project|OWASP Application Security Assessment Standards Project]] "Currently there is a lack of standardization over what constitutes an application security assessment. With no single set of criteria being referenced, it is suggested that OWASP establish a set of standards defining and establishing a baseline approach to conducting differing types/levels of application security assessment. The standards should be flexible in design to accommodate a range of security assurance levels. The standards should not be viewed as placing requirements on any party. Rather, the standards should make recommendations about what should be done to be consistent with what the OWASP community believes is best practice. Adhering to the standards should help increase end user organization confidence that assessments meet an industry agreed-upon approach.?"
+* [[:Category:OWASP Application Security Metrics Project|OWASP Application Security Metrics Project]] "This OWASP Project will first identify and provide the OWASP community a set of application security metrics that have been found by contributors to be effective in measuring application security. This will be followed by the development of new metrics that build on the initial metrics foundation to fulfill unmet metrics requirements. The goals of this Project are to make a baseline set of application security metrics available to the OWASP community and subsequently to provide a forum for the community to contribute metrics back into the baseline."
+
+== Latest additions to the WIKI == 
+==== New Pages ==== 
+* [[Top 10 2007]] - Top 10 2007 RC1 Public Comments & Review page
+* [[Guide to SQL Injection]] - Article examining the possibility of tampered SQL query data exploiting your database and/or application.
+* [[Member Offers]] - New offers available for all individual OWASP Members and employees of OWASP Corporate Members.
+* [[Announce:Web Honeynet]] - Web Honeynet project announcement by SecuriTeam and the ISOTF.
+* [[Code Auditor Workbench Tool]] - Ideas about a source code analysis tool to aid security consultants
+* [[OWASP News 2006]], [[OWASP Community 2006]] - Pages containing the OWASP news stories and community events from 2006.
+
+==== Updated pages ==== 
+* [[Membership]] - Add reference to the  [[Member Offers]] page and changed the 'Educational Members' category to be 'Educational and Non-Profit Members'
+* [[ORG_%28OWASP_Report_Generator%29#Building_the_Installer|Installer details for ORG]] - Information on how to build an installer for ORG using WiX
+* [[SQL Injection]] - Updated with links to the SQL Injection pages in the OWASP Guide, OWASP Code Review and OWASP Testing Guide
+* [[:Category:OWASP_Stinger_Project|OWASP Stinger Project‎]] - Updated with new release information (2.4 RC1)
+* [[.Net Research Links]] - Several new CLR links
+* [[Fuzzing]]
+* [[Testing for SQL Injection (OWASP-DV-005)|Testing for SQL Injection]] , [[Testing: Information Gathering]] , [[Reviewing Code for SQL Injection]]
+* minor edits or comments: [[Talk:JAAS Tomcat Login Module]] , [[Category:OWASP Orizon Project]] (added link to Orizon Blog) , [[OWASP Stinger 3 Ideas]]
+
+==== New Documents & Presentations from chapters ====
+* [[:Image:OWASP Testing Guide Presentation.zip|OWASP Testing Guide Presentation]]
+* [[:Image:OWASP Top 10 2007 RC1.pdf|OWASP Top 10 2007 RC1.pdf]] or [[:Image:OWASP Top 10 2007 RC1.doc|OWASP Top 10 2007 RC1.doc]] - the new version of the OWASP Top 10 (Release Candidate 1)
+* From the [[Belgium]] chapter:
+** Jan 07: 
+*** [[:Image:OWASP BE 2007-01-23 OWASP Update.zip|OWASP BE 2007-01-23 OWASP Update.zip]] - OWASP Update including 2006 poll results 
+*** [[:Image:OWASP BE 2007-01-23 WebGoat-Pantera.zip|OWASP BE 2007-01-23 WebGoat-Pantera.zip]] - OWASP WebGoat and Pantera presentation
+*** [[:Image:OWASP BE 2007-01-23 AOP security.zip|OWASP BE 2007-01-23 AOP security.zip]] - AOP Security presentation
+* From the [[Israel]] chapter
+** Jan 07
+*** [http://www.owasp.org/images/4/4b/OWASP_IL_The_Universal_XSS_PDF_Vulnerability.pdfAnalysis of the Universal XSS PDF vulnerability - Cause, Solutions and Fun Stuff]
+** Nov 06 (OWASP IL mini conference):
+*** [http://www.owasp.org/images/8/89/Enterprise_portals_security.pdf Malicious content in enterprise portals]
+*** [http://www.owasp.org/images/6/65/Secure_coding.pdf Real vs. Virtual Patching]
+*** [http://www.owasp.org/images/d/dd/The_Core_Rule_Set.pdf  "The Core Rule Set": Generic detection of application layer attacks]
+*** [http://www.owasp.org/images/a/ae/OWASP_10_Most_Common_Backdoors.pdf The OWASP Top Ten Backdoors]
+*** [http://www.owasp.org/images/2/22/Hacking_The_FrameWork.ppt Hacking The Framework]
+** Jul 06: 
+*** [http://www.owasp.org/images/3/36/OWASP_IL_0706_Comsec_ShayZ_Crypto_1_0_2.pdf Exposing cryptography for software developers]
+*** [http://www.owasp.org/images/1/10/OWASP_IL_Preventing_spoofing_phishing_and_spam.pdf Preventing Spoofing, Phishing and Spamming by Secure Usability and Cryptography]
+* [[:Image:ValidationQuestionnaire.doc|ValidationQuestionnaire.doc]]
+
+==== Latest Blog entries ====
+* from [http://blogs.owasp.org/seba/ Life of an OWASP Chapter Leader]
+** [http://blogs.owasp.org/seba/2007/01/29/sdlc-for-the-geek/ SDLC for the “Geek”]
+** [http://blogs.owasp.org/seba/2007/01/23/cross-chapter-cooperation/ Cross-Chapter cooperation]
+* from [http://blogs.owasp.org/dacort/ /dev/sec/webapp]
+** [http://blogs.owasp.org/dacort/2007/01/31/reporting-web-vulns/ Reporting Web Vulns]
+* from [http://blogs.owasp.org/keremkusmezer/ Security Tales From The .Net Crypt]
+** [http://blogs.owasp.org/keremkusmezer/2007/01/22/weird-thing/ Weird Thing]
+** [http://blogs.owasp.org/keremkusmezer/2007/01/23/systemnet-logging-tips/ System.Net Logging Tips]
+** [http://blogs.owasp.org/keremkusmezer/2007/01/23/great-project-about-reflection/ Great Project About Reflection] (.Net not Java)
+** [http://blogs.owasp.org/keremkusmezer/2007/01/23/buffer-overflow-in-ilasm-and-ildasm/ Buffer OverFlow in ILASM and ILDASM]
+* from [http://blogs.owasp.org/orizon/ Orizon post]
+** [http://blogs.owasp.org/orizon/2007/01/23/xml-galore/ XML galore]
+** [http://blogs.owasp.org/orizon/2007/01/22/parsing-freedom/ Parsing freedom]
+* from [http://blogs.owasp.org/diniscruz/ Dinis Cruz Blog]
+** [http://blogs.owasp.org/diniscruz/2007/01/23/an-example-of-a-flawed-xss-blacklist-filter/ An example of a flawed XSS BlackList filter]
+
+
+
+==== OWASP Community ====
+*Feb 26-Mar 1 - [http://www.blackhat.com Black Hat DC]
+: OWASP members receive a $100 Briefings discount by inserting BH7DCASSOC in the box marked “Coupon Codes”
+*Feb 22 (18:00h) - [[London|London chapter meeting]]
+*Feb 20 (18:00h) - [[Rochester|Rochester chapter meeting]]
+*Feb 15 (18:00h) - [[Seattle|Seattle chapter meeting]]
+*Feb 15 (18:00h) - [[Washington DC|Washington DC (MD) chapter meeting]]
+*Feb 15 (18:00h) - [[Virginia (Northern Virginia)|Washington DC (N. VA) chapter meeting]]
+*Feb 15 (18:00h) - [[Seattle|Seattle chapter meeting]]
+*Feb 14 (18:00h) - [[Toronto|Toronto chapter meeting]]
+*Feb 13 (18:00h) - [[Ireland|Ireland chapter meeting]]
+*Feb 12 (18:30h) - [[Switzerland|Switzerland chapter meeting]]
+*Feb 7 (18:30h) - [[Boston|Boston chapter meeting]]
+*Feb 6-7 - [[Italy#February_6th-8th.2C_2007_-_InfoSecurity|Italy@InfoSecurity]]
+*Feb 6 (18:00h) - [[Melbourne|Melbourne chapter meeting]]
+*Feb 2 (14:00h) - [[Chennai|Chennai chapter meeting]]
+*Jan 31 (15:00h) - [[Mumbai|Mumbai chapter meeting]]
+*Jan 30 (11:30h) - [[Austin|Austin chapter meeting]]
+
+==== Application Security News ====
+
+* Jan 23 - [http://www.gnucitizen.org/projects/greasecarnaval Greasemonkey Backdoor Proof of Concept] -  A simple [http://greasemonkey.mozdev.org/ Greasemonkey] script that illustrates the potential for abuse by hooking a backdoor to your browser using Javascipt and AJAX techniques. 
+
+* Jan 23 - [[Announce:Web Honeynet|Web Honeynet Project Announcement]] -  The newly formed Web Honeynet Project from SecuriTeam and the ISOTF will in the next few months announce research on real-world web server attacks which infect web servers with: Tools, connect-back shells, bots, downloaders, malware, etc. which are all cross-platform (for web servers) and currently exploited in the wild.
+
+== OWASP References in the Media ==
+
+This week we have two examples of non compliance with the [[OWASP brand usage rules]], namely the #''8. The OWASP Brand must not be used in any materials that could mislead readers by narrowly interpreting a broad application security category. For example, a vendor product that can find or protect against forced browsing must not claim that they address all of the access control category.''
+
+* [http://www.embedded-computing.com/news/db/?5197 Java Source Code Analysis Available for Developers to Improve Software Security and Quality] - quote ''"Java Security Analysis Aligned with OWASP -- KDJ's vulnerability analysis provides excellent coverage of the vulnerabilities from the OWASP Top 10 list."''
+* [http://www.marketwire.com/mw/release_html_b1?release_id=208677 Ounce Labs Simplifies Regulatory and Policy Compliance With New SmartAudit] - quote : ''"1. OWASP Top Ten: Identifies the existence and location in the source code of any of the Top 10 most critical web application security vulnerabilities, a list complied by the Open Web Application Security Project."''
+
+The problem with these claims is that it is very hard to know what exactly do they mean. At least in KDJ's case they say ''"...excellent coverage..."'' versus Ounce Labs' ''"...any of the Top 10..."''.
+
+One idea that is currently being debated is if OWASP brand usage rules should state that if a company makes claims such as the ones above in relation with the OWASP Top 10 (or other OWASP materials), they MUST include a reference to a publicly accessible page that ‘explains’ how well they ‘think’ each element of the Top 10 is covered.
+
+__NOEDITSECTION__

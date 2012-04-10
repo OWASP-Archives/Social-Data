@@ -1,0 +1,376 @@
+=[[Guide Frontispiece|Frontispiece]]=
+#Dedication
+#Copyright and license
+#Editors 
+#Authors and Reviewers
+#Revision History
+=[[About The Open Web Application Security Project]]=
+#Structure and Licensing
+#Participation and Membership
+#Projects
+=[[Guide Introduction | Introduction]]=
+#Developing Secure Applications
+#Improvements in this edition
+#How to use this Guide
+#Updates and errata
+#With thanks
+=[[What are web applications?]]=
+#Technologies
+#First generation – CGI
+#Filters
+#Scripting
+#Web application frameworks – J
+#Small to medium scale applications
+#Large scale applications
+#View
+#Controller
+#Model
+#Conclusion
+=[[Policy Frameworks]]=
+#Organizational commitment to security
+#OWASP’s Place at the Framework table
+#Development Methodology
+#Coding Standards
+#Source Code Control
+#Summary
+=[[Secure Coding Principles]]=
+#Asset Classification
+#About attackers
+#Core pillars of information security
+#Security Architecture
+#Security Principles
+=[[Threat Risk Modeling]]=
+#Threat Risk Modeling
+#Performing threat risk modeling using the Microsoft Threat Modeling Process
+#Alternative Threat Modeling Systems
+#Trike
+#AS/NZS
+#CVSS
+#OCTAVE
+#Conclusion
+#Further Reading
+=[[Handling E-Commerce Payments]]=
+#Objectives
+#Compliance and Laws
+#PCI Compliance
+#Handling Credit Cards
+#Further Reading
+=[[Phishing]]=
+#What is phishing?
+#User Education
+#Make it easy for your users to report scams
+#Communicating with customers via e-mail
+#Never ask your customers for their secrets
+#Fix all your XSS issues
+#Do not use pop-ups
+#Don’t be framed
+#Move your application one link away from your front page
+#Enforce local referrers for images and other resources
+#Keep the address bar, use SSL, do not use IP addresses
+#Don’t be the source of identity theft
+#Implement safe-guards within your application
+#Monitor unusual account activity
+#Get the phishing target servers offline pronto
+#Take control of the fraudulent domain name
+#Work with law enforcement
+#When an attack happens
+#Further Reading
+=[[Web Services]]=
+#Securing Web Services
+#Communication security
+#Passing credentials
+#Ensuring message freshness
+#Protecting message integrity
+#Protecting message confidentiality
+#Access control
+#Audit
+#Web Services Security Hierarchy
+#SOAP
+#WS-Security Standard
+#WS-Security Building Blocks
+#Communication Protection Mechanisms
+#Access Control Mechanisms
+#Forming Web Service Chains
+#Available Implementations
+#Problems
+#Further Reading
+=[[Ajax and Other "Rich" Interface Technologies]]=
+#Objective
+#Platforms Affected
+#Architecture
+#Access control: Authentication and Authorization
+#Silent transactional authorization
+#Untrusted or absent session data
+#State management
+#Tamper resistance
+#Privacy
+#Proxy Façade
+#SOAP Injection Attacks
+#XMLRPC Injection Attacks
+#DOM Injection Attacks
+#XML Injection Attacks
+#JSON (Javascript Object Notation) Injection Attacks
+#Encoding safety
+#Auditing
+#Error Handling
+#Accessibility
+#Further Reading
+=[[Guide to Authentication]]=
+#Objective
+#Environments Affected
+#Relevant COBIT Topics
+#Best Practices
+#Common web authentication techniques
+#Strong Authentication
+#Federated Authentication
+#Client side authentication controls
+#Positive Authentication
+#Multiple Key Lookups
+#Referer Checks
+#Browser remembers passwords
+#Default accounts
+#Choice of usernames
+#Change passwords
+#Short passwords
+#Weak password controls
+#Reversible password encryption
+#Automated password resets
+#Brute Force
+#Remember Me
+#Idle Timeouts
+#Logout
+#Account Expiry
+#Self registration
+#CAPTCHA
+#Further Reading
+#Authentication
+
+=[[Guide to Authorization]]=
+#Objectives
+#Environments Affected
+#Relevant COBIT Topics
+#Best Practices
+#Best Practices in Action
+#Principle of least privilege
+#Centralized authorization routines
+#Authorization matrix
+#Controlling access to protected resources
+#Protecting access to static resources
+#Reauthorization for high value activities or after idle out
+#Time based authorization
+#Be cautious of custom authorization controls
+#Never implement client-side authorization tokens
+#Further Reading
+
+=[[Session Management]]=
+#Objective
+#Environments Affected
+#Relevant COBIT Topics
+#Description
+#Best practices
+#Exposed Session Variables
+#Page and Form Tokens
+#Weak Session Cryptographic Algorithms
+#Session Token Entropy
+#Session Time-out
+#Regeneration of Session Tokens
+#Session Forging/Brute-Forcing Detection and/or Lockout
+#Session Token Capture and Session Hijacking
+#Session Tokens on Logout
+#Session Validation Attacks
+#PHP
+#Sessions
+#Further Reading
+#Session Management
+=[[Data Validation]]=
+#Objective
+#Platforms Affected
+#Relevant COBIT Topics
+#Description
+#Definitions
+#Where to include integrity checks
+#Where to include validation
+#Where to include business rule validation
+#Data Validation Strategies
+#Prevent parameter tampering
+#Hidden fields
+#ASP.NET Viewstate
+#URL encoding
+#HTML encoding
+#Encoded strings
+#Data Validation and Interpreter Injection
+#Delimiter and special characters
+#Further Reading
+=[[Interpreter Injection]]=
+#Objective
+#Platforms Affected
+#Relevant COBIT Topics
+#User Agent Injection
+#HTTP Response Splitting
+#SQL Injection
+#ORM Injection
+#LDAP Injection
+#XML Injection
+#Code Injection
+#Further Reading
+#SQL-injection
+#Code Injection
+#Command injection
+=[[Canonicalization, locale and Unicode]]=
+#Objective
+#Platforms Affected
+#Relevant COBIT Topics
+#Description
+#Unicode
+#http://www.ietf.org/rfc/rfc#
+#Input Formats
+#Locale assertion
+#Double (or n-) encoding
+#	HTTP Request Smuggling
+#	Further Reading
+
+=[[Error Handling, Auditing and Logging]]=
+#Objective
+#Environments Affected
+#Relevant COBIT Topics
+#Description
+#Best practices
+#Error Handling
+#Detailed error messages
+#Logging
+#Noise
+#Cover Tracks
+#False Alarms
+#Destruction
+#Audit Trails
+#Further Reading
+#Error Handling and Logging
+=[[File System]]=
+#Objective
+#Environments Affected
+#Relevant COBIT Topics
+#Description
+#Best Practices
+#Defacement
+#Path traversal
+#Insecure permissions
+#Insecure Indexing
+#Unmapped files
+#Temporary files
+#PHP
+#Includes and Remote files
+#File upload
+#Old, unreferenced files
+#Second Order Injection
+#Further Reading
+#File System
+=[[Distributed Computing]]=
+#Objective
+#Environments Affected
+#Relevant COBIT Topics
+#Best Practices
+#Race conditions
+#Distributed synchronization
+#Further Reading
+=[[Buffer Overflows]]=
+#Objective
+#Platforms Affected
+#Relevant COBIT Topics
+#Description
+#General Prevention Techniques
+#Stack Overflow
+#Heap Overflow
+#Format String
+#Unicode Overflow
+#Integer Overflow
+#Further reading
+=[[Administrative Interface]]=
+#Objective
+#Environments Affected
+#Relevant COBIT Topics
+#Best practices
+#Administrators are not users
+#Authentication for high value systems
+#Further Reading
+=[[Guide to Cryptography]]=
+#Objective
+#Platforms Affected
+#Relevant COBIT Topics
+#Description
+#Cryptographic Functions
+#Cryptographic Algorithms
+#Algorithm Selection
+#Key Storage
+#Insecure transmission of secrets
+#Reversible Authentication Tokens
+#Safe UUID generation
+#Summary
+#Further Reading
+#Cryptography
+
+=[[Configuration]]=
+#Objective
+#Platforms Affected
+#Relevant COBIT Topics
+#Best Practices
+#Default passwords
+#Secure connection strings
+#Secure network transmission
+#Encrypted data
+#PHP Configuration
+#Global variables
+#register_globals
+#Database security
+#Further Reading
+#ColdFusion Components (CFCs)
+#Configuration
+=[[Software Quality Assurance]]=
+#Objective
+#Platforms Affected
+#Best practices
+#Process
+#Metrics
+#Testing Activities
+=[[Deployment]]=
+#Objective
+#Platforms Affected
+#Best Practices
+#Release Management
+#Secure delivery of code
+#Code signing
+#Permissions are set to least privilege
+#Automated packaging
+#Automated deployment
+#Automated removal
+#No backup or old files
+#Unnecessary features are off by default
+#Setup log files are clean
+#No default accounts
+#Easter eggs
+#Malicious software
+#Further Reading
+=[[Maintenance]]=
+#Objective
+#Platforms Affected
+#Relevant COBIT Topics
+#Best Practices
+#Security Incident Response
+#Fix Security Issues Correctly
+#Update Notifications
+#Regularly check permissions
+#Further Reading
+#Maintenance
+=[[GNU Free Documentation License]]=
+#PREAMBLE
+#APPLICABILITY AND DEFINITIONS
+#VERBATIM COPYING
+#COPYING IN QUANTITY
+#MODIFICATIONS
+#COMBINING DOCUMENTS
+#COLLECTIONS OF DOCUMENTS
+#AGGREGATION WITH INDEPENDENT WORKS
+#TRANSLATION
+#TERMINATION
+#FUTURE REVISIONS OF THIS LICENSE
+=Reference=
+[[Category:OWASP_Guide_Project]]

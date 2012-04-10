@@ -1,0 +1,555 @@
+[[Guide Table of Contents|Development Guide Table of Contents]]
+__TOC__
+
+'''''Style is time’s fool. Form is time’s student – Stewart Brand '''''
+
+Ajax applications, often styled as “Web 2.0”, are not a form of magic security pixie dust. Instead, there are two classes of applications: secure and insecure. This is independent of the use of Ajax or similar technologies that preceded it, such as Flash, applets, or ActiveX. With some effort, Ajax applications can be secure. Unfortunately, many are not, which is the '''''raison d’être''''' of this chapter.
+
+The acronym AJAX stands for Asynchronous JavaScript and XML. These technologies underpinning Ajax are not new – they first appeared in 1998 with Microsoft Outlook Web Access in Exchange Server 5.5. “Web 2.0” was defined by Tim O’Reilly to mean highly peer-to-peer dynamic applications. Such applications include del.icio.us library that allows users to share their libraries’ details, or Flickr that allows users to share their photos in a highly interactive way. We define “Ajax applications” as those that use the XMLHttpRequest object to asynchronously call the server and receive replies, regardless of how they handle or display the received data, or if they are public peer-to-peer low value applications such as forum software or highly sensitive private data, such as a tax return lodgment application.
+
+Ajax enabled applications aim to increase the interactivity and richness of the web interface. Secure Ajax applications are achievable at minimal cost increase as long as security is considered during design and tested throughout development. 
+
+Compliance with disability laws is mandatory for all government and most corporate organizations. Ajax framework developers who wish to be used by these types of organizations must ensure their code supports common accessibility aides. Ajax framework users should select frameworks that produce accessible output and design their applications to be accessible and test regularly. In most countries, to do otherwise is simply deliberate negligence, and is often harshly punished by the courts. 
+
+Ajax applications face '''''exactly the same '''''security issues as all other web applications, plus they add their own particular set of risks that must be correctly managed. By their complex, bidirectional, and asynchronous nature, Ajax applications increase attack surface area. 
+
+Use of Ajax (or any rich interface) requires careful consideration of architecture, server-side access control, state management, and strong validation to prevent attacks. Without considering these basic controls, even brochure-ware websites, such as car manufacturer websites, can be a hazard to both the user and the web site owner’s reputation and thus sales.
+
+At the time of writing, there is a multitude of Ajax frameworks and add-ons, and many more being written every day. Users of Ajax frameworks should ensure that their chosen framework meets the security risks of their particular application, and does not impose an unsecurable architecture upon them. 
+
+Developers of Ajax frameworks should investigate the controls presented in this chapter, and associated controls documented throughout the rest of this book to ensure that their approach is simple, accessible, and secure.
+
+==Objective ==
+
+To ensure that AJAX (and all “rich” interactive interfaces, such as Flash and Shockwave) have adequate:
+
+* Secure Communications
+
+* Authentication and Session Management
+
+* Access Control 
+
+* Input Validation
+
+* Error Handling and Logging
+
+To prevent applications from being attacked using known attack vectors, such as unauthorized access, injection attacks, and so on.
+
+==Platforms Affected ==
+
+* All Server Platforms
+
+* Web applications which use Ajax, ActiveX, Flash or Shockwave
+
+* Clients which are required to use such applications
+
+==Architecture ==
+
+Appropriate security architecture should be considered when implementing Ajax front ends. Some Ajax frameworks will proudly display that they are 100% client based, with no server side controls, such as Tibco and Atlas (an Ajax framework for .NET). 
+
+Strong security architecture provides adequate defense in depth, and architecturally correct placement of key security controls. For more details, see the Security Architecture chapter.
+[[Category:FIXME|I wanted to make Security Architecture a link, but I am not sure what section it refers to]]
+
+For some types of applications, such as brochure-ware and non-interactive applications, such as stock tickers, this is acceptable security architecture as the risks are low – it would be hard to obviate the security controls to lose actual money. However, as the risk of the application increases, the threats and countermeasures required also increase. 
+
+'''Architecture by example '''
+
+For the purposes of this section, irs.gov.ex, a taxation department of a fictitious country, has decided to implement an Ajax enabled electronic lodgment and tracking service for all of its 100 million taxpayers. A key reason to move to the new system is to reduce the workload on existing staff for the 90+% of tax returns that could be processed automatically … as long as the taxpayers do not deliberately lie, deceive, or cheat the system. Which of course, they do regularly. 
+
+They bought a fancy new Enterprise Service Bus (ESB), to which they hooked up their old but incredibly reliable mainframe backend, their SAP R/3 implementation that writes the checks and tax invoices, and several other key systems. 
+
+This particular ESB, like many on the market today, has no data validation, authentication, or authorization controls of its own; it is a simple web-service integration layer. The ESB expects that the underlying systems will perform adequate validation and authorization to prevent abuse, as the software company that wrote the ESB expected that all calling systems would be trusted, internal systems. Hooking up a dynamic web site where the users are known to be relentless, eager, and motivated tax avoiders changes the risk profile of a previously internal system with trusted staff.
+
+The tax department does not want to change existing systems as they are in production and stable. More to the point, they cannot change their mainframe code easily - their skilled mainframe programmers either were promoted to senior management or retired 15 years ago, and it would be extremely costly to hire new mainframe developers, and impossible to change how the third party systems work, like SAP or their anti-fraud system. 
+
+Old code, such as COBOL CICS transactions, or previously internal only systems such as SAP R/3, have a different trust model than highly dynamic Internet connected websites. It is highly likely such systems have never been tested against now common attacks, such as HTML injection (XSS), DOM injection, XML query attacks, or similar. Without any intermediate code to protect these older systems, they are at immense risk.
+
+The tax department selected a simple solution in the belief it will save money. In this first example, the bulk of the business logic is contained in deployed JavaScript applications. All of the business logic, validation, and state are contained in the client’s browser, and it makes direct calls to the enterprise service bus. 
+
+However, this model is simply broken: the previously generic process orchestration service will need to become far more aware of the caller’s identity (to provide authentication and enforce authorization), maintain secure state, and provide validation services that have previously been performed on the client. 
+
+[[Image:Insecure Security and state maintained on the client.gif]]
+
+This security model is akin to leaving the keys to the Reserve Bank at the train station notice board. There is no method of protecting this model without significant replication of the business logic and re-validating all the state at the enterprise service bus, or similar web service endpoints. 
+
+Many enterprises, including irs.gov.ex, have taken to service oriented architecture (SOA), which uses web services enabling re-use of pre-existing transactions and systems, such as SAP or Siebel, or custom transactions running on mainframes. If an Ajax framework is connected to such SOA endpoints, such as an enterprise service bus, or directly to a backend data warehouse or other persistent store, there is no ability to validate the calling identity, authorize the transaction, validate the data, or any other normal security activity. So this model will not do. 
+
+In the next model, which is how most PHP application frameworks work today, the Ajax xmlrpc endpoint is not necessarily well integrated with the main application. 
+
+[[Image: Insecure Ajax Web Service Endpoint separate from the main application.gif]]
+
+In this model, if the Ajax endpoint cannot or does not access secure state, or associate the call with the active session, a hostile caller could emulate an active session and call protected resources with minimal skills or tools. This vulnerability has already been demonstrated with several popular Ajax PHP toolkits on Bugtraq, and probably applies to other less well-known toolkits for other languages and platforms.
+
+The best way to protect both of these models is to bring them back to the normal three-tier application model:
+
+[[Image: Better Shared business logic in the middle tier with different front ends.gif]]
+
+In this model, which is akin to how GMail works, the application is still significantly Ajax enabled, and provides a rich experience to the user. However, this code is backed by:
+
+* A solid session management scheme to ensure that authentication and authorization is performed in a trusted part of the architecture
+
+* Data validation is performed in both directions on the server-side at various layers to limit or prevent injection and other attacks
+
+* All calls to the backend services are performed by trusted server-side business logic
+
+* The layered architecture allows reasonable trust of the caller at the ESB level as the data has been significantly authorized and validated
+
+This means that the ESB and its published services, such as 40 year old COBOL code, do not need to be particularly aware of the implications of being made available to the Internet. This enables higher levels of re-use and reduces costs.
+
+Although more complex to the project implementing the Ajax enabled application, to the funding business, this architecture is the cheapest way of maintaining security whilst avoiding updating or maintaining ancient or third party code.
+
+Selecting the correct architecture is unfortunately not a checklist – it is a balance of risk versus cost. However, as demonstrated in this section, client-side heavy architecture models are completely untrustworthy for transactional systems and should be avoided.
+
+==Access control: Authentication and Authorization ==
+[[Category:FIXME|Starting here, should these sections be part of this article? Or do they go somewhere else with links here?]]
+
+Ajax code uses the XMLHttpRequest object, which will send the cookies of the current browser context through with each request. For applications which have user sessions, it is vital that normal authentication paths are used to ensure that the caller is known to the application. Brochure-ware applications can skip this section as they allow anonymous calling.
+
+'''How to determine if you are vulnerable '''
+
+If you have transactions or calls that are not to be used by anonymous callers, check that client-side code cannot call them without an established user context.
+
+To do this: 
+
+* Fire up your favorite proxy tool, such as WebScarab
+
+* Generate an authenticated XMLHttpRequest using the browser
+
+* Right click on the resulting entry in WebScarab, click “Re-send” 
+
+* Edit out the cookie
+
+See if a valid result is returned. If yes, you are vulnerable. Repeat for every Ajax enabled server-side service.
+
+'''Countermeasures '''
+
+Ensure that every Ajax callable function, whether XMLRPC, custom code, or a web service verify the session and authorization. 
+
+For example, in typical Ajax style, CPaint uses this insecure example:
+<pre>
+
+<?php?  
+
+function calculate_tax($sales_amount)
+
+{
+
+return($sales_amount * 0.075);?
+
+}?
+
+?>
+</pre>
+
+Let’s add some session authentication, authorization and data validation, and business rule validation: 
+
+<pre>
+<?php?  
+
+function calculate_tax($sales_amount)
+
+{
+
+// check that the session is logged in ?
+
+	assert_login();
+
+
+
+	// check that the user has the USER role to prevent 
+
+// guest and admin access
+
+	assert_role(‘USER’);
+
+
+
+// Validate data and business rules
+
+if ( is_numeric($sales_amount) && $sales_amount > 0 )
+
+{
+
+// Perform the calculation and return
+
+return($sales_amount * 0.075);?
+
+}
+
+// Data failed validation and business rules
+
+return -1;
+
+}
+
+?>
+</pre>
+
+With these simple changes, we ensure that:
+
+* (Authentication) Enforce that the user is logged on
+
+* (Authorization and Compliance) Enforce role authorization and provide SOX-compliant segregation of duties
+
+* (Data Validation) Ensure that the data is safe to perform our calculation
+
+* (Business Rule Validation) Lastly, check the data is within acceptable business rule boundaries as it is not a good idea to calculate tax for negative and zero values
+
+Obviously, performing a tax rate calculation is not that important, but if it was an insurance premium calculator (which uses highly sensitive actuary data) this is the minimum you would expect to see for sensitive code.
+
+==Silent transactional authorization ==
+
+Any system that silently processes transactions using a single submission is dangerous to the client. For example, if a normal web application allows a simple URL submission, a preset session attack will allow the attacker to complete a transaction without the user’s authorization. In Ajax, it gets worse: the transaction is silent; it happens with no user feedback on the page, so an injected attack script may be able to steal money from the client without authorization. 
+
+'''How to determine if you are vulnerable '''
+
+Determine if the application:
+
+* Is vulnerable to DOM injection and can run arbitrary JavaScript
+
+* If the browser allows execution of loaded JavaScript via URL entry, by navigating to the transaction submission page, and then typing in javascript:function(args). If the JavaScript is executed, it is likely that spyware will also be able to execute this code via the DOM model
+
+'''Countermeasures '''
+
+Ensure that all transactions are conducted with appropriate authorization, including transaction signing as necessary
+
+==Untrusted or absent session data ==
+
+A common mis-implementation with Ajax is the desire to call a second server. 
+
+[[Image:Ajax Second Server.gif]]
+
+Session data on the first server usually contains relatively trustworthy authentication and authorization information, as well as sensitive state, but in general, the second server cannot access this information in a timely or safe fashion. 
+
+An example includes running an Ajax application on <u>http://www.example.com</u>, and the Ajax code is able to directly process share trades on <u>http://market.somebiginvestmentfirm.com/</u> via the use of embedded trust or embedded credentials. 
+
+Attackers will be able to fraudulently perform transactions if there is no shared state between the two systems. This attack only requires that the attackers can tamper with embedded state on the client and if market.somebiginvestmentfirm.com foolishly trusts calls from Ajax callers without first checking with example.com. However, if example.com is simply one of hundreds of brokers, then this scenario is very unlikely to be secure no matter how it’s sliced or diced. This particular scenario requires federated identity, which is discussed further in the Authentication chapter.
+
+'''How to determine if you are vulnerable '''
+
+You are vulnerable to this issue if:
+
+* Sensitive state is passed through the client to the second server in the foolish hope it will be trusted by the second server
+
+* The Ajax endpoints are hosted on a different server with unsharable session state
+
+* The second server is addressed by a URL that would prevent the cookies from the first session being used by the second server. Most browsers do not allow an application running on <u>ws.example.com</u> to read cookies from <u>www.example.com</u>. However, browsers will allow cookies to be read from <u>http://example.com</u> but you should not rely on this as an attacker may spoof another URL such as attack.example.com and set cookies for example.com. 
+
+* If the web service or other endpoint cannot obtain data from the first server’s session state for any other reason (such as incompatible technologies, like running a PHP web application and the Ajax application is trying to consume ASP.NET web services).
+
+'''Countermeasures '''
+
+There are at least three methods to get around this issue:
+
+* Do not host the receiving end point on a different server; simply scale the entire application up (web services and all) on the same host. This allows trivially easy access to the trusted session state.
+
+* Stash the state in a database, and pass a cryptographically strong random key from the first server to the second server via the client. This method is far slower, more code intensive, and less scalable than the first solution.
+
+* Use federated authentication to provide a shared authorization context and verify it on the second server. This is usually very slow, but it is safe as long as the single sign-on (SSO) implementation is relatively secure and does not allow replay attacks.
+
+A solution that will not work is to simply pass the sensitive state via the client. A hostile client can tamper with the username, role, or any other sensitive state, so it cannot be trusted to transmit such data safely.
+
+==State management ==
+
+The DOM is designed to be manipulated and visible within the browser. It was never designed to be a secure storage area, but rather as a method of controlling how the page looks and behaves. Therefore, secure applications need to take care with client side storage of secure state.
+
+'''How to determine if you are vulnerable '''
+
+
+
+'''Countermeasures '''
+
+   
+
+==Tamper resistance  ==
+
+If state is stored on the client, the attacker is able to easily manipulate this state using a DOM inspection tool, or simply by re-writing to their own API. 
+
+'''How to determine if you are vulnerable: '''
+
+* Use DOM inspection tools like FireBug (https://addons.mozilla.org/firefox/1843/) – can you see client side state?
+
+* Can you change the state?
+
+* Use proxy tools, such as Paros, Spike Proxy, or WebScarab. When you see client-side state, can you modify it or inject interesting traffic? Does the server-side code detect the change in a reasonable way? 
+
+'''Countermeasures '''
+
+* Do not obfuscate client side state for no purpose – this requires more code and is trivially bypassed by advanced attackers
+
+* Applications should maintain a copy of all client-side state, and only accept back state that the user is authorized to change, such as a form fields or settings which they can change in the web UI
+
+* Ensure that the action is authorized before performing any activity on submitted data
+
+* Include server-side validation, preferring white listing to blacklisting.
+
+==Privacy  ==
+
+Almost all Ajax clients use XMLHttpRequest with GET requests. These embed the data in the “URL”, and even though the data is generally not visible to the user, it is available in the browser history. 
+
+Phishers favor GET requests. They love to use links embedded in e-mails. If coupled with poorly written code that does not assert authorization, such code will allow the phisher to commit an unauthorized transaction.
+
+Even if POSTs are used, private data can be cached in intermediate untrusted caches if the application uses HTTP rather than HTTPS connections. 
+
+Most browsers have GET data limits, which can be as little as 2 KB. POSTs do not have this limitation, allowing far more data to be sent in any one request. 
+
+'''How to determine if you are at risk '''
+
+* Use a proxy tool, like Paros, Spike, or WebScarab to determine the mode of the Ajax interaction. If it is GET, you are potentially at risk.
+
+* Look at the data – does it contain details such as usernames, passwords, names, addresses, medical history, bank account, tax, or other private details? If so, you are at risk.
+
+* If you are sending sensitive data, can you access the Ajax endpoint via HTTP? If so, you are at risk from privacy breaches.
+
+'''Countermeasures '''
+
+Generally, regardless of data value, use only POST requests. 
+
+''CPaint POST transfer mode client example''
+
+
+<pre>
+var cp = new cpaint();
+
+cp.set_transfer_mode(‘POST’);'
+
+…
+
+cp.call(‘processCreditCard.php’, ‘setCCDetail’, document.getElementById(‘creditcardnumber’), document.getElementById(‘creditcardexpiry’),
+
+document.getElementById(‘ccv’));
+
+CPaint POST transfer mode server example
+
+<?php?  
+
+function setCCDetail($cc, $expiry, $ccv)
+
+{
+
+// check that the session is logged in ?
+
+	assert_login();
+
+
+	// check that the user has the USER role to prevent 
+
+// guest and admin access
+
+	assert_role(‘USER’);
+
+
+
+// Validate data and business rules
+
+if ( is_credit_card($cc) && is_expiry_date($expiry) && is_numeric($ccv) )
+
+{
+
+// Set the credit card details
+
+$this->cc = $cc;
+
+$this->exp = $expiry;
+
+$this->ccv = $ccv;
+
+return true;
+
+}
+
+// Data failed validation and business rules
+
+return false;
+
+}
+
+?>
+</pre>
+
+
+Include server-side code that enforces the source of the data, so that it only comes from the POST, not from the request, GET, environment, or cookie data.
+
+If data transiting Ajax endpoints is protected by the users’ privacy laws, ensure that the data transits only over HTTPS using SSLv3 or TLS 1.0 or better and block HTTP communications.
+
+==Proxy Façade  ==
+
+Many toolkits, particularly PHP toolkits, allow you to register a class or file with the Ajax toolkit and thus call that method. CPaint for example works in this manner. However, some toolkits are worse than others – they allow '''any''' in context PHP function to be called, including system() and eval(). Others are not robust against PHP code injection – see below for more details.
+
+'''How to determine if you are vulnerable '''
+
+If your toolkit works by registering classes or functions, try:
+
+* Calling a system call, such as system() or printf()
+
+* Calling another function in your code, but one which has not been registered
+
+* Try using some of the language features, such as ` for PHP for example 
+
+If any of these attacks work, your code (and any code using this framework) is vulnerable to attack.
+
+'''Countermeasures '''
+
+In general, such methods of calling server side code are fraught with danger. It’s better to provide a limited interface, called a proxy façade, to only allow access to permitted functions. 
+
+This would also allow authorization checks and basic validation to be performed before calling previously internal code. 
+
+==SOAP Injection Attacks ==
+
+'''How to determine if you are vulnerable '''
+
+
+
+'''Countermeasures '''
+
+   
+
+
+
+==XMLRPC Injection Attacks ==
+
+'''How to determine if you are vulnerable '''
+
+
+
+'''Countermeasures '''
+
+   
+
+
+
+==DOM Injection Attacks ==
+
+'''How to determine if you are vulnerable '''
+
+
+
+'''Countermeasures '''
+
+   
+
+
+
+==XML Injection Attacks ==
+
+'''How to determine if you are vulnerable '''
+
+
+
+'''Countermeasures '''
+
+   
+
+
+
+==JSON (JavaScript Object Notation) Injection Attacks ==
+
+'''How to determine if you are vulnerable '''
+
+
+
+'''Countermeasures '''
+
+   
+
+
+
+==Encoding safety ==
+
+Ajax applications are particularly prone to encoding attacks as JavaScript understands several encodings (depending on the browser, locale and code page), whilst the scripting language itself is primitive when it comes to providing robust encoding and decoding utilities. 
+
+'''How to determine if you are vulnerable '''
+
+
+
+'''Countermeasures '''
+
+Do not rely heavily upon JavaScript processing the encoding or decoding capabilities for the client. Send data pre-encoded to the client, and receive data and handle it correctly. 
+
+For more details, see the Canonicalization chapter later in this book.
+
+==Auditing ==
+
+'''How to determine if you are vulnerable '''
+
+
+
+'''Countermeasures '''
+
+   
+
+
+
+==Error Handling ==
+
+'''How to determine if you are vulnerable '''
+
+
+
+'''Countermeasures '''
+
+   
+
+
+
+
+
+==Accessibility ==
+
+Almost all Ajax toolkits and applications are inaccessible. Rarely do they pass even basic W3C WAI validation, and do not have accessible alternative paths. Some toolkits, such as Tibco General Interface, crash the browser if a larger text size is chosen. This is completely unacceptable and worse, completely preventable. Being a “rich” interface does not excuse disability requirements. Based upon the US Census conducted in 2000, around 19.1% of the total US population has a disability of some kind (with similar levels elsewhere on the planet). Locking out 20% of your potential users from using your application is unacceptable and is in fact, illegal in most countries. 
+
+Nearly all Western disability discrimination laws are the same – they require accessibility unless it is a justifiable hardship. They do not distinguish between open source or closed source, for profit or charitable, government or corporate – their application is universal.
+
+The techniques for creating accessible applications are widely known and have been documented for more than ten years. Accessibility evaluation tools are included or available as an option in every web development environment. As it does not cost a great deal to write new software to be accessible (the primary cost is in the testing), it is never a justifiable hardship to be accessible. 
+
+Over the last few years, case law has firmly solidified upon the side of the disabled (see the references, particularly the SOCOG / IBM decision). If you now deliberately write inaccessible software, it would be negligent in the same way that building new buildings without accessibility aides such as ramps and lifts to allow wheelchair access. This stuff is not rocket science, it does not cost a lot of money to do, and lastly, you may need it one day.
+
+'''How to identify if you are vulnerable '''
+
+* Read the W3C WAI guidelines and ensure your application has alternate accessible paths, and adheres to basic accessibility guidelines.
+
+* Identify suitable evaluation tools for your development environment if it does not already contain them. Fix issues found by these tools and re-test.
+
+* Try using the basic accessibility tools built into your operating system to see if your code works in high contrast, different color schemes, resize the text elements in your browser (in Firefox use Control-+ key to do this, Text Size -> Larger in Internet Explorer 6.0 or use the zoom control on the bottom right of the screen in IE 7), (Windows specific) set the font resolution to high DPI to emulate large fonts, choose big default fonts in the browser, use the screen magnification tool, and test various basic screen readers. If your application fails any of these tests, you are vulnerable. 
+
+* Once you are satisfied your application should have a reasonable shot at passing full testing, identify suitable accredited accessibility test firms or similarly qualified resources who can test your application using actual disability tools and provide qualified feedback. In general, unless your application is very simple, you should fix any issues found.
+
+'''Countermeasures '''
+
+* Develop with accessibility in mind. Just like security, the sooner you do it, the cheaper this activity becomes and the more likely your application will be accessible.
+
+* Test in house regularly. If possible, employ staff or volunteers who require such accessibility; they will let you know the best choices for full featured screen readers, Braille devices, and magnification and other accessibility aides. Let them test your application and provide feedback. 
+
+* If you are likely to sell to corporate or government organizations, ensure that all applications are tested by an accredited accessibility testing firm. Fix all the issues they identify.
+
+==Further Reading ==
+
+AJAX Spell Command Injection Vulnerability
+
+<u>http://www.securityfocus.com/bid/13986/discuss</u>
+
+CPaint Command Injection Vulnerability
+
+<u>http://www.securityfocus.com/bid/14565/discuss</u> 
+
+XML-RPC Command Injection Vulnerability
+
+<u>http://www.securityfocus.com/bid/14088/discuss</u>
+
+Maguire vs SOCOG/IBM, Nublog
+
+<u>http://www.contenu.nu/socog.html</u> 
+
+W3C, Existing accessibility tools
+
+<u>http://www.w3.org/WAI/ER/existingtools.html</u> 
+
+US Census 2000: Disability Status 2000
+
+<u>http://www.census.gov/prod/2003pubs/c2kbr-17.pdf</u> 
+
+==Reference==
+[[Guide Table of Contents|Development Guide Table of Contents]]
+[[Category:OWASP_Guide_Project]]
+[[Category:OWASP AJAX Security Project]]
+[[Category:AJAX]]

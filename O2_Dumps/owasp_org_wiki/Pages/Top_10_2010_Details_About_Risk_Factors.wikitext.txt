@@ -1,0 +1,107 @@
+{{Top_10_2010:TopTemplate|useprev=2010PrevLink|usenext=Nothing|prev=Notes About Risk}}
+{{Top_10_2010:SubsectionColoredTemplate|Top 10 Risk Factor Summary|
+The following table presents a summary of the 2010 Top 10 Application Security Risks, and the risk factors we have assigned to each risk. These factors were determined based on the available statistics and the experience of the OWASP team. To understand these risks for a particular application or organization, <b><u>you must consider your own specific threat agents and business impacts</u></b>. Even egregious software weaknesses may not present a serious risk if there are no threat agents in a position to perform the necessary attack or the business impact is negligible for the assets involved.
+}}
+
+{| style="align:center; text-align:center; border:2px; width:100%; solid #4F81BD; background-color:#F2F2F2; padding=2;" 
+|- style="background-color: #4F81Bd; color: #FFFFFF;"
+! RISK !! Threat Agents !! Attack Vectors
+! colspan="2" | Security Weakness
+! Technical Impacts
+! Business Impacts
+|- 
+| style="background-color: #D9D9D9; color: #000000;" | [[Top_10_2010-A1 | A1-Injection]]
+| style="background-color: #D9D9D9; color: #000000;" | 
+| style="background-color: #FF0000; color: #000000;" | '''Exploitability<br>EASY
+| style="background-color: #FFB200; color: #000000;" | '''Prevalence<br>COMMON
+| style="background-color: #FFB200; color: #000000;" | '''Detectability<br>AVERAGE
+| style="background-color: #FF0000; color: #000000;" | '''Impact<br>SEVERE
+| style="background-color: #D9D9D9; color: #000000;" | 
+|-
+| style="background-color: #D9D9D9; color: #000000;" | [[Top_10_2010-A2 | A2-XSS
+| style="background-color: #D9D9D9; color: #000000;" | 
+| style="background-color: #FFB200; color: #000000;" | '''Exploitability<br>AVERAGE
+| style="background-color: #FF00FF; color: #000000;" | '''Prevalence<br>VERY WIDESPREAD]]
+| style="background-color: #FF0000; color: #000000;" | '''Detectability<br>EASY
+| style="background-color: #FFB200; color: #000000;" | '''Impact<br>MODERATE
+| style="background-color: #D9D9D9; color: #000000;" | 
+|-
+| style="background-color: #D9D9D9; color: #000000;" | [[Top_10_2010-A3 | A3-Authentication]]
+| style="background-color: #D9D9D9; color: #000000;" | 
+| style="background-color: #FFB200; color: #000000;" | '''Exploitability<br>AVERAGE
+| style="background-color: #FFB200; color: #000000;" | '''Prevalence<br>COMMON
+| style="background-color: #FFB200; color: #000000;" | '''Detectability<br>AVERAGE
+| style="background-color: #FF0000; color: #000000;" | '''Impact<br>SEVERE
+| style="background-color: #D9D9D9; color: #000000;" | 
+|-
+| style="background-color: #D9D9D9; color: #000000;" | [[Top_10_2010-A4 | A4-DOR]]
+| style="background-color: #D9D9D9; color: #000000;" | 
+| style="background-color: #FF0000; color: #000000;" | '''Exploitability<br>EASY
+| style="background-color: #FFB200; color: #000000;" | '''Prevalence<br>COMMON
+| style="background-color: #FF0000; color: #000000;" | '''Detectability<br>EASY
+| style="background-color: #FFB200; color: #000000;" | '''Impact<br>MODERATE
+| style="background-color: #D9D9D9; color: #000000;" | 
+|-
+| style="background-color: #D9D9D9; color: #000000;" | [[Top_10_2010-A5 | A5-CSRF]]
+| style="background-color: #D9D9D9; color: #000000;" | 
+| style="background-color: #FFB200; color: #000000;" | '''Exploitability<br>AVERAGE
+| style="background-color: #FF0000; color: #000000;" | '''Prevalence<br>WIDESPREAD
+| style="background-color: #FF0000; color: #000000;" | '''Detectability<br>EASY
+| style="background-color: #FFB200; color: #000000;" | '''Impact<br>MODERATE
+| style="background-color: #D9D9D9; color: #000000;" | 
+|-
+| style="background-color: #D9D9D9; color: #000000;" | [[Top_10_2010-A6 | A6-Config]]
+| style="background-color: #D9D9D9; color: #000000;" | 
+| style="background-color: #FF0000; color: #000000;" | '''Exploitability<br>EASY
+| style="background-color: #FFB200; color: #000000;" | '''Prevalence<br>COMMON
+| style="background-color: #FF0000; color: #000000;" | '''Detectability<br>EASY
+| style="background-color: #FFB200; color: #000000;" | '''Impact<br>MODERATE
+| style="background-color: #D9D9D9; color: #000000;" | 
+|-
+| style="background-color: #D9D9D9; color: #000000;" | [[Top_10_2010-A7 | A7-Crypto]]
+| style="background-color: #D9D9D9; color: #000000;" | 
+| style="background-color: #FFFF00; color: #000000;" | '''Exploitability<br>DIFFICULT
+| style="background-color: #FFFF00; color: #000000;" | '''Prevalence<br>UNCOMMON
+| style="background-color: #FFFF00; color: #000000;" | '''Detectability<br>DIFFICULT
+| style="background-color: #FF0000; color: #000000;" | '''Impact<br>SEVERE
+| style="background-color: #D9D9D9; color: #000000;" | 
+|-
+| style="background-color: #D9D9D9; color: #000000;" | [[Top_10_2010-A8 | A8-URL Access]]
+| style="background-color: #D9D9D9; color: #000000;" | 
+| style="background-color: #FF0000; color: #000000;" | '''Exploitability<br>EASY
+| style="background-color: #FFFF00; color: #000000;" | '''Prevalence<br>UNCOMMON
+| style="background-color: #FFB200; color: #000000;" | '''Detectability<br>AVERAGE
+| style="background-color: #FFB200; color: #000000;" | '''Impact<br>MODERATE
+| style="background-color: #D9D9D9; color: #000000;" | 
+|-
+| style="background-color: #D9D9D9; color: #000000;" | [[Top_10_2010-A9 | A9-Transport]]
+| style="background-color: #D9D9D9; color: #000000;" | 
+| style="background-color: #FFFF00; color: #000000;" | '''Exploitability<br>DIFFICULT
+| style="background-color: #FFB200; color: #000000;" | '''Prevalence<br>COMMON
+| style="background-color: #FF0000; color: #000000;" | '''Detectability<br>EASY
+| style="background-color: #FFB200; color: #000000;" | '''Impact<br>MODERATE
+| style="background-color: #D9D9D9; color: #000000;" | 
+|-
+| style="background-color: #D9D9D9; color: #000000;" | [[Top_10_2010-A10 | A10-Redirects]]
+| style="background-color: #D9D9D9; color: #000000;" | 
+| style="background-color: #FFB200; color: #000000;" | '''Exploitability<br>AVERAGE
+| style="background-color: #FFFF00; color: #000000;" | '''Prevalence<br>UNCOMMON
+| style="background-color: #FF0000; color: #000000;" | '''Detectability<br>EASY
+| style="background-color: #FFB200; color: #000000;" | '''Impact<br>MODERATE
+| style="background-color: #D9D9D9; color: #000000;" | 
+|}
+
+
+
+{{Top_10_2010:SubsectionColoredTemplate|Additional Risks to Consider|
+The Top 10 covers a lot of ground, but there are other risks that you should consider and evaluate in your organization. Some of these have appeared in previous versions of the OWASP Top 10, and others have not, including new attack techniques that are being identified all the time. Other important application security risks (listed in alphabetical order) that you should also consider include:
+* [[Clickjacking]] (Newly discovered attack technique in 2008)
+* Concurrency Flaws 
+* [[Application_Denial_of_Service | Denial of Service]]] (Was 2004 Top 10 – Entry A9)
+* [http://projects.webappsec.org/Information-Leakage Information Leakage] and [[Top_10_2007-A6 | Improper Error Handling]] (Was part of 2007 Top 10 – Entry A6)
+* [http://projects.webappsec.org/Insufficient+Anti-automation Insufficient Anti-automation]
+* Insufficient Logging and Accountability (Related to 2007 Top 10 – Entry A6)
+* [[ApplicationLayerIntrustionDetection | Lack of Intrusion Detection and Response]]
+* [[Top_10_2007-A3 | Malicious File Execution]] (Was 2007 Top 10 – Entry A3)
+}}
+{{Top_10_2010:BottomTemplate|useprev=2010PrevLink|usenext=Nothing|prev=Notes About Risk}}

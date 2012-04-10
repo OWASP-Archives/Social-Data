@@ -1,0 +1,128 @@
+There was a great article on MSDN a while back (years at this point) that showed the creation of a SOAP extension that would verify incoming requests against a schema, something .NET does not support out of the box (even in 2.0).  Additionally there was quasi support for [http://www.schematron.com/ schematron] via Assert attributes.  This allows for a very powerful input validation of web services.
+
+This is a project to provide continued support for this extension.  There have been some updates to the original code, including moving to the .NET Framework v2.0.
+
+The original article is available [http://msdn.microsoft.com/msdnmag/issues/03/07/XMLSchemaValidation/ here].
+
+== Performance Penalties ==
+
+To add in XML schema validation we must parse the soap packet ourselves.  This of course will incur an additional performance hit outside of simply turning on validation.  Unfortunately there is no method (that I'm aware of) to enable schema validation in .NET currently.
+
+== Downloading ==
+
+[http://canoodle.googlecode.com/files/SoapValidation-0.5.msi SoapValidation-0.5.msi] - Assembly, documentation, samples
+
+[http://canoodle.googlecode.com/files/SoapValidation-0.5-src.zip SoapValidation-0.5-src.zip] - Source, documentation, samples
+
+The latest code is now being maintained in a [http://code.google.com/p/canoodle/ Google Code repository].
+
+== Installation ==
+
+Download the installer and run.  Easy :)
+
+== Reporting Bugs ==
+
+Report bugs to Michael Eddington @ meddington@phed.org.
+
+== Use ==
+
+Add a reference to SoapValidator.dll from your web service project.  Modify your web.config to include the required settings and add attributes to classes and/or methods.  See examples later.
+
+=== Methods of Use ===
+
+There are two methods for using the validator.  First you can force all web methods to be validated using the web.config file.  Second you can mark methods using [Validation] attribute.
+
+<h3>Attributes</h3>
+<p>[<strong>Validation</strong>]</p>
+<p>Mark web method for validation against schemas</p>
+<p>[<strong>ValidationSchemaFolder</strong>(string relativeFolder)]</p>
+
+<p>Used to add folders that contain schemas to load and cache.&nbsp; This attribute is only valid for classes.&nbsp; The relativeFolder parameter is relative to the vroot.</p>
+<ul>
+<li><em>relativeFolder</em> -- Folder of schemas to load and cache.&nbsp; Relative to the virtual root (vroot).</li></ul>
+<p>[<strong>ValidationSchema</strong>(string schemaFile)]</p>
+
+<p>Used to add schema files to load and cache.&nbsp; This attribute is only valid for classes.&nbsp; The schemaFile parameter is relative to the vroot.</p>
+<ul>
+<li><em>schemaFile</em> -- Schema file to load.&nbsp; Relative to the virtual root (vroot).</li></ul>
+<p>[<strong>Assert</strong>(string rule)]<br>[<strong>Assert</strong>(string rule, string description)]</p>
+
+<p>Used to add an XPath&nbsp;validation expression to a web method.&nbsp; The XPath expression must evaluate to true.</p>
+<ul>
+<li><em>rule</em> -- XPath validation expression.&nbsp; Must evaluate to true. 
+<li><em>description</em> -- [optional] Description of assertion rule.</li></ul>
+<p>[<strong>AssertNamespaceBinding</strong>(string prefix, string ns)]</p>
+
+<p>Specifies namespace bindings used by assert xpath's.</p>
+<ul>
+<li><em>prefix</em> -- namespace prefix 
+<li><em>ns</em> -- namespace to map to</li></ul>
+<hr>
+
+<h3>Web.config Changes</h3>
+<p>First two extensions must be registered by adding the following inside of the &lt;webServices&gt; node:</p>
+
+<p></p>
+<p></p><pre>&lt;soapExtensionReflectorTypes&gt;
+  &lt;add type="SoapValidation.ValidationExtensionReflector, SoapValidation"/&gt;
+&lt;/soapExtensionReflectorTypes&gt;
+&lt;serviceDescriptionFormatExtensionTypes&gt;
+  &lt;add type="SoapValidation.ValidationFormatExtension, SoapValidation"/&gt;
+&lt;/serviceDescriptionFormatExtensionTypes&gt; 
+</pre>
+<p>Next, POST and GET protocols must be disabled by adding the following inside of the &lt;webServices&gt; node:</p><pre>&lt;protocols&gt;
+
+  &lt;remove name="HttpPost" /&gt;
+  &lt;remove name="HttpGet" /&gt;
+&lt;/protocols&gt;
+</pre>
+<p>Finally, if you want to force all web methods to be validated with out using the [Validation] attribute add the following inside of the &lt;webServices&gt; node:</p><pre>&lt;soapExtensionTypes&gt;
+  &lt;add type="SoapValidation.ValidationExtension, SoapValidation" priority="1" group="0" /&gt;
+
+&lt;/soapExtensionTypes&gt;
+</pre>
+<hr>
+
+<h3>Using Validation</h3>
+<p>Here is a basic example that will cause validation to be run:</p><pre>[WebService(Namespace="<a href="http://example.org/geometry&quot;)]public">http://example.org/geometry")]
+public</a> class SimpleTests : System.Web.Services.WebService
+{ 
+  [WebMethod]
+  [Validation]
+  public double CalcArea2(double length, double width)
+  {
+    return length * width;
+  }
+}</pre>
+<hr>
+
+<h3>Using Assertions</h3>
+
+<p>Here is an example of using assertions to verify business rules in a way schema's fall short.</p><pre>[AssertNamespaceBinding("t", "<a href="http://example.org/geometry&quot;)]">http://example.org/geometry")]</a>
+[WebService(Namespace="<a href="http://example.org/geometry&quot;)]">http://example.org/geometry")]</a>
+public class SimpleTests : System.Web.Services.WebService
+{ 
+  [WebMethod]
+  [Validation]
+  [Assert("(//t:length * //t:width) &gt; 100", "Area must be greater than 100")]
+  [Assert("(//t:length div //t:width) = 2", "Length must be exactly twice width")]
+  public double CalcArea2(double length, double width)
+  {
+    return length * width;
+  }
+}
+</pre>
+<p>&nbsp;</p>
+
+== Project Contributors ==
+
+[http://phed.org Michael Eddington]
+
+== Project Sponsor ==
+
+[http://leviathansecurity.com Leviathan Security Group, Inc.]
+
+[[Category:OWASP .NET Project]]
+[[Category:OWASP Download]]
+[[Category:OWASP Tool]]
+[[Category:OWASP Validation Project]]

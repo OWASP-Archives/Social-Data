@@ -1,0 +1,29 @@
+10.  Improper Error Handling -> 10.1  Fail Open Authentication Scheme
+
+=== Lesson overview ===
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution ===
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information. 
+
+=== Strategy ===
+
+This lessons demonstrates a fail open vulnerability in that when the 'Password' parameter in the POST body is removed entirely, the user is authenticated. To mitigate this, a straightforward pinpoint strategy was used.
+
+=== Implementation === 
+
+The lesson is mitigated by the ruleset 'rulefile_10_improper-error-handling.conf':
+
+<pre>
+  SecRule ARGS:menu "!@eq 1100" "t:none,pass,skip:2"
+  SecRule &ARGS:Password "@eq 0" "t:none,deny,severity:3, \ 
+    msg:'Post parameter Password is mandatory, but it is not present in request.', \ 
+    tag:'AUTHENTICATION',redirect:/_error_pages_/lesson10-1.html"
+  SecAction "allow:request,t:none, \ 
+    msg:'Returning; nothing bad on this page (rulefile_10-1).'"
+</pre>
+
+
+Note that it is perfectly acceptable - and probably preferable - to use <font face="Courier New">'&ARGS_POST:Password'</font> instead of <font face="Courier New">'&ARGS:Password'</font>.

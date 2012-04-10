@@ -1,0 +1,6 @@
+'''Speaker: Eric Klien - Fortify Software'''
+
+'''Topic : Make My Day - Just Run a Web Scanner:''' Countering the Faults of Typical Web Scanners Through Byte-Code Injection -  Bytecode instrumentation allows a user to inject additional code into an application's binary. This technique has traditionally been used to measure the runtime performance and test coverage of Web applications. However, bytecode instrumentation has other promising uses, including software security. As the overall security space evolves from the outside-in approach we saw with Web Application Firewalls in the 1990s, bytecode instrumentation provides the perfect opportunity to embed security into the application itself. This talk will provide an overview of bytecode instrumentation, demonstrate how the technology works, and show some concrete ways it can be used to inject security features into an application after it has been developed
+
+
+'''Speaker Notes:''' [https://www.owasp.org/images/7/7d/Erik_-_Byte_Code_Injection_Security_Seminar.ppt Download Here]

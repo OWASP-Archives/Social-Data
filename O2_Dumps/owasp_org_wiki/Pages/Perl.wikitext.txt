@@ -1,0 +1,91 @@
+This page should collect together any resources relating to [http://www.perl.org/ Perl] and OWASP or security in general. 
+
+It is perhaps odd that this page is so new: 
+
+#Perl has long been an [http://cpansearch.perl.org/src/DAPM/perl-5.10.1/Artistic open source language] and often associated with the internet. 
+#It offers what seems to be a much under-used method of combating many sorts of exploit namely [http://search.cpan.org/~dapm/perl-5.10.1/pod/perlsec.pod#Taint_mode taint] mode. This forces every "input" to the program to be checked for malign influences before it is allowed to effect the "outside" of the program.
+
+== Possible perl OWASP projects  ==
+
+#Perl ports of multi-language OWASP projects, for example [[AntiSamy]]. 
+#Review of CPAN modules according to OWASP standards, for example [http://search.cpan.org/~silasmonk/CGI-Application-Plugin-Authentication-0.17/lib/CGI/Application/Plugin/Authentication.pm CGI::Application::Plugin::Authentication]. 
+#A perl module to measure the [http://en.wikipedia.org/wiki/Password_strength strength of passwords].
+
+== Perl resources  ==
+
+#[[OWASP ESAPI Perl Project]] has been started.
+#Perl [http://perldoc.perl.org/perlsec.html security] man page 
+#[http://perlmonks.org Perl Monks] 
+#[http://www.cgisecurity.com/lib/sips.html Security Issues in Perl Scripts by Jordan Dimov]
+
+== Perl modules  ==
+An attempt to list and classify perl modules related to web security. This should lead on to discussion of vulnerabilities.
+
+=== Web frameworks  ===
+
+Authentication modules will often be framework specific so let's list those. 
+
+{| border="1" cellspacing="1" cellpadding="1" style="width: 742px; height: 220px;"
+|+ Perl web frameworks and their security mechanisms 
+|-
+! scope="col" | Framework 
+! scope="col" | Authentication 
+! scope="col" | Authorization 
+! scope="col" | Comments
+|-
+| [http://www.catalystframework.org/ Catalyst] 
+| [http://search.cpan.org/perldoc?Catalyst::Plugin::Authentication Catalyst::Plugin::Authentication]<br> 
+| The same module also covers authorization via the concept of realms.<br> 
+| Catalyst seems to have issues with taint mode.
+|-
+| [http://cgi-app.org/ CGI::Application] 
+| [http://search.cpan.org/perldoc?CGI::Application::Plugin::Authentication CGI::Application::Plugin::Authentication] 
+| [http://search.cpan.org/perldoc?CGI::Application::Plugin::Authorization CGI::Application::Plugin::Authorization] 
+| Not a very coherent framework, multiple authors
+|-
+| [http://jifty.org/view/HomePage Jifty] 
+| [http://search.cpan.org/~alexmv/Jifty-0.91117/lib/Jifty/Plugin/Authentication/Password.pm Jifty::Plugin::Authentication]
+| n/a
+| ?
+|-
+| [http://mojolicious.org/ Mojolicious] 
+| <br> 
+| <br> 
+| <br>
+|-
+| [http://perldancer.org/ Dancer] 
+| <br> 
+| <br> 
+| <br>
+|}
+
+=== Authentication<br>  ===
+
+A lot of generic authentication modules can be found on [http://search.cpan.org/search?query=Authen&mode=all CPAN]. 
+
+Also [http://cpansearch.perl.org/src/LDS/HTTPD-User-Manage-1.66/user_manage.html HTTPD::User::Manage].<br> 
+
+=== Authorization  ===
+
+I am not aware of anything generic. 
+
+=== HTML validation/cleanup  ===
+
+Anything similar to [[AntiSamy]] should go here. 
+
+[http://search.cpan.org/perldoc?HTML::Scrubber HTML::Scrubber] 
+
+There is a discussion on this subject going on at [http://perlmonks.org/?node_id=861639 PerlMonks:Dynamic HTML cleanup].
+
+
+
+=== Password strength  ===
+
+[http://search.cpan.org/perldoc?Data::Password::Entropy Data::Password::Entropy]<br>
+
+=== CAPTCHA alternatives ===
+These are attempts to distinguish human and robot users. CAPTCHA is not perfect at this and is highly inaccessible.
+
+[http://search.cpan.org/~lushe/Authen-Quiz-0.05/lib/Authen/Quiz.pm Authen::Quiz]<br>
+
+[[Category:Language]]

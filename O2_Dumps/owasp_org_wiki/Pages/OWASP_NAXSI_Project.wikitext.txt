@@ -1,0 +1,60 @@
+[[File:naxsi-logo.jpg]]
+==== Main  ====
+ 
+=What is Naxsi?=
+
+Naxsi is an open source, high performance, low rules maintenance, Web
+Application Firewall module for Nginx, the infamous web server and
+reverse-proxy.
+
+Its goal is to help people securing their web applications against attacks like
+SQL Injections, Cross Site Scripting, Cross Site Request Forgery, Local &
+Remote file inclusions.
+
+
+The difference with most WAF (Web Application Firewalls) out there is that it
+does not rely upon signatures to detect and block attacks. It uses a
+simpler model where, instead of trying to detect "known" attacks, it detects unexpected
+characters in the HTTP requests/arguments. 
+
+
+Each kind of unusual character will increase the score of the request. If the request reaches a score considered "too high", the request will be denied, and the user will be
+redirected to a "forbidden" page. Yes, it works somewhat like a spam system.
+
+==== Project About  ====
+ 
+{{:Projects/OWASP NAXSI Project | Project About}} 
+ __NOTOC__ <headertabs />  
+[[Category:OWASP_Project|NAXSI Project]] [[Category:OWASP_Tool]] [[Category:OWASP_Download]] [[Category:OWASP_Alpha_Quality_Tool]]
+
+
+=Why it is different?=
+
+Because it works on a learning mode (read white list). Set the module in
+learning mode, crawl your site, and it will generate the necessary white lists
+to avoid false positives! Naxsi doesn't rely upon pre-defined signatures, so it
+should be capable to defeat complex/unknown/obfuscated attack patterns.
+
+= Project Main Page =
+
+The project is currently hosted on googlecode as well, and you may find more details here :
+http://naxsi.googlecode.com
+
+Be sure to check the wiki as well !
+http://code.google.com/p/naxsi/w/list
+
+Naxsi 0.43 has just been released, you can find naxsi's last versions here :
+http://code.google.com/p/naxsi/downloads/list
+
+
+
+=Next steps=
+
+ * [http://code.google.com/p/naxsi/wiki/Howto Howto : See Naxsi in action !]
+ * [http://code.google.com/p/naxsi/wiki/NaxsiVsAppScan See Naxsi results on a highly vulnerable web site]
+ * [http://code.google.com/p/naxsi/wiki/Naxsi_Vs_ObfuscatedAttackPatterns See Naxsi results vs Obfuscated|Complex SQLi patterns]
+ * [http://code.google.com/p/naxsi/wiki/OnlyTrustWhatYouCanTest Try to bypass Naxsi !]
+ * [http://code.google.com/p/naxsi/wiki/WeNeedYou We need you!]
+ * [http://code.google.com/p/naxsi/wiki/KnownBugs Naxsi is young, there are known bugs] 
+ * [http://code.google.com/p/naxsi/wiki/LearningMode LearningMode, key feature !]
+ * [http://code.google.com/p/naxsi/wiki/NaxsiInternals Curious about Naxsi ? Check-out callgraphs and other geeky stuff !]

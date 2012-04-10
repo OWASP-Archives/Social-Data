@@ -1,0 +1,35 @@
+----
+{| style="width:100%" border="0" align="center"
+ | colspan="7" style="width:100%; background:#7B8ABD" align="center"|<font color="black">'''OWASP Live CD Project - SpoC 2007 Release'''
+ |-
+ | colspan="6" style="width:85%; background:white" align="left"|
+The OWASP Live CD (LabRat) is a bootable CD akin to knoppix but dedicated to Application Security. It shall serve as a vehicle and distrubition medium for OWASP tools and guides. This release version has been deprecated.  The current version of this project is the [http://www.owasp.org/index.php/Category:OWASP_Project_Frame_Experience_6#tab=.22Austin_Terrier.22_Release Austin Terrier.22 Release].
+ |-
+ | style="width:16%; background:#C2C2C2" align="center"|Project Leader
+ | style="width:16%; background:#C2C2C2" align="center"|Project Contributors
+ | style="width:18%; background:#C2C2C2" align="center"|Mailing List
+ | style="width:18%; background:#C2C2C2" align="center"|License
+ | style="width:16%; background:#C2C2C2" align="center"|Project Type
+ | style="width:16%; background:#C2C2C2" align="center"|Sponsors
+ |-
+ | style="width:16%; background:white" align="center"|[mailto:josh(at)packetfocus.com '''Joshua Perrymon''']
+ | style="width:16%; background:white" align="center"|[mailto:bcausey(at)zerodayconsulting.com '''Brad Causey''']
+ | style="width:18%; background:white" align="center"|[https://lists.owasp.org/mailman/listinfo/owasp-live-cd-2008-project '''Subscribe here''']
+ | style="width:18%; background:white" align="center"|[http://www.gnu.org/copyleft/fdl.html '''GNU Free Documentation 1.2''']
+ | style="width:16%; background:white" align="center"|[[:Category:OWASP_Project|'''Tool''']]
+ | style="width:16%; background:white" align="center"|[[OWASP Spring Of Code 2007|'''OWASP SpoC 07''']] [http://www.packetfocus.com '''PacketFocus'''], [http://www.ritsgroup.com '''Rits Group''']
+ |}
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#C2C2C2" color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#C2C2C2" color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#C2C2C2" color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:32%; background:white" align="center"|
+'''[[:Category:OWASP_Project_Assessment#Beta_Quality_Tool_Criteria|Beta Quality]]'''<br>
+ | style="width:36%; background:white" align="center"|
+[http://www.packetfocus.com/hackos/AOC_Labrat-ALPHA-0010.iso '''SpoC 2007 release version available to download''']<br>
+Project Pages [[:Category:OWASP_Live_CD_2007_Project|'''A''']] & [[SpoC 007 - OWASP LiveCD Project|'''B''']]
+| style="width:32%; background:white" align="center"|
+[http://www.owasp.org/index.php/Category:OWASP_Project_Frame_Experience_6#tab=.22Austin_Terrier.22_Release '''OWASP Live CD Project/Austin Terrier Release''']
+ |}
+----

@@ -1,0 +1,381 @@
+=Overview=
+
+==Abstract==
+
+Correctly implementing an input validation mechanism for a custom application is extremely difficult. It is then inevitable that large web applications will fall victim to this class of vulnerability. Therefore, a developer should have a clear understanding of how to successfully design and implement a reusable input validation mechanism for their applications. The OWASP Validation Documentation attempts to fulfill this requirement by providing the necessary design principles as well as an example implementation. This document is structured such that if a developer were to incorporate all of the presented design principles, then the result will be a complete and reusable input validation engine.
+
+=Design Principles=
+
+==A2.1	Design Principle Overview==
+
+The most overlooked module in web applications is the input validation mechanism. Unfortunately, most developers are either unaware of the consequences or simply find developing input validation mechanisms “too hard”. For the former, I refer you to the 'Guide'. The latest version at the time of writing is 2.01. There exists an entire section related to input validation and the potential consequences of faulty validation mechanisms. The most important concept that a reader should take away from the 'Data Validation' section of 'The Guide' is that a weak input validation mechanism “leads to almost all of the major vulnerabilities in applications, such as interpreter injection, locale/Unicode attacks, file system attacks, and buffer overflows” (The Guide, pg 173). Two obvious additions when discussing web application validation is that of Cross Site Scripting and SQL Injection. These attacks are constantly taking place and are often cited in the OWASP Application Security News section (http://www.owasp.org). Ever hear of a bank reporting that they've had several thousand credit card numbers stolen? Ever hear of the 'MySpace' worm? These issues would not exist had application developers implemented input validation correctly. Therefore, it is the goal of this document to provide a clear and detailed set of principals that should be incorporated in the development of an application specific input validation mechanism.
+
+===Positive Security Model===
+
+The validation engine should be primarily based around what “is” accepted rather than what “is not” accepted.
+
+===Centralized Design===
+
+The validation engine should be centralized such that every module in the application adheres to the validation rules and principles
+<nowiki>--~~~~Insert non-formatted text here
+----
+
+----
+<nowiki>
+== Insert non-formatted text here ==
+[[Image:[[Media:Example.jpg]]<math>'''Insert formula here'''''''Italic text''[[Link title]]''</math>]]</nowiki></nowiki>
+
+===Simplistic API===
+
+A developer should not necessarily be security-aware to use an input validation engine. The validation engine should be easily added to the application.
+
+===Dynamic Modification (Rule Based Approach)===
+
+The validation engine should be easily modified to handle new additions to the application. The use of the 'Security Validation Description Language' coupled with a dynamic loading scheme simplifies this requirement.
+
+===Action Based===
+
+The developer should be able to specify a desired set of actions to be taken on a per-parameter basis.
+
+===Negative Security===
+
+When the positive security model becomes too open, the developer should be able to implement a negative security model.
+
+=Positive Security Model=
+
+==Overview==
+
+Successful input validation must be based primarily around a positive security model. This means that we must define what “is” acceptable input rather than what “is not” acceptable input. This is also known as white and black listing, respectively. The problem with defining what “is not” acceptable is that there will always exist a multitude of exceptions. For example, consider the following method of XSS filtering:
+ 
+ public boolean validate(HttpServletRequest request, String parameterName) {
+ 	boolean result = false;
+ 	String parameterValue = null;
+ 	parameterValue = request.getParameter(parameterName);
+ 	if(parameterValue != null && parameterValue.indexOf(“<script”) != -1) {
+ 		result = true;
+ 	}
+ 	return result;
+ }
+
+Assuming a basic understanding of how cross site scripting works, one might glance at this code and believe that we have successfully filtered the scripts in the parameter value. However, consider the parameter value of “<IMG SRC="javascript:alert('XSS');">”. Our validation routine would not flag this value and would therefore allow an XSS vector in our application. While this is a trivial example, it clearly indicates why simply relying on a negative validation model will inevitably fail.
+Now lets consider how this function could be implemented using a positive security model. First, we must decide which characters are considered legal for our application. In our instance, we will simply assume that only alpha-numeric values are acceptable. Thus, the basic algorithm of our validate function is as follows: check every character in the parameter value and verify that it is considered an acceptable value. Thanks to the power of the regular expression libraries available in all languages, this is relatively trivial. The following example implements our validate function using an alpha-numeric restrictive regular expression:
+ 
+ protected final static String ALPHA_NUMERIC = “^[a-zA-Z0-9\s.\-]+$”; // we only want case insensitive letters and numbers
+ public boolean validate(HttpServletRequest request, String parameterName) {
+ 	boolean result = false;
+ 	Pattern pattern = null;
+ 	parameterValue = request.getParameter(parameterName);
+ 	if(parameterValue != null) {
+ 		pattern = Pattern.compile(ALPHA_NUMERIC);
+ 		result = pattern.matcher(parameterValue).matches(); // does parameterValue contain legal characters?
+ 	}
+ 	return result;
+ }
+
+The important line in this example of code is when we invoke the “matches()” function in the “pattern” object. Using our defined regular expression, this will validate each character in the “parameterValue” string. If any illegal characters are found, it will return false. Regular expression libraries exist for every language and the reader is strongly encouraged to review the references section for more information.
+
+=Centralized Design=
+
+==Overview==
+
+One of the major weaknesses of validation in applications is the lack of a single centralized mechanism. Ideally, there should be a single validation point for the entire application. When developers to use ad-hoc validation routines throughout the   software development life-cycle, the result is extremely sloppy and flawed code. When designing an input validation engine, we wish to have the entire request validated before it is handled by our core web application. Let us consider the several available technologies which aide in the fulfillment of this requirement.
+
+===J2EE Filter===
+
+J2EE filters provide the ability to intercept, view, and modify both the request and associated response for the requesting client. Filters are inserted and executed by the J2EE container's deployment descriptor (web.xml) file. For example, if an HTTP request for a JSP page hits our Apache web server, the request is sent to Tomcat for processing. Before Tomcat executes the code inside of the JSP, the request must be passed along a chain of J2EE filters. One such chain would essentially be our input validation engine. Here, we can simply validate the request and take the appropriate action before the request ever hits the intended web application.
+
+An excellent article on developing a straight-forward J2EE validation filter can be found at http://www.owasp.org/index.php/How_to_add_validation_logic_to_HttpServletRequest.
+
+===.NET HTTPModule===
+
+The .NET HTTPModule is the .NET implementation of a J2EE filter. When the HTTP packet hits the web server, the request is executed in the .NET runtime library. Like the J2EE filter, the request is first processed by a series of HTTP modules and handlers. Here, the validation engine can perform its necessary routines before the packet ever reaches the web application. Deploying an HTTPModule requires appropriate modification of the .NET web.config file.
+
+===ISAPI Module===
+
+The Internet Server Application Programming Interface, or ISAPI, module gives the developer the ability to validate the request even before it is analyzed by the core web server. Essentially, the request is sent to the listening application on the web port, typically port 80. The web server catches the packet and prepares to take the necessary actions. However, the packet is first passed through a series of ISAPI modules whereby the request open for analysis and modification. While ISAPI modules are primarily a Microsoft technology, the less stable port for the Apache web server exists as well.
+
+===Apache Module===
+
+Apache modules provide similar capabilities as the ISAPI module for the Microsoft IIS server. However, Apache modules are obviously better integrated with their web server. All requests are analyzed by the loaded modules before the packet is handled by the core of the web server. In fact, there are complete security projects built around the implementation of an Apache module. Mod Security is one of the most well known free implementations of a web application firewall.
+
+=Simplistic API=
+
+==Overview==
+
+Integrating an input validation engine into either an existing application or an application in development should be relatively trivial. Developers making use of an input validation are not necessarily security aware. There are two possible approaches to implementing an input validation engine into either existing or developmental code. One approach would be to modify the existing or developmental source code to include the necessary validation call at a centralized location. The second approach would be to not touch the source code at all. While the second approach is ideal, we shall consider the first approach in this section.
+When developing the API for an input validation engine, we must review the engines full functionality. At the most basic level, we can validate an entire request using one line of code. For example, the following code snippet makes use of some fictitious API:
+
+ public void doPost(HttpServletRequest request, HttpServletResponse response) {
+ 	if(validateRequest(request)) {
+ 		// do some request processing
+ 	} else {
+ 		// failed request, no processing
+ 	}
+ }
+
+This simplistic form of validation API, whereby all work is completed by one call, is perfect for most validation mechanisms in web applications. However, we wish to implement a certain level of flexibility in our engine such that the code can be used for future application implementations. The complexity of the validation API strongly correlates with the complexity of the dynamic rules processed by the engine. For example, consider the following two cases: 1) a parameter violation and 2) a cookie violation. We can easily justify receiving a malformed parameter in a request. Whether it be a mistyped word, or perhaps an incomplete form; malformed parameters are not necessarily sure signs of an attack. However, consider the case when a cookie is modified, such as the JSESSIONID cookie that is instantiated in J2EE applications. This cookie is a hash consisting of 32 alpha-numeric characters. If we ever receive a request whereby the JSESSIONID does not meet the pre-defined character requirement, then we are most likely under attack. Cookies are not directly modifiable by the user. Cookie modifications are a clear indication that requests are being tampered without outside of the desired web application context. Since certain violations can have a unique level of severity, perhaps our validation API should take this into consideration. For example, if we receive a request with a cookie violation, perhaps we should throw some fatal exception and allow the developer to take necessary actions. The following code, which closely resembles the original Stinger implementation, implements the concept of a fatal violation exception:
+
+ public void doPost(HttpServletRequest request, HttpServletResponse response) {
+ 	try {
+ 		if(validateRequest(request)) {
+ 			// do some request processing
+ 		} else {
+ 			// caught some violation. No processing
+ 		}
+ 	} catch (FatalViolationException fve) {
+ 		fve.printStackTrace();
+ 		logRequest(request);
+ 		blackList(request);
+ 	}
+ }
+
+In the previous example, we use the same fictitious 'validateRequest()' API. However, this call is placed inside a try-catch statement which looks for a 'FatalViolationException'. If there is some violation in a request that is obviously malicious, then an exception is thrown and the developer is designated for appropriate action. In this example, the request is logged and the request originator is somehow blacklisted. It is worth noting that the severity of the violation is defined elsewhere in the code. 
+We can even expand upon this model to allow the developer to handle all non-fatal violations. This is the exact approach taken by the original implementation of Stinger. Consider the following block of code:
+
+ public void doPost(HttpServletRequest request, HttpServletResponse response) {
+ 	Stinger stinger = Stinger.getInstance(request.getServletContext());
+ 	ProblemList problemList = null;
+ 	Problem problem = null;
+ 	PrintWriter out = null;
+ 	try {
+ 		problemList = stinger.validate(request);
+ 
+ 		if(problemList.hasElements()) {
+ 			out = response.getOutputWriter();
+ 
+ 			while(problemList.hasMoreElements()) {
+ 				problem = problemList.nextElement();
+ 	
+ 				out.println(problem.getMessage());
+ 			}
+ 		} else {
+ 			// process request
+ 		}
+ 
+ 	} catch (FatalViolationException fve) {
+ 		fve.printStackTrace()
+ 		logRequest(request);
+ 		blackList(request);
+ 	}
+ }
+
+In this model, the validation routine returns an enumeration of elements containing all of the non-fatal violations in the request. In this example, each violation is denoted by a 'Problem' object which contains some message describing the violation. The messages for each violation are then appended to the response and sent back to the user. If there are no violations in the request, the request is processed by the core application.
+As we have demonstrated, there are several ways to design the API of your input validation engine. The key is to remember that the more complicated the API; the more reluctant developers are to include the engine in their code.
+
+=Dynamic Modification (Rule Based Approach)=
+
+==Overview==
+
+An input validation engine must offer a certain level of flexibility such that it can be easily integrated into the most diverse web applications. The level of flexibility really depends on the overall functionality you are looking to provide in your input validation engine. The base requirement, however, is the ability to modify the validation rules defining the web application. Furthermore, these application defining rules should be dynamically loaded during runtime such that an application restart is not necessary to see the effects of rule modification. Fulfilling these base requirements typically begins with the creation of some rule containing file. 
+The file layout concepts that we shall now discuss are all based around what is known as the 'Security Validation Description Language' (SVDL); a XML based file format utilized by Stinger. In order to understand the basic layout of certain SVDL sections, let’s review what defines a typical web application from a validation standpoint. Web application input vectors are typically grouped into three categories: Headers, Cookies, and Parameters. Often, the typical headers of an HTTP request are useless to a custom web application. While the extremely paranoid would validate the headers, we shall discard them for simplicity. Cookies, however, are a vital part to a web application. Their primary purpose is to hold valuable information utilized by a web application for tasks such as persistence. Cookies are inevitably used by web applications and, therefore, must be considered in our validation rules. The third group, parameters, is every other input field available in a web application. Input parameters are a vital part of all web applications and should be validated strictly.
+After defining all of the critical input vectors, we must define their scope as they relate to the web application. As previously noted, cookies are used for a variety of purposes. However, we must note that they persist across many stages of the web application. Therefore, once a cookie is instantiated, its presence is solely dependent on the web application. Therefore, we should assume that cookies maintain a global scope across the web application. Perhaps one would consider a more granular approach whereby we define the modules in the web application where specific cookies are appropriate. This method, however, quickly becomes cumbersome. The amount of work to gain a little extra security is exponentially greater than the amount of worked necessary for a lower level of security (80-20 rule). Parameters, on the other hand, do not persist across the modules of a web application. Rather, parameters are statically defined by their requested URI. Now that we understand the input vectors and their scope, we will now define a simple format to be used in our engine's rule file.
+In our example, we shall break our rules down into two sections, the cookie rules and the page rules. As the name implies, the cookie rules section will contain the rules defined by the applications cookies. The page rules will consist of all the parameter rules defining a single URI in the web application.
+Consider the following example as an entry in the cookie rules portion of our validation file:
+
+ <cookies>
+ 	<cookie>
+ 		<name>JSESSIONID</name>
+ 		<regex>^[A-F0-9]{32}$</regex>
+ 		<description>Typical J2EE session id</description>
+ 	</cookie>
+ 	<cookie>
+ 		<name>Location</name>
+ 		<regex>^[A-F0-9]{32}$</regex>
+ 		<description>Identifies the user location</description>
+ 	</cookie>
+ </cookies>
+
+In this example, we have defined two unique cookies, the 'JSESSIONID' cookie and the 'Location' cookie. For each cookie, we define a regular expression which strictly describes what is considered acceptable cookie input. Basic cookie rules are relatively straight-forward to implement for our engine.
+Now let’s consider the parameter rules that define a request URI. Since we know that parameters are defined by their requested URI, we will break the page rules section down by page. For each page, we shall define all of its parameters and their appropriate regular expressions. Consider the following example:
+
+ <ruleset>
+ 	<name>Login Servlet</name>
+ 	<path>/LoginServlet/</path>
+ 
+ 	<rule>
+ 		<name>username</name>
+ 		<regex>^[A-F0-9]{10}$</regex>
+ 		<description>The username during login</description>
+ 	</rule>
+ 	<rule>
+ 		<name>password</name>
+ 		<regex>^[A-F0-9]{8,999}$</regex>
+ 		<description>The password during login</description>
+ 	</rule>
+ </ruleset>
+
+The previous example defined all of the rules pertaining to the request URI path of '/LoginServlet/'. Here, we see that there are only two parameters accepted by this servlet, the username and password. As with the cookies, we define a regular expression which must be fulfilled for the input to pass validation. 
+Now consider the case when we are testing our defined rules. We clearly to not want to have to constantly start and stop our application for each test, especially if the user has a weak understanding of regular expressions. Therefore, these rules that we define should be dynamically loaded. When the validation routine is called, we should reload all of the necessary rules for the request. In our examples, this means loading the defined cookie rules as well as the rule set which pertains to the requested URI. As a result, the user making rule modifications will get instant feedback after submitting a proper request.
+For many users, this level of complexity will meet all of the necessary requirements for their input validation engine. However, I strongly encourage you to read the 'Stinger Implementation' section to see the design of a complete and complex SVDL file.
+
+=Action Based=
+
+==Overview==
+
+
+In every validation example provided so far, the developer has been required to handle the violations. Regardless of the approach provided in the examples, ultimately the software engineer is required to develop more code. As a result, the validation engine has lead to counter-productivity in the software life-cycle. As previously stated, input validation engines should reduce the overall complexity of the development life-cycle, allowing the developers to focus on functionality rather than security. Input validation engines, as well as security in general, should effectively be a business enabler. Therefore, an input validation engine should take appropriate actions on a per-violation basis.
+An input validation engine is considered 'Action Based' if the developer has the ability to define a series of actions to be taken as a result of a specific violation. When implementing an action based validation engine, it is important to allow for the ability to specify a set of actions to be executed in a specific order. Consider the case when a generic parameter violation occurs. This parameter is a standard input box which accepts arbitrary input from the user. If a violation occurs, then the developer might be interested in simply logging the request. Furthermore, the developer may wish to sanitize the illegal parameter value through character replacement or HTML encoding. No serious actions are necessary since clients commonly mistype text into input fields. However, consider the case when a hidden field is modified in a request. By design, a hidden field is not immediately viewable to the end user. However, through the use of proxies such as WebScarab, attackers can easily modify the values in these fields. If we receive a violation in a hidden field, then clearly some misbehavior is going and the specified actions will be more severe. Violations against cookies should be considered as severe as violations against hidden fields. Let us assume the following typical scenario: You are using a home-grown cookie with your own algorithm which can be clearly defined by a regular expression. Now consider the case when the cookie is modified such that it violates the defined regular expression. Ideally, we would want to log this request, clear any cookies, and invalidate the session. The validation engine should provide several actions such that the developer can choose the best set for their needs.
+The primary case addressed by the OWASP Validation Documentation is that of a malformed violation; either a parameter or a cookie does not meet the requirements defined by our regular expression. However, a complete validation engine should also consider the possibility of extra and or missing cookies/parameters. While this may be viewed as overly paranoid, consider this: why would we ever get an extra parameter in a request? Clearly, an extra parameter indicates an attempted attack at the web application. If an attacker notices a parameter value pair such as “user=true”, then the attacker may think that the pair “admin=true” would exist. Any extra parameters are clear indications of an attack and the developer should deploy the appropriate action set. However, how would the web application react when a necessary parameter is missing from the request. For example, the user neglected to specify a password at a login page. We would expect the web application to handle the request properly. If a required parameter is missing, the developer may wish to simply drop the request to prevent further processing. However, if the web application does not handle errors properly, then the malicious user may be successfully authenticated. This is known as 'Fail Open Authentication' ; a primary example used in the OWASP Top Ten documentation for improper error handling. 
+
+=Negative Security Model=
+
+==Overview==
+
+An input validation engine must require the use of a positive security model. There are far too many exceptions to every negative rule in existence. However, a positive security model does not always provide the most complete validation implementation. In fact, it is quite often the case that a positive security model simply becomes too open, thus susceptible to many of the attacks detailed in the OWASP Top Ten. Consider the following scenario: we have a web application containing a module which accepts HTML input from the user. In order to maintain necessary application functionality, the validation engine must allow HTML input; specifically, the arrow characters (< and >). This obviously opens the door to a wide variety of cross site scripting attacks that the current positive security model could not prevent. As a result, the input validation engine should allow for a negative security model to be implemented on top of the positive security model. Even though the positive security model opens the application open to a certain level of attacks, we can rely on the negative security model for some assurance for security. 
+Implementing the negative security model is largely similar to the implementation of a positive security model. We must provide a series of regular expressions which describe common attacks that should never appear in the parameter or cookie value. In fact, our validation engine should provide groups of these regular expressions such that the developer can simply state, for example, that a specific parameter should implement the cross site scripting negative model. This implementation would greatly increase the overall level of security in our previously stated scenario. It is important to remember when implementing a negative security model that the positive model must be validated first. In your code, validate that the parameter value passes all of the positive requirements before utilizing the negative requirements. This requirement should be enforced in your engine implementation such that the utilizing developer does not make this mistake.
+
+=Stinger Implementation=
+
+==Overview==
+
+At this point, the reader should have a solid understanding of the design principles that should be incorporated into an input validation engine. While Stinger is certainly capable of being implemented in production services, the major goal of Stinger was to provide an example implementation of these six design principles. By reviewing the implementation of Stinger, the reader will fully understand how all of the design principles are tied together.
+
+==How the design principles are Implemented==
+
+===Positive Security Model===
+
+Stinger takes full advantage of the powerful regular expression library built into the J2SE platform. By utilizing strict regular expressions, we can build a positive security policy to be implemented by Stinger. Consider the following example of a SVDL file:
+
+ <regexs>
+ 	<regex>
+ 		<name>email</name>
+ 		<pattern>^[\w-]+(?:\.[\w-]+)*@(?:[\w-]+\.)+[a-zA-Z]{2,7}$</pattern>
+ 		<description>Email address</description>
+ 	</regex>
+ 	<regex>	
+ 		<name>safetext</name>
+ 		<pattern>^[a-zA-Z0-9\s.\-]+$</pattern>
+ 		<description>Lower and upper case letters and all digits</description>
+ 	</regex>
+ 	<regex>
+ 		<name>digitwords</name>
+ 		<pattern>^(zero|one|two|three|four|five|six|seven|eight|nine)$</pattern>
+ 		<description>The English words representing the digits 0 to 9</description>
+ 	</regex>
+ <regexs>
+
+This section of an SVDL file shows how all regular expressions are defined in a single location. A more complete set of regular expressions can be found in the appendix as well as the Regular Expression Repository at http://www.owasp.org/index.php/OWASP_Validation_Regex_Repository. The following example is a parameter rule which makes use of one of the regular expressions listed above:
+
+ <rule>
+ 	<name>username</name>
+ 	<regex>safetext</regex>
+ </rule>
+
+This is an overly simplistic rule which relies heavily on the defaults provided in an SVDL file. This rule is assumed to be encapsulated by a “ruleset” tag which further describes this rule. Specifically, we are looking for the 'username' parameter in the URI provided by the “ruleset” tag. When we find this parameter, we check to see if it adheres to the regular expression “safetext”. When Stinger validates a request, it pulls a RegEx object by the name defined inside of the <regex> tag in the rule.  When the RegEx object is found, we compare the value of the parameter to that of the pattern found in the RegEx object. If the pattern matches, we continue processing the request. If the pattern fails, we take the necessary actions. In this case, it would be the defaults provided in an SVDL file.
+
+===Centralized Design===
+
+As previously noted, it is important that an input validation engine be centralized in an application. Sporadic implementations of validation lead to segments of code which do not adhere to the principals and policies of security in general. Stinger offers two approaches to the centralized design. First, the developer has the option of creating the Stinger object and manually validating the request. This should be done at the earliest point of the code such that none of the request is processed before validation. Unfortunately, this has a major draw-back which severely affects the functionality of Stinger. When a violation occurs, Stinger carries out a set of actions defined by the developer. Executing these actions means that Stinger takes control over the request and the response. Consider the case when we validate a request in a JSP. When the validation fails, we wish to redirect the user to an error page and invalidate the session. Unfortunately, once the action is taken place, the JVM attempts to execute the rest of the code provided in a JSP. This will undoubtedly lead to an 'IllegalStateException' in the servlet engine. There may be implementations which can avoid this issue, yet none of them will be clean. The second, and preferred, method of implementing Stinger is through a J2EE filter. This involves no coding on the part of the developer. Simply configure the SVDL file and drop Stinger into the filter chain via the modification of the deployment descriptor file. J2EE filters offer the ability to easily modify requests and responses before they are processed by the custom web application. This means that of a violation occurs in the request, we can redirect to an error page and not run into the 'IllegalStateException' scenario. We can also easily modify the request and response objects through the use of the HttpServlet(Request/Response)Wrapper object. This means that we can perform request/response modification actions, such as parameter sanitization (HTML encoding), transparently to the web application. 
+
+===Simplistic API===
+
+For those implementing Stinger via an imported library, Stinger offers an overly simplistic API. For those implementing Stinger via the recommended J2EE filter, there is no necessary API. Let us assume we are implementing Stinger via an imported library. The following code snippet provides an example of using Stinger in your source code:
+
+ public void doPost(HttpServletRequest request, HttpServletResponse response) {
+ 
+      MutableHttpRequest mRequest = new MutableHttpRequest(request);
+      MutableHttpResponse mResponse = new MutableHttpRequest(response);
+      Stinger stinger = Stinger.getInstance(this.getServletContext());
+ 
+      try {
+ 	stinger.validateRequest(mRequest, mResponse);
+ 
+ 	/* Process Data */
+      } catch (BreakChainException be) {
+ 	be.printStackTrace(); // an action has taken ownership of the response object
+      }
+ }
+
+In this example, we validate the request using only a few lines of code. First, we instantiate MutableHttp(Request/Response) objects which extend the HttpServlet(Request/Response)Wrapper class. Doing so allows us to modify both the request and the response objects on the fly. This gives us the necessary control to implement actions such as redirects and sanitizations. Next, we get the singleton Stinger instance to be used for validation. Next, we simply call the 'validateRequest' function to carry out all of our validation rules defined in the SVDL file. This validation call potentially throws a 'BreakChainException'. This exception is thrown if an action taken against a violation takes ownership of the response object, such as a request redirect. What is not represented in the code snippet, however, is how the developer can access the list of violations found by Stinger. If Stinger finds a set of non-fatal violations in a request, then it stores these violations in the session object. In order for the developer to access the list of violations, they must call the 'getAttribute' function in the mRequest object using ''ViolationList'' as the argument.
+
+===Dynamic Modification (Rule based approach)===
+
+When the rules of a validation engine are modified, the application should not have to be restarted for the changes to take effect. To fulfill this requirement, Stinger dynamically loads the rules on each request based on the URI of that request. Only the rules pertaining to that URI are loaded. Other portions of the SVDL file are not loaded in order to reduce a certain level of overhead on each request.
+The question now should be what are the other sections of an SVDL file? In our previous examples, we have seen rules grouped in rule sets which define a particular URI. We also have seen a regular expression section whereby all of the used regular expressions are stored in a single location. There are, however, several more sections to be considered in a complete SVDL file. Please refer to the appendix for an example of a complete SVDL file.
+The first section of an SVDL file is a section we have discussed already, the regular expression repository. This is the section of an SVDL file which contains all of the regular expressions to be utilized within Stinger. The first time Stinger is loaded, it reads in all of the regular expressions into a map whereby the name of the regular expression is the key. Each rule contains the key of the desired regular expression. When a rule is validated, Stinger simply pulls the regular expression from the repository via the key in the rule.
+The second section in a typical SVDL file is known as the 'global' section. These are the rules applied for parameters which have no defined rule. Furthermore, all actions pertaining to cookies are contained within this section. For extra, missing, and malformed parameters/cookies, we specify two attributes: 1) a severity and 2) an action set. The severity can be one of three values: ignore, continue, and fatal. A severity of ignore means that even though the violation occurred, do not execute the actions listed in the action set. A severity of continue means we simply execute the appropriate action for the violation and continue processing the request. The fatal severity should only be used for actions that should never happen. For example, our application should never receive an extra parameter. These are clear indications of attacks and should be handled accordingly. When a fatal violation is found, Stinger stops processing the requests and performs the defined actions. Fatal violations should contain the most severe actions, such as invalidating a session.
+The third section is dedicated to defining the cookies used in the application. Since having an extra, missing, or malformed cookie is not page specific, there is no reason to have cookie specific rules as we do with parameters. Therefore, in our cookie section, we simply define the cookie name and the regular expression which strictly defines its value.
+The fourth section contains all of the negative security groups and filters available to Stinger. A filter is simply a regular expression with some “meta-data”, a name and a description. When we validate against a filter, we use the regular expression defined inside of the filter. Any resulting violations message will include the name of the filter being violated for debugging purposes. Groups are defined by a name and contain filters which attempt to achieve a similar purpose (such as preventing XSS). 
+The rest of the SVDL file contains all of the rule sets to be dynamically loaded into Stinger at runtime. While each rule set has a name, it is defined by the path variable. When a request is received by Stinger, it loads the rules based on that requested URI. A rule set contains a series of rules which specifically define the parameters to be sent to that URI. If a parameter is not specified in this section, then the parameter is considered extra and the actions defined in the global section are carried out. For each rule, we define the parameter name and its associated regular expression. These are the only required pieces of information for a rule. When Stinger loads the rule set and sees portions of a rule missing, it applies the defaults specified in the 'global' section. Aside from the name and regular expression, a rule can contain any of the following: a negative security section, a missing section, and a malformed section. The negative security section defines the groups and or specific filters to be applied to the rule. The missing and malformed sections are the same as those found in the global section with the exception that these are parameter specific. Any action and severity defined in this segment of the rule overrides the specified defaults.
+
+===Action Based===
+
+As previously stated, an input validation engine is considered 'Action Based' if the developer has the ability to define a series of actions to be taken as a result of a specific violation. In the previous section, we have seen how action sets are defined within the SVDL file. If a violation occurs for the current rule being checked, then each action in this set is executed. If an action is marked with the attribute “once=true”, then we only execute that action once.
+Each action available in Stinger is actually a subset of a single class called “AbstractAction”. Each action is required to extend this class and implement the required abstract functions. The following code segment contains the AbstractAction class:
+
+ public abstract class AbstractAction {
+ 	private Parameter[] parameters = null;
+ 	private boolean executeOnce = false;
+ 	public AbstractAction() {
+ 	}
+ 	public Parameter[] getParameters() {
+ 		return parameters;
+ 	}
+ 	public void setParameters(Parameter[] parameters) {
+ 		this.parameters = parameters;
+ 	}
+ 	public boolean executeOnce() {
+ 		return executeOnce;
+ 	}
+ 	public void setExecuteOnce(boolean executeOnce) {
+ 		this.executeOnce = executeOnce;
+ 	}	
+ 	public abstract void doAction(MutableHttpRequest mRequest, MutableHttpResponse mResponse);
+ }
+
+When the AbstractAction is extended, the implementing class has access to the parameters parsed by Stinger. These are accessed directly via the 'parameters' variable or indirectly via the 'getParameters()' function. The only requirement of our AbstractAction class is the implementation of the 'doAction()' function; the function called by Stinger when executing a class. The following is an example action provided in the Stinger distribution:
+
+ public class Invalidate extends AbstractAction {
+ 	public Invalidate() {	
+ 	}
+ 	private void invalidateSession(MutableHttpRequest mRequest) {
+ 		HttpSession session = mRequest.getSession(false);
+ 		if(session != null) {
+ 			session.invalidate();
+ 		}
+ 	}
+ 	public void doAction(MutableHttpRequest mRequest, MutableHttpResponse mResponse) {
+ 		System.out.println("ACTION: Invalidating request");
+ 		invalidateSession(mRequest);
+ 	}
+ }
+
+The 'Invalidate' class implements an action requested by many users of Stinger 1.0. The only purpose of this class is to invalidate a session. When Stinger executes this class, it calls 'doAction()'. This in turns calls the 'invalidateSession()' function with the request object as a parameter. Giving access to the MutableHttp(Request/Response) objects opens the creative door for each implementing action.
+
+===Negative Security===
+
+The negative security model is offered in order to alleviate the problem introduced when the positive security model becomes too open. Stinger implements the negative security model similar to that of the positive security model. Rather then define regular expressions for what is accepted, we define regular expressions for what is not accepted. In Stinger, regular expressions are defined as filters and similar filters are placed in groups. This offers a level of flexibility when we apply the negative security model to a rule. When we apply the negative security model to a rule, we can apply groups and or specific filters. 
+When processing a rule, Stinger first applies the positive security model. If the rule passes the positive security model, we will then apply the optional negative security model. Stinger simply iterates through each filter specified in the rule and validates accordingly. If a match is found, then Stinger has found a violation and actions are taken accordingly.
+
+=References=
+
+==OWASP Guide==
+
+Andrew van der Stock, “OWASP Guide.” http://www.owasp.org/index.php/Category:OWASP_Guide_Project
+A10.2	Build an HTTP Request Validation Engine
+
+==Build an HTTP Request Validation Engine==
+
+Jeff Williams, “How to Build an HTTP Request Validation Engine for Your J2EE Application.”
+	http://www.aspectsecurity.com/article/bld_HTTP_req_val_engine.html
+
+==Regular Expression Implementations==
+
+===Java===
+:#http://java.sun.com/j2se/1.4.2/docs/api/java/util/regex/Pattern.html
+:#http://www.javaregex.com/
+:#http://www.regular-expressions.info/java.html
+===.NET===
+:#http://www.regular-expressions.info/dotnet.html
+:#http://www.windowsdevcenter.com/pub/a/oreilly/windows/news/csharp_0101.html
+:#http://www.c-sharpcorner.com/3/RegExpPSD.asp
+
+===Other===
+:#C/C++ - http://www.pcre.org/
+:#Python - http://www.amk.ca/python/howto/regex/
+
+=Appendix=
+
+==Example SVDL File==
+
+An example SVDL file can be found at http://www.owasp.org/releases/Stinger/2.0beta1/sample_svdl.txt

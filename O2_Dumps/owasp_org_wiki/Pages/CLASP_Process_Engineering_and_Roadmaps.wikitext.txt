@@ -1,0 +1,112 @@
+{{Template:SecureSoftware}}
+[[Category:OWASP CLASP Project]]
+
+==Creating the Process Engineering Plan==
+
+To ensure an efficient ongoing process, it is important to carefully plan the process engineering effort. A good process engineering plan should include — at a minimum — the following elements:
+
+* Business objectives that the process is being developed to meet.
+* Project milestones and checkpoints.
+* Pass/fail criteria for each milestone and checkpoint — e.g., necessary approvals, evaluation criteria, and stakeholder involvement.
+
+
+===Business objectives===
+
+While your team is documenting business objectives for an impending process engineering effort, bring into consideration any global application software development security policies that may already exist for the project or the organization. This should include any existing certification requirements.
+
+Another objective at this point should be to agree on the set of security metrics that will be collected and monitored externally to the project throughout the process deployment phases in order to measure overall security posture. For example, security posture can be determined based on:
+
+* Internal security metrics collected;
+* Independent assessment (which can be performed using CLASP activities as well);
+* Or — less desirably — through externally reported incidents involving the effort.
+
+===Process milestones===
+
+Your team should construct a draft process engineering plan, which identifies the key project milestones to be met for the project. The focus should be on when activities should be introduced, who should perform them, and how long they should take to perform. 
+
+===Process evaluation criteria===
+
+As a final step in your planning efforts for process engineering, you should decide upon the criteria for measuring the success of your team, as well as the process engineering and deployment effort.
+
+Success might be measured in one or more of many different methods, such as:
+
+* Comparing the rate of deployment across projects;
+* Comparing the percentage of security faults identified in development versus those found in production; or
+* Monitoring the timeliness, accuracy, and thoroughness of key development artifacts.
+
+Be specific, but be realistic in identifying success metrics. Remember that this process will evolve to meet your ever-changing and demanding business needs. Small successes early on will be more rewarding for the team than big failures, so consider a slow roll-out of new processes, with an accompanying incremental rollout of metrics.
+
+==Forming the Process Engineering Team==
+
+Development organizations should be bought into the process which they use for development. The most effective way to do that is to build a process engineering team from members of the development team so that they can have ownership in creating the process. 
+
+===Steps to form Team===
+
+We recommend taking the following steps to form the process engineering team:
+
+====Build a process engineering mission statement====
+Document the objectives of the process team. It is reasonable to have the entire development team sign off on the mission, so that those people who are not on the team still experience buy-in and inclusion.
+====Identify a process owner====
+The process team should have a clearly identified process “champion,” whose foremost job is to set a direction and then evangelize that direction. Make it clear that this team will be held accountable for all aspects of the engineering and deployment activities associated with early adoption of this new security process framework.
+====Identify additional contributors====
+As with the process owner, people who make good evangelists should be valued as well as people who will be the most worthy contributors.
+====Document roles and responsibilities====
+Clearly document the roles and responsibilities of each member of this team.
+====Document the CLASP process roadmap====
+It is time to make the classic “build-versus-buy” decision for a process framework. Can one of the process roadmaps packaged as part of CLASP be used as-is? Can the team simply extend one of the packaged roadmaps to meet either organizations software development needs? Does the team really need to step back and opportunistically chose discrete activities — thereby building a unique process framework that provides a “best fit” for their organization? This decision and the resulting process roadmap must be documented and approved before moving into the deployment phase. See the following section for sample roadmaps.
+====Review and approve pre-deployment====
+Institute a checkpoint before deployment, in which a formal walk-through of the process is conducted. The objective at this point is to solicit early feedback on whether or not the documented framework will indeed meet the process objectives set forth at the beginning of this effort. The team should not proceed to the deployment phase of this project until organizational approval is formally issued.
+====Document any issues====
+Issues that come up during the formation of the process engineering team should be carefully documented. These issues will need to be added to the process engineering or process deployment plans — as appropriate to managing risk accordingly.
+
+==Sample Roadmaps==
+
+To help you navigate the CLASP activities more efficiently, we provide sample roadmaps which focus on common organizational requirements. There are two roadmaps:
+
+* A Legacy application roadmap aimed at organizations looking for a minimal impact on their ongoing development projects, which introduces only those activities with the highest relative impact on security. This roadmap is recommended for existing software in the maintenance phase.
+* A Green-Field roadmap that has been developed for organizations that are looking for a more holistic approach to application-security development practices. This roadmap is recommended for new software development, using a spiral or iterative methodology. 
+
+===Green-Field Roadmap===
+* Institute security awareness program
+* Monitor security metrics
+* Specify operational environment	
+** This step is important as a foundation for security analysis.
+* Identify global security policy
+* Identify resources and trust boundaries
+** This step is also important as a foundation for security analysis.
+* Identify user roles and resource capabilities
+* Document security-relevant requirements
+** Some attempt should be made to address resource-driven requirements from the system — both implicit and explicit — even if not to the level of depth as would be performed for Green Field development.
+* Identify attack surface
+** This step is also important as a foundation for security analysis.
+* Apply security principles to design
+* Research and assess security posture of technology solutions
+* Specify database security configuration
+* Perform security analysis of system requirements and design (threat modeling)
+* Integrate security analysis into source management process
+* Implement and elaborate resource policies and security technologies
+* Address reported security issues
+* Perform source-level security review
+* Identify, implement and perform security tests
+* Verify security attributes of resources
+* Build operational security guide
+* Manage security issue disclosure process
+
+
+===Legacy Roadmap===
+* Institute security awareness program
+* Specify operational environment
+** This step is important as a foundation for security analysis.
+* Identify resources and trust boundaries
+** This step is also important as a foundation for security analysis.
+* Document security-relevant requirements
+** Some attempt should be made to address resource-driven requirements from the system — both implicit and explicit — even if not to the level of depth as would be performed for Green Field development.
+* Identify attack surface
+** This step is also important as a foundation for security analysis.
+* Perform security analysis of system requirements and design (threat modeling)
+* Address reported security issues
+* Perform source-level security review
+* Identify, implement and perform security tests
+* Verify security attributes of resources
+* Build operational security guide
+* Manage security issue disclosure process

@@ -1,0 +1,137 @@
+[[Project Information:template GTK plus GUI for w3af Project|Clik here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''FINAL REVIEW''' 
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART I''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#GTK+ GUI for w3af project|GTK + GUI for w3af Project's Deliveries & Objectives]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#GTK+ GUI for w3af project|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+1.  The project is fully completed, finished on schedule.  Although a detailed progress can be seen in the w3af SourceForge project page, I will include here the tasks with a small comment.
+
+The following are the tasks that are already finished and closed (the number between square brackets is the SourceForge task id). Note that some of this tasks weren't planned at the beggining of the project, but included after it, in response to community or project leader request (the idea is not to minimize the work, but to maximize the tool quality and usefulness). 
+
+- [148110] Manually send a request and analyze the response.
+
+- [148111] Manually create a fuzzed requests based on tokens
+
+- [148112] Reload a plugin after its edited from within the GUI
+
+- [148113] Embebed tool to encode/decode URL/Base64 and to hash sha1/md5
+
+- [148114] HTTP response side by side content compare
+
+- [148198] log graph - debug lines overwrite axis
+
+- [148220] Colorize KB Browser names
+
+- [148224] Resend request
+
+- [148261] Remember size of all windows
+
+- [148428] Detailed sintax help
+
+- [148429] ? signs in fuzzer window
+
+- [148430] fuzzer analysis
+
+- [148431] Manual request and fuzzer window icons
+
+- [148511] Results - URLs - Right button over tree entry
+
+- [148623] Add icons for http-config and misc-config
+
+- [148673] log graph
+
+- [148674] encode decode window
+
+- [149208] Version in crash
+
+- [149584] Run pylint against the GTK UI and fix all bugs
+
+- [149836] Point & Click Pentest
+
+- [149843] textview size limit
+
+- [149970] Double click should expand trees
+
+- [150066] New profile - Default profile
+
+- [150067] Remove white space between data selectors in log
+
+- [150068] How do we find the find feature in the log?
+
+- [150070] Change name: "Set the right text here"
+
+- [150071] "Wait" mouse pointer in fuzzy request editor
+
+- [150072] Pause/Stop Fuzzy request sending
+
+- [150076] Exploit window: selections, bold, grayed, etc.
+
+- [150077] "Smarter" status bar with infos, vulns and shells
+
+- [150078] Change the position of the buttons in the encode/decode window
+
+- [150080] Remove debug messages from log
+
+- [150111] Target domain in window title
+
+- [150171] Resize log window widgets
+
+- [150298] GUI documentation and user guide
+
+- [150501] sitemap modifications
+
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#GTK+ GUI for w3af project|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+A 100% of the project was completed.
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+We're getting into the Release Candidates / Final release procedure, it'd be great if you join to the w3af community, use the tool, and give us feedback. Thank you! 
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART II''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Assessment Criteria
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[:Category:OWASP Project Assessment|OWASP Project Assessment Criteria]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Alpha Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+None. All criterias are fulfilled in more quality than Alpha Quality.
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Beta Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+None. All criterias are fulfilled in more quality than Beta Quality.
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+3. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Release Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+None. All criterias are fulfilled in Release Quality.
+ |-  
+ | style="width:25%; background:#7B8ABD" align="center"|
+4. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+We're getting into the Release Candidates / Final release procedure, it'd be great if you join to the w3af community, use the tool, and give us feedback. Thank you!
+|}

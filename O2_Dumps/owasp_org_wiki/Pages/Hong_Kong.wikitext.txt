@@ -1,0 +1,247 @@
+http://www.infosechk.org/download/OWASP/owasp_banner.jpg
+
+
+{{Chapter Template|chaptername=Hong Kong|extra=The chapter leader is [mailto:anthonylai@owasp.org Anthony LAI,CISSP,CISA]|mailinglistsite=http://lists.owasp.org/mailman/listinfo/owasp-hongkong|emailarchives=http://lists.owasp.org/pipermail/owasp-hongkong}}
+----
+
+<paypal>Hong Kong</paypal>
+
+The Hong Kong chapter was formed in December 2004. The objectives to establish OWASP Hong Kong Chapter are mainly because:
+-There are many web applications established in past 10 years. However, how many developers know that their developed application are secure. Meanwhile, there are many transactional-based systems, we should not ignore that the web application is another channel for hackers to compromise one's confidential information and interrupt any critical business operations.
+
+- Raise the security awareness of web application development among the professionals.
+
+
+- Encourage professionals to reference standard like ISO7799 for their web application security and post-deployment review as well as audit.
+
+
+- Accelerate to Share, learn, discuss and review best practices of the experienced web application development security professionals even across various user groups (Java User Group and .NET User Group ) and security associations (i.e. PISA) in Hong Kong.
+
+http://www.clarencewong.com/photo/owasp_meeting.jpg
+
+''From left to right: James Tsao, Anthony Lai, David Walker, Richard Stagg, Marco Leung and Gary Kung''
+
+
+'''Coding Practice'''
+
+- Mainstream web technologies (i.e. .NET, J2EE and PHP on Linux) security assessment
+
+- Web application platform (i.e. Apache, IIS, Linux, Database) security assessment and review.
+
+- Recent Web application security concerns.
+
+- Regularly convey latest projects and presentations from OWASP. 
+
+
+
+== News from Hong Kong Chapter ==
+
+'''Chapter meeting on Jan-18, 2012: "Securing the SSL channel against man-in-the-middle attacks: Future technologies - HTTP Strict Transport Security and and Pinning of Certs"'''
+
+''I have arranged a seminar on Wednesday 18 Jan 2012 from Tobias from OWASP London Chapter from 19:00 to 20:15 at HK Polytechnic University room P305. I would like to invite OWASP, PISAM, ISOC-HK, HK Software Exploitation and VXRL fellows to attend to it:
+
+'''Topic:''' HSTS and Pinning of Certs (defending against CA private key compromises - learnings from the DigiNotar breach): 
+
+'''Description:'''
+This is cutting edge and will talk about new technologies that will be coming up in
+the coming months to counter risks that became apparent from the
+current trust model used in browsers with hundreds of equally trusted
+CAs and its vulnerability to a breach of a single individual CA.
+
+'''Presenter:''' You could find his profile from here and he is readily a great and nice researcher indeed. He has presented talks in Appsec Beijing and Europe before: 
+https://www.owasp.org/index.php/User:Tgondrom
+
+'''Synopsis:''' "Securing the SSL channel against man-in-the-middle attacks: Future technologies - HTTP Strict Transport Security and and Pinning of Certs"
+
+In the recent months major trusted CAs providing trusted certificates for SSL/TLS in browser scenarios were compromised (e.g. seen in the Diginotar breach) and based on the current trust models (trusting all registered CAs equally for all domains) exposed vital web applications to the risk of man-in-the-middle attacks.
+Several approaches are currently discussed to mitigate this risk. The most advanced and closest to final adoption being the technologies discussed by the browser vendors at the recent IETF meeting in November in Taipei: HSTS and pinning of certificates.
+To better protect content providers against the distribution of bogus certificates, an HTTP header extension containing a fingerprint of their certificates linked to a domain address has been defined.
+This approach, which has been partly tested in Chrome, and already helped identify and protect to some extend Google's web application in the recent Diginotar compromise. Chrome users were able to detect the bogus DigiNotar certificates because Chrome had embedded the hashes of valid Google certificates. Back in July, the hacked DigiNotar certificate authority (CA), which has since gone out of business, was used to issue more than five hundred bogus certificates for companies including Google and various intelligence services.
+
+The presented technology is cutting edge and although the specification is not final yet, it will be rolled-out in about 6 months time. Two other models that compete or complement this approach will also be discussed (DNSSEC and Moxie's Convergence).
+''
+
+
+'''NEW!!!! Software Exploitation - It is about reverse engineering and exploit'''
+
+''
+I feel very honorable to invite Nguyen NAM to provide 2-day workshop on software exploit and reverse engineering. In fact, we met in OWASP Appsec Conference 2008 at Taipei and his team has won CTF (Capture The Flag) in Hack In The Box (HITB) 2008. It is really a valuable chance to have him to be in Hong Kong and this workshop is normally charged at 1000 USD per head. Meanwhile, there is NO such kind of workshop held in Hong Kong. Please reach me at [[anthonylai@owasp.org]] for reservation. 
+
+
+'''Status - 16 Dec 2008 : '''The speaker will arrive on 19 Dec and please bring USB storage more than 8GB to copy the VM for practice later on)
+Please act fast to reserve it first and the current reservation is 30. The class size is expected to be at most 35.
+
+Payment Method:
+
+1) Send the payment to: Hang Seng Bank, 390-031367-888 and then send back the receipt to anthonation@gmail.com and anthonylai@owasp.org
+
+2) Please reach me if you have enquiry at +852 6778 2668.
+
+''
+
+
+'''Instructor'''
+Nam Nguyen
+
+
+'''Date and Time'''
+2 days, 20 - 21 Dec 2008 (Sat and Sun)
+Registration Time: 9:45am
+Time: 10:00 - 13:00; 14:30 - 17:30
+Breaks: 15 minutes each (from 11:30 to 11:45 and 16:00 to 16:15)
+
+
+'''Venue'''
+Room 172, IVE Haking Wong, Cheung Sha Wan
+
+
+'''Organizer'''
+OWASP (Hong Kong Chapter)
+
+
+'''Co-organizer and Venue Sponsorship'''
+Vocational Training Council (Haking Wong)
+
+
+'''Fee (For PISA, HTCIA and OWASP members)'''
+
+1000 HKD (On or Before 13 Dec) 
+
+1500 HKD (From 14 and before 18 Dec 2008)
+
+'''Fee (For others)'''
+
+2000 HKD (On or Before 13 Dec) 
+
+2500 HKD (After 13 and before 18 Dec 2008)
+
+
+
+Seats are limited and expected lab size at most 40. The current reservation is 24 (Last updated: 3 Dec 2008)
+
+
+'''Summary'''
+This course is a primer into software exploitation on the Linux environment.
+The course assumes only basic understanding of the Linux commands, and C
+programming with the standard library. It explains the computer
+architecture, assembly language then moves on to three basic classes of
+security bug: buffer overflow, format string, and race condition and methods
+to take advantage of them. Throughout the course, various examples are
+introduced with increasing difficulty so that participants will naturally
+realize the art of software exploitation for themselves.
+
+This course does not discuss about shell coding. Except on one example where
+provided shell code is used as an illustration, all other challenges require
+only good analysis and calculation.
+
+The course is conducted as a workshop with heavy interaction between
+participants and instructor. There will not be any presentation slide.
+Participants are to take note during the course.
+
+
+'''Audience'''
+
+Software developers, system administrators, security engineers \with some
+experience in Linux and C programming. It is good to prepare a candidate to
+join for Capture The Flag (CTF) event.
+
+'''Table of Contents'''
+
+1. Computer architecture
+
+2. Assembly language
+
+3. Buffer overflow
+
+4. Format string
+
+5. Race condition
+
+6. Techniques
+
+	a. Overwrite critical variable
+
+	b. Overwrite return address
+
+	c. Return to .text
+
+	d. Return to libc
+
+	e. Overwrite .dtors
+
+	f. Overwrite .got
+
+	g. Overwrite .bss, functors
+
+	h. By pass Advanced Space Layout Randomization
+
+7. Tools of the trade: IDA, GDB, and Python
+
+8. Sharing of CTF in HITB
+
+
+'''Workshop Specifics'''
+As we have got a lab. An VM image will be provided.
+
+
+'''Speaker Biography'''
+Nam Nguyen is currently the principal security consultant with Blue
+Moon Consulting Co., Ltd. He started poking at binaries when he
+couldn't finish Dune 2 and has since spent more than a decade reverse
+engineering and understanding how stuffs work.
+Nam is a CISSP, a core member of the VNSecurity group, and a chapter
+lead of OWASP Vietnam. His interests include code construction and
+destruction, decompilation and Python.
+
+----
+
+ 
+http://www.infosecurityproject.com/images/infosec2007_content_04.jpg
+
+'''OWASP(HK Chapter) supports 8th Infosecurityproject Conference:''' 
+URL:http://www.infosecurityproject.com/
+
+
+http://www.takungpao.com/images/new.gif'''OWASAP Committee Member, Richard Stagg, uncovered Security Reality (Mar 2007)
+Richard from Handshake Networking could tell you the truth of that.
+URL:http://www.cw.com.hk/computerworldhk/article/articleDetail.jsp?id=409104
+
+
+
+'''Hong Kong Standard: HKU changes Internet policy to boost security
+Hong Kong University has changed its Internet policy a week after The Standard reported that improperly indexed material listed on its Web sites could be accessed by users of the Google Internet search engine. Doug Crets 4/3/2006'''
+
+URL: http://www.thestandard.com.hk/news_detail.asp?pp_cat=11&art_id=15675&sid=7341056&con_type=1&d_str=20060403&sear_year=2006
+
+
+'''Hong Kong Standard: Online enemy within
+The biggest threats to computer users are not hackers but their own ignorance, complacency or carelessness, writes Doug Crets 3/27/2006'''
+URL:http://www.thestandard.com.hk/news_detail.asp?pp_cat=11&art_id=15121&sid=7238709&con_type=1&d_str=20060327&sear_year=2006
+
+
+'''Web Application Security with PISA:''' http://www.pisa.org.hk/event/web-appl-sec.htm
+
+http://www.pisa.org.hk/event/web-appl-sec.jpg
+
+
+'''OWASP (Hong Kong Chapter): Successful Web Application Security and Hacking Demo seminar co-organized with Hong Kong Java User Group (30 Jul 2005'''
+https://hkjug.dev.java.net/gatherings/2005/0730.html
+http://www.infosechk.org/download/OWASP/20050730/2_exposure.JPG
+
+
+'''OWASP (Hong Kong Chapter): Web Application Security organized with Sun Wah Pearl Linux (29 Oct 2005)'''
+
+http://www.infosechk.org/download/OWASP/20051029/seminar.jpg
+
+== Contact Us ==
+
+'''Chapter Mailbox'''
+
+P.O. Box No. 6684, General Post Office, Hong Kong SAR
+
+
+== Recent Update ==
+--[[User:Anthonylai|Anthony Lai]] 11:25, 6 July 2006 (EDT)
+
+[[Category:China]]
+[[Category:Asia]]

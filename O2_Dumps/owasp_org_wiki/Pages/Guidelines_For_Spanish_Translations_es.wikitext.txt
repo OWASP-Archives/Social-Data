@@ -1,0 +1,171 @@
+==Sobre el proyecto de internacionalización de OWASP==
+El número de personas en el mundo que hablan, nativamente o como lengua secundaria, chino, español, francés, ruso, árabe y lenguajes indios esta estimado en un numero parecido o incluso mayor a los que hablan inglés.
+
+Este proyecto intenta fijar las bases para la traducción de todos los proyectos de OWASP a los principales idiomas del mundo, apoyando así a el objetivo de OWASP de esparcir la cultura de seguridad en aplicaciones. 
+
+Es buen momento para que OWASP llegue a aquellos que no hablan inglés de manera completa y no solo con un par de documentos. Por ello, el nacimiento de este proyecto.
+
+==Sobre el proyecto de OWASP-Spanish==
+Desde 2005 este proyecto a trabajado en llevar a el publico de habla hispana la documentación de OWASP en si idioma natal, esto con el objeto de fomentar la distribución de la cultura de seguridad en Latinoamérica y España. Aunque el idioma inglés esta ampliamente distribuido en el mundo, hay mucha gente y organizaciones que no lo dominan. Es el objetivo de este proyecto eliminar esta barrera del lenguaje para permitir le difusión irrestricta de la "filosofía" OWASP.
+
+==Sobre este documento==
+Este documento pretende fungir como una guía básica para la traducción de los documentos y páginas de OWASP al español, los elementos principales de este documento son 
+* Lineamientos generales para traducir
+* Guía sobre la integración con el sitio en inglés
+* Descripción de cómo agregar el reconocimiento a los participantes en la traducción 
+
+===Lineamientos generales para traducir===
+Dada la distribución tan amplia del lenguaje y la gran cantidad de variantes que existen, los lineamientos tratan de ayudar a utilizar un español "neutral" (tal no existe, pero si no se hace de esta manera nos veríamos en la necesidad de traducir varias veces el documento a el mismo idioma pero con diferentes enfoques regionales)
+
+Es altamente recomendable seguir los siguientes lineamientos para realizar una traducción mas organizada y fluida, de otra manera, se va a requerir mucho tiempo en la conjunción de los diferentes secciones de los documentos. Además de que sería desconcertante para el lector cambiar entre distintos estilos de traducción durante la lectura de un documento o las paginas de el sitio de Internet de OWASP. 
+
+* '''Tratamiento al lector''': Excepto casos contados, ha de tratarse al lector siempre de usted. Por ello se traducirá 'you' por usted, no por tú. Esta fórmula se utiliza para dar un trato formal al lector. De preferencia evite escribir la palabra en sí, mas bien, hágalo implícito en la sentencia, entonces, para traducir ‘You have to click on the menu....” es preferible "Tiene que dar clic en el menú..." en ves de “Usted tiene que dar clic en el menú...” dado que en inglés se utilizan mucho los pronombres como parte de su sintaxis.
+ 
+* '''Si no sabe, pregunte'''. Es decir, si no sabe busque el significado de la palabra en un glosario de términos, NO LA INVENTE
+** Como glosario de términos informáticos se deberá utilizar alguno de los siguientes
+*** http://www.tugurium.com/gti/ (Escribir el termino en inglés en la sección de “buscar”)
+*** http://quark.fe.up.pt/orca/index.es.html 
+** En caso de duda sobre el uso de una palabra en español consulte el diccionario de la real academia de la lengua española
+*** http://buscon.rae.es/diccionario/drae.htm 
+
+* '''Muchas palabras terminadas en "ing" no son gerundios''', aunque lo parezcan, por lo que “your typing should be slow...” se traduce como “Debe escribir despacio...” o “Writing a letter is easy” se traduce como “Escribir una carta es fácil”.
+
+* '''Los pronombres posesivos en inglés no se tienen necesariamente que traducir''' por el correspondiente pronombre posesivo en español. Se entiende, pero un hispanoparlante no hablaría así, por ejemplo, en lugar de su sistema para traducir your system debería utilizarse el sistema. Sólo se debería poner su si el propietario del sistema es relevante en este caso. La película de Amenábar Abre los ojos se traduciría al inglés a Open your eyes pero en español no se diría Abre tus ojos.
+
+* '''Cuidado con palabras que se escriben parecido pero que no significan lo mismo''', que no tienen el mismo género, o que habitualmente se traducen a anglicismos que no existen, algunos ejemplos:
+** '''command''': orden, comando no es correcto.
+** '''actual''': real o verdadero, actual no es correcto.
+** '''free''': libre (generalmente, en Debian), y no gratis.
+** '''font''': tipo de letra, fuente no es correcto.
+** '''library''': biblioteca, no librería.
+** '''normally''': habitualmente (generalmente mejor que 'normalmente')
+** '''to encrypt''': cifrar (no encriptar, que es meter en una cripta)
+** '''to parse''': analizar o tratar (no parsear, que no existe)
+** '''prevent''': impedir, no prevenir.
+** '''the interface''': la interfaz (ojo, femenino).
+** '''by default''': por omisión, de forma predeterminada ('defecto' es un 'falso amigo', que aunque ha sido admitido por la RAE, es preferible evitar).
+** Para una lista mas completa favor de ver la siguiente página http://maja.dit.upm.es/~aalvarez/pitfalls/ 
+
+* '''Palabras compuestas''': En inglés se usa comúnmente el guión (-) para componer palabras a partir de otras más simples. En español el guión separa más que junta. Palabras como sub-architecture o best-effort han de traducirse de forma que o bien se junten las palabras (subarquitectura), según las normas de estilo del español, o bien se realice una traducción más libre de la palabra, con por ejemplo una expresión (lo mejor posible). También es posible separar los términos con un espacio: ex presidente. Si se piensa que se puede perder significado al traducir la palabra, puede colocarse después entrecomillada aunque sólo se hará esto si la palabra técnica no queda clara o si el término se utiliza en otros contextos (por ejemplo, programas o etiquetas de control) sin traducir. Por ejemplo: This is done at best-effort podría traducirse por Ello se hace lo mejor posible, The minor-release field podría traducirse por El campo de distribución menor (“minor-release”, N. del T.).
+
+* '''Los términos que sean intraducibles y deban dejarse en inglés se marcaran como tales'''. Esto significa, habitualmente, que deberá utilizarse las comillas tipográficas (en textos de programas) u otros mecanismos de marcado (por ejemplo, <nowiki><em></nowiki> en páginas HTML). No se deberá, sin embargo, abusar de esto y poner(put) cada palabra(word) con un sinónimo(synonymous) entre paréntesis, ya que es francamente(frankly) ridículo(ridiculous).
+
+* '''Mayúsculas y minúsculas''':
+** En español se escribe con mayúsculas sólo la primera letra de los títulos, "Our Priorities are Our Users and Free Software" debe traducirse por "Nuestras prioridades son nuestros usuarios y el software libre".
+** Las mayúsculas deben ir acentuadas (la falsa idea de que no es necesario o es opcional viene del mundo de las máquinas de escribir)
+** Los meses y los días de la semana en español se escriben en minúsculas 
+** Tampoco se ponen con mayúsculas los nombres de idioma
+
+* '''Evitar muchas preposiciones en la misma frase'''. Por ejemplo, en la frase: "El niño vio el coche en la cuneta de la calle enfrente de la academia de inglés", ¿qué o quién estaba enfrente de la academia, el coche o el niño?
+
+* '''Intentar evitar coloquialismos y expresiones idiomáticas'''. Por ejemplo, la frase: "Juan no tenía pasta y se la birló a su hermano", debería ser: "Juan no tenía dinero y se lo robó a su hermano"
+
+* '''Traducción fiel'''
+** No inventar abreviaturas. Por ejemplo, la abreviatura de departamento es "dept.", y no "dpto"; la abreviatura de teléfono es "tel." y no "tlf.", etc.
+** Usar el mismo tipo de letra, formato y estilo (mayúsculas y minúsculas, negrita, italica, etc) que el documento original
+
+* '''Marcar palabras especiales'''. Por ejemplo, en un manual informático, se recomienda la frase: "Escoja la opción <Herramientas> y haga clic en<Aceptar>"en lugar de "Escoja la opción Herramientas y haga opción en Aceptar".
+
+* '''El uso de herramientas automatizadas de traducción es aceptable''', sin embargo, dada la falta de “sentido común” de estas herramientas hace que el texto resultante tenga inconsistencias importantes que evitarían la lectura natural del texto. Algunas de esas herramientas son:
+** http://www.google.es/translate_t?hl=es (Google)
+** http://babelfish.altavista.com/ (Babel Fish)
+** http://www.freetranslation.com/ (Free Translator)
+** http://translation2.paralink.com/  (Another free translator)
+'''NOTA: No estoy relacionado con ninguno de estos traductores automáticos ni tampoco puedo recomendar alguno de ellos en particular.'''
+
+* '''Revisión ortográfica y gramatical'''. Antes de considerar el documento como terminado hay que correr el analizador sintáctico y gramatical del procesador de textos para revisar que no hayamos olvidado corregir alguna palabra.
+
+* '''Segunda Lectura'''. Una ves terminado el documento hay que volver a leerlo para confirmar que lo que hemos traducido tiene sentido para el lector. Un analizador sintáctico no va a detectar un error cuando las palabras existan aun y que puestas juntas no tengan sentido, por ejemplo: “agua para con sumo humano” no va a ser marcado como incorrecto siendo que es una frase sin sentido (note el espacio entre “con” y “sumo”). Lo mismo ocurre si traducimos literalmente el texto, al final el editor va a tener que rescribir el documento.
+
+* '''Edición Final'''. Antes de su publicación, una ves que la traducción del documento se haya finalizado hay que enviarlo a revisión con un compañero para permitir corregir problemas que no hayan sido identificados por nosotros mismos.
+
+===Errores “aceptables”===
+	Hay algunas practicas que pueden considerarse errores (principalmente en España) pero que son estilos ampliamente utilizados y aceptados en la mayoría de los países hispano hablantes, por lo que estos errores se consideran aceptables en la traducción de documentos para OWASP.
+
+* Para apoyar en parte la neutralidad de la traducción hay algunos elementos que pueden ser omitidos para evitar mas trabajo y dado que no son utilizados en todos los países hispano parlantes. Esto son:
+
+* El uso de comillas simples o dobles en ves de las comillas tipográficas latinas
+
+* Uso “razonable” de voz pasiva, aunque no es común en español es aceptable su uso ocasional.
+
+* La falta de un estilo en particular como los usados por otros proyectos por medio de una guía de estilos.
+
+* No utilizar el punto como separador de miles y la coma como el separador de decimales (al revés que en inglés) ya que este último es el formato mayoritario utilizado por los usuarios hispano parlantes.
+
+===Ligas útiles===
+Siéntase libre de leer la siguiente documentación para complementar sus conocimientos antes de iniciar la traducción.
+
+El Rincón del Traductor
+http://www.elcastellano.org/rincon.html
+
+Diccionario de la Real Academia de la Lengua Española
+http://buscon.rae.es/diccionario/drae.htm 
+
+Manual de Ortografia de la Real Academia de la Lengua Española
+http://www.rae.es/rae/gestores/gespub000015.nsf/(voanexos)/arch7E8694F9D6446133C12571640039A189/$FILE/Ortografia.pdf 
+
+Anglicismos, barbarismos, neologismos y «falsos amigos» en el lenguaje informático
+http://www.ati.es/gt/lengua-informatica/externos/sampedr1.html 
+
+Glosas de la Academia Norteamericana De La Lengua Española
+http://www9.georgetown.edu/faculty/irizarry/academia/glosas.html 
+
+Falsos amigos (false cognates)
+http://www.eloihr.net/falsefriends/index.php?page=diccionario 
+
+False Friends
+http://www.miguelmllop.com/glos/index.php?letter=* 
+ 
+===Referencias===
+La siguiente es una lista de documentos que aunque no es indispensable leerlos para este esfuerzo de traducción, pueden servir de referencia personal
+
+Glosario básico inglés-español para usuarios de Internet.
+http://www.ati.es/novatica/glosario/glosario_internet.html 
+
+Glosario de términos informáticos
+http://www.clarin.com/suplementos/informatica/htm/glosario.htm 
+
+Traducción y documentación: cooperar para difundir la información
+http://www.hipertext.net/web/pag241.htm
+
+Normas Correspondientes a las Traducciones del sitio de Debian
+http://www.es.debian.org/international/spanish/notas 
+
+La Traducción en el mundo del Software Libre
+http://es.tldp.org/Articulos/0000otras/doc-traduccion-libre/doc-traduccion-libre/ 
+
+Basic Computer Spanglish Pitfalls
+http://maja.dit.upm.es/~aalvarez/pitfalls/ 
+
+Diez errores frecuentes de revisores y traductores
+http://elcastellano.org/diezerr.html 
+
+Reglas de acentuación
+http://www.ati.es/gt/lengua-informatica/estilo/acentos.html 
+
+Spanglish
+http://www.gsi.dit.upm.es/%7Egfer/spanglish/ 
+
+KDE-ES
+http://i18n.kde.org/teams/es/index.php 
+
+Diccionarios de la lengua española (Diferentes Regiones)
+http://elcastellano.org/diccio.html 
+ 
+International Telecommunication Union SANCHO (Sector Abbreviations and defiNitions for a teleCommunications tHesaurus Oriented) database
+http://www.itu.int/sancho/index.asp 
+
+GNOME-ES
+http://es.gnome.org/Documentacion/Guias/TraduccionDeAyudas 
+
+Diccionarios.com, diccionarios y traducción inglés español
+http://www.diccionarios.com/ 
+
+Glosarios Inglés-Español-Francés de la base de datos de documentación científico-técnica de ACTA
+http://www.acta.es/index.asp?inc=ief 
+
+Página de la lengua española
+http://www.dat.etsit.upm.es/~mmonjas/espannol.html
+
+===Mejoras===
+Si tienen sugerencias o mejoras a este documento envie sus comentarios a la lista de distribucion de [mailto:owasp-spanish@lists.owasp.org OWASP-Spanish] o con [mailto:johnccr@yahoo.com Juan Carlos Calderon].

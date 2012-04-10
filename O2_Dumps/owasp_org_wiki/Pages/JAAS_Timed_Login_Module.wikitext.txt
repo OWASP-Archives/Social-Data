@@ -1,0 +1,41 @@
+==Status==
+Under review
+
+==Introduction==
+The OWASP JAAS Timed Login Module is an implementation of a JAAS LoginModule that provides an escalating time based lockout facility and authentication against a database.  This could be used to prevent brute force attacks against the authentication service.
+The module is based on the DBLogin module from http://free.tagish.net/jaas/ [[Category:FIXME|update link]]
+
+==Features==
+* Authentication against a database using JDBC for users and roles
+* Password stored as SHA-256 hash
+* Incremental time based lockout
+
+==Download==
+* svn checkout http://owasp-java.googlecode.com/svn/trunk/OWASPJaasLoginModule .
+* http://owasp-java.googlecode.com/svn/trunk/OWASPJaasLoginModule/
+
+
+==Getting Started==
+The project is a valid NetBeans project, but will require importing using a different IDE.  The build file contains three database targets for starting, populating and stopping the hsqldb database.  The expected database structure is also in the build file.  This same structure and sample data is replicated in the jaastestdb.xml file which is used to create and populate and the junit test cases.
+A main method is provided in Standalone.java which allows keyboard login.
+
+===Configuration===
+The key configuration files for the module are:
+* login.test.conf - which contains the module's main configuration parameters:
+** dbDriver
+** dbUrl
+** dbUser
+** dbPassword
+** loginQuery = query to perform login, default is "SELECT UserID,Password FROM Users WHERE UserName=?"
+** rolesQuery = query to select roles, default is "SELECT Roles.RoleName FROM Users_Roles,Roles WHERE Users_Roles.UserID=? AND Users_Roles.RoleID=Roles.RoleID"
+** loginTable = table name for storing the login data
+** clippingLevel = number of failed logins that will trigger the timeout
+** interval = time in seconds to delay the next permitted auth.  The first delay after the timeout is triggered will be 'interval' seconds, the second 'interval*2', the third 'interval*3', etc.
+The unit tests and the standalone application should be run with the following arguments:
+  -Djava.security.auth.login.config=file:login.test.conf
+
+==Todo==
+* Use a salted hash
+* Provide an audit log
+* Fix the authorisation unit tests
+[[Category:OWASP Java Project]]

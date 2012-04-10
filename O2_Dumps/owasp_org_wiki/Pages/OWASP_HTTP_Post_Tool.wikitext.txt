@@ -1,0 +1,27 @@
+==== Main  ====
+{{Social Media Links}}
+
+The OWASP Testing Guide v3 [http://www.owasp.org/index.php/Testing_for_Denial_of_Service (Section 4.9) Denial of Service Testing] outlines numerous areas of Denial of Service. In version 4.0 additional updates will be made.  This QA tool was created to allow you to test your web applications to test availability concerns from Layer7 DoS HTTP GET and HTTP POST denial of service attacks. <br>
+
+* Slides - [http://www.owasp.org/images/4/43/Layer_7_DDOS.pdf OWASP Slides Click Here]
+
+* [http://code.google.com/p/owasp-dos-http-post/downloads/list DOWNLOAD TOOL] - This tool is [http://www.gnu.org/licenses/gpl.html GPLv3]
+
+* Excellent write up of the issue(s) and some of the mitigation options [http://blog.spiderlabs.com/2011/07/advanced-topic-of-the-week-mitigating-slow-http-dos-attacks.html ModSecurity Blog] and [http://www.esecurityplanet.com/trends/article.php/3921156/Denial-of-Service-Attacks-Get-more-Sophisticated.htm Good Article]
+
+* IGtv Interview - [http://www.youtube.com/watch?v=0IkpgZGK0lg Watch Interview]
+
+
+[http://code.google.com/p/owasp-dos-http-post/downloads/list http://www.owasp.org/images/2/28/Http-post.png]
+
+Sponsored by: [http://www.proactiverisk.com http://www.owasp.org/images/7/71/Proactiverisk.jpg]
+
+
+==== Project About ====
+{{:Projects/OWASP HTTP Post Tool | Project About}}
+
+
+__NOTOC__ <headertabs />
+
+
+[[Category:OWASP_Project|HTTP Post Tool]] [[Category:OWASP_Tool]] [[Category:OWASP_Alpha_Quality_Tool]] [[Category:OWASP_Download]]

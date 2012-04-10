@@ -1,0 +1,103 @@
+==Wednesday, July 25, 2007 ==
+Open to the public, attendance is free
+
+'''Agenda and Presentations:'''<br/>
+6:00pm - 6:30pm ... Check-in and reception (food & bev)<br/>
+6:30pm - 7:15pm ... Attacking XML Security - Brad Hill<br/>
+7:15pm - 8:00pm ... Development of a Security Metric System to Rate Enterprise Software - Fredrick Lee<br/>
+8:00pm - 8:30pm ... Networking Session<br/>
+
+'''Venue:'''<br/>
+Ariba<br/>
+807 11th Avenue<br/>
+Sunnyvale, Ca 94089<br/>
+[http://www.ariba.com/company/hq_map.cfm Map and Directions]<br/>
+
+
+'''Attacking XML Security'''<br/>
+'''''Presented by: Brad Hill, iSEC Partners'''''<br/>
+
+'''Abstract:''' 
+Brad will present his ongoing research into attacking the XML Digital Signature and Encryption standards that underpin the security  of Web Services, mobile code, SAML, federated identity systems and more.  The talk will begin with a high-level, critical take on the emerging conventional wisdom about message-oriented security and continue with a detailed discussion of design and implementation weaknesses in the standards.  Technical material will include a root cause analysis of the recent iSEC advisory on cross-platform, remote code execution vulnerabilities discovered in multiple XML Digital Signature products. <br/>
+
+[http://www.isecpartners.com/files/iSEC_HILL_AttackingXMLSecurity_bh07.pdf Presentation Link]<br/>
+
+'''Bio:''' Based out of Seattle, Brad Hill is a Senior Security Consultant at iSEC Partners, a full-service security consulting firm that provides penetration testing, secure systems development, security education and software design verification.   Brad brings a ten year background as a software developer and architect in the technology and financial services sectors to his work at iSEC, where he does design review, application assessment and development lifecycle improvement for some of the world’s leading software companies.  
+<br/>
+<br/>
+<br/>
+'''Development of a Security Metric System to Rate Enterprise Software'''<br/>
+'''''Presented by: Fredrick Lee, Fortify Software'''''<br/>
+
+'''Abstract:''' 
+As part of Fortify Software’s Java Open Review (JOR) project, both security defects and quality issues discovered in open source software are collected. The projects being analyzed are diverse in their development methodologies, development stages, and application styles. The projects range from small utility packages (e.g. Apache Commons), to mid-size intranet applications (e.g. JSPWiki), to large-scale, commercial grade enterprise projects (e.g. JBoss). In essence, participants in the Java Open Review project reflect the typical enterprise organization’s code base: a large collection of several small utility/internal applications and a handful of enterprise “flagship” products.
+
+As part of the project, we have been challenged to answer the question: Which
+application is more “secure.” To answer this question, Fortify has sought to develop a set of metrics that combine lessons learned from our experience working on various enterprise code bases and our work on the JOR project. The metrics are designed to incorporate diverse criteria, including the size of the application, the types of vulnerabilities identified, and time required to fix the vulnerabilities. The metrics provide a mechanism to rate software components for security concerns and enable enterprises to:
+
+- Evaluate which open source projects offer an acceptable level of security <br/>
+- Compare competing open source software solutions based on their security <br/>
+- Measure internal development efforts against open source open source counterparts
+
+Ultimately, with sufficient industry adoption, the metrics can also enable enterprises to compare their internal efforts against other enterprises within the same vertical. As part of the talk we will present our experience to date working with companies to develop an effective mechanism for evaluating the security of enterprise software.
+
+'''Bio:''' Fredrick Lee is a member of Fortify Software’s Security Research Group, where he manages the Java Open Review Project. Scanning the code of over 100 applications so far, Fredrick is helping assess and improve the security of open source software. Fredrick also helps the Security Research Group develop the secure coding rules that are use to run Fortify’s suite of products. 
+ 
+Prior to joining Fortify Software, Fredrick was a Senior Information Security Engineer at Bank of America, where he helped roll out a secure development framework, performed security assessments, and developed enterprise security solutions. 
+ 
+Fredrick graduated from the University of Oklahoma, with a BS in Computer Engineering. 
+
+<br/>
+
+'''Upcoming Security Workshops'''<br/>
+'''''Presented by: Brian Bertacini, Volunteer Chapter Organizer'''''<br/>
+
+'''Abstract:''' Introduce local volunteer expert trainers that are planning web application and infrastructure security workshops.
+
+Please RSVP to via email [mailto:brian.bertacini@owasp.org Brian Bertacini], call 408-979-0571 or visit [http://owasp.mollyguard.com OWASP.Mollyguard.com]
+
+Special thanks to [http://www.ariba.com Ariba] for hosting this event and to [http://www.appsecconsulting.com AppSec Consulting] and [http://www.isecpartners.com iSEC Partners] for sponsoring.
+
+
+== Thursday, April 12, 2007 ==
+Open to the public, attendance is free
+
+'''Agenda and Presentations:'''<br/>
+6:00pm - 6:30pm ... Check-in and reception (food & bev)<br/>
+6:30pm - 7:30pm ... Past, Present and Future of Web Application Security in PCI - Bernie Weidel<br/>
+7:30pm - 8:30pm ... Top Web Application Vulnerabilities, Exploits and Countermeasures - Josh Daymont<br/>
+
+'''Venue:'''<br/>
+Ariba<br/>
+807 11th Avenue<br/>
+Sunnyvale, Ca 94089<br/>
+[http://www.ariba.com/company/hq_map.cfm Map and Directions]<br/>
+
+
+'''Past, Present and Future of Web Application Security in PCI'''<br/>
+'''''Presented by: Bernie Weidel - PCI Product Manager, Qualys'''''<br/>
+
+'''Abstract:''' 
+This presentation will start off with a holistic view of Ecommerce Data Security in contrast to the overall scope of Fraud in the Financial Services Industry, thereby giving insights as to why the PCI DSS was created by the Credit Card Brands and developed into its current form. Next, we will explore the current state of Web Application Security in the PCI DSS v1.1 and attempt to bring clarity to some of the more confusing items. We will also outline the structure of the PCI DSS Council; reviewing its key concepts and requirements. Lastly, we will outline methods you can use to proactively get involved in shaping future versions of the PCI DSS.<br/>
+
+'''Bio:''' Bernie Weidel, Product Manager for QualysGuard PCI is responsible for evaluating customer/partner requirements, integrating them into the product, and driving PCI to market. Bernie has been developing methods to achieve and evidence compliance since 2000, when he designed a HIPAA compliance program for Scarborough Insurance Agency. Prior to joining Qualys, Bernie was an Infrastructure Security Project Manager at Adobe Systems where he implemented, managed and streamlined SOX and PCI compliance programs. He was also responsible for various aspects of security such as Web Application Security, Database Security, PDA Security and Vulnerability Management. Before Adobe, Bernie worked for Symbol Wireless Technologies as a Wireless Systems Analyst; designing, installing and troubleshooting/fine tuning Enterprise Wireless Networks.
+<br/>
+<br/>
+<br/>
+'''Top Web Application Vulnerabilities, Exploits and Countermeasures'''<br/>
+'''''Presented by: Josh Daymont - Sr. Security Consultant, Fortify'''''<br/>
+
+'''Abstract:''' 
+This presentation will take a look at Web Application Security from the Front lines to the back offices of systems development. First, a look at the top vulnerabilities and how are they exploited. Then look beyond the front lines and explore countermeasures that can be implemented during the development process to protect applications and sensitive data after deployment.<br/>
+
+
+
+
+'''About OWASP'''<br/>
+'''''Presented by: Brian Bertacini, Volunteer chapter organizer'''''<br/>
+
+'''Abstract:''' An overview of the Open Web Application Security Project (OWASP), current projects and feedback from the recent WebAppSec Conference in Seattle.  
+
+Please RSVP to via email [mailto:brian.bertacini@owasp.org Brian Bertacini], call 408-979-0571 or visit [http://owasp.mollyguard.com OWASP.Mollyguard.com]
+
+Special thanks to [http://www.aribe.com Ariba] for hosting this event.

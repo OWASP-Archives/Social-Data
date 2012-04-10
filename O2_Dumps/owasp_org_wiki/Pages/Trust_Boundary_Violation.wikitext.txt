@@ -1,0 +1,99 @@
+{{Template:Vulnerability}}
+{{Template:Fortify}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+Commingling trusted and untrusted data in the same data structure encourages programmers to mistakenly trust unvalidated data.
+
+A trust boundary can be thought of as line drawn through a program. On one side of the line, data is untrusted. On the other side of the line, data is assumed to be trustworthy. The purpose of validation logic is to allow data to safely cross the trust boundary--to move from untrusted to trusted.
+
+A trust boundary violation occurs when a program blurs the line between what is trusted and what is untrusted. The most common way to make this mistake is to allow trusted and untrusted data to commingle in the same data structure.
+
+==Risk Factors==
+
+* Talk about the [[OWASP Risk Rating Methodology|factors]] that make this vulnerability likely or unlikely to actually happen
+* Discuss the technical impact of a successful exploit of this vulnerability
+* Consider the likely [business impacts] of a successful attack
+
+
+==Examples==
+
+
+The following Java code accepts an HTTP request and stores the usrname parameter in the HTTP session object before checking to ensure that the user has been authenticated.
+
+<pre>
+  usrname = request.getParameter("usrname");
+  if (session.getAttribute(ATTR_USR) == null) {
+      session.setAttribute(ATTR_USR, usrname);
+  }
+</pre>
+
+Without well-established and maintained trust boundaries, programmers will inevitably lose track of which pieces of data have been validated and which have not. This confusion will eventually allow some data to be used without first being validated.
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+
+==Related [[Controls]]==
+
+* [[:Category:Input Validation]]
+* [[Use encapsulation]]
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Range and Type Error Vulnerability]]
+[[Category:Java]]
+[[Category:Implementation]]
+[[Category:Code Snippet]]
+[[Category:Design]]
+[[Category:Vulnerability]]

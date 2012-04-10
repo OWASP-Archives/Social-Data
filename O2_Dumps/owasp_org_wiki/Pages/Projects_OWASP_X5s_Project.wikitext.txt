@@ -1,0 +1,50 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Project About</noinclude>
+| project_name = OWASP X5s Project
+| project_home_page = OWASP Fiddler Addons for Security Testing Project
+
+| project_description = Active XSS testing and input/output encoding detection
+x5s is a [http://www.fiddler2.com/fiddler2/ Fiddler]addon which aims to assist penetration testers in finding cross-site scripting vulnerabilities. This is not a point and shoot tool, it requires some understanding of how encoding issues lead to XSS, and it requires manual driving.
+
+It's main goal is to help you identify the hotspots where XSS might occur by:
+* Detecting where safe encodings were not applied to emitted user-inputs 
+* Detecting where Unicode character transformations might bypass security filters 
+* Detecting where non-shortest UTF-8 encodings might bypass security filters
+
+| project_license = [http://en.wikipedia.org/wiki/BSD_license New BSD]
+
+
+| leader_name1 = Chris Weber
+| leader_email1 = chris.weber@owasp.org
+| leader_username1 = ChrisWeber 
+
+| contributor_name[1-10] = 
+| contributor_email[1-10] = 
+| contributor_username[1-10] = 
+
+| pamphlet_link = 
+
+| presentation_link =
+
+| mailing_list_name = https://lists.owasp.org/mailman/listinfo/owasp-fast-project
+
+| project_road_map = 
+
+| links_url1 = http://xss.codeplex.com/wikipage?title=Tutorial&referringTitle=Home
+| links_name1 = Quickstart Tutorial
+
+| links_url2 = http://xss.codeplex.com/documentation?referringTitle=Home
+| links_name2 = Detailed Documentation
+
+| links_url3 = http://xss.codeplex.com/releases/43170/download/115610
+| links_name3 = Download link
+
+| release_1 = x5s v1.0.1
+
+| release_2 = 
+| release_3 =
+| release_4 =
+
+<!--- The line below is for GPC usage only. Please do not edit it --->
+| project_about_page = Projects/OWASP X5s Project
+
+}}

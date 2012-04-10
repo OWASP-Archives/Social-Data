@@ -1,0 +1,64 @@
+{{Template: <includeonly>{{{1}}}</includeonly><noinclude>Release About</noinclude>
+| project_name = OWASP ModSecurity Core Rule Set Project
+| project_home_page = :Category:OWASP ModSecurity Core Rule Set Project
+
+| release_name = ModSecurity 2.2.0
+| release_date = 05/26/2011 
+| release_description = 
+*Improvements:
+- Changed Licensing from GPLv2 to Apache Software License v2 (ASLv2)
+http://www.apache.org/licenses/LICENSE-2.0.txt
+- Created new INSTALL file outlining quick config setup
+- Added a new rule regression testing framework to the /util directory
+- Added new activated_rules directory which will allow users to place symlinks pointing
+to files they want to run.  This allows for easier Apache Include wild-carding
+- Adding in new RULE_MATURITY and RULE_ACCURACY tags
+- Adding in a check for X-Forwarded-For source IP when creating IP collection
+- Added new Application Defect checks (55 app defect file) from Watcher tool (Check Charset)
+http://websecuritytool.codeplex.com/wikipage?title=Checks#charset
+- Added new AppSensor rules to experimental_dir
+https://www.owasp.org/index.php/AppSensor_DetectionPoints
+- Added new Generic Malicious JS checks in outbound content
+- Added experimental IP Forensic rules to gather Client hostname/whois info  http://blog.spiderlabs.com/2010/11/detecting-malice-with-modsecurity-ip-forensics.html
+- Added support for Mozilla's Content Security Policy (CSP) to the experimental_rules
+http://blog.spiderlabs.com/2011/04/modsecurity-advanced-topic-of-the-week-integrating-content-security-policy-csp.html
+- Global collection in the 10 file now uses the Host Request Header as the collection key.
+This allows for per-site global collections.
+- Added new SpiderLabs Research (SLR) rules directory (slr_rules) for known vulnerabilties.
+This includes both converted web rules from Emerging Threats (ET) and from SLR Team.
+- Added new SLR rule packs for known application vulns for WordPress, Joomla and phpBB
+- Added experimental rules for detecting Open Proxy Abuse
+http://blog.spiderlabs.com/2011/03/detecting-malice-with-modsecurity-open-proxy-abuse.html
+- Added experimental Passive Vulnerability Scanning ruleset using OSVDB and Lua API
+http://blog.spiderlabs.com/2011/02/modsecurity-advanced-topic-of-the-week-passive-vulnerability-scanning-part-1-osvdb-checks.html
+- Added additional URI Request Validation rule to the 20 protocol violations file (Rule ID - 981227)
+- Added new SQLi detection rules (959070, 959071 and 959072)
+- Added "Toata dragostea mea pentru diavola" to the malicious User-Agent data
+https://www.modsecurity.org/tracker/browse/CORERULES-64
+
+*Bug Fixes:
+- Assigned IDs to all active SecRules/SecActions
+- Removed rule inversion (!) from rule ID 960902
+- Fixed false negative issue in Response Splitting Rule 
+- Fixed false negative issue with @validateByteRange check
+- Updated the TARGETS lising for rule ID 950908
+- Updated TX data for REQBODY processing
+- Changed the pass action to block in the RFI rules in the 40 generic file
+- Updated RFI regex to catch IP address usage in hostname
+https://www.modsecurity.org/tracker/browse/CORERULES-68
+- Changed REQUEST_URI_RAW variable to REQUEST_LINE in SLR rules to allow matches on request methods.
+- Updated the RFI rules in the 40 generic attacks conf file to remove explicit logging actions.
+They will now inherit the settings from the SecDefaultAction
+
+| release_license = [http://www.apache.org/licenses/LICENSE-2.0.txt Apache Software License v2 (ASLv2)]
+
+| release_download_link = http://sourceforge.net/projects/mod-security/files/modsecurity-crs/0-CURRENT/modsecurity-crs_2.2.0.zip/download  
+
+| leader_name1 = Ryan Barnett
+| leader_email1 = Ryan.Barnett@owasp.org
+| leader_username1 = Rcbarnett 
+
+| release_notes = http://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project_-_ModSecurity_2.2.0_-_Notes
+
+
+}}

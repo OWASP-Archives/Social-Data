@@ -1,0 +1,27 @@
+If you want to access using an CVS editor (for example TortoiseCVS) the sourceforge CVS servers, you need to use the following configuration settings:
+
+* protocol: ssh 
+* server: owasp.cvs.sourceforge.net:/cvsroot/owasp
+
+==Accessing OWASP CVS ==
+* One way is to browse the CVS online by going to the [http://owasp.cvs.sourceforge.net/owasp/ OWASP Source Tree]
+* Another way is to configure your CVS client to download the source locally.  Instructions for this can be found [http://sourceforge.net/cvs/?group_id=64424 here]
+
+== Configuring CVS access using tortoise CVS behind a proxy ==
+
+These are the steps you need to take:
+
+* Install the latest version of Tortoise CVS (from http://www.tortoisecvs.org/)
+* Create a connection using Putty to your proxy with the following tunnel:
+** Source port: 22
+** Destination: 66.35.250.83:22
+* Try SSHing into 127.0.0.1:22 you should get a ssh login priompt (after accepting sourceforge ssh fingerprint)
+* On the place where you want the project to be located, click on CVS Checkout and use these settings:
+** Protocol: Secure Shell(:ssh:)
+** Server: 127.0.0.1
+** Repository folder: /cvsroot/owasp
+** User name: {username}:{password}  (only use this for testing , once it is working see this for details on how to use ssh keys http://blogs.sun.com/alanbur/entry/using_netbeans_with_sourceforge)
+** Module: dotnet/ReportGenerator
+* click on 'Fetch List' to test connections (you should get no errors)
+
+[[Category:OWASP .NET Project]]

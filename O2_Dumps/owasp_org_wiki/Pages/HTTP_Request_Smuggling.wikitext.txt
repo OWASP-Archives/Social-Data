@@ -1,0 +1,130 @@
+{{Template:Attack}}
+
+Last revision: '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+<br>
+[[Category:OWASP ASDR Project]]
+
+==Description==
+The HTTP Request Smuggling attack explores an incomplete parsing of the submitted data done by an intermediary HTTP system working as a proxy. HTTP Request Smuggling consists of sending a specially formatted HTTP request that will be parsed in a different way by the proxy system and by the final system, so the attacker could smuggle a request to one system without the other being aware of it. This attack makes it possible to exploit other attacks, like [[Cache Poisoning]], [[Session hijacking attack|Session Hijacking]], [[Cross-site Scripting (XSS)]] and most importantly, the ability to bypass web application firewall protection. 
+
+To exploit the HTTP Request Smuggling,  some specific conditions must exist,  such as the presence of specific proxy system and version such as SunOne Proxy 3.6 (SP4) or FW-1/FP4-R55W beta or an XSS vulnerability in the web server.
+
+Basically the attack consists of submitting an HTTP request that encapsulates a second HTTP request in the same header, as shown below.
+
+ GET /some_page.jsp?param1=value1&param2=
+ Content-Type: application/x-www-form-
+ Content-Length: 0
+ Foobar: GET /mypage.jsp HTTP/1.0
+ Cookie: my_id=1234567
+ Authorization: Basic ugwerwguwygruwy
+
+In this case, the first HTTP header is parsed by the proxy system and the second by the final system, permitting the attacker to bypass the proxy’s access control.
+
+
+The attack could be exploited in different ways as reported by “HTTP Request Smuggling” paper by Watchfire, so it’s possible to realize these attacks:
+
+• Web Cache Poisoning
+
+• Firewall/IPS/IDS evasion
+
+• Forward vs. backward HRS
+
+• Request Hijacking
+
+• Request Credential Hijacking
+
+==Risk Factors==
+TBD
+[[Category:FIXME|need content]]
+
+
+==Examples==
+
+===Example 1 - Cache Poisoning Exploiting ===
+
+Our first example demonstrates a classic HRS attack. Suppose a POST request contains two "Content-Length" headers with conflicting values. Some servers (e.g., IIS and Apache) reject such a request, but it turns out that others choose to ignore the problematic header. Which of the two headers is the problematic one? Fortunately for the attacker, different servers choose different answers. For example, SunONE W/S 6.1 (SP1) uses the first "Content-Length" header, while SunONE Proxy 3.6 (SP4) takes the second header (notice that both applications are from the SunONE family). Let SITE be the DNS name of the SunONE W/S behind the SunONE Proxy. Suppose that "/poison.html" is a static (cacheable) HTML page on the W/S. Here's the HRS attack that exploits the inconsistency between the two servers:
+
+ <Font Color="blue">1 POST <nowiki>http://SITE/foobar.html</nowiki> HTTP/1.1
+ 2 Host: SITE
+ 3 Connection: Keep-Alive
+ 4 Content-Type: application/x-www-form-urlencoded
+ 5 Content-Length: 0
+ 6 Content-Length: 44
+ 7 [CRLF] </Font Color>
+ <Font Color="purple">8 GET /poison.html HTTP/1.1
+ 9 Host: SITE
+ 10 Bla: [space after the "Bla:", but no CRLF]</Font Color>
+ <Font Color="red">11 GET <nowiki>http://SITE/page_to_poison.html</nowiki> HTTP/1.1
+ 12 Host: SITE
+ 13 Connection: Keep-Alive
+ 14 [CRLF]</Font Color>
+
+[Note that each line terminates with a CRLF ("\r\n"), except for line 10.]
+Let's examine what happens when this request is sent to the W/S via the proxy server. First, the proxy parses the POST request in lines 1-7 (in blue), and encounters the two "Content-Length" headers. As we mentioned earlier, it decides to ignore the first header, so it assumes the request has a body of length 44 bytes. Therefore, it treats the data in lines 8-10 as the first request body (lines 8-10, in purple, contain exactly 44 bytes). The proxy then parses lines 11-14 (in red), which treats as the client's second request. Now let's see how the W/S interprets the same payload, once it has been forwarded to it by the proxy.[[Category:FIXME|is the code above supposed to be in color?]]
+Unlike the proxy, the W/S uses the first "Content-Length" header: as far as it's concerned, the first POST request has no body, and the second request is the GET in line 8 (notice that the GET in line 11 is parsed by the W/S as the value of the "Bla" header in line 10). To summarize, this is how the data is partitioned by the two servers:
+                                  1st request        2nd request
+             SunONE Proxy          lines 1-10        lines 11-14
+             SunONE W/S            lines 1-7         lines 8-14
+
+Next, let's see which responses are sent back to the client. The requests the W/S sees are "POST /foobar.html" (from line 1) and "GET /poison.html" (from line 8), so it sends back two responses with the contents of the "foobar.html" page and the "poison.html" page, respectively. The proxy matches these responses to the two requests it thinks were sent by the client - "POST /foobar.html" (line 1) and "GET /page_to_poison.html" (line 11). Since the response is cacheable (we assumed "poison.html" is a cacheable page), the proxy caches the contents of "poison.html" under the URL "page_to_poison.html", and voila:  the cache is poisoned! Any client requesting "page_to_poison.html" from the proxy would receive the "poison.html" page.
+A technical note: Lines 1-10 and 11-14 have to be sent in two separate packets, since SunONE Proxy doesn't pipeline requests on the same packet.
+
+===Example 2 - Request Credential Hijacking===
+
+Another area of interest is the ability of the attacker to forcefully invoke a script (/some_page.jsp) with a client's credentials. This attack is similar in effect to the [[Cross-Site Request Forgery]] attack, yet it is more powerful because the attacker is not required to interact with the client (victim).
+The attack is as follows:
+
+ POST /some_script.jsp HTTP/1.0
+ Connection: Keep-Alive
+ Content-Type: application/x-www-form-urlencoded
+ Content-Length: 9
+ Content-Length: 142
+ this=thatGET /some_page.jsp?param1=value1&param2=value2 HTTP/1.0
+ Content-Type: application/x-www-form-urlencoded
+ Content-Length: 0
+ Foobar:
+
+When the client sends a request, such as:
+ GET /mypage.jsp HTTP/1.0
+ Cookie: my_id=1234567
+ Authorization: Basic ugwerwguwygruwy
+
+Tomcat will glue this to the queued incomplete request, and together, it will have:
+ GET /some_page.jsp?param1=value1&param2=value2 HTTP/1.0
+ Content-Type: application/x-www-form-urlencoded
+ Content-Length: 0
+ Foobar: GET /mypage.jsp HTTP/1.0
+ Cookie: my_id=1234567
+ Authorization: Basic ugwerwguwygruwy
+
+Now a complete request, it will invoke the script /some_page.jsp and return its results to the client. If this script is a password change request, or a money transfer to the attacker's account, then this may potentially incur serious damage to the client.
+
+==Related [[Threat Agents]]==
+* [[internal software developer]]
+
+==Related [[Attacks]]==
+* [[Cross-site Scripting (XSS)]]
+
+==Related [[Vulnerabilities]]==
+* TBD
+[[Category:FIXME|need links]]
+
+==Related [[Controls]]==
+* [[:Category:Session Management]]
+
+==References==
+* http://www.securiteam.com/securityreviews/5GP0220G0U.html
+* [[Testing for HTTP Splitting/Smuggling (OWASP-DV-016)|Testing for HTTP Splitting/Smuggling]]
+
+[[Category:FIXME|link not working
+
+* Watchfire.com Whitepaper: HTTP Request Smuggling [http://download.watchfire.com/ttl/wp/HTTP-Request-Smuggling.pdf?file=HTTP-Request-Smuggling.pdf&authToken=1214447561_b9e39c8d332106d359a4f3742b8d7bbd]
+
+
+]]
+
+[[Category:Protocol Manipulation]]
+
+[[Category:Attack]]
+__NOTOC__

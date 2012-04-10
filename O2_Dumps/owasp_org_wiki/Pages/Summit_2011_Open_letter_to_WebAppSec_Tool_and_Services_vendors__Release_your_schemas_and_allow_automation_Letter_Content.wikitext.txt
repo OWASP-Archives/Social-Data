@@ -1,0 +1,42 @@
+==To WebAppSec vendors==
+This request is mainly focused on the commercial vendors of products and services of the following WebAppSec categories: Pen-testing, Code Review, BlackBox Scanning, WhiteBox Scanning and WAFs.
+
+Other software/services categories, including equivalent Open Source tools, are more than welcomed to participate.
+<br/><br/>
+==Open Letter==
+<br/>
+'''02/Feb/2010'''
+
+'''Open letter to WebAppSec tool/services vendors: Release your schemas and allow automation'''
+
+Dear vendor,
+ 
+Although you provide a product or service that automates (as much as you can) the process of evaluating the security of a particular application, at the moment (Feb 2011) it is very hard to consume, consolidate, integrate and instrument your deliverables and technology.
+
+Our industry (and clients) desperately need to move into a world where we are able to consolidate, analyse and present the results created by multiple tools/services. This would create a scenario where we (for example) are able to deliver to developers (as Unit Tests or Software-as-a-Service) 'complete and integrated' findings (i.e. security findings that contain both WhiteBox and BlackBox findings). We also need to be able to create WAF rules from the findings delivered, and must have the ability to integrate them with other technologies used through the Software Development LifeCycle (e.g. BugTracking, Change Control, Application Modelling/Design Tools, Threat Modelling tools, Knowledge-Base/ELearning solutions, etc...)
+
+At the moment there are numerous companies and projects that are trying to achieve such integration (good luck on their endeavours), but we need an independent base we call all work from.
+
+With this in mind, the following data and artifacts are requested from you and ALL product vendors in this space :
+* '''The XSD (schemas) for ALL released versions of your product/service''' (starting with the most recent release and going back as far as possible)
+* '''Sample XML files''' (or whatever format the data can be exported) '''of: vulnerable-by-design and Open Source web applications''' - To kickstart this process please deliver the results for the following applications: 
+** [http://www.owasp.org/index.php/Category:OWASP_WebGoat_Project OWASP WebGoat] (Java), 
+** [http://code.google.com/p/owasp-hacmebank/ HacmeBank - OWASP version] (.Net), 
+** [http://www.mediawiki.org/wiki/MediaWiki MediaWiki] (PHP), 
+** [http://nerddinner.codeplex.com/ NerdDinner] (ASP.NET MVC), 
+** [https://src.springframework.org/svn/spring-samples/jpetstore/trunk/org.springframework.samples.jpetstore PetStore] (Struts/Spring version)]
+** [http://code.google.com/p/spring-petstore  PetStore] (DWR version). 
+** Other applications can be also provided at the discretion of the vendors (as long as it is possible to also scan those applications from other tools/services)
+* '''Artifacts created during scanning''' (for example Internal representations of source code or web applications)
+* '''Rules used during the scans''' (to allow the replication of findings and the creation of a core 'industry wide' set of rules) 
+* '''APIs that can be used to instrument and control your scanning engine''' (please provide as much documentation as possible on the currently supported ways to interact with your product)
+
+With these materials (to be uploaded to a google code repository), the OWASP community will try to create the following standards (reusing as much as possible the great work done by others in this space (MITRE, CWE, NIST, OVAL, etc...):
+* Open Findings Schema
+* Open Rules Schema
+* Open Application Artifacts Schema (which could also be called: Open Scan Targets Schema)
+* Open Intermediate Representation Schema (abstraction layer of code and web assets) 
+
+The [[Summit_2011 | OWASP Summit 2011]] represents a unique opportunity to make this happen, so please either provide the requested data yourselves, or allow your current clients to do so (without the thread of a lawsuit)
+
+The undersigned below, urge you to join these effort and to active participate in this endeavour

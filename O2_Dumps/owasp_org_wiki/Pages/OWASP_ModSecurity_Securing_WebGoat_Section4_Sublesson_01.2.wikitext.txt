@@ -1,0 +1,41 @@
+1. General -> 1.2  HTTP Splitting
+
+=== Lesson overview ===
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution === 
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information. 
+
+=== Strategy ===
+
+The solution is to prevent carriage returns and line feeds from passing through. ModSecurity ruleset 'modsecurity_crs_40_generic_attacks.conf' already has some rules for an HTTP response splitting attack so they were used. In the second rule, note the transformations <font face="Courier New">urlDecodeUni</font> and <font face="Courier New">htmlEntityDecode</font>.
+
+=== Implementation === 
+
+The lesson is mitigated by the ruleset 'rulefile_01_general_http-splitting.conf':
+
+<pre>
+# The first rule is not necessary to solve the WebGoat lesson
+SecRule REQUEST_URI|REQUEST_HEADERS|REQUEST_HEADERS_NAMES "%0[ad]" \
+	"t:lowercase,capture,log,auditlog,deny,severity:3, \ 
+msg:'HTTP Response Splitting Attack via URI/Header',logdata:'%{TX.0}', \
+tag:'HTTP_SPLITTING',redirect:/_error_pages_/lesson01a.html"
+
+SecRule REQUEST_FILENAME|ARGS|ARGS_NAMES|XML:/* \
+        "(?:\bhttp\/(?:0\.9|1\.[01])|<(?:html|meta)\b)" \
+	"t:urlDecodeUni,t:htmlEntityDecode,t:lowercase,capture,log,auditlog,deny, \
+severity:3,msg:'HTTP Response Splitting Attack via args/file name', \
+logdata:'%{TX.0}',tag:'HTTP_SPLITTING',redirect:/_error_pages_/lesson01b.html"
+</pre>
+
+=== Reviewer comments === 
+
+The Strategy/Implementation details look fine as you are using our existing Core Rule IDs 950910/950911.  The only issue that I would raise, and it is not specific to this particular issue, is that of anti-evasion considerations when choosing the ModSecurity transformation functions to use.  As you are all aware, the bad guys are constantly trying to bypass these types of filters by messing with encodings, whitespace formatting, etc…  With this in mind, we may need to rethink and retest the applied trans functions.  Ivan has been doing some research in this area and can provide more details and recommendations.  
+
+One item that I would suggest that you test is that of adding the ModSecurity multiMatch action - http://www.modsecurity.org/documentation/modsecurity-apache/2.5.5/modsecurity2-apache-reference.html#N11554.  
+
+This may not be the best option from a performance perspective, but it will help to identify attacks as we would be inspecting the data both before and after each trans function is applied vs. the normal process of only inspecting it after all of them are completed.
+
+I have also seen web apps that allow clients to submit html.  Oftentimes they use %0A and %0D to actually format html and not necessarily for HTTP Response Splitting attacks.  We would need a different parser or something a bit more granular for this (Anti-Samy-ish).

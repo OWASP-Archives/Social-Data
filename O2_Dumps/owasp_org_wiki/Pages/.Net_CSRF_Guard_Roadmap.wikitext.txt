@@ -1,0 +1,17 @@
+=== TODO ===
+* Check out J2EE CSRF Guard 2.0 features and nomenclature for possible alignment
+** Actually, the current development version of CSRFGuard for .Net already implements many of the requirements that I had shared with the Java team.
+* Investigate threats of bad applications that leak ASP.Net session info from HTTPS to HTTP.  This module right now is implicitly assuming that the session is trustworthy which it would be nice if we could have some programmatic basis for believing this.
+* Write nunit test cases for everything
+* Loads of error handling to be production-ready.
+* Secure Coding:
+** Data input canonicalization
+* Features:
+** Filters
+*** HTMLParser filter
+* Need MSI installer
+* Need to test out Machine.config deployment
+* Watir functional tests.
+=== Future ===
+* Investigate an option for an application to provide its own web control (hidden) that you could override with the value from session instead of replacing the form tags with regex.
+** Or, an option that would involve tightly coupling the app and the module -- the module could stick the token in session and the app could put it in the pages; then the module would only need to validate the data coming back and not do any rewriting.

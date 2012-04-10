@@ -1,0 +1,28 @@
+== At Breach Security, January 24th 2007 ==
+
+The 6th OWASP IL meeting was held on January 24th 2007, at 17:15, at Breach Security offices in Herzelya and was sponsored by [[www.breach.com|Breach Security]]. The meeting was very successful, with nearly 50 people attending the meeting.
+
+The agenda of the meeting was:
+
+
+<big>'''[[media:OWASP_IL_Source_Code_Analysis_and_Application_Security.pdf|Source Code Analysis and Application Security - Cheating the Maze]]'''</big>
+
+'''Maty Siman, Founder & CTO, [http://www.checkmarx.com/ Checkmarx]'''
+
+During the last few years automatically analyzing source code in order to find security vulnerabilities became a popular method in the field of Application Security. The presentation will discuss the theory and research of static code analysis, the application of static code analysis for security, comparing this method to other application security defense technologies and will demonstrate the use of static code analysis for application security.
+
+
+<big>'''[[media:OWASP_IL_WCF_Security.pdf|Security Implications of .Net 3.0 and the Windows Communication Foundation (WCF)]]'''</big>
+
+'''Emmanuel Cohen-Yashar (Manu), Senior .NET technology consultant, [http://www.sela.co.il Sela Group]'''   
+
+Windows Communication Foundation (WCF) is the new Microsoft communication framework bundled as part of of .NET Framework 3.0, the new .NET Windows API succeeding Win32 with the release of Windows Vista. WCF programming model unifies Web Services, .NET Remoting, Distributed Transactions, and Message Queues into a single Service-oriented programming model for distributed computing. The presentation will describe the tenets of SOA – Service Oriented Architecture, introduce WCF and discuss the security implications of this broad new communication paradigm.
+
+
+<big>'''[[media:OWASP_IL_The_Universal_XSS_PDF_Vulnerability.pdf|Analysis of the Universal XSS PDF vulnerability - Cause, Solutions and Fun Stuff]]'''</big>
+
+'''Ofer Shezaf, CTO, [http://www.breach.com Breach Security], Leader of [http://www.modsecurity.org/projects/rules/index.html ModSecurity Core Rule Set] open source project '''
+
+Recently a new vulnerability was discovered in commonly used versions of Adobe Acrobat software. Unlike common XSS attacks that require a specific vulnerability in the attacked web site, in this case the vulnerability in Acrobat is sufficient and no fault is required in the attacked web site, and any site that serves PDF files is vulnerable. Therefore it is called "universal XSS" vulnerability.
+
+The presentation will describe the vulnerability, the theoretical and practical solutions for the vulnerability as well as some very funny stories about the dynamics of such a high profile vulnerability, or in other words, what happens when you try to get a car mechanic to fix an application security vulnerability.

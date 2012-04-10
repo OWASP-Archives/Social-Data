@@ -1,0 +1,82 @@
+[[Category:OWASP_Project|OWASP Review BSI IT-Grundschutz Baustein Webanwendungen]]
+==Mailing-List, Coordination and Contact==
+If you want to become a part of the OWASP review team, please subscribe to the mailing list [https://lists.owasp.org/mailman/listinfo/bsi-webbaustein-review https://lists.owasp.org/mailman/listinfo/bsi-webbaustein-review]. It is not necessary to be a member to volunteer, of course :-)
+
+The contact the coordinating team please mail to [mailto:bsi-webbaustein@owasp.de bsi-webbaustein@owasp.de] or contact the project leader  [mailto:ralf.reinhardt@owasp.org Ralf] [[User:Ralf Reinhardt|Reinhardt]]
+
+This is a project of the [[Germany | OWASP German Chapter]].
+
+==Abstract==
+Technical review of the module web application
+("Baustein Webanwendungen") of the IT-baseline protection catalog ("IT
+Grundschutz Katalog") of the German Federal Office for Information
+Security ("BSI") from the OWASP's point of view.
+
+==Introduction==
+The German "Federal Office for Information Security" (BSI), which is
+comparable to departments focused on security in organizations like NIST
+or CCTA, offers the IT Baseline Protection ("IT-Grundschutz") for public
+usage, which is based on ISO/IEC 27001. The IT Baseline Protection
+include a catalog of approx. 80 "Bausteine" (building blocks). Those
+blocks are dealing with one particular subject of IT security. They are
+usually written in the German language and later translated to English.
+They become the de facto standard for IT security and related
+certifications in Germany after they are finally released.
+
+In January 2012 the draft of the block "Webanwendungen" (web
+applications) was released with a request for comments. Since this is
+the core expertise of OWASP we invited a delegate of the BSI to attend
+the last chapter meeting of the German Chapter which took place in
+Frankfurt / Main on the 3rd of February. The meeting's outcome was the
+strong wish to perform a review of that very web application block as an
+OWASP project. This project will help to expand the visibility of OWASP
+in the German IT security landscape broadly.
+
+
+==Roadmap==
+* Building a coordinating team
+* <b>Defining the review rules</b> [[Talk:OWASP_Review_BSI_IT-Grundschutz_Baustein_Webanwendungen| see "Discussion"]]   
+* Reading the BSI documents
+* Collecting comments from the community familiar with the BSI documents
+* Creating a common understanding
+* Writing a review with OWASP glasses 
+* Review of OWASP's review itself
+* Releasing the result(s)
+
+==Deadline==
+06/01/2012, in German: '''01.06.2012'''
+
+
+==Relevant links and general information==
+==== Document download ====
+"Entwurf Baustein Webanwendungen" of the BSI (in German language) directly: 
+[https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/Download/Vorabversionen/Baustein_Webanwendungen_Entwurf.zip https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/Download/Vorabversionen/Baustein_Webanwendungen_Entwurf.zip]
+
+General download section of the BSI:
+[https://www.bsi.bund.de/ContentBSI/grundschutz/kataloge/download/download.html https://www.bsi.bund.de/ContentBSI/grundschutz/kataloge/download/download.html]
+
+==== Some further information about "BSI" and "Grundschutz"====
+The BSI about itself: [https://www.bsi.bund.de/EN/Home/home_node.html https://www.bsi.bund.de/EN/Home/home_node.html ]
+
+Wikipedia about BSI: [http://en.wikipedia.org/wiki/Bundesamt_f%C3%BCr_Sicherheit_in_der_Informationstechnik http://en.wikipedia.org/wiki/Bundesamt_f%C3%BCr_Sicherheit_in_der_Informationstechnik]
+
+Wikipedia about "IT-Grundschutz Katalog": [http://en.wikipedia.org/wiki/IT_Baseline_Protection_Catalogs http://en.wikipedia.org/wiki/IT_Baseline_Protection_Catalogs]
+
+
+==Actual Work in Progress==
+Will be found in [[Talk:OWASP_Review_BSI_IT-Grundschutz_Baustein_Webanwendungen| "Discussion"]]. In German :-)
+
+
+==Coordinating Team==
+* Tobias Glemser
+* Boris Hemkemeier
+* Kai Jendrian
+* Ralf Reinhardt
+* Dirk Wetter
+
+==Project Contributors==
+* Dennis Moers
+* ''Your name here''
+
+==Project Licence==
+Creative Commons Attribution ShareAlike 3.0

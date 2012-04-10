@@ -1,0 +1,29 @@
+16. Session Management Flaws -> 16.2 Spoof an Authentication Cookie
+
+(This sublesson was not formally solved by the project)
+
+=== Lesson overview ===
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution === 
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information. 
+
+=== Strategy ===
+
+This WebGoat lesson shows how to guess another user's authentication cookie. The vulnerability is that the cookie is easy to guess even from only 2 unique user accounts and their authentication cookie; it is exploited by logging in as another user and supplying the predictable authentication cookie. 
+
+A ModSecurity solution is not possible for this lesson because it is not possible to distinguish between an authentication cookie that comes from a valid user versus one that comes from an attacker. 
+
+=== Implementation === 
+
+None
+
+=== Reviewer comments ===
+
+For this particular lesson, it is possible to use mitigation #2 of Sublesson 16.1:
+
+2. The critical point in identifying Session Hijacking attacks is to bind the client IP (and possibly other browser data) to the SessionID when the webapp hands it out in the Set-Cookie response header.  If this is done, you can then identify when someone guesses a SessionID and adds it to their browser as the REMOTE_ADDR variable data will not match what ModSecurity saved in the setsid Session collection when the app handed it out.
+
+We know that the cookie is weak/easily guessed however what we will be enforcing is that the webapp did *NOT* give this out to the client in a Set-Cookie response header so it is not valid.

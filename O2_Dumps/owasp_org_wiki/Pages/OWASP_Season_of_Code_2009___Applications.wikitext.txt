@@ -1,0 +1,197 @@
+'''This page contains project Applications to the [[OWASP Season of Code 2009|OWASP Season of Code 2009]]'''.
+
+= A few notes =
+*'''If you want to apply for a OWASP SoC 09 sponsorship you HAVE TO USE THIS PAGE for your application.'''
+** See [[OWASP Season of Code 2009#HOW TO PARTICIPATE (TO DEVELOPERS)|How To Participate]] for what to do once you completed your Application.
+** Please remember that projects will be selected and funded based on how well they meet the [[OWASP_Season_of_Code_2009#SELECTION_CRITERIA|Selection Criteria]].
+** Please see [[OWASP Summer of Code 2008 Applications|OWASP SoC 08]], [[OWASP Spring Of Code 2007 Applications|OWASP SpoC 07]] for examples of Applications and [[OWASP Autumn of Code 2006 - Applications|OWASP AoC 06]]. 
+* '''You can propose your project in any form you wish, but the best proposals will be well thought out, clear and concise, and reflective of your passion for the topic.  We strongly suggest that you include [[OWASP Season of Code 2009 - Applications - Proposal Type|this information in your proposal]].
+'''
+
+= Applications - {Fill in below}  =
+
+== Application 1  ==
+
+{| border="0" align="center" style="width: 95%;"
+|-
+| align="center" style="background: white none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; color: white;" colspan="2" | 
+|-
+| align="center" style="background: rgb(179, 179, 179) none repeat scroll 0% 0%; width: 30%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | Applicant's Identification/Project Release Leader<br> 
+([[OWASP Season of Code 2009 - Applications - Proposal Type Applicant's Identification|''Please see specifications'']]) 
+
+| align="left" style="background: rgb(194, 194, 194) none repeat scroll 0% 0%; width: 70%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | Igor Kranjec
+|-
+| align="center" style="background: rgb(179, 179, 179) none repeat scroll 0% 0%; width: 30%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | Application Designation/Name 
+| align="left" style="background: rgb(194, 194, 194) none repeat scroll 0% 0%; width: 70%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | ASTRanger (Abstract Syntax Tree Ranger)
+|-
+| align="center" style="background: rgb(179, 179, 179) none repeat scroll 0% 0%; width: 30%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | First (proposed) Reviewer<br> 
+([[OWASP Season of Code 2009 - Applications - Proposal Type Applicant's Identification|''Please see specifications'']]) 
+
+| align="left" style="background: rgb(194, 194, 194) none repeat scroll 0% 0%; width: 70%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | Paulo Coimbra
+|-
+| align="center" style="background: rgb(179, 179, 179) none repeat scroll 0% 0%; width: 30%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | Application Security Issue Addressed 
+| align="left" style="background: rgb(194, 194, 194) none repeat scroll 0% 0%; width: 70%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | 
+'''Prelude''' 
+
+A commonly available tool for the Source Code static analysis (SCA, Static Code Analyzer) is a tool aimed to perform a parsing of the application source code in order to create a reference model on which to apply specific rules to identify problems and create a detailed report. There are a number of complete and efficient SCA tools available on the market. 
+
+'''Problem to be addressed''' 
+
+Based on our experience an ideal SCA tool should have the following additional characteristics: - multiplatform support; 
+
+- multi programming language support (with complete grammars, without “syntax holes”); 
+
+- ability to execute in stand alone mode or integrated with the most utilized development environment; 
+
+- Open Source distribution, with a strong community support; 
+
+- Security issues dedicated, with a clean separation between the analysis engine and vulnerability repository; 
+
+- Able to analyze large code bases with high performance. 
+
+'''Proposal''' 
+
+ASTRanger Project foresees the prototype development of a tool for the static analysis of source code that is going to address all of the above problems and will be able to assure that correct security rules (based on OWASP best practices) will be applied at the same time of the source code implementation. The tool will be embedded on the application developed, in such a way becoming a real Security Framework. 
+
+|-
+| align="center" style="background: rgb(179, 179, 179) none repeat scroll 0% 0%; width: 30%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | Prioritized area<br>(''Please choose from'' [[OWASP Season of Code 2009#HOW_TO_PARTICIPATE_.28TO_DEVELOPERS.29|''here'']]) 
+| align="left" style="background: rgb(194, 194, 194) none repeat scroll 0% 0%; width: 70%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | Enterprise usability of OWASP projects
+|-
+| align="center" style="background: rgb(179, 179, 179) none repeat scroll 0% 0%; width: 30%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | Project Release Roadmap 
+| align="left" style="background: rgb(194, 194, 194) none repeat scroll 0% 0%; width: 70%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | 
+'''Milestones''': 
+
+June 30, 2009 - Project Begins 
+
+July 10, 2009 – Requirements Analysis: Functional Requirements Document (FRD) 
+
+July 16, 2009 – Requirements Analysis: SAR (System Architectural Requirements) 
+
+July 20, 2009 – Identify vulnerabilities and exploitation methods. 
+
+July 24, 2009 - Defining rules set for selected vulnerabilities 
+
+July 28 2 2009 - Create thresholds for generating security alerts 
+
+Aug 3 2009 - Define parsing source code actions in response to security alerts 
+
+Aug 6 2009 - Development 
+
+Aug 18 2009 – Test and debugging 
+
+Aug 28, 2009 - Peer Review &amp; Revisions 
+
+Aug 31, 2009 – Deliver of Prototype (Project Completion) 
+
+|-
+| align="center" style="background: rgb(179, 179, 179) none repeat scroll 0% 0%; width: 30%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | Other Questions 
+| align="left" style="background: rgb(194, 194, 194) none repeat scroll 0% 0%; width: 70%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | &#124;} 
+|}
+
+== Application 2  ==
+
+{| border="0" align="center" style="width: 95%;"
+|-
+| align="center" style="background: white none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; color: white;" colspan="2" | <br>
+|-
+| align="center" style="background: rgb(179, 179, 179) none repeat scroll 0% 0%; width: 30%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | Applicant's Identification/Project Release Leader<br> 
+([[OWASP Season of Code 2009 - Applications - Proposal Type Applicant's Identification|''Please see specifications'']]) 
+
+| align="left" style="background: rgb(194, 194, 194) none repeat scroll 0% 0%; width: 70%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | Marc Chisinevski
+|-
+| align="center" style="background: rgb(179, 179, 179) none repeat scroll 0% 0%; width: 30%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | Application Designation/Name 
+| align="left" style="background: rgb(194, 194, 194) none repeat scroll 0% 0%; width: 70%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | Asset management (asset identification, valuation and risk assessment based on ISO27005)
+|-
+| align="center" style="background: rgb(179, 179, 179) none repeat scroll 0% 0%; width: 30%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | First (proposed) Reviewer<br> 
+([[OWASP Season of Code 2009 - Applications - Proposal Type Applicant's Identification|''Please see specifications'']]) 
+
+| align="left" style="background: rgb(194, 194, 194) none repeat scroll 0% 0%; width: 70%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | Paulo Coimbra
+|-
+| align="center" style="background: rgb(179, 179, 179) none repeat scroll 0% 0%; width: 30%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | Application Security Issue Addressed 
+| align="left" style="background: rgb(194, 194, 194) none repeat scroll 0% 0%; width: 70%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | 
+'''Prelude''' 
+
+Please find the sources and documentation at http://sourceforge.net/projects/assetmng.<br> 
+
+The application is already production-ready. However, the functionalities below need further analysis: 
+
+&nbsp; - Asset management (asset identification, valuation and risk assessment based on ISO27005); integration with opensource Security Information Management systems is currently being discussed. 
+
+&nbsp; - Party management (clients, providers) 
+
+&nbsp; - Contract and license management - integration with opensource tools such as OCS Inventory needs to be investigated, assetmng offering complementary functionalities. 
+
+<br> '''Problems to be addressed''' 
+
+&nbsp;&nbsp; - Integration of different asset valuation and risk assessment models; 
+
+&nbsp;&nbsp; - Integration with opensource Security Information Management systems 
+
+<br> 
+
+<span style="font-weight: bold;">Functionalities</span><br> 1/ already implemented: managers/business analysts use the interface in order to: 
+
+  - define assets and business process and their intrinsic values;
+  
+  - classify these assets according to ISO27005 guidelines
+  
+  
+  
+
+2/ to be developed: the application calculates asset values taking into an account&nbsp; 
+
+  - the intrinsic value of the asset defined in step 1;
+  
+  - the values of other assets depending on this asset;
+  
+  - the values of business processes using the asset.
+  
+  
+  
+
+The concept of an “asset” derived from ISO 27005 
+
+====== ================================================  ======
+
+An asset can be: 
+
+- a business process or activity; 
+
+- information; 
+
+- a supporting asset such as a server or a network device. 
+
+<br> 
+
+3/ already implemented: the Legal or HR departments can use the application in order to manage parties and contracts 
+
+<br> 
+
+4/ already implemented: IT or helpdesk can use the application in order to manage licenses as well as their relationships to contracts and servers 
+
+<br> 
+
+|-
+| align="center" style="background: rgb(179, 179, 179) none repeat scroll 0% 0%; width: 30%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | Prioritized area<br>(''Please choose from'' [[OWASP Season of Code 2009#HOW_TO_PARTICIPATE_.28TO_DEVELOPERS.29|''here'']]) 
+| align="left" style="background: rgb(194, 194, 194) none repeat scroll 0% 0%; width: 70%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | Enterprise usability of OWASP projects
+|-
+| align="center" style="background: rgb(179, 179, 179) none repeat scroll 0% 0%; width: 30%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | Project Release Roadmap 
+| align="left" style="background: rgb(194, 194, 194) none repeat scroll 0% 0%; width: 70%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | 
+'''Milestones''': 
+
+July 16th, 2009 - Sources and documentation published at http://sourceforge.net/projects/assetmng 
+
+August 1st, 2009 – Identify improvements, new functionalities and integration options 
+
+Aug 10th, 2009 - Development 
+
+Aug 18th, 2009 – Test and debugging 
+
+Aug 28, 2009 - Peer Review &amp; Revisions 
+
+Aug 31, 2009 – Deliver of Prototype (Project Completion) 
+
+|-
+| align="center" style="background: rgb(179, 179, 179) none repeat scroll 0% 0%; width: 30%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | Other Questions 
+| align="left" style="background: rgb(194, 194, 194) none repeat scroll 0% 0%; width: 70%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | &#124;}
+|}

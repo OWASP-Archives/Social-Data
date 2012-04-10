@@ -1,0 +1,44 @@
+= The OWASP Source Code Flaws Top 10 =
+
+{| border='1' cellpadding='2' 
+|-	
+|[[Source_Code_Flaws_Top_10_2009-C1|C1 - Design Weakness]]
+|A design weakness occurs when the logic used to create the application did not addressed a threat modeling activity so it may be easy for an attacker to subvert your application behavior. Design also covers an objects scope and visibility, so extra care must be taken to limit what your program expose to others.
+|-
+
+|[[Source_Code_Flaws_Top_10_2009-C2|C2 - Architectural Weakness]]
+|Your application depends on many auxiliary system when it runs. It does not stand on its own. An architectural weakness occurs when your code interacts in a unsafe way with auxiliary systems.
+|-
+
+|[[Source_Code_Flaws_Top_10_2009-C3|C3 - Missing input validation]]
+|Any input to a program must be processed through filtering and validation functions to ensure that is what is expected and to reduce the risk of malicious data.  Using incoming data that is not sanitized can lead to very dangerous runtime vulnerabilities such as cross Site scripting, injection flaws, and others.
+|-
+
+|[[Source_Code_Flaws_Top_10_2009-C4|C4 - Insecure communications]]
+|Web applications use the TCP/IP stack to communicate to the world. An insecure communication vulnerability in the source code concerns how the operating system provided abstraction layer (sockets, ...) and communication layer provided by the framework (java sockets, ...) are used. This covers more than just checking about SSL usage, it is concerned with how the communication code is written.
+|-
+
+|[[Source_Code_Flaws_Top_10_2009-C5|C5 - Information leakage and improper error handling]]
+|This is the same as the one listed in the original Top 10, just from a source code point of view. Missing exception handling or a too verbose logging string, for example, would be included in this flaw category.
+|-
+
+|[[Source_Code_Flaws_Top_10_2009-C6|C6 - Direct object reference]]
+| This is the same as the one listed in the original Top 10, just from a source code point of view.
+|-
+
+|[[Source_Code_Flaws_Top_10_2009-C7|C7 - Misuse of local resources]]
+|Operating system resources like memory, disk space and CPU time can often seem unlimited, but they are not.  A program should effectively manage these resources.  Poorly designed local resource utilization, can cause an application to have poor response time. It can also make it vulnerable to a denial of service by an attacker that causes the program to consume one or more type of these resources.
+|-
+
+|[[Source_Code_Flaws_Top_10_2009-C8|C8 - Usage of potentially dangerous APIs]]
+|Frameworks and libraries evolve to solve security issues. Often they leave backward compatibility routines to give developers time to change their code. Developers frequently forget to transition their code to the new interface, leaving calls to the potentially dangerous APIs even if they have been deprecated.  All such potentially dangerous routine calls fit this category.
+|-
+
+|[[Source_Code_Flaws_Top_10_2009-C9|C9 - Documentation weakness]]
+|Source code must be well documented to make it maintainable. Poor comments can make code hard to understand in the future, even after a short time.  It is easy to introduce security flaws or other bugs if the logic is not clear or even misunderstood.  Comments in the code must document anything needed to fully understand how the code works.
+|-
+
+|[[Source_Code_Flaws_Top_10_2009-C10|C10 - Best practices violation]]
+|This category includes all generic best practices in source code development that are violated by the code. Anything missing from the previous categories would be covered by this category.
+|}
+'''<center>Table 1: Top 10 Source code flaws for 2009</center>'''

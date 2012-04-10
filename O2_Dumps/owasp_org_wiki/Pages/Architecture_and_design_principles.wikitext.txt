@@ -1,0 +1,72 @@
+The following is a merge of ENISA, OWASP and Veracode top 10. Note that there is a mixture of threats and vulnerabilities here - we should decide whether to use risks (threats with impact on assets which occur with probability) and vulnerabilities (system flaws which increase the probability of a threat occurring). I have cut those risks/vulnerabilities which cannot be addressed in any way by developers.  We should decide whether to include recommendations in the style of "code of practice"- e.g. activity monitoring should only be used in circumstances xyz... (feel free to restructure)
+
+My recommendation would be to separate out the design principles from the Risks/Vulnerabilities.
+
+=='''Mobile Security'''==
+*1. Threats, Risks and Vulnerabilities (Risks)
+*2. Design Principles (As part of the Controls) - Added here [https://www.owasp.org/index.php/Projects/OWASP_Mobile_Security_Project_-_Top_Ten_Mobile_Controls#Top_10_mobile_controls_and_design_principles]
+*3. Architectural Patterns  (New)
+*4. Secure Mobile Development/Coding Guidelines
+
+==1. Top Risks/Vulnerabilities==
+
+* Unsafe sensitive data storage
+** Consider the whole data lifecycle in writing your application (collection over the wire, temporary storage, caching, backup, deletion etc...)
+** Automatically delete data which is not required (how to know when it's not required?).
+** Securely delete data using standard shredding techniques.
+** Store a minimum of data on the client side device.
+** Securely wipe removable media.
+** Be aware of caches and temporary storage as a possible leakage channel.
+** Implement key and password storage best practice.
+** In the design phase analyse what data needs to be protected most and what doesn't and apply controls at appropriate places.
+
+* Unintentional disclosure of data: The smartphone user unintentionally discloses data on the smartphone.
+** Apply the principle of minimal disclosure - only collect and disclose data which is required for the application (how to know what this is?)
+** Use non-persistent identifiers wherever possible - e.g. do not use the EMEI number as an identifier unless there is a good reason to do so.
+** Apply techniques for the detection of covert channels - e.g. covert flow trees to discover information which may flow through shared resources such as file systems, resource use etc...
+** Carefully control what data which is stored in public stores such as address book, media gallery etc... including metadata.
+** Obtain user explicit user consent according to best practice (see implementation guidelines) for collection of personal data.
+
+* Attacks on decommissioned smartphones: The smartphone is decommissioned improperly allowing an attacker access to the data on the device.
+** See first risk
+** Provide a convenient way of resetting access credentials which does not require the device (consider an automated timeout on access credentials).
+** Consider using SIM card as default storage for small but sensitive data such as keys.
+
+* Phishing attacks: An attacker collects user credentials (such as passwords and credit card numbers) by means of fake apps or (SMS, email) messages that seem genuine.
+** Provide appropriate trust cues for linking to unknown third party applications.
+** Do not train users to follow untrusted paths.
+** Provide a reporting channel for phishing from apps (e.g. if you are a browser plugin developer).
+
+* Spyware:  Spyware covers untargeted collection of personal information as opposed to targeted surveillance.
+
+* Network Spoofing Attacks: An attacker deploys a rogue network access point (WiFi or GSM) and users connect to it. The attacker subsequently intercepts (or tampers with) the user communication to carry out further attacks such as phishing.
+** Use the GSM encryption-on indicator to detect and signal downgrade attacks.
+
+* Surveillance attacks: An attacker keeps a specific user under surveillance through the target user’s smartphone.
+**  Don't use 3rd party code without carefully verifying
+* Diallerware attacks: An attacker steals money from the user by means of malware that makes hidden use of premium SMS services or numbers.
+* Financial malware attacks The smartphone is infected with malware specifically designed for stealing credit card numbers, online banking credentials or subverting online banking or ecommerce transactions.
+* Network congestion 	Network resource overload due to smartphone usage leading to network unavailability for the end-user.
+** Note that this relies a lot on smart developers because a lot of the congestion is due to signalling overload. Could we make some recommendations on detecting idle/focus so that the app knows when it really needs to be connected to the network?
+* Unauthorized network connectivity (exfiltration or command & control)
+* UI Impersonation
+* System modification (rootkit, APN proxy config)
+** Validate updates and input data from untrusted sources.
+* Logic or Time bomb (including runtime interpreter)
+** Define clearly who should be responsible for updating the application Extensions or plugins e.g. Angry birds Add-ons and installations 
+* Unsafe sensitive data transmission
+* Hardcoded password/keys
+* Lack of data protection in transit
+** Don't allow SSL downgrade.
+** Don't trust network infrastructure
+** See Network Spoofing.
+* Client-side injection
+* Client-side DOS
+* Malicious third-party code
+** Follow security best practice for implementation of runtime interpreters (be careful when implementing anything which turns user input into executable code).
+* Client-side buffer overflow
+* Failure to properly handle inbound SMS messages
+** Remove test code from software
+* Failure to properly handle outbound SMS messages
+* Failure to disable insecure platform features in application (caching of keystrokes, screen data)
+** Least privilege. Be aware of privileges granted by default by API's and disable them.

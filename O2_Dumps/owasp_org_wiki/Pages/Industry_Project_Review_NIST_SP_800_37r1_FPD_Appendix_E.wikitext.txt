@@ -1,0 +1,293 @@
+{| align="right"
+| __TOC__
+|}
+
+<big>APPENDIX E</big>
+
+<big>'''SUMMARY OF RMF TASKS'''</big>
+
+LISTING OF PRIMARY RESPONSIBILITIES AND SUPPORTING ROLES
+
+
+{| style="background:#DCDCDC;color:black;width:100%;" border="1" cellpadding="2" cellspacing="0" align="left"
+! style="width:30%;" | <center><font size="+1">RMF TASKS</font></center>
+! style="width:35%;" | <center><font size="+1">PRIMARY RESPONSIBILITY</font></center>
+! style="width:35%;" | <center><font size="+1">SUPPORTING ROLES</font></center>
+|-
+| style="background:silver" colspan="3" | <big>'''RMF Step 1: Categorize Information System'''</big>
+|-
+| '''''TASK 1-1'''''
+:'''Security Categorization'''
+:Categorize the information system and document the results of the [http://fismapedia.org/index.php?title=Term:Security_Categorization security categorization] in the [http://fismapedia.org/index.php?title=Term:Security_Plan security plan].
+|
+:Information System Owner
+:Information Owner/Steward
+|
+:Risk Executive (Function)
+:Authorizing Official '''''or''''' Designated Representative
+:Chief Information Officer
+:Senior Information [http://fismapedia.org/index.php?title=Term:Security_Officer Security Officer]
+:Information [http://fismapedia.org/index.php?title=Term:System_Security_Officer System Security Officer]
+|-
+| '''''TASK 1-2'''''
+:'''Information System Description'''
+:Describe the information system (including system [http://fismapedia.org/index.php?title=Term:Boundary boundary]) and document the description in the [http://fismapedia.org/index.php?title=Term:Security_Plan security plan].
+|
+:Information System Owner
+|
+:Authorizing Official '''''or''''' Designated Representative
+:Senior Information [http://fismapedia.org/index.php?title=Term:Security_Officer Security Officer]
+:Information Owner/Steward
+:Information [http://fismapedia.org/index.php?title=Term:System_Security_Officer System Security Officer]
+|-
+| '''''TASK 1-3'''''
+:'''Information System Registration'''
+:Register the information system with appropriate organizational program/management offices.
+|
+:Information System Owner
+|
+:Information [http://fismapedia.org/index.php?title=Term:System_Security_Officer System Security Officer]
+|-
+| style="background:silver" colspan="3" | <big>'''RMF Step 2: Select Security Controls'''</big>
+|-
+| '''''TASK 2-1'''''
+:'''Security Control Selection'''
+:Select the [http://fismapedia.org/index.php?title=Term:Security_Controls security controls] for the information system and document the controls in the [http://fismapedia.org/index.php?title=Term:Security_Plan security plan].
+|
+:Information Security Architect
+:Information System Owner
+|
+:Authorizing Official '''''or''''' Designated Representative
+:Information Owner/Steward
+:Information [http://fismapedia.org/index.php?title=Term:System_Security_Officer System Security Officer]
+:Information System Security Engineer
+|-
+| '''''TASK 2-2'''''
+:'''Common Control Identification'''
+:Identify the [http://fismapedia.org/index.php?title=Term:Security_Controls security controls] that are provided by the organization as common controls for organizational information systems and document the controls in a [http://fismapedia.org/index.php?title=Term:Security_Plan security plan] (or equivalent document).
+|
+:Chief Information Officer '''''or''''' [http://fismapedia.org/index.php?title=Term:Senior_Information_Security_Officer Senior Information Security Officer]
+:Information Security Architect
+:Common Control Provider
+|
+:Risk Executive (Function)
+:Authorizing Official '''''or''''' Designated Representative
+:Information System Owner
+:Information System Security Engineer
+|-
+| '''''TASK 2-3'''''
+:'''Monitoring Strategy'''
+:Develop a strategy for the continuous monitoring of security control effectiveness and any proposed/actual changes to the information system and its environment of operation.
+|
+:Information System Owner '''''or''''' [http://fismapedia.org/index.php?title=Term:Common_Control_Provider Common Control Provider]
+|
+:Risk Executive (Function)
+:Authorizing Official '''''or''''' Designated Representative
+:Chief Information Officer
+:Senior Information [http://fismapedia.org/index.php?title=Term:Security_Officer Security Officer]
+:Information Owner/Steward
+:Information [http://fismapedia.org/index.php?title=Term:System_Security_Officer System Security Officer]
+|-
+| '''''TASK 2-4'''''
+:'''Security Plan Approval'''
+:Review and approve the [http://fismapedia.org/index.php?title=Term:Security_Plan security plan].
+|
+:Authorizing Official '''''or''''' Designated Representative
+|
+:Risk Executive (Function)
+:Chief Information Officer
+:Senior Information [http://fismapedia.org/index.php?title=Term:Security_Officer Security Officer]
+|-
+| style="background:silver" colspan="3" | <big>'''RMF Step 3: Implement Security Controls'''</big>
+|-
+| '''''TASK 3-1'''''
+:'''Security Control Implementation'''
+:Implement the [http://fismapedia.org/index.php?title=Term:Security_Controls security controls] specified in the [http://fismapedia.org/index.php?title=Term:Security_Plan security plan].
+|
+:Information System Owner '''''or''''' [http://fismapedia.org/index.php?title=Term:Common_Control_Provider Common Control Provider]
+|
+:Information Owner/Steward
+:Information [http://fismapedia.org/index.php?title=Term:System_Security_Officer System Security Officer]
+:Information System Security Engineer
+|-
+| '''''TASK 3-2'''''
+:'''Security Control Documentation'''
+:Document the security control implementation, as appropriate, in the [http://fismapedia.org/index.php?title=Term:Security_Plan security plan], providing a functional description of the control implementation (including planned inputs, expected behavior, and expected outputs).
+|
+:Information System Owner '''''or''''' [http://fismapedia.org/index.php?title=Term:Common_Control_Provider Common Control Provider]
+|
+:Information Owner/Steward
+:Information [http://fismapedia.org/index.php?title=Term:System_Security_Officer System Security Officer]
+:Information System Security Engineer
+|-
+| style="background:silver" colspan="3" | <big>'''RMF Step 4: Assess Security Controls'''</big>
+|-
+| '''''TASK 4-1'''''
+:'''Assessment Preparation'''
+:Develop, review, and approve a plan to assess the [http://fismapedia.org/index.php?title=Term:Security_Controls security controls].
+|
+:Security Control [http://fismapedia.org/index.php?title=Term:Assessor Assessor]
+|
+:Authorizing Official '''''or''''' Designated Representative
+:Chief Information Officer
+:Senior Information [http://fismapedia.org/index.php?title=Term:Security_Officer Security Officer]
+:Information System Owner '''''or''''' [http://fismapedia.org/index.php?title=Term:Common_Control_Provider Common Control Provider]
+:Information Owner/Steward
+:Information [http://fismapedia.org/index.php?title=Term:System_Security_Officer System Security Officer]
+|-
+| '''''TASK 4-2'''''
+:'''Security Control Assessment'''
+:Assess the [http://fismapedia.org/index.php?title=Term:Security_Controls security controls] in accordance with the [http://fismapedia.org/index.php?title=Term:Assessment assessment] procedures defined in the [http://fismapedia.org/index.php?title=Term:security_assessment_plan security assessment plan].
+|
+:Security Control [http://fismapedia.org/index.php?title=Term:Assessor Assessor]
+|
+:Information System Owner '''''or''''' [http://fismapedia.org/index.php?title=Term:Common_Control_Provider Common Control Provider]
+:Information Owner/Steward
+:Information [http://fismapedia.org/index.php?title=Term:System_Security_Officer System Security Officer]
+|-
+| '''''TASK 4-3'''''
+:'''Security [http://fismapedia.org/index.php?title=Term:Assessment Assessment] Report'''
+:Prepare the [http://fismapedia.org/index.php?title=Term:security_assessment_report security assessment report] documenting the issues, findings, and recommendations from the [http://fismapedia.org/index.php?title=Term:Security_Control_Assessment security control assessment].
+|
+:Security Control [http://fismapedia.org/index.php?title=Term:Assessor Assessor]
+|
+:Information System Owner '''''or''''' [http://fismapedia.org/index.php?title=Term:Common_Control_Provider Common Control Provider]
+:Information [http://fismapedia.org/index.php?title=Term:System_Security_Officer System Security Officer]
+|-
+| style="background:silver" colspan="3" | <big>'''RMF Step 5: Authorize Information System'''</big>
+|-
+| '''''TASK 5-1'''''
+:'''Remediation Actions'''
+:Conduct initial [http://fismapedia.org/index.php?title=Term:Remediation remediation] actions based on the findings and recommendations of the [http://fismapedia.org/index.php?title=Term:security_assessment_report security assessment report].
+|
+:Information System Owner '''''or''''' [http://fismapedia.org/index.php?title=Term:Common_Control_Provider Common Control Provider]
+|
+:Authorizing Official '''''or''''' Designated Representative
+:Chief Information Officer
+:Senior Information [http://fismapedia.org/index.php?title=Term:Security_Officer Security Officer]
+:Information Owner/Steward
+:Information [http://fismapedia.org/index.php?title=Term:System_Security_Officer System Security Officer]
+:Information System Security Engineer
+:Security Control [http://fismapedia.org/index.php?title=Term:Assessor Assessor]
+|-
+| '''''TASK 5-2'''''
+:'''Plan of Action and Milestones'''
+:Prepare the [http://fismapedia.org/index.php?title=Term:Plan_of_Action_and_Milestones plan of action and milestones] based on the findings and recommendations of the [http://fismapedia.org/index.php?title=Term:security_assessment_report security assessment report] excluding any [http://fismapedia.org/index.php?title=Term:Remediation remediation] actions taken.
+|
+:Information System Owner '''''or''''' [http://fismapedia.org/index.php?title=Term:Common_Control_Provider Common Control Provider]
+|
+:Information Owner/Steward
+:Information [http://fismapedia.org/index.php?title=Term:System_Security_Officer System Security Officer]
+|-
+| '''''TASK 5-3'''''
+:'''Security Authorization Package'''
+:Assemble the [http://fismapedia.org/index.php?title=Term:Security_Authorization security authorization] package and submit the package to the [http://fismapedia.org/index.php?title=Term:Authorizing_Official authorizing official] for [http://fismapedia.org/index.php?title=Term:Adjudication adjudication].
+|
+:Information System Owner '''''or''''' [http://fismapedia.org/index.php?title=Term:Common_Control_Provider Common Control Provider]
+|
+:Information [http://fismapedia.org/index.php?title=Term:System_Security_Officer System Security Officer]
+:Security Control [http://fismapedia.org/index.php?title=Term:Assessor Assessor]
+|-
+| '''''TASK 5-4'''''
+:'''Risk Determination'''
+:Determine the risk to organizational operations (including mission, functions, image, or reputation), organizational assets, individuals, other organizations, or the Nation.
+|
+:Authorizing Official '''''or''''' Designated Representative
+|
+:Risk Executive (Function)
+:Senior Information [http://fismapedia.org/index.php?title=Term:Security_Officer Security Officer]
+|-
+| '''''TASK 5-5'''''
+:'''Risk Acceptance'''
+:Determine if the risk to organizational operations, organizational assets, individuals, other organizations, or the Nation is acceptable.
+|
+:Authorizing Official
+|
+:Risk Executive (Function)
+:Authorizing Official Designated Representative
+:Senior Information [http://fismapedia.org/index.php?title=Term:Security_Officer Security Officer]
+|-
+| style="background:silver" colspan="3" | <big>'''RMF Step 6: Monitor Security Controls'''</big>
+|-
+| '''''TASK 6-1'''''
+:'''Information System and Environment Changes'''
+:Determine the security impact of proposed or actual changes to the information system and its environment of operation.
+|
+:Information System Owner '''''or''''' [http://fismapedia.org/index.php?title=Term:Common_Control_Provider Common Control Provider]
+|
+:Risk Executive (Function)
+:Authorizing Official '''''or''''' Designated Representative
+:Senior Information [http://fismapedia.org/index.php?title=Term:Security_Officer Security Officer]
+:Information Owner/Steward
+:Information [http://fismapedia.org/index.php?title=Term:System_Security_Officer System Security Officer]
+|-
+| '''''TASK 6-2'''''
+:'''Ongoing Security Control Assessments'''
+:Assess a selected subset of the technical, management, and operational [http://fismapedia.org/index.php?title=Term:Security_Controls security controls] employed within and inherited by the information system in accordance with the organizationdefined monitoring strategy.
+|
+:Security Control [http://fismapedia.org/index.php?title=Term:Assessor Assessor]
+|
+:Authorizing Official '''''or''''' Designated Representative
+:Information System Owner '''''or''''' [http://fismapedia.org/index.php?title=Term:Common_Control_Provider Common Control Provider]
+:Information Owner/Steward
+:Information [http://fismapedia.org/index.php?title=Term:System_Security_Officer System Security Officer]
+|-
+| '''''TASK 6-3'''''
+:'''Ongoing [http://fismapedia.org/index.php?title=Term:Remediation Remediation] Actions'''
+:Conduct selected [http://fismapedia.org/index.php?title=Term:Remediation remediation] actions based on the results of ongoing monitoring activities and the outstanding items in the [http://fismapedia.org/index.php?title=Term:Plan_of_Action_and_Milestones plan of action and milestones].
+|
+:Information System Owner '''''or''''' [http://fismapedia.org/index.php?title=Term:Common_Control_Provider Common Control Provider]
+|
+:Authorizing Official '''''or''''' Designated Representative
+:Information Owner/Steward
+:Information [http://fismapedia.org/index.php?title=Term:System_Security_Officer System Security Officer]
+:Information System Security Engineer
+:Security Control [http://fismapedia.org/index.php?title=Term:Assessor Assessor]
+|-
+| '''''TASK 6-4'''''
+:'''Critical Updates'''
+:Update the [http://fismapedia.org/index.php?title=Term:Security_Plan security plan], [http://fismapedia.org/index.php?title=Term:security_assessment_report security assessment report], and [http://fismapedia.org/index.php?title=Term:Plan_of_Action_and_Milestones plan of action and milestones] based on the results of the continuous monitoring process.
+|
+:Information System Owner '''''or''''' [http://fismapedia.org/index.php?title=Term:Common_Control_Provider Common Control Provider]
+|
+:Information Owner/Steward
+:Information [http://fismapedia.org/index.php?title=Term:System_Security_Officer System Security Officer]
+|-
+| '''''TASK 6-5'''''
+:'''Security Status Reporting'''
+:Report the security status of the information system (including the effectiveness of [http://fismapedia.org/index.php?title=Term:Security_Controls security controls] employed within and inherited by the system), to appropriate organizational officials on an ongoing basis in accordance with the organization-defined monitoring strategy.
+|
+:Information System Owner '''''or''''' [http://fismapedia.org/index.php?title=Term:Common_Control_Provider Common Control Provider]
+|
+:Information [http://fismapedia.org/index.php?title=Term:System_Security_Officer System Security Officer]
+|-
+| '''''TASK 6-6'''''
+:'''Ongoing Risk Determination and Acceptance'''
+:Review the reported security status of the information system (including the effectiveness of [http://fismapedia.org/index.php?title=Term:Security_Controls security controls] employed within and inherited by the system) on an ongoing basis in accordance with the monitoring strategy to determine whether the risk to organizational operations, organizational assets, individuals, other organizations, or the Nation remains acceptable.
+|
+:Authorizing Official
+|
+:Risk Executive (Function)
+:Authorizing Official Designated Representative
+:Senior Information [http://fismapedia.org/index.php?title=Term:Security_Officer Security Officer]
+|-
+| '''''TASK 6-7'''''
+:'''Information System Removal and Decommissioning'''
+:Implement an information system decommissioning strategy, when needed, which executes required actions when a system is removed from service.
+|
+:Information System Owner
+|
+:Risk Executive (Function)
+:Authorizing Official Designated Representative
+:Senior Information [http://fismapedia.org/index.php?title=Term:Security_Officer Security Officer]
+:Information Owner/Steward
+:Information [http://fismapedia.org/index.php?title=Term:System_Security_Officer System Security Officer]
+|}
+
+
+
+== Sources ==
+
+* [http://csrc.nist.gov/publications/drafts/800-37-Rev1/SP800-37-rev1-FPD.pdf NIST SP 800-37 Rev. 1 DRAFT Guide for Applying the Risk Management Framework to Federal Information Systems: A Security Life Cycle Approach]
+
+[[Category:GIC-NISTSP80037r1FPD]]

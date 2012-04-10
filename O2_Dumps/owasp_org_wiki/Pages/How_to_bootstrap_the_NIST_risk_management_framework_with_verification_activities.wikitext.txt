@@ -1,0 +1,49 @@
+[[::Category:OWASP_Application_Security_Verification_Standard_Project |OWASP Application Security Verification Standard (ASVS)]] can be used in support of the NIST risk management framework. This article describes one possible way to bootstrap the NIST risk management framework security life cycle with verification activities.
+  
+  
+
+[[Image:Nist-800-53.JPG|thumb|900px|right|NIST risk management framework security life cycle]]
+The NIST risk management framework security life cycle activities can be summarized as follows:
+  
+  
+*Categorize the information system
+*Select an initial set of security controls
+*Supplement the initial set of tailored security controls
+*Document the agreed-upon set of security controls
+*Implement the security controls
+*Assess the security controls
+*Authorize information system operation
+*Monitor and assess selected security controls
+  
+  
+The NIST risk management framework security life cycle activities can be strengthened with verification activities using OWASP ASVS as follows:
+  
+  
+{| border="0"
+
+ | style="width:15%; background:#4058A0" align="center"|<font color="white">'''NIST framework activity'''
+ | style="width:14%; background:#4058A0" align="center"|<font color="white">'''Can ASVS be used?'''
+ | style="width:15%; background:#4058A0" align="center"|<font color="white">'''Notes'''
+|-
+|   style="width:15%; background:#cccccc" |Categorize the information system    ||   style="width:15%; background:#cccccc" |No     ||   style="width:15%; background:#cccccc" |
+|-  
+|   style="width:15%; background:#cccccc" |Select an initial set of security controls   || style="width:15%; background:#cccccc" |No ||  style="width:15%; background:#cccccc" |
+|-
+|   style="width:15%; background:#FFDF80" |Supplement the initial set of tailored security controls   || style="width:15%; background:#FFDF80" |'''Yes''' ||  style="width:15%; background:#FFDF80" |OWASP ASVS is an easy way to add web application and web service-specific security requirements, to guard against threats that are specific to web applications and web services. 
+|-
+|   style="width:15%; background:#FFDF80" |Document the agreed-upon set of security controls   || style="width:15%; background:#FFDF80" |'''Yes''' ||  style="width:15%; background:#FFDF80" |OWASP ASVS security architecture analyses can be used as input to system security plans.
+|-
+|   style="width:15%; background:#FFDF80" |Implement the security controls   || style="width:15%; background:#FFDF80" |'''Yes''' ||  style="width:15%; background:#FFDF80" |OWASP ASVS verification requirements can be used to ensure security controls called by web applications and web services are designed, implemented, and called securely.
+|-
+|   style="width:15%; background:#FFDF80" |Assess the security controls   || style="width:15%; background:#FFDF80" |'''Yes''' ||  style="width:15%; background:#FFDF80" |OWASP ASVS verifications can be performed to assess supplemented web application and web service technical security control requirements.
+|-
+|   style="width:15%; background:#cccccc" |Authorize information system operation   || style="width:15%; background:#cccccc" |No ||  style="width:15%; background:#cccccc" |
+|-
+|   style="width:15%; background:#FFDF80" |Monitor and assess selected security controls   || style="width:15%; background:#FFDF80" |'''Yes''' ||  style="width:15%; background:#FFDF80" |OWASP ASVS verifications can be performed during the life cycle at regular intervals, as a new on-going activity introduced into the existing life cycle.
+
+|}
+
+    
+
+[[Category:OWASP Application Security Verification Standard Project]]
+[[Category:How To]]

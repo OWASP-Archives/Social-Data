@@ -1,0 +1,27 @@
+{{Template: <includeonly>{{{1}}}</includeonly><noinclude>Release About</noinclude>
+| project_name = OWASP ModSecurity Core Rule Set Project
+| project_home_page = :Category:OWASP ModSecurity Core Rule Set Project
+| release_name = ModSecurity 2.0.10
+| release_date = 11/29/2010
+| release_description
+ = Improvements:
+
+- Commented out the Anomaly Scoring Blocking Mode TX variable since, by default, the CRS is running in traditional mode.
+
+Bug Fixes: - Moved all skipAfter actions in chained rules to chain starter SecRules
+
+ https://www.modsecurity.org/tracker/browse/MODSEC-159
+
+- Changed phases on several rules in the 20 protocol anomaly rules file to phase:1 to avoid FNs  
+
+| release_license = [http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU General Public License - Version 2.0]
+| release_download_link = http://sourceforge.net/projects/mod-security/files/modsecurity-crs/0-CURRENT/modsecurity-crs_2.0.10.tar.gz.md5/download
+
+| leader_name1 = Ryan Barnett
+| leader_email1 = Ryan.Barnett@breach.com
+| leader_username1 = Rcbarnett 
+
+| release_notes = http://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project_-_ModSecurity_2.0.10_-_Notes
+
+
+}}

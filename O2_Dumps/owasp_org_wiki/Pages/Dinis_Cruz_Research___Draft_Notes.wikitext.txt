@@ -1,0 +1,556 @@
+== Found Jitted Code ==
+
+This example shows a method to find the final address of JITTED (and preJiTed code)
+
+<pre>
+FindingJit.cs
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Reflection;
+
+
+
+namespace FindingJit
+
+{
+
+    class FindingJit
+
+    {
+
+        static void Main(string[] args)
+
+        {            
+
+            Console.WriteLine(@"Finding JIT");   
+
+	    outputMethodInfoPointers();                    
+
+            FindingJit_ClassA.method1();
+
+            outputMethodInfoPointers();
+
+            FindingJit_ClassA.method1();
+
+            outputMethodInfoPointers();
+
+            FindingJit_ClassA.method2();
+
+            outputMethodInfoPointers();
+
+            FindingJit_ClassA.method3();
+
+            outputMethodInfoPointers();
+
+            Console.WriteLine(@"Done, press enter to terminate process");
+
+            Console.ReadLine();
+
+        }
+
+
+
+        static void outputMethodInfoPointers()
+
+        {
+
+            FindingJit_ClassA fcaObject = new FindingJit_ClassA();
+
+            getMethodProperties(fcaObject.GetType(), "method1");
+
+            getMethodProperties(fcaObject.GetType(), "method2");
+
+            getMethodProperties(fcaObject.GetType(), "method3");
+
+        }
+
+        static  void getMethodProperties(Type tObject, string strMethodName)
+
+        {         
+
+
+
+            MethodInfo miMethodInfo = tObject.GetMethod(strMethodName);
+
+          
+
+            IntPtr ipFunctionPointer = miMethodInfo.MethodHandle.GetFunctionPointer();
+
+            Console.WriteLine("ipFunctionPointer: {0}", Convert.ToString(ipFunctionPointer.ToInt32(),16));
+
+            //obfcaObjectject asd = FindingJit_ClassA;
+
+          //  if (null != tType)
+
+           // {
+
+            //    MethodInfo miMethod = tType.GetMethod(strMethodName);
+
+
+
+//            }
+
+        }
+
+    }
+
+        
+
+
+
+}
+
+
+
+
+
+FindingJit_ClassA.cs
+
+
+
+using System;
+
+using System.Collections.Generic;
+
+using System.Text;
+
+
+
+namespace FindingJit
+
+{
+
+    public class FindingJit_ClassA
+
+    {
+
+        public static void method1()
+
+        {
+
+            Console.WriteLine(@"In FindingJit_ClassA.method1");
+
+        }
+
+
+
+        public static void method2()
+
+        {
+
+            Console.WriteLine(@"In FindingJit_ClassA.method2");
+
+        }
+
+
+
+        public static void method3()
+
+        {
+
+            Console.WriteLine(@"In FindingJit_ClassA.method3");
+
+        }
+
+
+
+    }
+
+}
+
+
+</pre>
+
+
+
+
+
+
+---
+
+
+
+Finding JIT
+
+ipFunctionPointer: 4909ed0
+
+ipFunctionPointer: 4909ee0
+
+ipFunctionPointer: 4909ef0
+
+In FindingJit_ClassA.method1
+
+ipFunctionPointer: 4b6a690
+
+ipFunctionPointer: 4909ee0
+
+ipFunctionPointer: 4909ef0
+
+In FindingJit_ClassA.method1
+
+ipFunctionPointer: 4b6a690
+
+ipFunctionPointer: 4909ee0
+
+ipFunctionPointer: 4909ef0
+
+In FindingJit_ClassA.method2
+
+ipFunctionPointer: 4b6a690
+
+ipFunctionPointer: 4b6a6c0
+
+ipFunctionPointer: 4909ef0
+
+In FindingJit_ClassA.method3
+
+ipFunctionPointer: 4b6a690
+
+ipFunctionPointer: 4b6a6c0
+
+ipFunctionPointer: 4b6a6f0
+
+Done, press enter to terminate process
+
+
+
+
+
+-----
+
+
+
+
+
+Note how the value of ipFunctionPointer changes with the JIT events.
+
+
+
+from the above values we can make the following assumption
+
+
+
+				Value preJIT	value postJIT
+
+In FindingJit_ClassA.method1	   4909ed0	   4b6a690
+
+In FindingJit_ClassA.method2	   4909ee0	   4b6a6c0
+
+In FindingJit_ClassA.method3	   4909ef0	   4b6a6f0
+
+
+
+
+
+doing the following patch
+
+
+
+
+
+
+<pre>
+     static void patchPostJitMethod2WithPostJitMethod1()
+
+        {
+
+            Console.WriteLine(" in patchPostJitMethod2WithPostJitMethod1");
+
+     
+
+            string strPatch = "\xB8" + 
+
+                              "AAAA" + 
+
+                              "\xFF\xE0"; // jmp EAX
+
+
+
+            //B8 41414141      MOV EAX,41414141
+
+            //FFE0             JMP EAX
+
+
+
+
+
+            //int iInt = Int32.Parse(strPatchRaw.Substring(0, 2), 16);            
+
+            PatchMemory(ipMethod2.ToInt32(), strPatch); // \xE9 XXXXXXXX is JMP XXXXXXXX
+
+            Console.WriteLine("done patchPostJitMethod2WithPostJitMethod1");
+
+        }
+
+    }
+</pre>
+
+
+results in 
+
+
+
+
+
+
+
+Unhandled Exception: System.AccessViolationException: Attempted to read or write
+
+ protected memory. This is often an indication that other memory is corrupt.
+
+
+
+
+
+which is the framework sort of handeling the exception
+
+
+
+is cdb we see that we controled EIP
+
+
+
+In FindingJit_ClassA.method2
+
+ipFunctionPointer: 116bac8
+
+ipFunctionPointer: 116bb38
+
+ipFunctionPointer: 9136f8
+
+ in patchPostJitMethod2WithPostJitMethod1
+
+ipFunctionPointer: 116bac8
+
+ipFunctionPointer: 116bb38
+
+done patchPostJitMethod2WithPostJitMethod1
+
+(9bc.120): Access violation - code c0000005 (first chance)
+
+First chance exceptions are reported before any exception handling.
+
+This exception may be expected and handled.
+
+eax=41414141 ebx=0012f4ac ecx=0126d180 edx=00000000 esi=00180de8 edi=00000000
+
+eip=41414141 esp=0012f480 ebp=0012f490 iopl=0         nv up ei pl nz ac pe nc
+
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00010216
+
+41414141 ??              ???
+
+
+
+:)
+
+
+
+
+
+This patches below work if I run it from Visual Studio but don't work if I run it from cmd.exe
+
+
+<pre>
+     static void patchPostJitMethod2WithPostJitMethod1()
+
+        {
+
+            Console.WriteLine(" in patchPostJitMethod2WithPostJitMethod1....***");
+
+            FindingJit_ClassA fcaObject = new FindingJit_ClassA();
+
+            IntPtr ipMethod1 = getMethodProperties(fcaObject.GetType(), "method1");
+
+            IntPtr ipMethod2 = getMethodProperties(fcaObject.GetType(), "method2");
+
+
+
+	    // 		This work, but only if the exe is executed from VS.net 2005
+
+            byte bRelativeJmpAddress = (byte)(ipMethod1.ToInt32() - ipMethod2.ToInt32() -2);
+
+
+
+            string strPatchRaw = string.Format("{0}", Convert.ToString(bRelativeJmpAddress, 16));
+
+            string strPatch = "\xEB" + Encoding.UTF7.GetString(new byte[] { bRelativeJmpAddress });
+
+
+
+		// EB xx is Jmp Short (current EIP + xx)     // the [target] - [destination] needs to be adusted by two
+
+            /* 
+
+		This work, but only if the exe is executed from VS.net 2005
+
+                int iRelativeJmpAddress = ipMethod1.ToInt32() - ipMethod2.ToInt32();
+
+                string strPatch = "\xE9" + Encoding.UTF7.GetString(new byte[] { 
+
+                  Convert.ToByte(strPatchRaw.Substring(6, 2), 16) ,
+
+                  Convert.ToByte(strPatchRaw.Substring(4, 2),16),
+
+                  Convert.ToByte(strPatchRaw.Substring(2, 2),16),
+
+                  Convert.ToByte(strPatchRaw.Substring(0, 2),16)});
+
+             */
+
+            char[] ctest = strPatch.ToCharArray();
+
+            string dDummy = "";
+
+            //7C81086A   EA 41414141 0000   JMP FAR 0000:41414141                    ; Far jump
+
+            /*
+
+            string strPatch = "\xEA" + "AAAA" + "\x00\x00";
+
+            
+
+           /*
+
+
+
+		This doesn' work because we corrupt EAX
+
+
+
+             string strPatchRaw = "0" + Convert.ToString(ipMethod1.ToInt32(), 16);
+
+             
+
+             string strPatch = "\xB8" +
+
+                                Encoding.ASCII.GetString(new byte[] { 
+
+                                Convert.ToByte(strPatchRaw.Substring(6, 2), 16) ,
+
+                                Convert.ToByte(strPatchRaw.Substring(4, 2),16),
+
+                                Convert.ToByte(strPatchRaw.Substring(2, 2),16),
+
+                                Convert.ToByte(strPatchRaw.Substring(0, 2),16)}) + 
+
+                              //"AAAA" + 
+
+                              "\xFF\xE0"; // jmp EAX
+
+            */
+
+            //B8 41414141      MOV EAX,41414141
+
+            //FFE0             JMP EAX
+
+
+
+
+
+            //int iInt = Int32.Parse(strPatchRaw.Substring(0, 2), 16);            
+
+            PatchMemory(ipMethod2.ToInt32(), strPatch); // \xE9 XXXXXXXX is JMP XXXXXXXX
+
+            Console.WriteLine("done patchPostJitMethod2WithPostJitMethod1");
+
+        }
+
+    }
+
+
+</pre>
+
+
+-- what is weird is why it only works in VS.NEt (all cmd.exe, ollybdg and PEBrowe barf at this jmp)
+
+== .Net framework using reflection to invoke a private member  ==
+
+
+* Example from the .Net framework of using reflection to invoke a private member from another class
+
+in : System.Data, Version=2.0.0.0 
+
+
+
+in System.Data.SqlClient.SqlCachedBuffer.ToXmlReader() : XmlReader
+
+
+
+internal XmlReader ToXmlReader()
+{
+      XmlReader reader1;
+      SqlCachedStream stream1 = new SqlCachedStream(this);
+      XmlReaderSettings settings1 = new XmlReaderSettings();
+      settings1.ConformanceLevel = ConformanceLevel.Fragment;
+      MethodInfo info1 = typeof(XmlReader).GetMethod("CreateSqlReader", BindingFlags.NonPublic | BindingFlags.Static);
+      object[] objArray1 = new object[3];
+      objArray1[0] = stream1;
+      objArray1[1] = settings1;
+      object[] objArray2 = objArray1;
+      new ReflectionPermission(ReflectionPermissionFlag.MemberAccess).Assert();
+      try
+      {
+            reader1 = (XmlReader) info1.Invoke(null, objArray2);
+      }
+      finally
+      {
+            CodeAccessPermission.RevertAssert();
+      }
+      return reader1;
+}
+
+to see other similar example of this use the Analyzer on System.Security.Permissions.ReflectionPermissionFlag
+
+System.Security.Permissions.ReflectionPermissionFlag
+
+	Depends On
+	Used By
+		System.AppDomainInitializerInfo.Unwrap() : AppDomainInitializer
+		System.Data.SqlClient.SqlCachedBuffer.ToXmlReader() : XmlReader
+		System.Data.SqlClient.SqlStream.ToXmlReader() : XmlReader
+		System.Data.SqlTypes.SqlXml.CreateReader() : XmlReader
+		System.DelegateSerializationHolder.GetDelegate(DelegateEntry, Int32) : Delegate
+		System.DelegateSerializationHolder.GetDelegateSerializationInfo(SerializationInfo, Type, Object, MethodInfo, Int32) : DelegateEntry
+		System.Reflection.Emit.DynamicMethod.PerformSecurityCheck(Module, StackCrawlMark&, Boolean) : Void
+		System.Reflection.Emit.DynamicMethod.PerformSecurityCheck(Type, StackCrawlMark&, Boolean) : Void
+		System.Reflection.Emit.DynamicMethod+RTDynamicMethod.Invoke(Object, BindingFlags, Binder, Object[], CultureInfo) : Object
+		System.RuntimeType+ActivatorCache.InitializeDelegateCreator() : Void
+		System.Security.Permissions.ReflectionPermission..ctor(ReflectionPermissionFlag)
+		System.Security.Permissions.ReflectionPermission.Copy() : IPermission
+		System.Security.Permissions.ReflectionPermission.Flags : ReflectionPermissionFlag
+		System.Security.Permissions.ReflectionPermission.FromXml(SecurityElement) : Void
+		System.Security.Permissions.ReflectionPermission.get_Flags() : ReflectionPermissionFlag
+		System.Security.Permissions.ReflectionPermission.Intersect(IPermission) : IPermission
+		System.Security.Permissions.ReflectionPermission.IsSubsetOf(IPermission) : Boolean
+		System.Security.Permissions.ReflectionPermission.IsUnrestricted() : Boolean
+		System.Security.Permissions.ReflectionPermission.m_flags : ReflectionPermissionFlag
+		System.Security.Permissions.ReflectionPermission.Reset() : Void
+		System.Security.Permissions.ReflectionPermission.set_Flags(ReflectionPermissionFlag) : Void
+		System.Security.Permissions.ReflectionPermission.SetUnrestricted(Boolean) : Void
+		System.Security.Permissions.ReflectionPermission.ToXml() : SecurityElement
+		System.Security.Permissions.ReflectionPermission.Union(IPermission) : IPermission	System.Security.Permissions.ReflectionPermission.VerifyAccess(ReflectionPermissionFlag) : Void
+		System.Security.Permissions.ReflectionPermissionAttribute.CreatePermission() : IPermission
+		System.Security.Permissions.ReflectionPermissionAttribute.Flags : ReflectionPermissionFlag
+		System.Security.Permissions.ReflectionPermissionAttribute.get_Flags() : ReflectionPermissionFlag
+		System.Security.Permissions.ReflectionPermissionAttribute.get_MemberAccess() : Boolean
+		System.Security.Permissions.ReflectionPermissionAttribute.get_ReflectionEmit() : Boolean
+		System.Security.Permissions.ReflectionPermissionAttribute.get_TypeInformation() : Boolean
+		System.Security.Permissions.ReflectionPermissionAttribute.m_flag : ReflectionPermissionFlag
+		System.Security.Permissions.ReflectionPermissionAttribute.set_Flags(ReflectionPermissionFlag) : Void
+		System.Security.Permissions.ReflectionPermissionAttribute.set_MemberAccess(Boolean) : Void
+		System.Security.Permissions.ReflectionPermissionAttribute.set_ReflectionEmit(Boolean) : Void
+		System.Security.Permissions.ReflectionPermissionAttribute.set_TypeInformation(Boolean) : Void
+		System.Security.Permissions.ReflectionPermissionFlag.AllFlags
+		System.Security.Permissions.ReflectionPermissionFlag.MemberAccess
+		System.Security.Permissions.ReflectionPermissionFlag.NoFlags
+		System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit
+		System.Security.Permissions.ReflectionPermissionFlag.TypeInformation		System.Security.Policy.ApplicationSecurityManager.DecodeAppTrustManagerFromElement(SecurityElement) : IApplicationTrustManager
+		System.Security.SecurityManager.GetSpecialFlags(PermissionSet, PermissionSet) : Int32
+		System.Security.SecurityManager.MapToSpecialFlags(SecurityPermissionFlag, ReflectionPermissionFlag) : Int32
+		System.Security.Util.XMLUtil.CreateCodeGroup(SecurityElement) : CodeGroup
+		System.Security.Util.XMLUtil.CreateMembershipCondition(SecurityElement) : IMembershipCondition
+		System.Security.Util.XMLUtil.CreatePermission(SecurityElement, PermissionState, Boolean) : IPermission
+		System.Web.InternalSecurityPermissions.get_Reflection() : IStackWalk

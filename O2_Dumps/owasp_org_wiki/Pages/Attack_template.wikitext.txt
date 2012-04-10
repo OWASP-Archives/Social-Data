@@ -1,0 +1,94 @@
+Every '''[[Attack]]''' should follow this template.
+
+{{Template:Attack}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+==Description==
+
+An attack is an action taken by a threat agent to exploit a vulnerability. Be sure you don't put [threat agents] or [vulnerabilities] in this category.
+
+# Start with a one-sentence description of the attack
+# How is the attack is launched?
+# Who are the likely threat agents?
+# What vulnerability does this attack target?
+
+
+==Risk Factors==
+
+* Talk about the [[OWASP Risk Rating Methodology|factors]] that make this attack likely or unlikely to actually happen
+* You can mention the likely technical impact of an attack
+* The [business impact] of an attack is probably conjecture, leave it out unless you're sure
+
+
+==Examples==
+
+===Short example name===
+: A short example description, small picture, or sample code with [http://www.site.com links]
+
+===Short example name===
+: A short example description, small picture, or sample code with [http://www.site.com links]
+
+
+==Related [[Threat Agents]]==
+
+* [[Threat Agent 1]]
+* [[Threat Agent 2]]
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+Note: the contents of "Related Problems" sections should be placed here
+
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+Note: contents of "Avoidance and Mitigation" and "Countermeasure" Sections should be placed here
+
+
+==References==
+
+'''Note1:''' A reference to related [http://cwe.mitre.org/ CWE] or [http://capec.mitre.org/ CAPEC] article should be added when exists. Eg:
+
+* [http://cwe.mitre.org/data/definitions/79.html CWE 79].
+* http://www.link1.com
+* [http://www.link2.com Title for the link2]
+
+'''Note2:'''One should classify Attacks subcategories by adding eg. <nowiki>[Category:Data Structure Attacks]]</nowiki> based on the following:
+
+Abuse of Functionality
+
+Data Structure Attacks
+
+Embedded Malicious Code
+
+Exploitation of Authentication
+
+Injection
+
+Path Traversal Attack
+
+Probabilistic Techniques
+
+Protocol Manipulation
+
+Resource Depletion
+
+Resource Manipulation
+
+Sniffing Attacks
+
+Spoofing
+__NOTOC__

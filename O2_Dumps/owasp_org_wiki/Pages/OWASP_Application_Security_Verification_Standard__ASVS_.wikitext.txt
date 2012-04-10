@@ -1,0 +1,15 @@
+==The Presentation: "OWASP Application Security Verification Standard (ASVS)"==
+
+Providers of web application security verification services can take wildly different approaches and levels of rigor, ranging from using simple search tools to performing painstaking code review and manual testing. This process also typically involves searching for and only reporting vulnerabilities, but does not necessarily comment on what good security practices were found.
+All of these problems have a single root cause: the lack of a standard for performing application-level security verification that can be used for any application without special interpretation. The OWASP Application Security Verification Standard (ASVS) was designed to normalize the range in coverage, level of rigor, and reporting requirements available in the market when it comes to performing application security verification.
+By the end of this presentation, you will understand how OWASP ASVS defines:
+* Levels of application-level security verification that increase in breadth and depth as one moves up the levels,
+* Verification requirements that prescribe a unique white-list approach for security controls,
+* Reporting requirements that ensure reports are sufficiently detailed to make verification repeatable, and to determine if the verification was accurate and complete.
+
+Download: [[Media:Wichers_-_About_OWASP_ASVS_Web_Edition_v2.pdf‎ ‎| About OWASP ASVS Web Edition.pdf‎]]
+
+==The Speaker: Dave Wichers==
+Dave Wichers is a cofounder and the Chief Operating Officer (COO) of [http://www.aspectsecurity.com Aspect Security], a company that specializes in application security services. For OWASP, he is the volunteer [[:Category:OWASP_AppSec_Conference | OWASP Conferences]] Chair, a volunteer member of the [[About_OWASP#Global_Board_Members|OWASP Board]], a coauthor of the [[OWASP_Top_Ten_Project | OWASP Top 10]] and the [[ASVS | OWASP Application Security Verification Standard]], and a contributor to the [[ESAPI | OWASP Enterprise Security API (ESAPI)]] project.
+
+[[OWASP_Software_Assurance_Day_DC_2009#Agenda and Presentations:_13_March_2009|back to Presentation Agenda]]

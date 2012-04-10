@@ -1,0 +1,137 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+
+==Description==
+Omitting a break statement so that one may fall through is often indistinguishable from an error, and therefore should not be used.   
+
+'''Consequences'''
+
+Unspecified.
+
+'''Exposure period'''
+
+* Pre-design through Build: The use of tools to detect this problem is recommended.
+* Implementation: Many logic errors can lead to this condition. It can be exacerbated by lack of or misuse of mitigating technologies
+
+'''Platform'''
+
+* Languages: C/C++/Java
+* Operating platforms: Any
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood of exploit'''
+
+Medium
+
+While most languages with similar constructs automatically run only a single branch, C and C++ are different. This has bitten many programmers, and can lead to critical code executing in situations where it should not.
+
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+Java:
+
+<pre>
+{    
+    int month = 8;
+        switch (month) {
+            case 1:  print("January");
+            case 2:  print("February");
+            case 3:  print("March");
+            case 4:  print("April");
+            case 5:  println("May");
+            case 6:  print("June");
+            case 7:  print("July");
+            case 8:  print("August");
+            case 9:  print("September");
+            case 10: print("October");
+            case 11: print("November");
+            case 12: print("December");
+        }
+        println(" is a great month");
+  }
+</pre>
+
+C/C++: 
+
+Is identical if one replaces print with printf or cout.
+
+One might think that if they just tested case12, it will display that the respective month "is a great month." However, if one tested November, one notice that it would display "November December is a great month."
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* Pre-design through Build: Most static analysis programs should be able to catch these errors.
+* Implementation: The functionality of omitting a break statement could be clarified with an if statement. This method is much safer.
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:General Logic Error Vulnerability]]
+[[Category:Implementation]]
+[[Category:OWASP_CLASP_Project]]

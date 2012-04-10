@@ -1,0 +1,55 @@
+<div align="right">[http://www.watchfire.com/ https://www.owasp.org/images/c/ca/Front_page_watchfire.gif]</div>
+
+<div style="font-size:7pt;text-align:right">OWASP no endosa productos o servicios comerciales - para comprar un espacio <b>[http://www.owasp.org/index.php/Advertising de click aqui]</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+
+<!-- Encabezado -->
+
+{|style="width:100%;background-color:#ececec;border:1px solid #ccc"
+|style="width:56%;color:#000"|
+
+{|style="width:280px;border:solid 0px;background:none"
+|-
+|style="width:280px;text-align:center;color:#000" |
+<div style="font-size:162%;border:none;margin: 0;color:#000">'''Bienvenido a [[About The Open Web Application Security Project|OWASP]]'''</div>
+<div style="top:+0.2em;font-size: 95%">la comunidad libre y abierta de seguridad en aplicaciones</div>
+|}
+
+<!-- Ligas especiales -->
+|style="width:14%;font-size:95%;color:#000"|
+*[[OWASP Guide Project|Guía]]
+*[[OWASP Top Ten Project|Las 10 mayores]]
+*[[OWASP WebGoat Project|WebGoat]]
+|style="width:14%;font-size:95%"|
+*[[OWASP CLASP Project|CLASP]]
+*[[OWASP WebScarab Project|WebScarab]]
+*[[OWASP Legal Project|Contratación]]
+|style="width:14%;font-size:95%"|
+*[[OWASP Testing Project|Pruebas]]
+*[[OWASP Code Review Project|Revisión de Código]]
+*'''[[Special:Allpages|Mas...]]'''
+
+|} <!-- End Banner -->
+
+{|style="width:100%;background:none;"
+|style="font-size:95%;text-align:left;color:#000"|[[About The Open Web Application Security Project|Sobre]] '''·'''  [[Searching|Búsqueda]] '''·''' [[Tutorial|Editar]] '''·''' [[How to add a new article|Nuevo artículo]]  '''·'''  [[OWASP Categories|Categorias]]
+|style="font-size:95%;padding:10px 0;margin:0px;text-align:right;color:#000"|  [[Special:Statistics|Estadísticas]]  '''·'''  [http://www.owasp.org/index.php?title=Special:Recentchanges&limit=100&hidebots=0 Cambios Recientes]
+|}
+
+<!-- Contenido Principal -->
+{|style="width:100%;border-spacing:8px;margin:0px -8px"
+
+<!-- Inicio de la columna izquierda -->
+|class="MainPageBG" style="width:50%;border:1px solid #cedff2;background-color:#f5faff;vertical-align:top"|{{Main Left Panel}}
+
+<!-- Inicio de la columna derecha -->
+|class="MainPageBG" style="width:50%;border:1px solid #cedff2;background-color:#f5faff;vertical-align:top"|{{Main Right Panel}}
+
+<!-- Fin del contenido principal -->
+|}
+
+<!-- area de miembros -->
+
+{{Template:OWASP Members Horizontal}}
+
+
+__NOTOC__ __NOEDITSECTION__

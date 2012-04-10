@@ -1,0 +1,79 @@
+{{Stub}}
+{{Vulnerability}}
+<br>
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+Enforcing access control in the presentation layer means that the developer does not show buttons and links for functions and assets that are not authorized for the user. An attacker, however, is not constrained by the buttons and links presented, and can forge requests for those functions and assets. [[Forced browsing]] is one attack that targets this type of vulnerability.
+
+'''Consequences'''
+* Disclosure of unauthorized assets (confidentiality)
+* Invocation of unauthorized business functions (integrity)
+
+'''Exposure period'''
+* Design phase
+
+'''Platform'''
+* Languages: any
+* Operating platforms: any
+
+'''Required resources'''
+* Generally requires a user login, although not always
+
+'''Severity'''
+Very high -- can result in disclosure of sensitive information or the invocation of protected business functions.
+
+'''Likelihood of exploit'''
+With the source code, this vulnerability is very likely
+
+'''Avoidance and mitigation'''
+Access control must be performed in the business layer, not only the presentation layer.
+
+'''Discussion'''
+This vulnerability is similar in some ways to [[Validation performed in client]], as the same security checks are performed in two places. Doing validation in the business logic, like doing validation on the server, are critical to security. However, many web applications and web services only do access control in the presentation layer, allowing an attacker to easily access unprotected functions.
+
+==Rick Factors==
+TBD
+
+==Examples ==
+J2EE
+
+ //FIXME: JSP example of not showing a link
+
+ASP.NET (C#)
+
+
+           //Incorrect usage example
+           //example of using custom code to control access through the presentation
+           //layer. This code creates a vulnerability, because the administration page
+           //referenced in the href attribute is not protected, and a user could navigate 
+           //to it directly.
+           if (currentUser.Role == Role.Admin)
+           {
+               Response.Write("<a href=\"#administrationlink\">Administration Menu</a>");
+           }
+
+==Related [[Attacks]]==
+* [[Forced browsing]]
+
+==Related [[Vulnerabilities]]==
+* [[Validation performed in client]]
+
+==Related [[Controls]]==
+* [[Control 1]]
+* [[Control 2]]
+
+==Related [[Technical Impacts]]==
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+==References==
+TBD
+
+
+[[Category:Range and Type Error Vulnerability]]
+[[Category:Vulnerability]]
+[[Category:Authorization Vulnerability]]
+[[Category:OWASP ASDR Project]]

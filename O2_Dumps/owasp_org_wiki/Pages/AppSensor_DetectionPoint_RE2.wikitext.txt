@@ -1,0 +1,10 @@
+Here is some sample code that can be used to detect RE2. 
+
+<pre>
+
+//the execution of this line will create an exception if an attack is found - ie. invalid text is the request method (not valid for HTTP 1.1 request method)
+boolean isValid = AttackDetectorUtils.verifyValidRequestMethod(myServletRequest, AttackDetectorUtils.POST); 
+if (! isValid) {
+    notify user ...&nbsp;???
+}
+</pre>

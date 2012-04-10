@@ -1,0 +1,537 @@
+__NOTOC__ 
+{| border="0" align="center" style="width: 100%;"
+|-
+| style="width: 75%; background: none repeat scroll 0% 0% rgb(255, 255, 255);" | 
+[[File:Owasp appsecAsia2012ConfBanner.jpg]]
+| style="width: 25%; background: none repeat scroll 0% 0% rgb(255, 255, 255);" | 
+[[File:RegisterForAppsec.png|link=http://www.regonline.com/appsecapac2012]]
+|}
+=Welcome=
+<font size=2pt>
+{{Social Media Links}}
+<!-- Twitter Box --> 
+<!--
+'''@appsecasia Twitter Feed ([http://twitter.com/appsecasia follow us on Twitter!])''' <twitter>228540661</twitter> -->
+
+{| border="0" cellpadding="15" align="center" class="FCK__ShowTableBorders" style="width: 100%;"
+|-
+| style="width: 35%; background: none repeat scroll 0% 0% rgb(255, 255, 255); color: black;" | 
+<center>[[File:Owaspconf2012_small320w.jpg]]</center>
+
+<br/>
+<br/>
+'''Welcome to the OWASP 2012 Appsec Asia Pacific Conference.'''
+
+The event is being held in Sydney, Australia from the 11th to the 14th of April 2012 at the Four Points Sheraton Darling Harbour.
+
+The conference consists of 2 days of world class training by OWASP instructor's followed by 2 days of quality presentations and keynotes from industry leaders, OWASP projects and industry consultants. In previous years the OWASP Asia Pacific conference has been rated as one of the "must attend" events of the year, with the conference always filling up quickly.
+<br/>
+
+
+'''Who should attend this conference:'''
+
+* Application Developers, Testers, Quality Assurance Team Members
+* Chief Information Officers, Security Officers, Technology Officers
+* Security Managers and Staff
+* Executives, Managers and staff responsible for IT Security Governance
+* IT Professionals interested in Improving Information Security
+<br/>
+
+'''Conference Highlights:'''
+
+* Alastair MacGibbon: Keynote Presentation (more information available on "Speakers" Tab)
+* Jacob West (Fortify - HP): Keynote Presentation (more information available on "Speakers" Tab)
+* Industry Leading training - Exploiting Web Applications with Samurai-WTF
+* Industry Panel from Finance and Insurance Sectors
+* Networking Opportunities to meet peers and other developers
+* Gain access to resources within OWASP projects as well as leading vendors
+<br/>
+[[File:RegisterForAppsec.png|link=http://www.regonline.com/appsecapac2012]]
+
+| style="width: 20%; background: none repeat scroll 0% 0% rgb(255, 255, 255);" | 
+<center>'''Thank you to all of our supporters!'''</center>
+<br/>
+<h2><center>Diamond & Platinum Sponsors</center></h2> 
+
+<center>[[File:Fortify HP logo.png|link=http://www.fortify.com]]</center>
+
+
+<h2><center>Gold & Silver Sponsors</center></h2> 
+
+
+<center>[[File:AppsecureLogo.jpg|link=http://www.appsecure.com/]]</center><br/>
+
+<center>[[File:CS-LogoWeb.png|link=http://www.contentsecurity.com.au/]]</center><br/>
+
+<center>[[File:GASystems-logo.jpg|link=http://www.gasystems.com.au/]]</center><br/>
+
+<center>[[File:Imperva 312x54.jpg|link=http://www.imperva.com/]]</center><br/>
+
+<center>[[File:Ionize75H.jpg‎|link=http://www.ionize.com.au/]]</center><br/>
+
+<center>[[File:SPL-LOGO-LARGE.png|link=http://www.trustwave.com/]]</center><br/>
+
+
+<h2><center> Associations & Supporters</center></h2> 
+We are proudly supported by the following Industry Associations and Media outlets.
+
+<center>[[File:Auscert-Header-logo.gif|link=http://www.auscert.org.au/]]</center>
+
+
+<center>[[File:AisaLogo.png|link=http://www.aisa.org.au/]]</center>
+
+
+|}
+
+
+
+=Registration Costs=
+
+{{:AppSecAsiaPac2012/Register}}
+
+
+=Training=
+
+{{:AppSecAsiaPac2012/Training}}
+
+= Conference Schedule=
+
+NOTE: Conference is scheduled to change as required by the conference committee, check back for updates prior to the conference.
+
+<font size=2pt>
+{| border="0" align="center" class="FCK__ShowTableBorders" style="width: 75%;"
+|-
+| align="center" colspan="4" style="background: none repeat scroll 0% 0% rgb(64, 88, 160); color: white;" | <font size=3pt>'''Conference Day 1 - Friday - April 13th''' </font>
+<br> 
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | ''(Time Allocated)'' 
+| style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 133, 122);" | '''Track 1 - Detect''' <br> (Grand Ballroom 1 & 2)
+| style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 165, 122);" | '''Track 2 - Protect''' <br> (Grand Ballroom 3)
+| style="width: 30%; background: none repeat scroll 0% 0% rgb(204, 255, 122);" | '''Track 3 - Leadership & OWASP''' <br> (Wharf & Bridge Rooms Level 1)
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''7:30 - 8:30 AM'' 
+<br>
+| align="center" colspan="3" style="width: 80%; background: none repeat scroll 0% 0% rgb(194, 194, 194);" | '''Conference Registration Open - Coffee & Tea Available '''
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''8:30-8:40 AM'' 
+<br>
+| align="center" colspan="3" style="width: 80%; background: none repeat scroll 0% 0% rgb(188, 133, 122);" | '''Conference Opening - Appsec Asia 2012'''
+Speakers: Conference Committee Chair - Mr Justin Derry
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''8:40-9:30 AM'' 
+<br>
+| align="center" colspan="3" style="width: 80%; background: none repeat scroll 0% 0% rgb(188, 133, 122);" | '''KeyNote: Presentation'''
+Speaker: Alastair MacGibbon
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''9:30-9:40 AM'' 
+| align="center" colspan="3" style="width: 80%; background: none repeat scroll 0% 0% rgb(246, 246, 246);" | Short Break - Conference Movement 
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''9:40-10:30 AM'' 
+<br>
+| align="center" colspan="3" style="width: 80%; background: none repeat scroll 0% 0% rgb(188, 133, 122);" | '''KeyNote: Presentation'''
+Speaker:Jacob West
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''10:30-11:00 AM'' 
+<br>
+| align="center" colspan="3" style="width: 90%; background: none repeat scroll 0% 0% rgb(194, 194, 194);" | '''Break - Morning Tea - Provided for attendees in main EXPO & Conference Hall - Ground Level'''
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''11:00-11:50 AM'' 
+<br>
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 133, 122);" | &nbsp;'''Presentation: You can't filter the stupid!'''
+&nbsp;Speakers: Charles Henderson & David Byrne
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 165, 122);" | &nbsp;'''Presentation: Advanced Mobile Application Code Review Techniques'''
+&nbsp;Speaker: Prashant Vema & Dinesh Shetty
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(204, 255, 122);" | &nbsp;'''Presentation: Effective Software Development in a PCI-DSS Environment'''
+&nbsp;Speaker: Bruce Ashton
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''11:50-12:00 PM'' 
+| align="center" colspan="3" style="width: 80%; background: none repeat scroll 0% 0% rgb(246, 246, 246);" | Short Break - Conference Movement  
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''12:00-12:50 PM'' 
+<br>
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 133, 122);" | &nbsp;'''Presentation: Testing from the Cloud. Is the Sky Falling?'''
+&nbsp;Speaker: Matt Tesauro
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 165, 122);" | &nbsp;'''Presentation: Rethinking Web Application Architecture for Cloud'''
+&nbsp;Speaker: Arshad Noor
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(204, 255, 122);" | &nbsp;'''Presentation: OWASP Project - Secure Coding Practices Quick Reference Guide'''
+&nbsp;Speaker: Justin Clarke
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''12:50-1:30 PM''
+<br>
+| align="center" colspan="3" style="width: 90%; background: none repeat scroll 0% 0% rgb(194, 194, 194);" | '''Break - Lunch - Provided for attendees in main Expo & Conference Hall - Ground Level'''
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''1:30-2:20 PM''
+<br>
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 133, 122);" | &nbsp;'''Presentation: Overcoming the Quality vs Quantity Problem in Software Security Testing'''
+&nbsp;Speaker: Rafal Los
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 165, 122);" | &nbsp;'''Presentation: Mobile Security on iOS and Andriod'''
+&nbsp;Speaker: Mike Park (Trustwave)
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(204, 255, 122);" | &nbsp;'''Presentation: De-Anonymizing Anonymous'''
+&nbsp;Speaker: Wayne O'Young
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''2:20-2:30 PM''
+| align="center" colspan="3" style="width: 80%; background: none repeat scroll 0% 0% rgb(246, 246, 246);" | Short Break - Conference Movement 
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''2:30-3:20 PM'' 
+<br> 
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 133, 122);" | &nbsp;'''Presentation: Pen Testing Mobile Applications'''
+&nbsp;Speaker: Frank Fan
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 165, 122);" | &nbsp;'''Presentation: Application Security Logging & Monitoring, The Next Frontier'''
+&nbsp;Speaker: Peter Freiberg
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(204, 255, 122);" | &nbsp;'''Presentation: Modern Software Security Assurance with OpenSAMM'''
+&nbsp;Speaker: Pravir Chandra
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''3:30-4:00 PM''
+<br>
+| align="center" colspan="3" style="width: 90%; background: none repeat scroll 0% 0% rgb(194, 194, 194);" | '''Break - Afternoon Tea - Provided for attendees in EXPO & Conference Hall - Ground Level'''
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''4:00-4:50 PM''
+<br>
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 133, 122);" | &nbsp;'''Presentation: Harder, Better, Faster, Stronger (SQLi)'''
+&nbsp;Speakers: Luke Jahnke<br> & Louis Nyffenegger
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 165, 122);" | &nbsp;'''Presentation: Securing the SSL Channel against Man-in-the-middle Attacks'''
+&nbsp;Speaker: Tobias Gondrom
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(204, 255, 122);" | &nbsp;'''Presentation: The risks that Pen Tests don't find'''
+&nbsp;Speaker: Gary Gaskell
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''4:50-5:00 PM''
+| align="center" colspan="3" style="width: 80%; background: none repeat scroll 0% 0% rgb(246, 246, 246);" | Short Break - Conference Movement
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''5:00-5:30 PM''
+<br>
+| align="center" colspan="3" style="width: 80%; background: none repeat scroll 0% 0% rgb(188, 133, 122);" | '''Panel Discussion - Application Security Trends in 2012'''
+Panelists: To be Announced
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''5:30-6:30 PM''
+<br>
+| align="center" colspan="3" style="width: 80%; background: none repeat scroll 0% 0% rgb(194, 194, 194);" | '''OWASP - Afternoon Networking Event - Ground Floor - Four Points Sheraton'''
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''6:30 - 10:00 PM''
+<br>
+| align="center" colspan="3" style="width: 80%; background: none repeat scroll 0% 0% rgb(194, 194, 194);" | '''OWASP - Gala Dinner - Grand Ballroom. (Inclusive in Conference Fee) - Speaker: Sabeena Oberoi - Assistant Secretary Cyber Security and Asia Pacific Engagement.'''
+|}
+
+
+
+{| border="0" align="center" class="FCK__ShowTableBorders" style="width: 75%;"
+|-
+| align="center" colspan="4" style="background: none repeat scroll 0% 0% rgb(64, 88, 160); color: white;" | <font size=3pt>'''Conference Day 2 - Saturday- April 14th''' </font>
+<br> 
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | ''(Time Allocated)'' 
+| style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 133, 122);" | '''Track 1 - Detect''' <br> (Grand Ballroom 1 & 2)
+| style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 165, 122);" | '''Track 2 - Protect''' <br> (Grand Ballroom 3)
+| style="width: 30%; background: none repeat scroll 0% 0% rgb(204, 255, 122);" | '''Track 3 - Leadership & OWASP''' <br> (Wharf & Bridge Rooms Level 1)
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''7:30 - 8:30 AM'' 
+<br>
+| align="center" colspan="3" style="width: 80%; background: none repeat scroll 0% 0% rgb(194, 194, 194);" | '''Conference Registration Open - Coffee & Tea Available '''
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''8:30-8:40 AM'' 
+<br>
+| align="center" colspan="3" style="width: 80%; background: none repeat scroll 0% 0% rgb(188, 133, 122);" | '''Conference Day 2 Update- Appsec Asia 2012'''
+Speakers: Conference Committee Chair - Mr Justin Derry
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''8:40-9:30 AM'' 
+<br>
+| align="center" colspan="3" style="width: 80%; background: none repeat scroll 0% 0% rgb(188, 133, 122);" | '''KeyNote: Presentation'''
+Speaker: Jeremiah Grossman
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''9:30-9:40 AM'' 
+| align="center" colspan="3" style="width: 80%; background: none repeat scroll 0% 0% rgb(246, 246, 246);" | Short Break - Conference Movement 
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''9:40-10:30 AM'' 
+<br>
+| align="center" colspan="3" style="width: 80%; background: none repeat scroll 0% 0% rgb(188, 133, 122);" | '''KeyNote: Presentation'''
+Speaker: Dr Jason Smith
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''10:30-11:00 AM'' 
+<br>
+| align="center" colspan="3" style="width: 90%; background: none repeat scroll 0% 0% rgb(194, 194, 194);" | '''Break - Morning Tea - Provided for attendees in main EXPO & Conference Hall - Ground Level'''
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''11:00-11:50 AM'' 
+<br>
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 133, 122);" | &nbsp;'''Presentation:Pentesting iOS Applications:'''
+&nbsp;Speaker:Jason Haddix
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 165, 122);" | &nbsp;'''Presentation: Password Less Authentication & Authorization & Payments'''
+&nbsp;Speaker: Srikar Sagi
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(204, 255, 122);" | &nbsp;'''Presentation: [[OWASP_Zed_Attack_Proxy_Project OWASP Project - Zed Attack Proxy (ZAP)]]'''
+&nbsp;Speaker: Simon Bennetts
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''11:50-12:00 PM'' 
+| align="center" colspan="3" style="width: 80%; background: none repeat scroll 0% 0% rgb(246, 246, 246);" | Short Break - Conference Movement  
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''12:00-12:50 PM'' 
+<br>
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 133, 122);" | &nbsp;'''Presentation: HTTP Fingerprinting - Next Generation'''
+&nbsp;Speaker: Eldar Marcussen
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 165, 122);" | &nbsp;'''Presentation: Web Crypto for the Developer who has better things to do.'''
+&nbsp;Speaker: Adrian Hayes
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(204, 255, 122);" | &nbsp;'''Presentation: Static Code Analysis & Governance'''
+&nbsp;Speaker: Jonathan Carter
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''12:50-1:30 PM''
+<br>
+| align="center" colspan="3" style="width: 90%; background: none repeat scroll 0% 0% rgb(194, 194, 194);" | '''Break - Lunch - Provided for attendees in main Expo & Conference Hall - Ground Level'''
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''1:30-2:20 PM''
+<br>
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 133, 122);" | &nbsp;'''Presentation: Shake Hooves with BeEF'''
+&nbsp;Speaker: Christian Frichot
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 165, 122);" | &nbsp;'''Presentation: Software Security Goes Mobile'''
+&nbsp;Speakers: Jacob West
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(204, 255, 122);" | &nbsp;'''Presentation: Data Breaches - When Application Security Goes Wrong'''
+&nbsp;Speaker: Mark Goudie
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''2:20-2:30 PM''
+| align="center" colspan="3" style="width: 80%; background: none repeat scroll 0% 0% rgb(246, 246, 246);" | Short Break - Conference Movement 
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''2:30-3:20 PM'' 
+<br> 
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 133, 122);" | &nbsp;'''Presentation: Pentesting Smart Grid Web Apps'''
+&nbsp;Speaker: Justin Searle
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 165, 122);" | &nbsp;'''Presentation: Breaking is Easy, Preventing is Hard'''
+&nbsp;Speakers: Matias Madou
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(204, 255, 122);" | &nbsp;'''Presentation: How MITM Proxy has been slaying SSL Dragons'''
+&nbsp;Speaker: Jim Cheetham
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''3:20-3:30 PM''
+| align="center" colspan="3" style="width: 80%; background: none repeat scroll 0% 0% rgb(246, 246, 246);" | Short Break - Conference Movement 
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''3:30-4:20 PM''
+<br>
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 133, 122);" | &nbsp;'''Presentation: Rise of the Planet of the Anonymous'''
+&nbsp;Speaker: Errazudin Ishak
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 165, 122);" | &nbsp;'''Presentation: Anatomy of a Logic Flaw'''
+&nbsp;Speakers: Charles Henderson & David Byrne
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(204, 255, 122);" | &nbsp;'''Presentation: DSD - Cyber Security Australia'''
+&nbsp;Speaker: Chris Clarke - Cyber Security Analyst
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''4:20-4:30 PM''
+| align="center" colspan="3" style="width: 80%; background: none repeat scroll 0% 0% rgb(246, 246, 246);" | Short Break - Conference Movement
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''4:30-5:00 PM''
+<br>
+| align="center" colspan="3" style="width: 80%; background: none repeat scroll 0% 0% rgb(188, 133, 122);" | '''OWASP Appsec Asia 2012 - Conference Wrap Up'''
+Speakers: OWASP Board, OWASP Appsec Asia Conference Committee
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | &nbsp;''5:00-6:00 PM''
+<br>
+| align="center" colspan="3" style="width: 80%; background: none repeat scroll 0% 0% rgb(194, 194, 194);" | '''OWASP Sponsor - Afternoon Networking Event - TBA'''
+|}
+
+</font>
+
+
+=Keynote Speakers=
+
+'''In alphabetical order:'''
+
+
+==Alastair MacGibbon== 
+Alastair MacGibbon is an internationally-respected authority on cybercrime, including Internet fraud, consumer victimisation and a range of Internet security and safety issues.  He is the managing partner of Surete Group, a consultancy dealing with improved customer retention for Internet companies by increasing trust and reducing negative user experiences.  Prior to this for almost 5 years Alastair headed Trust & Safety at eBay Australia and later eBay Asia Pacific.  He was a Federal Agent with the Australian Federal Police for 15 years, his final assignment as the founding Director of the Australian High Tech Crime Centre.
+
+
+==Jacob West== 
+Jacob West is Director, Software Security Research for the Enterprise Security Products division of Hewlett-Packard. West is a world-recognized expert on software security and brings a technical understanding of the languages and frameworks used to build software together with extensive knowledge about how real-world systems fail. In 2007, he co-authored the book "Secure Programming with Static Analysis" with colleague and Fortify founder Brian Chess. Today, the book remains the only comprehensive guide to static analysis and how developers can use it to avoid the most prevalent and dangerous vulnerabilities in code. West is a frequent speaker at industry events, including RSA Conference, Black Hat, Defcon, OWASP, and many others. A graduate of the University of California, Berkeley, West holds dual-degrees in Computer Science and French and resides in San Francisco, California. 
+
+
+==Dr. Jason Smith from CERT Australia==
+Dr Jason Smith  is an assistant director at the national CERT, CERT Australia, which is part of the Attorney-General's Department. He is an experienced cyber security researcher and consultant, having provided consultancy services over the last decade on information infrastructure protection to government and critical infrastructure utilities.
+
+Since joining government Jason has been involved in the development and execution national scale cyber exercises and the advanced cyber security training for control systems conducted by the US Department of Homeland Security.
+
+Jason holds a degree in software engineering and data communications, a PhD in information security and is an Adjunct Associate Professor at the Queensland University of Technology.
+
+[http://www.cert.gov.au/ About CERT Australia] 
+
+
+==Jeremiah Grossman==
+Jeremiah Grossman is the Founder and CTO of WhiteHat Security, where he is responsible for Web security R&D and industry outreach. Mr. Grossman has written dozens of articles, white papers, and is a published author. His work has been featured in the Wall Street Journal, NY Times and many other mainstream media outlets. As a well-known security expert and industry veteran, Mr. Grossman has been a guest speaker on five continents at hundreds of events including BlackHat, RSA, ISSA, and others. He has been invited to guest lecture at top universities such as UC Berkeley, Stanford, Harvard, UoW Madison, UCLA, and Carnegie Mellon. Mr. Grossman is also a co-founder of the Web Application Security Consortium (WASC) and previously named one of InfoWorld's Top 25 CTOs. Before founding WhiteHat, Mr. Grossman was an information security officer at Yahoo!
+
+
+Mr. Grossman was recently a speaker at TEDxMaui. [http://tedxmaui.com/2011/12/30/speaker-spotlight-jeremiah-grossman/ Learn more here.]
+
+
+
+=Track Session Speakers=
+
+{{:AppSecAsiaPac2012/Talks}}
+
+
+=Sponsors=
+
+The Conference Committee is excited to announce that the conference has been openly supported by the following vendors and associations. Without the great support of these companies and organisations the 2012 event would not be what it is today.
+
+<h2>Diamond & Platinum Sponsors</h2> 
+The OWASP Conference 2012, welcomes our sponsors for Diamond and Platinum. There are still spaces available for sponsorship, but it's closing fast.
+
+More information is available on our sponsorship packages by viewing the sponsor pack [[File:AppSec AsiaPac 2012 Sponsorship.pdf]]. Contact our Committee for more information.
+
+[[File:Fortify HP logo.png|link=http://www.fortify.com]]
+
+
+<h2>Gold & Silver Sponsors</h2> 
+The OWASP Conference 2012, welcomes our sponsors for Gold and Silver. The conference still has availability for other Gold and Silver sponsors.
+
+[[File:AppsecureTransLogo.png|link=http://www.appsecure.com/]]
+[[File:Imperva 312x54.jpg|link=http://www.imperva.com/]]
+[[File:Ionize75H.jpg‎|link=http://www.ionize.com.au/]]
+[[File:CS-LogoWeb.png|link=http://www.contentsecurity.com.au/]]
+[[File:Trustwave small.png|link=http://www.trustwave.com/]]
+
+
+<h2> Associations & Supporters</h2> 
+We are proudly supported by the following Industry Associations and Media outlets.
+
+[[File:Auscert-Header-logo.gif|link=http://www.auscert.org.au/]]
+[[File:AisaLogo.png|link=http://www.aisa.org.au/]]
+
+
+
+=Chapters Workshop=
+
+{{:AppSecAsiaPac2012/Chapters_Workshop}}
+
+=Venue=
+
+We're excited to announce that the location of the OWASP Conference for Appsec Asia 2012 will be held at:
+
+'''Four Points Sheraton, Darling Harbour'''<br>
+161 Sussex Street<br>
+Sydney, New South Wales 2000<br>
+Australia <br>
+<br>
+
+The facility provides hotel rooms and conference facilities, OWASP has secured cheap room rates directly in the hotel for the duration of the event.
+
+If you don't know your way around Sydney, here's the Google Maps link to the Hotel.
+
+http://maps.google.com.au/maps/place?q=Four+Points+by+Sheraton+Sydney,+Sussex+Street,+Sydney,+New+South+Wales&hl=en&cid=7369128618339939693
+
+[[File:FourPointsSheratonDarlingHarbour.jpg]]
+<br>
+
+We are using both the Ground and upper levels. The majority of the event will be held on the ground level, including all breaks etc. Attendees will find the registration and conference desk located at the Ground level near Hotel Reception. (You're not going to get lost, as we take up most of the ground level for this event.)
+
+Further details about venue locations will be posted when they become available.
+
+=Travel and Accommodations=
+For assistance with any of the items below, feel free to utilize OWASP's preferred travel agency:<br>
+Segale Travel Service contact information is:  +1-800-841-2276 <br>
+Sr. Travel Consultants:  <br>
+[mailto:mariam@segaletravel.com Maria Martinez]...ext 524 <br>
+[mailto:linnv@segaletravel.com Linn Vander Molen]...ext 520
+
+
+Additionally, the [mailto:appsecasia2012@owasp.org Conference Planning Team] is available to answer any questions!
+
+
+==Accommodation==
+
+We've been able to arrange for accommodation within the Four Points Sheraton Hotel(where the training and conference will be held) for attendees. These rooms have been allocated at a special rate, and available strictly for a limited time. To book these rooms at the special rate, you need to use the booking link shown below. These rooms are available one night either side of the event ensuring that if you are travelling interstate or international it's easy to find a room at a good rate. The room rate allocated for the event is $200 AUD Inclusive per night.
+
+
+'''Four Points Sheraton, Darling Harbour'''<br>
+161 Sussex Street<br>
+Sydney, New South Wales 2000<br>
+Australia <br>
+<br>
+
+'''[http://www.starwoodmeeting.com/Book/OWASP http://www.starwoodmeeting.com/Book/OWASP]'''
+
+
+==Travel Domestic==
+
+The OWASP Conference is to be held in Sydney at the Darling Harbour precinct. Hotel Location, http://maps.google.com.au/maps/place?q=Four+Points+by+Sheraton+Sydney,+Sussex+Street,+Sydney,+New+South+Wales&hl=en&cid=7369128618339939693
+
+
+
+==International Travel==
+
+The Sydney International Airport is located adjacent to the Domestic terminal. Similar taxi fares to the city and hotel venue apply.
+If you are travelling by train, you can ride the train from the International terminal all the way to the Town Hall station as above.
+
+
+==Airport Transportation==
+
+*Any major Airline carrier will fly you into Sydney Airport, from here, you can take a Taxi (Approx $35-40 AUD).
+*[http://www.kst.com.au KST Sydney Airport Shuttle] -- $18AUD oneway/ $32AUD roundtrip
+* Another option is the train from the Airport, which you can ride all the way into the closest station which is Town Hall. From this stop the hotel is a small downhill walk (no more then 5-10mins) from the station.
+
+
+
+==Driving Instructions==
+
+''From Sydney Airport (South)'' 
+
+Travel along Southern Cross Drive and take the South Dowling Street exit.
+
+Turn right onto Dacey Avenue.
+
+At the second set of traffic lights turn left onto Anzac Parade.
+
+Follow Anzac Parade past Moore Park on your right; Anzac Parade will become Flinders Street.
+
+Turn left onto Oxford Street and follow to Liverpool Street; Hyde Park will be on your right.
+
+Continue along Liverpool Street and turn right onto Kent Street.
+
+Travel five blocks and turn left onto Erskine Street.
+
+Immediately turn left again onto Sussex Street. The hotel will be on your right.
+
+
+''From East'' 
+
+Proceed along New South Head Road. Continue onto William Street and then onto Park Street; Hyde Park will be on your right.
+
+Proceed along Park Street as it becomes Druitt Street and turn right onto Kent Street.
+
+Travel approximately three blocks and turn left onto Erskine Street.
+
+Immediately turn left again onto Sussex Street. The hotel will be on your right.
+
+
+''From West'' 
+
+Proceed along the Western Distributor towards the city taking the City North exit followed by the Sussex Street South Exit.
+
+Turn right onto Sussex Street, the hotel will be on your right.
+
+
+''From North'' 
+
+Take the Pacific Highway/Warringah Highway and proceed over the Sydney Harbour Bridge.
+
+Take the York street exit off the bridge and continue along before turning right into Erskine Street .
+
+Proceed approximately three blocks before turning left into Sussex Street. The hotel will be on your right.
+
+
+
+=Contact Us=
+
+Justin Derry - Planning Committee Co-Chair<br>
+Andrew van der Stock - Planning Committee Co-Chair<br>
+Christian Frichot - Planning Committee Member<br>
+Andrew Mueller - Planning Committee Member<br>
+Mohd Fazli Azran - Global Conference Committee Liaison<br>
+Sarah Baso - OWASP Operational Support<br>
+
+
+If you are interested in helping out with this conference or have any questions, please contact us at: appsecasia2012@owasp.org
+
+
+=Archives=
+
+*[https://www.owasp.org/index.php/AppSecAsiaPac2012/CFP Call for Papers]
+*[[Speaker Agreement]]
+*[https://www.owasp.org/index.php/AppSecAsiaPac2012/CFT Call for Trainers]
+*[https://www.owasp.org/images/8/80/APAC2012_Training_Instructor_Agreement.pdf Training Instructor Agreement]
+*Information about the [https://www.owasp.org/index.php/AppSecAsiaPac2012/OWASP_Track OWASP Track]
+
+
+</font>
+
+<headertabs />

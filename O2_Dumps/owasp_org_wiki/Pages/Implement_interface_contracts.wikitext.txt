@@ -1,0 +1,42 @@
+{{Template:SecureSoftware}}
+
+==Overview==
+
+
+Purpose:	
+
+*	Provide unit-level semantic input validation.
+
+* Identify reliability errors in a structured way at the earliest point in time.
+
+Role:
+
+* Implementer
+
+Frequency:
+
+* As needed; generally as functions or methods are modified.
+
+Interface contracts are also commonly known as assertions. They can be a formidable tool for preventing security problems - particularly if applied consistently, and rigorously.
+
+In many application development processes, interface contracts are not enabled in production software. They are removed by habit in order to improve efficiency. If the efficiency impact is nominal for the project, CLASP strongly recommends leaving such checks in the code for the sake of security.
+
+Otherwise, checks of security critical parameters should be implemented using a permanent mechanism, such as code directly at the top of the function, as discussed in activities below.
+
+==Implement validation and error handling on function or method inputs ==
+
+For each method or function visible outside its compilation unit, specify in code what the expectations are for valid input values. One should validate that each input variable has a valid value in and of itself, and should determine validity in relation to other inputs. Validation checks should contain no side effects. Failures should be handled as specified in design. See CLASP Resource B for the concept on input validation.
+
+Input variables should not be constrained to parameters. Any variable read by the function or method should be considered an input variable - including global variables, and class and method variables. Note that some interface contract facilities will allow specifying invariants for an entire class - i.e., things that must always be true about class data before and after each method invocation - once.
+
+==Implement validation on function or method outputs ==
+
+Perform the same validation between relationships before exiting a function or method. Output specifications are meant to provide a clear behavioral specification to calling code to prevent accidental misuse.
+
+Generally, output validation code is most useful in implementation. It is reasonable to disable such code for deployment or even use pseudo-code if absolutely necessary.
+
+
+[[Category:Activity]]
+[[Category:CLASP Activity]]
+[[Category:BP4 Implement secure development practices]]
+[[Category:OWASP_CLASP_Project]]

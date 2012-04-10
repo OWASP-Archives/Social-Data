@@ -1,0 +1,149 @@
+{{Template:OWASP Testing Guide v3}}
+
+== Short Description of the Issue == 
+This article describes how to exploit SQL Injection vulnerabilities when the
+backend database is MS Access. In particular, the article focuses on how to exploit Blind SQL Injection.
+After an initial introduction on the typical functions that are useful to exploit a SQL Injection vulnerability, 
+a method to exploit Blind SQL Injection will be discussed.
+
+== Black Box testing and example ==
+
+=== Standard Test ===
+First of all, let's show a typical example of SQL error that can encounter when
+a test is executed:
+
+ Fatal error: Uncaught exception 'com_exception' with message '<b>Source:</b> Microsoft JET Database Engine<br/><b>Description:</b>
+
+That means that maybe we are testing an application with an MS Access Database backend.
+
+Unfortunately, MS Access doesn't support any comment character in the SQL query,
+so it is not possible to use the trick of inserting the characters /* or -- or # to truncate the query. On the other hand, we can fortunately  bypass this limit with the NULL character. If we insert the char %00 at some place in 
+the query, all the remaining characters after the NULL are ignored. That happens
+because, internally, strings are NULL terminated.
+However, the NULL character can sometimes cause troubles. We can notice that there is another value that can be used in order to truncate the query.
+The character is 0x16 (%16 in URL encoded format) or 22 in decimal. So if we have the following query:
+
+ SELECT [username],[password] FROM users WHERE [username]='$myUsername' AND [password]='$myPassword'
+
+we can truncate the query with the following two URLs:
+
+ http://www.example.com/index.php?user=admin'%00&pass=foo
+ http://www.example.com/index.php?user=admin'%16&pass=foo
+
+==== Attributes enumeration ====
+In order to enumerate the attributes of a query, it is possible to use the same method used for the database
+MS SQL Server. In short, we can obtain the name of the attributes by error messages. For example,
+if we know the existence of a parameter because we got it by an error message due to the
+' character, we can also know the name of the remaining attributes with the following query:
+
+ ' GROUP BY Id%00
+
+In the error message received we can see that the name of the next attribute is shown. We iterate the
+method until we obtain the name of all the attributes. If we don't know the name of at least
+one attribute, we can insert a fictitious column name, and, just like by magic, we obtain the name of
+the first attribute.
+
+==== Obtaining Database Schema ====
+Various tables exist in MS Access that can be used to obtain the name of a table in a
+particular database. In the default configuration these tables are not accessible, however it's
+possible to try it. The names of these table are:
+
+* MSysObjects
+* MSysACEs
+* MSysAccessXML
+
+For example, if a union SQL injection vulnerability exists, you can use the following query:
+
+ ' UNION SELECT Name FROM MSysObjects WHERE Type = 1%00
+
+These are the main steps that you can use to exploit a SQL injection vulnerability on 
+MS Access. There are also some functions that can be useful to exploit custom 
+queries. Some of these functions are:
+
+* ASC: Obtain the ASCII value of a character passed as input
+* CHR: Obtain the character of the ASCII value passed as input
+* LEN: Return the length of the string passed as parameter
+* IIF: Is the IF construct, for example the following statement IIF(1=1, 'a', 'b') return 'a'
+* MID: This function allows you to extract substring, for example the following statement mid('abc',1,1) return 'a'
+* TOP: This function allows you to specify the maximum number of results that the query should return from the top. For example TOP 1 will return only 1 row.
+* LAST: This function is used to select only the last row of a set of rows. For example the following query SELECT last(*) FROM users will return only the last row of the result.
+
+Some of these functions will be used to exploit a blind SQL injection as we see in the next
+paragraph. For other functions please refer to References.
+
+=== Blind SQL Injection testing ===
+[[Blind SQL Injection]] vulnerabilities are by no means the most frequent type of vulnerability
+that you will find. Generally, you find an SQL injection in a parameter where no union 
+query is possible. Also, usually, there is no chance to execute shell commands or to read/write
+a file. All you can do is infer the result of your query. For our test we take the
+following example:
+
+ http://www.example.com/index.php?myId=[sql]
+
+where the id parameter is used in the following query:
+
+ SELECT * FROM orders WHERE [id]=$myId
+
+For our test, we will consider the myId parameter vulnerable to blind SQL injection.
+We want to extract the content of the table users, in particular, of the column
+username (we have already seen how to obtain the name of the attributes thanks
+to the error messages and other techniques). It is supposed that the reader already knows the theory behind
+the blind SQL injection attack, so we go straight to show some examples. A typical query that
+can be used to infer the first character of the username of the 10th rows is:
+
+ http://www.example.com/index.php?id=IIF((select%20mid(last(username),1,1)%20from%20(select%20top%2010%20username%20from%20users))='a',0,'ko') 
+
+If the first character is 'a', this query will return a 0 (a "true response"), otherwise a
+'ko' string. Now we will explain why we have used this particular query.
+The first thing to point out is that with the functions IFF, MID and LAST, we extract the first
+character of the username of the selected row. Unfortunately, the original query returns a set of records and not only one record, so we can't use this methodology directly. We must first select only one row. We can use the TOP function, but it only works with the first row. To select the other
+queries we must use a trick. We want to infer the username of the row number 10.
+First we use the TOP function to select the first ten rows with the query:
+
+ SELECT TOP 10 username FROM users
+
+Then, we extract from this set the last row with the function LAST. Once we have only one row and 
+exactly the row that we want, we can use the IFF, MID and LAST functions to infer the value
+of the username.
+It may be interesting to note the use of the IFF function. In our example we use IFF to return a number or a string. With this trick we can distinguish when we have a true response or not. This is because id is of a numeric type, so if we compare it with a string we obtain a SQL error, otherwise with the 0 value we have no errors. Of course if the parameter was of type string we can use different values. For example, we can have the following query:
+
+ http://www.example.com/index.php?id='%20AND%201=0%20OR%20'a'=IIF((select%20mid(last(username),1,1)%20from%20(select%20top%2010%20username%20from%20users))='a','a','b')%00
+
+that returns a query that is always true if the first character is 'a' or a query that is always false in the other case.
+
+This method allows us to infer the value of the username. To understand when we have 
+obtained the complete value we have two choices:
+
+# We try all the printable values; when no one is valid then we have the complete value.
+# We can infer the length of the value (if it's a string value we can use the LEN function) and stop when we have found all the characters.
+
+== Tricks ==
+Sometimes we are blocked by some filtering function. Here we see some tricks to bypass these filters.
+
+=== Alternative Delimiter ===
+Some filters strip away the space from the input string. We can bypass these filters using
+the following values as delimiter instead of the white space:
+
+'''
+9
+a
+c
+d
+20
+2b
+2d
+3d
+'''
+
+For example we can execute the following query:
+
+ http://www.example.com/index.php?username=foo%27%09or%09%271%27%09=%09%271
+
+to bypass a hypothetical login form.
+
+== References ==
+'''Whitepapers'''<br>
+* http://www.techonthenet.com/access/functions/index_alpha.php
+* http://www.webapptest.org/ms-access-sql-injection-cheat-sheet-IT.html
+
+[[Category:FIXME| is the second link correct?]]

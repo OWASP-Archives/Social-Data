@@ -1,0 +1,125 @@
+{{2011_BASC:Header_Template | Agenda}}
+<!-- --------------------------------------------------------------------
+INSTRUCTIONS FOR EDITORS:
+
+Updating this agenda is a 3-step process. First you must convert the existing entries to the
+new format. You can do these one at a time or all at once. Whatever is easiest. Second, you need to
+fill in the data for the presentation. Third, miscellaneous details should be cleaned up.
+
+1) To convert a presentation to the new format:
+  - Most importantly, look at the 10:00 time slot and use it as an example.
+  - Find the time slot you want to modify.
+  - If it already has the Presentation Agenda Template then you are done
+  - Copy: {{2010_BASC:Presentaton_Agenda_Template|TYPE|To Be Determined Presentation|To Be Determined}}
+  - Delete the text that is in the time slot already. This requires great care.
+      You probably want to delete the lines that do not begin with a 
+      pipe (|) or an open curly ({).
+  - Paste the text you copied into that time slot.
+  - Replace the word "TYPE" with either "Presentation" or "Keynote"
+
+2) To fill in the appropriate data:
+  - Go to http://www.owasp.org/index.php/2010_BASC_Presentations and add
+    the presentation's abstract. If you don't have an abstract,
+    insert "Presentation abstract will be available shortly."
+  - Go to http://www.owasp.org/index.php/2010_BASC_Speakers and add the speaker(s) bio.
+    If you don't have bio information, just put the speaker's name into the page and 
+    and make their bio "Speaker information will be available shortly."
+    Until it presents a problem, list multiple speakers as one.
+    For example, "John Boy & Grandpa".
+  - Find the right slot in the table.
+  - Replace the "To Be Determined Presentation" text in the table
+    with the presentation name __EXACTLY__ as it is on the presentation page.
+  - Replace the "To Be Determined" text in the table
+    with the speaker(s) name(s) __EXACTLY__ as it is on the bio page.
+  
+3) Clean up whatever needs cleaning up.
+
+-------------------------------------------------------------------- -->
+
+
+
+<!-- lighter blue: #9BA8CF -->
+{| style="width:80%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#7B8ABD; color:white" |
+
+<h2>Saturday, October 8 </h2> 
+ |-
+ | style="width:10%; background:#7B8ABD" align="center" | 8:30-9:30 || colspan="2" style="width:80%; background:#D2D2D2" align="center" | 
+<div>
+<span style="font-size:130%">'''Breakfast and Registration'''</span><br/>
+provided by our Platinum Sponsor
+</div>
+{| border="1"
+| [[File:Rapid7LogoSmall.png|300px|link=http://www.rapid7.com|Rapid7]]
+|}
+|-
+ | style="width:10%; background:#7B8ABD" align="center" | 09:00-09:50 || colspan="2" style="width:80%; background:#B0B0B0;" align="center" | 
+<div style="margin:10px;">
+<span style="font-size:130%">'''Keynote'''</span><br>
+<span style="font-size: 120%">[[2011_BASC_Speakers#Rob Cheyne|Rob Cheyne]]</span><br/>
+</div>
+ |-
+ | style="width:10%; background:#7B8ABD" | || align="center" style="width:30%; background:#CFA49B" | '''Track 1'''<br/>Horace Mann Room
+ | align="center" style="width:30%; background:#DFC799;" | '''Track 2'''<br/>Deborah Sampson / Paul Thomas Room
+|-
+| style="width:10%; background:#7B8ABD" align="center" | 10:00-10:50 || style="width:30%; background:#BC857A" align="center" |  
+{{2011_BASC:Presentaton_Agenda_Template|Presentation|Reversing Web Applications|Andrew Wilson}}
+ | style="width:30%; background:#BCA57A" align="center" | 
+{{2011_BASC:Presentaton_Agenda_Template|Presentation|Don't Get Pwn3d By Your Phone|John Carmichael}}
+|-
+| style="width:10%; background:#7B8ABD" align="center" | 11:00-11:50 || style="width:30%; background:#CFA49B" align="center" | 
+{{2011_BASC:Presentaton_Agenda_Template|Presentation|Mozilla Secure World: Simple Ways to Secure Your Website|HaoQi Li}}
+ | style="width:30%; background:#DFC799" align="center" | 
+{{2011_BASC:Presentaton_Agenda_Template|Presentation|The Perils of JavaScript APIs|Ming Chow}}
+|-
+ | style="width:10%; background:#7B8ABD" align="center" | 12:00-13:00 || colspan="2" style="width:80%; background:#D2D2D2" align="center" | 
+<span style="font-size:130%">'''Lunch'''</span><br/>
+provided by our Platinum Sponsor
+{| border="1"
+|[[File:Source250.png|link=http://www.sourceconference.com/|Source Conference]]
+|}
+|-
+| style="width:10%; background:#7B8ABD" align="center" | 13:00-13:50 || style="width:30%; background:#BC857A" align="center" | 
+{{2011_BASC:Presentaton_Agenda_Template|Presentation|OWASP Mobile Top 10 Risks|Zach Lanier}}
+ | style="width:30%; background:#BCA57A" align="center" | 
+{{2011_BASC:Presentaton_Agenda_Template|Presentation|WAFs - An Overview of Free Web Application Firewalls|Roy Wattanasin}}
+
+|-
+| style="width:10%; background:#7B8ABD" align="center" | 14:00-14:50 || style="width:30%; background:#CFA49B" align="center" | 
+{{2011_BASC:Presentaton_Agenda_Template|Presentation|Secrets Of Static Binary Analysis|Christien Rioux}}
+ | style="width:30%; background:#DFC799" align="center" | 
+{{2011_BASC:Presentaton_Agenda_Template|Presentation|Don't Be A Victim|Jack Daniel}}
+|-
+| style="width:10%; background:#7B8ABD" align="center" | 15:00-15:50 || style="width:30%; background:#BC857A" align="center" | 
+{{2011_BASC:Presentaton_Agenda_Template|Presentation|Binary Instrumentation of Programs|Robert Cohn}}
+ | style="width:30%; background:#BCA57A" align="center" | 
+{{2011_BASC:Presentaton_Agenda_Template|Presentation|Preventing Data Breaches from Vulnerable Web Applications using Data Provenance|Anirudh Ramachandran}}
+|-
+| style="width:10%; background:#7B8ABD" align="center" | 16:00-16:50 || style="width:30%; background:#CFA49B" align="center" | 
+{{2011_BASC:Presentaton_Agenda_Template|Presentation|Google & Search Hacking|Francis Brown}}
+ | style="width:30%; background:#DFC799" align="center" | 
+{{2011_BASC:Presentaton_Agenda_Template|Presentation|There’s an App for That|Michael Anderson}}
+|-
+
+|-
+| style="width:10%; background:#7B8ABD" align="center" | 17:00-17:30 || colspan="2" style="width:30%; background:#D2D2D2" align="center" | 
+<span style="font-size:130%">'''Social Time'''</span><br/>
+provided by our Platinum Sponsor
+{| border="1"
+| [[File:safelight_sm.png|link=http://www.safelightsecurity.com|SafeLight Security]]
+|}
+|-
+| style="width:10%; background:#7B8ABD" align="center" | 17:30-18:30 || colspan="2" style="width:30%; background:#B0B0B0" align="center" | 
+<br/>
+<span style="font-size:130%">'''Expert Panel'''</span><br>
+<br/>
+
+|-
+| style="width:10%; background:#7B8ABD" align="center" | 18:30-19:00 || colspan="2" style="width:30%; background:#99FF99" align="center" | 
+<br/>
+<span style="font-size:130%">'''Wrap Up'''</span><br>
+<br/>
+
+|}
+
+{{2011_BASC:Footer_Template | Agenda}}

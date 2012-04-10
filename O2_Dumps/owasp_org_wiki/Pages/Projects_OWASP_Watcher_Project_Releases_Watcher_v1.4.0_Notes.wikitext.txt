@@ -1,0 +1,55 @@
+'''Downloading Watcher'''
+
+From the [http://websecuritytool.codeplex.com/releases/view/22212 download page] you can get the ZIP file for manual installation or the EXE installer. A Team Foundation Server (TFS) component is also included as a separate download with instructions for installing and exporting results to TFS.
+
+Watcher is built in C# as a small framework with 30+ checks already included. It's built so that new checks can be easily created to perform custom audits specific to your organizational policies, or to perform more general-purpose security assessments. Examples of the types of issues Watcher will currently identify:
+* ASP.NET VIEWSTATE insecure configurations
+* JavaServer MyFaces ViewState without cryptographic protections 
+* Cross-domain stylesheet and javascript references 
+* User-controllable attribute values such as href, form action, etc
+* User-controllable javascript events (e.g. onclick)
+* Cross-domain form POSTs 
+* Insecure cookies which don't set the HTTPOnly or secure flags 
+* Open redirects which can be abused by spammers and phishers 
+* Insecure Flash object parameters useful for cross-site scripting
+* Insecure Flash crossdomain.xml 
+* Insecure Silverlight clientaccesspolicy.xml 
+* Charset declarations which could introduce vulnerability (non-UTF-8)
+* User-controllable charset declarations 
+* Dangerous context-switching between HTTP and HTTPS 
+* Insufficient use of cache-control headers when private data is concerned (e.g. no-store) 
+* Potential HTTP referer leaks of sensitive user-information 
+* Potential information leaks in URL parameters 
+* Source code comments worth a closer look 
+* Insecure authentication protocols like Digest and Basic 
+* SSL certificate validation errors 
+* SSL insecure protocol issues (allowing SSL v2) 
+* Unicode issues with invalid byte streams 
+* Sharepoint insecurity checks 
+
+Reducing false positives is a high priority, suggestions are welcome. Right now each check takes steps to reduce false positives, some better than others, and checks can be individually disabled if they’re generating too much noise. 
+
+'''Prior work'''
+
+There has been a lot of great work over the years creating Web-app security tools. Passive assessment proxies do exist, such as [http://code.google.com/p/ratproxy/ RatProky], [http://portswigger.net/ Burp Proxy], [http://code.google.com/p/proxmon/ ProxMon], [http://www.parosproxy.org/index.shtml Paros] and OWASP's Pantera and WebScarab.
+
+Some of these even combine active testing methods. [http://www.charlesproxy.com/ Charles Proxy] has also been a very useful proxy during assessments. We use whatever tools suit our needs in a given situation, based on the functions and reporting they provide.
+
+I still find reason to use some of the other proxies, but found a compelling interest to develop Watcher. For one thing, Fiddler is free and widely used. We work with a large group of developers and testers who either use Windows or Fiddler on a daily basis. Switching between different proxies for functional testing and security testing wasn't optimal, so we decided to build a plugin for Fiddler that incorporates the security testing we want to passively automate. You can perform your functional testing as normal, and have Watcher find security issues for you.
+
+Fiddler provides a proxy framework with builtin tools for HTTP, HTML/XML, and Javascript debugging. Rather than recreate the proxy, we can focus on the security checking. Fiddler will handle SSL MITM, NTLM authentication, request interception, and other functions you'd expect from a functional proxy. It can also be easily extended and contains other useful features such as an AutoResponder, performance stats, and more. 
+
+If you wanted you could still use other proxies that suit your needs and chain them together with Fiddler and Watcher to get more coverage.
+
+'''Reviews'''
+
+Various unsolicited reviews of Watcher have been written. Check them out to see how different people find value and use this type of tool.
+
+* Russ McRee has written a review for [http://holisticinfosec.org/toolsmith/docs/november2009.html ISSA Journal's Toolsmith]
+* Rafal @ ishackingyou.com has written a review about how [http://preachsecurity.blogspot.com/2009/06/watcher-web-vulnerabilities-served-up.html Watcher's hotspot detection enables web-app pen-testing]
+* Eviltester has written on [http://www.eviltester.com/index.php/2009/04/30/learn-security-testing-with-fiddler-and-watcher/  how to learn security testing with Fiddler and Watcher]
+* John Sawyer wrote a review on Darkreading about the [http://www.darkreading.com/blog/archives/2009/04/new_passive_web.html;jsessionid=GEXOE5RV2BPWDQE1GHRSKHWATMY32JVN  passive agressive testing of Watcher]
+
+'''User Interface and Reporting'''
+
+Watcher writes findings to a ListView which includes the Severity, SessionID, Title, and URL. The full report can be exported to an XML file.

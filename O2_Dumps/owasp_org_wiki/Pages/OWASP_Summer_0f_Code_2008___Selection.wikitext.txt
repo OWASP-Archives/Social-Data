@@ -1,0 +1,250 @@
+This page contains the applications, the Jury's evaluation and the projects sponsored on the [[OWASP Summer of Code 2008]].
+
+== Individual and Global OWASP Board Member’s Assessment ==
+
+{| class="wikitable" style="text-align:center"
+! width="500" align="center"|'''Applications Assessment Type'''
+!width="500" align="center" | '''Jury to Edit'''
+!width="500" align="center" | '''SoC's 2008 Results'''
+ 
+|-
+| align="CENTER"|[[OWASP Summer of Code 2008 Applications - for majority vote|Majority vote - 1st round]]
+| align="center"|[http://spreadsheets.google.com/a/owasp.org/ccc?key=pAX6n7m2zaTXckoJGOB0_LA&hl=en Majority vote - 1st round - '''Finalized''']
+| align="center"|[http://spreadsheets.google.com/pub?key=pAX6n7m2zaTXckoJGOB0_LA Majority vote - 1st round - '''Finalized''']
+|-
+| align="center"|[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications|Majority vote/Further clarifications were required - 2nd round]]
+| align="center"|[http://spreadsheets.google.com/a/owasp.org/ccc?key=pAX6n7m2zaTWKpV2puRElNw&hl=en Majority vote - 2nd round  - '''Finalized''']
+| align="center"|[http://spreadsheets.google.com/pub?key=pAX6n7m2zaTWKpV2puRElNw Majority vote - 2nd round  - '''Finalized''']
+|-
+| align="CENTER"|[[OWASP Summer of Code 2008 Applications - for selection criteria vote|Selection criteria vote - 3rd round]]
+| align="center"|[http://spreadsheets.google.com/a/owasp.org/ccc?key=pAX6n7m2zaTXfkbcvHAVnUA&hl=en Selection criteria vote - 3rd round - '''Finalized''']
+| align="center"|[http://spreadsheets.google.com/pub?key=pAX6n7m2zaTXfkbcvHAVnUA Selection criteria vote - 3rd round - '''Finalized''']
+|}
+
+== OWASP Summer of Code 2008 Applications - Final Assessment ==
+=== Majority vote - First round ===
+{| class="wikitable" style="text-align:center"
+! width="600" height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | Application
+! width="220" align="CENTER" | '''Applicant's Name'''
+! width="60" align="CENTER" | '''Assessment'''
+! width="60" align="CENTER" | '''Selection'''
+! width="80" align="CENTER" | '''Sponsorship'''
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications#OWASP Code review guide, V1.1|OWASP Code review guide, V1.1]]'''
+| align="CENTER" | Eoin Keary
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 5.000 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications#The Ruby on Rails Security Guide v2|The Ruby on Rails Security Guide v2]]'''
+| align="CENTER" | Heiko Webers 
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 2.500 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications#P028 - OWASP UI Component Verification Project (a.k.a. OWASP JSP Testing Tool)|OWASP UI Component Verification Project (a.k.a. OWASP JSP Testing Tool)]]'''
+| align="CENTER" | Jason Li
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 2.500 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications#Internationalization Guidelines and OWASP-Spanish Project|Internationalization Guidelines and OWASP-Spanish Project]]'''
+| align="CENTER" | Juan Carlos Calderon 
+| align="CENTER" | By Vote
+| align="CENTER" | YES
+| align="CENTER" | 5.000 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications#The Application Security Desk Reference - ASDR|OWASP Application Security Desk Reference (ASDR)]]'''
+| align="CENTER" | Leonardo Cavallari Militelli
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 5.000 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications#OWASP .NET Project Leader|OWASP .NET Project Leader]]'''
+| align="CENTER" | Mark Roxberry 
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 2.500 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications#OWASP Education Project|OWASP Education Project]]'''
+| align="CENTER" | Martin Knobloch
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 2.500 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications#The OWASP Testing Guide v3|The OWASP Testing Guide v3]]'''
+| align="CENTER" | Matteo Meucci
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 5.000 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications#OWASP Application Security Verification Standard|OWASP Application Security Verification Standard]]'''
+| align="CENTER" | Mike Boberski 
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 2.500 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications#Online code signing and integrity verification service for open source community (OpenSign Server)|OWASP Online code signing and integrity verification service for open source community]]'''
+| align="CENTER" | Phil Potisk and Richard Conway
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 2.500 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications#Securing WebGoat using ModSecurity|Securing WebGoat using ModSecurity]]'''
+| align="CENTER" | Stephen Evans
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 2.500 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications#OWASP Book Cover & Sleeve Design|OWASP Book Cover & Sleeve Design]]'''
+| align="CENTER" | LXstudios
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 6.000 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications#OWASP Individual & Corporate Member Packs, Conference Attendee Packs Brief|OWASP Individual & Corporate Member Packs, Conference Attendee Packs Brief]]'''
+| align="CENTER" | LXstudios
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 2.000 US$
+|}
+
+=== Majority vote - Second round ===
+{| class="wikitable" style="text-align:center"
+! width="600" height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | Application
+! width="220" align="CENTER" | '''Applicant's Name'''
+! width="60" align="CENTER" | '''Assessment'''
+! width="60" align="CENTER" | '''Selection'''
+! width="80" align="CENTER" | '''Sponsorship'''
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#P022_-_OWASP_Access_Control_Rules_Tester|OWASP Access Control Rules Tester]]'''
+| align="CENTER" | Andrew Petukhov
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 2.500 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#OpenPGP Extensions for HTTP - Enigform and mod_openpgp|OpenPGP Extensions for HTTP - Enigform and mod_openpgp]]'''
+| align="CENTER" | Arturo 'Buanzo' Busleiman
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 2.500 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#OWASP-WeBekci Project|OWASP-WeBekci Project]]'''
+| align="CENTER" | Bunyamin Demir
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 2.500 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#OWASP Backend Security Project|OWASP Backend Security Project]]'''
+| align="CENTER" | Carlo Pelliccioni
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 2.500 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#P003/P013 - OWASP Application Security Tool Benchmarking Environment and Site Generator refresh.=|OWASP Application Security Tool Benchmarking Environment and Site Generator refresh]]'''
+| align="CENTER" | Dmitry Kozlov
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 5000 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#Teachable Static Analysis Workbench|Teachable Static Analysis Workbench]]'''
+| align="CENTER" | Dmitry Kozlov, Igor Konnov
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 5000 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#P025 OWASP Positive Security Project|OWASP Positive Security Project]]'''
+| align="CENTER" | Eduardo Vianna de Camargo Neves
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 2.500 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#GTK+ GUI for w3af project|GTK+ GUI for w3af project]]'''
+| align="CENTER" | Facundo Batista
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 2.500 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#Source Code Review OWASP Projects|OWASP Source Code Review OWASP Projects]]'''
+| align="CENTER" | James Walden
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 2.500 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#OWASP Interceptor Project - 2008 Update|OWASP Interceptor Project - 2008 Update]]'''
+| align="CENTER" | Justin Derry
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 2.500 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#Skavenger|Skavenger]]'''
+| align="CENTER" | Matthias Rohr
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 2.500 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#SQL Injector Benchmarking Project (SQLiBENCH)|SQL Injector Benchmarking Project (SQLiBENCH)]]'''
+| align="CENTER" | Mesut Timur & Bedirhan Urgun
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 2.500 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#P017 - OWASP AppSensor - Detect and Respond to Attacks from Within the Application|OWASP AppSensor - Detect and Respond to Attacks from Within the Application]]'''
+| align="CENTER" | Michael Coates
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 2.500 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#The Owasp Orizon Project|Owasp Orizon Project]]'''
+| align="CENTER" | Paolo Perego
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 2.500 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#P006 - OWASP Corporate Application Security Rating Guide|OWASP Corporate Application Security Rating Guide]]'''
+| align="CENTER" | Parvathy Iyer
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 2.500 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications#OWASP AntiSamy .NET| OWASP AntiSamy .NET]]'''
+| align="CENTER" | Arshan Dabirsiaghi
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 2.500 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications#Python Static Analysis|Python Static Analysis]]'''
+| align="CENTER" | Georgy Klimov
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 2.500 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications#OWASP Classic ASP Security Project|OWASP Classic ASP Security Project]]'''
+| align="CENTER" | Juan Carlos Calderon
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 2.500 US$
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications#OWASP Live CD 2008 Project|OWASP Live CD 2008 Project]]'''
+| align="CENTER" | Matt Tesauro
+| align="CENTER" | By vote
+| align="CENTER" | YES
+| align="CENTER" | 2.500 US$
+|-
+|}
+
+=== Majority vote - Third round ===
+{| class="wikitable" style="text-align:center"
+! width="600" height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | Application
+! width="220" align="CENTER" | '''Applicant's Name'''
+! width="60" align="CENTER" | '''Assessment'''
+! width="60" align="CENTER" | '''Selection'''
+! width="80" align="CENTER" | '''Sponsorship'''
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#Code Crawler|OWASP Code Crawler ]]'''
+| align="CENTER" | Alessio Marziali 
+| align="CENTER" | By selection criteria
+| align="CENTER" | YES
+| align="CENTER" | 2.500 US$
+|-
+|}

@@ -1,0 +1,91 @@
+3. AJAX Security -> 3.8 Dangerous Use of Eval
+
+=== Lesson overview ===
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution === 
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information. 
+
+=== Strategy ===
+
+This WebGoat lesson demonstrates the use of the JavaScript eval() function. The vulnerability is an XSS attack in the 3 digit credit card access code field such as:
+<pre>
+123');alert(document.cookie);('
+</pre>
+
+Note that the '<script>' tag is not necessary because the data is placed in the JavaScript eval() function.
+
+=== Implementation === 
+
+The credit card field is also vulnerable.
+
+The ModSecurity solution is to whitelist both fields. 
+
+The regex for the 3-digit access code ('field1') is: ^\d\d\d$
+
+The regex for the credit card number ('field2') is: ^[ \d]{16,20}$
+
+Since the solution cannot distinguish between a malicious attack and an errant entry for credit card number or the access code, a JavaScript alert box is shown to the user that closely resembles the application's error message box. But appending JavaScript to the response body is not an option because then the request would go through to the application, which we don't want. Luckily, it was discovered that since an 'eval' function calls the file 'eval.jsp', upon an error condition the response body was simply:
+<pre>
+alert('Whoops: You entered an incorrect access code of "123xxx"');
+</pre>
+
+So, the ModSecurity rule blocks the request upon an error condition and replicates the application's error message box as closely as possible.
+
+For the solution, a new 'rulefile_00_initialize.conf' initialization file had to be made because it had junk in it for Lesson 13 and the line:
+<pre>
+<LocationMatch "^/.*$">
+</pre>
+
+throws off this lesson because it's evaluated first. The new file to use is 'rulefile_00_phase2-initialize.conf'.
+
+The POST URI is 'http://192.168.0.5/WebGoat/lessons/Ajax/eval.jsp' with sample POST parameters:
+<pre>
+field1=123');alert(document.cookie);('&field2=4128 3214 0002 1999
+</pre>
+
+The ModSecurity configuration file 'rulefile_03-8_dangerous-eval.conf' contains only a phase 2 request section:
+<pre>
+  SecRule REQUEST_URI "!^/webgoat/lessons/ajax/eval.jsp" "t:lowercase,skipAfter:380"
+
+  # 3 digit acess code
+  SecRule &ARGS_POST:field1 "@eq 0" "nolog,skip:1"
+  SecRule ARGS_POST:field1 "!^\d\d\d$" \ 
+"phase:2,t:none,log,auditlog,deny,severity:3,msg:'AJAX Security -> \ 
+3.8 Dangerous Use of Eval: A malicious attempt may have been made to inject \ 
+XSS script into the 3 digit access code field',tag:'INJECTION_ATTACK', \ 
+redirect:/_error_pages_/lesson03-8a.html"
+
+  # credit card number
+  SecRule &ARGS_POST:field2 "@eq 0" "nolog,skip:1"
+  SecRule ARGS_POST:field2 "!^[ \d]{16,20}$" \ 
+"phase:2,t:none,log,auditlog,deny,severity:3,msg:'AJAX Security -> \ 
+3.8 Dangerous Use of Eval: A malicious attempt may have been made to inject \ 
+XSS script into the credit card number field',tag:'INJECTION_ATTACK', \ 
+redirect:/_error_pages_/lesson03-8b.html"
+
+  SecAction "t:none,nolog,id:'380'"
+</pre>
+
+Note the uniqueness of the response from eval.jsp on an error and how the application displays it. Most of the ModSecurity solutions that block on an error condition redirects to a bland error HTML file that does not have the look and feel of WebGoat (this can be remedied, of course, with a little bit of work). In this lesson, 'lesson03-8a.html' consists simply of one line: 
+<pre>
+alert("Whoops: You entered an incorrect access code");'
+</pre>
+
+Here is a screen shot of the application's error message box returned to the user for an invalid access code:
+
+[[Image:OWASP_ModSecurity_Securing_WebGoat_dangerous_eval_SS0.jpg]]
+
+
+Here is the screen shot of the ModSecurity solution's error message box:
+
+[[Image:OWASP_ModSecurity_Securing_WebGoat_dangerous_eval_SS1.jpg]]
+
+
+=== Comments ===
+
+* This lesson demonstrates the use of the JavaScript 'eval' function and an interesting way that an error message can be displayed to the user.
+* Unfortunately, there is no way to pass incorrect user input to the error message box at run time because the redirected error pages are loaded when Apache is started.
+* ModSecurity supplies an operator 'verifyCC' to check if a string is a potential credit card number; see the reference manual for more details.

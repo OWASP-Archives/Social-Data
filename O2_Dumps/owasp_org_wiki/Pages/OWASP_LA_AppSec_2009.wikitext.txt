@@ -1,0 +1,174 @@
+= The OWASP Application Security Brazil 2009 =
+
+
+
+== Team Members ==
+
+'''Organization'''
+
+* '''General Management:''' [mailto:eduardo.neves@owasp.org Eduardo V. C. Neves] and [mailto:welias@conviso.com.br Wagner Elias]
+* '''Local Management:'''
+** ''Brasília:''
+
+== Files ==
+
+'''Event Organization'''
+
+* 10/12/2008: [https://www.owasp.org/images/1/12/OWASP-AppSecBR.ppt OWASP LA AppSec 2009 Overview (Draft 1.0): Describes in general terms how the event will be promoted and managed.]
+* 20/12/2009: [[OWASP_LA_AppSec_2009-Projeto_Basico_v1.0]]: Conference Project v1.0 in Portuguese. Project to be sent to sponsoring organizations.
+
+= Proposta de Projeto Básico =
+
+
+
+== Público alvo ==
+
+===Indústria e Governo:===
+
+* Profissionais de segurança da informação
+* Desenvolvedores de sistemas
+* Gerentes de projeto de sistemas web
+* Analistas de sistemas e analistas de processo de desenvolvimento de software
+* Auditores de sistemas
+
+===Pesquisadores e estudantes na áreas:===
+
+* Segurança de informações
+* Engenharia de software
+* Sistemas de informação
+
+== Duração ==
+
+3 dias sendo 1 dia de cursos e treinamentos e 2 dias de palestras técnicas.
+
+''Proposta: seguir o modelo do AppSec Australia: https://www.owasp.org/index.php/OWASP_AU_Conference_2009#Conference_Agenda''
+
+'''Leo: Acredito que devemos ter 2 dias de treinamentos para podermos oferecer cursos mais abrangentes e 2 dias de palestras. 4 dias no total.'''
+
+== Datas ==
+
+A definir conforme disponibilidade de espaço e palestrantes (entre 14 de setembro e 2 de outubro de 2009) 
+
+'''(Sugiro como data para o evento um fim de semana como 17,18 e 19 de setembro para que no sábado possamos fechar com uma possível festa.)'''
+
+'''* Eduardo Neves: Sugiro que o evento seja feito nos dias 16, 17 e 18 de setembro. Precisamos fechar a data este ano, validar com o local e começa a divulgar em janeiro.
+'''
+'''OBS: Eventos em final de semana podem não atrair muitos profissionais patrocinados por empresas. Podemos fazer o encerramento numa sexta. (Lucas)'''
+==Tamanho==
+
+Participantes: 100 
+
+'''Leo: devido ao ineditismo do evento, este número é baixo. Penso que podemos trabalhar com um número em torno de 200-300 participantes.'''
+
+Palestras:
+* 4 palestras convidadas ou '''keynotes''' (90 minutos + perguntas)<br>
+* 16 apresentações de trabalhos (45 minutos + perguntas) em duas trilhas
+* Todas as palestras serão gravadas e divulgadas na Internet, se possível simultaneamente ao evento.
+
+==Temática==
+
+===Segurança de aplicações web===
+
+Todos os aspectos relacionados ao desenvolvimento de sistemas seguros, incluindo tópicos como desenvolvimento seguro, segurança e arquitetura de software, processos de desenvolvimento de sistemas seguros, ferramentas para análise de segurança de aplicações, bibliotecas e frameworks de segurança para aplicações web, auditoria e testes de segurança em aplicações, metodologias gerenciais para melhoria da segurança no desenvolvimento de software.
+
+Será dada ênfase nos aspectos práticos enfrentados pelas equipes de desenvolvimento em todas as fases do ciclo de vida de uma aplicação.
+===OWASP===
+
+O OWASP (Open Web Application Security Project) é uma organização sem fins lucrativos que visa possibilitar o desenvolvimento de sistemas mais confiáveis e robustos. Para atingir seus objetivos, o OWASP patrocina diversos projetos de ferramentas e documentos, que ficam disponíveis na página web da organização. Projetos atuais e futuros do OWASP também fazem parte da temática do evento.
+==Divulgação==
+
+A estratégia de divulgação será definida oportunamente, dependendo do orçamento e patrocínios, mas incluirá minimamente:
+* divulgação no site do OWASP
+* divulgação nas listas de discussão (email) do OWASP
+* contatos com empresas e órgãos governamentais
+* divulgação em universidades e centros de ensino através de palestras, email e contato com professores.
+* divulgação em listas de discussão de temas afins
+* contatos com a imprensa local e nacional
+
+== Comitês ==
+
+'''Comitê executivo'''
+
+Responsável final por todas as decisões e pela supervisão dos trabalhos dos demais comitês. Será composto pelos líderes de cada um dos demais comitês e pelos líderes do OWASP envolvidos na organização da conferência.
+
+''Proposto: Eduardo Vianna de Camargo Neves<br>
+''Proposto: Lucas Ferreira<br>''
+''Proposto: Wagner Elias''<br>
+''Proposto: Leonardo Cavallari Militelli''
+
+'''Comitê de programa'''
+
+Responsável pela definição da programação do evento, incluindo as palestras convidadas e a seleção dos trabalhos submetidos ao evento. 
+
+''Proposto: Wagner Elias''<br>
+''Proposto: Cleber Brandão (CleBeer)''<br>
+''Proposto: Eduardo Jorge (eth0)''
+
+'''Comitê local'''
+
+Responsável pela organização local, incluindo espaço físico, equipamentos, hospedagem, transporte e eventos sociais. Este comitê será definido quando for decidido o local da conferência.
+
+''Proposto: Lucas Ferreira''<br>
+''Proposto: Eduardo Jorge (eth0)''
+
+'''Comitê de divulgação'''
+
+Responsável pela divulgação do evento por todos os meios, incluindo o contato com a imprensa, potenciais patrocinadores e instituições afins. Será responsável também pela elaboração de todo o material impresso e eletrônico do evento.
+
+''Proposto: Eduardo Vianna de Camargo Neves (eduardo.neves@owasp.org)''<br>
+''Proposto: Eduardo Jorge (eth0)''<br>
+''Proposto: Cleber Brandão (CleBeer)''<br>
+
+== Processo de Seleção dos trabalhos ==
+
+A ser definido oportunamente pelo comitê de programa. A principal restrição é que será baseado na revisão da qualidade e relevância dos trabalhos apresentados de forma técnica e imparcial.
+
+==Preços==
+
+A definir. A princípio devem haver preços diferenciados para estudantes, descontos para associações que apoiarem o evento (ISSA) e alguns VIPs para os patrocinadores.
+
+''Inscrição: R$200-400''
+
+''Valor treinamentos: R$400-600/dia''
+
+E. Neves: O preço só pode ser definido depois de sabermos os custos. Notem que existem diferenças gigantes nos valores cobrados nos AppSec, em Taiwan custou 35USD ....
+
+==Atividades sociais==
+
+Dada a duração estimada de 3 dias para o evento com o primeiro dia reservado para cursos, prevemos a necessidade de apenas uma atividade social de grande porte. Sugere-se a realização de um jantar em restaurante típico brasileiro. Ficará a cargo do comitê local definir local e custo da atividade.
+
+'''Leo: Devemos considerar a realização de coquetéis diários conforme o modelo de patrocinadores que será definido. Melhor momento para networking.'''
+
+==Instalações==
+
+Serão necessárias as seguintes instalações físicas para o evento:
+* Auditório principal com 150 lugares
+* Auditório secundário ou sala de aula para 50 pessoas
+* Espaço para estandes de patrocinadores, de preferência com possibilidade de realizar os coffee breaks
+* Espaço para a secretaria do evento
+* Sala de acesso á internet
+* Rede wi-fi para acesso à internet
+* Sala para imprensa
+* Câmeras, microfones e demais equipamentos necessários para transmissão/gravação das palestras
+
+==Entidades que poderiam apoiar o evento==
+* [http://www.setur.df.gov.br/005/00502001.asp?ttCD_CHAVE=1899 Brasiliatur]
+* [http://www.brasiliaconvention.com.br/ Brasilia Convention & Visitors Bureau]
+* [http://www.ucb.br Universidade Católica de Brasília]
+* [http://www.impacta.edu.br/ Faculdades Impacta]
+
+==Possíveis Patrocinadores==
+* [http://www.google.com.br Google]
+* [http://www.cobra.com.br Cobra]
+* [http://www.dataprev.gov.br DATAPREV]
+* [http://www.serpro.gov.br SERPRO]
+* [http://www.b2br.com.br B2BR]
+* [http://www.trueaccess.com.br TrueAccess]
+* [http://www.modulo.com.br Modulo Security]
+* [http://www.politec.com.br POLITEC]
+* [http://www.bb.com.br Banco do brasil]
+* [http://www.caixa.gov.br Caixa Economica]
+* [http://www.iti.gov.br ITI]
+* [http://www.planejamento.gov.br Ministerio do planejamento (SLTI)]
+* Empresas de Auditoria e Consultorias nacionais e multinacionais
+* Fornecedores e representantes de soluções nacionais e multinacionais

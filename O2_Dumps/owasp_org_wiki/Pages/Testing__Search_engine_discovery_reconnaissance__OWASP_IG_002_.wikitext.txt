@@ -1,0 +1,47 @@
+{{Template:OWASP Testing Guide v3}}
+
+== Brief Summary ==
+This section describes how to search the Google Index and remove the associated web content from the Google Cache.
+
+== Description of the Issue == 
+Once the GoogleBot has completed crawling, it commences indexing the web page based on tags and associated attributes, such as <TITLE>, in order to return the relevant search results. [1]
+
+If the robots.txt file is not updated during the lifetime of the web site, then it is possible for web content not intended to be included in Google's Search Results to be returned.
+
+Therefore, it must be removed from the Google Cache.
+
+== Black Box Testing==
+Using the advanced "site:" search operator, it is possible to restrict Search Results to a specific domain [2].
+
+Google provides the Advanced "cache:" search operator [2], but this is the equivalent to clicking the "Cached" next to each Google Search Result.  Hence, the use of the Advanced "site:" Search Operator and then clicking "Cached" is preferred.
+
+The Google SOAP Search API supports the doGetCachedPage and the associated doGetCachedPageResponse SOAP Messages [3] to assist with retrieving cached pages. An implementation of this is under development by the [[::Category:OWASP_Google_Hacking_Project |OWASP "Google Hacking" Project]].
+
+== Example ==
+To find the web content of owasp.org indexed by Google Cache the following Google Search Query is issued:
+<pre>
+site:owasp.org
+</pre>
+[[Image:Google_site_Operator_Search_Results_Example.JPG]]
+
+To display the index.html of owasp.org as cached by Google the following Google Search Query is issued:
+<pre>
+cache:owasp.org
+</pre>
+[[Image:Google_Cached_Example.JPG]]
+
+
+
+== Gray Box testing and example == 
+Grey Box testing is the same as Black Box testing above.
+
+== References ==
+'''Web'''<br>
+[1] "Google 101: How Google crawls, indexes, and serves the web" - http://www.google.com/support/webmasters/bin/answer.py?answer=70897 <br>
+[2] "Advanced Google Search Operators" - http://www.google.com/help/operators.html <br>
+[3] "Google SOAP Search API" - http://code.google.com/apis/soapsearch/reference.html#1_2 <br>
+[4] "Preventing content from appearing in Google search results" - http://www.google.com/support/webmasters/bin/topic.py?topic=8459
+
+'''Tools'''<br>
+[1] FoundStone SiteDigger - http://www.foundstone.com/us/resources/proddesc/sitedigger.htm<br>
+[2] Google Hacker - http://yehg.net/lab/pr0js/files.php/googlehacker.zip<br>

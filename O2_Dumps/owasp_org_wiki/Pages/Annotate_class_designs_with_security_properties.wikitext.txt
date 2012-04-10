@@ -1,0 +1,52 @@
+{{Template:SecureSoftware}}
+
+==Overview==
+
+
+Purpose:	
+
+*	Elaborate security policies for individual data fields.
+
+Role:
+
+* Designer
+
+Frequency:
+
+* Once per iteration.
+
+
+
+==Map data elements to resources and capabilities ==
+
+Each data element in the system should have a security policy for it that is defined by the system requirements and design, either explicitly or implicitly. While security requirements should be defined on a per-resource or a per-capability basis, data elements will often not be a resource on their own, but will be a component of a more abstractly defined resource.
+
+Each data element should be mapped back to the requirements to determine the requirements on that data in relation to the basic security services. Often, this task will lead to a refinement of requirements. 
+
+For example, consider a system that defines user data as a resource. There may be an access control requirement stating the data should be available only to the individual user and the administrator - except as allowed by the user. In such an example, it may be that not all data should have this flexibility. Maybe the user could choose to export his name and address to others but not his social security number.
+
+Realistically, such refinement of requirements happens frequently, and in an agile environment, these changes may not be incorporated directly into requirements; in this case, documenting information either in a class diagram or as a structured annotation to the code helps ensure correct implementation and facilitates review.
+
+==Annotate fields with policy information ==
+
+Note that access control policy on a resource depends on the operation on that resource (i.e., the capability). In a class diagram, capabilities are generally identified by methods operating on that data.
+
+Data fields should define the owning role or roles and should also define generically which role or roles have access to which basic capabilities throughout the lifetime of the data - e.g., read, write, modify, execute, assign permissions to a capability, and add or transfer ownership.
+
+An important goal of such a specification is to allow an auditor to determine whether data could ever flow in a way that violates the access control policy. The policy should be as coarse as possible to make it easy to specify and check.
+
+A coarse policy will often require exceptions to implement a policy that is more complex. That is, there may be conditions where it may be valid to pass data in a way that would not be allowed by a high-level policy. For example, consider a simple policy that user data should not go to other users. Instead of specifying fine-grained capabilities around granting read and write access, one can mark the data as relaxable. 
+
+Points where such decisions are made are called relaxation points. How relaxation can occur should be well specified in the requirements, and the number of points in the program should be minimized to lessen the chance of error and facilitate analysis.
+
+If policy relaxation should never be necessary for a data element, it should be annotated as non-relaxable. Otherwise, it should be annotated as relaxable, along with a description under the conditions where relaxation can occur; this may be done by identifying a requirement by reference.
+
+==Annotate methods with policy data ==
+
+Methods operate on data, and may use one or more capabilities on that data. Methods should be annotated to identify which operations they perform on data, and whether they are relaxation points for any data element.
+
+
+[[Category:Activity]]
+[[Category:CLASP Activity]]
+[[Category:BP4 Implement secure development practices]]
+[[Category:OWASP_CLASP_Project]]

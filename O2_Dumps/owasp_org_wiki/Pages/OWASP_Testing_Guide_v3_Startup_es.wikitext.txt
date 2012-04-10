@@ -1,0 +1,38 @@
+== Planeación de la nueva guía de pruebas de OWASP v3 ==
+
+'''3 de Octubre d 2007: Inicio v3''' <br>
+La guía de pruebas de OWASP v2 fue un gran éxito, con miles de descargas y muchas, muchas compañias que la han adoptado como estándar para pruebas de intrusión de pruebas en applicaciones Web <br>
+Ahora nos gustaría empezar un nuevo proyecto que esta basado en v2 sino mejorarlo y completarlo. <br>
+<br>
+
+En la guía de pruebas de OWASP v2 hemos separado el conjunto de pruebas en 8 sub-categorias:
+* Obtención de información
+* Pruebas de reglas de negocio
+* Pruebas de autentificación
+* Pruebas de manejo de sesiones
+* Pruebas de validación de entradas
+* Pruebas de negación de servicios
+* Pruebas de servicios Web 
+* Pruebas de AJAX
+
+Los siguientes son mis ideas sobre la nueva guía de pruebas de OWASP v3:
+
+1) Faltan pruebas de autorización. Como Jeff y Dave dijeron mucho tiempo antes, es importante crear una nueva categoría.<br>
+* Esta debe incluir cosas que estaban en v1 pero fueron eliminadas para v2, nos gustaría: OWASP-AC-003 : Manipulación de parámetros de autorización, OWASP-AC-004 : páginas y funciones autorizadas
+2) La obtención de informatión no es un conjunto de vulnerabilidades --> no en el reporte --> nueva categoría: modo pasivo <br>
+3) Pruebas de reglas de negocio --> No en el reporte --> Modo pasivo <br>
+4) Pruebas de infraestructura --> nueva categoría <br>
+5) La sección de servicios Web necesita mejoras <br>
+6) La sección de pruebas de AJAX necesita mejoras <br>
+7) Nueva categoría: pruebas del lado del cliente. pruebas en AJAX y Flash. <br>
+
+Este [http://www.owasp.org/index.php/Image:Planning_OTGv3.doc documento] analiza las vulnerabilidades de la guía de pruebas de OWASP v2 y un plan para crear la nueva v3. <br><br>
+
+También se necesitan hacer las siguientes acalaraciones/consideraciones como prepareción para v3:<br>
+1) "OWASP-AUTHN-001 : la autentificación al final de la petición debe ser HTTPS" y "OWASP-AUTHN-003 : Credenciales transportadas sobre un canal cifrado" como estaban en v1 cubiertas totalmente por "OWASP-IG-005 : pruebas de SSL/TLS "? '''--> no, necesitamos creee una nuevas pruebas de autentificación'''<br>
+2) "OWASP-AUTHN-009 : Estructura de contraseñas" y "OWASP-AUTHN-010 : passwords en blanco" como estaban en la v1 totalmente cubiertas como OWASP-AT-003 & OWASP-AT-001? '''--> si'''<br>
+3) estan todas las 5 referencias AUTHSM como ellas estaban en v1 totalmente cubiertas por "OWASP-SM-001 : esquema de manejo de sesiones"?<br>
+4) ¿que de "OWASP-DP-001 : Información sensible en HTML" cae dentro de v2/v3? <br>
+5) De todas las referencias de la v1 sobre protección de datos con SSL (DP-003 hasta DP-007) ¿cuales caen bajo "OWASP-IG-005 : Pruebas de SSL/TLS"?<br>
+6) ¿es "OWASP-DS-001 : Bloqueando cuentas del cliente" un subconjunto de AUTHN-008 en v1 o AT-006 en v2 o es realmente un elemento aparte?<br>
+7) "OWASP-EH-002 : Mensajes de error de usuario" y "OWASP-EH-001 : Mensajes de error de aplicacion" como estaban en la v1 caerían bajo "OWASP-IG-004 : Analisis de códigos de error"?, Si es asi, donde aparecerían en el reporte los errores de antentificación demasiado especificos? (Si entiendo correctamente la obtención de información no se reportaría) [Esto serían mensajes de error los cuales especifican realmente "usuario invalido" o "contraseña invalida" en vez de "Error: Las credenciales proveidas son inválidas" o mensajes genéricos similares.] '''--> yes'''<br>

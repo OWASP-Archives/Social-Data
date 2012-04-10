@@ -1,0 +1,85 @@
+'''New OWASP J2EE Filters Released! - 10:08, 5 January 2007 (EST)'''
+
+The OWASP Community has released two brand new J2EE Filters! Both of the new filters attempt to address current hot topics is the web application security community.
+
+:*'''[http://www.owasp.org/index.php/CSRF_Guard OWASP CSRF Guard]''' - protects a web application from Cross-Site Request Forgery attacks through the use of a unique random request token
+:*'''[http://www.owasp.org/index.php/PDF_Attack_Filter_for_Java_EE PDF Attack Filter]''' - protects a web application from the recently discovered [http://www.gnucitizen.org/blog/danger-danger-danger/ XSS-PDF Flaw] through the use of a redirect trick
+
+If you have any suggestions or comments for either filter, please email your comments to [mailto:owasp@owasp.org owasp@owasp.org]
+
+ '''OWASP Stinger Gets a Project Page! - 09:30, 16 December 2006 (EST)'''
+
+The OWASP Stinger Project has it's own project page. All information pertaining to Stinger (including downloads) can now be found [http://www.owasp.org/index.php/Category:OWASP_Stinger_Project here].
+
+ '''Stinger 2.2 Released! - 13:37, 24 November 2006 (EST)'''
+
+The OWASP Stinger project is pleased to announce the immediate availability of Stinger 2.2 for both JDK 5.0 and JDK 1.4! The following is a list of the notable changes:
+
+:* Implemented a more complete MutableHttpRequest object and removed the MutableHttpResponse object.
+:* The rule set 'paths' are implemented used regular expressions. There is no longer a need to define multiple paths for specific rule sets.
+:* The 'created' and 'enforce' paths for cookie rules are implemented using regular expressions. There is no longer a need to define multiple 'enforce' paths.
+:* The introduction of an 'exclude' set defining paths that should not be processed by Stinger.
+:* Implemented log rolling capabilities in the 'Log' action.
+:* Added a 'Forward' action which can forward request processing to a specified page.
+:* Used the HTML entity encoding function found in the [http://www.owasp.org/index.php/How_to_perform_HTML_entity_encoding_in_Java HTML Entity Encoding article].
+
+A special thanks goes out to John Callaway for his work in expanding the 'Log' action capabilities as well as the JDK 1.4 port.
+
+ '''OWASP Stinger 2.0 Released! - 10:53, 2 November 2006 (EST)'''
+
+The OWASP Stinger Project is proud to announce the immediate availability of OWASP Stinger 2.0 release for JDK 5.0. I wanted to thank everyone for their support along the way. There have been requests for a JDK 1.4 port of Stinger 2.0. Unfortunately, the Stinger project is heavily built around some specific 5.0 features. If someone is interested in doing a port, please let me know.
+
+ '''OWASP Stinger 2.0RC1 Released! - 22:41, 26 September 2006 (EDT)'''
+
+The OWASP Validation Project is proud to announce the immediate availability of OWASP Stinger 2.0 RC1.
+
+:* The Eclipse development project can be downloaded [http://www.owasp.org/releases/Stinger/2.0rc1/Stinger-2.0-Lite.zip here].
+:* The deployment Stinger jar file can be downloaded [http://www.owasp.org/releases/Stinger/2.0rc1/Stinger-2.0-Lite-rc1-20060926.jar here].
+
+Change List:
+
+:* The negative security feature has been removed. Unless a collection of negative filter expressions are populated, this feature will remain inactive.
+:* Several SVDL modifications: Cookie rules section updated to allow for created and multiple enforced URIs, global section syntax modified, rule sets can contain multiple paths, etc.
+:* Major review of source code in reference to cleanliness and performance.
+
+Known Issues:
+
+When attempting to visit the test index.jsp page in the Eclipse project, you must browse to http://localhost/Stinger-2.0-Lite/index.jsp?hidden1=test. There is a test rule in the default SVDL file which requires the existence of the 'hidden1' parameter. Without this parameter, your session will be invalidated and you will be redirected to the error page found at http://localhost/Stinger-2.0-Lite/error.html
+
+The [http://www.owasp.org/index.php/OWASP_Stinger_Manual OWASP Stinger manual] should be consulted for development and deployment guidance. Please bear in mind that the manual is still under construction.
+
+ '''OWASP Stinger Project Needs Your Help! - 16:37, 12 September 2006 (EDT)'''
+
+One of the new features available in Stinger 2.0 is the ability to apply a negative security model on top of a positive security model. There are cases when the positive model becomes too open and a negative security model is necessary. The OWASP Stinger Project is in need of regular expressions which can be used to thwart potential input validation attacks, such as cross site scripting and SQL Injection. One such example would look for the words ''document.cookie''in the parameter value. This obvious cross site scripting attack would then be caught by the negative security model and the appropriate action(s) taken place. If you have any regular expressions which you would like to donate to the OWASP Validation Project, please contact [mailto:eric.sheridan@owasp.org Eric Sheridan].
+
+ '''OWASP Validation Documentation now maintained in Mediawiki! - 16:18, 12 September 2006 (EDT)'''
+
+In an attempt to fully open the validation documentation to the OWASP community, the paper will now be maintained via Mediawiki. The online version of the validation documentation can be found [http://www.owasp.org/index.php/OWASP_Validation_Documentation here]. We encourage contributions and edits. We will periodically build word document version of the validation documentation when appropriate.
+
+ '''Announcing Minor Releases for both Stinger and the Validation Documentation - 11:15, 14 August 2006 (EDT)'''
+
+The OWASP Validation Project is pleased to announce the immediate availability of maintenance releases for both [http://www.owasp.org/index.php/OWASP_Stinger_Project Stinger] and the [http://www.owasp.org/index.php/OWASP_Validation_Documentation_Project Validation Documentation]. 
+
+Check out their respective project pages for more information.
+
+ '''Stinger 2.0 Beta I and OWASP Validation Documentation Released! - 18:53, 4 August 2006 (EDT)'''
+
+The OWASP Validation Project is pleased to announce the immediate availability of Stinger 2.0 Beta I as well as a rough draft of the OWASP Validation Documentation. Both projects are the result of a tireless effort to provide a clear and defined process of implementing input validation in web applications. The Validation Project would like to thank everyone for their continuing support. More information on can be found at the [http://www.owasp.org/index.php/OWASP_Stinger_Project Stinger] project page and the [http://www.owasp.org/index.php/OWASP_Validation_Documentation_Project OWASP Validation Documentation] project page.
+
+:* Note: These projects are still in the development stage. Testing and feedback would be greatly appreciated!
+
+ '''Fortify Software Donates Vulnerability Research Project - 09:35, 31 July 2006 (EDT)'''
+
+Fortify software as graciously donated a comprehensive set of software security research material to OWASP. The research material provides an in-depth analysis of 115 software vulnerabilities which can be found at the [http://www.owasp.org/index.php/Category:OWASP_Honeycomb_Project OWASP Honeycomb Project] homepage. The category of particular interest is, of course, the [http://www.owasp.org/index.php/Category:Input_Validation_Vulnerability Input Validation Vulnerability].  The OWASP Community is strongly encouraged to donate to this milestone project. Once the current set of projects is completed, it is the goal of the OWASP Validation Project to contribute to the vast and quickly growing [http://www.owasp.org/index.php/Category:OWASP_Honeycomb_Project OWASP Honeycomb Project].
+
+ '''OWASP Validation Documentation Delayed - 09:07, 23 July 2006 (EDT)'''
+
+Unfortunately, the OWASP Validation Documentation has been delayed for roughly a week. The good news, however, is the reason for the delay. A new project, entitled '''Poseidon''', is currently in development. Poseidon will greatly simplify the generation of an SVDL file through the use of your own web based application! Look for a rough draft of the validation documentation near the end of the week.
+
+ '''Project Stinger 2.0 is Underway! - 11:44, 10 July 2006 (EDT)'''
+
+One of the goals of the OWASP Validation Project is updating and improving the Java validation engine, Stinger. This update will include the many submitted ideas/patches over the past several years on top of a completely rewritten engine. If you have any ideas/patches that you would like to have reviewed for submission, please contact [mailto:eric.sheridan@owasp.org Eric Sheridan].
+
+ '''OWASP Validation Finds a New Project Lead - 11:44, 10 July 2006 (EDT)'''
+
+Thanks to Jeff Williams, Eric Sheridan is now the lead of the OWASP Validation Project. The project will be moving forward in the next few weeks. Refer to the road map for short term goals and deadlines. Stay tuned!

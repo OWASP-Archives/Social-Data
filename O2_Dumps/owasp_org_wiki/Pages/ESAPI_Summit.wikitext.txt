@@ -1,0 +1,170 @@
+== Summit 2011  ==
+
+=== Summit Overview  ===
+
+The ESAPI Summit will be held on September 21, 2011 at [http://www.appsecusa.org OWASP AppSec USA 2011] in Minneapolis, Minnesota. 
+
+=== Agenda  ===
+
+{| cellspacing="2" cellpadding="2" style="border: 2px solid black;"
+|- style="background-color: navy;"
+! style="color: white;" | Start 
+! style="color: white;" | End 
+! style="color: white;" | Topic 
+! style="color: white;" | Description 
+! style="color: white;" | Deliverables
+|- style="background-color: lightgray;"
+| 0900 
+| 0930 
+| Mission Briefing 
+| Brief summary of where we've been, administrative changes, and outlining the goals and purpose of the Summit 
+| n/a
+|-
+| 0930 
+| 1030 
+| The ESAPI Specification 1.0 
+| Review the high level API and determine what methods should remain as '''core''' API's and what should be moved upstream to higher level API's (ie ESAPI-Web, ESAPI-Mobile, etc) 
+| 
+*[[ESAPI Specification Overview]]
+
+|- style="background-color: lightblue;"
+| 1030 
+| 1045 
+| colspan="3" | Coffee Break
+|- style="background-color: lightgray;"
+| 1045 
+| 1200 
+| The ESAPI Roadmap 
+| Take a look at the existing Roadmap, create the roadmap for the next several release cycles. 
+|
+*[[ESAPI Roadmap]]
+|- style="background-color: lightblue;"
+| 1200 
+| 1300 
+| colspan="3" | Lunch Break and Open Conversation (Provided by OWASP/ESAPI)
+|- style="background-color: lightgray;"
+| 1300 
+| 1400 
+| ESAPI Policies 
+| Formally define how to processes for contributers, community, sponsors, submitting issues, reporting security vulnerabilities
+| 
+*[[ESAPI How To Contribute]] 
+*[[ESAPI Community Contributions]] 
+*[[ESAPI Sponsoring]] 
+*[[ESAPI Submitting Issues]] 
+*[[ESAPI Vulnerability Reporting]]
+|- style="background-color: lightgray;"
+| 1400 
+| 1500 
+| ESTAPI Framework 
+| How do we test and ensure that implementations meet the specifications defined in the API in a cross-platform and demonstratible manner? 
+| 
+*[[ESAPI Testing Framework]]
+|- style="background-color: lightblue;"
+| 1500
+| 1515 
+| colspan="3" | Coffee Break
+|-
+| 1515 
+| 1615 
+| Documentation 
+| Identify a Roadmap for ESAPI Documentation. Elect someone to champion this cause and find resources to address the documentation needs. Determine funding levels and budget needed for documentation to happen. 
+| 
+*[[ESAPI Documentation Roadmap]] 
+*[[ESAPI Documentation Sub-Project]] 
+*[[ESAPI Documentation Sub-Project Budget]]
+
+|- style="background-color: lightgray;"
+| 1615
+| 1630 
+| Mission De-Briefing 
+| We have accomplished a lot in the last 3 years as a team. This will be a quick wrap-up by Chris on the 2nd ESAPI Summit Day. 
+| n/a
+|- style="background-color: lightblue;"
+| 2100 
+| ???? 
+| ESAPI 2.0GA Release Celebration 
+| Celebrate the release of ESAPI 2.0GA (and beyond) with beers with the ESAPI Team (Sponsors/Location: TBA) 
+| n/a
+|}
+
+<noinclude>
+=== Attending the ESAPI Summit ===
+
+If you are planning to attend this summit, please [https://docs.google.com/a/owasp.org/spreadsheet/viewform?formkey=dHBEQ1YtVlcyWHp1RTZ6cHJHdENDc1E6MQ add your name here] so that we can ensure that we have adequate space and materials for everyone.
+
+* [[User:Chris Schmidt|Chris Schmidt]] - Meeting Leader
+* [[User:jmanico|Jim Manico]] - ESAPI Project Manager
+* [[User:John Steven|jOHN Steven]] - Cigital Principal, ESAPI Malcontent
+* [[User:Kevin W. Wall|Kevin Wall]] - CenturyLink; ESAPI crypto guy
+
+<noinclude>
+
+== Summit 2008 ==
+
+=== Summit Overview ===
+
+The first OWASP ESAPI Summit was held December 9-11, 2008. It was hosted by Aspect Security in their Columbia, MD office.
+
+The following were the attendees of the Summit:
+
+*[[User:Jeff Williams|Jeff Williams]], Aspect Security - [[ESAPI|ESAPI Project Lead]]
+*[[User:Wichers|Dave Wichers]], Aspect Security - [http://code.google.com/p/owasp-esapi-java/ ESAPI Java Committer]
+*Ron Monzillo, Sun Microsystems - [http://java.sun.com/javaee/security/ Java EE Security Architect] 
+*[[User:Arshan|Arshan Dabirsiaghi]], Aspect Security - [[:Category:Intrinsic_Security_Working_Group|OWASP Intrisic Security Working Group Chair]]
+*[[User:Jerryhoff|Jerry Hoff]], Aspect Security
+*[[User:Mikehfauzy|Mike Fauzy]], Aspect Security
+*[[User:Kevin.Fealey|Kevin Fealey]], Aspect Security - [[ESAPI Swingset|ESAPI Swingset Lead]]
+*[[User:Jmanico|Jim Manico]], Aspect Security - [http://code.google.com/p/owasp-esapi-java/ ESAPI Java Committer]
+*Steve Lavenhar, Booz Allen Hamilton
+*Lian Jin, Booz Allen Hamilton
+*John Steven, Cigital, Technical Director
+*Joel Winstead, Cigital
+*Alex Smolen, Foundstone - [[.NET ESAPI | ESAPI .NET Lead]]
+*Andy Miller, Lockheed Martin
+*John Munsch, Lockheed Martin
+*Steve Christey, MITRE - [http://cve.mitre.org CVE]/[http://cwe.mitre.org CWE] Project Lead
+
+The following pages contain our thoughts/results from the summit.
+
+Summary: TODO
+
+=== Links ===
+
+* [[ESAPI Charter]]
+* [[ESAPI Roadmap]]
+* [[ESAPI Adoption Strategy]]
+* [[ESAPI Framework Strategy]]
+* [[ESAPI Assurance]]
+* [[ESAPI Documentation]]
+* [[ESAPI Marketing]]
+* [[ESAPI Tooling]]
+* [[ESAPI Static Analysis Support]]
+* [[ESAPI Performance]]
+* [[ESAPI Internationalization]]
+* [[ESAPI Installation]]
+
+=== Design ===
+
+* [[ESAPI API]]
+
+=== Features ===
+
+* [[ESAPI Validation]]
+* [[ESAPI Canonicalization]]
+* [[ESAPI Encoding]]
+* [[ESAPI Authentication]]
+* [[ESAPI Session Management]]
+* [[ESAPI Access Control]]
+* [[ESAPI Encryption]]
+* [[ESAPI Randomizer]]
+* [[ESAPI Error Handling]]
+* [[ESAPI Logging]]
+* [[ESAPI Intrusion Detection]]
+* [[ESAPI HTTP Protection]]
+* [[ESAPI Utilities]]
+* [[ESAPI Filters]]
+
+__NOTOC__
+[[Category:OWASP Enterprise Security API]]
+</noinclude>

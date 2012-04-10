@@ -1,0 +1,256 @@
+11.  Injection Flaws -> 11.1  Command Injection
+
+11.  Injection Flaws -> 11.2  Blind SQL Injection
+
+11.  Injection Flaws -> 11.3  Numeric SQL Injection
+
+11.  Injection Flaws -> 11.4  Log Spoofing
+ 
+11.  Injection Flaws -> 11.5  XPATH Injection
+
+11.  Injection Flaws -> 11.6  String SQL Injection
+
+11.  Injection Flaws -> 11.7  LAB: SQL Injection
+
+11.  Injection Flaws -> 11.8  Database Backdoors
+
+The lessons are combined because the strategy and the ruleset to solve them are the same.
+ 
+=== Lesson overview === 
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution === 
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information. 
+
+=== Strategy === 
+
+Some lessons were mitigated using straightforward (probably too straightforward) pinpoint whitelisting rules.
+
+Some lessons were mitigated using rules from the core ruleset. Note that these blacklist rules apply to all of the sublessons within this lesson and that some false positives had to be weeded out. Also note the rare use of 'skipAfter'.
+
+The best way to explain the mitigating solutions is to present the ruleset in its entirety and let the comments speak for themselves.
+
+=== Implementation === 
+
+The lessons are mitigated in the ruleset 'rulefile_11_injection-flaws.conf':
+
+<pre>
+  # Injection Flaws; the negative security rules are taken from Breach Security's \ 
+    core ruleset file name: modsecurity_crs_40_generic_attacks.conf
+
+# ---------------------------------------------------------------
+# Core ModSecurity Rule Set ver.1.6.0
+# Copyright (C) 2006-2007 Breach Security Inc. All rights reserved.
+#
+# The ModSecuirty Core Rule Set is distributed under GPL version 2
+# Please see the enclosed LICENCE file for full details.
+# ---------------------------------------------------------------
+
+<LocationMatch "^/WebGoat/attack$">
+
+  # 'menu=1200'; this lesson contains 12 sublessons & stages; we will \ 
+    restrict check only to this overall Injection Flaws lesson; if enable \ 
+    following rule, also enable last rule
+  SecRule ARGS:menu "!@eq 1200" "t:none,pass,skipAfter:110"
+
+
+  # The following rule is for lesson '11.3 Numeric SQL Injection'.
+  # The regex is a whitelist only for this particular lesson and for the 'station' \ 
+      parameter, which is a decimal value (101,102, 103..) from a SELECT list
+
+  SecRule &ARGS:station "@eq 0" "pass,nolog,skip:2"
+  SecRule ARGS_POST:station "\d\d\d" \ 
+    "t:urlDecodeUni,t:htmlEntityDecode,allow:request,skip:1"
+  SecAction "deny,log,auditlog,msg:'Numeric SQL Injection', \ 
+    tag:'WEB_ATTACK/NUMERIC_SQL_INJECTION',severity:'3', \ 
+    redirect:/_error_pages_/lesson11-3.html"
+
+  # The following rule is for lesson '11.4 Log Spoofing' and taken from \ 
+    the HTTP splitting rule; had to add '\r\n' to regex.
+  # As set up now, this rule applies to only this lesson (menu=1200) and \ 
+    in real life situation could cause false positives if a text box \ 
+    accepted CR/LF as valid input.
+  SecRule ARGS_POST "(%0[ad]|\r|\n)" \
+    "t:urlDecodeUni,t:htmlEntityDecode,deny,log,auditlog, \ 
+    msg:'Log Spoofing',tag:'WEB_ATTACK/LOG_SPOOFING',severity:'3', \ 
+    redirect:/_error_pages_/lesson11-4.html"
+
+  # Next, for a dose of madness; a 'username' parm in 11.8 set is still \ 
+    processed in the 'Username' 11.5 set that is next; cannot distinguish \ 
+    them by the submit buttons but XPATH page has a 'Password' field whereas \ 
+    the Database Backdoor page does not.
+
+  # The following rule is for lesson '11.5 XPATH Injection'.
+  # The regex is a whitelist only for this particular lesson and for the \ 
+    'Username' parameter. Lesson 11.4 also uses 'Username' parameter and this \ 
+    would cause interference for that lesson, but that lesson's SecRule will \ 
+    be invoked first.
+  SecRule &ARGS_POST:Username "@eq 0" "nolog,skip:3"
+  SecRule &ARGS_POST:Password "@eq 0" "nolog,skip:2"
+  SecRule ARGS_POST:Username "^([A-Za-z 0-9\']+)$" \ 
+    "t:urlDecodeUni,t:htmlEntityDecode,allow:request,skip:1"
+  SecAction "deny,log,auditlog,msg:'XPATH Injection', \ 
+    tag:'WEB_ATTACK/XPATH_INJECTION',severity:'3', \ 
+    redirect:/_error_pages_/lesson11-5.html"
+
+  # The following rule is for lesson '11.8 Database Backdoor'.
+  # The regex is a whitelist only for this particular lesson and for \ 
+    the 'username' parameter. The field is labeled 'User ID' so the \ 
+    assumption is that no spaces or special characters are allowed.
+  SecRule &ARGS_POST:username "@eq 0" "pass,nolog,skip:2"
+  SecRule ARGS_POST:username "^([A-Za-z0-9]+)$" \ 
+    "t:urlDecodeUni,t:htmlEntityDecode,allow:request,skip:1"
+  SecAction "deny,log,auditlog,msg:'Database Backdoor', \ 
+    tag:'WEB_ATTACK/DATABASE_BACKDOOR',severity:'3', \ 
+    redirect:/_error_pages_/lesson11-8.html"
+
+  # The following rule is for lesson '11.7 LAB: SQL Injection Stage 1'.
+  # The regex is a whitelist only for this particular lesson and for \ 
+    the 'username' parameter. The assumption is that no spaces are allowed.
+  # Wanted to chain next 2 rules with "chain,nolog,skip:2" but for some reason \ 
+    ModSecurity is not letting me so doing it more kludgey way
+  SecRule &ARGS_POST:employee_id "@eq 0" "nolog,skip:4"
+  SecRule &ARGS_POST:action "@eq 0" "nolog,skip:3"
+  SecRule &ARGS_POST:password "@eq 0" "nolog,skip:2"
+  SecRule ARGS_POST:password "[ ]" "t:urlDecodeUni,t:htmlEntityDecode,deny,log, \ 
+    auditlog,msg:'LAB: SQL Injection Stage 1', \ 
+    tag:'WEB_ATTACK/SQL_INJECTION',severity:'3', \ 
+    redirect:/_error_pages_/lesson11-7.html"
+  SecAction "allow:request,t:none, \ 
+    msg:'Returning from 11.7 LAB: SQL Injection Stage 1 (rulefile_11-1).'"
+
+#
+# Command injection
+#
+  # Added 'netstat', 'netstat.exe', 'ifconfig', 'ipconfig.exe', to solve \ 
+    the lesson (netstat) and add another common command (ifconfig/ipconfig)
+  # Had to add this rule to match the string in square brackets: \ 
+    [" netstat -an & ipconfg"] that is added to a querystring such as \ 
+    [HelpFile=AccessControlMatrix.help]
+  #  ARGS_NAMES is ' netstat \xe2\x88\x92an ' and value is empty string. \ 
+    So 'netstat' will not match in ARGS SecRules below.
+  # Had to remove nc, ps, ls, id, mail, rm
+  SecRule ARGS_NAMES "@pm uname wguest.exe /perl /nasm rcmd.exe tclsh /xterm \ 
+  finger tftp chown /echo nmap.exe ping /passwd /chsh /uname telnet.exe /ftp \ 
+  tclsh8 lsof /ping echo cmd.exe /kill python traceroute /ps perl passwd \ 
+  wsh.exe /rm /cpp chgrp /telnet localgroup kill /chgrp /finger nasm /ls \ 
+  nc.exe /chmod /nc /g++ /id /chown cmd /nmap chsh /gcc net.exe /python /lsof \ 
+  ftp.exe ftp xterm mail /mail tracert nmap chmod cpp telnet cmd32.exe gcc g++ \ 
+  netstat netstat.exe ifconfig ipconfig.exe" \
+	"t:htmlEntityDecode,t:removeWhitespace,t:lowercase,deny,log, \ 
+      auditlog,msg:'Command Injection #1',tag:'WEB_ATTACK/COMMAND_INJECTION',\ 
+      logdata:'%{TX.0}',severity:'3',redirect:/_error_pages_/lesson11a.html"
+
+  # Too many false positives; have to remove words that might match and \ 
+    hope this suffices for WebGoat
+  # Removing: ps, ls, id, mail, rm
+  SecRule ARGS "@pm uname wguest.exe /perl /nasm rcmd.exe nc tclsh /xterm \ 
+    finger tftp chown /echo nmap.exe ping /passwd /chsh /uname telnet.exe \ 
+    /ftp tclsh8 lsof /ping echo cmd.exe /kill python traceroute /ps perl \ 
+    passwd wsh.exe /rm /cpp chgrp /telnet localgroup kill /chgrp /finger \ 
+    nasm /ls nc.exe /chmod /nc /g++ /id /chown cmd /nmap chsh /gcc net.exe \ 
+    /python /lsof ftp.exe ftp xterm /mail tracert nmap cd chmod cpp telnet \ 
+    cmd32.exe gcc g++ netstat netstat.exe ifconfig ipconfig.exe" \
+	"t:htmlEntityDecode,t:compressWhitespace,t:lowercase,deny, \ 
+      log,auditlog,msg:'Command Injection #2',tag:'WEB_ATTACK/COMMAND_INJECTION', \ 
+      logdata:'%{TX.0}',severity:'3',redirect:/_error_pages_/lesson11b.html"
+
+  SecRule ARGS "(?:\b(?:(?:n(?:et(?:\b\W+?\blocalgroup|\.exe)|(?:map|c)\.exe)| \
+    t(?:racer(?:oute|t)|elnet\.exe|clsh8?|ftp)|(?:w(?:guest|sh)|rcmd|ftp)\.exe| \ 
+    echo\b\W*?\by+)\b|c(?:md(?:(?:32)?\.exe\b|\b\W*?\/c)| \ 
+    d(?:\b\W*?[\\\/]|\W*?\.\.)|hmod.{0,40}?\+.{0,3}x))|[\;\|\`]\W*?\b \ 
+    (?:(?:c(?:h(?:grp|mod|own|sh)|md|pp)|p(?:asswd|ython|erl|ing|s)| \ 
+    n(?:asm|map|c)|f(?:inger|tp)|(?:kil|mai)l|(?:xte)?rm|ls(?:of)?| \ 
+    telnet|uname|echo|id)\b|g(?:\+\+|cc\b))|\/(?:c(?:h(?:grp|mod|own|sh)|pp)| \ 
+    p(?:asswd|ython|erl|ing|s)|n(?:asm|map|c)|f(?:inger|tp)| \ 
+    (?:kil|mai)l|g(?:\+\+|cc)|(?:xte)?rm|ls(?:of)?|telnet|uname| \ 
+    echo|id)(?:[\'\"\|\;\`\-\s]|$))" \
+	"capture,t:htmlEntityDecode,t:lowercase,deny,log,auditlog, \ 
+      msg:'Command Injection #3',tag:'WEB_ATTACK/COMMAND_INJECTION', \ 
+      logdata:'%{TX.0}', severity:'3',redirect:/_error_pages_/lesson11c.html"
+
+  # There is a match on 'rm' as in 'Content-Type:  \ 
+      application/x-www-form-urlencoded', so excluded it from the request headers
+  # Had to remove 'id' as it was matching 'JSESSIONID'
+  # Had to remove 'cd' as it was matching \ 
+      "JSESSIONID=A9CD681DA81BC9100FDD308DA46BA679"
+  SecRule REQUEST_HEADERS|XML:/*|!REQUEST_HEADERS: \ 
+    '/^(Cookie|Referer|X-OS-Prefs|Content-Type)$/'|REQUEST_COOKIES| \ 
+    REQUEST_COOKIES_NAMES \
+        "@pm uname wguest.exe /perl /nasm rcmd.exe nc tclsh /xterm finger tftp \ 
+      chown /echo nmap.exe ping /passwd /chsh ps /uname telnet.exe /ftp ls \ 
+      tclsh8 lsof /ping echo cmd.exe /kill python traceroute /ps perl passwd \ 
+      wsh.exe /rm /cpp chgrp /telnet localgroup kill /chgrp /finger nasm /ls \ 
+      nc.exe /chmod /nc /g++ /id /chown cmd /nmap chsh /gcc net.exe /python \ 
+      /lsof ftp.exe ftp xterm mail /mail tracert nmap rm chmod cpp telnet \ 
+      cmd32.exe gcc g++" \
+	"t:urlDecodeUni,t:htmlEntityDecode,t:compressWhitespace,t:lowercase, \ 
+      deny,log,auditlog,msg:'Command Injection #4', \ 
+      tag:'WEB_ATTACK/COMMAND_INJECTION', \ 
+      logdata:'%{TX.0}',severity:'3',redirect:/_error_pages_/lesson11d.html"
+
+  SecRule REQUEST_HEADERS|XML:/*|!REQUEST_HEADERS: \ 
+    '/^(Cookie|Referer|X-OS-Prefs)$/'|REQUEST_COOKIES|REQUEST_COOKIES_NAMES \
+        "(?:\b(?:(?:n(?:et(?:\b\W+?\blocalgroup|\.exe)|(?:map|c)\.exe)| \ 
+      t(?:racer(?:oute|t)|elnet\.exe|clsh8?|ftp)|(?:w(?:guest|sh)|rcmd| \ 
+      ftp)\.exe|echo\b\W*?\by+)\b|c(?:md(?:(?:32)?\.exe\b|\b\W*?\/c)| \ 
+      d(?:\b\W*?[\\\/]|\W*?\.\.)|hmod.{0,40}?\+.{0,3}x))|[\;\|\`]\W*?\b \ 
+      (?:(?:c(?:h(?:grp|mod|own|sh)|md|pp)|p(?:asswd|ython|erl|ing|s)| \ 
+      n(?:asm|map|c)|f(?:inger|tp)|(?:kil|mai)l|(?:xte)?rm|ls(?:of)?| \ 
+      telnet|uname|echo|id)\b|g(?:\+\+|cc\b))|\/(?:c(?:h(?:grp|mod|own|sh)|pp)| \ 
+      p(?:asswd|ython|erl|ing|s)|n(?:asm|map|c)|f(?:inger|tp)| \ 
+      (?:kil|mai)l|g(?:\+\+|cc)|(?:xte)?rm|ls(?:of)?|telnet|uname|echo|id) \ 
+      (?:[\'\"\|\;\`\-\s]|$))" \
+	"capture,t:urlDecodeUni,t:htmlEntityDecode,t:lowercase,deny, \ 
+      log,auditlog,msg:'Command Injection #5',tag:'WEB_ATTACK/COMMAND_INJECTION', \ 
+      logdata:'%{TX.0}',severity:'3',redirect:/_error_pages_/lesson11e.html"
+
+  SecRule ARGS \
+		"(?:(?:[\;\|\`]\W*?\bcc|\bwget)\b|\/cc(?:[\'\"\|\;\`\-\s]|$))" \
+	"capture,t:htmlEntityDecode,t:lowercase,deny,log,auditlog, \ 
+      msg:'Command Injection #6',tag:'WEB_ATTACK/COMMAND_INJECTION', \ 
+      logdata:'%{TX.0}',severity:'3',redirect:/_error_pages_/lesson11f.html"
+
+  SecRule "REQUEST_HEADERS|XML:/*|!REQUEST_HEADERS: \ 
+    '/^(Cookie|Referer|X-OS-Prefs|User-Agent)$/ \ 
+    '|REQUEST_COOKIES|REQUEST_COOKIES_NAMES" \
+		"(?:(?:[\;\|\`]\W*?\bcc|\bwget)\b|\/cc(?:[\'\"\|\;\`\-\s]|$))" \
+	"capture,t:urlDecodeUni,t:htmlEntityDecode,t:lowercase,deny, \ 
+      log,auditlog,msg:'Command Injection #7',tag:'WEB_ATTACK/COMMAND_INJECTION', \ 
+      logdata:'%{TX.0}',severity:'3',redirect:/_error_pages_/lesson11g.html"
+
+  # The following rule is for lesson 11.2 Blind SQL Injection and taken from \ 
+    the 'SQL injection' section of modsecurity_crs_40_generic_attacks.conf; \ 
+    the '@pm' rules have too many FPs to use
+  # Note that this rule has to be the last rule in this file since it contains \
+    'id:'110' and all of the other rules skip after this one to the ending \ 
+    SecAction directive
+  SecRule REQUEST_FILENAME|ARGS|ARGS_NAMES  \ 
+    "(?:\b(?:(?:s(?:elect\b(?:.{1,100}?\b(?:(?:length|count|top)\b.{1,100}?\b \ 
+  from|from\b.{1,100}?\bwhere)|.*?\b(?:d(?:ump\b.*\bfrom|ata_type)| \ 
+  (?:to_(?:numbe|cha)|inst)r))|p_(?:(?:addextendedpro|sqlexe)c| \ 
+  (?:oacreat|prepar)e|execute(?:sql)?|makewebtask)|ql_ \ 
+  (?:longvarchar|variant))|xp_(?:reg(?:re(?:movemultistring|ad)| \ 
+  delete(?:value|key)|enum(?:value|key)s|addmultistring|write)| \ 
+  e(?:xecresultset|numdsn)|(?:terminat|dirtre)e|availablemedia| \ 
+  loginconfig|cmdshell|filelist|makecab|ntsec)|u(?:nion\b.{1,100}?\b \ 
+  select|tl_(?:file|http))|group\b.*\bby\b.{1,100}?\bhaving| \ 
+  d(?:elete\b\W*?\bfrom|bms_java)|load\b\W*?\bdata\b.*\binfile| \ 
+  (?:n?varcha|tbcreato)r)\b|i(?:n(?:to\b\W*?\b(?:dump|out)file|sert\b\W*?\b \ 
+  into|ner\b\W*?\bjoin)\b|(?:f(?:\b\W*?\(\W*?\b \ 
+  benchmark|null\b)|snull\b)\W*?\()|a(?:nd\b ?(?:\d{1,10}|[\'\"][^=]{1,10}[\'\"]) \ 
+  ?[=<>]+|utonomous_transaction\b)|o(?:r\b ?(?:\d{1,10}|[\'\"][^=]{1,10}[\'\"]) \ 
+  ?[=<>]+|pen(?:rowset|query)\b)|having\b ?(?:\d{1,10}|[\'\"][^=]{1,10}[\'\"]) \ 
+  ?[=<>]+|print\b\W*?\@\@|cast\b\W*?\()|(?:;\W*?\b \ 
+  (?:shutdown|drop)|\@\@version)\b|'(?:s(?:qloledb|a)|msdasql|dbo)')" \
+	"capture,t:htmlEntityDecode,t:replaceComments,t:compressWhitespace, \ 
+      t:lowercase,deny,log,auditlog,msg:'Blind SQL Injection', \ 
+      tag:'WEB_ATTACK/SQL_INJECTION',logdata:'%{TX.0}',severity:'3', \ 
+      id:'110',redirect:/_error_pages_/lesson11-2.html"
+
+    #  SecAction "allow,t:none, \ 
+         msg:'Returning; nothing bad on this page (rulefile_11-1).'"
+</LocationMatch>
+</pre>

@@ -1,0 +1,70 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Project About</noinclude>
+| project_name = OWASP Favicon Database Project
+| project_home_page = :Category:OWASP Favicon Database Project
+
+| project_description = Software enumeration via favicon.ico. How to do that? Take hash (in our case MD5) of favicon.ico and compare it against the known database. This project is about the favicon database itself and process in how to get the database of most frequent ones by crawling internet.
+
+| project_license = [http://www.gnu.org/licenses/gpl-2.0.html GPL 2] for [https://www.owasp.org/index.php/OWASP_favicon_database_crawl OWASP Favicon Database Crawl] and [http://creativecommons.org/licenses/by/3.0/ CC BY 3.0] for [https://www.owasp.org/index.php/OWASP_favicon_database OWASP Favicon Database]
+
+| leader_name1 = Vlatko Kosturjak
+| leader_email1 = kost@linux.hr
+| leader_username1 = Kost
+
+| contributor_name1 = Fyodor
+| contributor_email1 = 
+| contributor_username1 = 
+
+| contributor_name2 = Brandon Enright
+| contributor_email2 = 
+| contributor_username2 = 
+
+| contributor_name3 = Kris Katterjohn
+| contributor_email3 = 
+| contributor_username3 = 
+
+| contributor_name[4-10] = 
+| contributor_email[4-10] = 
+| contributor_username[4-10] = 
+
+| pamphlet_link = 
+| presentation_link =
+
+| mailing_list_name = https://lists.owasp.org/mailman/listinfo/owasp-favicon-database
+
+| project_road_map = https://www.owasp.org/index.php/OWASP_favicon_database_roadmap
+
+| links_url1 = http://kost.com.hr/favicon.php
+| links_name1 =  Favicon.ico enumeration project
+
+| links_url2 = http://seclists.org/nmap-dev/2009/q3/0462.html
+| links_name2 = Favicon survey script
+
+| links_url4 = https://www.owasp.org/index.php/OWASP_favicon_database_crawl
+| links_name4 = Favicon process, problem and solution
+
+| links_url5 = https://www.owasp.org/index.php/OWASP_favicon_database
+| links_name5 = Favicon database in wiki format
+
+| links_url6 = https://www.owasp.org/index.php/File:Favicon-md5-20100222.zip
+| links_name6 = Favicon MD5 database of most popular favicons found on the Internet
+
+| links_url7 = http://nmap.org/
+| links_name7 = NSE script for MD5 favicon fingerprinting
+
+| links_url8 = http://www.openvas.org/
+| links_name8 = NASL NVT for MD5 favicon fingerprinting
+
+| links_url9 = http://w3af.sourceforge.net/
+| links_name9 = w3af plugin for MD5 favicon fingerprinting
+
+| links_url10 = https://www.owasp.org/index.php/OWASP_favicon_database_crawl
+| links_name10 =  OWASP Favicon Database Crawl.
+
+| release_1 = 
+| release_2 = 
+| release_3 =
+| release_4 =
+
+<!--- The line below is for GPC usage only. Please do not edit it --->
+| project_about_page = Projects/OWASP Favicon Database Project
+}}

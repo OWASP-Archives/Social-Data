@@ -1,0 +1,109 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Race Conditions]]
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+
+==Description==
+
+If two threads of execution use a resource simultaneously, there exists the possibility that resources may be used while invalid, in turn making the state of execution undefined. 
+
+'''Consequences'''
+
+* Integrity: The main problem is that - if a lock is overcome - data could be altered in a bad state.
+
+'''Exposure period'''
+
+* Design: Use a language which provides facilities to easily use threads safely. 
+
+'''Platform'''
+
+* Languages: Any language with threads
+* Operating platforms: All
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood of exploit'''
+
+Medium
+
+* Design: Use locking functionality. This is the recommended solution. Implement some form of locking mechanism around code which alters or reads persistent data in a multi-threaded environment. 
+
+* Design: Create resource-locking sanity checks. If no inherent locking mechanisms exist, use flags and signals to enforce your own blocking scheme when resources are being used by other threads of execution. 
+
+
+==Risk Factors==
+
+TBD
+
+
+==Examples==
+
+In C/C++:
+
+<pre>
+int foo = 0;
+    int storenum(int num)
+    {
+        static int counter = 0;
+        counter++;
+        if (num > foo) 
+            foo = num;
+            return foo;   
+    }
+</pre>
+
+In Java:
+
+<pre>public classRace {
+  static int foo = 0;
+
+  public static void main() {
+    new Threader().start();
+    foo = 1;
+  }
+
+  public static class Threader extends Thread {
+    public void run() { 
+      System.out.println(foo);
+    }
+  }
+}
+</pre>
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD

@@ -1,0 +1,120 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+Simple authentication protocols are subject to reflection attacks if a malicious user can use the target machine to impersonate a trusted user.
+
+'''Consequences'''
+
+* Authentication: The primary result of reflection attacks is successful authentication with a target machine - as an impersonated user.
+
+'''Exposure period'''
+
+* Design: Protocol design may be employed more intelligently in order to remove the possibility of reflection attacks.
+
+'''Platform'''
+
+* Languages: Any
+* Platforms: All
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Medium to High
+
+'''Likelihood of exploit'''
+
+Medium
+
+Reflection attacks capitalize on mutual authentication schemes in order to trick the target into revealing the secret shared between it and another valid user. 
+
+In a basic mutual-authentication scheme, a secret is known to both the valid user and the server; this allows them to authenticate. In order that they may verify this shared secret without sending it plainly over the wire, they utilize a Diffie-Hellman-style scheme in which they each pick a value, then request the hash of that value as keyed by the shared secret. 
+
+In a reflection attack, the attacker claims to be a valid user and requests the hash of a random value from the server. When the server returns this value and requests its own value to be hashed, the attacker opens another connection to the server. This time, the hash requested by the attacker is the value which the server requested in the first connection. When the server returns this hashed value, it is used in the first connection, authenticating the attacker successfully as the impersonated valid user.
+
+==Risk Factors==
+
+TBD
+
+
+==Examples==
+
+In C/C++:
+
+<pre>unsigned char *simple_digest(char *alg,char *buf,unsigned int len, int *olen) {
+        const EVP_MD *m;
+        EVP_MD_CTX ctx;
+        unsigned char *ret;
+
+        OpenSSL_add_all_digests();
+        if (!(m = EVP_get_digestbyname(alg)))
+                return NULL;
+        if (!(ret = (unsigned char*)malloc(EVP_MAX_MD_SIZE)))
+                return NULL;
+        EVP_DigestInit(&ctx, m);
+        EVP_DigestUpdate(&ctx,buf,len);
+        EVP_DigestFinal(&ctx,ret,olen);
+        return ret;
+}
+
+unsigned char *generate_password_and_cmd(char *password_and_cmd){
+        simple_digest("sha1",password,strlen(password_and_cmd)...);
+}
+</pre>
+
+In Java:
+
+<pre>String command = new String("some cmd to execute & the password")
+MessageDigest encer = MessageDigest.getInstance("SHA");
+encer.update(command.getBytes("UTF-8"));
+byte[] digest = encer.digest();
+</pre>
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Using a broken or risky cryptographic algorithm]]
+
+
+==Related [[Controls]]==
+
+* Design: Use different keys for the initiator and responder or of a different type of challenge for the initiator and responder.
+
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Synchronization and Timing Vulnerability]]
+[[Category:Authentication Vulnerability]]
+[[Category:OWASP_CLASP_Project]]
+[[Category:Code Snippet]]
+[[Category:C]]
+[[Category:Java]]

@@ -1,0 +1,26 @@
+==Goals==
+The OWASP PHP Project's overall goal is to...
+
+ Produce materials that show PHP developers, application architects, and 
+ systems administrators how to deal with most common application security
+ problems throughout the complete lifecycle of the application.
+
+In the near term, we are focused on the following tactical goals:
+
+# Implementing Security using Best Practices (Non Framework Based Applications)
+# Provide examples of how to prevent Cross Site Scripting attacks in popular web frameworks
+# Provide examples of how to prevent SQL Injection in popular data access frameworks
+# Provide examples of how to prevent Cross Site Scripting attacks in popular AJAX frameworks 
+# Provide examples of how to prevent LDAP injection in PHP
+# Secure configuration guides
+
+==Current Tasks==
+
+* Call for volunteers - Join the [http://lists.owasp.org/mailman/listinfo/owasp-phpness mailing list], read the [[Tutorial]] and get started!
+* Refine this roadmap in the [http://www.owasp.org/index.php/Talk:OWASP_PHP_Project_Roadmap discussion]. 
+
+==Ideas==
+
+Please submit your ideas for the OWASP PHP Project [[OWASP PHP Project Proposals]] (''you can sign your ideas by adding four tilde characters like this <nowiki>~~~~</nowiki>'').
+
+[[Category:OWASP PHP Project]]

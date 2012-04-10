@@ -1,0 +1,40 @@
+==== Main  ====
+
+This project is led by [[http://www.linkedin.com/pub/jing-xie/45/890/a1a Jing Xie]] & [[User: Bill Chu|Bill Chu]]. Other major contributors include [[User:Jun Zhu|Jun Zhu]], [http://hci.sis.uncc.edu:8080/richter Heather Richter Lipford], [[User:John Melton|John Melton]] & [[User: Will Stranathan|Will Stranathan]].<br>
+
+We have presented our talk [http://d5srjexdxko0l.cloudfront.net/talks.html#ide Secure Programming Support in IDE] at [http://d5srjexdxko0l.cloudfront.net/ AppSec USA 2011] in Minneapolis. 
+
+You can view and download our presentation [http://webpages.uncc.edu/~jxie2/ASIDE.pdf here].
+
+==== Project About ====
+{{:Projects/OWASP ASIDE Project | Project About}}
+
+==== Take a Look ====
+
+ASIDE is still under development. But in order to give you a sense of what it should be doing, we have this old version of [http://webpages.uncc.edu/~jxie2/aside_old.swf ASIDE DEMO]. You will need Adobe Flash to display it. A newer version will soon be uploaded.
+
+==== Download ====
+
+The first publicly available ASIDE can be downloaded [http://webpages.uncc.edu/~jxie2/edu.uncc.sis.aside_0.0.1.jar here]. You also need to download the complementary [http://webpages.uncc.edu/~jxie2/edu.uncc.sis.aside.logging_0.0.1.jar logging] facility to make ASIDE work properly. ASIDE is built upon [http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/indigosr1 Eclipse IDE for Java EE Developers] Version 3.5+.
+
+To make it work, please place the two jar files under the plugins folder of your Eclipse installation directory and then restart your Eclipse.
+
+==== Source Code ====
+
+The source code is located at https://github.com/Jing-Xie/owasp-aside
+
+==== Research Activities ====
+
+1. [[User:Jing Xie|Jing Xie]], [http://hci.sis.uncc.edu:8080/richter Heather Richter Lipford], and [[User:Bill Chu|Bill Chu]], [http://webpages.uncc.edu/~jxie2/XIE-CHI2012.pdf Evaluating Interactive Support for Secure Programming], To appear at ACM Conference on Human Factors in Computing Systems (CHI), May 2012, Austin, Texas, USA
+
+2. [[User:Jing Xie|Jing Xie]], [[User:Bill Chu|Bill Chu]], [http://hci.sis.uncc.edu:8080/richter Heather Richter Lipford], and [[User:John Melton|John T. Melton]], [http://www.acsac.org/2011/openconf/modules/request.php?module=oc_program&action=view.php&a=&id=62&type=2 ASIDE:IDE Support for Web Application Security], In Proceedings of 27th Annual Computer Security Applications Conference (ACSAC), December 5–9, 2011, Orlando, FL, USA
+
+3. [[User:Jing Xie|Jing Xie]],  [http://hci.sis.uncc.edu:8080/richter Heather Richter Lipford], and [[User:Bill Chu|Bill Chu]], [http://webpages.uncc.edu/~jxie2/XIE-VLHCC2011.pdf Why do programmers make security errors?], In Proceedings of IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC), September 18–22, 2011, Pittsburgh, PA, USA
+
+4. [[User:Jing Xie|Jing Xie]], [[User:Bill Chu|Bill Chu]], and [http://hci.sis.uncc.edu:8080/richter Heather Richter Lipford] [http://www.arc.uncc.edu/pubs/essos2011.pdf Interactive Support for Secure Software Development], In Proceedings of Engineering Secure Software and Systems Third International Symposium (ESSoS), February 2011, Madrid, Spain
+
+
+__NOTOC__ <headertabs />
+
+
+[[Category:OWASP_Project|ASIDE Project]] [[Category:OWASP_Tool|OWASP ASIDE]] [[Category:OWASP_Alpha_Quality_Tool|OWASP Alpha Quality Tool]] <!---[[Category:OWASP_Download]]--->

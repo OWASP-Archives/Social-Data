@@ -1,0 +1,31 @@
+[[Project Information:template Code Review Project|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications#OWASP Code review guide, V1.1|OWASP Code Review Guide V1.1 Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#OWASP Code review guide, V1.1|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|I evaluated the guide from the following perspectives:
+<br>1) OWASP writing style: The guide has 100% followed the guidelines specified in OWASP for writing guides. I believe. The language is lucid and easy to understand. The layout of the book proceeds in a logical manner. There are some spelling issues but those are quite minor.
+<br>2) Beta Quality and further: The Beta quality has been thoroughly reached and the guide as an overall package satisfies all criteria for the same. Its also available as a download from the bookstore and has a TOC. There are links to other OWASP Tools and Documentation Projects as and where applicable.
+<br>3) Technical Suggestions: From a developer's perspective the examples section for XSS and SQL Injection could probably do with a few more sample codes on how the vulnerabilities can be exploited. Also if the guide could expand on dealing with SDLC vis-a-vis code review for security, it might be more helpful.
+<br>4) Objectives Achieved: Even though this is a 50% review and the above points notwithstanding, the guide has been ''par excellence'' in achieving its objectives. 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"|
+
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#OWASP Code review guide, V1.1|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| 90-95%
+ |- 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|Overall there is very little to suggest new as the author has amply displayed his subject matter expertise. :-)
+|}

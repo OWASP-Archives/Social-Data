@@ -1,0 +1,61 @@
+{{Top_10_2010:TopTemplate|useprev=2010PrevLink|usenext=2010NextLink|prev=What's Next For Organizations|next=Details About Risk Factors}}
+{{Top_10_2010:SubsectionColoredTemplate|It's About Risks, Not Weaknesses|
+Although [http://www.owasp.org/index.php/Top_10_2007 previous versions of the OWASP Top 10] focused on identifying the most common “vulnerabilities,” these documents have actually always been organized around risks. This caused some understandable confusion on the part of people searching for an airtight weakness taxonomy. This update clarifies the risk-focus in the Top 10 by being more explicit about how threat agents, attack vectors, weaknesses, technical impacts, and business impacts combine to produce risks.
+
+To do so, we developed a Risk Rating methodology for the Top 10 that is based on the [http://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology OWASP Risk Rating Methodology]. For each Top 10 item, we estimated the typical risk that each weakness introduces to a typical web application by looking at common likelihood factors and impact factors for each common weakness. We then rank ordered the Top 10 according to those weaknesses that typically introduce the most significant risk to an application.
+
+The [http://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology OWASP Risk Rating Methodology] defines numerous factors to help calculate the risk of an identified vulnerability. However, the Top 10 must talk about generalities, rather than specific vulnerabilities in real applications. Consequently, we can never be as precise as a system owner can when calculating risk for their application(s). We don’t know how important your applications and data are, what your threat agents are, nor how your system has been built and is being operated.
+
+Our methodology includes three likelihood factors for each weakness (prevalence, detectability, and ease of exploit) and one impact factor (technical impact). The prevalence of a weakness is a factor that you typically don’t have to calculate. For prevalence data, we have been supplied prevalence statistics from a number of different organizations and we have averaged their data together to come up with a Top 10 likelihood of existence list by prevalence. This data was then combined with the other two likelihood factors (detectability and ease of exploit) to calculate a likelihood rating for each weakness. This was then multiplied by our estimated average technical impact for each item to come up with an overall risk ranking for each item in the Top 10.
+
+Note that this approach does not take the likelihood of the threat agent into account. Nor does it account for any of the various technical details associated with your particular application. Any of these factors could significantly affect the overall likelihood of an attacker finding and exploiting a particular vulnerability. This rating also does not take into account the actual impact on your business. <u>Your organization</u> will have to decide how much security risk from applications <u>the organization</u> is willing to accept. The purpose of the OWASP Top 10 is not to do this risk analysis for you.
+
+The following illustrates our calculation of the risk for [[Top_10_2010-A2 | A2: Cross-Site Scripting]], as an example. Note that XSS is so prevalent that it warranted the only ‘VERY WIDESPREAD’ prevalence value. All other risks ranged from widespread to uncommon (values 1 to 3).
+}}
+
+<center>
+{| style="align:center; text-align:center; border:2px solid #4F81BD; background-color:#F2F2F2; padding=2;" 
+|- style="background-color: #4F81Bd; color: #FFFFFF;"
+! Threat Agents !! Attack Vectors
+! colspan="2" | Security Weakness
+! Technical Impacts
+! Business Impacts
+|- 
+| style="background-color: #D9D9D9; color: #000000;" | ______
+| style="background-color: #FFB200; color: #000000;" | '''Exploitability<br>AVERAGE
+| style="background-color: #FF00FF; color: #000000;" | '''Prevalence<br>VERY WIDESPREAD
+| style="background-color: #FF0000; color: #000000;" | '''Detectability<br>EASY
+| style="background-color: #FFB200; color: #000000;" | '''Impact<br>MODERATE
+
+| style="background-color: #D9D9D9; color: #000000;" | ______
+|-style="text-align: center; border: 2px solid #FFFFFF; font-weight: bold; font-size: 150%;"
+| 
+| 2
+| 0
+| 1
+| 2
+| 
+|-style="text-align: center; border: 2px solid #FFFFFF;"
+| 
+| colspan=3 |  '''Step 1:''' Average Exploitability, Prevalence and Detectability - ((2 + 0 + 1) / 3)
+| 
+|-style="text-align: center; border: 2px solid #FFFFFF;"
+| 
+| 
+| '''Likelihood Rating''' = <span style="font-weight: bold; font-size: 150%; color: red;">1</span>
+| 
+| 
+|-
+|-style="text-align: center; border: 2px solid #FFFFFF;"
+| 
+|
+| colspan=3 |  '''Step 2:''' Multiply Average by Impact - (1 * 2)
+|-style="text-align: center; border: 2px solid #FFFFFF; "
+|
+|
+| colspan=3 | '''Risk Ranking''' = <span style="font-weight: bold; font-size: 150%; color: red;">2</span>
+|}
+</center>
+{{Top_10_2010:BottomTemplate|useprev=2010PrevLink|usenext=2010NextLink|prev=What's Next For Organizations|next=Details About Risk Factors}}
+
+[[Category:OWASP Top Ten Project]]

@@ -1,0 +1,128 @@
+{{Template:Attack}}
+
+[[Category:OWASP ASDR Project]]
+<br>
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+==Overview==
+CSRF is an attack which forces an end user to execute unwanted actions on a web application in which he/she is currently authenticated. With a little help of social engineering (like sending a link via email/chat), an attacker may force the users of a web application to execute actions of the attacker's choosing. A successful CSRF  exploit can compromise end user data and operation in case of normal user. If the targeted end user is the administrator account, this can compromise the entire web application.
+
+==Related Security Activities==
+
+===How to Review Code for CSRF Vulnerabilities===
+
+See the [[:Category:OWASP Code Review Project|OWASP Code Review Guide]] article on how to [[Reviewing code for Cross-Site Request Forgery issues |Reviewing code for CSRF]] Vulnerabilities.
+
+===How to Test for CSRF Vulnerabilities===
+
+See the [[:Category:OWASP Testing Project|OWASP Testing Guide]] article on how to [[Testing for CSRF  (OWASP-SM-005) |Test for CSRF]] Vulnerabilities.
+
+===How to Prevent CSRF Vulnerabilites===
+
+See the [http://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet OWASP CSRF Prevention Cheat Sheet] for prevention measures.
+
+Listen to the [http://www.owasp.org/download/jmanico/owasp_podcast_69.mp3 OWASP Top Ten CSRF Podcast].
+
+John Melton also has an [http://www.jtmelton.com/2010/05/16/the-owasp-top-ten-and-esapi-part-6-cross-site-request-forgery-csrf/ excellent blog post] describing how to use the native anti-CSRF functionality of the [http://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API OWASP ESAPI].
+
+==Description==
+Cross-Site Request Forgery (CSRF) is an attack that tricks the victim into loading a page that contains a malicious request. It is malicious in the sense that it inherits the identity and privileges of the victim to perform an undesired function on the victim's behalf, like change the victim's e-mail address, home address, or password, or purchase something. CSRF attacks generally target functions that cause a state change on the server but can also be used to access sensitive data.
+
+For most sites, browsers will automatically include with such requests any credentials associated with the site, such as the user's session cookie, basic auth credentials, IP address, Windows domain credentials, etc.  Therefore, if the user is currently authenticated to the site, the site will have no way to distinguish this from a legitimate user request.
+
+In this way, the attacker can make the victim perform actions that they didn't intend to, such as logout, purchase item, change account information, retrieve account information, or any other function provided by the vulnerable website.
+
+Sometimes, it is possible to store the CSRF attack on the vulnerable site itself. Such vulnerabilities are called Stored CSRF flaws. This can be accomplished by simply storing an IMG or IFRAME tag in a field that accepts HTML, or by a more complex cross-site scripting attack. If the attack can store a CSRF attack in the site, the severity of the attack is amplified. In particular, the likelihood is increased because the victim is more likely to view the page containing the attack than some random page on the Internet.  The likelihood is also increased because the victim is sure to be authenticated to the site already.
+
+Synonyms: CSRF attacks are also known by a number of other names, including XSRF, "Sea Surf", Session Riding, Cross-Site Reference Forgery, Hostile Linking. Microsoft refers to this type of attack as a One-Click attack in their threat modeling process and many places in their online documentation.
+
+===Prevention measures that do '''NOT''' work===
+;Using a secret cookie
+:Remember that all cookies, even the ''secret'' ones, will be submitted with every request. All authentication tokens will be submitted regardless of whether or not the end-user was tricked into submitting the request. Furthermore, session identifiers are simply used by the application container to associate the request with a specific session object. The session identifier does not verify that the end-user intended to submit the request.
+
+;Only accepting POST requests
+:Applications can be developed to only accept POST requests for the execution of business logic. The misconception is that since the attacker cannot construct a malicious link, a CSRF attack cannot be executed. Unfortunately, this logic is incorrect. There are numerous methods in which an attacker can trick a victim into submitting a forged POST request, such as a simple form hosted in attacker's website with hidden values. This form can be triggered automatically by JavaScript or can be triggered by the victim who thinks form will do something else.
+
+<!--==Risk Factors==
+TBD
+-->
+==Examples==
+
+===How does the attack work?===
+There are numerous ways in which an end-user can be tricked into loading information from or submitting information to a web application. In order to execute an attack, we must first understand how to generate a malicious request for our victim to execute. Let us consider the following example: Alice wishes to transfer $100 to Bob using bank.com. The request generated by Alice will look similar to the following:
+
+ POST <nowiki>http://bank.com/transfer.do</nowiki> HTTP/1.1
+ ...
+ ...
+ ...
+ Content-Length: 19;
+ 
+ acct=BOB&amount=100
+
+However, Maria notices that the same web application will execute the same transfer using URL parameters as follows:
+
+ GET <nowiki>http://bank.com/transfer.do?acct=BOB&amount=100</nowiki> HTTP/1.1
+
+Maria now decides to exploit this web application vulnerability using Alice as her victim. Maria first constructs the following URL which will transfer $100,000 from Alice's account to her account:
+
+ <nowiki>http://bank.com/transfer.do?acct=MARIA&amount=100000</nowiki>
+
+Now that her malicious request is generated, Maria must trick Alice into submitting the request. The most basic method is to send Alice an HTML email containing the following: 
+
+ <nowiki><a href="http://bank.com/transfer.do?acct=MARIA&amount=100000">View my Pictures!</a></nowiki>
+
+Assuming Alice is authenticated with the application when she clicks the link, the transfer of $100,000 to Maria's account will occur. However, Maria realizes that if Alice clicks the link, then Alice will notice that a transfer has occurred. Therefore, Maria decides to hide the attack in a zero-byte image:
+
+ <nowiki><img src="http://bank.com/transfer.do?acct=MARIA&amount=100000" width="1" height="1" border="0"></nowiki>
+
+If this image tag were included in the email, Alice would only see a little box indicating that the browser could not render the image. However, the browser ''will still'' submit the request to bank.com without any visual indication that the transfer has taken place.
+
+<!--==Related [[Threat Agents]]==
+* TBD
+-->
+==Related [[Attacks]]==
+* [[Cross-site Scripting (XSS)]]
+* [[Cross Site History Manipulation (XSHM)]]
+<!--==Related [[Vulnerabilities]]==
+* TBD
+-->
+
+==Related [[Controls]]==
+* Add a per-request nonce to URL and all forms in addition to the standard session. This is also referred to as "form keys". Many frameworks (ex, Drupal.org 4.7.4+) either have or are starting to include this type of protection "built-in" to every form so the programmer does not need to code this protection manually. 
+* TBD: Add a per-session nonce to URL and all forms
+* TBD: Add a hash(session id, function name, server-side secret) to URL and all forms
+* TBD: .NET - add session identifier to ViewState with MAC
+* Checking the referrer in the client's HTTP request will prevent CSRF attacks.  By ensuring the HTTP request have come from the original site means that the attacks from other sites will not function.  It is very common to see referrer checks used on embedded network hardware due to memory limitations.  XSS can be used to bypass both referrer and token based checks simultaneously.  For instance the Sammy Worm used an XHR to obtain the CSRF token to forge requests.
+* "Although cross-site request forgery is fundamentally a problem with the web application, not the user, users can help protect their accounts at poorly designed sites by logging off the site before visiting another, or clearing their browser's cookies at the end of each browser session." -http://en.wikipedia.org/wiki/Cross-site_request_forgery#_note-1
+* [[Tokenizing]]
+
+==References==
+* [http://www.cgisecurity.com/articles/csrf-faq.shtml The Cross-Site Request Forgery (CSRF/XSRF) FAQ]
+: ''quote: "This paper serves as a living document for Cross-Site Request Forgery issues. This document will serve as a repository of information from existing papers, talks, and mailing list postings and will be updated as new information is discovered."''
+
+* [[Testing for CSRF (OWASP-SM-005)|Testing for CSRF]]
+: CSRF (aka Session riding) paper from the OWASP Testing Guide project (need to integrate)
+
+* [http://www.darkreading.com/document.asp?doc_id=107651&WT.svl=news1_2 CSRF Vulnerability: A 'Sleeping Giant']
+: Overview Paper
+
+* [http://www.owasp.org/index.php/Image:RequestRodeo-MartinJohns.pdf Client Side Protection against Session Riding]
+: Martin Johns and Justus Winter's interesting paper and presentation for the 4th OWASP AppSec Conference which described potential techniques that browsers could adopt to automatically provide CSRF protection - [http://www.owasp.org/index.php/Image:RequestRodeo-MartinJohns.pdf PDF paper]
+
+* [[:Category:OWASP_CSRFGuard_Project|OWASP CSRF Guard]]
+: J2EE, .NET, and PHP Filters which append a unique request token to each form and link in the HTML response in order to provide universal coverage against CSRF throughout your entire application.
+
+* [http://yehg.net/lab/pr0js/view.php/A_Most-Neglected_Fact_About_CSRF.pdf A Most-Neglected Fact About Cross Site Request Forgery (CSRF)  ]
+: Aung Khant, http://yehg.net, explained the danger and impact of CSRF with imperiling scenarios.
+
+* [[:Category:OWASP CSRFTester Project|OWASP CSRF Tester]]
+: The OWASP CSRFTester gives developers the ability to test their applications for CSRF flaws.
+
+* [http://code.google.com/p/pinata-csrf-tool/ Pinata-CSRF-Tool: CSRF POC tool]
+: Pinata makes it easy to create Proof of Concept CSRF pages. Assists in Application Vulnerability Assessment.
+
+[[Category:Exploitation of Authentication]]
+[[Category:Embedded Malicious Code]]
+[[Category:Spoofing]]
+[[Category: Attack]]

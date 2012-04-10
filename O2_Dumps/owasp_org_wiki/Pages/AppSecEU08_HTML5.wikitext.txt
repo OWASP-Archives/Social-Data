@@ -1,0 +1,50 @@
+[[AppSecEU08 | AppSecEU08]] > [[AppSecEU08#Agenda_and_Presentations_-_May_21-22 | Agenda and Presentations]] > [[AppSecEU08_HTML5 | HTML5 Security]]
+
+= Slides and Contact =
+
+Slides: [http://www.w3.org/2008/Talks/0521-owasp-html5-tlr/0521-owasp-html5-tlr.pdf Would you like fries with that?]
+
+Contact: Thomas Roessler, W3C Security Activity Lead, [mailto:tlr@w3.org tlr@w3.org]
+
+= HTML5 resources =
+
+* [http://www.w3.org/html/wg/html5/ HTML 5 editor's draft]
+* [http://dev.w3.org/html5/pubnotes/ HTML 5 publication notes]
+* [http://html5.org/tools/web-apps-tracker Web interface to specification changes]
+* [http://twitter.com/whatwg Major changes as a twitter feed]
+* [http://www.w3.org/html/wg/ HTML Working Group Home Page]
+
+Specific parts of the specification that were mentioned during the talk:
+
+* [http://www.w3.org/html/wg/html5/#windows Browsing contexts]; [http://www.w3.org/html/wg/html5/#security6 navigation policy]
+* [http://www.w3.org/html/wg/html5/#origin Origin]
+* [http://www.w3.org/html/wg/html5/#custom-handlers Custom protocol and content handlers]
+* [http://www.w3.org/html/wg/html5/#offline Offline Web Applications]
+* [http://www.w3.org/html/wg/html5/#structured Structured client-side storge]
+* [http://www.w3.org/html/wg/html5/#crossDocumentMessages Cross Document Messaging] (aka postMessage)
+* [http://www.w3.org/html/wg/html5/#server-sent-events server-sent DOM events]
+* [http://www.w3.org/html/wg/html5/#network Network connections]
+
+Also of interest, but added even more recently:
+
+* [http://www.w3.org/html/wg/html5/#sandbox iframe sandboxing]; [http://lists.w3.org/Archives/Public/public-webapi/2008May/0326.html summary of concepts]
+
+= Cross-domain XMLHttpRequest =
+
+* [http://dev.w3.org/2006/waf/access-control/ access-control editor's draft]
+* [http://dev.w3.org/2006/webapi/XMLHttpRequest-2/ XMLHttpRequest Level 2 editor's draft]
+
+Note that the "access-control" specification provides a mechanism for authorizing exceptions to the same-origin policy. How that authorization (and the data retrieved) is used isn't actually specified. For XMLHttpRequest, the governing specification is XMLHttpRequest Level 2.  Don't read one without the other.
+
+Also relevant:
+
+* [http://lists.w3.org/Archives/Public/public-appformats/2008Mar/0017.html IE Team's proposal for Cross Site Requests] (XDomainRequest)
+
+Relevant work is currently occuring in the [http://www.w3.org/2006/webapi/ Web API] and [http://www.w3.org/2006/appformats/ Web Application Formats] Working Groups at W3C. A [http://www.w3.org/2007/12/WebApps-Charter-2007 proposed restructuring] of that work is currently being negotiated.
+
+= About W3C =
+
+* [http://www.w3.org/Consortium/ About W3C]
+* [http://www.w3.org/Consortium/process W3C Process]
+* [http://www.w3.org/Consortium/membership About W3C membership]
+* [http://www.w3.org/Consortium/Member/List Current members]

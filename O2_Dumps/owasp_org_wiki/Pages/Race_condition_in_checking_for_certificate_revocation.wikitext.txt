@@ -1,0 +1,96 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Race Conditions]]
+
+__TOC__
+
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+==Description==
+
+If the revocation status of a certificate is not checked before each privilege requiring action, the system may be subject to a race condition, in which their certificate may be used before it is checked for revocation.
+
+'''Consequences'''
+
+* Authentication: Trust may be assigned to an entity who is not who it claims to be.
+* Integrity: Data from an untrusted (and possibly malicious) source may be integrated. 
+* Confidentiality: Date may be disclosed to an entity impersonating a trusted entity, resulting in information disclosure.
+
+'''Exposure period'''
+
+* Design: Checks for certificate revocation should be included in the design of a system
+* Design: One can choose to use a language which abstracts out this part of the authentication process.
+
+'''Platform'''
+
+* Languages: Languages which do not abstract out this part of the process.
+* Operating platforms: All
+
+'''Required resources'''
+
+Minor trust: Users must attempt to interact with the malicious system.
+
+'''Severity'''
+
+Medium
+
+'''Likelihood of exploit'''
+
+Medium
+
+If a certificate is revoked after the initial check, all subsequent actions taken with the owner of the revoked certificate will loose all benefits guaranteed by the certificate. In fact, it is almost certain that the use of a revoked certificate indicates malicious activity. 
+
+If the certificate is checked before each access of a protected resource, the delay subject to a possible race condition becomes almost negligible and significantly reduces the risk associated with this issue.
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+In C/C++:
+
+<pre>
+if (!(cert = SSL_get_peer(certificate(ssl)) || !host)
+  foo=SSL_get_veryify_result(ssl);
+  if (X509_V_OK==foo)
+//do stuff
+  foo=SSL_get_veryify_result(ssl);
+ //do more stuff without the check. 
+</pre>
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Failure to follow chain of trust in certificate validation]]
+* [[Failure to validate host-specific certificate data]]
+* [[Failure to validate certificate expiration]]
+* [[Failure to check for certificate revocation]]
+
+
+==Related [[Controls]]==
+
+* Design: Ensure that certificates are checked for revoked status before each use of a protected resource
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+Note: A reference to related [http://cwe.mitre.org/ CWE] or [http://capec.mitre.org/ CAPEC] article should be added when exists. Eg:
+
+* [http://cwe.mitre.org/data/definitions/79.html CWE 79].
+* http://www.link1.com
+* [http://www.link2.com Title for the link2]

@@ -1,0 +1,51 @@
+=== Introduction ===
+Virtually all web applications leverage a huge number of 3rd party as well as internal custom libraries. A huge security risk that is lurking in this area is that many of these libraries are old and have known security flaws or weaknesses.  And most organizations have no process for keeping the libraries they use up to date.
+
+Why is this important? Well, if an attacker knows you are using an old library with a known security flaw, then they can simply attack that weakness rather than trying to find a custom flaw in your application. We all know this is important because we keep up with patching our OSs, Web Servers, App Servers, Database Management Systems, Virtual Machines, Browsers, etc., but we are ignoring the libraries our application's use.
+
+To address this, I think each development team needs to:
+# Have a definitive list of what libraries their application is using.
+# Know exactly what version of each of these libraries they are using.
+# Determine what versions are available.
+# Have a process for monitoring when new versions of each of these libraries is released.
+# Have a process for determining when a new release is something they should adopt, or can safely ignore.
+# Once a decision to upgrade is made, have a process for performing this upgrade and tracking it to completion.
+
+Many organizations can't even accomplish step 1. And for those that can, they typically fail at steps 2 or 3.
+
+=== Recommendations===
+
+However, accomplishing this is hard. The following documents some of the ideas on how to make performing this activity easier through the use of automation.
+
+Step 1 - What libraries am I using?
+
+Many modern build environments have the ability to build dependency graphs for the libraries you are using, which can calculate which libraries your application needs. TBD:DOCUMENT WHICH ONES HERE.
+
+TODO: If there is a way to determine what libraries are actually deployed, and their versions, it would be great to document this too.
+
+Step 2 - What versions am I using?
+
+Similarly, these same or related tools can tell you what versions you currently have brought in to your environment.   TODO: DOCUMENT THIS for each programming language.
+
+Step 3 - What versions are available?
+
+The best repository of existing libraries available today is at: https://repository.sonatype.org/. Many of the build tools previously described can automatically connect to this repository and tell you which of your existing libraries are registered in Sonatype, and if they are out of date.
+
+Step 4 - How to monitor for new releases?
+
+The tools described in step 3 can usually be run on a scheduled basis so you can get periodic reports. You can then choose whatever schedule is best for you. Weekly, Monthly, etc.
+
+Step 5 - Should you upgrade?
+
+Just because there is a new release, it doesn't mean you should ugprade right away. If there are no security vulnerabilities addressed between your current version and your latest version, then there may be no security specific reason to upgrade. There may be performance enhancements, other bug fixes, or new features that are relevant to your application, but that is a separate concern.
+
+Step 6 - Tracking the upgrade to completion?
+
+Once you decide that you should upgrade, this should cause you to create some kind of ticket that you should track to completion. This can be doing by creating a bug report in your bug tracking system that has a specific suspense date that you can then use to track to completion.  The point  her is to not lose track of the fact that this upgrade needs to be done, and in a timely fashion.
+
+===References===
+
+Here are a few specific security documents that recommend or require that these kinds of upgrades be done. If you are aware of more, please add them to this list.
+
+* [[Top_10_2010-A6 | 2010 OWASP Top 10-A6: Security Misconfiguration]] - See Example Scenario #1.
+* [http://iase.disa.mil/stigs/app_security/app_sec/app_sec.html DISA's Application Security & Development (ASD) STIG] - APP6050 requires that the system and installed applications have current patches, security updates, and configuration settings.

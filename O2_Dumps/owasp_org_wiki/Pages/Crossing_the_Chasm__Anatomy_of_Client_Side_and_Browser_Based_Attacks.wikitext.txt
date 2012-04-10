@@ -1,0 +1,9 @@
+'''Crossing the Chasm: Anatomy of Client-Side and Browser-Based Attacks, Dhruv Soi (OWASP Delhi Chapter, 2008 OWASP India, 2009 OWASP AppSec Asia), Pukhraj Singh (OWASP Delhi)'''
+
+The last couple of years have witnessed a sea-change in the Internet threat landscape. Not only has the cyber-crime model been heavily monetized, but the attacks vectors have also become more and more sophisticated. One category of exploitation which has upped the ante is the client-side and browser-based exploitation. 
+
+From humble beginnings like the WMF debacle, attackers have come a long way in luring unaware users into their vicious trap. Now, we see almost business-like precision and efficiency in such shady dealings. From thousands of malicious websites serving plethora of obfuscated exploits cropping up everyday, to the compromise of popular and critical websites which end up becoming the gateway of such nefarious activities, never before has the Internet security community born the brunt of something so organized and wide-scale. 
+
+Having investigated hundreds of such ‘in-the-wild’ cases and being at the helm of affairs during incidents of global outbreak (WMF zero-day, IE VML vulnerability, MPack automated exploitation toolkits, ANI zero-day, Xunlei WebThunder zero-day, Peacomm propagation; to investigating the compromise of websites of Indian government agencies like Defense Research and Development Organization) has given Pukhraj a multifaceted view of the problem. It has lend him a unique perspective as to why this is such a hard nut to crack – why contemporary security products fail in such situations, the modus operandi of selling exploits in the underground, the escalation of cyber-espionage, to the underlying architectural deficiencies in client-side applications and browsers. 
+
+Pukhraj will share some his war-zone stories giving you an enthralling view, right from the foxhole.

@@ -1,0 +1,106 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+A capture-relay protocol flaw exists when it is possible for a malicious user to sniff network traffic and replay it to the server in question to the same effect as the original message (or with minor changes). 
+
+'''Consequences'''
+
+*	Authorization: Messages sent with a capture-relay attack allow access to resources which are not otherwise accessible without proper authentication.
+
+'''Exposure period'''
+
+*	Design: Prevention of capture-relay attacks must be performed at the time of protocol design.
+
+'''Platform'''
+
+* Languages: All
+* Operating platforms: All
+
+'''Required resources'''
+
+Network proximity: Some ability to sniff from, and inject messages into, a stream would be required to capitalize on this flaw.
+
+'''Severity'''
+
+Medium to High
+
+'''Likelihood   of exploit'''
+
+High
+
+Capture-relay attacks are common and can be difficult to defeat without cryptography. They are a subset of network injection attacks that rely on listening in on previously sent valid commands, then changing them slightly if necessary and resending the same commands to the server. 
+
+Since any attacker who can listen to traffic can see sequence numbers, it is necessary to sign messages with some kind of cryptography to ensure that sequence numbers are not simply doctored along with content.
+
+==Risk Factors==
+TBD
+
+==Examples ==
+
+In C/C++:
+
+<pre>unsigned char *simple_digest(char *alg,char *buf,unsigned int len, int *olen) {
+        const EVP_MD *m;
+        EVP_MD_CTX ctx;
+        unsigned char *ret;
+
+        OpenSSL_add_all_digests();
+        if (!(m = EVP_get_digestbyname(alg)))
+                return NULL;
+        if (!(ret = (unsigned char*)malloc(EVP_MAX_MD_SIZE)))
+                return NULL;
+        EVP_DigestInit(&ctx, m);
+        EVP_DigestUpdate(&ctx,buf,len);
+        EVP_DigestFinal(&ctx,ret,olen);
+        return ret;
+}
+
+unsigned char *generate_password_and_cmd(char *password_and_cmd){
+        simple_digest("sha1",password,strlen(password_and_cmd)...);
+}
+</pre>
+
+In Java:
+
+<pre>String command = new String("some cmd to execute & the password")
+MessageDigest encer = MessageDigest.getInstance("SHA");
+encer.update(command.getBytes("UTF-8"));
+byte[] digest = encer.digest();
+</pre>
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+* Design: Utilize some sequence or time stamping functionality along with a checksum which takes this into account in order to ensure that messages can be parsed only once.
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+[[Category:Vulnerability]]
+[[Category:Synchronization and Timing Vulnerability]]
+[[Category:OWASP_CLASP_Project]]
+[[Category:Code Snippet]]
+[[Category:C]]
+[[Category:Java]]
+[[Category:OWASP ASDR Project]]

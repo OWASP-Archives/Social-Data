@@ -1,0 +1,16 @@
+This document assumes a basic knowledge of standard SQL (selects, inserts, joins, etc.). 
+
+=Reconnaissance=
+==Identifying the SQL platform==
+
+=Attacks=
+==Injection fuzzing strings==
+
+=Database platforms=
+* [[SQL Injection Cookbook - DB2|IBM DB2]]
+* [[SQL Injection Cookbook - MSSQL|Microsoft SQL]]
+* [[SQL Injection Cookbook - MySQL|MySQL]]
+* [[SQL Injection Cookbook - Oracle|Oracle]]
+* [[SQL Injection Cookbook - PostgreSQL|PostgreSQL]]
+
+* [[SQL Injection Cookbook template|Template for new server types]]

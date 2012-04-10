@@ -1,0 +1,129 @@
+{{OWASP Book|5691953}} 
+==== Main  ====
+{{Social Media Links}}
+
+== Welcome to the new OWASP Testing Guide  ==
+
+=== OWASP Testing Guide v4  ===
+[http://www.owasp.org/images/b/b2/OWASP_Testing_Guide_-_OWASP_Summit_2011.pdf | Roadmap has been defined at the OWASP Summit 2011. Here you can see the last presentation we did].
+
+=== OWASP Testing Guide v3  ===
+
+16th December 2008: OWASP Testing Guide v3 is finished!<br> 
+
+*You can download the Guide in PDF [http://www.owasp.org/images/5/56/OWASP_Testing_Guide_v3.pdf here] 
+*Download the presentation [https://www.owasp.org/images/2/2c/OWASP_EU_Summit_2008_OWASP_Testing_Guide_v3.ppt here] 
+*Browse the Testing Guide v3 on the wiki [https://www.owasp.org/index.php/OWASP_Testing_Guide_v3_Table_of_Contents here]
+
+''''NEW: OWASP projects and resources you can use TODAY''''<br>
+16th April 2010 in London, OWASP leaders deliver a course focused on the main OWASP Projects.<br>
+Matteo Meucci will deliver a training course on the OWASP Testing Guide v3. <br>
+More information [http://www.owasp.org/index.php/London/Training/OWASP_projects_and_resources_you_can_use_TODAY here]
+
+Video @ FOSDEM 09: [http://fosdem.unixheads.org/2009/maintracks/owasp.ogv here] 
+
+Citations:
+
+http://www.owasp.org/index.php/Testing_Guide_Quotes
+
+=== Overview  ===
+
+This project's goal is to create a "best practices" web application penetration testing framework which users can implement in their own organizations and a "low level" web application penetration testing guide that describes how to find certain issues. 
+
+Version 3 of the Testing Guide was released in December 2008 after going through a major upgrade through the [[OWASP Summer of Code 2008]]. 
+
+=== Background and Motivation  ===
+
+'''History Behind Project''' The OWASP Testing guide originated in 2003 with Dan Cuthbert as one of the original editors. It was handed over to [[User:EoinKeary|Eoin Keary]] in 2005 and moved onto the new OWASP wiki when it came online. Being in a wiki is easier for people to contribute and has made updating much easier. [[User:Mmeucci|Matteo Meucci]] took on the Testing guide after Eoin and shepherded it through the version 2 and version 3 updates, which have been significant improvements. 
+
+== Project History  ==
+
+=== OWASP Testing Guide v3  ===
+
+Testing Guide v3: plan (archive) 
+
+26th April 2008: Version 3 of the Testing Guide started under [[OWASP Summer of Code 2008]]. 
+
+6th November 2008: Completed draft created and previewed at [[OWASP EU Summit 2008|OWASP EU Summit 2008 in Portugal]]. 
+
+Final stable release in December 2008 
+
+=== OWASP Testing Guide v2  ===
+
+'''10th February 2007: The OWASP Testing Guide v2 is now published''' [[User:Mmeucci|Matteo Meucci]] (as part of his [[OWASP Autumn of Code 2006 - Projects: Testing Guide|AoC project]]) has just published the latest version of Testing guide which: 
+
+*you can read it on line on the [http://www.owasp.org/index.php/OWASP_Testing_Guide_v2_Table_of_Contents Testing Guide v2 wiki] 
+*or download the Guide in [http://www.owasp.org/index.php/Image:OWASP_Testing_Guide_v2_pdf.zip Adobe PDF format] or in [http://www.owasp.org/index.php/Image:OWASP_Testing_Guide_v2_doc.zip Ms Doc format]
+
+'''OWASP Testing Guide v2 in Spanish:''' Now you can get a complete translation in [http://www.owasp.org/index.php/Image:OWASP_Testing_Guide_v2_spanish_doc.zip Ms Doc format] 
+
+For comments or questions, please join the [http://lists.owasp.org/mailman/listinfo/owasp-testing OWASP Testing mailing list], read our archive and share your ideas. Alternatively you can contact [[User:EoinKeary|Eoin Keary]] or [[User:Mmeucci|Matteo Meucci]] directly. 
+
+Here you can find: 
+
+*[http://www.owasp.org/index.php/Testing_Guide_Quotes The OWASP Testing Guide 'Quotes'] 
+*[http://www.owasp.org/index.php/OWASP_Testing_Guide_Presentations Testing Guide presentations]
+
+<br> 
+
+=== The OWASP Testing Guide v2 - Request for Review  ===
+
+'''10th January 2007: The OWASP Testing Guide v2 is now in its final stages''' [[User:Mmeucci|Matteo Meucci]] (as part of his [[OWASP Autumn of Code 2006 - Projects: Testing Guide|AoC project]]) has just published the latest version of Testing guide which: 
+
+*you can read it on line on the [http://www.owasp.org/index.php/OWASP_Testing_Guide_v2_Table_of_Contents Testing Guide v2 wiki - 'Release Candidate 1'] 
+*or download the Guide in [http://www.owasp.org/index.php/Image:OWASP_Testing_Guide_v2_RC1_pdf.zip Adobe PDF format] or [http://www.owasp.org/index.php/Image:OWASP_Testing_Guide_v2_RC1_doc.zip Ms Doc format]
+
+'''So what we need now (until 10th of February) is for you to review it.''' Please let us know any mistakes made, and if you feel that there is something missing, please help yourself and edit the relevant WIKI page. 
+
+For comments or questions, please use the 'Discussion' pages or email [[User:EoinKeary|Eoin Keary]] or [[User:Mmeucci|Matteo Meucci]] directly. 
+
+The current plan is to create a 'published' version of this guide on the 10th of February which will be sent to all OWASP members in book format. 
+
+If you want to participate see the [[OWASP Testing Project v2.0 - Review Guidelines]] page for the lastest updates 
+
+<br> 
+
+=== Old Testing Guide Download  ===
+
+A copy of the old guide (The OWASP Testing Guide v1.1) is available [[http://prdownloads.sourceforge.net/owasp/OWASPWebAppPenTestList1.1.pdf?download here]], it shall also be available in HTML format on the forthcoming OWASP Live CD. A PDF copy shall also be available to download. 
+
+'''OWASP Pen Test Checklist in Italian''' Sun May 22 10:56:39 EDT 2005 I'm glad to announce we have released OWASP Pen Test Checklist in Italian. Thanks to the Italian Chapter, Massimiliano and Matteo for it's great effort to have this document translated. You can download this version in [http://www.owasp.org/docroot/owasp/misc/OWASPWebAppPenTestList1.1_ITA.pdf PDF] or [http://www.owasp.org/docroot/owasp/misc/OWASPWebAppPenTestList1.1_ITA.doc Word] 
+
+'''Checklist ver 1.17 in Spanish''' Mon Apr 04 15:37:24 EDT 2005 I'm glad to announce we have released OWASP Pen Test Checklist ver 1.17 in Spanish.Thanks to Pedro, Raul and Rogelio for it's great effort to have this document translated and to Christian by helping out with technical edition. You can download this version [http://www.owasp.org/docroot/owasp/misc/testing_spanish.pdf PDF] or [http://www.owasp.org/docroot/owasp/misc/testing_spanish.doc Word] 
+
+<br> 
+
+=== Related  ===
+
+'''OWASP Testing Guide (v2+v3) Report Generator''' is found at [http://yehg.net/lab/#wasarg http://yehg.net/lab/#wasarg]. 
+
+'''THE OWASP Testing Project Live CD''' The OWASP testing project is currently implementing an Application security Live CD. <br> LabRat Version 0.8 Alpha is just weeks away from Beta testing*. 
+
+The aim of this CD is to have a complete testing suite on one Disk. The CD shall also contain the forthcoming OWASP Testing guide. 
+
+The Live CD now has its own section you can find it here: [http://www.owasp.org/index.php/Category:OWASP_Live_CD_Project] 
+
+== Feedback and Participation  ==
+
+We hope you find the information in the OWASP Testing project useful. Please contribute back to the project by sending your comments, questions, and suggestions to the OWASP Testing mailing list. Thanks! 
+
+To join the OWASP Testing mailing list or view the archives, please visit the [http://lists.owasp.org/mailman/listinfo/owasp-testing subscription page]. 
+
+==== Translations ====
+
+Thanks to the translators all around the world you can download the guide in the following languages:
+
+* Spanish in [http://www.owasp.org/images/8/80/Gu%C3%ADa_de_pruebas_de_OWASP_ver_3.0.pdf PDF] or [http://www.owasp.org/images/d/d7/Gu%C3%ADa_de_pruebas_de_OWASP_ver_3.0.zip MS Word] formats. 
+
+* Chinese in [http://www.owasp.org/images/0/06/OWASP%E6%B5%8B%E8%AF%95%E6%8C%87%E5%8D%97%28%E4%B8%AD%E6%96%87%EF%BC%89.pdf PDF] format. (Thanks to the [http://www.owasp.org/index.php/China-Mainland China-mainland chapter].)
+
+* Japanese in [http://www.owasp.org/images/1/1e/OTGv3Japanese.pdf PDF] format here (this is a 1st draft, final release coming soon). 
+
+
+==== Project About ====
+{{:Projects/OWASP Testing Project | Project About}}
+
+__NOTOC__ <headertabs />
+
+
+[[Category:OWASP_Project|Testing Guide]] [[Category:OWASP_Document]] [[Category:OWASP_Download]] [[Category:OWASP_Release_Quality_Document|OWASP Stable Quality Document]]

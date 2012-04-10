@@ -1,0 +1,212 @@
+The following defines the quality levels for OWASP TOOLS and DOCUMENTATION (Projects). Rating projects against these criteria aid in recognizing excellent contributions and identifying projects in need of further work. [[:Category:OWASP_Project | All existing OWASP projects and their current ratings are here]].
+
+The Tool ratings are reasonably complete. The documentation rates still need to be developed.
+
+== Assessment Scale for OWASP TOOLS Projects==
+
+=== Release Quality Tool Criteria ===
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#white; color:black"|
+ |-
+ | style="width:10%; background:#C2C2C2" align="center"| '''Class''' 
+ | style="width:60%; background:#C2C2C2" align="center"| '''Criteria'''  
+ | style="width:20%; background:#C2C2C2" align="center"| '''Review Process'''  
+ | style="width:10%; background:#C2C2C2" align="center"| '''Example''' 
+ |-
+ | style="width:10%; background:#f2984c" align="center"|'''[[:Category:OWASP Project#Release_Quality_Projects|Release Quality OWASP Tools]]'''
+ | style="width:60%; background:#e6e6e6" align="left"|
+All Beta Quality Requirements plus:
+* Be reasonably easy to use
+* Include online documention built into tool (based on required user documentation)
+* Include build scripts that facilitate building the application from source (Goal: One-click build)
+* Publicly accessible bug tracking system established, ideally at the same place as the source code repository (e.g., at Google code, or Sourceforge)
+* Be run through [https://opensource.fortify.com/teamserver/welcome.fhtml Fortify Software's open source review] (if appropriate) and [http://findbugs.sourceforge.net/ FindBugs].
+**WebGoat would not be appropriate for example since it would light up like a Christmas tree :-)
+* C/C++ apps (if we have any) should consider being run through [http://scan.coverity.com/ Coverity's open source review]. Coverity also accepts submissions for open source Java applications.
+* When approved to be Release Quality: Update the link to it on: the [[:Category:OWASP_Project | OWASP Project]] page and update [[:Category:OWASP Release Quality Tool|its project quality tag]] on its project page to be Release Quality.
+'''Recommendations:'''
+* Conference style Powerpoint presentation that describes the use and status of the tool. (This could be used by others to discuss the tool at OWASP Chapter meetings, serve as easy to review offline documentation, etc.)
+* UAT pass on functionality of the tool
+* Developer documents any limitations
+ | style="width:20%; background:#e6e6e6" align="left"|
+* '''Requirement''': 2 Reviewers + 1 OWASP Board Member.
+** If possible, the project's lead should suggest two Project Reviewers.  One of them should be an OWASP Project or Chapter Leader.
+** If the project's lead can't find the Project Reviewers, the OWASP Board will identify them. The same will happen whenever the reviewers suggested do not have the required approval.
+ | style="width:10%; background:#e6e6e6" align="center"|[[OWASP WebGoat Project|OWASP WebGoat Project]]
+ |-
+ |}
+
+=== Beta Quality Tool Criteria ===
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#white; color:black"|
+ |-
+ | style="width:10%; background:#C2C2C2" align="center"| '''Class''' 
+ | style="width:60%; background:#C2C2C2" align="center"| '''Criteria'''  
+ | style="width:20%; background:#C2C2C2" align="center"| '''Review Process'''  
+ | style="width:10%; background:#C2C2C2" align="center"| '''Example''' 
+ |-
+ | style="width:10%; background:#ffcc66" align="center"|'''[[:Category:OWASP Project#Beta_Status_Projects|Beta Quality OWASP Tools]]'''  
+ | style="width:60%; background:#e6e6e6" align="left"|
+All Alpha Quality Requirements plus:
+* Have an easy to use installer (Goal: Fully automated installer) (or stand alone executable version)
+* Include user documentation in Project's OWASP Wiki page(s)
+* Add a common About Box or help menu in the tool itself
+**(which lists name of tool, author, e-mail address of author, current version number and/or release date) 
+* Include documentation on how to build it from code, starting with getting it directly from the code repository. (Ideally, this would include easy to use build scripts, which is required for Release Quality)
+* This documentation must stored be in the same repository as the code.
+* When approved to be Beta Quality: Update the link to it on: the [[:Category:OWASP_Project | OWASP Project]] page and update [[:Category:OWASP Beta Quality Tool|its project quality tag]] on its project page to be Beta.
+ | style="width:20%; background:#e6e6e6" align="left"|
+* '''Requirement''': 2 Reviewers.
+** If possible, the project's lead should suggest two Project Reviewers.  One of them should be an OWASP Project or Chapter Leader .
+** If the project's lead can't find the Project Reviewers, the OWASP Board will identify them. The same will happen whenever the reviewers suggested do not have the required approval.
+ | style="width:10%; background:#e6e6e6" align="center"|[[:Category:OWASP AntiSamy Project|OWASP AntiSamy Project]]
+ |}
+
+=== Alpha Quality Tool Criteria ===
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#white; color:black"|
+ |-
+ | style="width:10%; background:#C2C2C2" align="center"| '''Class''' 
+ | style="width:60%; background:#C2C2C2" align="center"| '''Criteria'''  
+ | style="width:20%; background:#C2C2C2" align="center"| '''Review Process'''  
+ | style="width:10%; background:#C2C2C2" align="center"| '''Example''' 
+ |-
+ | style="width:10%; background:#ffff66" align="center"|'''[[:Category:OWASP Project#Alpha_Status_Projects|Alpha Quality OWASP Tools]]''' 
+ | style="width:60%; background:#e6e6e6" align="left"|
+* Agree to [[OWASP Licenses|OWASP's open source license]]
+* The “main” page for any OWASP tool must be on the OWASP website. This page must:
+** describe the tool, the project leader, contact info, and include all relevant links, including a download link for the code and the executable version,
+** includes a roadmap/guideline pointing out the steps to achieve the purpose of project.
+** include the [[:Category:OWASP Alpha Quality Tool|Alpha Quality Tool]] project tag,
+** be placed at [[:Category:OWASP_Project | OWASP Project]] page.
+* Have its code and any documentation in Googlecode, or Sourceforge.
+* [https://lists.owasp.org/mailman/listinfo Mailing list for project created]. 
+* Solves a core application security need.
+ | style="width:20%; background:#e6e6e6" align="left"|
+* '''Requirement''': 1 Reviewer.
+** If possible, the project's lead should suggest a Project Reviewer who is an existing OWASP Project or Chapter Leader. 
+** If the project's lead can't find a Project Reviewer, the OWASP Board will identify one. The same will happen whenever the reviewer suggested does not have the required approval.
+ | style="width:10%; background:#e6e6e6" align="center"|[[:Category:OWASP CSRFTester Project|OWASP CSRFTester Project]]
+ |}
+
+=== Inactive Tool Criteria ===
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#white; color:black"|
+ |-
+ | style="width:10%; background:#C2C2C2" align="center"| '''Class''' 
+ | style="width:60%; background:#C2C2C2" align="center"| '''Criteria'''  
+ | style="width:20%; background:#C2C2C2" align="center"| '''Review Process'''  
+ | style="width:10%; background:#C2C2C2" align="center"| '''Example''' 
+ |- 
+ | style="width:10%; background:#ffffcc" align="center"|'''[[:Category:OWASP Project#Inactive_Projects|Inactive Projects]]''' 
+ | style="width:60%; background:#e6e6e6" align="left"|The criteria is being built
+ | style="width:20%; background:#e6e6e6" align="left"|
+* '''Requirement''': 
+ | style="width:10%; background:#e6e6e6" align="center"|[[:Category:OWASP CAL9000 Project|OWASP CAL9000 Project]]
+ |-
+ |}
+
+
+
+== Assessment Scale for OWASP DOCUMENTATION Projects==
+
+=== Release Quality Documentation Criteria ===
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#white; color:black"|
+ |-
+ | style="width:10%; background:#C2C2C2" align="center"| '''Class''' 
+ | style="width:60%; background:#C2C2C2" align="center"| '''Criteria'''  
+ | style="width:20%; background:#C2C2C2" align="center"| '''Review Process'''  
+ | style="width:10%; background:#C2C2C2" align="center"| '''Example''' 
+ |-
+ | style="width:10%; background:#f2984c" align="center"|'''[[:Category:OWASP Project#Release_Quality_Projects|Release Quality OWASP Documentation]]'''
+ | style="width:60%; background:#e6e6e6" align="left"|
+All Beta Quality Requirements plus:
+* Document has been reviewed accordingly to the [[OWASP Writing Style]] and updated to be consistent and not overly repetitive with all other Release Quality OWASP Documentation.
+* Conference style Powerpoint presentation that describes the use and status of the project. (This could be used by others to discuss the project at OWASP Chapter meetings, serve as easy to review offline documentation, etc.)
+* Wiki content, if more than 30 pages, has been converted to an OWASP Book and is available for download or purchase at the [http://stores.lulu.com/owasp OWASP Lulu bookstore].
+* The referred above OWASP Book must have a table of contents that links all the wiki content together. See [[Guide Table of Contents| here an example]].
+* When approved to be Release Quality: Update the link to it on: the [[:Category:OWASP_Project | OWASP Project]] page and update [[:Category:OWASP Release Quality Document|its project quality tag]] on its project page to be Release Quality.
+ | style="width:20%; background:#e6e6e6" align="left"|
+* '''Requirement''': 2 Reviewers + 1 OWASP Board Member.
+** If possible, the project's lead should suggest two Project Reviewers.  One of them should be an OWASP Project or Chapter Leader.
+** If the project's lead can't find the Project Reviewers, the OWASP Board will identify them. The same will happen whenever the reviewers suggested do not have the required approval.
+ | style="width:10%; background:#e6e6e6" align="center"|[[:Category:OWASP AppSec FAQ Project|OWASP AppSec FAQ Project]]
+ |}
+
+=== Beta Quality Documentation Criteria ===
+{|
+ | style="width:10%; background:#ffcc66" align="center"|'''[[:Category:OWASP Project#Beta_Status_Projects|Beta Quality OWASP Documentation]]'''  
+ | style="width:60%; background:#e6e6e6" align="left"|
+All Alpha Quality Requirements plus:
+* The document seems sufficiently or substantially complete with respect to the topic or process it is intended to cover.
+* All wiki content has been reviewed by a technical editor to ensure that English grammar is correct, understandable, and the content flows well.
+* Clear efforts to interlink this document to other appropriate Beta and Release Quality OWASP Documentation and Tools projects have been made.
+* When approved to be Beta Quality: Update the link to it on: the [[:Category:OWASP_Project | OWASP Project]] page and update [[:Category:OWASP Beta Quality Document|its project quality tag]] on its project page to be Beta.
+ | style="width:20%; background:#e6e6e6" align="left"|
+* '''Requirement''': 2 Reviewers.
+** If possible, the project's lead should suggest two Project Reviewers.  One of them should be an OWASP Project or Chapter Leader.
+** If the project's lead can't find the Project Reviewers, the OWASP Board will identify them. The same will happen whenever the reviewers suggested do not have the required approval.
+ | style="width:10%; background:#e6e6e6" align="center"|[[:Category:OWASP CLASP Project|OWASP CLASP Project]]
+ |-
+ |}
+
+=== Alpha Quality Documentation Criteria ===
+{|
+ | style="width:10%; background:#ffff66" align="center"|'''[[:Category:OWASP Project#Alpha_Status_Projects|Alpha Quality OWASP Documentation]]''' 
+ | style="width:60%; background:#e6e6e6" align="left"|
+* Agree to [[OWASP Licenses|OWASP's open source license]]
+* The “main” page for any OWASP documentation project must be on the OWASP website. This page must:
+** describe the purpose and scope of project, the project leader, contact info, and include all relevant links,
+** includes a roadmap/guideline pointing out the steps to achieve the purpose of project.
+** includes a list of contributors, if a team effort.
+** include the [[:Category:OWASP Alpha Quality Document|Alpha Quality Document]] project tag,
+** be placed at [[:Category:OWASP_Project | OWASP Project]] page.
+* Have all its content stored in the OWASP wiki.
+* [https://lists.owasp.org/mailman/listinfo Mailing list for project created]. 
+* Solves a core application security documentation/process need.
+ | style="width:20%; background:#e6e6e6" align="left"|
+* '''Requirement''': 1 Reviewer.
+** If possible, the project's lead should suggest a Project Reviewer who is an existing OWASP Project or Chapter Leader. 
+** If the project's lead can't find a Project Reviewer, the OWASP Board will identify one. The same will happen whenever the reviewer suggested does not have the required approval.
+ | style="width:10%; background:#e6e6e6" align="center"|[[:Category:OWASP AJAX Security Project|OWASP AJAX Security Project]]
+ |}
+
+=== Inactive Documentation Criteria ===
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#white; color:black"|
+ |-
+ | style="width:10%; background:#C2C2C2" align="center"| '''Class''' 
+ | style="width:60%; background:#C2C2C2" align="center"| '''Criteria'''  
+ | style="width:20%; background:#C2C2C2" align="center"| '''Review Process'''  
+ | style="width:10%; background:#C2C2C2" align="center"| '''Example''' 
+ |- 
+ | style="width:10%; background:#ffffcc" align="center"|'''[[:Category:OWASP Project#Inactive_Projects|Inactive Projects]]''' 
+ | style="width:60%; background:#e6e6e6" align="left"|The criteria is being built
+ | style="width:20%; background:#e6e6e6" align="left"|
+* '''Requirement''': 
+ | style="width:10%; background:#e6e6e6" align="center"|
+ |}
+
+== FAQ ==
+
+; 1. What is the purpose of the project ratings? : The rating system allows OWASP to monitor the quality of Projects in our subject areas, and to prioritize work on these projects.  It is also utilized to prepare for static releases of Wikipedia content.  
+; 2. How do I add a project (tool or documentation) to the OWASP Projects? : To propose a new project, please send an email to [mailto:owasp@owasp.org?subject=New_OWASP_Project_idea OWASP].
+; 3. How does the assessment scale work? : Each category has a set of requirements/criteria to be met. Beta Quality implies that all of its requirements, as well as the Alpha Quality requirement have been met. Release Quality implies that all of the requirements, including Alpha and Beta, have been met. 
+; 4. Who can assess projects? : [mailto:paulo.coimbra@owasp.org The OWASP Project Manager] can assign you a reviewer.
+; 5. Why didn't the reviewer leave any comments? : Unfortunately, due to the volume of projects that need to be assessed, we are unable to leave detailed comments in most cases.  If you have particular questions, you might ask the person who assessed the project; they will be happy to provide you with their rationale.
+; 6. What if I don't agree with a rating? : You can list it in the [[:Category:OWASP Project Assessment#Requests for assessment|section for assessment requests]] below, and someone will take a look at it.  Alternatively, you can ask any member of the project to rate the project again.  
+; 7. Aren't the ratings subjective? : Yes, they are somewhat subjective, but it's the best system we've been able to devise.  If you have a better idea, please don't hesitate to let us know!
+; 8. What if I have a question not listed here? : If your question concerns the project assessment process specifically, please contact [mailto:owasp@owasp.org OWASP] or its [mailto:paulo.coimbra@owasp.org Project Manager] directly.
+
+== Requests for assessment ==
+
+If you have made significant changes to a project and would like an outside opinion on a new rating for it, please feel free to list it below and e-mail [mailto:paulo.coimbra@owasp.org OWASP Project Manager].  
+
+# Here
+# Or here
+# ''Add new requests above this line'' <!-- PLEASE DO NOT REMOVE OR CHANGE THIS LINE -->
+
+
+[[Category:OWASP Project Assessment]]
+[[Category:Global_Projects_Committee]]

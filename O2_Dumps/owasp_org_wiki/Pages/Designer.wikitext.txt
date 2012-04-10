@@ -1,0 +1,18 @@
+{{Template:SecureSoftware}}
+
+==Role Description==
+The primary responsibility of the designer is to keep security risks out of the application, whenever possible. This responsibility has many facets:
+* First, he must figure out what technologies will satisfy security requirements and research them well enough to determine how to use those technologies properly.
+* Second, if a security flaw is found in the application, it is usually up to the designer to assess the consequences and determine how to best address the problem.
+* Finally, the designer needs to help support measuring the quality of application security efforts. Generally, this involves providing data that can be used as metrics or as a foundation for an application security review. 
+For example, the designer should explicitly document the “attack surface” of an application — which is roughly equal to the entry points to an application that may be visible to an attacker. This data can be used in a metric roughly akin to traditional software complexity metrics; it is also an excellent starting point for those who are looking to determine whether there are exploitable risks in software.
+Designers have the most security-relevant work of all the traditional development roles:
+* They should push back on requirements that may have unrecognized security risks. 
+* They need to give implementers a roadmap in order to minimize the risk of errors requiring an expensive fix.
+* They also need to understand the security risks of integrating third-party software.
+* In addition, they are generally the point person for responding to security risks identified in the software. 
+Thus, designers should maintain a high level of security awareness; we recommend reading CLASP Resources A, B, C and D thoroughly.
+
+[[Category:Role]]
+[[Category:CLASP Role]]
+[[Category:OWASP CLASP Project]]

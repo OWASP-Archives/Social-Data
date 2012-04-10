@@ -1,0 +1,102 @@
+6.  Code Quality -> 6.1  Discover Clues in the HTML
+
+=== Lesson overview === 
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution ===
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information.
+
+=== Strategy ===
+
+The solution to this lesson is not to allow any admin or login credentials that have been placed in HTML comments to reach the user.
+
+The guilty code is:
+
+<pre>
+<!-- 	FIXME admin:adminpw
+  -->
+</pre>
+
+=== Implementation ===
+
+The lesson is mitigated by the ruleset 'rulefile_06_code-quality.conf':
+
+<pre>
+  SecRule TX:MENU "!@eq 700" "phase:4,t:none,pass,skip:2"
+
+  SecRule RESPONSE_BODY \ 
+    "<!--[ \r\n\t]*?(.*)?(?i:adm(in)?|pwd|passw(or)?d)(.*)?[ \r\n\t]*?-->" \ 
+    "phase:4,t:none,log,auditlog,deny,severity:3, \
+msg:'Authentication Credentials in HTML comment',id:'61',tag:'LEAKAGE', \
+redirect:/_error_pages_/lesson06-1.html"
+
+  SecAction "phase:4,allow,t:none, \ 
+    msg:'Returning; nothing bad on this page (rulefile_06-1).'"
+</pre>
+
+
+Notice that the <font face="Courier New">'TX:MENU'</font> variable, which is set in the rulefile_00_initialize.conf, is used because using <font face="Courier New">'ARGS:menu'</font> will not be accurate as it goes out of scope when leaving Phase 2.
+
+=== Comments ===
+
+The regex used for this solution can give false positives. It is okay for this lesson, but in 'Lesson 4.2 Authentication Flaws -> Forgot Password', this string of text also matches:
+
+<pre>
+<!-- Start Instructions -->
+...
+Users can retrieve their password if they can answer the secret question properly. 
+...
+<!-- Stop Instructions -->
+</pre>
+
+
+The regex works as intended both in The Regex Coach and in Expresso. Instead of going through a laborious process each attempt just to see if the regex works as intended, it would be nice to have a utility that calls the exact same PCRE API that ModSecurity currently calls (see the source code file 'msc_util.c') so that the regex can be tested completely outside of ModSecurity.
+
+=== Reviewer comments ===
+
+Information leakage through html comments is an interesting challenge from a WAF perspective.  Here are a few of them:
+
+1. No False Negatives: We don't want to miss any comments so we need to have an accurate html parser in order to deal with all possible formats, etc…  Something like mod_html_proxy or mod_publisher would help in this area.
+
+2. All Comments != Bad: HTML comments, in and of themselves, are not bad.  It is only the ones that are leaking sensitive info.  The question is what is sensitive?  In the context of this WebGoat lesson, the sensitive info is the admin credentials.  Unfortunately, if we try to address the underlying issue and not just for this lesson, we have no idea of the exact format of the data being presented.
+ 
+3. Blocking vs. Scrubbing: Assuming we can reliably detect comments but not necessarily any sensitive data leaks, is this category of issue severe enough that you would want to block the entire response?  Scrubbing inbound data for attacks and sending it onto the application is more risky than scrubbing outbound data for info leakages and then sending it onto clients.  Once again, a module such as mod_proxy_html even has a remove comments directive that will handle this issue.
+
+ 
+The best option that I see is to actually remove all comments from outbound data, however seeing as ModSecurity cannot currently do this then the next best thing is to alert and/or block.  In order to make our RegEx more generic and to look for other comment formats we should account for C-style, JavaScript and one-liner comments:
+
+C-style:
+
+<pre>
+/* This is a comment */
+
+/* C-style comments can span
+as many lines as you like,
+as shown in this example */
+</pre>
+ 
+JavaScript/C++ style:
+
+<pre>
+// This is a one-line comment
+</pre>
+
+Also a one-liner with just the beginning:
+
+<pre>
+<!-- This is treated as a one-line JS comment
+</pre>
+
+The updated Mod rule would look like this:
+
+<pre>
+SecRule RESPONSE_BODY "(<!--[ \r\n\t]*?(.*)?(?i:adm(in)?|pwd|passw(or)?d) \
+(.*)?[ \r\n\t]*?(-->)?|\/\*.*\*\/|\/\/)" \
+    "phase:4,t:none,log,auditlog,deny,severity:3, \
+msg:'Authentication Credentials in HTML comment',id:'61',tag:'LEAKAGE', \
+redirect:/_error_pages_/lesson06-1.html"
+</pre>
+
+It was tested a bit and seems to work but the RegEx could probably be tweaked a bit more.

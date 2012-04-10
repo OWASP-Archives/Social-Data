@@ -1,0 +1,77 @@
+==Status==
+Released 14 Jan 2008
+
+==Overview==
+As the name implies, SQL injection vulnerabilities allow an attacker to inject (or execute) SQL commands within an application.  It is one of the most wide spread and dangerous application vulnerability.  The CLASP project provides a good overview of [[SQL injection]].
+
+==Example of SQL injection==
+The following Java servlet code, used to perform a login function, illustrates the vulnerability by accepting user input without performing adequate input validation or escaping meta-characters:
+ conn = pool.getConnection( );
+ String sql = "select * from user where username='" + username +"' and password='" + password + "'";
+ stmt = conn.createStatement();
+ rs = stmt.executeQuery(sql);
+ if (rs.next()) {
+ loggedIn = true;
+ 	out.println("Successfully logged in");
+ } else {
+ 	out.println("Username and/or password not recognized");
+ }
+It is possible for attackers to provide a username containing SQL meta-characters that subvert the intended function of the SQL statement.  For example, by providing a username of:
+ admin' OR '1'='1
+and a blank password, the generated SQL statement becomes:
+ select * from user where username='admin' OR '1'='1' and password=' '
+This allows an attacker to log in to the site without supplying a password, since the ‘OR’ expression is always true.  Using the same technique attackers can inject other SQL commands which could extract, modify or delete data within the database.
+
+==Attack techniques==
+For more information on SQL injection attacks see:
+* http://www.hdm-stuttgart.de/~ms096/SQLInjectionWhitePaper.pdf
+* http://www.nextgenss.com/papers/advanced_sql_injection.pdf
+* http://www.appsecinc.com/presentations/Manipulating_SQL_Server_Using_SQL_Injection.pdf
+
+==Defense Strategy==
+To prevent SQL injection:
+* All queries should be parametrized.
+* All dynamic data should be explicitly bound to parametrized queries.
+* String concatenation should never be used to create dynamic SQL.
+
+For more details, see the OWASP [[SQL Injection Prevention Cheat Sheet]].
+
+==Parameterized Queries==
+All data access techniques provide some means for escaping SQL meta-characters automatically. The following sections detail how to perform input validation and meta-character escaping using popular data access technologies.
+
+===Prepared Statements===
+Variables passed as arguments to prepared statements will automatically be escaped by the JDBC driver.<br>
+<b>Example: </b>ps.1<br>
+ String selectStatement = "SELECT * FROM User WHERE userId = ? ";
+ PreparedStatement prepStmt = con.prepareStatement(selectStatement);
+ prepStmt.setString(1, userId);
+ ResultSet rs = prepStmt.executeQuery();
+
+Although Prepared Statements helps in defending against SQL Injection, there are possibilities of SQL Injection attacks through inappropriate usage of Prepared Statements. The example below explains such a scenario where the input variables are passed directly into the Prepared Statement and thereby paving way for SQL Injection attacks. <br>
+<b>Example: </b>ps.2<br>
+<pre>
+String strUserName = request.getParameter("Txt_UserName"); 
+PreparedStatement prepStmt = con.prepareStatement("SELECT * FROM user WHERE userId = '+strUserName+'");
+</pre>
+
+===Stored Procedures===
+
+TODO
+
+===Hibernate===
+According to [http://forum.hibernate.org/viewtopic.php?t=960817&start=0&postdays=0&postorder=asc this forum thread] hibernate uses prepared statements, so it is protected from direct sql injection, but it could still be vulnerable to [[Interpreter_Injection#ORM_Injection| injecting HQL statements]].
+
+==Variable Binding==
+
+It is critical to use Bind Variables as mentioned in the example ps.1 above. Usage of PreparedStatement with Bind variables defends SQL Injection attacks and improves the performance.
+
+
+==Dynamic Queries via String Concatenation==
+
+The important thing to remember is to <b>never construct SQL statements using string concatenation of unchecked input values.</b>  Creating of dynamic queries via the java.sql.Statement class leads to SQL Injection.
+
+== References ==
+*[1] [http://research.corsaire.com/whitepapers/060116-a-modular-approach-to-data-validation.pdf A Modular Approach to Data Validation]
+*[2] [http://forum.hibernate.org/viewtopic.php?t=960817&start=0&postdays=0&postorder=asc&highlight= Topic: does Hibernate guard against SQL injection?]
+
+[[Category:OWASP Java Project]]

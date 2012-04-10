@@ -1,0 +1,42 @@
+= Module Description =
+This module explains the complete approach of Web Application Security when developping or deploying web applications as part of the [[:Category:OWASP Education Project|Education Project]].
+There is no silver bullet when it comes to securing web applications. This problem has to be addressed from different angles, covering the involved actors, processes: development as well as deployment and Technologies.
+* People Awareness and Education
+* Web Application Security Training
+* Security Requirements and Abuse Cases
+* Threat Modelling
+* Secure Design Guidelines
+* Secure Coding Guidelines and Security Code Review
+* Testing for web application security
+* Secure administration and Security within Change Management
+* Deployment WebAppSec Controls
+* WebAppSec Tools
+* Starting and improving an SDLC
+* Web Application Security Roles and Responsibilities 
+
+For the WebAppSec for Developers track this can be trimmed down to 20 minutes:
+* People Awareness and Education
+* Development WebAppSec Controls
+* Deployment WebAppSec Controls
+* WebAppSec Tools 
+
+= Target audience =
+Novice.
+
+= Presentation =
+The presentation can be found in [[:Image:Education_Module_Embed_within_SDLC.ppt|Embed within SDLC]].
+
+Normally this presentation is performed in 100 minutes.
+
+= Resources =
+== OWASP pointers ==
+* [[Phoenix/Tools]]
+* [[OWASP Code Review Project]]
+* [[Threat Modeling]]
+* [[OWASP Testing Project]]
+* [[OWASP CLASP Project]]
+
+== External pointers ==
+* [http://msdn2.microsoft.com/en-us/security/aa570413.aspx Microsoft Application Threat Modeling]
+
+[[Category:OWASP Education Modules]]

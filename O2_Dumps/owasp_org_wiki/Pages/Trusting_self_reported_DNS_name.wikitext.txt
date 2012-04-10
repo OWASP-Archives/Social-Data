@@ -1,0 +1,149 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+The use of self-reported DNS names as authentication is flawed and can easily be spoofed by malicious users.
+
+'''Consequences'''
+
+Authentication: Malicious users can fake authentication information by providing false DNS information.
+
+'''Exposure period'''
+
+* Design: Authentication methods are generally chosen during the design phase of development.
+
+'''Platform'''
+
+* Languages: All
+* Operating platforms: All 
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood of exploit'''
+
+High
+
+As DNS names can be easily spoofed or mis-reported, they do not constitute a valid authentication mechanism. Alternate methods should be used if the significant authentication is necessary.
+
+In addition, DNS name resolution as authentication would - even if it was a valid means of authentication - imply a trust relationship with the DNS servers used, as well as all of the servers they refer to. 
+
+
+==Risk Factors==
+
+* Talk about the [[OWASP Risk Rating Methodology|factors]] that make this vulnerability likely or unlikely to actually happen
+* Discuss the technical impact of a successful exploit of this vulnerability
+* Consider the likely [business impacts] of a successful attack
+
+
+==Examples==
+
+In C/C++:
+
+<pre>
+sd = socket(AF_INET, SOCK_DGRAM, 0);
+serv.sin_family = AF_INET;
+serv.sin_addr.s_addr = htonl(INADDR_ANY);
+servr.sin_port = htons(1008);
+bind(sd, (struct sockaddr *) & serv, sizeof(serv));
+while (1) {
+  memset(msg, 0x0, MAX_MSG);
+  clilen = sizeof(cli);
+  h=gethostbyname(inet_ntoa(cliAddr.sin_addr));
+  if (h->h_name==...)
+  n = recvfrom(sd, msg, MAX_MSG, 0,
+              (struct sockaddr *) & cli, &clilen);
+}
+</pre>
+
+In Java:
+
+<pre>
+while(true) {
+  DatagramPacket rp=new DatagramPacket(rData,rData.length);
+         
+  outSock.receive(rp);
+  String in = new String(p.getData(),0, rp.getLength());
+  InetAddress IPAddress = rp.getAddress();
+  int port = rp.getPort();
+          
+  if ((rp.getHostName()==...) && (in==...)){
+    out = secret.getBytes();
+    DatagramPacket sp =new DatagramPacket(out,out.length,
+      IPAddress, port);
+    outSock.send(sp);
+  }  
+}
+</pre>
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Trusting self-reported IP address]]
+* [[Using referrer field for authentication]]
+
+
+
+==Related [[Controls]]==
+
+* Design: Use other means of identity verification that cannot be simply spoofed.
+
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Protocol Errors]]
+[[Category:OWASP_CLASP_Project]]

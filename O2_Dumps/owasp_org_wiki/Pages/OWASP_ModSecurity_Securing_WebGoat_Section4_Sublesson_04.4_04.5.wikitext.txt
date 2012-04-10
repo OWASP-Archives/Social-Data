@@ -1,0 +1,169 @@
+4.  Authentication Flaws -> 4.4  Multi Level Login 1
+
+4.  Authentication Flaws -> 4.5  Multi Level Login 2
+
+The lessons are combined because the strategy and the ruleset to solve them are the same. 
+
+=== Lesson overview ===
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution === 
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information.
+
+=== Strategy === 
+
+In both lessons, the attacker alters a value of a hidden field; for the first one it is: <font face="Courier New">'<input name='hidden_tan' type='HIDDEN' value='2'>'</font>
+
+In order to solve this, the hidden field values have to be saved in the response body and then, when the request is sent, compared to see if it has been altered. It might be technically possible to use the session collection functionality of ModSecurity, parse the response body with a regular expression and store the hidden values, then do the same in the following request and make the comparison. Instead, Lua scripts are used; see Section 4.3 'Using the Lua scripting language' for details on how Lua is used to detect if input values - in this case hidden ones - have been altered on the client side. 
+
+=== Implementation === 
+
+The lesson is mitigated in the ruleset 'rulefile_04_authentication-flaws.conf'.
+
+<pre>
+  SecRule ARGS:menu "!@eq 500" "phase:2,t:none,skip:2"
+
+  # following takes care of 4.3 & 4.4 - Multi Level Login
+  # action is triggered if script returns non-nil value
+  SecRuleScript "/etc/modsecurity/data/read-hidden-values_04.lua" \
+    "phase:2,t:none,log,auditlog,deny,severity:3, \ 
+    msg:'Parameter Tampering; Hidden field', \ 
+    tag:'PARAMETER_TAMPERING',redirect:/_error_pages_/lesson04-4.html"
+  SecAction "phase:2,allow:request,t:none,log,auditlog, \ 
+    msg:'Luascript: hidden field not altered or does not exist'"
+
+################################################################
+
+  SecRule TX:MENU "!@eq 500" "phase:4,t:none,pass,skip:1"
+
+  # parse response body and write hidden values to file
+  SecRuleScript "/etc/modsecurity/data/write-hidden-values1.lua" \
+    "phase:4,t:none,log,auditlog,allow,msg:'Writing RESPONSE BODY \ 
+    & parsed input fields to file using luascript'"
+</pre>
+
+
+Both rules are only processed only when in this lesson (menu=500).
+
+The 2nd rule uses the lua script 'write-hidden-values1.lua' in Phase 4 to write HTML input element values to a data file from every response request, in this format:
+
+<pre>
+Entry{
+  name = "hidden_tan",
+  type = "HIDDEN",
+  value = "2"
+}
+
+Entry{
+  name = "tan",
+  type = "TEXT",
+  value = ""
+}
+
+Entry{
+  name = "Submit",
+  type = "SUBMIT",
+  value = "Submit"
+}
+</pre>
+
+
+For every request, the lua file 'read-hidden-values_04.lua' gets the hidden field value, <font face="Courier New">'hidden_tan'</font>, compares it with the value stored in the data file, and matches the SecRuleScript if the field has been altered.
+
+The same solution is used for Multi Level Login 2, only in this case the hidden field name is <font face="Courier New">'hidden_user'</font>.
+
+=== Reviewer comments ===
+
+<font><u>Part I</u></font>
+
+The use of Lua in this lesson is novel in that it is being used to parse the response body and save data for later analysis.  It is possible to achieve the same result by using ModSecurity’s persistent collections and saving data in custom variables and then later inspecting them. 
+
+For this particular lesson, one method of fixing this issue is the approach that you took – to parse the response html for hidden field data and saving it for later inspection.  While Lua may perform this task well, it is not absolutely required in order to achieve protection from the underlying issue.  Additionally, accurate parsing of outbound html is challenging.  Yes, storing this type of data in hidden fields is a bad idea, however the real problem is that the back-end should be tracking these use/reuse of this data.  With that in mind, it is possible to skip parsing the response html payloads and simply focus on when the hidden_tan and parameters are first submitted.  When this happens, you can easily store this data in a Session collection (tied once again to the JSESSIONID) and then check on future requests that these values are not re-submitted.
+
+For Multi-level Login 2 – all you have to do is store the original username submitted (user2) and then ensure that it matches the hidden_user argument submitted later.  If it doesn’t match then you can deny.
+
+Here are some example rules:
+<pre>
+#
+# Initiate the session collection based on the JSESSIONID
+#
+
+SecAction "phase:1,t:none,pass,nolog,setsid:%{REQUEST_COOKIES.JSESSIONID}, \
+setuid:%{session.username}"
+
+#
+# Capture the submitted username for tracking/display in Mod audit logs
+#
+
+SecRule ARGS:'/^user/' ".*" "phase:2,t:none,pass,nolog,capture, \
+setvar:session.username=%{TX.0},setuid:%{TX.0}"
+
+#
+# If this is the first time we have seen the "hidden_tan" and "tan" parameters, 
+# we store the data in the session collection and skip the security checks.
+# We have to give the session variables unique names so that we have unique values
+#
+
+SecRule &SESSION:'/(hidden_tan|tan)/' "@eq 0" \
+"chain,phase:2,t:none,pass,nolog,skip:2"
+
+SecRule ARGS:hidden_tan ".*" "chain,capture, \
+setvar:session.hidden_tan_%{time_epoch}=%{TX.0}"
+
+SecRule ARGS:tan ".*" "capture,setvar:session.tan_%{time_epoch}=%{TX.0}
+
+#
+# If we get here, then we have saved parameter data in the session collection to 
+# check against the currently submitted data.  We can use the wildcarding RegEx 
+# capabilities of the session collection variable to allow us to inspect all 
+# of the saved unique parameter names.
+# If any of the submmited hidden_tan/tan data matches what was already saved, 
+# then this is session replay attack.
+#
+
+SecRule SESSION:'/HIDDEN_TAN_*/' "@streq %{ARGS.HIDDEN_TAN}" \
+"phase:2,t:none,log,auditlog,deny,msg:'Previous Hidden Tan Data Used.'"
+
+SecRule SESSION:'/TAN_*/' "@streq %{ARGS.TAN}"  \
+"phase:2,t:none,deny,log,auditlog,msg:'Previous Hidden Tan Data Used.'"
+
+#
+# Verify that the hidden_user data matches the username when they first logged in.
+#
+
+SecRule &ARGS:HIDDEN_USER "@eq 1" "chain,phase:2,t:none,deny,log, \
+auditlog,msg:'Hidden User Parameter Manipulation.'"
+
+SecRule SESSION:'/^user/' "!@streq %{ARGS.HIDDEN_USER}"
+</pre>
+
+<font><u>Part II</u></font>
+
+Virtual patching is an interesting use-case concept, however it is best if we can “generically” attempt to address the underlying vulnerability.  In the case of these two lessons, it is relatively easy to implement some virtual patches to address the vulnerability once you have knowledge about the exact attack vector parameter names (as evidenced by the rules in my previous email).  What would be great is to try and achieve the same level of protection without knowing the names of these parameters…
+
+In a real-world application, the approach of parsing the response bodies for hidden data values, storing it and then comparing it on subsequent requests has merit.  As I stated previously, it is not needed for the context of these two WebGoat lessons (as the issue is not with the first submittal of data but ones that come later), however in real applications there exists issues with altering hidden fields that go beyond replay attacks and can be a problem if the first person manipulates them.  In this case, you need to have some knowledge of outbound response body data so that you can enforce it when it comes back in.  Keep in mind that this technique is difficult to get right mainly due to the combination of needing a good parser along with the free text coding style of today’s Web 2.0 apps. 
+
+Following is an attempt to mimic what was done by the Lua scripts in this lesson.  I was able to implement an outbound response body inspection rule to identify/save HIDDEN data elements and then recheck on subsequent requests for the existence of the hidden parameter value name and ensure it matches what was originally sent out.  Here are the example rules:
+<pre>
+SecAction "phase:1,t:none,pass,setsid:%{REQUEST_COOKIES.JSESSIONID}, \
+setuid:%{session.username},initcol:global=global"
+
+SecRule ARGS:'/^user/' ".*" "phase:2,t:none,pass,nolog,noauditlog,capture, \
+setvar:session.username=%{TX.0},setuid:%{TX.0}"
+
+SecRule SESSION:HIDDEN_ARG_NAME "!^$" "chain,phase:2,t:none,log,auditlog, \
+deny,msg:'Hidden Parameter Manipulation.'"
+
+SecRule ARGS_POST_NAMES "@contains %{SESSION.HIDDEN_ARG_NAME}" "chain"
+
+SecRule REQUEST_BODY "!@contains %{SESSION.HIDDEN_ARG}" "t:none,t:lowercase"
+
+SecRule RESPONSE_BODY "<input.*name=[\"']?([\w\s]*)[\"']?[\s>]type=[\"']? \
+(hidden)[\"']?[\s>]value=[\"']?(\w*)[\"']\s?>" "phase:4,t:none,t:lowercase, \
+pass,nolog, capture,setvar:session.hidden_arg_name=%{tx.1}, \
+setvar:session.hidden_arg=%{tx.1}=%{tx.3}"
+</pre>
+
+This has not been tested rigorously for evasions, etc… but it seems to work well for the 4.4 and 4.5 lessons.  One possible limitation with these rules is that it may not work correctly if there were multiple outbound HIDDEN elements.

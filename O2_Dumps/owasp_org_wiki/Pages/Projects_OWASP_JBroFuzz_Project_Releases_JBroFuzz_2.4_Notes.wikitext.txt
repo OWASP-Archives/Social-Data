@@ -1,0 +1,14 @@
+'''Release Notes (2.4):'''
+
+* Commandline support - main class analyzing and executing the commandline options
+* Added --no-execute option to command line support 
+* Added "Connection: close" preference option to be added to the headers automatically
+* Massive UI revamp for Fuzzing Tab: Contains 3 Sub-Tabs: Input, Output, On the wire
+* Introduction of Fuzzing Transforms for those double-URL, triple-Base64 encodings
+* Added HTTP proxy support & authentication for checking updates
+* EncoderHashWindow improvements in keeping history within different row selections
+* Fixed ZBase32 Encoding/Decoding to work as Phil wants it to
+* Prefix/Suffix in Fuzzer Transforms: http://www.owasp.org/index.php/OWASP_JBroFuzz_Tutorial#Added_Fuzzer_Transformations
+* Added a plain-text encoder, similar to Zero-Fuzzer for theoretical completeness 
+* Fixed a bunch of supposed "security holes" reported by static analyzers
+* Small Oracle payloads update

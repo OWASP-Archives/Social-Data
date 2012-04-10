@@ -1,0 +1,99 @@
+==== Home ====
+
+{| width="100%"
+|-
+! width="66%" | 
+! width="33%" | 
+|- valign="top"
+| 
+Web application security is an essential component of any successful project, whether open source PHP applications, web services such as straight through processing, or proprietary business web sites. Hosters (rightly) shun insecure code, and users shun insecure services that lead to fraud. The aim of this Development Guide is to allow businesses, developers, designers and solution architects to produce secure web applications. If done from the earliest stages, secure applications cost about the same to develop as insecure applications, but are far more cost effective in the long run.
+
+Unlike other forms of security (such as firewalls and secure lockdowns), web applications have the ability to make a skilled attacker rich, or make the life of a victim a complete misery. At this highest level of the OSI software map, traditional firewalls and other controls simply do not help. The application itself must be self-defending. The Development Guide can help you get there. The Development Guide has been written to cover all forms of web application security issues, from old hoary chestnuts such as SQL Injection, through modern concerns such as AJAX, phishing, credit card handling, session fixation, cross-site request forgeries, compliance, and privacy issues.
+
+| 
+[[Image:Asvs-ad-where-at.png]]
+
+|}
+
+{| width="100%"
+|-
+! width="33%" | 
+! width="33%" | 
+! width="33%" | 
+|- valign="top"
+| 
+== Let's talk here  ==
+
+[[file:Asvs-bulb.jpg‎ ]]'''Development Guide Communities'''
+
+Further development of the Development Guide occurs through mailing list discussions and occasional workshops, and suggestions for improvement are welcome. For more information, please [mailto:owasp@owasp.org contact us].
+
+* [https://lists.owasp.org/mailman/listinfo/owasp-guide mailing list (this is the main list)]
+
+| 
+== Got Cycles? == 
+
+Work has begun on the next version of the Development Guide! Read all about it, [http://bit.ly/a5imj2 here]
+
+* Contributor Onboarding Instructions ([http://owasp-development-guide.googlecode.com/files/development-guide-contributing.pdf PDF])
+
+== Got Translation Cycles? == 
+
+The Development Guide project is always on the lookout for volunteers who are interested in translating the Development Guide into another language.
+
+* Translation Onboarding Instructions (Currently under development!)
+
+| 
+== Related resources ==
+
+[[file:Asvs-satellite.jpg‎ ]]'''OWASP Resources'''
+
+* [http://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project OWASP ASVS]
+* [http://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project OWASP Top Ten]
+* [http://www.owasp.org/index.php/Category:OWASP_Legal_Project OWASP Legal Project]
+* [http://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API OWASP ESAPI]
+* [http://www.owasp.org/index.php/Common_OWASP_Numbering OWASP Common Numbering]
+|}
+
+
+====Downloads==== 
+
+[[file:Asvs-step1.jpg‎ ]]'''1. About the Development Guide'''
+
+The Development Guide is aimed at architects, developers, consultants and auditors and is a comprehensive manual for designing, developing and deploying secure Web Applications and Web Services. The original OWASP Development Guide has become a staple diet for many web security professionals. Since 2002, the initial version was downloaded over 2 million times. Today, the Development Guide is referenced by many leading government, financial, and corporate standards and is the Gold standard for Web Application and Web Service security.
+
+* Project presentation in English (Currently under development!)
+* Data sheet in English (Currently under development!) 
+
+[[file:Asvs-step2.jpg‎ ]]'''2. Get the Development Guide'''
+
+* Development Guide 2010 in English (Currently under development!) ([http://code.google.com/p/owasp-development-guide/wiki/Introduction Wiki])
+* Development Guide 2005 in English ([http://prdownloads.sourceforge.net/owasp/OWASPGuide2.0.1.pdf?download PDF], [http://prdownloads.sourceforge.net/owasp/OWASPGuide2.0.1.zip?download Word], [[Guide_Table_of_Contents | Wiki]])
+* Development Guide 2005 in Spanish ([http://www.owasp.org/images/b/b2/OWASP_Development_Guide_2.0.1_Spanish.pdf PDF], [http://www.owasp.org/images/5/58/OWASP_Development_Guide_2.0.1_Spanish.doc Word])
+* Development Guide 2002 in Japanese ([http://prdownloads.sourceforge.net/owasp/OWASPGuideV1.1.1-jp.pdf?download PDF])
+* Development Guide (Earlier Versions) ([http://sourceforge.net/project/showfiles.php?group_id=64424&package_id=62287 file download center], [http://sourceforge.net/cvs/?group_id=64424 CVS])
+
+
+[[file:Asvs-step3.jpg‎ ]]'''3. Learn about using the Development Guide'''
+
+The Development Guide provides practical guidance and includes J2EE, ASP.NET, and PHP code samples. The Development Guide covers an extensive array of application-level security issues, from SQL injection through modern concerns such as phishing, credit card handling, session fixation, cross-site request forgeries, compliance, and privacy issues. 
+
+* Development Guide Articles (Please see below)
+
+
+====Glossary====
+
+[[file:Asvs-letters.jpg‎ ]]'''Development Guide Terminology'''
+
+* (Currently under development!)
+
+<!--- ==== Project Details ====
+{{:GPC_Project_Details/OWASP_Guide_Project | OWASP Project Identification Tab}} ---->
+
+
+==== Project About ====
+{{:Projects/OWASP Development Guide | Project About}}
+
+
+__NOTOC__
+<headertabs/>

@@ -1,0 +1,60 @@
+{{Top_10_2010:TopTemplate|useprev=2010PrevLink|usenext=2010NextLink|prev=A1-Injection|next=A3-Broken Authentication and Session Management}}
+
+<center>
+{| style="align:center; text-align:center; border:2px solid #4F81BD; background-color:#F2F2F2; padding=2;" 
+|- style="background-color: #4F81Bd; color: #FFFFFF;"
+! width="16.5%" | Threat Agents 
+! width="16.5%" | Attack Vectors
+! width="33%" colspan="2" | Security Weakness
+! width="16.5%" | Technical Impacts
+! width="16.5%" | Business Impacts
+|- 
+| style="background-color: #D9D9D9; color: #000000;" | ______
+| style="background-color: #FFB200; color: #000000;" | '''Exploitability<br>AVERAGE
+| style="background-color: #FF00FF; color: #000000;" | '''Prevalence<br>VERY WIDESPREAD
+| style="background-color: #FF0000; color: #000000;" | '''Detectability<br>EASY
+| style="background-color: #FFB200; color: #000000;" | '''Impact<br>MODERATE
+| style="background-color: #D9D9D9; color: #000000;" | ______
+|-valign="top"
+| style="text-align: left; border: 2px solid #FFFFFF;" | Consider anyone who can send untrusted data to the system, including external users, internal users, and administrators.
+| style="text-align: left; border: 2px solid #FFFFFF;" | Attacker sends text- based attack scripts that exploit the interpreter in the browser. Almost any source of data can be an attack vector, including internal sources such as data from the database.
+| colspan="2" style="text-align: left;border: 2px solid #FFFFFF;" | [[Cross-site_Scripting_(XSS) | XSS]] is the most prevalent web application security flaw. XSS flaws occur when an application includes user supplied data in a page sent to the browser without properly validating or escaping that content. There are three known types of XSS flaws: 1) [[Cross-site_Scripting_(XSS)#Stored_XSS_Attacks | Stored]], 2) [[Cross-site_Scripting_(XSS)#Reflected_XSS_Attacks | Reflected]], and 3) [[DOM_Based_XSS | DOM based XSS]].
+
+Detection of most XSS flaws is fairly easy via testing or code analysis.
+| style="text-align: left; border: 2px solid #FFFFFF;" | Attackers can execute scripts in a victim’s browser to hijack user sessions, deface web sites, insert hostile content, redirect users, hijack the user’s browser using malware, etc.
+| style="text-align: left; border: 2px solid #FFFFFF;" | Consider the business value of the affected system and all the data it processes.
+
+Also consider the business impact of public exposure of the vulnerability.
+|}
+</center>
+{{Top_10_2010:SubsectionAdvancedTemplate|type=box|number=1|risk=1}}
+You need to ensure that all user supplied input sent back to the browser is verified to be safe (via input validation), and that user input is properly escaped before it is included in the output page. Proper output encoding ensures that such input is always treated as text in the browser, rather than active content that might get executed.
+
+Both static and dynamic tools can find some XSS problems automatically. However, each application builds output pages differently and uses different browser side interpreters such as JavaScript, ActiveX, Flash, and Silverlight, which makes automated detection difficult. Therefore, complete coverage requires a combination of manual code review and manual penetration testing, in addition to any automated approaches in use.
+
+Web 2.0 technologies, such as AJAX, make XSS much more difficult to detect via automated tools.
+{{Top_10_2010:SubsectionAdvancedTemplate|type=box|number=2|risk=1}}
+Preventing XSS requires keeping untrusted data separate from active browser content.
+# The preferred option is to properly escape all untrusted data based on the HTML context (body, attribute, JavaScript, CSS, or URL) that the data will be placed into. Developers need to include this escaping in their applications unless their UI framework does this for them. See the [[XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet | OWASP XSS Prevention Cheat Sheet]] for more information about data escaping techniques.
+# Positive or “whitelist” input validation with appropriate canonicalization and decoding is also recommended as it helps protect against XSS, but is <u>not a complete defense</u> as many applications require special characters in their input. Such validation should, as much as possible, decode any encoded input, and then validate the length, characters, format, and any business rules on that data before accepting the input.
+{{Top_10_2010:SubsectionAdvancedTemplate|type=box|number=3|risk=1}}
+The application uses untrusted data in the construction of the following HTML snippet without validation or escaping:
+The attacker modifies the ‘CC’ parameter in their browser to:
+
+This causes the victim’s session ID to be sent to the attacker’s website, allowing the attacker to hijack the user’s current session.
+
+Note that attackers can also use XSS to defeat any automated CSRF defense the application might employ. See [[Top_10_2010-A5 | A5 for info on CSRF]].
+{{Top_10_2010:SubsectionAdvancedTemplate|type=box|number=4|risk=1}}
+{{Top_10_2010:SubSubsectionOWASPReferencesTemplate}}
+* [[XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet | OWASP XSS Prevention Cheat Sheet]]
+* [[Cross-site_Scripting_(XSS) | OWASP Cross-Site Scripting Article]]
+* [[ESAPI | ESAPI Project Home Page]]
+* [http://owasp-esapi-java.googlecode.com/svn/trunk_doc/latest/org/owasp/esapi/Encoder.html ESAPI Encoder API]
+* [http://www.owasp.org/index.php/ASVS#tab=Downloads ASVS: Output Encoding/Escaping Requirements (V6)]
+* [http://www.owasp.org/index.php/ASVS#tab=Downloads ASVS: Input Validation Requirements (V5)]
+* [[Testing_for_Data_Validation | Testing Guide: 1st 3 Chapters on Data Validation Testing]]
+* [[Reviewing_Code_for_Cross-site_scripting | OWASP Code Review Guide: Chapter on XSS Review]]
+{{Top_10_2010:SubSubsectionExternalReferencesTemplate}}
+* [http://cwe.mitre.org/data/definitions/79.html CWE Entry 79 on Cross-Site Scripting]
+* [http://ha.ckers.org/xss.html RSnake's XSS Attack Cheat Sheet]
+{{Top_10_2010:BottomAdvancedTemplate|type=box|useprev=2010PrevLink|usenext=2010NextLink|prev=A1-Injection|next=A3-Broken Authentication and Session Management}}

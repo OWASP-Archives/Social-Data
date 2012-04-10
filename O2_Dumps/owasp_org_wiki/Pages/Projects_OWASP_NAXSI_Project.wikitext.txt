@@ -1,0 +1,62 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Project About</noinclude>
+
+| project_name = OWASP NAXSI Project 
+
+| project_home_page = OWASP NAXSI Project
+
+| project_description = *Naxsi (Nginx Anti Xss Sql Injection) is an open source, high performance, low rules maintenance, Web Application Firewall module for Nginx, the infamous web server and reverse-proxy.
+
+*Its goal is to help people securing their web applications against attacks like SQL Injections, Cross Site Scripting, Cross Site Request Forgery, Local & Remote file inclusions.
+
+*The difference with most WAF (Web Application Firewalls) out there is that it does not rely upon signatures to detect and block attacks. It uses a simpler model where, instead of trying to detect "known" attacks, it detects unexpected characters in the HTTP requests/arguments.
+
+*Each kind of unusual character will increase the score of the request. If the request reaches a score considered "too high", the request will be denied, and the user will be redirected to a "forbidden" page. Yes, it works somewhat like a spam system.
+
+
+| project_license = [http://www.gnu.org/licenses/gpl-2.0.html GPL 2.0]
+
+| leader_name1 = Thibault "bui" Koechlin
+| leader_email1 =  bui@nbs-system.com
+| leader_username1 = Thibault Koechlin
+
+| contributor_name1 = Sebastien Blot 
+| contributor_email1 = 
+| contributor_username1 = 
+
+| contributor_name2 = Antonin Le Faucheux
+| contributor_email2 = 
+| contributor_username2 = 
+
+| contributor_name3 = Didier Conchaudron
+| contributor_email3 = 
+| contributor_username3 =
+
+| contributor_name4 = Sofian Brabez
+| contributor_email4 = 
+| contributor_username4 = 
+
+| pamphlet_link = 
+
+| presentation_link =
+
+| mailing_list_name = https://lists.owasp.org/mailman/listinfo/owasp-naxsi-project
+
+| project_road_map = https://www.owasp.org/index.php/Projects/OWASP_NAXSI_Project/Roadmap
+
+| links_url1 = http://code.google.com/p/naxsi/
+| links_name1 =Naxsi's at code.google.com
+
+| links_url2 = https://www.owasp.org/index.php/GPC_Project_Assessment/OWASP_NAXSI_Project/Naxsi-alpha-v0.43
+| links_name2 =Release's (Naxsi-alpha-v0.43) Assessment Process Control
+
+| links_url[3-10] = 
+| links_name[3-10] = 
+
+| release_1 =  Naxsi-0.41
+| release_2 =  Naxsi-0.42
+| release_3 =  Naxsi-0.43
+
+<!--- The line below is for GPC usage only. Please do not edit it --->
+| project_about_page = Projects/OWASP NAXSI Project
+
+}}

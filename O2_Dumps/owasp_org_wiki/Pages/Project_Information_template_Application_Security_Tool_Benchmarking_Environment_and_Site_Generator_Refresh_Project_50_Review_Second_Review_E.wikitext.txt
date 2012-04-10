@@ -1,0 +1,36 @@
+[[Project Information:template Application Security Tool Benchmarking Environment and Site Generator Refresh Project|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#P003/P013 - OWASP Application Security Tool Benchmarking Environment and Site Generator refresh.=|OWASP Application Security Tool Benchmarking Environment and Site Generator refresh Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#P003/P013 - OWASP Application Security Tool Benchmarking Environment and Site Generator refresh.=|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| The UI has been created and is usable minus a few bugs that were found and sent along to Dmitry.  The UI is a lot easier to work with then the previous version and should work well once the back-end code is written.  
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#P003/P013 - OWASP Application Security Tool Benchmarking Environment and Site Generator refresh.=|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|  I would say the project is about 50% of the way done.  The UI is pretty much complete.  
+ |- 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| Here are the suggestions I passed on to Dmitry:
+* During the install there is no option to add a shortcut to the desktop
+* From the install the name of the program is Sitegen yet when you run the program the title is SiteGenerator 2.0 we should keep these values similar 
+* When you expand the window the inner frames do not expand with it (good job on handling the case of making the window smaller though, that can't be done leading to no mashed up UI).
+* You can add invalid directory path and the program does not correct you which leads to invalid directory paths when you hit generate
+* You can add in a blank role in the "Access Control" tab when you are creating a new site.
+* If a large number of directories and or files are specified the application locks up (or at least appears to).  I put 26000+ for each field and the application went bye-bye.  We should set a maximum range (I noticed there was a minimum range which was good).
+* There is no clear way to modify the access control
+*
+* As of 3/15/2009 these issues have all been fixed.
+|}

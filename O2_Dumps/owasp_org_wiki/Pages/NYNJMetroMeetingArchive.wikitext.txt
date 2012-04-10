@@ -1,0 +1,35 @@
+This is the meeting archive for the [[NYNJMetro]] Chapter.
+
+== November 2nd, 2010 @ KPMG ==
+
+'''Meeting Sponsors(s): ''' [http://www.proactiverisk.com http://www.owasp.org/images/7/71/Proactiverisk.jpg]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[https://www.isecpartners.com http://www.owasp.org/images/8/8b/Isec_logo.gif]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[http://www.protiviti.com http://www.owasp.org/images/c/cf/Protiviti.jpg]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[http://www.aspectsecurity.com http://www.owasp.org/images/c/c1/Aspect_logo_owasp.jpg]<br>[http://www.kpmg.com http://www.owasp.org/images/d/de/Kpmglogo.jpg]&nbsp;&nbsp;&nbsp;&nbsp;[http://www.veracode.com http://www.owasp.org/images/4/43/AppSecDC2009-Sponsor-veracode.gif]&nbsp;&nbsp;&nbsp;&nbsp;[http://www.fishnetsecurity.com http://www.owasp.org/images/e/ea/Fishnet_Security.gif]&nbsp;&nbsp;&nbsp;&nbsp;[http://www.artofdefence.com http://www.owasp.org/images/f/fd/Artofdefense.jpg]&nbsp;&nbsp;&nbsp;&nbsp;[http://www.netspi.com http://www.owasp.org/images/d/d5/NetSpi_logo.png]
+
+=== Much Ado about Randomness, Aleksandr Yampolskiy === 
+Access to random bits is required by almost every security protocol. A common assumption in cryptography is that all parties have access to a perfect random source. Then we can prove that RC4 encryption is unbreakable, signatures are unforgeable, SSL is secure, and life is good. In pratice, the situation is quite different as demonstrated by exploits of WEP wireless protocol, Netscape 1.1 SSL keys, and sabotage of Kerberos 4 secret keys. In this talk, we will try to bridge the gap between theory and practice. We will explain what it means for a number to be "securely random", and show common mistakes that people make when generating random numbers in their programs. We will demonstrate how BurpSuite and WebScarab proxies can be used to break predictable session IDs. We will also demonstrate some custom tools for finding programs that use poor sources of randomness.
+
+=== Groundspeed: Manipulating Web Application Interfaces, Felipe Moreno ===
+This talk will suggest a new approach for web application input validation testing and demonstrate [http://groundspeed.wobot.org/ Groundspeed], an open-source Firefox extension that manipulates the interface of web applications in order to make the life of the security tester easier. Groundspeed allows the penetration tester to modify the application user interface by manipulating the forms and form elements, eliminating annoying limitations and client-side controls.
+
+=== Escaping the Sandbox, Stephen Ridley ===
+As many had predicted, 2010 is quickly becoming the "year of the sandbox" due to their rapid adoption by software vendors for highly-exposed COTS products. There have been several talks at popular security conferences discussing the subversion or evasion of these sandbox technologies, however, very few actual code samples or tools have been released to date. In this presentation I discuss actual code samples from common sandbox implementations, such as the one found in the widely-deployed Google Chrome browser, and I introduce my own suite of tools, [http://s7ephen.github.com/SandKit/ SandKit], for the analysis of sandbox implementations.
+
+=== Memory Corruption, Exploitation, and You, Dino Dai Zovi ===
+This is a high-level talk covering several philosophical areas related to memory corruption vulnerabilities, advanced persistent threats (APTs), and the handling of security vulnerabilities.  What differentiates this talk from many others like it, is that the speaker has actually discovered a good number of vulnerabilities and written exploits for them and many more.  In addition, the speaker has used his own privately discovered and exploited vulnerabilities in highly-successful penetration tests against large enterprises, simulating the actions of an advanced targeted attack.  This talk distills a number of lessons learned from these experiences that attendees may use in defending their networks.
+
+== August 9th, 2010 @ KPMG ==
+
+'''Meeting Sponsor(s):''' [http://www.proactiverisk.com http://www.owasp.org/images/7/71/Proactiverisk.jpg]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[https://www.isecpartners.com http://www.owasp.org/images/8/8b/Isec_logo.gif]<br>[http://www.kpmg.com http://www.owasp.org/images/d/de/Kpmglogo.jpg]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[http://www.aspectsecurity.com http://www.owasp.org/images/c/c1/Aspect_logo_owasp.jpg] <br>
+
+=== Using the [[OWASP O2 Platform]] to consume OWASP projects, [http://uk.linkedin.com/pub/dinis-cruz/5/742/233 Dinis Cruz] ===
+
+This presentation will focus on how to consume the OWASP Wiki and a number of OWASP projects using the OWASP O2 Platform. The O2 Platform provides powerful support and automation capabilities for both BlackBox and WhiteBox analysis and this presentation will provide examples on how to use O2 with: WebGoat, WebScarab, Code Crawler, Dir Buster,  Testing Guide, Code Review Guide and OpenSAMM.
+
+The O2 Platform is focused on automating application security knowledge and workflows. It is specifically designed for developers and security consultants to be able to perform quick, effective and thorough 'source-code-driven' application security reviews (BlackBox + WhiteBox). In addition to the manual findings created/discovered by security consultants, the OWASP O2 Platform allows the easy consumption of results from multiple OWASP  projects and commercial scanning tools. This allows security consultants to find, exploit and automate (via Unit Tests) security vulnerabilities usually dismissed by the community as impossible to find/recreate. More importantly, it provides the Security Consultants a mechanism to: a) 'talk' with developers (via UnitTest) ,  b) give developers a way to replicate + "check if it's fixed" the vulnerabilities reported and c) engage on a two-way conversion on the best way to fix/remediate those vulnerabilities.
+
+=== Hacker Jeopardy w/ [http://www.linkedin.com/in/danguido Dan Guido] === 
+
+This fun quiz following the well known inverted answer-question scheme. 
+We will have prizes to hand out and drawings for raffles (must be present to win)
+
+=== Cloudy with a Chance of Rain, [http://www.linkedin.com/pub/greg-shipley/2/222/234 Greg Shipley] ===
+As cloud computing craze plows forward, many security and risk teams have identified the need to balance the risks with the (potential) rewards. As part of a series of articles for Information Week magazine, Greg Shipley has surveyed over 500 organizations on cloud computing concerns and adoption practices. Greg will present some of these data-backed findings, provide some no-nonsense advice on how to manage SaaS, PaaS, and IaaS related risks, and suggest some methods of navigating the business and risk dilemmas that we will inevitably face as we move forward

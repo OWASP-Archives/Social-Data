@@ -1,0 +1,31 @@
+----
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP JSP Testing Tool Project''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|The goal of this project is to create an easy to use, freely available tool that can be used to quickly ascertain the level of protection that each component of a JSP tag library offers. This information can serve two purposes: <ol><li>It provides a means for projects to create a coding standard. By identifying which components are safe or unsafe, a project can establish a preference order of useable components. For those components identified as unsafe, extra security requirements can be imposed on any pages using those components</li><li>It provides tag library providers development guidance. Providers can target security enhancements to the components that are most susceptible to cross-site scripting attacks. They can also use these results to demonstrate their performance relative to other competing tag libraries. It also provides feedback for developers that create small custom tag libraries for internal development usage.
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Short Project Description'''
+ | style="width:14%; background:#cccccc" align="center"|[[User:Jason Li|'''Jason Li''']]
+ | style="width:14%; background:#cccccc" align="center"|Project Contributors<br>'''N/A'''
+ | style="width:14%; background:#cccccc" align="center"|Mailing List<br>[https://lists.owasp.org/mailman/listinfo/owasp-jsp-testing-tool-project '''Subscribe here''']<br>[mailto:owasp-jsp-testing-tool-project(at)lists.owasp.org '''Use here''']
+ | style="width:14%; background:#cccccc" align="center"|License<br>[http://www.opensource.org/licenses/bsd-license.php ''' 	 New BSD License''']
+ | style="width:14%; background:#cccccc" align="center"|Project Type<br>[https://www.owasp.org/index.php/Category:OWASP_Project#tab=Alpha_Status_Projects '''Tool''']
+ | style="width:15%; background:#cccccc" align="center"|Sponsors<br>[[OWASP Summer of Code 2008|'''OWASP SoC 08''']] 
+ |}
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|
+'''[[:Category:OWASP_Project_Assessment#Alpha_Quality_Tool_Criteria|Apha Quality]]'''<br>[[:JSP Testing Tool Project - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="center"|
+[http://code.google.com/p/owasp-jsp-testing-tool/ Google Code Home]
+ | style="width:29%; background:#cccccc" align="center"|
+If any, add link here
+ |}
+----

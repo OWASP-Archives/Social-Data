@@ -1,0 +1,59 @@
+{{Template:SecureSoftware}}
+
+==Overview==
+
+Purpose:	
+
+* Communicate potential risks to stakeholder.
+
+*	Communicate rationale for security-relevant decisions to stakeholder.
+
+Role:
+
+* Requirements Specifier
+
+Frequency:
+
+* As required; typically occurring multiple times per iteration, and most frequently in Inception and Elaboration iterations
+
+
+
+==Identify misuse cases ==
+
+Misuse cases are identical to use cases, except that they are meant to detail common attempted abuses of the system. Like use cases, misuse cases require understanding the actors that are present in the system. Those actors should be mapped to capabilities, if possible. Misuse cases should be designed for each actor, and one should also consider uses cases for nefarious collaborating actors.
+
+As with normal use cases, one should expect misuse cases to require adjustment over time. Particularly, it is common to start with high-level misuse cases, and refine them as the details of the system are better understood.
+
+Determining misuse cases generally constitutes a brainstorming activity. There are three good starting points for structured brainstorming:
+
+*	 First, one can start with a pre-existing knowledge base of common security problems and determine whether an attacker may have cause to think such a vulnerability is possible in the system. Then, one should attempt to describe how the attacker will leverage the problem if it exists.
+
+*	Second, one can brainstorm on the basis of a list of system resources. For each resource, attempt to construct misuse cases in connection with each of the basic security services: authentication, confidentiality, access control, integrity, and availability.
+
+*	Third, one can brainstorm on the basis of a set of existing use cases. This is a far less structured way to identify risks in a system, yet is good for identifying representative risks and for ensuring the first two approaches did not overlook any obvious threats. Misuse cases derived in this fashion are often written in terms of a valid use and then annotated to have malicious steps.
+
+==Describe misuse cases ==
+
+A system will have a number of predefined roles, and a set of attackers that might reasonably target instances of the system under development. These together should constitute the set of actors that should be considered in misuse cases. 
+
+As with traditional use cases, you should establish which actors interact with a use case - and how they do so - by showing a communicates-association. Also as traditionally done, one can divide use cases or actors into packages if they become too unwieldy.
+
+Important misuse cases should be represented visually, in typical use case format, with steps in a misuse set off (e.g., a shaded background), particularly when the misuse is effectively an annotation of a legitimate use case.
+
+Those misuse cases that are not depicted visually but are still important to communicate to the user should be documented, as should any issues not handled by the use case model.
+
+==Identify defense mechanisms for misuse cases ==
+
+As one identifies defense mechanisms for various threats specified in a use case model, one should update the use case model to illustrate the defense mechanism. If there is no identified mechanism at a particular point in time, the use case should be annotated to say so. 
+
+Defense mechanisms either should map directly to a functional requirement, or, if the defense mechanism is user-dependent, to an item in an operational security guide.
+
+==Evaluate results with stakeholders ==
+
+Review and discuss the misuse case with stakeholders, so that they have a clear understanding of the misuse case and agree that it is an adequate reflection of their requirements.
+
+
+[[Category:Activity]]
+[[Category:CLASP Activity]]
+[[Category:BP3 Capture security requirements]]
+[[Category:OWASP_CLASP_Project]]

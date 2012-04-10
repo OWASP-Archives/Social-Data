@@ -1,0 +1,38 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>OWASP Training Modules</noinclude>
+| Module_designation = [[:OWASP AppSensor Project|OWASP AppSensor Project]]
+| Module_Overview_Goal = 
+The AppSensor project defines a conceptual framework and methodology that offers prescriptive guidance to implement intrusion detection and automated response into an existing application. Current efforts are underway to create the AppSensor tool which can be utilized by any existing application interested in adding detection and response capabilities.
+
+There is one resource specifically created for this training:
+* [http://www.owasp.org/index.php/File:Owasp-training-2011-appsensor-slides.pdf Presentation]
+
+
+| Content = 
+&nbsp;
+'''Detection'''
+AppSensor defines over 50 different detection points which can be used to identify a malicious attacker.
+
+'''Response'''
+AppSensor provides guidance on how to respond once a malicious attacker has been identified. Possible actions include: logging out the user, locking the account or notifying an administrator. More than a dozen response actions are described.
+
+'''Defending the Application'''
+An attacker often requires numerous probes and attack attempts in order to locate an exploitable vulnerability within the application. By using AppSensor it is possible to identify and eliminate the threat of an attacker before they are able to successfully identify an exploitable flaw. 
+
+&nbsp;
+| Material = 
+[http://www.owasp.org/index.php/AppSensor_Developer_Guide AppSensor & ESAPI Developer's Guide]<br>
+[http://code.google.com/p/appsensor/source/browse/trunk/AppSensor-Tutorial/ AppSensor Tutorial]<br>
+[https://www.owasp.org/images/2/2f/OWASP_AppSensor_Beta_1.1.pdf Download AppSensor Book - PDF]<br>
+[https://www.owasp.org/images/b/b0/OWASP_AppSensor_Beta_1.1.doc Download AppSensor Book - Word]<br>
+[http://www.brighttalk.com/webcast/20680 Automated Application Defenses to Thwart Advanced Attackers]<br>
+[https://www.owasp.org/index.php/File:Appsensor-pid.pdf AppSensor Diagram]<br>
+[http://www.youtube.com/watch?v=8ItfuwvLxRk Live Demo]<br>
+[http://code.google.com/p/appsensor/ AppSensor Code]<br>
+
+&nbsp;
+}}
+
+
+
+
+[[Category:OWASP_Training|Training]]

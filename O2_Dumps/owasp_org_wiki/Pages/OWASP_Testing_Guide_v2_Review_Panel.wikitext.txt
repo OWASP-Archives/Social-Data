@@ -1,0 +1,251 @@
+[[http://www.owasp.org/index.php/OWASP_Testing_Guide_v2_Table_of_Contents Table of Contents]]
+
+
+Update: 4th December, 23.00 (GMT+1)<br>
+
+<nowiki>
+**********************
+</nowiki><br>Reviewing planning<br>
+<nowiki>
+**********************
+</nowiki><br>
+
+The reviewers are:
+Mark Roxberry,
+Alberto Revelli,
+Daniel Cuthbert,
+Antonio Parata,
+Matteo G.P. Flora,
+Matteo Meucci,
+Eoin Keary,
+Stefano Di Paola,
+James Kist,
+Vicente Aguilera,
+Mauro Bregolin,
+Syed Mohamed A,
+Paul Davies
+
+* II phase reviewing
+
+<nowiki>
+*********************************************************
+</nowiki><br>Here is the complete list of articles to be reviewed: <br>
+<nowiki>
+*********************************************************
+</nowiki>
+
+
+----
+* '''Introduction --> reviewed by Eoin Keary'''
+'''[OK]'''
+
+
+----
+* '''The OWASP Testing Framework -->...'''
+1 of 1 article to be reviewed (Daniel doing this)
+
+
+----
+* '''4.1 Introduction and objectives -->.EK'''
+'''[OK]'''
+
+----
+* '''4.2 Information Gathering (Reviewed by EK) --> Keary'''
+9 of 10 articles reviewed -> <BR> 
+* '''Testing Web Application Fingerprint''' -added new article
+** (Reviewed by JK) - Corrected the English in the "Brief Summary" section. Added "Description of the Issue". In the Black-Box testing section, is it necessary to show all of the different web server versions? This information is just repeated from the referenced whitepaper. If we are going to do that, should we also include output from newer versions, such as IIS 6.0, Apache 1.3.37, Apache 2.x, etc.? 
+* '''Application Discovery''': 
+** Reviewed + updated(EK) (Maybe we should include HTTP methods for application descovery, such as HTTP HEAD command?)<BR>
+** (Bregolin) If you are referring to things such as "fingerprinting", it was hinted - and I personally agree on this - to create a new section on Web application fingerprinting. There's however a bit of overlap with Infrastructure configuration management testing
+* '''Analysis of error codes''': 
+** Reviewed + updated(EK) <BR>
+** Besides the own error, it would be necessary to speak about the voluntary provocation of errors? (Vicente). Two examples: <BR>
+*** Example 1: Type error. (original): ?id=276 (test): ?id=X <BR>
+*** Example 2: Type conversion error. (original): ?id=276 (test): ?id=276 and 1 in (select top 1 name from sysobjects) <BR>
+** (Bregolin) Agree with the above. A testing methodology should be formalized, i.e. tester should verify if it is possible to cause information disclosure in error or diagnostic messages by tampering with user-alterable input using a set of techniques (such as type mismatch, overflow/underflow, excess input length, various forms of injection, ...)
+* '''Infrastructure configuration management testing AoC''': 
+** Reviewed by EK. '''Not in typical guide structure -> (MM: I've changed the structure)'''<BR>
+* '''SSL/TLS Testing AoC''': 
+** Reviewed + updated(EK). '''(Reviewed by MM: changed the structure)'''<BR>
+* '''DB Listener Testing''': 
+** '''Complete + reviewed'''<BR>
+* '''Application configuration management testing''': 
+** (Reviewed by JK). For Blackbox testing examples specific to IIS, refer to http://www.nextgenss.com/papers/iisrconfig.pdf. I think we should add an automated testing section, and reference tools such as Nikto, Wikto, and others.
+** Reviewed by EK. '''Not typical guide structure -> (MM: I've changed the structure)'''
+** ''Sample/known files and directories'': might be good to refer to http://www.owasp.org/index.php/Old_file_testing_AoC ??
+** ''Logging'': Timestamp is also important
+* '''File extensions handling'''<BR>
+** contains the text: "''...To review and expand...''" - '''Is this complete??'''
+** '''Need a second opinion on this one...(MM yes it is complete)'''
+* '''Old file testing''': Reviewed by EK
+<BR>
+
+----
+* '''4.3 Business logic testing --> Meucci'''
+1 of 1 article reviewed 
+'''[OK]'''
+
+----
+* '''4.4 Authentication Testing --> Roxberry (articles have been edited)'''
+0 of 7 articles to be reviewed 
+'''[OK]'''
+** 4.4 Authentication Testing (95%) : Reviewed by MR, Paul Davies to push to 100%
+** 4.4.1 Default or guessable (dictionary) user account (80%) : Reviewed by MR 
+** 4.4.2 Brute Force (95%) : Reviewed by MR
+** 4.4.3 Bypassing authentication schema (95%) : Reviewed by MR 
+** 4.4.4 Directory traversal/file include (100%) : Reviewed by MR 
+** 4.4.5 Vulnerable remember password and pwd reset (90%) Reviewed by MR
+** 4.4.6 Logout and Browser Cache Management Testing (100%) Reviewed by MR
+
+----
+* '''4.5 Session Management Testing --> Syed Mohamed A'''
+5 of 6 articles to be reviewed  
+** 4.5 Session Management Testing (95%->100%) (daniel reviewing)
+** 4.5.1 Analysis of the Session Management Schema (90%->100%) (daniel reviewing)
+** 4.5.2 Cookie and Session token Manipulation (100%) (daniel reviewing)
+** 4.5.3 Exposed session variables (90%->100%) (daniel reviewing)
+** 4.5.4 Session Riding (XSRF) (80%->100%) (daniel reviewing)
+** 4.5.5 HTTP Exploit (0%) (daniel reviewing)
+
+----
+* '''4.6 Data Validation Testing --> Meucci'''
+18 articles reviewed
+'''[OK]'''
+** 4.6 Data Validation Testing : Reviewed by EK
+*** (Bregolin) begin
+*** [Note: Haven't committed the following since that would imply a substantial rewrite, let's see what others think]
+*** I think that this section should first categorize what constitutes input for a web application. (Which allows to identify what must be tested, and how). i.e., obviously input fields, hidden fields, HTTP headers (such as Referer, cookies), HTTP methods etc.
+*** There are other kinds of injection, such as CRLF injection.
+*** SQL Injection affects SQL statements, and not queries (though usually that's the case)
+*** It should be stressed that the main reason to perform data validation is to prevent application faults, i.e. unexpected behavior, that is violation of (security) requirements. Regardless of the categories of vulnerabilities listed, an application should (actually must!) verify all input against: type, length, range or domain validity. "Bad" input may not cause any of the listed vulnerabilities yet cause the application to misbehave, if it is not checked (possibly causing DoS or violating data integrity or confidentiality).
+*** (Bregolin) end
+** 4.6.1 Cross site scripting: Reviewed by EK (Reformatted it slightly with wiki tags). '''Completed and reviewed by MM)
+*** Reviewed by SDP. Some thought about content structure: 
+***:As it is a testing guide, any other information about how to sanitize input should be referenced to Owasp Data Validation Project (no redundancy). Approach in testing section could be more schematic.
+***:A kind of:
+**** Special characters entities etc.
+**** Context Dependent characters (an intro)
+**** How to search for Reflected, stored and DOM vulnerabilities.
+**** Non obvious injections (Administrative pages or non obvious pages) and second order injections (at least a small intro and/or a whitepaper/reference to incubated flaws).
+** 4.6.1.1 HTTP Methods and XST Reviewed by MM. Reviewed by AP.
+** 4.6.2 SQL Injection (90%->100%) Reviewed by MM. Reviewed by EK.
+*** Not sure about "inferential" injection definition in "Description of Issue"
+*** Added some reference to Oracle. Corrected English.
+** 4.6.2.1 Stored procedure injection (40%) '''Merged in Testing SQL Injection section, MM'''
+**4.6.2.2 Oracle testing (100%) 
+** 4.6.2.3 MySQL testing (100%) Reviewed by MM
+** 4.6.2.4 SQL Server testing (100%) Reviewed by MM. Reviewed by AR.
+** 4.6.3 LDAP Injection (100%) Reviewed by MM added wp and tools
+** 4.6.4 ORM Injection (100%) Reviwed by MM. 
+** 4.6.5 XML Injection (90%->100%) Reviwed and updated by MM. 
+** 4.6.6 SSI Injection (95%->100%) Reviewed by MM 
+** 4.6.7 XPath Injection (80%) Reviewed by MM. 
+** 4.6.8 IMAP/SMTP Injection (95%->100%)Reviewed by MM 
+** 4.6.9 Code Injection (100%) Reviewed by MM. 
+** 4.6.10 OS Commanding (100%) Reviewed by MM + added an example
+** 4.6.11 Buffer overflow Testing (100%) Reviewed by MM. '''Note: these tests are not usual web app tests'''
+*** (Bregolin) The point is that these are not black box tests, so where they are now they are misplaced
+** 4.6.11.1 Heap overflow (100%) Reviewed by MM
+** 4.6.11.2 Stack overflow (100%)Reviewed by MM
+** 4.6.11.3 Format string (100%)Reviewed by MM
+** 4.6.12 Incubated vulnerability testing (95%) Reviewed by MM
+
+----
+
+
+* '''4.7 Denial of Service Testing--> Revelli'''
+8 of 8 articles Reviewed
+'''[OK] - To do the References'''
+** 4.7 Denial of Service Testing 100% Reviewed by Revelli
+** 4.7.1 Locking Customer Accounts 100% Reviewd by Revelli
+** 4.7.2 Buffer Overflows 100% Reviewd by Revelli
+** 4.7.3 User Specified Object Allocation 100% Reviewd by Revelli
+** 4.7.4 User Input as a Loop Counter 100% Reviewd by Revelli
+** 4.7.5 Writing User Provided Data to Disk 100% Reviewd by Revelli
+** 4.7.6 Failure to Release Resources 100% Reviewd by Revelli
+** 4.7.7 Storing too Much Data in Session 100% Reviewd by Revelli
+
+----
+* '''4.8 Web Services Testing --> Matteo Meucci'''
+6 of 6 articles reviewed
+'''[OK]'''
+** 4.8 Web Services Testing (100%) Reviewed by Meucci
+** 4.8.1 XML Structural Testing (100%) Reviewed by Meucci
+** 4.8.2 XML content-level Testing (90%->100%) Reviewed by Meucci
+** 4.8.3 HTTP GET parameters/REST Testing (100%) Reviewed by Meucci
+** 4.8.4 Naughty SOAP attachments (95%->100%) Reviewed by Meucci
+** 4.8.5 Replay Testing (95%->100%) Reviewed by Meucci. 
+
+----
+* '''4.9 AJAX Testing --> Roxberry'''
+3 of 3 articles to be reviewed 
+** 4.9 AJAX Testing (70%)
+** 4.9.1 Vulnerabilities (60%)
+** 4.9.2 How to test (60%)
+
+----
+* '''5. Writing Reports: value the real risk'''
+We have to write about it. 
+** 5.1 How to value the real risk -> Reviewed by EK (Great!!)
+** 5.2 How to write the report of the testing - > Reviewed by EK (Great also).
+*** Should we include putting positive findings into a report as well as vulnerabilities?
+*** Link to "Analysis of error codes" spelling mistake..
+
+
+----
+* '''Appendix A: Testing Tools -->Review and updated by Meucci'''
+ok
+
+----
+* '''Appendix B: Suggested Reading -->...'''
+ok
+
+----
+* '''Appendix C: Fuzz Vectors --> Stefano Di Paola, Subere '''
+ok. 
+Some other fuzz vectors could be added. <br>
+How about every author to add his specific fuzz vector section?<br>
+[Meucci] Good idea. I think that we have not to write a brief description of each fuzz vectors (this is an appendix).
+Example: 
+ 
+LDAP Injection: <br>
+
+<nowiki>*)(|%26<br>
+... </nowiki>
+
+
+----
+
+<nowiki>
+*************************
+</nowiki><br>
+Reviewers  Rules <br>
+<nowiki>
+*************************
+</nowiki>
+
+1) Check the english language<br>
+2) Check the template: the articles on chapter 4 should have the following:<br>
+
+* Template (http://www.owasp.org/index.php/Template_Paragraph_Testing_AoC)
+
+In some articles we don't need to talk about Gray Box Testing or other, so we can eliminate it.
+
+3) Check the reference style. (I'd like to have all the referenced URLs visible because I have to produce also a pdf document of the Guide).
+I agree with Stefano, we have to use a reference like that:
+
+<nowiki>== References ==</nowiki>
+
+<nowiki>'''Whitepapers'''<br></nowiki>
+
+<nowiki>* [1] Author1, Author2: "Title" - http://www.ietf.org/rfc/rfc2254.txt<br></nowiki>
+
+<nowiki>* [2]...<br></nowiki>
+
+<nowiki>'''Tools'''<br></nowiki>
+
+<nowiki>* Francois Larouche: "Multiple DBMS Sql Injection tool" - http://www.sqlpowerinjector.com/index.htm <br></nowiki>
+
+4) Check the reference with the other articles of the guide or with the other OWASP Project.
+
+5) Other?

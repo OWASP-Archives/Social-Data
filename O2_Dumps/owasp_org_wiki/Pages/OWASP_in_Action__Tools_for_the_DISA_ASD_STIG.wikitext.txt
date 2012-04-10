@@ -1,0 +1,18 @@
+== The presentation  ==
+
+[[Image:Owasp_logo_normal.jpg|right]]In April 2010, the Defense Information Systems Agency (DISA) released Version 3 of its Application Security and Development (ASD) Security Technical Implementation Guide (STIG). The ASD STIG is a series of application security requirements that apply to "all DoD developed, architected, and administered applications and systems connected to DoD networks." This presentation talks about the various [[Category:OWASP Project| OWASP Projects]] that can be used to help fulfill these requirements. This presentation is given as part of [[OWASP Software Assurance Day DC 2010 | OWASP Software Assurance Day]] at the [https://buildsecurityin.us-cert.gov/bsi/events/1133-BSI.html | 13th Annual Software Assurance Forum].
+
+[[Media:OWASPSoftwareAssuranceDay2010.ppt | Download the presentation]]
+
+== The speaker  ==
+
+[http://www.owasp.org/index.php/User:Jason_Li Jason Li] is a Principal Consultant for Aspect Security where he has performed numerous ASD STIG validation tests of a variety of applications. In addition, he performs application security assessments and architecture reviews, as well as application security training, to a wide variety of financial and government customers. Jason is an active OWASP leader, contributing to several OWASP projects and serving as Co-Chair of the OWASP Global Projects Committee. He holds a Post-Masters certificate in Computer Science and concentration in Information Security from Johns Hopkins University and a Masters degree in Computer Science from Cornell University.
+
+== Notes ==
+
+Defense Information Systems Agency (DISA) provides Security Implementation Technical Guides (STIGs) to cover the gamut of systems dev elopement.  The [http://iase.disa.mil/stigs/downloads/zip/unclassified_application_security_development_stig_v3r1.zip Application Security and Development (ASD) STIG] first issued in 2006 and the most recent issuance came out in April 2010.  This STIG applies to all DOD developed, architected, and administered applications.  There are a 157 different STIG rules, some are very broad, others very specific, and some are complex.  It is easy to get lost in the weeds.  Some are harder to test than others.  There are procedural, configuration, and standards requirements.  OWASP is explicitly called out as a resource in the ASD STIG checklist; see the OWASP documentation projects and they are free.  The [http://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project OWASP Top Ten Project] lines up well with the ASP STIG; there are 33 Category One STIG flaws most of which in the top 10.  
+
+Li reviewed the STIG requirements and related OWASP tools and methods.  There is no “[http://iase.disa.mil/stigs/faq.html#15 gold disk]” for the ASD STIG.  However, the [[:Category:OWASP LiveCD Education Project|OWASP Live CD Education Project]] could be used if some one were to contribute a mapping of the tools with the STIG.  Some of the requirements Jason reviewed include: [http://www.owasp.org/index.php/Category:OWASP_DirBuster_Project OWASP DirBuster] can in part address APP3620 Information Disclosure.  APP5080 Code Review is covered by the [http://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project OWASP Application Security Verification Standard (ASVS)].  APP6130 Systems Monitoring would be met by the [http://www.owasp.org/index.php/Category:OWASP_AppSensor_Project OWASP AppSensor Project]. APP5100 Fuzz Testing can be met by the [[ OWASP JBroFuzz|OWASP JBroFuzz Project]]  and the [http://www.owasp.org/index.php/Category:OWASP_WSFuzzer_Project OWASP WSFuzzer Project].  
+ 
+--[[User:Walter Houser|Walter Houser]] 22:19, 5 October 2010 (UTC)
+[[Category:OWASP_Conference_Presentations]]

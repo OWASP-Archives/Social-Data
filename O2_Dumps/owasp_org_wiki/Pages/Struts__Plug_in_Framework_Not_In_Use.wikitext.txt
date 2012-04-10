@@ -1,0 +1,61 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Improper Data Validation]]
+
+
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+==Description==
+
+Use the Struts Validator to prevent vulnerabilities that result from unchecked input.
+
+Unchecked input is the leading cause of vulnerabilities in J2EE applications. Unchecked input leads to cross-site scripting, process control, and SQL injection vulnerabilities, among others. Although J2EE applications are not generally susceptible to memory corruption attacks, if a J2EE application interfaces with native code that does not perform array bounds checking, an attacker may be able to use an input validation mistake in the J2EE application to launch a buffer overflow attack.
+
+To prevent such attacks, use the Struts Validator to check all program input before it is processed by the application.
+
+Example uses of the validator include checking to ensure that:
+
+* Phone number fields contain only valid characters in phone numbers 
+* Boolean values are only "T" or "F" 
+* Free-form strings are of a reasonable length and composition
+
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+TBD
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* [[:Category:Input Validation]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+
+__NOTOC__

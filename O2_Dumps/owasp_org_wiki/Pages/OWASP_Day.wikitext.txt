@@ -1,0 +1,154 @@
+== OWASP Day : Worldwide OWASP chapter meetings on the topic "Privacy in the 21st Century" (5th till 12th September 2007) ==  
+
+'''OWASP Day''' is the title given to the 17 chapter meetings (hosted by 19 OWASP Chapters) staged during the [http://www.globalsecurityweek.com/ Global Security Week]. Since these meetings occurred between 5th and 12th of September 2007, we ended up calling this event the '''OWASP Week'''.
+
+Before you start looking at the presentations below, take a moment to see this presentation from Jeff (audio + powerpoint presentation)
+
+* [http://www.owasp.org/downloads/OWASP_Day.wmv "Welcome to OWASP Day 2007 , Quick tour of OWASP], Jeff Williams, video played at all chapter meetings
+
+
+== Global Agenda and Presentations ==
+
+{|class="wikitable sortable" style="text-align: top;" border="1" cellpadding="2"
+|+ 
+! width=80 |Day
+! |Chapter
+! |Title
+
+|-valign="top"
+|'''Wed 5th'''|| [[Israel]] ||
+* [http://www.owasp.org/images/f/fa/OWASP_IL_8_Dangling_Pointer.pdf "Straight from Blackhat: Dangling Pointers"] , Jonathan Afek , Watchfire
+* [http://www.owasp.org/images/8/83/OWASP_IL_8_Evasive_Crimeware_attacks_Business_drivers_and_Proposed.pdf "Evasive Crimeware attacks, Business drivers, and Proposed Defense"] , Iftach Amit , Finjan
+* [http://www.owasp.org/images/0/03/OWASP_IL_8_JavaScript_Agent_Injection.pdf "Javascript Content Injection as a solution for client side browser vulnerabilities"] , Ofer Shezaf , Breach Security (Israel chapter Leader) 
+
+|-valign="top"
+|'''Wed 5th'''|| [[London]] ||
+* [http://www.owasp.org/images/0/02/OWASP_Day_Belgium_2007-pdp.ppt "For my next trick... hacking Web2.0"], Petko D. Petkov (pdp), GNUCITIZEN
+* Panel: "Privacy in the 21st Century?", moderator: Ivan Ristic
+* Panel: "Future of the OWASP London Chapter" 
+
+|-valign="top"
+|'''Thu 6th'''|| [[NYNJMetro]]  ||
+* [http://www.owasp.org/images/e/e0/OWASP_SEPT6.pdf "Welcome and NYNJMetro Demographics], Tom Brennan (President OWASP NY/NJ Metro)
+* [http://www.owasp.org/images/4/4e/OWASP_NY_07-Financial-Real-Time-Threats_Pavlosoglou.ppt "Financial Real-Time Threats: Impacting Trading Floor Operations"] , Dr. Yiannis Pavlosoglou , Information Risk Management
+* "Stock fluctuation from an unrecognized influence" , Justine Bone-Aitel , Immunity Security
+* "Hackers...BotNets oh My! Obtain a briefing on the current BotNet investigations etc.", NYC FBI Cyber Crime Unit 
+* "Why today's vulnerability assessments are failing and a case for industry standardization", "Blackhat/Defcon", Tom Brennan (President OWASP NY/NJ Metro)
+* Panel: "Global Security Week What is the current state of Privacy on Web Application Security? What should we be focusing on?"
+
+|-valign="top"
+|'''Thu 6th'''|| [[Belgium]] ||
+* [https://www.owasp.org/images/b/b7/OWASPDay2007Belgium_WebGoat-WebScarab.ppt "Getting started with WebGoat & WebScarab"] ,Erwin Geirnaert , ZION Security]
+* [https://www.owasp.org/images/5/51/OWASP_Day_-_Belgium_-_Curphey.pdf "OWASP Evaluation and Certification Criteria Draft"] , Mark Curphey (OWASP founder)
+* [https://www.owasp.org/images/0/0d/OWASPDay2007-Belgium-dwk.ppt "Automated Web FOO or FUD?"] , David Kierznowski, GNUCITIZEN
+* [https://www.owasp.org/images/f/f4/OWASPDay2007Belgium_Pantera_Unleash.ppt "OWASP Pantera Unleashed"] , Simon Roses Femerling , Microsoft
+* [https://www.owasp.org/images/d/dc/OWASPDay2007Belgium_BartDeWin.ppt"CLASP, SDL and Touchpoints Compared"] , Bart De Win, DistriNet research group
+* [https://www.owasp.org/images/c/ca/OWASP_Day_Belgium_FCCU_e-insecurity.pdf "Threats of e-insecurity in Belgium and the Belgian response"] ,  Luc Beirens, FCCU 
+* [https://www.owasp.org/images/0/02/OWASP_Day_Belgium_2007-pdp.ppt "For my next trick... hacking Web2.0 (pdp)"] , Petko D. Petkov (pdp), GNUCITIZEN 
+* "Panel Discussion: “Privacy in the 21st Century?", moderator: André Marien , Verizon Business - Cybertrust
+|-valign="top"
+|'''Thu 6th'''|| [[Washington DC]] + Northern VA  || 
+* [https://www.owasp.org/images/5/5e/Wang-Honeyclients-OWASPCon-06Sep07.ppt "Honeyclients and Malicious Web Servers"] , Kathy Wang , Mitre
+* [https://www.owasp.org/images/e/ef/IDefense_MalcodePrivacy_Hartstein_20070905.ppt "A malcode perspective on web application privacy"] Blake Hartstein , iDefense 
+* [https://www.owasp.org/images/2/25/Chuck-willis-owasp-live-o-dc-2007.pdf "Practical Web Privacy with Firefox"] , Chuck Willis , Mandiant
+* [https://www.owasp.org/images/d/db/OWASP_ESAPI_Sneak_Peek.ppt "A sneak peak at Jeff's new "Enterprise Security API"] , Jeff Williams , Aspect Security (OWASP board member & Chairman) 
+* [https://www.owasp.org/images/a/ad/DRM_Overview_-_OWASP_09-2007.ppt "Digital Rights Management"] , James Stibbards , Cloakware
+|-valign="top"
+|'''Thu 6th'''|| [[San Antonio]] || 
+* [http://www.owasp.org/images/5/56/Fortify-bjenkins-AppSecStrategy-20070906.pdf "Developing an Application Security Strategy for Large Enterprise Systems"] , Bruce Jenkins, Fortify Software 
+|-valign="top"
+|'''Thu 6th'''|| [[Seattle]] || 
+* [http://www.owasp.org/images/f/f6/SANS_Online_Banking_Case_study.ppt "Online Banking"] , Rob Rachwald , Fortify
+* [https://www.owasp.org/images/3/32/Web_Hacking_101.pdf "Web Hacking 101"], Damon Cortesi , IOActive
+|-valign="top"
+|'''Thu 6th'''|| [[San Jose]] + San Francisco  || 
+*  Workshop: "Malicious Code Injection Workshop" , Siva Ram , AppSec Consulting ; Arian Evans ,WhiteHat Security
+*  Panel: "Privacy, Security and Breaches, Oh My!", moderator: Alex Stamos, iSEC Partners ; Panelists: Doran Rotman, KPMG ; David Pollino, Washington Mutual Bank ; Robert Fly, Salesforce.com ; Larry Pingree, Safeway ; Kurt Opsahl, EFF  
+|-valign="top"
+|'''Thu 6th'''|| [[Mumbai]] || 
+* [https://www.owasp.org/images/4/48/Owasp_Live0_Conf_Talk_Aditya_K_Sood_Sec_Niche.pdf "Black Vector of Web Exploitation"] , Aditya Sood , Sec Niche
+* [https://www.owasp.org/images/4/4c/OWASP_Day_Rishi_Narang.pdf "End User Privacy Breaches"] , Rishi Narang , Third Brigade
+* [https://www.owasp.org/images/f/fe/Privacy_0n_the_Web_-_The_Road_Ahead_in_the_21st_Century.pdf "Privacy on the Web - The road ahead in the 21st century"] , Yogesh Badwe , Orange Business Services
+|-valign="top"
+|'''Thu 6th'''|| [[Ottawa]] ||
+* [http://www.owasp.org/images/9/9f/Windows_CardSpace_for_OWASP.zip What is Cardspace?]  , Christian Beauclai , Microsoft  
+|-valign="top"
+|'''Thu 6th'''|| [[Poland]] ||
+* [http://www.owasp.org/images/6/64/OWASP_about.pdf "OWASP"] , Robert 'shadow' Pajak
+* [http://www.owasp.org/images/1/1b/OWASP_Day_Poland_rezos.pdf "OWASP SPoC"] , Przemyslaw 'rezos' Skowron
+* [http://www.owasp.org/images/0/01/OWASP_practice.pdf "Pentration test - OWASP in practice"] , Jarek Sajko 
+|-valign="top"
+|'''Sat 8th'''|| [[Turkey]] ||
+* [https://www.owasp.org/images/6/66/OWASP_DAY_TR.sub.ppt "Prelude. OWASP DAY and OWASP Turkey projects"], Bedirhan Urgun, Bunyamin Demir
+* [https://www.owasp.org/images/b/bc/OWASP2007_KamudaPrivacy.ppt "Privacy in Governmental Insitutions - A Current State Analysis"], Hayrettin Bahsi, Chief Researcher UEKAE TUBITAK  
+* [https://www.owasp.org/images/4/4b/Guvenli_Web_Uygulamalarinin_Gelistirilmesi2.ppt "Secure Web Application Development] - Korhan Gurler ,Researcher PRO-G 
+* "A Panel on Privacy in Turkey - OWASP-Turkey Members 
+|-valign="top"
+|'''Mon 10th'''|| [[Italy]] || 
+* [http://www.owasp.org/images/0/03/OWASP_Day1_Meucci.ppt "Introduction to the OWASP-Day and OWASP-Italy projects"] ([http://icsecurity.di.uniroma1.it/storage/Documenti/audioowaspday07/01%20-%20Session%20Opening%20(L.%20Mancini).mp3 Audio]), Matteo Meucci
+* [http://www.owasp.org/images/5/53/OWASP_Day1_Bregolin.ppt "Privacy in the digital era"] ([http://icsecurity.di.uniroma1.it/storage/Documenti/audioowaspday07/03%20-%20Privacy%20in%20the%20digital%20era%20(M.%20Bregolin).mp3 Audio]), Mauro Bregolin , KIMA Projects & Services
+* [http://www.owasp.org/images/0/00/OWASP-Day1_Pelliccioni.pdf "OWASP Top 10 2007 - Are our information 'really' safe?"] ([http://icsecurity.di.uniroma1.it/storage/Documenti/audioowaspday07/04%20-%20OWASP%20Top%2010%202007%20(C.%20Pelliccioni).mp3 Audio]),  Carlo Pelliccioni , MediaService. [http://www.owasp.org/images/3/30/Video_Top-10-2007_part1.zip Video Part 1] , [http://www.owasp.org/images/d/db/Video_Top-10-2007_part2.zip Video Part 2]
+* [http://www.owasp.org/images/6/66/OWASP-Day1_Revelli.ppt "Anti-Anti-XSS: bypass browser protections"] ([http://icsecurity.di.uniroma1.it/storage/Documenti/audioowaspday07/05%20-%20Anti-Anti-XSS%20bypass%20browser%20protections%20(A.%20Revelli).mp3 Audio]), Alberto Revelli ,  Portcullis 
+* [http://www.owasp.org/images/e/e6/OWASP_Day1_Petroque.ppt "Growing Application Security Awareness"] ([http://icsecurity.di.uniroma1.it/storage/Documenti/audioowaspday07/06%20-%20PCI%20Standard%20for%20on-line%20payment%20(L.%20Petroque).mp3 Audio]), Laurent Petroque , F5
+* [http://www.owasp.org/images/f/f1/OWASP_Day1_Carettoni.pdf "Buzzwords Security"] ([http://icsecurity.di.uniroma1.it/storage/Documenti/audioowaspday07/07%20-%20Buzzwords%20Security%20(L.%20Carrettoni).mp3 Audio]) , Luca Carettoni , SecureNetwork
+* [http://www.owasp.org/images/3/3c/OWASP_Day1_Allan.pdf "Hacker Attacks on the Horizon: Understanding the Top Web 2.0 Attack Vectors"] ([http://icsecurity.di.uniroma1.it/storage/Documenti/audioowaspday07/08%20-%20Hacker%20Attacks%20on%20the%20Horizon%20(D.%20Allan).mp3 Audio]), Danny Allan , Watchfire
+|-valign="top"
+|'''Mon 10th'''|| [[Rochester]]  || 
+* [http://www.owasp.org/images/f/fb/OWASP_Top_10_2007_v6.ppt "The new OWASP Top Ten"], Ralf Durkee, Durkee Consulting, Inc.
+|-valign="top"
+|'''Mon 12th'''|| [[Houston]] || 
+* "Enhancing Application Security with Bytecode Instrumentation" , Patrick White , Fortify Software 
+|-valign="top"
+|'''Mon 12th'''|| [[Cleveland]] ||
+* "The new OWASP Top Ten."
+
+|}
+
+
+
+== Organizers == 
+
+In addition to the local chapter leaders,  Dinis Cruz and Mike de Libero are the main points of contact (but of course much more help is needed :)  )
+
+
+
+== Global Security Week (GWS) ==
+
+For more details on the (GWS) see:
+*  http://www.globalsecurityweek.com/
+* http://www.globalsecurityweek.com/html/national_activities.html
+* http://www.globalsecurityweek.com/html/gsw_06.html  (Resources)
+
+And here is a description from one the organizers:
+
+''The aim of Global Security Week is to raise security awareness amongst the public and organizations about issues relating to security, primarily information security.  This year's theme is on the subject of privacy and we hope that a number of events will be held worldwide to promote people's awareness as to how to protect their privacy when online and also educate companies on their responsibilities, both legal and morally, when it comes to protecting the privacy of their customers.
+''
+''Global Security Week is a totally voluntary initiative and we have no commercial funding or agenda.  The initiative is funded entirely from the committee's own funds and time.  We have people involved in Global Security Week throughout the world and during the week we have events planned in different regions.  For example here in Ireland I plan to run a free seminar on the above topic open to anyone who wished to attend''
+
+''We ask that those who wish to become involved, help promote Global Security Week in their region either by running specific events dedicated to Global Security Week, taking part in events already planned or simply making people aware that the week is on and the topic is "Privacy in the 21st Century". Even simply making people aware of Global Security Week and directing them to the website is a great help. Not having commercial funding we depend on word of mouth and like minded individuals to make people aware of the week.''
+
+
+== ... for future reference ... ==
+==== (original) Proposed Event layout ==== 
+ 
+Each chapter is free to organize its mini conference and to define how long it should last.
+
+But within the spirit of the event the following ideas are proposed:
+
+* The topic of the event should be on  "Privacy in the 21st Century", so all talks should be related to it (we should be addressing the Web Application side of Privacy (for example what happens to Privacy with SQL Injection, XSS and issues like pdp's [http://www.gnucitizen.org/blog/snoop-onto-them-as-they-snoop-onto-us Snoop onto Them as they Snoop onto us])
+* The event should have 4 to 5 speaking slots (can be 30m if required)
+* If possible, invite a presenter from the local government to talk about their views on the subject
+* Presentation from a local OWASP Project leader about his/hers project (i.e. for the cases where a leader of an [https://www.owasp.org/index.php/Category:OWASP_Project OWASP Project] lives locally (or will be in that city during the event)
+* All events are recommended to have the same panel discussion on the subject "'''What is the current state of Privacy on Web Application Security? and what should we be focusing on?'''"). After the panel discussion, each local chapters is invited to create a summary of its conclusions for publishing on the OWASP website
+* "Talk 'Lets get rid of 3 major sources of vulnerabilities:
+*# CROSS-SITE SCRIPTING: 70-90% of web applications have Cross-Site Scripting (XSS) holes. You must *both* carefully validate input and use HTML entity encoding on all data output.
+*# SQL INJECTION: If your queries are a bunch of strings and user input concatenated together, your database could be attacked with SQL Injection. Stamp out this attack by using "parameterized" queries, such as Java's PreparedStatement instead.
+*# SESSION EXPOSURE: Your SESSIONIDs are *just* as valuable as usernames and passwords, so make sure you never expose them. Don't ever allow authenticated SESSIONIDs to be sent without SSL or exposed in the URL."
+
+==== Other Ideas ====
+* Create a Security Manifest that will be 'signed' by all attendees 
+* Distributed capture the flag (where each local chapter plays has a team (against the other chapters))
+* Short intro/welcome movie at the beginning of each mini-conference by OWASP board
+
+__NOEDITSECTION__
+__NOTOC__

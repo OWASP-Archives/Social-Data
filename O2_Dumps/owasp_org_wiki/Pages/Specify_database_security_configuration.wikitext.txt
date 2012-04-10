@@ -1,0 +1,43 @@
+{{Template:SecureSoftware}}
+
+==Overview==
+
+Purpose:	
+
+*	Define a secure default configuration for database resources that are deployed as part of an implementation.
+
+*	Identify a recommended configuration for database resources for databases that are deployed by a third party.
+
+Role:
+
+* Database Designer
+
+Frequency:
+
+* As necessary; generally, once per iteration.
+
+
+
+==Identify candidate configuration ==
+
+Choose a candidate database configuration for the database. 
+
+While an out-of-the-box configuration is an acceptable starting point, it is usually more efficient to start with a third-party baseline or to go through a process to identify a candidate baseline. For example, see the NIST database security checklist: http://csrc.nist.gov/pcig/cig.html.
+
+In the case of third-party deployments, the configuration will generally be defined relative to the default configuration.
+
+==Validate configuration ==
+
+For the resources specified that interact with the database, validate that the baseline configuration properly addresses the security requirements for that data.
+
+Also, unnecessary functionality (e.g., stored procedures) can introduce unanticipated risk vectors. Practice the principle of least privilege by removing unnecessary functionality from the configuration. 
+
+In the case of third-party deployments, it is sufficient to specify which functionality is absolutely necessary in the operational security guide, then to recommend that all other features be disabled.
+
+If appropriate, perform testing with a database configuration tool for any candidate platforms to determine non-obvious security risks to resources. Again, make changes to the configuration if necessary, and documenting them in the operational security guide, if appropriate.
+
+
+[[Category:Activity]]
+[[Category:CLASP Activity]]
+[[Category:BP7 Publish operational security guidelines]]
+[[Category:OWASP_CLASP_Project]]

@@ -1,0 +1,365 @@
+__NOTOC__ <!--
+--> 
+{{Chapter Template|chaptername=Germany
+|extra=[[Image:owasp_germany_logo.png|right]]
+The chapter leader is [mailto:tobias.glemser@owasp.org Tobias Glemser].
+
+Chapter Board members are: [mailto:achim@owasp.org Achim Hoffmann], [mailto:bruce.sams@owasp.org Bruce Sams], [mailto:dirk.wetter@owasp.org Dirk Wetter], [mailto:emin.tatli@owasp.org Emin Tatlı], Martin Johns.
+
+<br />
+|mailinglistsite=http://lists.owasp.org/mailman/listinfo/owasp-germany
+|emailarchives=http://lists.owasp.org/pipermail/owasp-germany
+
+}}
+<br />
+
+= OWASP Germany =
+
+<big>Herzlich Willkommen auf der Homepage des OWASP German Chapter.</big>
+
+=== OWASP Germany  ===
+
+Das OWASP Germany Chapter Meeting fand am 03.02.2012 in Frankfurt statt. Details siehe <u>[[Germany#Chapter_Meetings|(Tab Chapter Meetings)]]</u>
+
+;Mailing-Liste: 
+Wir freuen uns auf Beiträge in unserer [http://lists.owasp.org/mailman/listinfo/owasp-germany Mailingliste]. Diese müssen natürlich einen Bezug zu (Web-)Anwendungssicherheit haben, wir sind aber nicht auf Themen festgelegt. Möglich sind also u. A. Fragen, Tipps, aktuelle Hinweise, Stellenangebote oder Projektgesuche.
+
+;Mitarbeiter: 
+Wir suchen engagierte Personen, die das German Chapter als Ansprechpartner für Firman und Branchen vertreten. Weitere Details folgen in Kürze hier.
+
+=Aktuelles=
+===Aktuelles / News===
+
+---- 
+*03.02.2012: Chapter Meeting in Frankfurt, Details siehe <u>[[Germany#Chapter_Meetings|(Tab Chapter Meetings)]]</u>
+*17.11.2011: [[German OWASP Day 2011|4. German OWASP Day 2011]] in München
+<!-- alter Name: AppSec Germany
+[[OWASP AppSec Germany 2011 Conference|OWASP AppSec Germany 2011 Conference]]
+-->
+*19.08.2011: Chapter Board Meeting, Details siehe [[Germany#Chapter_Meetings|(Tab Chapter Meetings)]]
+*09.07.2011: Workshop zur Übersetzung der OWASP Top 10 in Karlsruhe (Kontakt: [[User:Kai_Jendrian|.kai]])
+*18.06.2011: Webseite mit neuem Layout
+*April 2011: Initiierung des German Language Project
+*12 October 2009: [[Projektierung der Sicherheitsprüfung von Webanwendungen|Projektierung der Sicherheitsprüfung von Webanwendungen]] 
+*10 September 2008: [[Best Practices: Web Application Firewalls|Best Practices: Web Application Firewalls wiki pages]] 
+*17 July 2008: OWASP Germany released [[Media:Best_Practices_Guide_WAF_v104.en.pdf|Best Practices: Use of Web Application Firewalls (English)]] *18 March 2008: OWASP Germany released [[Media:Best_Practices_Guide_WAF.pdf|Best Practices: Einsatz von Web Application Firewalls (German)]] 
+*07 September 2007: Chapter meeting in Frankfurt 
+*18 July 2007: scheduled chapter meeting on September 7th 2007 
+*02 Mar 2007: German Federal Office for Information Security aka ''Bundesamt für Sicherheit in der Informationstechnik (BSI)'' has released the [http://www.bsi.bund.de/fachthem/betriebssysteme/indigo/index.htm#indigoen Indigo Security] (engl: 'Indigo Security').
+
+*23 Feb 2007: German Federal Office for Information Security aka ''Bundesamt für Sicherheit in der Informationstechnik (BSI)'' has released the [http://www.bsi.de/literat/studien/tomcat/index.htm Apache Tomcat Sicherheitsuntersuchung] (engl: 'Apache Tomcat Security Assessment').
+
+*06 Sept 2006: German Federal Office for Information Security aka ''Bundesamt für Sicherheit in der Informationstechnik (BSI)'' has released the [https://www.bsi.bund.de/cae/servlet/contentblob/476464/publicationFile/30632/WebSec_pdf.pdf Maßnahmenkatalog und Best Practices für die Sicherheit von Webanwendungen] (engl: 'Measures and Best Practices for Web Application Security').
+
+*20 May 2006: OWASP Moves to MediaWiki Portal
+
+OWASP is pleased to announce the arrival of OWASP 2.0! 
+
+OWASP 2.0 utilizes the MediaWiki portal to manage and provide the latest OWASP related information. Enjoy!
+
+= Projekte des German Chapter =
+=== Projekte des German Chapter ===
+==Review des BSI IT-Grundschutz Bausteins Webanwendungen aus OWASP Sicht==
+
+'''[[OWASP_Review_BSI_IT-Grundschutz_Baustein_Webanwendungen|Review des BSI IT-Grundschutz Bausteins Webanwendungen aus OWASP Sicht]]'''
+
+== Projektierung der Sicherheitsprüfungen von Webanwendungen ==
+
+'''[[Projektierung der Sicherheitsprüfung von Webanwendungen|Projektierung der Sicherheitsprüfung von Webanwendungen]]'''
+
+== Best Practices: Web Application Firewalls ==
+
+'''[[Best Practices: Web Application Firewalls|Best Practices: Web Application Firewalls wiki pages]]'''
+
+== German Language Project  ==
+
+{| width="100%" style="background-color:inherit;"
+| width="70%" style="vertical-align:top; padding-right:0.5em;" |
+Obwohl die ''lingua franca'' <sup>[1]</sup> in der IT Englisch ist, fragen auch Fachleute immer wieder nach Texten in Deutsch. Für einige (Fach-)Artikel gibt es schon Übersetzungen. Inspiriert durch das [[OWASP Spanish|OWASP Spanish Project]] und [[OWASP Portuguese Language Project|OWASP Portuguese Language Project]] ist die Idee entstanden, wichtige Dokumente usw. auch in Deutsch zur Verfügung zu stellen. Einzelne Ansätze dazu gab es zwar schon, diese und weitere werden jetzt zentral üeber das '''[[OWASP German Language Project|OWASP German Language Project]]''' verwaltet.
+
+Wir laden alle Interessierte herzlich ein mit Kommentaren und Übersetzungen beizutragen und so wichtige Aspekte der Web Application Security auch in Deutsch zu formulieren, so dass ein noch größeres Publikum erreicht wird.
+Weiter Detail findet Ihr auf der [[OWASP German Language Project|Projektseite]]. [[User:Mrohr|Matthias Rohr]], der Project Leader, freut sich über Eure tatkräftige Unterstützung.
+----
+<small>[1] ''lingua franca'', man sieht an diesem Ausdruck, dass auch die Lateiner wussten, welches die Verkehrssprache ist</small> &#9786;
+
+| width="30%" style="vertical-align:top; padding-left:0.5em;border-left:1px solid black" |
+The [[OWASP German Language Project|OWASP German Language Project]] is a new OWASP Project that will provide a foundation, guideance and common terminology for German translations. Please contact [[User:Mrohr|Matthias Rohr]], who is the project leader, if you want to participate. Any comments are welcome ...
+|} 
+
+= OWASP Stammtisch-Initiative =
+=== OWASP Stammtisch-Initiative ===
+
+{| width="100%" style="background-color:inherit;"
+| width="70%" style="vertical-align:top; padding-right:0.5em;" |
+In mehren Städten gibt es '''[[OWASP German Chapter Stammtisch Initiative|OWASP-Stammtisch]] ''', bei denen man sich in lockerer Runde im Biergarten oder Gasthaus trifft um sich auszutauschen, nette Leute kennenzulernen oder auch ernsthafte Sicherheitsthemen zu diskutieren. 
+
+Aktive Stammtische gibt es (Stand 2011) in:
+[[OWASP_German_Chapter_Stammtisch_Initiative#tab=M.C3.BCnchen |München]],
+[[OWASP_German_Chapter_Stammtisch_Initiative#tab=K.C3.B6ln        |Köln]],
+[[OWASP_German_Chapter_Stammtisch_Initiative#tab=Frankfurt         |Frankfurt]],
+[[OWASP_German_Chapter_Stammtisch_Initiative#tab=Stuttgart         |Stuttgart]],
+[[OWASP_German_Chapter_Stammtisch_Initiative#tab=Hamburg         |Hamburg]],
+[[OWASP_German_Chapter_Stammtisch_Initiative#tab=Karlsruhe         |Karlsruhe]]
+
+
+| width="30%" style="vertical-align:top; padding-left:0.5em;border-left:1px solid black" |
+A "regular's table" (Stammtisch) is a German tradition for meeting each other in a beer garden or a pub in order to discuss certain topics (and to drink beer, of course&nbsp;;-).
+
+In the case of an '''[[OWASP German Chapter Stammtisch Initiative|OWASP-Stammtisch]]''' it's all about Web Application Security. Right now a Stammtisch is established in 
+[[OWASP_German_Chapter_Stammtisch_Initiative#tab=M.C3.BCnchen |Munich]],
+[[OWASP_German_Chapter_Stammtisch_Initiative#tab=K.C3.B6ln       |Cologne]],
+[[OWASP_German_Chapter_Stammtisch_Initiative#tab=Frankfurt        |Frankfurt]],
+[[OWASP_German_Chapter_Stammtisch_Initiative#tab=Stuttgart         |Stuttgart]],
+[[OWASP_German_Chapter_Stammtisch_Initiative#tab=Hamburg         |Hamburg]],
+[[OWASP_German_Chapter_Stammtisch_Initiative#tab=Karlsruhe         |Karlsruhe]]
+|}
+
+
+= German Conferences =
+=== German Conferences / Unsere Konferenzen ===
+
+Seit 2008 veranstalten wir mit gutem Zuspruch Konferenzen. Die Aufstellung (The German Chapter organizes sucessfully conferences since 2008. Here's our piece of history):
+
+== German OWASP Day 2011, 17.11.2011 in München ==
+
+Unsere vierte Inkarnation, der  [https://www.owasp.org/index.php/German_OWASP_Day_2011 Germany OWASP Day 2011] , fand mit bislang bester Resonanz statt. Sowohl zahlenmäßig, als auch in puncto Feedback, was wir von Teilnehmern, Sprechern und Sponsoren bekommen haben.
+
+== OWASP AppSec Germany 2010 Conference 20.10.2010 in Nürnberg  ==
+Die dritte deutsche Konferenz gab's auch wieder parallel zur it-sa: [https://www.owasp.org/index.php/OWASP_AppSec_Germany_2010_Conference OWASP AppSec Germany 2010 Conference].
+
+== OWASP AppSec Germany 2009 Conference 13.10.2009, Nürnberg  ==
+Beim zweiten Mal zogen wir nach Nürnberg, und veranstalteten die [https://www.owasp.org/index.php/OWASP_AppSec_Germany_2009_Conference OWASP AppSec Germany 2009 Conference] parallel zur it-sa 2009.
+
+== OWASP Germany 2008 Conference 25.11.2008 in Frankfurt  ==
+Unsere erste Konferenz, die [https://www.owasp.org/index.php/OWASP_Germany_2008_Conference OWASP Germany 2008 Conference] , fand inklusive obligatorischer Vorabendveranstaltung zum Networking in Frankfurt statt.
+
+= Chapter Meetings =
+=== Chapter Meetings ===
+
+== OWASP Germany Chapter Meeting am 03.02.2012 in Frankfurt ==
+
+OWASP Germany Chapter Meeting fand am 03.02.2012 in Frankfurt statt.<br>
+Ort: Saalbau Gallus, Frankenallee 111, 60326 Frankfurt am Main 
+[[http://maps.google.de/maps?q=Frankenallee+111,+60326+Frankfurt+am+Main&hl=de&sll=50.104389,8.642389&sspn=0.002883,0.010375&vpsrc=0 Karte]] (Wenige Meter von der S-Bahnstation Galluswarte entfernt, ein Halt von
+Frankfurt Hbf)
+<br>
+----
+<br>
+<big>Hiermit laden wir Euch nochmals herzlich zum ersten Chapter Meeting 2012 des OWASP German Chapters ein.
+Wer sich aktiv in die Gestaltung des Chapters einbringen möchte, ist hier genau richtig. Wir stellen die Weichen, um OWASP in Deutschland noch präsenter zu machen und freuen uns auf Deinen Beitrag! OWASP lebt von der Community, von der aktiven Beteiligung.
+Nur aufgrund der vielen Köpfe sind wir dort, wo wir heute stehen. Also los! Wir würden uns insbesondere freuen, mehr von Euch aus dem edukativen Bereich (ja, Ihr liebe Studenten!) bei uns willkommen zu heißen.</big>
+
+Zur besseren Planung gebt bitte kurz per Mail Bescheid, wenn Ihr teilnehmt. Danke!
+
+Plant auch danach noch gerne etwas Zeit ein, wir lassen den Tag bei einem gemeinsamen Essen und vielleicht einem Getränk nachwirken.
+
+Viele Grüße und bis zum 03.02. in Frankfurt, wir freuen uns auf Euch.
+OWASP German Chapter
+
+=== Agenda ===
+
+* Georg: Begrüßung durch Georg Heß, German Board Leader
+* Kai:   Vortrag "OWASP Top 10 auf Deutsch - Fallstricke und Überraschungen"
+* Kai:   Fragen und Antworten zu "OWASP Top 10 auf Deutsch"
+* Boris: Vortrag "Das neue OWASP Chapter Handbook - wie wir weltweit arbeiten"
+* Boris: Fragen und Antworten zu "OWASP Chapter Handbook"
+* Dirk:  Rückblick OWASP Day 2011, Ausblick 2012
+* Tobias: Rückblick it-sa 2011, Ausblick 2012
+* Dirk:  AppSec Research EU: 2013 in Deutschland?
+* Boris: Firmen-Chapter-Support (Kosten, Vorteile, Ablauf)
+* Georg: Aktionen zur Mitgliedergewinnung
+* Bruce: Möglichkeiten zur Intensivierung der Pressearbeit
+* Boris: Zusammenarbeit mit dem BSI
+* Tobias: Themen für Projekte 2012
+* Georg: kurzer Abriss zu OWASP-Zertifizierungen
+* Achim: Definition Rahmenbedingungen Jobseite
+* Achim: Administratoren für owasp.org
+* Georg: Wahl Leader und Board OWASP German Chapter
+
+
+{| width="100%" style="background-color:inherit;"
+| width="65%" style="vertical-align:top; padding-right:0.5em;" |
+Das Protokoll des Chapter-Meetings ist <u>[[Media:Chapter-Germany-20120203-Protokoll.zip|hier]]</u> zu finden; das Passwort ist geheim ;-)
+
+Wichtige Entscheidungen in Kürze:
+* Tobias als Chapter Leader gewählt
+* Wahl des Boards: Bruce, Dirk, Emin, Martin, Achim
+* German OWASP Day 2012 im November in München
+** 1,5 - 2 Tage, dieses Jahr keine kommerziellen Trainings
+** CfP-Kommitee geführt von Dirk, Martin
+** es wird eine Teilnahme/Anwesenheits-Bescheinigung geben
+* OWASP-Stand auf it.sa 2012 in Nürnberg
+* Firmensponsoring wird ermöglicht: local sponsor ca. 500,-/Jahr
+* Zusammenarbeit mit BSI wird intensiviert
+* es wird (vorerst) keine eigene deutsche Jobseite unter owasp.org geben; bitte [[OWASP_Jobs]] benutzen
+...
+| width="35%" style="vertical-align:top; padding-left:0.5em;border-left:1px solid black" |
+The protocol of the Chapter Germany Meetings can be found <u>[[Media:Chapter-Germany-20120203-Protokoll.zip|here]]</u> . Note that it is in German.
+
+Most important:
+* Tobias as Chapter Leader elected
+* Boards Members: Bruce, Dirk, Emin, Martin, Achim
+* German OWASP Day 2012 will be in November in München
+** 1,5 - 2 days, no trainings sessions this year
+** CfP Commitee lead by Dirk, Martin
+* OWASP will be present at it.sa 2012 in Nürnberg
+* company sponsoring possible: local sponsor ca. 500,-/anno
+* co-operation and collaboration with BSI will be initiated
+* currently no local job page within owasp.org
+...
+|}
+
+== Chapter Board Meeting am 19.8.2011 in München ==
+
+=== Agenda ===
+* Selbstverständnis Chapter – die Zukunft
+* OWASP Germany in „das Bewusstsein“ bringen
+* Vereinsgründung ja/nein
+* Geldverwaltung/Rechnungen
+* Firmen als Chapter Member
+* IT-SA 2011
+* Board (Kommunikation. Rollen, Wahl, Termin Chapter Meeting)
+* Stand der Dinge: Flyer
+* OWASP Day
+
+{| width="100%" style="background-color:inherit;"
+| width="65%" style="vertical-align:top; padding-right:0.5em;" |
+Das Protokoll des Board-Meetings ist <u>[[Media:Chapter-Germany-20110819-Protokoll.zip|hier]]</u> zu finden; das Passwort ist geheim ;-)
+
+Wichtige Entscheidungen in Kürze:
+* OWASP Chapter Germany stellt auf der it.sa in Nürnberg aus, 11.10. - 13.10.2011
+* es wird eine ''Firmen-Mitgliedschaft'' aka ''Chapter Supporter'' angeboten; Näheres in kürze auf der Webseite
+* nächstes Chapter Meeting am 20.01.2011 oder 03.02.2011 in Frankfurt
+...
+| width="35%" style="vertical-align:top; padding-left:0.5em;border-left:1px solid black" |
+The protocol of the Chapter Germany Board Meetings can be found <u>[[Media:Chapter-Germany-20110819-Protokoll.zip|here]]</u> . Note that it is in German.
+
+Most important:
+* OWASP Chapter Germany will be at it.sa in Nuremberg, 11.10. - 13.10.2011
+* ''Chapter Supporter'' will be possible for companies; details comming soon
+* next Chapter Meeting 20.01.2011 or 03.02.2011 in Frankfurt
+...
+|}
+
+== Chapter Meeting am 20.5.2010 in München ==
+
+=== Agenda ===
+
+* 14:00 Allgemeine Begrüßungs- und Vorstellungsrunde 
+* 14:15 Bruce Sams: „Strategie und Kosten für ein SDLC“  
+* 14:50 Diskussion 
+* 15:10 Boris Hemkemeier: „Two Factors Are Not Enough“  
+* 16:05 Diskussion (geht nahtlos über in die) 
+* 16:15 Kaffeepause 
+* 16:35 Vortrag mit Diskussion „Organisatorisches im Chapter“  
+* 17:15 Beginn der Beschlussfassungen und Wahlen 
+* 17:25 Vortrag mit Diskussion „OWASP Germany Conference 2010“ 
+
+=== Organisatorisches im Chapter === 
+
+Die Wesentlichen Punkte, die umgesetzt oder verbessert werden sollen: 
+
+* Mehr Außenwirkung durch Public Relations, bessere Pressearbeit / Pressemitteilungen und Einführung und Pflege einer Sprecher- und Rednerliste (um z.B. bei öffentlichen Veranstaltungen OWASP adäquat vorstellen zu können) 
+* Gepflegtes Wiki sowohl für Außendarstellung als auch als Plattform für die interne Kommunikation 
+* Einführung von direkten Ansprechpartner für diverse Branchen
+
+Es folgt eine kurze Diskussion, wie dies effektiv umgesetzt werden kann. Es wird ein Vorschlag durch konkludentes Handeln angenommen: Es soll ein Chapter Board bestehend aus 5 Mitgliedern gewählt werden. Jedes dieser Mitglieder bekommt eine oder mehrere dedizierte Aufgabe(n), um die oben genannten Punkte abzudecken und umzusetzen. Es folgt ein Aufruf, sich für eine entsprechende Wahl zur Verfügung zu stellen. Es soll ebenso der neue Chapter Leader gewählt werden. Da sich nur ein Kandidat für nur einen Posten zur Wahl für die nächsten zwei Jahre zur Verfügung stellt, wird folgendes entschieden: Bei Abstimmungen hat jedes Mitglied des Boards genau eine Stimme, während der Chapter Leader zwei Stimmen hat. So soll zukünftig bei Abstimmungen eine Stimmengleichheit verhindert werden. 
+
+=== Beschluss zur Anzahl der Chapter Leaders  ===
+
+Es wird von den 12 Teilnehmern des Chapter Meetings einstimmig beschlossen, das zukünftig das Chapter Germany (analog zu den meisten anderen OWASP Chapters) nur noch einen Chapter Leader hat. 
+
+=== Wahl des Chapter Leaders ===
+
+'''Georg Heß''' kandidiert als Chapter Leader und wird mit 11 von 12 Stimmen bei einer Enthaltung zum neuen Chapter Leader des OWASP Chapters Germany gewählt. 
+
+=== Beschluss zur zukünftigen Zusammensetzung des Boards ===
+
+Einstimmig wird beschlossen, dass das zukünftige Board aus 5 Mitgliedern besteht. Diese sollen die Aufgaben wie in der Diskussion beschrieben wahr nehmen. 
+
+=== Wahl des Boards ===
+
+Es kandidieren '''Tobias Glemser, Boris Hemkemeier, Achim Hoffmann, Uli Petersen und Bruce Sams ''' für die 5 Sitze im Board. Alle werden einstimmig gewählt. 
+
+Alle Gewählten nehmen die Wahl an. 
+
+== OWASP German Chapter Meeting 10.07.2009, Mannheim ==
+
+;Summary:We will start with three interesting fresh talks. The following topics are the next activities of the OWASP German Chapter: the new [http://www.owasp.org/index.php/OWASP_German_Chapter_Stammtisch_Initiative "Stammtisch Initiative"] and the planning of the [http://www.owasp.org/index.php/OWASP_AppSec_Germany_2009_Conference OWASP AppSec Germany 2009] at Nuremberg. 
+
+;Location:Aula of the [http://www.hs-mannheim.de Hochschule Mannheim], Building 3, Paul-Wittsack-Strasse 10, Mannheim ([http://maps.google.de/maps?f=d&source=s_d&saddr=Mannheim+Hbf&daddr=49.471303,8.48372&geocode=Fbr-8gIduTmBAA%3B&hl=de&mra=dme&mrcr=0&mrsp=1&sz=15&sll=49.474885,8.474715&sspn=0.015532,0.050254&ie=UTF8&z=15 Google Maps]). Please download the [http://www.hs-mannheim.de/campus/grafik/campusplan_legende_web.pdf campus map]. 
+
+;Agenda:
+
+* 12:00 - 13:00&nbsp;: Lunch (optional, please send an email to [mailto:Georg.Hess@artofdefence.com?subject=OWASP%20Chapter%20Meeting%20Lunch%20registration Georg Heß] to register for lunch), meeting point for the lunch is at the Aula in Building 3
+* 13:15 - 13:30 : Opening by our host Prof. Rainer Gerten (German) 
+* 13:30 - 14:30 : OWASP Educational Services - Teaching Security!, Martin Knobloch, Member of OWASP Global Education Committee (English) 
+* 14:30 - 15:00 : Vorstellung und aktueller Stand des OWASP Germany Projekts "Best Practice: Projektierung von Sicherheitsprüfungen von Web Applikationen", N.N., Projekt-Mitarbeiter (German) 
+* 15:00 - 15:45 : Cloud Application Security - Chancen und Risiken - Einige Ansatzpunkte zum Thema, Georg Hess (German) 
+* 15:45 - 16:15 : Coffee 
+* 16:15 - 17:00 : Organisational topics of the OWASP German Chapter (German) 
+** OWASP Stammtisch Initiative 
+** Outlook and organisational tasks for the 2nd [[OWASP Germany 2009 Conference]]
+* nach 17:00 : Come together (Any ideas for a near pub??) 
+
+;Minutes: [https://lists.owasp.org/pipermail/owasp-germany/2009-July/000086.html See the list archive for the minutes.]
+
+
+=== OWASP AppSec 2010 ===
+
+Es folgt ein kurzer historischer Rückblick der Veranstaltungsorte: 2008 im Hotel in Frankfurt, 2009 auf der Messe it-sa in Nürnberg. Kurze Diskussion pro und contra Hotel vs. Messe vs. Hochschul-Location. 
+
+* Es soll geprüft werden, ob die diesjährige '''„OWASP Germany Conference 2010“''' wieder in Kooperation mit der Messe Nürnberg / it-sa durchgeführt werden kann (z.B. am 20.10.2010). 
+* Weiterhin ist ein Konferenztag mit '''zwei verschiedenen Tracks (Technik und Management)''' angedacht. 
+* Um die inhaltliche Gestaltung voranzutreiben wird ein '''Programm-Komitee''' (initial bestehend aus '''Bruce Sams, Kai Jendrian, Boris Hemkemeier und Martin Johns''') ins Leben gerufen, das alsbald den '''CFP''' starten soll.
+
+Gegen 18:15 löst sich das OWASP German Chapter Meeting auf und geht nahtlos in den 12. „Happy Anniversary!“ OWASP Stammtisch München über.
+
+== OWASP German Chapter Meeting - February 20th, 2008 in Darmstadt  ==
+
+;Date: February 20th, 2008, 11:00-16:15
+;Location: Darmstadt, CAST (http://www.cast-forum.de)'''<br> Fraunhoferstr. 5 (vormals Rundeturmstr. 6) - EG Room 072 - [http://www.cast-forum.de/workshops/anfahrt.html Anfahrt]
+
+The next chapter meeting will be hosted at CAST in Darmstadt.<br> This time the focus is on technical presentations and discussion. <br> <br> 
+
+;Agenda: Technical presentation slots will consist of 20-30 minute presentation and 15 minute discussion. 
+*1. (11:00 - 11:15) Welcome, Introduction and Administrativia 
+*2. (11:15 - 11:30) Vorstellung von CAST (Dr. Heinemann) 
+*3. (11:30 - 11:45) Short OWASP organisation introduction and update (Tobias Gondrom) 
+*4. (11:45 - 12:30) First technical presentation "Best Practices beim Einsatz einer Web Application Firewall 1.0" (Slides: [http://www.owasp.org/images/1/1b/WAF-Paper.pdf PDF]) (Alexander Meisel) 
+*5. (12:30 - 13:15) Break 
+*6. (13:15 - 14:00) Second technical presentation "Defending against Web Application DoS Attacks" (Maximilian Dermann) 
+*7. (14:00 - 14:45) 20-Minutes Talks (15 Min Presentation + 5-10 Min Discuss) 
+**"Input validation in ASP.NET -- tips, tricks &amp; pitfalls" (Boris Hemkemeier) 
+**"Managing of extremely large Web Application Firewall Installations" (Slides: [http://www.owasp.org/images/f/f6/VeryLargeWAFs.pdf PDF]) (Alexander Meisel) 
+*8. (14:45 - 15:00) Coffee Break 
+*9. (15:00 - 15:45) Fourth technical presentation "Secure Coding and Development Guidelines (part of CLASP)" (Tobias) 
+*10. (15:45 - 16:00) Wrap-up and outlook
+
+<br> 
+
+== Chapter Meeting on September 7th 2007 in Frankfurt/Main  ==
+
+After two years of absence the German Chapter has been restarted. The chapter meeting was on September 7th 2007, 15:00 - 18:00. 
+
+This first chapter meeting had as its main goal the re-initiation of the German chapter and to start work on projects. Talks and presentations are secondary and will receive more focus at subsequent meetings. 
+
+'''[https://lists.owasp.org/pipermail/owasp-germany/2007-September/000038.html Read meeting notes/minutes here]''' 
+
+
+
+= Comments  =
+=== Comments ===
+If you want to participate in the work of the German OWASP chapter or offer to submit work to it and cannot attend the meeting, please contact  any of the German Chapter Board members (see above) or send an email to our [mailto:owasp-germany@lists.owasp.org chapter mailing list]. 
+
+= Press Relations =
+=== Press Relations ===
+Press Relations of the OWASP German Chapter are currently directed exclusively towards the local press. We therefore do not provide english translations.
+
+*[http://www.owasp.org/index.php?title=Germany/press Press relations]
+
+
+<headertabs />
+
+[[Category:Germany]]
+[[Category:Europe]]

@@ -1,0 +1,64 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Project About</noinclude>
+
+| project_name = OWASP CSRFGuard Project 
+
+| project_home_page = Category:OWASP CSRFGuard Project
+
+| project_description = Welcome to the home of the OWASP CSRFGuard Project! OWASP CSRFGuard is a library that implements a variant of the [http://www.corej2eepatterns.com/Design/PresoDesign.htm synchronizer token pattern] to mitigate the risk of [[Cross-Site Request Forgery]] (CSRF) attacks. The OWASP CSRFGuard library is integrated through the use of a JavaEE Filter and exposes various automated and manual ways to integrate per-session or pseudo-per-request tokens into HTML. When a user interacts with this HTML, CSRF prevention tokens (i.e. cryptographically random synchronizer tokens) are submitted with the corresponding HTTP request. It is the responsibility of OWASP CSRFGuard to ensure the token is present and is valid for the current HTTP request. Any attempt to submit a request to a protected resource without the correct corresponding token is viewed as a CSRF attack in progress and is discarded. Prior to discarding the request, CSRFGuard can be configured to take one or more actions such as logging aspects of the request and redirecting the user to a landing page. The latest release enhances this strategy to support the optional verification of HTTP requests submitted using Ajax as well as the optional verification of referrer headers.
+
+| project_license = [http://www.opensource.org/licenses/bsd-license.php BSD]
+
+| leader_name1 = Eric Sheridan
+| leader_email1 = eric.sheridan@owasp.org
+| leader_username1 = Esheridan
+
+| contributor_name1 =
+| contributor_email1 = 
+| contributor_username1 = 
+
+| contributor_name2 =
+| contributor_email2 = 
+| contributor_username2 = 
+
+| pamphlet_link = 
+
+| presentation_link =
+
+| mailing_list_name = https://lists.owasp.org/mailman/listinfo/owasp-csrfguard
+
+| project_road_map = https://www.owasp.org/index.php/Projects/OWASP_CSRFGuard_Project/Roadmap
+
+| links_url1 = https://www.owasp.org/index.php/OWASP_Cross-Site_Request_Forgery_Research_Pool
+| links_name1 = OWASP Cross-Site Request Forgery Research Pool
+  
+| links_url2 = https://github.com/esheri3/OWASP-CSRFGuard
+| links_name2 = CSRF Online Git Repository
+
+| links_url3 = https://www.owasp.org/index.php/CSRFGuard_3_User_Manual
+| links_name3 = User Manual/OWASP CSRFGuard v3
+
+| links_url4 = http://www.owasp.org/index.php/Category:OWASP_CSRFTester_Project
+| links_name4 = OWASP CSRFTester
+
+| links_url5 = https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet
+| links_name5 = OWASP CSRF Prevention Cheat Sheet
+
+| links_url6 = http://www.owasp.org/index.php/PHP_CSRF_Guard
+| links_name6 = OWASP PHP CSRF Guard Project
+
+| links_url7 = http://www.thespanner.co.uk/2007/10/19/jsck/
+| links_name7 = CSRFGuard style solution for PHP and JavaScript
+
+| links_url8 = http://www.owasp.org/index.php/.Net_CSRF_Guard
+| links_name8 = OWASP .Net CSRF Guard Project
+
+| links_url[9-10] = 
+| links_name[9-10] = 
+
+| release_1 = OWASP CSRFGuard 3.0.0.503
+| release_2 = 
+| release_3 =
+| release_4 =
+<!--- The line below is for GPC usage only. Please do not edit it --->
+| project_about_page = Projects/OWASP_CSRFGuard_Project
+}}

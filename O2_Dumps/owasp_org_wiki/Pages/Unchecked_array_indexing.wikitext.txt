@@ -1,0 +1,115 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+Unchecked array indexing occurs when an unchecked value is used as an index into a buffer.
+
+'''Consequences'''
+
+* Availability: Unchecked array indexing will very likely result in the corruption of relevant memory and perhaps instructions, leading to a crash, if the values are outside of the valid memory area
+* Integrity: If the memory corrupted is data, rather than instructions, the system will continue to function with improper values.
+* Access Control: If the memory corrupted memory can be effectively controlled, it may be possible to execute arbitrary code, as with a standard buffer overflow.
+
+'''Exposure period'''
+
+* Requirements specification: The choice could be made to use a language that is not susceptible to these issues.
+* Implementation: Many logic errors can lead to this condition. It can be exacerbated by lack of or misuse of mitigating technologies.
+
+'''Platform'''
+
+* Languages: C, C++, Assembly
+* Operating Platforms: All
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Medium
+
+'''Likelihood of exploit'''
+
+Medium
+
+Unchecked array indexing, depending on its instantiation, can be responsible for any number of related issues. Most prominent of these possible flaws is the buffer overflow condition. Due to this fact, consequences range from denial of service, and data corruption, to full blown arbitrary code execution
+
+The most common condition situation leading to unchecked array indexing is the use of loop index variables as buffer indexes. If the end condition for the loop is subject to a flaw, the index can grow or shrink unbounded, therefore causing a buffer overflow or underflow.   Another common situation leading to this condition is the use of a function's return value, or the resulting value of a calculation directly as an index in to a buffer.
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+TBD
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Buffer Overflow]] (and related issues)
+* [[Buffer Underwrite]]
+* [[Signed-to-Unsigned Conversion Error]]
+* [[Write-What-Where]]
+
+
+==Related [[Controls]]==
+
+* Requirements specification: The choice could be made to use a language that is not susceptible to these issues.
+* Implementation: Include sanity checks to ensure the validity of any values used as index variables. In loops, use greater-than-or-equal-to, or less-than-or-equal-to, as opposed to simply greater-than, or less-than compare statements.
+
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Range and Type Error Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

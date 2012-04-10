@@ -1,0 +1,137 @@
+{{Template:SecureSoftware}}
+{{Template:Vulnerability}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+On some operating systems, the fact that the temp file exists may be apparent to any user.
+
+'''Consequences'''
+
+Confidentiality: Since the file is visible and the application which is using the temp file could be known, the attacker has gained information about what the user is doing at that time.
+
+'''Exposure period'''
+
+* Requirements specification: The choice could be made to use a language or library that is not susceptible to these issues.
+* Implementation: If one must use his own temp file implementation, many logic errors can lead to this condition. 
+
+'''Platform'''
+
+* Languages: All languages which support file input and output.
+* Operating platforms: This problem exists mainly on older operating systems and cygwin.
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Low
+
+'''Likelihood of exploit'''
+
+Low
+
+Since the file is visible, the application which is using the temp file could be known. If one has access to list the processes on the system, the attacker has gained information about what the user is doing at that time. By correlating this with the applications the user is running, an attacker could potentially discover what a user's actions are. From this, higher levels of security could be breached.
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+In C\C++:
+
+<pre>
+FILE *stream;
+char tempstring[] = "String to be written";
+
+if( (stream = tmpfile()) == NULL ) {
+   perror("Could not open new temporary file\n"); 
+   return (-1);
+}   
+/* write data to tmp file */
+/* ... */
+_rmtmp();
+</pre>
+
+In cygwin and some older unixes one can ls /tmp and see that this temp file exists.
+
+In Java:
+
+<pre>
+try { 
+    File temp = File.createTempFile("pattern", ".suffix");
+    temp.deleteOnExit(); 
+    BufferedWriter out = new BufferedWriter(new FileWriter(temp));
+    out.write("aString"); 
+    out.close(); } 
+catch (IOException e) { } 
+</pre>
+
+This temp file is readable by all users.
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* Requirements specification: Many contemporary languages have functions which properly handle this condition. Older C temp file functions are especially susceptible.
+* Implementation: Try to store sensitive tempfiles in a directory which is not world readable - i.e., per user temp files.
+* Implementation: Avoid using vulnerable temp file functions.
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:General Logic Error Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

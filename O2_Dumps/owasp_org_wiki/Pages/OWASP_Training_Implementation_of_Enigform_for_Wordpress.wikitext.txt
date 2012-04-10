@@ -1,0 +1,37 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>OWASP Training Modules</noinclude>
+| Module_designation = [[:Category:OWASP OpenPGP Extensions for HTTP - Enigform and mod openpgp|OWASP OpenPGP Extensions for HTTP - Enigform and mod_openpgp Project]]
+| Module_Overview_Goal = 
+&nbsp;
+Implement Enigform Authentication for Wordpress, from a bare-bones Ubuntu server installation to a working blog. To find problems, solve and document them. Learn, have fun, ask questions, have more fun.
+
+If you can, bring a laptop with a virtualization solution installed with Ubuntu 9.10.
+
+| Content = 
+&nbsp;
+*Mod_Openpgp Installation: Dependencies, mod_openpgp and EPS
+*Server Keypair Creation
+*Client Keypair Creation and Import into Server's Keyring
+*Running EPS (Enigform Python Server)
+*Apache VirtualHost Configuration for EPS and mod_openpgp
+*Installing Enigform in your Firefox Browser
+*Wordpress Plugin Installation and Configuration
+*Wordpress Template Editing
+
+&nbsp;
+| Material = 
+&nbsp;
+*[http://wiki.buanzo.org/index.php?n=Main.Wp-enigform-authentication Wordpress Plugin for Enigform Authentication - Definitive Guide]
+*[http://www.owasp.org/index.php/File:Enigform.pdf Enigform pdf]
+
+Latest versions:
+*[http://www.owasp.org/index.php/File:IBWAS10-Enigform.pdf IBWAS10 Enigform (pdf)]
+*[http://www.owasp.org/index.php/File:IBWAS10-Jify.pdf IBWAS10 - Jify (pdf)]
+<br>
+*[http://www.vimeo.com/18036735 Video of the session presented at IBWAS'10 Training Day, 16th Dec 2010]
+&nbsp;
+}}
+
+
+
+
+[[Category:OWASP_Training|Training]]

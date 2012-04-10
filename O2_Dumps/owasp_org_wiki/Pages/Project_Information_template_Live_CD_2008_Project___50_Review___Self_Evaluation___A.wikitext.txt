@@ -1,0 +1,27 @@
+[[Project Information:template Live CD 2008 Project|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications#OWASP Live CD 2008 Project|OWASP Live CD 2008 Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#OWASP Live CD 2008 Project|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|My Goals for this project where:<br> (1) Move from Morphix to SLAX <br>(2) Get SLAX to have an equal number of tools as had existed in the Live CD 2007 (updating tools where necessary) <br>(3) Add OWASP branding to SLAX <br>(4) Add additional, quality tools <br>(5) Document the Live CD, both how it was created and general documentation (e.g. OWASP Testing Guide). <br><br> I've got (1), (2) and 90% of (3) in the current ISO image.  I have yet to complete (4) and (5).  The remaining objective will be completed in the second half of the project - specifically the 10% remaining for (3) plus (4) and (5).
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#OWASP Live CD 2008 Project|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|The breakdown is as follows:<br>(1) Move to SLAX = 100%<br>(2) Tool parity with 2007 Live CD = 100%  ''*See Note below*''<br>(3) OWASP Branding = 90%<br>(4) Additional Tools = 0%<br>(5) Documentation = 0%<br><br>Note:  Metasploit currently is not on the ISO image but was part of the 2007 Live CD.  There is an unresolved issue as to whether that is strictly a web app tool or not.  Likely Metasploit will be added in the second 1/2 of the SoC as it is a very popular tool in general.
+ |- 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|So far I am very pleased with the assistance that has been forthcoming from my reviewers.  I will definitely be asking them for assistance with the selection of the additional tools as well as proof reading any documentation I generate.  From the OWASP community at large, I'd love for a wide variety of individuals to try the Beta Live CD and provide feedback, suggestions, problems, etc.  After I complete this self evaluation, I'll be posting the ISO on a website and providing a link in the project's OWASP page.  I'd suggest joining the email list to keep up with developments and also for feedback, suggestions and the like.
+|}

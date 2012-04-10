@@ -1,0 +1,48 @@
+__NOTOC__
+Here are a number of references related to [[Android]] Security
+
+===Official documentation===
+* Main websites: http://www.android.com , http://code.google.com/android , http://developer.android.com/
+* [http://developer.android.com/guide/appendix/faq/security.html Android Security FAQ]
+* [http://developer.android.com/guide/index.html Android Developer's Guide]
+* [http://developer.android.com/guide/topics/security/security.html Security and Permissions]
+* [http://developer.android.com/guide/topics/testing/testing_android.html Testing and Instrumentation]
+* [http://developer.android.com/guide/topics/manifest/manifest-intro.html AndroidManifest.xml File] and [http://developer.android.com/reference/android/Manifest.permission.html Permissions list]
+* [http://developer.android.com/guide/tutorials/notepad/index.html Notepad Tutorial] - Recomended starting point to understand Android
+
+===Android Security Team===
+* Report security vulnerabilities in Android: security@android.com (here is the [http://developer.android.com/security_at_android_dot_com.txt PGP Public] key)
+* [http://groups.google.com/group/android-security-discuss Android Security Mailing list]
+* [http://groups.google.com/group/android-security-discuss/browse_thread/thread/a2ab575dd0e5c27d Introduction from Android Security Team]
+
+===Published Research and presentations ===
+* '''Presentations'''
+** [http://www.smartphonesdumbapps.com/ Smart Phones Dumb Apps] Presentation about how to unpack, disassemble/decompile, and analyze Android applications.  Also has a link to some Perl code to automate parts of this process.
+** [http://www.coverity.com/library/pdf/coverity-scan-2010-open-source-integrity-report.pdf Coverity SCAN 2010 Open Source Integrity Report] which contains information about 88 Kernel bugs in Android
+** [https://www.isecpartners.com/files/iSEC_Android_Exploratory_Blackhat_2009.pdf Exploratory Android Security (iSEC Partners,  Blackhat_2009)
+** [https://www.isecpartners.com/files/iSEC_Securing_Android_Apps.pdf Developing Secure Mobile Applications for Android] 
+** [http://www.blackhat.com/html/bh-ad-10/bh-ad-10-briefings.html Building Android Sandcastles in Android's Sandbox] at BlackHat Abu Dhabi (Nov 10 - 11 2010) (NOT PUBLISHED YET)
+** [http://anantshri.info/articles/android_cust_rom_security.html Security Issues in android Custom ROMs] at c0c0n Kochi India (Oct 8 2011)
+* '''Books'''
+** [http://shop.oreilly.com/product/0636920022596.do Application Security for the Android Platform]
+** [http://www.amazon.com/gp/product/0071633561/ Mobile Application Security]
+*'''Blog posts'''
+** [http://jack-mannino.blogspot.com/2010/09/reversing-android-apps-101.html Reversing Android Apps 101]  and [http://jack-mannino.blogspot.com/2010/10/storing-data-on-mobile-devices-wrong.html Storing Data On Mobile Devices The Wrong Way]  - Jack Mannino 
+** [http://carnal0wnage.blogspot.com/2010/04/android-emulators-with-android-market.html Android Emulators with Android Market] and [http://techdroid.kbeanie.com/2009/11/android-market-on-emulator.html Android Market on Emulator]
+
+===Tools===
+* '''Android Development'''
+** [http://developer.android.com/sdk/index.html Android SDK] 
+* '''Android Security Review'''
+** [http://www.smartphonesdumbapps.com/ Smart Phones Dumb Apps] Presentation about how to unpack, disassemble/decompile, and analyze Android applications.  Also has a link to some Perl code to automate parts of this process.
+** [http://code.google.com/p/dex2jar/ Dex2Jar] :'' "...Android mobile device runs applications which have been converted into a compact Dalvik Executable (.dex) format. Dex2Jar converts .dex files to Java .class files..." ''
+** [http://code.google.com/p/android-apktool/ ApkTool] :'' "...It is a tool for reengineering 3rd party, closed, binary Android apps. It can decode resources to nearly original form and rebuild them after making some modifications; it makes possible to debug smali code step by step. Also it makes working with app easier because of project-like files structure and automation of some repetitive tasks like building apk, etc..." ''
+** [http://java.decompiler.free.fr JD-GUI and JD-Eclipse], [http://www.neshkov.com/ DJ] and [http://www.varaneckas.com/jad JAD (mirror)] : Java Decompilers
+** [http://code.google.com/p/android4me/downloads/list AXMLPrinter2] - Utility that decodes the Android XML files, such as Manifest.xml ().
+** [[OWASP O2 Platform]] can be used to review the Android Java source code (create object model of compiled java code, search source-code files, model config files)
+** Commercial tools (like Fortify, IBM AppScan Source) can parse Java files (the question is "Do they have Android Specific rules")
+** iSec Partners have a number of Android related tools at https://www.isecpartners.com/mobile_application_tools.html
+
+===Media Coverage===
+*  Storing data unencrypted: "Firm finds security holes in mobile bank apps": http://news.cnet.com/8301-27080_3-20021874-245.html 
+* Paypal has issue with lack of SSL in iPhope app: http://online.wsj.com/article/SB10001424052748703506904575592782874885808.html (more to iPhone page)

@@ -1,0 +1,111 @@
+== OWASP Training Courses ==
+
+The tutorials and the conference itself were held at KU in the College De Valk. The specific rooms are specified below.
+
+
+{| style="width:80%" border="0" align="center"
+ ! align="center" style="background:#4058A0; color:white" | T1. Foundations of Web Application Security - One Day Course - May 29th, 2006
+ |-
+ | style="background:#F2F2F2" | This powerful one day course focuses on the most common web application security problems, including the OWASP Top Ten. The course will introduce and demonstrate hacking techniques, illustrating how application vulnerabilities can be exploited so students really understand how to avoid introducing such vulnerabilities into their code. [[AppSec_Europe_2006/Training | Read more here!]] This class will be held in room DV3 01.08
+ |-
+ ! align="center" style="background:#4058A0; color:white" | T2. WebServices and XML Security - One Day Course - May 29th, 2006
+ |-
+ | style="background:#F2F2F2" | Many enterprises are currently developing new Web Services and/or adding and acquiring Web Services functionality into existing applications -- now is the time to build security into the system! [[AppSec_Europe_2006/Training | Read more here!]] This class will be held in room DV3 01.10
+|}
+
+
+== OWASP Europe 2006 Conference Schedule ==
+
+{| style="width:80%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white" | Day 1 - May 30, 2006
+ |-
+ | style="width:10%; background:#7B8ABD" | || style="width:40%; background:#BC857A" | Track 1: Auditorium Zeger Van Hee (Room DV1 91.56) 
+ | style="width:40%; background:#BCA57A" | Track 2: Auditorium 2 (Room DV1 91.54)
+ |-
+ | style="width:10%; background:#7B8ABD" | 08:00 - 09:00 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Registration and Coffee
+ |-
+ | style="width:10%; background:#7B8ABD" | 09:00 - 09:10 || colspan="2" style="width:80%; background:#F2F2F2" align="left" | Welcome to AppSec Europe 2006: Dave Wichers, OWASP Conferences Chair
+ |-
+ | style="width:10%; background:#7B8ABD" | 09:10 - 10:00 || colspan="2" style="width:80%; background:#F2F2F2" align="left" | [http://www.owasp.org/index.php/Image:OWASPAppSecEU2006_Day1Keynote-OWASP2.0.ppt Keynote: OWASP 2.0 - A new vision for OWASP: Enabling organizations to develop, maintain, and acquire applications they can trust] - Dinis Cruz - OWASP .Net Project Lead
+ |-
+ | style="width:10%; background:#7B8ABD" | 10:00 - 11:10 || colspan="2" style="width:80%; background:#F2F2F2" align="left" | Panel: [http://www.artima.com/weblogs/viewpost.jsp?thread=162577 "Should companies be emulating Microsoft’s Security Development Lifecycle (SDL)?”]
+Moderator: Johan Peeters, Program Director secappdev.org
+Panelists: Dinis Cruz, Andrew Van Der Stock, Pravir Chandra - Chief Security Architect - Secure Software, Alex Lucas - Security Engineer - Microsoft
+ |-
+ | style="width:10%; background:#7B8ABD" | 11:10 - 11:30 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Break
+ |-
+ | style="width:10%; background:#7B8ABD" | 11:30 - 12:30 || style="width:40%; background:#BC857A" align="left" | [http://www.owasp.org/index.php/Image:OWASPAppSecEU2006_CLASP_Project.ppt OWASP CLASP Project] – Pravir Chandra, Chief Security Architect, Secure Software
+ | style="width:40%; background:#BCA57A" align="left" | [http://www.owasp.org/index.php/Image:OWASPAppSecEU2006_CanTestingToolsReallyFindOWASPTop10.ppt Can (Automated) Testing Tools Really Find the OWASP Top 10?], Erwin Geirnaert, Partner ZION Security
+ |-
+ | style="width:10%; background:#7B8ABD" | 12:30 - 13:45 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Lunch
+ |-
+ | style="width:10%; background:#7B8ABD" | 13:45 - 15:00 || style="width:40%; background:#BC857A" align="left" | [http://www.owasp.org/index.php/Image:OWASPAppSecEU2006_Bootstrapping_the_Application_Assurance_Process.ppt Bootstrapping a Software Security Assurance Process] – Sebastien Deleersnyder, OWASP Belgium Chapter Lead 
+ | style="width:40%; background:#BCA57A" align="left" | [http://www.owasp.org/index.php/Image:OWASPAppSecEU2006_AJAX_Security.ppt AJAX Security] – Andrew Van Der Stock, Security Engineer - NAB and OWASP Guide Project Lead
+ |-
+ | style="width:10%; background:#7B8ABD" | 15:00 - 15:20 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Break
+ |-
+ | style="width:10%; background:#7B8ABD" | 15:20-16:30 || style="width:40%; background:#BC857A" align="left" | From Theory to Reality: Seven Practical Steps to Delivering More Secure Software – Roger Thornton, CTO Fortify
+ | style="width:40%; background:#BCA57A" align="left" | [http://www.owasp.org/index.php/Image:OWASPAppSecEU2006_HTTPMessageSplittingSmugglingEtc.ppt HTTP Message Splitting, Smuggling and Other Animals] [1]- Amit Klein, Internationally Recognized Web Application Security Researcher and OWASP Israel Chapter Leader 
+ |-
+ | style="width:10%; background:#7B8ABD" | 16:30-16:50 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Break
+ |-
+ | style="width:10%; background:#7B8ABD" | 16:50 - 18:00 || colspan="2" style="width:40%; background:#F2F2F2" align="left" | Panel: "The role of Sandboxing in creating secure .Net and Java applications.” 
+Organizer: Dinis Cruz
+
+Panelists: Stephen de Vries - Corsaire, Roger Thornton - CTO Fortify
+ |-
+ | style="width:10%; background:#7B8ABD" | 18:00 - 19:00 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Walking Tour of Leuven on the way to the Faculty Club
+ |-
+ | style="width:10%; background:#7B8ABD" | 18:40 - 19:20 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | [http://www.owasp.org/index.php/Chapter_Leader_Meeting_AppSec_Europe_2006 Chapter Leads Meeting at the Faculty Club]: Led by Sebastien Deleersnyder
+ |-
+ | style="width:10%; background:#7B8ABD" | 19:00 - 21:00 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Social Gathering: Dinner and Drinks at the Faculty Club
+ |-
+ ! colspan="3" align="center" style="background:#4058A0; color:white" | Day 2 - May 31, 2006
+ |-
+ | style="width:10%; background:#7B8ABD" | || style="width:40%; background:#BC857A" | Track 1: Auditorium Zeger Van Hee (Room DV1 91.56) 
+ | style="width:40%; background:#BCA57A" | Track 2: Auditorium 2 (Room DV1 91.54)
+ |-
+ | style="width:10%; background:#7B8ABD" | 08:00 - 09:00 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Coffee
+ |-
+ | style="width:10%; background:#7B8ABD" | 09:00 - 09:50 || colspan="2" style="width:80%; background:#F2F2F2" align="left" | [http://www.owasp.org/index.php/Image:OWASPAppSecEU2006_Day2Keynote-OWASP_TNG.ppt Keynote: Taking OWASP to the next level], Andrew Van Der Stock, Security Engineer - NAB and OWASP Guide Project Lead
+ |-
+ | style="width:10%; background:#7B8ABD" | 09:50 - 10:50 || colspan="2" style="width:80%; background:#F2F2F2" align="left" | [http://www.owasp.org/index.php/Image:OWASPAppSecEU2006_WAFs_WhenAreTheyUseful.ppt Web Application Firewalls: When are they useful?] - Ivan Ristic, Founder Thinking Stone
+ |-
+ | style="width:10%; background:#7B8ABD" | 10:50 - 11:10 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Break
+ |-
+ | style="width:10%; background:#7B8ABD" | 11:10 - 12:30 || style="width:40%; background:#BC857A" align="left" | [http://www.owasp.org/index.php/OWASPAppSecEU2006_ExposingCryptographyforSoftwareDevelopers.ppt Exposing cryptography for software developers: common pitfalls & countermeasures that every developer should follow when writing crypto-aware applications], Shay Zalalichin, Application Security Unit Manager, Comsec Security Consulting B.V.
+ | style="width:40%; background:#BCA57A" align="left" | Refereed Papers Track – Slot 1: Research Papers
+ 
+1) [http://www.owasp.org/index.php/Image:OWASPAppSecEU2006_RequestRodeo.ppt RequestRodeo: Client Side Protection against Session Riding], Martin Johns and Justus Winter ([http://www.owasp.org/index.php/Image:RequestRodeo-MartinJohns.pdf paper])
+
+2) [http://www.owasp.org/index.php/Image:OWASPAppSecEU2006_InlineApproachforSecureSOAPRequests.ppt An Inline Approach for Secure SOAP Requests and Early Validation], Mohammad Ashiqur Rahaman, Maarten Rits and Andreas Schaad ([http://www.owasp.org/index.php/Image:AnInlineSOAPValidationApproach-MohammadAshiqurRahaman.pdf paper])
+ |-
+ | style="width:10%; background:#7B8ABD" | 12:30 - 13:45 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Lunch
+ |-
+ | style="width:10%; background:#7B8ABD" | 13:45 - 15:10 || style="width:40%; background:#BC857A" align="left" | SiteGenerator, VulnReport and the other OWASP .Net tools, Dinis Cruz, OWASP .Net Projects Lead
+ | style="width:40%; background:#BCA57A" align="left" | Refereed Papers Track – Slot 2: Experience Papers
+
+3) [http://www.owasp.org/index.php/Image:OWASPAppSecEU2006_SecurityTestingthruAutomatedSWTests.ppt Security Testing Web Applications through Unit Tests], Stephen de Vries ([http://www.owasp.org/index.php/Image:AutomatedSecurityTestingofWebApplications-StephendeVries.pdf paper])
+
+4) [http://www.owasp.org/index.php/Image:OWASPAppSecEU2006_ProtectingWebServicesAndAapplications.ppt Protecting Web Services against Security Threats], Rix Groenboom 
+([http://www.owasp.org/index.php/Image:SecuringWebServices-RixGroenboom.pdf paper])
+ |-
+ | style="width:10%; background:#7B8ABD" | 15:10 - 15:30 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Break
+ |-
+ | style="width:10%; background:#7B8ABD" | 15:30 - 16:30 || colspan="2" style="width:40%; background:#F2F2F2" align="left" | Panel: “Are we winning the war?” - Are we actually getting a handle on application security issues and making things better, or are things still getting worse?
+Moderator: Gunnar Peterson
+Panelists: Roger Thornton - CTO Fortify; Dave Wichers - COO Aspect Security; André Mariën - Consulting Director - CyberTrust EMEA; Charlie Cano - F5
+ |-
+ | style="width:10%; background:#7B8ABD" | 16:30 - 16:50 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Break
+ |-
+ | style="width:10%; background:#7B8ABD" | 16:50 - 17:30 || colspan="2" style="width:40%; background:#F2F2F2" align="left" | [http://www.owasp.org/index.php/Image:AppSec2006EU_Wrapup.ppt Conference Wrap Up] - Dave Wichers, OWASP Conferences Chair
+|}
+
+== References ==
+
+All four papers from the Refereed Papers Track can be downloaded as one document [http://www.cs.kuleuven.be/publicaties/rapporten/cw/CW448.pdf here].
+
+* Papers that Amit Klein's "HTTP Message Splitting, Smuggling and Other Animals" presentation is based on:
+:# [http://www.securityfocus.com/archive/1/401866 “Meanwhile, on the other side of the web server” (Amit Klein, June 2005)]
+:# [http://www.packetstormsecurity.org/papers/general/whitepaper_httpresponse.pdf “Divide and Conquer - HTTP Response Splitting, Web Cache Poisoning Attacks, and Other Topics” (Amit Klein, March 2004)]
+:# [http://www.cgisecurity.com/lib/HTTP-Request-Smuggling.pdf “HTTP Request Smuggling” (Chaim Linhart, Amit Klein, Ronen Heled, Steve Orrin, June 2005)]

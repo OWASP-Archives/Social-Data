@@ -1,0 +1,59 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Failure to follow guideline/specification]]
+
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+==Description==
+
+The program calls a thread's run() method instead of calling start().
+
+In most cases a direct call to a Thread object's run() method is a bug. The programmer intended to begin a new thread of control, but accidentally called run() instead of start(), so the run() method will execute in the caller's thread of control.
+
+==Risk Factors==
+TBD
+
+==Examples ==
+
+The following excerpt from a Java program mistakenly calls run() instead of start().
+
+    Thread thr = new Thread() {
+      public void run() {
+        ...
+      } 
+    };
+    thr.run();
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+Note: A reference to related [http://cwe.mitre.org/ CWE] or [http://capec.mitre.org/ CAPEC] article should be added when exists. Eg:
+
+* [http://cwe.mitre.org/data/definitions/79.html CWE 79].
+* http://www.link1.com
+* [http://www.link2.com Title for the link2]

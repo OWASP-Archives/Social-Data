@@ -1,0 +1,130 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+
+==Description==
+
+Sending non-cloned mutable data as an argument may result in that data being altered or deleted by the called function, thereby putting the calling function into an undefined state.
+
+'''Consequences'''
+
+* Integrity: Potentially data could be tampered with by another function which should not have been tampered with. 
+
+'''Exposure period '''
+
+* Implementation: This flaw is a simple logic issue, introduced entirely at implementation time.
+
+'''Platform'''
+
+* Languages: C/C++ or Java
+* Operating platforms: Any
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Medium
+
+'''Likelihood of exploit'''
+
+Medium
+
+In situations where unknown code is called with references to mutable data, this external code may possibly make changes to the data sent. If this data was not previously cloned, you will be left with modified data which may, or may not, be valid in the context of execution.
+
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+In C\C++:
+
+<pre>
+private:
+  int foo.
+  complexType bar;
+  String baz;
+  otherClass externalClass; 
+
+public:
+  void doStuff() {
+    externalClass.doOtherStuff(foo, bar, baz)
+  }
+</pre>
+
+In this example, ''bar'' and ''baz'' will be passed by reference to doOtherStuff() which may change them.
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* Implementation: Pass in data which should not be alerted as constant or immutable.
+* Implementation: Clone all mutable data before returning references to it. This is the preferred mitigation. This way - regardless of what changes are made to the data - a valid copy is retained for use by the class.
+
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+Note: A reference to related [http://cwe.mitre.org/ CWE] or [http://capec.mitre.org/ CAPEC] article should be added when exists. Eg:
+
+* [http://cwe.mitre.org/data/definitions/79.html CWE 79].
+* http://www.link1.com
+* [http://www.link2.com Title for the link2]
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:General Logic Error Vulnerability]]
+[[Category:Implementation]]
+[[Category:OWASP_CLASP_Project]]

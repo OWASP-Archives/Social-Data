@@ -1,0 +1,1154 @@
+*[[OWASP Summer 0f Code 2008 : Selection|'''Back to OWASP Summer of Code 2008 : Selection Page''']]
+
+*'''This page contains [[OWASP Summer of Code 2008|OWASP Summer of Code 2008]] applications which the voting team require some further clarifications.'''
+
+== Code Crawler ==
+* Alessio Marziali (aka nTze)<br> 
+
+ Dinis Comments: 
+ * Confirm connection to Code Review project, and what parts of it (in percentage) will be covered
+ * Eoin should be one of the reviewers in this project
+ * Confirm that final delivery will be of [[:Category:OWASP Project Assessment#Assessment Scale for OWASP TOOLS Projects|'''Beta Quality''']].
+ * Also add a delivery to:
+   * scan 4 OWASP projects using this tool, 
+   * Create two documents
+     * a report containing its results (Ideally using OWASP's Report Generator)
+     * a how-to guide (so that the results can be reproduced)
+
+ Jeff Comments:
+ * Need to confirm that this is not just a grep tool
+ * Need much more details about what types of vulnerabilities
+ * Need information about false positives
+
+ Alessio Marziali Answer:
+ Q: Confirm connection to Code Review project, and what parts of it (in percentage) will be covered
+ A: At this time Code Crawler is mainly related and directed by Eoin Keary. By my side I’m trying to 
+ implement all the features that came from the book. Now, I cant give you the right percent ration about 
+ the Code Review Project coverage but, just looking at the Eoin’s application you can read how much 
+ importan this tool is becoming for that project.
+ Q: Eoin should be one of the reviewers in this project
+ A: I’m already in touch with Eoin via IM and e-mail.
+ Q: Confirm that final delivery will be of Beta Quality.
+ A: The final delivery will be followed by Documentation, Guides and everything listed in Assessment Scale 
+ for OWASP TOOLS Projects.
+ Q: Also add a delivery to:
+ - Scan 4 OWASP projects using this tool, 
+ - Create two documents
+ - A report containing its results (Ideally using OWASP's Report Generator)
+ - A how-to guide (so that the results can be reproduced)
+ A: Delivery date by the end of this month, that’s why the core of the system is going to change.
+ That’s due to the new improvements of C# 3.0 and the .NET Framework in general, I’ll be working on more 
+ complex scanning system.
+ Q: Need to confirm that this is not just a grep tool
+ A: Code Crawler is not just a grep tool. The core of this software is getting more complicated every build, 
+ and I’m working close with other owasp fellows to improve it.
+ Q: Need much more details about what types of vulnerabilities
+ A: There’s a lot of vulnerabilities that Code Crawler can discover. XSS, SQL Injection are the mainly 
+ covered at this point. Since the core system is changing right now I can’t specify more informations.
+ Q: Need information about false positives
+ A: The development of this tool is “try to avoid false positives” driven, this means we’ll try to drive down the false positive
+ ratio as much as we can.
+
+
+'''Description'''<br>
+This tool is aimed at assisting code review practitioners. It is a static code review tool which searches for key topics within .NET and J2EE/JAVA code.
+The aim of the tool is to accompany the OWASP Code review Guide and to implement a total code review solution for "everyone"; Where "everyone" means "more" companies performing secure software activities.<br><br>
+Key areas of improvement:<br>
+'''Reporting'''<br>
+- PDF
+- Microsoft Office Compatible Word Document
+- HTML
+
+'''Scanning'''<br>
+- Multiple File scanned at the same time<br>
+-- Open Microsoft Visual Studio's Solutions<br>
+
+'''Bigger Database''' <br>
+Which will provide more information about the threats such vulnerability type (XSS,SQL Injection, Remote File Inclusion etc).<br>
+'''Security Software Life Cycle'''<br>
+A feature that will let you save the threats for each project/document, so the reviewer can check how the development is going from a “security prospective” during the entire software lifecycle.<br>
+
+Improvement of the code scan system.<br>
+
+== P022 - OWASP Access Control Rules Tester ==
+By Andrew Petukhov
+
+ Dinis Comments: 
+ * Use WebGoat and HacmeBank as target applications and deliver a report of its analysis (& exploitation) using AcCoRuTe
+ * Confirm that final delivery will be of [[:Category:OWASP Project Assessment#Assessment Scale for OWASP TOOLS Projects|'''Beta Quality''']]. 
+
+ Andrew Comments: 
+ * I do confirm that the stated suggestions will be fulfilled
+
+'''Introduction:'''
+
+I believe that web application business logic vulnerabilities will be under increasing attention in near future. Although input validation vulnerabilities (XSS, SQLI) are in overwhelming majority nowadays, many automated approaches have emerged that deal with them. On the contrary, there are no known approaches (and methodologies for security experts) to classify or even detect business logic vulnerabilities. Besides, business logic flaws usually expose web application to great risks (according to OWASP Testing Guide). My proposal is to create a systematic approach that addresses business logic vulnerabilities. 
+
+'''Project objectives and deliverables:'''
+
+Project is intended two deliverables: research technical report (publication ready article) and an Access Control Rules Tester tool.
+
+The research will be intended to answer the following questions: 
+* Is there a reasonable classification of business logic vulnerabilities?
+* Is it possible to generalize some cases into methodology or even an algorithm for an automated tool?
+* Is it possible to build precise access control matrix for a web application and how?
+
+Access Control Rules Tester (AcCoRuTe) tool will be Java-based application. As proposed inP022, AcCoRuTe will have the following functionality:
+* Site spider. Basic features: Javascript (and AJAX) is interpreted by Rhino in order to get more site links; forms are filled in by operator. 
+* Sitemap generator. Sitemap is presented to operator; he can make it more precise/complete. 
+* Sitemaps analyzer. This component intersects different sitemaps in order to determine possible flaws. The result is test case, which verifies, whether vulnerability really exists or not.
+
+I am PhD student at Moscow State University. In 2007 I took part in OWASP Spring of Code on project "Python Dynamic Analysis". I have strong background in programming and I beleive that I also have creative approach to existing scientific problems.
+
+== OpenPGP Extensions for HTTP - Enigform and mod_openpgp ==
+By Arturo 'Buanzo' Busleiman
+
+ Dinis Comments: 
+ * We need more details on the project's objectives and deliverables.
+ * It is possible to add ASP.NET support.
+ * Can we use WebGoat as a test application and show how to implement the solution: WebGoat+Firefox+Enigform+mod_openpgp   
+ (ideally this would be included in the official distributions of webgoat.)
+ * Confirm that final delivery will be of [[:Category:OWASP Project Assessment#Assessment Scale for OWASP TOOLS Projects|'''Beta Quality''']].
+ * Final delivery should also contain detailed 'how-to' guides.
+
+ Buanzo's Response:
+ * Acknowledge and agreed.
+ * I don't have the necessary knowledge, but mod_openpgp has nothing to do with PHP or ASP.NET. It adds headers which any language can read.
+   I'd say "ASP.NET" support is already "in". What we could do is port a simple PHP application to ASP.NET, Rails, etc...
+ * I need more information on WebGoat. Let's discuss it. I'm open to ideas.
+ * mod_openpgp, my main focus for SoC2008, will be of Beta Quality, but I need more input from the community. So far, it's a one-man effort.
+ * I plan on opening a wiki and writing a detailed guide. Again, I need input from the community.
+
+=== Introduction to the project ===
+My name is Arturo Busleiman, a.k.a Buanzo. Last year I worked with OWASP to take Enigform (The OpenPGP Firefox Extension) and mod_openpgp (The Apache counterpart) to an usable level. This year, I want to focus on mod_openpgp and Secure Session Management, presenting a working web-site using this new authentication methodology in such a way that it will attract security professionals and web-developers to this new mix of two good'ol protocols: HTTP and OpenPGP.
+
+For that to happen, OWASP support is essential. I'm very happy to submit my application for Summer of Code 2008.
+
+=== About Buanzo ===
+
+I am a 26 year old Independent security consultant from Buenos Aires, Argentina, that has contributed to the world of information systems security since 1994. Linux and Security are my life.
+
+A quick search for buanzo on google [http://www.google.com/search?hl=en&q=buanzo&btnG=Google+Search] will provide all necessary details about my professional and community background. For comprobable experience, you could also check my Rent a Coder profile.[http://www.rentacoder.com/RentACoder/SoftwareCoders/showBioInfo.asp?lngAuthorId=735204] or my "Customer Comments" page at [http://www.buanzo.com.ar/pro/].
+
+I've contributed scripts, fixes and translations to the Nmap project. I've also acted as Expert Contributor for SANS TOP-20 2004, 2005, 2006 and 2007. I've developed 
+tools and written documentation that can be found in Freshmeat, mozdev.org and addons.mozilla.org. Also I've written
+the Unix chapter of the OISSG's Information Systems Security Assessment Framework, v1.0 [http://www.oissg.org/content/view/71/71/].
+
+In my free time, I "run" the 2600 Argentina meetings, write articles, give talks and play the guitar.
+
+I'm an active member of the FLOSS community since 1996, having written articles in magazines http://www.net-security.org/dl/articles/Detecting_and_Understanding_rootkits.txt, made TV, radio and newspaper appearances [http://codigoabierto.bitacoras.com/archivos/2005/04/01/buanzo-hacks] and led different security research groups of Spain, Mexico and Argentina. Currently I contribute time thorugh my sites, forums and blogs, answering questions in mailing lists and helping coordinate some local LUGs. I do also manager the Linux Counter for Argentina [http://counter.li.org/reports/place.php?place=AR].
+
+=== About Enigform ===
+
+The project has draw attention from the IETF OpenPGP Working Group, and even Vinton Cerf (The Father of the Internet) said that Enigform and mod_openpgp "[this] strikes me as a really interesting idea and I hope you (Buanzo) will pursue it with the W3C." (February 18, 2008). [http://en.wikipedia.org/wiki/Enigform]
+
+== OWASP-WeBekci Project ==
+by Bunyamin Demir
+
+ Dinis Comments: 
+ * Use WebGoat as a case study and use WeBecki to protect it (i.e. add rules, customize them, etc..)
+ * Ivan (ModSecurity Creator) should be one of the reviewers in this project
+ * Confirm that final delivery will be of [[:Category:OWASP Project Assessment#Assessment Scale for OWASP TOOLS Projects|'''Beta Quality''']].
+ * This project should work in collaboration with [[OWASP Summer of Code 2008 Applications#Securing WebGoat using ModSecurity|Securing WebGoat using ModSecurity]].
+ * So, Bunyamin can you contact [mailto:stephencraig.evans@gmail.com Stephen Evans] and see how you can work together?
+
+ Bunyamin :
+ * We can use WebGoat for testing when i finish it. By the way I can create a rule set in WeBekci for protect to WebGoat.
+ * Ivan told me he was busy nowadays.
+ * The project will confirm to Beta Quality when it's completed.
+ * To protect WebGoat is just a feature, I'm designing an interface to administer mod_security.
+ * -
+
+http://www.owasp.org/index.php/Category:OWASP_WeBekci_Project
+
+'''Executive Summary'''
+
+Web application firewalls (WAF) are gaining importance among the information security technologies designed to protect web sites from attack. WAF solutions prevent attacks that network firewalls and intrusion detection systems can't and they require no modification of application source code. ModSecurity [http://www.modsecurity.org/] is an open source web application firewall that runs as an Apache module. It is an embeddable web application firewall and it provides protection from a range of attacks against web applications. It is an open source project available to everyone; it however does not come with an admin panel. 
+
+I decided to provide this essential tool with a control panel which I believe will ease and thus encourage its usage.
+
+ModSecurity allows for HTTP traffic monitoring and real-time analysis with no changes to existing infrastructure. My main goal is to analyze attacks and generate rules to change the configuration of the ModSecurity accordingly.
+
+ModSecurity  has a feature called “flexible rule engine” as its heart of Attack Prevention capability . It uses ModSecurity’s “Rule Language,” (a programming language designed to work with HTTP transaction data). It is easy to use and flexible; yet the system administrators need to learn its own rules to create what is called “Certified ModSecurity Rules” to be implemented. My control panel will automate the major code-generation in Rule Language. 
+
+'''Objectives and Deliverables'''
+
+* '''Configuration'''        : Most of the configuration parameters will be managed through the web interface
+* '''Rule Generator'''       : Basic rules will be generated using the web interface
+* '''Core Rule Integration''': Core rules will be added to the database for use
+* '''Logging and Reporting''': Apache error log and modsec_audit log will be parsed and presented to the user thru the web interface
+* '''DB Support'''           : MySQL
+
+'''Why I should be sponsored for the project'''
+Being a SpoC2007 project, it couldn't be implemented mainly due to a job change and therefore lack of time. With the help of Bedirhan Urgun we'll be able to produce a quality web admin panel GUI for a same host modsec installation infrastructure. We are both part of OWASP Turkey [http://www.owasp.org/index.php/Turkey] and tried to produce a great deal of awareness both about web security and OWASP with both documents/chapter meetings/email list and mini-conferences.
+
+== OWASP Backend Security Project ==
+* Full name: Carlo Pelliccioni
+
+ Dinis Comments: 
+ * This project should be coordinated with the OWASP Testing Guide, OWASP Source Code Review and OWASP HoneyComb project. 
+   Can you contact the project leaders of this project and see how you can work together (ideally list which content will be used from those projects).
+ * Confirm that content will be delivered on two formats: WIKI and Word document 
+ * Work document should be delivered in a format ready for book publishing
+
+ Carlo:
+ * I agree! I've already contacted Matteo Meucci and I'll contact as soon as the other OWASP leaders.
+ * The project has been designed in the beginning to become a downloadable document so I can confirm the two formats.
+ * OK. I'll organize the WIKI and Word document as the template of OWASP books
+
+* Project: OWASP Backend Security Project
+* Project description: 
+:OWASP Backend Security Project is a new project created to improve and to collect the existant information about the backend security.
+:The project is composed by three sections (security development, security hardening and security testing). 
+:The aim is to define the guidelines for the companies and IT professionals working in the security field into processes development and back-end components management/testing in the enterprise architecture.
+
+* Objectives:
+
+'''Overview'''
+Create a section with an introduction about the project (high-level description) explaining the main goals.
+
+'''Development'''
+Include the writings already existant in OWASP wiki concerning PHP,JAVA and ASP.NET and extend the projects' sections with new contents.
+
+'''Hardening'''
+Create new guidelines about the dbms hardening
+
+'''Testing'''
+Include the writings already existant in OWASP wiki about security testing. Create new articles about security testing.
+
+== Fortify Code Review Project ==
+
+ Dinis comment: There needs to be some internal discussion (between OWASP board and Fortify) on the best way to handle the 
+ two received proposals (on helping with the implementation of Fortify in OWASP). [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#Source Code Review OWASP Projects|Source Code Review OWASP Application]]
+
+ Project canceled by the applicant
+
+* David Rook
+
+'''Your educational and professional background: '''
+
+I have worked in IT for over 8 years now with 5 years Information Security experience. I have obtained and taught many IT certifications in my career so far.
+
+'''Application security experience and accomplishments: '''
+
+Work experience as an Information Security Analyst implementing application security in a highly sensitive environment. I'm currently contributing to an OWASP project (Code Review guide) and spoken on the subject of Application Security at a developers conference.
+
+'''Participation and leadership in open communities: '''
+
+As mentioned above I'm currently contributing to one other OWASP project.
+
+'''The opportunity, challenges, issues or need your proposal addresses: '''
+
+My proposal is to help Fortify and OWASP achieve the goals set out in the objectives for this project. The project has the ability to deliver a clear guide on static analysis and subsequently how to add this into the SDLC. The auditing of open source software can help to enhance the security of this software and possibly improve its ability to increase its user base. 
+
+'''Milestones and objectives: '''
+
+Process all OWASP Java developments through the Fortify scanner
+Review the output of the Fortify scans on the OWASP projects that have been submitted
+Produce the first draft of the three documents that need to be delivered
+Liaise with OWASP/major Java Open Source project contacts to involve them in reviewing the output of Fortify scans of their developments
+Provide final documentation
+
+'''Specific activities and who will carry out these activities: '''
+
+I will carry out all the activities for this project myself.
+
+Research current methods of static analysis in the application security arena and combine this with my own knowledge. This research will allow me to define a workflow which illustrates how static analysis will be integrated into the SDLC.
+
+Identify which OWASP applications have been submitted for analysis and identify which other projects can be scanned. I will contact the relevant project leads to get them to submit the projects for review.
+
+Review the results of the scans and analyse any issues found. I will provide feedback on any issues found to the relevant project lead. 
+
+Identify major Open Source Java projects and liaise with these projects to involve them in scans of their code. We will provide feedback on the results and ensure that future code revisions are also scanned by the Fortify system.
+
+Provide revised guides based on feedback from the draft documents and the use of the Fortify system.
+
+'''Specific deliverables and a rough project schedule so we can track progress: '''
+
+The deliverables for this project would see me firstly provide draft guides once I have used the Fortify system to review any recently scanned OWASP projects. 
+
+I would also seek to involve major java Open Source projects in the Fortify project which will help the Fortify Scanner become part of many Open Source developments.
+
+Providing report documents to the relevant OWASP project leads which would explain any issues found in the Fortify scan of their code
+
+Deliver the final guides for review
+
+'''Long-term vision for the project: '''
+
+I would see this project firstly serving as a focal point for anyone wishing to implement Static Analysis into their own SDLC. Secondly I see this project as a launching pad for the Fortify scanner to increase its use by Open Source projects. 
+
+'''Any other reasons why you and your project should be selected: '''
+
+I'm very passionate about Application Security and I want to use this passion to help the Application Security community. I think the project should be selected so that the  objectives of both the OWASP and Fortify can be achieved.
+
+'''Project Plan:'''
+
+My project plan can be found here: http://docs.google.com/Present?docid=dcd4c73_0ghsncvcf&skipauth=true
+
+==P003/P013 - OWASP Application Security Tool Benchmarking Environment and Site Generator refresh.===
+submitted by Dmitry Kozlov (see below about project team)
+
+ Dinis Comments: (Dmitry's coments are in italic)
+ * I would like to see a closer integration with the work currently being done on OWASP Site Generator (OSG), 
+ since there are a lot of synergies between what is going on and the vision presented in this proposal.
+
+''Sure our plans include  integration with SiteGenerator. ''
+'' But I'm not so familiar with it to describe just now in details how to do it. ''
+'' As far as I see there is a lot of further work have to be done on SiteGenerator's GUI to become user friendly. ''
+'' (as example I'd like to have a wizard helping to create site by configuring navigational elements, ''
+'' functional elements such as CRUD, security tools (authentication, authorization, etc. and vulnerabilities ))''
+'' And it seems to me that Dinis's original vision of SiteGenerator is far from it's current state.''
+ 
+
+ * It is important to note that the original vision for OSG was to make most of it platform independent and 
+ its main objective was to enable the benchmarking of application security tools.I would like to see how we can 
+ integrate the central module of OSG (which is designed to give the user a powerful GUI to perform the required 
+ site configurations and analysis) with the individual 'platform independent' modules (as described below)
+
+'' At present time I can say that vulnerabilities database should be rebuild to be able to create '' 
+'' non-ASP code, for example Java Servlets etc. It seems to me that SAMATE project (and of cause OWASP vuln list) will be  helpful. ''
+''It seems to me that the best way to integrate current SiteGenerator with platform-dependent modules via xml-based site config file and the libraries of reusable elements (mentioned in our project application)''
+
+ * Dmitry can you contact [mailto:medelibero@gmail.com Mike de Libero] and [mailto:leven101@gmail.com Abby] (from OSG team) and see where are the synergies between the current OSG 
+ work and your proposed ideas (CC me)
+ * [mailto:medelibero@gmail.com Mike de Libero] (from OSG team) should be one of the reviewers in this project
+
+'' Unfortunately not just now. I don't have integral vision of SiteGenerator, but only a lot of questions and ideas.''
+'' Of cause I promise to  coordinate each our step with SiteGenerator's team.''
+'' By the way: can we run SiteGenerator on Linux/Mono?''
+
+
+ * The answer to the question below '...(by the way: Does OWASP need it to be published?...' is YES :)
+
+''It will took us some time to translate it to English.''
+
+
+'''Introduction'''
+In my opinion it is not good idea to start two new different projects
+concerning to Benchmarking Environment. OWASP already has "Insecure Web
+App Project", Foundstone created couple of similar applications, our
+group created similiar application in Python (by the way: Does OWASP
+need it to be published?). OWASP SiteGenerator is another different tool
+but very platform-bound. Moreover NIST is also working in this direction.
+
+'''Project description'''
+My idea is to split destination web application technology from the
+three reusable libraries: library of navigational elements, library of
+vulnerabilities and library of language constructs. Library of
+navigational elements is required to assess spidering features and
+library of language constructs is required to assess source code
+scanners this constructs can be in programming language or preferable in
+language-independent form of Abstract Syntax Tree. Navigation and
+vulnerability libraries are independent from technology web application
+built in. This make is possible to create web applications with similar
+vulnerabilities in different technologies.
+
+User can create target XML application configuration similar to
+SiteGenerator's in terms of site structure, navigational elements and
+vulnerabilities. After that web application can be generated using
+technology specific generator. Generators can create source code or
+binary application but not a stub like SiteGenerator. This allows static
+and dynamic code analysis to be performed on web application and
+penetration testing too.
+
+I think this tool and components library should be platform-independent
+unlike SiteGenerator. And only technology-specific generators may be
+platform-dependent. Such technology-specific generators can be source
+code generators or can be binary application template.
+
+If you are interested in we can perform such project by our students
+under scientific advisory by Dmitry Kozlov and Andrew Petukhov, but it
+seems to me this tool will be delivered in about 6-7 month. During
+SoC2007 it was about 7 month between start and finish of projects.
+
+== Teachable Static Analysis Workbench ==
+By Dmitry Kozlov, Igor Konnov
+
+ Dinis Comments (''author's anwers are italic''): 
+
+ * Can we link this project to the Code Review project. If so confirm which parts of it (in percentage) will be covered
+
+''Sure we can, but only with Code Review Guide, but not with Code Crawler tool ''
+''(we experience problems running it. It is far before alfa, isn't it?).  ''
+''We plan to cover input validation, authorization, authentication and possibly ''
+''error handling from Code Review Guide. ''
+
+ * For the applications to test, can we use OWASP tools for it? If not, where will the test application created be published?
+
+''We plan to use OWASP Insecure WebApp Project, WebGoat (as far as I understand) and hopefully HackmeBank.''
+
+ * Regarding budget, what adjustments would be requirement if the sponsorship value was 5,000 USD?
+
+''We hope it wouldn't be. But if so we will postpone Code Review Tree, Orizon, FindBugs''
+
+
+'''Introduction:'''
+
+This application covers two OWASP Project proposals: P002 Teachable Static Analysis Workbench and P023 Code Review Tree. These project proposals look complementary and the key idea was to create ONE tool for code review instead of number non-integrated tools.
+Note: this project is very close to P024 Attack Surface Metric too – based on web application entry points and used backends it is easy to compute such a metric.
+
+'''Project objectives and deliverables:'''
+
+Project is intended two deliverables: research technical report (publication ready article) and a workbench prototype.
+
+
+The research will be intended to answer the following questions: 
+* Can we integrate existing open source static analysis tools (OWASP and third-party) to work altogether? We plan analysis to cover the following tools: LAPSE, Orizon, ESAPI, FindBugs.
+* How static analysis workbench can be taught by security analyst?
+* How static analysis workbench can support web-applications built using MVC frameworks?
+
+Workbench prototype will be Java-based Eclipse plug-in which aim is to help security analyst/code reviewer validation of web application. At prototype step we suggest to analyze J2EE Web tier applications build on Java Servlets, JSP (without business logic in it) and one MVC framework (Apache Struts).  We plan workbench prototype to have the following functionality:
+* Input validation vulnerabilities analysis: identification of web application entry points (aka attack surface in P024), call graph for each entry point (see “Packages -> Classes -> Methods -> callsites” in P023), identification of data validation routines, teachable taint analysis. 
+* Authentification and access control analysis: identification of code related to access control and it’s analysis.
+* Pattern-based code analysis.
+* Teachability: analyst indicates security-related code (sources of tainted data, sensitive sinks, input validation and sanitizing functions, access control code, etc.) and workbench automatically recomputes possible vulnerabilities list. The second idea is to spread knowledge gathered from analyst to other web applications.
+
+Project budget: $10K (note: this project combines two OWAPS Project Proposals)
+
+
+'''Future development:'''
+
+Further, workbench can be extended to support various Java web application frameworks and to support Python web applications (it seems to us that teachable tool is much more valuable for Python and other languages where the notion of web application is not so formal as in J2EE).
+
+
+'''Background: '''
+
+Dmitry Kozlov is a postdoc researcher at Moscow State 
+University. Since 2003 he leads a group performing research in the area of web 
+application security. In 2007 this group took part in OWASP Spring of 
+Code on project "Python Dynamic Analysis". This project was implemented 
+mostly by Dmitry’s PhD student Andrew Petukhov. Also in 2007 this group created static analysis tool for Python language, based on Pixy PHP analyser (publication is upcoming).
+
+Igor Konnov is PhD student at Moscow State University he has strong background in program analysis and verification.
+
+== P025 OWASP Positive Security Project ==
+by Eduardo Vianna de Camargo Neves
+
+
+ Dinis Comments: 
+ * This project must be done in close collaboration with Erwin and https://www.owasp.org/index.php/OWASP_Corporate_Application_Security_Rating_Guide 
+   and with the (SoC 08 proposal) http://www.owasp.org/index.php/OWASP_Summer_of_Code_2008_Applications_Reviewer_Comments#P006_-_OWASP_Corporate_Application_Security_Rating_Guide 
+   Eduardo can you please contact Erwin and Parvathy to see how you can work together
+ * Confirm that content will be delivered on two formats: WIKI and Word document 
+ * Work document should be delivered in a format ready for book publishing.
+
+
+ Eduardo Vianna de Camargo Neves Comments: 
+ *  Required liaison was made with Parvathy and we agreed to contribute on each other project and work as a team on these initiatives. No answer was received from Erwin so far, however Parvathy informed that he will be the project reviewer for both projects. I also included Wagner Elias as a second reviewer for the Positive Approach Project.
+ * Content will be delivered, at least, in WIKI and Word document formats. However is very probable that we need to create PowerPoint presentations, banners and other marketing material.
+ * Work document will be delivered in a format ready for book publishing that must be agreed with OWASP Foundation.
+ * Please check the complete changes on text bellow.
+
+
+'''Summary'''
+
+A common approach on most companies is to increase the protection of their assets after the occurrence of a considerable impact. However some companies learned that a positive approach on IT Security is most effective in several ways and reduce the financial costs on responses to security incidents and the related post-mortem corrective actions.
+
+The Positive Security Project will be used to learn how companies are working to create a positive security approach on their own resources and use this knowledge to create a set of control, marketing and awareness tools that will be available to promote and construct a positive approach to security worldwide.
+
+'''Approach'''
+
+This project will be developed in a partnership with the OWASP Corporate Application Security Rating Guide where the initial information about how companies are dealing with application security will be gathered and several inputs from the Positive Security Project deliverables will be provided.
+
+Using the knowledge the Positive Security Project will create a set of control, marketing and awareness tools that will be available to promote and construct a positive approach to security worldwide. This set will be available at OWASP Wiki and on commercial ready-to-publish formats (i.e. doc, ppt and pdf) for the community usage, translation and adaptation on specific initiatives (i.e. a presentation for a software company).
+
+'''Benefits'''
+
+The whole IT Security community will be benefited from this initiative and with the adequate support from OWASP to maintain the project active and liaise with big players on the market, we can expect the following:
+
+•	The IT Security community will receive a simplified and effective material to support the discussion for a positive posture within their companies, suppliers and customers, allowing this initiative to be spread amongst several players on the market at the same time and in a concrete fashion.
+
+•	The knowledge and relationship developed during the support on the production of the Security Rating Guide will allow us to produce the deliverables on Positive Security Project with real information, increasing the credibility of the initiative for the market.
+
+•	The Security Rating Guide and the Positive Security Project can be walk in parallel, merging their information to support a concise and continuous marketing campaign to encourage a positive approach on the market.
+
+•	As an open community free from commercial pressures, OWASP can use both projects to support the evaluation of security products for the market, allowing the organization to receive profits from these services and support current and future projects.
+
+'''Team Members'''
+
+•	Team Leader: Eduardo Vianna de Camargo Neves, CISSP
+
+•	Team Member: Parvathy Iyer, CIA, CISA (current team leader of Corporate Application Security Rating Guide)
+
+•	Reviewers: Neal Kirschner, CISA, CISSP, CFE, CFSA, CISM and Wagner Elias, CBCP
+
+A team of compromised volunteers from OWASP community and participants from security communities and associations (i.e. ISSA, SANS and ISC2) will be invited to join this initiative.
+
+'''Summarized Work Breakdown Structure (WBS)'''
+
+01.	Criteria establishment to support the Corporate Application Security Rating Guide (E.N. and P.I.) – 25 Apr
+
+02.	Criteria establishment and approval of marketing templates for Positive Security Project (E.N., W.E. and N.K.) – 02 May
+
+03.	Development of the Positive Security Project material (i.e. blog and marketing sheets) (E.N.) – 16 May
+
+04.	Review and comments by the OWASP community – 16 to 23 May
+
+05.	Definition of the Positive Security Project material (E.N., P.I., W.E. and N.K.) – 30 May
+
+06.	Liaison with the OWASP Members, Top 50 Companies and Top 50 Software Companies to present the project and negotiate their participation as supporters, sponsors or contributors. (E.N.) – 13 June (A)
+
+07.	Update on Positive Security Project including the refreshed Corporate Application Security Rating Guide on the material and references (E.N. and P.I.) – 20 June
+
+08.	Presentation of the Positive Security Project approach for the market (E.N.) – 07 July (B)
+
+09.	Conference calls with team members to evaluate the results of the initiatives in all countries and produce project´s documents (i.e. lessons learned, update on marketing material and evaluation of alternative approaches for the future steps). (E.N., P.I., W.E. and N.K.) – 07 August
+
+10.	Prepare project documentation and present results and deliverables to the OWASP community on the web site on Wiki and ready-to-publish formats (E.N.) – 31 August
+
+(A) Support from OWASP Foundation is required to liaise with companies and associations worldwide
+
+(B) Support from OWASP Foundation and community are to spread the word on all countries were OWASP members are located.
+Project Control
+
+The project will be managed following PRINCE2 Process Model and all control documents published for the OWASP community. The following mandatory project control documents are planned:
+
+•	Project Initiation Document: To document project´s background, definition, objectives, approach, etc.
+
+•	Communication Plan: To assure that OWASP Community are being continuous communicated about project status and deliverables achievement.
+
+•	Highlight Report: To provide the OWASP Community with a summary of the project status, progress and potential problems or areas where help may be required.
+
+•	End Project Report: To present project achievements. Should be considered as the final project report.
+
+More documents may be included during project development to support the control and assure a high quality level (i.e. issue log, project approach).
+
+'''Long Range Plan'''
+
+The project shall be used as a tool to support efforts to encourage and make the positive approach a reality on the IT Security field. These initiatives shall be supported by OWASP as long term plans and grow to a continuous world-wide campaign in this direction that must achieve big players on the market and be recognized by the community as a tool that must be used to evaluate security enabled companies and products. 
+
+'''EDUARDO VIANNA DE CAMARGO NEVES'''
+
+'''Educational and Professional Background'''
+
+Information Security professional and enthusiastic with 15 years dedicated to achieve expressive results in the areas of IT, Information Security, Compliance and Project Management. A CISSP in good stand and Officer at the ISSA Brazilian Chapter, my professional career gave me extensive knowledge in several fields of Information Security with accumulated experience at consulting firms, as CSO at a world player company on consumer goods market and now as an entrepreneur at Latin American market.
+
+'''Application security experience and accomplishments'''
+My work experience is on Security Management, Risk Assessment, Business Continuity and Disaster Recovery, Security Awareness and other managed-related fields on our industry. I don’t have hands-on experience on application security and this is the main reason why I am running to be qualified on the project described below, where I believe that my skills can be used to achieve an excellent result for the community.
+
+'''Participation and leadership in open communities'''
+
+•	Member of OWASP Brazil where I made some small contributions in a recent past.
+
+•	Member of ABNT/CB-21/SC02 committee, Brazilian ISO representative for 27001 and 17799 standards
+
+•	Officer of ISSA Brazil Chapter where I am responsible for the South Region and as the editor of Antebellum, the ISSA Brazil Journal
+
+•	Founder and member of GISI-PR, an open community focused on discuss and promote Information Security initiatives within Paraná State, Brazil
+
+'''Why me?'''
+
+Can be me, you or anyone that carries these projects in a professional fashion and assure that all deliverables are being achieved. The most important parts is to make it happen, talk and get the support from reputable associations and large companies (OWASP Members are a good start) and lead it as a long range responsibility.
+I am running to win this project because I believe in all of this. I see both as very valuable initiatives that can help companies to make more business; people to get more jobs and the whole community to win in a scenario where our contributions on the security market are recognized as business tools.
+
+== GTK+ GUI for w3af project ==
+''Facundo Batista''
+
+ Dinis Comments: 
+ * Clarify if there will any OWASP reference or Branding on the new GUI
+ * Confirm that final delivery will be of 'Beta Quality'
+ * Clarify if the GUI project (or w3af) will be an OWASP project
+
+ Facundo Batista & Andres Riancho comments:
+
+ This is how I adjusted it:
+
+ * Confirm that final delivery will be of 'Beta Quality'
+
+ ** The quality of this work is planned to be Beta. This means: all the
+ quality achievable by careful design, good programming practices, and a
+ lot of testing from core developers. Why I don't say that this is Final
+ Quality? Because for this the product should be left on the wild for several 
+ weeks (I plan to fix any issue that could appear then, but the timespan 
+ exceeds this Summer of Code program).
+
+ * Clarify if there will any OWASP reference or Branding on the new GUI
+
+ * Clarify if the GUI project (or w3af) will be an OWASP project
+ ** I can not answer these questions, because I'm not the owner of w3af
+ project. I put in copy to Andres Riancho, the owner, for him to
+ address this. Please let me know if I should add something to the wiki
+ page regarding this.
+
+ ** Regarding the first question, Inside the "Help" menu, we will add a
+ "Sponsors" window were all the project sponsors will be listed with a
+ small logo and links to their sites will be added.
+
+ ** Regarding the question about w3af being an OWASP project, the answer
+ is currently no, which could change in the future. My reasons for this
+ were written in a previous mail I sent to Tom and you.
+
+
+'''Your educational and professional background'''
+
+I'm Electronic Engineer with a Master in Engineer Innovation in
+Bologna University, Italy. I live in Buenos Aires, Argentina, and love
+reading books, playing tennis, and programming Python.
+
+I worked in a mobile company for six years, in the Network Management
+department, then I was Chief Developer of a Mobile Content Provider,
+and now I'm Solution Architect in Multimedia & Systems Integration in
+Ericsson. Also I was professor in several universities, high schools
+and other institutions.
+
+
+'''Application security experience and accomplishments'''
+
+None, more than working in w3af. However, my proposal here is not
+related to the security part of the product, but to its graphical
+interface and usability.
+
+
+'''Participation and leadership in open communities'''
+
+I'm very involved in the free software and open source community. I'm
+a Python Core Developer and member of the Python Software Foundation
+by merit. I have a long history of talks given in several
+international (PyCon, EuroPython) and national (a lot!) conferences. I
+also teach Python in educational institutions, enterprises and as a
+private instructor. I founded Python Argentina, the national users
+groups, and I'm a very active member of it.
+
+I also lead other open source projects (SMPPy, SiGeFi, etc.) and
+particpate in others (Docutils, w3af itself, etc.).
+
+
+'''The opportunity, challenges, issues or need your proposal addresses'''
+
+My main objective is to minimize the effort and learning curve of
+using w3af, providing a very usable graphical interface.
+
+Note that as the interface is cross platform, being usable also in the
+win32 environment, it will help to popularize the w3af project.
+
+This will allow users without information security knowledge to verify
+that their web applications are correctly programmed and configured.
+
+
+'''Specific activities and who will carry out these activities'''
+
+I will carry the following activities, detailed later in smaller steps:
+
+- Design and code new windows and interfaces to increase the functionality of the project.
+
+- Tuning of the process workflow, allowing a more intuitive way of working.
+
+- Visual polishing for a more pleasant and intuitive tool.
+
+- Usability tests and improvements.
+
+The quality of this work is planned to be Beta. This means: all the 
+quality achievable by careful design, good programming practices, and a 
+lot of testing from core developers. Why I don't say that this is Final 
+Quality? Because for this the product should be left on the wild for several
+weeks (I plan to fix any issue that could appear then, but the timespan 
+exceeds this Summer of Code program).
+
+
+'''Specific deliverables and a rough project schedule so we can track progress'''
+
+''New features implemented in the pyGTK user interface:''
+
+- Local proxy to trap and modify requests and responses sent from a browser.
+
+- Manually send a request and analyze the response.
+
+- Manually create a fuzzed requests based on tokens, so user can construct easily differents HTTP request with a regex-like semantics.
+
+- Wizard to perform a vulnerability assessment.
+
+- Graphical display of site map and vulnerabilities.
+
+- Reload a plugin after its edited from within the pyGTK user interface.
+
+- Embebed tool to encode/decode URL/Base64 and to hash sha1/md5.
+
+- HTTP response side by side content compare.
+
+
+''Usability improvements in the pyGTK user interface:''
+
+- Meetings with a usability expert that the w3af team leader has already contacted and worked with.
+
+- Kill all pending bugs and make a stable release.
+
+
+''Documentation:''
+
+- Users guide for the pyGTK user interface.
+
+- Help system for the GUI itself
+
+
+'''Long-term vision for the project'''
+
+To provide the web application security community with a stable and fully 
+featured framework to perform all the tasks included in a penetration test
+from within the project.
+
+
+'''Any other reasons why you and your project should be selected'''
+
+w3af is one of the most active web application security projects;
+the community that supports it is growing and we need the support of 
+already established organizations like OWASP to keep working at the 
+rate that we want to.
+
+== Source Code Review OWASP Projects ==
+* James Walden
+
+ Dinis comment: There needs to be some internal discussion (between OWASP board and Fortify) on the best way to handle the 
+ two received proposals (on helping with the implementation of Fortify in OWASP). 
+ See, please, [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#Fortify Code Review Project|Fortify Code Review Application]]
+
+'''Educational and professional background: '''
+
+I am an assistant professor of computer science at Northern Kentucky University, and I previously worked as a visiting assistant professor at the University of Toledo.  Before entering academia, I worked for Intel as a software engineer for five years.  I hold a Ph.D. in theoretical physics from Carnegie Mellon University.
+
+'''Application Security experience: '''
+
+My primary area of interest in research and teaching is application security.  I have worked with application security issues since 1993 when I was developing secure CGI scripts in perl at CMU, and much of my work at Intel involved application security.  I have used Fortify's Source Code Analysis tool in my teaching and research since 2005, and I served as a technical reviewer for the book ''Secure Programming with Static Analysis'' by Brian Chess and Jakob West.
+
+I have developed workshops on secure programming, software security, and web application security, including both slides and demonstration web applications, which I have taught to computer science faculty at conferences since 2005 and to software developers through my university since 2006.  I have given many talks on application security during the last three years to local professional groups like IEEE, ISACA, and ISSA and at conferences such as the Ohio Information Security Conference and Recent Advances in Information Assurance, Network and Software Security 2007.
+
+'''Open Communities: '''
+
+I have contributed to the OWASP Guide and OWASP Code Review Guide, and I participate in the OWASP Cincinnati chapter.  I have also submitted a number of small patches to fix bugs in open source projects over the years.
+
+'''Opportunity and Challenges'''
+
+There will be other contributors to this project, including one professor and  several students.  Dr. Maureen Doyle will work with one student to develop and document the workflow to incorporate Fortify Java Open Source static analysis into the SDLC.  Anticipated issues include detecting false positives that result from the analysis and reporting the security errors to the appropriate developers for future correction (e.g., through Bugzilla or similar system).  It is uncertain how much of the workflow can be automated.  The workflow documentation will require that static analysis be a part of the SDLC.  
+
+Dr. Doyle has twenty years of industry experience working with various development lifecycles and has implemented software processes at General Electric and Alphatech, Inc.  Dr. Doyle keeps current on software development paradigms as part of her course preparation for graduate and undergraduate software engineering courses. Dr. James Walden, whose background is described above, will lead the auditing task and collaborate on the workflow development.  
+
+'''Milestones and Objectives'''
+
+The objectives of this project are:
+* Develop and document a workflow for open source projects to incorporate static analysis into the Software Development Life Cycle (SDLC).
+* Apply the above workflow as a required step for OWASP projects.
+* Aid in auditing select open source projects to create a baseline for comparing security amongst open source projects. 
+
+The milestones for this project are:
+* '''Three projects''' selected for initial analysis by May 1.
+* '''Project 1''' submitted to Fortify Java Open Review Project by June 1
+* '''Workflow''' sent out for review by June 1
+* '''Projects 2 and 3''' submitted to Fortify Java Open Review Project by July 1
+* '''Additional projects''' identified for analysis with the revised workflow by July 1.
+* '''Workflow''' available at OWASP by August 15
+* '''Additional projects''' submitted to Fortify Java Open Review by August 15
+
+'''Project Schedule'''
+
+* May 1, 2008: Team finalized, three projects selected for initial analysis.
+* June 1, 2008: Team of workflow reviewers finalized, preliminary workflow sent out for review, project 1 analysis complete using initial workflow.
+* July 1, 2008: Project 2 and 3 analysis completed, workflow finalized, additional projects selected for creating baseline.
+* August 15, 2008: Analysis of projects for baseline security measures complete, workflow documented on OWASP web site.
+
+'''Long Term Vision'''
+
+We would like to analyze the classes of security bugs found through static analysis to determine if patterns exist, so that we could develop measures to prevent the introduction of such bugs into projects.  We would also like to implement a security metrics collection process for projects, recording data on static analysis usage, number of security bugs, lifetime of security bugs, and so forth.
+
+'''Supporting Information'''
+
+Dr. Walden and Dr. Doyle bring a combination of industrial and academic experience to this task.  They both regularly mentor undergraduate students working on research projects, and they have already recruited students to work on a project using static analysis tools.  The funds offered by OWASP will be used solely to fund our undergraduate students.
+
+== OWASP Interceptor Project - 2008 Update ==
+by Justin Derry
+
+ Dinis Comments: 
+ * Use WebGoat as an example and show how Interceptor can be used to exploit its vulnerabilities (add to deliverables the creation of a document with detailed 'how to' information)
+ * Confirm that final delivery will be of 'Beta Quality'
+ * Clarify the budget requirements to the GUI toolkit. For example, can this toolkit be used by more OWASP .NET tools? will its source code be made available? can we security audit it?
+
+
+ Justin Comments:
+ * Thanks for the Feedback Dinis, i have made some of the changes as per below to the project. BETA Quality project will not be an issue. It's very close to this now, and we can simply use this to get it there. (i.e documentation, better stability) platform support.
+ * Don't need to worry about the GUI Toolkit, i am going to do the update no matter what, so i went ahead and purchased the component myself. 
+ * I will take the source "open" so people can download. It's just if they wish to do their development they will need to buy the two components as they are "developer licenses" not software based. But this won't stop us from putting the source online. Yes we will audit the code (we will put it online) but i will also run it through Fortify SCA (see my seperate email to you on this).
+
+http://www.owasp.org/index.php/Category:OWASP_Interceptor_Project
+
+'''Executive Summary'''
+
+The OWASP Interceptor project was originally written by myself and donated to the OWASP project. Since it has been online numerous people have downloaded the tools and used the code/toolkit. Currently the industry has very limited “XML” or SOAP client testing tools that are designed specifically to perform XML interception and manipulation. The Objective of the Interceptor project is to provide a strong tool for performing XML penetration tests against Web Service (or XML/SOAP) endpoints. The tool should not replace other proxy interception tools such as Charles, Web Scarab and so on, but be purely focused on handling and reading XML structures from clients.
+
+
+The Interceptor tool includes a “swiss-army” knife of features that will help with decoding/hash generation and interpretation of XML code. The key objective is to make a tool that can assist with the collection, inspection and attack replay of XML requests against service endpoints. This year it’s time for an update. The tool doesn’t run on Vista and needs a number of back-end features addressed as well as some help files etc. (Help to get the tool out of BETA status).
+
+
+'''Objectives this year'''
+
+This year I see the following objectives in the application code base.
+•	Get the Interface to run on all Window Platforms (.NET) Win2000, XP and Vista;
+
+•	Update the TCP handle libraries to be faster
+
+•	Update the XML Parser engine to support the latest structures
+
+•	Provide a “default” attack database of known XML attack methods (this is a big one)
+
+•	Write a number of help files on how to use the tool
+
+•	Update the toolkit BASE64 Decoder, XML Generators etc with further tools
+
+•	Write a better “reporting” engine to show the result of simulated attack responses
+
+•	Better HTTP support for Manipulation, Authentication and Header Injection etc
+
+•	Better support for interception and handling AJAX XML requests
+
+•	Create a Web "Usability" Guide on how to use the Tool to break the OWASP Web Goat project.
+
+•	Ensure the Tools is released with Source Code (Minus Licensed Components) and is of Beta Quality.
+
+These are the core features I would like to introduce, with also further to probably come as a part of the project.
+
+
+'''Why should I be sponsored for the project?'''
+
+The current development cycle stopped due to limited time and the need to purchase the IDE tools to develop the interface in .NET. As a Summer of Code 2008 sponsored project we can get the IDE interface tools to implement “Vista” features that will see the tool run on all .NET platforms (Win2000, XP and Vista). Recent changes in my job will allow me to spend more time on developing the toolkit.
+
+Over a number of years I have been involved with OWASP, whilst most recently getting involved with running the OWASP Australia Security Conference for 2008, as well as the Brisbane Chapter. I am also working in the Asia Pacific RIM to further increase the awareness of OWASP and Application Security. My Conference duties for the year have finished up (till planning starts again in a couple of months) so my time can be invested in updating the toolkit.
+
+I believe during the previous years, i have shown OWASP that i am willing and able to produce a quality outcome and i am prepared to put the effort into OWASP to acheive the goals set out for this project. 
+
+Some of the Sponsorship money for the project would go to purchasing a specific toolkit for the UI. (The UI is important simply because we want the application to be user friendly). Xceed Components provide a Smart UI as well as some of the decoding and compression features the tool needs. This would require us to approach them upfront for a “free” licence or use some of the Sponsorship money to buy the toolkit. But we can tackle that problem when we come to it.
+
+== Lockpick ==
+*Mark Roxberry
+
+ Dinis Comment: Proposal removed by Mark
+
+'''Summary'''
+
+Lockpick is an open source penetration testing project management tool.  There are plenty of tools that do specific functions, or a range of technical functions (NMAP, Nessus).  However, there are not many open source tools to help manage the scope of the testing a system.  Lockpick will fill that role.  When I start a penetration test, Lockpick will provide my checklists and script resources and update my tools.  For intelligence gathering, Lockpick will let me create profiles for target companies and persons.  I can shell out to my normal tool suite and organize my log files and other output with the tool.  Eventually, I can use Lockpick to pull all of the testing data together and generate an executive summary and detail report with the logs and profiles for addenda.
+
+'''Project Roadmap'''
+
+April 2, 2008 - April 30, 2008 (Sprint 1)
+*Architecture, technical design (use cases, db design) and UI design
+
+May 1, 2008 - May 31, 2008 (Sprint 2)
+*Project framework (modular design - use an dependency injection (IoC) architecture, so we can rip and replace components)
+*GUI framework
+*GUI for pen-test overview (use NIST or OSSTMM for process milestones)
+
+June 1, 2008 - June 30, 2008 (Sprint 3)
+*Competitive intelligence feature (Company and individual profile builder)
+
+July 1, 2008 - July 31, 2008 (Sprint 4)
+*Checklist and scripting repository feature (with rss synchronization feed)
+(Unit Tests, Code, and QA)
+
+July 15, 2008
+Project Status Report
+
+August 1, 2008 - August 31, 2008 (Sprint 5)
+*3rd Party tool integration (shell out and log management)
+
+'''Project Wishlist'''
+
+*Report generator (integrated with open office, google docs)
+*OVAL (Open Vulnerability and Assessment Language) database reader
+*Testing log GUI
+
+'''Project Team'''
+
+Mark Roxberry, CISSP, CEH, MCP - independent software vendor.  I've been writing code since infancy.  It would be great to have OWASP sponsor the project and give me the opportunity to create something that other testers can use.
+
+== Skavenger ==
+* Matthias Rohr
+
+ Dinis Comments: 
+ * Use WebGoat and OWASP Site Generator (OSG) as case studies and create a report on how to use Skavenger to identify the vulnerabilities that exist in these two vulnerable applications 
+   (HacmeBank could be also be used as an example of a vulnerable ASP.NET application)
+>> A case study for WebGoat can be downloaded here: http://www.matthiasrohr.de/CaseStudy_WebGoat_Skavanger.pdf
+
+ * Confirm that delivery will include documentation on how to use WebScarab with Skavenger
+>> Actually, Skavenger already includes a documentation (in CHM and HTML format) which describes how you can use Skavenger to scan WebScarab data. However, this documentation will be extended and will also include a troubleshooting chapter.
+
+ * Rogan (WebScarab) project leader should be the reviewer
+>> This would be a good choice since WebScarab provides the best cache data for performing passive analysis and is therefore the recommended proxy. 
+
+ * Confirm that final delivery will be of 'Beta Quality' 
+>> Confirmed.
+
+ * Confirm if this project will be an OWASP project
+>> Confirmed.
+
+'''Introduction'''
+
+Skavenger is a web application security assessment toolkit which arised from many years of professional experience in the web application assessment field and is the result of nearly one your of work.
+
+It passively analyzes traffic logged by various MITM proxies (such as WebScarab and Burp) as well as other sources (like Firefox's LiveHTTPHeader plugin) and helps to identify various kinds of possible vulnerabilities (such as XSS, CRLF injection, an insecure session management and several kinds of information disclosure). Skavenger's modular design allows the integration of custom scanning modules without any knowledge about the tool at all.
+
+Skavenger is completely written in Perl and can be downloaded from:
+https://sourceforge.net/projects/skavenger/
+
+'''Objectives and deliverables'''
+
+Here are some ideas:
+* A GUI to monitor and analyze scanning results
+* More sophisticated scanner modules (e.g. for better backend identification and more platform specific tests)
+* Database integration
+* API's to integrate modules in other languages (such as Python or Java).
+* Better source integration with custom Firefox, Burp or (of course) WebScarab plugins
+
+== SQL Injector Benchmarking Project (SQLiBENCH) ==
+by Mesut Timur & Bedirhan Urgun
+
+ Dinis Comments: 
+ * Will it be possible to use OWASP Site Generator to host the 'test cases' (covering the multiple databases) and to use WebScarab to script the exploits 
+   (i.e. the proof that vulnerabilities are real and exploitable)?
+ * What SQL tools will be tested? (ie benchmarked) Please list both Open Source and Commercial tools
+ * Can we add Hibernate to the list of SQL injection targets?
+ * Confirm that final delivery will contain:
+   * the testing environment (with the vulnerabilities)
+   * the test scripts (i.e the exploits)
+   * report(s) containing detailed explanations of the
+       * project's deliverables
+       * methodology 
+       * vulnerabilities and test scripts (i.e how they work)
+       * tools results
+
+ Responses:
+ '''For Comment#1''': 
+ There'll be proof that the vulnerabilities are real and exploitable. We shall write the vulnerable application in ASP.NET, 
+ which will, hopefully, allow us to use Site Generator. We'll also generate scripts in WebScarab that'll dump db information  
+ in cases permitted.
+ '''For Comment#2''': 
+ sqlix, sqlmap, bsql, sqlget, absinthe and pangolin (maybe a few others)
+ '''For Comment#3''': 
+ We'll utilize nHibernate.
+ '''For Comment#4''': 
+ The only problem is providing the "testing environment" since we would have the licensing problems. 
+ So, we'll create a step-by-step documentation and video on preparing the testing environment. That aside, other items are confirmed.
+
+'''Prelude'''
+
+There're a lot of and great open source tools (takeover/dumpers/hybrid) for taking advantage of an sql injection vulnerability both used by web application security specialists and attackers. 
+Techniques used, databases supported, algorithms employed and abilities implemented by these "sql injectors" greatly varies. Standardization is one of the abstract goals of OWASP and we think it's important to standardize general vulnerability techniques exists in web applications and one of the biggest one is sql manipulation. 
+In our effort, we aim to produce a standardization of techniques used in exploiting sql injection by automatic tools. 
+
+'''Proposal'''
+
+The goal of the project is to create a detailed set of benchmarking criterias for automatic sql injection tools and applying these to a set of open source sql injectors, producing analysis/benchmarking reports.
+Additionaly, in a semi-academic manner, algorithms used by several sql injectors will be analyzed both implementation and complexity vise.
+
+'''Deliverables And Project Schedule Milestones'''
+
+Two set of documents will be produced. One of them will include the benchmarking criterias and the other will comprise of analysis of selected sql injectors against the benchmarking criterias.
+Moreover, an interactive visual data flow diagram, giving hints to testers about which tool should be used under which circumstances, will be implemented with web-based technologies such as jquery library. 
+
+April 03    Project Kickoff
+
+April 03-30 Determination of the benchmarking criterias 
+
+May   01-15 Producing a test environment image with 5-6 rdbms (MSSQL Express, Oracle Express, DB2 Express, MySQL, PgSQL, etc.) and a vulnerable application (which will support different sql injection types, databases and include logging capabilities)
+
+May   15-31 Selecting and installing automatic sql injectors onto the test system and starting to use them on vulnerable application
+
+June  01-30 Analysing tools and applying benchmarking criterias, contacting the authors as we proceed 
+
+July  01-31 Producing reports for benchmarking criterias and tool analysis
+
+'''About Us'''
+
+We're part of OWASP-Turkey. [http://www.h-labs.org Mesut Timur] is a junior in the Computer Engineering Dept. of [http://www.gyte.edu.tr University of GYTE] and [http://www.webguvenligi.org Bedirhan Urgun] is a web/application security specialist in [http://www.uekae.tubitak.gov.tr TUBITAK-UEKAE].
+
+== P017 - OWASP AppSensor - Detect and Respond to Attacks from Within the Application ==
+'''Name'''
+Michael Coates
+
+ Dinis Comments: 
+ * Use WebGoat as an example and show how AppSensor can be used to detect and respond (i.e. mitigate) attacks targeted at the multiple WebGoat vulnerabilities
+ * Bruce Mayhew (WebGoat Project leader) should be one of the reviewers in this project
+ * Confirm that final delivery will be of 'Beta Quality'
+ * This project should integrate with https://www.owasp.org/index.php/OWASP_Summer_of_Code_2008_Applications#Securing_WebGoat_using_ModSecurity
+   Michael can you contact Stephen Evans and see how you can work together
+ * Add to deliveries the creation of a document (both WIKI and Pdf format) with detailed 'how-to use the tool' information (again using WebGoat as the target application)  
+
+
+ Michael Coates Response:
+ * Use WebGoat as an example and show how AppSensor can be used to detect and respond (i.e. mitigate) attacks targeted at the multiple WebGoat vulnerabilities
+ ''' Response:'''
+ This can be done as an example of using the AppSensor framework for a portion of an application. However, the framework itself will be the primary deliverable.
+ * Bruce Mayhew (WebGoat Project leader) should be one of the reviewers in this project
+ ''' Response:'''
+ I will contact him.
+ * Confirm that final delivery will be of 'Beta Quality'
+ ''' Response:'''
+ Most definitely
+ * This project should integrate with https://www.owasp.org/index.php/OWASP_Summer_of_Code_2008_Applications#Securing_WebGoat_using_ModSecurity
+ Michael can you contact Stephen Evans and see how you can work together
+ ''' Response:'''
+ The ModSecurity is based on the idea of creating security rules outside of the application without touching the source. 
+ This is the opposite of  my approach. The AppSensor framework will guide an architect on how to cohesively integrate the 
+ Application level IDS into the source code itself. I can work with the ModSecurity project if desired, however, I believe 
+ we are taking two fundamentally different approaches to this problem.
+ * Add to deliveries the creation of a document (both WIKI and Pdf format) with detailed 'how-to use the tool' information (again using WebGoat as the target application)  
+ ''' Response:'''
+ My primary delivery is going to be the AppSensor framework document.  Since this will be a knowledge resource, the "how to" 
+ will describe how an architect or software developer should integrate the Application IDS framework into their custom application.
+ '''I also added some additional clarification on the objective of this project below.'''
+
+''''' Additional Clarification on Project Objective'''''
+
+My goal with this project is to create the standard and guidance for how an application should detect, log and respond to malicious events.  The deliverable for this project will be a framework of information which would be used by an application architect during the design of the system itself. This project would not create a tool or any code. Instead, it will build upon many of the IDS concepts developed in ESAPI and move towards a fully developed Application IDS Framework Standard. 
+For example, when an architect considers the design of their authentication system  (or any other critical system) they would reference the AppSensor guidelines on authentication. The AppSensor guidance will indicate what sort of authentication actions need to be logged (failed login attempt, use of multiple user-names from a single IP, high rate of login attempts etc) and what information must be captured (user-name, ip, timestamp etc). 
+Further, the AppSensor guidance will detail how all the events should be handled. Events will have different severities and will be sent to a centralized logging system within the application. This system collect the security events from throughout the application (authorization attacks, business logic attacks, force browsing attempts etc) and will then be able to take appropriate action against the user. This could include locking out an account, generating alerts to sys-admins, shutting down portions of the application, etc. 
+Essentially, my project is defining how an Intrusion Detection System should be designed, configured and built into the code of any custom application. By building the Application Level IDS within the application itself, we are in the best place to capture and respond to all malicious actions performed against the application. 
+
+'''Project'''
+
+P017 - OWASP AppSensor - Detect and Respond to Attacks from Within the Application
+
+'''The opportunity, challenges, issues or need your proposal addresses, '''
+
+As critical applications continue to become more accessible and inter-connected, it is paramount that the information be protected. We must also realize that our defenses may not be perfect. Given enough time, attackers can identify security flaws in the design or implementation of an application. In addition to implementing layers of defense within an application, it is critical that we identify malicious individuals before they are able to identify any gaps in our defenses. The best place to identify malicious activity against the application is within the application itself.
+Network based intrusion detection systems are not appropriate to handle the custom and intricate workings of an enterprise application and are ill-suited to detect attacks focusing on application logic such as authentication, access control, etc.  The application itself is the best place to identify and respond to malicious activity.
+This project will create the framework which can be used to build a robust system of attack detection, analysis, and response within an enterprise application
+
+'''Objectives or ways in which you will meet the goal(s), '''
+
+I plan to use a methodical approach throughout the creation of this resource. I will reference my own professional experience, OWASP resources, ESAPI, and academic materials to identify a robust set of potential attacks and identification methods. Thresholds will be recommended for each of the detected attacks. Each recommended threshold value and response recommendation will be accompanied with additional information to describe the purpose of the threshold and recommendation. This additional information will allow the reader to determine if the threshold is appropriate for their implementation.
+
+'''Specific activities and who will carry out these activities, '''
+
+I will complete the following activities:
+1. Identify and define attack patterns against applications
+2. Document points of detection within the application for the attack patterns & identify key information to log
+3. Create thresholds for generating security alerts
+4. Define recommended response actions for the security alerts
+
+
+'''Specific deliverables and a rough project schedule so we can track progress, '''
+
+April 2, 2008 - Project Begins
+
+April 2, 2008-April 12, 2008 - High level planning & design 	
+
+April 12, 2008-May 1, 2008 - Identify and define attack patterns against applications	
+
+May 1, 2008-June 1, 2008 - Document points of detection within the application for the attack patterns & identify key information to log	
+
+June 1, 2008-June 13, 2008 - Pier Review & Revisions	
+
+June 15, 2008 - Status Report	
+
+June 16, 2008-Aug 15, 2008 - Create thresholds for generating security alerts	
+
+June 16, 2008-Aug 15, 2008 - Define recommended response actions for the security alerts	
+
+Aug 16, 2008-Aug 30, 2008 - Pier Review & Revisions	
+
+Aug 31, 2008 - Project Complete	
+
+
+
+'''Long-term vision for the project, '''
+
+1.  I’d like to include a tiered type approach of thresholds and responses. This is would be similar to the approach used by FISMA of defining different controls for High, Medium, and Low systems.
+
+2. Building on item #1, I want to eventually include a system which lets the user provide information about their system.  This information could include rating or prioritizing different security concerns. a customized set of monitoring points, thresholds and response actions can be recommended for the application based on the provided data.
+
+
+'''About Me'''
+
+'''Education & Professional Background'''
+
+Masters of Science in Computer, Information and Network Security – DePaul University 
+(Expected Graduation 2009)
+Bachelor of Science in Computer Science – University of Illinois
+Extensive experience in conducting black and white box security reviews of complex applications and networks for major financial organizations and international telecoms. I also have experience working as the primary investigator of attacks against a multi-national organization with IDS sensors in networks throughout the world. In addition, I have experience working with several regulatory controls and security standards (FISMA, NIST, GLBA etc). My experience as an ethical hacker and incident responder puts me in an excellent position to tackle this project. 
+
+'''Application security experience and accomplishments'''
+
+I am a Senior Computer Security Engineer with Aspect Security where I perform security code reviews and application security testing against a variety of platforms. Prior to working with Aspect Security, I was heavily involved in the discovery and exploitation of application vulnerabilities during black box ethical hacking assessments for numerous clients.
+
+'''Participation and leadership in open communities'''
+
+I am a member of OWASP and attend Chicago OWASP chapter meetings. I also attend ChiSec, an informal meet-up of security professionals in the Chicago area. In addition, I interact with the community through my security blog. http://michaelcoates.wordpress.com. 
+
+'''Any other reasons why you and your project should be selected. '''
+
+I created a similar framework while working within a Security Operation Center. I created attack scenarios, identified relevant IDS events, defined thresholds and appropriate response action for the Security analysts.
+
+'''Requested Reviewer - Eric Sheridan, Application Security Consultant at Aspect Security, Inc.'''
+
+Eric Sheridan is an Application Security Consultant at Aspect Security, a consulting services company specializing in application security. At Aspect Security, Eric specializes in execution of security verification assessments and the establishment of security activities throughout the development lifecycle. In addition, Eric is an instructor in Aspect’s portfolio of Application Security Courses. Eric is also an active participant in OWASP whose contributions include work with projects such as WebGoat, Stinger, CSRFGuard, CSRFTester, and the SASAP project from OWASP SPoC 2007. Eric was also a featured speaker at the 2007 OWASP/WASC San Jose conference.
+
+Contact Information: eric dot sheridan 'at' owasp dot org
+
+== The Owasp Orizon Project ==
+* Paolo Perego (aka thesp0nge),
+* The Owasp Orizon Project, 
+
+ Dinis Comments: 
+ * Can we link this project to the Code Review project. If so confirm which parts of it (in percentage) will be covered
+ * Also add a delivery to:
+   * scan 4 OWASP projects using this tool, 
+   * Create two documents
+     * a report containing its results (Ideally using OWASP's Report Generator)
+     * a how-to guide (so that the results can be reproduced)
+
+ thesp0nge Comments:
+ Hi Dinis, thanks for your comments
+ * Can you explain me better what do you mean by "linking" the two projects?
+ * Yesterday during my Owasp Day in Rome I announced in Orizon Roadmap an howto guide made with lulu.com template as other owasp projects did, so ok for the guide.
+ * Ok for the report using Owasp's Report Generator
+ * For me its ok scanning 4 Owasp projects written in Java. Please help me defining the scanning perimeter.
+
+'''Introduction'''
+
+The [http://www.owasp.org/index.php/Category:OWASP_Orizon_Project Owasp Orizon Project] born in 2006 in order to provide a framework to all Owasp projects developing code review services.
+
+The project is in a quite stable stage and it is usable for Java static code review and some dynamic tests against XSS.
+Owasp Orizon includes also APIs for code crawling, usable for code crawling tools.
+
+[http://milk.sf.net Milk] project is a java code review tool I'm writing using Orizon as background engine. Its goal is to show engine capabilities.
+
+'''Objectives and deliverables'''
+
+* plugin architecture for static code review library: this planned feature will be announced (hopefully, if my CFP will be accepted) to next Owasp European App conf.
+* starting C# support
+* upgrade from Alpha quality project to Beta quality project in accord to [http://www.owasp.org/index.php/Category:OWASP_Project_Assessment Owasp Project Assessment criteria]
+
+'''Why I should be sponsored for the project'''
+
+Owasp Orizon is the first Owasp project I'm involved in. I'm also contributor of Owasp Italian chapter managed by Matteo Meucci and I'm talking at various speeches about application security and safe coding best practices.
+
+I'm a security consultant working in ethical hacking and we're approaching code review and safe topics right now. I'm a developer too so I understand also the "dark side" of the problem developing code with security in mind.
+
+I work using the "release early release often" paradigm so to be concrete and let other people having something usable to work with. 
+
+In the last year Owasp Orizon evolved a lot with a good static code review engine and a lot of code was written to give Owasp guys the best framework as possible to be used for writing code review tools. I hope to pursuit my goals again with SoC 2008.
+
+== P006 - OWASP Corporate Application Security Rating Guide ==
+'''*Project Application submitted by: Parvathy Iyer'''
+
+Educational and professional background: CIA, CISA with over seven years experience in information technology and application security audits.
+
+Application security experience and accomplishments : I have experience in ensuring that equity application solution conforms to security compliance requirements of the stock exchanges and the Security Exchange Board of India.
+
+Participation and leadership in open communities : Member of ISACA and IIA, NJ Chapters.
+
+The opportunity, challenges, issues or need your proposal addresses : The project will be the first of its kind that I have ever attempted and in that sense its my first challenge. The project will help me organize and structure publicly available data that large companies will share of the lessons learned about how to organize an application security initiative, best practices for training and testing, and more.
+
+
+Objectives or ways in which you will meet the goal(s) : Analysis of publicly available data such as interviews, presentations, briefings for details. The project will link to all source material used in creating the rating. The rating will involve application security and awareness training; defining security requirements and verification for each application; establishing a dedicated application team and process for responding to security issues and allocating points to each issues.
+
+
+Specific activities and who will carry out these activities : Parvathy.N.Iyer will carry out the entire analysis and rating. Neal Kirschner, Director of IT services at Eisner LLP with over 20 years work experience will be the reviewer on the project.
+
+
+Specific deliverables and a rough project schedule so we can track progress : A project update will be provided on May 31, 2008 and the project shall be completed by August 31, 2008.
+
+Long-term vision for the project: The project will be used as a guide for rating applications.
+
+Any other reasons why you and your project should be selected: I feel that I should be selected for the project is because this would be a fun challenge for me and also because I am competent and committed to doing this project.
+
+
+Project Application submitted by: Parvathy Iyer
+
+Current occupation: IT Audit- Senior, Eisner LLP

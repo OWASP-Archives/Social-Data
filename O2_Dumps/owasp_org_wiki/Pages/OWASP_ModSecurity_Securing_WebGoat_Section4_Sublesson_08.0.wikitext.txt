@@ -1,0 +1,105 @@
+=== Addressing XSS attacks and vulnerabilities ===
+
+XSS attacks and vulnerabilities can be addressed externally in 3 ways:
+
+<font><u>Whitelist validation:</u></font> 
+Use a standard input validation mechanism to validate all input data for length, type, syntax, and business rules before accepting the data to be displayed or stored. Use an "accept known good" validation strategy. Reject invalid input rather than attempting to sanitize potentially hostile data.  Example: the “item_number” parameter should only accept digits between 1 and 5 characters in length however it is vulnerable to XSS:
+<pre>
+http://www.example.com/cgi-bin/product_search_query.php?item_number=<script>alert(‘XSS’)</script>
+</pre>
+
+The following custom ModSecurity 2.5 rule can provide proper positive security input validation for this parameter:
+<pre>
+<Location /cgi-bin/product_search_query.php>
+
+SecRule &ARGS_POST_NAMES "!@eq 0" "phase:2,t:none,deny,log,auditlog, \
+msg:'Input Validation Alert – Arguments in Post Payload',logdata:'%{MATCHED_VAR}'"
+
+SecRule &ARGS_GET_NAMES:item_number "!@eq 1" "phase:2,t:none,deny,log,auditlog, \
+msg:'Input Validation Alert – Multiple item_number parameters.',logdata:'%{MATCHED_VAR}'"
+
+SecRule ARGS_GET:item_number "!^\d{1,5}$" "phase:2,t:none,deny,log,auditlog, \
+msg:'Input Validation Alert – Data not in the correct format.',logdata:'%{MATCHED_VAR}'"
+
+</Location>
+</pre>
+
+This rule set will help to prevent evasion attempts by ensuring that there is only 1 argument called “item_number”, that it is only present within the QUERY_STRING data and that it has the proper format and length.  Keep in mind that this type of input validation should also be incorporated within the application itself.  The main reasons for implementing this type of positive security filter at the web application firewall layer are for general security-in-depth and also for those web applications where updating the code is either not possible or will take a very long time.
+
+<font><u>Blacklist validation:</u></font>  
+The Core Rule set, which is available for free from the ModSecurity website, includes a robust negative security rule set for XSS detection.  The current version of the rule set uses complex logic combining two different operators; @pm set-based pattern matching used for fast pre-qualification of data to identify the existence of key XSS strings, and then @rx regular expression rules to apply advanced checks to both confirm XSS logic and exclude false positives.
+
+<pre>
+SecRule REQUEST_FILENAME|ARGS|ARGS_NAMES|REQUEST_HEADERS|XML:/*|!REQUEST_HEADERS:Referer \ 
+"@pm jscript onsubmit copyparentfolder javascript meta onmove onkeydown onchange onkeyup \ 
+activexobject expression onmouseup ecmascript onmouseover vbscript: \ 
+<![cdata[ http: settimeout onabort shell: .innerhtml onmousedown onkeypress asfunction: \ 
+onclick .fromcharcode background-image: .cookie ondragdrop onblur x-javascript mocha: \ 
+onfocus javascript: getparentfolder lowsrc onresize @import alert onselect script onmouseout \ 
+onmousemove background application .execscript livescript: getspecialfolder vbscript iframe \ 
+.addimport onunload createtextrange onload <input" \
+
+"t:urlDecodeUni,t:htmlEntityDecode,t:compressWhiteSpace,t:lowercase,pass,nolog,skip:1"
+
+SecAction pass,nolog,skipAfter:959004
+
+SecRule REQUEST_FILENAME|ARGS|ARGS_NAMES \
+"(?:\b(?:(?:type\b\W*?\b(?:text\b\W*?\b(?:j(?:ava)?|ecma|vb)|application\b\W*?\bx-(?:java|vb)) \
+script|c(?:opyparentfolder|reatetextrange)|get(?:special|parent)folder|iframe\b.{0,100}?\bsrc)\b| \
+on(?:(?:mo(?:use(?:o(?:ver|ut)|down|move|up)|ve)|key(?:press|down|up)|c(?:hange|lick)| \
+s(?:elec|ubmi)t|(?:un)?load|dragdrop|resize|focus|blur)\b\W*?=|abort\b)|(?:l(?:owsrc\b\W*?\b \
+(?:(?:java|vb)script|shell|http)|ivescript)|(?:href|url)\b\W*?\b(?:(?:java|vb)script|shell)| \
+background-image|mocha):|s(?:(?:tyle\b\W*=.*\bexpression\b\W*|ettimeout\b\W*?)\(|rc\b\W*?\b(?:(?:java|vb) \
+script|shell|http):)|a(?:ctivexobject\b|lert\b\W*?\(|sfunction:))| \
+<(?:(?:body\b.*?\b(?:backgroun|onloa)d|input\b.*?\btype\b\W*?\bimage)\b| ?(?:(?:script|meta)\b|iframe)| \
+!\[cdata\[)|(?:\.(?:(?:execscrip|addimpor)t|(?:fromcharcod|cooki)e|innerhtml)|\@import)\b)" \
+
+"capture,t:htmlEntityDecode,t:compressWhiteSpace,t:lowercase,ctl:auditLogParts=+E,log, \
+auditlog,msg:'Cross-site Scripting (XSS) Attack',id:'950004',tag:'WEB_ATTACK/XSS', \
+logdata:'%{TX.0}',severity:'2'"
+
+
+SecRule REQUEST_HEADERS|XML:/*|!REQUEST_HEADERS:Referer \
+"(?:\b(?:(?:type\b\W*?\b(?:text\b\W*?\b(?:j(?:ava)?|ecma|vb)|application\b\W*?\bx-(?:java|vb)) \
+script|c(?:opyparentfolder|reatetextrange)|get(?:special|parent)folder|iframe\b.{0,100}?\bsrc)\b| \
+on(?:(?:mo(?:use(?:o(?:ver|ut)|down|move|up)|ve)|key(?:press|down|up)|c(?:hange|lick)| \
+s(?:elec|ubmi)t|(?:un)?load|dragdrop|resize|focus|blur)\b\W*?=|abort\b)| \
+(?:l(?:owsrc\b\W*?\b(?:(?:java|vb)script|shell|http)|ivescript)| \
+(?:href|url)\b\W*?\b(?:(?:java|vb)script|shell)|background-image|mocha):| \
+s(?:(?:tyle\b\W*=.*\bexpression\b\W*|ettimeout\b\W*?)\(|rc\b\W*?\b(?:(?:java|vb) \
+script|shell|http):)|a(?:ctivexobject\b|lert\b\W*?\(|sfunction:))| \
+<(?:(?:body\b.*?\b(?:backgroun|onloa)d|input\b.*?\btype\b\W*?\bimage)\b| \
+?(?:(?:script|meta)\b|iframe)|!\[cdata\[)|(?:\.(?:(?:execscrip|addimpor)t| \
+(?:fromcharcod|cooki)e|innerhtml)|\@import)\b)" \
+
+"capture,t:urlDecodeUni,t:htmlEntityDecode,t:compressWhiteSpace,t:lowercase, \
+ctl:auditLogParts=+E,log,auditlog,msg:'Cross-site Scripting (XSS) Attack',id:'959004', \
+tag:'WEB_ATTACK/XSS',logdata:'%{TX.0}',severity:'2'"
+</pre>
+ 
+While these generic XSS attack detection rules are extremely effective, they are still employ the negative security model and thus are subject to evasion issues.  This is why utilizing a positive security model for input validation is the preferred method.
+
+<font><u>Identifying Poor/Missing Output Encoding:</u></font> 
+Ensure that all user-supplied data is HTML entity encoded before rendering in HTML, taking the approach to encode all characters other than a very limited subset.  ModSecurity does not currently manipulate inbound or outbound data so it can not, by itself, be used to entity encode user data that is returned in output.  While this is true, ModSecurity can be utilized to identify when web applications are failing to properly html entity encode user data in output.   
+
+The following ModSecurity rule set will generically identify both Stored and Reflected XSS attacks where the inbound XSS payloads are not properly output encoded.  For Reflected XSS attacks, the rules will identify inbound user supplied data that contains dangerous meta-characters, then store this data as a custom variable in the current transaction collection and inspect the resulting outbound RESPONSE_BODY data to see if it contains the exact same inbound data.  If proper outbound entity encoding of meta-characters is not utilized by the web application then the user supplied data in the response will exactly match the captured inbound data.  This is effective at catching XSS attacks that utilize the “<script>alert(‘XSS’)</script>” type of checks typically sent during web assessments.
+
+For Stored XSS attacks, instead of the looking at the response body returned for the current transaction, we need to be able to identify if this user supplied data shows up in other parts of the web application.  These rules address this issue by capturing the same inbound data and then storing it in a persistent global collection.  On subsequent requests by any client, the response body payload is inspected to see if it contains any of the XSS strings captured in the global collection.
+
+<pre>
+SecAction "phase:1,nolog,pass,initcol:global=xss_list"
+
+SecRule &ARGS "@gt 0" "chain,phase:4,t:none,log,auditlog,deny,status:403, \
+msg:'Potentially Malicious Meta-Characters in User Data Not Properly Output Encoded.', \
+logdata:'%{tx.inbound_meta-characters}'"
+
+SecRule ARGS "([\'\"\(\)\;<>/])" \
+"chain,t:none,capture,setvar:global.xss_list_%{time_epoch}=%{matched_var}, \
+setvar:tx.inbound_meta-characters=%{matched_var}"
+
+SecRule RESPONSE_BODY "@contains %{tx.inbound_meta-characters}" "ctl:auditLogParts=+E"
+
+SecRule GLOBAL:'/XSS_LIST_.*/' "@within %{response_body}"  \
+"phase:4,t:none,log,auditlog,pass, msg:'Potentially Malicious Meta-Characters in User \ 
+Data Not Properly Output Encoded',tag:'WEB_ATTACK/XSS'"
+</pre>

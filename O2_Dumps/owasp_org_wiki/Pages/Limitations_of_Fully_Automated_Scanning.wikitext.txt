@@ -1,0 +1,41 @@
+==Motivation==
+
+Fully automated security tools can be seductive and distracting. They produce an endless stream of work to run and handle findings, and you get to watch the vulnerability numbers decreasing. But it's sort of like the old joke about the guy looking for his keys in a different place from where he lost them because the light is better there.
+
+A better view is that scanners are a key *part* of a well balanced breakfast. As useful as they are, it's imporant to recognize that scanners *are* limited (as are pentesting, code review, static analysis, and architecture review for that matter). Each of these techniques has *huge* blind spots.  That’s why it's best to use each technique for what it’s good at.
+
+The blind spot from a purely automated scan (the way many are deploying default->click->scan) is huge.  It’s not just the items listed below but also things like CSRF, stored XSS, attribute-based XSS, etc...  This shouldn’t be taken as an indictment of the scanners – it’s just that they’re not a whole program by themselves.  Rather, scanners are best used to support a comprehensive application security initiative.
+
+Many organizations *are* using static and dynamic tools in a fully automated way. Essentially, this means that they are installing the tools, using the default configuration, running the tools, and then expecting usable findings.
+
+A better approach is to use automated tools as a first pass after which you invest significant manual work.  Not just to investigate the automated findings, but also to look into the blind spots by using other techniques. Building an application security initiative that focuses only on improving automated scanner scores will create a lot of work and a lot of false confidence.
+
+==List==
+
+Here is a preliminary list (please update) of items that external scanning tools cannot find
+
+* business layer access control issues
+* internal identity management issues
+* lack of a structured security error handling approach 
+* improper caching and pooling
+* failure to log critical events
+* logging sensitive information
+* fail open security mechanisms
+* many unusual forms of injection
+* improper temporary storage of sensitive information
+* encryption algorithm choice and implementation problems
+* hardcoded credentials, keys, and other secrets
+* backdoors, timebombs, easter eggs, and other malicious code
+* all concurrency issues (race condition, toctou, deadlock, etc...)
+* failure to use SSL to connect to backend systems
+* lack of proper authentication with backend systems
+* lack of access control over connections to backend systems
+* lack of proper validation and encoding of data sent to and received from backend systems
+* lack of proper error handling surrounding backend connections
+* lack of centralization in security mechanisms
+* other insane design and implementation patterns for security mechanisms
+* code quality issues that lead to security issues (duplication, dead code, modularity, complexity, style)
+* improper separation of test and production code
+* lots more...
+
+Most of the above list applies to static analysis tools as well, but there are a few differences.

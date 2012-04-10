@@ -1,0 +1,122 @@
+'''April 2010 | Local Chapter Meeting'''<br />
+More information can be found [https://lists.owasp.org/pipermail/owasp-switzerland/2010-February/000152.html here].
+
+'''25. June 2009 | Local Chapter Meeting'''<br />
+More information can be found [https://lists.owasp.org/pipermail/owasp-switzerland/2009-June/000144.html here] (the start time has changed to 17:15).
+
+'''7. April 2009  | Local Chapter Meeting'''<br />
+More information can be found [https://lists.owasp.org/pipermail/owasp-switzerland/2009-March/000140.html here].
+
+'''8. September 2008  | Local Chapter Meeting'''<br />
+All information about the meeting can be found at [https://lists.owasp.org/pipermail/owasp-switzerland/2008-August/000132.html here]
+
+'''1. April 2008 | Global OWASP Week'''<br />
+
+The following was the official invitation mail:
+
+<pre>
+
+Dear Receiver,
+in the name of the OWASP (http://owasp.org) I'd like to invite you to
+our next event, which is part of the Global OWASP Week 2008. If you're
+interested in web application security, this is something for you.
+
+
+Date and time:
+ 1.April 2008 -> WebAppSec Is No Joke
+ 18:00 - ca. 21:00
+
+Where:
+ The event takes place at the ETH Zurich, in the main building, room
+ HG F26.5
+
+Who:
+  As at all of our meetings, everyone is welcome. If you know someone
+  who could also be interested in this event, ask him/her to come too.
+
+Content:
+  We'll have three interesting Talks.
+
+ - Taking Apache access logs to the next level: Complying to PCI DSS
+   for fun and profit
+   (Christian Folini - Technical Consultant at netnea)
+
+     The PCI DSS is rather vague, when it comes to logfiles. It does
+     make clear, that writing logfiles and reading them is a
+     requirement though. But it leaves it up to you to define your
+     setup and your processes. Apache brings numerous logging
+     possibilities, but they are rarely used in practice. Based on a
+     sample enterprise setup, I will discuss key items of a
+     revision-proof architecture. System components and methods will be
+     examined and a few interesting techniques presented.
+
+  - Implementing an Application Security Lifecycle programme
+    (Alessandro Moretti - Executive director for IT security risk
+     management at UBS Investment Bank)
+
+     Topic:
+     A case study at UBS Investment Bank - how the Application Security
+     Lifecycle Programme aims to implement proactive and reactive IT
+     security management and promote application security across the
+     global UBS IT community.
+
+     Short description:
+     UBS IT Security Risk Management will provide an overview of the
+     risk strategy, and an insight into the strategic initiative, based
+     partly on OWASP, to enhance the application security with each
+     phase of the software development lifecycle. The presentation will
+     provide details on the vision, the overall programme approach and
+     on selected deliverables as part of the programme. Topics include,
+     security education, risk management, source code testing,
+     penetration testing and web application firewalls. A question and
+     answer session will follow.
+
+  - WebAppSec the Big Picture
+    (Sven Vetsch - Security Tester at Dreamlab Technologies)
+
+     Most of the actual vulnerabilities which security researchers and
+     also bad guys (doesn't) report every day, are related to web
+     applications. Even if this is the case, the security community
+     didn't get the big picture of what security related problems we've
+     got through web applications. In this demonstration, we will show
+     you an overview of the most important web vulnerabilities like SQL
+     Injections, XSS, CSRF, Path Traversal, Session Fixation and much
+     more. The focus in this demonstration is not to show you the
+     latest research results in webappsec, it's to show you the big
+     picture of this topic.
+
+
+If there are any further questions, don't hesitate to contact me at:
+sven.vetsch _at_ disenchant.ch
+
+Regards,
+Sven Vetsch
+Leader OWASP Switzerland
+
+</pre>
+
+'''11. December 2007 | Local Chapter Meeting'''<br />
+All information can be found [http://lists.owasp.org/pipermail/owasp-switzerland/2007-November/000105.html here] and [http://lists.owasp.org/pipermail/owasp-switzerland/2007-November/000106.html here].
+
+'''19. and 20. September 2007 | Security-Zone'''<br />
+[[Image:Securityzonelogo_07.jpg]]<br />
+The Security-Zone will take place on the 19. and 20. September 2007 and it's the most important security event we've got in Switzerland. You can find all information on the [http://www.security-zone.info/ official Security-Zone website]. There will be much OWASP publicity and we will also be actively participating in this event. For more information on what we do, you can read [http://www.disenchant.ch/blog/owasp-switzerland-goes-public/80 Sven's blog posting] about this and you can order your own free ticket [http://security-zone.adim.ch/Anmeldung.php?client=1&lang=1&idcatart=75&o=owasp%22%20target=%22_new here].
+
+'''24. July 2007 | Local Chapter Meeting'''<br />
+A summary for the meeting can be found [http://lists.owasp.org/pipermail/owasp-switzerland/2007-July/000095.html here] in our mailinglist archive.
+
+The presentation about "Dependability for Java Mobile" Code" by Pierre Parrend can be found [https://www.owasp.org/index.php/Mobile_Java_Security here], including a small abstract.
+
+'''26. April 2007 | Local Chapter Meeting and "Swiss Security Dinner"'''<br />
+A summary for the meeting can be found [http://lists.owasp.org/pipermail/owasp-switzerland/2007-April/000086.html here] in our mailinglist archive.
+
+'''12. February 2007 | Local Chapter Meeting'''<br />
+A summary for the meeting can be found [http://lists.owasp.org/pipermail/owasp-switzerland/2007-February/000079.html here] in our mailinglist archive.
+
+The presentation about "XSS-Worms" (in OWASP template) by [http://disenchant.ch Sven Vetsch] can be found [http://www.owasp.org/images/f/fe/Pres_20070206_04_svetsch_xss_worms_owasp.zip here]
+
+'''11. November 2006 | OWASP Switzerland Local Chapter Kickoff Meeting'''
+
+Switzerland have a Local Chapter for a while now but there were never some meetings or some other activities. Now, a few members of the OWASP Switzerland Local Chapter mailinglist met each other in Zurich to do a real kick-off for this Chapter.
+
+In the Switzerland Local Chapter, we decided that at the moment the most important thing for us would be to build a network of people in Switzerland which are interested in the OWASP too and at the same time to promote it that the folks which didn't know the OWASP yet will get in touch with it. In future meetings we also want to do some presentations and/or workshop for having an active knowledge transfer.

@@ -1,0 +1,80 @@
+==About==
+The OWASP .NET Project contains content related to securing .NET applications and services.
+
+
+==.NET Project Overview==
+{| align="right" class="wikitable"
+|-
+! OWASP Project Quick Reference
+|- 
+| 
+*[[OWASP Top 10 Project]]<br />
+*[[OWASP Testing Guide]]<br />
+*[[.Net Assembly Analyzer]]<br />
+*[[OWASP WebGoat Project]]<br />
+*[[OWASP WebScarab Project]]
+*[http://code.google.com/p/owasp-net-content/  OWASP .NET Content Project]
+|-
+|}
+
+'''Purpose'''
+
+The purpose of the OWASP .NET Project is to provide a central repository of information and tools for software professionals that use the Microsoft .NET Framework for web applications and services.  The project will try to include resources from Microsoft and from the Open Source community, the Alt.NET community and other related security resources.
+
+Please review the [[:Category:Vulnerability|vulnerabilities]] section at OWASP for the grand list of web vulnerabilities, many apply to .NET software.  This section has a Quick Reference table for OWASP projects that you can use for your security projects now.  For .NET related content throughout the site, look for the [[:Category:.NET|.NET category]].  There is plenty of work to be done, so feel free to join the OWASP .NET Project (See Joining the project below).  Contribute work or join our mailing list, many voices are better than one, so join today!
+
+'''Goals'''
+
+*To provide a comprehensive collection of resources for all roles involved with designing, developing and maintaining .NET web applications and services.
+
+*To organize content specific to OWASP projects that can be used or referenced for .NET security.
+
+*To reach out and bring in content from the open source community to protect users of .NET web applications and services.
+
+'''Content'''
+
+The following sections include content that can be useful for a specific role in securing .NET web applications and services:
+
+; [[.NET Security for Architects| .NET Security for Architects]]
+; [[.NET Security for Developers| .NET Security for Developers]]
+; [[.NET Security for IT Professional| .NET Security for IT Professionals]]
+; [[.NET Penetration Testing| .NET Penetration Testing]]
+; [[.NET Incident Response| .NET Incident Response]]
+
+For active projects:
+; [[OWASP .NET Active Projects]]
+
+For emerging technology projects:
+; [[OWASP .NET Vulnerability Research]]
+
+==Joining the Project==
+The project's high level roadmap can be found at the [[OWASP .Net Project Roadmap]]
+* Please submit your ideas for articles, content and general feedback to the [[.NET Project Wishlist]].
+* If you'd like to contribute:
+# visit the [[Tutorial]], 
+# join the mailing list (see [[How to join Owasp.Net Mailing List]])
+# and pick a topic from the [[.NET Project Wishlist]] or suggest a new topic
+# or check out our active projects list, [[OWASP .NET Active Projects]], and join one today.
+
+Remember to add the tag: <nowiki>[[Category:OWASP .NET Project]]</nowiki> to the end of new articles so that they're properly categorized.
+
+
+
+{| align="right" class="wikitable" width="100%"
+|-
+! OWASP .NET Project Latest
+|- 
+| 
+* April 29 2008: Added [[ASP.NET Request Validation]] wiki page
+* April 19 2008: Added [[OWASP .NET Vulnerability Research]] wiki page
+* April 9 2008: [http://www.microsoft.com/downloads/details.aspx?familyid=2412c443-27f6-4aac-9883-f55ba5b01814&displaylang=en&Hash=4fZb2FzZ7%2bmaj0VqoUbFZzzw0WW5%2bxWjK3XBVit5eX%2b%2bB90vmLtZlAstlNg9cRu6Pg%2b50DNCMhGT6ADei7DgFg%3d%3d Microsoft Security Development Lifecycle 3.2] published
+* March 2008:  Project ReOrg - the .NET Project section is being reorganized, see the [[OWASP .Net Project Roadmap]] for what we're doing here.
+* Nov 2007: Uploaded test scripts from OWASP training in San Jose [https://www.owasp.org/images/7/7d/Fetch_Web_Page_%28from_OWASP_training_in_San_Jose%29.zip download here]
+* Jun 2007: Created stub pages for Microsoft's [[SilverLight]], Abobe's [[AIR]], Microsoft's [[WSS]] and Apple's [[iPhone]]
+|-
+|}
+
+[[Category:OWASP Project]]
+[[Category:OWASP Tool]]
+
+__NOTOC__

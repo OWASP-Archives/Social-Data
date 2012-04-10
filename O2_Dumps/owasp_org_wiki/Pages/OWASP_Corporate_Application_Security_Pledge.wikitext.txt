@@ -1,0 +1,39 @@
+'''NB: This page is a rough draft of an idea we are working on and should not be used yet'''
+
+==Background==
+
+OWASP recognizes that many organizations are doing the hard work to become capable of repeatably producing secure applications. These organizations deserve a way to promote the fact that they are doing the right things.
+
+We have created the "OWASP Corporate Application Security Pledge" to recognize these organizations and set a goal for other organizations to achieve.
+
+There is much more that organizations can do, but we believe that these are the most critical steps that all organizations should have in place.
+
+==Participation==
+
+To participate in the OWASP Pledge, please identify your organization (or part of a larger organization) and confirm that you are meeting the practices. None of the information from the program will be shared other than your organization's identity.
+
+Once you have taken the pledge, you can use the pledge LOGO to promote the fact that you are taking steps to produce secure software.
+
+OWASP does not verify compliance with your pledge, but will assist in notifying your organization's application security representatives of any issue related to failure to keep your pledge. Failure to respond in a timely manner to an issue will result in revocation of the privilege of using the OWASP logo.
+
+
+==The OWASP Corporate Application Security Pledge==
+
+'''NB: Need to add verifiable items'''
+
+To demonstrate our commitment to acquiring, building, and operating applications that are trustworthy enough for our business and our customers, our organization hereby confirms that:
+
+; 1. We have established an ongoing application security awareness and training program.
+: Our training program ensures that software developers, architects, and testers have been exposed to application security and understand how to find and prevent the common vulnerabilities. Leaders and managers are trained in how to lead projects and teams to produce secure applications.
+
+; 2. We review all applications for common vulnerabilities.
+: All of our applications, including internal applications) receive some level of scrutiny for common vulnerabilities before they are deployed. Our most critical applications receive a detailed code review and penetration test, while less critical applications receive at least an automated security scan.
+
+; 3. We have established a dedicated application security team.
+: Our application security team provides expert application security support to development projects across the software development lifecycle. In particular, the team helps with security requirements, architecture reviews, code reviews, and penetration testing. The organization will provide a working point of contact for all application security issues.
+
+; 4. We perform security activities as a part of our software development lifecycle.
+: Our software development lifecycle includes activities that help us understand the threat and make informed decisions about application security risks. These activities occur throughout the process from concept through operation and maintenance. In particular, every project has a set of security requirements and those requirements are tested.
+
+; 5. We have assigned responsibility for application security.
+: Each of our software projects has an application security lead who is responsible for ensuring that the application is secure enough for the business and its customers. In addition, responsibility for application security is assigned up through the organization to the executive management level.

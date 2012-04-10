@@ -1,0 +1,72 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Cross-site Scripting (XSS)]]
+
+
+
+<br>
+
+
+==Description==
+
+While creating dynamiac web pages it's easy to make a mistake. If a generated page depends on entered data (e.g.
+URI, HTTP headers etc.) and these data are not filtered enough, it is possible that it can be exploited using
+XSS technique.
+
+==Risk Factors==
+TBD
+
+
+
+==Examples ==
+
+Example 1
+
+Let's assume that we have an error page, which is handling requests for a non existing pages. Classic 404 error
+page. We may use the code below as an example to inform user about what specific page is missing:
+<pre>
+<html>
+<body>
+
+<? php
+print "Not found: " . urldecode($_SERVER["REQUEST_URI"]);
+?>
+
+</body>
+</html>
+</pre>
+Let's see how does it work:
+<pre>
+http://testsite.test/file_which_not_exist
+</pre>
+In response we got:
+<pre>
+Not found: /file_which_not_exist
+</pre>
+Now we will try to force the error page to include our code:
+<pre>
+http://testsite.test/<script>alert("TEST");</script>
+</pre>
+The result is:
+<pre>
+Not found: / (but with JavaScript code <script>alert("TEST");</script>)
+</pre>
+We have successfully injected the code, our XSS! What does it mean? E.g. that we
+may try to steal the cookies. Problems which may occur using XSS techique are:
+*escaping data entered by the user (e.g. character " after escaping will be \"),
+* maximum length of the URI, which HTTP server will accept.
+
+==Related [[Threat Agents]]==
+* TBD
+
+==Related [[Attacks]]==
+* [[XSS Attacks]]
+* [[:Category:Injection Attack]]
+* [[Invoking untrusted mobile code]]
+
+==Related [[Vulnerabilities]]==
+* [[:Category:Input Validation Vulnerability]]
+
+==Related [[Controls]]==
+* [[:Category:Input Validation Control]]
+* [[HTML Entity Encoding]]

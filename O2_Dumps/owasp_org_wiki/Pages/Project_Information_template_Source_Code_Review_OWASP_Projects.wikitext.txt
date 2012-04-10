@@ -1,0 +1,35 @@
+----
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Source Code Review OWASP-Projects Project''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|The objectives of this project are: 1. Develop and document a workflow for FLOSS projects to incorporate static analysis into the Software Development Life Cycle (SDLC); 2. Apply the above workflow as a required step for OWASP projects; 3. Aid in auditing select FLOSS projects to create a baseline for comparing security amongst FLOSS projects. 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project key Information'''
+ | style="width:14%; background:#cccccc" align="center"|Project Leader<br>[[User:Dancornell|'''Dan Cornell''']]<br>SoC's Project Leader<br>[[User:Walden|'''James Walden''']]
+ | style="width:14%; background:#cccccc" align="center"|Project Contributors<br>[[User:Jderry|'''Justin Derry''']]<br>[[User:Mdoylema|'''Maureen Doyle''']]<br>[mailto:whelanm87@gmail.com '''Michael Whelan''']<br>[mailto:gwelch925@gmail.com '''Grant Welch''']
+ | style="width:14%; background:#cccccc" align="center"|Mailing list<br>[https://lists.owasp.org/mailman/listinfo/owasp-scode-review-owasp-projects '''Subscribe here''']<br>[mailto:OWASP-SCode-Review-OWASP-Projects(at)lists.owasp.org '''Use here''']
+| style="width:14%; background:#cccccc" align="center"|License<br>[http://creativecommons.org/licenses/by-sa/3.0/ '''Creative Commons Attribution Share Alike 3.0''']
+ | style="width:14%; background:#cccccc" align="center"|Project Type<br>[[:Category:OWASP_Project#Release Quality Projects|'''Documentation''']]
+ | style="width:15%; background:#cccccc" align="center"|Sponsor<br>[[OWASP Summer of Code 2008|'''OWASP SoC 08''']]<br>[https://owasp.fortify.com/teamserver/welcome.fhtml '''Fortify''']  
+ |}
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|
+'''[[:Category:OWASP_Project_Assessment#Release Quality Documentation Criteria|Release Quality]]'''<br>[[:OWASP Source Code Review OWASP Projects - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="center"|
+* [https://www.owasp.org/images/c/c9/OWASPEU_SourceReview.ppt Power Point Presentation]
+* [[:Image:Workflow_July_11a.zip|Updated Workflow/Zip Folder]]
+* [[:Image:Workflow_Draft1.pdf|Workflow - Draft1]]
+* [[:Image:CreateProjectExample.pdf|Example flow diagram for creating a new project to be reviewed/PDF File]]
+* [https://owasp.fortify.com/teamserver/welcome.fhtml Fortify OWASP Open Review Project]
+ | style="width:29%; background:#cccccc" align="center"|
+* [[:Category:OWASP Open Review Project|'''OWASP Open Review Project (ORPRO)''']]
+ |}
+----

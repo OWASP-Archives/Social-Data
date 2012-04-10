@@ -1,0 +1,43 @@
+----
+{| style="width:100%" border="0" align="center"
+ | colspan="7" style="width:100%; background:white" align="center"|<font color="black">'''OWASP LIVE CD PROJECT'''
+ |-
+ | colspan="7" style="width:100%; background:#C2C2C2" align="center"|'''One Sheet Overview'''
+ |-
+ | colspan="7" style="width:100%; background:white" align="left"|<font color="black"> 
+The OWASP Live CD project was originally started to update the previous [http://www.owasp.org/index.php/Category:OWASP_Live_CD_2007_Project OWASP Live CD 2007].  The project met the September 15th, 2008 deadline for the OWASP Summer of Code (SoC) and produced its first release - the SoC release.  Since the completion of the SoC, the project has made two new releases:  
+* the Portugal release (Dec 12, 2008)  
+* the AustinTerrier release (Feb 10, 2009)
+Even with the Summer of Code and two releases complete, the project continues to add functionality, tools and further polish the existing Live CD environment.  Content for the OWASP Live CD is both on this site and on the documentation and downloads [http://mtesauro.com/livecd site].
+
+Several sub-projects have sprung from this project.  Currently, a version of the OWASP Live CD installed to a virtual hard drive (VMware) is available and work continues on making other versions of the project available including a bootable USB, portable VM installation, an installation for the Asus Eee PC.  These are either downloadable files or instructions on how to create the alternate delivery mechanisms.
+
+The OWASP Live CD is free for commercial or non­commercial use. 
+ |-
+ | colspan="7" style="width:100%; background:#C2C2C2" align="center"|'''Application Security Issue Addressed'''
+ |-
+ | colspan="7" style="width:100%; background:white" align="left"|<font color="black"> 
+The OWASP Live CD is a project that collects some of the best open source security projects in a single environment.  Web developers, testers and security professionals can boot from this Live CD and have access to a full security testing suite. This allows its users to test for various security issues in web applications and web sites. The OWASP Live CD also contains documentation and an interactive learning environment ([[:Category:OWASP_WebGoat_Project|Web Goat]]) to enhance users web application security knowledge.  
+ |-
+ | colspan="7" style="width:100%; background:#C2C2C2" align="center"|<font color="black">'''PROJECT RELEASE(S)!''' 
+ |-
+ | colspan="7" style="width:100%; background:white" align="center"|<font color="black">
+[[:Category:OWASP Project Frame Experience 7 Austin Terrier Release|Feb 10, 2009 - '''Austin Terrier Release - STABLE RELEASE''']]<br>Dec 12, 2008 - '''Portugal Release'''<br>September 15, 2008 - '''SoC 08 Release'''<br>Dec 12, 2008 - '''SpoC 2007 Release'''
+ |-
+ | style="width:15%; background:#C2C2C2" align="center"|'''Project Site Assessment'''
+ | style="width:14%; background:#C2C2C2" align="center"|'''Project Leader'''
+ | style="width:14%; background:#C2C2C2" align="center"|'''Project Maintainer'''
+ | style="width:14%; background:#C2C2C2" align="center"|'''Mailing List '''
+ | style="width:14%; background:#C2C2C2" align="center"|'''Project Roadmap'''
+ | style="width:15%; background:#C2C2C2" align="center"|'''Conf. Style Presentation'''
+ | style="width:14%; background:#C2C2C2" align="center"|'''Related Projects'''
+ |-
+ | style="width:15%; background:white" align="center"|[[Assessing Projects|'''Level 1 Project''']]
+ | style="width:14%; background:white" align="center"|[[User:Mtesauro|'''Matt Tesauro''']]
+ | style="width:14%; background:white" align="center"|[[User:Mtesauro|'''Matt Tesauro''']]
+ | style="width:14%; background:white" align="center"|[https://lists.owasp.org/mailman/listinfo/owasp-live-cd-2008-project '''Subscribe here''']
+ | style="width:14%; background:white" align="center"|[[:Category:OWASP Project Frame Experience 7 Roadmap|'''See here''']]
+ | style="width:15%; background:white" align="center"|('''add file here''')
+ | style="width:14%; background:white" align="center"|('''if any''')
+ |}
+----

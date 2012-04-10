@@ -1,0 +1,118 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+In many languages, the compare statement is very close in appearance to the assignment statement; they are often confused.
+
+'''Consequences'''
+
+Unspecified.
+
+'''Exposure period'''
+
+* Pre-design through Build: The use of tools to detect this problem is recommended.
+* Implementation: Many logic errors can lead to this condition. It can be exacerbated by lack, or misuse, of mitigating technologies. 
+
+'''Platform'''
+
+* Languages: C, C++, Java
+* Operating platforms: Any
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood   of exploit'''
+
+Low
+
+This bug is mainly a typo and usually should cause obvious problems with program execution. The assignment will not always take place.
+
+==Risk Factors==
+
+* Talk about the [[OWASP Risk Rating Methodology|factors]] that make this vulnerability likely or unlikely to actually happen
+* Discuss the technical impact of a successful exploit of this vulnerability
+* Consider the likely [business impacts] of a successful attack
+
+
+==Examples==
+In C/C++/Java:
+
+<pre>
+void called(int foo){
+        foo==1;
+        if (foo==1) printf("foo\n");
+}
+
+int main(){
+        called(2);
+        return 0;
+}
+</pre>
+
+==Related [[Attacks]]==
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+* [[Assigning instead of comparing]]
+
+
+==Related [[Controls]]==
+* [[Control 1]]
+* [[Control 2]]
+* Pre-design: Through Build: Many IDEs and static analysis products will detect this problem.
+
+==Related [[Technical Impacts]]==
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:General Logic Error Vulnerability]]
+[[Category:OWASP_CLASP_Project]]
+[[Category:Code Snippet]]
+[[Category:C]]

@@ -1,0 +1,16 @@
+==What is .NetMon?==
+* An Open Source .Net Profiling Tool (Developed by Dinis Cruz and originally released by Foundstone) for Security Auditing .Net Applications which has the following features:
+** Designed With Security Audit In Mind, Which Defers it from other .Net Profilers.
+** Normal and ASP.Net Applications Can Be Profiled,
+** The tool is capable of monitoring the process flow for every thread created by the process. The tool is capable of following the flow trace by thread or by process.
+** Performs a call trace of all the functions from the starting of the .NET process 
+** Provides a count of number function calls made for the process in real time
+** Allows analysis and filtration of Particullar Namespaces,Classes, and Methodes During Profiling.
+** Provides a tree structure to follow all the nested calls that have been logged from the start of the .NET process.
+** Import and Export of The Treeview Structure To Xml Format For Further Analysis.
+
+[http://www.foundstone.com/index.htm?subnav=resources/navigation.htm&subcontent=/resources/proddesc/dotnetmon.htm Download]
+
+{{Stub}}
+
+[[Category:OWASP .NET Project]]

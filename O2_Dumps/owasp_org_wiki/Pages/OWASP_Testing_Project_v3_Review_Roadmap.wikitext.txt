@@ -1,0 +1,241 @@
+'''This page track all the update to the Testing Guide v3 during the Reviewing phase.'''<br>
+
+In particular the focus is:<br>
+- Review the content of each article<br>
+- Review the english sintax<br>
+- no "attacker", better "tester"<br>
+- no "we describe", but "it is described"<br>
+
+Official Testing Guide Reviewers are:
+* Nam Nguyen
+* Kevin R.Fuller
+* if you want to review it add your name please and keep track of updating
+
+'''Nam Review:'''
+----
+Aug 31, 2008
+* Appendix D
+* Appendix C
+* Appendix B
+* Appendix A
+* Chapter 5
+** [[How to write the report of the testing]]
+*** ``TO UPDATE WITH V3 controls`` is still in the article. Has it been updated to v3? '''(Mat: I'm updating it, thanks)'''
+* Chapter 4
+** Section 4.11 [[Testing for AJAX Vulnerabilities (OWASP-AJ-001)|Testing for AJAX Vulnerabilities]]
+*** There are mentioning of "attackers" but I think they are fine.
+*** The subsection on Memory leaks is not complete.
+** Section 4.11 [[Testing for AJAX  (OWASP-AJ-002)|Testing for AJAX]]
+*** The subsection "Intercepting and Debugging JS code with Browsers" is very difficult to understand. I tried to fix it, but I'm afraid what I have might not reflect what the original author wanted to express.
+
+Sep 02, 2008
+* Chapter 4
+** Section 4.10
+*** Subsection [[Testing for WS Replay   (OWASP-WS-007)|Testing for WS Replay]] Gray box testing and examples gives incomplete sample code. I believe the call to GetSessionIDMac() missed four parameters. In this same part, using SSL helps in preventing replay attack but it doesnt prevent replay attack by itself. In this same subection, the images show identifiable real Internet address in Hungary, should them be masked off?
+
+Sep 04, 2008
+* Chapter 4
+** Section 4.9
+** Section 4.8
+*** I'm not sure if format string could be classified under subsection 4.8.14 "Buffer overflow testing".
+*** Subsecion 4.8.3: Incomplete
+*** Subsection 4.8.4: Incomplete
+*** Subsection 4.8.5: What is "data-plane input"?
+
+Sep 06, 2008
+* Chapter 4
+** Section 4.8
+
+Sep 07, 2008
+* Chapter 4
+** Section 4.7
+** Section 4.6
+*** Subsection 4.6.1: "Review code for path traversal" does not exist in the Code Review Guide, or the link the broken.
+** Section 4.5
+
+Sep 10, 2008
+* Chapter 4
+** Section 4.4
+** Section 4.3
+** Section 4.2
+** Section 4.1
+* Chapter 3
+* Chapter 2
+* Chapter 1
+** [[Testing Guide Frontispiece]] still shows v2 editors and reviewers
+** [[About The Open Web Application Security Project]] The link to the printed edition of the book is invalid. This page is a generally shared wiki page among all projects.
+
+
+'''Kevin Review:'''
+----
+August 27/28th
+articles reviewed<br><br>
+1. Frontispiece<br>
+1.1 About the OWASP Testing Guide Project<br> 
+<br>
+1.2 About The Open Web Application Security Project<br> 
+<br>
+2. Introduction<br>
+2.1 The OWASP Testing Project<br> 
+2.2 Principles of Testing<br> 
+2.3 Testing Techniques Explained <br>
+2.4 Security requirements test derivation,functional and non functional test requirements,<br> 
+and test cases through use and misuse cases<br> 
+2.4.1 Security tests integrated in developers and testers workflows<br> 
+2.4.2 Developers' security tests: unit tests and component level tests<br> 
+2.4.3 Functional testers' security tests: integrated system tests, tests in UAT, and production environment<br> 
+2.5 Security test data analysis and reporting: root cause identification and business/role case test data reporting<br> 
+<br>
+3. The OWASP Testing Framework<br>
+3.1. Overview<br> 
+3.2. Phase 1: Before Development Begins<br> 
+3.3. Phase 2: During Definition and Design<br> 
+3.4. Phase 3: During Development<br> 
+3.5. Phase 4: During Deployment<br> 
+3.6. Phase 5: Maintenance and Operations<br> 
+3.7. A Typical SDLC Testing Workflow<br>
+<br> 
+4.Web Application Penetration Testing<br> 
+4.1 Introduction and Objectives<br> 
+4.1.1 Testing Checklist<br> 
+4.2 Information Gathering<br> 
+4.2.1 Spiders, Robots and Crawlers<br> 
+4.2.2 Search Engine Discovery/Reconnaissance<br> 
+4.2.3 Identify application entry points<br> 
+4.2.4 Testing for Web Application Fingerprint<br> 
+4.2.5 Application Discovery<br> 
+4.2.6 Analysis of Error Codes<br> 
+4.3 Configuration Management Testing<br> 
+4.3.1 SSL/TLS Testing (SSL Version, Algorithms, Key length, Digital Cert. Validity)<br>
+4.3.2 DB Listener Testing<br> 
+4.3.3 Infrastructure Configuration Management Testing<br> 
+4.3.4 Application Configuration Management Testing<br>
+<br> 
+* I was concerned about the structure and flow of this section.  It did not read cleanly for me and appeared more "wordy" then the other sections. The format also did not appear to be consistent with the other sections resulting in a disjointed feeling when reading it.<br>
+4.3.5 Testing for File Extensions Handling<br> 
+4.3.6 Old, Backup and Unreferenced Files<br> 
+<br>
+03 September, 2008<br>
+4.1 Introduction and Objectives<br> 
+4.1.1 Testing Checklist<br> 
+4.2 Information Gathering<br> 
+4.2.1 Spiders, Robots and Crawlers<br> 
+4.2.2 Search Engine Discovery/Reconnaissance<br> 
+* Changed "GoogleBot" to the "GoogleBot"<br>
+4.2.3 Identify application entry points<br> 
+4.2.4 Testing for Web Application Fingerprint<br> 
+4.2.5 Application Discovery<br> 
+<br>
+10 September, 2008<br>
+4.3.7 Infrastructure and Application Admin Interfaces<br> 
+4.3.8 Testing for HTTP Methods and XST<br> 
+* Grammer change in the section "Arbitrary HTTP Methods". Changed "and / or" to "and/or"
+* Grammer change in section "Test XST Potential"  andded a space between bullet number 1 and 2 and the text.
+
+4.4 Business Logic Testing <br> 
+<br> 
+* The section read out a little longer then the other sections.  All the content was interesting and relevant.  I would suggest taking Example 2 and breaking it out into another example (Example 2.1 or 3?)in order to break up the flow. I found my self losing my train of thought the further I read into it<br> 
+<br> 
+<br> 
+4.5 Authentication Testing<br> 
+*What is "provenance"? It might be better to use adifferent, more common word with the same meaning.  An average user might get confused if they do not know what it means. <br>
+4.5.1 Credentials transport over an encrypted channel <br>
+*  I made several grammar related changes (commas and is vs are)and one content change.  Please crosscheck to insure the context is the same and check for additional grammar issues.<br>
+4.5.2 Testing for user enumeration <br>
+4.5.3 Testing for Guessable (Dictionary) User Account 
+*  made several grammar related changes with regard to commas 
+4.5.4 Brute Force Testing <br>
+4.5.5 Testing for bypassing authentication schema <br>
+4.5.6 Testing for vulnerable remember password and pwd reset <br>
+4.5.7 Testing for Logout and Browser Cache Management Testing <br>
+4.5.8 Testing for CAPTCHA <br>
+4.5.9 Testing Multiple Factors Authentication <br>
+*  Changed some grammar (commas, capitalization)<br>
+<br>
+Date 16 Sept, 2008<br>
+4.6 Authorization testing <br>
+4.6.1 Testing for path traversal <br>
+4.6.2 Testing for bypassing authorization schema <br>
+4.6.3 Testing for Privilege Escalation <br>
+<br>
+4.7 Session Management Testing <br>
+4.7.1 Testing for Session Management Schema<br>
+*  I made several corrections to capitalization so as to maintain consistency accross the document.<br>
+ 4.7.1 Testing for Session Management Schema <br>
+4.7.2 Testing for Cookies attributes <br>
+4.7.3 Testing for Session Fixation <br>
+4.7.4 Testing for Exposed Session Variables <br>
+*  Changed A first person reference to third person reference ( "My... I would expect" to "When the authenticaion... The user..")<br>
+<br>
+Date: 17 September 2008<br>
+<br>
+4.7.4 Testing for Exposed Session Variables <br>
+4.7.5 Testing for CSRF <br>
+4.7.6 Testing for HTTP Exploit <br>
+<br>
+4.8 Data Validation Testing <br>
+4.8.1 Testing for Reflected Cross Site Scripting  <br>
+4.8.2 Testing for Stored Cross Site Scripting <br> 
+4.8.3 Testing for DOM based Cross Site Scripting <br>
+* Section feels incomplete.  The content appears to end abruptly.  The author mentions source code review for Black and Greybox testing.  While this is the likely test process It would be nice to include a tool-based test if one exists for those of us who are not coders and have only rudimentary experience with code.  <br>
+4.8.4 Testing for Cross Site Flashing  <br>
+* Grammar changes (singular to plural and vica versa, capitalization. <br>
+4.8.5 Testing for SQL Injection  <br>
+4.8.5.1 Oracle Testing  <br>
+4.8.5.2 MySQL Testing 
+ <br>
+DATE: 19 September, 2008
+
+4.8.5.4 MS Access Testing 
+4.8.5.5 Testing PostgreSQL 
+4.8.6 Testing for LDAP Injection 
+* Changed "LDAP three" to "LDAP tree"
+4.8.7 Testing for ORM Injection 
+
+4.8.8 Testing for XML Injection 
+
+4.8.9 Testing for SSI Injection 
+
+4.8.10 Testing for XPath Injection 
+
+4.8.11 IMAP/SMTP Injection 
+
+4.8.12 Testing for Code Injection 
+
+4.8.13 Testing for Command Injection 
+
+4.8.14 Testing for Buffer overflow 
+
+4.8.14.1 Testing for Heap overflow 
+
+4.8.14.2 Testing for Stack overflow 
+
+4.8.14.3 Testing for Format string 
+
+4.8.15 Testing for incubated vulnerabilities
+
+4.9 Testing for Denial of Service 
+
+(new: F.Mavituna - 100%) 4.9.1 Testing for SQL Wildcard Attacks 
+
+4.9.2 Testing for DoS Locking Customer Accounts 
+
+4.9.3 Testing for DoS Buffer Overflows 
+
+4.9.4 Testing for DoS User Specified Object Allocation 
+
+4.9.5 Testing for User Input as a Loop Counter 
+
+4.9.6 Testing for Writing User Provided Data to Disk 
+
+4.9.7 Testing for DoS Failure to Release Resources 
+
+4.9.8 Testing for Storing too Much Data in Session 
+
+ 4.10 Web Services Testing 
+* Changed "HTTP" to "the HTTP"
+Questions: (Mat will answer it)<br>
+4.10.1 WS Information Gathering 
+
+4.10.2 Testing WSDL 
+* I made several grammar and spelling changes to the paragraph on WSDigger and it's use.  The last sentence on use appeared to be incomplete.  I attempted to complete it.  Please review.

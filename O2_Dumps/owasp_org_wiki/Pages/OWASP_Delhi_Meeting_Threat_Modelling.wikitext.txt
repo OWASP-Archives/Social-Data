@@ -1,0 +1,9 @@
+'' "You cannot build secure systems until you understand your threats. Threat modeling is essential to a secure enterprise" -  '''Michael Howard '''''
+
+
+
+'''Threat Modeling''' is a process of assessing and documenting a system’s security risks. This process enables development teams to better understand the threat that a component will have to face after release. A threat model can help a team figure out how to organize their security efforts such as determining the scope and focus of penetration testing and fuzzing efforts. With techniques such as entry point identification, privilege boundaries and threat trees, you can identify strategies to mitigate potential threats to your system. Your security threat modeling efforts also enable your team to justify security features within a system, or security practices for using the system, to protect your corporate assets.
+
+
+
+The key to threat modeling is to determine where the most effort should be applied to keep a system secure. This is a variable that changes as new factors develop and become known, applications are added, removed, or upgraded, and user requirements evolve. Threat modeling is an iterative process that consists of defining enterprise assets, identifying what each application does with respect to these assets, creating a security profile for each application, identifying potential threats, prioritizing potential threats, and documenting adverse events and the actions taken in each case.

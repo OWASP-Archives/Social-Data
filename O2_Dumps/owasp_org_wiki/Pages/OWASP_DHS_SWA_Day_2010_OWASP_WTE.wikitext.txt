@@ -1,0 +1,27 @@
+== The presentation  ==
+
+[[Image:Owasp_logo_normal.jpg|right]]A presentation about the OWASP Web Testing Environment, previously the OWASP Live CD.
+
+This presentation is given as part of [[OWASP Software Assurance Day DC 2010 | OWASP Software Assurance Day]] at the [https://buildsecurityin.us-cert.gov/bsi/events/1133-BSI.html | 13th Annual Software Assurance Forum].
+
+[[Media:Matt_Tesauro_2010-09_OWASP_DHS_SWA_Day_-_WTE.ppt | Download the presentation]]
+
+== The speaker  ==
+
+[http://www.owasp.org/index.php/User:Mtesauro Matt Tesauro's Bio]
+
+== Notes ==
+;[[:Category:OWASP LiveCD Education Project|OWASP Live CD Education Project]] 
+
+The OWASP Live CD is an educational supplement project containing tutorials, challenges and videos detailing the use of tools contained within the OWASP LiveCD - LabRat. This project was sponsored by [[OWASP Spring Of Code 2007|OWASP Spring Of Code 2007]] and [http://www.securitydistro.com/ Security Distro] (Assessment Criteria v1.0)
+
+It’s hard to be a tester if you have never been a developer.  The goal of the CD was originally to create a ready-made environment in which to perform testing.  The CD showcases great tools and contains not only OWASP tools.
+
+The design goals include being easy to keep users up to date while being easy to update.There were gaps between the tools and the testing guides.  The goal is to keep them aligned.
+
+[http://www.appseclive.org/ The OWASP Web Testing Environment (WTE)] is the new name of the DVD which includes 26 significant tools.   WTE also includes Firefox security add-ons, OWASP documents, a Top 10 risks list, VM software, and many other.  WTE is also used as an education tool.  The Webgoat tool is already being used for training classes.
+
+WTE consists of more tools focused on developing instead of testing focused; there are more tools available via a repository for packages.  Each tool will now automatically install dependent tools.  WTE now runs on Ubuntu and each tool has its own Debian package.  You can mix and match packages for only what you need to use.  Some new features to be added in future versions are virtual installs, USB bootable install, customized versions of WTE via a la carte builds.
+
+--[[User:Walter Houser|Walter Houser]] 22:18, 5 October 2010 (UTC)
+[[Category:OWASP_Conference_Presentations]]

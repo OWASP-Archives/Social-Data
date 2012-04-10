@@ -1,0 +1,22 @@
+{{Template: <includeonly>{{{1}}}</includeonly><noinclude>Release About</noinclude>
+| project_name = OWASP X5s Project
+| project_home_page = OWASP Fiddler Addons for Security Testing Project
+| release_name = x5s v1.0.1
+| release_date = 06/05/2010
+| release_description =
+x5s was first and foremost designed to find encoding and character transformation issues that can lead to XSS vulnerability, and present them in a visual way where they could be reviewed with a quickness. Many tools exist for testing Web-applications to find cross-site scripting bugs. There are browser plugins, Web-scanners, and static code analyzers. We use whatever suits us in a given situation and produces the output we're interested in receiving. We developed x5s for penetration testers and other security-minded persons who already know how to find and exploit an XSS vulnerability. The tool has a slightly different bent than other tools we've used. 
+
+It's main goals include: 
+* Automate finding the encoding issues that can lead to XSS. 
+* Identify where character transformations occur by injecting multibyte characters such as higher Unicode code points and non-shortest form character encodings.
+
+| release_license = [http://en.wikipedia.org/wiki/BSD_license New BSD]
+
+| release_download_link = http://xss.codeplex.com/releases/view/43170
+
+| leader_name1 = ChrisWeber
+| leader_email1 = chris.weber@owasp.org
+| leader_username1 = ChrisWeber 
+
+| release_notes = http://www.owasp.org/index.php/Projects/OWASP_X5s_Project/Releases/x5s_v1.0.1/Notes
+}}

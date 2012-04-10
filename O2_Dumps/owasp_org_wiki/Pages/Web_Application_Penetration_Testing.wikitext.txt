@@ -1,0 +1,25 @@
+{{Template:OWASP Testing Guide v3}}
+
+The following paragraphs describe the Web Application Penetration Testing Methology, split into the 11 subcategories:
+
+[[Testing: Introduction and objectives|'''4.1 Introduction and Objectives''']]
+
+[[Testing: Information Gathering|'''4.2 Information Gathering''']]
+
+[[Testing_for_configuration_management|'''4.3 Configuration Management Testing''']]
+
+[[Testing for business logic   (OWASP-BL-001)|'''4.4 Business logic testing''']]
+
+[[Testing for authentication|'''4.5 Authentication Testing''']]
+
+[[Testing for Authorization|'''4.6 Authorization Testing''']]
+
+[[Testing for Session Management|'''4.7 Session Management Testing''']]
+
+[[Testing for Data Validation|'''4.8 Data Validation Testing''']]
+
+[[Testing for Denial of Service|'''4.9 Testing for Denial of Service''']]
+
+[[Testing for Web Services|'''4.10 Web Services Testing''']]
+
+[[Testing_for_AJAX:_introduction|'''4.11 Ajax Testing''']]

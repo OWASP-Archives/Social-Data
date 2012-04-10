@@ -1,0 +1,63 @@
+== 1st Web Security Days - July 14 (Turkey 2007) ==
+
+
+First of the Web Security Days has been realized by Owasp-Turkey chapter on 14th of July 2007 in İstanbul. With a ~70 registered attendees, it was great to have a pack of web security oriented people for a five hours of mostly technical presentations. 
+
+Dinis Cruz (Chief OWASP Evangelist) actively participating with his two presentations, attendees had the chance of capturing a first hand understanding of OWASP’s general structure, projects, the current state, in short, the spirit. Moreover, Dinis also presented a general view of an application audit by combining the best of two worlds; black box testing and source code review. Both of the presentations are humbly translated into Turkish onsite.
+
+Ferruh Mavituna has launched his fresh new testing/attacking tool on what he dubbed as “XSS Tunnelling” vowing the audience. Bunyamin Demir has provided a general overview of modsecurity WAF module of Apache with practical attack and prevention steps. Bedirhan Urgun has demoed an attack vector (cache poisoning) by using HRS, backed up with a master/zombie scenerio implemented on Attack API. Finally, Omur Camci has demonstrated fundamental Java security functionalities such as creating partial trust policies and signing jar files.
+
+We’d like to thank our sponsors; [http://www.gelisimplatformu.org/ Gelisim Platformu] and [http://www.pro-g.com.tr/ Pro-G Security]. 
+
+Encouraged with this one, we hope next meeting (could it be 6th September with Owasp Live…) will be more fluent, beneficial and definitely crowded.
+
+Thanks again to all participated.
+
+Last but not the least, presentation materials will be available soon and links to those materials (ppt, videos and papers) will be published here.
+
+
+OWASP-Turkey chapter
+
+== Agenda ==
+
+'''Saturday 14 July 2007'''<br>
+'''Time:''' 11:00-18:00<BR>
+
+'''Address''' to the meeting are:
+
+[http://www.gelisimplatformu.org Gelisim Platformu] - Gayrettepe 80310 Istanbul - Turkey<br/>
+<br/>
+
+{| style="width:80%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white" | Agenda
+ |-
+ |-
+ | style="width:10%; background:#7B8ABD" | 11:00-11:05 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Registration and Opening - ''OWASP-Turkey''
+ |-
+ | style="width:10%; background:#7B8ABD" | 11:05-12:00 || colspan="2" style="width:40%; background:#F2F2F2" align="left" | OWASP World (tools, documents, projects,etc..) - ''Dinis Cruz (Chief Evangelist)''
+ |-
+ | style="width:10%; background:#7B8ABD" | 12:10-12:30 || colspan="2" style="width:40%; background:#F2F2F2" align="left" | HTTP Response Splitting, Demo (Web Cache Poisoning and a little more) - ''Bedirhan Urgun''
+ |-
+ | style="width:10%; background:#7B8ABD" | 12:30-13:45 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Lunch
+ |-
+ | style="width:10%; background:#7B8ABD" | 13:45-14:25 || colspan="2" style="width:40%; background:#F2F2F2" align="left" | XSS Tunnelling - ''Ferruh Mavituna''
+ |-
+ | style="width:10%; background:#7B8ABD" | 14:35-15:00 || colspan="2" style="width:40%; background:#F2F2F2" align="left" | Web Application Security With ModSecurity - ''Bunyamin Demir''
+ |-
+ | style="width:10%; background:#7B8ABD" | 15:10-16:50 || colspan="2" style="width:40%; background:#F2F2F2" align="left" | Security Practices In Java - ''GP Bilisim Kulubu''
+ |-
+ | style="width:10%; background:#7B8ABD" | 16:50-16:10 || colspan="2" style="width:40%; background:#C2C2C2" align="left" | Break
+ |-
+ | style="width:10%; background:#7B8ABD" | 16:10-16:50 || colspan="2" style="width:40%; background:#F2F2F2" align="left" | Live Demo Of An Web Application Security Review (And Source Code Analysis) - ''Dinis Cruz''
+ |-
+ | style="width:10%; background:#7B8ABD" | 17:00-17:45 || colspan="2" style="width:40%; background:#F2F2F2" align="left" | Q&A and What can we do for OWASP?
+ |-
+ | style="width:10%; background:#7B8ABD" | 17:45-18:00 || colspan="2" style="width:40%; background:#C2C2C2" align="left" | Closing - ''OWASP-Turkey''
+|}
+
+
+== Sponsored ==
+
+The event was sponsored by [http://www.gelisimplatformu.org/ Gelisim Platformu] and [http://www.pro-g.com.tr/ Pro-G Security]
+
+<center>[[Image:Gelisim_platformu_logo.gif]]&nbsp;&nbsp;&nbsp;&nbsp;[[Image:Pro-g_web_security_days_logo.gif|Pro-g_web_security_days_logo.gif]]</center>

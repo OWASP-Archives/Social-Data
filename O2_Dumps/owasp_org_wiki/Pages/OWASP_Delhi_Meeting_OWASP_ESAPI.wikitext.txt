@@ -1,0 +1,14 @@
+Traditionally applications have been vulnerable largely due to the development team's lack of understanding of the common security threats. This has recently begun to change as most software development firms have started taking security a bit more seriously. Many developers are now aware of the OWASP Top Ten.
+
+Even with this increased sense of awakening most applications continue to suffer from the same vulnerabilities. This is because developers are thrust with the responsibility for designing and building the security mechanisms and more often than not they get it wrong.
+
+The existing libraries and APIs available for mitigating security threats are complex, difficult to work with and incomplete with respect to the developer's needs.
+
+What the developers need is an API which gives them the power to achieve most of these complex tasks with a few simple function calls. This is exactly what OWASP's Enterprise Security API (ESAPI) is designed to be. 
+
+ESAPI provides a set of methods that developers most often need irrespective of the nature of the application. In addition to the interfaces there is also the excellent reference implementation which has been put through detailed code analysis and penetration testing by experts.
+
+In addition to addressing the most obvious needs like encoding, data validation, access control, and indirect object reference etc, ESAPI also provides advanced features like logging, ability to accept safe HTML (Using AntiSamy) and intrusion detection capabilities. 
+In simple words, ESAPI does for the developers what the Metasploit did for the Penetration Testers. 
+
+This talk will introduce ESAPI to the audience and take them through its developer-centric design and features along with a live coding demo.

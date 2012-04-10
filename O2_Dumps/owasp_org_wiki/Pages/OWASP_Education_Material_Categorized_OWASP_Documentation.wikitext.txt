@@ -1,0 +1,143 @@
+<includeonly>===</includeonly>= OWASP Documentation =<includeonly>===</includeonly>
+An [[:Category:OWASP_Project |'''OWASP Project''']] is a collection of related tasks that have a defined roadmap and team members. OWASP project leaders are responsible for defining the vision, roadmap, and tasks for the project. The project leader also promotes the project and builds the team. Tools and documents are organized into the following categories:
+PROTECT - These are tools and documents that can be used to guard against security-related design and implementation flaws.
+DETECT - These are tools and documents that can be used to find security-related design and implementation flaws.
+LIFE CYCLE - These are tools and documents that can be used to add security-related activities into the Software Development Life Cycle (SDLC).
+
+<hr><br> '''Protect: '''
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#FFFFFF color:white"|<font color="white">
+'''[[:Category:OWASP_Guide_Project|OWASP Development Guide]]''' 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Beginner''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Experienced''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Expert''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+|}
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#FFFFFF color:white"|<font color="white">
+'''[[:Category:OWASP_Ruby_on_Rails_Security_Guide_V2|OWASP Ruby on Rails Security Guide V2]]''' 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Beginner''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Experienced''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Expert''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+|}
+
+
+<br>''' Detect:'''
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#FFFFFF color:white"|<font color="white">
+'''[[:Category:OWASP_Code_Review_Project|OWASP Code Review Guide]]''' 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Beginner''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Experienced''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Expert''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+|}
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#FFFFFF color:white"|<font color="white">
+'''[[:Category:OWASP_Testing_Project|OWASP Testing Guide]]''' 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Beginner''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Experienced''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Expert''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+|}
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#FFFFFF color:white"|<font color="white">
+'''[[:Category:OWASP_Top_Ten_Project|OOWASP Top Ten Project]]''' 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Beginner''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Experienced''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Expert''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+|}
+
+<br>''' Life Cycle:'''
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#FFFFFF color:white"|<font color="white">
+'''[[:Category:OWASP_AppSec_FAQ_Project|OWASP AppSec FAQ Project]]''' 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Beginner''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Experienced''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Expert''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+|}
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#FFFFFF color:white"|<font color="white">
+'''[[:Category:OWASP_Legal_Project|OWASP Legal Project]]''' 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Beginner''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Experienced''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Expert''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+|}
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#FFFFFF color:white"|<font color="white">
+'''[[:Category:OWASP_Source_Code_Review_OWASP_Projects_Project|OWASP Source Code Review for OWASP-Projects]]''' 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Beginner''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Experienced''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Expert''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+|}

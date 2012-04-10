@@ -1,0 +1,15 @@
+Can SQL injection vulnerabilities lead to negligence lawsuits?
+
+One of the primary reasons for the OWASP Top 10 in 2002 was to help create a standard for duty of care when writing web applications. The fact that the FTC has gone after companies like Guess Jeans and PETCO for SQL Injection problems bolsters the case. However, there are some challenges...
+
+1) The duty of care is a judgment call. Still, I think most people would probably agree that RockYou had a duty to protect their users' information.
+
+2) Did RockYou breach the duty? A lot depends on the facts here - if it was garden variety SQL injection then perhaps, but what if they made a more subtle error? Did they get 4999 queries right and just mess up one? As much as I'd like to say it has to be considered "reasonable care" to protect against SQL injection by now, many developers don't really understand get it.
+
+3) Did RockYou actually cause the harm? Or was it the hacker? Was the chain of causation between the breach and the damage foreseeable by RockYou? Causation can be tricky.
+
+4) What is the harm exactly? It's not enough to say RockYou failed to exercise reasonable care, you have to show some actual harm. This is going to be a little difficult to measure.
+
+Perhaps this is the case that changes the game for people writing software that is ridiculously insecure, but I wouldn't hold my breath. OWASP can certainly issue an opinion, but without a lot more facts it will be difficult to say anything useful. I suppose we could offer our support to the plaintiffs to see if they need any technical guidance.
+
+We can issue public "OWASP" opinions, but they need to be coordinated through the Board/Committees, so that we can make sure that any statements we make really reflect the overall consensus of OWASP.

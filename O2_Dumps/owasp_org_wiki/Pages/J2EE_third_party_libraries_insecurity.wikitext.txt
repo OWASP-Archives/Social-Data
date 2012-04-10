@@ -1,0 +1,26 @@
+'''Introduction'''
+
+It might be obvious but I believe that from time to time everybody needs to get their memory refreshed. In these days software developers relay on third party libraries, to help them do their work faster. This is a potential way for a malicious code to sneak in to our most secure application. Imagine a library that parses JSON/CSV/XML, or does some other useful things for our app. This library is fairly simple, but contains a piece of code that will find all context variables that will contain URLs and passwords for other systems, or it can silently connect to our DB and start downloading our data. There is always issue of how will attacker export gathered informations but there is HTTP/MAIL/DNS/ICMP/file. Given how many open source projects are out there, and how much of them are in use,  it is a big field to mess with. 
+
+'''Why should it concern me ?'''
+
+Because nobody (or almost nobody) ever views the sources for library that's being used. Why ? - Time. Nobody has enough time to properly finish their project, not even thinking about viewing sources of libraries we use on daily basis. None sane manager will allow his developers to spend their time on analyzing thousands of lines of code. That is why this all could slip unnoticed. 
+
+
+'''What can we do?'''
+
+As you probably already know there is not much that we can do about it, and we wont eliminate every threat. But what we can do:
+
+1. We can sign jars - but it doesn't do us any good because we already trust our source. 
+2. We can review source code - but it is extremely time consuming, and sources doesn't have to match compiled classes so we should build jar ourselves. 
+3. We can attach a security manager policy file to libraries - and I think this is a most cost effective countermeasure we can do.
+
+'''The policy file'''
+
+This file should be provided by library developer and contain informations on what this lib should have access to, i.e. file or net. It should be obvious that library that parses JSON should not access network or HDD. If we have such file attached to library we can analyze it in much shorter time and be able to tell, if this lib is safe. Of course if we won't use Security Manager or our brain or view security policy file there is nothing that would help. 
+
+--[[User:Damian Kolasa|Damian Kolasa]] 04:34, 30 November 2011 (EST)
+
+{{Stub}} 
+
+[[Category:OWASP Java Project]]

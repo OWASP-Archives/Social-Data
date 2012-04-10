@@ -1,0 +1,63 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Improper Data Validation]]
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+
+==Description==
+
+The validator form defines a validate() method but fails to call super.validate().
+
+The Struts Validator uses a form's code>validate() method to check the contents of the form properties against the constraints specified in the associated validation form. That means the following classes have a validate() method that is part of the validation framework:
+
+<pre>
+	ValidatorForm
+	ValidatorActionForm
+	DynaValidatorForm
+	DynaValidatorActionForm
+</pre>
+
+If you create a class that extends one of these classes and if your class implements custom validation logic by overriding the validate() method, you must call super.validate() in your validate() implementation. If you do not, the Validation Framework cannot check the contents of the form against a validation form. In other words, the validation framework will be disabled for the given form.
+
+Disabling the validation framework for a form exposes the application to numerous types of attacks. Unchecked input is the root cause of vulnerabilities like cross-site scripting, process control, and SQL injection. Although J2EE applications are not generally susceptible to memory corruption attacks, if a J2EE application interfaces with native code that does not perform array bounds checking, an attacker may be able to use an input validation mistake in the J2EE application to launch a buffer overflow attack.
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+TBD
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[:Category:Input Validation]]
+
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+__NOTOC__

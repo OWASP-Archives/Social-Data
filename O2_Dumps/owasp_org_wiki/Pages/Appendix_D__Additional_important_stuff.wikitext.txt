@@ -1,0 +1,28 @@
+This Appendix will get updated when necessary and major updates will be noted in the News section of the main project page at https://www.owasp.org/index.php/Category:OWASP_Securing_WebGoat_using_ModSecurity_Project
+
+=== This wiki in a Word doc ===
+
+This zipped Word doc (3.1 meg) is a snapshot of the wiki on 28 November 2008 and might be easier to reference than navigating around on the wiki. 
+
+[[Image:OWASP_ModSecurity_Securing_WebGoat_wiki_28Nov2008.zip]]
+
+This version, starting on page 9, is in landscape mode which some might find irritating to read. A new version, all in portrait mode, will be uploaded within a week (as of 31 Dec 2008); for now, change to portrait mode within Word (File -> Page Setup -> Portrait) if you want to.
+
+=== Other material ===
+
+This zip file (1.4 meg) is a short version and long version of ppt prezos that I gave at the OWASP EU Summit in Portugal on November 3-7, 2008. If somebody can figure out how to stop stupid Powerpoint from automatically inserting the damned bullets, please email me at stephencraig_dot_evans_at_gmail_dot_com or subscribe to the project mailing list at https://lists.owasp.org/mailman/listinfo/owasp-webgoat-using-modsecurity and post a message there. 
+
+[[Image:OWASP_EU_Summit_2008_ModSec_on_WebGoat.zip]]
+
+=== Fixes/enhancements ===
+
+This section contains fixes and/or enhancements to the rulesets (time permitting).
+
+# Fix for 'rulefile_10_improper-error-handling.conf' (13 Dec 2008):
+
+Their wasn't enough filtering so this rule was being invoked in other situations where it shouldn't have been. Change the first line below and add the 2nd one immediately after like this:
+
+<pre>
+  SecRule ARGS:menu "!@eq 1100" "t:none,pass,skip:2"
+  SecRule &ARGS:Username "@eq 0" "t:none,pass,skip:1"
+</pre>

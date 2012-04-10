@@ -1,0 +1,83 @@
+{{template:CandidateForDeletion}}
+ #REDIRECT [[Information Leakage]]
+
+__TOC__
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+==Description==
+Server messages need to be parsed before being passed on to the user.
+
+'''Consequences'''
+*	Confidentiality: Often this will either reveal sensitive information which may be used for a later attack or private information stored in the server.
+
+'''Exposure period'''
+*	Implementation: This flaw is a simple logic issue, introduced entirely at implementation time.
+*	Build: It is important to adequately set read privileges and otherwise operationally protect the log.
+
+'''Platform'''
+*	Languages: Any; it is especially prevalent, however, when dealing with SQL or languages which throw errors.
+*	Operating platforms: Any
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood   of exploit'''
+
+High
+
+'''Avoidance and mitigation'''
+*	Implementation: Any error should be parsed for dangerous revelations.
+*	Build: Debugging information should not make its way into a production release.
+
+'''Discussion'''
+
+The first thing an attacker may use - once an attack has failed - to stage the next attack is the error information provided by the server.
+
+[[SQL Injection]] attacks generally probe the server for information in order to stage a successful attack.
+
+==Risk Factors==
+TBD
+
+
+==Examples==
+
+In Java:
+
+<pre>
+try {
+  /.../
+} catch (Exception e) {
+  System.out.println(e);
+}
+</pre>
+
+Here you are passing much more data than is needed.
+
+Another example is passing SQL exceptions to a WebUser without filtering.
+
+
+==Related [[Attacks]]==
+* [[SQL Injection]]
+
+==Related [[Vulnerabilities]]==
+
+==Related [[Controls]]==
+* [[Control 1]]
+* [[Control 2]]
+TBD
+
+==Related [[Technical Impacts]]==
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+TBD
+
+==References==
+TBD

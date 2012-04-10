@@ -1,0 +1,29 @@
+<br>
+[[Category:OWASP ASDR Project]]
+
+
+== Description ==
+
+An accident is an undesirable and unexpected event that causes personal injury, material (damage to patrimony) or financial damage,  and occurs so unintentionally. They may be caused by humans, animals and natural causes. An incident is different from an accident, because incidents are where someone is at fault. It's possible to investigate and learn with accidents, so we can avoid them in the future. This is sometimes called root cause analysis, but does not generally apply to accidents that cannot be predicted with any certainty.
+
+== Risk Factors ==
+
+* Accidents can be caused by the nature as hurricanes and earthquake, animals and insects and humans and it can be from stopping a service for a few seconds to shutting down a data center for hours, causing losses of millions of dollars.
+
+== Examples ==
+
+=== Physical ===
+: A physical example includes unwanted collisions and falls, as the fall of a laptop from the table or fire in the datacenter caused by a short circuit.
+=== Non-Physical ===
+: Non-physical examples can be when somebody trip over the power cable of a server.
+
+==Related [[Attacks]]==
+TBD
+
+==Related [[Vulnerabilities]]==
+TBD
+
+== References ==
+* [http://en.wikipedia.org/wiki/Accident Wikipedia]
+
+[[Category: Threat Agent]]

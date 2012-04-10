@@ -1,0 +1,48 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Project About</noinclude>
+| project_name = OWASP LAPSE Project
+| project_home_page = OWASP LAPSE Project
+
+| project_description = LAPSE stands for a <u>L</u>ightweight <u>A</u>nalysis for <u>P</u>rogram <u>S</u>ecurity in <u>E</u>clipse. LAPSE is designed to help with the task of auditing <b>Java EE Applications</b> for common types of security vulnerabilities found in Web Applications. LAPSE was developed by [http://suif.stanford.edu/~livshits/ Benjamin Livshits] as part of the [http://suif.stanford.edu/~livshits/work/griffin/ Griffin Software Security Project]. The project's second push is being led by Pablo Martín Pérez, [http://www.evalues.es/index.php/en.html  Evalues Lab] ICT Security Researcher, developing LAPSE+, an enhanced version of LAPSE.
+
+| project_license =  [http://www.gnu.org/licenses/gpl-3.0-standalone.html GNU General Public License v3]
+
+| leader_name1 = Pablo Martín Pérez
+| leader_email1 = pablo.perez@owasp.org
+| leader_username1 = Pablo Martín Pérez
+
+| leader_name2 = José María Sierra Cámara
+| leader_email2 = jose.maria.sierra@owasp.org
+| leader_username2 =
+
+| contributor_name1 = Ben Livshits (former lead, non-active)
+| contributor_email1 = 
+| contributor_username1 = 
+
+| contributor_name2 = 
+| contributor_email2 = 
+| contributor_username2 = 
+
+| pamphlet_link = 
+
+| presentation_link =
+
+| mailing_list_name = https://lists.owasp.org/mailman/listinfo/owasp-lapse
+
+| project_road_map = http://www.owasp.org/index.php/OWASP_LAPSE_Project/Roadmap
+
+| links_url1 = http://www.evalues.es/index.php/en.html
+| links_name1 = Evalues - IT Security Evaluation
+
+| links_url2 = http://research.microsoft.com/en-us/um/people/livshits/
+| links_name2 = Former project's lead, Ben Livshits, web page 
+
+| links_url3 = http://www.owasp.org/index.php/OWASP_Java_Project
+| links_name3 = OWASP Java Project
+
+| release_1 = LapsePlus 2.8.1
+| release_2 = 
+| release_3 =
+| release_4 =
+<!--- The line below is for GPC usage only. Please do not edit it --->
+| project_about_page = Projects/OWASP LAPSE Project
+}}

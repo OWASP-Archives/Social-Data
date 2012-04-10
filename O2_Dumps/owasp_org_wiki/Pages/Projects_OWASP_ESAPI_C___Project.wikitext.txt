@@ -1,0 +1,30 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Project About</noinclude>
+| project_name = OWASP ESAPI C Project
+| project_home_page = :Category:OWASP Enterprise Security API
+| project_description = This is the C language version of the OWASP ESAPI.
+*ESAPI for C is sponsored by the United States Government
+*An API for helping programmers develop more secure business applications in C.
+*Provides easy to use functions for proper auditing, simple wrappers for cryptographic functions, and more.
+| project_license =
+| leader_name1 = Dan Amodio
+| leader_email1 = dan.amodio@aspectsecurity.com
+| leader_username1 = Dan_Amodio
+| contributor_name1 = David Anderson
+| contributor_email1 = david.anderson@aspectsecurity.com
+| contributor_username1 = 
+| pamphlet_link = 
+| presentation_link =
+| mailing_list_name = https://lists.owasp.org/mailman/listinfo/owasp-esapi-c
+| project_road_map = 
+| links_url1 = http://code.google.com/p/owasp-esapi-c/
+| links_name1 = ESAPI-C Google Code Project
+| links_url2 = http://owasp-esapi-c.googlecode.com/svn/trunk/doc/html/index.html
+| links_name2 = ESAPI-C Documentation
+| release_1 = 
+| release_2 = 
+| release_3 =
+| release_4 =
+<!--- The line below is for GPC usage only. Please do not edit it --->
+| project_about_page = Projects/OWASP ESAPI C Project
+}}
+<noinclude>[[Category: Project About]]</noinclude>

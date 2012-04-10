@@ -1,0 +1,24 @@
+SAM"SHE (Security Analyser for Microsoft’s Shared Hosting Environments) is a tool that evaluates the security of IIS servers, and:
+
+* Designed to be 1-click test
+* Objective to raise the awareness of the problems by the ones that matter (the paying clients)
+* Contains no ‘exploits’ and ‘dangerous functionality’
+
+
+== Download ==
+
+SAM'SHE is part of [[ANBS]] and can be downloaded here: [http://prdownloads.sourceforge.net/owasp/Owasp_ANBS_V0_55.zip Owasp_ANBS_V0_55.zip]
+
+
+== Screenshots ==
+'''SAM'SHE test execution''' on an Windows 2003 Web Edition server
+
+[[Image:SAMSHE ExecuteTests.png]]
+
+'''SAM'SHE results''' on an Windows 2003 Web Edition server
+
+[[Image:SAMSHE_Results.png]]
+
+
+
+[[Category:OWASP .NET Project]]

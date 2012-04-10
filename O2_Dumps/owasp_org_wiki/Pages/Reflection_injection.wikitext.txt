@@ -1,0 +1,124 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+
+==Description==
+Reflection injection problems are a subset of injection problems, in which external input is used to construct a string value passed to class reflection APIs. By manipulating the value an attacker can cause unexpected classes to be loaded, or change what method or fields are accessed on an object.
+
+'''Consequences'''
+
+* Access control: Reflection injection allows for the execution of arbitrary code by the attacker.
+
+'''Exposure period'''
+
+* Design: It may be possible to find alternate methods for satisfying functional requirements than using reflection.
+* Implementation: Avoid using external input to generate reflection string values.
+
+'''Platform'''
+
+* Language: Java, .NET, and other languages that support reflection
+* Platform: Any
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood of exploit'''
+
+High
+
+
+The most straightforward reflection injection attack is to provide the name of an alternate class available to the target application which implements the same interfaces but operates in a less secure manner. This can be used as leverage for more extensive attacks. More complex attacks depend upon the specific deployment situation of the application.
+
+If the classloader being used is capable of remote class fetching this becomes an extremely serious vulnerability, since attackers could supply arbitrary URLs that point at constructed attack classes. In this case, the class doesn't necessarily even need to implement methods that perform the same as the replaced class, since a static initializer could be used to carry out the attack.
+
+If it is necessary to allow reflection utilizing external input, limit the possible values to a predefined list. For example, reflection is commonly used for loading JDBC database connector classes. Most often, the string class name is read from a configuration file. Injection problems can be avoided by embedding a list of strings naming each of the supported database driver classes and requiring the class name read from the file to be in the list before loading.
+
+==Risk Factors==
+
+* Talk about the [[OWASP Risk Rating Methodology|factors]] that make this vulnerability likely or unlikely to actually happen
+* Discuss the technical impact of a successful exploit of this vulnerability
+* Consider the likely [business impacts] of a successful attack
+
+
+==Examples==
+
+The following Java code dynamically loads a connection class to be used for transferring data:
+
+<pre>
+// connType is a String read from an external source
+Class connClass = Class.forName(connType);
+HttpURLConnection conn = (HttpURLConnection)connClass.newInstance();
+conn.connect();
+</pre>
+
+Suppose this application normally passed "javax.net.ssl.HttpsUrlConnection". This would provide an HTTPS connection using SSL to protect the transferred data. If an attacker replaced the connType string with "java.net.HttpURLConnection" then all data transfers performed by this code would happen over an un-encrypted HTTP connection instead.
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Injection problem]]
+
+==Related [[Controls]]==
+
+* Design: It may be possible to find alternate methods for satisfying functional requirements than using reflection.
+* Implementation: Avoid using external input to generate reflection string values.
+
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Range and Type Error Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

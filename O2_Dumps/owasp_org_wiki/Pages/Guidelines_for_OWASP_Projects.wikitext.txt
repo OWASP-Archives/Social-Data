@@ -1,0 +1,50 @@
+This is a DRAFT page still under review by the [[Global Projects Committee]]
+
+This page is maintained by the [[Global Projects Committee]] to help assist Project Leaders with information about successfully running an OWASP Project. It will be updated from time to time, and changes will be discussed and announced on the OWASP-Leaders list.
+
+== Project Wiki Pages ==
+
+* When a new project is started, we will create a wiki page as the official homepage for your project.  It will contain the <nowiki>[[Category:OWASP Project]]</nowiki> tag at the bottom. Please ensure this tag stays on your project homepage.
+
+* Project wiki pages will also be listed in the appropriate category on the [[:Category:OWASP Project|OWASP Projects]] page, which means that, initially, until being [[:Category:OWASP Project Assessment|assessed]], it will be placed alphabetically within the [[:Category:OWASP_Project#Alpha_Status_Projects|‘Alpha Status Projects’]] category. Exceptions can be made for special circumstances (e.g. pre-established project being brought into OWASP), so contact the [[Global Projects Committee|OWASP Global Projects Committee]] for more information. 
+
+* We'll start your project homepage with a '''Project Identification''' template to capture the relevant meta-data that you already provided about your project. For example, the [[:Category:OWASP Live CD Project|Live CD Project page]] contains the source code <nowiki>{{Template:OWASP Live CD Project}}</nowiki> and the [[:Template:OWASP Live CD Project|template]] is automatically embedded on the project page.
+
+* You may move your '''Project Identification''' template anywhere you'd like (top/bottom of the page, to a separate tab, etc.) but please ensure it stays linked from your project's page. If you really would like it to be out of the way, you can just edit the '''Project Identification''' page and tag it with your project's category label, such as <nowiki>[[Category:OWASP Enterprise Security API]]</nowiki>, and then no link on your project's homepage is required.
+
+* Your project homepage belongs to your project and you are free to design it as you like (some good examples of different styles include the [[:Category:OWASP_Enterprise_Security_API|ESAPI Project page]] and the [[:Category:OWASP Live CD Project|Live CD Project page]]). It's usually a good idea to include information about your project including detailed descriptions, screenshots, download links, a link to the project mailing list, contact information for the project leader, and any other relevant information.
+
+* You can have as many wiki pages as you want to support your project.  Please feel free to create them yourself.  Everything posted on the wiki is accessible by many people around the world.
+
+* If you have never edited a wiki, take a quick look at the [http://en.wikipedia.org/wiki/Wikipedia:Cheatsheet this cheat sheet] for basic editing help.  Also, [http://www.openoffice.org/ OpenOffice] is a free ''office suite'' which includes the ability to export to MediaWiki text.  The exported text file contents can be copied and pasted into OWASP's wiki.
+
+== Project Sponsorship ==
+
+Many OWASP projects are made more successful through contributions from sponsor organizations that donate money or man-power. But, managing sponsorship attribution over time can become tricky, so here are some general guidelines for project leaders based on common cases:
+
+* In cases where sponsors contribute materials governed by an open-source license that requires attribution, Project Leaders should ensure that attribution is done accordingly. In such instances, it may also be necessary to attribute individual contributors.
+
+* For financial contributions to a project (e.g. an outside organization donating through [[OWASP Season of Code]] sponsorship), sponsors should be attributed for at least 1 year. After that, Project Leaders are free to leave or remove the sponsorship attribution.
+
+* Sponsors can be attributed by name or through display of their logo. This can appear on the project homepage or built in to the document/tool itself. This is the choice of the Project Leader.
+
+== Project Licensing ==
+
+For OWASP projects, the materials are available under an approved FLOSS (Free, Libre and Open Source Software) license. For more information, please see the [http://www.owasp.org/index.php/OWASP_Licenses OWASP Licenses page].  Some other items to consider when choosing a license:
+
+* For documentation projects, the [http://creativecommons.org/licenses/by-sa/3.0/ Creative Commons Attribution ShareAlike 3.0 license] is good choice as that license was designed for creative endeavors such as written works.
+
+* For tools and other coding projects, an approved FLOSS license is recommend as these were designed for software creation.  Examples of FLOSS licenses for coding projects are:
+** GNU GPL ([http://www.fsf.org/licensing/licenses/gpl.html version 3] and [http://www.gnu.org/licenses/old-licenses/gpl-2.0.html version 2])
+** BSD License (aka modified or 3-clause BSD license [http://www.xfree86.org/3.3.6/COPYRIGHT2.html#5 see section 2.2] for an example)
+** Apache 2.0 License ([http://www.apache.org/licenses/LICENSE-2.0 license text])
+
+When choosing a software license, the primary difference between licenses deals with the restrictions and permissions enforced by the license.  The restrictions and permissions enforced by the chosen license can have impacts on business adoption and contributions by the community at large.  Consideration should be given to existing and well established licenses as these are much better understood by the IT and business community in general.  For more assistance on selecting a license, here are some general references:
+* The Free Software Foundations [http://www.fsf.org/licensing/licenses/ licenses page].  The FSF authored the GPL licenses.
+* The Open Source Initiative's [http://www.opensource.org/licenses/category licenses page] ordered by category.
+* A [http://www.softwarefreedom.org/podcast/2009/mar/03/0x08/ podcast] on selecting a FLOSS license.
+* The [http://www.softwarefreedom.org/ Software Freedom Law Center] can provide advice on license selection as well.
+
+[[Category:OWASP Project]]
+[[Category:How To]]
+[[Category:OWASP Project Assessment]]

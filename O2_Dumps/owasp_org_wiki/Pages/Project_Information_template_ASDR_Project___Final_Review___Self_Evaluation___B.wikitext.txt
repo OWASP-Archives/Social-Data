@@ -1,0 +1,59 @@
+[[Project Information:template ASDR Project|Clik here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''FINAL REVIEW''' 
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART I''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications#The Application Security Desk Reference - ASDR|OWASP Application Security Desk Reference (ASDR) Project's Deliveries & Objectives]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#The Application Security Desk Reference - ASDR|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| It's was not possible to develop and review all articles from the guide. Only 40 articles were developed /reviewed. 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#The Application Security Desk Reference - ASDR|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|Except by articles development/review and considering all the work (templates definition, 2 new categories created, draft book compilation, definition of subcategories for each category in order to define a taxonomy) and despite my underestimation of work when I applied to SoC, I believe the project reached 80%.
+
+Also, another task that wasn't defined in the proposal was made. All articles (+600) were filtered out and merged when suitable, thus making 303 articles tagged to be deleted.
+The current number of articles in ASDR is 357, which already had been put in template structure.
+
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|Identify some more focused volunteers to develop and review articles contents in order to raise their quality.
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART II''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Assessment Criteria
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[:Category:OWASP Project Assessment|OWASP Project Assessment Criteria]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Alpha Quality''' status? 
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|All requirements were accomplished, except by revision phase. One of the reviewers (Darren Challey) started to review the first 30 pages, even though it was not completed.
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Beta Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+3. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Release Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+ |-  
+ | style="width:25%; background:#7B8ABD" align="center"|
+4. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|Reference guide is a continuous project that needs lots of support from community. I expect to receive this support in next Season of Quality in order to keep its development until we have everything consolidated and a first Quality Release version.
+|}

@@ -1,0 +1,22 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>OWASP Training Modules</noinclude>
+| Module_designation = [[:ESAPI Swingset|OWASP ESAPI Swingset]]
+| Module_Overview_Goal =
+&nbsp; 
+*The [https://www.owasp.org/index.php/ESAPI_Swingset#tab=Project_About_-_Swingset_Interactive OWASP ESAPI Swingset Interactive Project] is a web application which demonstrates common security vulnerabilities and asks users to secure the application against these vulnerabilities using the ESAPI library. 
+*[https://www.owasp.org/index.php/ESAPI_Swingset#tab=Project_About_-_Swingset_Demo OWASP ESAPI Swingset Demo Project] is s a web application which demonstrates the many uses of the [[:Category:OWASP Enterprise Security API|Enterprise Security API (ESAPI)]]. 
+| Content = 
+&nbsp;
+The application is intended for Java Developers. The goal of the application is to teach developers about the functionality of the ESAPI library and give users a practical understanding of how it can be used to protect web applications against common security vulnerabilities.
+&nbsp;
+
+&nbsp;
+| Material = 
+&nbsp;
+*[http://code.google.com/p/owasp-esapi-swingset-interactive/ OWASP ESAPI Swingset Interactive Project's Code Repository]
+*[http://code.google.com/p/owasp-esapi-java-swingset/ OWASP ESAPI Swingset Demo Project's Code Repository]
+&nbsp;
+}}
+
+
+
+[[Category:OWASP_Training|Training]]

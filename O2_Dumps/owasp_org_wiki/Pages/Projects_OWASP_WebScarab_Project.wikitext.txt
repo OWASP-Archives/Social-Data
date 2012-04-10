@@ -1,0 +1,46 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Project About</noinclude>
+| project_name = OWASP WebScarab Project
+| project_home_page = :Category:OWASP WebScarab Project
+
+| project_description = WebScarab is a framework for analysing applications that communicate using the HTTP and HTTPS protocols. It is written in Java, and is thus portable to many platforms. WebScarab has several modes of operation, implemented by a number of plugins. In its most common usage, WebScarab operates as an intercepting proxy, allowing the operator to review and modify requests created by the browser before they are sent to the server, and to review and modify responses returned from the server before they are received by the browser. WebScarab is able to intercept both HTTP and HTTPS communication. The operator can also review the conversations (requests and responses) that have passed through WebScarab.
+
+You may also be interested in testing the [[OWASP WebScarab NG Project | Next Generation of WebScarab]].
+
+| project_license = [http://www.gnu.org/licenses/gpl-2.0.html  GPL version 2 or later]
+
+| leader_name1 = Rogan Dawes 
+| leader_email1 = rogan.dawes@gmail.com
+| leader_username1 = RoganDawes
+
+| contributor_name[1-10] = 
+| contributor_email[1-10] = 
+| contributor_username[1-10] = 
+
+| pamphlet_link = 
+
+| presentation_link = https://www.owasp.org/images/8/88/OWASP_EU_Summit_2008_WebScarab_treasures.ppt
+
+| mailing_list_name = http://lists.owasp.org/mailman/listinfo/owasp-webscarab
+
+| project_road_map = https://www.owasp.org/index.php/Category:OWASP_WebScarab_Project#Future_development
+
+| links_url1 = https://www.owasp.org/index.php/WebScarab_Getting_Started
+| links_name1 = WebScarab Getting Started Guide
+
+| links_url2 = http://yehg.net/lab/pr0js/training/webscarab.php
+| links_name2 =  WebScarab Movies
+
+| links_url3 = 
+| links_name3 = 
+
+| links_url[1-10] = 
+| links_name[1-10] = 
+
+| release_1 = WebScarab
+| release_2 = 
+| release_3 =
+| release_4 =
+
+<!--- The line below is for GPC usage only. Please do not edit it --->
+| project_about_page = Projects/OWASP WebScarab Project
+}}

@@ -1,0 +1,128 @@
+15.  Parameter Tampering -> 15.1  Exploit Hidden Fields
+
+15.  Parameter Tampering -> 15.2  Exploit Unchecked Email
+
+The lessons are combined because the strategy and the ruleset to solve them are the same.
+
+=== Lesson overviews === 
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solutions === 
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information.
+
+=== Strategy === 
+
+To mitigate Lesson 15.1, the attacker cannot be allowed to alter the hidden field 'Price'.
+
+Lesson 15.2 has 2 parts:
+
+Stage 1 is mitigated by preventing an XSS attack, so one line is added to the rule file 'rulefile_08_xss.conf' to take care of this.
+
+<pre>
+  SecRule ARGS:menu "!@eq 1600" "chain,t:none,..."	
+</pre>
+
+
+Stage 2 has the same issue of altering a hidden field, in this case the email address in:
+
+<pre>
+<input name='to' type='HIDDEN' value='webgoat.admin@owasp.org'>
+</pre>
+
+
+Mitigating the hidden field value issues uses the same strategy that is used to solve '4.4  Multi Level Login 1' and '4.5  Multi Level Login 2'. In both cases, a check is implemented to see whether the hidden fields have been altered.
+
+=== Implementation === 
+
+The lesson is mitigated by the ruleset 'rulefile_15_parameter-tampering.conf':
+
+<pre>
+  SecRule ARGS:menu "!@eq 1600" "phase:2,t:none,skip:2"
+
+  # action is triggered if script returns non-nil value
+  SecRuleScript "/etc/modsecurity/data/read-hidden-values_15.lua" \ 
+    "phase:2,t:none,log,auditlog,deny,severity:3, \ 
+      msg:'Parameter Tampering; Hidden field',tag:'PARAMETER_TAMPERING', \ 
+      redirect:/_error_pages_/lesson15-1.html"
+  SecAction "phase:2,allow:request,t:none,log,auditlog, \ 
+    msg:'Luascript: hidden field not altered or does not exist'"
+
+################################################################
+
+  SecRule TX:MENU "!@eq 1600" "phase:4,t:none,pass,skip:1"
+
+  # parse response body and write hidden values to file
+  SecRuleScript "/etc/modsecurity/data/write-hidden-values1.lua" \ 
+    "phase:4,t:none,log,auditlog,allow, \ 
+      msg:'Writing RESPONSE BODY & parsed input fields to file using luascript'"
+</pre>
+
+
+The Lua script used here in Phase 4 that writes the HTML input values to file is the exact same file as the one used in Lessons 4.4 and 4.5. The output is:
+
+<pre>
+Entry{
+  name = "gId",
+  type = "TEXT",
+  value = "GMail id"
+}
+
+Entry{
+  name = "gPass",
+  type = "PASSWORD",
+  value = "password"
+}
+
+Entry{
+  name = "subject",
+  type = "TEXT",
+  value = "Comment for WebGoat"
+}
+
+Entry{
+  name = "to",
+  type = "HIDDEN",
+  value = "webgoat.admin@owasp.org"
+}
+
+Entry{
+  name = "SUBMIT",
+  type = "SUBMIT",
+  value = "Send!"
+</pre>
+
+
+Note that the Lua script could be modified with one line of code to write only hidden input fields, but we do not in order to illustrate writing all input types to a persistent data store.
+
+The 'read-hidden-values_15.lua' file only has to be modified ever so slightly. 
+
+First, modify the debug messages such as:
+
+<pre>
+  m.log(9, "entering Luascript read-hidden-values_15.lua")
+</pre>
+
+
+Keep in mind that it is a good practice to include a word like 'luascript' in every debug message in order to be able to more easily search a debug file when necessary.
+
+Next, to get the values from the POST request body:
+
+<pre>
+  local dprice = m.getvar("ARGS_POST.Price", "none")
+  local to1 = m.getvar("ARGS_POST.to", "none")
+</pre>
+
+
+Then, filter by the field names:
+
+<pre>
+   if dprice ~= nil and type:lower() == "hidden" and name == "Price" then ...
+</pre>
+     
+and:
+
+<pre>
+   if to1 ~= nil and type:lower() == "hidden" and name == "to" then ...
+</pre>

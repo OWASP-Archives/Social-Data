@@ -1,0 +1,6 @@
+'''SQL Injection - how far does the rabbit hole go?'''
+
+SQL Injection has been around for over 10 years, and yet it is still to this day not truly understood by many security professionals and developers. With the recent mass attacks against sites across the world it has again come to the fore of vulnerabilities under the spotlight, however many consider it to only be a data access issue, or parameterized queries to be a panacea. <br>
+<br><br>
+
+This talk starts from what was demonstrated last year at Black Hat in Las Vegas, where a self propagating SQL Injection worm was demonstrated live on stage. Explore some of the deeper, darker areas of SQL Injection, hybrid attacks, and exploiting obscure database functionality.<br>

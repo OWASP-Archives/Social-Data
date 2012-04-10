@@ -1,0 +1,81 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Failure to follow guideline/specification]]
+
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+==Description==
+
+This field is never accessed, except perhaps by dead code. It is likely that the field is simply vestigial, but it is also possible that the unused field points out a bug.
+
+
+==Risk Factors==
+
+* Talk about the [[OWASP Risk Rating Methodology|factors]] that make this vulnerability likely or unlikely to actually happen
+* Discuss the technical impact of a successful exploit of this vulnerability
+* Consider the likely [business impacts] of a successful attack
+
+
+==Examples==
+
+===Example 1===
+
+The field named glue is not used in the following class. The author of the class has accidentally put quotes around the field name, transforming it into a string constant.
+
+<pre>
+	public class Dead {
+	
+	  String glue;
+	
+	  public String getGlue() {
+		return "glue";
+	  }
+	
+	}
+</pre>
+
+===Example 2===
+
+The field named glue is used in the following class, but only from a method that is never called.
+
+<pre>
+	public class Dead {
+	
+	  String glue;
+	
+	  private String getGlue() {
+		return glue;
+	  }
+	
+	}
+</pre>
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD

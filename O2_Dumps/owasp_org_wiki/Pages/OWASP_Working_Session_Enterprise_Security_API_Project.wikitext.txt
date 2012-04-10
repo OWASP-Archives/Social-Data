@@ -1,0 +1,136 @@
+{| style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:#b3b3b3; color:white"|<font color="black">'''Working Sessions Operational Rules''' - [[:Working Sessions Methodology|'''Please see here the general frame of rules''']].
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:#4058A0; color:white"|<font color="white">'''WORKING SESSION IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Work Session Name'''
+ | colspan="6" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Enterprise Security API Project '''
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Work Session Description''' 
+ | colspan="6" style="width:85%; background:#cccccc" align="left"|In this working session we will consider all aspects of the Enterprise Security API project. The goal of the project is to simplify security for developers to make secure code more likely. To achieve this goal we define clean intuitive APIs for standard security functionality. Ideally, these APIs will cover common security controls across web applications, web services, and even rich client applications. This working session will review the state of the project, discuss technical issues, discuss "marketing" of the project, prioritize project work items, and browbeat attendees into joining the project and making the world a safer place.
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Related Projects (if any)''' 
+ | colspan="6" style="width:85%; background:#cccccc" align="left"|
+[[:Category:OWASP Enterprise Security API|OWASP Enterprise Security API (ESAPI) Project]]
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|'''Email Contacts & Roles'''
+ | style="width:25%; background:#cccccc" align="center"|'''Chair'''<br>[mailto:jeff.williams(at)owasp.org '''Jeff Williams'''] 
+ | style="width:25%; background:#cccccc" align="center"|'''Secretary'''<br>[mailto:arshan.dabirsiaghi(at)aspectsecurity.com '''Arshan Dabirsiaghi''']
+ | style="width:25%; background:#cccccc" align="center"|'''Mailing list'''<br>[https://lists.owasp.org/mailman/listinfo/owasp-esapi '''Subscription Page''']
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:#4058A0; color:white"|<font color="white">'''WORKING SESSION SPECIFICS''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Objectives'''
+ | colspan="6" style="width:85%; background:#cccccc" align="left"|<font color="black">
+Introduce everyone to the idea and cost-benefits of an ESAPI. 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|'''Venue/Date&Time/Model'''
+ | style="width:25%; background:#cccccc" align="center"|'''Venue'''<br>[[:OWASP EU Summit 2008|OWASP EU Summit Portugal 2008]] 
+ | style="width:25%; background:#cccccc" align="center"|'''Date&Time'''<br>November 5, 2008 <br>1:00 PM
+ | style="width:25%; background:#cccccc" align="center"|'''Discussion Model'''<br>"Participants + Attendees" 
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:white; color:white"|<font color="black">
+ |}
+
+{|style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:#4058A0; color:white"|<font color="white">'''WORKING SESSION OPERATIONAL RESOURCES''' 
+ |-
+ | style="width:100%; background:#cccccc" align="center"|Please add here, ASAP, any needed relevant resources, e.g. data-show, boards, laptops, etc.
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:white; color:white"|<font color="black">
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:#4058A0; color:white"|<font color="white">'''WORKING SESSION ADDITIONAL DETAILS''' 
+ |-
+ | style="width:100%; background:#cccccc" align="left"|Please add here, any additional notes, links, ideas, guidelines, etc... The objective is to help the working sessions participants and attendees to prepare their participation/contribution.
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|'''WORKING SESSION OUTCOMES''' 
+ |-
+ | style="width:7%; background:#6C82B5" align="center"|Statements, Initiatives or Decisions 
+ | style="width:46%; background:#b3b3b3" align="center"|'''Proposed by Working Group''' 
+ | style="width:47%; background:#b3b3b3" align="center"|'''Approved by OWASP Board'''
+ |-
+ | style="width:7%; background:#7B8ABD" align="center"|
+ | style="width:46%; background:#C2C2C2" align="center"|A volunteer to lead the 'marketing' campaign for ESAPI.  
+ | style="width:47%; background:#C2C2C2" align="center"|After the Board Meeting - fill in here. 
+ |-
+ | style="width:7%; background:#7B8ABD" align="center"|
+ | style="width:46%; background:#C2C2C2" align="center"|Prioritized list of marketing ideas for the ESAPI concept. 
+ | style="width:47%; background:#C2C2C2" align="center"|After the Board Meeting - fill in here. 
+ |-
+ | style="width:7%; background:#7B8ABD" align="center"|
+ | style="width:46%; background:#C2C2C2" align="center"|Prioritized list of ideas for improving the API. 
+ | style="width:47%; background:#C2C2C2" align="center"|After the Board Meeting - fill in here. 
+ |-
+ | style="width:7%; background:#7B8ABD" align="center"|
+ | style="width:46%; background:#C2C2C2" align="center"|[http://uk.youtube.com/watch?v=-D_bymZ-8vI Video]
+ | style="width:47%; background:#C2C2C2" align="center"|After the Board Meeting - fill in here. 
+ |}
+== Working Session Participants ==
+(Add you name by editing this table. On your the right, just above the this frame, you have the option to edit)
+{| style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:#4058A0; color:white"|<font color="white">'''WORKING SESSION PARTICIPANTS''' 
+ |-
+ | style="width:7%; background:#7B8ABD" align="center"|
+ | style="width:15%; background:#cccccc" align="center"|'''Name'''
+ | style="width:15%; background:#cccccc" align="center"|'''Company'''
+ | style="width:63%; background:#cccccc" align="center"|'''Notes & reason for participating, issues to be discussed/addressed'''
+ |-
+ | style="width:7%; background:#7B8ABD" align="center"|1
+ | style="width:15%; background:#cccccc" align="center"|Matt Tesauro
+ | style="width:15%; background:#cccccc" align="center"|OWASP Live CD Project Lead
+ | style="width:63%; background:#cccccc" align="center"|Curious about how various "ports" should be handled (lang != Java) <br> Run them as separate projects or sub-projects.  How are they synchronized, if at all?  What state are they in?  How bad will the browbeating be?
+ |-
+ | style="width:7%; background:#7B8ABD" align="center"|2
+ | style="width:15%; background:#cccccc" align="center"|Andrea Cogliati
+ | style="width:15%; background:#cccccc" align="center"|OWASP Rochester, NY
+ | style="width:63%; background:#cccccc" align="center"|Interested in porting to other platforms (Ruby&Rails) and in integration issues with existing framework (Struts, Spring, ...)
+ |-
+ | style="width:7%; background:#7B8ABD" align="center"|3
+ | style="width:15%; background:#cccccc" align="center"|Alex Smolen
+ | style="width:15%; background:#cccccc" align="center"|Foundstone
+ | style="width:63%; background:#cccccc" align="center"|Author and Project Leader for .NET ESAPI
+|-
+ | style="width:7%; background:#7B8ABD" align="center"|4
+ | style="width:15%; background:#cccccc" align="center"|Kuai Hinojosa
+ | style="width:15%; background:#cccccc" align="center"|New York University
+ | style="width:63%; background:#cccccc" align="center"|Interesting in ESAPI for PHP and How to best implement the ESAPI.
+|-
+ | style="width:7%; background:#7B8ABD" align="center"|5
+ | style="width:15%; background:#cccccc" align="center"|Fred Donovan
+ | style="width:15%; background:#cccccc" align="center"|Donovan Networks
+ | style="width:63%; background:#cccccc" align="center"|Interested in the structure and integrating this as a solution for Fortune 200 web development processes
+|-
+ | style="width:7%; background:#7B8ABD" align="center"|6
+ | style="width:15%; background:#cccccc" align="center"|
+ | style="width:15%; background:#cccccc" align="center"| 
+ | style="width:63%; background:#cccccc" align="center"|
+|-
+ | style="width:7%; background:#7B8ABD" align="center"|7
+ | style="width:15%; background:#cccccc" align="center"|
+ | style="width:15%; background:#cccccc" align="center"|
+ | style="width:63%; background:#cccccc" align="center"|
+|-
+ | style="width:7%; background:#7B8ABD" align="center"|8
+ | style="width:15%; background:#cccccc" align="center"|
+ | style="width:15%; background:#cccccc" align="center"|
+ | style="width:63%; background:#cccccc" align="center"|
+|-
+ | style="width:7%; background:#7B8ABD" align="center"|9
+ | style="width:15%; background:#cccccc" align="center"|
+ | style="width:15%; background:#cccccc" align="center"|
+ | style="width:63%; background:#cccccc" align="center"|
+|-
+ | style="width:7%; background:#7B8ABD" align="center"|10
+ | style="width:15%; background:#cccccc" align="center"|
+ | style="width:15%; background:#cccccc" align="center"|
+ | style="width:63%; background:#cccccc" align="center"|
+ |}
+If needed add here more lines.
+
+[[Category:OWASP_Working_Session]]

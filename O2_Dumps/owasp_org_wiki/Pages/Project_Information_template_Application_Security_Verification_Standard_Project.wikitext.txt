@@ -1,0 +1,55 @@
+{| style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="6" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Application Security Verification Standard Project''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="6" style="width:85%; background:#cccccc" align="left"|
+The primary aim of the OWASP Application Security Verification Standard (ASVS) Project is to normalize the range in the coverage and level of rigor available in the market when it comes to performing application security verification using a commercially-workable open standard. This standard can be used to establish a level of confidence in the security of web applications and web services.
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Email Contacts'''
+ | style="width:14%; background:#cccccc" align="center"|Project Leader<br>[mailto:mike.boberski(at)cox.net '''Mike Boberski''']
+ | style="width:14%; background:#cccccc" align="center"|Project Contributors<br>[mailto:jeff.williams(at)owasp.org '''Jeff Williams''']<br>[mailto:dave.wichers(at)owas.org'''Dave Wichers''']
+ | style="width:14%; background:#cccccc" align="center"|[https://lists.owasp.org/mailman/listinfo/owasp-application-security-verification-standard '''Mailing List/Subscribe''']<br>
+[mailto:Owasp-Application-Security-Verification-Standard(at)lists.owasp.org '''Mailing List/Use''']
+ | style="width:14%; background:#cccccc" align="center"|First Reviewer<br>[mailto:jeff.williams(at)owasp.org '''Jeff Williams''']
+ | style="width:14%; background:#cccccc" align="center"|Second Reviewer<br>[mailto:pierre.parrend(at)insa-lyon.fr '''Pierre Parrend''']<br>[http://www.rzo.free.fr Curriculum]
+ | style="width:15%; background:#cccccc" align="center"|OWASP Board Member<br>[mailto:tomb@owasp.org '''Tom Brennan''']
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="6" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT MAIN LINKS''' 
+ |-
+ | style="width:100%; background:#cccccc" align="center"|
+* [https://www.owasp.org/images/5/52/About_OWASP_ASVS_Web_Edition.ppt '''OWASP ASVS Project's Power Point Presentation''']
+* OWASP ASVS Project/Beta Edition - [[:Image:OWASP ASVS Web Edition 2008 Beta.doc|'''Word''']] and [[:Image:OWASP ASVS Web Edition 2008 Beta.pdf|'''PDF''']] files.
+* OWASP ASVS Project/Alpha Edition - [[:Image:OWASP ASVS Web Edition 2008 Alpha.doc|'''Word''']] and [[:Image:OWASP ASVS Web Edition 2008 Alpha.pdf|'''PDF''']] files.
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="6" align="center" style="background:#4058A0; color:white"|<font color="white">'''SPONSORS & GUIDELINES''' 
+ |-
+ | style="width:50%; background:#cccccc" align="center"|[[OWASP Summer of Code 2008|Sponsor - '''OWASP Summer of Code 2008''']] 
+ | style="width:50%; background:#cccccc" align="center"|[[OWASP Summer of Code 2008 Applications#OWASP Application Security Verification Standard|'''Sponsored Project/Guidelines/Roadmap''']]
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="5" align="center" style="background:#4058A0; color:white"|ASSESSMENT AND REVIEW PROCESS
+ |-
+ | style="width:15%; background:#6C82B5" align="center"|'''Review/Reviewer''' 
+ | style="width:21%; background:#b3b3b3" align="center"|'''Author's Self Evaluation'''<br>(applicable for Alpha Quality & further) 
+ | style="width:21%; background:#b3b3b3" align="center"|'''First Reviewer'''<br>(applicable for Alpha Quality & further)
+ | style="width:21%; background:#b3b3b3" align="center"|'''Second Reviewer'''<br>(applicable for Beta Quality & further)
+ | style="width:22%; background:#b3b3b3" align="center"|'''OWASP Board Member'''<br>(applicable just for Release Quality) 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''50% Review''' 
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes'''<br>---------<br>[[Project Information:template Application Security Verification Standard - 50 Review - Self Evaluation - A|See&Edit:50% Review/Self-Evaluation (A)]]
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes'''<br>---------<br>[[Project Information:template Application Security Verification Standard - 50 Review - First Reviewer - C|See&Edit: 50% Review/1st Reviewer (C)]]
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes'''<br>---------<br>[[Project Information:template Application Security Verification Standard 50 Review Second Review E|See&Edit: 50%Review/2nd Reviewer (E)]]
+ | style="width:22%; background:#C2C2C2" align="center"|X 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Final Review''' 
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes/No''' (To update)<br>---------<br>Which status has been reached?<br>'''Season of Code''' - (To update)<br>---------<br>[[Project Information:template Application Security Verification Standard - Final Review - Self Evaluation - B|See&Edit: Final Review/SelfEvaluation (B)]]
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes/No''' (To update)<br>---------<br>Which status has been reached?<br>'''Season of Code''' - (To update)<br>---------<br>[[Project Information:template Application Security Verification Standard - Final Review - First Reviewer - D|See&Edit: Final Review/1st Reviewer (D)]]
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes/No''' (To update)<br>---------<br>Which status has been reached?<br>'''Season of Code''' - (To update)<br>---------<br>[[Project Information:template Application Security Verification Standard - Final Review - Second Reviewer - F|See&Edit: Final Review/2nd Reviewer (F)]]
+ | style="width:22%; background:#C2C2C2" align="center"|X
+ |-
+ |}

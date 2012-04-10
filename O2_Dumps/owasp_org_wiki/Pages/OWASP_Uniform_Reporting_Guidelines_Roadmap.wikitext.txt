@@ -1,0 +1,10 @@
+*Beta release/request for comments within next 2 months.
+
+*My goal is to help tie in some of the amazing projects we have to allow organizations, penetration testing teams and individuals to complete their work using only OWASP tools as well as help educate organizations as to what they should be demanding in reports from penetration testers.
+
+*Ideally what I want to do is define something that most people would agree is the appropriate way to document security findings.
+
+*I want to produce 3 deliverables:
+#Document that clearly spells out how to document things in a reproducable manner, important parts of the report, break down of info needed for findings, industry best practices etc.
+#Sample word document template that I would love to see become industry standard or be swallowed up into OWASP testing guide
+#Spreadsheet template that lets users define finding names, finding types, some of the details and remediation advise. This will allow penetration testing teams to rapidly document commonly occurring issues and only add the unique information. I want to prepopulate this template to capture a lot of the great content already produced by OWASP including the testing guide.

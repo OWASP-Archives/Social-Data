@@ -1,0 +1,49 @@
+= Top Consumer Guidelines =
+
+We keep seeing users suffer from leakage of personal information, identity theft and even actual money transactions made under their behalf.
+The following list of key practical guidelines would lower the impact of most of these attacks (Page maintained by Adi Sharabani (Adi dot Sharabani at owasp dot org)
+
+== 1. Keep your device up to date / i.e. keep your body in shape ==
+Whether you are using an iPhone, Android Phone, PC or Mac, the software of those devices should always be up to date. Each new update could contain a security fix for a vulnerability that was discovered in those products. When the updates are released, hackers around the world analyze it, deduct what is the vulnerability that was fixed, and create a new exploit that would work on unpatched computers.
+If your computer or device is not up-to-date you are very much likely to be hacked.
+
+== 2. Don’t connect to untrusted networks / i.e. don’t go into dangerous parking lot ==
+Hackers can easily hack into users from the same local network. They can obtain different levels of control on any device in the network, monitor everything it is doing on the internet, including everything the victims type or do in their web browser and even manipulate the information the victims see. This can be simply done either by a malicious user of the same network, or by an infected computer that connects to that network. 
+As a rule of thumb, users should try to avoid using untrusted networks - i.e. networks that has users which you do not know. If you have a cellular data plan, try to use it as it is much harder for hackers to hack into it. If you have a home wireless network, put a password on it, so others would not be able to join in, and hack into your devices.
+
+== 3. Use passwords wisely / i.e. don’t use the same lock for you home and gym locker ==
+In mid 2010, Turkish hackers hacked into several small Israeli web sites. They managed to retrieved the names and passwords of users of those sites. The impact should have been relatively minor. However, many users of those sites used the same passwords for their gmail, Facebook, and other more sensitive applications. The Turkish hackers could thus take those passwords and log into their victim’s more sensitive systems, reading their email or logging into their social networks.
+As a user you are not responsible for the security of the websites you browse to. However, having the same password for different web sites, will allow hackers who broke into one site to enter your credentials in the other site. 
+In addition, it is clearly not wise to use simple passwords like “qwertyui” - these are easily  guessed by automated tools that try to enumerate passwords to hopefully guess the right one.
+
+== 4. Supply sensitive information through an encrypted channel / i.e don’t shout your pin number in the middle of the mall ==
+Companies should transfer you to an encrypted channel before asking or sending sensitive information. Using an encrypted channel, blocks others from seeing or changing the communication between yourself and the website you browse to. Before filling in any sensitive information such as credit cards or passwords make sure that you are on an encrypted channel to the website you planned to send the information to.
+Each browser reflects the fact it is currently under an encrypted channel in a different way. Know how your device reflects this information and verify that before filling in the sensitive information. This is usually marked by an “https” prefix before the address and an icon of a lock in a location the website could not control (such as the toolbar of your browser). For example:
+IPhone:
+ SHAPE  \* MERGEFORMAT 
+
+Android:
+ SHAPE  \* MERGEFORMAT 
+
+Chrome:
+ SHAPE  \* MERGEFORMAT 
+
+Internet Explorer:
+<Need to add screenshot>
+
+
+Firefox:
+ SHAPE  \* MERGEFORMAT 
+
+
+Safari:
+ SHAPE  \* MERGEFORMAT 
+
+== 5. Trust your instincts / i.e. Don’t eat in smelly restaurants ==
+While you cannot control the security of the sites you browse to, it is in your power to decide which sites to use, and when to provide your personal information. If the site doesn’t have a budget for investing in clean and nice interface, it probably doesn’t have the budget to secure its database. If something looks fishy to you, the site might not be legitimate at all.
+
+== 6. Don’t trust incoming data / i.e. don’t let the con artist full you ==
+Many of the phishing attacks in which hackers pretend to be someone else, starts by hackers approaching you. If you got an email saying that “you just won 1 million dollars” - don’t trust it. Moreover, hackers could easily forge the origin of the mail making you believe it was sent from someone else. In general, it is always better not to follow anything that was handed to you and you didn’t ask for - this is the same for the physical world as well. While it is sometimes inconvenient, it is wiser not to trust links you get in email. If an email was send to you from someone you don’t know, consider ignoring it. If you get an email from Facebook with a friendship request, it is better to simply go to Facebook and see that request rather than clicking on a link a hacker could have sent you. 
+
+== 7. Track your accounts / i.e. Verify your body parts are in-tacked ==
+Even if you follow every single security recommendation, you are always at some level of risk. For example, hackers might not be able to hack into your phone or computer, but hacking into a site that keeps your credit card will allow them to use it. Regularly checking your account balance, and recent transactions will allow you to verify that this did not happen.

@@ -1,0 +1,119 @@
+{{Template:SecureSoftware}}
+{{Template:Vulnerability}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+The failure to encrypt data passes up the guarantees of confidentiality, integrity, and accountability that properly implemented encryption conveys. 
+
+'''Consequences'''
+
+* Confidentiality: Properly encrypted data channels ensure data confidentiality.
+* Integrity: Properly encrypted data channels ensure data integrity. 
+* Accountability: Properly encrypted data channels ensure accountability.
+
+'''Exposure period'''
+
+* Requirements specification: Encryption should be a requirement of systems that transmit data.
+* Design: Encryption should be designed into the system at the architectural and design phases
+
+'''Platform'''
+
+* Languages: Any
+* Operating platform: Any
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood   of exploit'''
+
+Very High
+
+Omitting the use of encryption in any program which transfers data over a network of any kind should be considered on par with delivering the data sent to each user on the local networks of both the sender and receiver. 
+
+Worse, this omission allows for the injection of data into a stream of communication between two parties - with no means for the victims to separate valid data from invalid.
+
+In this day of widespread network attacks and password collection sniffers, it is an unnecessary risk to omit encryption from the design of any system which might benefit from it.
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+In C:
+
+<pre>server.sin_family = AF_INET;
+hp = gethostbyname(argv[1]);
+if (hp==NULL) error("Unknown host");
+memcpy( (char *)&server.sin_addr,(char *)hp->h_addr,hp->h_length);
+if (argc < 3) port = 80;
+else port = (unsigned short)atoi(argv[3]);
+server.sin_port = htons(port); 
+	if (connect(sock, (struct sockaddr *)&server, sizeof server) < 0)
+         error("Connecting");
+...
+
+  while ((n=read(sock,buffer,BUFSIZE-1))!=-1){
+          write(dfd,password_buffer,n);
+.
+.
+.</pre>
+In Java:
+
+<pre>try {
+  URL u = new URL("http://www.importantsecretsite.org/");
+  HttpURLConnection hu = (HttpURLConnection) u.openConnection();
+  hu.setRequestMethod("PUT");
+  hu.connect();
+  OutputStream os = hu.getOutputStream();
+  hu.disconnect();
+}
+catch (IOException e) { //...
+</pre>
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* Requirements specification: require that encryption be integrated into the system.
+* Design: Ensure that encryption is properly integrated into the system design, not simply as a drop-in replacement for sockets.
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD
+
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Protocol Errors]]
+[[Category:OWASP_CLASP_Project]]
+[[Category: Cryptographic  Vulnerability]]

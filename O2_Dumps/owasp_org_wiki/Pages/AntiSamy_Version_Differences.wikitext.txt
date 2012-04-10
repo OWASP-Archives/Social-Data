@@ -1,0 +1,23 @@
+This page shows the different AntiSamy features and whether or not its available in a given port.<br> 
+
+{| width="828" cellspacing="3" cellpadding="3" border="1" align="left" style="" summary="Shows the capability and feature differences amongst AntiSamy versions."
+|+ <br> 
+|-
+! scope="col" | Feature<br> 
+! scope="col" | AntiSamy (Java)<br> 
+! scope="col" | AntiSamy (.NET)<br>
+|-
+| align="left" | '''Safely parses HTML'''<br>''Does this version of AntiSamy allow users to provide HTML input that will filter out any dangerous data, including any JavaScript?''<br> 
+| align="center" | Yes<br> 
+| align="center" | Yes<br>
+|-
+| align="left" | '''Can parse and validate CSS instead of removing it'''<br>''Does this version of AntiSamy allow users to provide cascading style sheets as well as HTML without accepting any dangerous data that could allow phishing or other visual attacks?''<br> 
+| align="center" | Yes<br> 
+| align="center" | Mostly<br>
+|-
+| align="left" | '''Allows advanced processing options'''<br>''Does this version of AntiSamy support "directives", which can be used to implement advanced functionality and usability?''
+| align="center" | Yes
+| align="center" | No
+|}
+
+<br>

@@ -1,0 +1,72 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Improper Data Validation]]
+
+
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+==Description==
+
+All Struts forms should extend a Validator class.
+
+In order to use the Struts Validator, a form must extend one of the following:
+
+<pre>
+	ValidatorForm
+	ValidatorActionForm
+	DynaValidatorActionForm
+	DynaValidatorForm.
+</pre>
+
+You must extend one of these classes because the Struts Validator ties in to your application by implementing the validate() method in these classes.
+
+Forms derived from the following classes cannot use the Struts Validator:
+
+<pre>
+	ActionForm
+	DynaActionForm
+</pre>
+
+Bypassing the validation framework for a form exposes the application to numerous types of attacks. Unchecked input is the root cause of vulnerabilities like cross-site scripting, process control, and SQL injection. Although J2EE applications are not generally susceptible to memory corruption attacks, if a J2EE application interfaces with native code that does not perform array bounds checking, an attacker may be able to use an input validation mistake in the J2EE application to launch a buffer overflow attack.
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+TBD
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* [[:Category:Input Validation]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+
+
+__NOTOC__

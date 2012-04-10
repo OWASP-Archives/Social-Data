@@ -1,0 +1,40 @@
+----
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT INFORMATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Web Application Security Metric using Attack Patterns Project'''
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|
+The Project provides attack pattern database along with prototype model. Currently the database is designed with 19 tables from both primary and secondary schema. The tool expects to collect security requirements from the user and then builds patterns knowledge whether existing or new knowledge on the data collected. Initially some attack patterns are created for database purpose and the community is allowed to extend for new data. The pattern data is supported with numerous fields.
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|
+'''Key Project Information'''
+ | style="width:14%; background:#cccccc" align="center"|
+Project Leader<br>[[User:Raja krovi|'''Raja Krovi''']]
+ | style="width:15%; background:#cccccc" align="center"|
+Project Contibutors<br>[[:OWASP Web Application Security Metric using Attack Patterns Project - Contributors|'''See here''']]
+
+ | style="width:10%; background:#cccccc" align="center"|
+Mailing List<br>[https://lists.owasp.org/mailman/listinfo/owasp-web-application-security-metric '''Subscribe here''']<br>[mailto:owasp-web-application-security-metric@lists.owasp.org '''Use here''']
+ | style="width:17%; background:#cccccc" align="center"|
+License<br>[http://www.gnu.org/licenses/old-licenses/gpl-2.0.html '''GNU General Public License v2''']
+ | style="width:14%; background:#cccccc" align="center"|
+Project Type<br>[[:Category:OWASP_Project#Alpha_Status_Projects|'''Tool''']]
+ | style="width:15%; background:#cccccc" align="center"|
+Sponsors<br>if any, add link
+ |}
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|
+'''[[:Category:OWASP Project Assessment#Alpha Quality Tool Criteria|Apha Quality]]'''<br>[[:OWASP Web Application Security Metric using Attack Patterns Project - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="center"|
+* add link(s)
+ | style="width:29%; background:#cccccc" align="center"|
+*  if any, add link(s)
+ |}
+----

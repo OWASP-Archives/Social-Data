@@ -1,0 +1,54 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Failure to follow guideline/specification]]
+
+
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+
+==Description==
+
+This synchronized block contains no statements; it is unlikely the synchronization achieves the intended effect.
+
+Synchronization in Java can be tricky. An empty synchronized block is often a sign that a programmer is wrestling with synchronization but has not yet achieved the result they intend.
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+<pre>
+synchronized(this) { }
+</pre>
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD

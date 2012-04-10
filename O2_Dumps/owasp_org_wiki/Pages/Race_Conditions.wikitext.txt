@@ -1,0 +1,363 @@
+{{Template:Vulnerability}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+
+==Description==
+
+A race condition occurs when a pair of routine programming calls in an application do not perform in the sequential manner that was intended per business rules.
+It is a timing event within software that can become a security vulnerability if the calls are not performed in the correct order.
+
+===Race condition in checking for certificate revocation===
+If the revocation status of a certificate is not checked before each privilege requiring action, the system may be subject to a race condition, in which their certificate may be used before it is checked for revocation.
+
+'''Consequences'''
+
+* Authentication: Trust may be assigned to an entity who is not who it claims to be.
+* Integrity: Data from an untrusted (and possibly malicious) source may be integrated. 
+* Confidentiality: Date may be disclosed to an entity impersonating a trusted entity, resulting in information disclosure.
+
+'''Exposure period'''
+
+* Design: Checks for certificate revocation should be included in the design of a system
+* Design: One can choose to use a language which abstracts out this part of the authentication process.
+
+'''Platform'''
+
+* Languages: Languages which do not abstract out this part of the process.
+* Operating platforms: All
+
+'''Required resources'''
+
+Minor trust: Users must attempt to interact with the malicious system.
+
+'''Severity'''
+
+Medium
+
+'''Likelihood of exploit'''
+
+Medium
+
+If a certificate is revoked after the initial check, all subsequent actions taken with the owner of the revoked certificate will loose all benefits guaranteed by the certificate. In fact, it is almost certain that the use of a revoked certificate indicates malicious activity. 
+
+If the certificate is checked before each access of a protected resource, the delay subject to a possible race condition becomes almost negligible and significantly reduces the risk associated with this issue.
+
+
+In C/C++:
+
+<pre>
+if (!(cert = SSL_get_peer(certificate(ssl)) || !host)
+  foo=SSL_get_veryify_result(ssl);
+  if (X509_V_OK==foo)
+//do stuff
+  foo=SSL_get_veryify_result(ssl);
+ //do more stuff without the check. 
+</pre>
+
+Design: Ensure that certificates are checked for revoked status before each use of a protected resource
+
+===Race condition in signal handler===
+Race conditions occur frequently in signal handlers, since they are asynchronous actions. These race conditions may have any number of Problem Types and symptoms.
+
+'''Consequences'''
+
+* Authorization: It may be possible to execute arbitrary code through the use of a write-what-where condition.
+* Integrity: Signal race conditions often result in data corruption.
+
+'''Exposure period'''
+
+* Requirements specification: A language might be chosen which is not subject to this flaw.
+* Design: Signal handlers with complicated functionality may result in this issue.
+* Implementation: The use of any non-reentrant functionality or global variables in a signal handler might result in this race conditions.
+
+'''Platform'''
+
+* Languages: C, C++, Assembly
+* Operating platforms: All
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood of exploit'''
+
+Medium
+
+Signal race conditions are a common issue that have only recently been seen as exploitable. These issues occur when non-reentrant functions, or state-sensitive actions occur in the signal handler, where they may be called at any time. If these functions are called at an inopportune moment, such as while a non-reentrant function is already running, memory corruption occurs that may be exploitable.
+
+Another signal race condition commonly found occurs when free is called within a signal handler, resulting in a double free and therefore a write-what-where condition. This is a perfect example of a signal handler taking actions which cannot be accounted for in state. Even if a given pointer is set to NULL after it has been freed, a race condition still exists between the time the memory was freed and the pointer was set to NULL. This is especially prudent if the same signal handler has been set for more than one signal - since it means that the signal handler itself may be reentered.
+
+
+<pre>
+#include <signal.h>
+#include <syslog.h>
+#include <string.h>
+#include <stdlib.h>
+
+void *global1, *global2;
+char *what;
+
+void sh(int dummy) {  
+  syslog(LOG_NOTICE,"%s\n",what);  
+  free(global2);  
+  free(global1);  
+  sleep(10);  
+  exit(0);
+}
+
+int main(int argc,char* argv[]) {  
+  what=argv[1];  
+  global1=strdup(argv[2]);  
+  global2=malloc(340);  
+  signal(SIGHUP,sh);  
+  signal(SIGTERM,sh);  
+  sleep(10);  
+  exit(0);
+}
+</pre>
+
+'''Controls'''
+
+* Requirements specification: A language might be chosen, which is not subject to this flaw, through a guarantee of reentrant code.
+* Design: Design signal handlers to only set flags rather than perform complex functionality.
+* Implementation: Ensure that non-reentrant functions are not found in signal handlers. Also, use sanity checks to ensure that state is consistent be performing asynchronous actions which effect the state of execution.
+
+===Race condition in switch===
+If the variable which is switched on is changed while the switch statement is still in progress, undefined activity may occur.
+
+'''Consequences'''
+
+* Undefined: This flaw will result in the system state going out of sync.
+
+'''Exposure period'''
+
+* Implementation: Variable locking is the purview of implementers.
+
+'''Platform'''
+
+* Languages: All that allow for multi-threaded activity
+* Operating platforms: All
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Medium
+
+'''Likelihood of exploit'''
+
+Medium
+
+This issue is particularly important in the case of switch statements that involve fall-through style case statements - i.e., those which do not end with break. 
+
+If the variable which we are switching on changes in the course of execution, the actions carried out may place the state of the process in a contradictory state or even result in memory corruption. 
+
+For this reason, it is important to ensure that all variables involved in switch statements are locked before the statement starts and are unlocked when the statement ends.
+
+'''Example'''
+
+In C/C++:
+
+<pre>
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main(argc,argv){
+        struct stat *sb;
+        time_t timer;
+
+        lstat("bar.sh",sb);
+
+        printf("%d\n",sb->st_ctime);
+        switch(sb->st_ctime % 2){
+                case 0: printf("One option\n");break;
+                case 1: printf("another option\n");break;
+                default: printf("huh\n");break;
+        }
+
+        return 0;
+}
+</pre>
+
+Implementation: Variables that may be subject to race conditions should be locked for the duration of any switch statements.
+
+===Race condition within a thread===
+If two threads of execution use a resource simultaneously, there exists the possibility that resources may be used while invalid, in turn making the state of execution undefined. 
+
+'''Consequences'''
+
+* Integrity: The main problem is that if a lock is overcome data could be altered in a bad state.
+
+'''Exposure period'''
+
+* Design: Use a language which provides facilities to easily use threads safely. 
+
+'''Platform'''
+
+* Languages: Any language with threads
+* Operating platforms: All
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood of exploit'''
+
+Medium
+
+* Design: Use locking functionality. This is the recommended solution. Implement some form of locking mechanism around code which alters or reads persistent data in a multi-threaded environment. 
+
+* Design: Create resource-locking sanity checks. If no inherent locking mechanisms exist, use flags and signals to enforce your own blocking scheme when resources are being used by other threads of execution.
+
+'''Examples'''
+
+In C/C++:
+
+<pre>
+int foo = 0;
+    int storenum(int num)
+    {
+        static int counter = 0;
+        counter++;
+        if (num > foo) 
+            foo = num;
+            return foo;   
+    }
+</pre>
+
+In Java:
+
+<pre>public classRace {
+  static int foo = 0;
+
+  public static void main() {
+    new Threader().start();
+    foo = 1;
+  }
+
+  public static class Threader extends Thread {
+    public void run() { 
+      System.out.println(foo);
+    }
+  }
+}
+</pre>
+
+===Time of check, time of use race condition===
+Time-of-check, time-of-use race conditions occur when between the time in which a given resource is checked, and the time that resource is used, a change occurs in the resource to invalidate the results of the check.
+
+'''Consequences'''
+
+* Access control: The attacker can gain access to otherwise unauthorized resources.
+* Authorization: race conditions such as this kind may be employed to gain read or write access to resources which are not normally readable or writable by the user in question.
+* Integrity: The resource in question, or other resources (through the corrupted one), may be changed in undesirable ways by a malicious user.
+* Accountability: If a file or other resource is written in this method, as opposed to in a valid way, logging of the activity may not occur.
+* Non-repudiation: In some cases it may be possible to delete files a malicious user might not otherwise have access to, such as log files.
+
+'''Exposure period'''
+
+* Design: Strong locking methods may be designed to protect against this flaw.
+* Implementation: Use of system APIs may prevent check, use race conditions.
+
+'''Platform'''
+
+* Languages: Any
+* Platforms: All
+
+'''Required resources'''
+
+* Some access to the resource in question
+
+'''Severity'''
+
+Medium
+
+'''Likelihood of exploit'''
+
+Low to Medium
+
+Time-of-check, time-of-use race conditions occur when a resource is checked for a particular value, that value is changed, then the resource is used, based on the assumption that the value is still the same as it was at check time.
+
+This is a broad category of race condition encompassing binding flaws, locking race conditions, and others.
+
+'''Example'''
+
+In C/C++:
+
+<pre>
+struct stat *sb;
+..
+lstat("...",sb);
+// it has not been updated since the last time it was read
+printf("stated file\n");
+if (sb->st_mtimespec==...)
+  print("Now updating things\n");
+  updateThings();
+}
+</pre>
+
+Potentially the file could have been updated between the time of the check and the lstat, especially since the printf has latency.
+
+'''Controls'''
+
+* Design: Ensure that some environmental locking mechanism can be used to protect resources effectively.
+* Implementation: Ensure that locking occurs before the check, as opposed to afterwards, such that the resource, as checked, is the same as it is when in use.
+
+==Risk Factors==
+
+* A common business impact of a race condition is one where a payment confirmation occurs without producing a request object for order fulfillment.
+* The technical impact of this vulnerability can be mitigated through thread management classes or other programming constructs that control the synchronization of threads
+
+
+==Examples==
+
+TBD
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+
+* [http://cwe.mitre.org/data/definitions/362.html CWE 79].
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Synchronization and Timing Vulnerability]]

@@ -1,0 +1,105 @@
+{{Top_10_2007:TopTemplate|usenext=NextLink|next=-Referencia Insegura y Directa a Objetos|useprev=PrevLink|prev=-Fallas de Inyección|usemain=MainLink|main=}}
+
+Las vulnerabilidades de ejecución de ficheros malintencionados se encuentran en muchas aplicaciones. Los programadores suelen usar o concatenar directamente una posible entrada hostil con funciones de archivo o conexiones, o confiar indebidamente en ficheros de entrada. En muchas plataformas, el entorno de trabajo permite el uso de referencias a objetos externos, como URLs o referencias al sistema de ficheros. Cuando los datos no son comprobados correctamente, esto puede llevar a que se incluya, procese o ejecute contenido arbitrario hostil y remoto por el servidor Web. 
+Esto permite a los atacantes realizar:
+* Ejecución remota de código 
+* Instalación remota de rootkits y controlar el sistema completo. 
+* En Windows, se pueden controlar sistemas internos mediante el uso de encapsulación de ficheros SMB de PHP. 
+
+Este ataque es particularmente común en PHP, y se deben tomar precauciones extremas con cualquier función de archivo o flujos de datos para asegurarse que la entrada proporcionada por el usuario no influya en los nombres de ficheros. 
+
+==Entornos Afectados==
+
+Todos los entornos de aplicaciones Web son vulnerables a la ejecución de ficheros malintencionados si aceptan nombres de ficheros o archivos desde los usuarios. Ejemplos comunes incluyen "assemblies" de .NET que permiten URL de nombres de ficheros como argumentos, o código que acepta nombres de fichero proveídos por el usuario para incluirlos en los archivos locales. 
+
+'''PHP es particularmente vulnerable''' a ataques de tipo "inclusión remota de ficheros" (RFI - remote file include) a través de la manipulación de parámetros con cualquier API basada en archivos o flujos de datos. 
+
+==Vulnerabilidad==
+
+Un fragmento común de código vulnerable es: 
+
+ <nowiki>include $_REQUEST['filename'];</nowiki>
+
+Eso no solo permite la evaluación de scripts hostiles remotos, sino que puede ser usado para acceder a servidores de archivos locales (si PHP está alojado en sistemas Windows) debido al soporte de SMB en los encapsuladores de los sistemas de ficheros de PHP. 
+
+Otros métodos de ataque incluyen: 
+
+* Datos hostiles que son enviados a archivos de sesiones, a datos de logs y a través de la subida de imágenes (típico de software de foros) 
+* Usar compresión o flujos de datos de audio, como zlib:// o ogg:// que no inspeccionan la bandera interna en el URL de PHP y permite acceder a recursos remotos incluso si allow_url_fopen o allow_url_include está deshabilitado 
+* El uso de encapsuladores de PHP, como php://entrada y otros que recogen datos de la petición POST en lugar de un archivo 
+* El uso de datos de PHP: wrappers como data:;base64,PD9waHAgcGhwaW5mbygpOz8+ 
+
+Como esta lista es extensa (y cambia periódicamente), es vital usar una arquitectura segura y un diseño robusto a la hora de manejar datos proporcionados por los usuarios que influyen en la elección del nombre de archivos del servidor y su acceso. 
+
+Aunque se han proporcionado ejemplos en PHP, este ataque es también aplicable de diversas formas a .NET y J2EE. Las aplicaciones escritas en estos entornos de trabajo necesitan prestar especial atención para programar mecanismos seguros de acceso para asegurarse que los nombres de archivos proporcionados por o influenciados por los usuarios no permitan que se obvien los controles de seguridad. 
+
+<nowiki>Por ejemplo, es posible que documentos XML enviados por un atacante tengan DTD hostiles que fuercen al analizador XML a cargar DTD remotos, tratar y procesar los resultados. Una empresa de seguridad australiana ha demostrado con este método como escanear puertos detrás de los cortafuegos. Vea [SIF01] en las referencias de este capítulo para más información. </nowiki>
+
+El daño que esta vulnerabilidad en particular causa es directamente proporcional a la fortaleza de los controles de aislamiento de la plataforma/caja de arena del entorno de trabajo. Como PHP raramente es aislado y no tiene ningún concepto de caja de arena o arquitectura de seguridad, el daño es mucho mayor en un ataque que en otras plataformas con confianza limitada o parcial, o que están contenidas en una caja de arena apropiada, como cuando una aplicación Web corre bajo JVM con el gestor de seguridad apropiadamente habilitado y configurado (que raramente es el que trae por omisión). 
+
+==Verificando la seguridad==
+
+Enfoques automatizados: las herramientas de escáner de vulnerabilidades tendrán dificultades para identificar los parámetros que son usados en un archivo adjunto o la sintaxis para hacerlos funcionar. Las herramientas de análisis estático pueden buscar el uso de APIs peligrosas, pero no pueden verificar que exista una validación o codificación apropiada para protegerse de la vulnerabilidad.
+
+Enfoques manuales: una revisión de código es capaz de buscar código que pueda permitir incluir un fichero en la aplicación, pero hay muchos posibles errores que reconocer. Las pruebas también pueden ser capaces de detectar estas vulnerabilidades, pero identificar los parámetros en particular y la sintaxis correcta puede ser complicado.
+
+==Protección==
+
+La prevención de errores de inclusión de archivos remotos requiere una cuidadosa planificación en las fases de diseño y arquitectura. En general, una aplicación bien escrita no usará ninguna información proporcionada por el usuario en nombres de ficheros para ningún recurso del servidor (como imágenes, documentos de transformación XML y XSL o scripts), y tendrá configuradas reglas en el firewall para evitar conexiones salientes a Internet o internamente a cualquier otro servidor. Sin embargo, muchas aplicaciones heredadas continuarán teniendo la necesidad de aceptar datos proporcionados por los usuarios.
+
+Entre las consideraciones más importantes están:
+
+* '''Usar un mapa de referencias indirectas a objetos''' (ver la sección A4 para más detalles). Por ejemplo, donde se ha usado una vez un nombre de fichero parcialmente, considere usar cifrado de una vía en la referencia parcial. 
+
+En lugar de:
+
+ <nowiki><select name="language"></nowiki> <nowiki><option value="English">English</option></nowiki>
+
+utilice
+ <nowiki><select name="language"></nowiki> <nowiki><option value="78463a384a5aa4fad5fa73e2f506ecfc">English</option></nowiki>
+
+Considere el uso de "sales" para prevenir ataques de fuerza bruta de la referencia indirecta al objeto. De forma alternativa, sólo use índices de valores como 1, 2, 3, y asegúrese que los límites del array son comprobados para detectar una falsificación de parámetros.
+
+* '''Utilice mecanismos de comprobación explícita de corrupciones''', si su lenguaje lo soporta. De otro modo, considere un esquema variable de nombres para ayudar con la comprobación de corrupciones.
+
+ $hostile = &$_POST; // refer to POST variables, not $_REQUEST
+ <nowiki>$safe['filename']= validate_file_name($hostile['unsafe_filename']); // make it safe</nowiki>
+
+De este modo cualquier operación basada en una entrada hostil es inmediatamente evidente.
+
+ <code>Incorrecto:<nowiki>require_once($_POST['unsafe_filename'] . 'inc.php');</nowiki></code>
+ <code>Correcto: <nowiki>require_once($safe['filename'] . 'inc.php');</nowiki></code>
+
+* '''Validación estricta de la entrada del usuario''' usando la estrategia "aceptar lo bueno conocido"
+* '''Añadir reglas en el cortafuegos''' para evitar que los servidores Web realicen nuevas conexiones a sitios Web externos y a los sistemas internos. Para sistemas de alto valor, aislar el servidor Web en su propia VLAN o subred privada.
+* '''Comprobar cualquier fichero o nombre de fichero proporcionado por el usuario''' para propósitos legítimos, que no pueden obviar otros controles. En caso de poder ser obviados, se podría contaminar los datos proporcionados por los usuarios en el objeto de sesión, avatares e imágenes, informes en PDF, archivos temporales, etc.
+* '''Considere implementar una jaula chroot '''o algún otro mecanismo de caja de arena como la virtualización para aislar las aplicaciones entre sí.
+* '''PHP: deshabilite allow_url_fopen y allow_url_include''' en php.ini y considere compilar PHP localmente sin incluir esta funcionalidad. Muy pocas aplicaciones necesitan esta funcionalidad y en estos casos estas opciones deberían habilitarse desde la base de la aplicación. 
+* '''PHP: deshabilite register_globals y utilice E_STRICT''' '''para encontrar variables no inicializadas'''
+* '''PHP: asegúrese de que todas las funciones de ficheros y flujos de datos (stream_*) son investigadas cuidadosamente.''' Asegúrese de que los datos de usuario no son proporcionados a ninguna función que tenga como argumento un nombre de fichero, incluyendo: 
+
+<code>include() include_once() require() require_once() fopen() imagecreatefromXXX() file() file_get_contents() copy() delete() unlink() upload_tmp_dir() $_FILES move_uploaded_file()</code>
+
+* PHP: sea extremadamente cauto si pasa datos a system() eval() passthru() o ` (el operador de backtick). 
+* Con J2EE, asegúrese de que el administrador de seguridad está habilitado y correctamente configurado, y que la aplicación está solicitando permisos correctamente.
+* Con ASP.NET, por favor consulte la documentación sobre confianza parcial, y diseñe sus aplicaciones de forma que sean segmentadas en confianzas, de manera que la mayor parte de la aplicación funcione en el estado de menores permisos posibles.
+
+==Ejemplos==
+
+* [http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0360 http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0360]
+* [http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-5220 http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-5220] 
+* [http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4722 http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4722] 
+
+==Referencias==
+
+* CWE: CWE-98 (PHP File Inclusion), CWE-78 (OS Command Injection), CWE-95 (Eval injection), CWE-434 (Unrestricted file upload)
+* WASC Threat Classification: [http://www.webappsec.org/projects/threat/classes/os_commanding.shtml http://www.webappsec.org/projects/threat/classes/os_commanding.shtml] 
+* OWASP Guide, [http://www.owasp.org/index.php/File_System#Includes_and_Remote_files http://www.owasp.org/index.php/File_System#Includes_and_Remote_files] 
+* OWASP Testing Guide, [http://www.owasp.org/index.php/Testing_for_Directory_Traversal http://www.owasp.org/index.php/Testing_for_Directory_Traversal] 
+* OWASP PHP Top 5, [http://www.owasp.org/index.php/PHP_Top_5#P1:_Remote_Code_Execution http://www.owasp.org/index.php/PHP_Top_5#P1:_Remote_Code_Execution] 
+* Stefan Esser,[http://blog.php-security.org/archives/45-PHP-5.2.0-and-allow_url_include.html http://blog.php-security.org/archives/45-PHP-5.2.0-and-allow_url_include.html] 
+* <nowiki>[SIF01] SIFT, Web Services: Teaching an old dog new tricks, </nowiki>[http://www.ruxcon.org.au/files/2006/web_services_security.ppt http://www.ruxcon.org.au/files/2006/web_services_security.ppt] 
+* [http://www.owasp.org/index.php/OWASP_Java_Table_of_Contents#Defining_a_Java_Security_Policy http://www.owasp.org/index.php/OWASP_Java_Table_of_Contents#Defining_a_Java_Security_Policy] 
+* Microsoft - Programming for Partial Trust, [http://msdn2.microsoft.com/en-us/library/ms364059(VS.80).aspx http://msdn2.microsoft.com/en-us/library/ms364059(VS.80).aspx] 
+
+{{Top_10_2007:BottomTemplate|usenext=NextLink|next=-Referencia Insegura y Directa a Objetos|useprev=PrevLink|prev=-Fallas de Inyección|usemain=MainLink|main=}}

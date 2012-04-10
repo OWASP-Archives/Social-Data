@@ -1,0 +1,43 @@
+[[Project Information:template Backend Security Project|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#OWASP Backend Security Project|OWASP Backend Security Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#OWASP Backend Security Project|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+Tasks to complete:<br>
+1.1 About OWASP Backend Security Project <br>
+1.2 Contributors <br>
+2.4 JAVA Backend Security programming<br>
+3.2.5 PostgreSQL Hardening<br>
+3.2 DBMS <br>
+Overviews for each section are in the layout but there is no overview information. This would definitely help new users searching for information before diving into a specific area. <br><br>
+
+There are multiple section still designated alpha. I am guessing that they have this designation for a specific reason which is why I listed them below.<br>
+4.2 Database security testing (40%, Daniele Bellucci) ***(alpha version)*** <br>
+4.4 Tools (50%, Fabio Mattiussi, Simone Savi) ***descriptions (alpha version)*** <br>
+
+
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#OWASP Backend Security Project|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+60% Completed
+ |- 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+Filling out the overviews for each section would be a plus as stated above.<br>
+Each area that is referencing the various MS SQL types only say SQL which isn't specific enough in this context.
+|}

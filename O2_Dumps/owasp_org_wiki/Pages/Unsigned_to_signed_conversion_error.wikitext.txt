@@ -1,0 +1,137 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+An unsigned-to-signed conversion error takes place when a large unsigned primitive is used as an signed value - usually as a size variable.   
+
+'''Consequences'''
+
+* Availability: Incorrect sign conversions generally lead to undefined behavior, and therefore crashes.
+* Integrity: If a poor cast leads to a buffer underwrite, data integrity may be affected.
+* Access control (instruction processing): Improper unsigned-to-signed conversions often create buffer underwrite conditions which can be used to execute arbitrary code. This is usually outside the scope of a program's implicit security policy.
+
+'''Exposure period'''
+
+* Requirements specification: The choice could be made to use a language that is not susceptible to these issues.
+* Design: Accessor functions may be designed to mitigate some of these logical issues.
+* Implementation: Many logic errors can lead to this condition. It can be exacerbated by lack of or misuse of mitigating technologies.
+
+'''Platform'''
+
+* Languages: C, C++, Fortran, Assembly
+* Operating platforms: All
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood of exploit'''
+
+Low to Medium
+
+Although less frequent an issue than signed-to-unsigned casting, unsigned-to-signed casting can be the perfect precursor to dangerous buffer underwrite conditions that allow attackers to move down the stack where they otherwise might not have access in a normal buffer overflow condition. 
+
+Buffer underwrites occur frequently when large unsigned values are cast to signed values, and then used as indexes into a buffer or for pointer arithmetic.
+
+==Risk Factors==
+
+TBD
+
+
+==Examples==
+
+While not exploitable, the following program is an excellent example of how implicit casts, while not changing the value stored, significantly changes its use:
+
+<pre>
+#include <stdio.h>
+		
+int main() {   
+  int value;    
+  value = (int)(~((int)0) ^ (1 << (sizeof(int)*8)));    
+
+  printf("Max unsigned int: %u %1$x\nNow signed: %1$d %1$x\n",
+         value);    
+  return (0);
+}
+</pre>
+
+The above code produces the following output:
+
+<pre>
+Max unsigned int: 4294967295 ffffffff
+Now signed: -1 ffffffff
+</pre>
+
+Note how the hex value remains unchanged.
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Buffer underwrite]]
+
+
+
+==Related [[Controls]]==
+
+* Requirements specification: The choice could be made to use a language that is not susceptible to these issues.
+* Design: Ensure that interacting functions retain the same types and that only safe type casts must occur. If possible, use intelligent marshalling routines to translate between objects. 
+* Implementation: Use out-of-data band channels for transmitting error messages if unsigned size values must be transmitted. Check all errors.
+* Build: Pay attention to compiler warnings which may alert you to improper type casting.
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Range and Type Error Vulnerability]]
+[[Category:OWASP_CLASP_Project]]
+[[Category:Code Snippet]]
+[[Category:C]]

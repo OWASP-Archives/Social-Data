@@ -1,0 +1,26 @@
+==Goals==
+The OWASP CLASP Project's overall goal is to...
+
+  Reinforce application security through a set of prescriptive and proactive
+  process components that are adaptable to any development model.
+
+In the near term, we are focused on the following tactical goals...
+
+# Porting all of the CLASP v1.2 materials to the OWASP wiki
+# Generating more introductory materials to help users get started with CLASP
+# Enhancing the vulnerability catalog with more information (descriptions, examples, etc.)
+
+
+==Current Tasks==
+* Add 'Activity Assessment View' stuff to each CLASP activity (Unassigned)
+* Add 'Coding Guidelines' from CLASP to stubbed wiki page (Unassigned)
+* Add 'Vulnerability Use Cases' stuff from CLASP to Wiki (Unassigned)
+
+
+==Ideas==
+* The [[:Category:CLASP Activity]] is redundant with [[:Category:OWASP CLASP Project]] and [[:Category:Activity]]. I suggest we remove it.
+** I added it since [[:Category:Activity]] has a few other items in addition to [[:Category:CLASP Activity]] (for example, [[Deployment]], [[Configuration]], etc.). My thought was that those are good things to have linked to a general 'Activity' category, but for CLASP, it's redundant and doesn't fit in to the overall picture since it's more high-level. Thus, it made sense to keep the CLASP activities collected in one place as well as mapping them up to the more general 'Activity' category. ([[User:Pravir Chandra|Pravir Chandra]])
+
+
+
+[[Category:OWASP CLASP Project]]

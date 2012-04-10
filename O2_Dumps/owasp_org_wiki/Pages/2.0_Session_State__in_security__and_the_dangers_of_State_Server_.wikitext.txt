@@ -1,0 +1,39 @@
+[http://msdn.microsoft.com/msdnmag/issues/05/09/SessionState/default.aspx Best Practices Fast, Scalable, and Secure Session State Management for Your Web Applications] -- MSDN Magazine, September 200 presents ''"...an in-depth look at designing and deploying high-performance, scalable, secure session solutions, and presents best practices for both existing and new ASP.NET session state features straight from the ASP.NET feature team."''
+
+In the Securing Session State section:
+
+''“ASP.NET session state provides an important security advantage over client state management techniques in that the actual state is stored on the server side and not exposed on the client and other network entities along the HTTP request path. “''
+
+i.e. using the VIEWSTATE is a very bad idea from a security and performance point of view
+
+''“However, there are several important aspects of session state operation that need to be considered in order to maintain application security. Security best practices fall into three major categories: preventing session ID spoofing and injection, securing the state storage in the back-end, and ensuring session state deployment security in dedicated or shared environments. ”
+''
+yes, yes and yes
+
+''“ASP.NET 2.0 session state has been hardened to help guard against session ID spoofing and injection. It takes advantage of the HTTP-only cookie feature (currently supported by Internet Explorer 6.0 with Microsoft® Internet Explorer 6.0 SP1 or Windows® XP SP2 installed) “''
+
+Which is good news, and I wish Firefox should do the same, although it only mitigates against one specific type of XSS attacks
+
+''“In addition, ASP.NET 2.0 also provides a session ID regeneration feature, which forces expired session IDs that are not found on the server to be replaced with a newly generated ID. This avoids the accidental reuse of session IDs that commonly occurs with cookieless session links (such as those indexed by search engine crawlers), as well as malicious session ID injection attacks through cookieless session link posting. This feature is on by default and is only supported for cookieless session IDs. ”''
+
+Why only in cookieless session links? Probably because then saving authentication data in cookies would not work.
+
+The problem is that the use of session IDs in 2.0 (which is used by Forms Authentication) is still broken and you have a scenario where site owners have no ability to revoke issued tokens (I have not tried in 2.0, but in 1.1 the session information was stored in a cookie in an encrypted formated (with a salted machine key value) with no session information stored on the server. This ment that if I was able to find out what that value was, I would be able to use that cookie for as long as it was valid and there was no method on the server that would stop me from doing it
+
+''“Reducing the session expiration timeout to the lowest usable value is a good security practice and can help avoid most of the session ID exploits. To provide an even higher level of protection, your app should make it easy for its users to log out and abandon the session before leaving the site, and use JavaScript to detect the browser window closing to force a session abandonment on the server. ”''
+
+This comment in 1.1 is false (I need to check in 2.0) since in 1.1 when you 'sign-out' and 'abandon the session' all that ASP.NET does is to clear the client's browser cache (not disabling the session ID from future use)
+
+On using SQLServer state provider:
+
+''“If you are using Windows integrated authentication in your SQL Server connection string, take advantage of the ASP.NET 2.0 configuration option to connect to the server under the hosting identity rather than request identity like in previous versions. This option is on by default and is configured by using the useHostingIdentity attribute in the <sessionState> configuration element. This simplifies the authentication management on an intranet, as you only grant database access to the ASP.NET worker process or application identity instead of granting access to the entire domain or a set of users. “''
+
+The issue here is where is the password for this identity stored (because if it is in the metabase, in most cases it can be read from other co-hosted websites)
+
+And for the grand finale, '''a typical Microsoftean way of describing a vulnerability:'''
+
+''"....The State Server service does not provide any authentication capabilities, so anyone with network access to it can change the session data and cause undesired behavior. To help secure the State Server instance, you must make sure that it is protected from unauthorized access by machines other than your Web server using Windows Firewall or IPSec policies”''..
+
+I.e. If you use State Server in a multi host website (using the 'best practices' for isolating each website with multiple application pools, etc...), every single co-hosted web site will have total control over everybody's sessions (and since server to server isolation is still very rare, that would include any computer that is able to do a 64k port scan to that server)
+
+[[Category:OWASP .NET Project]]

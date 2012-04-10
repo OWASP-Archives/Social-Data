@@ -1,0 +1,121 @@
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Microsoft Sans Serif";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;}
+div.Section1
+	{page:Section1;}
+-->
+
+
+
+
+
+<div class=Section1>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=631
+ style='width:473.4pt;border-collapse:collapse;border:none'>
+ <tr>
+  <td width=631 colspan=4 valign=top style='width:473.4pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='font-family:"Microsoft Sans Serif"'>Review /Engagement
+  reference:</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=631 colspan=4 valign=top style='width:473.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='font-family:"Microsoft Sans Serif"'>Package/Component/Class
+  Name</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=631 colspan=4 valign=top style='width:473.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='font-family:"Microsoft Sans Serif"'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=227 valign=top style='width:169.95pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='font-family:"Microsoft Sans Serif"'>Finding
+  description</span></p>
+  </td>
+  <td width=131 valign=top style='width:98.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='font-family:"Microsoft Sans Serif"'>Location(S)</span></p>
+  </td>
+  <td width=117 valign=top style='width:88.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='font-family:"Microsoft Sans Serif"'>Severity</span></p>
+  </td>
+  <td width=156 valign=top style='width:117.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='font-family:"Microsoft Sans Serif"'>Recommendation</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=227 valign=top style='width:169.95pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='font-family:"Microsoft Sans Serif"'>&nbsp;</span></p>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Arial'>No input
+  validation of the <b>HTTPRequest object.getID()</b> function. </span></p>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Arial'>&nbsp;</span></p>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Arial'>Lack of
+  input validation may make the application vulnerable to many types of
+  injection</span></p>
+  </td>
+  <td width=131 valign=top style='width:98.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='font-family:"Microsoft Sans Serif"'>&nbsp;</span></p>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Arial'>com.inc.dostuff.java</span></p>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Arial'>Lines 20,
+  55,106</span></p>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Arial'>&nbsp;</span></p>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Arial'>com.inc.main.java</span></p>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Arial'>Lines 34,
+  99</span></p>
+  </td>
+  <td width=117 valign=top style='width:88.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='font-family:"Microsoft Sans Serif"'>&nbsp;</span></p>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:"Microsoft Sans Serif"'>Critical
+  </span><b><span style='font-size:11.0pt;font-family:"Microsoft Sans Serif"'>&#9642;</span></b></p>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:"Microsoft Sans Serif"'>&nbsp;</span></p>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:"Microsoft Sans Serif"'>Required
+  &#9633;</span></p>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:"Microsoft Sans Serif"'>&nbsp;</span></p>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:"Microsoft Sans Serif"'>Recommended
+  &#9633;</span></p>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:"Microsoft Sans Serif"'>&nbsp;</span></p>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:"Microsoft Sans Serif"'>Informational
+  &#9633;</span></p>
+  <p class=MsoNormal><span style='font-family:"Microsoft Sans Serif"'>&nbsp;</span></p>
+  </td>
+  <td width=156 valign=top style='width:117.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='font-family:"Microsoft Sans Serif"'>&nbsp;</span></p>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Arial'>It is critical
+  that this be addressed prior to deployment to production</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>

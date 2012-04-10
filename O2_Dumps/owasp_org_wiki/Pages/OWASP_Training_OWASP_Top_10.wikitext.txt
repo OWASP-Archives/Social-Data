@@ -1,0 +1,24 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>OWASP Training Modules</noinclude>
+| Module_designation = [[:Category:OWASP_Top_Ten_Project|OWASP Top 10]]
+| Module_Overview_Goal = The primary aim of the OWASP Top 10 is to educate developers, designers, architects and organisations about the consequences of the most important web application security weaknesses. The Top 10 provides basic methods to protect against these high risk problem areas and provides guidance on where to go from there. The Top 10 project is referenced by many standards, books, tools, and organisations, including MITRE, PCI DSS, DISA, FTC, and many more. The OWASP Top 10 was initially released in 2003 and minor updates were made in 2004, 2007, and this 2010 release. We encourage you to use the Top 10 to get your organisation started with application security so developers can learn from the mistakes of other organisations. Executives can start thinking about how to manage the risk that software applications create in their enterprise.
+
+| Content = 
+&nbsp;
+This significant update presents a more concise, risk focused list of the Top 10 Most Critical Web Application Security Risks. The OWASP Top 10 has always been about risk, but this update makes this much more clear than previous editions, and provides additional information on how to assess these risks for your applications. For each Top 10 item, this release discusses the general likelihood and consequence factors that are used to categorise the typical severity of the risk, and then presents guidance on how to verify whether you have problems in this area, how to avoid them, some example flaws in that area, and pointers to links with more information.
+&nbsp;
+| Material = 
+&nbsp;
+*[http://www.owasp.org/images/7/73/John_Wilander_IBWAS10_-_OWASP_Top_10_From_a_Developers_Perspective.ppt OWASP Top 10 from a developer's perspective_ppt] 
+*[http://www.owasp.org/images/5/54/John_Wilander_IBWAS10_-_OWASP_Top_10_From_a_Developers_Perspective.key.zip OWASP Top 10 from a developer's perspective_zip] 
+*[http://www.owasp.org/images/2/2c/John_Wilander_IBWAS10_-_OWASP_Top_10_From_a_Developers_Perspective.pdf OWASP Top 10 from a developer's perspective_pdf]
+*[http://www.owasp.org/images/2/2a/AppSec_DC_2009_-_OWASP_Top_10_-_2010_rc1-3.ppt AppSec DC 2009 OWASP Top 10 ppt]
+*[http://www.owasp.org/images/d/dc/02_OWASP_BNL10_Training_-_Top_10_v2010.pptx OWASP BeNeLux10 Training by Seba Deleersnyder - Top 10 v2010]
+*[http://www.owasp.org/images/c/cb/OWASP_Top_10_-_2010_rc1.pdf OWASP Top 10 2010 pdf]
+<br>
+*[http://www.vimeo.com/18027106 Video of the session presented at IBWAS'10 Training Day, 16th Dec 2010]
+&nbsp;
+}}
+
+
+
+[[Category:OWASP_Training|Training]]

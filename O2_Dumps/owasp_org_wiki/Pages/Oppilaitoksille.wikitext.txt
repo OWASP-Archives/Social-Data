@@ -1,0 +1,48 @@
+=Oppilaitosyhteistyö=
+
+OWASP Helsinki Chapter pyrkii levittämään tietoa www-sovelluksiin liittyvistä riskeistä ja yleisimmistä haavoittuvuuksista. Tähän sisältyvät parhaat käytännöt riskien pienentämiseen jo sovellusten suunnittelu- ja toteutusvaiheissa sekä menetelmät ja työkalut haavoittuvuuksien havaitsemiseen ennen tuotantokäytön alkamista. Keskeisenä osana tätä toimintaa on yhteistyö Suomessa toimivien oppilaitosten kanssa.
+
+Sovellusturvallisuus ja verkkosovelluksiin liittyvät riskit ovat aihepiirejä, joita olisi tärkeä opettaa tuleville ohjelmistosuunnittelijoille ja -kehittäjille. Liiketoiminnan siirtyessä verkkoon, yhä suurempi paino on verkkosovellusten riskeissä. Tietoturvallisuuden nykyinen opetus ja tutkimus suomalaisissa oppilaitoksissa ei kokemustemme mukaan vastaa tämän päivän ohjelmistokehityksen, ja sitä kautta liiketoiminnan tarpeita.
+
+=Kurssitarjonta=
+
+Käytännön kokemusten perusteella, tietoturvallisuuteen liittyviä asioita tulisi sisällyttää nykyistä enemmän tulevien tietotekniikan ammattilaisten koulutukseen sekä suunnata tutkimustoimintaa myös tietoturvallisuuteen liittyviin aiheisiin. Tätä tarkoitusta varten OWASP:in projektien joukosta löytyy useita oppilaitosten käyttöön soveltuvia kokonaisuuksia kuten esimerkiksi:
+
+1. Turvallisen ohjelmistokehityksen prosessit, elinkaari- ja kypsyysmallit
+* [[OWASP_CLASP_Project|OWASP CLASP]]
+* [[Software_Assurance_Maturity_Model|OpenSAMM]]
+2. Turvallinen sovellusarkkitehtuuri
+* yleiset [[Control|sovelluskontrollit]]
+* erilaiset web-frameworkit, [[OWASP_Enterprise_Security_API|OWASP ESAPI]], [[OWASP_AntiSamy_Project|AntiSamy]]
+3. Webin yleisimmät haavoittuvuudet
+* [[OWASP_Top_Ten_Project|OWASP Top 10]]
+* työkalu [[OWASP_WebScarab_Project|WebScarab]]
+* opetusympäristönä [[OWASP_WebGoat_Project|WebGoat]]
+4. Uhkamallinnus
+* [[Threat_Risk_Modeling|Threat modeling]]
+5. Turvallinen ohjelmointi, katselmointi ja testaus
+* [[OWASP_Guide_Project|Development Guide]] -opas
+* [[OWASP_Code_Review_Project|Code Review Guide]] -opas
+* [[OWASP_Testing_Project|Code Review Guide]] -opas
+6. Sovellusturvallisuuden tarkastaminen
+* [[OWASP_Application_Security_Verification_Standard_Project|OWASP ASVS]] (Application Security Verification Standard)
+
+Tulemme mielellämme keskustelemaan aiheesta lisää oppilaitosten kanssa. Tarvittaessa voimme järjestää opetuksen tueksi myös vierasluennoitsijoita, jotka ovat alan kokeneita asiantuntijoita yritysmaailmasta.
+
+=Kansainvälinen toiminta=
+
+OWASP-toiminnassa on kansainvälisesti mukana yliopistoja, ja opiskelijoille on mahdollista saada järjestön kautta tukea alaan liittyviin tutkimusprojekteihin.
+
+=Konferenssit=
+
+OWASP järjestää säännöllisesti konferensseja, joihin osallistuu myös yliopistotutkijoita. Esimerkiksi:
+
+http://owasp.blogspot.com/2009/12/owasp-appsec-research-2010-2nd-call-for_13.html
+
+=Yhteystiedot=
+
+Mikäli kiinnostuitte ja haluatte lisätietoja, voitte ottaa yhteyttä joihinkin allaolevista henkilöistä (etunimi.sukunimi@owasp.org).
+
+* Petteri Arola / PJ
+* Pekka Sillanpää
+* Henri Lindberg

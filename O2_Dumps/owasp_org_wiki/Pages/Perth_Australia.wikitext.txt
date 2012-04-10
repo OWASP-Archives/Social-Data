@@ -1,0 +1,137 @@
+{{Chapter Template|chaptername=Perth, Western Australia|extra=The chapter leaders are:
+* [http://www.owasp.org/index.php/User:Xntrik Christian Frichot]
+* [mailto:joshua@qwek.com Joshua Qwek]
+* Timothy Bessant
+* [mailto:david.taylor@bankwest.com.au David Taylor]|mailinglistsite=http://lists.owasp.org/mailman/listinfo/owasp-Perth|emailarchives=http://lists.owasp.org/pipermail/owasp-Perth}}
+
+<paypal>Perth Australia</paypal>
+
+== Upcoming OWASP Events ==
+
+Watch this space! (We're going for 4 meetings this year folks!)
+
+== Previous OWASP Meetings ==
+
+=== Secure Coding and OOAD (March 2012) ===
+
+Building on the OWASP secure coding priniciples, this session will introduce Robert C Martin's 5 OO principles in order to show how well designed code can help with the implementation and enforcement of secure coding principles, as well as alleviating maintenance headaches. Presented by Chris Arnold of Swiss power and ABB.
+
+=== Defending Web Applications (December 2011) ===
+
+Worried about having your site hacked? What about your Wordpress blog? David Taylor and Christian Frichot of OWASP Perth are back to talk about all things web security, and instead of spending a couple of hours trying to scare you with how to break stuff, we hope to educate you on how best to defend your web applications.
+
+We’ll be covering a range of defensive methods, including addressing coding vulnerabilities directly, implementing an open source HIDS, or even implementing your own 2nd factor authentication scheme utilising the Google Authenticator.
+
+Presented at Perth AISA's Techday 2011
+
+=== How minor vulnerabilities can do ‘very bad things’ - The Sequel (May 2011) ===
+
+Missed the 2010 AISA Techday session? Haven't made it out to an OWASP event lately? David and Christian are happy to be presenting their updated presentation, including live demos, on the impacts of web application security vulnerabilities at the upcoming Australia / New Zealand Testing Board (ANZTB) SIGIST meeting!
+
+=== Cross-site scripting: You don’t always know who the actors are (May 2011) ===
+
+So the time has come. Your company has finally approved the project to update your online web presence. A brand new, whiz-bang Content Management System is being deployed and your developers are frantically coding away to prepare a whole batch of fresh new content. Before you realise it, the delivery date is a week away and you have some security guy screaming at you about cross-site scripting issues!
+
+Cross-site scripting? So what.
+
+Does this experience sound familiar to you?
+
+In this session Christian Frichot will spend some time dissecting this common web application vulnerability, and just how serious its impacts can be. Exploitation of cross-site scripting is no longer just within the realm of nerdy, hacker types, new (and old) tools out there allow this trivial vulnerability to be used for so much more, including keystroke logging, and even forcing your iPhone to dial a number via Skype. For those facing these issues there are plenty of resources which can help, and Christian will cover these as well.
+
+=== How minor vulnerabilities can do ‘very bad things’ (December 2010) ===
+
+The Perth branch of the Australian Information Security Association is pleased to announce details for the second annual Perth AISA Tech day to be held on the 3rd December. This year we are holding the event in the heart of Perth’s CBD thanks to proud AISA supporters L7 Solutions.
+
+Appearing for their second consecutive year, regular AISA and OWASP members Christian and David are following on from last year’s topic. Last year you will remember that the demonstrated a number of classes of vulnerabilities in web applications (XSS, CSRF, SQL Injection etc.). This year they are going to show how relatively minor vulnerabilities can be exploited and leveraged to do ‘very bad things’ ™ to the client browser, the web server or both. 
+
+This session will include demonstrations of the BeEF browser exploitation framework and Metasploit.
+
+=== Web Application (In)Security Brief - Injection (September 2010) ===
+
+Having recently run training sessions on web application security for SyScan'10 and Blackhat, we're lucky enough to have Wade Alcorn from NGS to give a brief presentation on "Exploiting and discovering injection" for September's Perth OWASP Meeting. Come on up to Level 46 of the Bankwest Tower to join us discuss web application security with Wade and others. Please RSVP to ensure appropriate seating arrangements and we're hoping to then shift off to the Generous Squire for a quick beverage afterwards!
+
+==== About the presenter ====
+
+Wade Alcorn has experience in numerous aspects of offensive information security assessments. This ranges from bluetooth, reverse engineering and web application assessments to managing large teams of security professionals. Prior to joining NGS, Wade had been responsible for cutting-edge PKI and VPN development using technologies including C/C++ and Java. He has presented at conferences including BlackHat and AusCERT.
+
+=== Security Event and Incident Management" Panel Session (Perth AISA August 2010) ===
+
+==== [http://www.aisa.org.au/index.php?page=301 AISA Details] ====
+
+Log management is a necessary task in Security Management, but is often neglected. There are various pressures being placed on businesses, such as audit and compliance, industry standards (eg PCI, APRA), internal security maturity which have allowed organisations to understand the benefits to be gained from undertaking a SEIM project.
+
+There are many options for organisations looking to develop log management and security incident response processes, which range from open source syslog solutions, through to vendor supplied SEIM products and cloud based monitoring solutions.
+
+A panel selected from a variety of industries including representation from security consulting, corporate and vendor will discuss the considerations, options and benefits of employing SEIM technology and processes.
+
+We were fortunate to have Joshua Qwek, one of Perth's OWASP chapter lead, participate in this panel.
+
+=== How mature is your software security process? (Perth AISA May 2010) ===
+
+==== [http://www.aisa.org.au/index.php?page=287 AISA Details] ====
+
+As the security industry continues to change its focus to application 
+security a lot of companies who rely on software, developed either 
+internally or externally, are wondering what they can do reduce the risk 
+of security flaws. 
+
+Microsoft's Security Development Lifecycle (SDL) model can look 
+appealing, however without a clear understanding of what your software 
+security processes look like, it may be difficult to achieve any real 
+improvements. 
+
+Implementing a holistic end-to-end software security process can often 
+look like an impossible task, and while the end picture resembles Eden, 
+it's often the first steps that everyone stumbles on. As the saying goes 
+"You can't manage what you can't measure", and without a clear 
+understanding of what your software security processes look like now it's 
+unlikely that you can achieve any real improvements. 
+
+OWASP's Open Software Assurance Maturity Model, or OpenSAMM, aims 
+to assist organisations, both big and small, in evaluating their existing 
+software security practices and constructing a measurable, balanced 
+program to increase their software security. 
+
+Wondering how this can help your internal development processes? Want 
+to have a more rigid process to audit your externally developed software 
+processes? Then perhaps OWASP's OpenSAMM project can assist.
+
+This meeting will be co-hosted by both the local AISA chapter and the Perth OWASP chapter.
+
+=== Perth OWASP - Perth AISA Technical Day (Dec 2009) ===
+
+==== [http://www.owasp.org/index.php/File:AISA_Perth_TSD_2009_Brochure_-Final.pdf Brochure] ====
+
+The local OWASP boys will be whipping out their flux capacitor to fit as much information as they possibly can into a 2 hour jam-packed session on web app security testing. By providing a flyby of the OWASP Testing Guide, David and Christian aim to demonstrate and explain how to detect security vulnerabilities in your own web applications, including: Cross Site Scripting; Injection Flaws; Cross Site Request Forgery and Session Management Flaws.
+
+Demonstrations will utilise a number of open source and freely available tools, including OWASP's own WebScarab. To provide a yoga-like flexibility to the session all materials and testing environments (an Ubuntu wrapped VMware virtual machine) will be provided to attendees, allowing you to either chase us rapidly down the rabbit hole of the OWASP Top 10, or to take your own time after the session...
+
+The perfect way to spend a lazy Sunday afternoon.
+
+=== Web-based Malware (Sep 2009) ===
+
+==== About the presenter ====
+Shlomi Cohen joined IBM with the Watchfire acquisition at August 2007.
+Over nine years of experience in web application security in both start-ups and established companies. Emphasis in strategic selling, sales consulting, technical sales and management.
+* Leading the Security solution on the WW Rational Tiger sales team
+* Work with the customers and the local sales team to form the right security solution
+* Development of sale process for multiple products
+* Working closely with customers and the product management team in driving the products roadmaps
+* Assisting IBM’s growth in acquisition portfolio
+
+Previous to the WW Rational Security Solution leader:
+* Managing the technical sales team for Watchfire in the Americas group of IBM
+* Watchfire Security Research team manager - A team responsible for various web application security aspects including web application vulnerability research, security product rule updates, enhanced security feature definition, security audits, customer support, marketing and sales assistance
+* AppShield Development Manager - Managed the development and QA teams for the AppShield product - a client Server Web Application Firewall
+
+=== Threat Modelling in the Software Development Lifecycle (Feb 2009) ===
+
+One of the most important concepts being promoted in the security industry is security in the software development lifecycle. This concept is important due to two primary factors:
+* It is generally recognised that by shifting security activities closer towards the requirements gathering stage, or the design stage, that less vulnerabilities will make their way into the production systems.
+* It is also recognised that the cost of mitigating vulnerabilities increases later in the lifecycle.
+By walking through a case study I hope to demonstrate the effectiveness of addressing risk during the earlier stage of the software development lifecycle, and that these activities are not solely the responsibility of the "security guy", but all participants in a software project including the project manager, business stakeholders and software designer.
+==== About the presenter ====
+Christian Frichot is currently employed by Bankwest working within the Security Consulting Services team. His core responsibilities include phishing and online fraud response, security assessments, information risk assessments and other ad-hoc information security consulting. Christian hopes to spend more time in '09 focusing on education and application security, where he feels more effort needs to be applied.
+
+[[Category:OWASP Chapter]]
+[[Category:Australia]]

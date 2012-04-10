@@ -1,0 +1,27 @@
+{{Template: <includeonly>{{{1}}}</includeonly><noinclude>Release About</noinclude>
+| project_name = OWASP Hatkit Datafiddler Project
+| project_home_page = OWASP Hatkit Datafiddler Project
+
+| release_name = Hatkit Fiddler v 0.5.0
+| release_date = April 9 2011
+
+| release_description = 
+*This tool allows you to analyze data which has been catpured into a MongoDB. You can view the data in table-mode (with dynamically evaluated column-definitions which can reach into html, transform values etc), aggregate-mode (performs advanced data aggregation, showing different characteristics on the data depeneding on how you define (or use the pre-defined) javascript aggregators, which are sent right into MongoDB). It also has a third-party-app replay functionality, to let w3af or ratproxy do their thing and analyze the data for you.
+*Requirements: Python, Python-qt bindings, Qt4, MongoDB, Python Mongodb drivers.
+
+| release_license = [http://www.gnu.org/licenses/gpl.html GNU General Public License v3]
+| release_download_link = https://bitbucket.org/holiman/hatkit-datafiddler/downloads
+
+| leader_name1 = Martin Holst Swende
+| leader_email1 = martin.holst_swende@owasp.org
+| leader_username1 = Martin Holst Swende
+
+| contributor_name[1-10] = 
+| contributor_email[1-10] = 
+| contributor_username[1-10] =  
+
+| release_notes = https://bitbucket.org/holiman/hatkit-datafiddler/overview
+
+| links_url[1-10] = 
+| links_name[1-10] = 
+}}

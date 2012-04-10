@@ -1,0 +1,113 @@
+{{Template:Attack}}
+
+Last revision: '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+<br>
+[[Category:OWASP ASDR Project]]
+
+
+==Description==
+LDAP Injection is an attack used to exploit web based applications that construct LDAP statements based on user input. When an application fails to properly sanitize user input, it’s possible to modify LDAP statements using a local proxy. This could result in the execution of arbitrary commands such as granting permissions to unauthorized queries, and content modification inside the LDAP tree.
+The same advanced exploitation techniques available in [[SQL Injection]] can be similarly applied in LDAP Injection.
+
+==Risk Factors==
+TBD
+
+
+==Examples==
+
+===Example 1===
+In a page with a user search form, the following code is responsible to catch input value and generate a LDAP query that will be used in LDAP database.
+
+  <input type="text" size=20 name="userName">Insert the username</input> 
+
+The  LDAP query is narrowed down for performance and the underlying code for this function might be the following:
+  String ldapSearchQuery = "(cn=" + $userName + ")";
+  System.out.println(ldapSearchQuery); 
+
+If the variable $userName is not validated, it could be possible accomplish LDAP injection, as follows:
+*If a user puts “*” on box search, the system may return all the usernames on the LDAP base
+*If a user puts “jonys) (| (password = * ) )”, it will generate the code bellow revealing jonys’ password ( cn = jonys ) ( | (password = * ) )
+
+===Example 2===
+The following vulnerable code is used in an ASP web application which provides login with an LDAP database. 
+On line 11, the variable userName is initialized and validated to check if it’s not blank. Then, the content of this variable is used to construct an LDAP query used by SearchFilter on line 28. The attacker has the chance specify what will be queried on LDAP server, and see the result on the line 33 to 41; all results and their attributes are displayed.
+
+Commented vulnerable asp code:
+ <nowiki> 
+ 1.	<html>
+ 2.	<body>
+ 3.	<%@ Language=VBScript %>
+ 4.	<%
+ 5.	Dim userName
+ 6.	Dim filter
+ 7.	Dim ldapObj
+ 8.		
+ 9.	Const LDAP_SERVER = "ldap.example"
+ 10.	
+ 11.	userName = Request.QueryString("user")
+ 12.	
+ 13.	if( userName = "" ) then
+ 14.	Response.Write("Invalid request. Please specify a valid
+ 15.	user name")
+ 16.	Response.End()
+ 17.	end if
+ 18.	
+ 19.	filter = "(uid=" + CStr(userName) + ")" ' searching for the  user entry 
+ 20.	
+ 21.	'Creating the LDAP object and setting the base dn
+ 22.	Set ldapObj = Server.CreateObject("IPWorksASP.LDAP")
+ 23.	ldapObj.ServerName = LDAP_SERVER
+ 24.	ldapObj.DN = "ou=people,dc=spilab,dc=com"
+ 25.	
+ 26.	'Setting the search filter
+ 27.	ldapObj.SearchFilter = filter
+ 28.	
+ 29.	ldapObj.Search
+ 30.	
+ 31.	'Showing the user information
+ 32.	While ldapObj.NextResult = 1
+ 33.	Response.Write("<p>")
+ 34.	
+ 35.	Response.Write("<b><u>User information for: " + 
+ 36.	ldapObj.AttrValue(0) + "</u></b><br>")
+ 37.	For i = 0 To ldapObj.AttrCount -1
+ 38.	Response.Write("<b>" + ldapObj.AttrType(i) +"</b>: " +
+ 39.	ldapObj.AttrValue(i) + "<br>" )
+ 40.	Next
+ 41.	Response.Write("</p>")
+ 42.	Wend
+ 43.	%>
+ 44.	</body>
+ 45.	</html>   </nowiki>
+ 
+In the example above, we send the * character in the user parameter which will result in the filter variable in the code to be initialized with (uid=*). The resulting LDAP statement will make the server return any object that contains a uid attribute like username.
+
+ <nowiki> http://www.some-site.org/index.asp?user=*  </nowiki>
+
+==Related [[Threat Agents]]==
+* [[internal software developer]]
+
+==Related [[Attacks]]==
+* [[Interpreter Injection]]
+* [[SQL Injection]]
+* [[Command Injection]]
+* [[Relative Path Traversal]]
+* [[Resource Injection]]
+* [[Path Manipulation]]
+
+==Related [[Vulnerabilities]]==
+* [[:Category:Input Validation Vulnerability]]
+
+==Related [[Controls]]==
+* [[:Category:Input Validation]]
+
+==References==
+* http://www.blackhat.com/presentations/bh-europe-08/Alonso-Parada/Whitepaper/bh-eu-08-alonso-parada-WP.pdf
+* http://www.ietf.org/rfc/rfc1960.txt A String Representation of LDAP Search Filters (RFC1960)
+* http://www.redbooks.ibm.com/redbooks/SG244986.html IBM RedBooks - Understanding LDAP
+* http://www.webappsec.org/projects/threat/classes/ldap_injection.shtml
+
+[[Category:Injection]]
+[[Category:Attack]]
+__NOTOC__

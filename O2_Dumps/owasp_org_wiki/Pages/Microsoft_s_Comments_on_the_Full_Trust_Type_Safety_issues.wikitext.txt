@@ -1,0 +1,24 @@
+'''From:''' "Microsoft Security Response Center" <secure@microsoft.com><br/>
+'''Sent:''' Monday, December 26, 2005 7:26 PM<br/>
+'''To:''' dinis@ddplus.co.uk<br/>
+'''Subject:''' RE: Possible Type Confusion issue in .Net 1.1 (only works in Full Trust)<br/>
+
+<i>Hi Dinis,
+
+I trust you had or are having a great holiday season.
+
+Thanks for heads up on your blog posting, I've received the following feedback from the product team, seems this topic has come up before.
+
+Some people have argued that Microsoft should always enforce type safety at runtime (i.e. run the verifier) even if code is "Fully Trusted". We've chosen not to do this for a number of reasons (e.g. historical, perf, etc). There are at least two important things to consider about this scenario:
+
+1) Even if we tried to enforce type safety using the verifier for Fully Trusted code, it wouldn't prevent Fully Trusted from accomplishing the same thing in 100 other different ways. In other words, your example accessed an object as if it were a different incompatible type - The verifier could have caught this particular technique that allowed him to violate type safety. However, he could have accomplished the same result using private reflection, direct memory access with unsafe code, or indirectly doing stuff like using PInvoke/native code to disable verification by modifying the CLR's verification code either on disk or in memory. There would be a marginal benefit to insuring people wrote "cleaner" more "type safe" code by enforcing verification at runtime for Full Trust, but you wouldn't get any additional security benefits because you can perform unverifiable actions in dozens of ways the verifier won't prevent if you are Fully Trusted.
+
+2) As mentioned at the end of #1 above, one argument is that it's good for programmers (even fully trusted ones) to follow type safety rules, and doing runtime verification would keep peoplewriting cleaner code. However, we don't need to do the verification at "runtime" in order to encourage good type safety hygiene. Instead, we can rely on our languages to do this for us. For example, C# and VB by default ensure that you produce verifiable code. If you've written your code in a language like C#, you're not going to run into cases where you've accidentally created unverifiable code (This can be seen in the example posted on the blog since you needed to use the low level assembler to hack up a program initially compiled in C#). Given that you can't prevent Fully Trusted code from doing unverifiable things at runtime, there's only a marginal difference between encouraging type safety at compile time vs at runtime for the Fully Trusted code developer.
+
+I hope that helps to convey the message on where Microsoft stands with this issue.
+
+Kind Regards
+Scott D.</i>
+
+
+[[Category:OWASP .NET Project]]

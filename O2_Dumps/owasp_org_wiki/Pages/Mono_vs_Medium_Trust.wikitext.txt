@@ -1,0 +1,19 @@
+Here is an interresting question which one is more secure?
+
+'''Option A) 10 Asp.Net Application runinng on:'''
+
+* 1 Hardened Windows 2003 Server, IIS 6.0, Partial Trust .Net 2.0 Environment in 10 diferent IIS websites
+
+or
+
+'''Option B) 10 Asp.Net Application running on:'''
+
+* 10 images (XEN/VMWare) of an Hardened Linux ditribution, Apache and Full Trust Mono (1 Asp.Net website per image)
+
+And which one will have more features? (remember that Medium Trust is a very limiting environment)
+
+And which one will perform better? (remember that Partal Trusts in .Net are considerable slower than Full Trust ones)
+
+[[User:Dinis.cruz|Dinis.cruz]]
+
+[[Category:OWASP .NET Project]]

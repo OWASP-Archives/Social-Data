@@ -1,0 +1,48 @@
+2 Access Control Flaws -> 2.3 LAB: Role Based Access Control
+
+=== Lesson overview ===
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution === 
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information. 
+
+=== Strategy ===
+
+In this WebGoat lab, each role has permission to certain resources (A-F). Each user is assigned one or more roles. Only the user with the 'Admin' role should have access to the 'F' resources but there is a vulnerability where the user doesn't need the 'Admin' role can access these 'F' resources; this is exploited by intercepting a request in a web proxy and altering the Employee ID number.
+
+The WebGoat solution is to modify the back end source code and add an 'isAuthorized' method.
+
+A ModSecurity solution would be to Lua-persist the Role Based Access Control configuration to 2 *.data files. In essence, the 'isAuthorized' method is implemented within ModSecurity instead of the WebGoat source code.
+
+=== Implementation === 
+
+One *.data file would contain a list of roles with the resources that they have access to, something like this:
+<pre>
+Entry{ 
+  role = "Admin",
+  resources = "A,B,D,F"
+} 
+
+Entry{ 
+  role = "User",
+  resources = "A,B,C"
+}
+...
+</pre>
+
+The second *.data file would contain each user and their roles:
+<pre>
+Entry{
+  employee_id = 101,
+  roles = "User, Manager"
+}
+...
+</pre>
+
+ModSecurity would intercept the request and call a Lua script which would determine if the request to the resource was valid or not.
+
+=== Comments ===
+
+* In the real world, a web interface could serve as a front end to the *.data files, or, if possible, the Lua script could be altered to read from an existing access control file or database (Lua can do SQL).

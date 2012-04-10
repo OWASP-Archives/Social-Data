@@ -1,0 +1,188 @@
+==  OWASP Newsletter #15 (28-March-2008) ==
+Welcome to the 15th edition of the OWASP Newsletter, featuring the OWASP NYC AppSec 2008 Conference, OWASP Week 2008, and the OWASP Guide 3.0 Development Resumes.
+
+As always, if you have any content to add to the next edition, please feel free to add it directly to its WIKI page [[OWASP Newsletter 16]].
+
+Alison McNamee - OWASP Operations Director - Tel: 301-575-0197 - eMail: Alison.mcnamee@owasp.org
+
+== Featured Item: OWASP Europe AppSec 2008 Conference==
+
+The [https://www.owasp.org/index.php/AppSecEU08 OWASP Europe AppSec 2008 Conference] will take place on <b>May 19th-22nd</b>.  After successful OWASP Conferences in the United States and Europe, we are back in Belgium: 5 tutorials and 2 conference tracks in the historic center of Ghent! The conference is stuffed with top notch presentations from industry recognised speakers and technical experts on the latest application security risks and trends.
+
+Amongst the 30+ speakers are Mark Curphey, Dinis Cruz, Ivan Ristic, Petko (pdp) Petkov, Brian Chess and Gary McGraw!
+
+Registration for training and attendees will open up on April 1st, 2008. For full details on the event click [https://www.owasp.org/index.php/AppSecEU08 here].
+
+== Featured Item: OWASP NYC AppSec 2008 Conference==
+
+The [https://www.owasp.org/index.php/OWASP_NYC_AppSec_2008_Conference OWASP NYC AppSec 2008 Conference] will take place on <b>October 7th-10th</b>.  At this event, there will be two days of Multi-track Seminars, Capture the Flag, two days of Hands-On Training and a Vendor Exhibit.  The conference will be held downtown <b>New York City</b> with the capacity for up to <b>1,000 attendees</b> register early!
+<br>
+<br>
+Registration for training and attendees will open up on April 1st, 2008. For full details on the event, to submit a talk or for more information on sponsorship opportunities click [https://www.owasp.org/index.php/OWASP_NYC_AppSec_2008_Conference here].
+
+
+== Featured Item: OWASP Week 2008==
+
+Following the success of OWASP Day in 2007, this year we have decided to have the first ever OWASP Week!  This will take place between March 30th and April 4th.  To see what chapters are participating, please go to [[OWASP_Week_April_08]].
+
+== Featured Project: OWASP Guide 3.0 Development Resumes==
+
+Andrew van der Stock, the OWASP Guide Project Lead, is calling for volunteers to re-factor the OWASP Guide to be solely about secure architecture and coding using ESAPI. This will help distinguish the Guide from our other major documents:
+
+* The Guide will become solely about coding securely using ESAPI with J2EE, .NET and PHP
+* The Code Review Guide is about reviewing web apps
+* The Testing Guide is about testing web apps
+
+Andrew is looking for volunteers to take on individual chapters. There are 16 chapters, and each should take one person about a month to re-factor, followed by a few months for peer review, QA, diagrams, and final acceptance. The goal is to release the final OWASP Guide 3.0 at the OWASP US Conference in late 2008.
+
+If you're interested, please join the owasp-guide mail list:
+
+https://lists.owasp.org/mailman/listinfo/owasp-guide
+
+Once joined, please post to the list with an introduction and a list of which chapters you'd are interested in taking on. If you've previously volunteered, please just say so and priority will be given to your chapter choices.
+
+== Featured Item: OWASP Summer of Code 2008 - 35 uploaded applications ==
+{| class="wikitable" style="text-align:center"
+|-
+| align="CENTER"|[[Image:SoC 08 Logo Small.jpg|center]]
+| align="left"|
+* The submission period for [[OWASP Summer of Code 2008|OWASP Summer of Code 2008]] applications finished off on 25th March. 
+* The open-source software community has answered positively [[OWASP Summer of Code 2008 Applications|uploading 35 applications]]. 
+* We thank everybody who has applied. 
+* We announce a two-week-delay in the assessment of OWASP Summer of Code’s 2008 applications. We are now planning to deliver our assessment on the 16th April. Hence, the whole SoC’s 2008 schedule will be postponed two weeks.
+** Having carefully analysed the set of 35 applications, we have decided to request that 18 applicants adjust their proposals. [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications|These 18 applications can be found here]].
+*** For each one, we have posted a couple of recommendations. Consequently, we ask that each applicant answer just below our recommendations, whether or not they are accepted. If so, please leave a clear note of it and modify accordingly your applications in the same wiki page.
+*** We also recommend that applicants state positions by the 9th of April.
+** The remaining set of applications can be found on either the [http://spreadsheets.google.com/pub?key=pAX6n7m2zaTXckoJGOB0_LA Majority Vote Page] or [http://spreadsheets.google.com/pub?key=pAX6n7m2zaTXfkbcvHAVnUA&gid=0 Selection Criteria Page]. Although the new official date to announce the SoC’s 2008 is now the 16th of April, we will post our assessment as soon as it has been reached. At this moment, the applicants can of course start working. However, we will return to all applicants later, once the assessment process has been totally completed, with further details.
+** We understand the inconvenience that this might cause and apologise for that. Although, as we are acting to improve the SoC’s final deliveries, we also ask for understanding and we thank in advance.
+|}
+
+== Latest additions to the WIKI ==
+
+
+==== New Pages====
+
+* [[OWASP_Backend_Security_Project_Tools]]
+* [[OWASP_OSG_Functional_Spec]]
+* [[.NET_Architect]]
+* [[.Net_Project_Wishlist]]
+* [[.NET_Project_ReOrg_Alpha]]
+* [[Germany/press]]
+* [[OWASP_Board_Meetings_3-6-08]]
+* [[Not-For-Profit_Status]]
+* [[OWASP_Request_for_Proposal_List]]
+* [[OWASP_Week_April_08]]
+* [[OWASP_Board_Meetings_March_Agenda]]
+* [[OWASP_Board_Meetings_2-7-08]]
+* [[Ajax_Frameworks]]
+
+====New Chapter Pages====
+
+* [[Qatar]]
+* [[Spain/Meetings]]
+* [[Boulderchaptermeetings2008.html]]
+* [[Boulderchaptermeetings2007.html]]
+* [[Mexico City/es]]
+
+====Updated Pages====
+
+* [[SpoC_007_-_OWASP_Site_Generator]]
+* [http://www.owasp.org/index.php/Category:OWASP_Flash_Security_Project OWASP Flash Security Project]
+* [[OWASP_.Net_Project_Roadmap]]
+* [http://www.owasp.org/index.php/Category:OWASP_DirBuster_Project OWASP DirBuster Project]
+* [http://www.owasp.org/index.php/Category:OWASP_Backend_Security_Project OWASP Backend Security Project]
+* [[Testing_for_Cross_site_scripting]]
+* [[CSRF_Guard_2x_Roadmap]]
+* [[Talk:Declarative_Access_Control_in_Java]]
+* [http://www.owasp.org/index.php/Category:OWASP_JBroFuzz OWASP JBroFuzz]
+* [[JSP JSTL]]
+* [[Preventing LDAP Injection in Java]]
+* [[Password length & complexity]]
+* [http://www.owasp.org/index.php/Category:OWASP_Project_Assessment OWASP Project Assessment]
+* [[OWASP_NYC_AppSec_2008_Conference]]
+* [http://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API OWASP Enterprise Security API]
+* [[Italy_OWASP_Day_2]]
+* [[OWASP_Summer_of_Code_2008_Applications]]
+* [[Ajax_Literature_Review]]
+* [[OWASP_Grants]]
+* [[Reviews_of_security_podcasts]]
+* [[OWASP_Foundation]]
+* [[OWASP_Spring_Of_Code_2007_-_Payments]]
+* [[OWASP_Backend_Security_Project]]
+* [[Category_talk:OWASP_Testing_Project]]
+* [[OWASP_Summer_of_Code_2008_Press_Release]]
+* [[OWASP_Spring_Of_Code_2007_-_Projects]]
+* [[Web_Application_Firewall]]
+* [[OWASP_Summer_0f_Code_2008_:_Selection]]
+* [http://www.owasp.org/index.php/Category:OWASP_Video OWASP Video]
+* [[OWASP_Java_Table_of_Contents]]
+
+====Updated chapter pages:====
+
+* [[Boise]]
+* [[Belgium]]
+* [[Austin]]
+* [[London]]
+* [[Cleveland]]
+* [[Mexico City]]
+* [[Boulder]]
+* [[Virginia (Northern Virginia)]]
+* [[Denver]]
+* [[Memphis]]
+* [[Eugene]]
+* [[Belgium]]
+* [[Chennai]]
+* [[Rochester]]
+* [[Belgium]]
+* [[Turkey]]
+* [[Italy]]
+* [[Latvia]]
+* [[Helsinki]]
+* [[Minneapolis St Paul]]
+* [[Cincinnati]]
+* [[Suncoast]]
+* [[Sacramento]]
+* [[Buffalo]]
+* [[Spain]]
+* [[Columbus]]
+* [[Switzerland]]
+* [[Washington DC]]
+* [[NYNYMetro]]
+* [[Netherlands]]
+* [[Egypt]]
+
+==== New Documents & Presentations from chapters==== 
+
+* [http://video.google.com/videoplay?docid=-8346192947975269407&hl=en Robert Hansen's talk on Logic Attacks and Inefficiencie of Robotic Detection at MSP]
+
+For a complete list of chapter presentations see [[OWASP_Education_Presentation|the online table of presentations]].
+
+== OWASP references in the Media==
+
+* [http://www.computerweekly.com/blogs/stuart_king/2008/03/i-still-dabble-occassionally-w.html The First Rule of Programming: It's Always Your Fault]
+* [http://schmoil.blogspot.com/2008/03/owasp-esapi.html OWASP ESAPI]
+* [http://onelittlewindow.org/blog/?p=54 OWASP Enterprise Security API]
+* [http://www.wehuberconsultingllc.com/?p=10 OWASP-Ideas for unit testing web security]
+* [http://therealcobracommander.blogspot.com/2008/03/top-10-reasons-web-sites-get-hacked.html Top 10 Reasons Web Sites get Hacked]
+* [http://duckdown.blogspot.com/2008/03/do-outsourcing-firms-write-secure-code.html Do Outsourcing Firms write secure code?]
+* [http://blogsecurity.net/news/owasp-talk-php-code-analysis-real-world-examples/ OWASP Talk PHP Code Analysis Real World Examples]
+* [http://michaelcoates.wordpress.com/2008/03/20/owasp-summer-of-code/ OWASP Summer of Code]
+* [http://i8jesus.com/?p=17 AntiSamy 1.1 is out!]
+* [http://duckdown.blogspot.com/2008/03/economics-of-industry-certifications.html Economics of Industry Certifications]
+* [http://blogs.owasp.org/orizon/2008/03/12/owasp-appsec-conference-2008-ny/ Conference 2008 at NY]
+* [http://testinglondon.wordpress.com/2008/03/14/web-testing-and-reporting-best-practices/ Web Testing and Reporting Best Practices]
+* [http://narencoolgeek.blogspot.com/2008/03/xss-and-csrf-attacks.html XSS and CSRF Attacks]
+* [http://www.mailbucket.org/cf-talk-5053820.html Email Encryption]
+* [https://bmfo.net/talks/owasp-australia-2008/ OWASP Australia 2008]
+* [http://duckdown.blogspot.com/2008/03/software-vendors-and-owasp.html Software Vendors and OWASP]
+* [http://cincinnatirecruiter.wordpress.com/2008/03/02/february-owasp-top-10-exploits/ February OWASP Top 10 - Exploits]
+* [http://duckdown.blogspot.com/2008/02/exposing-ecm-security-vulnerabilities.html Exposing ECM Security Vulnerabilities]
+* [http://ha.ckers.org/blog/20080227/res-timing-file-enumeration-without-javascript-in-ie70/ Res timing file enumeration without 
+javascript in ie7.0]
+* [http://www.smop.co.uk/blog/index.php/2008/02/25/fosdem/ FOSDEM]
+* [http://mrtopf.de/blog/plone/planetplone/fosdem-2008-about-owasp/ About OWASP]
+* [http://www.publicradio.org/columns/futuretense/2008/02/index.shtml Why many popular website are risky]
+* [http://owaspsoc2008.wordpress.com OWASP Summer of Code 2008's Blog] 
+=='''[https://www.owasp.org/index.php/Template:Application_Security_News Application Security News Feed]'''==
+
+<owaspfeeddetails />

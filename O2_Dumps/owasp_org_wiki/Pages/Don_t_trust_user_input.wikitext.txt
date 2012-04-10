@@ -1,0 +1,38 @@
+{{Template:Principle}}
+
+<br>
+[[Category:OWASP ASDR Project]]
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+==Description==
+
+A user or client will not always submit data your application will expect.  By building robust applications that do not trust user input by default, you ensure the application will be able to handle unexpected data gracefully.  Examples of user input include: form data, client information such as user-agent strings, cookies, referer, etc.  Anything that is submitted in an HTTP request should be considered user input.
+
+==Examples==
+
+===Phone number===
+: A short example description, small picture, or sample code with [http://www.site.com links]
+
+===Short example name===
+: A short example description, small picture, or sample code with [http://www.site.com links]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* [[Input Validation]]
+
+
+==References==
+
+* http://www.link1.com
+* [http://www.link2.com Title for the link2]
+
+[[Category:Principle]]

@@ -1,0 +1,53 @@
+The [https://ocms.owasp.org OWASP Conference Management System] (OCMS) was designed to take in applications for all non-chapter meeting events, vett them through the Global Conferences Committee , and schedule them. This serves as the "official" starting point for all (non-chapter meeting) OWASP events.  Currently, most of the functionality of the system is in the [https://ocms.owasp.org/events/ Event Manager] however additional modules are planned for the future.  All OWASP events using the OWASP brand and wishing to use OWASP Foundation resources (money, schwag, content etc) must register their event via OCMS and have it approved by the [[Global Conferences Committee]]
+
+Much of this system's functionality requires users to be logged in. Anyone can easily [https://ocms.owasp.org/accounts/register/ signup] for an account and is welcome to put forth an application to host an OWASP event. For more information on hosting an OWASP event see the [[How to Host a Conference]] page.
+
+
+=Signing Up=
+# Go to https://ocms.owasp.org/accounts/register/
+# Complete the form, for your email address, please use a @owasp.org address if you have one (we will be implementing SSO in the future)
+# Submit the form
+# You'll get an email confirmation, simply click the link in the email and your account is ready to go
+
+=Event Manager=
+The [https://ocms.owasp.org/events/ Event Manager] is the principle starting point for using OCMS.  The main page has 4 major elements
+* Upcoming Events - This lists all of the currently approved events on the OWASP event calendar
+* Your Events - This lists all events for which you are listed as an event planner
+* Events Under Review - This lists all events for which you are listed as an event planner that are still under review by the GCC (For superusers, this is all events under review)
+* Actions - Currently, the only action is to submit a new event proposal
+
+
+The event manager also interfaces with the [http://www.google.com/calendar/embed?src=hl6cjgs6ep1h7oniqgueu2bhbo%40group.calendar.google.com OWASP Event calendar].  Once an event is approved, an entry will automatically be placed in this calendar with some basic event details.  When an event planner updates their event, the [http://www.google.com/calendar/embed?src=hl6cjgs6ep1h7oniqgueu2bhbo%40group.calendar.google.com OWASP Event calendar] will also be updated automatically. 
+
+==Submitting a new Event Proposal==
+#Click the "Submit Event" button under actions
+#Select an event type from the options you are presented.  More information can be found [[OWASP Event Definitions | here]]
+#A form will appear that is specific to the event type you'd like to propose.  There will be some comments about each event type below.
+##Field names in bold should indicate required fields (some browsers this is broken, and a known issue)
+##Different events will have different required items however Event Name, City State or Country, Start Date, End Date, Link to Wiki, Description, and Local Planning Team are always required.
+##The Local Planning Team field provides access control to the event.  Anyone listed in this field will have the ability to update event details or cancel the event and will receive email notification when appropriate.
+#Click Add
+#Correct any errors and submit
+
+The [[Global Conferences Committee]] will be notified of your submission automatically.  Once the GCC has decided, each member can go into your event and vote to approve, deny or obtain.  The votes will be displayed in the "Voting box" on the right hand side of your event display.
+
+Once your event status has been determined (%50+1 of the GCC approves) you will receive a notification email from the system.
+
+==Updating Event Proposal==
+#From the [https://ocms.owasp.org/events/ Event Manager] main page, click on the name of the event you'd like to edit
+##Only event planners for this event, GCC members, and administrators will be able to edit the event
+#Make the updates that you need to make to the event
+#Click Save
+
+Note: If your event is approved the [http://www.google.com/calendar/embed?src=hl6cjgs6ep1h7oniqgueu2bhbo%40group.calendar.google.com OWASP Event calendar] will automatically be updated.
+
+==Cancel an Event==
+#From the [https://ocms.owasp.org/events/ Event Manager] main page, you can click on the "[Delete]" button if you are an event planner or superuser
+#From the [https://ocms.owasp.org/events/ Event Manager] main page, click on the name of the event you'd like to delete
+#Click delete on the bottom left hand of the form
+
+==Check on a submitted event==
+#From the [https://ocms.owasp.org/events/ Event Manager] main page, click on the name of the event you'd like to view
+#Look at the right hand side of the event display, there will be a "Voting box" that will show the current voting status
+
+Once your event status has been determined (%50+1 of the GCC approves) you will receive a notification email from the system

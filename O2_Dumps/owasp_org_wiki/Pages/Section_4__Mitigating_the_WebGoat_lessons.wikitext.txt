@@ -1,0 +1,565 @@
+=== Project metrics at 50% project completion ===
+
+See Section 2 for the WebGoat lesson Table of Contents and an overview of the results from doing the WebGoat lessons. Appendix A contains a zip file which is made up of the lesson plans and solutions - in HTML format - which were taken from WebGoat and can be viewed stand-alone.
+
+Out of 51 possible lessons, the following are teaching lessons, not vulnerabilities, and therefore have no context for ModSecurity rules:
+* 1.1  Http Basics
+* 4.1  Password Strength
+* 15.3  Bypass Client Side JavaScript Validation
+* 17.1  Create a SOAP Request
+
+Therefore there is a total number of 47 lessons to do; half is 24 so that was the goal of the first 50% of project completion. The lowest hanging fruit was taken first because considerable effort wasput into: (1) setup and configuration of the environment; (2) getting familiar with WebGoat and taking all of the lessons; (3) learning ModSecurity (and Remo); (4) re-learning regular expressions; (5) learning Lua script; and (6) developing an efficient work methodology.
+
+The total number of sublessons mitigated by ModSecurity rules: 25 - thereby achieving the goal of at least 50% of sublessons mitigated. 
+
+They are:
+* Sublesson 1.2
+* Sublesson 2.4
+* Sublessons 4.2, 4.4, 4.5
+* Sublesson 6.1
+* Sublessons 8.1, 8.2, 8.4, 8.5, 8.7
+* Sublesson 10.1
+* Sublessons 11.1, 11.2, 11.3, 11.4, 11.5, 11.6, 11.7, 11.8
+* Sublesson 13.1
+* Sublessons 15.1, 15.2
+* Sublessons 17.3, 17.4
+
+=== Project metrics at 100% project completion ===
+
+Based on Reviewer feedback, three (3) of the 4 sublessons that were originally assessed as not being able to be a ModSecurity solution, actually can be. They are:
+* 1.1 Http Basics 
+* 15.3 Bypass Client Side JavaScript Validation 
+* 17.1 Create a SOAP Request 
+
+Fifteen (15) sublessons were solved in the 2nd phase which makes a total of 40 sublessons solved.
+
+Five (5) sublessons do not count because ModSecurity solutions cannot be written for them (further explanation below):
+* 3. AJAX Security -> 3.3 Same Origin Policy Protection
+* 5. Buffer Overflows (not implemented)
+* 4. Authentication Flaws -> 4.1 Password Strength 
+* 8. Cross-Site Scripting (XSS) -> 8.6 HTTPOnly Test 
+* 14. Insecure Storage -> 14.1 Encoding Basics
+
+The remaining 7 sublessons are either unable to be solved or can be solved but were complex solutions and weren’t completed because of lack of time. The next section gives further explanation for each sublesson that was not solved.
+
+'''Therefore, 40 out of 47 WebGoat sublessons were solved, or 85%. The original goal was 90%, or 42 lessons.'''
+
+See ‘Section 5, The Mitigating Solutions’ for details on each of the ModSecurity solutions new in Phase 2. In chronological order, these 15 sublessons are:
+
+* Sublesson 12. Insecure Communication -> 12.1 Insecure Login
+* Sublesson 7. Concurrency -> 7.1 Thread Safety Problem
+* Sublesson 7. Concurrency -> 7.2 Shopping Cart Concurrency Flaw
+* Sublesson 2. Access Control Flaws -> 2.2 Bypass a Path Based Access Control Scheme
+* Sublesson 8. Cross-Site Scripting (XSS) -> 8.3 Stored XSS Attacks
+* Sublesson 9. Denial of Service -> 9.1 Denial of Service from Multiple Logins
+* Sublesson 3. AJAX Security -> 3.4 DOM Injection
+* Sublesson 3. AJAX Security -> 3.5 XML Injection
+* Sublesson 3. AJAX Security -> 3.7 Silent Transactions Attacks
+* Sublesson 3. AJAX Security -> 3.1 LAB: DOM-Based cross-site scripting
+* Sublesson 3. AJAX Security -> 3.6 JSON Injection
+* Sublesson 3. AJAX Security -> 3.8 Dangerous Use of Eval
+* Sublesson 1. Introduction -> 1.1 Http Basics
+* Sublesson 15. Parameter Tampering -> 15.3 Bypass Client Side JavaScript Validation
+* Sublesson 17. Web Services -> 17.1 Create a SOAP Request
+
+Note that as the project progressed, solving ModSecurity solutions over and over resulted in standard formats and cleaner output for the solution write-ups and their artifacts (ModSecurity *.conf files, Lua scripts, HTML error files, etc.). For example, to get an example of a Lua script being used, find one later in the project because it will be more refined and clearer to understand.
+
+=== Sublessons that do not count or were not solved (and why) ===
+
+<font><u>Sublessons that do not count:</u></font>
+
+* 3. AJAX Security -> 3.3 Same Origin Policy Protection
+
+:This WebGoat lesson demonstrates a browser's same origin policy protection and as such has no vulnerability with a ModSecurity solution or any other way to illustrate similar functionality within ModSecurity. Therefore, this sublesson is not part of the total count.
+
+* 5. Buffer Overflows (not implemented by WebGoat)
+
+* 4. Authentication Flaws -> 4.1 Password Strength
+
+:This WebGoat lesson calls a 3rd party website and shows password strength (time to crack a user-supplied password that matches the criteria); as such it has no vulnerability with a ModSecurity solution or any other way to illustrate similar functionality within ModSecurity. Therefore, this sublesson is not part of the total count.
+
+* 8. Cross-Site Scripting (XSS) -> 8.6 HTTPOnly Test
+
+:See the Mitigating Solutions section for the link to this page.
+
+* 14. Insecure Storage -> 14.1 Encoding Basics
+
+:This WebGoat lesson demonstrates encoding and decoding (e.g. Base64, md5, entity, unicode); as such it has no vulnerability with a ModSecurity solution or any other way to illustrate similar functionality within ModSecurity. Therefore, this sublesson is not part of the total count.
+
+:Note: ModSecurity has many built-in encoding/decoding transformation functions - it supports each encoding/decoding function in this lesson demonstration, and more.
+
+<font><u>Sublessons that were not solved (but almost all have suggestions):</u></font>
+
+See the Mitigating Solutions section for the link to these sublessons:
+
+* 2. Access Control Flaws -> 2.3 LAB: Role Based Access Control
+
+* 3. AJAX Security -> 3.2 LAB: Client Side Filtering (no suggestion for solution)
+
+* 3. AJAX Security -> 3.9 Insecure Client Storage
+
+* 16. Session Management Flaws -> 16.1 Hijack a Session
+
+* 16. Session Management Flaws -> 16.2 Spoof an Authentication Cookie
+
+* 16. Session Management Flaws -> 16.3 Session Fixation
+
+* 17. Web Services -> 17.2 WSDL Scanning
+
+
+
+=== Unfinished business ===
+
+The following topics need to be addressed in order to use the content of this project in a real world situation.
+
+====     Concurrent file access ====
+
+In the real world, a file locking mechanism will need to be implemented for any solution that uses Lua persistence and writes data to a file. The implemention should be easy; something like the Unix file.lock mechanism: check for the lock file before opening and writing; if it doesn't exist, then create the lock and then delete when finished. For the rare occurrence that a requested file is in use, return an error message to the user saying "please try again", or implement a 'sleep' or 'wait' capability in Lua.
+
+See this thread for more information on a Lua 'wait' function:
+
+NEWBIE Question: LUA wait() function?
+
+http://lua-users.org/lists/lua-l/2008-03/msg00209.html
+
+====     Lua security in ModSecurity ====
+
+This section was created after project completion in response to 2 reviewer comments:
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+(1) I am pretty sure your Lua code is vulnerable to (Lua) Injection. 
+
+For example, in '10. Sublesson 03.5' you do:
+
+     _, _, inner1 = string.find(a, "<reward>(.-)</reward>")
+
+Then:
+
+     outstr = string.format("Entry{\n  reward = \"%s\"\n}\n\n", inner1)
+
+But you do not escape inner1.
+
+I've already raised this issue, but I wouldn't let a solution that uses this approach anywhere near my systems, for this very reason.
+
+2) As previously commented, I am terrified with your usage of dofile(), coupled with dynamically-generated code based on external data. In fact, there may be a vulnerability or two in your code. Even if there isn't, the point is that we, security professionals, should be leading the way by using foolproof techniques. We mustn't rely on things that are so easy to do wrong.
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+Security using Lua in ModSecurity is presented here as an opening discussion; anybody who wants to add to this section or have any other comments can email me at stephencraig_dot_evans_at_gmail_dot_com.
+
+
+<font><u>How this project uses Lua</u></font>
+
+A Lua script called from a ModSecurity rule returns either nil or non-nil; that result determines what action ModSecurity then takes.
+
+Inside of a Lua script, "Lua persistence" is used to read and write data to ModSecurity's SecDataDir (for this project it is '/etc/modsecurity/data'). Some of the data is for configuration such as the number of password retries. Another case is to record information culled from an HTTP response, then later compare that with user input in an HTTP POST request. 
+
+
+<font><u>The Lua 'dofile()' function</u></font>
+
+The Lua 'dofile()' function does not do anything extra that is not already in the Lua language; it is what is called in Lua lingo as 'sugarcoating'.
+
+For example, a project data file might be:
+<pre>
+Entry{
+  username = "global",
+  retry = 2,
+  interval = 3,
+  lockedout = "no",
+  current = "no"
+}
+
+Entry{
+  username = "webgoat",
+  retry = 2,
+  interval = 1216639104,
+  lockedout = "yes",
+  current = "no"
+}
+
+Entry{
+  username = "admin",
+  retry = 2,
+  interval = 0,
+  lockedout = "yes",
+  current = "no"
+}
+</pre>
+
+A function is declared in the Lua script:
+<pre>
+  function Entry (b)
+    local uame = b.username
+    local locked = b.lockedout
+    local intvl = b.interval
+    ...
+  end
+</pre>
+
+The function is called from the main Lua program:
+<pre>
+  dofile(<datafile>)
+</pre>
+
+This performs the function on each 'Entry' chunk in the data file. There's nothing magical about it: it is a convenience because it implicitly does looping and file I/O; 'dofile' could be implemented by using the existing Lua language functionality. 
+
+See Sublesson '4. Authentication Flaws -> 4.2 Forgot Password' for a more complicated use of 'dofile'.
+
+
+<font><u>Research sources for this section</u></font>
+
+Google search and the very-active, offical, Lua mailing list, lua-l, was used for researching this section. The excellent, official Lua mailing list archive, which has averaged around 700 messages per month for the last 5 years, is at: http://lua-users.org/lists/lua-l/
+
+Possible attack vectors that will be discussed in the next 3 sections are:
+
+1. The Lua engine (in ModSecurity, it is a shared object file or dll)
+
+2. Affecting the return value of the Lua script
+
+3. Malicious user data
+
+
+<font><u>The Lua engine</u></font>
+
+There have been vulnerabilities in the C code that comprises Lua, e.g. buffer overflows which have caused Denial of Service but no known vulnerabilities that have allowed code execution. Of course, that doesn't mean that there is no possibility of it, plus there is no known "seal of approval" on the Lua engine. However, in the context of Lua in ModSecurity, full compromise would be restricted to the damage that can be done with the permission levels of the Apache process on Linux; on Windows it could be much worse.
+
+
+<font><u>Affecting the return value of the Lua script</u></font>
+
+An attacker that could access the file system of the ModSecurity installation can modify a Lua-persisted file and change its settings to alter the return value of the Lua script, causing either a false positive or false negative because the ModSecurity rule will do the opposite of the expected behaviour.
+
+It must be taken into consideration that for this to occur, an attacker will already have write access to the SecDataDir with the privileges of the Apache process, and perhaps other important directories and files on the file system.
+
+
+<font><u>Malicous user data</u></font>
+
+User input written to a file that is later read from the file cannot be used maliciously to inject into any HTTP stream because ModSecurity does not have the capability to modify the HTTP request or HTTP response; therefore, any kind of malicious HTML or HTTP code is useless (there is one exception: malicious user data that is written by the Lua script to the ModSecurity debug log, then read by a Web browser).
+
+User data stored in a file can later be accessed by a project Lua script to be compared with other values. For example, using 'dofile', a loop will read in each of these values and compare them with an HTTP POST paremeter value:
+<pre>
+Entry{
+  reward = "WebGoat Mug 20 Pts"
+}
+
+Entry{
+  reward = "WebGoat t-shirt 50 Pts"
+}
+
+Entry{
+  reward = "WebGoat Secure Kettle 30 Pts"
+}
+</pre>
+
+The danger is that a malicious Lua function can be written to Lua-persisted file because it was not sanitized, so instead of:
+<pre>
+reward = "WebGoat Mug 20 Pts"
+</pre>
+
+It can be:
+<pre>
+reward = "<malicious Lua code>"
+</pre>
+
+Next, if that data is accessed in a Lua script - e.g. 'tempvar = reward' - can a malicious function be executed?
+
+The answer: maybe, but it hasn't been tested yet. A Lua function can be executed by using the Lua 'loadstring' function; e.g. loadstring(functionname .. "()"). Perhaps a malicious function can be defined at the beginning of a user input string, then be followed by the 'loadstring' function that will execute it.
+
+Some pseudo code:
+<pre>
+reward = "malfunc function() \n  <malicious code>\nend;loadstring(malfunc .. "()")
+</pre>
+
+Then, perhaps this statement will trigger the malicious function to execute:
+<pre>
+tempvar = reward
+</pre>
+
+
+<font><u>Execution of scripts and programs by Apache</u></font>
+
+If there is a syntax error in a Lua script called by a ModSecurity rule, then Apache will not start; actually, Apache acts more like a compiler in that it resolves file references and other entities.  Is it possible that Apache loads everything it is going to execute at startup? Answer: unknown.
+
+If true, then:
+
+1. Because user data is written to file during Apache runtime, dynamic execution of malicious Lua script in ModSecurity is not possible.
+
+2. Most of this section's discussion on Lua security in ModSecurity is irrelevant.
+
+3. ModSecurity will not execute malicious shell or Perl scripts constructed by a Lua script, then afterwards called by a subsequent ModSecurity rule.
+
+This can be tested by writing a malicious Lua script in a stand-alone environment, then including it in a variable that has been written to file. Then load the variable in a Lua script called by a ModSecurity rule and see if the malicious Lua script executes.
+
+
+<font><u>Potential secure Lua coding options</u></font>
+
+In a nutshell, here are recommendations and/or options for secure Lua coding in:
+
+1. Sanitize (e.g. HTML-encode) user data that is written to the debug log file; the Lua function that does this is: 'm.log(<log message>)'
+
+2. It appears that any malicious Lua code needs left and right parenthesis. If true, write a Lua encode/decode function that converts a '(' or ')' to an obscure, never-used character (in Lua) when writing user data to a file, then reverse the process when reading it from a file.
+
+3. Enforce a maximum string length of user data before writing to file. 
+
+4. In every file that reads user data from a file, disable all unnecessary Lua functionality that can be potentially dangerous, as outlined by one of the creators of Lua, Luiz Henrique de Figueiredo:
+<pre>
+local E=debug.getregistry()
+E._LOADED={}
+E._LOADLIB=nil
+E=nil
+arg=nil
+debug.debug=nil
+debug.getregistry=nil
+dofile=nil		-- this might not be needed in the particular Lua script
+io={write=io.write}	-- this might not be needed in the particular Lua script
+loadfile=nil
+os.execute=nil
+os.getenv=nil
+os.remove=nil
+os.rename=nil
+os.tmpname=nil
+package=nil
+require=nil
+loadstring = nil 	-- this one added is added for the project
+</pre>
+
+5. Deploy other solutions such as sandboxing (see References below).
+
+
+<font><u>Conclusion</u></font>
+
+Presented in this section was an opening discussion on Lua security within the context of ModSecurity.
+
+How would somebody know that Lua is being used within ModSecurity, and that ModSecurity is being used? Let's be honest: Mac, Linux, and mobile malware are virtually insignificant now because those platforms are not yet popular enough and homogeneus enough to spend the time on them. It's the same - and even far less of a risk - for using Lua in ModSecurity.
+
+To look on the bright side - the silver lining of the cloud - if Metasploit starts releasing exploits for Lua script in ModSecurity, then we've made it!
+
+
+<font><u>References</u></font>
+
+Lua script as data model (Lua security): http://lua-users.org/lists/lua-l/2008-09/msg00399.html
+
+Re: Lua script as data model (Denial of Service): http://lua-users.org/lists/lua-l/2008-09/msg00408.html
+
+Re: function calls without brackets: http://lua-users.org/lists/lua-l/2008-06/msg00067.html
+
+Re: Execute a function: http://lua-users.org/lists/lua-l/2008-08/msg00291.html; http://lua-users.org/lists/lua-l/2008-08/msg00294.html
+
+Indirect call to function and passing arguments: http://lua-users.org/lists/lua-l/2008-07/msg00267.html
+
+Secure tables in Lua?: http://lua-users.org/lists/lua-l/2008-07/msg00007.html
+
+Secure tables in Lua: Summary: http://lua-users.org/lists/lua-l/2008-07/msg00065.html
+
+Sandboxing techniques: http://lua-users.org/wiki/SandBoxes
+
+Sandboxing user code in Lua: http://lua-users.org/lists/lua-l/2008-07/msg00344.html
+
+Sandbox in Lua 5.1: http://lua-users.org/lists/lua-l/2008-05/msg00812.html
+
+Re: Loose sandbox***: http://lua-users.org/lists/lua-l/2008-07/msg00406.html
+
+=== Overall strategy ===
+
+The intention of mitigating the vulnerabilities is to demonstrate the largest variety of mitigating solutions and features of ModSecurity as possible:
+* Some lessons are solved using the easiest way possible for convenience (and to count towards achieving the goal of 50% complete!)  
+* Some lessons are solved by using rules from the core rulesets provided by Breach Security
+* Some mitigating solutions are meant to be global, meaning being in effect at all times, like the XSS and Command Injection core rules from Breach Security
+* One lesson demonstrates the use of a session variable
+* Some lessons require persistence beyond what is offered by ModSecurity; Lua scripts are used to achieve this
+* Some lessons require a more robust capability than ModSecurity's regular expressions, 'and/or' logical mechanisms, and goto statements (skip and skipAfter); again, Lua scripts are used to achieve this.
+* One lesson uses the 'append' action to append JavaScript to the end of a response body, which alters the content and behavior of the HTML page
+
+The rulesets can be used all together or, for a specific WebGoat sublesson, the initialization file (rulefile_00_initialize.conf) plus that sublesson's ruleset can be used.
+
+The best way to open the discussion about the overall strategy used is to show a chunk of the initialization file:
+
+<pre>
+<LocationMatch "^/WebGoat/attack$">
+  # Group 1: the following block pertain to pages that don't have 
+  #   Screen or menu parameters
+1.  SecRule &ARGS:Screen "!@eq 0" chain,skipAfter:200
+2.  SecRule &ARGS:menu "!@eq 0" "t:none"
+
+  # Group 2: set session collection if entering WebGoat; POST body parameter 
+  #   is "start=Start WebGoat" (Start WebGoat submit button)
+3.  SecRule &ARGS_POST:start "@eq 0" "nolog,skip:3"
+4.  SecRule ARGS_POST:start "!@streq Start WebGoat" \ 
+      "t:urlDecodeUni,t:htmlEntityDecode,skip:2"
+5.  SecRule REQUEST_COOKIES:JSESSIONID "!^$" \ 
+      "chain,log,auditlog,pass,msg:'Setting session collection'"
+6.  SecAction setsid:%{REQUEST_COOKIES.JSESSIONID} 
+7.  SecAction "log,setvar:session.lesson13=0,msg:'setting session.lesson13=0 \  
+      initially after setsid from rulefile_00-0-initialize.conf'"
+
+8.  SecAction "t:none,allow,id:'200'"
+
+  # Group 3: here there should be a 'menu' parameter, so set a variable for          
+  #   the menu number that's used if needed in Phase 4
+9.  SecRule ARGS_GET:menu "^(.*)$" "pass,setvar:tx.menu=%{MATCHED_VAR}"
+</pre>
+
+In Group 1, the two chained rules denote the major section of WebGoat after the login and start pages. The 'Screen' parameter is arbitrary, while the 'menu' parameter is the lesson key. Basically, if this condition is met, skip past Group 2.
+
+In Group 2, the next 2 rules pertain to the start page, denoted by the <font face="Courier New">'start=Start WebGoat'</font> POST body parameter. Nothing of importance occurs on this page so we skip to the 'allow' action on line 8.
+
+Line 5 and 6 denote that a successful login has occurred, so the session ID is saved in a session collection for later use throughout the remaining lessons. Line 7 sets a session variable (a toggle switch) for use in 'Lesson 13: Insecure Configuration'.
+
+At Line 9, we have to save the 'menu' value for use in Phase 4.
+
+At this point, we know the 'menu' value: it exists throughout phase 2 as is, and we have saved the value in a variable for Phase 4. 
+
+For the rest of the ruleset files, we will filter on the 'menu' parameter and each lesson will have its own ruleset file. 
+
+For example, ruleset file 'rulefile_04_authentication-flaws.conf' has 2 sections:
+
+<font face="Courier New">'SecRule ARGS:menu "!@eq 500" "phase:2,t:none,skip:2"'</font> says "if we aren't in Lesson 4 in Phase 2, then don't do any further processing here".
+
+Similarly, <font face="Courier New">'SecRule TX:MENU "!@eq 500" "phase:4,t:none,pass,skip:1"'</font> says "if we aren't in Lesson 4 in Phase 2, then don't do any further processing here".
+
+=== Reviewer comments ===
+
+For many lesson solutions, a project reviewer has made comments regarding the project's choice of a solution (or lack of one), and often also has given a "classic" ModSecurity solution to those lessons solved by using Lua script. 
+
+Reviewer comments are added at the end of each individual lesson solution write-up in its own section; to date, the following sublessons have been updated with reviewer comments:
+
+* 1. General -> 1.2 HTTP Splitting
+* 2. Access Control Flaws -> 2.4 Remote Admin Access
+* 4. Authentication Flaws -> 4.2 Forgot Password
+* 4. Authentication Flaws -> 4.4 Multi Level Login 1
+* 4. Authentication Flaws -> 4.5 Multi Level Login 2
+* 6. Code Quality -> 6.1 Discover Clues in the HTML
+* Lesson 8.0: 8. Cross-Site Scripting (XSS)] Addressing XSS attacks
+* 8. Cross-Site Scripting (XSS) -> 8.2 LAB: Cross Site Scripting
+* 8. Cross-Site Scripting (XSS) -> 8.4 Reflected XSS Attacks
+* 8. Cross-Site Scripting (XSS) -> 8.5 Cross Site Request Forgery (CSRF)
+* 8. Cross-Site Scripting (XSS) -> 8.6 HTTPOnly Test
+* 8. Cross-Site Scripting (XSS) -> 8.7 Cross Site Tracing (XST) Attacks
+* 16. Session Management Flaws -> 16.1 Hijack a Session
+* 16. Session Management Flaws -> 16.2 Spoof an Authentication Cookie
+* 16. Session Management Flaws -> 16.3 Session Fixation
+
+=== Using the Lua scripting language ===
+
+In some situations, the ModSecurity Rule Language is not flexible enough to prevent complex exploits. Enter Lua script, a tried-and-true programming language used mainly in the gaming industry but also used in other areas such as Nmap and the MySQL Proxy project.
+
+Some advantages are:
+
+# Enables ModSecurity to address business logic flaws
+# Enhances the capability of using ModSecurity as an egress filter
+# Lua persistence: Super-persistence beyond the existing Session scope and capability (the SecDataDir directory is used for storage)
+# By being able to use a programming language, it is easier to do whitelisting and implement a positive security model.
+# Flexibility for virtual patching (as in, mitigating vulnerabilities discovered in a penetration test and NOT as in porting Snort or scanner signatures). 
+# Ease-of-use: The Lua scripts can be developed and tested offline as standalone programs before being used by ModSecurity.
+# A programming language that is built to be rugged; e.g. handling multi-megabyte memory buffers and files. 
+
+In Phase 1, Lua scripts are used in sublessons:
+* 4.2:  Forgot Password (OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_04.2)
+* 4.4:  Multi Level Login 1, 4.5:  Multi Level Login 2 (OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_04.4_04.5)
+* 8.2  LAB: Cross Site Scripting (OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_08.2_08.4_08.5_08.7)
+* 15.1  Exploit Hidden Fields, 15.2  Exploit Unchecked Email (OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_15.1_15.2)
+
+In Phase 2, Lua scripts are used in sublessons:
+
+* 3. AJAX Security -> 3.4 DOM Injection
+
+* 3. AJAX Security -> 3.5 XML Injection
+
+* 3. AJAX Security -> 3.6 JSON Injection
+
+* 7. Concurrency -> 7.1 Thread Safety Problem
+:Shows the process of developing a standalone Lua script on Windows, then integrating it with ModSecurity on Linux
+
+* 7. Concurrency -> 7.2 Shopping Cart Concurrency Flaw
+: Shows how Lua can be used to handle application state; in this case, a purchase that utilizes a shopping cart.
+
+* 8. Cross-Site Scripting (XSS) -> 8.3 Stored XSS Attacks
+: Shows rudimentary output sanitization using Lua.
+
+* 9. Denial of Service -> 9.1 Denial of Service from Multiple Logins
+
+* 12. Insecure Communication -> 12.1 Insecure Login
+: Shows: (1) using JavaScript injection that adds an MD5 library on the front end in order to hash a password before being sent; (2) rebuilding the Lua engine and including a 3rd party MD5 library; and (3) hashing the expected password within a Lua script and comparing it with the client side password.
+
+The Implementation section of each sublesson explains in detail how Lua script is used.
+
+=== Using JavaScript 'prepend' and 'append' ===
+
+The JavaScript 'prepend' and 'append' ModSecurity actions and their applications are shown in sublessons:
+* 3. AJAX Security -> 3.1 LAB: DOM-Based cross-site scripting
+* 3. AJAX Security -> 3.7 Silent Transactions Attacks
+* 12. Insecure Communication -> 12.1 Insecure Login
+
+=== Structure of mitigating a lesson ===
+
+The following outlines the overall structure of each lesson/sublesson (they are used interchangeably throughout this project) to be used in the next section that contains the details of each mitigating solution:
+
+<font><u>Lesson overview:</u></font> The path and file name of the lesson plan as taken from WebGoat. See Appendix A for more information.
+
+<font><u>Lesson solution:</u></font> The path and file name of the lesson solution as taken from WebGoat. See Appendix A for more information.
+
+<font><u>Strategy (including challenges):</u></font> What approach was taken to solve the lesson and why; what were the challenges? (if any)
+
+<font><u>Implementation:</u></font> Details how the sublesson was mitigated.
+
+Note that the project's solution files that are formatted using a Linux editor with a 2-space tab. For viewing the files from Windows, it's preferable to use Wordpad instead of Notepad because Notepad might add CR/LF combinations. Still, using Notepad and the files in DOS format on Linux should pose no problems but using Wordpad is recommended.
+
+<font><u>Comment(s):</u></font> Any comments on the solution.
+
+=== The mitigating solutions ===
+
+Following are links to the mitigating solution pages. Some may link to the same page if their sublesson is solved by the same rule or by a group of rules in the same *.conf file. 
+
+Two asterisks (**) next to a sublesson denotes that it has not been solved but there are suggestions to solve it.
+Four asterisks (****) next to a sublesson indicates that there is no solution and the reason.
+
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_01.1 Sublesson 1.1: HTTP Basics]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_01.2 Sublesson 1.2: HTTP Splitting]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_02.2 Sublesson 2.2: Bypass a Path Based Access Control Scheme]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_02.3 Sublesson 2.3: LAB: Role Based Access Control] **
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_02.4 Sublesson 2.4: Remote Admin Access]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_03.1 Sublesson 3.1: LAB: DOM-Based cross-site scripting]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_03.2 Sublesson 3.2: LAB: Client Side Filtering] ****
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_03.4 Sublesson 3.4: DOM Injection]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_03.5 Sublesson 3.5: XML Injection]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_03.6 Sublesson 3.6: JSON Injection]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_03.7 Sublesson 3.7: Silent Transactions Attacks]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_03.8 Sublesson 3.8: Dangerous Use of Eval]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_03.9 Sublesson 3.9: Insecure Client Storage] **
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_04.2 Sublesson 4.2: Forgot Password]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_04.4_04.5 Sublesson 4.4: Multi Level Login 1]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_04.4_04.5 Sublesson 4.5: Multi Level Login 2]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_06.1 Sublesson 6.1: Discover Clues in the HTML]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_07.1 Sublesson 7.1: Thread Safety Problem]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_07.2 Sublesson 7.2: Shopping Cart Concurrency Flaw]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_08.0 Lesson 8: Cross-Site Scripting (XSS)] (Addressing XSS attacks - Reviewer comments)
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_08.2_08.4_08.5_08.7 Sublesson 8.1: Phishing with XSS]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_08.2_08.4_08.5_08.7 Sublesson 8.2: LAB: Cross Site Scripting]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_08.3 Sublesson 8.3: Stored XSS Attacks]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_08.2_08.4_08.5_08.7 Sublesson 8.4: Reflected XSS Attacks]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_08.2_08.4_08.5_08.7 Sublesson 8.5: Cross Site Request Forgery (CSRF)]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_08.2_08.4_08.5_08.7 Sublesson 8.7: Cross Site Tracing (XST) Attacks]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_08.6 Sublesson 8.6: HTTPOnly Test] **
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_09.1 Sublesson 9.1: Denial of Service from Multiple Logins]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_10.1 Sublesson 10.1: Fail Open Authentication Scheme]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_11.1_11.2_11.3_11.4_11.5_11.6_11.7_11.8 Sublesson 11.1: Command Injection]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_11.1_11.2_11.3_11.4_11.5_11.6_11.7_11.8 Sublesson 11.2: Blind SQL Injection]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_11.1_11.2_11.3_11.4_11.5_11.6_11.7_11.8 Sublesson 11.3: Numeric SQL Injection]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_11.1_11.2_11.3_11.4_11.5_11.6_11.7_11.8 Sublesson 11.4: Log Spoofing]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_11.1_11.2_11.3_11.4_11.5_11.6_11.7_11.8 Sublesson 11.5: XPATH Injection]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_11.1_11.2_11.3_11.4_11.5_11.6_11.7_11.8 Sublesson 11.6: String SQL Injection]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_11.1_11.2_11.3_11.4_11.5_11.6_11.7_11.8 Sublesson 11.7: LAB: SQL Injection]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_11.1_11.2_11.3_11.4_11.5_11.6_11.7_11.8 Sublesson 11.8: Database Backdoors]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_12.1 Sublesson 12.1: Insecure Login]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_13.1 Sublesson 13.1: Forced Browsing]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_15.1_15.2 Sublesson 15.1: Exploit Hidden Fields]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_15.1_15.2 Sublesson 15.2: Exploit Unchecked Email]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_15.3 Sublesson 15.3: Bypass Client Side JavaScript Validation]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_16.1 Sublesson 16.1: Hijack a Session] **
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_16.2 Sublesson 16.2: Spoof an Authentication Cookie] **
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_16.3 Sublesson 16.3: Session Fixation] **
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_17.1 Sublesson 17.1: Create a SOAP Request]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_17.2 Sublesson 17.2: WSDL Scanning] **
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_17.3_17.4 Sublesson 17.3: Web Service SAX Injection]
+# [http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_17.3_17.4 Sublesson 17.4: Web Service SQL Injection]

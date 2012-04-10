@@ -1,0 +1,115 @@
+= Introduction  =
+
+'''Authentication''' is the process of verification that an individual or an entity is who it claims to be. Authentication is commonly performed by submitting a user name or ID and one or more items of private information that only a given user should know. 
+
+'''Session Management''' is a process by which a server maintains the state of an entity interacting with it. This is required for a server to remember how to react to subsequent requests throughout a transaction. Sessions are maintained on the server by a session identifier which can be passed back and forward between the client and server when transmitting and receiving requests. Sessions should be unique per user and computationally very difficult to predict. 
+
+For more information on Authentication, please see the OWASP [[Guide to Authentication]] page.
+
+= Authentication General Guidelines  =
+
+== Implement Proper Password Strength Controls  ==
+
+A key concern when using passwords for authentication is password strength. A "strong" password policy makes it difficult or even improbable for one to guess the password either by using manual or automated means. The following characteristics define strong a strong password: 
+
+=== Password Length  ===
+
+Longer passwords provide a greater combination of characters and consequently make it more difficult for an attacker to guess. 
+
+'''Important applications''': Minimum of 6 characters in length. 
+
+'''Critical applications''': Minimum of 8 characters in length. (consider multi-factor authentication) 
+
+'''Highly critical applications''': Consider multi-factor authentication 
+
+=== Password complexity  ===
+
+'''Example'''<br>Passwords should be checked for the following composition or a variance of such: 
+
+*at least: 1 uppercase character (A-Z) 
+*at least: 1 lowercase character (a-z) 
+*at least: 1 digit (0-9) 
+*at least: 1 special character (!"£$%&amp;...) 
+*a defined minimum length (e.g. 8 chars) 
+*a defined maximum length (as with all external input) 
+*no contiguous characters (e.g. 123abcd) 
+*not more than 2 identical characters in a row (1111)
+
+== Implement Secure Password Recovery Mechanism  ==
+
+It is common for an application to have a mechanism that provides a means for a user to gain access to their account in the event they forget their password. Please see [https://www.owasp.org/index.php/Forgot_Password_Cheat_Sheet https://www.owasp.org/index.php/Forgot_Password_Cheat_Sheet] for details on this feature.
+
+== Require re-authentication for Sensitive Features ==
+
+In order to mitigate CSRF and session hijacking, it's important to require the current credentials for an account before updating sensitive account information such as the user's password, users email, or before sensitive transactions, such as shipping a purchase to a new address.  Without this countermeasure an attacker may be able to execute sensitive transactions through a CSRF or XSS attack, without needing to know the user's current credentials.  Additionally an attacker may get temporary physical access to a user's browser or by using a session riding attack.
+
+== Utilize Multi-Factor Authentication  ==
+
+Multifactor factor authentication is using more than one of: 
+
+*Something you know (account details or passwords) 
+*Something you have (tokens or mobile phones) 
+*Something you are (biometrics)
+
+to logon or process a transaction. 
+
+Authentication schemes such as One Time Passwords (OTP) implemented using a hardware token can also be&nbsp;key&nbsp;in fighting attacks such as CSRF and client-side malware. 
+
+== Authentication and Error Messages  ==
+
+Incorrectly implemented error messages in the case of authentication functionality can be used for the purposes of user ID and password enumeration. 
+
+'''An application should respond (both HTTP and HTML)&nbsp;in a generic manner which is not unique to the error condition or authentication failure.''' 
+
+==== Authentication responses  ====
+
+An application should respond with a generic error message regardless if the user ID or password was incorrect. It should also give no indication to the status of an existing account.
+
+==== Incorrect responses examples  ====
+
+*"Login for User foo: invalid password" 
+*"Login failed, invalid user ID" 
+*"Login failed; account disabled" 
+*"Login failed; this user is not active"
+
+==== Correct response example  ====
+
+*"Login failed; Invalid user&nbsp;ID or password"
+
+The correct response does not indicate if the user ID or password is the incorrect parameter and hence inferring a valid user ID. 
+
+==== Error Codes and URL's  ====
+
+The application may return a different HTTP Error code depending on the authentication attempt response. It&nbsp;may respond with a 200 for a positive result and a 403 for a negative result. Even though a generic error page is shown to a user, the HTTP response code may differ which can indicate a signature.
+
+== Transmit Passwords Only Over TLS  ==
+
+See: "Transport Layer Protection Cheat Sheet" 
+
+[http://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet http://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet] 
+
+"The login page and all subsequent authenticated pages must be exclusively accessed over TLS. The initial login page, referred to as the "login landing page", must be served over TLS. Failure to utilize TLS for the login landing page allows an attacker to modify the login form action, causing the user's credentials to be posted to an arbitrary location. Failure to utilize TLS for authenticated pages after the login enables an attacker to view the unencrypted session ID and compromise the user's authenticated session." 
+
+== Implement Account Lockout  ==
+
+If an attacker is able to guess passwords without the account becoming disabled due to failed authentication attempts, the attacker has an opportunity to continue with a brute force attack until the account is compromised. 
+
+Automating brute-force/password guessing attacks on web applications is a trivial challenge. Password lockout mechanisms should be employed that lock out an account if more than a preset number of unsuccessful login attempts are made. 
+
+Password lockout mechanisms have a logical weakness. An attacker that undertakes a large numbers of authentication attempts on known account names can produce a result that locks out entire blocks of application users accounts. 
+
+Given that the intent of a password lockout system is to protect from brute-force attacks, a sensible strategy is to lockout accounts for a number of hours. This significantly slows down attackers, while allowing the accounts to be open for legitimate users.
+
+= Session Management General Guidelines  =
+
+Session management is directly related to authentication. The '''Session Management General Guidelines''' previously available on this OWASP Authentication Cheat Sheet have been integrated into the new [https://www.owasp.org/index.php/Session_Management_Cheat_Sheet OWASP Session Management Cheat Sheet]. 
+
+= Related Articles  =
+
+{{Cheatsheet_Navigation}} 
+
+= Authors and Primary Editors  =
+
+Eoin Keary eoinkeary[at]owasp.org 
+
+[[Category:Cheatsheets]]

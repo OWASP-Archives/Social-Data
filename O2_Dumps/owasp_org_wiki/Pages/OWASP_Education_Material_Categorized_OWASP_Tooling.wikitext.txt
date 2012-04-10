@@ -1,0 +1,98 @@
+<includeonly>===</includeonly>= OWASP Tooling =<includeonly>===</includeonly>
+An [[:Category:OWASP_Project |'''OWASP Project''']] is a collection of related tasks that have a defined roadmap and team members. OWASP project leaders are responsible for defining the vision, roadmap, and tasks for the project. The project leader also promotes the project and builds the team. Tools and documents are organized into the following categories:
+PROTECT - These are tools and documents that can be used to guard against security-related design and implementation flaws.
+DETECT - These are tools and documents that can be used to find security-related design and implementation flaws.
+LIFE CYCLE - These are tools and documents that can be used to add security-related activities into the Software Development Life Cycle (SDLC).
+
+<hr><br>''' Protect:'''
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#FFFFFF; color:white"|<font color="white">
+'''[[:Category:OWASP_AntiSamy_Project|OWASP AntiSamy Java Project]] ''' 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Beginner''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Experienced''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Expert''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Video's ''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training video 
+|}
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#FFFFFF; color:white"|<font color="white">
+'''[[:Category:OWASP_Enterprise_Security_API|OWASP Enterprise Security API (ESAPI) Project]] ''' 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Beginner''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Experienced''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Expert''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+|}
+
+<br>''' Detect:'''
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#FFFFFF color:white"|<font color="white">
+'''[[:Category:OWASP_Live_CD_Project|OWASP Live CD Project]]''' 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Beginner''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Experienced''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Expert''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+|}
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#FFFFFF color:white"|<font color="white">
+'''[[:Category:OWASP_WebScarab_Project|OWASP WebScarab Project]]''' 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Beginner''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Experienced''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Expert''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+|}
+
+<br>''' Life Cycle:'''
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#FFFFFF color:white"|<font color="white">
+'''[[:Category:OWASP_WebGoat_Project|OWASP WebGoat Project]]''' 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Beginner''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Experienced''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Expert''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+|}

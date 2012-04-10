@@ -1,0 +1,35 @@
+[[Project Information:template Source Code Review OWASP Projects|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#Source Code Review OWASP Projects|OWASP Source Code Review OWASP-Projects Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#Source Code Review OWASP Projects|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+#No projects submitted to Fortify Open Source Review (FOR), as Fortify is updating the application.
+#"Preliminary Workflow" will probably need to be revised after a few projects have been submitted to FOR.
+#"Project Creation Workflow" assumes that the project already exists in accordance with how the Fortify Open Source Review (FOR) project operates. This workflow will probably need to be revised after a few projects have been submitted to FOR.
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#Source Code Review OWASP Projects|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+#Team of workflow reviewers finalized (100%)
+#Preliminary Workflow (100%)
+#Project Creation Workflow (100%)
+#Projects Submitted (0%) 
+  
+ |- 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+#With regard to the "Preliminary Workflow", it may be possible to simplify the workflow by taking out the "Is it a fixed version?" decision-point and configuring all projects as "continuous build". That may also allow a project to be re-started in the future without having to create a new project. It seems like this is more likely to happen with an open source project.

@@ -1,0 +1,87 @@
+== Welcome to the OWASP Tampa Local Chapter  ==
+
+<paypal>Tampa</paypal> 
+
+Anyone in our area interested in information security is welcome to attend. Our meetings are informal and encourage open discussion of all aspects of application security. We invite attendees to give short presentations about specific topics. 
+
+We have a mailing list at: https://lists.owasp.org/mailman/listinfo/owasp-tampa 
+
+If you have any questions about the Tampa chapter, please send an email to the chapter leader [http://scr.im/mascasa Justin Morehouse]. 
+
+The Tampa chapter is sponsored by [http://www.guidepointsecurity.com GuidePoint Security].
+
+Join the OWASP Tampa LinkedIn group [http://www.linkedin.com/groups?about=&gid=2897535&trk=anet_ug_grppro here]. 
+
+A reminder that CISSPs can earn 1 CPE credit for every hour of attendance at OWASP meetings.
+
+== Next Meeting  ==
+
+Our next meeting will be held on Wednesday, March 28 from 6pm to 8pm at Kforce in Ybor. Bill Church of F5 Networks will be presenting 'Inside Anonymous: Lessons Learned' and Stuart Hancock of DBNetworks will be presenting 'Protecting Against SQLi in Real-Time.' Abstract and bios for the presentations and presenters is below.
+
+This quarter's meeting agenda is as follows:
+
+*5:45 PM to 6:00 PM - Check-in 
+*6:00 PM to 6:45 PM - Protecting Against SQLi in Real-Time - Stuart Hancock, Director of Systems Engineering, DBNetworks
+*6:45 PM to 7:00 PM - Break 
+*7:00 PM to 7:45 PM - Inside Anonymous: Lessons Learned - Bill Church, Field Systems Engineer - Federal, F5 Networks
+*7:45 PM to 8:00 PM - Open Discussion Forum
+
+'''Protecting Against SQLi in Real-Time - Stuart Hancock, Director of Systems Engineering, DBNetworks'''
+
+Weekly,  there are news reports of new SQL injection attacks on corporate databases throughout the country.  While applications which are free from vulnerabilities are always the best solution, a better backstop is clearly needed.  Existing solutions are unable to defend against this threat.  DBNetworks will present its vision for a future technology which will protect against new and unique SQL injection attacks in real-time.  
+
+''Prior to coming on board at DBNetworks as the Director of Systems Engineering, Stuart was the Enterprise Cloud Program Manager at Cisco Systems; prior to that, he held positions at Cisco as a consulting engineer and HPC architect, and has worked in the past for a number of startups as well as EMC, IPivot (acquired by Intel for $500M), Intel, and Wang Laboratories.''   
+
+'''Inside Anonymous: Lessons Learned - Bill Church, Field Systems Engineer - Federal, F5 Networks'''
+
+Lessons learned from F5 customers who have been attacked by Anonymous and survived. We will walk through attacks complete with logs and captures showing how the attacks arrived and how were ultimately thwarted. We will also share tips for tuning your systems during an attack.
+
+''Bill has been in the information security space since 1998 both as customer, consultant, and an engineer. He was dropped in the deep end of a dot com website in the early 2000s in the days of Code Red and Nimda and and had to learn security the hard way. Bill is a firm believer in "know thy enemy and know thy self", you can't effectively secure yourself if you don't understand how the bad guys think and operate. He enjoys long walks on the beach and a fine single malt scotch.''
+
+== Meeting Location  ==
+
+We meet quarterly at the [http://www.kforce.com Kforce] building in Ybor. The address is: 
+
+[http://maps.google.com/maps?q=1001+East+Palm+Ave.+Tampa,+FL+33605&ll=27.962452,-82.449324&spn=0.008908,0.01929&oe=UTF-8&fb=1&gl=us&cid=0,0,7292050205277130420&z=16&iwloc=A 1001 East Palm Ave. Tampa, FL 33605] 
+
+Park in the Visitor spaces in the main parking lot that is off of East Palm Avenue. You will need to identify yourself at the security desk and ask how to get to Training Room B. 
+
+== Presentation Archives  ==
+
+2011-Q4 - How Not to Build Android Apps - Jack Mannino - Presentation Slides [https://www.owasp.org/images/8/86/HowNotToBuildAndroidApps2.pdf here]
+
+2011-Q4 - Behind Enemy Lines: Practical & Triage Approaches to Mobile Security Abroad - Justin Morehouse - Presentation Slides [http://www.slideshare.net/mascasa/behind-enemy-lines-practical-triage-approaches-to-mobile-security-abroad here] 
+
+2011-Q3 - Hiding in Plain Sight - Ramece Cave - Presentation Slides [https://www.owasp.org/images/2/28/Hiding_in_Plain_Sight.pdf here] 
+
+2011-Q3 - PCI Compliance 2.0 - Kate Mullin - Presentation Slides [https://www.owasp.org/images/6/67/PCI_Compliance_9_2011.pdf here] 
+
+OWASP Tampa Day 2011 - PCI for Developers: Lessons from the Real World - Trevor Hawthorn - Presentation Slides [https://www.owasp.org/images/f/f7/OTD2011-TH.pdf here] 
+
+OWASP Tampa Day 2011 - Top Website Vulnerabilities: Trends, Business Effects and How to Fight Them - Rinaldi Rampen - Presentation Slides [https://www.owasp.org/images/a/aa/OTD2011-RR.pdf here] 
+
+OWASP Tampa Day 2011 - How to Defend the Universe from Evil-doers: A Guide for Software Developers and Security Teams - Bruce Jenkins - Presentation Slides [https://www.owasp.org/images/1/12/OTD2011-BJ.pdf here] 
+
+OWASP Tampa Day 2011 - Analysis of Deadly Combination of XSS and CSRF - Sherif Koussa - Presentation Slides [https://www.owasp.org/images/8/8c/OTD2011-SK.pdf here] 
+
+2011-Q1 - Real Lessons of Deploying Static Analysis in Development Groups - Jeff LoSapio - Presentation Slides [http://www.owasp.org/images/3/3b/TampaOWASP_March2011.pdf here] 
+
+2011-Q1 - Intelligence Gathering for Penetration Testers: Opening Doors with Metadata - Chris Patten - Presentation Slides [http://www.owasp.org/images/a/ae/Intel_pen_owasp_Q1_2011.pdf here] 
+
+2011-Q1 - Vulnerability Management in an IPv6 World - Richard Newman &amp; Brett McKinney - Presentation Slides [http://www.owasp.org/images/f/fa/Vulnerability_Scanning_in_an_IPv6_World.pdf here] 
+
+2010-Q4 - Nessus Bridge for Metasploit - Zate Berg - Presentation Slides [http://www.scribd.com/doc/41173753/Nessus-Bridge-for-Metasploit here] 
+
+2010-Q2 - Stealing Guests...The VMware Way - Justin Morehouse &amp; Tony Flick - Presentation slides [http://www.fyrmassociates.com/pdfs/Stealing_Guests_The_VMware_Way-ShmooCon2010.pdf here] 
+
+2010-Q1 - The New World of Smartphone Security - Trevor Hawthorn - Presentation slides [http://www.stratumsec.net/sites/default/files/Stratum%20Security-The%20New%20World%20of%20Smartphone%20Security-Shmoocon%202010.pdf here] 
+
+2009-Q3 - Hacking the Smart Grid - Tony Flick - Presentation slides [http://www.owasp.org/images/d/df/HackingTheSmartGrid-OWASP_Tampa.pdf here] 
+
+2009-Q2 - Open SAMM - Zate Berg - Presentation slides [https://www.owasp.org/images/c/c3/Software_Assurance_Maturity_Model.pdf here] 
+
+2009-Q1 - XSS Anonymous Browser - Matt Flick - Presentation slides [https://www.owasp.org/images/b/bb/BlackHat-DC-09-Flick-XAB_Slides.pdf here] 
+
+2008-Q4 - Google Code Search&nbsp;: The pitfalls of Copy/Paste - Tony Flick - Presentation slides [https://www.owasp.org/images/5/5b/GoogleCodeSearch.pdf here] 
+
+[[Category:OWASP_Chapter]] [[Category:Florida]]

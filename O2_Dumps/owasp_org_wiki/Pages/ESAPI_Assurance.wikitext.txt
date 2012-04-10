@@ -1,0 +1,35 @@
+== Building an Assurance Case for ESAPI ==
+
+* [https://buildsecurityin.us-cert.gov/daisy/bsi/articles/knowledge/assurance/643-BSI.html  Arguing Security - Creating Security Assurance Cases]
+
+* summary: make Claims, provide supporting Evidence, and make Arguments for how the evidence supports the claims
+
+* Highest level claim is "The system is Acceptably Secure" but how to break this down into sub-claims that map to the provided evidence?  e.g. absence of specific vulns (as investigated by manual testing or tool scans)
+
+* Hey! How about an explicit threat model??? Especially, what are our assumptions.
+
+* claims could be summarized using a   [http://swaconsortium.org/projects/softwareFacts/softwareFacts.html Software Facts Label]
+
+* each language (Java, ASP, etc.) may need separate claims
+
+* list the third-party software
+
+* discuss coding practices that were followed, skill levels of developers, amount of independent review
+
+* publish scanning tool results.  "Tool X, using rule set R on date D,  was run against ESAPI version Y using configuration Z, and found this set of results with this amount of code coverage."
+
+== Coding Practices ==
+
+* was OWASP Top Ten followed?
+
+* how was performance and security balanced?
+
+* what is the level of training of the developers?  amount of experience in web development?
+
+* were tools part of the whole process or run at the end?
+
+* how was code repository prevented from unauthorized alterations?
+
+* practices for code check-in and independent review - how is introduction of Trojans avoided?
+
+* what threat level is being accounted for (e.g. will this only work against script kiddies)?  was threat modeling used? (No; I wish!)

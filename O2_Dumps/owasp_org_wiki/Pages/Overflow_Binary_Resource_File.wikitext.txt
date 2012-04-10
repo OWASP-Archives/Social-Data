@@ -1,0 +1,110 @@
+{{Template:Attack}}
+<br>
+[[Category:OWASP ASDR Project]]
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+==Description==
+The source of a buffer overflow may be input data.
+When it comes from the  Overflow Binary Resource File, the attacker has to modify/prepare the binary file in such a way that the
+application, after reading this file, has become prone to a classic [[Buffer overflow attack]]. The only difference between this attack
+and the classic one is the source of the input data. Common examples are specially crafted MP3, JPEG or ANI files, which cause buffer overflows.
+
+==Risk Factors==
+TBD
+
+==Examples ==
+The application reads the first 8 characters from the binary file.
+<pre>
+rezos@dojo-labs ~/owasp/binary $ cat read_binary_file.c
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+       FILE *f;
+       char p[8];
+       char b[8];
+
+       f = fopen("file.bin", "r");
+       fread(b, sizeof(b), 1, f);
+       fclose(f);
+
+       strcpy(p, b);
+
+       printf("%s\n", p);
+
+       return 0;
+}
+</pre>
+The crafted file contains more than 8 characters.
+<pre>
+rezos@dojo-labs ~/owasp/binary $ cat file.bin
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+</pre>
+After an attempt to run one more time, the application will end with:
+<pre>
+rezos@dojo-labs ~/owasp/binary $ ./read_binary_file
+Segmentation fault
+</pre>
+Failure. Was it buffer overflow?
+<pre>
+rezos@dojo-labs ~/owasp/binary $ gdb -q ./read_binary_file
+Using host libthread_db library "/lib/libthread_db.so.1".
+(gdb) r
+Starting program: /home/rezos/owasp/binary/read_binary_file
+
+Program received signal SIGSEGV, Segmentation fault.
+0xb7e4b9e3 in strcpy () from /lib/libc.so.6
+</pre>
+Yes, that was a buffer overflow in a strcpy() function.
+
+Why?
+
+fread(b, sizeof(b), 1, f); -  reads characters from the stream f, sizeof(b) once, to the buffer b. It looks OK.
+However there is no room for a '\0', which terminates the string.
+
+Whiile executing strcpy(p, b); where both buffers are equal, overflow takes place. What causes it is the absence of the
+null byte/terminating character in a buffer b[]. The strcpy() function will copy into the buffer p[] everything starting
+in b[0] and ending on the null byte. The attacker has successfully conducted the buffer overflow attack by crafting a
+special file.
+
+* Use safe equivalent functions, which check the buffer length, whenever possible.
+
+Namely:
+*gets() -> fgets()
+*strcpy() -> strncpy()
+*strcat() -> strncat()
+*sprintf() -> snprintf()
+
+* Those functions which don't have safe equivalents should be rewritten with safe checks implemented. Time spent on that will benefit in the future. Remember that you have to do it only once.
+
+* Use compilers, which are able to identify unsafe functions, logic errors, and check if the memory is overwritten when and where it shouldn't be.
+
+==Related [[Threat Agents]]==
+* [[:Category:Command_Execution]]
+
+==Related [[Attacks]]==
+* [[Buffer overflow attack]]
+* [[Format string attack]]
+
+==Related [[Vulnerabilities]]==
+* [[Format String]]
+* [[Heap overflow]]
+
+==Related [[Controls]]==
+* [[Bounds Checking]]
+* [[Safe Libraries]]
+* [[Static Code Analysis]]
+* [[Executable space protection]]
+* [[Address space layout randomization (ASLR)]]
+* [[Stack-smashing Protection (SSP)]]
+
+
+==References==
+* http://capec.mitre.org/data/definitions/44.html
+
+
+[[Category:Data Structure Attacks]]
+[[Category:Attack]]

@@ -1,0 +1,204 @@
+== Overview ==
+
+If you are performing an application security verification according to the [[::Category:OWASP_Application_Security_Verification_Standard_Project |OWASP Application Security Verification Standard (ASVS)]] verification requirements, then you will need to document the results according to ASVS reporting requirements. The ASVS prescribes four sets of reporting requirements:
+*R1 - Report Introduction Reporting Requirements'''
+*R2 - Application Description Reporting Requirements'''
+*R3 - Application Security Architecture Reporting Requirements'''
+*R4 - Verification Results Reporting Requirements'''
+
+
+The ASVS reporting requirements define the type of information that is required to be present in the report. The ASVS reporting requirements '''do not''' define the structure or formatting of the report. The ASVS reporting requirements '''do not''' preclude additional information from being included in the report. 
+
+
+The type of information that is required by each set of ASVS reporting requirements may be named, formatted, and organized according to a verifier’s requirements. '''ASVS reporting requirements will still be met as long as the required information is present.'''
+
+
+For example, a verification customer may expect a verifier’s report to look a certain way and to contain certain sections. The existing customer report structure can be updated to accommodate this situation by including the additional information required by ASVS reporting requirements: new subsections may be added to existing ones, new sections may be added at the end of the report or in appendices, and so on.
+
+== Example: Meeting Report Introduction Requirements ==
+
+The R1 - Report Introduction Reporting Requirements state:
+
+
+''“This part of the Report shall provide sufficient information to identify both the Report and the web application that is the subject of the report. The Report introduction shall also summarize the overall verdict.”''
+
+
+The above requirements can be met by including sections that look like the sample stub sections below. 
+
+
+    '''1. VERIFICATION REPORT INTRODUCTION'''
+            
+    This section identifies the Verification Report (VR) 
+    and the Target of Verification (TOV). It also identifies
+    VR conformance claims, and the VR organization. The TOV 
+    is <insert application name> provided by <insert 
+    developer name>. <insert application name> is <insert 
+    1-2 sentence description of what the application does>.
+         
+    The Verification Report contains the following
+    additional sections:
+        
+        *Section 2: The Target of Verification (TOV)
+        Description. This section describes the TOV
+        implementation.
+    
+        *Section 3: Assumptions. This section describes the 
+        assumptions made during verification.
+    
+        *Section 4: Verification Requirements. This section 
+        identifies the OWASP ASVS verification requirements that 
+        the verification was performed against.
+    
+        *Section 5: <insert level-specific verification 
+        technique name here> Process. This section describes the 
+        verification methodology that was used to determine if 
+        ASVS verification requirements were met or not.
+    
+        *Section 6: Verification Results. This section documents 
+        the results of the verification, including pass/fail 
+        verdicts for OWASP ASVS verification requirements that 
+        the verification was performed against.
+       
+    '''1.1 APPLICATION AND OWASP ASVS IDENTIFICATION'''
+      
+    Verification Report Version – <insert version of this 
+    document>
+    
+    TOV Identification – <name and version of the application>
+    
+    TOV Developer – <insert name of the developer or 
+    verification customer>
+    
+    OWASP ASVS Identification – OWASP Application Security 
+    Verification Standard – Web Edition 2008 (Beta), 
+    December 2008
+        
+    '''1.2 CONFORMANCE CLAIMS'''
+       
+    This TOV is conformant to the following OWASP 
+    specifications:
+        
+        *OWASP Application Security Verification Standard – Web 
+        Edition 2008 (Beta), December 2008. Level <insert ASVS 
+        level> Conformant.
+
+== Example: Meeting Application Description Requirements ==
+
+The R2 - Application Description Reporting Requirements state:
+
+
+''“This part of the Report shall provide sufficient description of the web application to aid the understanding of its operation and the environment that it operates in.”''
+
+
+The above requirements can be met by including sections that look like the sample stub sections below.
+
+
+    '''2. TOV DESCRIPTION'''
+      
+    '''2.1 TOV OVERVIEW'''
+      
+    <insert 1-2 paragraphs describing in layman’s terms at a 
+    high level what the application is and does>
+
+
+== Example: Meeting Application Security Architecture Reporting Requirements ==
+
+The R3 - Application Security Architecture Reporting Requirements state (in part):
+
+
+''“This part of the Report shall provide additional detail describing the web application as the first step in providing confidence to the reader of the report that the analysis that was performed was both complete and accurate. This part of the Report provides context for the analysis. The information presented in this section will be used in the course of the analysis to identify inconsistencies.”''
+
+
+The above requirements can be met by including sections that look like the sample stub sections below.
+
+
+    '''2.1 TOV ARCHITECTURE'''
+     
+    The TOV can be described in terms of the following 
+    components:
+      
+        *<application component name> – <1-2 sentence 
+        description>
+    
+        *<application component name> – <1-2 sentence 
+        description>
+    
+        *<application component name> – <1-2 sentence 
+        description>
+    
+    The intended environment of the TOV can be described in 
+    terms of the following components:
+      
+        *<environment component name> – <1-2 sentence 
+        description>
+    
+        *<environment component name> – <1-2 sentence 
+        description>
+    
+        *<environment component name> – <1-2 sentence 
+        description>
+    
+    <insert additional description here, depending on ASVS 
+    level; examples of IT environment components are 
+    application servers and operating systems.>
+
+== Example: Meeting Verification Results Requirements ==
+
+The R4 - Verification Results Reporting Requirements state (in part):
+
+
+''“This part of the Report shall provide the results of the analysis that was performed according to section “Verification Requirements” of the Standard, including description of any remediation of vulnerabilities that was required…”''
+
+
+The above requirements can be met by including sections that look like the sample stub sections below.
+
+
+    '''6. VERIFICATION RESULTS'''
+     
+    '''6.1 V1 – SECURITY ARCHITECTURE VERIFICATION RESULTS'''
+     
+    <insert what are likely proprietary result formats that 
+    include necessary ASVS reporting requirement information 
+    here, including pass/fail verdicts for each ASVS 
+    verification requirement>
+      
+    '''6.2 V2 – AUTHENTICATION VERIFICATION RESULTS'''
+      
+    '''6.3 V3 – SESSION MANAGEMENT VERIFICATION RESULTS'''
+        
+    '''6.4 V4 – ACCESS CONTROL VERIFICATION RESULTS'''
+        
+    '''6.5 V5 – INPUT VALIDATION VERIFICATION RESULTS'''
+    
+    '''6.6 V6 – OUTPUT ENCODING/ESCAPING VERIFICATION 
+    '''RESULTS'''
+    
+    '''6.7 V7 – CRYPTOGRAPHY VERIFICATION RESULTS'''
+    
+    '''6.8 V8 – ERROR HANDLING AND LOGGING VERIFICATION 
+    '''RESULTS'''
+    
+    '''6.9 V9 – DATA PROTECTION VERIFICATION RESULTS'''
+    
+    '''6.10 V10 – COMMUNICATION SECURITY VERIFICATION 
+    '''RESULTS'''
+    
+    '''6.11 V11 – HTTP SECURITY VERIFICATION RESULTS'''
+    
+    '''6.12 V12 – SECURITY CONFIGURATION VERIFICATION 
+    '''RESULTS'''
+    
+    '''6.13 V13 – MALICIOUS CODE SEARCH VERIFICATION 
+    '''RESULTS'''
+    
+    '''6.14 V14 – INTERNAL SECURITY VERIFICATION RESULTS'''
+
+
+== Helpful Hints ==
+
+*Note how the above did not include sections 3, 4 or 5, as defined within the first example. '''This is an example of how the OWASP ASVS does not prescribe formatting or structure.''' The information is likely helpful for a reader of the verification report, but is not strictly required by ASVS reporting requirements.
+*Try organizing verification results according to application components, then verification requirement sections with application components, if you have a complicated application.
+*Try organizing verification results according to verification levels, then tool/technique, then application components, if you need to generate separate reports (e.g. code review results go to one team, architecture results go to another team).
+
+[[Category:OWASP Application Security Verification Standard Project]]
+[[Category:How To]]

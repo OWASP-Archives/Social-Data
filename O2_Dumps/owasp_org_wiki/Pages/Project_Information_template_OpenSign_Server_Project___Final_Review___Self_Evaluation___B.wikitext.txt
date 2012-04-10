@@ -1,0 +1,67 @@
+[[Project Information:template OpenSign Server Project|Clik here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''FINAL REVIEW''' 
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART I''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications#Online code signing and integrity verification service for open source community (OpenSign Server)|OWASP OpenSign Server Project's Deliveries & Objectives]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#Online code signing and integrity verification service for open source community (OpenSign Server)|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+
+At this point the core functionality of the OpenSign project has been developed and tested. This includes the issuing and verifying of certificates within a client server infrastructure. Users must be authenticated and approved by an issuer to use the issuing-service. The issuing is done easily by making use of the client application or online via a web-form. However, OpenSign is not an independent solution for code signing yet. It relies on java-keytool (or an application with the same intention) to generate the client side keys and the certificate sign requests. There is no graphical interface for the client in place. Also the support of .NET code signing was not taken into account yet.
+
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#Online code signing and integrity verification service for open source community (OpenSign Server)|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+
+OpenSign Server: 80%
+
+Client Tools – OSSJClient: 90%
+
+Documentation: 80% 
+
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+none
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART II''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Assessment Criteria
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[:Category:OWASP Project Assessment|OWASP Project Assessment Criteria]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Alpha Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Beta Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+3. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Release Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+* Be run through Fortify Software's open source review (if appropriate) and FindBugs
+ |-  
+ | style="width:25%; background:#7B8ABD" align="center"|
+4. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+|}

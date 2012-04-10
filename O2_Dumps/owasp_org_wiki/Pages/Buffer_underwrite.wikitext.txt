@@ -1,0 +1,89 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+<br>
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+A buffer underwrite condition occurs when a buffer is indexed with a negative number, or pointer arithmetic with a negative value results in a position before the beginning of the valid memory location.
+
+'''Consequences'''
+
+*	Availability: Buffer underwrites will very likely result in the corruption of relevant memory, and perhaps instructions, leading to a crash.
+*	Access Control (memory and instruction processing): If the corrupted memory can be effectively controlled, it may be possible to execute arbitrary code. If the corrupted memory is data rather than instructions, the system will continue to function with improper changes, ones made in violation of a policy, whether explicit or implicit.
+*	Other: When the consequence is arbitrary code execution, this can often be used to subvert any other security service. 
+
+'''Exposure period'''
+
+*	Requirements specification: The choice could be made to use a language that is not susceptible to these issues.
+*	Implementation: Many logic errors can lead to this condition. It can be exacerbated by lack of or misuse of mitigating technologies.
+
+'''Platform'''
+
+*	Languages: C, C++, Assembly
+*	Operating Platforms: All
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood of exploit'''
+
+Medium
+
+==Risk Factors==
+TBD
+
+==Examples ==
+
+The following is an example of code that may result in a buffer underwrite, should find() returns a negative value to indicate that ''ch'' is not found in srcBuf: 
+
+<pre>
+int main() {
+  ...  
+  strncpy(destBuf, &srcBuf[find(srcBuf, ch)], 1024);
+  ...
+}
+</pre>
+
+If the index to srcBuf is somehow under user control, this is an arbitrary write-what-where condition.
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+==Related [[Vulnerabilities]]==
+
+* [[Buffer Overflow]] (and related issues)
+* [[Integer overflow]]
+* [[Signed to unsigned conversion error]]
+* [[Unchecked array indexing]]
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+* Requirements specification: The choice could be made to use a language that is not susceptible to these issues.
+* Implementation: Sanity checks should be performed on all calculated values used as index or for pointer arithmetic. 
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+
+[[Category:Vulnerability]]
+[[Category:Range and Type Error Vulnerability]]
+[[Category:OWASP_CLASP_Project]]
+[[Category:Implementation]]
+[[Category:Code Snippet]]
+[[Category:C]]
+[[Category:OWASP ASDR Project]]

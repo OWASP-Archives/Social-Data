@@ -1,0 +1,62 @@
+{{LinkBar
+  | useprev=PrevLink | prev=Code Review Preparation | lblprev=Preparation
+  | usemain=MainLink | main=OWASP Code Review Guide Table of Contents | lblmain=Table of Contents
+  | usenext=NextLink | next=Security Code Review Coverage | lblnext=
+}}
+__TOC__
+
+Security code reviews vary widely in their level of formality. Reviews can be as informal as inviting a friend to help look for a hard-to-find vulnerability, and they can be as formal as a software inspection process with trained teams, assigned roles and responsibilities, and a formal metric and quality tracking program. 
+
+In ''Peer Reviews in Software,'' Karl Wiegers lists seven review processes from least to most formal:
+
+# Ad hoc review
+# Passaround
+# Pair programming
+# Walkthrough
+# Team review
+# Inspection
+
+
+Throughout the SDLC there are points at which an application security consultant should get involved. Performing security activities across the lifecycle has proven to be far more cost-effective than either a “big design up front” security effort or a single pre-production security review.  The reason for intervening at regular intervals is that potential issues can be detected early on in the development life cycle where they are less costly to address. 
+
+Integration of security code review into the System Development Life Cycle (SDLC) can yield dramatic results to the overall quality of the code developed. Security code review is not a silver bullet, but is part of a healthy application development diet. Consider it as one of the layers in a defense-in-depth approach to application security. Security code review is also a cornerstone of the approach to developing secure software. The idea of integrating a phase into your SLDC may sound daunting, yet another layer of complexity or an additional cost, but in the long term and in today's cyber landscape it is cost effective, reputation building, and in the best interest of any business to do so. 
+
+'''Waterfall SDLC Example'''
+
+# Requirements definition 
+##Application Security Requirements
+# Architecture and Design 
+##Application Security Architecture and/or Threat Model
+#Development 
+##Secure Coding Practices
+##Security Testing
+##Security Code Review
+#Test 
+##Penetration Testing
+#Deployment 
+##Secure Configuration Management
+##Secure Deployment
+#Maintenance 
+
+
+[[Image:Code_Review_-_SDLC1.jpg]]
+
+'''Agile Security Methodology Example'''
+#Planning
+##Identify Security Stakeholder Stories
+##Identify Security Controls
+##Identify Security Test Cases
+#Sprints
+##Secure Coding
+##Security Test Cases
+##Peer Review with Security
+#Deployment
+##Security Verification (with Penetration Testing and Security Code Review)
+
+{{LinkBar
+  | useprev=PrevLink | prev=Code Review Preparation | lblprev=Preparation
+  | usemain=MainLink | main=OWASP Code Review Guide Table of Contents | lblmain=Table of Contents
+  | usenext=NextLink | next=Security Code Review Coverage | lblnext=
+}}
+
+[[Category:OWASP Code Review Project]]

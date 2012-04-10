@@ -1,0 +1,48 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Project About</noinclude>
+| project_name = OWASP ModSecurity Core Rule Set Project
+| project_home_page = :Category:OWASP ModSecurity Core Rule Set Project
+
+| project_description = 
+[http://www.modsecurity.org/ ModSecurity] is an Apache web server module that provides a web application firewall engine. The ModSecurity Rules Language engine is extrememly flexible and robust and has been referred to as the "Swiss Army Knife of web application firewalls." While this is certainly true, it doesn't do much implicitly on its own and requires rules to tell it what to do. In order to enable users to take full advantage of ModSecurity out of the box, we have developed the Core Rule Set (CRS) which provides critical protections against attacks across most every web architecture.
+
+Unlike intrusion detection and prevention systems, which rely on signatures specific to known vulnerabilities, the CRS is based on generic rules which focus on attack payload identification in order to provide protection from zero day and unknown vulnerabilities often found in web applications, which are in most cases custom coded.  
+
+| project_license = [http://www.apache.org/licenses/LICENSE-2.0.txt Apache Software License v2 (ASLv2)] 
+
+| leader_name1 = Ryan Barnett
+| leader_email1 = Ryan.Barnett@owasp.org
+| leader_username1 = Rcbarnett 
+
+| contributor_name1 = Breno Silva
+| contributor_email1 = 
+| contributor_username1 = 
+
+| pamphlet_link = 
+
+| presentation_link = http://www.owasp.org/images/b/b3/OWASP_ModSecurity_Core_Rule_Set.ppt
+
+| mailing_list_name = https://lists.owasp.org/mailman/listinfo/owasp-modsecurity-core-rule-set
+
+| project_road_map = http://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project_-_Roadmap
+
+| links_url1 = https://sourceforge.net/projects/mod-security/files/modsecurity-crs/0-CURRENT/
+| links_name1 = ModSecurity on SourceForge
+| links_url2 = https://www.modsecurity.org/tracker/browse/CORERULES
+| links_name2 = Bug Tracker
+| links_url3 = http://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project#tab=Installation
+| links_name3 = Installation
+| links_url4 = http://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project#tab=Documentation
+| links_name4 = Documentation
+| links_url5 = http://www.owasp.org/index.php/File:OWASP_ModSecurity_Core_Rule_Set.ppt
+| links_name5 = PPT Presentation
+| links_url6 = https://www.owasp.org/images/0/07/OWASP6thAppSec_ModSecurityCoreRuleSet_OferShezaf.pdf
+| links_name6 = PDF Withepaper 
+
+| release_1 = ModSecurity 2.0.6
+| release_2 = ModSecurity 2.0.10 
+| release_3 = ModSecurity 2.0.12
+| release_4 = ModSecurity 2.1.2
+| release_5 = 
+<!--- The line below is for GPC usage only. Please do not edit it --->
+| project_about_page = Projects/OWASP ModSecurity Core Rule Set Project
+}}

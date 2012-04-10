@@ -1,0 +1,16 @@
+<includeonly>
+{| border="1"
+|-  
+|colspan="2" align="left" | {{#if: {{{tool_name|}}} | {{{tool_name}}} | N/A }}
+|colspan="2" align="left" | {{#if: {{{tool_owner|}}} | {{{tool_owner}}} | N/A }}
+|colspan="2" align="left" | {{#if: {{{tool_website|}}} | {{{tool_website}}} | N/A }}
+|colspan="2" align="left" | {{#if: {{{tool_licence|}}} | {{{tool_licence}}} | N/A }}
+|colspan="2" align="left" | {{#if: {{{tool_stable_release|}}} | {{{tool_stable_release}}} | N/A }}
+|colspan="2" align="left" | {{#if: {{{tool_release_date|}}} | {{{tool_release_date}}} | N/A }}
+|colspan="2" align="left" | {{#if: {{{tool_platforms|}}} | {{{tool_platforms}}} | N/A }}
+|colspan="2" align="left" | {{#if: {{{tool_technologies|}}} | {{{tool_technologies}}} | N/A }}
+|-
+|}</incldueonly>
+<noinclude>
+Tool information template.
+</noinclude>

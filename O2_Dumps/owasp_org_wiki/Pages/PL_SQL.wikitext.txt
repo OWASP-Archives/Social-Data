@@ -1,0 +1,17 @@
+PL/SQL (Procedural Language/Structured Query Language) is Oracle Corporation's proprietary procedural extension to the SQL database language. Some other SQL database management systems offer similar extensions to the SQL language. PL/SQL's syntax strongly resembles that of Ada.
+
+The key strength of PL/SQL is its tight integration with the Oracle database.
+
+PL/SQL is one of three languages embedded in the Oracle Database, the other two being SQL and Java.
+
+* [[PL/SQL:SQL Injection]]
+* [[PL/SQL:Cursor Injection]]
+* [[PL/SQL:Dangling Cursor Snarfing]]
+* [[PL/SQL:Buffer overflow]]
+* [[PL/SQL:Privilege escalation]]
+
+http://en.wikipedia.org/wiki/PL/SQL
+
+[[Category:OWASP Oracle Project]]
+[[Category:Development]]
+[[Category:Language]]

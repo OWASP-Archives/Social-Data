@@ -1,0 +1,167 @@
+This page is intended to provide assistance and directions to authors of the 2007 Top 10 Vulnerabilities list, that is, this page is meant to help '''you'''. The Wiki version is intended to be modified by the OWASP community at large. The thought behind this is summed up best by the old adage:
+ "None of us are as smart as all of us." ''My Grandmother''
+
+So, if you know of any preventative measures to add that have been omitted, learn about a new variant of an existing vulnerability, or feel you have anything to add. Go for it!
+
+__TOC__
+
+==Top Ten Editing Etiquitte==
+While it is understood that changes to the Wiki version will not be scrutinized as intensely as the English PDF version of the document has been (months of review including Beta, RC1, and RC2), the Wiki version is still intended to maintain a high degree of quality. If you intend on making any significant changes or are unsure of your changes or simply do not know how to get started, the best way to proceed is to start a discussion. Pick the most appropriate page in the Wiki, click the ''Discussion'' link at the top and ask propose your change, ask your question, or whatever. 
+
+One less-obvious feature of the discussion pages is that you can create threads of conversation by clicking on the "+" tab (it only appears when you are on the discussion tab). Also, it is typical to sign your discussions with four tildes such as 
+ <nowiki>~~~~</nowiki>
+This signs your comment with your username as well as the current time and date. For example, four tildes produces the following for me:
+ [[User:Neil Smithline|Neil Smithline]] 22:43, 13 May 2007 (EDT)
+It gets expanded when the page is saved so that subsequent people joining the decision will not see four tildes but rather your signature.
+
+Should you feel that you need to modify the templates used in the Top 10, see [[#A Word About The Templates]]
+
+==Getting Started==
+To help you improve the Top 10 list we have put together this page including pointers to the Wiki pages used in the Top 10. We have also added some links to tutorials in the OWASP Wiki and in the [[http://en.wikipedia.org Wikipedia]] as they both use [[http://www.mediawiki.org MediaWiki]] and the Wikipedia has a much more extensive help system in place. Please be sure you have read and are familiar with the [[#Top Ten Editing Etiquitte|editing etiquitte]] section above.
+
+==Content Pages==
+{|- border="1" cellpadding="2"|colspan="2"
+!style="background:#FFFF99"|Page Link
+!style="background:#FFFF99"|Edit Link
+!style="background:#FFFF99"|Contents of Page
+|-
+|[[Top_10_2007]]
+|[https://www.owasp.org/index.php?title=Top_10_2007&action=submit edit]
+|The main page.
+|-
+|[[Top 10 2007-Methodology]]
+|[https://www.owasp.org/index.php?title=Top_10_2007-Methodology&action=submit edit]
+|The methodology section.
+|-
+|[[Top 10 2007-Cross Site Scripting]]<br>
+[[Top 10 2007-A1]]<br>
+[[Top 10 2007-XSS]]
+|[https://www.owasp.org/index.php?title=Top_10_2007-Cross_Site_Scripting&action=submit edit]
+|A1: XSS vulnerability
+|-
+|[[Top 10 2007-Injection Flaws]]<br>
+[[Top 10 2007-A2]]
+|[https://www.owasp.org/index.php?title=Top_10_2007-Injection_Flaws&action=submit edit]
+|A2: Injection Flaws
+|-
+|[[Top 10 2007-Malicious File Execution]]<br>
+[[Top 10 2007-A3]]
+|[https://www.owasp.org/index.php?title=Top_10_2007-Malicious_File_Execution&action=submit edit]
+|A3: Malicious File Execution
+|-
+|[[Top 10 2007-Insecure Direct Object Reference]]<br>
+[[Top 10 2007-A4]]
+|[https://www.owasp.org/index.php?title=Top_10_2007-Insecure_Direct_Object_Reference&action=submit edit]
+|A4: Insecure Direct Object Reference
+|-
+|[[Top 10 2007-Cross Site Request Forgery]]<br>
+[[Top 10 2007-A5]]
+[[Top 10 2007-CSRF]]
+|[https://www.owasp.org/index.php?title=Top_10_2007-Cross_Site_Request_Forgery&action=submit edit]
+|A5: Cross Site Request Forgery
+|-
+|[[Top 10 2007-Information Leakage and Improper Error Handling]]<br>
+[[Top 10 2007-Improper Error Handling]]<br>
+[[Top 10 2007-Information Leakage]]<br>
+[[Top 10 2007-A6]]
+|[https://www.owasp.org/index.php?title=Top_10_2007-Information_Leakage_and_Improper_Error_Handling&action=submit edit]
+|A6: Information Leakage and Improper Error Handling
+|-
+|[[Top 10 2007-Broken Authentication and Session Management]]<br>
+[[Top 10 2007-Broken Authentication]]<br>
+[[Top 10 2007-Session Management]]<br>
+[[Top 10 2007-A7]]
+|[https://www.owasp.org/index.php?title=Top_10_2007-Broken_Authentication_and_Session_Management&action=submit edit]
+|A7: Broken Authentication and Session Management
+|-
+|[[Top 10 2007-Insecure Cryptographic Storage]]<br>
+[[Top 10 2007-A8]]
+|[https://www.owasp.org/index.php?title=Top_10_2007-Insecure_Cryptographic_Storage&action=submit edit]
+|A8: Insecure Cryptographic Storage
+|-
+|[[Top 10 2007-Insecure Communications]]<br>
+[[Top 10 2007-A9]]
+|[https://www.owasp.org/index.php?title=Top_10_2007-Insecure_Communications&action=submit edit]
+|A9: Insecure Communications
+|-
+|[[Top 10 2007-Failure to Restrict URL Access]]<br>
+[[Top 10 2007-A10]]
+|[https://www.owasp.org/index.php?title=Top_10_2007-Failure_to_Restrict_URL_Access&action=submit edit]
+|A10: Failure to Restrict URL Access
+|-
+|[[Top 10 2007-Where to Go From Here]]
+|[https://www.owasp.org/index.php?title=Top_10_2007-Where_to_Go_From_Here&action=submit edit]
+|Where to Go From Here
+|-
+|[[Top 10 2007-References]]
+|[https://www.owasp.org/index.php?title=Top_10_2007-References&action=submit edit]
+|References
+|}
+
+==Markup Used==
+{| border="1" cellpadding="2"
+!style="background:#FFFF99"|Markup or Style
+!style="background:#FFFF99"|When used
+|-
+|<nowiki> = </nowiki>
+|H1 - Never used in top 10
+|-
+|<nowiki> == </nowiki>
+|H2 - used as main headers within a page. Will be appear in TOC if one is included.
+|-
+|<nowiki> === </nowiki>
+|H3 - used as second-level headers within a page. Will not appear in TOC by default.
+|-
+|<nowiki> &amp;lt; and &amp;gt; </nowiki>
+|Used instead of &lt; and &gt; when used as strings as compared to HTML tags. Sometimes the Wiki allows &lt; and &gt; to go through without using the escapes but sometimes it does bad things. For example 
+ <code><nowiki>"&lt;b&gt;" '''BOLD''' notbold</nowiki></code> 
+actually produces 
+ <code>"<b>" '''BOLD''' notbold</b></code>
+Probably not what was desired.
+|-
+|<nowiki> __NOTOC__ </nowiki>
+|Prevents default display of TOC which happens as soon as there is a total of four or more H1 (shouldn't be used) or H2 headers.
+|-
+|<nowiki> __TOC__ </nowiki>
+|Forces creation of a TOC at that point - even if a TOC would otherwise have not been generated.
+|-
+|<nowiki> &amp;ldquo; and &amp;rdquo; </nowiki>
+|Used as &ldquo;double quote characters&rdquo; where needed.
+|-
+|<nowiki> &amp;lsquo; and &amp;rsquo; </nowiki>
+|Used as &lsquo;singe quote characters&rsquo; where needed.
+|-
+|<nowiki> &lt;code&gt; and &lt;/code&gt;</nowiki>
+|Used to dilineate <code>code (fixed-width font, slightly gray background)</code>.
+|}
+
+
+==Template Pages==
+{| border="1" cellpadding="2"
+!width="50%" style="background:#FFFF99"|Page Link
+!width="50%" style="background:#FFFF99"|Contents of Page
+|-
+|[[Template:Top_10_2007:TopTemplate]]
+|Template to produce the top of the page.
+|-
+|[[Template:Top_10_2007:BottomTemplate]]
+|Template to produce the bottom of the page.
+|-
+|[[Template:PrevLink]]
+|Template to produce link to previous page in [[Template:Top_10_2007:TopTemplate]] and [[Template:Top_10_2007:BottomTemplate]].
+|-
+|[[Template:MainLink]]
+|Template to produce link to the [[Top_10_2007 main page]] in [[Template:Top_10_2007:TopTemplate]] and [[Template:Top_10_2007:BottomTemplate]].
+|-
+|[[Template:Nothing]]
+|Template that produces nothing. It is used by [[Template:Top_10_2007:TopTemplate]] and [[Template:Top_10_2007:BottomTemplate]] to produce nothing. For example, [[Top 10 2007]] has no previous nor main link so the Nothing template is called instead.
+|-
+|[[Template:FIXUP]]
+|Template that produces FIXUP notes. The template takes two arguments. The first is a name identifying the user (could be full name, username, initials, it is simply for identification) who added the FIXUP tag. The second is a comment about what needs to be fixed up. For example, '''<nowiki>{{FIXUP|Neil Smithline|Demo of FIXUP}}</nowiki>''' produces {{FIXUP|Neil Smithline|Demo of FIXUP}}.
+|}
+
+==General Wiki Help==
+See [[Help:Contents]].
+
+==A Word About The Templates==
+Templates are a complex yet very helpful feature in MediaWiki. The Top 10 list uses them to define the look-and-feel as well as the navigation of the site. Be especially careful before touching these as a minor change a template can frequently have surprising affects on pages you didn't even realize would be affected. It is strongly suggested you have familiarity with [http://en.wikipedia.org/wiki/Help:Template Wikipedia's Template Help] and [http://en.wikipedia.org/wiki/Help:Advanced_templates Wikipedia's Advanced Templates Help] before changing them. If you have any doubt, start a discussion on either the template page you are looking to modify or this page.

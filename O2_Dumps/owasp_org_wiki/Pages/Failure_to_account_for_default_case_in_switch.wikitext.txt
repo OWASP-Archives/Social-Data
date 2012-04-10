@@ -1,0 +1,124 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+The failure to account for the default case in switch statements may lead to complex logical errors and may aid in other, unexpected security-related conditions.
+
+'''Consequences'''
+
+Undefined: Depending on the logical circumstances involved, any consequences may result: e.g., issues of confidentiality, authentication, authorization, availability, integrity, accountability, or non-repudiation.
+
+'''Exposure period'''
+
+Implementation: This flaw is a simple logic issue, introduced entirely at implementation time.
+
+'''Platform'''
+
+* Language: Any
+* Platform: Any
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Undefined.
+
+'''Likelihood of exploit'''
+
+Undefined.
+
+This flaw represents a common problem in software development, in which not all possible values for a variable are considered or handled by a given process. Because of this, further decisions are made based on poor information, and cascading failure results. 
+
+This cascading failure may result in any number of security issues, and constitutes a significant failure in the system. In the case of switch style statements, the very simple act of creating a default case can mitigate this situation, if done correctly. 
+
+Often however, the default cause is used simply to represent an assumed option, as opposed to working as a sanity check. This is poor practice and in some cases is as bad as omitting a default case entirely.
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+In general, a safe switch statement has this form:
+
+<pre>
+switch (value) {       
+  case 'A':            
+    printf("A!\n");            
+    break;        
+  case 'B':            
+    printf("B!\n");            
+    break;        
+  default:            
+    printf("Neither A nor B\n");    
+}
+</pre>
+
+This is because the assumption cannot be made that all possible cases are accounted for. A good practice is to reserve the default case for error handling.
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* Undefined: A logical flaw of this kind might lead to any number of other flaws.
+
+
+==Related [[Controls]]==
+
+* Implementation: Ensure that there are no unaccounted for cases, when adjusting flow or values based on the value of a given variable. In switch statements, this can be accomplished through the use of the default label.
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Range and Type Error Vulnerability]]
+[[Category:Generic Logic Error Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

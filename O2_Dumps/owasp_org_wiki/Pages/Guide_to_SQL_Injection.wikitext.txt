@@ -1,0 +1,79 @@
+==Overview==
+
+A [[SQL injection]] attack consists of insertion or "injection" of a SQL query via the input data from the client to the application. A successful SQL injection exploit can read sensitive data from the database, modify database data (Insert/Update/Delete), execute administration operations on the database (such as shutdown the DBMS), recover the content of a given file present on the DBMS file system and in some cases issue commands to the operating system. 
+SQL injection attacks are a type of  [[Top 10 2007-Injection Flaws | injection attack]], in which SQL commands are injected into data-plane input in order to effect the execution of predefined SQL commands.
+
+==Threat Modeling==
+* SQL injection attacks allow attackers to spoof identity, tamper with existing data, cause repudiation issues such as voiding transactions or changing balances, allow the complete disclosure of all data on the system, destroy the data or make it otherwise unavailable, and become administrator of the database server. 
+* SQL Injection is very common with PHP and ASP applications due to a lack of awareness that the issue even existed by the neophyte programmers who frequently implemented them.  That SQL injections are found more often in PHP and ASP code is a reflection more of the experience level of the programmers who use them than of the tools themselves.  Competent programmers, aware of the issue, can use any language or interface and avoid the problem entirely, frequently speeding up the application in the process.
+* The severity of SQL Injection attacks is limited by the attackers' skill and imagination, and to a greater extent, defense in depth countermeasures, such as low privilege connections to the database server and so on. In general, consider SQL Injection a high impact severity.
+
+==Related Security Activities==
+
+===Description of SQL Injection Vulnerabilities===
+
+See the OWASP article on [[SQL Injection]] Vulnerabilities.
+
+See the OWASP article on [[Blind_SQL_Injection]] Vulnerabilities.
+
+===How to Review Code for SQL Injection Vulnerabilities===
+
+See the [[:Category:OWASP Code Review Project|OWASP Code Review Guide]] article on how to [[Reviewing Code for SQL Injection|Review Code for SQL Injection]] Vulnerabilities.
+
+===How to Test for SQL Injection Vulnerabilities===
+
+See the [[:Category:OWASP Testing Project|OWASP Testing Guide]] article on how to [[Testing for SQL Injection  (OWASP-DV-005)|Test for SQL Injection]] Vulnerabilities.
+
+==How to Avoid SQL Injection Vulnerabilities==
+
+There are two complementary and successful methods of mitigating SQL Injection attacks:
+* Parameterized queries using bound, typed parameters
+* Careful use of parameterized stored procedures. 
+Parameterized queries are the easiest to adopt, and work in fairly similar ways among most web technologies in use today, including:
+
+* Java
+* .NET
+* Perl
+* PHP
+
+===Parameterized Queries with Bound Parameters===
+
+Parameterized queries keep the query and data separate through the use of placeholders known as "bound" parameters. For example in Java, this looks like this:
+
+ "select * from table where columna=? and columnb=?"
+
+The developer must then set values for the two ? placeholders. Note that using this syntax without actually using the placeholders and setting values provides no protection against SQL injection.
+
+===Parameterized Stored Procedures===
+
+The use of parameterized stored procedures is an effective mechanism to avoid most forms of SQL Injection. In combination with parameterized bound queries, it is very unlikely that SQL injection will occur within your application. However, the use of dynamic code execution features can allow SQL Injection as shown below:
+
+<tt>
+create proc VulnerableDynamicSQL(@userName nvarchar(25))
+as
+  declare @sql nvarchar(255)
+  set @sql = 'select * from users where UserName = ''' 
+    + @userName + ''''
+  exec sp_executesql @sql
+</tt>
+(MS SQL example from http://dotnetjunkies.com/WebLog/chris.taylor/archive/2004/10/13/28370.aspx)
+
+The above example still allows SQL Injection as it allows dynamic injection of arbitrary string data. This is also true of Java / PL/SQL and MySQL's stored procedure support.
+
+===Least privilege connections===
+
+Always use accounts with the minimum privilege necessary for the application at hand, never “sa”, “dba”, “admin”, or the equivalent.
+
+===WARNING: Escaping table names===
+
+You must be very vigilant about mitigating SQL Injection when users supply table names, so in general it is best never to allow them to do so free-form.  Allowing users to supply table names in free form seems to be a common issue with PHP forum software. 
+
+<tt>$tablename = mysql_real_escape_string($tablename)</tt> 
+
+is simply not safe and cannot be made so. 
+
+In general:
+
+* Avoid using dynamic table names if at all possible. 
+* If you have to use dynamic table names, do not accept them from the user if at all possible.
+* If you have to allow user-supplied table names, use your database management system's functionality for quoting identifiers.  PostgreSQL, for example, supplies a quote_ident() function for this purpose.  If your database management system does not have such functionality, you must assume that its other countermeasures against attacks from outside are insufficient to fend off anything, and should migrate off that database management system as soon as you can.

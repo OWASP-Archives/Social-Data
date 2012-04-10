@@ -1,0 +1,58 @@
+{| style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="6" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Internationalization Project''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="6" style="width:85%; background:#cccccc" align="left"|The main goal of OWASP is to spread the word about security (“Our mission is to make application security "visible," so that people and organizations can make informed decisions about application security risks.”) and OWASP has done great work so far :). And now it’s time for a next big step. The number of native and secondary speakers in the world for Chinese, Spanish, French, Russian, Arabic and Indi languages are estimated in similar number to English speaking or even more (Some References at Ethnologue, Encarta, Wikipedia). I think is a good time for OWASP to reach those that do not speak English to have full access to all the OWASP materials, not just a couple of documents. OWASP, while open to translations, do not have clear guidelines on how to translate OWASP contents and (AFAIK) there is no multi-language support in OWASP.org site. This is understandable as there is no formal project for internationalization so far.  
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Email Contacts'''
+ | style="width:14%; background:#cccccc" align="center"|Project Leader<br>[mailto:juan.calderon(at)ge.com '''Juan Carlos Calderon''']
+ | style="width:14%; background:#cccccc" align="center"|Project Contributors<br>[mailto:to(at)change '''Name&Email''']
+ | style="width:14%; background:#cccccc" align="center"|[https://lists.owasp.org/mailman/listinfo/owasp-internationalization-guidelines '''Mailing List/Subscribe''']
+[mailto:OWASP-Internationalization-Guidelines(at)lists.owasp.org '''Mailing List/Use''']
+ | style="width:14%; background:#cccccc" align="center"|First Reviewer<br>[mailto:fabio.e.cerullo(at)aib.ie '''Fabio Cerullo''']<br>[https://www.owasp.org/index.php/User:Fabio.e.cerullo '''Curriculum''']<br>
+ | style="width:14%; background:#cccccc" align="center"|Second Reviewer<br>[mailto:rodrigo(at)rmarcos.com '''Rodrigo Marcos''']<br> [https://www.owasp.org/index.php/User:Rodrigo.marcos '''Curriculum''']
+ | style="width:15%; background:#cccccc" align="center"|OWASP Board Member<br>'''X'''
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="6" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT MAIN LINKS''' 
+ |-
+ | style="width:100%; background:#cccccc" align="center"|
+* (If appropriate, links to be added)
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="6" align="center" style="background:#4058A0; color:white"|<font color="white">'''RELATED PROJECTS''' 
+ |-
+ | style="width:100%; background:#cccccc" align="center"|
+[[:OWASP Spanish|OWASP Spanish Project]]
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="6" align="center" style="background:#4058A0; color:white"|<font color="white">'''SPONSORS & GUIDELINES''' 
+ |-
+ | style="width:50%; background:#cccccc" align="center"|[[OWASP Summer of Code 2008|Sponsor - '''OWASP Summer of Code 2008''']] 
+ | style="width:50%; background:#cccccc" align="center"|[[OWASP Summer of Code 2008 Applications#Internationalization Guidelines and OWASP-Spanish Project|'''Sponsored Project/Guidelines/Roadmap''']]
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="5" align="center" style="background:#4058A0; color:white"|ASSESSMENT AND REVIEW PROCESS
+ |-
+ | style="width:15%; background:#6C82B5" align="center"|'''Review/Reviewer''' 
+ | style="width:21%; background:#b3b3b3" align="center"|'''Author's Self Evaluation'''<br>(applicable for Alpha Quality & further) 
+ | style="width:21%; background:#b3b3b3" align="center"|'''First Reviewer'''<br>(applicable for Alpha Quality & further)
+ | style="width:21%; background:#b3b3b3" align="center"|'''Second Reviewer'''<br>(applicable for Beta Quality & further)
+ | style="width:22%; background:#b3b3b3" align="center"|'''OWASP Board Member'''<br>(applicable just for Release Quality) 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''50% Review''' 
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes'''<br>---------<br>[[Project Information:template Internationalization Guidelines - 50 Review - Self Evaluation - A|See&Edit:50% Review/Self-Evaluation (A)]]
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes'''<br>---------<br>[[Project Information:template Internationalization Guidelines - 50 Review - First Reviewer - C|See&Edit: 50% Review/1st Reviewer (C)]]
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes'''<br>---------<br>[[Project Information:template Internationalization Guidelines 50 Review Second Review E|See&Edit: 50%Review/2nd Reviewer (E)]]
+ | style="width:22%; background:#C2C2C2" align="center"|X 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Final Review''' 
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes''' <br>---------<br>Which status has been reached?<br>'''Season of Code''' - Beta Level<br>---------<br>[[Project Information:template Internationalization Guidelines - Final Review - Self Evaluation - B|See&Edit: Final Review/SelfEvaluation (B)]]
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes''' <br>---------<br>Which status has been reached?<br>'''Season of Code''' - Beta Level<br>---------<br>[[Project Information:template Internationalization Guidelines - Final Review - First Reviewer - D|See&Edit: Final Review/1st Reviewer (D)]]
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes''' <br>---------<br>Which status has been reached?<br>'''Season of Code''' - Beta Level<br>---------<br>[[Project Information:template Internationalization Guidelines - Final Review - Second Reviewer - F|See&Edit: Final Review/2nd Reviewer (F)]]
+ | style="width:22%; background:#C2C2C2" align="center"|X
+ |-
+ |}

@@ -1,0 +1,258 @@
+{| 
+! width="350" align="left"|
+! width="250" align="center" | 
+! width="300" align="center" | 
+|-
+| align="center"|[[Image:Owasp_au2009_conf_logo.jpg]]
+|}
+
+== Presentations ==
+
+The following presentation abstracts are provided to understand the details of the presentations. This year OWASP will be video recording the event again and all videos will be kept online and available through the OWASP wiki.
+
+
+== Christian Heinrich ==
+'''TCP Input Text & Download Indexed Cache'''
+
+Two Proof of Concept (PoC) will be demonstrated that implement the Google SOAP Search API to support the "reconnaissance" phase of a Penetration Test:
+
+	1. "Download Indexed Cache", which retrieves content indexed within the Google Cache to support the testing specified in the "Search Engine Reconnaissance" section of the recently released OWASP Testing Guide v3, which is a superior methodology to the Google Hacking Database (GHDB).
+
+	2. "TCP Input Text", which extracts TCP Ports and hostnames from Google Search Results into a .csv file and executes nmap and/or nc aka netcat for assurance of a listening TCP service.
+
+Mitigating controls, such as <META> Tags and robots.txt, based on the recommendations within the "Spiders/Robots/Crawlers" section of the recently released OWASP Testing Guide v3, will be presented.
+
+== Andrew Vanderstock ==
+'''The future (and past) of web application security: how to detect and protect against value attacks.'''
+
+2008 was a bumper year for value attacks. Criminals are finally getting over the sophomoric desire to 0wn large numbers of hosts, turning their attention to getting a lot of money instead. This is bad if you have stuff the criminals want.
+
+Unfortunately, web application scanners (source and dynamic) cannot easily (if at all) detect or scan for this entire class of attack - you need to do the hard work.
+
+In this presentation, you'll learn how to:
+
+* Figure out where the value in your application is
+* Identify weaknesses in your processes by identifying all the paths to your assets
+* Protect your application against value and process attacks by careful and minor changes to your design
+* Identify if folks are trying to do "interesting" things using ESAPI's intrusion detector classes
+
+With some luck, there might even be a demo!
+
+
+Andrew van der Stock is a leading web application researcher active in the builder web application community. Andrew has recently returned from a two year stint working in the USA.
+
+Andrew is the project lead and lead author for the following OWASP projects:
+
+* OWASP Developer Guide 3.0
+* OWASP Top 10 2009
+* ESAPI for PHP port
+
+He is looking for contributors to all of the above projects. He helped start the Melbourne and Sydney OWASP chapters. Previously, Andrew was Executive Director of OWASP from 2005 to 2007.
+
+He is the moderator of webappsec@securityfocus.com, and has contributed the web application section of the SANS Top 20 since 2005.
+He helped set the SANS GSSP Secure Programmer (Java) certification, and thus is deemed to hold this certification as he literally knows all the answers (he peeked).
+
+In previous lives, he has assisted with the following open source projects:
+
+    * UltimaBB, forum software - fork of XMB
+    * XMB, forum software
+    * SAGE-AU President of SAGE AU in 2000-2001, General Committee member 1999-2000, and a long time member.
+    * pnm2ppa HP print drivers for Unix and work-alike systems
+    * XFree86 Device drivers for Matrox Millennium I/II/Mystique (mid 90's vintage stuff)
+
+In his now copious spare time, Andrew continues to run AussieVeeDubbers, one of Australia's largest car forums, and one of the world's largest VW car forums.
+
+
+== Ranjita Shankar Iyer ==
+'''A Prescriptive approach to Secure SDLC'''
+
+The old adage goes “Prevention is better than cure”. Similarly, many security vulnerabilities can be easily prevented if security was taken into consideration at the beginning of the development process. As application security professionals, we’ve seen that uncovering serious vulnerabilities and subsequent attempts to repair with production-ready applications significantly increase costs to the enterprise and delay project timelines. Moreover, despite the immense amount of literature on application vulnerabilities we find that developers are still unaware or only have very limited knowledge of common threats and secure coding practices. This often leads to the commonly sighted flaws such as the following:
+- Implementation of client-side controls only that are easily bypassed
+- Incorrect implementation of regular expressions to block XSS and SQL injection attacks
+- Including too much sensitive business logic in applications that utilize FLEX and other RIA technologies
+- Insecure use of API's and frameworks such as struts and spring
+There are a number of commercial secure coding tools that facilitate developers to incorporate security controls upfront during the development and build process, but commercial products tend to be expensive, and not practical to provide to every developer. Commercial products are also a black-box to developers and enterprise security teams, where it’s unclear on how vulnerabilities were identified.
+ 
+Leveraging our expertise in the field, we have developed an extensive data grid that maps standard security requirements (grouped into categories such as User Authentication, Input Validation, Session Management etc ) to sample implementation snippets in popular frameworks such as .Net, Java Struts and FLEX. This data grid draws on work already complied by open source communities such as OWASP that has a variety of tools and resources to help developers in understanding and resolving security issues. Furthermore the major frameworks mentioned above also often provide a large set of security APIs at the developer’s disposal. Leveraging these existing APIs lessens the burden of implementing security correctly and our data grid references these API's where appropriate. 
+ 
+However, experience has shown us that such resources alone are not effective in preventing security code flaws. Therefore we are launching an open-source, extensible, secure coding analysis tool that delivers information from the data grid to the developer as they are writing code in their favorite IDE's. The plug-in tool takes a prescriptive approach and prompts the developer with useful information and repair techniques using existing security APIs within major frameworks and open-source resources, such as ESAPI. The tool has an innovative extensible design, whereby modules can be easily extended to incorporate any framework and any vulnerability. Deliberate design decisions have been made to accommodate future frameworks and the customizable vulnerability identification engine can also be tailored to accommodate specific business risks and regulatory policy requirements. 
+ 
+
+Speaker Bio's
+
+1) Ranjita Shankar Iyer CISSP, GSEC 
+Application Security Architect - Morgan Stanley
+Ranjita is an application security specialist with over 8 years of experience developing and securing business critical applications. She is currently a Security Architect at Morgan Stanley and assesses complex applications across the firm to ensure that they are employing appropriate security controls to protect highly confidential client and employee data. Prior to this, she was at EY at the Advanced Security Center performing attack and penetration tests for fortune 100 financial services clients. She is well versed in the many challenges that organizations face with regards to introducing security into the software development lifecycle. 
+ 
+2) Kai Huang  CISSP, GSEC
+Application Security Specialist - Ernst & Young
+Kai is part of E&Y Global Information Security group, and is responsible for reviewing and advising security matters for a wide range of applications and information systems consumed by E&Y.  Prior to GIS, Kai was a member of the E&Y Advanced Security Center, performing web application, internet, intranet tests for EY's Fortune 500 clients.  Kai's primary areas of interest are web application security and VOIP research and tool development.  Prior to E&Y, Kai worked at CIGNA as a CIRT member.
+
+== Sumit Siddharth  ==
+''' Recent Advancements in SQL Injection Exploitation Techniques '''
+
+This talk will cover different variants of SQL Injections and will demonstrate a variety of exploitation techniques. Starting with the very basics, the talk will progress to more complex scenarios and will discuss exploiting SQL injections which seem to be un-exploitable. The talk will have a number of demonstrations including the scenarios where this vulnerability goes undetected even by the most popular commercial scanners costing $$. Along the way, a number of freely available tools for exploiting SQL Injections will be discussed along with their pros and cons. 
+
+'''About the Speaker:'''
+
+Sumit Siddharth (sid) works as a senior IT security consultant for Portcullis Computer Security Ltd in U.K. Sid has authored a number of articles, advisories, white papers over the years and has been a speaker at a number of IT security conferences. He also owns the popular IT security blog www.notsosecure.com.
+
+== Peter Freiberg ==
+'''Determining attack surface and creating security test cases through observing business testing'''
+
+Application security testing is often a last minute black box activity where security testers rely on gut feel and intuition to determine how a system should work in order to compromise it. Even when coupled with source code analysis, a manual review or specialist software will not see all the data flows and context which pass through a system.
+
+By introducing web proxies that passively capture data flows from User Acceptance Testing we can observe the context of how the application should work. Using a newly created proxy log analysis tool, SPLAT, the following benefits can be obtained:
+•	Automatically determine the attack surface of an application
+o	What URLs are seen by users?
+o	Are these shared between roles?
+o	What pieces of data or parameters are passed and where?
+•	Automatically create test cases for some OWASP Top 10 Vulnerabilities
+•	Determine the data flows within your application
+•	Potentially find disclosure of sensitive information such as credit cards and tax file numbers
+•	Generate comparable metrics from testing phases
+
+== Siddharth Anbalahan ==
+''' Advanced Techniques in Code Reviews '''
+
+Learn how experts blend manual and automated techniques to accelerate code reviews. When you review large apps, you’ll love these nifty tricks to find famous, and some not-so-famous flaws. Using demos & code snippets we show how the blended technique is better than simple scanning or manual checks. You learn to write custom scripts that slash review time to 1/5th and get a ready-to-use checklist.
+Session Learning Objectives
+The 3 learning objectives of the session are:
+-	Learn how to code review large applications efficiently
+-	Learn a structured approach to code reviews
+-	Develop a checklist to use in future code reviews
+Participants will be able to do code reviews as mandated by PCI for all applications that handle credit card information.
+
+== Brett Moore ==
+'''Vulnerabilities In Action'''
+
+Common application vulnerabilities have been known for years now, and developers have been told about the threats and how to prevent these flaws. Even so, web applications are still been developed that are vulnerable to some of the oldest and most well known security flaws. The aim of this presentation is to show the attendees how vulnerabilities are discovered and exploited in real world situations, and the devastating effect that a flaw can have on the security of an application. The presentation will demonstrate multiple different application vulnerabilities across various development languages and operating systems. All of the commonly seen vulnerabilities will be demonstrated, aligned with the OWASP top 10 rating system. Attendees will be able to learn about the real dangers that application vulnerabilities pose, by seeing them been exploited as they would in a real compromise situation. The demonstration will be done again a ‘virtual’ network of vulnerable systems that will contain both server and application level flaws, giving a real world insight to an application compromise.
+
+== Karmendra Kohli ==
+'''Wooden Swords and Plastic Guns - Insecure Security Defenses'''
+
+"Securing applications insecurely gives a false sense of security. This session shows how popular security defenses are implemented wrongly, how apps are fitted with wooden swords and plastic guns. Based on our experience of testing 300+ applications, we show the most common errors in security defenses like CAPTCHAs, Encryption, Cache Control, etc. 
+Using code snippets and demos, we present actual encounters with insecurely secured applications. The audience will see how insecure implementations of CAPTCHAs allow bots to comfortably bypass defenses and perform automated registrations, post feedback, flood surveys and much more. We take you on a walk-through of how various insecure implementations of hashing defeats its very purpose. The audience learns how wrong use of cache control tags leads to authentication bypass, and disclosure of information among other weaknesses. We show how these wooden swords are a cause for concern. We explain what developers need to keep in mind so they implement security techniques "securely" - learn how to avoid subtle errors, and do things right the first time. With each topic we conclude with implementation best practices so developers / project managers / application owners can practice it from their next day at work."
+
+== Tom Brennan ==
+'''OWASP 3.0 - Where we came from, where we are, where we are going.'''
+
+== Rajkumar Pandian Sakthivel ==
+'''Web Application Security – A Reality Check'''
+
+Web Applications, harnessing the power of Internet has become a dominant factor in the web centric business .The power of Web applications have enabled businesses “flourish”, contributing to economic growth. To obey the Law of Polarities, the vulnerabilities present in the Web applications have caused an “impediment” to the growth of businesses resulting in huge losses. When the maturity of “containing” and combating Network Security Attacks (comprising of OS and Network Protocol vulnerabilities) has improved a lot with the help of Firewalls, Intrusion Prevention Systems and VPN, the overall scenario of Web application security looks grim. Security evangelists and enthusiasts have taken up the task of spreading the awareness of Web Application security. This paper discusses the current trends in the state of web application security and does a Reality Check. Different approaches of the software development community like Panic and patch approach (Web application attacked-Panic-Provide patch), Ritualistic approach (We have a policy in our company to check vulnerabilities in web apps, so we do something) and oblivious approach (Should it be done?  I never knew it) is discussed.
+
+The second part of the paper calls for a collaborative effort   from the Developers, Testers, Marketing people and users. The paper also suggests that Web application Security should be an intrinsic factor of the Design, Development & Testing phases.  The importance of Decision makers to understand, support and promote the web application security is discussed. The theme of “Securing Web applications – Passion, Art and Character” is advocated.
+
+== Drew Ames ==
+'''Improving Application Security using pre-processing input filters – a case study'''
+
+Recently, CQR Consulting were engaged to assist one of our customers who was having significant difficulties due to compromise through their published web applications.  A review of their code and development practices showed that the quickest and most efficient way to prevent multiple attacks was through the implementation of a pre-processing validation filter.
+ 
+This presentation will discuss the issues, approach and results of the development effort in creating a pre-processing validation filter.  It will present the risks which can be mitigated in such a way and others which need further controls to successfully manage.
+ 
+The information provided will assist attendees in the decision between roll-your-own, WAF appliance or full scale code re-write.
+
+== Mark Goudie ==
+'''An Insight into the World of Computer Forensics'''
+
+Security breaches and the compromise of sensitive information are a very real concern for
+organisations worldwide. When such incidents occur, rapid response is critical. The damage
+must be contained quickly, customer data protected, the root cause found and remedied, and an
+accurate record of events and losses produced for authorities.
+Furthermore, the investigation process must collect this evidence without adversely affecting the
+integrity of the information assets involved in the crime.
+The Data Breach Investigations Report – a study that integrates a vast amount of factual
+evidence from forensic investigations over the last four years – provides a unique insight into
+the world of computer forensics.
+The Report is unique in that it offers an objective, first-hand view of data breaches directly from
+casebooks, which represent a large proportion of total known compromised records during 2006
+and 2007, including three of the five largest data breaches ever reported. Industry sectors
+covered include Financial Services; Food and Beverage; Retail; and Technology.
+The expansive statistical data set generated through activities including litigation support, ediscovery,
+expert witness testimony, chain-of-custody, mock-incident training, and incident
+response program development offers an interesting glimpse into the trends surrounding
+computer crime and data compromise.
+In a finding that may surprise some, the study found that most data breaches were caused by
+external sources (73%). Breaches attributed to insiders (18%), though fewer in number, were
+much larger than those caused by outsiders when they did occur.
+Notably, at the commencement of the study, the main avenue of attack was the network or
+operating system. However over time, the typical attack vector has moved up the stack to the
+application layer.
+And Asia Pacific is becoming a “hot” region for both the source and victim for the data breach,
+with the vast majority of these cases involving software failure at some level.
+Key points to be covered in the presentation include demographics, data breach sources, types
+of threats, targeted and opportunistic attacks, pathways, data compromises, discover methods,
+anti-forensics, and unknown unknowns.
+
+== Malathi Carthigaser ==
+'''STRAW - A security Threat & Risk Assessment Methodology for Web Applications'''
+
+Myriad threat and risk assessment methodologies exist, but few that are considered suitable for adequately communicating the risks associated with web applications. In this presentation, a new methodology, the STRAW model will be outlined, that is consistent with current models (such as OWASP Risk Rating Methodology, AS 4360, STRIDE/DREAD etc.), but which extends upon them to provide the following benefits:
+
+•	Comprehensive matrix structure to capture all risk components and ratings.
+
+•	Enumerates a wide range of factors contributing to impact and likelihood ratings.
+
+•	Threat analysis is incorporated within the matrix.
+
+•	Related threat events/vulnerabilities are clearly cross-referenced to allow consideration of the combined effects of multiple related vulnerabilities.
+
+•	Easily understandable, and a common communication tool for both technical and business parties.
+
+
+The STRAW model is intended to be used after a security review has been completed, as a way of rating the severity of vulnerabilities/weaknesses identified, and subsequently, to aid in prioritising the security issues, and determining mitigation options and effort estimates. 
+
+It is a proven model that has been successfully employed in many projects to date.
+
+== Benjamin Mossé ==
+'''Browser Rider: what you never expected your browser could do to you'''
+
+Browser exploitation is in fashion but it doesn't seem that there's a popular tool to build and run attacks. Browser Rider will try to fill the gap by providing a framework to build, deploy and manage payloads that exploit the browser. This project aims on the long term to provide a powerful, simple and flexible interface to any client side attack for hackers. 
+
+Proposal
+
+Browser security has become one of the most discussed subjects. This is mainly due to two things: First, nowadays malwares are not spread over emails any longer but through web application often using JavaScript obfuscation to avoid anti-virus detection. Second as the web is growing new technologies are constantly appearing to enhance the user experience but also offering many new attack vectors. In both cases it is important to understand that the browser offers an easy mechanism for bypassing firewalls and other perimeter security to gain unauthorised access or commit other security breach. 
+
+From a security consultant point of view it can be hard to justify the risk of vulnerabilities that affect the browser such as cross-site scripting, cross-site request forgery and unauthorized redirection vulnerabilities as they do not impact directly the server or the database.
+
+Browser rider is a security tool to exploit browser vulnerabilities. It offers several existing payloads but also provides a complete programming framework to develop exploits. It also acts as a management system to deploy your attacks and control the infected browsers.
+
+The first part of this presentation will introduce the audience to the tool and demonstrate many attacks that can be ported to the browser using the Browser Rider. The second part will technically explain how the tool works (i.e. obfuscation, signature detection avoidance, polymorphism, program architecture, framework), how to write your own exploits with it and deploy them.
+
+On the long term Browser Rider aims at becoming a complete solution to execute, develop and test browser based attacks for security consultants.
+
+== Paul Theriault ==
+'''Plug-in Purgatory'''
+
+Browser plug-ins allow web developers to embed content in web pages which is otherwise unsupported by the browser. This additional content requires additional system resources and sometimes extended system privileges in order to run. Most plug-ins are expected to release these resources once a page has been unloaded, but as will be discussed in this presentation, bugs and unexpected side-effects in the implementation of these plug-ins may allow an attacker to develop content which does not get unloaded as intended. As a result, an attacker is able to execute attacks ranging from simple abuse of system resources, to persistent bi-directional command and control channels.
+This talk will discuss several approaches to this attack, and also examine the susceptibility to these attacks in common browser plug-ins.
+
+Bio
+
+Paul Theriault is a Senior Consultant with SIFT, and has extensive experience in both technical and policy areas of IT security ranging from application code review and testing, to business-wide risk assessment and management. With a background in web development, Paul's security research interests are centered on all things web - browsers, bytecode and everything in between.
+
+== Alex Kouzemtchenko ==
+'''Examining and Bypassing the IE8 XSS Filter'''
+
+Even with continued focus on XSS vulnerabilities, they are clearly not going away, and the issues are not being properly solved by even the safest frameworks, such as .NET. As such Microsoft has implemented defence-in-depth client-side protections inside Internet Explorer 8 in the form of the XSS Filter to make exploitation of these vulnerabilities either harder or impossible.
+
+This talk will examine the specific situations that the XSS Filter tries to protect users in, the scenarios where it does not prevent attacks, several bypass techniques for these filters and ways in which the XSS Filter's functionality can be abused to help perform attacks, such as Clickjacking or even XSS.
+
+Bio:
+
+Alex Kouzemtchenko has been an active member of the web application security research community for the past several years, publishing several papers and has presented his findings at several conferences such as Bluehat, the Chaos Communications Congress, RUXCON, Power of Community and XCon. Alex is the R&D Team Lead at SIFT where he gets paid to find new ways to break things and apply that work to consulting engagements.
+
+== Adi Sharabani ==
+'''Active Man in the Middle Attacks'''
+
+We've all known for a long time that using a public wireless network is risky. We all think twice before logging into our bank account or accessing any kind of sensitive information. But what about simply reading the news on our favorite news site?
+In this presentation, we will show how using a public network can expose you to practically any web-related client-side security issue on any domain, no matter how careful you think you're being. These issues range from XSS on any domain, through XSRF, to leaking of browser data and more. 
+
+We will show how the currently known best practices, which are supposed to keep you from harm when reading a blog in the neighborhood coffee shop, may be overcome. We'll demonstrate how such best practices are only useful against what we call "Passive" attacks, which are passively gathering data from the network. We will introduce a new type of attack coined "Active attacks", and see how they easily work around a careful user's attempt to browse responsibly in a public network. We will demonstrate how these attacks can steal information from past browsing activities. and how they can monitor your future browsing, inside the safetey of your home and your organization's networks.
+
+* More information on these attacks can be found on the [http://blog.watchfire.com/wfblog/2009/02/active-man-in-the-middle-attacks.html Watchfire's blog]
+
+Bio:
+
+Adi Sharabani manages the IBM Rational Application Security Research Group, responsible for product and industry research activities that pertain to Web application security. Adi joined IBM through the acquisition of Watchfire, a market leader in web application security testing. Prior to security research, Adi was a senior software developer on the AppScan team responsible for the invention and development of many of its key features.

@@ -1,0 +1,38 @@
+{{Template:Attack}}
+<br>
+[[Category:OWASP ASDR Project]]
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+==Description==
+A Cash Overflow attack is a [[Denial of Service]] attack specifically aimed at exceeding the hosting costs for a cloud application, either essentially bankrupting the service owner or exceeding the application cost limits leading the Cloud Service Provider disabling the application.
+
+==Risk Factors==
+TBD
+[[Category:FIXME|need content]]
+
+==Related [[Threat Agents]]==
+* [[:Category:Logical Attacks]]
+[[Category:FIXME|not a threat agent]]
+
+==Related [[Attacks]]==
+* [[Denial of Service]]
+
+==Related [[Vulnerabilities]]==
+* [[:Category: Input Validation Vulnerability]]
+* [[:Category: API Abuse]]
+
+==Related [[Controls]]==
+* TBD
+[[Category:FIXME|need links]]
+
+==References==
+* http://capec.mitre.org/data/index.html - Denial of Service through Resource Depletion
+
+
+[[Category: Spoofing]]
+[[Category: Probabilistic Techniques]]
+[[Category: Resource Depletion]]
+[[Category:Attack]]

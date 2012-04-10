@@ -1,0 +1,74 @@
+3. AJAX Security -> 3.4 DOM Injection
+
+=== Lesson overview ===
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution === 
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information. 
+
+=== Strategy ===
+
+This WebGoat lesson modifies an AJAX response with JavaScript that enables the 'Activate!' button for a license key by replacing the response body (about 28k bytes) with: <font face="Courier New">document.forms[0].SUBMIT.disabled = false;</font>
+
+=== Implementation === 
+
+When the button is disabled, it comes from the server as: 
+<pre>
+<input disabled value='Activate!' name='SUBMIT' type='SUBMIT'>
+</pre>
+
+The ModSecurity solution will be to set a variable in 'lesson03-4.data' called 'isdisabled' to "yes" if the 'Activate!' button is disabled; "no" otherwise. For the subsequent request, if the 'Activate!' button is submitted such as:
+<pre>
+POST http://192.168.0.5/WebGoat/attack?Screen=131&menu=400
+key=aaaa&SUBMIT=Activate%21
+</pre>
+
+Then we check against the persisted variable to see if it is enabled or disabled, then block the request if the button was originally disabled.
+
+'lesson03-4.data' will have the simple format of:
+<pre>
+Entry{
+  isdisabled = "yes"
+}
+</pre>
+
+First, we start with the response body because if the 'Activate!' button is sent in a request, for sure it had to be sent with its state in the previous response body.
+
+The phase 4 response portion of the configuration file is:
+<pre>
+  SecRule TX:MENU "!@eq 400" "phase:4,t:none,pass,skip:1"
+
+  SecRuleScript "/etc/modsecurity/data/activate-response_03-4.lua" \
+"phase:4,t:none,log,auditlog,allow,msg:'Luascript: AJAX Security -> \ 
+3.4 DOM Injection: in RESPONSE; checking if Activate button is disabled'"
+</pre>
+
+Refer to the Lua script 'activate-response_03-4.lua'. The steps are:
+* put the response body into a buffer
+* search and get the state of the Activate button
+* write the state to the data file
+
+The phase 2 request portion of the configuration file is:
+<pre>
+  SecRule ARGS:menu "!@eq 400" "phase:2,t:none,skip:4"
+  SecRule &ARGS_POST:SUBMIT "@eq 0" "nolog,skip:3"
+  SecRule &ARGS_POST:key "@eq 0" "nolog,skip:2"
+
+  # action is triggered if script returns non-nil value
+  SecRuleScript "/etc/modsecurity/data/activate-request_03-4.lua" \
+"phase:2,t:none,log,auditlog,deny,severity:3,msg:'Luascript: \ 
+AJAX Security -> 3.4 DOM Injection: request is pending', \
+tag:'INJECTION_ATTACK',redirect:/_error_pages_/lesson03-4.html"
+  SecAction "phase:2,allow:request,t:none,log,auditlog,msg:'Luascript: \ 
+AJAX Security -> 3.4 DOM Injection: acceptable state for Activate button'"
+</pre>
+
+Refer to the Lua script 'activate-request_03-4.lua'. The steps are:
+* get the button state from the data file
+* if it is enabled, return OK (nil) to ModSecurity; if it is disabled, return an error (non-nil)
+
+=== Comments ===
+
+* AJAX for this lesson only worked using Opera 9.26

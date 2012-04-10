@@ -1,0 +1,70 @@
+[[Category:OWASP_Sqlibench_Project|Clik here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#SQL_Injector_Benchmarking_Project_.28SQLiBENCH.29|Sqlibench Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#SQL_Injector_Benchmarking_Project_.28SQLiBENCH.29|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+%90-%95 of the overall deliverables are finished. The two unfinished jobs we have are; creating videos of the preparing the environment (nevertheless written documentation has been produced) and writing webscarab-beanshell scripts in order to show the exploits are real (instead we have created a howto document explaining the testing methodology for other benchmarkers, including example runs of sqlmap) 
+
+Additional to the %50 review deliverables, here are other deliverables adding upto the %100 review; 
+
+1. xml benchmarking report (http://sqlibench.googlecode.com/files/sqlibench_v2.1.xml)
+
+2. tabular pdf benchmarking report (http://sqlibench.googlecode.com/files/sqlibench_matrix_v2.pdf).
+
+3. updated interactive web application (http://www.webguvenligi.org/sqlibench/web/index.php)
+
+4. benchmarker life saver document (http://code.google.com/p/sqlibench/wiki/HowToBenchmark)
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#SQL_Injector_Benchmarking_Project_.28SQLiBENCH.29|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+%90-%95 of the deliverables are finished with only two empty spots (creating videos of the preparing the testing environment and writing webscarab beanshell scripts in order to show the exploits are real). We've also contacted the most of the sql injectors authors and acquired nonpublished new versions of their tools. 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+We'd love to hear comments on the criteria list we have produced 
+(http://code.google.com/p/sqlibench/wiki/BenchmarkingCriteria). 
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART II''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Assessment Criteria
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[:Category:OWASP Project Assessment|OWASP Project Assessment Criteria]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Alpha Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+None. All criteria seems to be fulfilled.
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Beta Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+None. We don't have any installer, though, which should be ok for documentation projects. Installer for the vulnerable .NET application could have been created but installation process is well-documented/easy and it's just a small part of the overall project.
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+3. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Release Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+N/A. Status target of the project is Beta.
+ |-  
+ | style="width:25%; background:#7B8ABD" align="center"|
+4. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+None. However, we'd love to hear comments on the criteria list we have produced (http://code.google.com/p/sqlibench/wiki/BenchmarkingCriteria). 
+|}

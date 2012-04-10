@@ -1,0 +1,126 @@
+The reason I am asking this question is because the way the .Net Framework and the JVM are used in the real world, I don't see any major advantages between them and C++, ASP Classic, PHP, ...(put your favorite language/development platform here)..., etc...
+
+
+The bottom line, is that in the 'Real Word', most .Net Applications execute with Full Trust and most Java based applications run with the Security Manager disabled. This means that the protections and security advantages provided by the Virtual Machine's Sandboxes (CLR and JVM) are close to useless since malicious code executed in those process can easily bypassed it.
+
+
+The reality is that 'Real World' .Net and Java applications are insecure by design, insecure by default and insecure in deployment, because their entire security model is based on the fact that no malicious code will be executed in its environment.
+
+
+Let's look at different types of applications, do a quick threat model and try to find the security advantages provided by .Net or JVM:
+
+
+Case Study 1: Web application
+
+1.1 Attack vector #1: Anonymous or user based attacks (launched from the Internet).
+
+1.1.1 Vulnerabilities exploited: Input Validation, Authorization failures or pour session management
+
+1.1.2 Comment: A developer team that doesn't understand security (or doesn't have a solid Software Development Life cycle) can create these vulnerabilities in any language (C++, C#, Java, PHP, etc...) which allow the total compromize of the application. Note that even if there is a solid SDL and the developer team does understand security, vulnerabilities (or potential exploit vector) will be created because it impossible to create 100% bug-free complex software systems.
+
+1.1.3 Impact of .Net or Java in the rating and quantity of vulnerabilities: From my experience, VERY LITTLE. So far .Net and Java websites are as vulnerable (if not more since they tend to me more complex) as websites developed in other languages/architectures
+
+1.2 Attack vector #2: Malicious code is uploaded and executed in one of the website's pages (or components)
+
+1.2.1 Comment: This is where the CLR and JVM should come into action and say "All code executed from this website ONLY has access to these permissions and is not able to access any more resources than the ones allocated!", the problem is that the way the .Net Framework assemblies (and Java code) are used in the real world, both CLR and JVM can be easily bypassed whereby the malicious code is only limited by the restrictions (if any) imposed by the Operating System to the account used to execute that code
+
+1.2.2 Impact of .Net or Java in the rating and quantity of vulnerabilities: NONE. If, for example, the .Net code was executed in a solid Partial Trust environment, then YES, there would a substantial positive impact in the rating and quantity of vulnerabilities. But with Full Trust, there is no difference between a .Net assembly and an unmanaged DLL. The perfect case study is IIS 6.0 which is as insecure as IIS 5.0 when handling malicious code executed from a co-hosted website (from a security point of view 'Application Isolation' doesn't exist in IIS 6.0 since IIS 6.0 is not able to sustain an malicious attack from the inside)
+
+
+Case Study 2: Fat Client working with a Server based Website/WebService/Remoting service
+
+2.1.1 Attack vector #1: Malicious user has local access to the Application (.Net or Java) and uses it to 'attack' the server
+
+2.1.2 Comment: This is an area where most fat applications fail because the original developers never expected the server components to be attacked from their own client application (which they spend thousand of hours programming security 'measures' like 'menu-items, buttons, textboxes which are only enabled for administrators'. The problem is most client applications run in the context of the user, and the user (no mater how low-privileged it is) will have TOTAL access and control over that process. Which means that there is nothing stopping the malicious user from changing the code of the client application so that it behaves in a way the original developers never expected (i have even found applications that construct SQL server queries on the client components)
+
+2.1.3 Impact of .Net or Java in the rating and quantity of vulnerabilities: NEGATIVE (i.e. they make this much more dangerous). Where in pure unmanaged applications you have to work with low level function hooks (ala Detours) in .Net you can use reflection and have full access to the entire application object model in a very user friendly way (obfuscation will make this a little harder and less user friendly, but since the .Net's BCL (Base Class Library) is not obfuscated, it is still very easy to see what is going on)
+
+
+As you can see in both presented scenarios the .Net Framework or JVM have little impact on the security of the final applications (by security I mean capability to sustain an attack). Or course that there are many more scenarios which we could discuss here, and in some the CLR/JVM security advantages might have some significance. But the bottom line is that after 10 years of Java and 5 of .Net the current application landscape is not more secure (we still have 100s of input validations issues (Buffer overflows in C++, SQL Injection in c#), and logic-errors and authorization flaws are still very un-explored attack vectors)
+
+What frustrates me (as somebody who is asked to protect systems and create secure runtime environments) is that both .Net and Java have a (sort of) workable solution in their architectures (I talking about Sandboxing). The problem is that due to a massive lack of foresight by Microsoft and the Java community, the amount of effort and focus that is currently placed in creating real-world applications that are designed to execute in these secure runtime environments in minimal.
+
+We are still talking about the basics! Microsoft is yet still to publicly acknowledge that is a MASSIVE PROBLEM the fact that 99% of .Net applications are designed for, and executed in Full Trust!
+
+It now two years that I have been in direct conversation with dozens of Microsoft contacts (from the Microsoft Security Response Center to a product manager of the ASP.NET team), and the answer is always the same: "Dinis, what you are talking about occurs by design and is not a vulnerability!" and "We know that Full Trust is a problem and we are trying to communicate that to your clients".
+
+According to the 'current' definition of 'what is a security vulnerability' the following 'features' were not vulnerabilities:
+
+* Outlook allowed emails direct access to the emails objects ('mail-merge' feature)
+* Internet explorer allowed almost unlimited access to ActiveX components (or Browser Help Objects)
+* Windows 2000 and 2003 Web edition have no Firewall and can be 'safely' connected to the Internet (RPC is such a 'friendly protocol')
+* Everything was turned on by default (namely IIS)
+* Windows messages from one window to another (WM_TIMER anyone?)
+* Windows 95 lack of internal isolation (i.e. there is no kernel protection in windows 95 and any process can 'patch' the entire OS)
+
+
+The above features only became 'vulnerabilities' and worth Microsoft Security team focus once they started to be exploited. So until the 'Full Trust' issue becomes an attack vector, it will not be a 'vulnerability' (just remember that you can't 'patch' an application designed to execute in Full Trust).
+
+I was hoping that with .Net 2.0 Microsoft would take the opportunity to change its tune and make some radical changes in its attitude to security and the "Full Trust .Net world" that they are creating. But I was very disappointed to see that they haven't.
+
+But hey, the good news is that there is no RISK, since RISK = Vulnerability * Impact * Probability (probability = number of occurrences * time).
+
+Although the Vulnerability and Impact are very high, the probability of an exploitation actually occurring is very low (i.e. the number of exploits targeting Full Trust .Net apps is still very low)
+
+Just look at the number of ISPs that execute their client's websites with Full Trust and try to find examples of massive exploitation to see that the risk (so far) is quite low
+
+But, the best example of this 'No Risk' reality is given to us by ORACLE with its reaction to David's Litchfield open letter and to public disclosure of the existence of dozens of unpatched Oracle vulnerabilities.
+
+Basically by not reacting and not addressing the issues properly, what ORACLE is saying is "Although you (David) and others are able to easily exploit our 'unbreakable' databases, in the 'real world' the number of people actually doing it maliciously is very low.
+So, since our clients are not losing considerable amounts of money with these vulnerabilities, and you (David & Co) will not maliciously exploit them, nothing will change until:
+
+A) there are enough attacks which cause considerable amounts of financial losses or
+
+B) the people (and corporations and governments) affected start to REALLY complain and apply serious pressure.
+
+Meanwhile, in the 'Real World', Oracle databases will continue to be massive insecure, we (oracle) will continue to say that they are 'unbreakable', the media will NOT challenge that claim, and everybody will be happy (except for the people directly affected by the exploitation of Oracle databases)"
+
+Oracle's current attitude to security is so bad, that they even make Microsoft looks good :)
+
+But Microsoft doesn't get 'Application Security'. Unless something is wormable or exploitable from the Internet, from the current Microsoft's point of view it is not a vulnerability (note that Microsoft DOES get 'Infrastructure Security' (i.e. networked based attacks, buffer overflows, etc...)).
+
+But then again, why should them? Most likely Microsoft's clients are putting no pressure to address this issue! Everybody is still too focused on: "features, easy of use, rapid development, features, easy of use, rapid development, features, easy of use, rapid development..... oh ... and it has to be secure..... features, easy of use, rapid development, features, easy of use, rapid development, features, easy of use, rapid development  ... did I mention security?.....   features, easy of use, rapid development, features, easy of use, rapid development....”
+
+So the main factors that affect the security today, is
+
+A) how much money is being lost by insecurity and
+
+B) how much 'real focus' (versus marketing efforts) and senior support there is in creating secure products/applications.
+
+
+This has more impact on the final product's security (whether it is an application or website) than the choice of technologies used.
+
+Which takes me to my original question: "What are the 'Real World' security advantages of the .Net Framework and Java?"
+
+To which I will give two answers:
+
+1) "Theoretically both should have a major impact. If and only if, .Net and Java applications are designed (and deployed) in solid Sandboxed environments where a bug is very hard to be maliciously exploited and the benefits of having a managed environment (and type safe languages) are realized"
+
+2) "No Impact, if (as it occurs in the real world today) the .Net assemblies are executed with Full Trust and the JVM without the Security Manager".
+
+There are two main pillars that seem to sustain most (if not) all security architectures:
+
+1) No Vulnerabilities can exist (since one single vulnerability will allow Full Compromize)
+2) No malicious code can be executed from the inside (since it will be able to take full control over the application or server because internal code is not executed inside a sandbox)
+
+
+Both are unrealistic, and impossible to guarantee. Unless these two paradigms change, there will be no major improvements the security of applications.
+
+And please don't turn this around into a discussion between Open Source/Microsoft, since I also know very high profile example of Open Source projects who are happy to sit on non-public vulnerabilities (reported to them) and do nothing about it unless they start to be publicly exploited (or publicly disclosed)
+
+In my view most Open Source projects are caught in Microsoft's trap of evaluating products based on the number of vulnerabilities that exist (read: “have been publicly acknowledged”). This is a stupid way to evaluate a product and has a very damaging side effect which is that makes everybody 'allergic to vulnerabilities' (i.e. the hard part is to convince somebody that 'something' is a 'vulnerability'). And anything mid-term, i.e. NOT being exploited today (like the Full Trust issue that I have been talking about for two years now) WILL NOT be considered to be a vulnerability and will NOT be  addressed in the way it should.
+
+Finally a quick disclaimer. I don't claim to be an Java expert but I will claim that I know a couple of things about the .Net framework and I would recommend anybody that relies on the security of the CLR to see the research that I did for my Owasp Washington presentation entitled 'Rooting the CLR'. I did this research so that when I say '...the fundamental design problem with the .Net framework is that the entire Framework (i.e. all dlls) are loaded into the process that will execute the Full trust Code. Which means that there is nothing stopping a malicious Full Trust .Net assembly to 'patch' the CLR itself...' people actually see what I mean. My demos were:
+* CLR patch that allowed calls to private methods to succeed
+* CLR patch that allowed corrupted Strong Named assemblies to be executed (i.e. ILDASM a signed .Net assembly, change it, ILASM it back into .exe format, and execute it without any exception been thrown)
+* Load core .Net framework dlls that come from directories under my control (for example c:\fusion.dll)
+* MSIL Patch on all Deny and Demand methods so that they always return without any exception being thrown, which disables most CAS protections in the running assembly (the only caveat with this demo is that the 'MSIL patch' must be applied before those methods are JITED)
+
+At the Owasp conference I spoke with several colleagues from the Java camp which confirmed to me that you can do similar stuff in the JVM and that in the 'Real World', the JVM sandbox is not widely used. Please feel free to correct my Java analogies to .Net   because I'm sure I got some of them wrong.
+
+As a final note, please remember that I am talking about the SECURITY of applications, I am not talking about the quality and effectiveness of these programming languages, platforms or architectures. There are enormous advantages in witting applications in .Net 1.1 (and now 2.0) when compared to VB 6.0 or ASP Classic. Both version (1.1 and 2.0) have an amazing range of features and allow the rapid development of very powerfully applications (same for Java). My issue is with the 'resilience to attacks' and 'ability to sustain an attack from an internal user', to which both .Net and Java fail in the real world.
+
+Hope this makes sense and I'm looking forward to your comments on the 'Real World' security advantages of the .Net Framework and Java
+
+
+Originally posted on 11/3/2005

@@ -1,0 +1,57 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Project About</noinclude>
+| project_name = OWASP Hatkit Proxy Project
+| project_home_page = OWASP Hatkit Proxy Project
+
+| project_description =
+*The Hatkit Proxy is an intercepting http/tcp proxy based on the Owasp Proxy, but with several additions. These additions are:
+**Swing-based UI,
+**Interception capabilities with manual edit,
+**Syntax highlightning (html/form-data/http) based on JFlex,
+**Storage of http traffic into MongoDB database,
+**Interception capabilities of tcp-traffic,
+**Possibilities to intercept in Fully Qualified mode (like all other http-proxies) OR Non-fully qualified mode. The latter means that interception is performed *after* the host has been parsed, thereby enabling the user to submit non-valid http content.
+*The primary purpose of the Hatkit Proxy is to create a minimal, lightweight proxy which stores traffic into an offline storage where further analysis can be performed, e.g. all kinds of analysis which is currently implemented by the proxies themselves (webscarab/burp/paros etc).
+*Also, since the http traffic is stored in a MongoDB, the traffic is stored at an object-level, retaining the structure of the parsed traffic, which enables a user to perform advanced queries later.
+*The proxy should also be a good choice for 'defenders' who wants to (temporarily?) monitor traffic. The proxy itself is, as stated, very lightweight, and the backend MongoDB storage scales very well and should be able to handle extreme amounts of data. This would allow defenders to perform advanced post-mortem or real-time analysis of incoming traffic.
+*Built in Java/Swing + MongoDB.
+
+
+| project_license = [http://www.gnu.org/licenses/gpl.html GNU General Public License v3]
+
+| leader_name1 = Martin Holst Swende
+| leader_email1 = martin.holst_swende@owasp.org
+| leader_username1 = Martin Holst Swende
+
+| contributor_name[1-10] = 
+| contributor_email[1-10] = 
+| contributor_username[1-10] = 
+
+| pamphlet_link = 
+
+| presentation_link =
+
+| mailing_list_name = https://lists.owasp.org/mailman/listinfo/owasp-hatkit-proxy-project
+
+| project_road_map = http://www.owasp.org/index.php/OWASP_Hatkit_Proxy_Project/Roadmap
+
+| links_url1 =   https://bitbucket.org/holiman/hatkit-proxy/
+| links_name1 = BitBucket repository
+
+| links_url2 = https://bitbucket.org/holiman/hatkit-proxy/issues?status=new&status=open  
+| links_name2 = BitBucket issue tracker
+ 
+| links_url3 = http://www.owasp.org/index.php/OWASP_Hatkit_Datafiddler_Project
+| links_name3 = OWASP Hatkit Datafiddler Project
+
+| links_url[4-10] =
+| links_name[4-10] 
+
+| release_1 = Hatkit Proxy 0.5.1
+
+| release_2 = 
+| release_3 =
+| release_4 =
+<!--- The line below is for GPC usage only. Please do not edit it --->
+| project_about_page = Projects/OWASP Hatkit Proxy Project
+
+}}

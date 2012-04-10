@@ -1,0 +1,21 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>OWASP Training Modules</noinclude>
+| Module_designation = [[:Category:OWASP_Code_Crawler|OWASP Code Crawler]]
+| Module_Overview_Goal =
+OWASP Code Crawler is a tool aimed at assisting code review practitioners. 
+
+It is a static code review tool which searches for key topics within .NET and J2EE/JAVA code. It's a Microsoft .NET 3.5 Windows Form application which supports the OWASP Code Review Project. It provides automatic STRIDE classification a very simple DREAD calculator and few minor utilities. 
+
+Direct links to WAST 2.0 Threat Classification, Secure Java Development Guidelines and OWASP Tools are also part of the package. 
+
+| Content = 
+&nbsp; 
+
+ 
+
+&nbsp;
+| Material = 
+[https://www.owasp.org/images/6/61/OWASP_CodeCrawler_Presentation.ppt CodeCrawler PPT Presentation]<br>
+[http://codeplex.codeplex.com/ OWASP Code Crawler Development's website (Codeplex)]<br>
+[http://codecrawler.codeplex.com/Release/ProjectReleases.aspx Download Code Crawler (Binary)]<br>
+
+}}

@@ -1,0 +1,27 @@
+{{Template: <includeonly>{{{1}}}</includeonly><noinclude>Release About</noinclude>
+| project_name = OWASP Zed Attack Proxy Project
+| project_home_page = OWASP Zed Attack Proxy Project
+| release_name = ZAP 1.2.0
+| release_date = 11/01/2011
+
+| release_description = 
+
+'''This release includes the following significant changes:'''
+
+* Memory leaks have been fixed in the active scanner and spider. 
+* External applications can now be invoked from the Sites and History tabs. 
+* The passive scanner now looks for vulnerabilities, such as: 	
+** Autocomplete forms with password fields
+** Cookies without the 'HttpOnly?' flag
+** SSL Cookies without the 'secure' flag
+** Weak authentication
+
+| release_license = [http://www.apache.org/licenses/LICENSE-2.0 Apache License 2.0]
+| release_download_link = http://code.google.com/p/zaproxy/downloads/list
+
+| leader_name1 = Psiinon
+| leader_email1 = psiinon@gmail.com
+| leader_username1 = Psiinon
+
+| release_notes = http://www.owasp.org/index.php/Projects/OWASP_Zed_Attack_Proxy_Project/Releases/ZAP_1.2.0/Notes
+}}

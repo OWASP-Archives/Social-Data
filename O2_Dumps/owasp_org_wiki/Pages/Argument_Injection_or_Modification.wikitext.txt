@@ -1,0 +1,66 @@
+{{Template:Attack}}
+<br>
+[[Category:OWASP ASDR Project]]
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+==Description==
+
+Argument Injection or Modification is a type of Injection attack. Modifying or injecting data as an argument may lead to very similar, often the same, results as in other injection attacks. It makes no difference if the attacker wants to inject the system command into arguments or into any other part of the code.
+
+==Risk Factors==
+TBD
+
+==Examples ==
+
+===Example 1===
+
+Knowing pseudo code of the application, the attacker may guess what action is required by the application to perform another one, for example, what must be done to authorize the attacker as the administrator.
+
+Reading the code below the attacker doesn't know the values of $pass and $login. The question is - is there possiblity of altering value of $authorized not knowing previously mentioned variables?
+
+<pre>
+$authorized=0;
+
+if($pass = "XXX" and $login = "XXX") { $authorized = 1; }
+if($authorized == 1) { admin_panel(); }
+</pre>
+
+If server configuration allows for that, we may try to pass argument $authorized=1 as input data to application.
+
+<pre>
+E.g. /index.php?user=&pass=&authorized=1
+</pre>
+
+===Example 2===
+
+If the security mechanism doesn't protect data as it should, e.g. doesn't check the identity of the user, and private data are displayed (despite that they shouldn't), then the user may try to alter arguments and get access to data owned by a different user.
+
+For example, by entering the address http://testsite.com/index.php?invoice=12 a user is able to check one of his invoices. Modifying the "invoice" argument, considering the above assumptions, the attacker may try to access other user's invoices. This might be useful to the attacker in a [[Brute force attack]].
+
+==Related [[Threat Agents]]==
+TBD
+
+==Related [[Attacks]]==
+* [[Command Injection]]
+* [[Code Injection]]
+* [[SQL Injection]]
+* [[LDAP injection]]
+* [[Server-Side_Includes_%28SSI%29_Injection|Sever-Side Includes (SSI) Injection]]
+* [[Cross-site Scripting (XSS)]]
+
+==Related [[Vulnerabilities]]==
+* [[:Category:Input Validation Vulnerability]]
+
+==Related [[Controls]]==
+* [[Input Validation]]
+* [[Output Validation]]
+* [[Canonicalization]]
+
+==References==
+TBD
+
+
+[[Category: Injection]]
+[[Category: Attack]]

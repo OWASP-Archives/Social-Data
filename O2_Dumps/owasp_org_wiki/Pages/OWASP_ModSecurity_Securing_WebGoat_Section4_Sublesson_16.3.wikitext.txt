@@ -1,0 +1,35 @@
+16. Session Management Flaws -> 16.3 Session Fixation
+
+(This sublesson was not formally solved by the project)
+
+=== Lesson overview ===
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution === 
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information. 
+
+=== Strategy ===
+
+This WebGoat session demonstrates a session fixation attack. An attacker chooses a Session ID, sends it in a link to the victim, the victim clicks the link and logs in, then the attacker uses that session ID to log in to the same banking web site and thereafter masquerades as the victim.
+
+A ModSecurity solution for this specific lesson would be to attach the user name to each unique session ID and persist it using Lua. Afterwards, if another user tried to log in using the same session ID, then the attacker would not be allowed to log in to the site.
+
+=== Implementation === 
+
+None
+
+=== Reviewer comments ===
+
+I believe that there are 2 potential Application Defects which make web application vulnerable to Session Fixation attacks that we can identify with ModSecurity (blocking is optional):
+
+1. Web Applications that allow SessionIDs to be passed within a QUERY_STRING
+
+As the lesson scenario shows, Phishing attacks that include links with previously known, pre-authentication SessionIDs are common.  You can create a ModSecurity rule that will generate an alert when it sees a SessionID being passed in the QUERY_STRING.  Flag is as a possible Session Fixation Attack.
+
+2. Web Applications that do not set a new SessionID upon authentication
+
+This is where you would need to identify the actual login page and then you can raise a flag if a successful auth does *NOT* result in the web application sending out a new Set-Cookie SessionID value.  We apps that take an existing, pre-auth SessionID and then simply dubs it as now being authenticated leaves open a possibility of Session Fixation attacks.
+
+One additional note in relation to the 2 previous Session Management Flaws rules – Sublessons 16.1 and 16.2 - a similar check for SessionIDs + IPs might work here however in reverse.  The attacker would connect to the site and receive a pre-auth SessionID.  We would then tie that SessionID to the attacker’s data.  When the attacker sends the Phishing link to the victim and the victim uses it, our rules could possibly flag this as a Session Hijacking attack.  We would have to have rules that will be able to identify/handle inbound SessionIDs in either/or the SessionID Request Cookie data or a parameter with these names.

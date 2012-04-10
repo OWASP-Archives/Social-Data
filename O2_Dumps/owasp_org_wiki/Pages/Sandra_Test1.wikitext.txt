@@ -1,0 +1,190 @@
+__NOTOC__ 
+
+==== Tab 1  ====
+
+== This is just a draft to test code (external links)  ==
+
+Random examples of poetry are as good as any, are they not? 
+
+Quotes are taken from the following sites: 
+
+*[http://cesariny.blogs.sapo.pt/3535.html Cesariny] 
+*[http://www.blupete.com/Literature/Poetry/KiplingIf.htm Kipling] 
+*[http://www.poemhunter.com/poem/ithaca/ Cavafy]
+
+<br> 
+
+== Info about me (internal link)  ==
+
+You can check my wiki page: [[User:Sandra Paiva|Sandra Paiva's]] info 
+
+[mailto:sandra.paiva@owasp.org Email address] 
+
+==== Cesariny  ====
+
+== Pastelaria  ==
+
+Afinal o que importa não é a literatura nem a crítica de arte nem a câmara escura <br> Afinal o que importa não é bem o negócio nem o ter dinheiro ao lado de ter horas de ócio 
+
+Afinal o que importa não é ser novo e galante <br> - ele há tanta maneira de compor uma estante 
+
+Afinal o que importa é não ter medo: fechar os olhos frente ao precipício <br> e cair verticalmente no vício <br> Não é verdade rapaz? E amanhã há bola <br> antes de haver cinema madame blanche e parola <br> 
+
+Que afinal o que importa não é haver gente com fome <br> porque assim como assim ainda há muita genteque come <br> 
+
+Que afinal o que importa é não ter medo <br> de chamar o gerente e dizer muito alto ao pé de muita gente: <br> Gerente! Este leite está azedo! <br> 
+
+Que afinal o que importa é pôr ao alto a gola do peludo <br> à saída da pastelaria, e lá fora – ah, lá fora! – rir de tudo <br> No riso admirável de quem sabe e gosta <br> ter lavados e muitos dentes brancos à mostra. 
+
+<br> 
+
+==== Kipling  ====
+
+== If (''part of'')  ==
+
+If you can keep your head when all about you <br> Are losing theirs and blaming it on you, <br> If you can trust yourself when all men doubt you <br> But make allowance for their doubting too, <br> If you can wait and not be tired by waiting, <br> Or being lied about, don't deal in lies, <br> Or being hated, don't give way to hating, <br> And yet don't look too good, nor talk too wise: <br> 
+
+'''(...)''' 
+
+<br> 
+
+==== Cavafy  ====
+
+== Ithaka ''(1st verse)''  ==
+
+When you set out for Ithaka <br> ask that your way be long, <br> full of adventure, full of instruction. <br> The Laistrygonians and the Cyclops, <br> angry Poseidon - do not fear them: <br> such as these you will never find <br> as long as your thought is lofty, as long as a rare <br> emotion touch your spirit and your body. <br> The Laistrygonians and the Cyclops, <br> angry Poseidon - you will not meet them <br> unless you carry them in your soul, <br> unless your soul raise them up before you. <br> 
+
+<br> 
+
+==== Tables (Practice)  ====
+
+*Table 1 
+*Table 2 
+*Table 3
+
+== Table 1  ==
+
+{| cellspacing="10" cellpadding="5" border="3" align="left" style="width: 246px; height: 87px;"
+|+ '''Table of poets''' 
+|-
+! scope="col" | Name 
+! scope="col" | Poem 
+! scope="col" | xpti
+|-
+| valign="middle" bgcolor="#cc99ff" align="center" | Cesariny 
+| A Pastelaria 
+| rowspan="3" | <br> <br> <br>
+|-
+| valign="middle" bgcolor="#cc99ff" align="center" | Kipling 
+| If
+|-
+| Cavafy 
+| Ithaka
+|}
+
+<br> 
+
+<br> 
+
+<br> 
+
+<br> <br> 
+
+<br> 
+
+<br> 
+
+<br> 
+
+<br> 
+
+{| cellspacing="1" cellpadding="1" border="1" style="width: 1150px; height: 521px;"
+|-
+! bgcolor="#006699" align="center" scope="col" colspan="5" style="color: white;" | 
+'''Conference Day 1 - June 23, 2010''' 
+
+[[Image:OWASP AppSec Research 2010 Research R.gif]] = Research paper [[Image:OWASP AppSec Research 2010 Demo D.gif]] = Demo [[Image:OWASP AppSec Research 2010 Presentation P.gif]] = Presentation<br> 
+
+|-
+| width="10%" bgcolor="#6666ff" | <br> 
+| width="30%" bgcolor="#993333" colspan="2" | Track 1<br> 
+| width="30%" bgcolor="#999999" | Track 2<br> 
+| width="30%" bgcolor="#66cc99" | Track 3<br>
+|-
+| width="10%" bgcolor="#6666ff" | 08:00 - 08:50<br> 
+| width="30%" bgcolor="#ffff99" colspan="4" | Registration, Breakfast and Coffee<br>
+|-
+| width="10%" bgcolor="#6666ff" | 08:50 - 09:00<br> 
+| width="30%" bgcolor="#cccccc" align="center" colspan="4" | Welcome to OWASP AppSec Research 2010 Conference<br>
+|-
+| width="10%" bgcolor="#6666ff" | 09:00 - 10:00<br> 
+| width="30%" bgcolor="#ffff99" align="center" colspan="4" | #Keynote: Cross-Domain Theft and the Future of Browser Security<br>Chris Evans, Information Security Engineer, and Ian Fette, Product Manager for Chrome Security, Google<br>
+|-
+| width="10%" bgcolor="#6666ff" rowspan="2" | 10:10 - 10:45<br> 
+| width="30%" bgcolor="#993333" align="center" rowspan="2" colspan="2" | [[Image:OWASP AppSec Research 2010 Research R.gif]] [[#BitFlip:_Determine_a_Data.27s_Signature_Coverage_from_Within_the_Application]] <br> 
+| width="30%" bgcolor="#999999" align="center" rowspan="2" | [[Image:OWASP AppSec Research 2010 Presentation P.gif]] [[#CsFire:_Browser-Enforced_Mitigation_Against_CSRF]]<br> 
+| bgcolor="#66cc99" align="center" rowspan="2" | [[Image:OWASP AppSec Research 2010 Presentation P.gif]] [[#Deconstructing_ColdFusion]]<br> 
+| width="30%" rowspan="2" colspan="2" | <br>
+|-
+| width="10%" bgcolor="#6666ff" | <br> 
+| width="30%" colspan="2" | <br> 
+| width="30%" | <br> 
+| <br> 
+| width="30%" colspan="2" | <br>
+|-
+| width="10%" bgcolor="#6666ff" | <br> 
+| width="30%" colspan="2" | <br> 
+| width="30%" | <br> 
+| <br> 
+| width="30%" colspan="2" | <br>
+|-
+| width="10%" bgcolor="#6666ff" | <br> 
+| width="30%" colspan="2" | <br> 
+| width="30%" | <br> 
+| <br> 
+| width="30%" colspan="2" | <br>
+|-
+| width="10%" bgcolor="#6666ff" | <br> 
+| width="30%" colspan="2" | <br> 
+| width="30%" | <br> 
+| <br> 
+| width="30%" colspan="2" | <br>
+|-
+| width="10%" bgcolor="#6666ff" | <br> 
+| width="30%" colspan="2" | <br> 
+| width="30%" | <br> 
+| <br> 
+| width="30%" colspan="2" | <br>
+|-
+| width="10%" bgcolor="#6666ff" | <br> 
+| width="30%" colspan="2" | <br> 
+| width="30%" | <br> 
+| <br> 
+| width="30%" colspan="2" | <br>
+|-
+| width="10%" bgcolor="#6666ff" | <br> 
+| width="30%" colspan="2" | <br> 
+| width="30%" | <br> 
+| <br> 
+| width="30%" colspan="2" | <br>
+|-
+| width="10%" bgcolor="#6666ff" | <br> 
+| width="30%" colspan="2" | <br> 
+| width="30%" | <br> 
+| <br> 
+| width="30%" colspan="2" | <br>
+|-
+| width="10%" bgcolor="#6666ff" | <br> 
+| width="30%" colspan="2" | <br> 
+| width="30%" | <br> 
+| <br> 
+| width="30%" colspan="2" | <br>
+|-
+| width="10%" bgcolor="#6666ff" rowspan="2" | <br> 
+| width="30%" rowspan="2" colspan="2" | <br> 
+| width="30%" rowspan="2" | <br> 
+| rowspan="2" | <br> 
+| width="30%" rowspan="2" colspan="2" | <br>
+|}
+
+<headertabs />

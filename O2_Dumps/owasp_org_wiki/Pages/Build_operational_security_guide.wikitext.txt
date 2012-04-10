@@ -1,0 +1,45 @@
+{{Template:SecureSoftware}}
+
+==Overview==
+
+Purpose:	
+
+*	Provide stakeholder with documentation on operational security measures that can better secure the product.
+
+*	Provide documentation for the use of security functionality within the product.
+
+Role:
+
+* Implementer
+
+Frequency:
+
+* Once per iteration.
+
+In the course of conception, elaboration, and evaluation, there will generally be many items identified that should be communicated to one or more roles at deployment. This information should all be collected in a role-driven implementation guide that addresses security concerns. 
+
+==Document pre-install configuration requirements ==
+
+Begin by documenting the environmental requirements that must be satisfied before the system is installed. See the task on operational environment assumptions for more detail.
+
+==Document application activity ==
+
+Document any security-relevant use of resources, including network ports, files on the file system, registry resources, database resources etc. See the activity on ''Resource identification ''for more detail.
+
+==Document the security architecture ==
+
+Document the threat profile assumed in design and the high-level security functionality of the system as relevant to the user - including authentication mechanisms, default policies for authentication and other functions, and any security protocols that are mandatory or optional. For protocols used, document the scope of their protection.
+
+==Document security configuration mechanisms ==
+
+List, and explain all security configuration options present in the system, and make note of their default and recommended settings. Be explicit about how they work, referencing any technologies utilized.
+
+==Document significant risks and known compensating controls ==
+
+Any known security risks that the customer may find reasonable should be documented, along with recommended compensating controls, such as recommended third party software that can mitigate the issue, firewall configurations, or intrusion detection signatures.
+
+
+[[Category:Activity]]
+[[Category:CLASP Activity]]
+[[Category:BP7 Publish operational security guidelines]]
+[[Category:OWASP_CLASP_Project]]

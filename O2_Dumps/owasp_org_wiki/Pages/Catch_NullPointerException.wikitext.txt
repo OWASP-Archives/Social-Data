@@ -1,0 +1,72 @@
+{{Template:Vulnerability}}
+{{Template:Fortify}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+It is generally a bad practice to catch NullPointerException.
+
+Programmers typically catch NullPointerException under three circumstances:
+
+# The program contains a null pointer dereference. Catching the resulting exception was easier than fixing the underlying problem. 
+# The program explicitly throws a NullPointerException to signal an error condition. 
+# The code is part of a test harness that supplies unexpected input to the classes under test. 
+Of these three circumstances, only the last is acceptable.
+
+==Risk Factors==
+TBD
+
+==Examples ==
+
+The following code mistakenly catches a NullPointerException.
+
+<pre>
+	  try {
+		mysteryMethod();
+	  }
+	  catch (NullPointerException npe) {
+	  }
+</pre>
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* [[:Category:Error Handling]]
+
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+Note: A reference to related [http://cwe.mitre.org/ CWE] or [http://capec.mitre.org/ CAPEC] article should be added when exists. Eg:
+
+* [http://cwe.mitre.org/data/definitions/79.html CWE 79].
+* http://www.link1.com
+* [http://www.link2.com Title for the link2]
+
+
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Error Handling Vulnerability]]
+[[Category:Vulnerability]]

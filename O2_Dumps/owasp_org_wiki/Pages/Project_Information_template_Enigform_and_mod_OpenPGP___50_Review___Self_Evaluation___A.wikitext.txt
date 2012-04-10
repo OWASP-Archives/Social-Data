@@ -1,0 +1,27 @@
+[[Project Information:template Enigform and mod OpenPGP|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#OpenPGP Extensions for HTTP - Enigform and mod_openpgp|OWASP OpenPGP Extensions for HTTP - Enigform and mod_openpgp  Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#OpenPGP Extensions for HTTP - Enigform and mod_openpgp|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|I'm working on more replay-attacks countermeasures, and we are deciding on the "Demo Site" issue. I still have to do research on WebGoat, but I also thought about creating an Enigform Auth plugin for Wordpress, phpBB, etc. I'd like to point out that the maotest.buanzo.org website is a TESTING site, and not an actual Demo site. Still to  implement: * Automatic Sessions Termination on Firefox Exit/Crash, * Better error-handling (Client side), * More documentation (current one suffices to implement a mod_openpgp enabled Apache server, but lacks better client-side FAQs and HOWTOs).
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#OpenPGP Extensions for HTTP - Enigform and mod_openpgp|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|I agree with Mark Roxberry's 60% completeness. The other 40% will mainly be Documentation, bugfixes and minor improvements, but a big % regarding the Demo site / Auth Plugin idea.
+ |- 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|Mark has been a GREAT help. He was not only a reviewer but a devoted beta tester. I'm glad to be working with him.
+|}

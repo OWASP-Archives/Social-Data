@@ -1,0 +1,46 @@
+[[Project Information:template Teachable Static Analysis Workbench|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#Teachable Static Analysis Workbench|OWASP Teachable Static Analysis Workbench Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#Teachable Static Analysis Workbench|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| 
+# TeSA plugin allows the user to mark the sources and sinks in the Eclipse text editor.  
+# FindBugs plugin was written which performs tainted analysis in more precise way than LAPSE, but does not yet have a  GUI. 
+# A command "ant run-tests" can be run from the command-line which consists of unit-tests for generating FindBugs configuration files that can then be reviewed using FindBugs. 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#Teachable Static Analysis Workbench|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+# 50% completed according to the planned deliverables
+# The primary remaining task is to complete the TeSA capability, finish the TeSA GUI and enhance documentation
+# The documentation does need a lot more work for the 100% mark. It is fine for the 50% review. 
+ |- 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+#Include the version and a direct link to the correct Eclipse. Also include a screenshot of the “eclipse help” screen for a user to compare if they aren’t sure whether they downloaded the correct version of eclipse
+#Make sure to specify the findbugs standalone version should be downloaded and that the eclipse findbugs plugin is not needed. Include the version and a direct link.
+#Explain the expected output of the junit-tests. Should they pass or fail? What do these tests do and what does it mean for the tests to pass or fail?
+#Provide a screenshot of the expected output for “ant run-tests”
+#Add notes that when using Windows it is necessary to use two slashes in the directory name when installing in Windows
+#Provide an example build.properites configuration in the instructions for both windows and linux. It may be helpful to provide an example directory structure and the corresponding appropriate build.properties configuration.
+#Add some documentation explaining what is a Sink and what is a Source. The difference and purpose of each is not immediately clear. In the sample guide, indicate what item is being highlighted when you are selecting Sink and Source.
+#Modify the GUI to show a listing of the selected sinks and sources. Also, add functionality to deselect a selected sink or source?
+#Since TeSA uses LAPSE it would be good to discuss what TeSA is doing and what LAPSE can do own its own. Basically, for those not familiar with LAPSE, they may wonder what exactly does TeSA add? Could they do most of this with just LAPSE? 
+#Describe all the functionality of TeSA in the documentation. Include the types of vulnerabilities that can be detected and provide sample code which includes these vulnerabilities. Also include step by step instructions and screenshots to demonstrate identifying each type of vulnerability. 
+#Put a link in the installation guide for the google code checkout page (http://code.google.com/p/teachablesa/source/checkout).
+#Include a link to download SVN (http://subversion.tigris.org/getting.html)
+#Indicate which build.properties should be changed (\secbugs\build.properties) - Just in case people download the whole tree instead of just the secbugs subtree
+|}

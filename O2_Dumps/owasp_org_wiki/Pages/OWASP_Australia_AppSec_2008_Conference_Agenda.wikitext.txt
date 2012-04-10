@@ -1,0 +1,136 @@
+[http://www.owasp.org/index.php/OWASP_Australia_AppSec_2008_Conference http://www.owasp.org/images/4/4b/Owasp_ausconf_banner.jpg]
+
+Welcome to the OWASP Australia Application Security Conference for 2008. Following on from the great success of OWASP Conferences in 2006 and 2007 in the United States and Europe, the first ever Asia Pacific & Australia Security conference will take place in February 2008.
+
+-------------------------------------------------------------------------------
+UPDATE: The OWASP Wiki now has an FTP/HTTP Upload server. I am able to put the
+MP3's online. So the links below can now work. If you simply want to download
+directly the link to the directory is.
+http://www.owasp.org/download/owasp_confau_2008/
+-------------------------------------------------------------------------------
+
+
+
+
+== OWASP Australia 2008 Conference Schedule - February 28th & 29th 2008 ==
+
+{| style="width:80%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white" | Day 1 - Thursday Feb 28, 2007
+ |-
+ | style="width:10%; background:#7B8ABD" | || style="width:40%; background:#BC857A" | Track 1  
+ | style="width:40%; background:#BCA57A" | Track 2
+ |-
+ | style="width:10%; background:#7B8ABD" | 08:00-09:00 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Registration and Coffee
+ |-
+ | style="width:10%; background:#7B8ABD" | 09:00-09:15 || colspan="2" style="width:80%; background:#F2F2F2" align="left" | Welcome to OWASP Australia 2008 Conference - Justin Derry, Australia OWASP Conference Chair and Practice Leader b-sec Consulting
+ |-
+ | style="width:10%; background:#7B8ABD" | 09:15-10:15 || colspan="2" style="width:80%; background:#F2F2F2" align="left" | Keynote: The Microsoft SLD-IT, The process of Building Secure Applications 
+Mark Curphey  (European Practice Manager - ACE Team Microsoft)
+[http://www.owasp.org/download/owasp_confau_2008/OWASPAU08_Session_1_Curphey.mp3 (MP3)]
+
+ |-
+ | style="width:10%; background:#7B8ABD" | 10:15-10:45 || colspan="2" style="width:80%; background:#F2F2F2" align="left" | An Introduction to OWASP 2008 & Current Projects - Justin Derry, Australia OWASP Conference Chair and Practice Leader b-sec Consulting
+ |-
+ | style="width:10%; background:#7B8ABD" | 10:45-11:15 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Morning Tea/Coffee, Vendor Technology Expo
+ |-
+ | style="width:10%; background:#7B8ABD" | 11:15-12:30 || style="width:40%; background:#BC857A" align="left" | Secure Software Development (OWASP EDU Project) - Martin Knobloch, Technical Specialist, Sogeti Nederland B.V.
+[http://www.owasp.org/download/owasp_confau_2008/OWASPAU08_Session_2_Knobloch.mp3 (MP3)]  [http://www.owasp.org/images/8/8d/OWASPAU08_Session_2_Knobloch.ppt (PPT)]
+ | style="width:40%; background:#BCA57A" align="left" | Considerations for application security testing for enterprise projects. - Jean Marie Abighanem, Director Enterprise Risk Services Deloitte Touche Tohmatsu
+[http://www.owasp.org/download/owasp_confau_2008/OWASPAU08_Session_3_Abighanem.mp3 (MP3)] 
+[http://www.owasp.org/images/9/97/OWASPAU08_Session_3_Abighanem.ppt (PPT)]
+ |-
+ | style="width:10%; background:#7B8ABD" | 12:30-13:30 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Lunch, Vendor Technology Expo
+ |-
+ | style="width:10%; background:#7B8ABD" | 13:30-14:30 || style="width:40%; background:#BC857A" align="left" | Automated web application scanning versus manual testing, choosing the best tools for the job. - Matthew Hackling, Enterprise Risk Services Deloitte Touche Tohmatsu 
+[http://www.owasp.org/download/owasp_confau_2008/OWASPAU08_Session_4_Hackling.mp3 (MP3)] 
+[http://www.owasp.org/images/4/41/OWASPAU08_Session_4_Hackling.ppt (PPT)] 
+ | style="width:40%; background:#BCA57A" align="left" | Business Risk & Compliance for Application Security - Malathi Carthigaser, Principal Consultant Application Security b-sec
+[http://www.owasp.org/download/owasp_confau_2008/OWASPAU08_Session_5_Carthigaser.mp3 (MP3)] 
+[http://www.owasp.org/images/2/20/OWASPAU08_Session_5_Carthigaser.ppt (PPT)] 
+ |-
+ | style="width:10%; background:#7B8ABD" | 14:45-15:45 || style="width:40%; background:#BC857A" align="left" | Whitelisting & Securing HTML Input - Peter Freiberg, b-sec Consulting Pty Ltd
+[http://www.owasp.org/download/owasp_confau_2008/OWASPAU08_Session_6_Freiberg.mp3 (MP3)] 
+ | style="width:40%; background:#BCA57A" align="left" | The Next Step in Evolution (Javascript Worms) - Benjamin Mosse, Security Researcher & Analyst Programmer
+[http://www.owasp.org/download/owasp_confau_2008/OWASPAU08_Session_7_Mosse.mp3 (MP3)] 
+[http://www.owasp.org/images/1/1a/OWASPAU08_Session_7_Mosse.ppt (PPT)] 
+ |-
+ | style="width:10%; background:#7B8ABD" | 15:45-16:15 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Afternoon Tea/Coffee, Vendor Technology Expo
+ |-
+ | style="width:10%; background:#7B8ABD" | 16:15-17:00 || style="width:40%; background:#BC857A" align="left" | Three OWASP Projects for Secure Applications - Michael Eddington, Leviathan Security Group 
+[http://www.owasp.org/download/owasp_confau_2008/OWASPAU08_Session_8_Eddington.mp3 (MP3)] 
+[http://www.owasp.org/images/b/b0/OWASPAU08_Session_8_Eddington.ppt (PPT)] 
+ | style="width:40%; background:#BCA57A" align="left" | Hacker Attacks on the Horizon: Understanding the Top Web 2.0 Attack Vectors - Danny Allan, IBM Watchfire
+[http://www.owasp.org/download/owasp_confau_2008/OWASPAU08_Session_9_Allan.mp3 (MP3)] 
+[http://www.owasp.org/images/f/fb/OWASPAU08_Session_9_Allan.pdf (PDF)]
+ |-
+ | style="width:10%; background:#7B8ABD" | 17:15-18:00 || colspan="2" style="width:40%; background:#F2F2F2" align="left" | Panel: “Application Security Threats Commonly faced by Organisations!”
+Moderator: Oliver Binz, Managing Director, b-sec Consulting Pty Ltd
+
+Panelists: Jean Marie Abighanem (Deloitte Touche Tohmatsu), Brian Chess (Fortify Software), James Manger (Telstra), Mark Curphey (Microsoft), Christian Heinrich 
+[http://www.owasp.org/download/owasp_confau_2008/OWASPAU08_Session_10_Panel.mp3 (MP3)] 
+ |-
+ | style="width:10%; background:#7B8ABD" | 18:30-19:00 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | OWASP Social Gathering: Pre-Dinner Drinks & Cocktails
+Location: Conference Facility Foyer @ Gold Coast Convention Center
+ |-
+ | style="width:10%; background:#7B8ABD" | 19:00-21:30 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | OWASP Social Gathering: Gala Dinner, Entertainment and Networking Opportunity for all registered attendees.
+Location: Gold Coast Convention Center Main Hall.
+|-
+
+ ! colspan="3" align="center" style="background:#4058A0; color:white" | Day 2 - Friday Feb 29, 2007
+ |-
+ | style="width:10%; background:#7B8ABD" | || style="width:40%; background:#BC857A" | Track 1
+ | style="width:40%; background:#BCA57A" | Track 2
+ |-
+ | style="width:10%; background:#7B8ABD" | 08:00-09:00 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Registration and Coffee
+ |-
+ | style="width:10%; background:#7B8ABD" | 09:00-9:15 || colspan="2" style="width:80%; background:#F2F2F2" align="left" | Conference Day 2 Open: Justin Derry, Australia OWASP Conference Chair and Practice Leader b-sec Consulting
+ |-
+ | style="width:10%; background:#7B8ABD" | 09:15-10:15 || colspan="2" style="width:80%; background:#F2F2F2" align="left" | Keynote2: Static Analysis & Secure Coding for Enterprises - Brian Chess, Fortify Software Ph.D., Founder & Chief Scientist
+Author of Secure Programming with Static Analysis by Brian Chess and Jacob West
+[http://www.owasp.org/download/owasp_confau_2008/OWASPAU08_Session_11_Chess.mp3 (MP3)] 
+[http://www.owasp.org/images/4/4a/OWASPAU08_Session_11_Chess.zip (PPT/ZIP)] 
+ |-
+ | style="width:10%; background:#7B8ABD" | 10:15-10:45 || colspan="2" style="width:80%; background:#F2F2F2" align="left" | OWASP Top Ten, OWASP Guide Project Updates
+ |-
+ | style="width:10%; background:#7B8ABD" | 10:45-11:15 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Morning Tea/Coffee, Vendor Technology Expo
+ |-
+ | style="width:10%; background:#7B8ABD" | 11:15-12:30 || style="width:40%; background:#BC857A" align="left" | Google Hacking - Christian Heinrich
+[http://www.owasp.org/download/owasp_confau_2008/OWASPAU08_Session_12_Heinrich.mp3 (MP3)] 
+ | style="width:40%; background:#BCA57A" align="left" | Scalability and Security — Together - James Manger, Identity and Security team – Chief Technology Office – Telstra
+[http://www.owasp.org/download/owasp_confau_2008/OWASPAU08_Session_13_Manager.mp3 (MP3)] 
+[http://www.owasp.org/images/8/89/OWASPAU08_Session_13_Manger.ppt (PPT)]
+
+ |-
+ | style="width:10%; background:#7B8ABD" | 12:30-13:30 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Lunch, Vendor Technology Expo
+ |-
+ | style="width:10%; background:#7B8ABD" | 13:30-14:30 || style="width:40%; background:#BC857A" align="left" | Using WS-SecurityPolicy to Defend Web Services Attacks - Symon Chang, BEA Systems
+[http://www.owasp.org/download/owasp_confau_2008/OWASPAU08_Session_14_Chang.mp3 (MP3)] 
+[http://www.owasp.org/images/1/1d/OWASPAU08_Session_14_Chang.ppt (PPT)] 
+ | style="width:40%; background:#BCA57A" align="left" | PCI Security Standards & Policies for Application Security - Darren Skidmore, Team Lead InfoSec and BCP, FIS Australasia Card Services Pty Ltd
+[http://www.owasp.org/download/owasp_confau_2008/OWASPAU08_Session_15_Skidmore.mp3 (MP3)] 
+ |-
+ | style="width:10%; background:#7B8ABD" | 14:30-15:30 || style="width:40%; background:#BC857A" align="left" | Dealing with threats to Databases - Sandeep Singh Nain, Security Analyst IBM
+[http://www.owasp.org/download/owasp_confau_2008/OWASPAU08_Session_16_Nain.mp3 (MP3)] 
+[http://www.owasp.org/images/a/a3/OWASPAU08_Session_16_Nain.ppt (PPT)] 
+ | style="width:40%; background:#BCA57A" align="left" | On the job browser exploitation - Mark Piper, Security-Assessment.com
+[http://www.owasp.org/download/owasp_confau_2008/OWASPAU08_Session_17_Mark.mp3 (MP3)] 
+ |-
+ | style="width:10%; background:#7B8ABD" | 15:30-16:00 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Afternoon Tea/Coffee, Vendor Technology Expo
+ |-
+ | style="width:10%; background:#7B8ABD" | 16:00-17:00 || style="width:40%; background:#BC857A" align="left" | The detection and analysis of Flash based malware. - Paul Theriault, Senior Associate SIFT
+[http://www.owasp.org/download/owasp_confau_2008/OWASPAU08_Session_18_Theriault.mp3 (MP3)] 
+[http://www.owasp.org/images/7/77/OWASPAU08_Session_18_Theriault.ppt (PPT)] 
+ | style="width:40%; background:#BCA57A" align="left" | Web Application Security. - Aidan Clarke F5 Systems Engineer
+[http://www.owasp.org/download/owasp_confau_2008/OWASPAU08_Session_19_Clark.mp3 (MP3)] 
+[http://www.owasp.org/images/4/48/OWASPAU08_Session_19_Clark.pdf (PDF)]
+ |-
+ | style="width:10%; background:#7B8ABD" | 17:00-17:30 || colspan="2" style="width:40%; background:#F2F2F2" align="left" | Conference Close, Justin Derry, Australia OWASP Conference Chair and Practice Leader b-sec Consulting
+ |-
+ | style="width:10%; background:#7B8ABD" | 17:30-19:00 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Happy Hour Drinks and Cocktails in Vendor Technology Expo
+ |-
+|}
+
+== OWASP Australia 2008 Conference Facilities Map ==
+To assist delegates the following map of the Conference Facilities is provided. The Gold Coast Convention Center has provided OWASP with the entire top floor of the Conference Facility for all services including presentations, meals and the vendor technology expo.
+
+[http://www.owasp.org/index.php/OWASP_Australia_AppSec_2008_Conference http://www.owasp.org/images/1/16/OWASP-AUS_CONFERENCE_LAYOUT_FIRSTFLOOR.png]

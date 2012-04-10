@@ -1,0 +1,32 @@
+{{stub}}
+
+==New OWASP Project details==
+see [[How to Start an OWASP Project]]
+===Project ideas & brainstorming:===
+Create an OWASP project around:
+* [http://diniscruz.blogspot.com/2009/12/idea-for-owasp-standard-for-public.html Idea for Owasp Standard for public rating of an website's security profile]
+* [http://diniscruz.blogspot.com/2009/12/comment-on-owasp-testing-and-disclosure.html Comment on OWASP testing and disclosure levels]
+
+===Other relevant OWASP projects===
+*[[:Category:OWASP Positive Security Project|OWASP Positive Security Project]]
+
+== Research link==
+===Public Disclosure Policies (by Commercial websites)===
+* [https://www.paypal.com/us/cgi-bin/webscr?cmd=xpt/cps/securitycenter/general/ReportingSecurityIssues-outside Paypal] Site Security Researchers
+* [http://www.facebook.com/security?v=app_6009294086 Facebook] Report a Possible Security Vulnerability 
+* [http://www.salesforce.com/company/disclosure.jsp Salesforce.com] Vulnerability Reporting Policy
+* [https://www.wesabe.com/page/security-contact Wesabe] Contacting Security - We want to hear from you (security@wesabe.com, [https://www.wesabe.com/downloads/wesabe-public-key.asc GPG key]
+* [http://www.microsoft.com/security/msrc/report.aspx Microsoft] Report a Vulnerability
+* [http://37signals.com/security-response 37signals] Security Response
+* [http://www.mozilla.org/security/bug-bounty.html Mozilla] Mozilla Bug Bounty Program
+
+===Other Links===
+* [http://securityretentive.blogspot.com/2009/12/security-disclosure-policies-that.html Security Disclosure Policies That Remove Chilling Effects]
+* [http://securityretentive.blogspot.com/2007/11/some-comments-on-paypals-security.html Some Comments on PayPal's Security Vulnerability Disclosure Policy]
+* [http://www.thesecuritypractice.com/the_security_practice/2008/03/communicating-a.html Communicating a Site Security Policy]
+* [http://www.thesecuritypractice.com/the_security_practice/2009/10/an-ethical-framework-for-information-security-research.html An ethical framework for information security research]
+* [http://www.thesecuritypractice.com/the_security_practice/2008/02/disclosure-poli.html Disclosure policies – what constitutes “responsible” disclosure, vs irresponsible disclosure?]
+* [http://n0where.org/samsara-20090924.pdf Disclosure Samsara] The Endless Responsible Vulnerability Disclosure Debate (Slides 32-34 have responsible disclosure recommendations for organizations)
+
+===Questions to answer===
+Question: What types of vulnerability testing is implicitly allowed? (XSS, SQLi,,XSRF)

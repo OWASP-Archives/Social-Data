@@ -1,0 +1,135 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+Miscalculated null termination occurs when the placement of a null character at the end of a buffer of characters (or string) is misplaced or omitted. 
+
+'''Consequences'''
+
+* Confidentiality: Information disclosure may occur if strings with misplaced or omitted null characters are printed.
+* Availability: A randomly placed null character may put the system into an undefined state, and therefore make it prone to crashing.
+* Integrity: A misplaced null character may corrupt other data in memory
+* Access Control: Should the null character corrupt the process flow, or affect a flag controlling access, it may lead to logical errors which allow for the execution of arbitrary code.
+
+'''Exposure period'''
+
+* Requirements specification: The choice could be made to use a language that is not susceptible to these issues.
+* Implementation: Precise knowledge of string manipulation functions may prevent this issue
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood of exploit'''
+
+Medium
+
+Miscalculated null termination is a common issue, and often difficult to detect. The most common symptoms occur infrequently (in the case of problems resulting from "safe" string functions), or in odd ways characterized by data corruption (when caused by off-by-one errors).
+
+The case of an omitted null character is the most dangerous of the possible issues. This will almost certainly result in information disclosure, and possibly a buffer overflow condition, which may be exploited to execute arbitrary code. 
+
+As for misplaced null characters, the biggest issue is a subset of buffer overflow, and write-what-where conditions, where data corruption occurs from the writing of a null character over valid data, or even instructions. These logic issues may result in any number of security flaws.
+
+
+==Risk Factors==
+
+TBD
+
+
+==Examples==
+
+While the following example is not exploitable, it provides a good example of how nulls can be omitted or misplaced, even when "safe" functions are used:
+
+<pre>
+#include <stdio.h>
+#include <string.h>
+
+int main() {   
+  char longString[] = "Cellular bananular phone";    
+  char shortString[16];    
+
+  strncpy(shortString, longString, 16);    
+  printf("The last character in shortString is: %c %1$x\n", 
+         shortString[15]);    
+  return (0);
+}
+</pre>
+
+The above code gives the following output:
+
+<pre>
+The last character in shortString is: l 6c
+</pre>
+
+So, the shortString array does not end in a NULL character, even though the "safe" string function strncpy() was used.
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Buffer Overflow]] (and related issues)
+* [[Write-what-where condition]]: A subset of the problem in some cases, in which an attacker may write a null character to a small range of possible addresses.
+
+
+==Related [[Controls]]==
+
+* Requirements specification: The choice could be made to use a language that is not susceptible to these issues.
+* Implementation: Ensure that all string functions used are understood fully as to how they append null characters. Also, be wary of off-by-one errors when appending nulls to the end of strings.
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Range and Type Error Vulnerability]]
+[[Category:OWASP_CLASP_Project]]
+[[Category:Code Snippet]]
+[[Category:C]]

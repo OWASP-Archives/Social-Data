@@ -1,0 +1,130 @@
+''Sent to owasp-all mailing list on 23th Feb 2007'' __NOEDITSECTION__
+
+== OWASP Newsletter #5 (23 Feb-07)==
+
+Hello, due to hyper busy schedule this edition of the OWASP newsletter is delivered a little bit later than normal (thx Mike for helping out).
+
+As always, if you have any content to add to the next edtion, feel free to add it directly to its WIKI page ([[OWASP Newsletter 6]]). 
+
+Finally, if you are a regular contributor you will notice a couple changes on the WIKI (for example the location of the EDIT button), this is due to the recent upgrade to the latest version of MediaWiki.
+
+Dinis Cruz
+
+Chief OWASP Evangelist
+
+== Featured Item: OWASP Conference Europe, Italy, Milan, May 16th-17th ==
+
+The organization of the [[6th OWASP AppSec Conference - Italy 2007]] is now officially under way.
+
+OWASP is soliciting both experiential and research papers for this conference as we did last year for the OWASP AppSec 2006 conference in Belgium, so if you want to do a presentation see the [[6th OWASP AppSec Conference - Italy 2007/CFP| Call For Papers]]. 
+
+Also posted are the [[6th OWASP AppSec Conference - Italy 2007/Training| details about the one-day training courses]] which are offered on May 15th, the day prior to the conference.
+
+== Featured Project: OWASP Tiger ==
+
+Another AoC project, OWASP Tiger is a new tool created from the ashes of the ASP.NET tools/PoC created by Dinis Cruz (see [OWASP Autumn of Code 2006 - Projects: Owasp .Net Tools] for more details).
+
+OWASP Tiger is a Windows application originally intented to be used for automating the process of testing variuous known ASP.NET security issues in hosted environments. However, it is much more versatile than that: it can help you construct and send a HTTP requests, receive and analyze the responses, match them against a set of conditions to produce alerts, notifications that something is wrong with the application(s) or service(s) being tested.
+
+For more details (and to download it) see the [[OWASP Tiger]] project page, and read the [[Tiger User Manual]]
+
+== Featured Project OWASP Testing Project ==
+
+'''The OWASP Testing Guide v2 is now published''' [[User:Mmeucci|Matteo Meucci]] (as part of his [[OWASP_Autumn_of_Code_2006_-_Projects:_Testing_Guide | AoC project]]) has just published the latest version of Testing guide which:
+* you can read it online on the [http://www.owasp.org/index.php/OWASP_Testing_Guide_v2_Table_of_Contents  Testing Guide v2 wiki]
+* or download the Guide in [http://www.owasp.org/index.php/Image:OWASP_Testing_Guide_v2_pdf.zip Adobe PDF format] or in [http://www.owasp.org/index.php/Image:OWASP_Testing_Guide_v2_doc.zip Ms Doc format]
+
+If you have something good to say about this guide, please add a comment to the [http://www.owasp.org/index.php/Testing_Guide_Quotes The OWASP Testing Guide 'Quotes'] page
+
+== Latest additions to the WIKI ==
+
+==== New Pages====
+* [[OWASP Tiger]] and [[Tiger User Manual]]
+* [[6th OWASP AppSec Conference - Italy 2007/Training]] and [[6th OWASP AppSec Conference - Italy 2007/CFP]]
+* [[Signing jar files with jarsigner]]
+* [[PRNG permanent compromise attack]], [[PRNG state compromise extension attack]], [[PRNG direct cryptanalytic attack]] and [[Java overview]]
+* [[Session Fixation Protection]]
+* [[Poland]] (New Chapter)
+* [[Testing Guide Quotes]]
+
+==== Updated pages====
+* [[OWASP_JBroFuzz | OWASP JBroFuzz]]
+* [[Unvalidated_Input | Unvalidated Input]]
+* [[Command_Injection | Command Injection]]
+* [[Session_Fixation | Session Fixation]]
+* [[OWASP_Java_Table_of_Contents | OWASP Java Table of Contents]]
+** [[Password_length_%26_complexity | Password length & complexity]]
+** [[Preventing_SQL_Injection_in_Java | Preventing SQL Injection in Java]]
+* [[Web_Application_Penetration_Testing | Web Application Penetration Testing]]
+** [[Testing_for_Error_Code | Testing for Error Code]]
+** [[Testing_for_Application_Discovery  | Testing for Application Discovery]]
+** [[Testing_for_Web_Application_Fingerprint | Testing for Web Application Fingerprint]]
+** [[Testing_for_Brute_Force (OWASP-AT-004) | Testing for Brute Force]]
+** [[Testing_for_infrastructure_configuration_management (OWASP-CM-003) | Testing for infrastructure configuration management]]
+** [[Testing_for_DB_Listener  (OWASP-CM-002)| Testing for DB Listener]]
+** [[Testing_for_Bypassing_Authentication_Schema (OWASP-AT-005)| Testing for Bypassing Authentication Schema]]
+** [[Testing_for_Default_or_Guessable_User_Account  (OWASP-AT-003)| Testing for Default or Guessable User Account]]
+** [[Handling_E-Commerce_Payments | Handling E-Commerce Payments]]
+** [[Appendix_A:_Testing_Tools | Appendix A: Testing Tools]]
+* [[Phoenix/Tools | Phoenix/Tools]]
+* [[PHP_CSRF_Guard | PHP CSRF Guard]]
+* [[Denver_January_2007_meeting | Denver January 2007 meeting]]
+
+==== New Documents & Presentations from chapters==== 
+Final (revised) version of the Testing Guide:
+
+* [[:Image:OWASP Testing Guide v2 doc.zip|OWASP Testing Guide v2 doc.zip]] or [[:Image:OWASP Testing Guide v2 pdf.zip|OWASP Testing Guide v2 pdf.zip]]
+
+From the last Israeli chapter meeting:
+* [[media:OWASP_IL_Source_Code_Analysis_and_Application_Security.pdf|Source Code Analysis and Application Security - Cheating the Maze]] - Maty Siman, Founder & CTO, [http://www.checkmarx.com/ Checkmarx]
+* [[media:OWASP_IL_WCF_Security.pdf|Security Implications of .Net 3.0 and the Windows Communication Foundation (WCF)]] - Emmanuel Cohen-Yashar (Manu), Senior .NET technology consultant, [http://www.sela.co.il Sela Group]
+* [[media:OWASP_IL_The_Universal_XSS_PDF_Vulnerability.pdf|Analysis of the Universal XSS PDF vulnerability - Cause, Solutions and Fun Stuff]] - Ofer Shezaf, CTO, [http://www.breach.com Breach Security], Leader of OWASP IL
+
+==== Latest Blog entries====
+* [http://blogs.owasp.org/eoinkeary/2007/02/21/the-uk-computer-misuse-act-could-ban-distribution-of-security-tools// The (UK) Computer misuse Act could ban distribution of security tools] 
+* [http://blogs.owasp.org/diniscruz/2007/02/20/sanboxes-on-olpc-and-wmf-maf/ Sanboxes on OLPC and WMF, MAF] 
+* [http://blogs.owasp.org/seba/2007/02/19/chapter-democrazy/ Chapter Democrazy] 
+* [http://blogs.owasp.org/eoinkeary/2007/02/19/gartner-smell-the-bacontofu/ Gartner smell the bacon/tofu!!!!]
+* [http://blogs.owasp.org/diniscruz/2007/02/15/uac-not-a-security-feature/ UAC not a security feature]
+* [http://blogs.owasp.org/dacort/2007/02/14/the-game-is-heating-up/ The game is heating up]
+* [http://blogs.owasp.org/dacort/2007/02/02/http-cookie-analysis-tool/ HTTP Cookie Analysis Tool]
+* [http://blogs.owasp.org/mike/2007/02/04/owasp-blogs-update/ OWASP Blog’s Update]
+* [http://blogs.owasp.org/mike/2007/02/12/interesting-article/ Interesting Article] 
+* [http://blogs.owasp.org/orizon/2007/02/05/version-010/ Version 0.10]  and [http://blogs.owasp.org/orizon/2007/02/06/8/ First public release] (Orizon)
+
+==== OWASP Community====
+* May 10 (18:00h) - [[Belgium|Belgium chapter meeting]]
+* Apr 12 (18:00h) - [[Netherlands|Netherlands chapter meeting]]
+* Mar 22 (18:00h) - [[London|London chapter meeting]]
+* Mar 21-22 - [[Belgium#OWASP_Top_10_2007_Update_.28Infosecurity_Belgium.2C_21_.26_.2622_Mar_2007.29|Belgium@InfoSecurity]]
+* Mar 7 (18:30h) - [[Kansas City|Kansas City chapter meeting]]
+* Mar 6 (18:30h) - [[Philadelphia|Philadelphia chapter meeting]]
+* Mar 6 (18:00h) - [[Melbourne|Melbourne chapter meeting]]
+* Feb 28 (18:00h) - [[Seattle|Seattle chapter meeting]]
+* Feb 27 (18:00h) - [[Edmonton|Edmonton chapter meeting]]
+* Feb 22 (18:30h) - [[Helsinki|Helsinki chapter meeting]]
+* Feb 22 (18:00h) - [[London|London chapter meeting]]
+* Feb 19 (18:00h) - [[Rochester|Rochester chapter meeting]]
+
+==== Application Security News====
+* '''Feb 21 - OWASP Top 10 2007 rc1 feedback'''
+:Lots of feedback on the new OWASP Top 10. See e.g. on [http://datasecurity.wordpress.com/2007/02/05/owasp-top-10-for-2007/ PCI DSS blog] with some interesting comments and of course Sylvan von Stuppe's comments on the [http://www.owasp.org/index.php/Top_10_2007 OWASP Top 10 RC1] can be found [http://sylvanvonstuppe.blogspot.com/2007/02/owasp-top-10-2007-update-rc1-a7-a8.html here](A7-A8), [http://sylvanvonstuppe.blogspot.com/2007/02/owasp-top-10-2007-update-rc1-a5-a6.html here](A5-A6), [http://sylvanvonstuppe.blogspot.com/2007/02/owasp-top-10-2007-update-rc1-a3-a4.html here](A3-A4) and [http://sylvanvonstuppe.blogspot.com/2007/01/owasp-top-10-2007-update-rc1-a1-a2.html here] (A1-A2). Last change to review the document prior to February 28th and provide feedback to the [http://lists.owasp.org/mailman/listinfo/owasp-topten owasp-topten@lists.owasp.org] mail list.
+
+* '''Feb 21 - [http://blog.washingtonpost.com/securityfix/2007/02/serious_flaw_in_google_desktop.html Serious Flaw in Google Desktop Prompts Patch]'''
+:"Search engine giant Google has issued an update for people running its powerful Desktop software. Researchers had demonstrated a potentially devastating security hole in the software that could allow bad guys to snoop on users' computers or even to install additional software."
+
+* '''Feb 05 - [http://www.scmagazine.com.au/news/45262,myspace-superworm-creator-sentenced-to-probation-community-service.aspx Sammy 'MySpace' KamKar Pleads Guilty in Court]'''
+:"The man responsible for unleashing what is believed to be the first self-propagating cross-site scripting worm has pleaded guilty in Los Angeles Superior Court to charges stemming from his most infamous hacking."
+
+* '''Feb 05 - [http://www.itsecurity.com/security.htm?s=10164 Why You're Organization Must Increase It's Web Application Security Budget]''' - "The Web application security threat is a real one. A failure to respond to this threat will result in real risk to any enterprise that stores financial or customer data. While the problem is a serious one, it is not something that cannot be fixed so long as proper attention and budget are allocated to it. Unfortunately, given the unique nature of the problem and its impact on the budgetary process, it will likely require direct intervention by the financial staff."
+
+* '''Feb 05 - [http://www10.mcadcafe.com/nbc/articles/view_article.php?section=CorpNews&articleid=347382 X-Force Notes Increase in Vulnerabilities. Where are the "X-Men" to fix them?]'''- " According to the report, which was developed by the IBM Internet Security Systems (ISS) X-Force(R) research and development team, there were 7,247 new vulnerabilities recorded and analyzed by the X-Force in 2006, which equates to an average of 20 new vulnerabilities per day. This total represents a nearly 40 percent increase over what ISS reported in 2005. Over 88 percent of 2006 vulnerabilities could be exploited remotely, and over 50 percent allowed attackers to gain access to a machine after exploitation. "
+
+* '''Feb 05 - [http://www.huffingtonpost.com/avi-rubin/bad-software-all-around_b_40119.html Rubin Smacks Diebold Once Again]'''- "Given what I've seen about voting system standards and voting system testing labs, I would bet money that the parking garage system at Baltimore Penn Station was tested more extensively before it was deployed than the Diebold voting machines that we use in Maryland."
+
+== OWASP references in the Media ==
+* [http://www.pr.com/press-release/30079 FutureBazaar Partners with AppLabs Technologies for Security Testing] 
+* [http://builder.com.com/5100-6389_14-6159742.html?part=rss&subj=bldr Lock it down: Use the revised OWASP Top Ten to secure your Web applications -- Part 1]
+* [http://www.webknowhow.net/news/news/070208CenzicWebApplicationSecurity.html Cenzic Identifies Latest Most Serious Web Application Vulnerabilites]
+* [http://www.marketwire.com/mw/release_html_b1?release_id=212594 With Application-Based Attacks on the Rise, No Site Is Safe, Reports CIA (Cenzic Intelligent Analysis) Lab in Year End Top Five Vulnerabilities List]
+* [http://www.prnewswire.com/cgi-bin/stories.pl?ACCT=104&STORY=/www/story/02-01-2007/0004518030&EDATE= Two Fortify Software Products Named as Finalists in 17th Annual Jolt Product Excellence Awards]

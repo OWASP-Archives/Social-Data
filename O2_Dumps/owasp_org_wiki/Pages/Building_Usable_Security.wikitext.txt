@@ -1,0 +1,5 @@
+One the most overlooked aspects of application security is usability. Users are often the weakest link in a software system. If security controls embedded in software systems hinder users’ ability to accomplish their tasks, users will ignore or try to bypass such controls, a common occurrence in today's systems. Building usable security functions is a significant component of building secure systems.
+
+Security engineers generally lack experience in usability engineering. One of the main reasons why application security violations continue to rise, is the fact that many deployed security mechanism are not user friendly, limiting their effectiveness. Unless engineers start thinking more about how to make security more usable, progress in securing systems will be limited.
+
+Many people believe that there is an inherent tradeoff between security and usability. However, that does not have to be the case. This talk will expand on the link between security and usability, and provide guidance on how to build security functions and controls that will facilitate their adoption and reduce users’ resistance to such controls.

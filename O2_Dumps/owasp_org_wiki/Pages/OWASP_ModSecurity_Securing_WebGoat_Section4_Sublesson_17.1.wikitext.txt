@@ -1,0 +1,61 @@
+17. Web Services -> 17.1 Create a SOAP Request
+
+=== Lesson overview ===
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution === 
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information. 
+
+=== Strategy ===
+
+This WebGoat lesson demonstrates the use of WSDL files and examines a SOAP request.
+
+The ModSecurity solution will be to discuss XML Web services and describe the configuration changes that would be required for ModSecurity to inspect this data.
+
+=== Implementation === 
+SOAP is a protocol for exchanging XML-based messages over computer networks, normally using HTTP/HTTPS. It forms the foundation layer of the web services protocol stack providing a basic messaging framework upon which abstract layers can be built. The most common use of SOAP is the Remote Procedure Call, in which one network node (the client) sends a request message to another node (the server) and the server immediately sends a response message to the client. 
+
+The purpose of WSDL (Web Services Markup Language) is to describe the interfaces of Web services; SOAP is used to communicate with the Web services.
+
+The project solution for this WebGoat lesson is to consolidate from the reference manual how ModSecurity supports XML and Web services.
+
+In order for ModSecurity to process XML in the HTTP response body, add 'text/xml' to this directive:
+<pre>
+  SecResponseBodyMimeType text/plain text/html text/xml
+</pre>
+
+If it is not present, the response body buffer will be empty and the normal debug log messages that ModSecurity is loading chunks of the response body will be missing.
+
+Once XML is enabled, XPath expressions can be used against the special variable 'XML'; the following attempts to match 'dirty':
+<pre>
+  SecRule XML:/xPath/Expression dirty
+</pre>
+
+To process XML in the request body, it necessary to turn on XML in the request header phase using the configuration option 'ctl:requestBodyProcessor=XML'; after the request body is processed as XML, XML-related features can be used to inspect it as in the following example.
+
+The variable 'XML' can also be used as a standalone variable as a target for the validateDTD and validateSchema operators:
+<pre>
+  SecRule REQUEST_HEADERS:Content-Type ^text/xml$ \
+    phase:1,t:lowercase,nolog,pass,ctl:requestBodyProcessor=XML
+  SecRule REQBODY_PROCESSOR "!^XML$" nolog,pass,skip:1
+  SecRule XML "@validateDTD /path/to/apache2/conf/xml.dtd"
+</pre>
+
+Or, the last line could be:
+<pre>
+  SecRule XML "@validateSchema /path/to/apache2/conf/xml.xsd"
+</pre>
+
+One action, 'xmlns', is used together with an XPath expression to register a namespace:
+<pre>
+  SecRule REQUEST_HEADERS:Content-Type "text/xml" \
+    phase:1,pass,ctl:requestBodyProcessor=XML,ctl:requestBodyAccess=On,\
+xmlns:xsd="http://www.SecRule XML:/soap:Envelope/soap:Body/q1:getInput/id() 123",\
+phase:2,deny
+</pre>
+
+=== Comments ===
+
+* This ModSecurity solution discusses XML Web services and describes the configuration changes that would be required for ModSecurity to inspect XML data.

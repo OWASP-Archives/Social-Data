@@ -1,0 +1,113 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+In some languages, forgetting to explicitly delimit a block can result in a logic error that can, in turn, have security implications.
+
+'''Consequences'''
+
+This is a general logic error - with all the potential consequences that this entails.
+
+'''Exposure period'''
+
+* Implementation
+
+'''Platform'''
+
+C, C++, C#, Java
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Varies
+
+'''Likelihood of exploit'''
+
+Low
+
+In many languages, braces are optional for blocks, and - in a case where braces are omitted - it is possible to insert a logic error where a statement is thought to be in a block but is not. This is a common and well known reliability error.
+
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+In this example, when the condition is true, the intention may be that both ''x'' and ''y'' run.
+
+<pre>
+if (condition==true) x;
+  y;
+</pre>
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+
+==Related [[Controls]]==
+
+* Implementation: Always use explicit block delimitation and use static-analysis technologies to enforce this practice.
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:General Logic Error Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

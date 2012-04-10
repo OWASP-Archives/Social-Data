@@ -1,0 +1,48 @@
+{{Template:Principle}}
+
+{{Template:Stub}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+<br>
+[[Category:OWASP ASDR Project]]
+
+
+==Description==
+
+There are many ways to deliver an “out of the box” experience for users. However, by default, the experience should be secure, and it should be up to the user to reduce their security – if they are allowed. 
+
+For example, by default, password aging and complexity should be enabled. Users might be allowed to turn these two features off to simplify their use of the application and increase their risk. 
+
+
+==Examples==
+
+===Short example name===
+: A short example description, small picture, or sample code with [http://www.site.com links]
+
+===Short example name===
+: A short example description, small picture, or sample code with [http://www.site.com links]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* [[Controls 1]]
+* [[Controls 2]]
+
+
+==References==
+
+* http://www.link1.com
+* [http://www.link2.com Title for the link2]
+
+
+__NOTOC__
+
+
+[[Category:Principle]]

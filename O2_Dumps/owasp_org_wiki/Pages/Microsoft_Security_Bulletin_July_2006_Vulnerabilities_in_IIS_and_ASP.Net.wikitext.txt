@@ -1,0 +1,20 @@
+Published on 11th July 2006
+    
+* [http://www.microsoft.com/technet/security/Bulletin/MS06-034.mspx Microsoft Security Bulletin MS06-034] - Vulnerability in Microsoft Internet Information Services using Active Server Pages Could Allow Remote Code Execution (917537)
+* [http://www.microsoft.com/technet/security/Bulletin/MS06-033.mspx Microsoft Security Bulletin MS06-033] - Vulnerability in ASP.NET Could Allow Information Disclosure (917283)
+
+I am a bit confused why MS06-034 is marked with 'Remote Code Execution' since if we follow the same logic, then MS should also release an advisory called "Asp.Net allows Remote Code Execution"
+
+
+== Research questions ==
+
+* where are the vulnerabilities (any volunteers to reverse engineer the patches?)
+** [http://www.microsoft.com/technet/security/Bulletin/MS06-034.mspx MS06-034] should be on asp.dll
+** [http://www.microsoft.com/technet/security/Bulletin/MS06-033.mspx MS06-033] should be on the config files?
+* can the other dislosed vulnerabilites be expoited from an ASP.NET environment, namely
+** [http://www.microsoft.com/technet/security/Bulletin/MS06-035.mspx Vulnerability in Server Service Could Allow Remote Code Execution (917159)]
+** [http://www.microsoft.com/technet/security/Bulletin/MS06-036.mspx Vulnerability in DHCP Client Service Could Allow Remote Code Execution (914388)]
+
+Dinis Cruz
+
+[[Category:OWASP .NET Project]]

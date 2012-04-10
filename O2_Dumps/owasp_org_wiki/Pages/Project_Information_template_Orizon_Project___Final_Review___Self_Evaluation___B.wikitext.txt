@@ -1,0 +1,89 @@
+[[Project Information:template Orizon Project|Clik here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''FINAL REVIEW''' 
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART I''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#The Owasp Orizon Project|OWASP Orizon Project's Deliveries & Objectives]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#The Owasp Orizon Project|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+The main goal of the Owasp Orizon project is to provide a set of APIs and a security check library to let people who want to write a static analyzer to use it as engine. In this perspective  the goal has completely accomplished. 
+The second and minor goal is to provide an embedded tool that uses Orizon APIs. Considering this, a lot of work needs to be done in having a release quality project. 
+
+In fact the goals that were not reached are:
+* having all Owasp Code Review Guide security checks in the embedded library
+* having the embedded tool a more usable GUI
+* having a complete documentation reference of the APIs
+* having a binary package for Win32 and UNIX/Linux architectures (Mac OS X Application is available at sourceforge). 
+
+From Owasp EU Summit '08, Orizon development was redirected towards creating a new and powerful application modeler that can create a model of an application allowing us to perform a code review.
+
+So we moved in working to Mirage engine, our modeler, with this approach:
+* Mirage will be responsible in taking the input, looking for source files
+* For each source file a specific modeler will be called to parse that file
+* Such modelers will be generated starting from a BNF grammar, using FreeCC as parser generator
+* Gathering together the modeler's results, Mirage can be able to build the whole application model.
+
+So we moved forward from our translating approach in a newer one. We take the grammar of a programming language, we use freecc to generate a parser, we build a modeler that uses the parser to scan a particular file type.
+Using this approach we are working over a PHP modeler and a Java and C# ones will follow asap.
+
+A new Orizon feature is also the Orizon shell. This is for advanced users that just want to use Orizon as code review tool. They can use a shell like environment submitting commands to the engine, interacting with it.
+
+In the time I'm writing this (Februrary 2009), the Mirage and the Shell are very alpha stage but the architecture of the Orizon framework can be considered stable. 
+
+|-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#The Owasp Orizon Project|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+Project deliveries & objectives are accomplished about by the 90%
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+From Eoin, I need some brainstorming in dividing security flaws in categories and having them in the Code Review Guide (so we can match Orizon and the Guide). From the Owasp community I need, during the next season of (cleanup/consolidation/...):
+* developers :-)
+* testing
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART II''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Assessment Criteria
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[:Category:OWASP Project Assessment|OWASP Project Assessment Criteria]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Alpha Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+None
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Beta Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+The installer, but having in mind that Orizon is first an engine to be used in other applications an installer can be a less priority issue.
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+3. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Release Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+The online documentation and a usable GUI for the embedded static analyzer provided with the engine.
+ |-  
+ | style="width:25%; background:#7B8ABD" align="center"|
+4. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+From Eoin, I need some brainstorming in dividing security flaws in categories and having them in the Code Review Guide (so we can match Orizon and the Guide). From the Owasp community I need, during the next season of (cleanup/consolidation/...):
+* developers :-)
+* testing
+|}

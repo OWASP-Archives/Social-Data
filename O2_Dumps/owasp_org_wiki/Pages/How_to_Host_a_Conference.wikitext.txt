@@ -1,0 +1,385 @@
+__NOTOC__
+
+= Preamble =
+
+=== CONGRATULATIONS!  YOU'RE GOING TO HOST AN OWASP EVENT! ===
+
+Our intent in posting these guidelines at the OWASP web site is to give conference planners something more than "Good Luck" as they prepare to host an event. While it is almost impossible to cover EVERY detail of planning, we think we have put together a fairly comprehensive series of recommendations.  Just ask anyone who has put together an event of any size and they will tell you it's hard work, but can also be a lot of fun.  We are an open community, so your peers are often a great resource.  Refer to some of the other conference pages and contact the conference planners directly for advice.  Different types of OWASP Events (see the {{#switchtablink:EVENT DEFINITION|Event Definition|How to Host a Conference}} tab)
+have a few requirements imposed on them.  See the {{#switchtablink:REQUIREMENTS|requirements|How to Host a Conference}} tab for details.
+
+<!--
+We’ve also prepared a [[Conference Planning Table]] that summarizes these guidelines and gives you a check sheet to use as you plan your conference.
+-->
+
+===Questions?===
+
+The [[Global Conferences Committee]] is responsible for coordinating all OWASP conferences and events.  If you have any questions or comments feel free to ask them at [mailto:global_conference_committee@lists.owasp.org global_conference_committee@lists.owasp.org]
+
+
+'''Global Conferences Committee Chair''' is [mailto:mark.bristow@owasp.org Mark Bristow]
+
+'''Global Conferences Committee Operational Support''' is [http://sl.owasp.org/contactus Sarah Baso]
+
+'''OWASP Operations Director''' is [http://sl.owasp.org/contactus Kate Hartmann]
+
+= EVENT DEFINITION =
+
+=== Event Definition ===
+{{:OWASP Event Definitions}}
+
+= PLANNING =
+
+=== Planning ===
+The amount of planning, committee work, advance deadlines, etc., in part depends on the size conference you are planning. A general rule is to allow about a month for every 20 participants. For example, if you are expecting 200 attendees, you should begin to prepare at least 10 months in advance.
+
+The general dates and time of the conference should be suggested by local variables as well as OWASP speaker availability. For example, it may not be a good idea to plan a conference in Wisconsin in January or Texas in August due to potential weather conditions. Check the OWASP [http://www.owasp.org/index.php/Category:OWASP_AppSec_Conference conference schedule] to make sure there are not any conflicting events. If you plan to invite out of town speakers, it’s best to arrange them months in advance. Good speakers and instructors are often booked up to a year in advance.
+
+Consider the size and scope of your conference. Small groups can be hosted nearly any time. But larger groups will require housing, transportation, and food services that might conflict with other events. Make sure to check the local community events to ensure there will be adequate accessibility to these needs.
+
+Having a cohesive, comprehensive plan for your event is key to the success of your event.  While all plans change it is important to consider all of the elements listed in the following tabs when developing your conference planning package.
+
+Once you have developed your plan submit it to the [[Global Conferences Committee]] for review and consideration.
+
+= ROLES AND RESPONSIBILITIES =
+
+=== Board Member Role ===
+The OWASP Board will make every effort to have at least one OWASP Board Member in attendance at each AppSec conference. The Board Member will:
+# Provide a keynote or other address on OWASP, our goals, vision, strategy, ethics, projects, membership, and progress. The goal is to introduce attendees to OWASP and our culture, describe membership program, attract contributors, and inspire people about the importance of application security.
+# Ensure that OWASP principles and ethics are upheld in all aspects of the prosecution of the conference. In particular, ensure that OWASP’s brand is not misused by commercial entities.
+# Provide logistical support and the ability to make quick decisions on the ground (within reason) without having a formal board meeting and decision process.
+# Serve as a lightning rod for any issues, problems, suggestions or praise that anyone wants to provide about OWASP and bring them to the appropriate committee or OWASP Board.
+# Assess the general operation of the local/regional OWASP organization, chapters, sponsors, leaders, and contributors. The goal is to use this information to strategize how to grow OWASP’s presence in the region and support the local leadership.
+# Meet with local leaders from OWASP, government, vendors, and industry to get them to understand why application security is important and joining with OWASP makes sense.
+
+
+=== Conference Liaison Initiative ===
+{{:Global Conferences Committee/Liaison Program}}
+
+=== Conference Committee ===
+While there is no requirement to organize your conference's committee in any particular way, these structures have worked for successful conferences in the past.  It's important to organize a conference committee as early as possible.  It is recommended that you establish regular planning/reporting meetings and set up email lists. Always make it clear who is supposed to do what and when. Keep minutes/notes of your meetings and use them to follow up. The more you communicate with each other, the less likely you'll have slip ups.
+
+It is important that the conference committee be predominately comprised of a local team that is able to act locally to speed up and help in all activities related to the conference venue and local services.  Planning a conference entirely from a remote location is a challenging job and is '''NOT''' recommended.  Events without local support are unlikely to get [[Global Conferences Committee]] approval.
+
+=== Conference Organizers ===
+
+This should be a relatively small group (recommend 3) who are the core organizers of the conference.  This group is the "executive leadership" for the conference.  There is a tendency for one person to lead a conference, or for this group to be fairly large.  experience indicates that one person is likely unable to handle all of the decisions that will be required for managing a successful conference while having too many causes the issue of inaction by committee.  In the initial stages, these are the people who will be doing the heavy lifting while the rest of the committee comes into place.  It's recommended that specific organizers be initially tasked into the following:
+
+*One of the principle organizers should be designated as responsible for the budget.  It is important to reconcile any decisions with the budget as well as keep it up to date.  Conferences are the lifeblood of OWASP's financial picture so it's important that they be managed well. See the [[Conference Budget Planning Tool]] page for more budgeting information.
+
+*One organizer should be devoted to developing partnerships/sponsorship leads for the conference.  It's important to determine if the conference will be partnering with any local organizations or governments up front and to manage that relationship.  Additionally getting sponsorships early will greatly help keep the conference fiscally responsible
+
+*The last organizer should be devoted to facilities.  The first step in planning a conference is to develop a contract with the conference facility.  There are many things to consider while working this process and it requires dedicated attention.  Please do keep in mind however that organizers may not sign contracts, only officers of OWASP (The Board) may obligate the foundation legally.
+
+=== Functional Leaders ===
+
+In the past it has been helpful to appoint functional leaders for the conference.  These volunteers are typically assigned a specific area of responsibility to work in conjunction with the principle organizer's efforts.
+
+*Sponsors -- To augment the activities of the principal organizer assigned to this task, it's important to assign someone to sponsorships right away.  This task will involve a lot of email, conference calls, and footwork and needs all the help it can get.
+
+*Security -- Checking credentials at the entrance to convention only areas and controlling access to convention events. There will be licensed security personnel onsite to handle and "real" security issues should they arise, volunteers are not expected to put themselves in any jeopardy as security staff.
+
+*Speakers -- Helping Speakers and Trainers get to and from their assigned areas, and making sure that they have the resources that they need to do their tasks. Will also interface with the facilities team if any facilities issues arise and need to be remedied.
+
+*Registration/Info Desk/Merch -- Helping run the registration and "Front Desk" functions of the conference. This may also expand to running an Information Desk functionality and/or helping sell merchandise.
+
+*Facilities -- Helping run the "behind the scenes" of the conference. This will mainly be overseeing the various contractors and vendors hired to provide services for the conference, and acting as a liaison between the convention center, contractors, exhibitors and the rest of the conference.
+
+*Volunteers -- Getting a small army is hard to do
+
+
+=== Program Committee ===
+
+You need a group of people to review the papers you will receive.
+
+Good criteria to select Program Committee members include their involvement in OWASP activities (e.g projects, conferences, mailing lists). Selecting people already involved with OWASP helps choosing proposals that are aligned with OWASP's values.
+
+
+=== Trainer Evaluators ===
+
+You need a group of people to review the training proposals you will receive.
+
+Good criteria to select Trainer Evaluators include their involvement in OWASP activities (e.g projects, conferences, mailing lists). Selecting people already involved with OWASP helps choosing proposals that are aligned with OWASP's values.
+
+
+=== OWASP Resources ===
+
+Remember that the foundation does have some personnel who can help with the conference planning.  While it's important not to over-leverage these people, do include them as often as they can support as their insight and experience will be invaluable.
+
+= BUDGET =
+
+=== Budget ===
+'''[https://www.owasp.org/index.php/Conference_Budget_Planning_Tool The OWASP Conference Budget Planning Tool]''' has been developed by the Global Conferences Committee to assist in the budget planning process. The tool was originally designed for AppSec conferences but can be used for a conference of any size. When submitting a budget to the GCC, you are required to use this format. 
+
+Attendees should be expected to pay their registration fees in advance. This helps provide an accurate picture of the number who will attend because the attendees are more committed to attending. You can consider a slightly higher fee for late registrations or registrations onsite, if your food and facilities planning can handle extra last-minute registrations. 
+
+Your conference costs should be handled through the Foundation. Sponsorship funds, venue deposits, travel reimbursements, printing, etc will be managed for you.  This allows you to focus more on the event content! [http://sl.owasp.org/contactus Contact Us] as soon as possible to get this set up. 
+Don't minimize the importance of a detailed accounting of your conference funds. Setting things up right before you begin to receive registrations fees can make things a lot easier during and after the conference. 
+
+=== Things to Consider ===
+* Shipment of OWASP products will come out of the conference budget
+* Conferences are expected to provide travel for at least one board member
+* Be sure to budget for fliers, signage and schwag
+* To request general OWASP schwag/promotional merchandise, fill out the [https://spreadsheets.google.com/a/owasp.org/spreadsheet/viewform?formkey=dF85bGtvdWdrd2JjYldNZ1gxSkJxaEE6MQ Google Form]
+
+=== Profit Sharing ===
+Local host chapters will share in OWASP event profits under the following schedule.  In the case of multiple host chapters, the host chapters will be responsible for determining the division before the event.  More detail can be found on the [[Global Conferences Committee/Policies|Global Conferences Committee Policies]] page.
+* Global AppSec Conference - 25% of event profits with a $5,000 USD cap ($10,000 for multi-chapter events)
+* Regional/Theme Events - 30% of event profits with a $4,000 USD cap
+* Local Events - 50% of profits with a $3000 USD cap
+
+= SPONSORS =
+
+=== Sponsorships ===
+Obtaining sponsorship is essential to the success of your event.  Without financial input from vendors to cover costs of food, venue, giveaways, and everything else, your event will inevitably fail.  The following document has been prepared to assist you in convincing vendors to give you money.  Please tailor the document to suit your event and forward it to any and all potential sponsors.
+
+https://www.owasp.org/index.php/Image:OWASP_sponsorship_new.doc
+
+It is important to have completed your budget early so you can correctly estimate the amount of sponsorship you will need.
+
+
+Contact [mailto:mark.bristow@owasp.org Mark Bristow] or [mailto:sarah.baso@owasp.org Sarah Baso] if you would like assistance or have interest in selling one of our [[Media:OWASP_Global_Conference_Sponsorships_FINAL.pdf| 2011 Global Sponsorship Packages]]. 
+
+=== Sponsor Displays ===
+
+If you plan to have an exhibit hall it must be easily accessible and must have adequate space to accommodate vendor booths. There may be costs associated with such a hall. Some facilities require that their own people set things up. Make sure you know what is included with any rental costs, and what you may have to pay extra for.
+
+Make sure that there is adequate time for attendees to visit the exhibits and to talk with vendors. Directing breaks and snacks into the vendor expo will encourage participants to visit the exhibits.  Depending on the benefits to the vendors, you may ask that they pay for exhibit space, or leverage their participation by asking them to sponsor one or more conference activities (reception, meal, etc.). 
+
+= VENUE =
+
+=== Venue ===
+One of your very first items of business should be to reserve necessary rooms for plenary sessions, breakout sessions, classroom sessions, tech expo, breaks, receptions, and conference headquarters/registration. 
+
+Adapt your conference to the facilities you have available. For example, good plenary sessions can be better than breakout sessions that don't have adequate facilities.  To the extent that you can, schedule conference sessions in rooms that have basic AV equipment (overhead projectors and screens, for example). If the rooms already have computers and computer/video projection, that's even better. Then assign conference sessions to the appropriate rooms.
+
+Try to keep conference costs down by using rooms that are free. Again, this may require some adapting or negotiating. Partnering with a local university is a great way to obtain free space. 
+
+A contract to secure your venue is critical.  '''Only a member of the Board can enter into a contract on behalf of OWASP!!!'''  [http://sl.owasp.org/contactus Contact Us] for signatures.  
+
+Training rooms will require space to accommodate generally 10-30 students per class. 
+
+
+= CONTENT =
+
+=== Content ===
+International meetings usually have a general theme. However, for regional meetings, you may want to choose a theme that reflects your chapter's particular strengths or interests.
+
+A good program is critical. Look for variety, interest, timeliness. What do your members need or want to leave with? Try to balance lectures with discussions, hands on, social activities, and time for colleague interaction.
+
+'''While is is acceptable to target individuals/companies to solicit content, in keeping with the OWASP value of openness, all Call for Papers and Call for Training must be open to all to submit'''.  Calls for Papers or Training must be at a minimum announced on the conference Wiki page.
+
+=== Presentations ===
+
+A general call for presenters should have a deadline that gives you ample time to recruit and to fill in gaps should you not get all the good proposals you need. Network with other members of your organization to identify people who might be invited to make presentations. Immediately after the deadline, begin organizing the conference schedule. Select the proposals you want to use and contact them to verify their availability. Create a tentative schedule, matching presenters to the facilities. You may want to lay out your schedule on a whiteboard, or use 3x5 cards on a corkboard so you can visualize how things fit together. Make sure you plan time for attendees to talk with each other, such as at breaks, before and after dinners, at receptions, etc.
+
+Send a formal acceptance note to each participant, and ask them to confirm by sending an abstract (if you didn't get that as part of their submission) and submitting a request for any special equipment (AV, computer, etc.)
+
+Also note that according to the standard OWASP [[Speaker Agreement]], presenters must submit their presentations (in Powerpoint format) at least 60 days prior to the conference. Submissions should be uploaded to [[:Category:OWASP Presentations | OWASP Presentations]] after the event.
+
+Consider a CFP system to manage submissions such as EasyChair (it is free) [http://www.easychair.org http://www.easychair.org], or OpenConf (free and pro-version) [http://www.openconf.com http://www.openconf.com].
+
+Additionally, each OWASP Conference is required to solicit a board member to provide a welcoming or keynote address.  This shows foundation endorsement of the local team ensures a consistent OWASP message.
+
+=== Training ===
+
+If you are offering training at your event the 
+[https://www.owasp.org/images/8/85/OWASP_CFT_Template-1-.doc Call For Training proposal template] should help you issue a call for training.  While you are welcome to target training organizations, remember to ensure that the call for training be publicly available so that all my propose classes. 
+
+Training revenues are to be split 60/40 with 60% of the revenue going to OWASP and 40% going to the trainer.  OWASP will provide the facilities, promotion, A/V equipment, and refreshments for all training.  Trainers are responsible for travel/accommodations for the training staff, all training materials, and promotion of the training.
+
+All training during OWASP Events must be '''OPEN TO THE PUBLIC'''.  OWASP and the Trainer may set aside no more than a combined 10% of the available training slots for their own use.  Setting aside of training slots in all cases must be approved by the [[Global Conferences Committee]]
+
+
+= AUDIO VISUAL RECORDING =
+
+=== Audio Visual/Recording ===
+This is another critically important part of the conference, especially in our technology-driven organization. You should assign a member of your committee to head this up since it's a demanding and time-consuming responsibility. 
+
+To the extent that you can, schedule conference sessions in rooms that have basic AV equipment (overhead projectors and screens, for example). If the rooms already have computers and computer/video projection, that's even better. Then assign conference sessions to the appropriate rooms. 
+
+Determine ahead of time what portable equipment you have available, and whether you have to rent equipment. OWASP owns one projector that can be "loaned" out for events.  [http://sl.owasp.org/contactus Contact Us] to arrange for the shipping of this and other items.  When you confirm conference presentations, ask presenters to provide you with a list of equipment they need.  
+
+= REGISTRATION =
+
+=== Registration ===
+OWASP has several registration tools available to use.  Currently we utilize the RegOnline registration system for larger, paying events.  If your event is free of charge, but you require an RSVP for space restrictions or food, please contact [http://sl.owasp.org/contactus Contact Us] to review registration options for free events.
+
+=== Registration Distribution ===
+
+[[Image:OWASP Registration Distribution.png|left|thumb|alt=OWASP Conference Registration Distribution over time.|OWASP Conference Registration Distribution over time.]]
+The following data was taken from several larger OWASP conferences to demonstrate how registrations are typically distributed over time.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+= PROMOTION =
+
+=== Promotion ===
+Promoting your conference begins as soon as you have selected a conference site and date. All OWASP Branded Events/Conferences are required to have a presence on the OWASP Wiki.  You are also welcome to register an external web address (preferably in the .org tld) to help market and promote your event so long as the site links back to the OWASP Wiki (main page or event page) in some way.  You are however required to keep the Wiki page up to date and current as the primary source of information for the event, any external resources are secondary sources of information.  Post the date and location on the OWASP wiki. Make sure to review pages for other conferences for great ideas and to allow for continuity in page style.
+* To request general OWASP schwag/promotional merchandise, fill out the [https://spreadsheets.google.com/a/owasp.org/spreadsheet/viewform?formkey=dF85bGtvdWdrd2JjYldNZ1gxSkJxaEE6MQ Google Form]
+
+The first wave of publicity comes with the call for presentations. 
+
+The next wave comes as you send out the conference announcement, with as much detail as you have, including a tentative program. This is important if you want to convince people they should come. Set a registration deadline that accounts for your own deadlines (food services, etc.) You may have to consider a higher fee for those who are late, especially if that really does incur additional costs for you.
+
+=== Advertisements ===
+
+Conference organizers are welcome to negotiate with local newspapers, trade magazines, and other media to help promote the event.  OWASP prefers to establish "in kind" agreements with media for promotions but in the past, paid advertisements have been used where appropriate.  If you have any questions or concerns please ask the [[Global Conferences Committee]]
+
+=== Design Components ===
+
+In designing your own Powerpoint templates, tshirts, bags, badges, banners, flags, carpets and what have you, find the original vector graphic of the OWASP logo (in EPS and AI formats) [[Media:OWASP_Logo.zip | here]]. Please do [[OWASP Conference Design Components|share them with the other conference chairs]]!
+
+The {{#switchtablink:RESOURCES|Resources|How to Host a Conference}} tab has additional resources for assisting in promoting your event.
+
+= DAY OF LOGISTICS =
+
+===Conference Materials ===
+
+At a minimum, you need to provide some sort of printed program. For most conferences, the following is usually adequate: a simple folder with program, maps, lists of local restaurants and attractions, a name tag, and writing materials (pen and pad). For larger, conferences you may want to include a conference bag that includes OWASP books or handouts. Be sure to allow ample time for printing and shipping of OWASP materials. International shipping can take several weeks.
+* To request general OWASP schwag/promotional merchandise, fill out the [https://spreadsheets.google.com/a/owasp.org/spreadsheet/viewform?formkey=dF85bGtvdWdrd2JjYldNZ1gxSkJxaEE6MQ Google Form]
+
+=== Name Tags ===
+
+If you plan properly, you should be able to generate name tags to be printed from your conference database program.  If you process your registrations through the OWASP office, they can create your nametags.
+
+Keep the name tag layout simple: a small conference logo or title, the person's full name in LARGE, readable letters, and the person's institution. Don't make people squint to read names on name tags.
+
+The actual type of name tag (paper stick-on, pin on plastic case, hang-around-the-neck, etc.) depends on your preferences and budget. If you do provide stick-on tags, you may want to generate at least one tag for each day of the conference since they won't be able to reuse the tags. If you use plastic badges, you can invite attendees to recycle them at the end of the conference.
+
+= CATERING =
+
+=== Catering ===
+Well-planned meals and snacks are critical to a successful conference. Consult with your venue food services, or with a local caterer, determine what is needed, and what it will cost. Let food services or the caterer do the work. 
+
+Be sure to negotiate food services in such a way that you are not liable for food costs beyond what you can cover through conference fees. Usually food planners will allow up to 10% more people than you contract for (e.g., for late registrations), but be sure this is clear up front. 
+
+To reduce costs, seek sponsors for specific meals where possible. Some larger vendors are happy to get the publicity that comes from sponsoring a breakfast, lunch, reception, or even a dinner. In any case, it doesn't hurt to ask. If the sponsor desires it, let the sponsor choose the caterer and take care of the arrangements. 
+
+For small conferences, many if not most of the meals can be left up to the attendees. Be sure to provide a good list of local eateries. Include information about which are within walking distance, which are not, and how to get to those that are not. 
+
+Strategically scheduled snack breaks, with drinks and fruit or cookies, can add a touch of class to your conference. These don't usually cost too much, and can be covered by registration fees. Don't skimp on the time allotted for breaks, since attendees will want to network and will take the time anyway. Be sure to take care of all the caffine junkies in the crowd.  If possible, try and arrange for a pre event tasting.  You don't want people remembering your event for the bad coffee or sandwiches.
+
+Be sure to allow for special dietary considerations. Always offer some vegetarian options for your meals.
+
+= SOCIAL EVENTS =
+
+=== Social Events ===
+After a long intensive day of speakers and/or training, a more casual opportunity for networking will be welcomed by most all attendees.  Depending on the size and location of your event you may want to consider one or several of the following options:
+
+* OWASP "meet up" at a local pub
+* OWASP gala dinner
+* Corporate sponsored party
+* Guided site seeing tours
+* Group outing to a sporting event
+
+In many cases you can include an optional fee to be paid to cover the costs of the event.  In the case of a corporate sponsored event, the sponsor would cover the costs.  Very often, however, an informal yet organized (planned) evening at the pub will be sufficient to facilitate networking among conference attendees and speakers.
+
+Be sure to remind everyone at the end of the last talk for the day of the location of the gathering, the cost (if any), and the start time for the next days speakers.
+
+Whatever you plan, however, be sure to include some free time for people to do things on their own.
+
+= TRAVEL =
+
+=== Travel ===
+Your conference venue usually has maps and travel information on how to get to the location. If there aren't adequate limo or shuttle services to your venue from the airport, you may need to make your own arrangements.
+
+'''OWASP on the MOVE funds are not to be used for conferences or events.'''  If you are planning on covering ANY speakers travel and/or accommodations, be sure to plan for this in your event budget.
+
+=== Visitor's Guide ===
+All global conferences that will attract a substantial international audience should create a city Visitor's guide.  A great example of a visitor's guide was put together by the [http://www.owasp.org/images/e/eb/OWASP_AppSec_Research_2010_Visitors_Guide_A4.pdf AppSec Research 2010 team]This guide should include sections like:
+*Country Overview
+** Common Languages
+** Money
+** Tipping and Haggling
+** Local Customs
+** Special Events during the conference
+* Transportation to Event
+** Taxi Company Phone numbers and estimated prices
+** Buss or Mass Transit information, schedules, and prices
+** Directions on how to get to conference site '''WITH PICTURES''' (It's recommended you walk from the major transportation hubs and take pictures along the way)
+*Host City
+** Local points of interest
+** How to get around the city (metro/bus maps)
+** Bars near the event
+
+= ACCOMMODATIONS =
+
+=== Accommodations ===
+If you plan on a regional or international event, it is considerate to negotiate a discounted room rate with a local hotel.  In many cases, if you event is at a hotel, they will happily give you greater than 50% discount on rooms.  If your event is at another type of venue (convention center, university campus, corporate building) there are often referral relationships between the venue and nearby hotels.  Be sure to ask you coordinator.
+
+When reserving your room blocks take into consideration the number of out of town speakers and guests you are expecting and how many room nights will be required.  Be sure to avoid commitment for the unsold rooms.  The hotel wants to get paid of course.  Be sure that the hotel will not hold OWASP responsible for unbooked rooms. 
+
+= RESOURCES =
+{{:Global Conferences Committee/Resources}}
+
+= POLICIES AND REQUIREMENTS =
+These are the requirements imposed on any event using the OWASP brand.  All Events must be coordinated with the [[Global Conferences Committee]] and receive their approval.  Event requests can be submitted via the https://ocms.owasp.org/ OWASP Conference Management System (OCMS)].  If you do not have an account, you can signup for an OCMS account [https://ocms.owasp.org/accounts/register here], please use an @owasp.org email address if available.
+
+{{:Global Conferences Committee/Policies}}
+
+= CONTRACTS =
+
+=== Co-Marketing of Event Contract Sample ===
+The <External Organization> Provides:
+*A Vendor Table in Vendor Area
+*OWASP Logo and Link on RSS Web-site
+*OWASP Logo and description in the Event Guide
+*Opportunity to provide an OWASP Banner in conference room
+*Tickets for 2 OWASP Speakers mutually approved by OWASP and <External Organization>
+*Software Security Track Chair
+*Monthly status update emailed to the OWASP Global Conferences Committee Chair (conferences@owasp.org) including
+**Current number of people registered for event
+**A budget update including all revenue and expenditures relating to the event
+The OWASP Foundation provides:
+*OWASP Promotional Materials for the provided table
+*Marketing of Conference
+**Notification to OWASP members and constituents about special discount code to attend <EVENT>. The event will provide 50-100 words of text and link describing offer; OWASP will transmit within any newsletter, via email notification and/or other methods as approved by OWASP
+**Event banner in OWASP banner rotation on main page for 90 days prior to the event
+
+=== Co-Hosted Event Contract Sample ===
+The <External Organization> Provides:
+*A Vendor Table in Vendor Area
+*OWASP Logo and Link on RSS Web-site
+*OWASP Logo and description in the Event Guide
+*Opportunity to provide an OWASP Banner in conference room
+*Tickets for 2 OWASP Speakers mutually approved by OWASP and <External Organization>
+*Software Security Track Chair
+*Monthly status update emailed to the OWASP Global Conferences Committee Chair (conferences@owasp.org) including
+**Current number of people registered for event
+**A budget update including all revenue and expenditures relating to the event
+The OWASP Foundation provides:
+*An active and contributing member of the conference executive committee present at 85% or more of the planning sessions, who will chair and moderate the Software Security Track.
+*At least 1 additional volunteer to assist on-site during the event, to be coordinated with the event volunteer coordinator.
+*Travel expenses for 2 well recognized OWASP speakers (topic and speaker mutually approved by Software Security Track Chair and OWASP)
+**Speakers must also sign the standard OWASP Speaking agreement
+*OWASP Schwag Give-aways for X attendees
+*X OWASP Lanyards
+*OWASP Promotional Materials for the provided table
+*Marketing of Conference
+**Notification to OWASP members and constituents about special discount code to attend <EVENT>. The event will provide 50-100 words of text and link describing offer; OWASP will transmit within any newsletter, via email notification and/or other methods as approved by OWASP
+**Event banner in OWASP banner rotation on main page for 90 days prior to the event
+Payment Schedule:
+*All real costs incurred by the Event and OWASP shall be reimbursed prior to the distribution of any profits from the event.  Real costs include expenses for schwag, Speaker Travel and Lanyards as well as any other costs not incurred in the course of supporting a booth at the event.
+*Should the event take a loss 
+**30% of losses shall be covered by the OWASP foundation, up to the amount of tangible goods provided 
+**70% Shall be covered by Event
+*Should the event make a profit (after real costs have been reimbursed)
+**30% of profits shall be paid to the OWASP Foundation
+**70% of profits shall be retained by Event
+
+=== Historic Contracts ===
+[http://www.owasp.org/images/5/57/MN_Convention_Center.pdf AppSec US Venue]<br>
+[https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B5Z9zE0hx0LNNmNlNmUyMzMtZmYzNC00NWU3LWIyNzgtNzRlMTdlZGMxMTBj&hl=en AppSec Asia Event Management Agreement]
+
+<headertabs/>

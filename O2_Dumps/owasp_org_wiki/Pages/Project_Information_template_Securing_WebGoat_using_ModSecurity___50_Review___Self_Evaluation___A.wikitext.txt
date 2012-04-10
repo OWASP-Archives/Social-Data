@@ -1,0 +1,31 @@
+[[Project Information:template Securing WebGoat using ModSecurity|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications#Securing WebGoat using ModSecurity|OWASP Securing WebGoat using ModSecurity Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#Securing WebGoat using ModSecurity|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|The main goal of solving 50% of the WebGoat vulnerabilities has been achieved. The final goal is 90%; 25 out of possible 47 to 50 lessons (subject to interpretation) were solved. See "Section 1: Tasks & Deliverables" at
+http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section_1_Introduction, and "Section 4: Project metrics" at
+http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section_4_Mitigating_the_WebGoat_Lessons.
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#Securing WebGoat using ModSecurity|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|I would guess that 70-75% of the effort needed to complete the project has been done. Everything was new to me: WebGoat (and I was using a beta version), ModSecurity, wikis; and researching and learning more about the classes and types of vulnerabilities have taken quite a bit of effort. As an 8 week veteran of ModSecurity, knowing now how WebGoat works and reaearching the remaining WebGoat vulnerabilities, I believe that solving the rest of the WebGoat lessons (90% or more) will be much easier.
+ |- 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|I have already received excellent feedback and guidance from Ryan Barnett. Of course, more feedback, criticism, and comments from the other reviewers are welcome.
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"|
+|}

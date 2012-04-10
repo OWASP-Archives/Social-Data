@@ -1,0 +1,168 @@
+{{Chapter Template|chaptername=Birmingham, UK|extra=Details of your our Chapter Leaders are  here [[Birmingham_Chapter_Leaders]] |mailinglistsite=http://lists.owasp.org/mailman/listinfo/owasp-birmingham|emailarchives=http://lists.owasp.org/pipermail/owasp-birmingham}}
+
+
+OWASP is a charitable organisation. Our chapter meetings are free to attend but there are always costs associated with running them. Any amount of donation is appreciated and will be used entirely to enhance the chapter meetings: <paypal>Birmingham UK</paypal>
+
+== Sponsors ==
+
+Many thanks to our first silver sponsor, [https://www.hedgehogsecurity.co.uk/ Hedgehog Security]
+
+[[File:Hedgehogsec.jpg|200px|thumb|left]]
+
+
+
+
+
+
+
+
+
+
+
+== Chapter  News ==
+
+'''Planned Chapter Meetings'''
+
+March 23rd 2012 Venue: Service Birmingham
+
+June2012 Venue:TBC
+
+September 2012 Venue:TBC
+
+December 2012 Venue:TBC
+
+== Next Meeting ==
+'''Date:''' Friday 23rd March :::  Please RSVP via '''[http://owaspbirmingham.eventbrite.co.uk eventbrite]''' You must register prior to the event.
+
+'''Location:''' Service Birmingham Offices
+
+B1 Building 
+
+50 Summerhill Road
+
+B1 3RB Birmingham
+
+'''Talks'''
+
+'''Tom MacKenzie''' will be reprising the talk he gave at Black Hat Abu Dhabi.
+
+Meticulous attackers can subvert audit controls to the point where a compromise is almost undetectable. We look at the tools and techniques which can be used by attackers to minimise evidence left behind and propose a novel strategy for managing this issue.
+ 
+Fully identifying the method and impact of a data compromise is heavily reliant on the forensic information available to investigators. Commonly this is dependent on having logs for the compromised period. However, in the cases where an attacker has taken steps to reduce their footprint on the system, investigations can be more challenging.
+ 
+We explore the various evidential sources which are commonly used to identify the extent and method of a web application compromise. We then discuss an attack which, due to its nature, is more complicated to identify and understand. The presentation will draw together the techniques used in investigating a data compromise and create an attack which is designed to completely compromise the web server while leaving the least amount of evidence on the system.
+ 
+Incident readiness specialists can often recommend that verbose logging is put in place. Logging such as full http request and response logging fits the bill for the investigator but by their nature these logs have serious drawbacks for the day to day management of the server; large storage requirements, incidental storage of sensitive data and performance issues are common problems.
+ 
+We suggest a new approach, restricting access or logging anomalies at the framework level. By blending the information gained at the framework level with automated application profiling techniques we can create heavily targeted logs bespoke to the specific application. This can be implemented for all applications regardless of whether source code is available. This method gives us the best chance of keeping logging to an absolute minimum whilst ensuring that techniques used to minimise forensic evidence left by an attack are unsuccessful.
+ 
+'''Ian Williams''' will be giving his first ever public talk (be gentle!) on how to get into web application security from a learners perspective. Ian will be looking at the Damn Vulnerable Web Application and how it can be used to learn web application security.
+There are plenty of books out there on web app security, SQLi and XSS. Reading about them is one thing, but if you are really going to understand how they work you've got to get your hands dirty. We will be looking at one environment in which you can practice what you've read about without fear of getting sue'd, but still getting some exposure to some of the techniques that are used to try any mitigate the attacks you are doing.
+
+'''Uzi Yair''', the cofounder and CEO of GTB Technologies, will be giving a talk on DLP. The talk will cover the mitigation of data loss prevention together with the web application security – threats, problems, needs and trends
+Why is Data Loss Prevention important for web application security experts ? According to a Gartner CISO survey, Data Loss Prevention (DLP) is the biggest priority for 2012. Data Loss Prevention (DLP) is typically defined as any solution or process that identifies confidential data, tracks that data as it moves through and out of enterprise and prevents unauthorized disclosure of data by creating and enforcing disclosure policies. Since confidential data can reside on a variety of computing devices (physical servers, virtual servers, databases, file servers, PCs, point-of-sale devices, flash drives and mobile devices) and move through a variety of network access points (wireline, wireless, VPNs, etc.) there are a variety of solutions that are tackling the problem of data loss, data recovery and data leaks. As the number of Internet-connected devices skyrockets into the billions, Data Loss Prevention is an increasingly important part of any organization’s ability to manage and protect critical and confidential information.
+
+
+'''Speaker Bio's'''
+
+Thomas Mackenzie is an Application Security Consultant for SpiderLabs in Europe, the Middle East and Africa. SpiderLabs is the global advanced security services team within Trustwave responsible for:
+
+* Security Analysis and Testing
+* Incident Response and Investigation
+* Research & Development
+
+Thomas has been asked to present technical talks at a number of international events including, DeepSec, Bsides Chicago and BlackHat Abu Dhabi. Thomas also speaks at a number of domestic venues including; OWASP events across the UK, PHP London, Marketing Event around WordPress, DC4420 and guest lecturing on application security and vulnerability management at a number of UK universities.
+Thomas is the founder of upSploit Advisory Management, an automated disclosure system that helps security researchers and vendors communicate vulnerability information quickly, easily and in an ethical manner. 
+
+Previously to Trustwave Thomas worked for security boutique in the North of England, where he worked as a security engineer in the web application security testing team. Before completing his move to SpiderLabs, he contracted for a number of companies providing consulting services in the area of web application security.
+
+Thomas has founded a number of vulnerabilities in well known software i.e. Wordpress and a highly downloaded iPhone App.
+
+Ian Williams is an Information Security Analyst for RWE IT UK, the IT provider for RWEnpower and one of the largest utilities in the UK. Ian is rather new to the security field having moved into it from a career in Wintel server support and software packaging and distribution.
+Always being one to have a tinker with things security had become a natural fit with Ian obtaining GIAC certifications GCIH, GAWN and GPEN in the 5 years since he started in the industry.
+Ian is a passionate supporter of the UK information security community and is working to pay back all of the support he has gained in the last 5 years by organising local security meetings such as OWASP and 2600 and speaking as a new commer to the industry, in the hope it will encourage more of the IT tinkerers to come over to the dark side!
+
+Uzi Yair is the cofounder and CEO of GTB Technologies, is a leader and expert in the data leak prevention marketplace. Uzi leads the development of GTB's game changing technology; a technology which has solved the known DLP market limitation of false positive rates.
+
+== Past Events ==
+We have to supply KPMG a list of attendees 24 hours before the meeting. If all tickets are gone please request to go on  the standby list
+
+'''Location:''' KPMG Offices Birmingham 
+
+One Snowhill 
+
+Snow Hill Queensway 
+
+Birmingham 
+
+West Midlands
+ 
+B4  6GH 
+
+Massive thanks to [http://www.kpmg.com/UK/en/WhatWeDo/Advisory/risk-consulting/services/tech-risk/Pages/InformationProtectionBusinessResilience.aspx KPMG] who again are supporting OWASP and giving something back to the community. 
+
+
+
+'''Schedule: 18:00 for 18:20 start'''
+
+
+
+'''18:20-18:30'''
+
+OWASP Chapter introduction. OWASP values and membership. Chapter information.
+
+OWASP Birmingham Chapter Leader
+
+
+
+'''18:30 - 19:10''' 
+
+'''Talk 1''' ''Agnitio: the security code review Swiss army knife'' 
+
+Teaching developers to write secure code, helping security professionals find security flaws in source code, producing application security metrics and reports with integrity checks and audit trails. If you want to implement an SDLC that produces secure software with the audit trails and reports frequently demanded by auditors and management you need to acknowledge that these are key constituents and implement them in a form that is both easy to understand and use.
+
+This is far easier to talk about than it is to implement in the real world where well structured SDLC’s are rare and application security programmes are usually under funded. Working with developers, security professionals and management to cultivate an environment where secure code is written and flaws found consistently requires both time and money. The same can be said for producing informative reports and metrics when all of your security code review data resides in notepad, Word and Excel files. With these problems in mind I developed Agnitio to be my security code review Swiss army knife and released it as a free tool in late 2010.
+
+In this demonstration filled talk I will show how Agnitio can be used to addresses repeatability, integrity and audit trail concerns by requiring the creation of application profiles, the use of a security code review checklist consisting of over 80 application security questions and mandatory integrity checks for reviews and reports created using the tool. I will demonstrate how the inbuilt secure coding and security code review guidance modules allow developers and security professionals to access the information they need precisely when they need it. I will also show how Agnitio automatically creates metrics and reports bringing much needed visibility to the security code review process with no extra effort required from the reviewer, developers or management.
+
+Agnitio v2.1 will be demonstrated during this talk which will show how Agnitio’s already powerful feature set has been expanded to guidance and questions linked to the OWASP top 10 mobile risks as well as the ability to decompile and analyse Android applications.
+
+'''Speaker''''' David Rook Application Security Lead - Realex Payments Ltd''
+
+
+'''19:30 - 20:10'''
+
+'''Talk 2:'''  ''Mobile Security - The Tune is Different, The Dance is the Same''
+
+Paco Hope will discuss what is fundamentally new about mobile applications, and what is fundamentally not new with respect to securing them. Looking at how the platforms work, their respective app stores, and the role of carriers and their security, we will understand four golden rules to ensuring secure use and development of mobile apps. Whether we are the app developer, security professional, or just someone trying to use their mobile securely, these four rules are important to know.
+
+'''Speaker''' Paco Hope, Principal Consultant, Cigital 
+
+
+'''20:20 -21-00'''
+
+'''Talk 3:'''   ''Mobile Application Security''
+
+This talk will start by taking a look at the mobile applosion that we have all witnessed since the Apple App Store was launched on the 11th July 2008. Mobile users have downloaded over 25 billion mobile apps since that day which is roughly 14,000 apps for every minute since Apple launched the App Store. Those kinds of numbers make it clear that mobile apps are big business and that we need to quickly understand how to secure these applications.
+
+I will show how mobile manufacturers and network operators are now a big part of your threat models and how their approach to security could undermine your application security efforts.
+
+The final part of the talk will focus on Android and iOS applications. I will give an overview of each platform as well guidance on how you should approach security code reviews for Android and iOS applications.
+
+'''Speaker''' ''David Rook Application Security Lead - Realex Payments Ltd''
+
+
+
+'''Speaker Bio's'''
+
+'''David Rook''' is the Application Security Lead at Realex Payments in Dublin. He is a contributor to several OWASP projects including the code review guide and the Cryptographic Storage Cheat Sheet. He has presented at leading information security conferences including DEF CON, BlackHat USA and RSA Europe. In addition to his work with OWASP David created a security resource website and blog called Security Ninja (http://www.securityninja.co.uk).
+
+In 2010 the Security Ninja blog was nominated for five awards including the best technology blog at the Irish Blog Awards, the Computer Weekly IT Security blog award and was a finalist for the Irish Web Awards Best Technology Site. In 2011 David received a Developer Security MVP award from Microsoft. David has recently become one of the first mentors in the Information Security Mentors project helping young people progress their information security careers.
+
+
+'''Paco Hope''' is a Principal Consultant with Cigital, Inc. and has 12 years of experience in mobile security, embedded security, web software security and operating system security. He has led numerous engagements assessing source code and implementations of mobile phones, lottery systems, casino gaming devices, smart cards and web applications. He is the co-author of The Web Security Testing Cookbook and Mastering FreeBSD and OpenBSD Security. Mr. Hope also serves on the Application Security Advisory Board of (ISC)2, acting as a subject matter expert for the Certified Information Systems Security Professional (CISSP) and the Certified Secure Software Lifecycle Professional (CSSLP).
+
+
+
+[[Category:OWASP Chapter]]
+[[Category:United Kingdom]]

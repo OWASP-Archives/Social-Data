@@ -1,0 +1,378 @@
+{{Chapter Template|chaptername=Philadelphia|extra=The chapter leaders are [mailto:aaron.weaver2@gmail.com Aaron Weaver], [mailto:darian.patrick@owasp.org Darian Patrick], and [mailto:justin@madirish.net Justin C. Klein Keane].
+
+<paypal>Philadelphia</paypal>
+|mailinglistsite=http://lists.owasp.org/mailman/listinfo/owasp-philadelphia|emailarchives=http://lists.owasp.org/pipermail/owasp-philadelphia}}
+
+== Next Meeting: '''Monday April 16th, from 7:00 - 8:30 PM'''  ==
+'''OWASP Philly/ Meeting - Fisher-Bennett Hall - 231'''
+
+'''When:''' Monday, Monday April 16th from 7:000 - 8:03 PM<br>
+'''Where:''' University of Pennsylvania, Fisher-Bennett Hall - 231, Philadelphia
+
+
+'''HECTOR, our evolving security intelligence platform'''<br>
+'''Presenter:''' Justin Klein Keane
+
+'''Abstract:'''
+
+Asset management is an ever present challenge for any IT organization,
+and especially so for information security groups.  Even more
+challenging is data aggregation for intelligent security analysis (or
+security intelligence).  HECTOR is an effort by the University of
+Pennsylvania's School of Arts and Sciences to provide such a security
+intelligence platform.  Organizing assets, scanning for vulnerabilities
+and profiles, correlating attacks on your network to services offered by
+hosts, tracking changes, following remediation, and making information
+available to multiple users via a web interface are all goals of HECTOR.
+HECTOR leverages honeypot technology, darknet sensors, port scans,
+vulnerability scans, intrusion detection systems, the powerful open
+source MySQL database, and a PHP based web front end to provide security
+intelligence to security practitioners.  
+
+HECTOR is an evolving, open source effort that attempts to leverage a wide variety of tools and
+information sources to empower security practitioners with better
+insights as well as to track and trend security related data.  Come hear
+about HECTOR in advance the official open source launch at the Educause
+Security Professionals 2012 conference.  Presentation material will
+include a discussion of the philosophy behind HECTOR, the open source
+technologies that make HECTOR work, as well as design challenges and
+solutions.  Even if you don't end up using HECTOR the presentation seeks
+to spur new ideas and ways of thinking about asset management and
+security data.
+
+== Previous Meeting: '''Friday September 16th, from 1:00 PM - 4:15 PM'''  ==
+'''Joint Meeting with ISSA-DV, Infragard -  VWR International, Radnor Corporate Center'''
+
+'''When:''' Friday September 16th, 1:00 PM<br>
+'''Where:''' VWR International
+Radnor Corporate Center
+100 Matsonford Road
+Wayne, PA 19087
+
+'''Register:''' [http://www.issa-dv.org/meetings/registration.php Please register to attend this free conference]
+
+==Agenda==
+
+{| class="wikitable"
+|-
+| '''1:00 - 1:15''' 
+| '''OWASP, INFRAGARD, ISSA Joint Session'''   
+|''Registration'' 
+|-
+|'''1:15 – 2:00''' 
+|'''Dan Kuykendall, CTO NT Objectives''' 
+|''"Not Your Granddad's Web App."''
+|-
+|'''2:00 – 2:45''' 
+|'''Jack Mannino from nVisium Security''' 
+|''"Building Secure Android Apps"''
+|-
+|'''2:30 – 2:45''' 
+|'''BREAK'''
+|
+|-
+|'''2:45 – 3:30''' 
+|'''CEO Matthew Jonkman Emergingthreats.net''' 
+|''Open Information Security Foundation (OISF Suricata)''
+|-
+|'''3:30 – 4:15''' 
+|'''Aaron Weaver - OWASP''' 
+|''Breaking Botnets: Finding App Vulnerabilities in Botnet Command & Control servers''
+|}
+
+'''Directions to [http://www.mapquest.com/maps?address=100+Matsonford+Rd&city=Radnor&state=PA&zipcode=19087 VWR International]'''
+
+== Previous Meeting: '''Monday June 20th, from 6:30 - 8:00 PM'''  ==
+'''OWASP Philly/ Meeting - Fisher-Bennett Hall - 231'''
+
+'''When:''' Monday, June 20th from 6:30 - 8:00 PM<br>
+'''Where:''' University of Pennsylvania, Fisher-Bennett Hall - 231, Philadelphia
+
+''Three lightning round presentations'' - Each presentation will be about 20 minutes long
+
+* Using PHP for Security - Justin C. Klein Keane
+* Perl for AppSec - Darian Anthony Patrick
+* What does your metadata say about your organization? A look at the open source tool Foca - Aaron Weaver
+
+Thanks to Penn for hosting the OWASP event!
+
+'''Directions:'''
+The building entrance faces the intersection of 34th and Walnut
+streets and the room is on the third floor.  Folks should bring
+identification and if the guard asks let him know you are coming to the OWASP
+meeting.
+
+== Previous Meeting: '''Monday, May 23rd, from 6:30 - 8:00 PM'''  ==
+'''OWASP Philly/ Meeting - Fisher-Bennett Hall - 231'''
+
+'''When:''' Monday, May 23rd from 6:30 - 8:00 PM<br>
+'''Where:''' University of Pennsylvania, Fisher-Bennett Hall - 231, Philadelphia
+
+'' The Search for Intelligent Life''
+
+'''Synopsis:''' For years organizations have been mining and culling data warehouses to measure every layer of their business right down to the clickstream information of their web sites. These business intelligence tools have helped organizations identify points of poor product performance, highlighting areas of current and potential future demand, key performance indicators, etc. In the information security field we still tend to look at our information in silos. Dedicated engineers solely focused on web application security, network security, compliance and so on, all while bemoaning a lack of information and decision support.
+
+In this talk, Ed will cover some of the many sources of security data publicly available and how to apply them to add context to your security data and tools to help make more intelligent decisions. Ed also points out a number of ways to repurpose information and tools your company is already using in order to glean a clearer view into your security and the threats that may effect it.
+
+'''Bio:''' Ed Bellis is the CEO of HoneyApps Inc, a vulnerability management Software as a Service that centralizes, correlates, prioritizes and automates the entire stack of security vulnerabilities and remediation workflow. Prior to HoneyApps, Ed served as the Chief Information Security Officer for Orbitz, the well known online travel agency where he built and led the information security program and personnel for over 6 years. Ed has over 18 years experience in information security and technology. 
+He is a frequent speaker at information security events across North America and Europe. Past talks have included venues such as IANS Security Forum, SaaScon, AppSec DC, BlackHat, CSO Perspectives, MIS Institute, and several others. Additionally, Ed is a contributing author to the book Beautiful Security by O’Reilly and a blogger on CSO Online.
+
+For a summary of the presentation please see http://www.madirish.net/justin/security-intelligence-philly-owasp-ed-bellis
+
+'''Directions:'''
+The building entrance faces the intersection of 34th and Walnut
+streets and the room is on the third floor.  Folks should bring
+identification and let the guard know they're coming for the OWASP
+meeting.
+
+== Previous Meeting: '''Monday, April 11th, from 6:30 - 8:00 PM'''  ==
+'''OWASP Philly/ Meeting - Fisher-Bennett Hall - 322'''
+
+'''When:''' Monday, April 11th from 6:30 - 8:00 PM<br>
+'''Where:''' University of Pennsylvania, Fisher-Bennett Hall - 322, Philadelphia
+
+'''Topic: TBD'''
+
+Supervisory Special Agent Brian Herrick of the Philadelphia FBI - Cyber Squad
+
+The building entrance faces the intersection of 34th and Walnut
+streets and the room is on the third floor.  Folks should bring
+identification and let the guard know they're coming for the OWASP
+meeting.
+
+== Previous Meeting: '''Monday, March 7th, from 6:30 - 8:00 PM'''  ==
+'''OWASP Philly/ Meeting - Fisher-Bennett Hall - 322'''
+
+'''When:''' Monday, March 7th from 6:30 - 8:00 PM<br>
+'''Where:''' University of Pennsylvania, Fisher-Bennett Hall - 322, Philadelphia
+
+'''The Power of Code Review'''
+
+Dave Wichers is a cofounder and the Chief Operating Officer (COO) of Aspect Security.
+*As a volunteer to OWASP, Dave is:
+*A member of the OWASP Board,
+*The OWASP Conferences Chair,
+*Project lead and coauthor of the OWASP Top 10,
+*Coauthor of the OWASP Application Security Verification Standard, and
+*Contributor to the OWASP Enterprise Security API (ESAPI) project.
+
+The building entrance faces the intersection of 34th and Walnut
+streets and the room is on the third floor.  Folks should bring
+identification and let the guard know they're coming for the OWASP
+meeting.
+
+For a write up of the meeting please see http://www.madirish.net/justin/owasp-philadelphia-march-7-2011-meeting
+
+== Previous Meeting: '''Tuesday, August 17th, 2010 6:30pm - 8:00pm'''  ==
+'''OWASP Philly/ Meeting - 307 Levine Hall'''
+
+'''When:''' Tuesday, August 17th, from 6:30 - 8:00 PM<br>
+'''Where:''' University of Pennsylvania, 307 Levine Hall, Philadelphia
+
+'''Mobile App Security Techniques'''
+
+Look left, look right, look in your pocket, you probably glanced over a cellular phone. These devices are getting more and more pervasive in today's society. More importantly they are getting very powerful. This new market of software users have been the catalyst of the "app" boom. Everyone is jumping on board and developing mobile applications. This influx of mobile application development means there are a large number of mobile applications that get rushed to the market before they can be properly reviewed from a security standpoint. So guess what, more bugs for the taking!
+
+In this talk we will lay out a few basic techniques that we use when we perform mobile application assessments, highlight possible pit falls that one should be aware and hopefully give those up and coming mobile application penetration testers a leg up on the competition.
+
+'''Raj Umadas''' is a Consultant with the Intrepidus Group. Mr. Umadas graduated Summa Cum-Laude from The Polytechnic Institute of NYU with a BS in Computer Engineering. At NYU:Poly, Mr. Umadas pursued a highly expansive computer security curriculum. He is just as comfortable sniffing out a memory corruption bug as he is assessing the risk management decisions of large projects.
+
+Coupled with Mr. Umadas' fresh academic outlook on security, he obtained a no-nonsense business sense of security while working in an Information Risk Management arm of a large investment bank. Corporate governance, segregation of duties, and SOX compliance were all daily concerns for Mr. Umadas.
+
+Mr. Umadas is eager to establish his own niche in the security world where he will be the catalyst of some very major innovation. With his strong academics, proven real world experience, and never-say-no attitude; it is only a matter of time.
+
+For a summary of this presentation please see http://www.madirish.net/security-tools/470
+
+== Previous Meeting: '''Tuesday, July 20th, 2010 6:30pm - 8:30pm'''  ==
+'''OWASP Philly/ Meeting - University of Pennsylvania - Philadelphia'''
+
+All are welcome to join us on Tuesday as we discuss web application security.
+
+When: Tuesday, July 20th, 2010 6:30pm - 8:30pm<br/>
+Where: Fisher-Bennett Room 401, University of Pennsylvania<br/>
+3340 Walnut Street St.
+Philadelphia, PA  19104
+
+'''Agenda:'''<br>
+1.) Opening Remarks<br>
+2.) Balancing Security & Usability, Justin Klein Keane<br>
+3.) Arshan Dabirsiaghi - Aspect Security<br>
+4.) Informal meetup afterwards at New Deck
+
+[http://owaspphiladelphia.eventbrite.com/ Please RSVP]
+
+[http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=3330+Walnut+St.,+Philadelphia,+Pennsylvania+19104&sll=39.953372,-75.191352&sspn=0.006678,0.013797&ie=UTF8&hq=&hnear=3330+Walnut+St,+Philadelphia,+Pennsylvania+19104&ll=39.954787,-75.191352&spn=0.006678,0.013797&z=16&iwloc=A&iwstate1=dir Directions to Fisher-Bennett]
+
+Questions should be directed to [mailto:aaron.weaver2@gmail.com Aaron Weaver]
+
+'''User Interface and Security in Web Applications'''
+
+Security is often seen as a competing priority to good user experience, but the two are not diametrically opposed. Good user experience is essential to good security. Without ease of use, most people simply ignore or bypass security protections in systems. In order to craft effective security measures it is essential to take user experience into consideration. With the meteoric growth of web applications as a medium for service delivery it is critical to deploy good security measures. Web applications offer an always on, globally available target for attackers. Users need to be allies in the drive for application security, but far too often security measures are presented as onerous, time consuming, bothersome add-on's to web applications rather than seamlessly integrated, easy to use, user friendly features. In this talk I propose to explore some of the reasons why good security in web applications matters and how you can make security effective by making it easy to use.
+
+'''Speaker: Justin Klein Keane'''
+
+Bio: Justin C. Klein Keane has over 8 years of experience in information
+security starting with his role as Editor in Chief of the Hack in the
+Box e-zine.  Currently Justin works as in Information Security
+Specialist with the University of Pennsylvania School of Arts and
+Sciences' Information Security and Unix Systems group.  Justin's past
+work included several positions as a web application developer, often
+utilizing PHP.  Justin is a regular contributer to the Full-Disclosure
+mailing list and is credited with dozens of vulnerability discoveries.
+Justin holds several ethical hacking and penetration testing
+certifications and regularly posts computer security related articles on
+his website http://www.MadIrish.net.
+
+== Previous Meeting: '''Thursday, December 3rd, 2009 6:30pm - 8:30pm'''  ==
+'''OWASP Philly/ Meeting - University of Pennsylvania - Philadelphia'''
+
+'''This is a joint meeting with the [http://www.meetup.com/phillyphp/ Philadelphia Area PHP Meetup group]'''. All are welcome to join us on Tuesday as we discuss web application security.
+
+When: December 3rd, 2009 6:30pm - 8:30pm<br/>
+Where: Wu & Chen Auditorium, Levine Hall, University of Pennsylvania<br/>
+3330 Walnut St.
+Philadelphia, PA  19104
+
+'''Agenda:'''<br>
+1.) Opening Remarks<br>
+2.) Discovering PHP Vulnerabilities Via Code Auditing, Justin Klein Keane<br>
+3.) TBD: Bruce Diamond<br>
+
+[http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=3330+Walnut+St.,+Philadelphia,+Pennsylvania+19104.&sll=39.953372,-75.191352&sspn=0.006678,0.013797&ie=UTF8&hq=&hnear=3330+Walnut+St,+Philadelphia,+Pennsylvania+19104&ll=39.954787,-75.191352&spn=0.006678,0.013797&z=16&iwloc=A&iwstate1=dir Directions to Levine Hall]
+
+Questions should be directed to [mailto:darian@criticode.com Darian Anthony Patrick]
+
+'''Discovering PHP Vulnerabilities Via Code Auditing'''
+
+Abstract: PHP provides an accessible, easy to use platform for developing dynamic
+web applications.  As the number of web based applications grow, so too
+does the threat from external attackers.  The open and global nature of
+the web means that web applications are exposed to attack from around
+the world around the clock.  Automated web application vulnerability
+scanning technology is still very much in its infancy, and unable to
+identify complex vulnerabilities that could lead to complete server
+compromise.  While intrusion detection systems prove very valuable in
+detecting attacks, the best way to prevent vulnerabilities is to engage
+in active code review.  There are many advantages of direct code review
+over automated testing, from the ability to identify complex edge
+scenario vulnerabilities to finding non-exploitable flaws and fixing
+them proactively.  Many vulnerabilities in PHP based web applications
+are introduced with common misuse of the language or misunderstanding of
+how functions can be safely utilized.  By understanding the common ways
+in which vulnerabilities are introduced into PHP code it becomes easy to
+quickly and accurately review PHP code and identify problems.  In
+addition to common problems, PHP includes some obscure functionality
+that can lead developers to unwittingly introduce vulnerabilities into
+their applications.  By understanding the security implications of some
+common PHP functions, code reviewers can pinpoint the use of such
+functions in code and inspect them to ensure safety.
+
+Speaker: Justin Klein Keane
+
+Bio: Justin C. Klein Keane has over 8 years of experience in information
+security starting with his role as Editor in Chief of the Hack in the
+Box e-zine.  Currently Justin works as in Information Security
+Specialist with the University of Pennsylvania School of Arts and
+Sciences' Information Security and Unix Systems group.  Justin's past
+work included several positions as a web application developer, often
+utilizing PHP.  Justin is a regular contributer to the Full-Disclosure
+mailing list and is credited with dozens of vulnerability discoveries.
+Justin holds several ethical hacking and penetration testing
+certifications and regularly posts computer security related articles on
+his website http://www.MadIrish.net.
+
+----
+
+== Previous Meeting: '''October 27th, 2009 6:00pm - 9:00pm'''  ==
+'''OWASP Philly Meeting - Comcast - Philadelphia'''
+
+<b>Presentations:</b><br>
+[http://www.owasp.org/images/7/79/Agile_Practices_and_Methods.ppt Agile Practices and Methods]<br>
+[http://www.owasp.org/images/d/d0/OWASP-AJAX-Final.ppt AJAX Security]<br>
+[http://www.owasp.org/images/0/06/Adobe_AMF.ppt Adobe AMF]<br>
+
+Food and space provided by Comcast.
+
+'''Sponsor:'''
+[[Image:comcastlogo.gif]]
+
+When: October 27th, 2009 6:00pm - 9:00pm
+Where: Floor (TBD), Comcast, 1701 John F Kennedy Blvd Philadelphia, PA  08054
+
+'''Agenda:'''<br>
+1.) OWASP Meeting Opening Remarks: Bruce A. Kaalund Director, Product Security<br>
+2.) Development Issues Within AJAX Applications: How to Divert Threats: Tom Tucker, Cenzic<br>
+3.) Agile Software Development Principles and Practices : Ravindar Gujral, Agile Philadelphia<br>
+4.) Testing Adobe Flex/SWF's, focusing on flash remoting (AMF): Aaron Weaver, Pearson eCollege<br>
+
+[http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=1701+John+F+Kennedy+Blvd+philadelphia&sll=39.954255,-75.16839&sspn=0.006908,0.013711&ie=UTF8&hq=&hnear=1701+John+F+Kennedy+Blvd,+Philadelphia,+Pennsylvania+19103&ll=39.956185,-75.168393&spn=0.006908,0.013711&t=h&z=16&iwloc=A Directions to Comcast]
+
+'''Development Issues Within AJAX Applications: How to Divert Threats'''
+
+Speaker: Tom Tucker
+
+Bio: Tom Tucker has over 25 years of experience within the enterprise hardware, software, network, and security market.  As a Senior Systems Engineer at Cenzic, Tom works directly with customers to protect their Web applications from hacker attacks.  Previously Tom's worked with Tier 1 and Tier 2 Network Service Providers such as BBN, GTE, AT&T, iPass, New Edge Networks and MegaPath Networks, designing firewall, VPN, WAN, LAN and Hosting solutions. Tom was also the Director of Intranet Engineering for Associates Information Services (now a part of Citigroup) implementing secure Internet technology solutions for both internal and external application delivery.
+
+
+----
+
+== Previous Meeting: '''Wednesday June 24th 2009, 6:30 PM - 8:00 PM'''  ==
+'''OWASP Philly Meeting - AccessIT Group - King of Prussia'''
+
+Pizza provided by AccessIT Group.
+
+'''Sponsors:'''
+[[Image:Logo_accessitgroup.gif]][[Image:Sanslogo_vertical.jpg]]
+
+'''Agenda:'''<br>
+1.) OWASP Introduction<br>
+2.) How to Analyze Malicious Flash Programs - Lenny Zeltser<br>
+3.) OWASP .NET, OWASP Report Generator,OWASP Cryttr/Encrypted Syndication - Mark Roxberry<br>
+
+[http://atlas.mapquest.com/maps/map.adp?formtype=address&country=US&popflag=0&latitude=&longitude=&name=&phone=&level=&addtohistory=&cat=Access+It+Group+Inc&address=2000+Valley+Forge+Cir&city=King+of+Prussia&state=PA&zipcode=19406 Directions]
+
+2000 Valley Forge Circle<br>
+Suite 106<br>
+King of Prussia, PA 19406<br>
+
+AccessIT Group is located in the 2000  Building (middle building) of the Valley
+Forge Towers.  The offices are located on the bottom floor of the
+building.  Parking is available in the front or rear of the building.  
+
+'''How to Analyze Malicious Flash Programs'''
+
+by Lenny Zeltser (http://www.zeltser.com)
+
+'''About the talk:'''
+Attackers increasingly use malicious Flash programs, often in the form of banner ads, as initial infection vectors. Obfuscation techniques and multiple Flash virtual machines complicate this task of analyzing such threats. Come to learn insights, tools and techniques for reverse-engineering this category of browser malware.
+
+'''Bio:'''
+Lenny Zeltser leads the security consulting practice at Savvis. He is also a board of directors member at SANS Technology Institute, a SANS faculty member, and an incident handler at the Internet Storm Center. Lenny frequently speaks on information security and related business topics at conferences and private events, writes articles, and has co-authored several books. Lenny is one of the few individuals in the world who've earned the highly-regarded GIAC Security Expert (GSE) designation. He also holds the CISSP certification. Lenny has an MBA degree from MIT Sloan and a computer science degree from the University of Pennsylvania. You can stay in touch with him via http://twitter.com/lennyzeltser.
+
+'''OWASP .NET, OWASP Report Generator, OWASP Cryttr / Encrypted Syndication'''
+
+by Mark Roxberry
+
+About the talk:  Mark is looking to generate some interest in participating in OWASP projects.  He will be speaking about projects that he is involved in and hoping to recruit folks who have time, energy and motivation to help out.
+
+Bio:  Mark Roxberry is a frequent contributor of research and code to OWASP.  His credits include OWASP Testing Guide contributor and reviewer, the OWASP .NET Project Lead, the OWASP Report Generator Lead and just recently the OWASP Encrypted Syndication Lead.  He is a Senior Consultant at Database Solutions in King of Prussia.  Mark has a B.S. in Russian Technical Translation from the Pennsylvania State University and has the CEH and CISSP certificates hanging in his bunker where he tries to figure out how to hack into Skynet when it comes online.
+
+== Previous Meetings ==
+
+Next Meeting: <br>'''October 28th 2008, 6:30 PM - 8:00 PM''' 
+<br>OWASP Philly Meeting - Protiviti - Two Libery Place Philadelphia
+
+Come join us in Philadelphia as we discuss web application security.
+
+'''Agenda:'''<br>
+1.) Web Application Security and PCI requirements (V 1.1 and 1.2)<br>
+2.) Clickjacking: What is it and should we be concerned about it?<br>
+3.) Summary of OWASP conference in New York.
+
+[Google Directions][http://maps.google.com/maps?q=50+South+16th+St+Philadelphia,+PA&ie=UTF-8&oe=utf-8&rls=org.mozilla:en-US:official&client=firefox-a&um=1&sa=X&oi=geocode_result&resnum=1&ct=title]
+
+Two Libery Place 50 South 16th St<br>
+Suite 2900<br>
+Philadelphia, PA 19102 USA<br>
+
+[[Category:Pennsylvania]]

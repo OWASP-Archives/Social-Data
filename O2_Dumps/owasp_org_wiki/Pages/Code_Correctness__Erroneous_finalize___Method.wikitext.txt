@@ -1,0 +1,50 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Failure to follow guideline/specification]]
+
+
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+==Description==
+
+This finalize() method does not call super.finalize().
+
+The Java Language Specification states that it is a good practice for a finalize() method to call super.finalize().[1]
+<br>The statement above is not completely correct. The Java Language Specification 3.0 section 12.6.1 states: "This should
+always be done, <b>unless it is the programmer's intent to nullify the actions of the finalizer in the superclass.</b>"
+
+==Risk Factors==
+TBD
+
+==Examples ==
+
+The following method omits the call to super.finalize().
+
+  protected void finalize() {
+                 discardNative();
+  }
+
+==Related [[Attacks]]==
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+* [[Control 1]]
+* [[Control 2]]
+
+==Related [[Technical Impacts]]==
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+* [1] J. Gosling, B. Joy, G. Steele, G. Bracha. The Java Language Specification, Second Edition. Addison-Wesley, 2000.

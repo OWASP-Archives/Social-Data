@@ -1,0 +1,127 @@
+__NOTOC__
+{{OWASP Defenders}} 
+
+== Summit 2011  ==
+
+=== Summit Overview  ===
+
+The [[OWASP AppSensor Project|AppSensor]] Summit will be held on September 21, 2011 at [http://www.appsecusa.org OWASP AppSec USA 2011] in Minneapolis, Minnesota. 
+
+=== Agenda  ===
+
+{| cellspacing="2" cellpadding="2" style="border: 2px solid black;"
+|- style="background-color: navy;"
+! style="color: white;" | Start 
+! style="color: white;" | End 
+! style="color: white;" | Topic 
+! style="color: white;" | Description 
+! style="color: white;" | Deliverables
+|- style="background-color: lightgray;"
+| 0900 
+| 0930 
+| AppSensor Intro & Retrospective
+| Brief summary of where we've been, administrative changes, and outlining the goals and purpose of the Summit 
+| n/a
+
+|- style="background-color: lightgray;"
+| 0930 
+| 1030 
+| The AppSensor Book v2
+|  Planning the next version of the OWASP AppSensor Book (Version 1 [http://www.lulu.com/content/5984542 here]).
+| [[AppSensor_BookV2]]
+
+|- style="background-color: lightblue;"
+| 1030 
+| 1045 
+| colspan="3" | Coffee Break
+
+|- style="background-color: lightgray;"
+| 1045 
+| 1200 
+| AppSensor Code 
+| Define what else is needed for the AppSensor code. More documentation, better examples, ports to other languages? Versions?
+| 
+* [http://code.google.com/p/appsensor/ Code]
+* [http://www.owasp.org/index.php/AppSensor_Developer_Guide AppSensor Developer Guide]
+
+|- style="background-color: lightblue;"
+| 1200 
+| 1300 
+| colspan="3" | Lunch Break and Open Conversation (Sponsored by Mozilla)
+
+|- style="background-color: lightgray;"
+| 1300
+| 1330 
+| Detection Points & Response Actions 
+| How else should we expand the detection points and response actions? Creation of different recommended response action packages (e.g. alert & monitor, divert and distract,  full lockdown)
+| 
+*[[AppSensor_DetectionPoints]] 
+*[[AppSensor_ResponseActions]] 
+
+|- style="background-color: lightgray;"
+| 1330
+| 1400 
+| AppSensor in the Field: ModSecurity & CrossTalk
+|  Updates from Ryan Barnett & Colin Watson on recent advances in AppSensor
+| 
+
+|- style="background-color: lightblue;"
+| 1400
+| 1415 
+| colspan="3" | Coffee Break
+
+|- style="background-color: lightgray;"
+| 1415
+| 1500 
+| AppSensor and Your Application - An Integration Plan
+|  Creation of an integration plan for adding AppSensor to an existing or new application. Conveying value, planning during design, tuning detection points, selecting response actions, etc.
+| 
+*[[AppSensor_IntegrationPlan]] 
+
+|- style="background-color: lightgray;"
+| 1500
+| 1530 
+| Roadmap for AppSensor - We Need One
+|  Define a roadmap for the project.
+| 
+*[https://www.owasp.org/index.php/OWASP_AppSensor_Project#tab=Project_Roadmap Roadmap]
+
+|- style="background-color: lightgray;"
+| 1530
+| 1545 
+| Wrap Up
+|  
+| 
+
+|- style="background-color: lightblue;"
+| 1545
+| 1630 
+| -
+| 
+| 
+
+|- style="background-color: lightblue;"
+| 1630
+| 1845 
+| OWASP Charity 5K/10K
+|  [http://www.appsecusa.org/strengthen.html Details]
+| 
+
+
+|}
+
+<noinclude>
+
+=== Attending the AppSensor Summit ===
+
+If you are planning to attend this summit, please add your name below so that we can ensure that we have adequate space and materials for everyone.
+
+* [[User:MichaelCoates]] - Michael Coates 
+* [[User:clerkendweller]] - Colin Watson
+* [[User:Rcbarnett]] - Ryan Barnett 
+* [[User:Jmanico]] - Jim Manico
+* [[User:BobChojnacki]] - Bob Chojnacki (Might not be there until 10:30.)
+
+'''Attending?''' Free of charge & open to all at AppSecUSA -  [https://docs.google.com/a/owasp.org/spreadsheet/viewform?formkey=dFVBMFEyRllpck1aRW9oVmE4eWNvWWc6MQ Sign up here]
+
+[[Category:OWASP_Project|AppSensor Project]]

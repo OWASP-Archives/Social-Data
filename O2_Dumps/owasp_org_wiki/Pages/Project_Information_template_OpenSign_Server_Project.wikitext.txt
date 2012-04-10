@@ -1,0 +1,33 @@
+----
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP OpenSign Server Project (Online code signing and integrity verification service for open source community)''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|The purpose of this project would be to build and host a feature-rich server and suite of client utilities with adequate secure hardware to ensure the integrity of code modules. - The service will allow all .NET and Java code modules to be uploaded to the service to be signed by a community code signing key. Each community (such as OWASP) will have a key and corresponding Software Publishing Certificate (SPC) which can optionally be embedded in the code module itself. Generally, however, the service is intended for developers and the wider community of concerned users that want to ensure that their downloaded portable executable is exactly what it purports to be. The root key will be stored in an HSM and will sign an SPC from a locally generated key-pair of which the public key will be sent to the service. Key pair generation can be made and submitted using standard .NET delay signing and jar signing tools distributed with the SDKs, however, the project remit will ensure that a client-side graphical tool for each environment is available to generate the keys pairs needed to sign code with and allow submission to the code signing service for signing and generation of SPC by the server's proprietary CA. Anonymity will not be allowed so the project will include a database of users which will be the basis of directory for SPCs. There will be a web and web services interface using an online login and WS-Security respectively which will allow the code to be uploaded on demand and signed by a code signing key with the option to embed the certificate or not. 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Key Project Information'''
+ | style="width:14%; background:#cccccc" align="center"|Project Leader<br>[[User:Philipp Potisk|'''Phil Potisk''']]<br>[mailto:techierebel(at)yahoo.co.uk '''Richard Conway''']
+ | style="width:16%; background:#cccccc" align="center"|Project Contributors<br>(if any)
+ | style="width:10%; background:#cccccc" align="center"|Mailing list<br>[https://lists.owasp.org/mailman/listinfo/owasp-opensign-server-project '''Subscribe here''']<br>[mailto:Owasp-OpenSign-Server-Project@lists.owasp.org '''Use here''']
+ | style="width:16%; background:#cccccc" align="center"|
+License<br>[http://www.gnu.org/licenses/gpl.html '''GNU General Public License v3''']
+ | style="width:14%; background:#cccccc" align="center"|
+Project Type<br>[https://www.owasp.org/index.php/Category:OWASP_Project#tab=Beta_Status_Projects '''Tool''']
+ | style="width:15%; background:#cccccc" align="center"|Sponsor<br>[[OWASP Summer of Code 2008|'''OWASP SoC 08''']]
+ |}
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|
+'''[[:Category:OWASP Project Assessment#Beta Quality Tool Criteria|Beta Quality]]'''<br>[[:Category:OWASP OpenSign Server Project - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="center"|
+[http://code.google.com/p/opensign-project/ OpenSign Project - code.google.com]<br>[https://www.owasp.org/images/0/04/OpenSign_Server_Demo_oss_0_4_ossjclient_0_9.ppt OpenSign Server Demo - Power Point Presentation]<br>server: [http://opensign-project.googlecode.com/files/OpenSignServer-1.0-bin.tar.gz OpenSignServer-1.0-bin.tar.gz ]<br>client: [http://opensign-project.googlecode.com/files/OSSJClient-1.0-bin.tar.gz OSSJClient-1.0-bin.tar.gz ]
+ | style="width:29%; background:#cccccc" align="center"|
+(if any, add link here)
+ |}
+----

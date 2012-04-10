@@ -1,0 +1,259 @@
+{{OWASP Book|5984542}} 
+{{OWASP Defenders}} 
+
+= About =
+{{ProjectTabs | 
+Proj_About= 
+{{:Project Information:template AppSensor Project}} 
+
+| 
+
+Proj_Documentation=
+= Overview =
+
+If you walk into a bank and try opening random doors, you will be identified, led out of the building and possibly arrested. However, if you log into an online banking application and start looking for vulnerabilities no one will say anything. This needs to change! 
+
+As critical applications continue to become more accessible and inter-connected, it is paramount that critical information is sufficiently protected. We must also realize that our defenses may not be perfect. Given enough time, attackers can identify security flaws in the design or implementation of an application. 
+
+In addition to implementing layers of defense within an application, we must identify malicious individuals before they are able to identify any gaps in our defenses. The best place to identify malicious activity against the application is within the application itself. Network based intrusion detection systems are not appropriate to handle the custom and intricate workings of an enterprise application and are ill-suited to detect attacks focusing on application logic such as authentication, access control, etc. This project will create the framework which can be used to build a robust system of attack detection, analysis, and response within an enterprise application 
+
+== Is this hard?==
+No, simple checks are used to detect malicious activity. A security exception is then thrown and the AppSensor/ESAPI framework takes care of the rest. 
+
+== Get AppSensor ==
+Download the AppSensor book for free at [http://www.lulu.com/product/download/owasp-appsensor/4520005  lulu.com]
+
+Order a printed version for under $10 [http://www.lulu.com/content/5984542 lulu.com]
+
+|
+
+Proj_Contributors=
+
+
+|
+
+Proj_Mail=
+
+AppSensor-Tutorial [http://code.google.com/p/appsensor/source/browse/trunk/AppSensor-Tutorial/ Now Available]!
+
+AppSensor Presented at AppSecUSA
+
+
+= Project Roadmap =
+
+'''September, 2010''' - Presented at AppSecUSA [http://www.slideshare.net/michael_coates/real-time-application-defenses-the-reality-of-appsensor-esapi-5181743 slides]
+
+'''June, 2010''' - Active ESAPI Integration Underway
+
+'''November, 2009''' [http://www.owasp.org/images/0/06/Defend_Yourself-Integrating_Real_Time_Defenses_into_Online_Applications-Michael_Coates.pdf OWASP DC, November 2009]
+
+'''Current:''' v1.2 in the works, demo application in development 
+
+'''May, 2009''' - AppSec EU Poland - Presentation ([http://www.owasp.org/images/b/b7/AppsecEU09_MichaelCoates.pptx PPT]) ([http://blip.tv/file/2198771 Video]) 
+
+'''January, 2009''' - v1.1 Released - Beta Status 
+
+'''November, 2008''' - AppSensor Talk at OWASP Portugal 
+
+'''November, 2008''' - v1.0 Released - Beta Status 
+
+'''April 16, 2008''' - Project Begins 
+
+<br> 
+
+= Detection Points =
+
+
+Below are the primary detection points defined within AppSensor. These are just the titles; the document contains descriptions, examples and considerations for implementing these detection points. 
+
+ '''[http://www.owasp.org/index.php/AppSensor_DetectionPoints Detailed Detection Point Information Here] '''
+
+ '''[http://www.owasp.org/index.php/AppSensor_ResponseActions Response Action Information Here]'''
+
+'''Summary of Information'''
+'''Detection Categories:''' 
+
+RE - Request
+
+AE - Authentication
+
+SE - Session
+
+ACE - Acess Control
+
+IE - Input
+
+EE - Encoding
+
+CIE - Command Injection
+
+FIO - File IO
+
+HT - Honey Trap
+
+UT - User Trend
+
+STE - System Trend
+
+RP - Reputation
+ 
+
+'''Signature Based Event Titles''' 
+
+ID Event
+
+RE1 Unexpected HTTP Command
+
+RE2 Attempt to Invoke Unsupported HTTP Method
+
+RE3 GET When Expecting POST
+
+RE4 POST When Expecting GET
+
+RE5 Additional/Duplicated Data in Request
+
+RE6 Data Missing from Request
+
+RE7 Unexpected Quantity of Characters in Parameter
+
+RE8 Unexpected Type of Characters in Parameter
+
+AE1 Use Of Multiple Usernames
+
+AE2 Multiple Failed Passwords
+
+AE3 High Rate of Login Attempts
+
+AE4 Unexpected Quantity of Characters in Username
+
+AE5 Unexpected Quantity of Characters in Password
+
+AE6 Unexpected Type of Character in Username
+
+AE7 Unexpected Type of Character in Password
+
+AE8 Providing Only the Username
+
+AE9 Providing Only the Password
+
+AE10 Adding POST Variable
+
+AE11 Missing POST Variable
+
+AE12 Utilization of Common Usernames
+
+SE1 Modifying Existing Cookie
+
+SE2 Adding New Cookie
+
+SE3 Deleting Existing Cookie
+
+SE4 Substituting Another User's Valid Session ID or Cookie
+
+SE5 Source IP Address Changes During Session
+
+SE6 Change Of User Agent Mid Session
+
+ACE1 Modifying URL Argument Within a GET for Direct Object Access Attempt
+
+ACE2 Modifying Parameter Within a POST for Direct Object Access Attempt
+
+ACE3 Force Browsing Attempt
+
+ACE4 Evading Presentation Access Control Through Custom POST
+
+IE1 Cross Site Scripting Attempt
+
+IE2 Violation of Implemented White Lists
+
+IE3 Violation Of Implemented Black Lists
+
+IE4 Violation of Input Data Integrity
+
+IE5 Violation of Stored Business Data Integrity
+
+IE6 Violation of Security Log Integrity
+
+EE1 Double Encoded Character
+
+EE2 Unexpected Encoding Used
+
+CIE1 Blacklist Inspection for Common SQL Injection Values
+
+CIE2 Detect Abnormal Quantity of Returned Records
+
+CIE3 Null Byte Character in File Request
+
+CIE4 Carriage Return or Line Feed Character In File Request
+
+FIO1 Detect Large Individual File 
+
+FIO2 Detect Large Number of File Uploads
+
+HT1 Alteration to Honey Trap Data
+
+HT2 Honey Trap Resource Requested
+
+HT3 Honey Trap Data Used
+
+'''Behavior Based Event Titles'''<br> 
+
+UT1 Irregular Use of Application
+
+UT2 Speed of Application Use
+
+UT3 Frequency of Site Use
+
+UT4 Frequency of Feature Use
+
+STE1 High Number of Logouts Across The Site
+
+STE2 High Number of Logins Across The Site
+
+STE3 Significant Change in Usage of Same Transaction Across The Site
+
+RP1 Suspicious or Disallowed User IP Address
+
+RP2 Suspicious External User Behavior
+
+RP3 Suspicious Client-Side Behavior
+
+RP4 Change to Environment Threat Level
+
+= Media =
+
+July, 2010 - OWASP London (UK) - [http://www.owasp.org/index.php/File:Owasp-london-20100715-appsensor-3.pdf Real Time Application Attack Detection and Response with OWASP AppSensor]
+
+June, 2010 - OWASP Leeds/North (UK) - OWASP AppSensor - The Self-Aware Web Application
+
+June, 2010 - Video presentation - [http://michael-coates.blogspot.com/2010/06/online-presentation-thursday-automated.html Automated Application Defenses to Thwart Advanced Attackers]
+
+November, 2009 -  AppSec DC - [http://www.owasp.org/images/0/06/Defend_Yourself-Integrating_Real_Time_Defenses_into_Online_Applications-Michael_Coates.pdf Defend Yourself: Integrating Real Time Defenses into Online Applications]
+
+May, 2009 - [http://www.owasp.org/download/jmanico/owasp_podcast_51.mp3 OWASP Podcast #51 ]
+
+May, 2009 - AppSec EU Poland - [https://www.owasp.org/images/b/b7/AppsecEU09_MichaelCoates.pptx Real Time Defenses against Application Worms and Malicious Attackers]
+
+November, 2008 - [https://www.owasp.org/images/7/77/Presentation_AppSensor.ppt OWASP Summit Portugal 2008 PPT]
+
+
+'''Video Demos of AppSensor'''
+
+[http://www.youtube.com/watch?v=8ItfuwvLxRk Detecting Multiple Attacks & Logging Out Attacker]
+
+[http://www.youtube.com/watch?v=CekUMk_VRV8 Detecting XSS Probes]
+
+[http://www.youtube.com/watch?v=LfD4y67qdWE Detecting URL Tampering]
+
+[http://www.youtube.com/watch?v=1D6nTlmYjhY Detecting Verb Tampering]
+
+
+= Project About =
+{{:Projects/OWASP_AppSensor_Project | Project About}}
+
+
+}} 
+
+__NOTOC__ <headertabs /> <br>
+
+[[Category:OWASP_Project|AppSensor Project]] [[Category:OWASP_Document]] [[Category:OWASP_Download]] [[Category:OWASP_Beta_Quality_Document]]

@@ -1,0 +1,12 @@
+==== Project About ====
+{{:Projects/OWASP Java HTML Sanitizer Project | Project About}}
+
+__NOTOC__ <headertabs/>
+
+A fast and easy to configure HTML Sanitizer written in Java which lets you include HTML authored by third-parties in your web application while protecting against XSS.
+
+The code is hosted on [http://code.google.com/p/owasp-java-html-sanitizer/ Google Code].  The [http://canyouxssthis.com/ attack review] is ongoing so please consider it beta software. 
+
+[[Category:OWASP_Tool]] 
+[[Category:OWASP_Alpha_Quality_Tool]] 
+[[Category:OWASP_Project|Java HTML Sanitizer]]

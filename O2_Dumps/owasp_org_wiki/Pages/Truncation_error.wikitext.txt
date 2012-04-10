@@ -1,0 +1,142 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+Truncation errors occur when a primitive is cast to a primitive of a smaller size and data is lost in the conversion.
+
+'''Consequences'''
+
+* Integrity: The true value of the data is lost and corrupted data is used.
+
+'''Exposure period'''
+
+* Implementation: Truncation errors almost exclusively occur at implementation time.
+
+'''Platform'''
+
+* Languages: C, C++, Assembly
+* Operating platforms: All
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Low
+
+'''Likelihood of exploit'''
+
+Low
+
+
+When a primitive is cast to a smaller primitive, the high order bits of the large value are lost in the conversion, resulting in a non-sense value with no relation to the original value. This value may be required as an index into a buffer, a loop iterator, or simply necessary state data. In any case, the value cannot be trusted and the system will be in an undefined state.
+
+While this method may be employed viably to isolate the low bits of a value, this usage is rare, and truncation usually implies that an implementation error has occurred.
+
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+This example, while not exploitable, shows the possible mangling of values associated with truncation errors:
+
+<pre>
+#include <stdio.h>
+
+int main() {   
+  int     intPrimitive;    
+  short   shortPrimitive;    
+
+  intPrimitive = (int)(~((int)0) ^ (1 << (sizeof(int)*8-1)));    
+  shortPrimitive = intPrimitive;    
+
+  printf("Int MAXINT: %d\nShort MAXINT: %d\n", 
+         intPrimitive, shortPrimitive);    
+  return (0);
+}
+</pre>
+
+The above code, when compiled and run, returns the following output:
+
+<pre>
+Int MAXINT: 2147483647
+Short MAXINT: -1
+</pre>
+
+A frequent paradigm for such a problem being exploitable is when the truncated value is used as an array index, which can happen implicitly when 64-bit values are used as indexes, as they are truncated to 32 bits. 
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Signed to unsigned conversion error]]
+* [[Unsigned to signed conversion error]]
+* [[Integer coercion error]]
+* [[Sign extension error]]
+
+
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+* Implementation: Ensure that no casts, implicit or explicit, take place that move from a larger size primitive or a smaller size primitive. 
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Range and Type Error Vulnerability]]
+[[Category:OWASP_CLASP_Project]]
+[[Category:Implementation]]
+[[Category:General Logic Error Vulnerability]]

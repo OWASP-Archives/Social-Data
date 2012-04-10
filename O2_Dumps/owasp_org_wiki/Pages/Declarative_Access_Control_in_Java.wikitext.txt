@@ -1,0 +1,72 @@
+==Status==
+Under review
+=== Overview ===
+A Java-based application can be configured to restrict access to resources via the deployment descriptor (web.xml). This is called declarative access control or declarative security.  No extra programming on your part is required.  The process is 100 percent managed by the container within which your web application is deployed.  The security mechanism described here is defined within the [http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=servlet-2.4-fr-spec-oth-JSpec&SiteId=JCP&TransactionId=noreg Java servlet specification].  [[Category:FIXME|link not working]] Therefore, any servlet/jsp container (e.g., Tomcat, Jetty, ServletExec) or JEE-compliant application server (e.g., JBoss, WebLogic, GlassFish) that supports servlets must also support declarative access control.
+
+=== Basic Authentication ===
+For example, the web.xml snippet below uses BASIC authentication.  The effect is that a popup box will appear and the user must enter his username and password when trying to access either a PDF file or anything under the "restrictedfiles" directory within the web app context.  The user credentials entered must be recognized as being part of the "admin" group in this case.
+
+<tt>
+ &lt;web-app&gt;
+  ...
+  &lt;security-constraint&gt;
+    &lt;web-resource-collection&gt;
+      &lt;web-resource-name&gt;Restricted Resources&lt;/web-resource-name&gt;
+      &lt;url-pattern&gt;*.pdf&lt;/url-pattern&gt;
+      &lt;url-pattern&gt;/restrictedfiles/*&lt;/url-pattern&gt;
+    &lt;/web-resource-collection&gt;
+    &lt;auth-constraint&gt;
+      &lt;role-name&gt;admin&lt;/role-name&gt;
+    &lt;/auth-constraint&gt;
+    &lt;user-data-constraint&gt;
+      &lt;transport-guarantee&gt;NONE&lt;/transport-guarantee&gt;
+    &lt;/user-data-constraint&gt;
+  &lt;/security-constraint&gt;
+  &lt;login-config&gt;
+    &lt;auth-method&gt;BASIC&lt;/auth-method&gt;
+    &lt;realm-name&gt;Restricted Files&lt;/realm-name&gt;
+  &lt;/login-config&gt;
+  &lt;security-role&gt;
+    &lt;role-name&gt;admin&lt;/role-name&gt;
+  &lt;/security-role&gt;
+  ...
+ &lt;/web-app&gt;
+</tt>
+
+=== Form Authentication ===
+In the snippet below, the &lt;login-config&gt; section has been changed to use FORM authentication. In this example, the container will cause the gatekeeper.jsp page to appear when the user tries to access a restricted resource. The user is asked to enter his username and password in an HTML form.  If the credentials entered are invalid, the tryagain.jsp page will be shown.
+
+<tt>
+ &lt;login-config&gt;
+   &lt;auth-method&gt;FORM&lt;/auth-method&gt;
+   &lt;realm-name&gt;Restricted Files&lt;/realm-name&gt;
+   &lt;form-login-config&gt;
+     &lt;form-login-page&gt;/gatekeeper.jsp&lt;/form-login-page&gt;
+     &lt;form-error-page&gt;/tryagain.jsp&lt;/form-error-page&gt;
+   &lt;/form-login-config&gt;
+ &lt;/login-config&gt;
+</tt>
+
+If you decide to use FORM authentication, you must create pages for &lt;form-login-page&gt; and &lt;form-error-page&gt;.   The login page has some additional constraints if you want everything to actually work.  You need to define a form where the action attribute is "j_security_check" and this form must have two input parameters, one called "j_username" and the other called "j_password".  So gatekeeper.jsp in the example here needs a form like this:
+
+<tt>
+ &lt;form name="AuthForm" action="j_security_check" method="post"&gt;
+   &lt;input type="text" name="j_username"&gt;
+   &lt;input type="password" name="j_password"&gt;
+   &lt;input type="submit" value="Submit"&gt;
+ &lt;/form&gt;
+</tt>
+
+The error page (tryagain.jsp in the example above) might simply display a message that the credentials entered are invalid and provide a link back to the login page.
+
+=== Additional Notes ===
+Unless [[SSL]] is used, both BASIC and FORM authentication methods send credentials as unencrypted. For BASIC method, the credentials are put into the format "username password", then Base64 encoded and included in the HTTP request header. An example http header would look like this: 
+
+<tt>
+Authorization: Basic YWRtaW46ZmlzaG5ldA==
+</tt>
+
+Other possible values for &lt;auth-method&gt; are DIGEST and CLIENT-CERT. It is also possible to have vendor-specific values for different containers. Note that the value of &lt;transport-guarantee&gt; essentially defines whether SSL is required or not. If the value is INTEGRAL or CONFIDENTIAL, then you can assume that an https request is required to access the resource.
+
+[[Category:OWASP Java Project]]
+[[Category:Access Control]]

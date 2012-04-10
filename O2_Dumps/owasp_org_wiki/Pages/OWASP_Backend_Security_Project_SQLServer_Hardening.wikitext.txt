@@ -1,0 +1,716 @@
+= Overview =
+In this section there are some best practices concerning the security of SQL Server 2005. The operating system under SQL Server is Windows Server 2003.
+
+= Description =
+
+== Installation of the Engine ==
+The prerequisites for the installation are:
+* .NET Framework 2.0
+* Microsoft SQL Native Client
+* Microsoft SQL Server 2005 Setup Support Files.
+
+The installation consist of a large amount of services that are shortly descripted:
+* SQL Server Database Services (install SQL Server database engine and tools for managing relational and XML data, replication and full text search)
+* Analysis Services (install analysis services and tools used to support online analytical procession OLAP and data mining. Install also Integration Services)
+* Notification Services (installs notification services a platform for developing and deploying applications that send personalized, timely notifications to a variety of devices or applications)
+* Integration Services (install a set of tools and programmable objects for creating and managing packages that extract, transofrm and load data, as well perform task)
+* Client Components (install management tools, development tools and legacy components)
+* Documentation, samples and sample databases (installs books online documentation, sample databases and sample applications for all sql 2005 components)
+During the installation the thing to remind is that from a security point of view, only what is strictly needed must be installed. To install a tipycal minimal configuration, the SQL Server Database Services and some Client Components (Connectivity components and  Management Tools) can be installed.
+=== Services ===
+In SQL Server every service can run under a particular Windows account. The choices for the service's accounts are:
+
+* Local user that is not a Windows administrator 
+* Domain user that is not a Windows administrator
+* Local Service account
+* Network Service account
+* Local System account
+* Local user that is a Windows administrator
+* Domain user that is a Windows administrator
+
+There is not only a solution to configure the service's account, but there are two rules to follow that enforce to behave in certain way:
+* minimum privileges
+* account isolation
+Follow this, probably an administrator account (local or domain) has much more privileges than needed, indipendently of the service.
+The Local System account has to many privileges and it's not indicated for a service's account
+On the other hand Local Service and Network Service have not much privileges, but they are used for more Windows services, so there is no account isolation.
+
+So the more secure solution for the Sql Server Service's Account is to use Local User or Domain User not Administrators. 
+For example imagine that are installed the trhee main services:
+* Sql Server
+* Sql Server Agent
+* Sql Server Browser
+The task is to create three Windows Local User Account, belonging to User Group, protected with password, and assign them to the services.
+In this manner there are exactly two concepts: minimum privileges and account isolation.
+
+=== Authentication Mode ===
+Sql Server provides two kinds of authentication: SQL Server Authentication and Windows Authentication. During the installation is possible to enable both (Mixed Mode) or only the Windows Authentication (Windows Mode)
+
+If there is an homogeneous Windows environment, the more secure solution is to enable the Windows mode Authentication, because the administration of the logins is made in the Windows Server and the credentials are not passed through the network, because Windows Authentication uses NTLM or Kerberos Protocols.
+If there is an heterogeneous environment, for example no domain controller or there are some legacy applications that have to connect to Sql Server, only the Mixed Mode solution is possible. In this second case the administration of the logins is made inside SQL Server and the credentials are necessarily passed through the network.
+
+Is important to say that in a Windows Mode Authentication, the "sa" user (system administrator) is not enabled. In a mixed mode is enabled. 
+So in an environment with Mixed Mode Authentication, to avoid the attacks against "sa" user, is better to:
+* rename "sa" with another name
+* use a strong password for the renamed "sa"
+
+=== Processes ===
+Every services that is installed in Sql Server could be administrated through the tool "Sql Server Configuration Manager" that is possible to install, enabling the client component of Sql Server.
+With this tool is possible to realize the two best practices for the account's services, assigning to every service a specific account protected with password, that authenticates against Windows.
+Every service could be started or stopped in a manual or automatic manner, like other Windows Services.
+
+== Configuration tools provided ==
+
+=== Surface Area Reduction (services and connections) ===
+The Surface Area Reduction is a powerful tool provided with Sql Server 2005 to configure:
+* Services & Connections
+
+'''Services'''
+
+Every Service installed could be rapidly managed. It's posssible in every moment to:
+* Manage the status of the service with the possibilities: Start/Stop & Pause/Resume
+* Manage the action of the operating system on startup for that service: Automatic, Manual, Disabled.
+
+The concept is to configure automatic start only for those services that are immediately needed, disabling or manually starting others services that are not necessary.
+
+'''Connections'''
+
+For every instance of SQL Server is possible to allow:
+* Only local connection to the server
+* Local and remote connections to the server
+In a distributed environment probably it's necessary to allow both the connection's type, but it's easy to understand that allowing remote connections expose the server more easily.
+So for the remote connections Sql Server could allow two kind of protocols:
+* TCP/IP
+* Named Piped
+For the normal use the better thing is to configure only TCP/IP, because Named Pipes need more open port to work.
+Additionally there are others two kinds of connections to the server:
+* VIA
+* Shared Memory
+VIA (Virtual Interface Adapter protocol ) works with VIA hardware. Shared Memory is a protocol that is possible to use only by local connections. 
+Using the Sql Server Configuration Manager the best solution is enable TCP/IP for remote connections and Shared Memory for the local connections.
+
+=== Surface Area Reduction (features) ===
+This is a series of interfaces for enabling or disabling many Database Engine, Analysis Services, and Reporting Services features. The most important are the features of the Database Engine: 
+
+* Ad hoc distributed queries
+* Common language runtime (CLR) integration	
+* Dedicated administrator connection (DAC)	
+* Database Mail	
+* Native XML Web services	
+* OLE Automation stored procedures
+* Service Broker
+* SQL Mail
+* Web Assistant stored procedures
+* xp_cmdshell
+
+'''Ad hoc distributed queries''' (default is disabled)
+
+This feature enable the OPENROWSET and OPENDATASOURCE calls, to connect to an OLE DB data source. To disable this feature launch:
+
+ EXEC sp_configure 'Ad Hoc Distributed Queries',0
+ GO
+ RECONFIGURE
+ GO
+
+It's recommended to disable this feature, because in a case of Sql Injection, an attacker could use OPENROWSET to connect to a database.
+
+'''Common language runtime (CLR) integration''' (default is disabled)
+
+This feature give the possibility to write stored procedures, triggers, user defined functions using a .NET Framework language. So if the server is not used with this aim, or if all the databases object are written with T-SQL, there's no reason to enable this. To disable this feature launch:
+
+ EXEC sp_configure 'clr enabled',0
+ GO
+ RECONFIGURE
+ GO
+
+'''Dedicated administrator connection (DAC)''' (default is disabled)
+
+This feature enables the possibility to execute diagnostics queries and troubleshoot problems when there are some problems to connect with standard mode to the server.
+The uses are tipically:
+
+* Querying some dynamic management views of SQL Server to obtain informations about the "status health"
+* Basic DBCC commands (for example DBCC SHRINKDATABASE to cut the log file)
+* Kill the PID of processes
+
+But for example is possible to do other works, like add logins with sysadmin privileges or other administrator's tasks
+This is an emergency type of connection, that SQL Server can permit every time, reserving an amount of resources during startup. It permits only a user a time, so if there is an user connected via DAC, no others users can connect. It's possible to use it with SQLCMD or Sql Server Management Studio, through the sintax:
+
+ Admin:<namepc>\<nameSqlInstance>
+
+So DAC is only another type of connection, and in every time the credentials must be given to the server, but if it's not necessary, disable it.
+To disable this feature launch:
+
+ EXEC sp_configure 'remote admin connections',0
+ GO
+ RECONFIGURE
+ GO
+
+'''Database mail''' (default is disabled)
+
+The database mail feature enables the possibility to use the Sql Server Instance to send email. If it's a powerful solution to give some advices to a sysadmin, from a security point of view it's a good practice to use the instance with the only aims that needed.
+To disable this feature launch:
+
+ EXEC sp_configure 'Database Mail XPs',0
+ GO
+ RECONFIGURE
+ GO
+
+'''Native XML Web services''' (default no SOAP endpoints are created)
+
+This feature basically gives the possibility to use SQL Server as a Web Services provider. It's possible to create HTTP Endpoints in Sql Server, associated for example to a result of stored procedure.
+A SOAP client could consume a service simply invoking the correct url provided by Sql Server, without others layers (tipically an IIS web server in wich the web services are hosted).
+Enabling this feature and create HTTP endpoints goes in the direction to increase the surface of attack. Every client could produce SOAP request, because SOAP grounds on its working to XML and HTTP, two standards.
+
+To use this feature, first thing is to create an HTTP endpoint for SOAP, and then start or stop the service, with the Surface Area Reduction tool.
+
+'''OLE Automation stored procedures''' (default is disabled)
+
+This feature allows access properties and methods of an ActiveX object within SQL Server. If it's necessary to obtain informations inside a DLL that is not available inside SQL Server, it's possible to use some stored procedure to do the work, enabling this feature, but it's better to access the object with the right language, not with T-SQL.
+To disable this feature launch:
+
+ EXEC sp_configure 'Ole Automation Procedures',0
+ GO
+ RECONFIGURE
+ GO
+
+'''Service Broker''' (default no Service Broker endpoints is created)
+
+Service Broker is a technology in which two or more entities accomplish a task, sending and receiving messages, in a asynchronous mode. As XML Web Services, to use this feature, a Service Broker endpoint must be created.
+A Service Broker endpoint listens on a specific TCP port numberm (tipically 4022, but could be configured during the endpoint's creation).
+The authentication against Service Broker could be BASIC, DIGEST, NTLM, KERBEROS, INTEGRATED.
+
+To use this feature, first thing is to create a TCP endpoint for SERVICE_BROKER, and then start or stop the service, with the Surface Area Reduction tool.
+
+'''SQL Mail''' (default is disabled)
+
+SQL Mail is a feature for legacy applications, supported for backward compatibility, to send and receive email using MAPI protocol. This is replaced by Database Mail Feature.
+To disable this feature launch:
+
+ EXEC sp_configure 'SQL Mail XPs',0
+ GO
+ RECONFIGURE
+ GO
+
+
+'''Web Assistant stored procedures''' (default is disabled)
+
+This feature enable stored procedures to generate HTML report from the data results. It's deprecated because there are others components (like Reporting Services) to present data in a browser.
+To disable this feature launch:
+
+ EXEC sp_configure 'Web Assistant Procedures',0
+ GO
+ RECONFIGURE
+ GO
+
+
+'''xp_cmdshell''' (default is disabled)
+
+This feature enable the extended stored procedure "xp_cmdshell". By definition "executes a command string as an operating-system command shell and returns any output as rows of text".
+Enabling xp_cmdshell is potentially very dangerous, because it allows a complete interaction with the operating system, so it's possible to give every command. It's better to do administratives tasks not using SQL Server, so mantain disable xp_cmdshell.
+To disable this feature launch:
+
+ EXEC sp_configure 'xp_cmdshell',0
+ GO
+ RECONFIGURE
+ GO
+
+=== Sql Server Configuration Manager (endpoints and protocols) ===
+
+
+=== System Stored Procedure ===
+
+Sql Server provides a lot of system stored procedures, to accomplish administratives tasks.
+Surface Configuration Area for features for example is a graphical interface that uses, as it's showed, the stored procedure '''sp_configure''' in conjunction with '''RECONFIGURE''' command to modify the server's configuration.
+So even if the server is well configurated avoiding every dangerous stored procedure (such as xp_cmdshell), if the application is vulnerable, a sql injection can cause the execution of the script:
+
+ EXEC sp_configure 'xp_cmdshell',1
+ GO
+ RECONFIGURE
+ GO
+
+and automatically the xp_cmdshell would be enabled.
+The solutions technically could be:
+* Dropping the sp_configure
+* Configuring in a right manner the LOGIN inside the Sql Server
+
+The first solution is not good, because dropping system stored procedure could cause anomalies when it's time to patching the server with the last updates/upgrades.
+So it's better to think in an "administrative manner"
+For example, sp_configure with zero or one parameter could be executed by everyone. But sp_configure with two parameters (necessary to re-enable xp_cmdshell) could be executed by users that have ALTER SETTINGS permission.
+In SQL Server there are two roles that, after installation, have ALTER SETTINGS permission:
+* sysadmin
+* serveradmin
+So it's necessary that the LOGIN used to connect to a database for an application doesn't belong to these roles, and at the same time doesn't have the ALTER SETTINGS permission.
+In this manner, there will be not possible to re-enable, for example, xp_cmdshell.
+
+To look that, there are some system stored procedure used to view roles and permission for a LOGIN. Imagine for example that a web application connect to a database with a SQL Login called 'userToConnect'.
+To see if this user belong to sysadmin or serveradmin roles, it's possible to digit:
+
+ SELECT * FROM sys.server_role_members x
+ INNER JOIN  sys.server_principals y
+ ON x.member_principal_id = y.principal_id
+ WHERE y.name = 'userToConnect'
+
+If there are one o more results, look at the first column. The possibilities for the "role_principal_id" are:
+* 3=sysadmin
+* 4=securityadmin
+* 5=serveradmin 
+* 6=setupadmin
+* 7=processadmin
+* 8=diskadmin
+* 9=dbcreator
+* 10=bulkadmin
+
+So if the 'userToConnect' doesn't have in the results number 3 or 5, doesn't belong to those roles. However it's not sufficient. Another check must be done. So launch
+
+ SELECT x.permission_name FROM sys.server_permissions x
+ INNER JOIN sys.server_principals y
+ ON x.grantee_principal_id = y.principal_id
+ WHERE y.name = 'userToConnect' 
+
+If the results don't have the permission ALTER SETTINGS, the "userToConnect" can't modify the server settings. Otherwise revoke the permission with:
+
+ REVOKE ALTER SETTINGS TO userToConnect
+
+Another extended stored procedure that must be mitigated is the one used to write in the Windows Registry. It's in the master database. Every created login belong to the database role "public". So to avoid that a login, with the public role in the master database could execute xp_regwrite, it's possible to revoke che EXECUTE right to the public role with
+
+ REVOKE EXECUTE TO public
+
+== Database Administration ==
+
+=== Password Policies ===
+When it's time to create a new Login on Sql Server, it's very important to use some evalation criteria. A possible script to do that is:
+
+ USE [master]
+ GO
+ CREATE LOGIN [userName1] WITH PASSWORD=N'password1' 
+ MUST_CHANGE, DEFAULT_DATABASE=[master], CHECK_EXPIRATION=ON, CHECK_POLICY=ON
+
+The relevant things are:
+
+* MUST_CHANGE --> after the first login, the user must change the planned password (in this case "password1"). Applied to SQL Logins
+* CHECK_EXPIRATION=ON --> the password must accomplish the expiration policy. Applied to SQL Logins
+* CHECK_POLICY=ON --> the password must accomplish the Windows policy. Applied to SQL Logins
+
+When SQL Server 2005 runs on Windows Server 2003 or higher, it can benefit on Windows password policies. These are configured on Control Panel -> Administrative Tools -> Local Security Policy. 
+On "Account Policies" there are 
+
+* Password Policy
+* Account Lockout Policy
+
+On the first option, it's important to set:
+* Enforce password history (number of password stored for each account, to avoid repeating every time the same password.  The range is [0-24])
+* Maximum password age (max number of days in which the password is valid. The range is [1-998]. A 0 value indicates no expiration)
+* Minimum password age (min number of days in which the password could not be changed The range is [1-998]. A 0 value indicates that the password could be changed in every moment)
+* Minimum password length (minimum number of characters. The range is [1-14]. A 0 value indicates no password needed)
+* Password must meet complexity requirements (no two consecutive character of account name, minimum 6 character belonging at least at three of the categories [A-Z], [a-z], [0-9], or characters like !, %, #, $ ecc...)
+
+On the second option, it's important to set:
+* Account lockout duration: (indicates the number of minutes in which the account is locked. The range is [1-99999]. A 0 value indicates that the account will be blocked until the administrator unlocks it)
+* Account lockout threshold (indicates the max number of failed attempts after that the login is blocked. The range is [1-99999]. A 0 value indicates that the account won't be never blocked)
+* Reset account lockout counter after (indicates the number of minutes that must elapse before the number of attempts return to zero. The range is [1-99999].)
+
+If an account is locked (for example due of an attempt to brute force that exceed the "Account lockout threshold" or simply for an error), a new password must be created by the administrator. So a good choice is to ALTER the login with a MUST_CHANGE new password, to force the user to modify it during the first login. The script is like that:
+
+ USE [master]
+ GO
+ ALTER LOGIN [userName1] WITH PASSWORD=N'12345678' UNLOCK MUST_CHANGE
+ GO
+
+=== Authorization ===
+
+As it's previously defined, in SQL Server 2005 there are 2 types of authentication: Windows Mode or Mixed Mode. In both case the login only authenticates against the server. Every login could belong to one or more "server roles":
+
+* sysadmin  
+* dbcreator 
+* diskadmin 
+* processadmin 
+* securityadmin 
+* bulkadmin 
+* serveradmin 
+* setupadmin 
+* public
+
+The full-rights role is "sysadmin" and for a predefined setting three groups and one sql login have this role (assuming the machine is called WIN2K3 and the sql installation SQL2005INSTANCE):
+
+* Windows group BUILTIN\Administrators
+* Windows group WIN2K3\SQLServer2005MSSQLUser$WIN2K3$SQL2005INSTANCE  (the group of the Sql Server Engine Service Account)
+* Windows group WIN2K3\SQLServer2005SQLAgentUser$WIN2K3$SQL2005INSTANCE  (the group of the Sql Server Agent Service Account)
+* Sql Login "sa"
+
+So if the services Sql Server Engine and Sql Server Agent run under a specific account (as it's mentioned above), it's possible to DROP the group BUILTIN\Administrators to reduce the administration's surface, but first check if there is a "sysadmin account" of which the password is known ("sa" or better renamed "sa" for example). Otherwise create it. After that drop the BUILTIN\Administrators (rembember that it's a reversible operation).
+
+ USE [master]
+ GO
+ DROP LOGIN [BUILTIN\Administrators]
+ GO
+
+The same approach is possible also with the others two groups, but it's necessary to create two more logins with sysadmin right. So it's preferred to mantain the two groups, using them only for the respective service account.
+
+=== Roles and Schemas ===
+
+In SQL Server, a LOGIN used for the authentication could be mapped inside a database as a USER database. Manage the permissions for a database user could be made with two elements: roles and schemas.
+SQL Server use some predefined roles:
+
+* db_accessadmin 
+* db_backupoperator 
+* db_datareader 
+* db_datawriter 
+* db_ddladmin 
+* db_denydatareader 
+* db_denydatawriter 
+* db_owner 
+* db_securityadmin 
+* public
+
+For a predefined setting, every new USER belong to the public database role, that can't be deleted. So never give permissions to this role, because they propagated to all the users of that database.
+The others roles are fixed and could not be customized. So for the principle of least privilege, they are not a good choice to model the account in SQL Server.
+The most privileged role is "db_owner" that could be everything on the database.
+When creating a database, the default owner of the database is the LOGIN of the creator; this LOGIN is mapped automatically in a predefined database USER called "dbo". So every object created inside the database is in the form of
+
+ dbo.storedprocedure
+ dbo.table
+ ...
+
+So every object could be virtually owned by dbo, and the database could not benefits of the granular permissions. 
+A good choice to manage the permissions inside a database could be build with this points:
+
+* create a customized database role (owned by dbo or other user)
+* create a SCHEMA (owned by the role created) that assembles all the securables that are linked together
+* give the appropriate permissions to that role
+* add user to that role
+
+In this manner it's possible to create specified database roles that assemble user with the only task to do jobs on a particular collection of securables, called SCHEMA. All the security of the objects is now made at the schema level and not at "dbo" level that is the predefined user-schema. The administration could be made granting or revoking privileges at the customized role, that could have one or more database user.
+
+ USE [dbExample]
+ GO
+ CREATE ROLE [Role1] AUTHORIZATION [dbo]
+ GO
+ CREATE SCHEMA [Schema1] AUTHORIZATION [Role1]
+ GO
+ GRANT CREATE TABLE TO [Role1]
+ GO
+ EXEC sp_addrolemember N'Role1', N'userName1'
+ GO
+
+When a database is created, the database includes a guest user by default. If a LOGIN doesn't have a a user account in the database, it uses the guest account. The guest user cannot be dropped, but it can be disabled in every database with:
+
+ USE exampleDB
+ GO
+ REVOKE CONNECT FROM GUEST 
+ GO
+
+=== Metadata Views ===
+
+In earlier versions of SQL Server, user that is logged on to an instance of SQL Server could view metadata for every object, even the securables on which the user had no permissions. 
+Metadata on SQL Server 2005 are provided with views on the system tables. The views belong to the "sys" schema (e.g sys.tables, sys.procedures).
+A user that for example doesn't have a SELECT permission on a database or an EXECUTE permission, will see empty results on the queries
+
+ SELECT * FROM sys.tables 
+ SELECT * FROM sys.procedures
+
+preserving the enumeration of the tables/procedures by everyone.
+To grant the view of metadata avoiding, for example, to give select or execute permission, is possible to use the VIEW DEFINITION permission:
+
+ GRANT VIEW DEFINITION ON OBJECT::tab2 TO [username1]
+
+The view definition permission could be granted at: 
+
+* Server level
+* Database level
+* Schema level
+* Object level
+
+To reduce the amount of debug error messages and information disclosure, it's possible to launch the statement:
+
+ DBCC TRACEON (3625, -1)
+
+
+
+=== Execution Context ===
+
+It establishes the identity against which permissions to execute statements or perform actions are checked. Execution context has two security tokens: a login token and a user token.
+Login tokens are valid in all the SQL instance and have a primary and secondary  identity to perform the permissions checking (server side and database side).
+The primary identity is the login itself. The secondary identity includes permissions inherited from rules and groups.
+
+User tokens are valid only in a specific database and have a primary and secondary  identity to perform the permissions checking (database side).
+The primary identity is the database user itself. The secondary identity includes permissions inherited from database roles.
+
+Members of the sysadmin fixed server role always have dbo as the primary identity of their user token.
+
+There are some system stored procedure to view the situation about login and user inside the SQL Server instance and inside the database in it. For example to view all the identity for the current login, launch the join between sys.login_token and sys.server.principals.
+
+ SELECT * FROM sys.login_token slt
+ INNER JOIN sys.server_principals ssp
+ ON slt.principal_id = ssp.principal_id
+
+The first result is the primary identity for the login and the others are secondary. 
+To see the same informations for the user in the databases the join must be between sys.user_token and sys.database_principals 
+
+ SELECT * FROM sys.user_token sut 
+ INNER JOIN sys.database_principals sdp
+ ON sdp.principal_id = sut.principal_id
+
+The first result is the primary identity for the user and the others are secondary.
+
+With these informations, when a user try to login in the istance, the engine verify all the token for that user and give the rights to do the jobs.
+But in SQL Server there is a mechanism to change the behavior provided by the tokens: the EXECUTE AS statement. For example instead of giving a critical permission to a user it's possible to make stored procedure that encapsulated the behavior, give the execution permission for that procedure and run the procedure under another execution context. 
+
+ CREATE PROCEDURE [Schema1].[pContextSwitch] 
+  WITH EXECUTE AS SELF
+ AS
+ BEGIN
+  SET NOCOUNT ON;
+  SELECT * from Secret.tab1
+ END
+
+If the user that execute the procedure doesn't have the permission to direct access to the schema "Secret", he/she can do it trough the procedure with the statement "WITH EXECUTE AS SELF". 
+The possibilities for the execution are:
+
+* EXECUTE AS CALLER
+* EXECUTE AS SELF
+* EXECUTE AS OWNER
+* EXECUTE AS login name
+* EXECUTE AS user name
+
+The "Caller" is the default. When it's used, the user must have not only the permission to execute the procedure but also the permission referenced on the module (in this case the "Secret" schema)
+The "Self" is the user that has created (or altered) the module called
+The "Owner" is the owner of the module; if the module has no owner, automatically is checked the owner of the schema in which the procedure resides.
+Login name and user name are quite obvious.
+The context specified in the EXECUTE AS clause of the module is valid only for the duration of the module execution. Context reverts to the caller when the module execution is completed.
+
+== Encryption ==
+SQL Server make use of symmetric and asymmetric encryption. It realizes a strong mechanism to protect the elements based on levels, in which every keys level encrypt the level below.
+In fact the "Encryption hierarchy" take care of the most important element of an encryption system: the key. In SQL Server the hierarchy is:
+
+* Windows Data Protection API (DBAPI, based on Crypto32) --> Windows
+* Service Master Key --> SQL Server
+* Database Master Key --> SQL Server
+* Certificates / Asymmetric Keys --> SQL Server
+* Symmetric Keys --> SQL Server
+
+The root of the hiearchy is DPAPI, the API of Windows that protect the Service Master Key of SQL Server using the credential of the account under which SQL Server Service runs. 
+After that there is the Service Master Key, that is unique for every instance of SQL Server and it's created during the installation. 
+It's not possible to direct access it but it's possible to backup it in a file, protected with password (the account under which SQL Server Service runs must have the right to write in that path). 
+
+ BACKUP SERVICE MASTER KEY TO FILE = 'c:\masterkey.dat' 
+ ENCRYPTION BY PASSWORD = 'strongPassword'
+
+and restore it:
+ 
+ RESTORE SERVICE MASTER KEY FROM FILE = 'c:\masterkey.dat' 
+ DECRYPTION BY PASSWORD = 'strongPassword'
+
+The next level is Database Master Key. It protects all keys that SQL Server manages within a particular database. To create a Database Master Key protected with password launch:
+
+ use exampleDB
+ CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'databaseKeyPassword'
+
+For the principle of Encryption hierarchy, the Database Master Key will be stored two times: one in the master database, encrypted with the Service Master Key. Another in the exampleDB encrypted with a Triple DES key from the password given.
+
+The copy stored in master database (and encrypted with the Service Mster Key) could be used autonomously by SQL Server. But it's possible to drop (or create) this right with the script:
+
+ ALTER MASTER KEY DROP ENCRYPTION BY SERVICE MASTER KEY (drop the Database Master Key in master database)
+ ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY (recreate the copy of the Database Master Key in master database)
+
+In this manner SQL Server can't directly open the Database Master Key. Before every operation concerning the use of it, an opening (and consequently closing) statement must be launched:
+
+ OPEN MASTER KEY DECRYPTION BY PASSWORD = 'databaseKeyPassword'
+ ...
+ ...
+ CLOSE MASTER KEY
+
+In the same manner it's possible to backup/restore the Database Master Key
+
+ BACKUP MASTER KEY TO FILE = 'c:\DBKey.dat'
+ ENCRYPTION BY PASSWORD = 'databaseKeyPasswordFileSystem'
+
+ RESTORE MASTER KEY FROM FILE = 'c:\DBKey.dat'
+ DECRYPTION BY PASSWORD = 'databaseKeyPasswordFileSystem'
+
+The Database Master Key is necessary only to use SQL Server to manage the User Key, but it's possible to manage the User key autonomously using passwords. There are four type of User's Key
+
+* Certificates
+* Asymmetric Keys
+* Symmetric Keys
+* Passphrases
+
+=== Certificates ===
+
+The statement of creation of a certificate in SQL Server permits:
+
+* to create a new certificate 
+* to import a certifcate from a file
+* to import a certificate from an executable signed 
+* to import a certificate from an assembly
+
+The private key in a certificate in SQL Server could be protected by the Database Master Key (is the default, if created) or by a password. For example to create a new certificate protected by password the statement is:
+
+ CREATE CERTIFICATE User1Cert AUTHORIZATION User1 
+ ENCRYPTION BY PASSWORD = 'password'
+ WITH subject = 'Certificate For User1',
+ START_DATE = '8/1/2008',
+ EXPIRY_DATE = '8/1/2009'
+
+The password protection, used to protect the private key of the certificate, is required if there isn't Database Master Key.
+The subject is a field respecting the X.509 standard
+The START_DATE and EXPIRY_DATE give the information about the duration of the certificate.
+
+The certificate and the private key could be stored on differents file with the statement
+
+ BACKUP CERTIFICATE User1Cert TO FILE = 'C:\User1Cert.dat',
+ WITH PRIVATE KEY(  ENCRYPTION BY PASSWORD = 'passwordToEncryptPrivateKey',  FILE = 'c:\PrivateKey.dat')
+
+Finally a plain text in SQL Server could be encrypted with the statement:
+
+ DECLARE @encText varbinary(1000)
+ SET @encText = EncryptByCert(Cert_ID('User1Cert'), 'plain text to encrypt')
+ 
+and decrypted:
+
+ SELECT CONVERT(varchar, DecryptByCert(Cert_ID('User1Cert'), @encText)) --> if the private key is encrypted with Database   
+                                                                            Master Key
+
+ SELECT CONVERT(varchar, DecryptByCert(Cert_ID('User1Cert'), @cipherText, N'password'))  --> if the private key is encrypted  
+                                                                                             with a password
+
+It's important to notice that the encrypted text in SQL Server assumes the type of "varbinary", that could be max 8000 bytes. Trying to decrypt a text in which the private key of the certificate is encrypted with a password, without provide it (as in the first statement), return NULL.
+Informations about the created certificates of a database could be viewed on the sys.certificates view.
+SQL Server doesn't validate the certificates on a certificate authority and does not support certificate revocation.
+
+=== Asymmetric Keys ===
+
+Asymmetric Keys are are not very different from the certificate. In the same manner of the certificates, it's possible to protect the private key with a password or leave SQL Server to protect it with the Database Master Key. The create statement is (in a complete form, providing the owner too):
+
+ CREATE ASYMMETRIC KEY User1AsKey
+ AUTHORIZATION User1
+ WITH ALGORITHM = RSA_1024    -- the private key could be 512, 1024, 2048 bits long
+ ENCRYPTION BY PASSWORD = 'password' --(optional)
+
+To encrypt a plain text use:
+
+ DECLARE @encText varbinary(500)
+ SET @encText = EncryptByAsymKey(AsymKey_ID('User1AsKey'), 'plain text to cypher')
+
+to decrypt:
+
+ SELECT CONVERT(varchar, DecryptByAsymKey(AsymKey_ID('User1AsKeyy'), @encText )) --> if the private key is encrypted with 
+                                                                                      Database Master Key
+
+ SELECT CONVERT(varchar, DecryptByAsymKey(AsymKey_ID('User1AsKey'), @encText , N'password'))  --> if the private key is 
+                                                                                                  encrypted with a password
+
+Informations about the created asymmetric keys of a database could be viewed on the sys.asymmetric_keys view
+
+=== Symmetric Keys ===
+Security of the symmetric encryption resides on the algorithm and on the secrecy of the key, used both to encrypt and decrypt. In SQL Server the possibilities for the algorithm are:
+
+* DES
+* TRIPLE_DES 
+* RC2
+* RC4 
+* RC4_128
+* DESX 
+* AES_128 
+* AES_192
+* AES_256 
+
+and the key used could be protected by
+
+* a CERTIFICATE
+* an ASYMMETRIC KEY
+* an existing SYMMETRIC KEY
+* a PASSWORD
+
+So the symmetric key is the only one that could not be protected by the Database Master Key. The create statement for a certificate protection is:
+
+ CREATE SYMMETRIC KEY symKeyA
+ AUTHORIZATION Username 
+ WITH ALGORITHM = AES_128 
+ ENCRYPTION BY CERTIFICATE userCert  
+
+the last row of the statemente could be ENCRYPTION BY PASSWORD = 'password' or ENCRYPTION BY ASYMMETRIC KEY myAsymKey. 
+
+Encrypt a symmetric key (e.g. symKeyB) with another symmetric key (e.g. symKeyA)  could be made with two steps:
+
+* Open the symmetric key symKeyA (technically decrypt symKeyA)
+* Encrypt the symmetric key symKeyB with symKeyA
+
+First step:
+
+ OPEN SYMMETRIC KEY symKeyA
+ DECRYPTION BY CERTIFICATE userCert  
+
+Second step:
+
+ CREATE SYMMETRIC KEY symKeyB
+ WITH ALGORITHM = TRIPLE_DES
+ ENCRYPTION BY SYMMETRIC KEY symKeyA
+
+Opening a symmetric key, the key is available in memory in plain text. 
+To force closing all the symmetric key opened (the Database Master Key too), the statement is
+
+ CLOSE ALL SYMMETRIC KEYS
+
+One of the advantage of the symmetric encryption is that its computation is faster than the asymmetric encryption, and it's better to use symmetric encryption for example to store encrypted column in a table. 
+Remembering that symmetric key are not protected by the Database Master Key, it's not possible to leave SQL Server to open the key. So first necessary open (decrypt) the key:
+
+ OPEN SYMMETRIC KEY symKeyA
+ DECRYPTION BY CERTIFICATE userCert --(DECRYPTION BY ASYMMETRIC KEY ... ; DECRYPTION BY PASSWORD ...)
+
+then it's possible to operate the symmetric encryption/decryption with the appropriate functions
+
+ DECLARE @encText varbinary(5000)
+ SET @encText = EncryptByKey(Key_GUID(symKeyA), 'plain text to cypher')
+ SELECT CONVERT(varchar, DecryptByKey(@encText))
+
+finally close the key
+
+ CLOSE SYMMETRIC KEY symKeyA
+
+It's a little different when it's time to cypher a plain text with a symKeyB, protected by symKeyA, protected by asymKeyC (...)
+Simply the operations must be done from the most internal level until the external. In this case:
+
+1) open the symKeyA protected by asymKeyC
+
+ OPEN SYMMETRIC KEY symKeyA
+ DECRYPTION BY ASYMMETRIC KEY asymKeyC
+
+2) open the symKeyB protected by the now opened symKeyA
+
+ OPEN SYMMETRIC KEY symKeyB
+ DECRYPTION BY SYMMETRIC KEY symKeyA
+
+3) encrypt/decrypt the text with symKeyB
+ 
+ DECLARE @encText varbinary(500)
+ SET @encText = EncryptByKey(Key_GUID(symKeyB), 'plain text to cypher')
+ SELECT CONVERT(varchar, DecryptByKey(@encText))
+
+4) close both the symKeyA and symKeyB (the order is not important)
+ 
+ CLOSE SYMMETRIC KEY symKeyA
+ CLOSE SYMMETRIC KEY symKeyB
+
+Informations about the created symmetric keys of a database could be viewed on the sys.symmetric_keys view
+
+=== Passphrases ===
+
+This method explain that it's not necessary to use the Encryption hiearchy provided by SQL Server for the keys management. It's possible to use two function that simply encrypt and decrypt a plain text using a passphrase
+
+ DECLARE @encText varbinary(500)
+ SET @encText = EncryptByPassphrase('this is the passphrase', 'plain text to cypher')
+
+ SELECT CAST(DecryptByPassphrase('this is the passphrase', @encText ) AS varchar)
+
+The algorithm used in this form of encryption is not documented.
+
+= References =
+http://www.microsoft.com/sql/technologies/security/default.mspx 
+
+http://support.microsoft.com/kb/932881/en-us
+
+http://msdn.microsoft.com/en-us/library/ms161948.aspx
+
+http://www.mombu.com/microsoft/sql-server-security/t-security-confusion-with-db-chaining-in-2005-287837.html
+
+http://weblogs.sqlteam.com/dang/archive/2008/02/09/Security-with-Ownership-Chains.aspx

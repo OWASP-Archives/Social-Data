@@ -1,0 +1,8 @@
+{{Template:Control}}
+
+HTML entity encoding is the process of replacing ASCII characters with their 'HTML Entity' equivalents. For example, you would replace the "<" character with "&amp;lt;"
+
+Using HTML entity encoding is useful because HTML entities are 'inert' in most interpreters, especially browsers.  This means that even if an attacker tricks your application into sending malicious code to another user's browser, the attack won't execute.
+
+{{Template:Stub}}
+[[Category: Control]]

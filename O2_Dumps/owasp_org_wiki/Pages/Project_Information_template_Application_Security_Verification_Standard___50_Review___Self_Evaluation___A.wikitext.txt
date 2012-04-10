@@ -1,0 +1,31 @@
+[[Project Information:template Application Security Verification Standard|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications#OWASP Application Security Verification Standard|OWASP Application Security Verification Standard Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#OWASP Application Security Verification Standard|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+Originally-proposed separate certification standard and scheme documents have been collapsed into a single ASVS document.
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#OWASP Application Security Verification Standard|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+An initial draft of the proposed standard has been written. In the initial draft, a proposed set of criteria is defined, and a proposed certification framework is defined. Please see the main ASVS project page for the initial draft of the ASVS.
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+* The OWASP Foundation must provide feedback about the certification framework, to determine if what is proposed is viable given OWASP's status as a non-profit, and other potential restrictions/requirements the author is not aware of, so that further refinements can be made as necessary. Otherwise, there will be no ability to conduct a trial evaluation. Please provide comments on sections: "Process" and "Where To Go From Here". 
+* The OWASP reviewers and the OWASP community may offer their domain expertise to further refine the proposed set of ESAPI-derived criteria. Please provide comments on sections "Methodology" and sections "V1" thru "V5". Once the approach to V5 is further refined, the author wil apply the approach as a template to remaining sections "V6" thru "V16".
+* Please email specific comments or questions comments to the author directly for discussion and consideration. Please use the ASVS project mailing list to solicit input from the community as appropriate. The author will make available upon email request a Word version of the document so that comments can be made in-line using the Word track-changes and comments features. 
+|}

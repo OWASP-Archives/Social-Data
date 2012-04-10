@@ -1,0 +1,71 @@
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''FINAL REVIEW''' 
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART I''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[:Category:OWASP EnDe RoadMap|EnDe Project RoadMap & Objectives]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[:Category:OWASP EnDe RoadMap|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+The current version is stable (beside some known browser GUI quirks). There're improvements planed like adding more hashing, coding and encryption functions, see [[:Category:OWASP EnDe RoadMap| EnDe RoadMap]] for details. This new functionality should be considered as enhancement request. 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[:Category:OWASP EnDe RoadMap|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+As the above listed encryption functions are more difficult to implement than those already there, I'd calculate the project at 75%.<br>
+Integration with other tools - 0%
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+1. Reviewer
+* anything to be found at the OWASP wiki
+* the documentation, see <nowiki>[?]</nowiki> button in the GUI and EnDe.man.txt
+2. Community
+* initial code for the missing features (see [[:Category:OWASP EnDe RoadMap| EnDe RoadMap]])
+* testing and reporting bugs and enhancement requests
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART II''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Assessment Criteria
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[:Category:OWASP Project Assessment|OWASP Project Assessment Criteria]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Alpha Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+* (Agree to OWASP's open source license): ''pending'', currently GPL2 will probably become CC-x.x
+* (The “main” page for any OWASP tool must be on the OWASP website) 
+** (describe the tool, the project leader, contact info, and include all relevant links, including a download link for the code and the executable version): tool: [[Category:OWASP_EnDe]]<br>[[:User:Achim| project leader]]<br>[[:Category:OWASP_EnDe| contact]]<br>[http://ende.my-stp.net/EnDe.man.html EnDe Documentation, links, etc.]<br>[http://ende.my-stp.net/EnDe.tgz Download] ''there is no executable version as it's all HTML and JavaScript, the download is the code itself''.
+** (includes a roadmap/guideline pointing out the steps to achieve the purpose of project) [[:Category:OWASP EnDe RoadMap| EnDe RoadMap]]
+** (include the Alpha Quality Tool project tag. (Which we still need to define)) ''??''
+** (be placed at OWASP Project page) [[:Category:OWASP_Project |OWASP Projects:  Alpha Status Projects]]
+* (Have its code and any documentation in Googlecode, or Sourceforge) ''pending''
+* (Mailing list for project created) ''done''
+* (Solves a core application security need) help developers and testers to understand various coudings
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Beta Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+3. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Release Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+ |-  
+ | style="width:25%; background:#7B8ABD" align="center"|
+4. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+|}

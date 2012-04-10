@@ -1,0 +1,36 @@
+[[Project Information:template JSP Testing Tool Project|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications#P028 - OWASP UI Component Verification Project (a.k.a. OWASP JSP Testing Tool)|OWASP JSP Testing Tool Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#P028 - OWASP UI Component Verification Project (a.k.a. OWASP JSP Testing Tool)|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+The project was reviewed as a standalone application due to limitations of the reviewer computer configuration. It's functional and produces an output report. All the table cells of the report was checked and they're according to the correspondent IFRAME at the bottom of the report. Some scripting error messages appeared in Internet Explorer 6 and the developer was notified.
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#P028 - OWASP UI Component Verification Project (a.k.a. OWASP JSP Testing Tool)|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+I agree with the numbers presented by the developer and the 1st reviewer:
+
+(1) Identify or Create Tag Library Parser: 75% 
+
+(2) Basic Test of Tags: 100% 
+
+(3) Design Report Format: 100% 
+ |- 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+The developer provided all the information needed. The detailed explanation about tag libraries sent by e-mail may be useful for those new to the subject (as the reviewer) and could be published in the project page. Congratulations for the great job!
+|}

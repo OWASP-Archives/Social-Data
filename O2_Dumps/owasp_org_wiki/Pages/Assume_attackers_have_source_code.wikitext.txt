@@ -1,0 +1,43 @@
+{{Delete}}
+
+{{Template:Principle}}
+
+==Description==
+Secrecy of source code and other implementation details is a very weak approach to security. In fact, the secrecy of your source code is probably not nearly as good as you think. So build your applications considering that an attacker has a copy of the source code. There is no reason that having the source code makes a secure system impossible.
+
+In most organizations, the source code for applications is stored in a [[Source Code Control System]] designed for integrity, not secrecy.
+
+Think who has access to the code and where it might have been stored. There's likely to be a full copy of the source code on every developer's machine.  They may have made backup copies in home directories or other storage.  They may have taken a copy to work on at home (or possibly to reuse on other projects). The code is also probably stored on backup tapes.
+
+The source code is also probably stored on compile servers and machines that are a part of the build process.  The code (in compiled form) is also likely to have found its way to test machines, developer machines, staging servers, and also production. Compiled code is easy to reverse engineer, especially with bytecode-type languages like Java and .NET.
+
+To say that many of these places are not as well protected as production environments is a serious understatement. So consider the threat (in your actual environment, not the way the standards say it is supposed to be) of an attacker being able to get a copy of the source code.
+
+The good news is that having the source code shouldn't provide much of an advantage to an attacker, if you've build it with that in mind.  The cryptographic community has followed this principle for decades, but many organizations cling to the notion that the secrecy of the code is critical to the security of their application.
+
+NOTE: Some source code contains intellectual property, such as trade secret algorithms and other business processes.  The secrecy of the source code is an important part of protecting this IP.
+
+
+==Examples==
+
+===Short example name===
+: A short example description, small picture, or sample code with [http://www.site.com links]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+
+
+==Related [[Controls]]==
+
+* [[Controls 1]]
+
+
+==References==
+
+* http://www.link1.com
+
+{{Stub}}
+
+[[Category:Principle]]

@@ -1,0 +1,35 @@
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT INFORMATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Learn About Encoding Project'''
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|
+This project has as its ultimate goal of demystifying the problems related to the study of character encoding (charset encoding). From charset's proper use to the issue of canonicalization, we'll try to explain and resolve the problems related to this issue so dear to professionals in the ICT world. The project consist of: a web application that explain the character life cycle and a usable textual tool and GUI tool.
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|
+'''Key Project Information'''
+ | style="width:14%; background:#cccccc" align="center"|
+Project Leader<br>[[user:federico.casani|'''Federico Casani''']]<br>[[user:andrea.zonzin|'''Andrea Zonzin''']]
+ | style="width:15%; background:#cccccc" align="center"|
+Project Contibutors<br>(if any) 
+| style="width:10%; background:#cccccc" align="center"|
+Mailing List<br>[https://lists.owasp.org/mailman/listinfo/owasp-learn-about-encoding '''Subscribe here''']<br>[mailto:owasp-learn-about-encoding@lists.owasp.org '''Use here''']
+ | style="width:17%; background:#cccccc" align="center"|
+License<br>[http://creativecommons.org/licenses/by-sa/3.0/ '''Creative Commons Attribution Share Alike 3.0''']
+ | style="width:14%; background:#cccccc" align="center"|
+Project Type<br>[[:Category:OWASP_Project#Alpha_Status_Projects|'''Tool''']]
+ | style="width:15%; background:#cccccc" align="center"|
+Sponsors<br>add link(s)
+ |}
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|
+'''[[:Category:OWASP Project Assessment#Alpha Quality Tool Criteria|Apha Quality]]'''<br>[[:OWASP Learn About Encoding Project - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="center"|[http://http://learnaboutencoding.wordpress.com '''Blog''']
+ | style="width:29%; background:#cccccc" align="center"|if any, add link(s)
+ |}

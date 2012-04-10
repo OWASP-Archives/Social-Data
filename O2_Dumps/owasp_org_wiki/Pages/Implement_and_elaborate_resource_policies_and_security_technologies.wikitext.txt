@@ -1,0 +1,33 @@
+{{Template:SecureSoftware}}
+
+==Overview==
+
+Purpose:	
+
+* Implement security functionality to specification
+
+Role:
+
+* Implementer
+
+Frequency:
+
+* As necessary
+
+
+
+==Review specified behavior ==
+
+The developer should identify any remaining ambiguities in the specification of security properties or technologies, including any further information necessary to build a concrete implementation.
+
+Perceived ambiguities should be addressed with the designer.
+
+==Implement specification ==
+
+As with most development, implementers should build software to specification. Even when security is a concern, this is not different. As is the case when implementing traditional features, the implementer should ensure that all coding guidelines are met - especially security guidelines.
+
+
+[[Category:Activity]]
+[[Category:CLASP Activity]]
+[[Category:BP4 Implement secure development practices]]
+[[Category:OWASP_CLASP_Project]]

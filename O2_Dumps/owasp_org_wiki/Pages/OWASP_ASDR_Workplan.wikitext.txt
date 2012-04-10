@@ -1,0 +1,48 @@
+__NOTOC__
+==ASDR Project==
+This page defines the workplan for [[OWASP_ASDR_Project|ASDR Project]]. 
+If you want to help, please contact [mailto:leonardocavallari@gmail.com Leonardo Cavallari] and subscribe to [https://lists.owasp.org/mailman/listinfo/owasp-asdr-project ASDR Mailing List] to start contributing with the activitie described bellow.
+
+An [[Media:OWASP_ASDR.jpeg|ASDR Mindmap]] was created to give an Overview of project structure, subcategories and activities specified below. I strongly suggest to take a look at it.
+
+Also, articles should follow their respective template. Check the following wiki source articles when developing/reviewing an article:
+* [[Principle template]]
+* [[Threat Agent template]]
+* [[Attack template]]
+* [[Vulnerability template]]
+* [[Control template]]
+* [[Technical Impact template]]
+* [[Business Impact template]]
+
+==Active Tasks==
+
+===Articles development===
+We need volunteers to develop and review articles. In this sense, you should choose a set of them from [[ASDR_Table_of_Contents|ASDR Table Of Contents]], otherwise contact me that I'll assign you some. At time of writing, there are about 300 stub articles that deserve special attention. What we need here are some focused volunteers that can develop at least one article from the scratch, based on the related template.
+
+All articles have related section for ASDR articles, external references and a threat modeling area that interlink with other OWASP projects: [[:Category:OWASP_Testing_Project|Testing Guide]], [[:Category:OWASP_Code_Review_Project|Code Review]] and [[:Category:OWASP_Guide_Project|Building Guide]]. Keep in mind to fill those sections properly.
+
+Any article that one judge improper or erroneous should be tagged with <nowiki>{{template:CandidateForDeletion}}</nowiki> at top of it and notified to project [https://lists.owasp.org/mailman/listinfo/owasp-asdr-project mailing list], so we can discuss about it.
+
+===Identify/Develop New articles===
+The section [[Principle]], [[Technical Impact]] and [[Business Impact]] need to be populated with articles. If you are missing an article, write a note to our mailing list and fell free to develop it. Remember to consider all above requirements.
+
+Project reviewers have an important role over this topic!!!
+
+===Revision Phase===
+Project reviewers will be in charge of:
+
+* Article Contents: check english terminology, content accurate/asertiviness. 
+
+* Categories and classification: verify if the article was correctly classified/categorized.
+
+* Template compliance: verify if the article template was respected.
+
+* Add article ID: insert an article ID sequentially. More details in near future.
+
+
+==Future Task==
+
+To be defined after EU Summit 08
+
+
+[[Category:OWASP ASDR Project]]

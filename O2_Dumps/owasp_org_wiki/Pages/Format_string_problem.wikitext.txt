@@ -1,0 +1,80 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Format_String]]
+
+
+==Overview==
+
+Format string problems occur when a user has the ability to control or write completely the format string used to format data in the printf style family of C/C++ functions.
+
+==Consequences ==
+
+*	Confidentially: Format string problems allow for information disclosure which can severely simplify exploitation of the program.
+
+*	Access Control: Format string problems can result in the execution of arbitrary code.
+
+==Exposure period ==
+
+*	Requirements specification: A language might be chosen that is not subject to this issue.
+
+*	Implementation: Format string problems are largely introduced at implementation time.
+
+*	Build: Several format string problems are discovered by compilers
+
+==Platform ==
+
+*	Language: C, C++, Assembly
+
+*	Platform: Any
+
+==Required resources ==
+
+Any
+
+==Severity ==
+
+High
+
+==Likelihood   of exploit ==
+
+Very High
+
+==Avoidance and mitigation ==
+
+*	Requirements specification: Choose a language which is not subject to this flaw.
+
+*	Implementation: Ensure that all format string functions are passed a static string which cannot be controlled by the user and that the proper number of arguments are always sent to that function as well. If at all possible, do not use the %n operator in format strings.
+
+*	Build: Heed the warnings of compilers and linkers, since they may alert you to improper usage.
+
+==Discussion ==
+
+Format string problems are a classic C/C++ issue that are now rare due to the ease of discovery. The reason format string vulnerabilities can be exploited is due to the %n operator. The %n operator will write the number of characters, which have been printed by the format string therefore far, to the memory pointed to by its argument. 
+
+Through skilled creation of a format string, a malicious user may use values on the stack to create a write-what-where condition. Once this is achieved, he can execute arbitrary code. 
+
+==Examples ==
+
+The following example is exploitable, due to the printf() call in the printWrapper() function. Note: The stack buffer was added to make exploitation more simple.
+
+<pre>
+#include <stdio.h>
+
+void printWrapper(char *string) {   
+  printf(string);
+}
+
+int main(int argc, char **argv) {   
+  char buf[5012];    
+  memcpy(buf, argv[1], 5012);    
+  printWrapper(argv[1]);    
+  return (0);
+}
+</pre>
+
+==Related problems ==
+
+*	[[Injection problem]]
+
+*	[[Write-what-where]]
+[[Category:Externally Linked Page]]

@@ -1,0 +1,184 @@
+8.  Cross-Site Scripting (XSS) -> 8.1  Phishing with XSS
+
+8.  Cross-Site Scripting (XSS) -> 8.2  LAB: Cross Site Scripting
+
+8.  Cross-Site Scripting (XSS) -> 8.4  Reflected XSS Attacks
+
+8.  Cross-Site Scripting (XSS) -> 8.5  Cross Site Request Forgery (CSRF)
+
+8.  Cross-Site Scripting (XSS) -> 8.7  Cross Site Tracing (XST) Attacks
+
+The lessons are combined because the strategy and the ruleset to solve them are the same.
+
+=== Lesson overviews === 
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solutions ===
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information. 
+
+=== Strategy ===
+
+Probably due to the constraints of WebGoat, it is not feasible to fully illustrate sophisticated CSRF and XST attacks so they can be mitigated with the core ruleset rules from 'modsecurity_crs_40_generic_attacks.conf' for generic XSS attacks.
+
+However, Stage 3 of the Lab proved challenging. The employee Bruce has malicious XSS code stored in his profile and it is triggered when David views it. The malicious code is contained in an address field that is displayed in the HTML body:
+
+<pre>
+8899 FreeBSD Drive<script>alert(document.cookie)</script>
+</pre>
+
+
+The strategy to mitigate this vulnerability is to use ModSecurity as an egress filter on the response body. It is observed that WebGoat only uses javascript in the Head section of HTML files and that Javascript is used only from *.js files such as:
+
+<pre>
+<script language="JavaScript1.2" src="javascript/javascript.js" \ 
+  type="text/javascript"></script>
+</pre>
+
+
+Because we know this, we can consider any other JavaScript code as malicious and, for example, require any JavaScript to start with:
+
+<pre>
+<script language="JavaScript1.2" src="javascript/
+</pre>
+
+=== Implementation === 
+
+The generic XSS attacks are mitigated from rules in the file 'rulefile_08_xss.conf':
+
+<pre>
+  # False positives removed from following list: 'application'
+  SecRule REQUEST_FILENAME|ARGS|ARGS_NAMES|REQUEST_HEADERS|XML:/*|!REQUEST_HEADERS:Referer \ 
+    "@pm jscript onsubmit copyparentfolder javascript meta onmove onkeydown onchange \ 
+    onkeyup activexobject expression onmouseup ecmascript onmouseover vbscript: \ 
+    <![cdata[ http: settimeout onabort shell: .innerhtml onmousedown onkeypress \ 
+    asfunction: onclick .fromcharcode background-image: .cookie ondragdrop onblur \ 
+    x-javascript mocha: onfocus javascript: getparentfolder lowsrc onresize @import \ 
+    alert onselect script onmouseout onmousemove background .execscript livescript: \ 
+    getspecialfolder vbscript iframe .addimport onunload createtextrange onload <input" \
+    "t:urlDecodeUni,t:htmlEntityDecode,t:compressWhiteSpace,t:lowercase,deny,log,auditlog, \ 
+    msg:'Cross-site Scripting (XSS) Attack - whole word matches',tag:'WEB_ATTACK/XSS', \ 
+    logdata:'%{TX.0}',redirect:/_error_pages_/lesson08a.html,severity:'3'"
+
+  # Enable the next line if want to change to 'pass' for detect-only mode
+  # SecAction pass,nolog,skipAfter:959004
+
+  SecRule REQUEST_FILENAME|ARGS|ARGS_NAMES \ 
+    "(?:\b(?:(?:type\b\W*?\b(?:text\b\W*?\b(?:j(?:ava)?|ecma|vb)| \ 
+    application\b\W*?\bx-(?:java|vb))script|c(?:opyparentfolder|reatetextrange) \ 
+    |get(?:special|parent)folder|iframe\b.{0,100}?\bsrc)\b| \ 
+    on(?:(?:mo(?:use(?:o(?:ver|ut)|down|move|up)|ve)|key(?:press|down|up)| \ 
+    c(?:hange|lick)|s(?:elec|ubmi)t|(?:un)?load|dragdrop|resize|focus|blur)\b\W* \ 
+    ?=|abort\b)|(?:l(?:owsrc\b\W*?\b(?:(?:java|vb)script|shell|http)|ivescript)| \ 
+    (?:href|url)\b\W*?\b(?:(?:java|vb)script|shell)|background-image|mocha) \ 
+    :|s(?:(?:tyle\b\W*=.*\bexpression\b\W*|ettimeout\b\W*?)\(|rc\b\W*?\b \ 
+    (?:(?:java|vb)script|shell|http):)|a(?:ctivexobject\b|lert\b\W*?\(|sfunction:))| \ 
+    <(?:(?:body\b.*?\b(?:backgroun|onloa)d|input\b.*?\btype\b\W*?\bimage)\b| \ 
+    ?(?:(?:script|meta)\b|iframe)|!\[cdata\[)|(?:\.(?:(?:execscrip|addimpor)t| \ 
+    (?:fromcharcod|cooki)e|innerhtml)|\@import)\b)" \
+    "capture,t:htmlEntityDecode,t:compressWhiteSpace,t:lowercase,log,auditlog,deny, \ 
+    msg:'Cross-site Scripting (XSS) Attack - script tags',tag:'WEB_ATTACK/XSS', \ 
+    logdata:'%{TX.0}',redirect:/_error_pages_/lesson08b.html,severity:'3'"
+
+  SecRule REQUEST_HEADERS|XML:/*|!REQUEST_HEADERS:Referer \ 
+     "(?:\b(?:(?:type\b\W*?\b(?:text\b\W*?\b(?:j(?:ava)?|ecma|vb)| \ 
+    application\b\W*?\bx-(?:java|vb))script|c(?:opyparentfolder|reatetextrange) \ 
+    |get(?:special|parent)folder|iframe\b.{0,100}?\bsrc)\b| \ 
+    on(?:(?:mo(?:use(?:o(?:ver|ut)|down|move|up)|ve)|key(?:press|down|up)| \ 
+    c(?:hange|lick)|s(?:elec|ubmi)t|(?:un)?load|dragdrop|resize|focus|blur)\ 
+    b\W*?=|abort\b)|(?:l(?:owsrc\b\W*?\b(?:(?:java|vb)script|shell|http)|ivescript)| \ 
+    (?:href|url)\b\W*?\b(?:(?:java|vb)script|shell)|background-image|mocha):| \ 
+    s(?:(?:tyle\b\W*=.*\bexpression\b\W*|ettimeout\b\W*?)\(|rc\b\W*?\b \ 
+    (?:(?:java|vb)script|shell|http):)|a(?:ctivexobject\b|lert\b\W*?\(|sfunction:))| \ 
+    <(?:(?:body\b.*?\b(?:backgroun|onloa)d|input\b.*?\btype\b\W*?\bimage)\b| \  
+    ?(?:(?:script|meta)\b|iframe)|!\[cdata\[)|(?:\.(?:(?:execscrip|addimpor)t| \ 
+    (?:fromcharcod|cooki)e|innerhtml)|\@import)\b)" \
+    "capture,t:urlDecodeUni,t:htmlEntityDecode,t:compressWhiteSpace,t:lowercase,log, \ 
+    auditlog,deny,msg:'Cross-site Scripting (XSS) Attack - in request headers or XML', \ 
+    id:'959004',tag:'WEB_ATTACK/XSS',logdata:'%{TX.0}', \ 
+    redirect:/_error_pages_/lesson08c.html,severity:'3'"
+</pre>
+
+
+For stopping the malicious stored XSS script, this rule is used:
+
+<pre>
+  SecRule TX:MENU "!@eq 900" "phase:4,t:none,pass,skip:1"
+
+  # parse response body and write hidden values to file
+  SecRuleScript "/etc/modsecurity/data/jscript_08.lua" "phase:4,t:none,log, \ 
+    auditlog,deny,msg:'Lesson 8 XSS Lab Stage 3, found nonconformant javascript \ 
+    tags using luascript',redirect:/_error_pages_/lesson08-3.html"
+</pre>
+
+
+Since we are whitelisting the pattern that is accepting for using JavaScript, a Lua script is used. The source code is shown here in its entirety, replete with debug code for Level 9 debugging:
+
+<pre>
+function main()  
+  m.log(9, "Starting luascript file jscript_08.lua")
+  print ("Executing luascript jscript_08.lua")
+
+  local tbuff = m.getvar("RESPONSE_BODY", "none") 
+  local str1
+  
+  for a in string.gmatch(tbuff, "<script.->") do
+    str1 = string.format("\nLuascript: Trying to match: %s: ", a)
+    m.log(9, str1)
+  	
+    if string.match(a, \ 
+      "^<script%s+language=\"JavaScript1.2\"%s+src=\"javascript/") == nil then
+      str1 = string.format("Luascript: from RESPONSE_BODY - \ 
+        string not matching: %s; exiting", a)
+      m.log(9, str1)
+      return str1
+    end
+  end
+
+  m.log(9, "Exiting luascript file jscript_08.lua")
+  return nil
+end
+</pre>
+
+Note that Lua is implemented in ModSecurity so that returning a value of 'nil' means there is no match in the SecRuleScript; you can think of 'nil' as a "good" return code meaning that nothing bad has happened. Anything else returned will cause a match and invoke the actions in the SecRuleScript.
+
+=== Reviewer comments ===
+
+* 8.1 Phishing with XSS
+** Can be mitigated by a combination of positive/negative security rules and the missing output encoding rule.
+
+* 8.2 LAB: Cross Site Scripting
+** Stage 1: Stored XSS
+** Stage 3: Stored XSS Revisited
+** Stage 5: Reflected XSS
+** Can be mitigated by a combination of positive/negative security rules and the missing output encoding rule.
+
+* 8.4 Reflected XSS Attacks
+** Can be mitigated by a combination of positive/negative security rules and the missing output encoding rule.
+
+* 8.5 Cross Site Request Forgery (CSRF)
+** The scenario for this lesson is that the user forum where the attacker is injecting the CSRF code is on the same site/domain as the CSRF targeted webapp.  So this means that initially blocking the CSRF injection would be feasible with the XSS rules and/or positive security for the newsgroup form submission page.
+** What is more challenging would be to assume that this newsgroup could possibly be hosted on a totally different website (possibly even hacker controlled).  The attacker is hoping that the victim would happen to be currently logged into the target website at the same time they viewed the CSRF code page.  Obviously, the likelihood of this increases significantly if the CSRF vector is hosted on the same site as the target app.
+** Assuming that the CSRF code is hosted on a separate site, the challenge from the web application’s (and ModSecurity’s) point of view is that we may *only* see the final request:
+<pre>
+GET /WebGoat/attack?Screen=9&menu=900&transferFunds=5000 HTTP/1.1
+
+Host: www.webgoat.net
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3
+Accept: image/png,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-us
+Accept-Encoding: gzip,deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Keep-Alive: 300
+Connection: keep-alive
+Referer: http://www.webgoat.net/WebGoat/attack?Screen=145&menu=900&Num=8
+Cookie: JSESSIONID=E98191536998CC789A59CD32EF865FB3
+Authorization: Basic Z3Vlc3Q6Z3Vlc3Q=
+</pre>
+
+Without the implementation of Anti-CSRF tokens, it is very challenging to identify this request as malicious.  One anomaly-based approach that we can see however is that when CSRF code is used within html “image” type tags, some browsers will tell you that it is expecting an image based on its Accept header.  We could possibly write a ModSec rule to compare the URL file extension and Accept header to look for this type of mismatch.
+
+* 8.7 Cross Site Tracing (XST) Attacks
+** The scenario for this lesson is that the form where the attacker is injecting the XST code is on the same site/domain as the targeted webapp.  So this means that initially blocking the XST injection would be feasible with the XSS rules and/or positive security for the newsgroup form submission page.
+** Additionally, you can use ModSecurity rules to deny TRACE request methods.

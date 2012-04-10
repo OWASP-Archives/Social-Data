@@ -1,0 +1,12 @@
+==What is Validator.Net==
+An alternative for the .Net Web Application Firewalls which includes following features:
+
+*No Need For Source Code , No Change On The Source Code
+*Integrates with existing ASP.Net Web Applications
+*Provides a centralized repository of rule set , such that those rules can be repeatedly applied to multiple controls of the application.
+*Allows custom rules to be written to the granularity of every control on each form.
+*Generates a set of XML rules that can be deployed for multiple applications.
+
+{{Template:Stub}}
+
+[[Category:OWASP .NET Project]]

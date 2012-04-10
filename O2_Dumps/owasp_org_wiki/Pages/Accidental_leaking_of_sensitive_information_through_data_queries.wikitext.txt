@@ -1,0 +1,62 @@
+#REDIRECT [[Information Leakage]]
+
+{{template:CandidateForDeletion}}
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+==Description==
+When trying to keep information confidential, an attacker can often infer some of the information by using statistics.
+
+'''Consequences'''
+
+*	Confidentiality: Sensitive information may possibly be disclosed through data queries accidentally.
+
+'''Exposure period'''
+
+*	Design: Proper mechanisms for preventing this kind of problem generally need to be identified at the design level.
+
+'''Platform'''
+
+Any; particularly systems using relational databases or object-relational databases.
+
+'''Required resources'''
+
+Any 
+
+'''Severity '''
+
+Medium
+
+'''Likelihood   of exploit'''
+
+Medium
+
+'''Avoidance and mitigation'''
+
+This is a complex topic. See the book ''Translucent Databases'' for a good discussion of best practices.
+
+In situations where data should not be tied to individual users, but a large number of users should be able to make queries that "scrub" the identity of users, it may be possible to get information about a user - e.g., by specifying search terms that are known to be unique to that user.
+
+
+==Risk Factors==
+TBD
+
+==Examples==
+* See the book ''Translucent Databases '' for examples.
+
+==Related [[Attacks]]==
+* [[SQL Injection]]
+
+==Related [[Vulnerabilities]]==
+
+==Related [[Controls]]==
+* [[Control 1]]
+* [[Control 2]]
+
+==Related [[Technical Impacts]]==
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+==References==
+TBD

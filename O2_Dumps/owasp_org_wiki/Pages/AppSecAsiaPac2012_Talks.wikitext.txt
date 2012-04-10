@@ -1,0 +1,507 @@
+'''In alphabetical order:'''
+
+
+==Adrian Hayes==
+'''Web: [http://security-assessment.com/ http://security-assessment.com/]'''<br>
+<br>'''Bio:''' Adrian is a security consultant for the Security-Assessment.com assurance team, providing clients with security penetration testing services and security related advice. He has deep knowledge of secure application design & architecture, mobile device & application security, cryptography, and social engineering based attacks.  Adrian is an active security researcher, and a regular contributor to the OWASP chapter in New Zealand. <br><br>
+
+'''Talk Abstract: Web Crypto for the Developer Who Has Better Things To Do'''<br>
+
+Cryptography is easy to get wrong and can be a pain to implement. This presentation will take you through practical examples of how to implement solid crypto on a number of common development platforms. We'll talk about how to store and verify passwords, how to safely transport and store backups. What's wrong with some default SSL configurations and maybe even random token generation among other things. Web app crypto should be easy and secure, not just one of those.<br><br>
+
+
+==Arshad Noor==
+
+<br>'''Bio:''' Arshad is the CTO of StrongAuth, Inc., a Silicon Valley-based company focused on enterprise key-management solutions. He has 25 years of experience in the Information Technology sector, of which, more than 12 were devoted to architecting and building key-management infrastructures for dozens of mission-critical environments around the world. He has been published in periodicals and journals, as well as authored XML-based protocols for two Technical Committees as OASIS. He is also a frequent speaker at forums such as RSA, ISACA, OWASP and the ISSE. He can be reached at arshad.noor@strongauth.com.<br><br>
+
+'''Talk Abstract: Rethinking web-application architectures for the Cloud'''<br>
+
+Unless your organization is unique, not all your data is sensitive. This raises the question: should scarce security resources be used to protect 100% of your data? The logical approach should be to build your IT infrastructure in a manner that optimizes your investments: protecting what matters while managing non-sensitive data with minimal controls.
+
+This white-paper presents an architecture for building the next generation of web-applications. This architecture allows you to leverage emerging technologies such as cloud-computing, cloud-storage and enterprise key-management Infrastructure (EKMI) to derive benefits such as lower costs, faster time-to-market and immense scalability with smaller investments – while proving compliance to PCI-DSS, HIPAA/HITECH and similar data-security regulations. We call this Regulatory Compliant Cloud Computing, or RC3.
+
+(More detail can be found at: http://www.infoq.com/articles/regulatory-compliant-cloud-computing).<br><br>
+
+==Bruce Ashton==
+
+<br>'''Bio:''' Bruce Ashton has been employed in web applications and development for 14 years, with experience ranging from startups to international blue-chip consultancies. He currently he works for Mako Networks, a network management and security service provider specializing in PCI DSS compliance solutions. Bruce specializes in developing secure software and applications, especially for banking and financial institutions.
+
+His career began working to develop online banking websites for a Swiss banking group on behalf of Pricewaterhouse Coopers, before moving on to create shopping and commerce websites for Mini and Rolls Royce. At Integralis, a security company specializing in firewall monitoring, Bruce was responsible for data analysis and reporting tools. He has also worked for high-volume transaction processing provider Provenco.
+
+He hails from the South Island of New Zealand.<br><br>
+
+'''Talk Abstract: Effective Software Development in a PCI DSS Environment'''<br>
+
+Compliance with the stringent Payment Card Industry Data Security Standards (PCI DSS) mandate a locked-down development environment. This is almost completely at odds with the normal working requirements of software developers. In fact, software developers typically like to be able to play and manipulate aspects of their computing environment as they develop new solutions – a scenario expressly forbidden under PCI DSS.
+Companies providing IT services to clients with PCI DSS requirements need to be compliant themselves. Often this means their developers need to work within a PCI DSS compliant environment.
+
+This talk will discuss the six PCI DSS requirements and how they apply to source code, development tools and software development in general. It will cover the sorts of problems that development teams face when working under PCI DSS and some of the possible solutions, as discovered through firsthand experience.
+<br><br>
+
+==Charles Henderson==
+
+<br>'''Bio:''' Charles Henderson, Director of Application Security Services of SpiderLabs
+at Trustwave
+
+Charles Henderson began his career in computer security in 1993,
+specializing in penetration testing as well as security and vulnerability
+research. As Director of Application Security Services at SpiderLabs, he
+leads the team responsible for Application Penetration Testing, Code
+Review, Secure Development Training, and other elite application security
+consulting services.
+
+Prior to joining SpiderLabs, Henderson ran his own boutique application
+security testing firm. Henderson's firm provided offensive security
+services to a wide variety of clients in the United States and Europe.
+
+Henderson speaks frequently at major industry events and conferences,
+including BlackHat, DEF CON,  AppSec US, AppSec EU, SOURCE, and the
+International Association of Financial Crime Investigators convention.<br><br>
+
+'''Talk Abstract: Anatomy of a Logic Flaw'''<br>
+
+Traditional vulnerabilities like SQL Injection, buffer overflows, etc, have well established techniques for discovery and prevention. On the other hand, logic flaws are incredibly diverse and often unique to the specific application or business organization. Because of this, logic flaws have taken on a near mythical status. In the myth, logic flaws are nearly impossible to find until the elite of the elite hackers launch an attack to completely own the application.
+
+The reality is far different; logic flaws are not the complex nightmare that many have made them out to be. This presentation will use real-world examples to show how logic flaws are typically introduced into an application, how they can be consistently detected during testing, and how they can be prevented during development. Instead of hoping for magic, repeatable processes will be outlined for each of those items. This will prove beneficial to anyone responsible for application security: programmers, architects, managers, and pen testers.<br><br>
+
+
+'''Talk Abstract: You Can't Filter "The Stupid"'''<br>
+
+Everyone wants to stretch their security budget as far as possible; in recent years, automated application security tools have become a popular choice for doing so. However, manual security testing isn’t going anywhere until the HAL-9000 application scanner/web app firewall comes online. While automated tools may be tempting, the reality is that only manual application testing provides strong protection against modern threats. Companies that are serious about application security and have reviewed both options are consistently choosing manual testing.
+
+Logic flaws may not get the press that vulnerabilities like SQL Injection or Cross-Site Scripting (XSS) do, but they can be devastating to an application. Every application is going to have its own unique set of logic, so it is impossible to automate tests for logic vulnerabilities. Because logic flaws often require no “hacking” skills, standard users often discover the vulnerabilities on their own. Examples from Trustwave penetration tests range from the simple – such as a shopping cart application that accepts bogus coupon codes – to the very complex – sensitive information disclosure by combining query results across multiple systems. 
+
+Many vulnerabilities are simply too complicated to practically detect with an automated tool. For example, it is very common for web applications to provide complex data structures such as serialized objects to the web browser. Examples of such frameworks or techniques include Microsoft’s .Net, Java ServerFaces, JSON, and Adobe Flex. Since a developer can place any type of data in these structures, an automated tool cannot be expected to reliably test them. Analyzing these structures can be a very complex process that requires the ability to understand the data in the context of the application.
+
+An experienced penetration tester can identify complicated vulnerabilities in the same way that a human attacker does. Humans can comprehend the intention of the developer in how the application is designed and intended to operate. Understanding this is critical for identifying how the system can be subverted. Human testers can also deduce business logic rules, even if they are not explicitly documented. When business requirements are documented and provided to the tester, the quality of testing is even greater. 
+
+Manual source code reviews present even more benefits by identifying vulnerabilities that require access to source code. Examples include “hidden” or unused application components, which may have been left intentionally as backdoors by disgruntled developers. There are many forms of blind SQL injection with no evidence in the response, exotic injection attacks (e.g. mainframe session attacks), vulnerabilities in back-end systems, and intentional backdoors. 
+<br><br>
+
+==Christian "xntrik" Frichot==
+'''Web: [http://labs.asteriskinfosec.com.au/ http://labs.asteriskinfosec.com.au/]'''<br>
+<br>'''Bio:''' I'm an information security professional based out of Perth, Western Australia. I've been working in the banking industry for the past 5 years and prior to that for a resources company for a number of years. These days I work for a newly created boutique security firm Asterisk based out of Perth. After initially confusing the BeEF project for something to do with cooking the ultimate steak, I've found myself involved with the open source tool development over the past 2 years, working primarily in module development, core testing, architecture, public relations and acting as the vice president in charge of volcanoes. Apart from BeEF, I'm also one of the Perth OWASP Chapter leads, kicking around talking to everyone I can about application security and keeping safe online.<br><br>
+
+'''Talk Abstract: Shake Hooves With BeEF'''<br>
+
+When was the last time you performed a penetration test and were able to successfully exploit a publicly accessible, vulnerable Apache instance? Or maybe the old-days where you could safely knock away for hours on an exposed FTP service until the username password combination clicked together. Like it or not, external perimeter controls have become so simple and ubiquitous these days you rarely come across ‘trivial-to-exploit’ systems, in fact, when was the last time you came across a small-to-medium (or larger) enterprise that didn’t use web-proxying services for their colleagues when browsing the net? We’ve seen how attackers are actively exploiting the trust and the ‘soft-gooey-juicy-ness’ of the internal network to perform various feats of exploitation (RSA anyone?), and this is where a nice slab of BeEF can really come in handy. A reasonable sized corporate is making 700,000 HTTP requests every work day. This attack surface needs to be tested.
+
+The Browser Exploitation Framework is designed to assist the penetration tester in leveraging the power of the web-browser to scan internal networks, exploit other systems, proxy requests or basically anything else you can think of doing with javascript.
+
+
+You are sure to walk away with a better understanding of how the BeEF framework fits in to your pen-testing toolkit along side your Metasploit and Burp.
+<br><br>
+
+==David Byrne==
+
+<br>'''Bio:''' David Byrne has worked in information security for over a decade. Currently, he is a managing consultant in Trustwave's Application Security group. Before Trustwave, David was the Security Architect at Dish Network, one of the world’s largest satellite television companies. In 2006, he started the Denver chapter of OWASP. In 2008, David released Grendel (grendel-scan.com), an open source web application security scanner. David has presented at a number of security events including DEFCON, Black Hat, Toorcon, FROC, the SANS penetration testing summit, and the Computer Security Institute’s annual conference.<br><br>
+
+'''Talk Abstract: Anatomy of a Logic Flaw'''<br>
+
+Traditional vulnerabilities like SQL Injection, buffer overflows, etc, have well established techniques for discovery and prevention. On the other hand, logic flaws are incredibly diverse and often unique to the specific application or business organization. Because of this, logic flaws have taken on a near mythical status. In the myth, logic flaws are nearly impossible to find until the elite of the elite hackers launch an attack to completely own the application.
+
+The reality is far different; logic flaws are not the complex nightmare that many have made them out to be. This presentation will use real-world examples to show how logic flaws are typically introduced into an application, how they can be consistently detected during testing, and how they can be prevented during development. Instead of hoping for magic, repeatable processes will be outlined for each of those items. This will prove beneficial to anyone responsible for application security: programmers, architects, managers, and pen testers.<br><br>
+
+
+'''Talk Abstract: You Can't Filter "The Stupid"'''<br>
+
+Everyone wants to stretch their security budget as far as possible; in recent years, automated application security tools have become a popular choice for doing so. However, manual security testing isn’t going anywhere until the HAL-9000 application scanner/web app firewall comes online. While automated tools may be tempting, the reality is that only manual application testing provides strong protection against modern threats. Companies that are serious about application security and have reviewed both options are consistently choosing manual testing.
+
+Logic flaws may not get the press that vulnerabilities like SQL Injection or Cross-Site Scripting (XSS) do, but they can be devastating to an application. Every application is going to have its own unique set of logic, so it is impossible to automate tests for logic vulnerabilities. Because logic flaws often require no “hacking” skills, standard users often discover the vulnerabilities on their own. Examples from Trustwave penetration tests range from the simple – such as a shopping cart application that accepts bogus coupon codes – to the very complex – sensitive information disclosure by combining query results across multiple systems. 
+
+Many vulnerabilities are simply too complicated to practically detect with an automated tool. For example, it is very common for web applications to provide complex data structures such as serialized objects to the web browser. Examples of such frameworks or techniques include Microsoft’s .Net, Java ServerFaces, JSON, and Adobe Flex. Since a developer can place any type of data in these structures, an automated tool cannot be expected to reliably test them. Analyzing these structures can be a very complex process that requires the ability to understand the data in the context of the application.
+
+An experienced penetration tester can identify complicated vulnerabilities in the same way that a human attacker does. Humans can comprehend the intention of the developer in how the application is designed and intended to operate. Understanding this is critical for identifying how the system can be subverted. Human testers can also deduce business logic rules, even if they are not explicitly documented. When business requirements are documented and provided to the tester, the quality of testing is even greater. 
+
+Manual source code reviews present even more benefits by identifying vulnerabilities that require access to source code. Examples include “hidden” or unused application components, which may have been left intentionally as backdoors by disgruntled developers. There are many forms of blind SQL injection with no evidence in the response, exotic injection attacks (e.g. mainframe session attacks), vulnerabilities in back-end systems, and intentional backdoors. 
+<br><br>
+
+==Dinesh Shetty==
+
+<br>'''Bio:''' Dinesh Shetty is currently working as an Information Security Consultant at Paladion Networks. He is the principal researcher in the Mobile Application Security Team at Paladion, having developed Paladion's Android, iOS and BlackBerry Gray Box and Code Review checklists, and has trained 30+ engineers to detect security flaws in mobile applications. He has found flaws in leading Web and Mobile-based financial applications and helped the respective organizations fix those vulnerabilities. He has authored many white papers on information security and network-related research, which have been published in multiple information security magazines and international journals such as Packet Storm, Exploit-DB and the PenTest Magazine among others. He has conducted technical trainings and given presentations about various platforms for multiple customers and reputed institutes like the National Institute of Bank Management (NIBM). He is a Certified Ethical Hacker and an IBM Certified AppScan Specialist. 
+<br><br>
+
+'''Talk Abstract: Advanced Mobile Application Code Review Techniques'''<br>
+
+Learn how Mobile experts blend their techniques in order to accelerate code reviews. While reviewing Android or iOS applications, you will love these handy tricks that help in detecting famous and a few not-so-famous flaws. Using demonstrations and code snippets, we will highlight the benefits of blended techniques in comparison with those of simple scanning or manual testing. You will also learn how to reduce the time taken for review and obtain a ready-to-use checklist.
+
+
+==Eldar Marcussen==
+'''Web: [http://www.justanotherhacker.com http://www.justanotherhacker.com]'''<br>
+<br>'''Bio:''' Eldar is a principal consultant and researcher at stratsec, where he helps organisations test their security and protect intellectual property. He is a perl advocate and in his spare time works on several open source projects aimed at secure web application development and testing. Eldar has presented at AISA and Ruxcon and worked with some of Australia’s leading hosting, search engine optimization and domain parking service providers providing design and security guidance.<br><br>
+
+'''Talk Abstract: HTTP Fingerprinting - the next generation'''<br>
+
+The next generation of HTTP Fingerprinting - builds on existing web server fingerprinting research to accurately detect and identify load balancers, web application firewalls, reverse proxies and web servers. Through in-depth analysis of HTTP traffic it is possible to detect and identify intermediate agents. Some of these techniques can also be used to identify server configuration such as loaded modules.
+
+Today’s tools for identifying web technologies don’t do an adequate job of identifying the sub-components comprising the architecture. Most HTTP based fingerprinting tools only focus on fingerprinting the web server(s) on the target or behind the load balancer. While there are some tools that identify load balancing, namely halberd and lbd, these tools focus on 
+enumerating the actual back ends without any fingerprinting. 
+
+By taking HTTP fingerprinting to the next level we can detect and identify both the intermediate agents and the web server. There are some tools aimed at detecting web application firewalls, for example  waffit/wafW00f, relies on strings commonly used in malicious payloads to detect if requests are blocked by the web application firewall. Through fault injection and fuzzing of vaguely defined (RFC 2616) request properties I was able to identify distinct responses in intermediary HTTP agents without relying on default/common WAF rules to be enabled.
+
+These tools and techniques will enable target identification to be more effective, and speed up the process of detecting potentially vulnerable systems that are normally transparent.
+
+Two tools will be released along with the presentation:
+•	lbmap – Identifies and fingerprints load balancers, WAFs, reverse proxies and web servers.
+•	aprof – Profiles apache configuration, including determining which modules are loaded.
+<br><br>
+
+==Errazudin Ishak==
+'''Web: [http://www.mimos.my http://www.mimos.my]'''<br>
+<br>'''Bio:''' Errazudin holds a Master’s degree in Computer Science (Sofware Engineering) and works as Staff Engineer at Mimos Berhad, a Malaysian government research arm, in ICT and frontier technology. His job focuses on web application development, deployment, security, performance and stability. He has spoken at several meetups and conferences and has worked with various back-end and web technologies for almost 11 years. In his free time he loves to emulate Rafael Nadal’s swerving forehand on court.<br><br>
+
+'''Talk Abstract: Rise of the Planet of the Anonymous'''<br>
+
+Welcome to Planet of the Anonymous. Where all system wranglers from every inch of Planet Earth really ‘hate’(or love?) them. The abominable avenger hacker group ‘Anonymous’ has become in many parts of the world as the modern-day Robin Hood of the Internet. Their approach of ‘stealing from the rich’ however is to strike hard at websites of anyone they see as cruel of freedom of speech and freedom of information. Their notorious hacktivism feats since 2008 can be list down, involving Project Chanology, Playstation Network, Bay Area Rapit Transit, Operation Payback, Wall Street, Darknet and many more. There are some good and bad points with Anonymous existence. The main good thing among others is, they have brought up the level of awareness for web application security at every possible level. This talk will discuss about web application security audit, things that you can look at to beef up extra security to your apps and why a lowly application security scanner based approach doesn't help that much.<br><br>
+
+==Frank Fan==
+
+<br>'''Bio:''' Frank Fan: CTO of DBAPPSecurity
+Mr. Frank Fan was graduated from California State University as a Computer Science PhD.
+With more than ten years of technical research and project management experience in world famous security companies, Mr. Frank Fan researched deeply about online security, database security and auditing and compliance( such as SOX, PCI, ISO17799/27001).
+Because of his successful technological innovation in information security, he become the first Chinese who made a speech in the World’s top security conference BLACKHAT and he has certificates such as CISSP, CISA, GCIH, GCIA, etc. 
+
+Right now, Mr. Frank Fan is the vice president of OWASP China and member of 2008 Olympic Organizing Committee security group.
+<br><br>
+
+'''Talk Abstract: Pentesting mobile Applications'''<br>
+
+1、iPhone&adnriod App Basics
+App development
+App distribution
+2、Pentesting iPhone Apps
+Methodology
+Areas of focus
+3、Pentesting adnriod Apps
+Methodology
+Areas of focus
+4、Major Mobile Threats
+<br><br>
+
+==Gary Gaskell==
+
+<br>'''Bio:''' Gary Gaskell is a highly regarded information and ICT security specialist serving the ICT industry for 18 years. He has published 36 articles in Australia and internationally. He combines excellent communications and business analysis skills with a thorough of technical and managerial security controls. 
+
+His career highlights include:
+#Being the first to define how to integrate smart cards into the Kerberos authentication system, 
+#Defining the security architectures for Internet and telephone banking systems,
+#Designing and building the security for a classified Defence support system,
+#Developing both the technical and managerial security plans for new enterprise class systems,
+#Developing pragmatic security plans for process control systems (SCADA),
+#Leading security reviews for formal audit functions.
+
+Gary is a Certified Information System Security Professional (CISSP), a Certified Information System Auditor (CISA), Certified Information Security Manager (CISM) and a Certified Specialist (SBCI) by the Business Continuity Institute.
+<br><br>
+
+'''Talk Abstract: The risks that pen tests don't find'''<br>
+
+Penetrations tests are a crucial element of an organisation's security plan. This is not likely to change in the near term. However, there are several security risks that pen tests don't detect. 
+
+This presentation will give an overview of this class of security risks and how to identify them. A focus will be on the emerging risks of using virtual server and storage infrastructure to host web applications - particularly where organisations use the internal SAN to provide storage to web applications. 
+
+The talk will inform attendees about where to get the reference information from and how to test or inspect the security settings using the philosophy that this should not be a black art but just normal IT security practice.<br><br>
+
+
+==Jacob West==
+'''Web: [http://www.hpenterprisesecurity.com http://www.hpenterprisesecurity.com]'''<br>
+<br>'''Bio:''' Jacob West is CTO and Director of Security Research for the Fortify product line in HP Enterprise Security. West is a world-recognized expert on software security and brings a technical understanding of the languages and frameworks used to build software together with extensive knowledge about how real-world systems fail. In 2007, he co-authored the book "Secure Programming with Static Analysis" with colleague and Fortify founder Brian Chess. Today, the book remains the only comprehensive guide to static analysis and how developers can use it to avoid the most prevalent and dangerous vulnerabilities in code. West is a frequent speaker at industry events, including RSA Conference, Black Hat, Defcon, OWASP, and many others. A graduate of the University of California, Berkeley, West holds dual-degrees in Computer Science and French and resides in San Francisco, California. <br><br>
+
+'''Talk Abstract: Software Security goes Mobile'''<br>
+
+In the past decade, mobile devices have led one of the most rapid and widespread technology shifts since the advent of the computer. Studies show that users rely heavily on their mobile devices for a variety of tasks—ranging from shopping to scheduling doctor’s appointments—that would have previously taken them to a laptop or desktop. In the near future, smartphone sales will surpass both feature phone sales in North America and PC sales worldwide. With less than ten percent of the world’s population left uncovered by cellular signals, the rate of adoption shows no sign of slowing.
+
+As society’s reliance on mobile devices grows, so too does the risk posed by vulnerabilities in the software that drives them. In this talk we scrutinize the challenges involved in building secure mobile applications. Throughout, we call attention to differences and similarities between traditional software security assurance initiatives and those focused on mobile. We discuss how frequent reliance on outsourcing complicates security efforts and how the diversification of parties with an interest in mobile security makes assigning accountability for risks tenuous. 
+
+Despite lifecycle differences, many mobile applications are simply new clients backed by existing web applications or services and are therefore subject to the same threats they’ve always faced. We review old threats in the new mobile context and go on to discuss threats unique to the mobile landscape, including: attacks against client-side data persistence, MMS, or GPS; malicious inter-application communication; problems with new security features, such as confusing permission models. We conclude the talk with a frank assessment of what software development organizations can do to take control and avoid being the weakest link in the chain of mobile security.
+<br><br>
+
+==Jason Haddix==
+
+<br>'''Bio:''' Jason Haddix is the Director of Penetration Testing at HP and develops and trains internal candidates on the mobile penetration testing team. He also has done several training for web application hacking and network penetration testing.
+
+<br><br>
+
+'''Talk Abstract: Pentesting iOS Applications'''<br>
+
+
+3rd party iOS applications are a tricky animal.  In contrast to Android applications written in a language like java, Objective-C, the iOS runtime, and the vulnerabilities baked into the platform are a new area for auditors, QA, and pentesters. I will present some of these vulnerabilities through both the lens of blackbox and whitebox testing, illustrating dynamic testing techniques and static review techniques. I will also debut a few new simple demos for security professionals to work through in the OWASP iGoat application, the vulnerable iPhone mobile application for learning.<br><br>
+
+==Jim Cheetham==
+
+<br>'''Bio:''' Jim has been working with Internet-connected services for over 20 years, covering fields from systems administration to architecture for companies of all sizes. 
+
+In the security field, he has run a busy department managing networking and security for a number of large government clients in NZ, and is now to be found in the Information Security Office at the University of Otago.
+<br><br>
+
+'''Talk Abstract: How MITMproxy has been slaying SSL Dragons'''<br>
+
+MITMproxy is an extensible HTTP/HTTPS interactive or programmable man-in-the-middle proxy, aimed at security researchers and web developers. This presentation introduces the project http://mitmproxy.org/, and demonstrates how easy it is to use to intercept and modify HTTP traffic, even when carried over HTTPS.
+
+It is of particular use in situations where you cannot install arbitrary software on the end-point, but you can install SSL certificates and configure a proxy; such as with mobile devices like iOS.
+
+Recently there have been a number of high-profile publications revealing how mobile device application vendors have been transmitting inappropriate data back to their servers; MITMproxy has often been the tool used to discover these. You will see how this has been done, and also how MITMproxy can use straightforward Python code to extend your decoding abilities to collect cleartext despite ad-hoc obfuscation or even high-grade encryption.
+
+MITMproxy is quick to use, easy to get started with, and capable of great things; it is a great tool in the arsenal of a web developer trying to debug what is happening inside an HTTPS connection, or of a security researcher trying to protect your privacy online.<br><br>
+
+==Jonathan Carter==
+
+<br>'''Bio:''' Jonathan has been working in the IT industry for the past 10 years. During this time, he has participated in a large number of diverse projects within Canada, the United States, and Australia and posses a broad range of technical and leadership skills.
+
+First, he earned a Bachelors of Computer Engineering with a major in Software Engineering at the prestigious University of Waterloo in Canada. Afterwards, he went on to earn a Masters in Computer Science with a major in Artificial Intelligence. Within Artificial Intelligence, he developed models of trust within computer security. He has many patents and publications relating to his research within the field.
+
+Jonathan has participated in many different aspects of application security. These include: governance engagements; seminar development; training delivery with clients; risk management projects; framework development; ethical penetration testing; and secure code reviews.
+
+In California, Jonathan was a security researcher specialising in static code analysis for a dominant player in this market space.
+<br><br>
+
+'''Talk Abstract: Static Code Analysis and Governance'''<br>
+
+Organisations love to use static code analysis tools to review their source code for application-security vulnerabilities.  Often, vendors of these tools project a very ideal and rosy image of a tool that scans, detects, and reports all of your serious application vulnerabilities.  The image looks great.  Predictable, stable, and complete detection of application-security issues without having to be an expert in security.  Clients often buy into the imagery of a technology that can serve as a panacea to all of their application-security issues without having to have the security experience or specialized knowledge.
+
+Unfortunately, there are a lot of technical issues with this type of technology that can seriously impact the accuracy of scanning results.  All too often, clients are blissfully unaware of these issues as they are not popular topics of conversation amongst vendors when trying to sell these tools.
+
+Under certain corner-cases, the technology can produce a large number of false positives or false negatives for a client's source code.  Clients can end up with a false sense of security or think the sky is falling.  Both scenarios are bad.  The impacts to an organisation can be unexpected and unpleasant.
+
+First, this discussion briefly discusses what static code analysis entails.  It also highlights the potential impacts of improper use of this technology on an organisation.  Then, I present the technical (and often undetected) pitfalls that clients may experience that negatively impact the accuracy of scanner results. Then, this discussion highlights how clients can mitigate the risks associated with these issues through the use of policies, guidelines, and processes.
+
+This discussion helps users of this technology get the best use of static analysis tools while mitigating the risks from particular scenarios.  Furthermore, the discussion illustrates how security governance and detection technologies must be in sync to achieve an accurate understanding of your current security posture.  <br><br>
+
+==Luke Jahnke==
+'''Web: [http://www.securusglobal.com/ http://www.securusglobal.com/]'''<br>
+<br>'''Bio:''' Louis and Luke work as security consultants for Securus Global in
+Melbourne. Their research mainly focuses on web and database security
+issues. They both presented at Auscert, Ruxcon and Ruxmon in 2011.<br><br>
+
+'''Talk Abstract: Harder, Better, Faster, Stronger...'''<br>
+
+SQL Injection vulnerabilities are common and relatively well-known,
+however, most current discussion of SQL injection attacks focus on WAF
+bypass or gaining more access to the system (e.g. code execution). This
+talk focuses on how to be more efficient in retrieving the information
+stored within the database.
+
+This talk contains three major components:
+Firstly: How to reduce the size of SQL injection attacks, for example,
+replacing "OR 1=1" with "||1" in MySQL, as well as how some functions
+can help reduce exploit size.
+
+Secondly: How to retrieve more information with only a single request,
+for example, how to utilise information encoding, compression functions
+and previous knowledge (such as data-type and format) to retrieve more
+data.
+
+Finally: How to retrieve more information using more states; blind SQL
+injection exploitation is based on boolean states, but in some
+situations, more states can be created.<br><br>
+
+==Magno (Logan) Rodrigues==
+'''Web: [https://www.owasp.org/index.php/User:Magno_Logan https://www.owasp.org/index.php/User:Magno_Logan]'''<br>
+<br>'''Bio:''' Magno (Logan) Rodrigues is the OWASP Paraiba Chapter Leader and has spoken in many events like GTS, Co0L, ENSOL, ECD and AppSec Latam 2011. He is also organizing the OWASP Paraíba Day 2012 and the OWASP AppSec Brasil 2012. He is a grad student in Information Security (MBA) from FATEC - I2P. He studied Computer Forensics for one year in New York, US at TC3. Graduated in Internet Systems from the Federal Institute of Technology of Paraiba - IFPB (BS). He works as a System Analyst at Politec Global IT Services, doing services for State Department of Taxation and Finance of the State of Paraiba, in João Pessoa, PB, Brazil.<br><br>
+
+'''Talk Abstract: Security Testing on Web Applications - How to protect yourself and avoid getting owned'''<br>
+
+Web Applications are the number one threat for companies and organizations today. And that's why they need to be fully tested and validated before they go into production. In this presentation we'll show what are the highest risks for web applications and how to avoid them. The OWASP Top 10 and the CWE/SANS Top 25 will give us a broader view of the most common vulnerabilities in web applications. After that, we'll show how test and find these vulnerabilities in your own web applications following the OWASP Testing Guide, the OSSTMM and using free and open source tools provided by the community like Mantra, ZAP, etc. To finish we'd like to show developers some best practices on how to develop code by introducing them to the Developers Guide and the Securing Coding Practices  as well as some other guides  that would help them in developing better and safer applications.<br><br>
+
+==Mark Goudie==
+
+<br>'''Bio:''' Mark Goudie is the Verizon Business managing principal for Investigative Response in Asia-Pacific and brings more than 20 years experience in IT to this role. He specializes in computer forensics and incident response, and has held this role since 2007.
+
+Goudie has held many roles in information technology and security including communication programmer, network manager, security architect, and security manager.
+
+In 2005 and 2006, Goudie was a member of the SANS (SysAdmin, Audit, Network, Security) Institute expert panel that identifies the top 20 Internet security threats to business and organizations. He is a joint author of the Verizon Business Data Breach Investigations Report and is a regular speaker at industry conferences including AusCERT, OWASP, PCI DSS, Ruxcon, and the INTERPOL Information Security Conference.
+
+Goudie has a bachelor of business degree, majoring in IT, from Victoria University of Technology, Melbourne, and an associate diploma in mechanical engineering from Regency Institute of TAFE based in Adelaide. He is a payment card industry qualified security assessor, and has global information assurance certification in hacker techniques, exploits and incident handling (GCIH), systems and network auditing (GSNA), and forensic analysis (GCFA).<br><br>
+
+'''Talk Abstract: Data Breaches - when application security goes wrong'''<br>
+
+2011 was another transformational year in computer security incidents with sensitive data being stolen by hactivists, insiders with legitimate access, self taught and untrained hackers, highly customised malware outbreaks and increases in corporate espionage.  The victims of these data breaches in 2011 where a different demographic as now we are witnessing attacks against household brand names and infrastructure that we have not seen in the past.  Like other historical events, we are doomed to repeat these mistakes if we do not learn from them.
+
+The presentation will illustrate how sensitive data is stolen using metrics from over 1,000 cases of confirmed data breach.  We will illustrate who is stealing the sensitive data, why they are doing it, and what can be done to protect against further data breach.  By using data from real world investigations we are able to use an evidence based risk management approach.  This enables our analysis to bring the critical problems to the surface and focus the attention on what truly matters to remediate the root causes of data breaches.  Recommendations are presented in a very prescriptive and practical fashion so they are immediately implementable.<br><br>
+
+==Matias Madou==
+'''Web: [http://blog.fortify.com/blog http://blog.fortify.com/blog]'''<br>
+<br>'''Bio:''' Matias Madou is Principal Security Researcher at the HP Fortify Security Research Group where he’s working on mainly technical projects, ranging from kicking off an insider threat project, to spearheading new protection mechanisms in the runtime tools. As he always wants to get the most out of solutions, he has a big hand in the correlation and integration of current HP Fortify security solutions.
+
+When he’s away from his desk, he’s instructing advanced training courses or helping out the field at short notice or presenting at DefCon, RSA, BruCon, Owasp, ... He holds a Ph.D. in computer engineering from Ghent University, where he studied application security through program obfuscation to hide the inner workings of an application. During his Ph.D., he collaborated with top research and industry players in the field of program obfuscation.
+<br><br>
+
+'''Talk Abstract: Breaking is easy, preventing is hard'''<br>
+
+Is security a losing battle? Breaking software seems to become easier over time, while protecting it seems to become harder and harder. The situation in 2011 was bleak: from Anonymous using simple SQL injection attacks against big targets, to Stuxnet and Duqu, all the way to external intrusions in to the Playstation network and RSA. In this talk, we explain this phenomenon and explore methods the industry might use to reverse the trend. 
+
+The rules for the security game are simple: coders can’t make any mistakes, because attackers only have to discover one good vulnerability to win. Finding vulnerabilities in a target program becomes easier provided enough time, of which attackers have plenty. New kinds of vulnerabilities and novel techniques for finding old ones often leave defenders playing catch-up with the bad guys, but also provide an opportunity for defenders to capture and leverage ever increasing vulnerability knowledge in their vulnerability assessment efforts. 
+
+Let us illustrate this opportunity with an example-- the open source enterprise automation software Apache OfBiz. In 2010, a security research firm stumbled on a couple of vulnerabilities in the widely used project. As a proof of concept, the firm posted a video showing how easy it was to become an administrator by exploiting one of the XSS issues in the application. To remain credible, the OFBiz team reacted quickly and remediated the vulnerabilities. After that push, security improvements in the product stalled. 
+
+After the security push, a problem in Sun’s JVM was discovered that permitted attackers to perform a denial-of-service attack, (the so called “Parse Double” problem), against vulnerable installations. Around the same time, new gray-box analysis techniques were introduced to the market. We tested the post-security-push version of Apache Ofbiz for the parse double vulnerability (as well as other well-known vulnerability categories) using this new analysis technique. The conclusion? Only one year after the Apache Ofbiz development team undertook its major security push, the same code base thought to be secure was already vulnerable.
+
+We kickoff the session by introducing Apache OFBiz and the security improvements implemented in its latest release. Next, we introduce the parse double denial of service vulnerability and a new assessment technique called gray-box analysis. Throughout the presentation, we dive into the internals of gray-box analysis and show how gray-box analysis can overcome some of the problems white-and black-box analyses face. Finally, we show a dozen new vulnerabilities in Apache OFBiz that have always been there, but were only identified using the latest security intelligence and assessment techniques. 
+<br><br>
+
+==Matt Tesauro==
+'''Web: [http://appseclive.org http://appseclive.org]'''<br>
+<br>'''Bio:''' Matt has been involved in the Information Technology industry for more than 10 years. Prior to joining Rackspace, Matt was a security consultant for security firms such as Trustwave as well as running an internal application security effort for a large government agency. Matt's focus has been in application security including testing, code reviews, design reviews and training. His background in web application development and system administration helped bring a holistic focus to Secure SDLC efforts he's driven. He has taught both graduate level university courses and for large financial institutions. Matt has presented and provided training a various industry events including DHS Software Assurance Workshop, AppSec EU, AppSec US, AppSec Academia, and AppSec Brazil.
+ 
+Matt is currently on the board of the OWASP Foundation in the role of Treasurer and highly involved in many OWASP projects and committees. Matt is the project leader of the OWASP WTE (Web Testing Environment) which is the source of the OWASP Live CD Project and Virtual Machines pre-configured with tools and documentation for testing web applications.
+ 
+Industry designations include the Certified Information Systems Security Professional (CISSP) and Certified Ethical Hacker (CEH). Matt Tesauro has a B.S. in Economics and a M.S in Management Information Systems from Texas A&M University.<br><br>
+
+'''Talk Abstract: Testing from the Cloud: Is the Sky Falling?'''<br>
+
+More and more IT is being moved to the cloud, why shouldn't your testing move there too? This talk will cover what it takes to take your testing tools from your laptop to the cloud using new features of the OWASP Web Testing Environment (WTE). WTE allows you to create custom installations of application security tools in the cloud on demand. Has your IP been shunned? No problem, kill that cloud instance and startup another. Is your life as mobile as your phone? No problem, a laptop + Internet = access to all your favorite tools from anywhere. Multiple clients? No problem, start an an instance for each one. By the end of this talk, you'll know all you need to fire up an cloud instance with all of your favorite tools and start having fun.<br><br>
+
+==Mike Park==
+'''Web: [http://www.trustwave.com/ http://www.trustwave.com/]'''<br>
+<br>'''Bio:''' Mike Park is a Managing Consultant at Trustwave. He is a member of Trustwave's SpiderLabs - the advanced security team focused on penetration testing, incident response, and application security. He has over 12 years experience building and securing software for a variety of companies. Mike is a CISSP and specializes in application security assessment, penetration testing, reverse engineering and secure development life cycle. Mike is an active member of the Ottawa ISSA.<br><br>
+
+'''Talk Abstract: Mobile Security on iOS and Android - Where the bdies are buried'''<br>
+
+This will be a continuation and expansion of my talk on Android Security from AppsecUSA in September 2011. It will include new material on the mobile threat-scape, new material on iOS and additional examples from real life mobile penetration tests conducted by SpiderLabs Application Security Services.
+
+We will start with a general review of the security landscape by Charles Henderson, with reference to our latest Global Security report and how it applies to the mobile application space. This will include who is doing the attacking and why. We will touch on the target rich environment in mobile applications as well the types of applications targeted
+
+We will then move on to concrete examples of how and why mobile applications and platforms are susceptible to the kind hacking and attacking just presented.
+
+Stating with an overview of iOS, we'll discuss the iPhone\iPad platform and they ways it is attacked, why data is leaked and how developers can defend against it.
+
+We'll then continue into explaining how Android is different - not better or worse, but merely different. Again, we'll touch on how Android is attacked, how data is leaked and how developers can defend on this platform.
+
+We'll then wrap up the talk by speculating about the future of mobile security and mobile application penetration testing.
+
+Throughout the presentation, we'll use real-world (though, obviously, sanitized) examples from real penetration tests we have conducted over the past few years at Spider labs. Where appropriate, we'll demonstrate some of our points with live or recorded demos of the issues and techniques discussed.
+
+As usual, we expect there to be a lively discussion and tough questions following the talk.<br><br>
+
+==Peter Freiberg==
+'''Web: [http://shelde.com http://shelde.com]'''<br>
+<br>'''Bio:''' Peter is a Principal Consultant at Shelde and heads up the Application Security 
+Practice. Here he assists customers build application security and risk management capabilities including secure design and development, testing and ethical hacking, training and education. 
+
+Prior to Shelde, Peter was a Director at Deloitte, providing application security and risk consulting services to leading companies in Australia. He also ran the Application Security Practice for Deloitte, driving the capability, direction and quality of the service. 
+He also spent seven years at VeriSign (now Symantec) as a Solutions Architect providing specialised security services in integrating products such as PKI, OTP, Credit Card gateways and software development for key internal systems. He was the key technical architect for developing and maintaining a Government endorsed PKI security identity platform (Gatekeeper).
+
+He has over 14 years experience in the IT industry with 11 spent in Security and is a Certified Secure Software Lifecycle Professional (CSSLP).
+<br><br>
+
+'''Talk Abstract: Application Security Logging and Monitoring - The Next Frontier'''<br>
+
+Many applications have poor security logs and consequently have limited ability to detect attacks and respond. 
+ 
+However, it’s not that surprising given the lack of security logging frameworks available. Even more mature frameworks in Java and .Net don’t actually provide much guidance on what to log, and there’s even less guidance on how to correlate and alert on events. Most logging frameworks on focused only on exceptions, with limited support (if any) on security events. 
+
+Application Security Logging faces four key issues:
+*Lack of Security Logging Frameworks
+*Lack of requirements for security logging
+*Lack of correlation and alerting capabilities
+*Lack of guidance on what and how to log
+
+While we’re still battling with the basics of developer security education and embedding secure practices, security professionals also need to think longer term about how to monitor user behavior, detect security events and build in proper logging and response capabilities. 
+
+Often security has focused on how to build secure applications but most enterprises also need behavioral information and detail event data to investigate incidents and identify malicious activity. 
+
+This talk will discuss:
+*The challenges for application security logging and monitoring
+*Common issues in current logging practices
+*Current resources (or lack of) available to developers for security logging
+*Tools for correlating and alerting from log sources
+*Logging in multi-tiered architectures and disparate systems
+*Which logging capabilities can be driven by application security and what types of logging might be required by audit and the business
+<br><br>
+
+==Prashant Verma==
+
+<br>'''Bio:''' Prashant Verma is a Senior Security Consultant and Competency Lead at Paladion Networks. He drives the Mobile Application Security Service and Research at Paladion. He is the co-author of the "Security Testing Handbook for Banking Applications". He has also authored security articles for the Hacki9 and Palisade magazines. He has given presentations at Club Hack 2011 on "Pentesting Mobile Applications". He has also given guest lectures and security trainings at various occasions, which include the National Institute of Bank Management (NIBM) and Babasaheb Ambedkar Marathwada University (BAMU). He is a "Digital Evidence Analyst" i.e. he has conducted Mobile Security Testing, Java, Android and iOS Security Code Reviews. He has also conducted numerous application and network penetration tests, vulnerability assessments, etc.<br><br>
+
+'''Talk Abstract: Advanced Mobile Application Code Review Techniques'''<br>
+
+Learn how Mobile experts blend their techniques in order to accelerate code reviews. While reviewing Android or iOS applications, you will love these handy tricks that help in detecting famous and a few not-so-famous flaws. Using demonstrations and code snippets, we will highlight the benefits of blended techniques in comparison with those of simple scanning or manual testing. You will also learn how to reduce the time taken for review and obtain a ready-to-use checklist.
+
+<br><br>
+
+
+==Pravir Chandra==
+
+<br>'''Bio:''' Pravir Chandra is a veteran in the security space and a long-time OWASP contributor, including his role as the creator and leader of the Open Software Assurance Maturity Model (OpenSAMM) project. Currently as security architect for the CTO of Bloomberg, he drives proactive security initiatives that demonstrate concrete value for the firm. Prior to this, Pravir was Director of Strategic Services at HP/Fortify where he lead software security assurance programs for Fortune 500 clients in a variety of verticals. He is responsible for standing up the most comprehensive and measurably effective programs in existence today. As a thought leader in the security field for over 10 years, Pravir has written many articles, whitepapers, and books and is routinely invited to speak at businesses and conferences world-wide.<br><br>
+
+'''Talk Abstract: Modern software security assurance with OpenSAMM'''<br>
+
+For those that haven't seen it already, the Open Software Assurance Maturity Model (OpenSAMM) is a flexible and prescriptive framework for building security into software development (http://opensamm.org). It has been in use by a huge number of organizations since its release in 2009, but what have we learned through seeing where it worked really well and where it could use improvement? This talk will explore the basic framework of the model, how it helps people build assurance programs, and then go far beyond to discuss actual examples of rubber-on-the-road usage of the model within companies. This will also segue into details on the next revision of OpenSAMM due out later this year. OpenSAMM is an open and free project under the Open Web Application Security Project (OWASP).
+<br><br>
+
+==Rafal Los==
+<br>'''Bio:''' Rafal Los, Chief Security Evangelist for Hewlett-Packard Software, combines over a decade of subject-matter expertise in information security and risk management with a critical business perspective.  From technical research to building and implementing enterprise application security programs, Rafal has a track record with organizations of diverse sizes and verticals.  He is a featured speaker at events around the globe, and has presented at events produced by OWASP, ISSA, Black Hat,  and SANS among many others. He stays active in the community by writing, speaking and contributing research, representing HP in OWASP, the Cloud Security Alliance and other industry groups. His blog, Following the White Rabbit, with his unique perspective on security and risk management has amassed a following from his industry peers, business professionals, and even the media and can be found at [http://hp.com/go/white-rabbit http://hp.com/go/white-rabbit].<br><br>
+Prior to joining HP, Los defined what became the software security program and served as a regional security lead at a Global Fortune 100 contributing to the global organization's security and risk-management strategy internally and externally.  Rafal prides himself on being able to add a 'tint of corporate realism' to information security.<br><br>
+Rafal received his B. S. in Computer Information Systems from Concordia University, River Forest, Ill.
+
+'''Talk Abstract: Overcoming the Quality vs Quantity Problem in Software Security Testing'''<br>
+The current state of software security poses a very serious problem when it comes to technology. Does the organization strive for more quality, or quantity in uncovering critical software security defects? Unfortunately as a result of the constraints of many security organizations' budgets and available resources these critical components are often mutually exclusive. Organizations shouldn't have to sacrifice quality for quantity, or vice versa their software security programs.
+While obtaining good quantity of coverage (both inside a single application from a static and dynamic perspective and across the enterprise application landscape) is critical to understanding the total threat profile of an organization, the organization simply can't forego the quality aspect because a poor test can not only provide a false statement of compliance but create the illusion of security. So what can organizations constrained by resources, capital and knowledge do to balance quantity against quality in their software security programs?
+How can people, process, and technologies be leveraged to effectively balance the quantity vs. quality scale? The speaker will address this very critical balance from a vendor-neutral, technology-agnostic perspective, giving developers, quality analysts and security testers the perspective necessary to provide optimal balance.
+<br><br>
+
+==Simon Bennetts==
+'''Web: http://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project http://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project]'''<br>
+<br>'''Twitter:'''[https://twitter.com/#!/psiinon @psiinon]
+<br>'''Bio:''' Simon Bennetts started the OWASP Zed Attack Proxy project, and leads the international group of volunteers who develop it. He is also one of the founders of the OWASP Manchester chapter and the OWASP Data Exchange Format project. In his day job he works for Sage UK Ltd as a Team Leader for both a development and a security team. His day to day work includes designing and building web applications, performing security assessments and delivering security training.<br><br>
+
+'''Talk Abstract: OWASP Zed Attack Proxy (ZAP)'''<br>
+
+The OWASP Zed Attack Proxy (ZAP) is an easy to use integrated penetration testing tool for finding vulnerabilities in web applications.
+It has been identified by the OWASP Global Projects Committee as a flagship OWASP project.
+
+ZAP is designed to be used by people with a wide range of security experience and as such is ideal for developers and functional testers who are new to penetration testing as well as experienced pentesters.
+It has comprehensive help pages, is fully internationalized and has been translated into 11 languages.
+
+A fork of the well regarded Paros Proxy, it was first released in September 2010 and the last version (1.3.4) has been downloaded over 13,000 times.
+
+This talk will:
+*Explain why ZAP was released.
+*Show what it can do.
+*Detail the new features included in ZAP 1.4, which is planned to be released before this conference.
+*Describe how you can easily build extensions to ZAP which have full access to all of its functionality.
+<br><br>
+
+==Srikar Sagi==
+'''Web: [http://www.linkedin.com/in/srikarsagi http://www.linkedin.com/in/srikarsagi]'''<br>
+<br>'''Bio:''' Passionate about building Secure & Reliable Systems at the lowest cost possible for organizations with 16+years of valuable industry experience and knowledge in Information Security & Risk Management, Infrastructure/ Application & Data Security, Threat Modeling, Writing Security Standards, Designing & Building Enterprise Security Architecture, Execution of Strategies & Programs to Mitigate Information Risks, Developing Secure Applications, Writing Standards for Cryptographic Usage & PKI/Cryptography Architectural Solutions, Reviewing Security Architecture, Security Risk  Analysis & Mitigation, Verification of Security Compliance for Data Privacy, Implementing Compliance Programs<br><br>
+
+'''Talk Abstract: Password Less Authentication, Authorization and Payments'''<br>
+
+A Mobile is ‘ONE'S OWN’ Identity in 21st Century
+Authentication & Authorization, is done via two independent networks :  The IP network , The mobile network.  A hacker who gets any sensitive user account information from the browser, cannot access the user's account unless he gets hold on their mobile phone & Users do not have to remember lengthy or complicated passwords, keep changing them frequently, no more tokens, just your identity i.e. your Mobile phone.
+
+ 
+To Minimize A/c. takeovers, Authentication & Authorization in the presence of malware mess & Replace OTPs & Broken 2 Factor Auth by using personal device- "Cell Phone & TeleCom Network" to prove Identity on the Net using Public Key Encryption & Digital Signatures to improve security, reduce costs & relieve users pain to remember many passwords, no more tokens. 
+<br><br>
+
+==Tobias Gondrom==
+'''Web: [http://datatracker.ietf.org/wg/websec/charter/ http://datatracker.ietf.org/wg/websec/charter/]'''<br>
+<br>'''Bio:''' Tobias Gondrom is Managing Director of an IT Security & Risk Management Advisory based in the United Kingdom and Germany. He has twelve years of experience in software development, application security, cryptography, electronic signatures and global standardisation organisations working for independent software vendors and large global corporations in the financial, technology and government sector, in America, EMEA and APAC. As the Global Head of the Security Team at Open Text (2005-2007) and from 2000-2004 as the lead of the Security Task Force at IXOS Software AG, he was responsible for security, risk and incident management and introduced and implemented a secure SDLC used globally by development departments in the US, Canada, UK and Germany.
+
+Since 2003 he is the chair of working groups of the IETF (www.ietf.org) in the security area, member of the IETF security directorate, and since 2010 chair of the formed web security WG at the IETF, and a former chapter lead of the German OWASP chapter from 2007 to 2008 and board member of OWASP London. Tobias is the author of the international standards RFC 4998, RFC 6283 and co-author and contributor to a number of internet standards and papers on security and electronic signatures, as well as the co-author of the book „Secure Electronic Archiving“, and frequent presenter at conferences and publication of articles (e.g. AppSec, ISSE, Moderner Staat, IETF, VOI-booklet “Electronic Signature“, iX).<br><br>
+
+'''Talk Abstract: Securing the SSL channel against man-in-the-middle attacks: Future technologies - HTTP Strict Transport Security and Pinning of Certs'''<br>
+
+Securing the SSL channel against man-in-the-middle attacks: Future technologies - HTTP Strict Transport Security and and Pinning of Certs
+(defending against CA private key compromises - learnings from the DigiNotar breach)
+
+In the recent months major trusted CAs providing trusted certificates for SSL/TLS in browser scenarios were compromised (e.g. seen in the Diginotar breach) and based on the current trust models (trusting all registered CAs equally for all domains) exposed vital web applications to the risk of man-in-the-middle attacks. Several approaches are currently discussed to mitigate this risk. The most advanced and closest to final adoption being the technologies discussed by the browser vendors at the recent IETF meeting in November in Taipei: HSTS and pinning of certificates. To better protect content providers against the distribution of bogus certificates, an HTTP header extension containing a fingerprint of their certificates linked to a domain address has been defined. This approach, which has been partly tested in Chrome, and already helped identify and protect to some extend Google's web application in the recent Diginotar compromise. Chrome users were able to detect the bogus DigiNotar certificates because Chrome had embedded the hashes of valid Google certificates. Back in July, the hacked DigiNotar certificate authority (CA), which has since gone out of business, was used to issue more than five hundred bogus certificates for companies including Google and various intelligence services.
+
+The presented technology is cutting edge and although the specification is not final yet, it will be rolled-out in about 6 months time. Two other models that compete or complement this approach will also be discussed (DNSSEC and Moxie's Convergence). <br><br>
+
+
+==Wayne O'Yong==
+'''Web: [http://www.imperva.com http://www.imperva.com]'''<br>
+<br>'''Bio:''' Wayne O’Young is a Senior Security Engineer for Imperva Inc, pioneer and leader of a new category of data security solutions. Based out of Sydney, Wayne has over a decade of experience in the IT and telecommunications industry having started his career as developing business applications.  Moreover he has spent most of his career focusing on information security.
+
+His professional interests include information systems security, in particular in the virtualized environment, mobility and sustainability of IT. Before joining Imperva, Wayne has held similar positions at Check Point Software Technologies and Juniper Network. Wayne holds an honours degree in Engineering and Computer Science from University of Sydney. <br><br>
+
+'''Talk Abstract: De-Anonymizing Anonymous'''<br>
+
+What do you see when you take the Guy Fawkes mask off?  In 2011, Imperva managed to witness an assault by hacktivist group Anonymous including the use of social media for communications and, most importantly, their attack methods.  Since Anonymous’ targets are highly variable, anyone can fall victim and security professionals need to know how to prepare.
+This talk will give a walk-through the key stages of an Anonymous campaign:
+- Recruitment and communication: We show how Anonymous leverages social networks to recruit its members and pick a target.
+- Application attack:  We detail and sequence the steps Anonymous hackers deploy to take data and bring down websites.
+- DDoS: In this final stage, we shed light on the DDoS techniques deployed to take down websites.
+Finally, we recommend key mitigation steps that organizations need to take if they ever become a target.
+<br><br>

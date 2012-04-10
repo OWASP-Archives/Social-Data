@@ -1,0 +1,54 @@
+{{Top_10_2010:TopTemplate|useprev=2010PrevLink|usenext=2010NextLink|prev=A5-Cross-Site Request Forgery (CSRF)|next=A7-Insecure Cryptographic Storage}}
+{{Top_10_2010:SummaryTableHeaderBeginTemplate}}
+{{Top_10_2010:SummaryTableValue-1-Template|Exploitability|EASY}}
+{{Top_10_2010:SummaryTableValue-2-Template|Prevalence|COMMON}}
+{{Top_10_2010:SummaryTableValue-1-Template|Detectability|EASY}}
+{{Top_10_2010:SummaryTableValue-2-Template|Impact|MODERATE}}
+{{Top_10_2010:SummaryTableHeaderEndTemplate}}
+     <td {{Template:Top 10 2010:SummaryTableRowStyleTemplate}}>Consider anonymous external attackers as well as users with their own accounts that may attempt to compromise the system. Also consider insiders wanting to disguise their actions.</td>
+     <td {{Template:Top 10 2010:SummaryTableRowStyleTemplate}}>Attacker accesses default accounts, unused pages, unpatched flaws, unprotected files and directories, etc. to gain unauthorized access to or knowledge of the system.</td>
+     <td colspan=2  {{Template:Top 10 2010:SummaryTableRowStyleTemplate}}>Security misconfiguration can happen at any level of an application stack, including the platform, web server, application server, framework, and custom code. Developers and network administrators need to work together to ensure that the entire stack is configured properly. Automated scanners are useful for detecting missing patches, misconfigurations, use of default accounts, unnecessary services, etc.</td>
+     <td {{Template:Top 10 2010:SummaryTableRowStyleTemplate}}>Such flaws frequently give attackers unauthorized access to some system data or functionality. Occasionally, such flaws result in a complete system compromise.</td>
+     <td {{Template:Top 10 2010:SummaryTableRowStyleTemplate}}>The system could be completely compromised without you knowing it. All your data could be stolen or modified slowly over time.<br/><br/>Recovery costs could be expensive.</td>
+{{Top_10_2010:SummaryTableEndTemplate}}
+
+{{Top_10_2010:SubsectionAdvancedTemplate|type={{Top_10_2010:StyleTemplate}}|number=1|risk=6}}
+Have you performed the proper security hardening across the entire application stack?
+# Do you have a process for keeping all your software up to date? This includes the OS, Web/App Server, DBMS, applications, and all code libraries.
+# Is everything unnecessary disabled, removed, or not installed (e.g. ports, services, pages, accounts, privileges)?
+# Are default account passwords changed or disabled?
+# Is your error handling set up to prevent stack traces and other overly informative error messages from leaking?
+# Are the security settings in your development frameworks (e.g., Struts, Spring, ASP.NET) and libraries understood and configured properly?
+
+A concerted, repeatable process is required to develop and maintain a proper application security configuration.
+{{Top_10_2010:SubsectionAdvancedTemplate|type={{Top_10_2010:StyleTemplate}}|number=2|risk=6}}
+The primary recommendations are to establish all of the following:
+# A repeatable hardening process that makes it fast and easy to deploy another environment that is properly locked down. Development, QA, and production environments should all be configured identically. This process should be automated to minimize the effort required to setup a new secure environment.
+# A process for keeping abreast of and deploying all new software updates and patches in a timely manner to each deployed environment. This needs to include <u>all code libraries as well</u>, which are frequently overlooked.
+# A strong application architecture that provides good separation and security between components.
+# Consider running scans and doing audits periodically to help detect future misconfigurations or missing patches.
+{{Top_10_2010:SubsectionAdvancedTemplate|type={{Top_10_2010:StyleTemplate}}|number=3|risk=6}}
+<u>Scenario #1</u>: Your application relies on a powerful framework like Struts or Spring. XSS flaws are found in these framework components you rely on. An update is released to fix these flaws but you don’t update your libraries. Until you do, attackers can easily find and exploit these flaws in your app.
+
+<u>Scenario #2</u>: The app server admin console is automatically installed and not removed. Default accounts aren’t changed. Attacker discovers the standard admin pages are on your server, logs in with default passwords, and takes over.
+
+<u>Scenario #3</u>: Directory listing is not disabled on your server. Attacker discovers she can simply list directories to find any file. Attacker finds and downloads all your compiled Java classes, which she reverse engineers to get all your custom code. She then finds a serious access control flaw in your application.
+
+<u>Scenario #4</u>: App server configuration allows stack traces to be returned to users, potentially exposing underlying flaws. Attackers love the extra information error messages provide.
+{{Top_10_2010:SubsectionAdvancedTemplate|type={{Top_10_2010:StyleTemplate}}|number=4|risk=6}}
+{{Top_10_2010:SubSubsectionOWASPReferencesTemplate}}
+* [[Configuration | OWASP Development Guide: Chapter on Configuration]]
+* [[Error_Handling | OWASP Code Review Guide: Chapter on Error Handling]]
+* [[Testing_for_configuration_management | OWASP Testing Guide: Configuration Management]]
+* [[Testing_for_Error_Code_(OWASP-IG-006) | OWASP Testing Guide: Testing for Error Codes]]
+* [[A10_2004_Insecure_Configuration_Management | OWASP Top 10 2004 - Insecure Configuration Management]]
+
+For additional requirements in this area, see the [http://www.owasp.org/index.php/ASVS#tab=Download ASVS requirements area for Security Configuration (V12)]
+
+{{Top_10_2010:SubSubsectionExternalReferencesTemplate}}
+*[http://www.pcmag.com/article2/0,2817,11525,00.asp PC Magazine Article on Web Server Hardening]
+*[http://cwe.mitre.org/data/definitions/2.html CWE Entry 2 on Environmental Security Flaws]
+*[http://cisecurity.org/en-us/?route=downloads.benchmarks CIS Security Configuration Guides/Benchmarks]
+{{Top_10_2010:BottomAdvancedTemplate|type={{Top_10_2010:StyleTemplate}}|useprev=2010PrevLink|usenext=2010NextLink|prev=A5-Cross-Site Request Forgery (CSRF)|next=A7-Insecure Cryptographic Storage}}
+
+[[Category:OWASP Top Ten Project]]

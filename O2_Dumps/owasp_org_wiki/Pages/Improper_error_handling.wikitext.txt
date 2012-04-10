@@ -1,0 +1,105 @@
+{{Template:SecureSoftware}}
+{{Template:Vulnerability}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+Sometimes an error is detected, and bad or no action is taken. 
+
+'''Consequences'''
+
+Undefined.
+
+'''Exposure period'''
+
+Implementation: This is generally a logical flaw or a typo introduced completely at implementation time. 
+
+'''Platform'''
+
+Languages: All
+
+Operating platforms: All
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Medium
+
+'''Likelihood   of exploit'''
+
+Medium
+
+If a function returns an error, it is important to either fix the problem and try again, alert the user that an error has happened and let the program continue, or alert the user and close and cleanup the program. 
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+In C:
+
+<pre>
+foo=malloc(sizeof(char);
+//the next line checks to see if malloc failed
+if (foo==0) {
+//We do nothing so we just ignore the error.
+}
+</pre>
+
+In C++ and Java:
+
+<pre>
+while (DoSomething()) {
+  try {
+    /* perform main loop here */
+  }
+  catch (Exception &e){
+    /* do nothing, but catch so it'll compile... */
+  }
+}
+</pre>
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* Implementation: Properly handle each exception. This is the recommended solution. Ensure that all exceptions are handled in such a way that you can be sure of the state of your system at any given moment.
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Error Handling Vulnerability]]
+[[Category:General Logic Error Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

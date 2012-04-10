@@ -1,0 +1,701 @@
+== Local Meetings ==
+<center><b>Los meetings son GRATUITOS y abiertos al público</b></center>
+
+ '''VII OWASP Spain Chapter Meeting: 15 de abril de 2011'''
+
+<table width="100%" bgcolor="#d5deed">
+<tr >
+<td><b>Organiza:</b></td>
+<td><b>Patrocina:</b></td>
+<td><b>Colabora:</b></td>
+<td></td>
+</tr>
+<tr>
+<td >[http://www.owasp.org/index.php/Spain http://www.owasp.org/images/d/dc/Owasp-spain.png]</td>
+<td>[http://www.isecauditors.com http://www.owasp.org/images/1/1e/Isec-logo.png]</td>
+<td>[http://www.ati.es http://www.owasp.org/images/7/73/ATI2.jpg]</td>
+<td>[http://www.fortify.com http://www.owasp.org/images/6/65/Fortify_HP_thumb.jpg]</td>
+</tr>
+<tr>
+</table>
+<br>
+<b>Presentaciones</b> ofrecidas en nuestro congreso:<br>
+
+<table width=100%>
+
+<tr>
+<td  bgcolor="#d5deed" valign="top" align="center">http://www.owasp.org/images/7/7a/Apastor_owasp_spain.jpg</td>
+<td bgcolor="#B3FF99" align="justify" valign="top"><i><b>[https://www.owasp.org/images/a/a7/Web_attacks_in_the_wild_-_ap.pdf Web Attacks In The Wild: An overview of last year’s probes]</b></i><br>Adrián Pastor. Principal Security Consultant. [http://www.corsaire.com Corsaire].
+La mayoría de los ataques web "in the wild" no son ataques dirigidos. En este tipo de intentos de intrusión, el atacante no está interesado en un sistema u organización en particular. En lugar de esto, el objetivo del atacante es comprometer cuanto más servidores web sea posible de forma automatizada en el menor tiempo posible. Generalmente esto se logra mediante la explotación de bugs críticos presentes en aplicaciones web de amplia difusión. Revisaremos los resultados de la investigación procedentes de los ataques contra un servidor web sin publicar (es decir, no detectable a través de motores de búsqueda) registrados en el último año.
+</td>
+</tr>
+
+<tr>
+<td  bgcolor="#d5deed" valign="top" align="center">http://www.owasp.org/images/a/a4/RaulSiles.png</td>
+<td bgcolor="#c0e0e0" align="justify" valign="top"><i><b>[https://www.owasp.org/images/0/0e/SAP-Session_%28Fixation%29_Attacks_and_Protections-OWASP-RaulSiles_Taddong.pdf SAP: Session (Fixation) Attacks and Protections (in Web Applications)]</b></i><br>Raúl Siles. Founder & Senior Security Analyst. [http://www.taddong.com Taddong].
+Los ataques de fijación de sesión, pese a ser conocidos desde el año 2002, todavía afectan hoy en día a aplicaciones web basadas en proyectos de código abierto, servidores de aplicación comerciales ampliamente utilizados, y aplicaciones de negocio críticas para muchas organizaciones a nivel mundial. En concreto, la exposición del interfaz web de las plataformas de negocio en Internet y en redes internas, hacen que esta vulnerabilidad actúe de punto de entrada para el acceso no autorizado a información confidencial y crítica, potencial objetivo de ataques dirigidos, criminales y de espionaje industrial.
+</td>
+</tr>
+
+<tr>
+<td  bgcolor="#d5deed" valign="top" align="center">http://www.owasp.org/images/8/83/Msegarra.jpg</td>
+<td bgcolor="#B3FF99" valign="top" align="justify"><i><b>[https://www.owasp.org/images/1/18/Seguridad_OWASP_en_la_Certificaci%C3%B3n_PA-DSS_de_Aplicaciones_de_Pago.pdf Seguridad OWASP en la Certificación PA DSS de Aplicaciones de Pago]</b></i><br>Marc Segarra López. Consultor en Seguridad. [http://www.isecauditors.com Internet Security Auditors].
+Para garantizar los mecanismos de seguridad en las aplicaciones que gestionan los datos de titulares de tarjetas de pago, en los que el riesgo de fraude es muy alto y para los que existen numerosas redes ilegales que aprovechan estos datos para un uso y beneficio ilegítimo, se hace necesario homologar las aplicaciones de pago bajo el estándar PA-DSS. Esta ponencia presentará el proceso que implica una certificación en PA DSS y como metodologías como la OWASP facilitan gran parte del cumplimiento requierido por esta norma.
+</td>
+</tr>
+
+<tr>
+<td  bgcolor="#d5deed" valign="top" align="center">http://www.owasp.org/images/0/0d/Cfragoso-thumb.png</td>
+<td bgcolor="#c0e0e0" align="justify" valign="top"><i><b>[https://www.owasp.org/images/d/db/Owasp-2011-cfragoso-infweb-v1.1.pdf Respuesta a incidentes de infección web]</b></i><br>Carles Fragoso Mariscal. Responsable de Respuesta a Incidentes ([http://www.cesicat.cat CESICAT-CERT]).
+Nuestro sitio web, gran escaparate visitado con frecuencia por usuarios y clientes, es el reflejo de la confianza y reputación de nuestra organización en Internet. Paralelamente, los cibercriminales siguen su inexorable cruzada de robo de credenciales, información y control de nuestros sistemas. Siendo conscientes de la mejora progresiva en las medidas preventivas y de concienciación de los usuarios, los delincuentes cibernéticos han centrado sus esfuerzos en comprometer nuestras webs con la motivación de utilizarlas como punto de distribución de código malicioso. En la conferencia se comentaran las tendencias de infección web y algunas de las estrategias de respuesta a adoptar para la prevención y contención de este tipo de incidentes.
+</td>
+</tr>
+
+</table>
+
+<br>
+Y algunas fotografías:<br>
+<center>
+<table>
+<tr>
+<td>
+[http://www.owasp.org/images/f/f0/VII_OWASP_Spain-01.jpg http://www.owasp.org/images/9/90/VII_OWASP_Spain-01-thumb.jpg]<br>[http://www.owasp.org/images/f/f0/VII_OWASP_Spain-01.jpg ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/2/2e/VII_OWASP_Spain-02.jpg http://www.owasp.org/images/8/85/VII_OWASP_Spain-02-thumb.jpg]<br>[http://www.owasp.org/images/2/2e/VII_OWASP_Spain-02.jpg ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/3/3b/VII_OWASP_Spain-03.jpg http://www.owasp.org/images/4/4e/VII_OWASP_Spain-03-thumb.jpg]<br>[http://www.owasp.org/images/3/3b/VII_OWASP_Spain-03.jpg ampliar]
+</td>
+<td align=center>
+[http://www.owasp.org/images/6/6c/VII_OWASP_Spain-04.jpg http://www.owasp.org/images/6/67/VII_OWASP_Spain-04-thumb.jpg]<br>[http://www.owasp.org/images/6/6c/VII_OWASP_Spain-04.jpg ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/f/f7/VII_OWASP_Spain-05.jpg http://www.owasp.org/images/0/0a/VII_OWASP_Spain-05-thumb.jpg]<br>[http://www.owasp.org/images/f/f7/VII_OWASP_Spain-05.jpg ampliar]
+</td>
+</tr>
+<tr>
+<td>
+[http://www.owasp.org/images/a/a8/VII_OWASP_Spain-06.jpg http://www.owasp.org/images/4/4b/VII_OWASP_Spain-06-thumb.jpg]<br>[http://www.owasp.org/images/a/a8/VII_OWASP_Spain-06.jpg ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/e/e8/VII_OWASP_Spain-07.jpg http://www.owasp.org/images/e/e1/VII_OWASP_Spain-07-thumb.jpg]<br>[http://www.owasp.org/images/e/e8/VII_OWASP_Spain-07.jpg ampliar]
+</td>
+<td align=center>
+[http://www.owasp.org/images/3/3f/VII_OWASP_Spain-08.jpg http://www.owasp.org/images/1/15/VII_OWASP_Spain-08-thumb.jpg]<br>[http://www.owasp.org/images/3/3f/VII_OWASP_Spain-08.jpg ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/6/6e/VII_OWASP_Spain-09.jpg http://www.owasp.org/images/0/0a/VII_OWASP_Spain-09-thumb.jpg]<br>[http://www.owasp.org/images/6/6e/VII_OWASP_Spain-09.jpg ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/2/2e/VII_OWASP_Spain-10.jpg http://www.owasp.org/images/6/64/VII_OWASP_Spain-10-thumb.jpg]<br>[http://www.owasp.org/images/2/2e/VII_OWASP_Spain-10.jpg ampliar]
+</td>
+</tr>
+<tr>
+<td>
+[http://www.owasp.org/images/0/06/VII_OWASP_Spain-11.jpg http://www.owasp.org/images/4/46/VII_OWASP_Spain-11-thumb.jpg]<br>[http://www.owasp.org/images/0/06/VII_OWASP_Spain-11.jpg ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/5/51/VII_OWASP_Spain-12.jpg http://www.owasp.org/images/3/38/VII_OWASP_Spain-12-thumb.jpg]<br>[http://www.owasp.org/images/5/51/VII_OWASP_Spain-12.jpg ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/2/2f/VII_OWASP_Spain-13.jpg http://www.owasp.org/images/0/09/VII_OWASP_Spain-13-thumb.jpg]<br>[http://www.owasp.org/images/2/2f/VII_OWASP_Spain-13.jpg ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/e/eb/VII_OWASP_Spain-14.jpg http://www.owasp.org/images/f/f7/VII_OWASP_Spain-14-thumb.jpg]<br>[http://www.owasp.org/images/e/eb/VII_OWASP_Spain-14.jpg ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/f/f3/VII_OWASP_Spain-15.jpg http://www.owasp.org/images/d/d7/VII_OWASP_Spain-15-thumb.jpg]<br>[http://www.owasp.org/images/f/f3/VII_OWASP_Spain-15.jpg ampliar]
+</td>
+</tr>
+<tr>
+<td>
+[http://www.owasp.org/images/5/5c/VII_OWASP_Spain-16.jpg http://www.owasp.org/images/c/c3/VII_OWASP_Spain-16-thumb.jpg]<br>[http://www.owasp.org/images/5/5c/VII_OWASP_Spain-16.jpg ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/a/ab/VII_OWASP_Spain-17.jpg http://www.owasp.org/images/7/70/VII_OWASP_Spain-17-thumb.jpg]<br>[http://www.owasp.org/images/a/ab/VII_OWASP_Spain-17.jpg ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/5/52/VII_OWASP_Spain-18.jpg http://www.owasp.org/images/2/24/VII_OWASP_Spain-18-thumb.jpg]<br>[http://www.owasp.org/images/5/52/VII_OWASP_Spain-18.jpg ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/7/7b/VII_OWASP_Spain-19.jpg http://www.owasp.org/images/4/4c/VII_OWASP_Spain-19-thumb.jpg]<br>[http://www.owasp.org/images/7/7b/VII_OWASP_Spain-19.jpg ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/f/fa/VII_OWASP_Spain-20.jpg http://www.owasp.org/images/0/08/VII_OWASP_Spain-20-thumb.jpg]<br>[http://www.owasp.org/images/f/fa/VII_OWASP_Spain-20.jpg ampliar]
+</td>
+</tr>
+</table>
+<br>
+Agradecemos a [http://www.poisonclub.com.ar/ Sebastian Ayala] la cesión de estas fotografías.
+<br><br>
+</center>
+
+ '''VI OWASP Spain Chapter Meeting: 18 de junio de 2010'''
+
+<table width=75%>
+<tr>
+<td>Organiza:</td>
+<td>Patrocina:</td>
+<td>Colabora:</td>
+<td></td>
+</tr>
+<tr>
+<td>[http://www.owasp.org/index.php/Spain http://www.owasp.org/images/f/f5/Owasp-logo2.jpg] OWASP Spain</td>
+<td>[http://www.isecauditors.com http://www.owasp.org/images/1/1e/Isec-logo.png]</td>
+<td>[http://innovacion.grupogesfor.com http://www.owasp.org/images/d/d7/Gesfor-logo.png]</td>
+</tr>
+<tr>
+</table>
+<br>
+<b>Presentaciones</b> ofrecidas en nuestro congreso:<br>
+
+<table width=100%>
+
+<tr>
+<td valign="top">http://www.owasp.org/images/e/e1/Agenda-rms.png</td>
+<td bgcolor="#B3FF99" align="justify" valign="top"><b>El Software Libre y tu libertad</b><br>[http://www.stallman.org Richard Stallman]. [http://www.fsf.org Free Software Foundation].<br>
+Richard Stallman hablará sobre las metas y la filosofía del movimiento del Software Libre, y el estado y la historia del sistema operativo GNU, el cual conjuntamente con el núcleo Linux actualmente es utilizado por decenas de millones de personas en todo el mundo.
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="justify" bgcolor="#c0e0e0">
+Richard Mattew Stallman es un programador y activista del software libre. En 1983 anunció el proyecto para desarrollar el sistema operativo [http://www.gnu.org GNU], un sistema operativo tipo Unix destinado a ser totalmente libre, y es el líder del proyecto desde entonces. GNU se usa usualmente con el kernel Linux en la combinación GNU/Linux. Con ese anuncio Stallman lanzó también el movimiento del software libre. En octubre de 1985 creó la [http://www.fsf.org Free Software Foundation]. Stallman ha recibido el premio "Grace Hopper" de la ACM (ACM Grace Hopper Award), una beca de la Fundación MacArthur, el premio "Pionero" de la Fundación Frontera Electrónica, y el Premio Takeda por Mejora Social/Económica, como así también varios doctorados Honoris Causa.
+</td>
+</tr>
+
+<tr>
+<td valign="top">http://www.owasp.org/images/b/b2/Agenda-fc.jpg</td>
+<td bgcolor="#B3FF99" align="justify" valign="top"><b>[http://www.owasp.org/images/1/19/Owasp_top10_spanish.pdf OWASP: Los diez riesgos más importantes en aplicaciones web 2010]</b><br>Fabio Cerullo. [http://www.aib.ie AIB Group]. OWASP Global Education Committee.<br>
+Fabio trabaja actualmente como especialista en seguridad de la informacion en el banco AIB (Dublin, Irlanda). Sus tareas comprenden realizar analisis de riesgos, evaluar la seguridad de aplicaciones web desarrolladas internamente o adquiridas a terceros, definir politicas y estandares sobre codificacion segura, como asi tambien brindar entrenamientos sobre seguridad de aplicaciones web a desarrolladores, auditores, ejecutivos y profesionales de seguridad. Antes de unirse a AIB, trabajó como Ingeniero de Seguridad en la Sede Europea de Symantec Security Response analizando codigo malicioso, amenazas combinadas, riesgos de seguridad y vulnerabilidades en diversas aplicaciones. Antes de trasladarse a Irlanda, trabajó en el desarrollo de diferentes programas y actividades de capacitación con énfasis en el desarrollo de software seguro en su natal Argentina. Como miembro de la organizacion OWASP, Fabio forma parte del Comite Global de Educacion cuya mision es brindar capacitacion y servicios educativos a empresas, instituciones gubernamentales y educativas sobre seguridad en aplicaciones, coordina conferencias a nivel internacional sobre dicha tematica, y desde inicios del 2010 ha sido nombrado presidente del Capitulo OWASP en Irlanda. Fabio es graduado en Ingenieria Informatica de la Universidad Católica Argentina y posee el certificado CISSP otorgado por (ISC)2 desde el año 2006.  
+</td>
+</tr>
+
+<tr>
+<td valign="top"></td>
+<td align="justify" bgcolor="#c0e0e0">
+OWASP (Open Web Application Security Project) ha publicado una actualización del ranking de los riesgos más importantes que afectan a las aplicaciones web. La misión de este documento es concienciar a la industria sobre los riesgos de seguridad, en el ámbito de las aplicaciones web, identificando y remarcando las diez amenazas más serias a las que se expone.<br>
+Dicho ranking nace del consenso y debate entre expertos en la materia de la seguridad en aplicaciones web. En esta edición 2010 se ha efectuado un cambio significativo en la metodología usada para la elaboración del Top 10. En vez de estimar una amenaza por su frecuencia (las más comunes) se han tenido en cuenta múltiples factores para el cálculo de cada una de ellas, dando lugar a un ranking de riesgos evaluados por su vector, predominio, detectabilidad e impacto. Asimismo, se demostrará como el Top 10 se encuentra relacionado con otros proyectos claves de OWASP tales como ESAPI & ASVS. 
+</td>
+</tr>
+
+<tr>
+<td>http://www.owasp.org/images/4/4f/David.jpg</td>
+<td bgcolor="#B3FF99" valign="top" align="justify"><b>[http://www.owasp.org/images/3/36/Wapiti_OWASP.pdf WAPITI: Seguridad para Desarrolladores Web en el Proyecto Romulus]</b><br>David del Pozo González. [http://innovacion.grupogesfor.com Grupo Gesfor]<br>
+Se presentará la herramienta Wapiti, un escáner de vulnerabilidades de aplicaciones web que permite auditar aplicaciones web y obtener informes que faciliten a los desarrolladores la corrección de fallos. Se mostrará tanto su uso para usuarios finales como su facilidad de extensión con nuevos ataques. 
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="justify" bgcolor="#c0e0e0">
+David del Pozo González es ingeniero de investigación de Grupo Gesfor desde 2008. Ingeniero en Informática y Máster en el Desarrollo de Sistemas para Comercio Electrónico por la Universidad de Salamanca. Anteriormente, trabajó en proyectos de TIC para operadores telefónicos, participando en proyectos en Brasil del mismo ámbito. En Informática Gesfor opera en el departamento de I+D en el área de proyectos de código abierto y ha participado en el proyecto europeo Rómulus (desarrollo pragmático, fiable y seguro de aplicaciones web mediante un diseño dirigido por el dominio y desarrollo orientado a mashup basado en un Metaframework de Java de código abierto), dentro del cual trabajó entre otras cosas en el desarrollo de Wapiti. Actualmente participa en VulneraNET, proyecto español de I+D de seguridad que coordina Grupo Gesfor.</td>
+</tr>
+
+<tr>
+<td>http://www.owasp.org/images/8/8f/Agenda-cma.png</td>
+<td bgcolor="#B3FF99" valign="top" align="justify"><b>[http://www.owasp.org/images/2/2a/Bruteforce2010.key.pdf 2010 y aún utilizando fuerza bruta: Webslayer]</b><br>Christian Martorella. [http://www.s21sec.com S21sec]<br>La presentación hablará sobre cómo los ataques de fuerza bruta siguen siendo útiles contra las aplicaciones Web y se presentará la última versión de Webslayer, un proyecto OWASP orientado a cubrir todas las necesidades de las pruebas de fuerza bruta contra las aplicaciones Web.
+</td>
+</tr>
+<tr>
+<td></td>
+<td align="justify" bgcolor="#c0e0e0">
+Christian Martorella ha estado trabajando en el ámbito de la seguridad de la información durante los últimos 10 años, iniciando su carrera en Argentina IRS como consultor de seguridad. Ahora está liderando un equipo de Servicios de Seguridad para S21sec en España, donde lleva a cabo pruebas de intrusión, análisis de aplicaciones Web, auditorías de seguridad y análisis forense para una amplia gama de industrias, incluyendo servicios financieros, telecomunicaciones, servicios públicos y el gobierno. Es cofundador y un miembro activo del equipo de Edge-Security, donde ha investigado y desarrollado herramientas de seguridad. Ha sido ponente en What the Hack!, NoConName, Conferencias FIST, Hack.Lu, Source Conference, OWASP EU Summit 2008 y IV OWASP Spain Chapter Meeting. Christian ha contribuido con herramientas de análisis de código abierto como OWASP WebSlayer, Wfuzz y Metagoofil. Le gusta todo lo relacionado con recopilación de información y pruebas de intrusión. Christian en la actualidad ocupa el cargo de Presidente en consejo de las conferencias FIST y es miembro del consejo asesor de Source Conference. Posee certificaciones de seguridad como CISSP, CISM, CISA, OPST, OPSA y CEH.
+</td>
+</tr>
+
+</table>
+<br>
+Y algunas fotografías:<br>
+<center>
+<table>
+<tr>
+<td>
+[http://www.owasp.org/images/6/62/Spain_20100618_1_G.JPG http://www.owasp.org/images/d/d9/Spain_20100618_1.JPG]<br>[http://www.owasp.org/images/6/62/Spain_20100618_1_G.JPG ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/a/aa/Spain_20100618_2_G.JPG http://www.owasp.org/images/1/10/Spain_20100618_2.JPG]<br>[http://www.owasp.org/images/a/aa/Spain_20100618_2_G.JPG ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/a/a7/Spain_20100618_3_G.JPG http://www.owasp.org/images/c/c4/Spain_20100618_3.JPG]<br>[http://www.owasp.org/images/a/a7/Spain_20100618_3_G.JPG ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/e/e7/Spain_20100618_4_G.JPG http://www.owasp.org/images/c/c9/Spain_20100618_4.JPG]<br>[http://www.owasp.org/images/e/e7/Spain_20100618_4_G.JPG ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/a/a3/Spain_20100618_5_G.JPG http://www.owasp.org/images/3/39/Spain_20100618_5.JPG]<br>[http://www.owasp.org/images/a/a3/Spain_20100618_5_G.JPG ampliar]
+</td>
+</tr>
+<tr>
+<td>
+[http://www.owasp.org/images/9/97/Spain_20100618_6_G.JPG http://www.owasp.org/images/e/e3/Spain_20100618_6.JPG]<br>[http://www.owasp.org/images/9/97/Spain_20100618_6_G.JPG ampliar]
+</td>
+<td align=center>
+[http://www.owasp.org/images/f/f5/Spain_20100618_7_G.JPG http://www.owasp.org/images/d/dc/Spain_20100618_7.JPG]<br>[http://www.owasp.org/images/f/f5/Spain_20100618_7_G.JPG ampliar]
+</td>
+<td align=center>
+[http://www.owasp.org/images/5/5a/Spain_20100618_8_G.JPG http://www.owasp.org/images/3/39/Spain_20100618_8.JPG]<br>[http://www.owasp.org/images/5/5a/Spain_20100618_8_G.JPG ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/d/d3/Spain_20100618_9_G.JPG http://www.owasp.org/images/3/32/Spain_20100618_9.JPG]<br>[http://www.owasp.org/images/d/d3/Spain_20100618_9_G.JPG ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/1/15/Spain_20100618_10_G.JPG http://www.owasp.org/images/c/cb/Spain_20100618_10.JPG]<br>[http://www.owasp.org/images/1/15/Spain_20100618_10_G.JPG ampliar]
+</td>
+</tr>
+<tr>
+<td>
+[http://www.owasp.org/images/1/19/Spain_20100618_11_G.JPG http://www.owasp.org/images/c/c0/Spain_20100618_11.JPG]<br>[http://www.owasp.org/images/1/19/Spain_20100618_11_G.JPG ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/5/5b/Spain_20100618_12_G.JPG http://www.owasp.org/images/7/79/Spain_20100618_12.JPG]<br>[http://www.owasp.org/images/5/5b/Spain_20100618_12_G.JPG ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/a/a6/Spain_20100618_13_G.JPG http://www.owasp.org/images/e/ea/Spain_20100618_13.JPG]<br>[http://www.owasp.org/images/a/a6/Spain_20100618_13_G.JPG ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/a/a2/Spain_20100618_14_G.JPG http://www.owasp.org/images/1/19/Spain_20100618_14.JPG]<br>[http://www.owasp.org/images/a/a2/Spain_20100618_14_G.JPG ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/6/6c/Spain_20100618_15_G.JPG http://www.owasp.org/images/4/4e/Spain_20100618_15.JPG]<br>[http://www.owasp.org/images/6/6c/Spain_20100618_15_G.JPG ampliar]
+</td>
+</tr>
+<tr>
+<td>
+[http://www.owasp.org/images/2/27/Spain_20100618_16_G.JPG http://www.owasp.org/images/c/c8/Spain_20100618_16.JPG]<br>[http://www.owasp.org/images/2/27/Spain_20100618_16_G.JPG ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/e/eb/Spain_20100618_17_G.JPG http://www.owasp.org/images/7/7f/Spain_20100618_17.JPG]<br>[http://www.owasp.org/images/e/eb/Spain_20100618_17_G.JPG ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/9/93/Spain_20100618_18_G.JPG http://www.owasp.org/images/4/4f/Spain_20100618_18.JPG]<br>[http://www.owasp.org/images/9/93/Spain_20100618_18_G.JPG ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/2/24/Spain_20100618_19_G.JPG http://www.owasp.org/images/7/75/Spain_20100618_19.JPG]<br>[http://www.owasp.org/images/2/24/Spain_20100618_19_G.JPG ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/6/60/Spain_20100618_20_G.JPG http://www.owasp.org/images/9/95/Spain_20100618_20.JPG]<br>[http://www.owasp.org/images/6/60/Spain_20100618_20_G.JPG ampliar]
+</td>
+</tr>
+</table>
+<br>
+Agradecemos a [http://www.poisonclub.com.ar/ Sebastian Ayala] y [http://www.isecauditors.com Daniel Fernández] la cesión de estas fotografías.
+</center>
+
+
+ '''V OWASP Spain Chapter Meeting: 15 de mayo de 2009'''
+
+<table width=50%>
+<tr>
+<td>Patrocinador principal:</td>
+<td>Colaboran en el patrocinio:</td>
+<td></td>
+</tr>
+<tr>
+<td>[http://www.isecauditors.com http://www.owasp.org/images/1/1e/Isec-logo.png]</td>
+<td>[http://www.pstestware.com http://www.owasp.org/images/4/47/Ps_testware_logo.jpg]</td>
+<td>[http://www.ati.es http://www.owasp.org/images/7/73/ATI2.jpg]</td>
+</tr>
+<tr>
+</table>
+<br>
+<b>Presentaciones</b> ofrecidas en nuestro congreso:<br>
+
+<table width=100%>
+<tr>
+<td bgcolor="#B3FF99">
+<b>[http://www.owasp.org/images/b/b1/Barna2009tosend.pdf Sintonizar la función de seguridad con el negocio]</b><br>Alberto Partida. CISA, CISSP, SANS GIAC Gold GSEC, Gold GCFW, Gold GCFA, GCIA y GREM. Miembro del Consejo Asesor. [http://www.sans.org SANS Institute]
+</td>
+</tr>
+<tr>
+<td align="justify" bgcolor="#c0e0e0">
+Necesitamos una clara sintonía, por no decir armonía, entre la funciónde seguridad en tecnologías de la información dentro de una organización y el negocio, la verdadera razón de ser de la organización. La mera idea de negocio implica asumir unos riesgos. Sin embargo, la seguridad trata de mitigar riesgos. Esta presentación propone 8 medidas, basadas en más de 10 años de experiencia profesional, para conseguir esa sintonía entre el negocio y la seguridad.
+</td>
+</tr>
+<tr>
+<td bgcolor="#B3FF99">
+<b>[http://www.owasp.org/images/4/4b/ChemaAlonsoBlindLDAPInjection.pdf LDAP Injection & Blind LDAP Injection]</b><br>José María Alonso. Microsoft MVP Windows Security. Consultor de Seguridad. [http://www.informatica64.com Informatica64]. 
+</td>
+</tr>
+<tr>
+<td align="justify" bgcolor="#c0e0e0">
+Las técnicas de inyección de código son conocidas ámpliamente. Esta sesión se centrará en las posibilidades de las inyecciones de código LDAP en aplicaciones web. Se verá, en un entorno de prueba, el impacto que pueden tener los ataques de inyección LDAP y la extracción de datos mediantes técnicas a ciegas.
+</td>
+</tr>
+<tr>
+<td bgcolor="#B3FF99">
+<b>[http://www.owasp.org/images/4/41/BIT.pdf Gestión de Incidentes de Seguridad Web en la Brigada de Investigación Tecnológica]</b><br>Jorge Martín. Inspector. Jefe del Grupo de Seguridad Lógica. [http://www.policia.es Cuerpo Nacional de Policia]
+</td>
+</tr>
+<tr>
+<td align="justify" bgcolor="#c0e0e0">
+En la primera parte de la ponencia conoceremos la estructura y funciones de la Brigada de Investigación Tecnológica y veremos algunos ejemplos de las distintas tipologias delictivas mas frecuentes, para centrarnos en la segunda parte en los incidentes de seguridad web que se denuncian habitualmente, sus consecuencias y el tratamiento que la Brigada da a cada uno de ellos, haciendo especial mención a aquellos aspectos que debe tener en cuenta un administrador para no perjudicar una posible investigación posterior.
+</td>
+</tr>
+<tr>
+<td bgcolor="#B3FF99">
+<b>[http://www.owasp.org/images/2/24/Webgoat.pdf Extensión de módulos de pruebas de seguridad de la herramienta Webgoat de OWASP]</b><br>Daniel Cabezas Molina. Technology and Security Risk Services (TSRS) Manager. [http://www.ey.com Ernst & Young]
+</td>
+</tr>
+<tr>
+<td align="justify" bgcolor="#c0e0e0">
+Se hablará sobre la modificación del código fuente del framework para realizar tests de seguridad y permitir su internacionalización, así como varios módulos para realizar pruebas que hasta el momento no existían: el uso de cifrado predecibles, como es el caso del bug aparecido en Debian el pasado año, y la explotación de desbordamientos de búfer en aplicaciones web.
+</td>
+</tr>
+</table>
+<br>
+Y algunas fotografías:<br>
+<center>
+<table>
+<tr>
+<td>
+[http://www.owasp.org/images/2/28/Spain_20090515_1.JPG http://www.owasp.org/images/3/31/Spain_20090515_1_thumb.png]<br>[http://www.owasp.org/images/2/28/Spain_20090515_1.JPG ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/b/b4/Spain_20090515_2.JPG http://www.owasp.org/images/d/de/Spain_20090515_2_thumb.png]<br>[http://www.owasp.org/images/b/b4/Spain_20090515_2.JPG ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/d/d0/Spain_20090515_3.JPG http://www.owasp.org/images/7/79/Spain_20090515_3_thumb.png]<br>[http://www.owasp.org/images/d/d0/Spain_20090515_3.JPG ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/9/9e/Spain_20090515_4.JPG http://www.owasp.org/images/e/e8/Spain_20090515_4_thumb.png]<br>[http://www.owasp.org/images/9/9e/Spain_20090515_4.JPG ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/7/77/Spain_20090515_5.JPG http://www.owasp.org/images/9/93/Spain_20090515_5_thumb.png]<br>[http://www.owasp.org/images/7/77/Spain_20090515_5.JPG ampliar]
+</td>
+</tr>
+<tr>
+<td>
+[http://www.owasp.org/images/b/bb/Spain_20090515_6.JPG http://www.owasp.org/images/b/ba/Spain_20090515_6_thumb.png]<br>[http://www.owasp.org/images/b/bb/Spain_20090515_6.JPG ampliar]
+</td>
+<td align=center>
+[http://www.owasp.org/images/4/4f/Spain_20090515_7.JPG http://www.owasp.org/images/3/30/Spain_20090515_7_thumb.png]<br>[http://www.owasp.org/images/4/4f/Spain_20090515_7.JPG ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/5/55/Spain_20090515_8.JPG http://www.owasp.org/images/7/76/Spain_20090515_8_thumb.png]<br>[http://www.owasp.org/images/5/55/Spain_20090515_8.JPG ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/7/79/Spain_20090515_9.JPG http://www.owasp.org/images/1/1c/Spain_20090515_9_thumb.png]<br>[http://www.owasp.org/images/7/79/Spain_20090515_9.JPG ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/1/10/Spain_20090515_10.JPG http://www.owasp.org/images/b/be/Spain_20090515_10_thumb.png]<br>[http://www.owasp.org/images/1/10/Spain_20090515_10.JPG ampliar]
+</td>
+</tr>
+<tr>
+<td>
+[http://www.owasp.org/images/a/a9/Spain_20090515_11.JPG http://www.owasp.org/images/9/99/Spain_20090515_11_thumb.png]<br>[http://www.owasp.org/images/a/a9/Spain_20090515_11.JPG ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/1/13/Spain_20090515_12.JPG http://www.owasp.org/images/c/cb/Spain_20090515_12_thumb.png]<br>[http://www.owasp.org/images/1/13/Spain_20090515_12.JPG ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/8/8c/Spain_20090515_13.JPG http://www.owasp.org/images/7/7e/Spain_20090515_13_thumb.png]<br>[http://www.owasp.org/images/8/8c/Spain_20090515_13.JPG ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/d/d7/Spain_20090515_14.JPG http://www.owasp.org/images/5/51/Spain_20090515_14_thumb.png]<br>[http://www.owasp.org/images/d/d7/Spain_20090515_14.JPG ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/7/71/Spain_20090515_15.JPG http://www.owasp.org/images/1/1b/Spain_20090515_15_thumb.png]<br>[http://www.owasp.org/images/7/71/Spain_20090515_15.JPG ampliar]
+</td>
+</tr>
+<tr>
+<td>
+[http://www.owasp.org/images/d/d3/Spain_20090515_16.JPG http://www.owasp.org/images/2/2e/Spain_20090515_16_thumb.png]<br>[http://www.owasp.org/images/d/d3/Spain_20090515_16.JPG ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/9/97/Spain_20090515_17.JPG http://www.owasp.org/images/2/2e/Spain_20090515_17_thumb.png]<br>[http://www.owasp.org/images/9/97/Spain_20090515_17.JPG ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/d/d9/Spain_20090515_18.JPG http://www.owasp.org/images/9/9c/Spain_20090515_18_thumb.png]<br>[http://www.owasp.org/images/d/d9/Spain_20090515_18.JPG ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/4/4c/Spain_20090515_19.JPG http://www.owasp.org/images/b/bb/Spain_20090515_19_thumb.png]<br>[http://www.owasp.org/images/4/4c/Spain_20090515_19.JPG ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/4/40/Spain_20090515_20.JPG http://www.owasp.org/images/2/28/Spain_20090515_20_thumb.png]<br>[http://www.owasp.org/images/4/40/Spain_20090515_20.JPG ampliar]
+</td>
+</tr>
+</table>
+<br>
+Agradecemos a Sebastian Ayala la cesión de estas fotografías.
+</center>
+
+
+ '''IV OWASP Spain Chapter Meeting: 21 de noviembre de 2008'''
+
+Patrocinado por: [http://www.isecauditors.com Internet Security Auditors]<br><br>
+
+<b>Presentaciones</b> ofrecidas en nuestro congreso:<br>
+
+<table width=100%>
+<tr>
+<td bgcolor="#B3FF99">
+<b>[https://www.owasp.org/images/f/f3/VicenteAguilera_IV_OWASP_Spain_chapter_meeting.pdf Actuaciones realizadas en 2008 por el capítulo español de la OWASP]</b><br>Vicente Aguilera Diaz, OWASP Spain Chapter Leader. [http://www.owasp.org/index.php/Spain OWASP]
+</td>
+</tr>
+<tr>
+<td align="justify" bgcolor="#c0e0e0">
+Esta breve presentación muestra las acciones realizadas o relacionadas directamente con nuestro capítulo a lo largo de 2008, así como la previsión de algunas de las acciones que llevaremos a cabo en 2009.
+</td>
+</tr>
+<tr>
+<td bgcolor="#B3FF99">
+<b>[https://www.owasp.org/images/b/b5/W3af_owasp_spain_iv.pdf w3af: Un framework de test de intrusión web]</b><br>José Ramón Palanco, CEO. Hazent Systems
+</td>
+</tr>
+<tr>
+<td align="justify" bgcolor="#c0e0e0">
+El proyecto w3af no pretende ser un reemplazo de web pentest manual, sino unir bajo un mismo framework, todas las técnicas automatizables de obtención de información, evasión de ids, localización de vulnerabilidades, explotación de vulnerabilidades, etc. al estilo metasploit (framework con el que interactúa).
+</td>
+</tr>
+<tr>
+<td bgcolor="#B3FF99">
+<b>[https://www.owasp.org/images/a/a1/Analisis_de_Eco.pdf Análisis de Eco]</b><br>Jesús Olmos González, Auditor Senior. [http://www.isecauditors.com Internet Security Auditors]
+</td>
+</tr>
+<tr>
+<td align="justify" bgcolor="#c0e0e0">
+Hoy día las vulnerabilidades web son "Well Known" y casi siempre nos encontraremos filtros que impedirán su explotación. Se comenzará explicando la problemática en la auditoría de caja negra: el código que no se ve se ha de deducir a través de diversas pruebas. El objetivo de dichas pruebas es deducir el código fuente a partir del análisis de los resultados ante distintas peticiones de entrada. Un atacante analizará los filtros implementados (por lo que será necesario localizar operativas de la aplicación que hagan "eco") con el objetivo
+de evadirlos y explotar posibles vulnerabilidades que existan en la aplicación. La presentación describirá distintos tipos de "eco" en aplicaciones web y como pueden ser detectados y aprovechados para elaborar posteriores ataques.
+</td>
+</tr>
+<tr>
+<td bgcolor="#B3FF99">
+<b>[https://www.owasp.org/images/c/c7/MS_SDL_IT_ProtegiendoElNegocio.pdf Microsoft Seguridad IT al descubierto]</b><br>Simon Roses Femerling, ACE Security Services. [http://www.microsoft.com Microsoft]
+</td>
+</tr>
+<tr>
+<td align="justify" bgcolor="#c0e0e0">
+La seguridad en Microsoft juega un papel fundamental tanto en sus productos como en sus activos de negocio y por ello desarrolla continuamente la más avanzada tecnología y mejora sus procesos para proteger a Microsoft y sus clientes. Esta ponencia pondrá al descubierto cómo Microsoft utiliza el SDL-IT para proteger sus activos de negocio.
+</td>
+</tr>
+<tr>
+<td bgcolor="#B3FF99">
+<b>[https://www.owasp.org/images/4/4f/OWASP-Christian_Martorella_-_Information_Gathering.pdf A fresh look into Information Gathering]</b><br>Christian Martorella. Responsable de Auditoría. [http://www.s21sec.com/ S21sec]
+</td>
+</tr>
+<tr>
+<td align="justify" bgcolor="#c0e0e0">
+En esta presentación se pretende mostrar las nuevas técnicas y fuentes que se pueden utilizar a la hora de obtener información pública sobre un objetivo o entidad. Se hará especial hincapié en información que se puede obtener a través de la Web.
+</td>
+</tr>
+</table>
+<br>
+
+ '''III OWASP Spain Chapter Meeting: 14 de marzo de 2008'''
+
+Patrocinado por: [http://www.isecauditors.com Internet Security Auditors]<br><br>
+
+<b>Presentaciones</b> ofrecidas en nuestro congreso:<br>
+
+<table width=100%>
+<tr>
+<td bgcolor="#B3FF99">
+<b>[https://www.owasp.org/images/b/be/OWASP_III_Amenazas_e_incidentes_en_aplicaciones_Web_v2.0_RaulSiles.pdf Amenazas e incidentes de seguridad en entornos Web: realidad o ficción]</b><br>Raúl Siles, Consultor de Seguridad independiente. [http://raulsiles.com raulsiles.com]
+</td>
+</tr>
+<tr>
+<td align="justify" bgcolor="#c0e0e0">
+Los entornos Web son uno de los objetivos principales en los ataques directos a organizaciones, y también actúan como medio de ataque sobre sus visitantes. La ponencia analiza amenazas, ataques e incidentes de seguridad reales que se están llevando a cabo en la actualidad sobre entornos Web corporativos, y sobre nuevos objetivos, las aplicaciones Web de los dispositivos embebidos.
+</td>
+</tr>
+<tr>
+<td bgcolor="#B3FF99">
+<b>[https://www.owasp.org/images/6/61/Ataques_a_politicas_de_seguridad_segun_contexto.pdf Ataques a políticas de seguridad según contexto]</b><br>
+Iñaki López/Daniel Cabezas, Responsables del Laboratorio de Seguridad Avanzada. [http://www.ey.com/global/content.nsf/Spain/Home Ernst&Young]
+</td>
+</tr>
+<tr>
+<td align="justify" bgcolor="#c0e0e0">
+Se presentará una aproximación a cómo inferir información acerca de redes o websites objetivos, sus relaciones y políticas de seguridad en base a información recabada públicamente. Incluirá demostración práctica.
+</td>
+</tr>
+<tr>
+<td bgcolor="#B3FF99">
+<b>[https://www.owasp.org/images/7/71/Seguridad-Multinivel-OWASP-2008.pdf La seguridad multinivel en servidores web]</b><br>Luis Calero, Director Técnico. [http://www.pentest.es Pentest Consultores]
+</td>
+</tr>
+<tr>
+<td align="justify" bgcolor="#c0e0e0">
+La ponencia versará sobre la aplicación práctica de la seguridad multinivel -MLS- así como de las distintas tecnologías de control de accesos existentes: -DAC, MAC, DBAC, RBAC, RSBAC- en la securización de servidores web.
+</td>
+</tr>
+<tr>
+<td bgcolor="#B3FF99">
+<b>[https://www.owasp.org/images/d/da/OWASP_Spain_20080314_Herramientas_de_an%C3%A1lisis_est%C3%A1tico_de_seguridad_del_c%C3%B3digo_estado_del_arte.pdf Herramientas de análisis estático de seguridad del código: estado del arte]</b><br>Luís Rodriguez Berzosa, Responsable del laboratorio software. [http://www.als-es.com/ Application LifeCycle Solutions]
+</td>
+</tr>
+<tr>
+<td align="justify" bgcolor="#c0e0e0">
+En esta ponencia se examina la situación actual de la clase de herramientas de análisis estático de seguridad, que sin ejecutar el código del software, tratan de identificar las vulnerabilidades explotables en las aplicaciones y servicios web. Se determina el estado del arte de las herramientas académicas y de código abierto, la oferta de OWASP en este dominio, los límites de esta tecnología, y se proponen algunas ideas para mejorar la difusión y la cobertura desde OWASP.
+</td>
+</tr>
+</table>
+<br>
+Y algunas fotografías:<br>
+<center>
+<table>
+<tr>
+<td>
+[http://www.owasp.org/images/3/38/IMG_0379.png http://www.owasp.org/images/1/1f/IMG_0379_thumb.png]<br>[http://www.owasp.org/images/3/38/IMG_0379.png ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/3/38/IMG_0380.png http://www.owasp.org/images/b/b7/IMG_0380_thumb.png]<br>[http://www.owasp.org/images/3/38/IMG_0380.png ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/9/9c/IMG_0384.png http://www.owasp.org/images/a/a3/IMG_0384_thumb.png]<br>[http://www.owasp.org/images/9/9c/IMG_0384.png ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/4/4c/IMG_0388.png http://www.owasp.org/images/7/7d/IMG_0388_thumb.png]<br>[http://www.owasp.org/images/4/4c/IMG_0388.png ampliar]
+</td>
+</tr>
+<tr>
+<td>
+[http://www.owasp.org/images/e/e3/IMG_0389.png http://www.owasp.org/images/e/eb/IMG_0389_thumb.png]<br>[http://www.owasp.org/images/e/e3/IMG_0389.png ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/1/1e/IMG_0390.png http://www.owasp.org/images/3/30/IMG_0390_thumb.png]<br>[http://www.owasp.org/images/1/1e/IMG_0390.png ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/8/89/IMG_0392.png http://www.owasp.org/images/4/41/IMG_0392_thumb.png]<br>[http://www.owasp.org/images/8/89/IMG_0392.png ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/2/2a/IMG_0398.png http://www.owasp.org/images/a/ad/IMG_0398_thumb.png]<br>[http://www.owasp.org/images/2/2a/IMG_0398.png ampliar]
+</td>
+</tr>
+</table>
+</center>
+
+ '''II OWASP Spain Chapter Meeting: 6 de julio de 2007'''
+
+Patrocinado por: [http://www.isecauditors.com Internet Security Auditors]<br><br>
+
+<b>Presentaciones</b> ofrecidas en nuestro congreso:<br>
+
+<table width=100%>
+<tr>
+<td bgcolor="#B3FF99">
+<b>[http://www.owasp.org/images/a/ae/Seguridad_en_entornos_financieros.pdf Seguridad en entornos financieros]</b><br>Pedro Sánchez, Responsable de Seguridad. [http://www.atca.es ATCA]
+</td>
+</tr>
+<tr>
+<td bgcolor="#B3FF99">
+<b>[http://www.owasp.org/images/2/2b/Conferencia_OWASP.pdf Ataques DoS en aplicaciones Web]</b><br>Jaime Blasco, Responsable de Seguridad. [http://www.eazel.es Eazel]
+</td>
+</tr>
+<tr>
+<td bgcolor="#B3FF99">
+<b>[http://www.owasp.org/images/3/3a/Trust_Security_Usability_-_v1.0.pdf Trust, Security and Usability]</b><br>Roger Carhuatocto, NeS & DTM Product Manager. [http://www.netfocus.es NetFocus]
+</td>
+</tr>
+<tr>
+<td bgcolor="#B3FF99">
+<b>[http://www.owasp.org/images/e/e9/OWASP-tratamiento_de_datos.pdf Programación segura: validación de entradas]</b><br>Albert Puigsech, Auditor Senior. [http://www.isecauditors.com Internet Security Auditors]
+</td>
+</tr>
+</table>
+<br>
+Y algunas fotografías:<br>
+<center>
+<table>
+<tr>
+<td>
+[[Image:IMG_0002-thumb.jpg]]<br>[http://www.owasp.org/images/1/15/IMG_0002.jpg ampliar]
+</td>
+<td>
+[[Image:IMG_0003-thumb.jpg]]<br>[http://www.owasp.org/images/5/51/IMG_0003.jpg ampliar]
+</td>
+<td>
+[[Image:IMG_0005-thumb.jpg]]<br>[http://www.owasp.org/images/a/ac/IMG_0005.jpg ampliar]
+</td>
+<td>
+[[Image:IMG_0006-thumb.jpg]]<br>[http://www.owasp.org/images/3/3e/IMG_0006.jpg ampliar]
+</td>
+</tr>
+<tr>
+<td>
+[[Image:IMG_0011-thumb.jpg]]<br>[http://www.owasp.org/images/8/86/IMG_0011.jpg ampliar]
+</td>
+<td>
+[[Image:IMG_0013-thumb.jpg]]<br>[http://www.owasp.org/images/5/5c/IMG_0013.jpg ampliar]
+</td>
+<td>
+[[Image:IMG_0017-thumb.jpg]]<br>[http://www.owasp.org/images/d/d4/IMG_0017.jpg ampliar]
+</td>
+<td>
+[[Image:IMG_0022-thumb.jpg]]<br>[http://www.owasp.org/images/4/4c/IMG_0022.jpg ampliar]
+</td>
+</tr>
+</table>
+</center>
+
+ '''I OWASP Spain Chapter Meeting: 16 de junio de 2006'''
+
+Patrocinado por: [http://www.isecauditors.com Internet Security Auditors]<br>
+Con la colaboración de: Centre de Supercomputació de Catalunya ([http://www.cesca.es CESCA])<br><br>
+
+<b>Presentaciones</b> ofrecidas en nuestro congreso:<br>
+
+<table width=100%>
+<tr>
+<td bgcolor="#B3FF99">
+<b>[http://www.owasp.org/images/1/11/OWASP-OWASP_Foundation_Spain_Chapter.pdf La OWASP Foundation y los objetivos del capítulo español]</b><br>Vicente Aguilera Díaz, OWASP Spain Chapter Leader. [http://www.owasp.org/index.php/Spain OWASP].
+</td>
+</tr>
+<tr>
+<td bgcolor="#B3FF99">
+<b>[http://www.owasp.org/images/b/b6/OWASP-Testing-Project_v1.pdf El proyecto OWASP Testing]</b><br>Javier Fernández-Sanguino, Consultor. [http://www.germinus.com Germinus]
+</td>
+</tr>
+<tr>
+<td bgcolor="#B3FF99">
+<b>[http://www.owasp.org/images/4/40/Jss-sec_webapp_network-v.1.5.pdf Fortificando Aplicaciones Web desde la capa de Red]</b><br>Carles Fragoso i Mariscal, Técnico de Seguridad. [http://www.cesca.es CESCA]
+</td>
+</tr>
+<tr>
+<td bgcolor="#B3FF99">
+<b>[http://www.owasp.org/images/5/5e/Jess_Garcia-Web_Forensics.pdf Web Forensics]</b><br>Jess Garcia, CEO de [http://www.jessland.net Jessland Security Services] e instructor de [http://www.sans.org SANS Institute].
+</td>
+</tr>
+<tr>
+<td bgcolor="#B3FF99">
+<b>[http://www.owasp.org/images/1/12/OWASP-MX_Injection.pdf Capturando y explotando servidores de correo ocultos]</b><br>Vicente Aguilera Díaz,  OWASP Spain Chapter Leader. [http://www.owasp.org/index.php/Spain OWASP].
+</td>
+</tr>
+</table>
+<br>
+Y algunas fotografías:<br>
+<center>
+<table>
+<tr>
+<td>
+[http://www.owasp.org/images/0/0e/IMG_3149.jpg http://www.owasp.org/images/f/fa/IMG_3149-thumb.jpg]<br>[http://www.owasp.org/images/0/0e/IMG_3149.jpg ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/0/00/IMG_3154.jpg http://www.owasp.org/images/0/06/IMG_3154-thumb.jpg]<br>[http://www.owasp.org/images/0/00/IMG_3154.jpg ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/d/df/IMG_3155.jpg http://www.owasp.org/images/2/2c/IMG_3155-thumb.jpg]<br>[http://www.owasp.org/images/d/df/IMG_3155.jpg ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/6/65/IMG_3156.jpg http://www.owasp.org/images/7/7a/IMG_3156-thumb.jpg]<br>[http://www.owasp.org/images/6/65/IMG_3156.jpg ampliar]
+</td>
+</tr>
+<tr>
+<td>
+[http://www.owasp.org/images/5/5c/IMG_3158.jpg http://www.owasp.org/images/b/bd/IMG_3158-thumb.jpg]<br>[http://www.owasp.org/images/5/5c/IMG_3158.jpg ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/4/49/IMG_3159.jpg http://www.owasp.org/images/0/01/IMG_3159-thumb.jpg]<br>[http://www.owasp.org/images/4/49/IMG_3159.jpg ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/9/9a/IMG_3167.jpg http://www.owasp.org/images/d/d4/IMG_3167-thumb.jpg]<br>[http://www.owasp.org/images/9/9a/IMG_3167.jpg ampliar]
+</td>
+<td>
+[http://www.owasp.org/images/0/09/IMG_3171.jpg http://www.owasp.org/images/1/12/IMG_3171-thumb.jpg]<br>[http://www.owasp.org/images/0/09/IMG_3171.jpg ampliar]
+</td>
+</tr>
+</table>
+</center>

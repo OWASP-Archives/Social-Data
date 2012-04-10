@@ -1,0 +1,10 @@
+Here is some sample code that can be used to detect RE3. 
+
+<pre>
+
+//the execution of this line will create an exception if an attack is found 
+boolean isValid = AttackDetectorUtils.verifyValidRequestMethod(myServletRequest, AttackDetectorUtils.GET); 
+if (! isValid) {
+    notify user ...&nbsp;???
+}
+</pre>

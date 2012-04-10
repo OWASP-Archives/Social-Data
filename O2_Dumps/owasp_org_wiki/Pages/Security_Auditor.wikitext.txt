@@ -1,0 +1,15 @@
+{{Template:SecureSoftware}}
+
+==Role Description==
+The basic role of a security auditor is to examine the current state of a project and try to assure the security of the current state of the project:
+* When examining requirements, the auditor will attempt to determine whether the requirements are adequate and complete.
+* When looking at a design, the auditor will generally attempt to determine whether there are any implications that could lead to vulnerabilities.
+* In addition, when looking at an implementation, the auditor will generally attempt to find overt security problems, which should be mappable to deviations from a specification.
+
+Rarely is being a project security auditor a full time job. Often, developers with a particular interest or skill in security perform auditing. Sometimes, organizations have an audit organization focused on other regulatory compliance, and these people will perform security review.
+
+It is usually better to avoid reviewing one’s own designs or one’s own code since it can be difficult to see the forest for the trees.
+
+[[Category:Role]]
+[[Category:CLASP Role]]
+[[Category:OWASP CLASP Project]]

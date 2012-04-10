@@ -1,0 +1,174 @@
+<b>Key:</b>
+* xx%: Progress status of the paragraph
+* <b>Review</b>: The paragraph needs a review
+* TD: Paragraph to be assigned
+
+==[[J2EE Security for Architects]]==
+Discuss the security implications of common J2EE architectures.  This could be discussed in terms of: Authentication, Authorisation, Data Validation, Cross Site Scripting protection.  Other architecture concerns such as scalability, performance and maintainability can also be mentioned, but the focus on security should not be lost.
+  
+Any other security concerns that should be addressed during the design phase should also be mentioned here.
+===Design considerations===
+* Architectural considerations (0%, TD)
+** EJB Middle tier (0%, TD)
+** Web Services Middle tier (0%, TD)
+** Spring Middle tier (0%, TD)
+
+==[[J2EE Security for Developers]]==
+=== Noteworthy Frameworks ===
+Discuss important and relevant Java security frameworks that would be useful to architects.  The information should be at a suitably high level. For example, by discussing the advantages and features as well as the associated costs (direct and indirect) of using the frameworks.
+
+(0%, Seeking Volunteers)
+*	Cocoon
+*	[[Java Server Faces]] (Sam Reghenzi - 90%, Finalising content)
+*	JSecurity
+*	SiteMesh
+*	Spring (0%, Adrian San Juan, TD)
+*	[[Struts]] (0% Jon Forck)
+*	Tapestry
+*	Tiles
+*	Turbine
+*	Webwork
+*	[[Wicket]]
+
+===Java Security Basics===
+Provide an introduction into the basic security services provided by the Java language and environment.  Remember to keep this relevant for web developers for the initial release - there may be a potential to expand this to thick clients in subsequent releases.
+* Class Loading (0%, Philippe Clairet)
+* Bytecode verifier (0%, Philippe Clairet)
+* The Security Manager and security.policy file (0%, John Wilander, Philippe Clairet)
+
+===Input Validation Overview ===
+Input validation is perhaps the most important category of application security. Any data entering a software system must be verified to contain safe data that is not mounting a SQL Injection, XSS, CSRF or other form of attack. This is done primarily through the use of regular expressions. It's crucial not to hard-code input validation routines. Regular expressions should contained within a configuration file that can easily updated by an InfoSec professional and not require a programmers intervention or deployment of new application code. Application security needs change over time as new attack vectors are discovered. Application administers need to be able to react to these changes as quickly as possible. 
+
+===Input Validation ===
+* Dangerous calls (BufferedReader.readLine(), ServletRequest.getParameter(), etc...) (0%, TD)
+* [[How to add validation logic to HttpServletRequest]] (100%, Jeff Williams, Complete)
+* [[How to perform HTML entity encoding in Java]] (100%, Jeff Williams, Complete)
+
+==== [[Preventing SQL Injection in Java]] ====
+* Overview 
+* Prevention (60%, Stephen de Vries, <b>Review</b>)
+** White Listing
+** Prepared Statements
+** Stored Procedures 
+** Hibernate 
+** Ibatis (60%, Rohyt Belani, <b>Review</b>)
+** Spring JDBC 
+** EJB 3.0
+** JDO
+
+==== [[Preventing LDAP Injection in Java]] ====
+* Overview (100%, Stephen de Vries, Complete)
+* Prevention (100%, Stephen de Vries, Complete)
+
+==== [[XPATH Injection]] ====
+As with the other Injection sections, only provide cursory information on the general case. Should contain practical real-world advise and code examples for preventing XPATH injection.
+* Overview (0%, TD)
+* Prevention (0%, TD)
+
+==== [[Miscellaneous Injection Attacks]]  ====
+* HTTP Response splitting (0%, TD)
+* [[Code injection in Java]] (75%, Neil Bergman, Review)
+* [[Command injection in Java]] - Runtime.getRuntime().exec() (100%, Neil Bergman, Review)
+* Regular Expression (regex) Injections (20%)
+
+''' Status '''
+In progress
+
+=== Authentication===
+* [[Storing credentials]] - (20%, Adrian San Juan, <b>Review</b>)
+* [[Hashing Java|Hashing]] - (100%, Michel Prunet, <b>Review</b>)
+* [[SSL Best Practices]] - (20%, Philippe Curmin, <b>Review</b>)
+* [[Captchas in Java]] - (100%, Dave Ferguson, <b>Review</b>) 
+* Container-managed authentication with Realms
+** [[Declarative Access Control in Java]] - (100%, Dave Ferguson, Completed)
+* [[JAAS Timed Login Module]] - (100%, Stephen de Vries, <b>Review</b>)
+* [[JAAS Tomcat Login Module]] - (100%, Stephen de Vries, <b>Review</b>)
+* [[Password length & complexity]] - (100%, Adrian San Juan, <b>Review</b>)
+
+===Session Management ===
+The generic problems and solutions for session management are covered in the Guide.  This section should focus on Java specific examples.
+* [[Logout]] (100%, Dominique Righetto, Complete)
+* [[Session Timeout]] (100%, Dominique Righetto, Complete)
+* Absolute Timeout (0%, TD)
+* [[Session Fixation in Java]] (100%, Rohyt Belani, <b>Review</b>)
+* Terminating sessions (0%, TD)
+** Terminating sessions when the browser window is closed
+
+===Authorization===
+* [[Declarative v/s Programmatic]] (10%, TD)
+* EJB Authorization (0%, TD)
+* Acegi (0%, TD)
+* JACC (0%, TD)
+* Check horizontal privilege (0%, TD)
+
+=== Encryption===
+* [http://www.owasp.org/index.php/Using_the_Java_Cryptographic_Extensions JCE] (100%, Joe Prasanna Kumar - To be reviewed)
+* Storing db secrets (0%, TD)
+* Encrypting JDBC connections (0%, TD)
+* [http://www.owasp.org/index.php/Using_the_Java_Secure_Socket_Extensions JSSE] (100%, Joe Prasanna Kumar - To be reviewed)
+* [http://www.owasp.org/index.php/Digital_Signature_Implementation_in_Java Digital Signatures in Java] (100%, Joe Prasanna Kumar - To be reviewed)
+
+=== Error Handling & Logging===
+* Logging - why log? what to log? log4j, etc. (0%, TD)
+* Exception handling techniques (0%, TD)
+** fail-open/fail-closed
+** resource cleanup
+** finally block
+** swallowing exceptions
+* Exception handling frameworks (50%, TD)
+** [[Servlet spec - web.xml]] (100%, Dominique Righetto, Complete)
+** [[Securing tomcat]] (100%, Darren Edmonds, Completed)
+** [[JSP errorPage]] (100%, Dominique Righetto, Complete)
+* Web application forensics (0%, TD)
+
+=== Web Services Security ===
+* SAML (0%, TD)
+* (X)WS-Security (0%, TD)
+* SunJWSDP (0%, TD)
+* WSS4J (0%, Eelco Klaver)
+* XML Signature (JSR 105) (0%, TD)
+* XML Encryption (JSR 106) (0%, TD)
+
+=== Code Analysis Tools ===
+The introduction should cover the advantages and short comings of code analysis tools.  An overview of the current state of the art and the available tools would go well here.  As a start, only open source tools are listed, but if vendors of commercial tools adhere to the [[Tutorial]] guidelines, these submissions will be gladly received.
+* Introduction (0%, TD)
+* [[:Category:OWASP LAPSE Project]] (100%, <b>Review</b>)
+* FindBugs (0%, TD)
+** Creating custom rules
+* PMD (0%, TD)
+** Creating custom rules
+* JLint (0%, TD)
+* Jmetrics (0%, TD)
+
+=== Choosing Security Libraries ===
+* [[Summary of Java Security Libraries]]
+
+== J2EE Security For Deployers ==
+Practical step-by-step guides to securing various J2EE servers.  Examples of secure configurations can also be provided for download.  If configurations are provided, they should be properly commented so that the rationale for configuration settings is clearly explained.  Users of the configurations should be provided with enough information to make their own risk decisions.
+=== Securing Popular J2EE Servers ===
+* [[Securing tomcat|Securing Tomcat]] - (100%, Darren Edmonds, Completed)
+* Securing JBoss (0%, TD)
+* Securing WebLogic (0%, TD)
+* Securing WebSphere (0%, TD)
+* Others...
+
+=== Defining a Java Security Policy ===
+Practical information on creating a Java security policies for J2EE servers.
+* PolicyTool - JChains already provides this functionality, one policy tool is enough.
+* jChains (www.jchains.org) - (0%, TD)
+
+=== Protecting Binaries ===
+* Bytecode manipulation tools and techniques (0%, TD)
+* [[Bytecode obfuscation]] (100%, Pierre Parrend, Released)
+* Convert bytecode to native machine code (0%, TD)
+* [[Protecting code archives with digital signatures]] (100%, Pierre Parrend, Released)
+* [[Signing jar files with jarsigner]] (100%, Pierre Parrend, Released)
+
+==J2EE Security for Security Analysts and Testers==
+* Using Eclipse to verify Java applications (0%, TD)
+* Using [[:Category:OWASP WebScarab Project|WebScarab]] to find vulnerabilities in J2EE applications - (0%, TD)
+* [[Decompiling Java bytecode]] (100%, Dominique Righetto, Complete)
+
+== [[Java Security Resources]] (ongoing)==
+
+[[Category:OWASP Java Project]]

@@ -1,0 +1,45 @@
+{{Template:SecureSoftware}}
+
+==Overview==
+
+Purpose:	
+
+* Document assumptions and requirements about the operating environment, so that the impact on security can be assessed.
+
+Role:
+
+* Requirements Specifier
+
+Frequency:
+
+* As necessary; generally, once per iteration.
+
+An operational environment specification allows team members to understand the operational context that they need to consider for designing protection mechanisms or building operational security guides. Much of the data required for an operational environment specification will already be produced in defining business requirements, and specifying the operational environment will often result in identifying new requirements.
+
+Generally, this activity will result in changes to existing requirements and specifications, if necessary. However, it is also reasonable to produce stand-alone documentation. An operational environment worksheet is provided in CLASP Resource F.
+
+==Identify requirements and assumptions related to individual hosts ==
+
+A host-level operational environment specification should identify anything that could potentially be security-relevant to other team members. In most circumstances, the large majority of considerations will be addressed by assuming nothing. For example, it is rare that, beyond the core OS, one will take actions to ensure that particular pieces of software will not be running on a machine, even if that software might pose a threat.
+
+Still, there are properties that are worth specifying, even beyond hardware platforms and OS. For example, it is worth specifying which user the software is expected to run as, since this has security implications.   
+
+One can also enforce prerequisites, as long as they are necessary to product functionality. Any such prerequisites should be identified as early as possible. If the project is expected to interact with important system components or libraries that come bundled with the OS, it is recommended to note this as well, not only because those may be additional sources of risk to the resources the application exports, but also because the software should be concerned about the security of resources it is capable of using.
+
+Additionally, one should consider what optional functionality might be in the environment that could have a security impact - positive or negative - that your project could explicitly leverage or protect, as necessary. 
+
+Example: Your customer base is government-focused and is likely to have a dynamic policy enforcement environment available. Note that - since providing policies for such an environment might be a way to remediate significant risks for those users - you can also serve other users by recommending a dynamic policy-enforcement environment to them. On the other hand, if your software is dependent on a component that is known to be risky, such as Microsoft's IIS server, it is good to know about the risk up-front.
+
+==Identify requirements and assumptions related to network architecture ==
+
+In some environments, one can assume particular things about network topology, such as the existence and configuration details of a firewall or a single-sign-on mechanism. Often, however, assumptions cannot be made.
+
+As with host-related concerns, it is recommended to define not only those things that will or will not be in the environment but also those things that may have an impact (either positive or negative) if present in the environment. For example, many applications assume implicitly that there is no network-attached storage, or if there is, it has its own security measures in place that make it as secure as the local disk. That is often not the case; and this is a concern that should ultimately be entered into an operational security guide if the risk is not addressed at the application level.
+
+Additionally, focus on those network resources that must be present for the system to correctly function - such as a database, and possibly available bandwidth. Also, if your customers are expected to want integration with centralized authentication servers or other network resources, this should be noted as a requirement.
+
+
+[[Category:Activity]]
+[[Category:CLASP Activity]]
+[[Category:BP3 Capture security requirements]]
+[[Category:OWASP_CLASP_Project]]

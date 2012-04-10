@@ -1,0 +1,116 @@
+[[Project Information:template Live CD 2008 Project|Clik here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''FINAL REVIEW''' 
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART I''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications#OWASP Live CD 2008 Project|OWASP Live CD 2008 Project's Deliveries & Objectives]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#OWASP Live CD 2008 Project|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| At inception, the project had the following goals:
+* Move from Morphix to SLAX (see Why SLAX) 
+** Complete as of 50% review
+* Get SLAX to have an equal number of tools as had existed in the Live CD 2007 (updating tools where necessary) 
+** Nearly complete as of 50% review.  Metasploit has been added (the only missing part from the 2007 release at the 50% review) and updated to the latest SVN release.  Also, a subversion client was added so that Live CD 2008 users can easily get the latest version on demand.
+* Add OWASP branding to SLAX 
+** 90% complete at 50% review state.  This is now complete and polished thanks to NIshi Kumar who volunteered to do the graphic design work.
+* Add additional, quality tools 
+** The following tools have been added to the CD which were not present on the 2007 CD
+*** Firefox 3 with many security related addons - [http://mtesauro.com/livecd/index.php?title=Firefox_Add-ons_included details here]
+*** Burp Suite
+*** Grendel-Scan
+*** OWASP DirBuster 
+*** OWASP SQLiX
+*** OWASP WSFuzzer
+** Some additional tools came as part of the SLAX distribution that are also web app sec related.  These were mentioned in the OWASP Testing Guide version 2
+*** wget
+*** host
+*** dig
+*** openssl
+*** grep
+*** whois
+*** grep
+* Document the Live CD 2008, both how it was created and general documentation (e.g. OWASP Testing Guide)
+** Extensive documentation on the creation of the Live CD 2008 was created [http://mtesauro.com/livecd here]  This was done on a MediaWiki installation so that the content could be moved easily to the OWASP website.  The Live CD's installation of Firefox also included bookmarks to the general site as well as directly linking to many of the internal Wiki pages.  For most of the modules, step-by-step instructions on how they were created are documented down to the individual command level.
+** General documentation included on the Live CD 2008 includes the following documentation primarily in PDF format.  Also included is a HTML page linking to each document should current version be desired.  The Live CD 2008 documentation Wiki also includes this list with links [http://mtesauro.com/livecd/index.php?title=Documentation_List here].
+*** OWASP Testing Guide  
+**** OWASP Testing Guide v2 (stable release)  
+**** OWASP Testing Guide v3 Table of Contents  
+*** OWASP CLASP 
+*** OWASP Top Ten Project  
+**** OWASP Top Ten 2007  
+**** OWASP Top 10 for Java Enterprise Edition  
+*** OWASP AppSec FAQ Project  
+*** OWASP Books: Download PDFs or Order Online  
+**** OWASP CLASP v1.2OWASP CLASP v1.2  
+**** OWASP Top 10 - 2007 Edition  
+**** OWASP Top10 - Testing - Legal 07  
+**** OWASP WebGoat and WebScarab 
+**** OWASP Guide 2.0  
+**** OWASP Code Review - 2008 (RC2)  
+*** WASC Threat Classification  
+*** OSSTMM - Open Source Security Testing Methodology Manual  
+**** OSSTMM_3.0_LITE.pdf download 
+**** OSSTMM.en.2.2.pdf download
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#OWASP Live CD 2008 Project|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| All the goals above are at 100% complete.
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|  First, my reviewers have been great.  I couldn't ask more of them. <br /><br />  As for the OWASP community at large, I'd love for more people to download and test the OWASP Live CD 2008 and provide feedback.  I've gotten some great feedback from the local OWASP chapter after presenting the Beta 2 release to them.  I've also had some unsolicited feedback from several people (both OWASP and others).  I'd love for this project to be wildly successful. To achieve that, I need feedback from a large number of people to find all the rough edges and provide suggestions to make it even better.
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART II''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Assessment Criteria
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[:Category:OWASP Project Assessment|OWASP Project Assessment Criteria]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. Having into consideration the [[:Category:OWASP Project Assessment_#Alpha_Quality_Tool_Criteria|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Alpha Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| Alpha Quality requires:
+* Agree to OWASP's open source license - '''yes'''
+* Main page must be on the OWASP website '''yes'''
+* Have code documented in Google Code or Sourceforge '''yes'''
+* Mailing List created '''yes'''
+* Solves a core application security need '''yes'''
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Beta Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| Beta Quality requires:
+* Have an easy installer '''yes''' (assumes booting the Live CD 2008 = installer)
+* Include user documentation on OWASP Wiki Pages '''yes'''
+* Include documentation on how to build it from code '''yes''' (assumes build from code = create Live CD 2008)
+* Documentation stored with code '''yes''' (assumes ISO image = source code)
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+3. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Release Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| Release Quality requires:
+* Reasonably easy to use '''yes'''
+* Include online documentation to built into the tool '''yes'''
+* Include scripts that facilitate building from source '''yes''' (assumes the scripts documented in the Live CD 2008 creation documentation suffice)
+* Publicly accessible bug tracking system '''yes'''
+* Run through Fortify and/or Coverity's source code review '''N/A'''
+ |-  
+ | style="width:25%; background:#7B8ABD" align="center"|
+4. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| See my comments for # 3 above.  I'd also love assistance getting the word out bout the OWASP Live CD 2008.<br /><br />Also, I'd like some guidance on the following:
+* Would OWASP like the documentation Wiki migrated from its current location on [http://mtesauro.com/livecd http://mtesauro.com/livecd]?
+* If so, where should this exist?  
+* Is there anything I need to do to indicate my desire to continue with this project?  Either official requirements or notification(s), etc.
+|}

@@ -1,0 +1,162 @@
+{{Stub}}
+=My server has been hacked...what do I do now?=
+
+This page will offer suggestions and resources for identifying and eliminating threats to your web servers/applications after a suspected attack. 
+
+Anyone interested in contributing is welcome.
+
+
+==Identification==
+
+Basic principles:
+
+* Incident identification/notification may occur from a number of information sources (events):
+** Staff reporting unusual activity
+** Staff, clients or public reporting a problem
+** Technical teams/support discovering evidence of an incident on systems.
+** Alerts from IDS, security monitoring systems or anti-virus software, Firewalls or WAFS.
+
+* Roles:
+** A Security incident owner must be assigned.
+** A point of contact must be available to respond to incidents at all times.
+** A security incident owner must track the security incident to remediation and resolution.
+
+
+* Examples of an incident:
+** Virus/malware infection
+** Unauthorized system changes
+** Unauthorized application/web site changes
+** Unauthorized disclosure of client information or information leakage
+** Theft or loss of company information/assets
+
+* Examples of an event:
+** Reports from intrusion detection system/WAF/Firewall or log scraping system
+** Reports from vulnerability scanning/traffic monitoring/performance monitoring
+
+==Assessment==
+
+
+Incident severity :
+
+Risk Rating
+
+* '''Low''': 
+** Events that cannot be 100% identified as attacks and have no effect on operations; 
+** False activation of intrusion detection systems, WAF alerts etc
+** Non-repeated scans or probing from an external uncontrolled network
+
+* '''Medium'''
+** Incidents that have no negative impact on operations. Incidents identified but unsuccessful in an attempt to actively breach information security controls from external or internal standpoint
+** Repeated active probing or parameter manipulation from an external or internal source.
+** Malware/rogue code/virus that has been successfully contained or removed
+
+* '''High'''
+** Incidents that have major impact to operations or corporate branding
+** Evidence of insider threat with identified motivation by salaried employees or contractors
+
+== Containment  ==
+
+Containment should be broken into proactive and reactive methods. 
+
+<br> 
+
+=== Proactive Methods  ===
+
+These are methods to be used in anticipation of a Web Application server compromise. Web applications have, by comparison to other server types, a much larger attack surface. This is typically because of the fact that by nature they are meant to be internet accessible and require anonymous access in order to be functional. Part of being proactive is segmentation of functions. Your web server should be separate from your application server and separate from your database server. Each tier should be divided by firewalls that only allow the necessary protocols and ports between each tier. In addition, accounts used to communicate between tiers of your web application (WA) should be implemented using the least-privelege method [http://en.wikipedia.org/wiki/Principle_of_least_privilege <sup>1</sup>]. 
+
+Additional notes: 
+
+*All tiers of the WA should be behind firewalls with egress filtering enabled. 
+*Your web server should never speak directly to your database server. 
+*All communications should be filtered by a reverse proxy when possible. 
+*No communications should be allowed between the DMZ segments and the internal company network. 
+*If database information is required to be passed into your internal network, do so in scheduled DTS packages that are strickly filtered and scrutinized by internal systems 
+*Assume all data in the DMZ is compromised. Treat as such on each tier. The database server should not blindly trust input from other tiers.
+*Use paramerized stored procedures to interact with the database
+
+=== Reactive Methods  ===
+
+Assuming your proactive methods are in place, you simply need to identify the point of entry, restore the server and applications and close the vulnerability that led to the compromise. <br> 
+
+In a scenario where your WA is not properly segmented, you'll need to identify the system where the entry point exists and isolate that system. This is typically the point that some rudamentery forensics is required in order to determine the scope of the breach, time exposed, and other details. This is discussed in more detail in the forensics section. 
+
+Depending on your research, you may find that attempts were made to expand the level of the breach. In this case, you'll need to quickly determine an area of effect. This type of "hacking triage" can be performed by analyzing paths in the network that the attacker most likely took. This can be difficult depending on the network design. The best point to make this evaluation is at the egress point of the network. If out-bound web traffic is proxied, then proxy logs would be a great place to start. Egress firewall logs, IDS logs, and any other type of outbound traffic analysis will provide the most detail. This should provide you a list of compromised machines that you can address quickly. 
+
+This is also the point where you, your legal team, and your organizations leadership will need to make a few critical decisions: 
+
+*Does this breach require customer/FED notification (typically when it involves regulated data such as PII) 
+*Do you want to pursue legal prosecution of the attacker? If so, evidence collection should be the next priority above containing the breach. 
+*Put your hands on your recovery plan, and make sure anything required within is accessible
+
+== Evidence Collection  ==
+
+What evidence you collect will be largely determined by your goal in collecting evidence in the first place. There are two primary reasons for collective evidence: 
+
+
+
+=== Evidence for Incident Analysis ===
+
+Choose this method only if you do not plan on pursuing prosecution in a court of law.
+
+When gathering information to reconstruct the incident, you'll have the flexibly to rapidly acquire information by any means necessary. This could mean simply copying all relevant application and service logs off to a thumb drive, or taking a quick image using commercial imaging software tools. Knowledge of the affected systems, and their logging capabilities are paramount in this case, as you'll need to know what to grab quickly. Once this step is complete, you should focus your attention on restoring the affected systems back into service.
+
+
+
+=== Evidence for Prosecution  ===
+
+Choose this method there is even a slight chance of going to court over this breach.
+
+Gathering electronic evidence properly requires a great deal of knowledge and skill. If you do not have this skill in your organization it is suggested you hire a consulting firm that specializes in electronic forensics. Covering how to do this is outside the scope of this document.
+
+==Forensic Analysis==
+==Investigation==
+* Check your shell´s command history (e.g. ''/root/.bash_history'')
+* Check last logged in users (e.g. ''/var/log/lastlog''; last; lastlog)
+* Check log files:
+** /var/log/auth.log
+** /var/log/daemon.log
+** /var/log/messages.log
+* Find files that have been modified
+<pre>
+ #find files modified between x and y minutes ago
+ find / -mmin +x -mmin -y -ls > ~/modified.txt
+</pre>
+* Changed binaries? Check for filesize and date. Some files to check:
+<pre>
+which
+passwd
+sshd
+ssh
+apt-get
+dpkg
+rpm
+login
+su
+</pre>
+* New entries in any crontab?
+* Check passwd for users with root privileges
+ grep :0: /etc/passwd
+* Do files have any uncommon attributes set?
+ lsattr -Ra / | grep -v -- "-------------------" | grep -- "--" > ~/lsattr.txt
+* Use tools for automatic checks
+** debsums
+** rkhunter
+** chkrootkit
+
+==Incident Follow-up==
+==Lessons Learned==
+==Event Correlation and Aggregation (Streamlining)==
+
+==External Resources==
+* [http://csrc.nist.gov/publications/nistpubs/800-61-rev1/SP800-61rev1.pdf NIST Computer Security Incident Handling Guide]
+* [http://www.zeltser.com/network-os-security/security-incident-survey-cheat-sheet.pdf Cheat Sheet for Server Admin.]
+* [http://www.ucl.ac.uk/cert/win_intrusion.pdf Checking Microsoft Windows® Systems for Signs of Compromise]
+* [http://www.zeltser.com/network-os-security/security-incident-questionnaire-cheat-sheet.pdf SECURITY INCIDENT QUESTIONNAIRE FOR RESPONDERS]
+* [http://sans.org/resources/winsacheatsheet.pdf SAN's SysAdmin Cheat Sheet]
+* http://usa.visa.com/download/merchants/cisp_what_to_do_if_compromised.pdf
+* http://usa.visa.com/download/merchants/cisp_responding_to_a_data_breach.pdf
+* [http://www.antiphishing.org/reports/APWG_CMU_Landing_Pages_Project.pdf Anti Phishing Working Group / Carnegie Mellon University - Phishing Education Landing Page Project]
+
+==Questions to Ask==
+* Was card data compromised?  
+* Do you need professional legal advice?

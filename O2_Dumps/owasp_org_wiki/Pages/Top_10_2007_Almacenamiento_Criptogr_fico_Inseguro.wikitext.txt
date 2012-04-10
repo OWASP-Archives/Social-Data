@@ -1,0 +1,63 @@
+{{Top_10_2007:TopTemplate|usenext=NextLink|next=-Comunicaciones inseguras|useprev=PrevLink|prev=-Autenticación y Gestión de Sesiones Disfuncional|usemain=MainLink|main=}}
+
+Proteger datos delicados con criptografía se ha convertido una parte clave de la mayoría de las aplicaciones Web. Simplemente no cifrar datos delicados está muy extendido. Aplicaciones que sí cifran, frecuentemente contienen criptografía mal diseñada, ya sea usando sistemas de cifrado no apropiados o cometiendo errores serios al usar algoritmos de cifrado sólidos. Estos defectos pueden conducir a la revelación de datos delicados y violaciones de cumplimiento de estándares. 
+
+==Entornos Afectados==
+
+Todos los entornos de aplicaciones Web son vulnerables al almacenamiento criptográfico inseguro. 
+
+==Vulnerabilidad==
+
+La prevención de fallas criptográficas conlleva una cuidadosa planeación. Los problemas más comunes son: 
+
+* No cifrar datos delicados.
+* Usar algoritmos creados a la medida.
+* Uso inseguro de algoritmos sólidos. 
+* Continuar utilizando algoritmos débiles (MD5, SHA-1, RC3, RC4, etc...)
+* Incrustar llaves en el código fuente y almacenar las llaves en forma insegura.
+
+==Verificando la seguridad==
+
+El objetivo es verificar que la aplicación cifra adecuadamente información sensible en almacenamiento. 
+
+Enfoques automáticos: Herramientas de exploración de vulnerabilidades no pueden comprobar almacenamiento criptográfico en absoluto. Herramientas de exploración de código pueden detectar el uso de la API criptográfica conocida, pero no pueden detectar si esta siendo utilizado debidamente o si el cifrado se realiza en un componente externo. 
+
+Enfoques manuales: Al igual que la exploración, las pruebas no pueden verificar el almacenamiento criptográfico. La revisión de código es la mejor manera de comprobar que una aplicación codifica datos delicados y tiene implementado adecuadamente el mecanismo y la gestión de llaves. En algunos casos esto puede involucrar el examinar la configuración de sistemas externos.
+
+==Protección==
+
+El aspecto más importante es asegurar que todo lo que debería ser cifrado sea en realidad cifrado. Entonces debe asegurarse que la criptografía se aplica correctamente. Como hay tantas maneras de usar la criptografía incorrectamente, las siguientes recomendaciones deberían ser tomadas como parte de su régimen de pruebas para ayudar a garantizar la manipulación segura de materiales criptográficos.
+
+* '''No cree algoritmos criptográficos'''. Solo use algoritmos públicos aprobados como AES, criptografía de llave pública RSA, y SHA-256 o mejor para funciones de cifrado de una vía..
+* '''No use algoritmos débiles''' como MD5 / SHA1. Favorezca alternativas más seguras como SHA-256 o superior. 
+* '''Genere las llaves fuera de línea y almacene llaves privadas con extremo cuidado'''. Nunca transmita llaves privadas sobre canales inseguros.
+* '''Asegúrese de que las credenciales de infraestructura como credenciales de bases de datos o detalles de acceso a colas de MQ son aseguradas adecuadamente''' (por medio de estrictos controles y permisos del sistema de archivos), o cifrados con seguridad y no fácilmente descifrados por usuarios locales o remotos. 
+* '''Asegúrese de que los datos cifrados almacenados en disco no sean fáciles de descifrar'''. Por ejemplo, la codificación de la base de datos no tiene valor si la cola de conexiones provee acceso sin cifrar.
+* En virtud del requisito 3 del Estándar de Seguridad de Datos de la Industria de las Tarjetas de Pago (PCI DSS por sus siglas en inglés), debe proteger los datos de los titulares de tarjetas. La conformidad con el PCI DSS es obligatoria para el 2008 para los comerciantes y cualquier otra persona que trate con tarjetas de crédito. '''Una buena práctica es nunca almacenar datos innecesarios''', como la información de la banda magnética o el número de cuenta primario (PAN por sus siglas en inglés, también conocido como el número de tarjeta de crédito). Si almacena el PAN, el cumplimiento de los requisitos del DSS es importante. Por ejemplo, NUNCA se permite almacenar el número CVV (el número de tres dígitos en la parte posterior de la tarjeta) bajo ninguna circunstancia. Para mayor información, vea por favor las directrices del PCI DSS e implemente controles según sea necesario.
+
+==Ejemplos==
+
+* [http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6145 http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6145] 
+* [http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-1664 http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-1664] 
+* [http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-1101 http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-1101] (True of most Java EE servlet containers, too)
+
+== Artículos Relacionados ==
+* [[Guide to Cryptography|Guía de Criptografía]]
+* [[Insecure Storage|Almacenamiento Inseguro]]
+* [[How to protect sensitive data in URL's|Comom proteger datos sensibles en la URL]]
+
+
+==Referencias==
+
+* CWE: CWE-311 (Failure to encrypt data), CWE-326 (Weak Encryption), CWE-321 (Use of hard-coded cryptographic key), CWE-325 (Missing Required Cryptographic Step), others.
+* WASC Threat Classification: No explicit mapping 
+* OWASP, [http://www.owasp.org/index.php/Cryptography http://www.owasp.org/index.php/Cryptography] 
+* OWASP Guide, [http://www.owasp.org/index.php/Guide_to_Cryptography http://www.owasp.org/index.php/Guide_to_Cryptography]
+* OWASP, [http://www.owasp.org/index.php/Insecure_Storage http://www.owasp.org/index.php/Insecure_Storage] 
+* OWASP, [http://www.owasp.org/index.php/How_to_protect_sensitive_data_in_URL's http://www.owasp.org/index.php/How_to_protect_sensitive_data_in_URL's] 
+
+* PCI Data Security Standard v1.1, [https://www.pcisecuritystandards.org/pdfs/pci_dss_v1-1.pdf https://www.pcisecuritystandards.org/pdfs/pci_dss_v1-1.pdf] 
+* Bruce Schneier, [http://www.schneier.com/ http://www.schneier.com/] 
+* CryptoAPI Next Generation, [http://msdn2.microsoft.com/en-us/library/aa376210.aspx http://msdn2.microsoft.com/en-us/library/aa376210.aspx] 
+
+{{Top_10_2007:BottomTemplate|usenext=NextLink|next=-Comunicaciones inseguras|useprev=PrevLink|prev=-Autenticación y Gestión de Sesiones Disfuncional|usemain=MainLink|main=}}

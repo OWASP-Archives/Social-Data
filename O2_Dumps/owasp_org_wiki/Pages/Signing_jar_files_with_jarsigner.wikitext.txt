@@ -1,0 +1,179 @@
+This article is a pragmatic tutorial to the <code>jarsigner</code> and <code>keytool</code> Java tools.
+Most of the information in this note can be found in the `help' section of the jarsigner and keytool utilities:
+
+<code>jarsigner --help</code>
+
+<code>keytool --help</code>
+
+==Status==
+Released 14/1/2008
+==Author==
+Pierre Parrend
+
+== Criteria for Signature Validity ==
+
+The criteria of validity of a digital signature are the following:
+* No modification of the archive resources after the signature,
+* certificate not outdated (or not yet valid).
+
+Moreover, the signer of the archive must be known, <i>i.e.</i> its public key certificate must be identified as trusted before the validation. Otherwise, any malicious third party can forge a similar certificate, potentially with the same signer name, and present a coherent signed archive.
+
+Additional criteria of archive signature validity are defined in the context of the OSGi framework, that are specific to the deployment of components from third party repositories:
+* No resource removed from the archive after the signature,
+* No resource added from the archive after the signature,
+* The digital signature must immediately follow the Manifest file of the archive, to prevent caching malicious files.
+
+This means that according to the security level you need, the Sun criteria of signature validity may not be sufficient.
+
+== Use of the JarSigner Tool ==
+
+The Sun `Jarsigner' is a utility delivered along with Sun JDK. It has the ability to sign Java Archives (Jars), and to verify the validity their signature.
+
+So as to test the jarsigner tool, you need to have a public/private key pair. The example are given with Bob's key pair.
+* The data used to conduce tests in this tutorial are found in the [[Media:jarsigner-test.zip]] file. Store it on you computer, and unzip the archive.
+
+Following files are used:
+* the Keystore file, refArchive/testkeystore, contains the private and public key for Bob, and the public key for Alice
+* Bob's Public Key Certificate is stored in the file refArchive/bob.cert (it is also available directly from the keystore)
+* Alice's Public Key Certificate is stored in the file refArchive/alice.cert (it is also available directly from the keystore)
+* the archives fridgebundle-1.1.jar, fridgebundle-1.1.signed.jar, fridgebundle-1.1.unknownsigner.jar, bindex-manifestMainAttrsModified-1.0.jar, are various Jar Files, that are used for the test.
+
+
+=== Sign a given jar archive ===
+
+Sign the archive <code>refArchive/fridgebundle-1.1.jar</code> with bob's private key:
+
+ <code>jarsigner -keystore refArchive/testkeystore -signedjar  
+     refArchive/fridgebundle-1.1.signed.jar refArchive/fridgebundle-1.1.jar bob
+  Enter Passphrase for keystore: password
+  Enter key password for bob: bobspwd</code>
+
+=== Check that a signed jar is valid ===
+
+Verify the signed archive <code>refArchive/fridgebundle-1.1.signed.jar</code> using the keystore <code>refArchive/testkeystore</code>:
+
+ jarsigner -verify -keystore refArchive/testkeystore refArchive/fridgebundle-1.1.signed.jar
+
+=== Verify a signed jar with unknown signer ===
+
+Verify the signed archive <code>refArchive/fridgebundle-1.1.unknownsigner.jar</code> using the keystore <code>refArchive/testkeystore</code>:
+
+ jarsigner -verify -keystore refArchive/testkeystore   
+ refArchive/fridgebundle-1.1.unknownsigner.jar
+
+=== Some test with an invalid archive signature ===
+
+Verify the signed archive <code>refArchive/bindex-manifestMainAttrsModified-1.0.jar</code> using the keystore <code>refArchive/testkeystore</code>:
+
+ jarsigner -verify refArchive/bindex-manifestMainAttrsModified-1.0.jar
+ jarsigner: java.lang.SecurityException: Invalid signature file digest 
+     for Manifest main attributes
+
+
+'''Remark:''' No warning is issued by the Sun Jarsigner if the signer of the archive is unknow to you. No matter who has signed the archive, this latter will be considered as valid !
+
+== Use of the Keytool Utility ==
+
+The Sun keytool utility supports the management of DSA and RSA asymetric key pairs, as well as the management of public key certificates of third party actors.
+
+Option:
+
+* use an existing keystore file
+''Example:'' the keystore file is named <code>refArchive/testkeystore</code>, and is accessible with the password <code>password</code>
+
+If you specify a keystore that does not exist in the keytool options, it is automatically created and initialized with the given parameters (e.g. the password).
+
+The default keystore in *nix systems is <i>/home/user/</i>.keystore. It is overridden by the <code>-keystore</code> option.
+
+You can perform following tests so as to learn how to use the keytool:
+
+=== Create a new DSA Key Pair for Bob ===
+
+Generate a new DSA Key Pair for the user Bob, using the keystore <code>refArchive/testkeystore</code>:
+
+ keytool -genkey -keystore refArchive/testkeystore -alias bob
+
+* The default algorithm for Key Pairs is DSA. The -sigalg option can be set to generate other types of keys, such as DSA ones.
+* The Distinguished Name for Bob is:
+
+<code>CN=Bob, OU=testing, O=signer & Co., L=wonderland, ST=United Kingdom, C=UK</code><br/>
+the password for accessing to the private key of Bob is:<br/>
+<code>bobspdw</code>
+
+=== Visualize the content of the keystore ===
+
+Visualize the content of the keystore file <code>refArchive/testkeystore</code>:
+
+ keytool -list -keystore refArchive/testkeystore  
+ Enter keystore password: password
+
+* which will show something like this if the keystore has just been created:<br/>
+<code>Keystore type: jks<br/>
+Keystore provider: SUN<br/>
+Your keystore contains 1 entry<br/>
+bob, Jan 28, 2007, keyEntry,<br/>
+Certificate fingerprint (MD5): 5C:B4:82:80:46:5D:C1:0B:48:DE:B6:50:F0:22:24:9D 
+</code>
+
+=== Extract of the public key certificate of Bob for dissemination ===
+
+Store the Public Key Certificate for Bob in the file <code>refArchive/bob2.cert</code>, from the keystore file <code>refArchive/testkeystore</code>:
+
+ keytool -export -keystore refArchive/testkeystore -alias bob > refArchive/bob2.cert
+
+* If Bob want that the world can check whether he is the one which signs Jar files, he has to make his public key available to them.
+
+=== Visualize a certificate ===
+
+Visualize the content of the Public Key Certificate for Bob, contained in the file <code>refArchive/bob.cert </code>:
+
+ keytool -printcert -file refArchive/bob.cert 
+
+* which will sow you something like:<br/>
+<code>Owner: CN=Bob, OU=testing, O=signer & Co., L=wonderland, ST=United Kingdom, C=UK<br/>
+Issuer: CN=Bob, OU=testing, O=signer & Co., L=wonderland, ST=United Kingdom, C=UK<br/>
+Serial number: 45bd17a6<br/>
+Valid from: Sun Jan 28 22:37:42 CET 2007 until: Sat Apr 28 23:37:42 CEST 2007<br/>
+Certificate fingerprints:<br/>
+MD5: 5C:B4:82:80:46:5D:C1:0B:48:DE:B6:50:F0:22:24:9D<br/>
+SHA1: 2D:32:03:BF:39:74:B0:00:71:5A:14:F7:E7:85:18:8D:C7:42:DC:3B</code>
+
+=== Import a certificate ===
+
+Import the Public Key Certificate of Alice <code>refArchive/alice.cert</code> in the keystore file <code>refArchive/testkeystore</code>:
+
+ keytool -import -keystore refArchive/testkeystore -file refArchive/alice.cert -alias alice  
+ password: password Trust this certificate? [no]: yes
+
+*Bob may want to communicate with Alice. He needs to import her Public Key Certificate into his own keystore, and mark it as `trusted'.
+
+=== Visualize again the content of the keystore ===
+
+ keytool -list -keystore refArchive/testkeystore
+ Enter keystore password: password 
+
+*Which shows you something like:<br/>
+<code>Keystore type: jks<br/>
+Keystore provider: SUN<br/>
+Your keystore contains 2 entries<br/>
+alice, Jan 28, 2007, trustedCertEntry,<br/>
+Certificate fingerprint (MD5): 01:29:74:E3:51:9E:31:87:0E:AB:C4:5C:0B:6B:34:03<br/>
+bob, Jan 28, 2007, keyEntry,<br/>
+Certificate fingerprint (MD5): 5C:B4:82:80:46:5D:C1:0B:48:DE:B6:50:F0:22:24:9D<code><br/>
+* Two different types of entries are available:<br/>
+- a trustedCertEntry, which contains the Public Key Certificate of alice<br/>
+- a keyentry, which contains the public/private key pair of Bob.
+
+= References =
+
+You can find further informations here:
+
+* [http://java.sun.com/j2se/1.5.0/docs/tooldocs/solaris/jarsigner.html Sun Jarsigner page]
+* [http://java.sun.com/j2se/1.5.0/docs/tooldocs/solaris/keytool.html Sun Keytool page]
+* [http://www.hmug.org/man/1/jarsigner.php Jarsigner man page]
+* [http://www.rzo.free.fr/bundle_signature.php Principles of OSGi bundles signature]
+
+[[Category:OWASP Java Project]]
+[[Category:Countermeasure]]
+[[Category:Deployment]]
+[[Category: Control]]

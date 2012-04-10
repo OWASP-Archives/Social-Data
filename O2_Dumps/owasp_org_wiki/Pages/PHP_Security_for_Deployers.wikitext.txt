@@ -1,0 +1,22 @@
+[[Category:OWASP PHP Project]]
+== PHP Security for Deployers ==
+=== If you're a Developer === 
+[http://www.owasp.org/index.php/PHP_Top_5 READ THIS] and then work with your SysAdmins to step through any and all the layers of security designed to protect your apps.  
+
+Example:
+##Traffic must first pass through a SPI firewall (ensure that ONLY necessary ports/protocols are permitted; ensure that EGRESS BLOCKING is in place so that if your system IS compromised it will be very difficult for the attacker to send data back or attack someone else via the Network Layer.  (Need reference; "traditional" SPI-based firewall security).
+##Traffic may then pass through an in-line IPS (Intrusion Prevention System) to filter out network-based attacks against the OS, web platform, or PHP framework itself
+##Traffic may then pass through a WAF (Web Application Firewall) such as [http://www.modsecurity.org/ ModSecurity] or a commercial WAF to defeat basic script-based attacks
+##Traffic may then pass through an additional layer of security such as [http://php-ids.org/ PHP-IDS] to identify other attacks or concerns.
+##By the time traffic has passed through all the layers above, you've achieved a significant measure of mitigation HOWEVER you still need to follow all the best practices to "harden" PHP, perhaps by using [http://www.hardened-php.net/suhosin.127.html suhosin].
+##Ditto for all other layers.  Your SysAdmin should ensure that the OS and web server (iis, apache) are also hardened.  See the NSA's [http://www.nsa.gov/ia/guidance/security_configuration_guides/ security configuration guides] to get started.
+##The rest is up to you, the developer.  [http://icanhascheezburger.com/2007/11/27/meh-security-system-let-me-showz-u-him/ Write secure code].  How difficult could [http://icanhascheezburger.com/2008/10/06/funny-pictures-doin-it-rathr-well-akshully/ THAT] be?  All it takes is a little [http://icanhascheezburger.com/2007/07/18/i-is-workin-wat-u-want/ work]...
+
+=== If you're a Tester ===
+# Note that [http://php-ids.org/ PHP-IDS] and [http://www.modsecurity.org/ ModSecurity]can also be useful tools for testing/discovering vulnerabilities in your code.  See [https://www.owasp.org/images/f/fd/OWASP_Dynamic_Vulnerability_Identification_RyanBarnett200804.pdf Ryan Barnett's excellent presentation] to the [http://www.owasp.org/index.php/Boulder Boulder OWASP chapter] regarding using ModSecurity to identify app vulns on an ongoing basis.
+# Grab the OWASP LiveCD [http://www.owasp.org/index.php/Category:OWASP_Live_CD_Project here(owasp.org)] or [http://www.appseclive.org/ here(appseclive.org)] and review the great information in the [http://www.owasp.org/index.php/Category:OWASP_Testing_Project OWASP Testing Project]
+
+=== If you're a SysAdmin ===
+# BE PATIENT.  NOBODY was born with a visceral understanding of how to write secure code, any more than YOU were born with the knowledge of how to harden YOUR components.
+# Help out with all the items above.
+# Have the developers buy you your favorite libation when you've completed all of the above items the first time.  There's a pretty strong posibility that they are making better wages than you.

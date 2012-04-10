@@ -1,0 +1,28 @@
+==The Problem==
+
+==Identity Flow Through Application Layers==
+All web application security experts will tell you how important logging is [1][2][3][4]. How else can you detect attacks, successful or otherwise? Logs should allow you to replay a user's request lifecycle. In an enterprise web application, this is a lot of work and I'm not happy to tell you not many people are doing it right. 
+
+There's generally two things development teams have to figure out when architecting a logging strategy; what to log and when to log.
+
+===When to Log===
+There's sdfsdf
+sdfsdfsdf
+sdfsdfsdf
+
+===What to Log===
+There's a general consensus on what kind of information an application log message should contain:
+
+*date and time
+*server IP
+*source IP
+*URL requested
+*module/action/class responsible
+*user ID
+*description of the event
+*severity level
+
+Whether you're investigating your web application's log files as part of a regular monitoring program or incident response, you should be able to follow a user's request lifecycle, all the way from the receival of the request (before the invocation of any HTTP filters).
+
+===References===
+http://msdn2.microsoft.com/en-US/library/aa302420.aspx#c04618429_004

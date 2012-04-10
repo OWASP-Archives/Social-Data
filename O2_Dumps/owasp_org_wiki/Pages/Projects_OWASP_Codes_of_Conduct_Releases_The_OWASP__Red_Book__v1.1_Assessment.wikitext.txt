@@ -1,0 +1,149 @@
+<small>[[:OWASP Codes of Conduct|Click here to return to project's main page]]</small><br>
+
+== Release Review of the [[:OWASP Codes of Conduct|OWASP Codes of Conduct]] - [[Projects/The OWASP "Red Book"/Releases/The OWASP "Red Book" v1.1|The OWASP "Red Book" v1.1 Release]] ==
+
+==== Project Leader for this Release ====
+
+'''''[[user:clerkendweller|Colin Watson]]'s Pre-Assessment Checklist:'''''
+
+==Project Leader review==
+
+{{ Template:Pre-Assessment Questions - Documents
+
+| 1. Is this release associated with a project containing at least the [[Assessing_Project_Health#Project_Wiki_Page_Minimal_Content|Project Wiki Page Minimum Content]]  information?
+= Yes
+
+| 2. Is your document licensed under a free and open license? (see Project Licensing section of the [http://www.owasp.org/index.php/Guidelines_for_OWASP_Projects Guidelines for OWASP Projects]) Please point out the link(s).
+= Yes - see front cover of document, and text on project page at https://www.owasp.org/index.php/OWASP_Codes_of_Conduct#The_Codes_of_Conduct and on tab page https://www.owasp.org/index.php/OWASP_Codes_of_Conduct#Certifying_Bodies
+
+| 3. Is the document available as a PDF (Portable Document Format) and an editable (.Doc) format on the project site? Please point out the link(s).
+= Yes, both at https://www.owasp.org/index.php/Projects/The_OWASP_%22Red_Book%22/Releases/The_OWASP_%22Red_Book%22_v1.1/Downloadable_Files
+
+| 4. Are all articles that constitute the project release properly tagged within project category and available from main project Wiki page? Please point out the link(s).
+= Main page has Category:OWASP_Project,Codes of Conduct, Category:OWASP_Document, Category:OWASP_Download, Category:OWASP_Alpha_Quality_Document
+
+| 5. Is there a roadmap for this project release which will take it from Alpha to Stable release? Please point out the link(s).
+= Yes, at https://www.owasp.org/index.php/Projects/The_OWASP_%22Red_Book%22/Roadmap
+
+| 6. Are the Alpha pre-assessment items complete?
+= Yes
+
+| 7. Are all document contents (articles) present and listed on the OWASP project wiki page? Please point out the link(s).
+= Yes at https://www.owasp.org/index.php/OWASP_Codes_of_Conduct
+
+| 8. Is there user documentation on the OWASP project wiki page? Please point out the link(s).
+= Yes at https://www.owasp.org/index.php/OWASP_Codes_of_Conduct
+
+| 9. Is there an “About This Document” section in the document listing:
+= Yes, on the first and last page of the document
+
+| 10. Is there documentation on how to build the tool from source including obtaining the source from the code repository?
+= Not applicable
+
+| 11. Are the Alpha and Beta pre-assessment items complete?
+= Yes
+
+| 12. Have any limitations been documented? Please point out the link(s).
+= Yes, within the text of the document, and on the page at https://www.owasp.org/index.php/OWASP_Codes_of_Conduct
+
+| 13. Does the document consider [http://www.owasp.org/index.php/OWASP_Writing_Style OWASP Writing Style] and [http://www.owasp.org/index.php/OWASP_Template_Document OWASP Template for Docs]? Please point out the link(s)
+= Yes I believe so, please see the downloads
+
+| 14. Is there a one sheet overview document about the project release? Please point out the link(s).
+= Yes, at https://www.owasp.org/index.php/File:OWASP_Codes-of-Conduct_Pamphlet.pdf
+
+| 15. Is the document in a format which can be converted to an OWASP book?  (books are currently via Lulu.com) Please point out the link(s).
+= I think so, it is in Word format.
+
+}}
+
+==== First Reviewer ====
+
+'''''[[user:name|TBD]]'s Review:'''''
+
+== First Reviewer ==
+
+<small>Ideally, reviewers should be an existing OWASP project leader or chapter leader.</small>
+
+{{ :Template:Assessment Questions - Documents
+
+| 1. Does the document consider the [http://www.owasp.org/index.php/OWASP_Writing_Style OWASP Writing Style]?
+= answer 1
+
+| 2. Do contents from wiki articles match download-able documents? (PDF and .doc versions)
+= answer 2
+
+| 3. Does the document have an “About This Document” section which allows the end user to get an overview of the state of the document?
+= answer 3
+
+| 4. How completely does the release address the goal of the project? Is the overall document complete in structure and organization? Are any missing or incomplete sections critical enough to keep the document at an Alpha quality level?
+= answer 4
+
+| 5. Have all the Beta Reviewer Action Items been completed? These will need to be completed if they have not already occurred during a previous assessment.
+= answer 5
+
+| 6. Have any limitations been documented? Please point out the link(s).
+= answer 6
+
+| 7. Does the document substantially address the application security issues it was created to solve?
+= answer 7
+
+| 8. Does the document respect OWASP Writing Style and OWASP Template for Docs?
+= answer 8
+
+| 9. Have you noted any limitations of the document that are not already documented by the project release lead?
+= answer 9
+
+| 10. Would you consider using this document in your day to day work assuming your professional work includes a reason to use this document? Would you recommend this document to others in the profession? Why or why not?
+= answer 10
+
+| 11. What, if anything, is missing which would make this a more useful document? Is what is missing critical enough to keep the release at a beta quality?
+= answer 11
+}}
+
+==== Second Reviewer ====
+
+'''''[[user:name|TBD]]'s Review:'''''
+
+== Second Reviewer ==
+
+<small>It is recommended that an OWASP board member or Global Projects Committee member be the second reviewer on Quality releases. The board has the initial option to review the project, followed by the Global Projects Committee.</small>
+
+{{ :Template:Assessment Questions - Documents
+
+| 1. Does the document consider the [http://www.owasp.org/index.php/OWASP_Writing_Style OWASP Writing Style]?
+= answer 1
+
+| 2. Do contents from wiki articles match download-able documents? (PDF and .doc versions)
+= answer 2
+
+| 3. Does the document have an “About This Document” section which allows the end user to get an overview of the state of the document?
+= answer 3
+
+| 4. How completely does the release address the goal of the project? Is the overall document complete in structure and organization? Are any missing or incomplete sections critical enough to keep the document at an Alpha quality level?
+= answer 4
+
+| 5. Have all the Beta Reviewer Action Items been completed? These will need to be completed if they have not already occurred during a previous assessment.
+= answer 5
+
+| 6. Have any limitations been documented? Please point out the link(s).
+= answer 6
+
+| 7. Does the document substantially address the application security issues it was created to solve?
+= answer 7
+
+| 8. Does the document respect OWASP Writing Style and OWASP Template for Docs?
+= answer 8
+
+| 9. Have you noted any limitations of the document that are not already documented by the project release lead?
+= answer 9
+
+| 10. Would you consider using this document in your day to day work assuming your professional work includes a reason to use this document? Would you recommend this document to others in the profession? Why or why not?
+= answer 10
+
+| 11. What, if anything, is missing which would make this a more useful document? Is what is missing critical enough to keep the release at a beta quality?
+= answer 11
+}}
+
+__NOTOC__
+<headertabs/>

@@ -1,0 +1,40 @@
+ASP.NET Provides built-in request validation on form submission or postback handling.  Request validation is on by default, and is handled differently by versions of the framework. 
+
+==ASP.NET 1.1 Request Validation Summary==
+
+*Filter  "&#"
+*Filter  ‘<’ then alphas or ! or / (tags)
+*Filter  "script:"
+*Filter  on handlers (onXXX=)
+*Filter “expression(“
+*Ignore elements named "__VIEWSTATE"
+
+
+==ASP.NET 2.0 Request Validation Summary==
+
+*Filter  "&#"
+*Filter  ‘<’ then alphas or ! or / or ? (tags)
+*Ignore elements with names prefixed with double underscore (__)
+
+
+==ValidateRequest Setting==
+===To toggle request validation (it is set to true by default):===
+
+On a single page:
+
+  <%@ Page validateRequest="true|false" %>
+
+For the entire application:
+
+  <configuration>
+     <system.web>
+          <pages validateRequest="true|false" />
+     </system.web>
+  </configuration>
+
+===References===
+[http://phed.org/2008/04/23/aspnet-20-dumbs-down-request-validation/ ASP.NET 2.0 dumb’s down request validation (by Michael Eddington)]
+
+[http://keepitlocked.net/archive/2007/10/30/asp-net-validaterequest-and-the-html-attribute-based-cross-site-scripting.aspx ASP.NET ValidateRequest and the HTML Attribute Based Cross Site Scripting]
+
+[[Category:OWASP .NET Project]]

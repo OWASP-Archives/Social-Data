@@ -1,0 +1,40 @@
+'''An 'Asp.Net' accident waiting to happen'''
+
+I would like to call the attention of the Asp.Net Community and Microsoft to an accident waiting to happen. In a time where Security is finally being taken seriously by Microsoft, their focus is still in adding features to products and not making the existent products secure.
+
+The accident will be the wide spread exploitation of websites hosted in shared hosting environments (such as ISPs). The problems described next will also affect any major Asp.Net application, but their problems will be dealt privately and lessons will not be learnt by the community.
+
+Asp.Net is the latest and most powerful web application development tool produced by Microsoft. Although it is a major technological advance from its predecessors (Asp, ISAPI, Web Classes, Custom COM Objects developed in Visual Studio 6, etc.) it is also very dangerous.
+
+The .Net framework (as implemented by Asp.Net) is very feature rich and powerful. It provides the developer (i.e. development team) with a huge array of tools, objects and methods that make their web application development a quick, easy and effective process.
+
+Microsoft, knowing that security is becoming more and more a central issue for end clients, included in the .Net framework several technologies that allow the creation and deployment of secure applications. The most important are:
+
+* Code Access Security (CAS)
+* Ability to deploy APTCA (AllowPartiallyTrustedCallersAttribute) assemblies in the GAC (Global Assembly Cache)
+* Built in Encryption technology (DPAPI)
+* Several methods to implement Secured Database Accesses
+* Several authentication methods and Build-in Impersonation features
+* Extended used of Role Based Security (used in conjunction with Windows server security features)
+* Applications pools (allow the execution of each website under the privileges of a unique (low privileged) user account)
+* Better management of process and threads
+
+These tools should allow the developer to create secure applications that could be deployed in secure servers.
+
+The problem is that today, the development and deployment of secure web applications in secure web servers is almost impossible because:
+
+* Although CAS (Code Access Security) could be used to limit what a web application could 'do' on the host server, in the real world it doesn't work. Any web application that is executed in 'Partially trusted’ environments (i.e. not in 'Full Trust') will not have access to fundamental Asp.Net features such as: Database connectivity using OleDB or ODBC, use of COM objects and many other important features.
+       
+* If a developer wants to use the powerful Asp.Net development environment in a quick, easy and effective way, the solution is to run its Asp.Net code in 'Full Trust' environments. The problem is that most security tools and technologies previously mentioned only work effectively in 'Partially trusted' environments
+       
+* Most ISPs that provide Shared Hosting environments allow their hosted websites to execute with 'Full Trust' rights. This means that even if a developer manages to get their web application to work in 'Partially trusted' environments, he would not be able to find a secure host for it. The only way around this is to purchase a dedicated server, which is also very dangerous, because it would then be the developer's responsibility to securely configure and manage it.
+       
+* Most developers will store sensitive information (such as usernames and passwords) in an unencrypted format in configuration files stored in their website's folders (for example in Web.config). This happens because the current version of Asp.Net doesn't provide a quick, effective and scalable solution to store encrypted data in the registry (or other secure location)
+       
+* In a shared hosting environment everybody has access to everybody's temporary files (i.e. the 'Asp.Net Temporary files' folder) and in Asp.Net all code is initially compiled into IL (Intermediate Language) which is easily decompiled into VB or C#. This means that every user with access to a valid account in a shared hosting environment can read the source code (.aspx, vb, cs or dll) of every website hosted in that server.
+       
+* In 'Full Trust' environments, the developer has access to the entire windows 32 API and (using reflection) all .Net functions (private or public). This means that it is easy to write code that: Executes commands on the server (i.e. creates processes), lists usernames, lists running process, list installed services, open TCP connections, etc...
+
+Fundamentally, the problem is that the current version of the .Net Framework (version 1.14) doesn't allow the creation of secure hosting environments.
+
+[[Category:OWASP .NET Project]]

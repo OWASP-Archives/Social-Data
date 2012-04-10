@@ -1,0 +1,30 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>OWASP Training Modules</noinclude>
+| Module_designation = [[:Category:OWASP_WebGoat_Project|OWASP WebGoat Project]]
+| Module_Overview_Goal =
+
+Web Goat is a deliberately insecure J2EE web application to teach web application security lessons. In each lesson, users must demonstrate their understanding of a security issue by exploiting a real vulnerability in the WebGoat application. The application is a realistic teaching environment, providing users with hints and code to further explain the lesson. The primary goal of the WebGoat project is simple: create a de-facto interactive teaching environment for web application security. 
+
+| Content = 
+WebGoat is written in Java and therefore installs on any platform with a Java virtual machine. Once deployed, the user can go through the lessons and track their progress with the scorecard. There are currently over 30 lessons, including those dealing with the following issues:
+
+* [[Cross-site Scripting (XSS)]]
+* Access Control
+* Thread Safety
+* [[Unvalidated_Input|Hidden Form Field Manipulation]]
+* Parameter Manipulation
+* [[Session_Management#Weak_Session_Cryptographic_Algorithms|Weak Session Cookies]]
+* Blind [[SQL injection|SQL Injection]] 
+* Numeric SQL Injection
+* String SQL Injection
+* [[Web Services]]
+* [[Improper_Error_Handling|Fail Open Authentication]]
+* Dangers of HTML Comments
+* ... and many more!
+
+&nbsp;
+| Material = [http://www.owasp.org/images/5/55/OWASP_WebGoat.ppt Web Goat Presentation]
+}}
+
+
+
+[[Category:OWASP_Training|Training]]

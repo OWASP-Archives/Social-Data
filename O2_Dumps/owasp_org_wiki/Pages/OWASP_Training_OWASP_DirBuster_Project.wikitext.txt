@@ -1,0 +1,26 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>OWASP Training Modules</noinclude>
+| Module_designation = [[:Category:OWASP_DirBuster_Project|OWASP DirBuster Project]]
+| Module_Overview_Goal =
+DirBuster is a multi threaded java application designed to brute force directories and files names on web/application servers. Often is the case now of what looks like a web server in a state of default installation is actually not, and has pages and applications hidden within. DirBuster attempts to find these. 
+<br>
+The goal of this project is to produce a tool which will assist in black box application testing, by trying to find hidden content. The project ensures that the tool produced provides information in such a way that any false positives produce can be quickly identified. 
+
+
+| Content = 
+<br>
+* '''What DirBuster can do for you?''' 
+Attempt to find hidden pages/directories and directories with a web application, thus giving a another attack vector (For example. Finding an unlinked to administration page). 
+* '''What DirBuster will not do for you?''' 
+Exploit anything it finds. This is not the purpose of DirBuster. DirBuster sole job is to find other possible attack vectors. 
+* '''How does DirBuster help in the building secure applications?''' 
+By finding content on the web server or within the application that is not required. 
+By helping developers understand that by simply not linking to a page does not mean it can not be accessed. 
+<br><br>
+| Material = 
+<br>
+*Latest version of DirBuster can be downloaded from [http://www.owasp.org/index.php/Category:OWASP_DirBuster_Project#tab=Download here] <br> 
+*and feature list can be viewed from [http://www.owasp.org/index.php/Category:OWASP_DirBuster_Project#tab=Features here]
+}}
+
+
+[[Category:OWASP_Training|Training]]

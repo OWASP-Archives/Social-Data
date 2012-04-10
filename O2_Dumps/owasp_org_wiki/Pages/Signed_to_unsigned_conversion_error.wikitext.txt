@@ -1,0 +1,138 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+A signed-to-unsigned conversion error takes place when a signed primitive is used as an unsigned value, usually as a size variable.
+
+'''Consequences'''
+
+* Availability: Incorrect sign conversions generally lead to undefined behavior, and therefore crashes.
+* Integrity: If a poor cast leads to a buffer overflow or similar condition, data integrity may be affected.
+* Access control (instruction processing): Improper signed-to-unsigned conversions without proper checking can sometimes trigger buffer overflows which can be used to execute arbitrary code. This is usually outside the scope of a program's implicit security policy.
+
+'''Exposure period'''
+
+* Requirements specification: The choice could be made to use a language that is not susceptible to these issues.
+* Design: Accessor functions may be designed to mitigate some of these logical issues.
+* Implementation: Many logic errors can lead to this condition. It can be exacerbated by lack, or misuse, of mitigating technologies.
+
+'''Platform'''
+
+* Languages: C, C++, Fortran, Assembly
+* Operating platforms: All
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood of exploit'''
+
+Medium
+
+Often, functions will return negative values to indicate a failure state. In the case of functions which return values which are meant to be used as sizes, negative return values can have unexpected results. If these values are passed to the standard memory copy or allocation functions, they will implicitly cast the negative error, indicating value to a large unsigned value. 
+
+In the case of allocation, this may not be an issue; however, in the case of memory and string copy functions, this can lead to a buffer overflow condition which may be exploitable. 
+
+Also, if the variables in question are used as indexes into a buffer, it may result in a buffer underflow condition.
+
+In the following example, it is possible to request that memcpy move a much larger segment of memory than assumed:
+
+<pre>
+int returnChunkSize(void *) {
+  /* if chunk info is valid, return the size of usable memory, 
+   * else, return -1 to indicate an error
+   */
+   .... 
+}
+
+int main() {
+  ... 
+  memcpy(destBuf, srcBuf, (returnChunkSize(destBuf)-1));
+  ...
+}
+</pre>
+
+If returnChunkSize() happens to encounter an error, and returns -1, memcpy will assume that the value is unsigned and therefore interpret it as MAXINT-1, therefore copying far more memory than is likely available in the destination buffer.
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+TBD
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Buffer Overflow]] (and related conditions)
+* [[Buffer underwrite]]
+
+==Related [[Controls]]==
+
+* Requirements specification: Choose a language which is not subject to these casting flaws.
+* Design: Design object accessor functions to implicitly check values for valid sizes. Ensure that all functions which will be used as a size are checked previous to use as a size. If the language permits, throw exceptions rather than using in-band errors.
+* Implementation: Error check the return values of all functions. Be aware of implicit casts made, and use unsigned variables for sizes if at all possible.
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+Note: A reference to related [http://cwe.mitre.org/ CWE] or [http://capec.mitre.org/ CAPEC] article should be added when exists. Eg:
+
+* [http://cwe.mitre.org/data/definitions/79.html CWE 79].
+* http://www.link1.com
+* [http://www.link2.com Title for the link2]
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Range and Type Error Vulnerability]]
+[[Category:OWASP_CLASP_Project]]
+[[Category:Code Snippet]]
+[[Category:C]]

@@ -1,0 +1,115 @@
+3. AJAX Security -> 3.5 XML Injection
+
+=== Lesson overview ===
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution === 
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information. 
+
+=== Strategy ===
+
+This WebGoat lesson adds more rewards to the allowed set of rewards by intercepting an AJAX response and appending these 2 entries to the XML list:
+<pre>
+<reward>WebGoat Core Duo Laptop 2000 Pts</reward>
+<reward>WebGoat Hawaii Cruise 3000 Pts</reward>
+</pre>
+
+However, the lesson is broke on the back end.
+
+When rewards are selected, a POST is sent, for example:
+<pre>
+accountID=836239&check1001=on&check1002=on&check1003=on&SUBMIT=Submit
+</pre>
+
+The problem is that there is no association between a checked entry, e.g. 'check1001' and a reward. This is because in the callback routine of the Ajax request, numbers are assigned irrespective of the reward:
+<pre>
+  for(var i=0; i< rewards.length; i++){
+    strHTML = strHTML + '<tr><td><input name="check' + (i+1001) +'" type="checkbox">
+</pre>
+
+To prove it, I did not add the 2 high-priced point rewards, I substituted them for the 't-shirt 50 Pts' and 'Secure Kettle 30 pts'; the return message should be:
+
+<pre>
+The following items will be shipped to your address:
+WebGoat Core Duo Laptop
+WebGoat Hawaii Cruise
+WebGoat Mug
+</pre>
+
+But the return message was erroneous:
+
+[[Image:OWASP_ModSecurity_Securing_WebGoat_XML_Injection_SS0.jpg]]
+
+
+Therefore, since the rewards cannot be distinguished from each other, the only choice is to count the number of rewards sent, and if that doesn't match the number of rewards in the original HTTP response - before manipulation in the web proxy - then an error is thrown.
+
+=== Implementation === 
+
+The ModSecurity solution will be to count the number of rewards sent to the user in the response body, then compare that with the number of rewards that the user subsequently sends in the request.
+
+Start the lesson with an empty data file 'lesson03-5.data' with the proper file permissions.
+
+First, process the response body and persist the rewards list to the data file.
+
+ModSecurity has to be configured to process XML; add 'text/xml' to the 'SecResponseBodyMimeType' directive in 'rulefile_00_phase2-initialize.conf':
+<pre>
+SecResponseBodyMimeType text/plain text/html text/xml
+</pre>
+
+The phase 4 response portion of the configuration file is:
+<pre>
+  SecRuleScript "/etc/modsecurity/data/rewards-response_03-5.lua" \
+"phase:4,t:none,log,auditlog,allow,msg:'Luascript: \ 
+AJAX Security -> 3.5 XML Injection: in RESPONSE; writing rewards to file'"
+</pre>
+
+Refer to the Lua script 'rewards-response_03-5.lua'. The steps are:
+* read the response body into a buffer
+* extract each reward using the pattern '<reward>(.-)</reward>'
+* write each reward to the data file
+
+An example will look like:
+<pre>
+Entry{
+  reward = "WebGoat t-shirt 20 Pts"
+}
+
+Entry{
+  reward = "WebGoat Secure Kettle 50 Pts"
+}
+
+Entry{
+  reward = "WebGoat Mug 30 Pts"
+}
+</pre>
+
+For phase 2, the POST request parameters have the form:
+<pre>
+accountID=836239&check1001=on&check1002=on&check1003=on&SUBMIT=Submit
+</pre>
+
+The phase 2 request portion of the configuration file is:
+<pre>
+  SecRule &ARGS_POST:SUBMIT "@eq 0" "nolog,skip:3"
+  SecRule &ARGS_POST:accountID "@eq 0" "nolog,skip:2"
+
+  # action is triggered if script returns non-nil value
+  SecRuleScript "/etc/modsecurity/data/rewards-request_03-5.lua" \
+"phase:2,t:none,log,auditlog,deny,severity:3,msg:'Luascript: \
+AJAX Security -> 3.5 XML Injection: request is pending', \
+tag:'INJECTION_ATTACK',redirect:/_error_pages_/lesson03-5.html"
+  SecAction "phase:2,allow:request,t:none,log,auditlog,msg:'Luascript: \ 
+AJAX Security -> 3.5 XML Injection: no illegal attempts made to add rewards'"
+</pre>
+
+Refer to the Lua script 'rewards-request_03-5.lua'. The steps are:
+* get the POST request parameters
+* loop through them and for each 'check*' argument name, increment the number of rewards by 1
+* count the number of rewards in the data file
+* compare the total and return an error if not equal
+
+=== Comments ===
+
+* This lesson shows how to use a 'do' loop in Lua and retrieve POST parameter names and values

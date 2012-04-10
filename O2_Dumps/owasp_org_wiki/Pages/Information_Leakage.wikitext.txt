@@ -1,0 +1,208 @@
+{{Template:Vulnerability}}
+{{Template:Fortify}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+Revealing system data or debugging information helps an adversary learn about the system and form a plan of attack. An information leak occurs when system data or debugging information leaves the program through an output stream or logging function.
+
+==Risk Factors==
+
+TBD
+
+
+==Examples==
+
+===Example 1===
+
+The following code prints the path environment variable to the standard error stream:
+
+<pre>
+	char* path = getenv("PATH");
+	... 
+	sprintf(stderr, "cannot find exe on path %s\n", path);
+</pre>
+
+===Example 2===
+
+The following code prints an exception to the standard error stream:
+
+<pre>
+	try {
+		...
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+</pre>
+
+Depending upon the system configuration, this information can be dumped to a console, written to a log file, or exposed to a remote user. In some cases the error message tells the attacker precisely what sort of an attack the system will be vulnerable to. For example, a database error message can reveal that the application is vulnerable to a SQL injection attack. Other error messages can reveal more oblique clues about the system. In the example above, the search path could imply information about the type of operating system, the applications installed on the system, and the amount of care that the administrators have put into configuring the program.
+
+===Accidental leaking of sensitive information through data queries===
+
+When trying to keep information confidential, an attacker can often infer some of the information by using statistics.
+
+'''Consequences'''
+
+*	Confidentiality: Sensitive information may possibly be disclosed through data queries accidentally.
+
+'''Exposure period'''
+
+*	Design: Proper mechanisms for preventing this kind of problem generally need to be identified at the design level.
+
+'''Avoidance and mitigation'''
+
+This is a complex topic. See the book ''Translucent Databases'' for a good discussion of best practices.
+
+In situations where data should not be tied to individual users, but a large number of users should be able to make queries that "scrub" the identity of users, it may be possible to get information about a user - e.g., by specifying search terms that are known to be unique to that user.
+
+===Accidental leaking of sensitive information through error messages===
+
+Server messages need to be parsed before being passed on to the user.
+
+'''Consequences'''
+*	Confidentiality: Often this will either reveal sensitive information which may be used for a later attack or private information stored in the server.
+
+'''Exposure period'''
+*	Implementation: This flaw is a simple logic issue, introduced entirely at implementation time.
+*	Build: It is important to adequately set read privileges and otherwise operationally protect the log.
+
+'''Platform'''
+*	Languages: Any; it is especially prevalent, however, when dealing with SQL or languages which throw errors.
+*	Operating platforms: Any
+
+'''Avoidance and mitigation'''
+*	Implementation: Any error should be parsed for dangerous revelations.
+*	Build: Debugging information should not make its way into a production release.
+
+'''Discussion'''
+
+Once an attack has failed, the first thing an attacker may use  to stage the next attack is the error information provided by the server.
+
+[[SQL Injection]] attacks generally probe the server for information in order to stage a successful attack.
+
+Example:
+In Java:
+
+<pre>
+try {
+  /.../
+} catch (Exception e) {
+  System.out.println(e);
+}
+</pre>
+
+Here you are passing much more data than is needed.
+
+Another example is passing SQL exceptions to a WebUser without filtering.
+
+===Accidental leaking of sensitive information through sent data===
+
+The accidental leaking of sensitive information through sent data refers to the transmission of data which is either sensitive in and of itself, or useful in the further exploitation of the system through standard data channels.
+
+'''Consequences'''
+*	Confidentiality: Data leakage results in the compromise of data confidentiality.
+
+'''Exposure period'''
+*	Requirements specification: Information output may be specified in the requirements documentation.
+*	Implementation: The final decision as to what data is sent is made at implementation time.
+
+'''Avoidance and mitigation'''
+
+*	Requirements specification: Specify data output such that no sensitive data is sent.
+*	Implementation: Ensure that any possibly sensitive data specified in the requirements is verified with designers to ensure that it is either a calculated risk or mitigated elsewhere.
+
+Accidental data leakage occurs in several places and can essentially be defined as unnecessary data leakage. Any information that is not necessary to the functionality should be removed in order to lower both the overhead and the possibility of security sensitive data being sent.
+
+The following is an actual MySQL error statement:
+
+<pre>
+Warning: mysql_pconnect(): 
+Access denied for user: 'root@localhost' (Using password: N1nj4) in /usr/local/www/wi-data/includes/database.inc on line 4
+</pre>
+
+
+===Missing Catch Block===
+If a Servlet fails to catch all exceptions, it may reveal debugging information that will help an adversary form a plan of attack.
+
+When a Servlet throws an exception, the default error response the Servlet container sends back to the user typically includes debugging information. This information is of great value to an attacker. For example, a stack trace might show the attacker a malformed SQL query string, the type of database being used, and the version of the application container. This information enables the attacker to target known vulnerabilities in these components.
+
+'''Example 1'''
+
+In the following method a DNS lookup failure will cause the Servlet to throw an exception.
+
+<pre>
+	protected void doPost (HttpServletRequest req,                 
+						HttpServletResponse res)
+				  throws IOException {
+		String ip = req.getRemoteAddr();
+		InetAddress addr = InetAddress.getByName(ip);
+		...
+		out.println("hello " + addr.getHostName());
+	}
+</pre>
+
+'''Example 2'''
+
+The following method will throw a NullPointerException if the parameter "name" is not part of the request.
+
+<pre>
+	protected void doPost (HttpServletRequest req,                 
+						HttpServletResponse res)
+				  throws IOException {
+		String name = getParameter("name");
+		...
+		out.println("hello " + name.trim());
+	}
+</pre>
+
+
+A good error handling mechanism always tries to capture all exceptions and returns a generic error message that does not reveal any details about the error and the application. Depending on the platform and container the application is running on, there can be different options.
+* Set a generic custom error page for all unhandled exceptions at the container level. (Normally, this is set in the configuration file.) The generic custom error page should have a simple error message that does not reveal any details about the exception happened.
+** In ASP.NET, it is the customError tag in the web.config file
+* Use an global error handler to capture all unhandled exceptions. 
+** In ASP.NET, it is the Application_Error sub in the global.asax file.
+* Handle the error in the page level
+** In ASP.NET, it is the Page_Error sub on the aspx page or associated codebehind page
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+host-extract - Host/IP pattern extraction tool used to detect information disclosure in web app
+source: http://host-extract.googlecode.com/, http://aldeid.com/index.php/Host-extract
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Error Handling Vulnerability]]
+[[Category:Logging and Auditing Vulnerability]]
+[[Category:Sensitive Data Protection Vulnerability]]
+[[Category:Java]]
+[[Category:C]]
+[[Category:Implementation]]
+[[Category:Code Snippet]]
+[[Category:Vulnerability]]

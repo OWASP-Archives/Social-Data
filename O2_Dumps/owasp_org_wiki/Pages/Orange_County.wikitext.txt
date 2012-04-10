@@ -1,0 +1,333 @@
+{{Chapter Template|chaptername=Orange County|extra=Lead by the co-presidents [mailto:neil@owasp.org Neil Matatall], [mailto:roblav@owasp.org Rob LaViolette] and [mailto:shong.chong@owasp.org Shong Chong]
+
+<paypal>Orange County</paypal>
+|mailinglistsite=http://lists.owasp.org/mailman/listinfo/owasp-Orange_County|emailarchives=http://lists.owasp.org/pipermail/owasp-Orange_County}}
+The chapter leaders are [mailto:neil@owasp.org Neil Matatall], Rob LaViolette, and Shong Chong.
+
+Follow OWASP OC on Twitter: https://twitter.com/OWASPOC for the latest news (so I don't spam your inboxes)
+
+== Sponsor ==
+
+[[File:Hireright.png]]
+
+== Local News ==
+
+===Future Meetings ===
+
+==== March 28th 2012 7PM ====
+
+When: March 28th 7pm
+
+Where: Irvine - 5151 California Ave, Irvine, CA 92617
+
+Loose Schedule:
+7:00 - 7:30: Introduction and networking
+7:30 - 8:30: Presentation
+
+===="WebGoat.NET"====
+
+Abstract:
+Jerry Hoff, the project leader of the OWASP Appsec Tutorial Series, and VP of the Static Code Analysis Division at WhiteHat Security, will be discussing his newest OWASP project, WebGoat.NET.  For many years, the Java version of WebGoat has been available as a fantastic tool for learning application security from the Java perspective.  Jerry has now created a parallel tool for ASP.NET developers to learn about application security.  Jerry will be discussing how this tool can be used in a learning environment, and other issues related to application security education.
+
+====Speaker Bio:====
+Jerry Hoff is vice president of the Static Code Analysis division at WhiteHat Security. In this role, he oversees the development of WhiteHats cloud-based static application security testing (SAST) service. Prior to WhiteHat, Mr. Hoff was co-founder and managing partner ofInfrared Security, a leading application security professional services firm. Mr. Hoff is an experienced application security consultant with years of professional development and training delivery. He is also the lead of the OWASP AppSec Tutorial Series. 
+
+
+
+You: ???
+
+===Previous Meetings===
+
+==== September 14th 2011 7PM ====
+
+When: Wednesday September 17th 7pm
+Where: TBD (Irvine)
+http://www.meetup.com/ocrails/events/30043551/
+
+Loose Schedule:
+7:00 - 7:30: Introduction and networking
+7:30 - 8:00: Brakeman with Justin Collins
+8:00 - 8:15: Lightning Rounds
+8:15 - 8:30: Brakeman Demo
+
+
+Brakeman with Justin Collins: 
+While the popular Ruby on Rails web framework provides built-in protection 
+for many security vulnerabilities, it is still possible to misuse these
+features or introduce other vulnerabilities to an application. Brakeman is a static code analysis tool designed specifically to find vulnerabilities and configuration issues  in Ruby on Rails applications. Since it works at the source code level, Brakeman can be used at any point in development without the need for deploying the full application stack. To make it even simpler, 
+Brakeman can be integrated with Hudson/Jenkins to provide automatic monitoring of Brakeman results as code is committed. This talk will discuss how to use Brakeman and how it can help you create safer Rails applications.
+
+Lightning Rounds:
+
+Neil Matatall: Friendly_id + ancsetry
+
+Drew Deponte: Guard, spork, BDD
+
+==== June 29th 2011 7PM ====
+
+[[http://owaspoc.eventbrite.com/ Registration Link]]
+
+'''When''': Wednesday june 29th, 2011 7pm
+
+'''Where:  HireRight Offices'''
+5151 California Avenue
+Irvine, CA 92617
+
+'''Pizza and refreshments will be provided by the sponsors of this meeting.
+'''
+
+===== Meeting Sponsors =====
+ 
+Food and refreshments:
+[[File:AppSecDC2010-Sponsor-trustwave.gif]]
+
+Meeting location:
+[[File:Hireright.png]]
+ 
+===== Presentation Topic: =====
+Featuring analysis of more than 220 data breach investigations and more than 2,300 penetration tests conducted by Trustwave's SpiderLabs, the Global Security Report 2011 identifies the top vulnerabilities business encountered in 2010 as well as a list of strategic initiatives to help your business improve its overall security.
+ 
+The data gathered from these engagements is substantial and comprehensive. This presentation will be a summary of the results of the analysis of the data gathered during 2010. The results will be presented both technical and business impact analysis.
+ 
+ 
+
+===== Charles Henderson, Director of Application Security Services of SpiderLabs at Trustwave =====
+ 
+Henderson began his career in computer security in 1993, specializing in penetration testing as well as security and vulnerability research. As Director of Application Security Services at SpiderLabs, he leads the team responsible for Application Penetration Testing, Code Review, Secure Development Training, and other elite application security consulting services.
+ 
+Prior to joining SpiderLabs, Henderson ran his own boutique application
+security testing firm. Henderson’s firm provided offensive security services to a wide variety of clients in the United States and Europe.
+ 
+Henderson speaks frequently at major industry events and conferences, including BlackHat, DEF CON,  AppSec US, AppSec EU, SOURCE, and the International Association of Financial Crime Investigators convention.
+
+
+
+====January 28th, 2011====
+
+'''Registration link: [https://www.regonline.com/owasp_oc_jan]'''
+
+'''Time:''' 1 PM - 5PM
+
+'''Location: '''
+
+[http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=5151+California+Ave&sll=33.621597,-117.740797&sspn=0.010489,0.019011&ie=UTF8&hq=&hnear=5151+California+Ave,+Irvine,+Orange,+California+92617&z=16&iwloc=A Hireright] 
+
+5151 California Ave
+
+Irvine, California 92617
+
+United States.   
+
+'''Topics:''' Threat Modeling, Application Security
+
+'''Food:''' Provided
+
+Speakers:  
+
+'''Samy Kamkar'''
+
+Online Privacy and the Evercookie
+
+Bio:
+
+Samy Kamkar has lectured on computer security issues in over a dozen
+countries, and his work has been featured on the front page of the New
+York Times. As a grey-hat hacker, he makes and breaks computer
+security for tech companies. In addition to his independent security
+research, he co-founded Fonality, an IP PBX company.
+
+'''Jim Manico'''
+
+Back to Basics: Defensive Coding Principles for Web Development 101
+
+The application security community is in deep need of prescriptive
+solutions for developers. This talk will review the world of Web
+Application Security from a "builder" point of view, focusing on
+critical controls that all developers must master if they wish to build
+low risk web applications today.
+
+Bio:
+
+Jim Manico is the chair of the OWASP Connections committee where he
+focuses on producing and hosting the OWASP Podcast. Jim also is a
+co-manager of the OWASP ESAPI Open Source project. Professionally, Jim
+is an independent application security architect specializing in the
+construction of low-risk web applications. Jim is also an application
+security educator and assessment specialist.
+
+'''Edward Bonver'''
+Talk Title:
+
+Threat Modeling at Symantec
+[[File:OWASP-WWW-2011-Edward-Bonver-Threat-Modelint-at-Symantec.pptx]]
+
+Abstract:
+
+Threat Modeling is one of the most important security activities that a development/QA team needs to perform as part of a Security Development Lifecycle. This activity allows the team to build a complete security profile of the system being built. Threat Modeling is not always easy to get going for a team that has little or no security experience. In this presentation we’ll take a look at why Threat Modeling is so important; we’ll explore the process behind it, and how the process is being implemented and followed across Symantec.
+
+Bio:
+
+Edward Bonver is a principal software engineer on the product security team under the Office of the CTO at Symantec Corporation.  In this capacity, Edward is responsible for working with software developers and quality assurance (QA) professionals across Symantec to continuously enhance the company’s software security practices through the adoption of methodologies, procedures and tools for secure coding and security testing.  Within Symantec, Edward teaches secure coding and security testing classes for Symantec engineers, and also leads the company’s QA Security Task Force, which he founded.  Prior to joining Symantec, Edward held software engineering and QA roles at Digital Equipment Corporation, Nbase and Zuma Networks. 
+
+
+Edward is a Certified Information Systems Security Professional (CISSP) and a Certified Secure Software Lifecycle Professional (CSSLP).  He holds a master’s degree in computer science from California State University, Northridge, and a bachelor’s degree in computer science from Rochester Institute of Technology. Edward is a Ph.D. student at NOVA Southeastern University.
+
+
+====Thursday, January 21st 2010====
+
+Time: 7:30
+Location: We will be meeting in the Anteater Instruction and Research Building on the UC Irvine campus. The building itself is inside of the Anteater Parking Structure at the corner of E. Peltason Dr and Anteater Dr and is room number 1020. Parking is $7 but feel free to park off campus and walk to the building. http://www.oit.uci.edu/computing/labs/training.html Buliding #653 in quadrant H9 on the campus map - http://today.uci.edu/pdf/UCI_09_map_campus_core.pdfBD
+
+For those who would like to avoid paying for parking, you can park in the University Center and take the campus shuttle: http://www.shuttle.uci.edu/maincampus/index.php
+
+The shuttle runs until 10:45PM.  The shuttle costs $1 per ride, but fees are rarely collected ;)
+
+Title: Do VLANs allow for good application security? 
+ 
+Virtual Local Area Networks (VLANs) are not a new concept, and can help
+any organization better control network access.  I will present some of
+the previous issues identified, what was the root cause, and how these
+have been fixed in current technology.  In addition we will talk about
+how this can help to enhance security in your environment, and what
+controls must be in place in order to implement such an environment.  We
+will also touch on how this can complicate your application environment,
+but improve overall security.
+
+I will touch on the controls that need to be reviewed and audited when
+working with VMware, VLANs, and web applications, to ensure that these
+networks are secure, and what to look for to potentially pass audit
+criteria.  I will also talk about where and how these controls have been
+implemented in order to protect thousands of users while accessing one
+of the most hostile networks in the world.
+
+David M. N. Bryan 
+Senior Security Consultant 
+
+David has over 9+ years of computer security experience including,
+consulting, engineering and administration.  He has performed security
+assessment projects for health care, nuclear, manufacturing,
+pharmaceutical, banking and educational sectors.   As an active
+participant in the information security community, he volunteers at
+DEFCON where he designs and implements the Firewall and Network for what
+is said to be the most hostile network environment in the world.  
+
+He is also an active participant in the local Minneapolis security
+groups both as a board member of OWASP MSP and DC612.  His roots and
+experience come from working for a large enterprise banks, designing and
+managing enterprise security systems.  In the more recent years he has
+been working as an Information Security Consultant to review the
+security and architecture of information computing environments.
+
+
+====Thursday December 17th 2009====
+
+7:30 PM, UC Irvine Campus, Room AIRB 1020
+
+
+We will be meeting in the Anteater Instruction and Research Building on the UC Irvine campus.  The building itself is inside of the Anteater Parking Structure at the corner of E. Peltason Dr and Anteater Dr and is room number 1020.  Parking is $7 but feel free to park off campus and walk to the building.
+http://www.oit.uci.edu/computing/labs/training.html
+Buliding #653 in quadrant H9 on the campus map - http://today.uci.edu/pdf/UCI_09_map_campus_core.pdf
+
+'''Abstract'''
+
+'''Title: Pulling the Plug: Security Risks in the Next Generation of Offline Web Applications'''
+
+As the line between desktop and web applications becomes increasingly blurry in a web 2.0 world, browser functionality is being pushed well beyond what it was originally intended for. Persistent client side storage has become a requirement for web applications if they are to be available both online and off. This need is being filled by a variety of technologies such as [http://webkit.org/blog/126/webkit-does-html5-client-side-database-storage Gears (formerly Google Gears) and the Database Storage]   functionality included in the emerging [http://dev.w3.org/html5/spec/Overview.html HTML 5 specification]. While all such technologies offer great promise, it is clear that the vast majority of developers simply do not understand their security implications.
+
+Researching a variety of currently deployed implementations of these technologies has revealed a broad scope of vulnerabilities with frightening implications. Now attackers can target victims not just once, but every time they visit a site as the victim now carries and stores the attack with them. Imagine a scenario whereby updated confidential information is forwarded to an attacker every time a victim interacts with a given we application. The attacker no longer needs to worry about timing their attacks to ensure that the victim is authenticated as the victim attacks himself! Limited storage? Cookies that expire? Not a problem when entire databases are accessible with virtually unlimited storage and an infinite lifespan. Think these attacks are theoretical? Think again. In this talk we dive into these technologies and break down the risk posed by them when not properly understood. We will then detail a variety of real-world vulnerabilities that have been uncovered, including a new class of cross-site scripting and client-side SQL injection.
+
+'''Bio'''
+
+'''Michael Sutton'''
+'''Vice President, Security Research – Zscaler'''
+
+Michael Sutton has spent more than a decade in the security industry conducting leading-edge research, building teams of world-class researchers and educating others on a variety of security topics. As VP of Security Research, Michael heads Zscaler Labs, the research and development arm of the company. Zscaler Labs is responsible for researching emerging topics in web security and developing innovative security controls, which leverage the Zscaler in-the-cloud model. The team is comprised of researchers with a wealth of experience in the security industry.    
+
+Prior to joining Zscaler, Michael was the Security Evangelist for SPI Dynamics where, as an industry expert, he was responsible for researching, publishing and presenting on various security issues. In 2007, SPI Dynamics was acquired by Hewlett-Packard. Previously, Michael was a Research Director at iDefense where he led iDefense Labs, a team responsible for discovering and researching security vulnerabilities in a variety of technologies. iDefense was acquired by VeriSign in 2005. Michael is a frequent speaker at major information security conferences; he is regularly quoted by the media on various information security topics, has authored numerous articles and is the co-author of Fuzzing: Brute Force Vulnerability Discovery, an Addison-Wesley publication.
+
+
+====Thursday, November 19th 2009====
+
+When: November 19th 2009, 7:30PM
+Where: Gina's Pizza, Irvine
+Topics: Facebook privacy, web application firewalls, penetration testing, the reluctance for hackers to execute attacks, and random new technology.  Announced OWASP OC/LAs intention to submit a proposal for AppSec 2010.
+
+====Wednesday, October 14th 2009====
+
+Separate meetings will be held for OWASP OC and OWASP@UCI (student group).
+
+When:  Wednesday 10/14  7:30PM
+Where:  Steelhead Brewery
+Topics:  News, Ideas, Chit-chat
+
+This is a restaurant/bar with plenty of seating, but room for a projector is out of the question so this would be an informal round table discussion.
+
+I have a presentation I'm working on regarding WAFs and Vulnerability Assessment Tools.  If it pleases the group, I'd love to go over the presentation and discuss everyone's experiences.  Also, it's a great way to get feedback :)
+
+Neil
+
+I'm open to suggestions of any kind: location, time, topics, etc
+
+====Thursday, September 17th, 2009 7:30PM ====
+'''Location:''' UC Irvine 
+Building: Calit2 building,building number 325 in quadrant H8 on the [http://today.uci.edu/pdf/UCI_09_map_campus_core.pdf UC Irvine Map]
+Room: 3008
+
+Parking will be $7.
+Please park in the [http://maps.google.com/maps?li=d&hl=en&f=d&iwstate1=dir:to&daddr=Parking+Structure+for+CalIT2%4033.643082,+-117.837593&geocode=CSJ9b4xJxrzxFUpaAQId5_D5-A&iwloc=1&dq=calit2,+uc+irvine,+ca&cid=33643082,-117837593,16505793731713499531&ei=v3bvSabfO6LejAOR2pjgAQ Anteater Parking Structure]
+
+I can only unofficially say that if you park in the nearby shopping centers and walk, you may be able to park for free.
+
+* <b>The Rise of Threat Analysis and the Fall of Compliance, Policies, and Standards in mitigating Web Application Security Risks</b>
+
+
+
+====Apr 30, 2009 6:30PM-8:30PM====
+Brooklyn Pizza Works, 1235 East Imperial Highway, Placentia, CA
+
+[http://maps.google.com/maps?q=1235+East+Imperial+Highway,+placentia,+ca&oe=utf-8&client=firefox-a&ie=UTF8&split=0&gl=us&z=16&iwloc=addr Google Map]
+
+Our fourth OC OWASP meeting will be an informal, roundtable discussion of current application security issues. Feel free to bring some ideas, code, slides, etc to contribute to the discussion. Hope to see everyone there!
+
+====Feb 19, 2009 6:30PM-8:30PM====
+Brooklyn Pizza Works, 1235 East Imperial Highway, Placentia, CA
+
+[http://maps.google.com/maps?q=1235+East+Imperial+Highway,+placentia,+ca&oe=utf-8&client=firefox-a&ie=UTF8&split=0&gl=us&z=16&iwloc=addr Google Map]
+
+Come talk application security at the third OWASP OC meeting. We'll discuss current application security topics and chapter issues over pizza. We have a room booked for 15-20 people so we'll be able to rant without disturbing the patrons :) See you there! [https://www.owasp.org/images/5/58/Cloud_Computing_Security.pdf Presentation Slides]
+
+
+====Dec 17, 2008 6PM - 9PM====
+Microsoft Campus
+Room MPR1, 3 Park Plaza, Suite 1600, Irvine, CA, 92614
+
+[http://maps.google.com/maps?f=q&hl=en&geocode=&q=microsoft,+Irvine,+CA,+92614&sll=33.678479,-117.838368&sspn=0.009892,0.022745&g=3+Park+Plaza,+Irvine,+CA,+92614&ie=UTF8&ei=sCFJSfKPEo3UNc2ZmCc&cd=1&cid=33728042,-117783305,17507068988286890825&li=lmd&ll=33.731835,-117.78142&spn=0.039545,0.090981&z=14&iwloc=A Google Map]
+
+This meeting will be a roundtable discussion of application security news, plus a few OWASP-themed challenges with prizes. Pizza will be provided and we'll head to the Yard House after the meeting.
+
+
+====Aug 27, 2008, 7 PM - 9 PM====
+Penny Saver
+
+603 Valencia, Brea, CA 92822
+
+[http://maps.google.com/maps?f=q&hl=en&geocode=&q=603+valencia,+Brea,+CA+92822&sll=33.911348,-117.851629&sspn=0.009865,0.022745&ie=UTF8&ll=33.909478,-117.852917&spn=0.009866,0.022745&z=16&iwloc=addr Google Map]
+
+Come meet up with web security professionals, have some pizza, and offer your thoughts for the direction of the OC chapter at our inaugural meeting! We are looking for speakers and venue sponsors for the next meeting. If you are interested, please contact the chapter leaders. Everyone is welcome to join us at our chapter meetings.
+
+[[Category:OWASP Chapter]]
+
+= Orange County OWASP Board Members =
+
+*<b>Orange County Co-President</b> [mailto:neil@owasp.org Neil Matatall]
+*<b>Orange County Co-President</b> Shong Chong
+*<b>Orange County Co-President</b> Rob LaViolette
+*<b>Orange County Treasurer:</b> [mailto: TBD] 
+*<b>Orange County Recording Secretary:</b> [mailto: TBD]
+*<b>Orange County Board Member</b> [mailto: TBD]
+*<b>Orange County Board Member:</b> [mailto: TBD] 
+*<b>Orange County Board Member:</b> [mailto: TBD]  
+
+
+
+[[Category:California]]

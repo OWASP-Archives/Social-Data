@@ -1,0 +1,136 @@
+{| style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:#b3b3b3; color:white"|<font color="black">'''Working Sessions Operational Rules''' - [[:Working Sessions Methodology|'''Please see here the general frame of rules''']].
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:#4058A0; color:white"|<font color="white">'''WORKING SESSION IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Work Session Name'''
+ | colspan="6" style="width:85%; background:#cccccc" align="left"|<font color="black">'''Code Review Guide'''
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Work Session Description''' 
+ | colspan="6" style="width:85%; background:#cccccc" align="left"|TBD
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Related Projects (if any)''' 
+ | colspan="6" style="width:85%; background:#cccccc" align="left"|
+[[:Category:OWASP Code Review Project|OWASP Code Review Project]]
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|'''Email Contacts & Roles'''
+ | style="width:25%; background:#cccccc" align="center"|'''Chair'''<br>[mailto:eoin.keary(at)owasp.org '''Eoin Keary'''] 
+ | style="width:25%; background:#cccccc" align="center"|'''Secretary'''<br>[mailto:name(at)name '''TBD''']
+ | style="width:25%; background:#cccccc" align="center"|'''Mailing list'''<br>[https://lists.owasp.org/mailman/listinfo/owasp-codereview '''Subscription Page''']
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:#4058A0; color:white"|<font color="white">'''WORKING SESSION SPECIFICS''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Objectives'''
+ | colspan="6" style="width:85%; background:#cccccc" align="left"|<font color="black">
+*  Discuss next version of code review guide.
+* Discuss industry requirements for code review.
+* Discuss academic versus practical ramifications of guide.
+* Brainstorm: Ideas for integration with other projects and tools.
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|'''Venue/Date&Time/Model'''
+ | style="width:25%; background:#cccccc" align="center"|'''Venue'''<br>[[:OWASP EU Summit 2008|OWASP EU Summit Portugal 2008]] 
+ | style="width:25%; background:#cccccc" align="center"|'''Date&Time'''<br>November 5 & 6, 2008 <br>Time TBD
+ | style="width:25%; background:#cccccc" align="center"|'''Discussion Model'''<br>"Everybody is a Participant"
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:white; color:white"|<font color="black">
+ |}
+
+{|style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:#4058A0; color:white"|<font color="white">'''WORKING SESSION OPERATIONAL RESOURCES''' 
+ |-
+ | style="width:100%; background:#cccccc" align="center"|Whteboard and Pens, Projector, Coffee :)
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:white; color:white"|<font color="black">
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:#4058A0; color:white"|<font color="white">'''WORKING SESSION ADDITIONAL DETAILS''' 
+ |-
+ | style="width:100%; background:#cccccc" align="left"|
+Please add here, any additional notes, links, ideas, guidelines, etc... The objective is to help the working sessions participants and attendees to prepare their participation/contribution.
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|'''WORKING SESSION OUTCOMES''' 
+ |-
+ | style="width:7%; background:#6C82B5" align="center"|Statements, Initiatives or Decisions 
+ | style="width:46%; background:#b3b3b3" align="center"|'''Proposed by Working Group''' 
+ | style="width:47%; background:#b3b3b3" align="center"|'''Approved by OWASP Board'''
+ |-
+ | style="width:7%; background:#7B8ABD" align="center"|
+ | style="width:46%; background:#C2C2C2" align="center"|Develop a roadmap for the code review guide: Technologies, approaches. 
+ | style="width:47%; background:#C2C2C2" align="center"|After the Board Meeting.
+ |-
+ | style="width:7%; background:#7B8ABD" align="center"|
+ | style="width:46%; background:#C2C2C2" align="center"|Fill in here.   
+ | style="width:47%; background:#C2C2C2" align="center"|After the Board Meeting - fill in here.
+ |-
+ | style="width:7%; background:#7B8ABD" align="center"|
+ | style="width:46%; background:#C2C2C2" align="center"|Fill in here. 
+ | style="width:47%; background:#C2C2C2" align="center"|After the Board Meeting - fill in here. 
+  |}
+== Working Session Participants ==
+(Add you name by editing this table. On your the right, just above the this frame, you have the option to edit)
+{| style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:#4058A0; color:white"|<font color="white">'''WORKING SESSION PARTICIPANTS''' 
+ |-
+ | style="width:7%; background:#7B8ABD" align="center"|
+ | style="width:15%; background:#cccccc" align="center"|'''Name'''
+ | style="width:15%; background:#cccccc" align="center"|'''Company'''
+ | style="width:63%; background:#cccccc" align="center"|'''Notes & reason for participating, issues to be discussed/addressed'''
+ |-
+ | style="width:7%; background:#7B8ABD" align="center"|1
+ | style="width:15%; background:#cccccc" align="center"|Paolo Perego (aka thesp0nge)
+ | style="width:15%; background:#cccccc" align="center"|Spike Reply
+ | style="width:63%; background:#cccccc" align="center"|Owasp Orizon - Project Leader
+ |-
+ | style="width:7%; background:#7B8ABD" align="center"|2
+ | style="width:15%; background:#cccccc" align="center"|David Rook
+ | style="width:15%; background:#cccccc" align="center"|Realex Payments
+ | style="width:63%; background:#cccccc" align="center"|Contributor to Code Review Guide
+ |-
+ | style="width:7%; background:#7B8ABD" align="center"|3
+ | style="width:15%; background:#cccccc" align="center"|Giorgio Fedon
+ | style="width:15%; background:#cccccc" align="center"|Minded Security
+ | style="width:63%; background:#cccccc" align="center"|Very interested in the topic
+|-
+ | style="width:7%; background:#7B8ABD" align="center"|4
+ | style="width:15%; background:#cccccc" align="center"| Matteo Meucci
+ | style="width:15%; background:#cccccc" align="center"| Minded Security
+ | style="width:63%; background:#cccccc" align="center"| Interested in integrating OWASP big 4: Dev, Code Review, Testing, ADSR
+|-
+ | style="width:7%; background:#7B8ABD" align="center"|5
+ | style="width:15%; background:#cccccc" align="center"|Kuai Hinojosa
+ | style="width:15%; background:#cccccc" align="center"|OWASP (MSP) Chapter Leader
+ | style="width:63%; background:#cccccc" align="center"|
+|-
+ | style="width:7%; background:#7B8ABD" align="center"|6
+ | style="width:15%; background:#cccccc" align="center"|James Walden
+ | style="width:15%; background:#cccccc" align="center"|NKU
+ | style="width:63%; background:#cccccc" align="center"|OWASP Source Code Analysis Project
+|-
+ | style="width:7%; background:#7B8ABD" align="center"|7
+ | style="width:15%; background:#cccccc" align="center"|Wagner Elias
+ | style="width:15%; background:#cccccc" align="center"|Conviso IT Security
+ | style="width:63%; background:#cccccc" align="center"|
+|-
+ | style="width:7%; background:#7B8ABD" align="center"|8
+ | style="width:15%; background:#cccccc" align="center"|Arturo 'Buanzo' Busleiman
+ | style="width:15%; background:#cccccc" align="center"|Independent
+ | style="width:63%; background:#cccccc" align="center"|Eoin looks passionate about the subject. I want to be near! :)
+|-
+ | style="width:7%; background:#7B8ABD" align="center"|9
+ | style="width:15%; background:#cccccc" align="center"|Rogan Dawes
+ | style="width:15%; background:#cccccc" align="center"|Corsaire
+ | style="width:63%; background:#cccccc" align="center"|Have experience, would like to contribute where possible
+|-
+ | style="width:7%; background:#7B8ABD" align="center"|10
+ | style="width:15%; background:#cccccc" align="center"|Frederick Donovan
+ | style="width:15%; background:#cccccc" align="center"|Donovan Networks
+ | style="width:63%; background:#cccccc" align="center"|Would like to see language specific guidelines
+ |}
+If needed add here more lines.
+
+[[Category:OWASP_Working_Session]]

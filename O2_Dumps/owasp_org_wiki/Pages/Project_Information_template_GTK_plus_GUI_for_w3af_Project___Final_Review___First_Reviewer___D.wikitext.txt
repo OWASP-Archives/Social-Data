@@ -1,0 +1,68 @@
+[[Project Information:template GTK plus GUI for w3af Project|Clik here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''FINAL REVIEW''' 
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART I''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#GTK+ GUI for w3af project|GTK + GUI for w3af Project's Deliveries & Objectives]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#GTK+ GUI for w3af project|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+1.  The project is fully completed, finished on schedule and Facundo did an excellent job.  A detailed progress can be seen in the w3af sourceforge project page [https://sourceforge.net/pm/task.php?group_id=170274&set=custom&group_project_id=56282&_assigned_to=0&_status=2&SUBMIT=Browse here] and a list of the bugs that were found and fixed during the development can be found [https://sourceforge.net/tracker2/?group_id=170274&atid=853652 here].
+
+In [https://www.owasp.org/index.php/Project_Information:template_GTK_plus_GUI_for_w3af_Project_-_Final_Review_-_Self_Evaluation_-_B Facundo's self revision] he listed the task IDs for every task, I analyzed them and he correctly listed the ones that were finished (which are all the ones that are assigned to him). An important thing to note is that some of this tasks weren't planned at the beggining of the project, but included after it, in response to community or project leader request (the idea is not to minimize the work, but to maximize the tool quality and usefulness). Once again, Facundo's work has been excellent.
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#GTK+ GUI for w3af project|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+A 100% of the project was completed. And as I said before, Facundo also performed some '''extra''' tasks, so I could also say 110%.
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+To Facundo: I'm glad you learned to code without an API ;)
+
+To the general public: Please download w3af from the main page and report any bugs, false positives/negatives you may find. 
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART II''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Assessment Criteria
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[:Category:OWASP Project Assessment|OWASP Project Assessment Criteria]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Alpha Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+None. All criterias are fulfilled in more quality than Alpha Quality. 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Beta Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+None. All criterias are fulfilled in more quality than Beta Quality. 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+3. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Release Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+None. All criterias are fulfilled in Release Quality. 
+ |-  
+ | style="width:25%; background:#7B8ABD" align="center"|
+4. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+To OWASP Foundation: Thanks for the experience of this SoC.
+
+To the general public: Please download w3af from the main page and report any bugs, false positives/negatives you may find. 
+|}

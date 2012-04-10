@@ -1,0 +1,44 @@
+[[Project Information:template Python Static Analysis|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications#Python Static Analysis|OWASP Python Static Analysis Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#Python Static Analysis|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| 
+
+There's a working version now with almost full Python language support. It still requires some improvements which are planned to do in the next section.
+The tool documentation is not written yet and publication article is not written too.
+
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#Python Static Analysis|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| 
+
+ * full language support: about 80%
+ * other Python frameworks: about 10%
+ * analysis improvement: 30%
+ * reporting capability: 70%
+ * documentation: not started
+ * article & presentation: not started
+
+Assuming that coding phase (especially language support) is the most time consuming, I think that the project is completed at 60%
+
+ |- 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| 
+
+It will be great if reviewers think about additional functionality, that they want to see in the final version of the tool.
+
+|}

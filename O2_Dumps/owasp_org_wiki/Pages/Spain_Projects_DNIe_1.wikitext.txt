@@ -1,0 +1,79 @@
+== '''DNIe-1: Identificación de los mecanismos y tecnologías de utilización y gestión del DNIe en aplicaciones web''' ==
+
+* Fecha de inicio: Junio 2011
+
+* Descripción: El propósito del primer subproyecto de OWASP DNIe, "Identificación de los mecanismos y tecnologías de utilización y gestión del DNIe en aplicaciones web" (DNIe-1), es recabar información de las tecnologías y mecanismos empleados para la creación de aplicaciones web basadas en el DNIe, a través de los responsables y/o personal involucrado en el diseño y programación de aplicaciones web basadas en el DNIe en España (jefes de proyecto, desarrolladores, arquitectos, administradores, consultores, profesionales de seguridad, etc). 
+
+* Objetivo: El objetivo principal es identificar los entornos y tecnologías más comúnmente empleados para la gestión del DNIe en aplicaciones web y recopilar estadísticas y detalles sobre éstos. Esta información permitirá a la comunidad española de seguridad y de desarrollo de aplicaciones web conocer las diferentes alternativas tecnológicas disponibles y qué están siendo empleadas actualmente en entornos reales. 
+
+* Información a recabar: Dentro de las tecnologías y mecanismos empleados sería interesante conocer, al menos, la siguiente información. Para cada uno de los componentes utilizados por la aplicación web para la gestión del DNIe, sería interesante disponer de su versión, al menos de la versión principal, y preferiblemente de la subversión (ej. Apache 2.2.19):
+** Componente encargado de la interacción con el DNIe: Dado que la autenticación mediante DNIe utiliza el protocolo HTTPS (SSL/TLS) para la autenticación web mediante certificados digitales cliente, es necesario conocer qué componente del entorno web es el encargado de la autenticación cliente mediante HTTPS: Web Application Firewall (WAF), concentrador/terminador/proxy HTTPS, servidor web, servidor de aplicación o la propia aplicación web. 
+** El servidor web empleado: Apache, IIS, etc
+** El servidor de aplicación empleado: Tomcat, Weblogic, Websphere, etc
+** El lenguaje de programación empleado: Java, PHP, ASP .NET, ASP, etc
+** Librerías públicas (open-source o comerciales) específicas empleadas para la gestión del DNIe (nombre y versión) o módulos específicos del componente encargado de la gestión del DNIe (nombre y versión). En caso de hacer uso de librerías propietarias, no públicas, indicar "propietaria".
+** Sector de la aplicación web que hace uso del DNIe: Administración pública, universidad, industria, servicios financieros, seguros, TI u otro.
+
+''NOTA'': Tanto la primera como la penúltima pregunta son de especial relevancia, ya que proporcionan información sobre el elemento crítico encargado de la autentificación, gestión y controles de acceso basados en el DNIe, y de las librerías o módulos específicos empleados para su implementación.
+
+* Resultado: Las estadísticas obtenidas de la información recopilada serán publicadas en la página web del proyecto OWASP DNIe durante el último trimestre de 2011, junto al nombre de los diferentes colaboradores que hayan participado en esta primera actividad. En ningún caso se publicará y vinculará al colaborador con los detalles de la aplicación web para la que facilita los datos.
+
+* Participación: Debido a la sensibilidad de la información proporcionada, existe la posibilidad de facilitar los detalles de la aplicación web de forma anónima. Por otro lado, dado que puede ser interesante recabar o matizar los detalles facilitados para una aplicación web particular, existe la posibilidad de indicar nombre y dirección de e-mail. En caso de facilitar los detalles de quién proporciona la información y no estar interesado en desvelar la organización a la que pertenece, se recomienda facilitar una dirección de e-mail genérica que no vincule a la persona con la organización.
+
+* '''Cuestionario''': '''El cuestionario on-line de la actividad DNIe-1 está disponible en http://www.surveymonkey.com/s/3SP5Z88, esperando su participación'''.
+
+* Fecha límite de recepción de información: '''16 de octubre de 2011'''.
+
+
+== '''RESULTADOS DNIe-1''': Identificación de los mecanismos y tecnologías de utilización y gestión del DNIe en aplicaciones web  ==
+
+*'''Versión:''' 1.0
+
+*'''Fecha de publicación:''' 9 de diciembre de 2011
+
+*'''Resumen:'''
+
+Debido a la baja participación (sólo se recibieron 14 cuestionarios), los resultados obtenidos no son concluyentes ni representativos, y no permiten cumplir los objetivos iniciales, es decir, poder extraer conclusiones sobre los entornos web más comúnmente utilizados en las aplicaciones web que utilizan el DNIe. 
+
+En base a los datos recabados, el entorno web más habitual para las aplicaciones web que hacen uso del DNIe está basado en Apache, Tomcat y Java empleando HTTPS (SSL/TLS) o applets Java para la interacción con el DNIe. Otros entornos, menos habituales, son los basados en IIS y ASP .NET, empleándose una solución propietaria para interactuar con el DNIe, o los basados en Apache y PHP, empleándose mod_ssl/openssl (HTTPS) para la interacción con el DNIe. 
+
+<u>''NOTA:''</u> Algunos entornos web hacen uso de varios componentes en su interacción con el DNIe, de ahí que la suma total de resultados de algunas preguntas (como por ejemplo las preguntas número 1 y 5) supere el número total de respuestas recibidas. 
+
+<br> 
+
+*'''Resultados:'''
+
+1.<br> 
+
+[[Image:DNIe-1 1.png]]<br> 
+
+2.<br> 
+
+[[Image:DNIe-1 2.png]]<br> 
+
+3.<br> 
+
+[[Image:DNIe-1 3.png]]<br> 
+
+4.<br> 
+
+[[Image:DNIe-1 4.png]]<br> 
+
+5. 
+
+[[Image:DNIe-1 5.png]] 
+
+*Solución propietaria: 6 <br> 
+*Java BouncyCastle: 4 <br> 
+*Java PKCS11: 1 <br> 
+*Mod_ssl/Openssl: 2 <br> 
+*@Firma: 1 <br> 
+*Nulo: 1<br>
+
+6. 
+
+[[Image:DNIe-1 6.png]]<br> 
+
+== OWASP DNIe  ==
+
+Esta actividad o subproyecto (DNIe-1)&nbsp;forma parte del proyecto [https://www.owasp.org/index.php/Spain/Projects/DNIe OWASP DNIe].

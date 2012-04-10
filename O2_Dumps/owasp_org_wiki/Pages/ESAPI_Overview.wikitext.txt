@@ -1,0 +1,85 @@
+=Background=
+==ESAPI.properties==
+ESAPI.properties contains all of the configuration options for ESAPI, including:
+* Information to use when logging, such as:
+** Name of the application
+** The level of logging (OFF, FATAL, ERROR, WARNING (default), INFO, DEBUG, TRACE, ALL)
+** The output file for the log
+** Whether or not to HTML encode all log messages before outputting
+* Security configurations regarding authentication and validation
+* Master password and salt used for encryption
+* Declares algorithms to use for hashing, encryption, randomization, and digital signing
+* Various intrusion detection settings
+
+==Which interface implementation does ESAPI use?==
+ESAPI.java defines the implementation to use for each of the ESAPI interfaces.
+
+For example, you can create an instance of the authenticator Class like this:
+
+<code><pre>Authenticator instance = ESAPI.authenticator();</pre></code>
+
+When this call is made, the following method from ESAPI.java is run:
+
+<code><pre>
+public static Authenticator authenticator() {
+        if (ESAPI.authenticator == null)
+		ESAPI.authenticator = new FileBasedAuthenticator();
+        return ESAPI.authenticator;
+}
+</pre></code>
+
+For each interface, there are also functions to tell ESAPI to use a different implementation:
+
+<code><pre>
+public static void setAuthenticator(Authenticator authenticator) {
+	ESAPI.authenticator = authenticator;
+}
+</pre></code>
+
+==Exceptions==
+There are a number of exception Classes built in to ESAPI – all of which extend EnterpriseSecurityException, which takes care of logging all messages passed to it.  ESAPI uses a threshold, set in ESAPI.properties to determine when to throw an IntrusionException, ValidationException or IntegrityException. 
+
+=Resource Directory=
+The following files are needed in the ESAPI resource directory for ESAPI to function properly:
+* ESAPI.properties
+* antisamy-esapi.xml (only if you plan on using Validator.isValidSafeHTML)
+
+If you plan on using the default Access Controller, you may need one or more of the following:
+* DataAccessRules.txt
+* FileAccessRules.txt
+* FunctionAccessRules.txt
+* ServiceAccessRules.txt
+* URLAccessRules.txt
+
+You do not need users.txt.  ESAPI will create this file when your application requests to create its first user.
+
+=Authentication=
+==Create Users==
+There are two ways to create users safely in ESAPI:
+* Use main() from FileBasedAuthenticator to generate users.txt for the first time.  To do this:
+<code><pre>java -Dorg.owasp.esapi.resources="/path/resources" -classpath esapi.jar org.owasp.esapi.Authenticator username password role</pre></code>
+
+*To create users from within your application, use:
+<code><pre>ESAPI.authenticator.createUser(username, password, password)</pre></code>
+Two copies of the new password are required to encourage user interface designers to include a "re-type password" field in their forms.
+
+''Note: Users created with the createUser method are disabled and locked by default.''  You must call:
+
+<code><pre>
+ESAPI.authenticator().getUser(username).enable();
+ESAPI.authenticator().getUser(username).unlock();
+</pre></code>
+
+==Login==
+If you use the default ESAPI authenticator, you will need your login page to use SSL, so be sure to have a keystore file and adjust your server configuration settings to account for this.  If you are using Apache Tomcat, please see the readme included in the latest release of the [[ESAPI_Swingset|ESAPI Swingset]] for help setting up SSL.
+
+* To authenticate a user, call:
+<code><pre>User  user = ESAPI.authenticator().login(HTTPServletRequest, HTTPServletResponse);</pre></code>
+
+Be sure to set the UsernameParameterName and PasswordParameterName variables in ESAPI.properties.  The login method will use those variable names to take the username and password that the user entered from the HTTPRequest.
+
+==Logout==
+To log a User out, simply call:
+<code><pre>User  user = ESAPI.authenticator().logout;</pre></code>
+
+[[Category: OWASP Enterprise Security API]]

@@ -1,0 +1,77 @@
+[[Project Information:template Securing WebGoat using ModSecurity|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications#Securing WebGoat using ModSecurity|OWASP Securing WebGoat using ModSecurity Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#Securing WebGoat using ModSecurity|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+The project set out to protect the vulnerable webgoat application without touching a line of code. Facing an unstable (and partially buggy) Webgoat version the project leader and sole contributor had to find a pragmatic approach to deal with this issue. On top of that it quickly turned out, that expermiental features of ModSecurity had to be used. 
+
+Stephen Evans managed to cope with these troubles and actually continued in a systematic and well documented way. This is crucial for this project as it will be used by new and intermediate users of ModSecurity in the future as a case study for their own work.
+
+There are still a few challenges ahead, but looking at the results so far, Stephen is well set to tackle those as well. The rules speak for themselves: they are of a very high quality in my eyes.
+
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#Securing WebGoat using ModSecurity|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+Well over 50%. Including some tricky lessons. 
+ |-
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| 
+http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section_1_Introduction                                                                                                                    
+
+Background:<br/>                                                                                                                             
+- Embedded or as Reverse Proxy? Not quite clear what you mean.  <br/>                                                                         
+- I guess you mean within the application server or within an Apache RP.       <br/>                                                            
+- Webgoat should be introduced too in this paragraph. <br/>                                                                                                       
+
+Purpose:     <br/>                                                                                                                           
+one line of source code. : in webgoat, that is.                                                                                       
+
+http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section_2_WebGoat                                                                                                                         
+
+The identification of the target and the introduction of a numbering scheme <br/>
+for stages of a lesson and its sublessons is a useful approach.                                                                         
+
+Overview of lesson results      <br/>                               
+-> A table within the wiki with color codes would be very useful here.                                                                 
+
+http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section_3_ModSecurity_WebGoat_at_50_percent                                                                                               
+
+Neat and clean project setup description. Like it.                                                                                      
+
+I personally believe that you could have profitted from working on the command line with "curl" <br/>
+to replay the attack, until the rules are correct and then check in the browser.                                                                                                          
+
+"empty the cash" -> rather not my account please. :)  <br/>                                                                                  
+guess it's the cache that should be emptied.                                                                                 
+
+http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_04.2                                                                                                                   
+
+Respect. That really is a WAF approach to a business logic flaw. Cool.                                                                  
+
+http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_04.4_04.5                                                                                                              
+
+I suggest you split the page in two. It's two lessons. <br/>
+Make it two pages, even if you repeat yourself. <br/>
+Right now, the text all appears under 4.5. Or did I get it wrong?                                                                                                                           
+
+http://www.owasp.org/index.php/OWASP_ModSecurity_Securing_WebGoat_Section4_Sublesson_08.2_08.4_08.5_08.7                                                                                                    
+
+I am loosing a bit track of the lessons here. Guess it is only me.                                                                      
+
+You provide very useful comments in the rule files. I like those very much.                                                         
+|}

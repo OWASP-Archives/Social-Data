@@ -1,0 +1,104 @@
+{{Template:SecureSoftware}}
+[[Category:OWASP CLASP Project]]
+
+== Overview ==
+There are several fundamental security goals that may be required for the resources in your system. For each resource in your system, you should be aware of whether and how you are addressing each concern throughout the lifetime of the resource. That is, each resource may have different protection requirements as it interacts with different resources. For example, user data may not need to be protected on the user’s machine but may need long-term secure storage in your database to prevent against possible insider attacks.
+
+The fundamental security goals are: access control, authentication, confidentiality, data integrity, availability, accountability, and non-repudiation. In this section, we give an overview of each of the goals, explaining important nuances and discussing the levels within a system at which the concern can be addressed effectively.
+
+Be aware that mechanisms put in place to achieve each of these services may be thwarted by unintentional logic errors in code. 
+
+
+== Authorization (access control) ==
+
+Authorization — also known as access control — is mediating access to resources on the basis of identity and is generally policy-driven (although the policy may be implicit). It is the primary security service that concerns most software, with most of the other security services supporting it. For example, access control decisions are generally enforced on the basis of a user-specific policy, and authentication is the way to establish the user in question. Similarly, confidentiality is really a manifestation of access control, specifically the ability to read data. Since, in computer security, confidentiality is often synonymous with encryption, it becomes a technique for enforcing an access-control policy.
+
+Policies that are to be enforced by an access-control mechanism generally operate on sets of resources; the policy may differ for individual actions that may be performed on those resources (capabilities). For example, common capabilities for a file on a file system are: read, write, execute, create, and delete. However, there are other operations that could be considered “meta-operations” that are often overlooked — particularly reading and writing file attributes, setting file ownership, and establishing access control policy to any of these operations.
+
+Often, resources are overlooked when implementing access control systems. For example, buffer overflows are a failure in enforcing write-access on specific areas of memory. Often, a buffer overflow exploit also accesses the CPU in a manner that is implicitly unauthorized as well.
+    
+=== Advantage of Mandatory Access Control ===
+
+From the perspective of end-users of a system, access control should be mandatory whenever possible, as opposed to discretionary. Mandatory access control means that the system establishes and enforces a policy for user data, and the user does not get to make his own decisions of who else in the system can access data. In discretionary access control, the user can make such decisions. Enforcing a conservative mandatory access control policy can help prevent operational security errors, where the end user does not understand the implications of granting particular privileges. It usually keeps the system simpler as well.
+
+Mandatory access control is also worth considering at the OS level, where the OS labels data going into an application and enforces an externally defined access control policy whenever the application attempts to access system resources. While such technologies are only applicable in a few environments, they are particularly useful as a compartmentalization mechanism, since — if a particular application gets compromised — a good MAC system will prevent it from doing much damage to other applications running on the same machine.
+
+
+== Authentication ==
+
+In most cases, one wants to establish the identity of either a communications partner or the owner, creator, etc. of data. For network connections, it is important to perform authentication at login time, but it is also important to perform ongoing authentication over the lifetime of the connection; this can easily be done on a per-message basis without inconveniencing the user. This is often thought of as message integrity, but in most contexts integrity is a side-effect of necessary re-authentication.
+
+Authentication is a prerequisite for making policy-based access control decisions, since most systems have policies that differ, based on identity.
+
+In reality, authentication rarely establishes identity with absolute certainty. In most cases, one is authenticating credentials that one expects to be unique to the entity, such as a password or a hardware token. But those credentials can be compromised. And in some cases (particularly in biometrics), the decision may be based on a metric that has a significant error rate.
+
+Additionally, for data communications, an initial authentication provides assurance at the time the authentication completes, but when the initial authentication is used to establish authenticity of data through the life of the connection, the assurance level generally goes down as time goes on. That is, authentication data may not be “fresh,” such as when the valid user wanders off to eat lunch, and some other user sits down at the terminal.
+
+In data communication, authentication is often combined with key exchange. This combination is advantageous since there should be no unauthenticated messages (including key exchange messages) and since general-purpose data communication often requires a key to be exchanged. Even when using public key cryptography where no key needs to be exchanged, it is generally wise to exchange them because general-purpose encryption using public keys has many pitfalls, efficiency being only one of them.
+
+===Authentication factors===
+
+There are many different techniques (or factors) for performing authentication. Authentication factors are usually termed strong or weak. The term strong authentication factor usually implies reasonable cryptographic security levels, although the terms are often used imprecisely.
+
+Authentication factors fall into these categories:
+
+* Things you know — such as passwords or passphrases. These are usually considered weak authentication factors, but that is not always the case (such as when using a strong password protocol such as SRP and a large, randomly generated secret). The big problem with this kind of mechanism is the limited memory of users. Strong secrets are difficult to remember, so people tend to share authentication credentials across systems, reducing the overall security. Sometimes people will take a strong secret and convert it into a “thing you have” by writing it down. This can lead to more secure systems by ameliorating the typical problems with weak passwords; but it introduces new attack vectors.
+* Things you have — such as a credit card or an RSA SecurID (often referred to as authentication tokens). One risk common to all such authentication mechanisms is token theft. In most cases, the token may be clonable. In some cases, the token may be used in a way that the actual physical presence is not required (e.g., online use of credit card doesn’t require the physical card).
+* Things you are — referring particularly to biometrics, such as fingerprint, voiceprint, and retinal scans. In many cases, readers can be fooled or circumvented, which provides captured data without actually capturing the data from a living being.
+
+A system can support multiple authentication mechanisms. If only one of a set of authentication mechanisms is required, the security of the system will generally be diminished, as the attacker can go after the weakest of all supported methods.
+
+However, if multiple authentication mechanisms must be satisfied to authenticate, the security increases (the defense-in-depth principle). This is a best practice for authentication and is commonly called multi-factor authentication. Most commonly, this combines multiple kinds of authentication mechanism — such as using both SecurID cards and a short PIN or password.
+
+===Who is authenticated?===
+
+In a two-party authentication (by far, the most common case), one may perform one-way authentication or mutual authentication. In one-way authentication, the result is that one party has confidence in the identity of the other — but not the other way around. There may still be a secure channel created as a result (i.e., there may still be a key exchange).
+
+Mutual authentication cannot be achieved simply with two parallel one-way authentications, or even two one-way authentications over an insecure medium. Instead, one must cryptographically tie the two authentications together to prove there is no attacker involved.
+
+A common case of this is using SSL/TLS certificates to validate a server without doing a client-side authentication. During the server validation, the protocol performs a key exchange, leaving a secure channel, where the client knows the identity of the server — if everything was done properly. Then the server can use the secure channel to establish the identity of the client, perhaps using a simple password protocol. This is a sufficient proof to the server as long as the server does not believe that the client would intentionally introduce a proxy, in which case it may not be sufficient.
+
+===Authentication channels===
+
+Authentication decisions may not be made at the point where authentication data is collected. Instead it may be proxied to some other device where a decision may be made. In some cases, the proxying of data will be non-obvious. For example, in a standard client-server application, it is clear that the client will need to send some sort of authentication information to the server. However, the server may proxy the decision to a third party, allowing for centralized management of accounts over a large number of resources.
+
+It is important to recognize that the channel over which authentication occurs provides necessary security services. For example, it is common to perform password authentication over the Internet in the clear. If the password authentication is not strong (i.e., a zero-knowledge password protocol), it will leak information, generally making it easy for the attacker to recover the password. If there is data that could possibly be leaked over the channel, it could be compromised. 
+
+
+==Confidentiality==
+
+It is often a requirement that data should be secret to all unauthorized parties, both when in transit on a network and when being stored, long-term or short-term.
+
+Confidentiality is often synonymous with encryption, but there is more to confidentiality than merely encrypting data in transit or in storage. For example, users may have privacy requirements relative to other users, where systems that use encryption alone will often behave improperly. In particular, in a system with multiple users — where each user will want to allow some subset of other users to see the data, but not others — good mediation is mandatory. Otherwise, a server that mistakenly ships off data against the wishes of a customer is likely to encrypt the data but to the wrong entity.
+
+Additionally, confidentiality can be compromised even when properly mediating access between resources and performing encryption. Potential attackers may be able to learn important information simply by observing the data you send. As a simple example, consider a system where Bob asks Alice questions so that everyone knows in advance, and Alice simply responds “yes” or “no” to each of them.
+
+If Alice’s responses each go out in a single packet, and each answer is encoded in text (particularly, “yes” and “no”) instead of a single bit, then an attacker can determine the original plaintext without breaking the encryption algorithm simply by monitoring the size of each packet. Even if all of the responses are sent in a single packet, clumped together, the attacker can at least determine how many responses are “yes” and how many are “no” by measuring the length of the string.
+
+Example: Assume that there are twenty questions, and the ciphertext is 55 characters. If every answer were “no”, then the ciphertext would be 40 characters long. Since there are 15 extra characters, and “yes” is one character longer than “no,” there must have been 15 “yes” answers.
+
+Lapses in confidentiality such as this one that are neither obvious nor protected by standard encryption mechanisms are called “covert channels.” Another case of a covert channel occurs when the attacker can gain information simply by knowing which parties are talking to each other. There, he can often tell by monitoring the encrypted packets on the wire which have destination addresses. Even when the destination addresses are encrypted, the attacker may be able to observe the two endpoints and correlate a particular amount of traffic leaving one location with the same amount of traffic arriving at another location at the same time.
+
+Covert channels are generally classified as either covert-storage channels or covert-timing channels. The previous example is a classic covert-timing channel. In covert-storage channels, artifacts of the way data is represented can communicate information, much like in our “yes” and “no” example. Also, when there are multiple ways of encoding the same information that are valid, it may be possible for two users to communicate additional unauthorized data by choosing a particular encoding scheme. This may be a concern, depending on the application. For example, in an on-line game, it may give two parties a way to communicate detailed data that would constitute cheating and would not be easy to communicate via other mechanisms; particularly, if the data is complex data such as game coordinates and is inserted and removed automatically; reading such things over the phone in a timely manner may be impossible. 
+
+==Data Integrity==
+
+In communications and data storage, it is almost always desirable to know that data is in the form it was intended to be. Data integrity checking allows one to make that determination. This generally implies authentication because the mechanism for determining that data has not been modified requires a secret possessed by the person who created the data. Proving the data has not changed in such a case is all done in the same operation as proving that the data originated with a particular sender.
+
+For this reason, CLASP treats data integrity as a subset of data authentication. There are cases where integrity may be a separate service as authentication — such as at the physical link layer on trusted media, where errors may happen naturally but will not be security errors. These situations are extremely rare in software development. 
+
+==Availability==
+
+Most systems that export resources, either directly or otherwise, come with some implicit understanding that those resources will generally be accessible (available). If an availability problem is caused maliciously, it is known as a denial of service attack.
+
+Note that data delays can be considered an availability problem. For example, imagine sending a message that says, “sell 10 shares of MSFT” that an attacker delays until the price has plummeted to the point where the user would no longer want to sell those shares. 
+
+==Accountability==
+
+Users of a system should generally be accountable for the actions they perform. In practice, this means that systems should log information on operations that could potentially require review. For example, financial transactions must always be tracked in order to abide by Sarbanes-Oxley regulations. For logs to be used in cases of accountability, they should generally be difficult to forge, using a message authentication scheme that protects the integrity of logs by authenticating the entity that performed the logging. 
+
+==Non-Repudiation==
+
+In most two-party data communication, the two parties can prove to themselves whether data comes from an authentic source. But one generally does not have proof that a third party would find plausible. A message for which the original sender or some endorser can be established to third parties is said to be non-repudiable. This security service is generally associated with digital signature schemes.
+
+Note that legal systems do not have an absolute notion of non-repudiation. Particularly, in a court of law, “duress” is a valid way to repudiate a message. For example, Alice could sign a message to Bob that Bob uses against Alice in court, but Alice may have a legitimate duress defense if she was forced to send the message by someone holding a gun to her head.

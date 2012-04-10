@@ -1,0 +1,153 @@
+This page is a collection of links (most from my Dinis' owasp.net blog) which releate to .Net
+
+
+== Exploit Central  ==
+* http://www.milw0rm.com/
+* http://www.secwatch.org/ - Providing updated information on the latest security vulnerabilities. 
+* http://www.packetstormsecurity.org/
+* http://elsenot.com/  - List Microsoft Security Bulletin List and exploits  (a bit out of date)
+* http://jav.ch/   - List Microsoft Security Bulletin List and exploits  (a bit out of date)
+
+==  Clr stuff ==
+* http://pinvoke.net - Detailed list of .NET's PInvoke definitions
+* Very, Very interesting interview by Anders Hejlsberg (the lead C# architect) with Bruce Eckel and Bill Venners (There are 8 parts and this [http://www.artima.com/intv/choices.html CLR Design Choices] links to the 8th (which contains links to all of them))
+* Yun Jin's [http://blogs.msdn.com/yunjin/archive/2004/02/21/77744.aspx Dangerous PInvokes] - string modification
+* [http://blogs.msdn.com/shawnfa/archive/2004/06/14/155478.aspx Calli is not Verifiable] (see also [http://www.dotnet247.com/247reference/msgs/20/100371.aspx calli on numeric constant] thread)
+* Joel Pobar's [http://blogs.msdn.com/joelpob/archive/2004/04/23/119171.aspx More late-bound invocation scenario notes]
+* Jonathan Keljo's CLR Blog Using the Profiling API EnterLeave Function Hooks
+* [http://msdn2.microsoft.com/en-us/library/ms173253.aspx How to Migrate to clrpure] and [http://msdn2.microsoft.com/en-us/library/85344whh.aspx Pure and Verifiable Code]  This last one contains this note: ''“There is one coding scenario that will pass the compiler but that will result in an unverifiable assembly: calling a virtual function through an object instance using the scope resolution operator. For example: MyObj -> A::VirtualFunction();.”''
+* David Notario's [http://blogs.msdn.com/davidnotario/archive/2006/01/13/512436.aspx Gotchas with Reverse Pinvoke (unmanaged to managed code callbacks)]
+* [http://msdn.microsoft.com/msdnmag/issues/05/05/JITCompiler/ Drill Into .NET Framework Internals to See How the CLR Creates Runtime Objects]
+* [http://msdn.microsoft.com/netframework/programming/clr/ The Common Language Runtime (CLR) (on MSDN)]
+[[Category:FIXME|this link not working]]
+* [http://msdn.microsoft.com/msdnmag/issues/06/05/BugBash/ Let The CLR Find Bugs For You With Managed Debugging Assistants]
+
+== CAS ==
+
+* [http://msdn.microsoft.com/msdnmag/issues/02/09/SecurityinNET/ The Security Infrastructure of the CLR Provides Evidence, Policy, Permissions, and Enforcement Services]
+
+== .Net 2.0 ==
+
+* [http://blogs.msdn.com/eugene_bobukh/archive/2005/06/08/427074.aspx More on 2.0 changes: Delegates Security] (from Eugene Bobukh's WebLog)
+
+
+== Click Once - entry needs reformating ==
+* [http://msdn.microsoft.com/msdnmag/issues/05/11/CodeAccessSecurity/default.aspx Find
+	Out What's New with Code Access Security in the .NET Framework 2.0]
+	and [http://msdn.microsoft.com/msdnmag/issues/05/11/CodeAccessSecurity/default.aspx?side=true" its
+	side notes] (MSDN Magazine, November 2005)
+
+	</li><li><p><a href="http://www.devnewsgroups.net/group/microsoft.public.dotnet.framework.windowsforms/topic35308.aspx">ClickOnce
+	and or No Touch Deployment example sites on Developer Newsgroups</a></p>
+</li></ul>
+<ul><li><p><a href="http://www.devx.com/dotnet/Article/30177/0/page/1">Take
+	the Pain Out of Deployments with ClickOnce</a></p>
+	</li><li><p><a href="http://msdn.microsoft.com/msdnmag/issues/04/05/ClickOnce/">ClickOnce
+	Deploy and Update Your Smart Client Projects Using a Central Server
+	</a>(MSDN Magazine, May 2004) says:</p>
+	<ul><li><p>“<i>To allow the application to
+		obtain the permissions it needs without administrator intervention
+		on the client machine, ClickOnce can prompt the user at
+		installation time to ask them to grant the application the elevated
+		permissions. Once permission is granted, the user will not be
+		prompted again on subsequent runs. Although this capability
+		circumvents some of the security protections provided by the CLR by
+		allowing a user to elevate security permissions for that
+		application, you can prevent the user from being allowed to do this
+		through security policy in an enterprise environment.”&nbsp;</i><span></span></p>
+		</li><li><p><span>dasBlonde
+		series of posts on </span><a href="http://www.dasblonde.net/CategoryView,category,ClickOnce.aspx"><span>ClickOnce</span></a></p>
+
+	</li></ul>
+	</li><li><p><a href="http://blogs.msdn.com/shawnfa/archive/2005/08/31/458641.aspx"><span>When
+	the Opposite of Transparent isn't Opaque</span></a></p>
+	</li><li><p>Series of articles on <a href="http://www.artima.com/articles/index.jsp?topic=security">Artima
+	about Java JVM security</a></p>
+[[Category:FIXME|link not working]]
+	</li><li><p>.Net Security Blog: <a href="http://blogs.msdn.com/shawnfa/archive/2006/01/18/514407.aspx">Isolated
+	Storage and ClickOnce</a>  and  <a href="http://blogs.msdn.com/shawnfa/archive/2006/01/20/514411.aspx">Detecting
+	that You're Running in a ClickOnce Application</a></p>
+</li>
+<li> [[ClickOnce_Security]] - Microsoft ClickOnce Vulnerabilities and Remediation measures </li>
+</ul>
+
+== WinDbg and SoS (Son of Strike) ==
+
+SoS is the WinDbg extension for analysing Managed Applications
+<ul><li><p><span>Keith
+	Brown's <a href="http://msdn.microsoft.com/msdnmag/issues/03/06/Bugslayer/">Bugslayer
+	SOS It's Not Just an ABBA Song Anymore</a></span> (MSDN Magazine,
+	June 2003)</p>
+	</li><li><p><a href="http://msdn.microsoft.com/msdnmag/issues/05/05/JITCompiler/">JIT
+	and Run Drill Into .NET Framework Internals to See How the CLR
+	Creates Runtime Objects</a> (MSDN Magazine, May 2005)</p>
+
+	</li><li><p><a href="http://www.eggheadcafe.com/articles/20060114.asp">Investigating
+	ASP.Net Memory Issues using WinDbg and SOS</a></p>
+	</li><li><p>Jason Zander's <a href="http://blogs.msdn.com/jasonz/archive/2003/10/21/53581.aspx">SOS
+	Debugging of the CLR, Part 1</a></p>
+	</li><li><p>WinDbg in Action 
+	</p>
+	<ul><li><p><a href="http://mtaulty.com/blog/%28qpfuv145clrvlf5520rplrfo%29/archive/2004/08/03/608.aspx">A
+		word for WinDbg</a> and <a href="http://mtaulty.com/blog/%28xvr5rffxvkzjgc55h5jocynf%29/archive/2004/08/03/609.aspx">A
+		word for WinDbg (2)</a> (now talking about SoS) <a href="http://mtaulty.com/blog/%28qpfuv145clrvlf5520rplrfo%29/archive/2004/08/03/608.aspx"><br></a>Yun
+		Jin's  <a href="https://blogs.msdn.com/yunjin/archive/2004/01/27/63642.aspx">OutOfMemoryException
+		and Pinning</a></p>
+
+		</li><li><p><a href="http://www.codeproject.com/debug/windbg_part1.asp">Windows
+		Debuggers Part 1 A WinDbg Tutorial </a>(The Code Project)</p>
+	</li></ul>
+	</li><li><p>good archive list <a href="http://www.eggheadcafe.com/forumarchives/windbg/">windbg
+	.NET Framework Post</a></p>
+	</li><li><p>good document, demos and toolset:
+	<a href="http://msdn.microsoft.com/library/en-us/dnbda/html/DBGrm.asp?frame=true">
+[[Category:FIXME|link not working]]
+Debugging
+	.NET Applications (Building Distributed Applications)</a></p>
+	</li><li><p>Also related:</p>
+
+	<ul><li><p>mvstanton's <a href="http://blogs.msdn.com/mvstanton/archive/2004/04/05/108023.aspx">Traversing
+		the gc heap (and introducing PSSCOR.DLL)</a></p>
+		</li><li><p><a href="http://www.developerland.com/DotNet/Enterprise/285.aspx">[SOS
+		from your production environment]</a> (DeveloperLand.com )</p>
+		</li><li><p><a href="http://www.codinghorror.com/blog/archives/000015.html">Coding
+		Horror Debugging ASPNET_WP in Production</a></p>
+		</li><li><p><a href="http://support.microsoft.com/default.aspx?scid=kb;en-us;Q286350">How
+		to use ADPlus to troubleshoot hangs and crashes</a></p>
+		</li><li><p><a href="http://msdn.microsoft.com/library/en-us/dnbda/html/dbgch02.asp?frame=true">Debugging
+		Memory Problems (Building Distributed Applications)</a></p>[[Category:FIXME|link not working]]
+
+== IL (needs some cleaning on the links) ==
+* https://mailserver.di.unipi.it/pipermail/dotnet/msg00147.html and http://mailserver.di.unipi.it/pipermail/dotnet/msg00164.html
+* http://blogs.msdn.com/ptorr/archive/2004/01/28/63748.aspx
+* http://blogs.msdn.com/ptorr/archive/2004/1/27.aspx
+* http://blogs.msdn.com/ptorr/archive/2004/01/27/63308.aspx
+* http://blogs.msdn.com/ptorr/archive/2005/01/16/353816.aspx
+* http://blogs.msdn.com/ptorr/archive/2004/01/26/62900.aspx
+* http://blogs.msdn.com/ptorr/archive/2004/01/15/58902.aspx
+* http://groups.google.com/group/microsoft.public.dotnet.languages.csharp/browse_frm/thread/3f41b45911a5d346/51a4058ba297c1fd#51a4058ba297c1fd
+
+
+* http://blogs.msdn.com/ericlippert/archive/2004/01/22/61803.aspx#61933
+* http://blogs.msdn.com/ericlippert/archive/2004/01/14/58700.aspx
+* http://weblogs.asp.net/jarnold/archive/2004/01/27/63574.aspx 
+
+
+* http://blogs.gotdotnet.com/joelpob/archive/2004/11/17/259224.aspx
+* http://blogs.gotdotnet.com/joelpob/archive/2004/09/22/233121.aspx
+* http://blogs.gotdotnet.com/joelpob/archive/2004/07/19/187709.aspx
+* http://blogs.gotdotnet.com/joelpob/archive/2005/07/01/434728.aspx
+
+
+* http://discuss.fogcreek.com/joelonsoftware/default.asp?cmd=show&ixPost=106245&ixReplies=9
+* http://www.thinktecture.com/Resources/Articles/SealedIsGood.html 
+
+* "Flexible Bytecode for Linking in .NET" (http://slurp.doc.ic.ac.uk/pubs/flexiblebytecodefordotnet-bytecode05.pdf)
+* "Untrusted Code Security" (http://securitytf.cs.kuleuven.ac.be/teaching/UntrustedCodeSecurity.pdf)[[Category:FIXME|link not working]]
+
+== Cool Articles (to normalize) ==
+* [http://www.codeproject.com/csharp/LaunchProcess.asp Launching a process and displaying its standard output][[Category:FIXME|link not working]]
+* [http://www.samspublishing.com/articles/article.asp?p=25922&seqNum=5&rl=1 Responding to COM Events in .NET Applications]
+* [http://msdn.microsoft.com/workshop/browser/hosting/wbcustomization.asp WebBrowser Customization] , [http://msdn.microsoft.com/workshop/browser/overview/Overview.asp About the Browser] [http://slingkid.blogsome.com/2006/05/26/blocking-images-similar-to-outlook/ Blocking images similar to Outlook in .NET 2.0] , [http://www.codeproject.com/csharp/ExtendedWebBrowser.asp Extended .NET 2.0 WebBrowser Control][[Category:FIXME|link not working]]
+
+[[Category:OWASP .NET Project]]

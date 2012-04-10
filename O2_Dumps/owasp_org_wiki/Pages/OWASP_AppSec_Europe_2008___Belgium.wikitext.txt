@@ -1,0 +1,317 @@
+[[Image:Owasp_banner_EU08.jpg]]
+
+Welcome to the European OWASP Application Security Conference! After successful OWASP Conferences in the United States and Europe, we are back in Belgium: 5 tutorials and 2 conference tracks in the historic center of Ghent on May 19-22 2008! 
+
+The conference is stuffed with top notch presentations from industry recognised speakers and technical experts on the latest application security risks and trends. New for AppSec Europe: technical vendor demos and a Capture the Flag! 
+
+==Conference Location==
+[[Image:GhentEU2008.JPG]]
+
+The historic center of  [http://en.wikipedia.org/wiki/Ghent Ghent], Belgium May 19th-22nd.
+
+[[OWASP_AppSec_Europe_2008_-_Belgium/Training | Tutorial Days: May 19th-20th]]
+
+[[OWASP_AppSec_Europe_2008_-_Belgium/Agenda | Main Conference: May 21st-22nd]]
+
+'''Registration is available via the OWASP Conference Cvent site at: [http://guest.cvent.com/i.aspx?4W,M3,7b36ecdc-1234-4d63-bc08-898a7bf60b2a Cvent link]'''
+
+'''If you are registering as a Speaker or Sponsor, please use the following link: [http://guest.cvent.com/i.aspx?4W,M3,49b0aaab-82ef-4a36-a982-6e56a485c531 Cvent link for speakers/sponsors]'''
+
+You may want to print out [http://local.google.com/maps/ms?ie=UTF8&hl=en&msa=0&msid=106138833491653132955.00044c6dc6d591427c620&ll=51.059388,3.729258&spn=0.019879,0.040169&z=15|usefull this map] of OWASP AppSec EU 2008 locations in Ghent.
+
+==Agenda and Presentations - May 21-22==
+
+The agenda follows the successful OWASP conference two tracks format, with opening keynotes and presentations in the main auditorium, split tracks in the middle of the day, and closing pannel discussions back in the main auditorium both days. As in the previous editions, the OWASP AppSec Europe 2008 conference will feature a refereed papers track.
+
+{| style="width:80%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white" | Day 1 - May 21, 2008
+ |-
+ | style="width:10%; background:#7B8ABD" | || style="width:40%; background:#BC857A" | Track 1: Auditorium 
+ | style="width:40%; background:#BCA57A" | Track 2: Council Room
+ |-
+ | style="width:10%; background:#7B8ABD" | 08:00-09:00 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Registration and Coffee
+ |-
+ | style="width:10%; background:#7B8ABD" | 09:00-09:05 || colspan="2" style="width:80%; background:#F2F2F2" align="center" | Welcome to OWASP AppSec 2008 Conference 
+''Sebastien Deleersnyder''
+ |-
+ | style="width:10%; background:#7B8ABD" | 09:05-09:45 || colspan="2" style="width:80%; background:#F2F2F2" align="center" | Keynote: The Great Information Security Scrap Yard Challenge [https://www.owasp.org/images/7/71/AppSecEU08_Key_Note_Curphey.pdf pdf]
+''Mark Curphey, Microsoft''
+ |-
+ | style="width:10%; background:#7B8ABD" | 09:45-10:20 || colspan="2" style="width:80%; background:#F2F2F2" align="center" | OWASP State of the Union
+''Dinis Cruz''
+ |-
+ | style="width:10%; background:#7B8ABD" | 10:20-10:40 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Break - Expo - CTF
+ |-
+ | style="width:10%; background:#7B8ABD" | 10:40-11:20 || style="width:40%; background:#BC857A" align="left" | [[AppSecEU08_The_OWASP_ESAPI_project | Fundamental Application Security Building Blocks - The Benefits of Establishing an Enterprise Security API (ESAPI) for Your Organization]] ([http://www.owasp.org/images/c/cd/AppSecEU08-ESAPI.ppt ppt])
+''[[User:Wichers | Dave Wichers]], Aspect Security''
+ | style="width:40%; background:#BCA57A" align="left" | [[AppSecEU08_Trends_in_Web_Hacking_Incidents:_What's_hot_for_2008 | Trends in Web Hacking: What's hot in 2008<br/>Analysis of the Web Hacking Incidents Database (WHID)]] ([[Media:AppSecEU2008-WHID.ppt‎|ppt]])
+''[http://blog.shezaf.com Ofer Shezaf], Breach''
+ |-
+ | style="width:10%; background:#7B8ABD" | 11:20-12:00 || style="width:40%; background:#BC857A" align="left" | [[AppSecEU08_Evaluation_Criteria_for_Web_Application_Firewalls | Evaluation Criteria for Web Application Firewalls]] ([http://www.owasp.org/images/f/f4/AppSecEU08_Evaluation_Criteria_for_Web_Application_Firewalls.pdf pdf])
+''[http://blog.ivanristic.com Ivan Ristic], Breach''
+ | style="width:40%; background:#BCA57A" align="left" | [[AppSecEU08_HTML5 | HTML5 security]]
+''Thomas Roessler''
+ |-
+ | style="width:10%; background:#7B8ABD" | 12:00-12:30 || style="width:40%; background:#BC857A" align="left" | [[AppSecEU08_The_OWASP_ORIZON_project | The OWASP Orizon Project internals]] ([http://www.owasp.org/images/0/0b/The_Owasp_Orizon_Project_Internals_v2_2_Paolo.ppt ppt])
+''Paolo Perego''
+ | style="width:40%; background:#BCA57A" align="left" | [[AppSecEU08_Remo_presentation |Remo presentation - Positive ModSecurity rulesets / Input validation]] ([http://www.owasp.org/images/f/f3/AppSecEU08_Remo_Presentation.pdf pdf])
+''Christian Folini''
+ |-
+ | style="width:10%; background:#7B8ABD" | 12:30-14:00 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Lunch - Expo - CTF
+ |-
+ | style="width:10%; background:#7B8ABD" | 14:00-14:40 || style="width:40%; background:#BC857A" align="left" | [[AppSecEU08_Best_Practices_Guide_Web_Application_Firewalls | Best Practices Guide: Web Application Firewalls]] ([http://www.owasp.org/images/a/a4/AppSecEU08-BPWAF.pdf pdf])
+''Alexander Meisel, art of defence''
+ | style="width:40%; background:#BCA57A" align="left" | [[AppSecEU08_Input_validation:_the_Good,_the_Bad_and_the_Ugly| 
+Input validation: the Good, the Bad and the Ugly]] ([http://www.owasp.org/images/4/4c/AppSecEU08-JohanPeeters.pdf pdf])
+[[Johan_Peeters|''Johan Peeters'']]
+ |-
+ | style="width:10%; background:#7B8ABD" | 14:40-15:20 || style="width:40%; background:#BC857A" align="left" | [[AppSecEU08_NTLM_Relay_Attacks | NTLM Relay Attacks]] ([http://www.owasp.org/images/2/20/AppSecEU08_NTLM_Relay_Attacks-pptx.ppt ppt])
+''Eric Rachner''
+ | style="width:40%; background:#BCA57A" align="left" | [[AppSecEU08_PHPIDS_Monitoring_attack_surface_activity|PHPIDS Monitoring attack surface activity]] ([http://www.owasp.org/images/d/dd/AppSec08_PHPIDS_Monitoring_attack_surface_activity.ppt ppt])
+''[http://mario.heideri.ch/ Mario Heiderich]''
+ |-
+ | style="width:10%; background:#7B8ABD" | 15:20-15:50 || style="width:40%; background:#BC857A" align="left" | [[AppSecEU08_Agile_Security_Breaking_the_Waterfall_Mindset | Agile Security - Breaking the Waterfall Mindset of the Security Industry]] ([http://www.owasp.org/images/b/b8/AppSecEU08-Agile_and_Secure.ppt ppt])
+''[[User:Wichers | Dave Wichers]], Aspect Security''
+ | style="width:40%; background:#BCA57A" align="left" | Security framework is not in the code ([http://www.owasp.org/images/a/ae/AppSecEU08-Sec_Frm_not_in_code.pdf pdf])
+''Sam Reghenzi''
+ |-
+ | style="width:10%; background:#7B8ABD" | 15:50-16:10 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Break - Expo - CTF
+ |-
+ | style="width:10%; background:#7B8ABD" | 16:10-17:00 || style="width:40%; background:#BC857A" align="left" | [[AppSecEU08_Exploiting_Online_Games | Exploiting Online Games]]
+''[[User:gem | Gary McGraw]], Cigital''
+ | style="width:40%; background:#BCA57A" align="left" | [[AppSecEU08 SHIELDS: metrics, tools and Internet services to improve security in application developments | SHIELDS: metrics, tools and Internet services to improve security in application developments]]
+''[[AppSecEU08 Domenico Rotondi | Domenico Rotondi]], TXT e-solutions Spa''
+ |-
+ | style="width:10%; background:#7B8ABD" | 17:00-18:00 || colspan="2" style="width:40%; background:#F2F2F2" align="left" | Panel: The PCI 6.6 dogfight - to Scan or to WAF, this is the question
+Moderator: [[User:Oshezaf|Ofer Shezaf]]<br/>
+Panelists (updated): Scanning side: Ory Segal (''IBM''), Matias Madou (''Fortify''), Gary McGraw (''Cigital''); WAF side: Christian Folini (''netnea.com''), Mario Heiderich (''PHPIDS''), Alexander Meisel (''Art of Defence'')
+ |-
+ | style="width:10%; background:#7B8ABD" | 18:00-19:00 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | [[AppSecEU08 Leader Meeting | OWASP Leader Meeting ]] Organized by ''[[User:Mmeucci | Matteo Meucci]], Minded Security''
+ |-
+ | style="width:10%; background:#7B8ABD" | 19:00-21:00 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | OWASP Social Gathering: Dinner and Drinks at the Monasterium
+ |-
+ ! colspan="3" align="center" style="background:#4058A0; color:white" | Day 2 - May 22, 2008
+ |-
+ | style="width:10%; background:#7B8ABD" | || style="width:40%; background:#BC857A" | Track 1: Auditorium 
+ | style="width:40%; background:#BCA57A" | Track 2: Council Room
+ |-
+ | style="width:10%; background:#7B8ABD" | 08:00-09:00 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Coffee
+ |-
+ | style="width:10%; background:#7B8ABD" | 09:00-9:40 || colspan="2" style="width:80%; background:#F2F2F2" align="center" | Keynote: [[AppSecEU08 Software Security State of the Practice 2008 | Software Security: State of the Practice 2008]]
+''[[user:gem | Gary McGraw]], Cigital''
+ |-
+ | style="width:10%; background:#7B8ABD" | 9:40-10:20 || colspan="2" style="width:80%; background:#F2F2F2" align="center" | Tour of OWASP projects
+''Dinis Cruz (Chief OWASP Evangelist),  [[User:Wichers | Dave Wichers]] (OWASP Board), Michael Eddington (OWASP Encoding Project, .NET Web Service Validation Project) ([http://www.owasp.org/images/f/f8/AppSecEU08-ReformAndCanoodle-Eddington.ppt ppt]) and Mark Roxberry (OWASP .NET Project)''
+ |-
+ | style="width:10%; background:#7B8ABD" | 10:20-10:40 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Break - Expo - CTF
+ |-
+ | style="width:10%; background:#7B8ABD" | 10:40-11:20 || style="width:40%; background:#BC857A" align="left" | Graph Analysis for WebApps: From Nodes to Edges
+''Simon Roses Femerling, Microsoft''
+ | style="width:40%; background:#BCA57A" align="left" | The OWASP Education Project
+''[[User:Konbloma | Martin Knobloch]], Sogeti Nederland B.V.''
+ |-
+ | style="width:10%; background:#7B8ABD" | 11:20-12:00 || style="width:40%; background:#BC857A" align="left" | [[ AppSecEU08_The_Dynamic_Taint_Propagation_Finding_Vulnerabilities_Without_Attacking | Dynamic Taint Propagation: Finding Vulnerabilities Without Attacking]] ([http://www.owasp.org/images/d/d3/AppSecEU08_Dynamic_Taint_Propagation_OWASP.ppt ppt])
+''[[User:mmadou | Matias Madou]], Fortify''
+ | style="width:40%; background:#BCA57A" align="left" | [[AppSecEU08_Threat_Modeling_for_Application_Designers_and_Architects | Threat Modeling for Application Designers & Architects]] ([http://www.owasp.org/images/3/38/AppSecEU08_Threat_Modeling_AppSecEU08_v_9_2.ppt ppt])
+''[[AppSecEU08 Shay Zalalichin Shay Zalalichin | Shay Zalalichin]]''
+ |-
+ | style="width:10%; background:#7B8ABD" | 12:00-12:30 || style="width:40%; background:#BC857A" align="left" |  
+[[AppSecEU08_Scanstud_-_Evaluating_static_analysis_tools | Scanstud: Evaluating static analysis tools]] ([https://www.owasp.org/images/7/76/Johns_jodeit_-_ScanStud_OWASP_Europe_2008.pdf pdf])
+
+''[http://www.informatik.uni-hamburg.de/SVS/personnel/martin/index.php Martin Johns]'', ''Moritz Jodeit'', ''Wolfgang Koeppl'', ''Martin Wimmer''
+ | style="width:40%; background:#BCA57A" align="left" | [[AppSecEU08_Office_2.0:_Software_as_a_Service%2C_Security_on_the_Sidelines | Office 2.0:  Software as a Service, Security on the Sidelines?]]  
+''[[User:JohnH | John Heasman]], NGSSoftware''
+ |-
+ | style="width:10%; background:#7B8ABD" | 12:30-14:00 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Lunch - Expo - CTF
+ |-
+ | style="width:10%; background:#7B8ABD" | 14:00-14:40 || style="width:40%; background:#BC857A" align="left" | [[AppSecEU08 How Data Privacy affects Applications and Databases | How Data Privacy affects Applications and Databases]] ([http://www.owasp.org/images/6/61/AppSecEU08-DeMaeyerDirk.pdf pdf])
+''[[AppSecEU08 Dirk De Maeyer | Dirk De Maeyer]]''
+ | rowspan="2" style="width:40%; background:#BCA57A" align="left" | [http://www.cs.kuleuven.be/~lieven/AppSec2008/program.html Refereed papers track] 
+'''Invited talk:''' 
+
+''Prof. Dieter Gollmann:'' [https://www.owasp.org/images/4/4f/OWASP-AppSecEU08-Gollmann.ppt Know Thyself!]
+ |-
+ | style="width:10%; background:#7B8ABD" | 14:40-14:50 || rowspan="3" style="width:40%; background:#BC857A" align="left" |  [[AppSecEU08_The_OWASP_Anti-Samy_project | The OWASP Anti-Samy project]] ([http://www.owasp.org/images/4/47/AppSecEU08-AntiSamy.ppt ppt])
+''Jason Li, Aspect Security''
+ |-
+ | style="width:10%; background:#7B8ABD" | 14:50-15:10 
+ | style="width:40%; background:#BCA57A" align="left" | [http://www.cs.kuleuven.be/~lieven/AppSec2008/program.html Refereed papers track]
+''fukami and Ben Fuhrmannek:'' [http://www.owasp.org/images/1/10/OWASP-AppSecEU08-Fukami.pdf SWF and the Malware Tragedy]
+ |-
+ | style="width:10%; background:#7B8ABD" | 15:10-15:20  
+ | rowspan="2" style="width:40%; background:#BCA57A" align="left" | [http://www.cs.kuleuven.be/~lieven/AppSec2008/program.html Refereed papers track]
+''Andrew Petukhov and Dmitry Kozlov:'' [http://www.owasp.org/images/3/3e/OWASP-AppSecEU08-Petukhov.pdf Detecting Security Vulnerabilities in Web Applications Using Dynamic Analysis with Penetration Testing]
+ |-
+ | style="width:10%; background:#7B8ABD" | 15:20-15:30 || rowspan="2" style="width:40%; background:#BC857A" align="left" | Google-Hacking and Google-Shielding ([http://www.owasp.org/images/6/6a/AppSecEU08-BeyondGoogleHacking-AmichaiShulman.ppt ppt])
+''Amichai Shulman''
+ |-
+ | style="width:10%; background:#7B8ABD" | 15:30-15:50
+ |  style="width:40%; background:#BCA57A" align="left" | [http://www.cs.kuleuven.be/~lieven/AppSec2008/program.html Refereed papers track]
+''Matias Madou, Edward Lee, Jacob West and Brian Chess:'' [http://www.owasp.org/images/9/9d/OWASP-AppSecEU08-Madou.pdf Watch What You Write: Preventing Cross-Site Scripting by Observing Program Output]
+ |-
+ | style="width:10%; background:#7B8ABD" | 15:50-16:10 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Break - Expo - CTF
+ |-
+ | style="width:10%; background:#7B8ABD" | 16:10-16:30 || rowspan="3" style="width:40%; background:#BC857A" align="left" | Client-side security
+''pdp''
+ | style="width:40%; background:#BCA57A" align="left" | [http://www.cs.kuleuven.be/~lieven/AppSec2008/program.html Refereed papers track]
+''Arshan Dabirsiaghi:'' [http://www.owasp.org/images/1/1b/OWASP-AppSecEU08-Dabirsiaghi.pdf Building and Stopping Next Generation XSS Worms]
+ |-
+ | style="width:10%; background:#7B8ABD" | 16:30-16:50
+ | style="width:40%; background:#BCA57A" align="left" | [http://www.cs.kuleuven.be/~lieven/AppSec2008/program.html Refereed papers track]
+''Etienne Janot and Pavol Zavarsky:'' [http://www.owasp.org/images/5/57/OWASP-AppSecEU08-Janot.pdf Preventing SQL Injections in Online Applications: Study, Recommendations and Java Solution Prototype Based on the SQL DOM]
+ |-
+ | style="width:10%; background:#7B8ABD" | 16:50-17:00
+ | style="width:40%; background:#BCA57A" align="left" | 
+ |-
+ | style="width:10%; background:#7B8ABD" | 17:00-18:00 || colspan="2" style="width:40%; background:#F2F2F2" align="left" | Panel: How to “sell” web application security to your organisation?
+Moderator: tbd
+Panelists: tbd
+ |-
+ | style="width:10%; background:#7B8ABD" | 18:00-18:10 || colspan="2" style="width:40%; background:#F2F2F2" align="left" | Conference Wrap Up - Dave Wichers, OWASP Conferences Chair 
+ |-
+ |}
+
+
+Venue: Aula, Ghent University, Voldersstraat 9, 9000 Ghent [http://maps.google.com/maps?f=q&hl=en&geocode=&q=Voldersstraat+9,+9000+Gent&jsv=107&sll=50.994753,3.745665&sspn=0.154284,0.466919&ie=UTF8&ll=51.054749,3.723121&spn=0.00963,0.029182&z=15&iwloc=addr Google Maps Link] 
+
+Registration is available via the OWASP Conference Cvent site at: [http://guest.cvent.com/i.aspx?4W,M3,7b36ecdc-1234-4d63-bc08-898a7bf60b2a Cvent link]
+
+==Tutorial Days -  May 19-20== 
+
+OWASP arranged for several Application Security tutorials on May 19th-20th, the days prior to the conference. 
+{| style="width:80%" border="0" align="center"
+ ! align="center" style="background:#4058A0; color:white" | T1. Building and Testing Secure Web Applications
+ |-
+ | style="background:#F2F2F2" | Most developers, IT professionals, and auditors learn what they know about application security on the job, usually by making mistakes. Application security is just not a part of many computer science curricula today and most organizations have not focused on instituting a culture that includes application security as a core part of their IT security efforts. This powerful two day course focuses on the most common web application security problems, including the OWASP Top Ten. The course will introduce and demonstrate hacking techniques, illustrating how application vulnerabilities can be exploited so students really understand how to avoid introducing such vulnerabilities into their code.
+
+Trainer: Jason Li, [http://www.aspectsecurity.com Aspect Security] - [[OWASP_AppSec_Europe_2008_-_Belgium/Training#T1._Building_and_Testing_Secure_Web_Applications_-_2-Day Course_-_May_19-20,_2008 | Read more here!]]
+ |-
+ ! align="center" style="background:#4058A0; color:white" | T2. Leading the Development of Secure Applications
+ |-
+ | style="background:#F2F2F2" | In this one-day management session you’ll get the answers to the ten key questions that most CIOs and development managers face when trying to improve security in the development process. The course provides proven techniques and valuable lessons learned that can be applied to projects at any phase of their application’s lifecycle. 
+
+Trainer: Arshan Dabirsiaghi, [http://www.aspectsecurity.com Aspect Security] - [[OWASP_AppSec_Europe_2008_-_Belgium/Training#T2._Leading_the_Development_of_Secure_Applications_-_1-Day_Course_-_May_19,_2008 | Read more here!]]
+ |-
+ ! align="center" style="background:#4058A0; color:white" | T3. Building Secure Rich Internet Applications
+ |-
+ | style="background:#F2F2F2" | Rich Internet applications using technologies like Ajax, Flash, ActiveX, and Java Applets require special attention to secure. This one day training addresses the special issues that arise in this type of application development. 
+
+Trainer: Arshan Dabirsiaghi, [http://www.aspectsecurity.com Aspect Security] - [[OWASP_AppSec_Europe_2008_-_Belgium/Training#T3._Building_Secure_Rich_Internet_Applications_-_1-Day_Course_-_May_20,_2008 | Read more here!]]
+ |-
+ ! align="center" style="background:#4058A0; color:white" | T4. Building Secure Web Services 
+ |-
+ | style="background:#F2F2F2" | The movement towards Web Services and Service Oriented architecture (SOA) paradigms requires new security paradigms to deal with new risks posed by these architectures. This session takes a pragmatic approach towards identifying Web Services security risks and selecting and applying countermeasures to the application, code, web servers, databases, application, and identity servers and related software. Many enterprises are currently developing new Web Services and/or adding and acquiring Web Services functionality into existing applications -- now is the time to build security into the system! 
+
+Trainer: [[User:wichers | Dave Wichers]], [http://www.aspectsecurity.com Aspect Security] - [[OWASP_AppSec_Europe_2008_-_Belgium/Training#T4._Building_Secure_Web_Services_-_2-Day_Course_-_May_19-20,_2008 | Read more here!]]
+ |-
+ ! align="center" style="background:#4058A0; color:white" | T5. Open Source ModSecurity Training 
+ |-
+ | style="background:#F2F2F2" | ModSecurity is currently the most widely deployed web application firewall (WAF) product. This two-day class is for those people who want to learn how to build, deploy, and use ModSecurity in the most effective manner. The course will cover the open source ModSecurity Console, which helps manage alerts on suspicious web activity targeting your web servers. The course also provides an in-depth look at the extremely powerful ModSecurity Rules Language. 
+
+Trainer: Ryan Barnett, Breach - [[OWASP_AppSec_Europe_2008_-_Belgium/Training#T5._ModSecurity_Boot-Camp_Training_-_2-Day_Course_-_May_19-20,_2008 | Read more here!]]
+|}
+More information about the tutorials are [[OWASP_AppSec_Europe_2008_-_Belgium/Training | online]].
+
+Venue: Monasterium PoortAckere, Oude Houtlei 56, 9000 Gent [http://www.monasterium.be/ http://www.monasterium.be/]
+
+==Cocktail Party - May 20, sponsored by Breach Security==
+
+In what is also becoming a tradition, there will be a cocktail party the night before the conference begins, sponsored by Breach Security. The free and open for all conference attendees event will be held at the Vintage Wine Bar at 6:30pm. We would appreciate it if you let us know if you are coming so we can be ready, please mail ofers@breach.com to confirm.
+
+[[Media:AppSec_EU_2008_Breach_Party.pdf|Details and direction map]] (updated May 7th with map and instructions from Monasterium Poortackere, the location of the training classes)
+
+==Evening Social Event - May 21==
+
+At every conference we have an evening social event the first night. This allows participants to have some unstructured time to mingle with the other attendees. They are always fun and typically attract about half the conference attendees. This year's event will be a Flemish buffet with special Belgian beers at the Monasterium (near the conference location).
+
+Registration is available via the OWASP Conference Cvent site at: [http://guest.cvent.com/i.aspx?4W,M3,7b36ecdc-1234-4d63-bc08-898a7bf60b2a Cvent link]
+
+==OWASP Band - May 21, sponsored by Breach Security ==
+
+If that is not enough: tune in for the OWASP Band! Check out the vibes of last year [[OWASP Band | online]]. After the OWASP Dinner you can play, dance or listen to the greatest open-source band: THE OWASP Band. You play an instrument; the neighbours don't complain on your singing talents: contact dinis.cruz <at> owasp.org!
+
+Venue: [http://www.whitecatbelgium.com/ The White Cat]
+Time: 23h
+
+Be there, or be ...
+
+
+==Accommodations==
+
+* OWASP arranged for a room block of 20 Executive Deluxe rooms at the [http://www.nh-hotels.com/nh/en/hotels/belgium/ghent/nh-gent-belfort.html NH Gent Belfort] at a rate of €199 per night. This room block is being held through April 11!! After that date, there is no guarantee that rooms at this rate will be available at the NH Gent Belfort.
+* OWASP attendees have an option for 20 rooms at € 122 and 10 rooms at € 132 per night at the [http://www.monasterium.be Hotel Monasterium PoortAckere] up until April 30. Use OWASP as reference when booking your room. Please note that there are no more rooms for the night of May 22.
+* OWASP arranged for a room block of 25 rooms at the IBIS hotels. You can already contact them on [http://www.ibishotel.com/ibis/fichehotel/gb/ibi/1455/fiche_hotel.shtml Hotel Ibis Gent Centrum Opera] (€ 89 per night - 10 rooms) and [http://www.ibishotel.com/ibis/fichehotel/gb/ibi/0961/fiche_hotel.shtml Hotel Ibis Gent Centrum Kathedraal] (€ 99 per night - 15 rooms of which 3 still available for the 22nd) - reservations through e-mail: H0961-RE at accor.com or fax: 0032/9 233 10 00 (before April 19 - reference OWASP).
+
+It is difficult getting rooms at reduced prices, as there is a medical congress around the same time in Ghent. You will find it difficult to get a room for the night of May 22. We recommend you then book a room for one night near the airport of [http://maps.google.com/maps?f=q&hl=en&geocode=&q=hotels+zaventem,+belgium&ie=UTF8&z=11 Brussels].
+
+The following is a list of nearby accommodations that may have availability:
+
+* [http://www.gent.be/eCache/THE/44/235.html List of hotels in Ghent]
+* [http://www.hotelnazareth.be/ Hotel Vandervalken Nazareth - on Highway 5 minutes from Ghent]
+* [http://www.bedandbreakfast-gent.be/en/home.php A list of bed and breakfasts in Ghent]
+* [http://www.jeugdherbergen.be/jeugdherbergen/gent/ Youth hostels in Ghent]
+
+==Transportation to the Conference==
+If you are flying in you'll come through [http://www.brusselsairport.be Brussels Airport]. From there  it is 65 km to Ghent. The airport train station is located below the terminal (basement level-1). Up to 4 trains an hour connect the airport to Brussels North, Brussels Central and Brussels Midi stations. The easiest way is then to take the train to Ghent Sint-Pieters (directly or through Brussels).
+
+To travel by train to the conferene come through Gent Sint-Pieters, see the [http://www.b-rail.be/main/E/ Belgian Railways Website]. 
+
+'''Next Tuesday May 20th, the Belgian railway is on strike!''' If you are flying in towards Brussels Airport, There will be long queues for the taxis. I advise to contact airport transport beforehand to reserve a place upfront. Possible services to and from Ghent are:
+* [http://www.taxi2airport.be/ http://www.taxi2airport.be/]
+* [http://www.palitax.be/ http://www.palitax.be/]
+* [http://www.taxi-eurojet.be/ http://www.taxi-eurojet.be/]
+If you are travelling with HST like Eurostar or Thalys: check with them it they will ride.
+
+From Ghent Sint-Pieters station tram nr 1 (direction Evergem Brielken) is the quickest and most comfortable way to travel to the city centre (stop KORTE MEER: from there it is a 150m walk to the Ghent Aula). The transport system is Ghent is excellent and always on time. A single ticket costs € 1.50 if bought in the bus/tram or € 1.20 if bought from ticket machine of small kiosk called lijnwinkel, such ticket is valid for an hour's travel on all trams and buses. 
+
+If you are coming by car, Ghent can be reached through the E40 and the E17. There are 2 parkings nearby: Parking Korte Meer and Parking Kouter.
+
+==Registration and Conference Fees==
+
+Registration is available via the OWASP Conference Cvent site at: [http://guest.cvent.com/i.aspx?4W,M3,7b36ecdc-1234-4d63-bc08-898a7bf60b2a Cvent link]
+
+The conference fee for this conference is :
+
+* Standard: 350 Euros, OWASP Members: 300 Euros, Students: 225 Euros. 
+* Conference Dinner (Evening of May 21st): 50 Euros
+* Conference Tutorials: 825 Euros, Student Fee: 430 Euros
+* [http://2008.confidence.org.pl/ CONFidence Poland 2008] members get a € 35 reduction on OWASP (see OWASP On a Plane below).
+* [http://www.issa-be.org ISSA], [http://www.isaca.be ISACA] and [http://www.lsec.be L-SEC] Members get a € 35 reduction.
+
+Note: To save on processing expenses, all fees paid for the OWASP conference are non-refundable. OWASP can accomodate transfers of registrations from one person to another, if such an adjustment becomes necessary.
+
+==OWASP on a Plane - CONFidence 2008==
+This year's [http://2008.confidence.org.pl/lang-pref/en/ CONFidence 2008] will take place on 16-17.05.2008 in Cracow (Poland). They have decided to spend Saturday morning talking about OWASP-related projects. No more excuses: you can attend 2 OWASP events in a row in Europe!
+
+==Conference Committee==
+
+OWASP Conferences Chair: Dave Wichers - Aspect Security - dave.wichers 'at' owasp.org
+
+2008 EU Planning Committee Chair: Sebastien Deleersnyder - Telindus - seba 'at' owasp.org
+
+Vendor Exhibition Chair: Pravir Chandra - Cigital - chandra 'at' cigital.com
+
+Capture the Flag Chair: Pieter Danhieux - Ernst & Young - pieter.danhieux 'at' be.ey.com
+
+Refereed Papers Chair: Lieven Desmet - KU Leuven - Lieven.Desmet 'at' cs.kuleuven.ac.be
+
+== Affiliated Partners ==
+We are glad to have the local support of:
+* ISACA
+* ISSA
+* L-SEC
+* Katholieke Universiteit Leuven
+
+==[[OWASP AppSec Conference Sponsors | Conference Sponsors]]==
+
+The following organizations are sponsors for this conference. If you are interested in sponsoring an OWASP conference, please contact OWASP at: conferences 'at' owasp.org.
+
+[http://www.aspectsecurity.com https://www.owasp.org/images/d/d1/Aspect_logo.gif]
+[http://www.telindus.com https://www.owasp.org/images/b/b3/Telindus.jpg]
+[http://www.imperva.com/ https://www.owasp.org/images/d/de/Imperva_2color_RGB.jpg]
+[http://www.fortifysoftware.com https://www.owasp.org/images/a/ac/Fortify.jpg] 
+[http://www.ibm.com https://www.owasp.org/images/2/2a/IBM_logo_black.jpg] 
+
+More information about conference sponsorship is available [[OWASP AppSec Conference Sponsors | here]].
+
+[[Category:OWASP AppSec Conference]]

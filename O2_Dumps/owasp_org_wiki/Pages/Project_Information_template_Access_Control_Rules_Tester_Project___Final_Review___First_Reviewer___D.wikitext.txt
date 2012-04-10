@@ -1,0 +1,75 @@
+[[Project Information:template Access Control Rules Tester Project|Clik here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''FINAL REVIEW''' 
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART I''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#P022 - OWASP Access Control Rules Tester|OWASP Access Control Rules Tester Project's Deliveries & Objectives]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#P022 - OWASP Access Control Rules Tester|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+Each defined goal has been met, with the exception of the following:
+* AcCoRuTe functionality including site spider. Basic features: Javascript (and AJAX) is interpreted by Rhino in order to get more site links; forms are filled in by operator. 
+
+This is acceptable, as the application utilizes a third-party tool instead to provide this spidering feature.
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#P022 - OWASP Access Control Rules Tester|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+100% has been attained for all goals. 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+*The document(s) should be on some sort of OWASP letterhead or word document template. 
+*In order to be release quality, the english grammar will need to be reviewed and mistakes will need to be corrected.
+*Utilizing Wikipedia / Blogs as reference points are generally not considered credible. Is it possible to reference more credible references?
+*The Requirements to run the tool are stated as "•	At least 50 GB of available HDD space. " Is this true?
+*When attempting to run the tool, it complained that I needed to set the JAVA_HOME environment variable, although I have run many java applications (for example Paros) within windows and have not had to use this. Is there a way around this requirement (for ease of set-up)? If not, maybe include these instructions
+*Several of the instructions relating to setting up Burp Proxy are incorrect, as burp has updated to version 2 and changed many options.
+**Going forward, it would be desirable to remove the dependancy of Burp Proxy.
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART II''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Assessment Criteria
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[:Category:OWASP Project Assessment|OWASP Project Assessment Criteria]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Alpha Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+None
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Beta Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+None
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+3. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Release Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+The follwong criteria of Release quality are not met:
+* Be reasonably easy to use. This requires the future users of AcCoRuTe to submit their remarks and proposals.
+* Include online documention built into tool (based on required user documentation).
+* Be run through Fortify Software's open source review (if appropriate) and FindBugs.
+ 
+ |-  
+ | style="width:25%; background:#7B8ABD" align="center"|
+4. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+Comments are within the above section
+|}

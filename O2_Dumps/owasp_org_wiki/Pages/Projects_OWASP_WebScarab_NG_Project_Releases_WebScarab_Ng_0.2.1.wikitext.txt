@@ -1,0 +1,35 @@
+{{Template: <includeonly>{{{1}}}</includeonly><noinclude>Release About</noinclude>
+| project_name = OWASP WebScarab NG Project
+
+| project_home_page = OWASP WebScarab NG Project
+
+| release_name = WebScarab-Ng-0.2.1
+
+| release_date = 22 January 2011
+
+| release_description = 
+*Version 0.2.1 with spider functionality - jar with run scripts.
+*New functionality:
+**cookie manager
+**manual spider
+**pider plugin with:
+***automatic discovery
+***integration with cookie manager
+***automatic form submission
+***flexibility to define request headers
+***integration with proxy and websitemap
+
+
+| release_license = [http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU General Public License v2]
+
+| release_download_link = https://code.google.com/p/webscarab-ng/downloads/detail?name=WebScarab-ng-0.2.1.one-jar.zip
+
+| leader_name1 = Daniel Brzozowski
+| leader_email1 = daniel@brzozowski.biz
+| leader_username1 = Daniel Brzozowski
+
+| release_notes = http://www.owasp.org/index.php/Projects/OWASP_WebScarab_NG_Project/Releases/WebScarab-Ng-0.2.1/Note
+
+| links_url1 =
+| links_name1 =
+}}

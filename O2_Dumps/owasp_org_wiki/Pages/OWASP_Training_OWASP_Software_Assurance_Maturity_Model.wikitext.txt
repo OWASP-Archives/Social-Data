@@ -1,0 +1,29 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>OWASP Training Modules</noinclude>
+| Module_designation = [[:Category:Software_Assurance_Maturity_Model|OWASP Software Assurance Maturity Model]]
+| Module_Overview_Goal =
+SAMM is an open framework that helps formulate and implement a strategy for software security. The main drivers for SAMM is, an organization’s behavior changes slowly over time. It is based on princliple that somebody has to learn to walk first before they can run. That is the reason changes has to be iterative while working toward long-term goals. There is no single recipe that works for all organizations. A solution must provide enough details for non-security-people. Overall, must be simple, well-defined, and measurable.
+
+| Content = 
+&nbsp;
+SAMM can help an organization evaluate existing software security practices and build a balanced software security assurance program in well-defined iterations. It can demonstrate concrete improvements to a security assurance program. It can also help in defining and measuring security-related activities. 
+
+At the highest level, SAMM defines four critical Business Functions:
+* Governance
+* Construction
+* Verification and
+* Deployment
+
+Each Business Function is the nuts-and-bolts of software development. For each Business Function, SAMM defines three Security Practices. So overall, there are twelve Security Practices that will help an organization build secure applications. 
+<br><br>
+You can browse SAMM online from [http://www.owasp.org/index.php/Category:Software_Assurance_Maturity_Model#tab=Browse_Online here.]
+
+&nbsp;
+| Material = 
+&nbsp;
+* [https://www.owasp.org/index.php/File:Owasp-training-samm-greece.pdf SAMM Presentation PDF File]
+*[http://www.opensamm.org/downloads/SAMM-1.0.pdf Software Assurance Maturity Model v1.0 PDF File]
+}}
+
+
+
+[[Category:OWASP_Training|Training]]

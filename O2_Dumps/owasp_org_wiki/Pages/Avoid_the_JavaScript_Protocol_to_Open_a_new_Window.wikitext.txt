@@ -1,0 +1,16 @@
+The JavaScript Protocol should be avoided as it is extremely complicated to use safely with untrusted data. It is common to see the JavaScript protocol used to open a new window as such:
+
+<pre>&lt;a href="javascript:window.open('http://www.w3schools.com/jsref/met_win_open.asp?
+    value=&lt;%=request.getParameter("value")%&gt;', 'w3c','location=no')"&gt;Window.open() Method&lt;/a&gt;</pre>
+
+The above example is difficult to encode safely due to the nesting of various contexts; in order these are: HTML Attribute, JavaScript, URL. To make the encoding easier and increase the overall safety this can be refactored into the following:
+
+<pre>&lt;a href="http://www.w3schools.com/jsref/met_win_open.asp?
+    value=&lt;%=EASPI.getEncoder().encodeForURL(request.getParameter("value"))%&gt;" 
+    onclick="window.open(this.href, 'w3c','location=no'); return false;"&gt;Window.open() Method&lt;/a&gt;</pre>
+
+The above simplifies the required encoding by removing the deep nesting of various contexts within the DOM. It is important to note that the onclick method must "return false;" in this scenario to prevent the window or frame from navigating to the URL specified.
+
+= Authors and Primary Editors  =
+
+Jeremy Long - jeremy.long [at] owasp.org

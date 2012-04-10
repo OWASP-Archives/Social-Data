@@ -1,0 +1,146 @@
+{{Template:Attack}}
+<br>
+[[Category:OWASP ASDR Project]]
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+==Related Security Activities==
+
+===How to Test for Brute Force Vulnerabilities===
+
+See the [[:Category:OWASP Testing Project|OWASP Testing Guide]] article on how to [[Testing for Brute Force  (OWASP-AT-004)|Test for Brute Force]] Vulnerabilities.
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+==Description==
+
+During this type of attack, the attacker is trying to bypass security mechanisms while having minimal knowledge about them. Using one or more accessible methods: dictionary attack (with or without mutations), brute-force attack (with given classes of characters e.g.: alphanumerical, special, case (in)sensitive) the attacker is trying to achieve his/her goal. Considering a given method, number of tries, efficiency of the system, which conducts the attack and estimated efficiency of the system which is attacked, the attacker is able to calculate how long the attack will have to last. Non brute-force attacks, on the other hand, which includes all classes of characters, give no certainty of success.
+
+==Risk Factors==
+TBD
+
+==Examples==
+
+Brute-force attacks are mainly used for guessing passwords and bypassing access control. However there are a lot of tools which use this techinque to examine the web service's catalogue structures and seek interesting, from the attacker's point of view, information. Very often the target of an attack are data in forms (GET/POST) and users' Session-IDs.
+
+===Example 1===
+
+In the first scenerio, where the goal of brute-forcing is to know the password in its decrypted form, it may appear that [http://www.openwall.com/john/ John the Ripper] is a very helpful tool. The TOP10 tools for password cracking with different methods, including brute-force, may be found on
+http://sectools.org/crackers.html.
+
+
+For testing web services there are tools like:
+ - dirb (http://sourceforge.net/projects/dirb/)
+ - WebRoot (http://www.cirt.dk/tools/webroot/WebRoot.txt)
+
+
+dirb belongs to more advanced tools. With its help we are able to:
+ - set cookies
+ - add any HTTP header
+ - use PROXY
+ - mutate objects which were found
+ - test http(s) connections
+ - seek catalogues and/or files using defined dictionaries and templates
+ - and much much more
+
+
+The simplest test to perform is:
+<pre>
+rezos@dojo ~/d/owasp_tools/dirb $ ./dirb http://testsite.test/
+-----------------
+DIRB v1.9
+By The Dark Raver
+-----------------
+START_TIME: Mon Jul  9 23:13:16 2007
+URL_BASE: http://testsite.test/
+WORDLIST_FILES: wordlists/common.txt
+SERVER_BANNER: lighttpd/1.4.15
+NOT_EXISTANT_CODE: 404 [NOT FOUND]
+(Location: '' - Size: 345)
+
+-----------------
+
+Generating Wordlist...
+Generated Words: 839
+
+---- Scanning URL: http://testsite.test/ ----
+FOUND: http://testsite.test/phpmyadmin/
+       (***) DIRECTORY (*)
+</pre>
+In the output the attacker is informed that phpmyadmin/ catalogue was found. The attacker who knows that is now able to perform the attack on this application. In dirb's templates there is, among others, a dictionary containing information about invalid httpd configuration. This dictionary will detect weaknesses of this kind.
+
+
+One of the main problems with tools like dirb is recognition if the given response from the server is expected and reliable. With more advanced server configuration (e.g. with mod_rewrite) automatic tools are unable to determine if server response informs about an error or that the file, which the attacker is after, was found.
+
+
+The application [http://www.cirt.dk/tools/webroot/WebRoot.txt WebRoot.pl], written by CIRT.DK, has embedded mechanisms for parsing server responses, and based on the phrase specified by the attacker,  measures if the server response is expected.
+
+For example:
+
+
+Np.
+
+./WebRoot.pl -noupdate -host testsite.test -port 80 -verbose -match "test" -url "/private/<BRUTE>" -incremental lowercase -minimum 1 -maximum 1
+
+
+ oo00oo00oo00oo00oo00oo00oo00oo00oo00oo00oo00oo00
+ o          Webserver Bruteforcing 1.8          o
+ 0  ************* !!! WARNING !!! ************  0
+ 0  ******* FOR PENETRATION USE ONLY *********  0
+ 0  ******************************************  0
+ o       (c)2007 by Dennis Rand - CIRT.DK       o
+ oo00oo00oo00oo00oo00oo00oo00oo00oo00oo00oo00oo00
+
+ [X] Checking for updates                - NO CHECK
+ [X] Checking for False Positive Scan    - OK
+ [X] Using Incremental                   - OK
+ [X] Starting Scan                       - OK
+    GET /private/b HTTP/1.1
+    GET /private/z HTTP/1.1
+
+ [X] Scan complete                       - OK
+ [X] Total attempts                      - 26
+ [X] Sucessfull attempts                 - 1
+ oo00oo00oo00oo00oo00oo00oo00oo00oo00oo00oo00oo00
+
+WebRoot.pl found one file "/private/b" on testsite.test, which contains phrase "test".
+
+
+Another example is to examine ranges of the variable's values:
+<pre>
+./WebRoot.pl -noupdate -host testsite.test -port 80 -verbose -diff "Error" -url "/index.php?id=<BRUTE>" -incremental integer -minimum 1 -maximum 1
+</pre>
+
+==Defensive Tools==
+
+'''Php-Brute-Force-Attack Detector'''
+
+http://yehg.net/lab/pr0js/files.php/php_brute_force_detect.zip
+
+Detect your web servers being scanned by brute force tools such as WFuzz, OWASP DirBuster and vulnerability scanners such as Nessus, Nikto, Acunetix ..etc. This helps you quickly identify probable probing by bad guys who's wanna dig possible security holes.
+
+http://yehg.net/lab/pr0js/tools/php-brute-force-detector-readme.pdf
+
+==Related [[Threat Agents]]==
+* [[:Category:Authentication]]
+
+==Related [[Attacks]]==
+* [[Blind SQL Injection]]
+* [[Blind XPath Injection]]
+
+==Related [[Vulnerabilities]]==
+* [[Insufficient Session-ID Length]]
+
+==Related [[Controls]]==
+* [[Authentication]]
+
+==References==
+ TBD
+
+
+
+[[Category:Probabilistic Techniques]]
+[[Category: Attack]]

@@ -1,0 +1,47 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>OWASP Training Modules</noinclude>
+| Module_designation = [[Category:OWASP Webslayer Project|OWASP Webslayer Project]]
+|  Module_Overview_Goal =
+WebSlayer is a tool designed for bruteforcing Web Applications, it can be used for finding not linked resources (directories, servlets, scripts, etc), bruteforce GET and POST parameters, bruteforce Forms parameters (User/Password), Fuzzing, etc.   
+
+The tools have a payload generator and a easy and powerful results analyzer.
+
+&nbsp;
+
+Some features are: 
+
+* Encodings: 15 encodings supported
+* All parameters attack: the tool will inject the payload in every parameter (Headers, Get, Post)
+* Authentication: Webslayer supports Ntml and Basic authentication, also you can brute force the authentication 
+* Multiple payloads: you can use 2 paylods in different parts
+* Proxy support (authentication supported) 
+* Live filters: You can change the filters as the attack is taking place
+* Multiple threads: You can set how many threads to use in the attack
+* Session import/export: Allows you to save the session and to continue working with the results 
+* Integrated web browser: a full fledge webkit browser is included to analyze the results 
+* Predefined dictionaries for predictable resource location, based on known servers (Thanks to Dark Raver, www.open-labs.org) 
+* Payload Generator (custom payload generator)
+
+| Content =
+The training will show how to use the tool and will cover the following topics:
+
+*Interface overview
+*Basic Payloads overview
+*Basic directory discovery setup
+*Advance directory and file discovery
+*Login form brute force attack
+*Basic authentication attack
+*Custom payload generation
+*Advanced uses
+
+
+&nbsp;
+| Material = 
+The training is a hands on course, so it is recommended to bring your own laptop (it´s possible to follow the training without a computer)
+
+The latest version of Webslayer can be downloaded from google code subversion [http://code.google.com/p/webslayer/downloads/list here].
+
+<br>
+*[http://www.vimeo.com/18082291 Video of the session presented at IBWAS'10 Training Day, 16th Dec 2010]
+*[http://www.owasp.org/index.php/File:Christian_Martorella-Webslayer-Training-IBWAS2010.pdf Webslayer Training, IBWAS2010] 
+&nbsp;
+}}

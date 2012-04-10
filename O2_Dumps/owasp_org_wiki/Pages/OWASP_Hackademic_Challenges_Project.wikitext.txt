@@ -1,0 +1,67 @@
+==== Main  ====
+<center>[[Image:Hackademic_transp_logo.png]]</center>
+
+
+The '''OWASP Hackademic Challenges''' Project is an open source project that helps you test your knowledge on web application security. You can use it to actually attack web applications in a realistic but also controlable and safe environment.
+
+'''Download''' the current version (v.0.1.1) from [https://code.google.com/p/owasp-hackademic-challenges/ Google Code]. 
+
+You can also challenge yourself using the live version hosted here: http://hackademic1.teilar.gr/
+
+Live version in Greek language (includes additional challenges): http://hackademic1.teilar.gr/gr
+
+
+== Overview == 
+
+The Hackademic Challenges implement realistic scenarios with known vulnerabilities in a safe, controllable environment. Users can attempt to discover and exploit these vulnerabilities in order to learn important concepts of information security through the attacker's perspective.
+
+Currently, there are 10 web application security scenarios available.
+
+You can choose to start from the one that you find most appealing,although we suggest to follow the order presented on the first page.We intend to expand the available challenges with additional scenarios that involve cryptography, and even vulnerable systems implemented in download-able virtual machines.
+
+
+== Target Group == 
+
+Anyone can use the OWASP Hackademic Challenges to test one's knowledge and skills. 
+
+Nevertheless, the OWASP Hackademic Challenges have been mainly developed to be used in a live classroom environment. Experience has shown increased interest and engagement from students that actually get to practice application security and see how things work in a realistic environment. 
+
+Currently they are successfully used in the security courses of the following universities:
+
+* [http://teilar.gr TEI of Larissa] (Hosting Institute)
+* [http://www.unipi.gr/ University of Piraeus]
+* [http://www.uoa.gr/ University of Athens]
+* [http://www.uom.gr/ University of Macedonia]
+* [http://www.teithe.gr/ TEI of Thessaloniki]
+* ''Add your university/educational institution here'' - [mailto:hackademic@owasp.gr Contact us] if you are using or want to use OWASP Hackademic Challenges in your class.
+
+== Deployment ==
+
+The OWASP Hackademic Challenges can be easily deployed to any PHP-capable web server. 
+
+Current deployments (http://hackademic1.teilar.gr/) have integrated the OWASP Hackademic Challenges with well-known CMS software (e.g. [http://www.joomla.org/ Joomla]) in order to provide a complete e-learning environment, where students can register and monitor their progress as they go through the challenges.
+
+If you need a assistance in setting up the OWASP Hackademic Challenges in your environment, please don't hesitate to contact the project team by posting your inquire on the OWASP Hackademic Challenges project [https://lists.owasp.org/mailman/listinfo/owasp-hackademic-challenges mailing list].
+
+== Roadmap==
+
+Current project roadmap includes:
+
+* Building additional challenges that also cover different security domains (e.g. cryptography) or other OWASP Top 10 risks.
+* Integrate the OWASP Hackademic Challenges with other CMS platfroms.
+* Build a framework to facilitate and normalize the process for adding new challenges.
+* ...
+
+
+
+==== Project About ====
+{{:Projects/OWASP Hackademic Challenges Project | Project About}}
+
+__NOTOC__ <headertabs />
+
+
+
+[[Category:OWASP_Project|Hackademic Challenges Project]]
+[[Category:OWASP_Tool]]
+[[Category:OWASP_Download]]
+[[Category:OWASP_Alpha_Quality_Tool]]

@@ -1,0 +1,71 @@
+Source Code Analysis tools are designed to analyze source code and/or compiled version of code in order to help find security flaws. Ideally, such tools would automatically find security flaws with a high degree of confidence that what is found is indeed a flaw. However, this is beyond the state of the art for many types of application security flaws. Thus, such tools frequently serve as aids for an analyst to help them zero in on security relevant portions of code so they can find flaws more efficiently, rather than a tool that simply finds flaws automatically.
+
+Some tools are starting to move into the IDE. For the types of problems that can be detected during the software development phase itself, this is a powerful phase within the development lifecycle to employ such tools, as it provides immediate feedback to the developer on issues they might be introducing into the code during code development itself. This immediate feedback is very useful as compared to finding vulnerabilities much later in the development cycle.
+
+==Strengths and Weaknesses of such tools==
+
+=== Strengths ===
+* Scales Well (Can be run on lots of software, and can be repeatedly (like in nightly builds))
+* For things that such tools can automatically find with high confidence, such as buffer overflows, SQL Injection Flaws, etc. they are great.
+
+=== Weaknesses ===
+* Many types of security vulnerabilities are very difficult to find automatically, such as authentication problems, access control issues, insecure use of cryptography, etc. The current state of the art only allows such tools to automatically find a relatively small percentage of application security flaws. Tools of this type are getting better, however.
+* High numbers of false positives.
+* Frequently can't find configuration issues, since they are not represented in the code.
+* Difficult to 'prove' that an identified security issue is an actual vulnerability.
+* Many of these tools have difficulty analyzing code that can't be compiled. Analysts frequently can't compile code because they don't have the right libraries, all the compilation instructions, all the code, etc.
+
+==Important Selection Criteria==
+
+* Requirement: Must support your language, but not usually a key factor once it does.
+
+* Types of Vulnerabilities it can detect (Out of the OWASP Top Ten?) (plus more?)
+* Does it require a fully buildable set of source?
+* Can it run against binaries instead of source?
+* Can it be integrated into the developer's IDE?
+* License cost for the tool. (Some are sold per user, per org, per app, per line of code analyzed. Consulting licenses are frequently different than end user licenses.)
+
+==OWASP Tools Of This Type==
+* [http://www.owasp.org/index.php/Category:OWASP_Orizon_Project OWASP Orizon Project]
+* [[OWASP_LAPSE_Project | OWASP LAPSE Project]]
+* [[OWASP O2 Platform]]
+
+==Open Source or Free Tools Of This Type==
+
+* [http://www.stachliu.com/resources/tools/google-hacking-diggity-project/attack-tools/ Google CodeSearchDiggity] - Utilizes Google Code Search to identifies vulnerabilities in open source code projects hosted by Google Code, MS CodePlex, SourceForge, Github, and more. The tool comes with over 130 default searches that identify SQL injection, cross-site scripting (XSS), insecure remote and local file includes, hard-coded passwords, and much more.  ''Essentially, Google CodeSearchDiggity provides a source code security analysis of nearly every single open source code project in existence – simultaneously.'' 
+* [http://findbugs.sourceforge.net/ FindBugs] - Find Bugs (including some security flaws) in Java Programs
+* [http://msdn.microsoft.com/en-us/library/bb429476(VS.80).aspx FxCop] (Microsoft) - FxCop is an application that analyzes managed code assemblies (code that targets the .NET Framework common language runtime) and reports information about the assemblies, such as possible design, localization, performance, and security improvements.
+* [http://pmd.sourceforge.net/ PMD] - PMD scans Java source code and looks for potential code problems (this is a code quality tool that does not focus on security issues)
+* [http://msdn.microsoft.com/en-us/library/ms933794.aspx PreFast] (Microsoft) - PREfast is a static analysis tool that identifies defects in C/C++ programs
+* [http://www.fortify.com/security-resources/rats.jsp RATS] (Fortify) - Scans C, C++, Perl, PHP and Python source code for security problems like buffer overflows and TOCTOU (Time Of Check, Time Of Use) race conditions
+* [http://www.securitycompass.com/inner_swaat.shtml SWAAT] - Simplistic Beta Tool - Languages: Java, JSP, ASP .Net, and PHP
+* [http://www.dwheeler.com/flawfinder/ Flawfinder] Flawfinder - Scans C and C++
+* [http://sourceforge.net/projects/rips-scanner/ RIPS] - RIPS is a static source code analyzer for vulnerabilities in PHP web applications
+
+==Commercial Tools from OWASP Members Of This Type==
+
+These vendors have decided to support OWASP by becoming [[Membership|members]]. OWASP appreciates the support from these organizations, but cannot endorse any commercial products or services.
+
+* [http://www.armorize.com/corpweb/en/products/codesecure Static Source Code Analysis with CodeSecure™] (Armorize Technologies)
+* [http://www.artofdefence.com/en/hypersource/hypersource.html Static Source Code Analysis with hypersource] (art of defence)
+* [http://www.fortifysoftware.com/products/sca.jsp Source Code Analysis] (HP/Fortify)
+* [http://www.veracode.com/ Veracode] (Veracode)
+
+==Other Well Known Commercial Tools Of This Type==
+
+* [http://www.checkmarx.com/Products.aspx?id=3 CxSuite] (Checkmarx)
+* [http://www.coverity.com/products/prevent.html Prevent] (Coverity)
+* [http://www-01.ibm.com/software/awdtools/appscan/ IBM AppScan Source Edition] (formerly Ounce)
+* [http://www.klocwork.com/products/insight.asp Insight] (KlocWork)
+* [http://www.parasoft.com/jsp/capabilities/static_analysis.jsp?itemId=547 Parasoft Test] (Parasoft)
+
+==More Info==
+
+* TODO: add comments from: http://lists.owasp.org/pipermail/owasp-dotnet/2006-August/000002.html
+* [[Appendix_A:_Testing_Tools | Appendix A: Testing Tools]]
+* [http://samate.nist.gov/index.php/Source_Code_Security_Analyzers NIST's list of Source Code Security Analysis Tools]
+
+[[Category:OWASP .NET Project]]
+
+
+__NOTOC__

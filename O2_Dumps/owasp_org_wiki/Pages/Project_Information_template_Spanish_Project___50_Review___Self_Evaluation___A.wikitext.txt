@@ -1,0 +1,51 @@
+[[Project Information:template Spanish Project|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications#Internationalization Guidelines and OWASP-Spanish Project|OWASP Spanish Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#Internationalization Guidelines and OWASP-Spanish Project|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+* Full translation to Spanish of all the release-level document projects. Notice they include both pages and documents:
+** Top 10 2007 (Almost done)
+** Guide 2 (missing)
+** Testing Guide (Done)
+** Legal (Done)
+** FAQ (Done)
+* Full Translation of major sections of OWASP Site (only pages)
+** Project Main Pages
+*** Release (10 done, 36 missing)
+*** Beta (5 done, 14 missing)
+*** Alpha (25 done, 12 missing)
+** Principles (missing)
+** References Section (missing)
+** Conferences (missing)
+** News (missing)
+** About OWASP (missing)
+* Evaluation of Spanish translation approach for WebGoat and WebScarab and delivery of this document to Bruce and Rogan for possible implementation in near future. (In progress)
+* Leverage for deploy of es.owasp.org, the domain already exists but is not redirecting correctly. (done)
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#Internationalization Guidelines and OWASP-Spanish Project|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|We are half way for this project a detailed list of deliverables was sent to reviewers and mailing list for their information. Basically we are missing:
+* Release quality projects
+** We have 90% advance of OWASP Top 10
+** OWASP Guide 2.0 translation is missing
+* 50% of the OWASP site translation
+* OWASP WebGoat translation proposal is in progress
+* OWASP WebScarab will start after WebGoat.
+ |- 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| From reviewers to start working on the reviews of the already translated documents. But it is expected to start happening in the following days.
+|}

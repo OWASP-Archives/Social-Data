@@ -1,0 +1,3 @@
+Using JSON in your application does not make it less secure - it is how you use it which may make you vulnerable. But the complexity of JSON applications does result in many JSON implementations being vulnerable to web-application attacks, most notably cross site scripting (XSS) and its variants. 
+
+On the other hand, testing JSON is far from trivial; this means you – the developer - face the difficulty of making sure the application is safe, while giving the attacker an opportunity to find a clever way to break in. This presentation will try to level the playing field by showing a way to methodically and repeatable way to test JSON application using a fuzzing framework - enabling JSON developers to find those tricky bugs and fix them before they become hacker prey.

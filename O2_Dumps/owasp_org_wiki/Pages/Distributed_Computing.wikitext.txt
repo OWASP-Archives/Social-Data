@@ -1,0 +1,34 @@
+[[Guide Table of Contents|Development Guide Table of Contents]]__TOC__
+
+{{Template:Stub}}
+
+==Objective ==
+
+To provide synchronization and remoting services to web applications, by hardening applications against:
+
+* time of check, time of use race conditions
+
+* distributed synchronization issues
+
+* common multi-programming, multi-threaded and distributed security issues
+
+==Environments Affected ==
+All. 
+
+==Relevant COBIT Topics ==
+TODO.
+
+==Best Practices ==
+* TODO.
+
+
+
+==Distributed synchronization ==
+TODO
+
+==Further Reading ==
+TODO
+
+
+[[Guide Table of Contents|Development Guide Table of Contents]]
+[[Category:OWASP_Guide_Project|Development Guide Table of Contents]]

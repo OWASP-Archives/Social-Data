@@ -1,0 +1,89 @@
+La newsletter est aussi disponible sur le WIKI du groupe OWASP France () ainsi qu'en anglais https://www.owasp.org/index.php/OWASP_Newsletter_5)
+
+=== Conférence OWASP Europe, du 16 au 17 Mai à Milan, Italie  ===
+
+L’organisation de la 6ème Conférence OWASP AppSec est en cours et aura lieu en Italie ( <https://www.owasp.org/index.php/6th_OWASP_AppSec_Conference_-_Italy_2007>).
+
+L’OWASP lance un appel a contribution concernant des retours d’expériences ou des documents de recherches fondamentales pour cette conférence, comme cela a été fait l’année dernière pour la conférence OWASP AppSec 2006 en Belgique; si vous désirez effectuer une présentation, voyez l’appel à contribution sur le site <https://www.owasp.org/index.php/6th_OWASP_AppSec_Conference_-_Italy_2007/CFP> . 
+
+Vous trouverez aussi les détails sur la journée de formation, <https://www.owasp.org/index.php/6th_OWASP_AppSec_Conference_-_Italy_2007/Training>, qui aura lieu le 15 Mai juste avant la conférence.
+
+=== Le projet OWASP Tiger ===
+
+Le projet OWASP Tiger consiste en la création d’un nouvel outil basé sur les cendres des outils ASP.NET <http://ASP.NET> créés par Dinis Cruz ([voir [le projet de Code 2006 OWASP : Owasp .Net Tools] pour plus de détails)
+
+OWASP Tiger est une application Windows créée initialement dans le but d’automatiser différents tests de sécurité ASP.NET dans les environnements hébergés. Mais il peut aussi faire plus que cela; Il peut aider a construire des requètes HTTP, recevoir et analyser les réponses, vérifier le contenu en fonction de conditions et produire des alertes, notifier que quelque chose ne fonctionne pas avec l’application ou le service testé.
+
+Pour plus de détails (et pour le télécharger) voire la page du projet OWASP Tiger, <https://www.owasp.org/index.php/OWASP_Tiger>, et lisez le manuel utilisateur, <https://www.owasp.org/index.php/Tiger_User_Manual>.
+
+=== Le projet du guide des tests de l’OWASP ===
+
+
+Matéo Meucci <https://www.owasp.org/index.php/User:Mmeucci> a publié la version 2.0 du guide des tests de l’OWASP <https://www.owasp.org/index.php/OWASP_Autumn_of_Code_2006_-_Projects:_Testing_Guide> ) :
+
+* Vous pouvez le lire en ligne sur le Wiki : <http://www.owasp.org/index.php/OWASP_Testing_Guide_v2_Table_of_Contents> 
+* Le télécharger au format Adobe PDF <http://www.owasp.org/index.php/Image:OWASP_Testing_Guide_v2_pdf.zip>  ou au format Microsoft Word .  <http://www.owasp.org/index.php/Image:OWASP_Testing_Guide_v2_doc.zip> 
+* Si vous avez des remarques sur le guide, n’hésitez pas à ajouter des commentaires sur la page su site <http://www.owasp.org/index.php/Testing_Guide_Quotes>  page 
+
+=== Derniers ajouts sur le Wiki Anglais ===
+
+==== Nouvelles pages ====
+* OWASP Tiger <https://www.owasp.org/index.php/OWASP_Tiger>  et son manuel<https://www.owasp.org/index.php/Tiger_User_Manual> 
+* Les séances de formation de la  6ème conférence  OWASP AppSec – Italie 2007 <https://www.owasp.org/index.php/6th_OWASP_AppSec_Conference_-_Italy_2007/Training>  et l’appel a contribution de la 6ème conférence OWASP AppSec - Italie 2007 <https://www.owasp.org/index.php/6th_OWASP_AppSec_Conference_-_Italy_2007/CFP> 
+* Signer les fichiers .jar avec jarsigner <https://www.owasp.org/index.php/Signing_jar_files_with_jarsigner> 
+* Les attaques par compromission PRNG <https://www.owasp.org/index.php/PRNG_permanent_compromise_attack> , PRNG state compromise extension attack <https://www.owasp.org/index.php/PRNG_state_compromise_extension_attack> , PRNG direct cryptanalytic attack <https://www.owasp.org/index.php/PRNG_direct_cryptanalytic_attack>  and Java overview <https://www.owasp.org/index.php/Java_overview> 
+* Protéger les sessions fixes <https://www.owasp.org/index.php/Session_Fixation_Protection> 
+* Le chapitre Polonais<https://www.owasp.org/index.php/Poland>  (Nouveau Chapitre) 
+* Commentaires sur le guide des tests <https://www.owasp.org/index.php/Testing_Guide_Quotes> 
+==== Pages Mises a jour ====
+* OWASP JBroFuzz <https://www.owasp.org/index.php/OWASP_JBroFuzz> 
+* Les entrées utilisateur non validées <https://www.owasp.org/index.php/Unvalidated_Input> 
+* Injections de commandes <https://www.owasp.org/index.php/Command_Injection> 
+* Session Fixation <https://www.owasp.org/index.php/Session_Fixation> 
+* La table des matières Java OWASP <https://www.owasp.org/index.php/OWASP_Java_Table_of_Contents> 
+* Longueur et complexité des mots de passes <https://www.owasp.org/index.php/Password_length_%26_complexity> 
+* Prévention des injections SQJ en Java <https://www.owasp.org/index.php/Preventing_SQL_Injection_in_Java> 
+* Tests de pénétration des applications Web <https://www.owasp.org/index.php/Web_Application_Penetration_Testing> 
+* Tester les codes d’erreurs <https://www.owasp.org/index.php/Testing_for_Error_Code> 
+* Tests de découvertes des applications <https://www.owasp.org/index.php/Testing_for_Application_Discovery> 
+* Tests et empreintes des applications Web <https://www.owasp.org/index.php/Testing_for_Web_Application_Fingerprint> 
+* Tests par brute force <https://www.owasp.org/index.php/Testing_for_Brute_Force> 
+* Tests pour le management des configurations des infrastructure <https://www.owasp.org/index.php/Testing_for_infrastructure_configuration_management> 
+* Tests pour les portes d’écoutes SGBD <https://www.owasp.org/index.php/Testing_for_DB_Listener> 
+* Passer outre les authentifications <https://www.owasp.org/index.php/Testing_for_Bypassing_Authentication_Schema> 
+* Tests pour des comptes utilisateur par défaut <https://www.owasp.org/index.php/Testing_for_Default_or_Guessable_User_Account> 
+* Gérer les paiements de e-commerce <https://www.owasp.org/index.php/Handling_E-Commerce_Payments> 
+* Annexe 1 : Les outils de tests <https://www.owasp.org/index.php/Appendix_A:_Testing_Tools> 
+* Phoenix/Tools <https://www.owasp.org/index.php/Phoenix/Tools> 
+* PHP CSRF Guard <https://www.owasp.org/index.php/PHP_CSRF_Guard> 
+* Réunion de Janvier du chapitre de Denver <https://www.owasp.org/index.php/Denver_January_2007_meeting> 
+==== Nouveaux documents et Présentations ====
+
+* Version finale et révisée du guide des tests: OWASP Testing Guide v2 doc.zip <https://www.owasp.org/index.php/Image:OWASP_Testing_Guide_v2_doc.zip>  ou OWASP Testing Guide v2 pdf.zip <https://www.owasp.org/index.php/Image:OWASP_Testing_Guide_v2_pdf.zip> 
+
+* De la dernière réunion du chapitre Israélien:  
+** Analyse des codes sources et sécurité des applications - Cheating the Maze  <https://www.owasp.org/images/f/fc/OWASP_IL_Source_Code_Analysis_and_Application_Security.pdf>  - Maty Siman, Fondateur et Directeur Technique, Checkmarx <http://www.checkmarx.com/> 
+** La sécurité de .Net 3.0 et  Windows Communication Foundation (WCF) <https://www.owasp.org/images/5/51/OWASP_IL_WCF_Security.pdf>  - Emmanuel Cohen-Yashar (Manu), Consultant technologique Senior .NET, Sela Group <http://www.sela.co.il/> 
+** Analyse de la vulnérabilité XSS PDF - Cause, Solutions   <https://www.owasp.org/images/4/4b/OWASP_IL_The_Universal_XSS_PDF_Vulnerability.pdf>  - Ofer Shezaf, Directeur Technique, Breach Security <http://www.breach.com/> , Responsable du chapitre Israélien 
+
+== Derniers billets des blogs
+* La loi anglaise sur le « Computer misuse Act » pourrait banir la distribution des outils de sécurité <http://blogs.owasp.org/eoinkeary/2007/02/21/the-uk-computer-misuse-act-could-ban-distribution-of-security-tools//>   
+* Sanboxes on OLPC and WMF, MAF  <http://blogs.owasp.org/diniscruz/2007/02/20/sanboxes-on-olpc-and-wmf-maf/>   
+* Chapter Democrazy <http://blogs.owasp.org/seba/2007/02/19/chapter-democrazy/>   
+* Gartner smell the bacon/tofu!!!!  <http://blogs.owasp.org/eoinkeary/2007/02/19/gartner-smell-the-bacontofu/> 
+* L’UAC n’est pas une fonction de sécurité <http://blogs.owasp.org/diniscruz/2007/02/15/uac-not-a-security-feature/> 
+* The game is heating up <http://blogs.owasp.org/dacort/2007/02/14/the-game-is-heating-up/> 
+* Un outil d’analyse des cookies HTTP <http://blogs.owasp.org/dacort/2007/02/02/http-cookie-analysis-tool/> 
+* Mise a jour du Blog OWASP <http://blogs.owasp.org/mike/2007/02/04/owasp-blogs-update/> 
+* Un article interessant <http://blogs.owasp.org/mike/2007/02/12/interesting-article/>   
+* Version 0.10 <http://blogs.owasp.org/orizon/2007/02/05/version-010/>   et première version publique <http://blogs.owasp.org/orizon/2007/02/06/8/>  (Orizon) 
+==== La communauté OWASP ====
+* 10 Mai (18:00h) – Réunion du chapitre Belge <https://www.owasp.org/index.php/Belgium> 
+* 12 Avril (18:00h) – Réunion du chapitre Néerlandais <https://www.owasp.org/index.php/Netherlands> 
+* 22 Mars (18:00h) – Réunion du chapitre londonien <https://www.owasp.org/index.php/London> 
+* 21 et 22 Mars- Belgium@InfoSecurity <https://www.owasp.org/index.php/Belgium#OWASP_Top_10_2007_Update_.28Infosecurity_Belgium.2C_21_.26_.2622_Mar_2007.29> 
+* 7 Mars (18:30h) – Réunion du chapitre de Kansas City <https://www.owasp.org/index.php/Kansas_City> 
+* 6 Mars (18:30h) – Réunion du chapitre de Philadelphie <https://www.owasp.org/index.php/Philadelphia> 
+* 6 Mars (18:00h) – Réunion du chapitre de Melbourne <https://www.owasp.org/index.php/Melbourne> 
+* 28 Février (18:00h) – Réunion du chapitre de Seattle <https://www.owasp.org/index.php/Seattle> 
+* 27 Février (18:00h) – Réunion du chapitre d’Edmonton <https://www.owasp.org/index.php/Edmonton>

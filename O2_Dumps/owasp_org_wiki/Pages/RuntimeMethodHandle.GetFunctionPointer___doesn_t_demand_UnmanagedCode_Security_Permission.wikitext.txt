@@ -1,0 +1,66 @@
+According to the official documentation  the System RuntimeMethodHandle.GetFunctionPointer Method  requires "''SecurityPermission for the ability to call unmanaged code. Associated enumeration: [http://msdn.microsoft.com/library/en-us/cpref/html/frlrfsystemsecuritypermissionssecuritypermissionflagclasstopic.asp SecurityPermissionFlag.UnmanagedCode]''" [[Category:FIXME|link not working]](for 1.1 see  [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemRuntimeMethodHandleClassGetFunctionPointerTopic.asp RuntimeMethodHandle.GetFunctionPointer Method]
+for 2.0 see [http://msdn2.microsoft.com/en-us/library/system.runtimemethodhandle.getfunctionpointer.aspx RuntimeMethodHandle.GetFunctionPointer Method])
+
+Using Reflector we can see that in 1.1 this is enforced by a [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpguide/html/cpcondemands.asp declarative] Security Demand:
+
+ [SecurityPermission(SecurityAction.Demand, UnmanagedCode=true)]
+ public IntPtr GetFunctionPointer()
+ {
+      return RuntimeMethodHandle.InternalGetFunctionPointer(this.m_ptr);
+ }
+
+but in 2.0 there is no security demand:
+
+ [MethodImpl(MethodImplOptions.InternalCall)]
+ public extern IntPtr GetFunctionPointer();
+
+This means that this code works in a 2.0 Partial Trust environment:
+
+ using System;
+ using System.Reflection;
+
+ namespace Owasp
+ {
+    public class GetFunctionPointer
+    {
+        public static void Main()
+        {
+            Type tType = Type.GetType("Owasp.GetFunctionPointer"); //("System.String");
+            MethodInfo[] miMethods = tType.GetMethods();
+            foreach (MethodInfo mi in miMethods)
+            {
+                Console.WriteLine(mi.Name + " : " +  Convert.ToString(mi.MethodHandle.GetFunctionPointer().ToInt64(),16));
+            }
+            Console.WriteLine("\n\n---------------\n\n");
+            Console.ReadLine();
+            //MethodInfo mi = new MethodInfo()
+        }
+    }
+ }
+
+output:
+
+ Z:\>GetFunctionPointer.exe
+ Main : c80070
+ GetType : 79690ccc
+ ToString : 9127cc
+ Equals : 9127e0
+ GetHashCode : 9127f4
+
+i.e. it worked!
+
+Where in 1.1, the same code throws (as expected) a security exception:
+
+ Unhandled Exception: System.Security.SecurityException: Request for the permisson of type System.Security.Permissions.SecurityPermission, mscorlib, Version=1..5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089 failed.  
+    at  System.Security.CodeAccessSecurityEngine.CheckTokenBasedSetHelper(Boolean ignoreGrants, TokenBasedSet grants, TokenBasedSet denied, TokenBasedSet demands 
+    at System.Security.CodeAccessSecurityEngine.CheckSetHelper(PermissionSet grants, PermissionSet denied, PermissionSet demands) 
+    at System.RuntimeMethodHandle.GetFunctionPointer()  
+    at Owasp.GetFunctionPointer.Main()
+
+ The state of the failed permission was:
+ <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Vrsion=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1"             Flags="UnmanagedCode"/>
+
+I did attempt searching in [http://msdn.microsoft.com/netframework/programming/breakingchanges/default.aspx Breaking Changes in .NET Framework 2.0] for this but since there is not search funcionality in there I gave up[[Category:FIXME|link not working]]
+
+
+[[Category:OWASP .NET Project]]

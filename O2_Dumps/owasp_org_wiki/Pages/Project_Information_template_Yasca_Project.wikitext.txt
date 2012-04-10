@@ -1,0 +1,58 @@
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Yasca Project'''  
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"| 
+* Yasca is an open source program which looks for security vulnerabilities, code-quality, performance, and conformance to best practices in program source code. It leverages external open source programs, such as [http://findbugs.sourceforge.net/ FindBugs], [http://pmd.sourceforge.net PMD], [http://artho.com/jlint JLint], [http://javascriptlint.com/ JavaScript Lint], [http://www.icosaedro.it/phplint/ PHPLint], [http://en.wikipedia.org/wiki/Cppcheck Cppcheck], [http://en.wikipedia.org/wiki/ClamAV ClamAV], [http://en.wikipedia.org/wiki/RATS RATS], and [http://pixybox.seclab.tuwien.ac.at/ Pixy] to scan specific file types, and also contains many custom scanners developed just for Yasca. It is a command-line tool that generates reports in HTML, CSV, XML, SQLite, and other formats. Yasca is easily extensible via a plugin-based architecture, so scanning any particular file is as simple as coming up with the rules or integrating external tools.<br/>
+* Yasca also features a simple regular-expression plugin that allows new rules to be written in less than a minute.
+
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Key Project Information'''
+ | style="width:12%; background:#cccccc" align="center"|Licensed under<br>[http://en.wikipedia.org/wiki/BSD_license BSD License]<br/>[http://en.wikipedia/org/wiki/GPL_license GPL License]
+ | style="width:12%; background:#cccccc" align="center"|Project Leader<br>[mailto:michael.scovetta(at)gmail.com '''Michael V. Scovetta''']
+ | style="width:12%; background:#cccccc" align="center"|Project Contributors<br>[mailto:name(at)name '''Name''']
+ | style="width:12%; background:#cccccc" align="center"|Mailing List<br>[https://lists.owasp.org/mailman/listinfo/owasp-yasca-project '''To Subscribe''']<br>[mailto:owasp-yasca-project(at)lists.owasp.org '''To Use''']
+ | style="width:12%; background:#cccccc" align="center"|First Reviewer<br>[mailto:name(at)name '''Name''']
+ | style="width:12%; background:#cccccc" align="center"|Second Reviewer<br>[mailto:name(at)name '''Name''']<br>
+ | style="width:12%; background:#cccccc" align="center"|OWASP Board Member<br>(if applicable)<br>[mailto:name(at)name '''Name&Email''']
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="6" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT MAIN LINKS''' 
+ |-
+ | style="width:100%; background:#cccccc" align="center"|
+Yasca is hosted on [http://sourceforge.net/projects/yasca SourceForge] and has a main project website at [http://www.yasca.org/ yasca.org].
+
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="6" align="center" style="background:#4058A0; color:white"|<font color="white">'''RELATED PROJECTS''' 
+ |-
+ | style="width:100%; background:#cccccc" align="center"|
+* [[:Category:OWASP Orizon Project|OWASP Orizon Project]]<br>
+* [[:Category:OWASP Code Review_Project|OWASP Code Review_Project]]
+* [[:Category:OWASP Open Review Project|OWASP Open Review Project]]
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="6" align="center" style="background:#4058A0; color:white"|<font color="white">'''SPONSORS & GUIDELINES''' 
+ |-
+ | style="width:50%; background:#cccccc" align="center"|Sponsor name, if applicable  
+ | style="width:50%; background:#cccccc" align="center"|[[:Category:OWASP Yasca Project Roadmap|'''Guidelines/Roadmap''']]
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="5" align="center" style="background:#4058A0; color:white"|ASSESSMENT AND REVIEW PROCESS
+ |-
+ | style="width:15%; background:#6C82B5" align="center"|'''Review/Reviewer''' 
+ | style="width:21%; background:#b3b3b3" align="center"|'''Author's Self Evaluation'''<br>(applicable for Alpha Quality & further) 
+ | style="width:21%; background:#b3b3b3" align="center"|'''First Reviewer'''<br>(applicable for Alpha Quality & further)
+ | style="width:21%; background:#b3b3b3" align="center"|'''Second Reviewer'''<br>(applicable for Beta Quality & further)
+ | style="width:22%; background:#b3b3b3" align="center"|'''OWASP Board Member'''<br>(applicable just for Release Quality) 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''First Review''' 
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes'''<br>---------<br>Which status has been reached?<br>'''Beta Status'''<br>---------<br>[[Project Information:template Yasca Project - First Review - Self Evaluation - A|See&Edit: First Review/SelfEvaluation (A)]]
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Not yet''' (To update)<br>---------<br>Which status has been reached?<br>'''Alpha Status''' - (To update)<br>---------<br>[[Project Information:template Yasca Project - First Review - First Reviewer - B|See&Edit: First Review/1st Reviewer (B)]]
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes/No''' (To update)<br>---------<br>Which status has been reached?<br>'''Alpha Status''' - (To update)<br>---------<br>[[Project Information:template Yasca Project - First Review - Second Reviewer - C|See&Edit: First Review/2nd Reviewer (C)]]
+ | style="width:22%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes/No''' (To update)<br>---------<br>Which status has been reached?<br>'''Alpha Status''' - (To update)<br>---------<br>[[Project Information:template Yasca Project - First Review - OWASP Board Member - D|See/Edit: First Review/Board Member (D)]]
+ |-
+ |}

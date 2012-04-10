@@ -1,0 +1,14 @@
+[[OWASP Code Review Guide Table of Contents]]__TOC__
+
+Shared Objects are designed to store up to 100kb of data relating to a users session.
+They are dependent on host and domain name and SWF movie name.
+
+They are stored in binary format and are not cross-domain by default.
+Shared objects are not automatically transmitted to the server unless requested by the application.
+
+It is worth noting that they are also stored outside the web browser cache:
+
+ C:\Documents and Settings\<USER>\Application Data\Macromedia\Flash Player\#Shared Objects\<randomstring>\<domain>
+In the case of cleaning the browser cache Flash sharedobjects survive such an action.
+
+Shared objects are handled by the Flash application and not the clients' web browser.

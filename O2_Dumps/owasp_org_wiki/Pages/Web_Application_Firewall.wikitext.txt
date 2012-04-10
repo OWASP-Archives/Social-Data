@@ -1,0 +1,92 @@
+{{Template:Countermeasure}}
+
+==Description==
+
+A web application firewall (WAF) is an appliance, server plugin, or filter that applies a set of rules to an HTTP conversation. Generally, these rules cover common attacks such as [[Cross-site Scripting (XSS)]] and [[SQL Injection]]. By customizing the rules to your application, many attacks can be identified and blocked. The effort to perform this customization can be significant and needs to be maintained as the application is modified.
+
+A far more detailed description is available at [http://en.wikipedia.org/wiki/Application_firewall Wikipedia]
+
+==Strengths and Weaknesses==
+
+==Important Selection Criteria==
+
+* Protection Against OWASP Top Ten!
+* Very Few False Positives (i.e., should NEVER disallow an authorized request)
+* Strength of Default (Out of the Box) Defenses
+* Power and Ease of Learn Mode
+* Types of Vulnerabilities it can prevent.
+* Detects disclosure and unauthorized content in outbound reply messages, such as credit-card and Social Security numbers.
+* Both Positive and Negative Security model support.
+* Simplified and Intuitive User Interface. 
+* Cluster mode support.
+* High Performance (milliseconds latency).
+* Complete Alerting, Forensics, Reporting capabilities.
+* Web Services\XML support.
+* Brute Force protection.
+* Ability to Active (block and log), Passive (log only) and bypass the web trafic.
+* Ability to keep individual users constrained to exactly what they have seen in the current session
+* Ability to be configured to prevent ANY specific problem (i.e., Emergency Patches)
+* Form Factor: Software vs. Hardware (Hardware generally preferred)
+
+
+You may also use [https://www.owasp.org/index.php/Category:OWASP_Best_Practices:_Use_of_Web_Application_Firewalls Best Practices: Use of Web Application Firewalls] to find out where and when to use a WAF and/or you may find 
+the [http://www.webappsec.org/projects/wafec/ Web Application Firewall Evaluation Criteria] useful for evaluating the performance and other characteristics of a WAF.
+
+The [[London Chapter WAF event]] held in 2006 has some comparative info amongst the WAF Vendors that participated in the event.
+
+==OWASP Tools Of This Type==
+
+The [http://www.owasp.org/index.php/Category:OWASP_Stinger_Project OWASP Stinger Project] is not a full blown WAF, but it is a strong Java/J2EE input validation filter that can be put in front of your application.
+* [https://www.owasp.org/index.php/OWASP_NAXSI_Project NAXSI] is a WAF for NGINX.
+
+==Well Known Open Source Tools Of This Type==
+
+* [http://www.aqtronix.com/?PageID=99 AQTronix - WebKnight]
+* [http://www.modsecurity.org/ Trustwave SpiderLabs - ModSecurity] 
+
+A recent new project by Qualys led by Ivan Ristic, the original ModSecurity author
+* [https://www.ironbee.com/ Qualys - Ironbee]
+
+==Commercial Tools from OWASP Members Of This Type==
+
+These vendors have decided to support OWASP by becoming [[Membership|members]]. OWASP appreciates the support from these organizations, but cannot endorse any commercial products or services.
+
+* [http://www.artofdefence.com/en/products/hyperguard.html art of defence - hyperguard]
+* [https://www.trustwave.com/web-application-firewall/  Trustwave - WebDefend Web Application Firewall]
+* [http://www.denyall.com/produits.html?set_lang=en Deny All - rWeb]
+* [http://fortifysoftware.com/products/defender/ Fortify Software - Defender]
+* [http://www.imperva.com/products/securesphere/web_application_firewall.html Imperva - SecureSphere™]
+* [http://www.pentasecurity.com/english/product/webWppleIntro.do Penta Security - WAPPLES]
+
+==Other Well Known Commercial Tools Of This Type==
+
+* [http://www.applicure.com Applicure - DotDefender]
+* [http://www.port80software.com/products/serverdefendervp/ Port80 Software - ServerDefender VP]
+* [http://www.radware.com/Solutions/Enterprise/Security/WebApplicationFirewall.aspx Radware AppWall]
+* [http://www.armorlogic.com/ Armorlogic - Profense]
+* [http://www.barracudanetworks.com/ns/products/web-application-controller-overview.php Barracuda Networks - Application Firewall]
+* [http://www.bee-ware.net/en/product/i-sentry/ Bee-Ware - iSentry]
+* [http://binarysec.com/ BinarySec - Application Firewall] 
+* [http://www.bugsec.com/index.php?q=WebSniper BugSec - WebSniper]
+* [http://www.cisco.com/en/US/products/ps9586/index.html Cisco - ACE Web Application Firewall]
+* [http://www.citrix.com/English/ps2/products/product.asp?contentID=25636 Citrix - Application Firewall]
+* [http://www.eeye.com/html/products/secureiis/index.html eEye Digital Security - SecureIIS]
+* [http://www.f5.com/products/big-ip/product-modules/application-security-manager.html F5 - Application Security Manager]
+* [http://forumsys.com/ Forum Systems - Xwall, Sentry]
+* [http://www.webscurity.com/products.htm mWEbscurity - webApp.secure]
+* [http://www.ergon.ch/en/airlock/ Ergon - Airlock]
+* [http://www.privacyware.com/intrusion_prevention.html Privacyware - ThreatSentry IIS Web Application Firewall]
+* [http://www.protegrity.com/WebApplicationFirewall Protegrity - Defiance TMS  - Web Application Firewall]
+* [http://www.xtradyne.com/ Xtradyne - Application Firewalls]
+* [http://www.bayshorenetworks.com/ Bayshore Networks - Application Protection Platform]
+
+==Related Threats==
+
+==Related Attacks==
+
+==Related Vulnerabilities==
+
+==Related Countermeasures==
+
+[[Category: Control]]
+[[Category:OWASP WAF]]

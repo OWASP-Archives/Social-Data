@@ -1,0 +1,149 @@
+{{Template:SecureSoftware}}
+{{Template:Vulnerability}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+Data should be protected from direct modification.
+
+'''Consequences'''
+
+* Integrity: The object could be tampered with.
+
+'''Exposure period'''
+
+* Design through Implementation: At design time it is important to reduce the total amount of accessible data. 
+* Implementation: Most implementation level issues come from a lack of understanding of the language modifiers.
+
+'''Platform'''
+
+* Languages: Java, C++
+* Operating platforms: Any
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Medium
+
+'''Likelihood of exploit'''
+
+Medium
+
+One of the main advantages of object-oriented code is the ability to limit access to fields and other resources by way of accessor functions. Utilize accessor functions to make sure your objects are well-formed.
+
+Final provides security by only allowing non-mutable objects to be changed after being set. However, only objects which are not extended can be made final.
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+In C++:
+
+<pre>
+public:
+  int someNumberPeopleShouldntMessWith;
+</pre>
+
+In Java:
+
+<pre>
+private class parserProg {
+    public stringField;
+}
+</pre>
+
+Another set of Examples are:
+
+In C/C++:
+
+<pre>
+private:
+  int someNumber;
+
+public:
+  void writeNum(int newNum) {
+    someNumber = newNum;
+  }
+</pre>
+
+In Java:
+
+<pre>
+public class eggCorns {
+   private String acorns;
+   public void misHear(String name){
+      acorns=name;
+   }
+}
+</pre>
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* Design through Implementation: Use private members, and class accessor methods to their full benefit. This is the recommended mitigation. Make all public members private, and - if external access is necessary - use accessor functions to do input validation on all values. 
+* Implementation: Data should be private, static, and final whenever possible This will assure that your code is protected by instantiating early, preventing access and preventing tampering. 
+* Implementation: Use sealed classes. Using sealed classes protects object-oriented encapsulation paradigms and therefore protects code from being extended in unforeseen ways.
+* Implementation: Use class accessor methods to their full benefit. Use the accessor functions to do input validation on all values intended for private values. 
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Protocol Errors]]
+[[Category:OWASP_CLASP_Project]]

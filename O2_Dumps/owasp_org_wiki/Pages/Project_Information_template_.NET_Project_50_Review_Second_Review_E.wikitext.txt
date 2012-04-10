@@ -1,0 +1,29 @@
+[[Project Information:template .NET Project|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications#OWASP .NET Project Leader|OWASP .NET Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#OWASP .NET Project Leader|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| It appears that the project has been successful at creating a useful structure for aggregating data into a single source on the OWASP site.  This in conjunction with the project that is currently being worked on were a team of Microsoft Security MVPs that are writing articles about specific issues should lead toward a strong set of guidelines the community can use.  This in combination with the growing reputaion of the OWASP community should lead to a greater awareness of how to secure DOT NET applications which was another of the goals.
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#OWASP .NET Project Leader|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+The project is comfortably at 50%
+ |- 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+I like the way the project not only relies on OWASP specific document but also links to a number of Microsoft and other resources.  My only suggestion, which may need to come a a later date, would be to address some of the issues around Silverlight which is growing in popularity and is being pushed my Microsoft.  I don't know that this needs to be done as part of this project but it could certanly be done in the future as an extention of the project.
+|}

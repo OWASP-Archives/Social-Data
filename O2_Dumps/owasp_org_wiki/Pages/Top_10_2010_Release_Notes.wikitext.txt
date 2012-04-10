@@ -1,0 +1,57 @@
+{{Top_10_2010:TopTemplate|usenext=2010NextLink|useprev=2010PrevLink|prev=Introduction|next=Main}}
+{{Top_10_2010:SubsectionColoredTemplate|What Changed From 2007 to 2010?|}}
+The threat landscape for Internet applications constantly changes. Key factors in this evolution are advances made by attackers, the release of new technology, as well as the deployment of increasingly complex systems. To keep pace, we periodically update the OWASP Top 10. In this 2010 release, we have made three significant changes:
+# We clarified that the Top 10 is about the Top 10 Risks, not the Top 10 most common weaknesses. See the details on the “Application Security Risks” page below.
+# We changed our ranking methodology to estimate risk, instead of relying solely on the frequency of the associated weakness. This has affected the ordering of the Top 10, as you can see in the table below.
+# We replaced two items on the list with two new items:
+<div style="margin-left: 50px;">
+* ADDED: A6 – Security Misconfiguration. This issue was A10 in the Top 10 from 2004: Insecure Configuration Management, but was dropped in 2007 because it wasn’t considered to be a software issue. However, from an organizational risk and prevalence perspective, it clearly merits re-inclusion in the Top 10; so now it’s back.
+* ADDED: A10 – Unvalidated Redirects and Forwards. This issue is making its debut in the Top 10. The evidence shows that this relatively unknown issue is widespread and can cause significant damage.
+* REMOVED: A3 – Malicious File Execution. This is still a significant problem in many different environments. However, its prevalence in 2007 was inflated by large numbers of PHP applications having this problem. PHP now ships with a more secure configuration by default, lowering the prevalence of this problem.
+* REMOVED: A6 – Information Leakage and Improper Error Handling. This issue is extremely prevalent, but the impact of disclosing stack trace and error message information is typically minimal. With the addition of Security Misconfiguration this year, proper configuration of error handling is a big part of securely configuring your application and servers.</div>
+
+
+<center>
+{| style="width: 100%; align:center; text-align:center; border:2px solid #4F81BD; background-color:#F2F2F2; padding=2;" 
+|- style="background-color: #4F81Bd; color: #FFFFFF;"
+! OWASP Top 10 - 2007 (Previous Version) !! OWASP Top 10 - 2010 (Current Version)
+|- style="background-color: #FFFFFF;" 
+| [[Top_10_2007-A2 | A2-Injection Flaws]]
+| [[Top_10_2010-A1 | A1-Injection]]
+|- style="background-color: #FFFFFF;" 
+| [[Top_10_2007-A1 | A1-Cross Site Scripting (XSS)]]
+| [[Top_10_2010-A2 | A2-Cross Site Scripting (XSS)]]
+|- style="background-color: #FFFFFF;" 
+| [[Top_10_2007-A7 | A7-Broken Authentication and Session Management]]
+| [[Top_10_2010-A3 | A3-Broken Authentication and Session Management]]
+|- style="background-color: #FFFFFF;" 
+| [[Top_10_2007-A4 | A4-Insecure Direct Object Reference]]
+| [[Top_10_2010-A4 | A4-Insecure Direct Object References]]
+|- style="background-color: #FFFFFF;" 
+| [[Top_10_2007-A5 | A5-Cross Site Request Forgery (CSRF)]]
+| [[Top_10_2010-A5 | A5-Cross Site Request Forgery (CSRF)]]
+|- style="background-color: #D7D6C0;" 
+| [[A10_2004_Insecure_Configuration_Management | (was T10 2004 A10 - Insecure Configuration Management)]]
+| [[Top_10_2010-A6 | A6 Security Misconfiguration (NEW)]]
+|- style="background-color: #FFFFFF;" 
+| [[Top_10_2007-A8 | A8-Insecure Cryptographic Storage]]
+| [[Top_10_2010-A7 | A7-Insecure Cryptographic Storage]]
+|- style="background-color: #FFFFFF;" 
+| [[Top_10_2007-A10 | A10-Failure to Restrict URL Access]]
+| [[Top_10_2010-A8 | A8-Failure to Restrict URL Access]]
+|- style="background-color: #FFFFFF;" 
+| [[Top_10_2007-A9 | A9-Insecure Communications]]
+| [[Top_10_2010-A9 | A9-Insufficient Transport Layer Protection]]
+|- style="background-color: #D7D6C0;" 
+| (not in 2007 Top 10)
+| [[Top_10_2010-A10 | A10-Unvalidated Redirects and Forwards (NEW)]]
+|- style="background-color: #E6B9B8;" 
+| [[Top_10_2007-A3 | A3-Malicious File Execution]]
+| <dropped from 2010 Top 10>
+|- style="background-color: #E6B9B8;" 
+| [[Top_10_2007-A6 | A6-Information Leakage and Improper Error Handling]]
+| <dropped from 2010 Top 10>
+|}
+</center>
+{{Top_10_2010:BottomTemplate|usenext=2010NextLink|useprev=2010PrevLink|prev=Introduction|next=Main}}
+[[Category:OWASP Top Ten Project]]

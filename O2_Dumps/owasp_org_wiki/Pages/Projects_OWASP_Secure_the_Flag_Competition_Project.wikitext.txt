@@ -1,0 +1,38 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Project About</noinclude>
+| project_name = OWASP Secure the Flag Competition Project
+| project_home_page = OWASP Secure the Flag Competition Project
+| project_description =
+This project aims to create a different type of competition that encourages secure coding rather than hacking skills.
+
+We've all heard of capture the flag competitions, Secure The Flag (STF) is different.  STF is a developer focused competition where teams compete to develop the most secure application based on a series of software requirements.  Some requirements are just there to set boundaries and standardize the game, some requirements are critical elements and MUST be implemented, other elements are optional and can get you bonus points, but be careful, bonus features are more risky!  Teams will receive the requirements, along with a pre-configured VM (LAMP) several days before the competition to allow ample time to design and implement their systems.
+
+| project_license = N/A
+
+| leader_name1 = Mark Bristow
+| leader_email1 = mark.bristow@owasp.org
+| leader_username1 = Mark.bristow 
+
+| contributor_name[1-10] = 
+| contributor_email[1-10] = 
+| contributor_username[1-10] = 
+
+| pamphlet_link = 
+
+| presentation_link =
+
+| mailing_list_name = https://lists.owasp.org/mailman/listinfo/owasp-secure-the-flag-competition
+
+| project_road_map = http://www.owasp.org/index.php/Projects/OWASP_Secure_the_Flag_Competition_Project/Roadmap
+
+| links_url[1-10] = 
+| links_name[1-10] = 
+
+| release_1 = 
+| release_2 = 
+| release_3 =
+| release_4 =
+
+<!--- The line below is for GPC usage only. Please do not edit it --->
+| project_about_page = Projects/OWASP Secure the Flag Competition Project
+
+}}

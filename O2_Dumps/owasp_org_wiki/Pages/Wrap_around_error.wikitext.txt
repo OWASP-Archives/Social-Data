@@ -1,0 +1,113 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+Wrap around errors occur whenever a value is incriminated past the maximum value for its type and therefore "wraps around" to a very small, negative, or undefined value.
+
+'''Consequences'''
+
+* Availability: Wrap-around errors generally lead to undefined behavior, infinite loops, and therefore crashes.
+* Integrity: If the value in question is important to data (as opposed to flow), simple data corruption has occurred. Also, if the wrap around results in other conditions such as buffer overflows, further memory corruption may occur.
+* Access control (instruction processing): A wrap around can sometimes trigger buffer overflows which can be used to execute arbitrary code. This is usually outside the scope of a program's implicit security policy.
+
+'''Exposure period'''
+
+* Requirements specification: The choice could be made to use a language that is not susceptible to these issues.
+* Design: If the flow of the system or the protocols used are not well defined, it may make the possibility of wrap-around errors more likely.
+* Implementation: Many logic errors can lead to this condition. 
+
+'''Platform'''
+
+* Language: C, C++, Fortran, Assembly
+* Operating System: Any
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood of exploit'''
+
+Medium
+
+Due to how addition is performed by computers, if a primitive is incremented past the maximum value possible for its storage space, the system will fail to recognize this, and therefore increment each bit as if it still had extra space. 
+
+Because of how negative numbers are represented in binary, primitives interpreted as signed may "wrap" to very large negative values.
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+See the Examples section of the problem type [[Integer overflow]] for an example of wrap-around errors.
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Integer overflow]]
+* [[Unchecked array indexing]]
+
+
+==Related [[Controls]]==
+
+* Requirements specification: The choice could be made to use a language that is not susceptible to these issues.
+* Design: Provide clear upper and lower bounds on the scale of any protocols designed.
+* Implementation: Place sanity checks on all incremented variables to ensure that they remain within reasonable bounds. 
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Range and Type Error Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

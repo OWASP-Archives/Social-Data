@@ -1,0 +1,272 @@
+= Overview =
+
+Historically DB2 has lived on a mainframe and resided in a fairly secure network. More and more we see DB2 exposed to the large world and used as backend for web applications. With these changes in DB2 comes increased risk.
+
+This paragraph has the objectives to define the minimum security requirements for configuring and managing DB2 databases, in terms of access to, configuration and management of the system, and to supply guidelines and operation instructions for system administrators, in order to guarantee the development of secure applications on DB2 platforms.
+
+= Description =
+
+== Configuring Accounts and Groups==
+
+Unlike Oracle and Microsoft SQL Server, which support database authentication and database accounts, DB2 exclusively uses the operating system for authentication purposes. What this means is that DB2 is immune to attackers gaining access via database accounts without a password, or accounts that have a default password. Indeed, when DB2 is installed some OS accounts are created and, in earlier versions of DB2, these OS accounts were given default passwords.
+
+DB2 accounts must be subject to the same control and administration rules as other accounts in operating systems. In particular, you must verify if accounts are redundant or have not been used at least once. Database administrators must periodically verify and possibly rectify privileges, groups and functions assigned to accounts, in order to guarantee that permissions assigned to users correspond to their real working needs.
+
+Ensure you have enabled password management features with for example a password lockout to 10 and password expiration to 90 days. The account expiration date must be set for accounts for users whose period of work is defined and limited in time.
+
+=== *NIX platforms ===
+
+It is advisable to change the default user-ids installed at the moment of database installation or by 3rd party products.
+By default, the DB2 Setup wizard creates these user and group accounts automatically during a DB2 UDB server installation.
+Installed with the database there are some DB2 users (db2inst1, db2fenc1, and dasusr1):
+
+  db2inst1:x:1001:1001::/home/db2inst1:/bin/sh
+  db2fenc1:x:1002:1002::/home/db2fenc1:/bin/sh
+  dasusr1:x:1003:1003::/home/dasusr1:/bin/sh
+
+You need to modify the initial passwords (ibmdb2). To do this, run these three commands:
+
+  passwd db2inst1
+  passwd db2fenc1
+  passwd dasusr1
+
+Some others accounts could be present after database or 3rd party products installation, they are:
+
+  db2inst[n]/ibmdb2        0 < n < 10        (db2inst2, db2inst3, ..., db2inst9)
+  db2fenc[n]/ibmdb2        0 < n < 10        (db2fenc2, db2fenc3, ..., db2fenc9)
+  db2ins[n]/ibmdb2         9 < n < 100       (db2ins10, db2ins11, ..., db2ins99)
+  db2fen[n]/ibmdb2         9 < n < 100       (db2fen10, db2fen11, ..., db2fen99) 
+  db2as/ibmdb2
+  dlfm/ibmdb2
+  db2admin/db2admin
+
+It is advisable to change all the default password.
+
+=== Windows platforms ===
+
+Beginning in DB2 UDB Version 8.2, a security option was added as part of the DB2 UDB installation to create two additional groups in the operating system, DB2USERS and DB2ADMNS. Once these groups are created, only user accounts that are members of these groups will have access to the DB2 UDB files on the system (including commands as well as user data files created by DB2 UDB).
+
+  DB2ADMNS     this group and local managers have complete access to DB2 objects through the operating system
+  DB2USERS     this group has read and execution access to the DB2 objects through the operating system
+
+Ensure you have changed default password for db2admin account and you have enabled this option during the original DB2 UDB installation. You can always enable it at a later time by running the db2secv82.exe program. This program can be found in the DB2PATH\SQLLIB\BIN\ directory, where DB2PATH is the location where DB2 UDB was installed. You should enable this option in order to secure your server to the greatest extent.
+
+== Configuring Authentication ==
+
+=== Authentication parameters ===
+Authentication parameter affects databases whithin an instance. To view the authentication paramenter use the following command:
+
+    db2 get dbm cfg
+
+The following authentication parameters define where the authentication take place:
+
+    CLIENT; 
+    SERVER; 
+
+SERVER means the user ID and password are sent from the client to the server so that authentication take place at server-side. CLIENT means that  authentication takes place at client-side.
+
+=== Encryption during Authentication ===
+
+Authentication should be encrypted, the following authentication parameters define wich type of encryption is used:
+
+
+  SERVER_ENCRYPT; 
+  DATA_ENCRYPT; (>= v8.2 only) 
+  KERBEROS; 
+  KRB_SERVER_ENCRYPT; 
+  GSSPLUGIN; 
+  GSS_SERVER_ENCRYPT
+
+The value SERVER_ENCRYPT encrypts passwords, DATA_ENCRYPT provides encryption of passwords and encryption of the following data:
+
+* SQL statements
+* SQL program variable data
+* Output data from the server processing an SQL statement and including a description of the data
+* Some or all of the answer set data resulting from a query
+* Large object (LOB) streaming
+* SQLDA descriptors
+
+
+KERBEROS and KRV_SERVER_ENCRYPT provides kerberos authentication througth a kerberos server.
+
+GSSPLUGIN and GSS_SERVER_ENCRyPT provides authentication thought an external GSSAPI-based security mechanism.
+
+== Configuring Authorisations ==
+
+The appropriate authorisations allowed to the previously created user must be chosen by indicating which authorisations database you want to grant.
+
+One or more authorisations can be allowed, according to the real need for the following privileges:
+
+  schema privileges 
+  table privileges 
+  index privileges 
+  view privileges 
+  tablespace privileges 
+  function privileges 
+  procedure privileges 
+  method privileges 
+  package privileges
+
+In order to facilitate the process of monitoring accounts and their relative authorisations, DB2 automatically manages this information using its system catalogue containing the following views:
+
+{| class="wikitable"
+! View name !! Description 
+|-
+| SYSCAT.DBAUTH || lists authorisations inherent to the database
+|-
+| SYSCAT.TABAUTH || lists authorisations inherent to tables and views
+|-
+| SYSCAT.COLAUTH || lists authorisations inherent to columns
+|-
+| SYSCAT.PACKAGEAUTH || lists authorisations inherent to packages
+|-
+| SYSCAT.INDEXAUTH || lists authorisations inherent to indexes
+|-
+| SYSCAT.SCHEMAAUTH || lists authorisations inherent to schemas
+|-
+| SYSCAT.PASSTHRUAUTH || lists authorisations inherent to servers
+|-
+| SYSCAT.ROUTINEAUTH || lists authorisations inherent to routines (functions, methods, or stored procedures)
+|}
+
+=== Authorisations and privileges for actions on DB ===
+
+Each user with privileges of SYSDBA, SYSCTL, and SYSMAINT or comparable privileges can access and modify any object in the database. Consequently, these privileges must be assigned with extreme caution and strict criteria.
+The groups SYSDBA, SYSCTL, and SYSMAINT must be assigned only to users that carry out roles of administration of the database. The principle of assigning the minimum privileges that are strictly necessary in order to carry out the work must always be followed in all environments, also in the “less formal” development ones.
+The roles and privileges of all users in a database in a development environment must be recertified during migration to a production environment, in order to guarantee the validity of roles and privileges.
+Grants to GUEST users or PUBLIC groups must be avoided.
+
+The following privileges must never be assigned to an application, except in specific, extraordinary circumstances:
+
+  BINDADD
+  CREATETAB
+  CREATE_EXTERNAL_ROUTINE
+  CREATE_NOT_FENCED_ROUTINE
+  IMPLICIT_SCHEMA
+  LOAD
+  QUIESCE_CONNECT
+
+Database views must be defined in accordance with the roles defined by the application, and respecting the principle of the minimum privileges that are strictly necessary.
+
+{| class="wikitable"
+! Action !! Authorisations and privileges
+|-
+| Granting or revoking database authorisations || 
+The correct authorisations are required:
+* For granting BINDADD, CONNECT, CREATETAB, CREATE_NOT_FENCED and IMPLICIT_SCHEMA authorisations, SYSADM or DBADM authorisation is not required;
+* For granting DBADM authorisation, SYSADM authorisation is required.
+|-
+| Granting or revoking schema privileges || 
+One of the following authorisations is required:
+* SYSADM authorisation;
+* DBADM authorisation;
+* A privilege with a Grant option (right to grant privileges to other groups or users).
+
+For example, it is possible to grant ALTERIN privileges on a schema using one of these authorisations:
+
+* SYSADM authorisation;
+* DBADM authorisation on the database where the schema is located;
+* ALTERIN privileges on the schema together with the right to grant this schema privilege to other users or groups.
+|-
+| Granting or revoking privileges on catalogue views and tables ||
+* SYSADM or DBADM authorisation is required.
+|-
+| Granting and revoking the CONTROL privileges on user-defined views and tables ||
+* SYSADM or DBADM authorisation is required.
+|-
+| Granting privileges different than CONTROL on user-defined views and tables ||
+One of the following authorisations is required:
+* SYSADM authorisation;
+* DBADM authorisation;
+* The CONTROL privilege on the tables or views over which you want to grant privileges;
+* The privilege that you want to grant together with the  Grant option (the right to grant this privilege to other users or groups).
+
+For example: it is possible to grant the ALTER privilege on the user-defined table using one of the following authorisations: 
+* SYSADM authorisation;
+* DBADM authorisation on the database where the table is located;
+* The CONTROL privilege on the table;
+* The ALTER privilege, together with the right to grant this privilege on the table to other users or groups.
+|-
+| Revoking privileges different than CONTROL on user-defined views and tables ||
+One of the following authorisations is required:
+* SYSADM authorisation;
+* DBADM authorisation;
+* The CONTROL privilege on the tables or views over which you want to grant privileges;
+|-
+| Granting or revoking the CONTROL privilege on an index ||
+SYSADM or DBADM authorisation is required.
+|-
+| Authorising a group or user to use a database ||
+One of the following authorisations is needed:
+* Authorisation for granting authorisations on the database;
+* Authorisation for granting schema privileges;
+* Authorisation for granting privileges on a table or view;
+* Authorisation for granting the CONTROL privilege on indexes;
+* Authorisation for granting privileges on a routine (functions, methods or procedures).
+|-
+| Granting and revoking BIND and EXECUTE privileges on a package ||
+One of the following authorisations are needed:
+* CONTROL privilege on the said package;
+* SYSADM authorisation;
+* DBADM authorisation on the database.
+|-
+| Granting and revoking CONTROL privileges on a package ||
+SYSADM or DBADM authorisation is required.
+|-
+| Granting and revoking privileges on a routine (functions, methods or procedures) ||
+It is necessary to have one of the following authorisations:
+* SYSADM or DBADM authorisation. Or, a user with the EXECUTE privilege for another routine that can grant/revoke EXECUTE privileges on a routine;
+
+The EXECUTE privilege cannot be granted or revoked on the function in the SYSIBM and SYSFUN schemas. The functions in these schemas are considered equivalent to setting the EXECUTE WITH GRANT OPTION on PUBLIC, allowing public use of these functions in SQL routines and in the original functions.
+|}
+
+== Roles, Views and Access controls ==
+
+* Views must be implemented in such a way to guarantee the necessary restrictions of access to the database tables.
+* User access to objects and data in the database must be managed by defining groups.
+* Users must not be assigned to default DB2 groups. Applicative users must be assigned to a group created "ad hoc", with the only privilege being “Connect to database”.
+* Applications must be developed with password-protected groups that do not require the user knowing the password, or saving the password inside the application itself.
+* Access to the shell of the operating system must not be allowed.
+* The use of views for restricting access to data is advised.
+
+== Database Management System Configuration ==
+
+=== File Permission ===
+
+* At the level of the operating system, database files must be protected from abusive access by any user.
+* The “SYSADM” group must always be set as the owner of the “physical” files that make up the database.
+* DB2 users must never have any operating system privileges on the files that make up the database, except for those files that DB2 sets by default during installation.
+* The DB2 configuration file for parameters “db2systm/ SQLDBCON / SQLDBCONF” must not be made accessible to users, even in read-only.
+
+The following table lists the authorisations and privileges for actions relating to database partitions:
+
+{| class="wikitable"
+! Action !! Authorisations and privileges 
+|-
+| Using database partitions groups ||
+SYSADM or DBADM authorisation is required.
+|-
+| Modifying a database partitions group ||
+SYSADM or SYSCTRL authorisation is required.
+|-
+| Using partitions || 
+Requires authorisation for connecting an instance. Any user with SYSADM or DBADM authorisation can access the authorisation for accessing a specific instance.
+|}
+
+=== Administration ===
+
+* Back up configuration files before making any changes or additions regarding instance parameters. All modifications made are automatically recorded by DB2 in the log file “db2diag.log”.
+* When a user is given the privilege to use a tablespace, do not use the “WITH GRANT OPTION” clause if it is not strictly necessary for the application.
+* It is advisable to use the threshold assessment for the use of disk space, indicating the warning percentage, and the alarm level based on the critical level of the application in use.
+* Following a DB2 upgrade you must always verify that user privileges have not changed in virtue of the changes in group privileges.
+* If the control centre is present, the system where the console is installed must be protected from unauthorised use, with systems such as password-protected screensavers, that activate after a certain period of inactivity.
+
+
+
+= References =
+
+[1] DB2 Security and Compliance Solutions for Linux, UNIX, and Windows - Whei-Jen Chen, Ivo Rytir, Paul Read, Rafat Odeh - IBM Redbooks
+
+[2] http://publib.boulder.ibm.com/infocenter/db2luw/v8/index.jsp?topic=/com.ibm.db2.udb.doc/admin/c0005483.htm
+
+[3] Hardening DB2 - Giuseppe Gottardi - Internal at Communication Valley S.p.A.

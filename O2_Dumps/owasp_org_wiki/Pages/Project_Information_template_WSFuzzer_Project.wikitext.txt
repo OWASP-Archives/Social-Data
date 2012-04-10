@@ -1,0 +1,58 @@
+{| style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="6" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP WSFuzzer Project Project''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="6" style="width:85%; background:#cccccc" align="left"| 
+WSFuzzer is a LGPL'd program, written in Python, that currently targets Web Services. In the current version HTTP based SOAP services are the main target. This tool was created based on, and to automate, some real-world manual SOAP pen testing work. This tool is NOT meant to be a replacement for solid manual human analysis. Please view WSFuzzer as a tool to augment analysis performed by competent and knowledgable professionals. Web Services are not trivial in nature so expertise in this area is a must for proper pen testing. 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Email Contacts'''
+ | style="width:14%; background:#cccccc" align="center"|Project Leader<br>[mailto:andres(at)neurofuzz.com '''Andres Andreu ''']
+ | style="width:14%; background:#cccccc" align="center"|Project Contributors<br>[mailto:ccbanciu(at)gmail.com '''Cosmin Banciu''']
+ | style="width:14%; background:#cccccc" align="center"|[https://lists.owasp.org/mailman/listinfo/owasp-wsfuzzer '''Mailing List/Subscribe''']<br>[mailto:owasp-wsfuzzer(at)lists.owasp.org '''Mailing List/Use''']
+ | style="width:14%; background:#cccccc" align="center"|First Reviewer<br>[mailto:ah(at)securenet(dot)de '''Achim Hoffmann''']<br>[https://www.owasp.org/index.php/User:Achim Profile]<br>(TBC)
+ | style="width:14%; background:#cccccc" align="center"|Second Reviewer<br>[mailto:name(at)name '''Name''']
+ | style="width:15%; background:#cccccc" align="center"|OWASP Board Member<br>[mailto:name(at)name '''Name&Email''']
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="6" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT MAIN LINKS''' 
+ |-
+ | style="width:100%; background:#cccccc" align="center"|
+Check out a video of [http://www.neurofuzz.com/modules/software/vidz.php WSFuzzer] in action<br>
+Get the tarball from [http://sourceforge.net/project/showfiles.php?group_id=155697 sourceforge]<br>
+Come and join the [http://www.linkedin.com/e/gis/1192957 Linkedin Group] also, or just search for "WSFuzzer" in the [http://www.linkedin.com/groupsDirectory "Groups"] section within Linkedin
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="6" align="center" style="background:#4058A0; color:white"|<font color="white">'''RELATED PROJECTS''' 
+ |-
+ | style="width:100%; background:#cccccc" align="center"|
+Featured in O'REILLY book - [http://oreilly.com/catalog/9780596514839/toc.html Web Security Testing Cookbook]<br>
+Included in [http://www.backtrack-linux.org/downloads/ BackTrack] - Backtrack->Vulnerability Identification->Fuzzers->WSFuzzer<br>
+Included in the [http://mtesauro.com/livecd/index.php?title=Current_Tool_List OWASP Live CD]<br>
+Featured in this [http://www.jroller.com/gmazza/date/20081110 Blog]<br>
+Featured in HNN [http://www.hackernews.com/2010/09/26/hnncast-2010-09-24/ HNNCast]<br>
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="6" align="center" style="background:#4058A0; color:white"|<font color="white">'''SPONSORS & GUIDELINES''' 
+ |-
+ | style="width:50%; background:#cccccc" align="center"|Current Sponsor: [http://www.neurofuzz.com neuroFuzz, LLC]  
+ | style="width:50%; background:#cccccc" align="center"|[[:Category:OWASP_WSFuzzer_Project#Goals|'''Goals/Guidelines/Roadmap''']]
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="5" align="center" style="background:#4058A0; color:white"|ASSESSMENT AND REVIEW PROCESS
+ |-
+ | style="width:15%; background:#6C82B5" align="center"|'''Review/Reviewer''' 
+ | style="width:21%; background:#b3b3b3" align="center"|'''Author's Self Evaluation'''<br>(applicable for Alpha Quality & further) 
+ | style="width:21%; background:#b3b3b3" align="center"|'''First Reviewer'''<br>(applicable for Alpha Quality & further)
+ | style="width:21%; background:#b3b3b3" align="center"|'''Second Reviewer'''<br>(applicable for Beta Quality & further)
+ | style="width:22%; background:#b3b3b3" align="center"|'''OWASP Board Member'''<br>(applicable just for Release Quality) 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''First Review''' 
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes'''<br>---------<br>Which status has been reached?<br>'''Beta Status'''<br>---------<br>[[Project Information:template WSFuzzer Project - First Review - Self Evaluation - A|See&Edit: First Review/SelfEvaluation (A)]]
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Not yet''' (To update)<br>---------<br>Which status has been reached?<br>'''Beta Status''' - (To update)<br>---------<br>[[Project Information:template WSFuzzer Project - First Review - First Reviewer - B|See&Edit: First Review/1st Reviewer (B)]]
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes/No''' (To update)<br>---------<br>Which status has been reached?<br>'''Beta Status''' - (To update)<br>---------<br>[[Project Information:template WSFuzzer Project - First Review - Second Reviewer - C|See&Edit: First Review/2nd Reviewer (C)]]
+ | style="width:22%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes/No''' (To update)<br>---------<br>Which status has been reached?<br>'''Beta Status''' - (To update)<br>---------<br>[[Project Information:template WSFuzzer Project - First Review - OWASP Board Member - D|See/Edit: First Review/Board Member (D)]]
+ |-
+ |}

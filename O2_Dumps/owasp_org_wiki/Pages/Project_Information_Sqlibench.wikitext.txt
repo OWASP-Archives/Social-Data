@@ -1,0 +1,54 @@
+{| style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="6" style="width:85%; background:#cccccc" align="left"|<font color="black">'''SQLiBENCH''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="6" style="width:85%; background:#cccccc" align="left"|SQLiBENCH is a benchmarking project of automatic sql injectors related to dumping databases. There're a lot of and great open source tools (takeover/dumpers/hybrid) for taking advantage of an sql injection vulnerability both used by web application security specialists and attackers. Techniques used, databases supported, algorithms employed and abilities implemented by these "sql injectors" greatly varies. It should be important to standardize general vulnerability techniques exists in web applications and one of the biggest one is sql manipulation. In our effort, we aim to produce a standardization of techniques used in exploiting sql injection by automatic tools.
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Email Contacts'''
+ | style="width:14%; background:#cccccc" align="center"|Project Leaders<br>[mailto:urgunb(at)hotmail.com '''Bedirhan Urgun''']
+ | style="width:14%; background:#cccccc" align="center"|Project Contributors<br>[mailto:mesut(at)h-labs.org '''Mesut Timur''']
+ | style="width:14%; background:#cccccc" align="center"|[https://lists.owasp.org/mailman/listinfo/owasp-sqlibench-project '''Mailing List/Subscribe''']<br>[mailto:owasp-sqlibench-project(at)lists.owasp.org '''Mailing List/Use''']
+ | style="width:14%; background:#cccccc" align="center"|First Reviewer<br>[mailto:ferruh(at)mavituna.com '''Ferruh Mavituna''']<br/> [[Project Information:Sqlibench:Ferruh|background info]]
+ | style="width:14%; background:#cccccc" align="center"|Second Reviewer<br>[mailto:KFuller(at)DMV.CA.gov '''Kevin Fuller'''] <br/> [[Project Information:Sqlibench:Kevin|background info]]  
+ | style="width:15%; background:#cccccc" align="center"|OWASP Board Member<br>(not applicable)
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="6" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT MAIN LINKS''' 
+ |-
+ | style="width:100%; background:#cccccc" align="center"|
+* SQLiBENCH is a benchmarking project and the documentation can be found at [http://code.google.com/p/sqlibench/ SQLiBENCH.]
+* Here you can find the [https://www.owasp.org/index.php/OWASP_Summer_of_Code_2008_Applications#SQL_Injector_Benchmarking_Project_.28SQLiBENCH.29 SQLiBENCH Project Proposal] document
+* Here you can find the [https://www.owasp.org/index.php/OWASP_Summer_of_Code_2008_Applications_-_Need_Futher_Clarifications#SQL_Injector_Benchmarking_Project_.28SQLiBENCH.29 Further Clarifications] document
+* Here are the three main outcomes of the project; benchmarking report in raw [http://sqlibench.googlecode.com/files/sqlibench_v2.1.xml xml], in tabular [http://sqlibench.googlecode.com/files/sqlibench_matrix_v2.pdf pdf] and as a [http://www.webguvenligi.org/sqlibench/web/index.php web application]. 
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="6" align="center" style="background:#4058A0; color:white"|<font color="white">'''SPONSORS & GUIDELINES''' 
+ |-
+ | style="width:50%; background:#cccccc" align="center"|[[OWASP Summer of Code 2008|Sponsor - '''OWASP Summer of Code 2008''']] 
+ | style="width:50%; background:#cccccc" align="center"|[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#SQL_Injector_Benchmarking_Project_.28SQLiBENCH.29|'''Sponsored Project/Guidelines/Roadmap''']]
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="5" align="center" style="background:#4058A0; color:white"|ASSESSMENT AND REVIEW PROCESS
+ |-
+ | style="width:15%; background:#6C82B5" align="center"|'''Review/Reviewer''' 
+ | style="width:21%; background:#b3b3b3" align="center"|'''Author's Self Evaluation'''<br>(applicable for Alpha Quality & further) 
+ | style="width:21%; background:#b3b3b3" align="center"|'''First Reviewer'''<br>(applicable for Alpha Quality & further)
+ | style="width:21%; background:#b3b3b3" align="center"|'''Second Reviewer'''<br>(applicable for Beta Quality & further)
+ | style="width:22%; background:#b3b3b3" align="center"|'''OWASP Board Member'''<br>(applicable just for Release Quality) 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''50% Review''' 
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes'''<br>---------<br>[[Project Information:Sqlibench - 50 Review - Self Evaluation - A|See&Edit: 50% Review/Self-Evaluation (A)]]
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes'''<br>---------<br>[[Project Information:Sqlibench - 50 Review - First Reviewer - C|See&Edit: 50% Review/1st Reviewer (C)]]
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes'''<br>---------<br>[[Project Information:Sqlibench 50 Review Second Review E|See&Edit: 50%Review/2nd Reviewer (E)]]
+ | style="width:22%; background:#C2C2C2" align="center"|X 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Final Review''' 
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes'''<br>---------<br>What status has been reached?<br>'''Beta'''<br>---------<br>[[Project Information:Sqlibench - Final Review - Self Evaluation - B|See&Edit: Final Review/SelfEvaluation (B)]]
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes'''<br>---------<br>What status has been reached?<br>'''Beta'''<br>---------<br>[[Project Information:Sqlibench - Final Review - First Reviewer - D|See&Edit: Final Review/1st Reviewer (D)]]
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes''' <br>---------<br>What status has been reached?<br>'''Beta''' <br>---------<br>[[Project Information:Sqlibench - Final Review - Second Reviewer - F|See&Edit: Final Review/2nd Reviewer (F)]]
+ | style="width:22%; background:#C2C2C2" align="center"|X
+ |-
+ |}

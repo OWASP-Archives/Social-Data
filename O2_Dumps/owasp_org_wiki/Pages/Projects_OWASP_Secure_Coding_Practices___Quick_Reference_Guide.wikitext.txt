@@ -1,0 +1,93 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Project About</noinclude>
+| project_name = OWASP Secure Coding Practices - Quick Reference Guide
+| project_home_page = :OWASP Secure Coding Practices - Quick Reference Guide
+
+| project_description =
+
+This document provides a quick high level reference for secure coding practices. It is technology agnostic and defines a set of general software security coding practices, in a checklist format, that can be integrated into the development lifecycle. Implementation of these practices will mitigate most common software vulnerabilities.
+
+| project_license = [http://creativecommons.org/licenses/by-sa/3.0/ '''Creative Commons Attribution Share Alike 3.0'''] 
+
+| leader_name1 = Keith Turpin 
+| leader_email1 = keith.turpin@owasp.org
+| leader_username1 = Keith Turpin
+ 
+| contributor_name1 = Dan Kranz 
+| contributor_email1 = 
+| contributor_username1 = 
+
+| contributor_name2 = Walt Pietrowski 
+| contributor_email2 = 
+| contributor_username2 = 
+
+| contributor_name3 = Catherine Spencer
+| contributor_email3 = 
+| contributor_username3 = 
+
+| contributor_name4 = Caleb McGary 
+| contributor_email4 = Caleb.mcgary@gmail.com
+| contributor_username4 = 
+
+| contributor_name5 = Jim Manico
+| contributor_email5 = jim.manico@owasp.org
+| contributor_username5 = Jmanico
+
+| contributor_name6 = Brad Causey
+| contributor_email6 = bradcausey@owasp.org
+| contributor_username6 = Bradcausey
+
+| contributor_name7 = Ludovic Petit
+| contributor_email7 = ludovic.petit@owasp.org
+| contributor_username7 = Ludovic Petit
+
+| contributor_name8 = Michael V. Scovetta
+| contributor_email8 = michael.scovetta@gmail.com
+| contributor_username8 =  
+
+| contributor_name9 = Jason Coleman
+| contributor_email9 = 
+| contributor_username9 =  
+
+| contributor_name10 = Tarcizio Vieira Neto
+| contributor_email10 = 
+| contributor_username10 =  
+
+| contributor_name11 = OWASP Korea chapter
+| contributor_email11 = 
+| contributor_username11 =  
+
+
+| pamphlet_link = http://www.owasp.org/images/3/35/Flyer_Secure_Coding_Practices_Quick_Reference_Guide_V2.pdf
+
+| presentation_link = https://www.owasp.org/images/f/fd/Secure_Coding_Practices_Quick_Ref_6.ppt
+
+| mailing_list_name = https://lists.owasp.org/mailman/listinfo/owasp-secure-coding-practices
+
+| project_road_map = http://www.owasp.org/index.php/OWASP_Secure_Coding_Practices_-_Quick_Reference_Guide/Roadmap
+
+| links_url1 = http://vimeo.com/17018329 
+| links_name1 = Video - Keith Turpin preseting the Quick Reference Guide on OWASP AppSec USA 2010
+
+| links_url2 = https://www.owasp.org/images/b/b3/OWASP_SCP_v1.3_pt-BR.pdf
+| links_name2 = SCP v2 > Brazilian Portuguese Translation > PDF file
+
+| links_url3 = https://www.owasp.org/images/6/6d/OWASP_SCP_v1.3_pt-PT.pdf
+| links_name3 = SCP v2 > Portugal Portuguese Translation > PDF file
+
+| links_url4 = https://www.owasp.org/images/8/8e/2011%EB%85%846%EC%9B%94_OWASP_%EC%8B%9C%ED%81%90%EC%96%B4%EC%BD%94%EB%94%A9%EA%B7%9C%EC%B9%99_v2_KOR.pdf
+| links_name4 = SCP v2 > Korean Translation > PDF file
+
+| links_url5 = http://www.owasp.org/images/c/c8/OWASP_SCP_Quick_Reference_Guide_SPA.doc
+| links_name5 = SCP v2 > Spanish Translation > doc file
+
+
+| release_1 = SCP v1
+
+| release_2 = SCP v1.1
+
+| release_3 = SCP v2
+
+| release_4 =
+<!--- The line below is for GPC usage only. Please do not edit it --->
+| project_about_page = Projects/OWASP Secure Coding Practices - Quick Reference Guide
+}}

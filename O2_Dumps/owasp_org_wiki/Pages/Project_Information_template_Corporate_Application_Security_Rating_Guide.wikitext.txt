@@ -1,0 +1,58 @@
+{| style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="6" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Corporate Application Security Rating Guide Project''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="6" style="width:85%; background:#cccccc" align="left"|This project will help to organize and structure publicly available data that large companies will share of the lessons learned about how to organize an application security initiative, best practices for training and testing, and more. Analysis of publicly available data such as interviews, presentations, briefings for details. The project will link to all source material used in creating the rating. The rating will involve application security and awareness training; defining security requirements and verification for each application; establishing a dedicated application team and process for responding to security issues and allocating points to each issues.
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Email Contacts'''
+ | style="width:14%; background:#cccccc" align="center"|SoC's Project Leader<br>[mailto:parvathy_iyerO(at)yahoo.com '''Parvathy Iyer''']
+ | style="width:14%; background:#cccccc" align="center"|Project Contributors<br>(if applicable)<br>[mailto:to(at)change '''Name&Email''']
+ | style="width:14%; background:#cccccc" align="center"|[https://lists.owasp.org/mailman/listinfo/owasp-corporate-application-security-rating-guide '''Mailing List/Subscribe''']<br>[mailto:Owasp-corporate-application-security-rating-guide(at)lists.owasp.org '''Mailing List/Use''']
+ | style="width:14%; background:#cccccc" align="center"|First Reviewer<br>[mailto:nkirschner(at)eisnerllp.com '''Neal Kirschner''']
+ | style="width:14%; background:#cccccc" align="center"|Second Reviewer<br>[mailto:Omar.Sherin(at)infosec2.com '''Omar Sherin''']
+ | style="width:15%; background:#cccccc" align="center"|OWASP Board Member<br>[mailto:name(at)name '''Name&Email''']
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="6" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT MAIN LINKS''' 
+ |-
+ | style="width:100%; background:#cccccc" align="center"|
+* (If appropriate, links to be added)
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="6" align="center" style="background:#4058A0; color:white"|<font color="white">'''RELATED PROJECTS''' 
+ |-
+ | style="width:100%; background:#cccccc" align="center"|
+*[[:SpoC 007 - OWASP Corporate Application Security Rating Guide|SpoC 007 - OWASP Corporate Application Security Rating Guide]]<br>
+*[[:Category:OWASP Positive Security Project|OWASP Positive Security Project]]
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="6" align="center" style="background:#4058A0; color:white"|<font color="white">'''SPONSORS & GUIDELINES''' 
+ |-
+ | style="width:50%; background:#cccccc" align="center"|[[OWASP Summer of Code 2008|Sponsor - '''OWASP Summer of Code 2008''']] 
+ | style="width:50%; background:#cccccc" align="center"|[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#P006 - OWASP Corporate Application Security Rating Guide|'''Sponsored Project/Guidelines/Roadmap''']]
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="5" align="center" style="background:#4058A0; color:white"|ASSESSMENT AND REVIEW PROCESS
+ |-
+ | style="width:15%; background:#6C82B5" align="center"|'''Review/Reviewer''' 
+ | style="width:21%; background:#b3b3b3" align="center"|'''Author's Self Evaluation'''<br>(applicable for Alpha Quality & further) 
+ | style="width:21%; background:#b3b3b3" align="center"|'''First Reviewer'''<br>(applicable for Alpha Quality & further)
+ | style="width:21%; background:#b3b3b3" align="center"|'''Second Reviewer'''<br>(applicable for Beta Quality & further)
+ | style="width:22%; background:#b3b3b3" align="center"|'''OWASP Board Member'''<br>(applicable just for Release Quality) 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''50% Review''' 
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes/No''' (To update)<br>---------<br>[[Project Information:template Corporate Application Security Rating Guide - 50 Review - Self Evaluation - A|See&Edit:50% Review/Self-Evaluation (A)]]
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes/No''' (To update)<br>---------<br>[[Project Information:template Corporate Application Security Rating Guide - 50 Review - First Reviewer - C|See&Edit: 50% Review/1st Reviewer (C)]]
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes/No''' (To update)<br>---------<br>[[Project Information:template Corporate Application Security Rating Guide 50 Review Second Review E|See&Edit: 50%Review/2nd Reviewer (E)]]
+ | style="width:22%; background:#C2C2C2" align="center"|X 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Final Review''' 
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes/No''' (To update)<br>---------<br>Which status has been reached?<br>'''Season of Code''' - (To update)<br>---------<br>[[Project Information:template Corporate Application Security Rating Guide - Final Review - Self Evaluation - B|See&Edit: Final Review/SelfEvaluation (B)]]
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes/No''' (To update)<br>---------<br>Which status has been reached?<br>'''Season of Code''' - (To update)<br>---------<br>[[Project Information:template Corporate Application Security Rating Guide - Final Review - First Reviewer - D|See&Edit: Final Review/1st Reviewer (D)]]
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes/No''' (To update)<br>---------<br>Which status has been reached?<br>'''Season of Code''' - (To update)<br>---------<br>[[Project Information:template Corporate Application Security Rating Guide - Final Review - Second Reviewer - F|See&Edit: Final Review/2nd Reviewer (F)]]
+ | style="width:22%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes/No''' (To update)<br>---------<br>Which status has been reached?<br>'''Season of Code''' - (To update)<br>---------<br>[[Project Information:template Corporate Application Security Rating Guide - Final Review - OWASP Board Member - G|See/Edit: Final Review/Board Member (G)]]
+ |-
+ |}

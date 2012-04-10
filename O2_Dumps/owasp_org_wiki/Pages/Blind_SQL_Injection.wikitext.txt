@@ -1,0 +1,158 @@
+{{Template:Attack}}
+[[Category:OWASP ASDR Project]]
+[[Category:Security Focus Area]]
+__NOTOC__
+<br>
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+==Overview==
+When an attacker executes SQL Injection attacks, sometimes the server responds with error messages from the database server complaining that the SQL Query's syntax is incorrect. Blind SQL injection is identical to normal [[SQL Injection]] except that when an attacker attempts to exploit an application, rather then getting a useful error message, they get a generic page specified by the developer instead. This makes exploiting a potential SQL Injection attack more difficult but not impossible. An attacker can still steal data by asking a series of True and False questions through SQL statements.
+
+==Threat Modeling==
+Same as for [[SQL Injection]]
+
+==Related Security Activities==
+
+===How to Avoid SQL Injection Vulnerabilities===
+
+See the [[:Category:OWASP Guide Project|OWASP Development Guide]] article on how to [[Guide to SQL Injection | Avoid SQL Injection]] Vulnerabilities.
+<br>See the OWASP [[SQL Injection Prevention Cheat Sheet]].
+
+===How to Avoid SQL Injection Vulnerabilities===
+
+See the [[:Category:OWASP Code Review Project|OWASP Code Review Guide]] article on how to [[Reviewing Code for SQL Injection|Review Code for SQL Injection]] Vulnerabilities.
+
+===How to Test for SQL Injection Vulnerabilities===
+
+See the [[:Category:OWASP Testing Project|OWASP Testing Guide]] article on how to [[Testing for SQL Injection    (OWASP-DV-005)|Test for SQL Injection]] Vulnerabilities.
+
+==Description==
+TBD
+
+==Risk Factors==
+Same as for [[SQL Injection]]
+
+==Examples ==
+An attacker may verify whether a sent request returned True or False in a few ways:
+
+===(in)visible content===
+Having a simple page, which displays article with given ID as the parameter, the attacker may perform a couple of simple tests if a page is vulnerable to SQL Injection attack.
+
+Example URL:
+<pre>
+http://newspaper.com/items.php?id=2
+</pre>
+sends the following query to the database:
+<pre>
+SELECT title, description, body FROM items WHERE ID = 2
+</prE>
+The attacker may try to inject any (even invalid) query, what should cause the query to return no results:
+<pre>
+http://newspaper.com/items.php?id=2 and 1=2
+</pre>
+Now the SQL query should looks like this:
+<pre>
+SELECT title, description, body FROM items WHERE ID = 2 and 1=2
+</pre>
+Which means that the query is not going to return anything.
+
+If the web application is vulnerable to SQL Injection, then it probably will not return anything. To make sure, the attacker will certainly inject a valid query:
+<pre>
+http://newspaper.com/items.php?id=2 and 1=1
+</pre>
+If the content of the page is the same, then the attacker is able to distinguish when the query is True or False.
+
+What next? The only limitations are privileges set up by the database administrator, different SQL dialects and finally the attacker's imagination.
+
+===RDBMS fingerprinting===
+
+If the attacker is able to determine when his query returns True or False, then he may fingerprint the RDBMS. This will make the whole attack much easier to him. One of the most popular methods to do this is to call functions which will return the current date. MySQL, MS SQL or Oracle have different functions for that, respectively ''now()'', ''getdate()'', and ''sysdate()''.
+
+===Timing Attack===
+
+A Timing Attack depends upon injecting the following MySQL query:
+<pre>
+SELECT IF(expression, true, false)
+</pre>
+Using some time-taking operation e.g. BENCHMARK(), will delay server
+responses if the expression is True.
+
+<pre>BENCHMARK(5000000,ENCODE('MSG','by 5 seconds'))</pre> - will execute 5000000 times the ENCODE function.
+
+Depending on the database server performence and its load, it should
+take just a moment to finish this operation. The important thing is,
+from the attacker's point of view, to specify high number of BENCHMARK()
+function repetitons, which should affect the server
+response time in a noticeable way.
+
+Example combination of both queries:
+<pre>
+1 UNION SELECT IF(SUBSTRING(user_password,1,1) = CHAR(50),BENCHMARK(5000000,ENCODE('MSG','by 5 seconds')),null) FROM users WHERE user_id = 1;
+</pre>
+If the server response was quite long we may expect that the first user password character with user_id = 1 is character '2'.
+<pre>
+(CHAR(50) == '2')
+</pre>
+Using this method for the rest of characters, it's possible to get to know entire password stored in the database. This method works even when the attacker injects the SQL queries and the content of the vulnerable page doesn't change.
+
+Obviously, in this example the names of the tables and the number of columns was specified. However, it's possible to guess them or check with a trial and error method.
+
+Other databases than MySQL also have implemented functions which allow them to use timing attacks:
+* MS SQL 'WAIT FOR DELAY '0:0:10''
+* PostgreSQL - pg_sleep()
+
+Conducting Blind_SQL_Injection attacks manually is very time consuming, but there are a lot of tools which automate this process. One of them is SQLMap (http://sqlmap.sourceforge.net/) partly developed within OWASP grant program. On the other hand, tools of this kind are very sensitive to even small deviations from the rule. This includes:
+* scanning othe WWW cluster, where clocks are not ideally synchronized,
+* WWW services where argument acquiring method was changed, e.g.  from /index.php?ID=10 to /ID,10
+
+==Related [[Threat Agents]]==
+Same as for [[SQL Injection]]
+
+==Related [[Attacks]]==
+* [[Blind_XPath_Injection]]
+* [[SQL_Injection]]
+* [[XPATH_Injection]]
+* [[LDAP_injection]]
+* [[Server-Side_Includes_%28SSI%29_Injection]]
+
+==Related [[Vulnerabilities]]==
+* [[Injection_problem]]
+
+==Related [[Controls]]==
+* [[:Category:Input Validation]]
+
+==References==
+* http://www.cgisecurity.com/questions/blindsql.shtml
+* http://www.imperva.com/application_defense_center/white_papers/blind_sql_server_injection.html
+* http://www.securitydocs.com/library/2651
+* http://seclists.org/bugtraq/2005/Feb/0288.html
+* http://ferruh.mavituna.com/makale/sql-injection-cheatsheet/
+
+'''Online Resources'''
+* [http://www.ngssoftware.com/papers/more_advanced_sql_injection.pdf more Advanced SQL Injection] - by NGS
+* [http://www.blackhat.com/presentations/bh-usa-04/bh-us-04-hotchkies/bh-us-04-hotchkies.pdf Blind SQL Injection Automation Techniques] - Black Hat Pdf
+* [http://seclists.org/lists/bugtraq/2005/Feb/0288.html Blind Sql-Injection in MySQL Databases]
+* [http://www.cgisecurity.com/questions/blindsql.shtml Cgisecurity.com: What is Blind SQL Injection?]
+* [http://www.securitydocs.com/library/2651 Blind SQL Injection]
+* http://www.spidynamics.com/whitepapers/Blind_SQLInjection.pdf
+* http://www.imperva.com/application_defense_center/white_papers/blind_sql_server_injection.html
+* [http://wcsc.myweb.usf.edu/tutorials/SQL_Injection.ppt SQL Injection Attacks]
+
+[[Category:FIXME|check link:
+
+* http://www.spidynamics.com/whitepapers/Blind_SQLInjection.pdf
+
+]]
+
+'''Tools'''
+* [http://www.sqlpowerinjector.com/ SQL Power Injector]
+* [http://www.0x90.org/releases/absinthe/ Absinthe :: Automated Blind SQL Injection] // ver1.3.1
+* [http://www.securiteam.com/tools/5IP0L20I0E.html SQLBrute - Multi Threaded Blind SQL Injection Bruteforcer] in Python
+* [[:Category:OWASP_SQLiX_Project|SQLiX - SQL Injection Scanner]] in Perl
+* [http://sqlmap.sourceforge.net sqlmap, automatic SQL injection tool] in Python
+* [http://www.514.es/2006/12/inyeccion_de_codigo_bsqlbf12th.html bsqlbf, a blind SQL injection tool] in Perl
+
+
+[[Category:Injection]]
+[[Category: Attack]]

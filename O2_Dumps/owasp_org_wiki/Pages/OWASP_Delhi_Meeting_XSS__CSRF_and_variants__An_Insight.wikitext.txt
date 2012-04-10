@@ -1,0 +1,9 @@
+XSS is used to steal sensitive information, hijack sessions, and compromise the browser and the underlying system integrity. XSS is a wide-open field that is constantly surprising the world with new and unique ways of exploiting applications. XSS vulnerabilities have existed since the early days of the Web. Today, they represent the biggest threat to e-commerce, a billions of dollars a day industry.
+
+There are many facets of XSS which need to be fully understood by Web developers, security researchers, professionals and consultants who are responsible for maintaining the security and Confidentiality-Integrity-Availability of the organization's resources.
+
+On the other hand, CSRF vulnerabilities have been identified and exploited since the 1990s. "A sleeping Giant" as termed by 'Dark Reading' is a more fatal attack than XSS. It remained mostly under the radar for a decade and it was not even included in the Web Security Threat Classification, OWASP Top 10 or Mitre Corp.'s Common Vulnerability and Exposures (CVE) list for a quite long time. Besides CSRF is too unsafe, Cleaning CSRF is even tougher than XSS or SQL injection.
+
+Gaining experience from auditing a number of diverse web applications, myself has learnt considerably in identifying the core cause of these vulnerabilities and has collected a number of attack vectors and techniques to exploit and/or test an application.
+
+Gunwant Singh will share his knowledge on the workings, the difference and the variants of both attacks. He will also discuss some infamous attacks like Cross Site Tracing, Cross site cooking etc.

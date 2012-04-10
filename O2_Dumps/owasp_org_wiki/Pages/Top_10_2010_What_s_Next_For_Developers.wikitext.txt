@@ -1,0 +1,31 @@
+{{Top_10_2010:TopTemplate|useprev=2010PrevLink|usenext=2010NextLink|prev=A10-Unvalidated Redirects and Forwards|next=What's Next For Verifiers}}
+{{Top_10_2010:SubsectionColoredTemplate|Establish and Use a Full Set of Common Security Controls|
+Whether you are new to web application security or are already very familiar with these risks, the task of producing a secure web application or fixing an existing one can be difficult. If you have to manage a large application portfolio, this can be daunting.
+
+'''Many Free and Open OWASP Resources Are Available'''
+
+To help organizations and developers reduce their application security risks in a cost effective manner, OWASP has produced numerous <u>free and open</u> resources that you can use to address application security in your organization. The following are some of the many resources OWASP has produced to help organizations produce secure web applications. On the next page, we present additional OWASP resources that can assist organizations in verifying the security of their applications.
+}}
+
+{| cellspacing="1" cellpadding="1" border="1" width="100%;"
+|<center>Application Security Requirements</center>
+|To produce a secure web application, you must define what secure means for that application. OWASP recommends you use the [[ASVS | OWASP Application Security Verification Standard (ASVS)]], as a guide for setting the security requirements for your application(s). If you’re outsourcing, consider the OWASP Secure Software Contract Annex.
+|-
+|<center>Application Security Architecture</center>
+|Rather than retrofitting security into your applications, it is far more cost effective to design the security in from the start. OWASP recommends the [[Guide | OWASP Developer’s Guide]], as a good starting point for guidance on how to design security in from the beginning.
+|-
+|<center>Standard Security Controls</center>
+|Building strong and usable security controls is exceptionally difficult. Providing developers with a set of standard security controls radically simplifies the development of secure applications. OWASP recommends the [[ESAPI | OWASP Enterprise Security API (ESAPI)]] project as a model for the security APIs needed to produce secure web applications. ESAPI provides reference implementations in [http://www.owasp.org/index.php/ESAPI#tab=Java_EE Java], [http://www.owasp.org/index.php/ESAPI#tab=.NET .NET], [http://www.owasp.org/index.php/ESAPI#tab=PHP PHP], [http://www.owasp.org/index.php/ESAPI#tab=Classic_ASP Classic ASP], [http://www.owasp.org/index.php/ESAPI#tab=Python Python], and [http://www.owasp.org/index.php/ESAPI#tab=ColdFusion.2FCFML Cold Fusion].
+|-
+|<center>Secure Development Lifecycle</center>
+|To improve the process your organization follows when building such applications, OWASP recommends the [[SAMM | OWASP Software Assurance Maturity Model (SAMM)]]. This model helps organizations formulate and implement a strategy for software security that is tailored to the specific risks facing their organization.
+|-
+|<center>Application Security Education</center>
+|The [[:Category:OWASP_Education_Project | OWASP Education Project]] provides training materials to help educate developers on web application security and has compiled a large list of [[OWASP_Education_Presentation | OWASP Educational Presentations]]. For hands-on learning about vulnerabilities, try [[WebGoat | OWASP WebGoat]]. To stay current, come to an [[:Category:OWASP_AppSec_Conference | OWASP AppSec Conference]], OWASP Conference Training, or local [[:Category:OWASP_Chapter | OWASP Chapter meetings]].
+|}
+<br>
+There are numerous additional OWASP resources available for your use. Please visit the [[Projects | OWASP Projects]] page, which lists all of the OWASP projects, organized by the release quality of the projects in question (Release Quality, Beta, or Alpha). Most OWASP resources are available on our [[Main_Page | wiki]], and many OWASP documents can be ordered in [http://stores.lulu.com/owasp hardcopy].
+
+{{Top_10_2010:BottomTemplate|useprev=2010PrevLink|usenext=2010NextLink|prev=A10-Unvalidated Redirects and Forwards|next=What's Next For Verifiers}}
+
+[[Category:OWASP Top Ten Project]]

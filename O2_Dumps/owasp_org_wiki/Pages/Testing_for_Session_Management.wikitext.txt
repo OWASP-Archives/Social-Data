@@ -1,0 +1,22 @@
+{{Template:OWASP Testing Guide v3}}
+
+''' 4.5 Session Management Testing'''
+----
+
+At the core of any web-based application is the way in which it maintains state and thereby controls user-interaction with the site.  Session Management broadly covers all controls on a user from authentication to leaving the application.
+HTTP is a stateless protocol, meaning that web servers respond to client requests without linking them to each other.  Even simple application logic requires a user's multiple requests to be associated with each other across a "session”.  This necessitates third party solutions – through either Off-The-Shelf (OTS) middleware and web server solutions, or bespoke developer implementations.  Most popular web application environments, such as ASP and PHP, provide developers with built-in session handling routines. Some kind of identification token will typically be issued, which will be referred to as a “Session ID” or Cookie.
+<br>
+There are a number of ways in which a web application may interact with a user.  Each is dependent upon the nature of the site, the security, and availability requirements of the application.
+Whilst there are accepted best practices for application development, such as those outlined in the [[OWASP Guide Project|OWASP Guide to Building Secure Web Applications]], it is important that application security is considered within the context of the provider’s requirements and expectations. In this chapter we describe the following items.<br>
+
+[[Testing for Session_Management_Schema  (OWASP-SM-001)|4.5.1 Testing for Session Management Schema (OWASP-SM-001)]]<br>
+This describes how to analyse a Session Management Schema, with the goal to understand how the Session Management mechanism has been developed and if it is possible to break it to bypass the user session. It explains how to test the security of session tokens issued to the client's browser: how to reverse engineer a cookie, and how to manipulate cookies to hijack a session.<br>
+[[Testing for cookies attributes (OWASP-SM-002)|4.5.2 Testing for Cookies attributes (OWASP-SM-002)]]<br>
+Cookies are often a key attack vector for malicious users (typically, targeting other users) and, as such, the application should always take due diligence to protect cookies. In this section, we will look at how an application can take the necessary precautions when assigning cookies and how to test that these attributes have been correctly configured.<br>
+[[Testing for Session Fixation  (OWASP-SM-003)|4.5.3 Testing for Session Fixation  (OWASP-SM-003)]]<br>
+When an application does not renew the cookie after a successful user authentication, it could be possible to find a session fixation vulnerability and force a user to utilize a cookie known to the attacker.<br>
+[[Testing for Exposed Session Variables   (OWASP-SM-004)|4.5.4 Testing for Exposed Session Variables   (OWASP-SM-004)]]<br>
+Session Tokens represent confidential information because they tie the user identity with his own session. It's possible to test if the session token is exposed to this vulnerability and try to create a replay session attack.
+<br>
+[[Testing for CSRF  (OWASP-SM-005)|4.5.5 Testing for CSRF (OWASP-SM-005)]]<br>
+Cross Site Request Forgery describes a way to force an unknowing user to execute unwanted actions on a web application in which he is currently authenticated. This section describes how to test an application to find this kind of vulnerability.<br>

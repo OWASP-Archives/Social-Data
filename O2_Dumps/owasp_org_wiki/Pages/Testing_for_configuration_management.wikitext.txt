@@ -1,0 +1,32 @@
+{{Template:OWASP Testing Guide v3}}
+
+''' 4.3 Testing for configuration management '''
+----
+
+Often analysis of the infrastructure and topology architecture can reveal a great deal about a web application. Information such as source code, HTTP methods permitted, administrative functionality, authentication methods, and infrastructural configurations can be obtained.<br>
+
+[[Testing for SSL-TLS (OWASP-CM-001)|4.3.1 SSL/TLS Testing (OWASP-CM-001)]]<br>
+SSL and TLS are two protocols that provide, with the support of cryptography, secure channels for the protection, confidentiality, and authentication of the information being transmitted.<br>
+Considering the criticality of these security implementations, it is important to verify the usage of a strong cipher algorithm and its proper implementation.
+
+[[Testing for DB Listener  (OWASP-CM-002)|4.3.2 DB Listener Testing (OWASP-CM-002)]]<br>
+During the configuration of a database server, many DB administrators do not adequately consider the security of the DB listener component. The listener could reveal sensitive data as well as configuration settings or running database instances if insecurely configured and probed with manual or automated techniques. Information revealed will often be useful to a tester serving as input to more impacting follow-on tests.
+
+[[Testing for infrastructure configuration management (OWASP-CM-003)|4.3.3 Infrastructure Configuration Management Testing  (OWASP-CM-003)]]<br>
+The intrinsic complexity of interconnected and heterogeneous web server infrastructure, which can count hundreds of web applications, makes configuration management and review a fundamental step in testing and deploying every single application. In fact it takes only a single vulnerability to undermine the security of the entire infrastructure, and even small and (almost) unimportant problems may evolve into severe risks for another application on the same server. In order to address these problems, it is of utmost importance to perform an in-depth review of configuration and known security issues.
+
+[[Testing for application configuration management (OWASP-CM-004)|4.3.4 Application Configuration Management Testing  (OWASP-CM-004)]]<br>
+Web applications hide some information that is usually not considered during the development or configuration of the application itself.<br>
+This data can be discovered in the source code, in the log files or in the default error codes of the web servers. A correct approach to this topic is fundamental during a security assessment.
+
+[[Testing for file extensions handling  (OWASP-CM-005)|4.3.5 Testing for File Extensions Handling (OWASP-CM-005)]]<br>
+The file extensions present in a web server or a web application make it possible to identify the technologies which compose the target application, e.g. jsp and asp extensions. File extensions can also expose additional systems connected to the application.
+
+[[Testing for Old, Backup and Unreferenced Files (OWASP-CM-006)|4.3.6 Old, Backup and Unreferenced Files  (OWASP-CM-006)]]<br>
+Redundant, readable and downloadable files on a web server, such as old, backup and renamed files, are a big source of information leakage. It is necessary to verify the presence of these files because they may contain parts of source code, installation paths as well as passwords for applications and/or databases.
+
+[[Testing_for_Admin_Interfaces  (OWASP-CM-007)|4.3.7 Infrastructure and Application Admin Interfaces (OWASP-CM-007)]]<br>
+Many applications use a common path for administrative interfaces which can be used to guess or brute force administrative passwords. This test tends to find admin interfaces and understand if it is possible to exploit it to access to admin functionality.
+
+[[Testing for HTTP Methods and XST  (OWASP-CM-008)|4.3.8 Testing for HTTP Methods and XST (OWASP-CM-008)]]<br>
+In this test we check that the web server is not configured to allow potentially dangerous HTTP commands (methods) and that Cross Site Tracing (XST) is not possible.

@@ -1,0 +1,35 @@
+= Agenda <font color="red">'''(DRAFT)'''</font> =
+
+To this end, the OWASP GPC establishes the following agenda for the 2009 calendar year.
+
+* '''Define Metrics:''' define metrics to measure OWASP Projects through various aspects such as quality, activity, usability, relevance, currentness, availability and popularity. (Integration)
+* '''Apply Metrics:'''  to all existing OWASP Projects and determine the status for each project (Integration)
+* '''Incorporate Results:''' incorporate results and experiences during re-evaluation process to establish new categorizations for projects (Integration)
+* '''Create Metadata:''' create a defined set of project metadata to be captured for all OWASP Projects to facilitate organization and maintenance. (Strategic)
+* '''Capture Metadata:''' capture all defined metadata for existing OWASP Projects (Integration)
+* '''Provide Repository:''' Provide a standardized, managed, OWASP-controlled repository for all OWASP Projects to facilitate a consistent manner to retrieve the latest versions of OWASP projects. (Integration)
+* '''Create Project Kit:''' Create a kit for new OWASP projects that includes standard graphic design elements such as OWASP logos, recommended color schemes, fonts, templates, etc. These elements should be used for both OWASP Tools and Documentation projects. In addition, consider creating human user interface guidelines for tools that use GUIs. (Strategic)
+* '''Migrate Projects:''' Migrate existing projects to the OWASP Repository (Integration)
+* '''Revamp Project Site:''' the OWASP Project website to leverage the newly created metadata, metrics and centralized repository. Additionally, the OWASP Project website should allow for members of the OWASP community to suggest new project ideas. (Strategic)
+* '''Rework Project page table:''' Re-work the X of Code table to incorporate the new metrics above (Integration)
+* '''Transition Process:''' Provide a transition process from X of Code to a proper project page (Integration)
+* '''Capture Metrics:''' Provide a method to capture and keep the metrics needed for a project in a way that doesn't interfere with marketing that project to its target audience(s) (Integration)
+* '''Template for Project Pages:''' Provide some sort of skeletal project page which contains a mixture of required, optional and free-form elements so that project pages are consistent (good for OWASP globally) while flexible enough to serve the project's audience (good for that project specifically).  Basically expand what's [http://www.owasp.org/index.php/How_to_Start_an_OWASP_Project here]. (Strategic)
+* '''Documentation Project Workflow:''' Research and define a workflow for documentation projects such that they can provide content for wiki, download, and printed matter in a way that minimizes effort. (Strategic)
+
+= Timeline <font color="red">'''(DRAFT)'''</font> =
+
+As much of the OWASP Project work is done via [[:Category:OWASP_Season_of_Code | OWASP Seasons of Code]], the OWASP GPC agenda will be driven largely by the dates surrounding these seasons of code.
+
+== Before Season of Quality - Spring Cleaning <font color="red">'''(DRAFT)'''</font> ==
+Ideally, many of these issues to be addressed prior to the spring Season of Code, which has been proposed as a Season of Quality (“Spring Cleaning”), in order to utilize any output to further the goals of the Season of Quality. As a result, the following goals are defined during the first quarter of 2009, prior to the beginning of the Season of Quality: Define Metrics, Apply Metrics, Incorporate Results, Create Metadata.
+
+During the Season of Quality, in addition to any quality proposed quality improvements such as documentation or proofreading, projects should be required to capture the defined set of metadata for their project. In addition, owners of projects that have been identified by metrics to be defunct or outdated should be contacted and given the opportunity to update their project as part of the Season of Quality. OWASP community members can be solicited to adopt any projects which can no longer be maintained by the owner. Projects that are abandoned by their owner and cannot attract OWASP community members should be deprecated and retired .
+
+== Before Summer/Autumn of Code <font color="red">'''(DRAFT)'''</font> ==
+By the start of the following Season of Code, the GPC will have determined a solution for providing a standardized, managed repository for all OWASP Projects and created a standard OWASP Project kit. All projects that are part of this Season of Code will use the new repository and project kit and the GPC will work with existing projects to migrate them to the new OWASP repository and standardize their appearance. Additionally, documentation will be created to help potential OWASP users in navigating the project repositories and OWASP community members to contribute to projects.
+
+== Before OWASP Summit 2009 <font color="red">'''(DRAFT)'''</font> ==
+During the season of code preceding the OWASP Summit 2009, the GPC will work with the OWASP Website Project to develop a design to leverage the added OWASP Project metadata to make the OWASP Projects easier to find by potential OWASP community members. OWASP Project pages will also be improved based on the centralized OWASP repository and separate sections will be made for projects based on project status (as evaluated by established metrics).
+
+[[Category: GPC Archive]]

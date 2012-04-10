@@ -1,0 +1,27 @@
+8. Cross-Site Scripting (XSS) -> 8.6 HTTPOnly Test
+
+(This sublesson was not formally solved by the project)
+
+=== Lesson overview ===
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution === 
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information. 
+
+=== Strategy ===
+
+This WebGoat lesson is a demonstration of the HttpOnly flag which prevents client side script from reading a cookie value if it is set; "Read Cookie" and "Write Cookie" buttons can be selected to view that particular browser's support of the HttpOnly flag.
+
+There really is no ModSecurity solution or any other way to illustrate similar functionality within ModSecurity, especially since this takes place in the browser and ModSecurity cannot modify source code in an HTTP response. 
+
+=== Reviewer comments ===
+
+For this lesson, ModSecurity rules can be implemented to inspect Response Headers and look for Set-Cookie data.  When we see it, we can create an Application Defect alert if it is missing the HttpOnly flag:
+
+<pre>
+SecRule RESPONSE_HEADERS:/Set-Cookie2?/ "!(?:\;? ?httponly;?)" \
+"phase:3,t:none,t:lowercase,pass,log,auditlog, \
+msg:'AppDefect: Missing HttpOnly Cookie Flag.'"
+</pre>

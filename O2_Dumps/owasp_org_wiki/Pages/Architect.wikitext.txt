@@ -1,0 +1,14 @@
+{{Template:SecureSoftware}}
+
+==Role Description==
+In an ideal world, the architect simply figures out how — at an architectural level — necessary security technologies integrate into the overall system. This includes network security requirements, such as firewalls, VPNs etc. For this reason, the architect should explicitly document trust assumptions in each part of the system — usually by drawing trust boundaries (e.g., network traffic from outside the firewall is untrusted, but local traffic is trusted). Of course, these boundaries must be a reflection of business requirements. For instance, high-security applications should not be willing to trust any unencrypted shared network media.
+Security requirements should come from the requirements specifier. To facilitate better security requirements, the architect should:
+* Only need to understand the security implications of technologies well enough that he does not introduce any overt security errors.
+* Enumerate all resources in use by a system — preferably to the deepest level of detail possible.
+* Further supporting the building of security requirements, he should identify the roles in the system that will use each resource.
+* He should identify the basic operations on each resource.
+* The architect should also be prepared to help people understand how resources interact with each other through the lifetime of the system.
+
+[[Category:Role]]
+[[Category:CLASP Role]]
+[[Category:OWASP CLASP Project]]

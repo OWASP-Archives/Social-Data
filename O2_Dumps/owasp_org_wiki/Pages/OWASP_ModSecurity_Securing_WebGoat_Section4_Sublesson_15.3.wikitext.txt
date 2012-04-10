@@ -1,0 +1,84 @@
+15. Parameter Tampering -> 15.3 Bypass Client Side JavaScript Validation
+
+=== Lesson overview ===
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution === 
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information. 
+
+=== Strategy ===
+
+This WebGoat lesson demonstrates bypassing client-side validation using a web browser plugin such as IEWatch for IE or Firebug for Firefox. There are 7 different validation types and any field that does not meet the requirements will return an error message.
+
+Often in real word implementations, the RegExs in the HTML source code are taken and re-implemented within ModSecurity so that validation is properly enforced and cannot be bypassed.
+
+The ModSecurity solution will be to copy the RegExs from the HTML source and use them in ModSecurity rules. 
+
+=== Implementation === 
+
+A sample POST URI and parameters are (the 2nd entry should be on one line):
+<pre>
+POST http://192.168.0.5/WebGoat/attack?Screen=31&menu=1600
+
+field1=abc&field2=123&field3=abc+123+ABC&field4=seven&field5=90210&
+field6=90210-1111&field7=301-604-4882
+</pre>
+
+The 'rulefile_15-3_bypass-client-side-validation.conf' is:
+<pre>
+  # exactly three lowercase characters
+  SecRule &ARGS_POST:field1 "@eq 0" "nolog,skipAfter:1530"
+  SecRule ARGS_POST:field1 "!^[a-z]{3}$" \
+"phase:2,t:none,log,auditlog,deny,severity:3,msg:'15. Parameter Tampering -> \
+15.3 Bypass Client Side JavaScript Validation: malicious attempt to enter \
+invalid data',tag:'INJECTION_ATTACK',redirect:/_error_pages_/lesson15-3.html"
+	
+  # exactly three digits
+  SecRule &ARGS_POST:field2 "@eq 0" "nolog,skipAfter:1530"
+  SecRule ARGS_POST:field2 "!^[0-9]{3}$" \
+"phase:2,t:none,log,auditlog,deny,severity:3,msg:'15. Parameter Tampering -> \
+15.3 Bypass Client Side JavaScript Validation: malicious attempt to enter \
+invalid data',tag:'INJECTION_ATTACK',redirect:/_error_pages_/lesson15-3.html"
+	
+  # letters, numbers, and space only
+  SecRule &ARGS_POST:field3 "@eq 0" "nolog,skipAfter:1530"
+  SecRule ARGS_POST:field3 "!^[a-zA-Z0-9 ]*$" \
+"phase:2,t:none,log,auditlog,deny,severity:3,msg:'15. Parameter Tampering -> \
+15.3 Bypass Client Side JavaScript Validation: malicious attempt to enter \
+invalid data',tag:'INJECTION_ATTACK',redirect:/_error_pages_/lesson15-3.html"
+	
+  # enumeration of numbers
+  SecRule &ARGS_POST:field4 "@eq 0" "nolog,skipAfter:1530" 
+  SecRule ARGS_POST:field4 "!^(one|two|three|four|five|six|seven|eight|nine)$" \
+"phase:2,t:none,log,auditlog,deny,severity:3,msg:'15. Parameter Tampering -> \
+15.3 Bypass Client Side JavaScript Validation: malicious attempt to enter \
+invalid data',tag:'INJECTION_ATTACK',redirect:/_error_pages_/lesson15-3.html"
+	
+  # simple zip code
+  SecRule &ARGS_POST:field5 "@eq 0" "nolog,skipAfter:1530"
+  SecRule ARGS_POST:field5 "!^\d{5}$" \
+"phase:2,t:none,log,auditlog,deny,severity:3,msg:'15. Parameter Tampering -> \
+15.3 Bypass Client Side JavaScript Validation: malicious attempt to enter \
+invalid data',tag:'INJECTION_ATTACK',redirect:/_error_pages_/lesson15-3.html"
+	
+  # zip with optional dash four
+  SecRule &ARGS_POST:field6 "@eq 0" "nolog,skipAfter:1530"
+  SecRule ARGS_POST:field6 "!^\d{5}(-\d{4})?$" \
+"phase:2,t:none,log,auditlog,deny,severity:3,msg:'15. Parameter Tampering -> \
+15.3 Bypass Client Side JavaScript Validation: malicious attempt to enter \
+invalid data',tag:'INJECTION_ATTACK',redirect:/_error_pages_/lesson15-3.html"
+	
+  # US phone number with or without dashes
+  SecRule &ARGS_POST:field7 "@eq 0" "nolog,skipAfter:1530"
+  SecRule ARGS_POST:field7 "!^[2-9]\d{2}-?\d{3}-?\d{4}$" \
+"phase:2,t:none,log,auditlog,deny,severity:3,msg:'15. Parameter Tampering -> \
+15.3 Bypass Client Side JavaScript Validation: malicious attempt to enter \
+invalid data',tag:'INJECTION_ATTACK',redirect:/_error_pages_/lesson15-3.html"						
+  SecAction "t:none,nolog,id:'1530'"
+</pre>
+
+=== Comments ===
+
+* This solution takes the RegExs used for client-side validation and incorporates them in ModSecurity rules.

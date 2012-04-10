@@ -1,0 +1,134 @@
+This page contains is a place holder for OWASP leader's responses to the following question:
+
+== Question == 
+
+'''OWASP project leaders, chapter leaders and members, as it grows what do you want OWASP to become?'''
+
+* A certifying and CBK type pseudo-company like (ISC)2?
+* An open source project organized along the lines of Debian, Apache, or a similar group that owns a set of projects?
+* Does OWASP want to certify apps, testers, both or none? (I've seen all POV advocated)
+* Who will be required to pay what kind of dues, if any?
+* How formal of an organization will OWASP become?
+* Is the status quo preferable to the proposed change?
+* Other?
+
+For the newer members of this list, here are some pages which you might find interesting:
+
+* [[About_OWASP]]
+* [[How_OWASP_Works]]
+* [[OWASP_brand_usage_rules]]
+* [[Chapter_Rules]]
+* [[Chapter_Leader_Handbook]]
+* [[:Category:Chapter_Resources]]
+* [[Tutorial]]
+* [[OWASP_Education_Presentation]]
+
+== Answers ==
+(Please add your local chapter and put your comments under your local chapter heading)
+
+===CHAPTERS===
+
+====NY/NJ Metro====
+* A certifying and CBK type pseudo-company like (ISC)2? - That is one area to explore or partner with existing SANS as a example.
+
+* An open source project organized along the lines of Debian, Apache, or a similar group that owns a set of projects? - YES
+
+* Does OWASP want to certify apps, testers, both or none? (I've seen all POV advocated)- Need more information on how this would work.
+
+* Who will be required to pay what kind of dues, if any? - All persons who want to be "members" $100.00 per per person is a dontation that is a tax write-off + is skin in the game. 
+
+* How formal of an organization will OWASP become? Subject matter experts, elected board of directors 2 year terms with global mission for the membership.
+
+* Is the status quo preferable to the proposed change? - OWASP wants to grow and like any small company to do so, some things need to grow as well with milestones to success.
+
+
+====Belgium====
+Nov-1 - Pending comments from Belgium mailing members and board members
+
+Nov-7: (compiled reactions)
+
+Mostly agree with points mentioned by the Education project leader(see below)
+
+*''Certifying like (ISC)2'': No, it's too formal, too american and too expensive.
+*''An open source project'': For source code / publications it is great to have an open source organisation but for the rest it's more about communication. 
+*''Does OWASP want to certify apps, testers, both or none'': Who will certify the application? It's more like do you follow the guidelines: Yes/No? And what about software evolution, OWASP needs to setup a complex mechanism to check apps, approve them, re-check them if any new security issue is discovered... Beside that it's part of some people jobs description and they cannot be competitor with the company they are working for?
+*''How formal of an organization will OWASP become'': Anarchy is famous for his ability to quickly react because anyone can decide to react... organisation means limitation, conciliation, responsabilities, papers, we all already have jobs/life including all that ... Let's decide some rules that we should not break (- do not display 0 day attack, - do not limit on one technology only, - do not add more "do not" :-))  
+*''Is the status quo preferable to the proposed change'':No
+
+====Helsinki, Finland====
+Nov-1 - Waiting for comments from mailing list members
+
+Nov-9 Compiled Answers from mailing list members
+
+''A certifying and CBK type pseudo-company like (ISC)2?''
+
+* No but maybe it should be wise to seek some co-operation with certifying organizations
+
+''An open source project organized along the lines of Debian, Apache, or a similar group that owns a set of projects?''
+
+* Open source projects should be part of OWASP but other activities are needed. 
+
+''Does OWASP want to certify apps, testers, both or none? (I've seen all POV advocated)''
+
+* Rather not
+
+''Who will be required to pay what kind of dues, if any?''
+
+* Current system is working.
+
+''How formal of an organization will OWASP become?''
+
+* Some increase in formality is perhaps needed to increase visibility. Independence and openess should be retained.
+
+''Other?''
+
+* OWASP should be more on the hands of developers than security people. Also more alignment with other domains of security would be beneficial for getting the message through in companies.
+
+
+
+====Turkey====
+
+* Certification is not required. It requires lots of resources and it’s way too commercial.
+* Apache Foundation is a good example but also we believe OWASP should not turn into a software development based organization.
+*–
+* Only “members” should pay money, not project leaders and chapter leaders. Requesting money from chapter leaders or project leader is unacceptable. Since they already spent lots of their time for OWASP.
+* Current state of OWASP is quite all right. Making it more formal potentially not going to work and even in this state lots of chapters and chapter leaders are not active enough. Getting more formal is not going to help it either.
+* There are some recommendations:
+** Generally we want changes, it’s good.
+** Active chapters should be supported more and we should start to eliminate inactive chapters.
+
+
+===PROJECTS===
+
+====Education====
+Put forward by Seba:
+* I do not think OWASP is the right place to perform certifications. It makes us ‘lawmaker’ and judge at the same time. What OWASP could/should do is propose a certification scheme / criteria input for other parties. This is even a project: http://www.owasp.org/index.php/SpoC_007_-_The_OWASP_Web_Security_Certification_Framework ?
+* Organization wise, I like the [http://www.apache.org/foundation/how-it-works.html http://www.apache.org/foundation/how-it-works.html]. The organization should not be the goal: it is there to support achieving the goals. My vote for Apache like organization: +1
+* OWASP has been driven by volunteers, who invest personal time: that is worth far more than a membership fee. Let’s keep this separated.
+* Over-regulation kills creativity and scares volunteers away. We should keep it very easy for people to start new projects or new chapters. When the projects/chapters grow, the contributing people and project leader(s) can regulate themselves if it is necessary to guarantee continuity. By providing some practical how-to’s and working examples instead of rules, OWASP provides the framework for successful projects/chapters.
+* Some projects and chapters will ‘die’: how do we detect this and make this visible? It should be clear for OWASP users/visitors what the project / chapter status is.Define a few measurable criteria that taken together provide a good insight in the project/chapter status.
+
+====Java Project====
+* The Top 10 has been widely misused and misquoted as a Web Application Security Standard.  This obviously indicates that a standard is what the industry is looking for.  Re-working the sec. dev. guide and the top 10 project to produce a set of web app standards would be an excellent start.  But, I don't think it is OWASP's role to verify compliance with, or to certify applications/products with these standards - as that would open a huge can of worms and require considerable changes to how OWASP is funded and staffed.
+* The same approach as above could be applied to other aspects of app security, such as secure development.  I.e. create the standards formally and provide resources around their implementation, but don't actually certify applications.
+* Continue to grow the wiki idea of security sharing for application.  OWASP is becoming the primary source of security information for web app vulns. The more developers and security experts start to view and update the OWASP site, the better.
+
+* Continue the focus on OWASP top 10 and other studies of web vulns. These top 10 lists/studies/reports are being used within company and professional presentations and credit is given to OWASP as the official source of web app info.
+
+*I think OWASP should offer some sort of professional certification. Perhaps it can be part of the OWASP conferences.  Provide some sort of certification for the training tracks which are offered. These tracks are sources of great information which is specific to a technology. Why not offer either a certificate of completion or a test and certification?  In my opinion, certifications from well known organizations will significantly drive conference attendance. (One reason why sans does so well)
+
+* It would be interesting to explore the idea of certifying an app. I can envision the OWASP stamp of approval for an item that has been developed securely (whitebox) and passes all blackbox security tests throughout the development cycle.
+
+* Charge for conference attendance, sponsorship, certifications, product certifications
+* Charge for vendor attendance at conferences
+* I like the current idea of membership which provides the benefit for commercial license of OWASP projects. I think that's a good idea to continue pushing, especially as the OWASP project keep growing.
+
+====Orizon====
+I think that as long as Owasp growns up it must follow other Opensource community approach. I mean that having a set of projects and creating like Apache, Debian, OpenBSD does is the right path.
+
+In my opinion, Owasp doesn't have to become a certification authority instead it could offer security reviews on demand.
+A fee could be applied to commercial projects and the collected fees could be used in events such as Spoc, Aoc and conferences, meanwhile these services would be free of charge for opensource projects.
+
+I think vendors have to pay for being sponsored in Owasp site and Owasp conferences and project and chapter leaders have to be paying owasp member.
+
+Of course, just my 2 cents

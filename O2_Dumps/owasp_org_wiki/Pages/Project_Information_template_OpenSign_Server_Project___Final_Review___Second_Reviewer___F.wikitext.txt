@@ -1,0 +1,122 @@
+[[Project Information:template OpenSign Server Project|Clik here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''FINAL REVIEW''' 
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART I''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications#Online code signing and integrity verification service for open source community (OpenSign Server)|OWASP OpenSign Server Project's Deliveries & Objectives]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#Online code signing and integrity verification service for open source community (OpenSign Server)|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+  | colspan="2" style="width:75%; background:#cccccc" align="left"|
+
+* Client tool to generate RSA key pair and request signing certificate by return via a secure connection, secure connection will authenticate user after a dedicated registration process and also use mutual authentication SSL to avoid man-in-the-middle - returning certificate to user in real time. Registered developer can then submit their SPC online to verify the SPC.
+
+-> ok
+
+* Client tool to download software that will do a proper verification on the software against the code signing service
+
+-> code download and verification is not available in the OSSJClient. Verification of the certificate is therefore performed
+independently of the signed code (one step is missing in the process).
+
+* Website interface for the code signing service
+
+-> ok
+
+* Set of Admin tools to manage the code signing service, user and certificate repository
+
+-> available, but completeness of features should be validated
+
+* Documentation
+
+-> User documentation has been completed.
+
+-> The demonstration could be more explicit related to the integration of the tools in the software deployment process.
+The role of entities (certificate, CSR) could be explained more precisely, so as to enable developpers with limited 
+security knowledge to use the tool. For instance: integrate the documentation (opendsign-concept.doc ...) in the
+demo slides.
+
+Documentation in the code repository contains the original design doc rather than the current dev/use documentation.
+
+OK
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#Online code signing and integrity verification service for open source community (OpenSign Server)|'''the assumed ones''']], please quantify in terms of percentage.
+  | colspan="2" style="width:75%; background:#cccccc" align="left"|
+
+* Client tool to generate RSA key pair and request signing certificate by return via a secure connection, secure connection will authenticate user after a dedicated registration process and also use mutual authentication SSL to avoid man-in-the-middle - returning certificate to user in real time. Registered developer can then submit their SPC online to verify the SPC.
+
+100 %
+
+* Client tool to download software that will do a proper verification on the software against the code signing service
+
+50%
+
+* Website interface for the code signing service
+90 %
+
+* Set of Admin tools to manage the code signing service, user and certificate repository
+
+70 %
+
+|- 
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+'''Second comments''':
+
+* I was able to get this running fine on MS OS with Java/Maven and compile in the Eclipse IDE
+* it would be nice it it would be possible to simply download and run the code
+for the server and the client  - AGREE
+* available user documentation: what can I do with each tool, how (for instance under the form of a '5 minutes introduction' and reference list of available functions) ? - AGREE
+* I would like to see the C# version as well
+* it would be nice if the 'trunk' would be documented in a way that let the user know:
+* how to run the server and clients (a global 'readme' file is missing).
+* Moreover, the 'opensign-design' document could be completed. User documentation makes this less urgent. - Agree
+
+'''Final Review'''
+
+Extending the OSSJClient with code download and verification feature would provide a important added value for
+a reasonnable work overhead. It could therefore be done in priority.
+
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART II''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Assessment Criteria
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[:Category:OWASP Project Assessment|OWASP Project Assessment Criteria]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Alpha Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Beta Quality''' status?
+  | colspan="2" style="width:75%; background:#cccccc" align="left"|
+* Include user documentation in Project's OWASP Wiki page(s) 
+OK
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+3. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Release Quality''' status?
+| colspan="2" style="width:75%; background:#cccccc" align="left"|
+* Include online documention built into tool (based on required user documentation) 
+* Be run through Fortify Software's open source review (if appropriate) and FindBugs
+OK
+ |-  
+ | style="width:25%; background:#7B8ABD" align="center"|
+4. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+|}

@@ -1,0 +1,13 @@
+'''Description'''
+
+This demonstration shows you on how you should implement baseline acceptable input filtering on visitors' inputs. Filtering inputs are the most important because 100% injection attacks (XSS,SQL,XPATH,OS CMD ...etc) come from inputs where filtering is weak or none. Developers should always be aware of inputs as well as outputs! You know Garbage In Garbage Out but for attackers, Garbage In Gold Out!
+Size: 4.09 MB
+
+
+'''Download:'''
+
+http://yehg.net/lab/pr0js/files.php/input_validatation_baseline.zip
+
+
+
+[[Category:Non-OWASP_Trainings]]

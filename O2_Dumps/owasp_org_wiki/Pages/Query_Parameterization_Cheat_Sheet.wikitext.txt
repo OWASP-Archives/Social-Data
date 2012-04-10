@@ -1,0 +1,94 @@
+= Introduction =
+
+[[SQL Injection]] is one of the most dangerous web vulnerabilities. So much so that it's the [[Top_10_2010-A1|#1 item in the OWASP Top 10]].  It represents a serious threat because SQL Injection allows evil attacker code to change the structure of a web application's SQL statement in a way that can steal data, modify data, or potentially facilitate command injection to the underlying OS.  This cheat sheet is a derivative work of the [[SQL Injection Prevention Cheat Sheet]].
+
+= Parameterized Query Examples =
+
+SQL Injection is best prevented through the use of [[SQL_Injection_Prevention_Cheat_Sheet#Defense_Option_1:_Prepared_Statements_.28Parameterized_Queries.29|''parameterized queries'']]. The following chart demonstrates, with real-world code samples, how to build parameterized queries in most of the common web languages. The purpose of these code samples is to demonstrate to the web developer how to avoid SQL Injection when building database queries within an web application.
+
+{| class="wikitable nowraplinks"
+|-
+! Language - Library
+! Parameterized Query
+|-
+| Java - Standard
+|   
+ String custname = request.getParameter("customerName"); 
+ String query = "SELECT account_balance FROM user_data WHERE user_name = ? ";  
+ '''PreparedStatement pstmt = connection.prepareStatement( query );'''
+ '''pstmt.setString( 1, custname); '''
+ ResultSet results = pstmt.executeQuery( );
+|-
+| Java - Hibernate
+|
+ Query safeHQLQuery = session.createQuery("from Inventory where productID=:productid");
+ safeHQLQuery.setParameter("productid", userSuppliedParameter);
+|-
+| .NET/C#
+|
+ String query = "SELECT account_balance FROM user_data WHERE user_name = ?";
+ try {
+    OleDbCommand command = new OleDbCommand(query, connection);
+    '''command.Parameters.Add(new OleDbParameter("customerName", CustomerName Name.Text));'''
+    OleDbDataReader reader = command.ExecuteReader();
+    // …
+ } catch (OleDbException se) {
+    // error handling
+ } 
+|-
+| ASP.NET
+|
+ string sql = "SELECT * FROM Customers WHERE CustomerId = @CustomerId";
+ '''SqlCommand command = new SqlCommand(sql);'''
+ '''command.Parameters.Add(new SqlParameter("@CustomerId", System.Data.SqlDbType.Int));'''
+ command.Parameters["@CustomerId"].Value = 1;
+|-
+| Ruby - ActiveRecord
+|  
+ '''# Create'''
+ Project.create!(:name => 'owasp')
+ '''# Read'''
+ Project.all(:conditions => "name = ?", name)
+ Project.all(:conditions => { :name => name })
+ Project.where("name = :name", :name => name)
+ '''# Update'''
+ project.update_attributes(:name => 'owasp')
+ '''# Delete'''
+ Project.delete(:name => 'name')
+|-
+| Ruby
+|
+ insert_new_user = db.prepare "INSERT INTO users (name, age, gender) VALUES (?, ? ,?)"
+ insert_new_user.execute 'aizatto', '20', 'male'
+|-
+| PHP - PDO
+| 
+ $stmt = $dbh->prepare("INSERT INTO REGISTRY (name, value) VALUES (:name, :value)");
+ '''$stmt->bindParam(':name', $name);'''
+ '''$stmt->bindParam(':value', $value);'''
+|-
+| Cold Fusion
+| 
+ <cfquery name = "getFirst" dataSource = "cfsnippets">
+     '''SELECT * FROM #strDatabasePrefix#_courses WHERE intCourseID ='''
+     '''<cfqueryparam value = #intCourseID# CFSQLType = "CF_SQL_INTEGER">'''
+ </cfquery>
+|-
+| Perl - DBI
+| 
+ my $sql = "INSERT INTO foo (bar, baz) VALUES ( ?, ? )";
+ '''my $sth = $dbh->prepare( $sql );'''
+ '''$sth->execute( $bar, $baz );'''
+|}
+
+= Related Articles =
+
+{{Cheatsheet_Navigation}}
+
+= Authors and Primary Editors  =
+
+Jim Manico - jim [at] owasp.org<br/>
+Dave Wichers - dave.wichers [at] aspectsecurity.com<br/>
+Neil Matatal - neil [at] owasp.org
+
+[[Category:Cheatsheets]]

@@ -1,0 +1,88 @@
+{{Template:Attack}}
+
+Last revision: '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+<br>
+[[Category:OWASP ASDR Project]]
+
+==Description==
+HTTP response splitting occurs when:
+
+* Data enters a web application through an untrusted source, most frequently an HTTP request. 
+* The data is included in an HTTP response header sent to a web user without being validated for malicious characters. 
+
+HTTP response splitting is a means to an end, not an end in itself. At its root, the attack is straightforward: an attacker passes malicious data to a vulnerable application, and the application includes the data in an HTTP response header.
+
+To mount a successful exploit, the application must allow input that contains CR (carriage return, also given by %0d or \r) and LF (line feed, also given by %0a or \n)characters into the header. These characters not only give attackers control of the remaining headers and body of the response the application intends to send, but also allow them to create additional responses entirely under their control.
+
+==Risk Factors==
+TBD
+
+==Examples==
+The following code segment reads the name of the author of a weblog entry, author, from an HTTP request and sets it in a cookie header of an HTTP response.
+
+<pre>
+	String author = request.getParameter(AUTHOR_PARAM);
+	...
+	Cookie cookie = new Cookie("author", author);
+        cookie.setMaxAge(cookieExpiration);
+        response.addCookie(cookie);
+</pre>
+
+Assuming a string consisting of standard alpha-numeric characters, such as "Jane Smith", is submitted in the request the HTTP response including this cookie might take the following form:
+
+<pre>
+	HTTP/1.1 200 OK
+	...
+	Set-Cookie: author=Jane Smith
+	...
+</pre>
+
+However, because the value of the cookie is formed of unvalidated user input, the response will only maintain this form if the value submitted for AUTHOR_PARAM does not contain any CR and LF characters. If an attacker submits a malicious string, such as "Wiley Hacker\r\nHTTP/1.1 200 OK\r\n...", then the HTTP response would be split into two responses of the following form:
+
+<pre>
+	HTTP/1.1 200 OK
+	...
+	Set-Cookie: author=Wiley Hacker
+	
+	HTTP/1.1 200 OK
+	...
+</pre>
+
+Clearly, the second response is completely controlled by the attacker and can be constructed with any header and body content desired. The ability of the attacker to construct arbitrary HTTP responses permits a variety of resulting attacks, including: [[Cross-User Defacement]], [[Cache Poisoning]], [[Cross-site Scripting (XSS)]] and [[Page Hijacking]].
+
+==Related [[Threat Agents]]==
+* [[internal software developer]]
+
+==Related [[Attacks]]==
+* [[Cross-User Defacement]]
+* [[Cache Poisoning]]
+* [[Cross-site Scripting (XSS)]]
+* [[Page Hijacking]]
+
+==Related [[Vulnerabilities]]==
+* [[:Category:Input Validation Vulnerability]]
+
+==Related [[Controls]]==
+* [[:Category:Input Validation]]
+
+==References==
+* http://www.infosecwriters.com/text_resources/pdf/HTTP_Response.pdf - HTTP Response Spliting
+* http://www.securiteam.com/securityreviews/5WP0E2KFGK.html - Introdution to HTTP Response Spliting
+
+[[Category:FIXME|link not working
+
+* Watchfire Whitepaper: HTTP Response Splitting, Web Cache Poisoning Attacks, and Related Topics Whitepaper[http://download.watchfire.com/ttl/wp/HTTPResponseSplitting.pdf?file=HTTPResponseSplitting.pdf&authToken=1214447561_257e36e250a83a8e5942584866d295ee]
+
+
+]]
+
+==Credit==
+
+{{Template:Fortify}}
+
+
+[[Category: Protocol Manipulation]]
+[[Category: Attack]]
+
+__NOTOC__

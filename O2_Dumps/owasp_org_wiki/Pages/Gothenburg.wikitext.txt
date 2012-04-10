@@ -1,0 +1,292 @@
+<!--
+Use if chapter template is used
+
+{{Chapter Template|chaptername=Gothenburg|extra=Välkommen till OWASP Göteborgs hemsida! Göteborgskapitlets ledare är [mailto:ulf.larson@owasp.org Ulf Larson], [mailto:mattias.jidhage@owasp.org Mattias Jidhage] och Jonas Magazinius
+|mailinglistsite=http://lists.owasp.org/mailman/listinfo/owasp-sweden|emailarchives=http://lists.owasp.org/pipermail/owasp-sweden}}
+--> <!--
+Remove all text below until the next comment is encountered if chapter template is used
+--> 
+<div align="right"><owaspbanner /></div> <div style="font-size:7pt;text-align:right">'''[http://www.owasp.org/index.php/Advertising Ad Space Available for 2011]'''</div> 
+----
+
+== OWASP Göteborgs lokalavdelning  ==
+
+Välkommen till OWASP Göteborgs hemsida. Göteborgskapitlets ledare är [mailto:ulf.larson@owasp.org Ulf Larson], [mailto:mattias.jidhage@owasp.org Mattias Jidhage] och Jonas Magazinius. 
+
+
+== Lokala nyheter  ==
+
+ '''2012-03-25 - Jim Manico's slides tillgängliga'''
+
+Här kommer nu länken till Jim Manico's slides från föredraget den 22e. Håll till godo! [[Media:Manico_Developer_Top_Ten_Core_Controls_v4.1.ppt.zip | JManico - Developer Top Ten]]
+
+ '''2012-03-03 - Nästa officiella event spikat till torsdag den 26e april'''
+
+Torsdagen den 26e april slår vi upp portarna OWASP Göteborgs sista event före sommaren. Efter detta går vi in i sommardimman och space:ar ut ett par månader innan vi återigen tar nya tag inför hösten. Sponsor för detta event är [http://www.combitech.se/ Combitech]. Tusen tack till Combitech för detta!
+
+Temat för aprileventet är Norge! Vi får besök av Erlend Oftedal (@webtonull) som skall berätta om ''Cross domain communication and browser security features''. Rekommenderad lyssning för er som använder webbläsare. Vi har också ett team från Combitech som skall berätta om säkerhetsarbetet bakom framtagningen av E-valg, elektroniska val i Norge. Garanterat spännande lyssning det med! 
+
+Denna gång kommer eventet att hållas på ''Utbildningscenter för kollektivtrafik, Bror Nilssons gata 16, 417 55 Göteborg'' Håll ögonen öppna för Eventbrite-länk.
+
+Preliminär agenda:
+
+17:30 Eventet öppnar. Mackor och dricka. Ett par ord från vår sponsor Combitech
+
+18:00 Community update
+
+18:10 Security assessment of the E-valg system - Combitech
+
+19:05 Bensträckare
+
+19:15 Cross domain communication and browser security features - Erlend Oftedal (presentation och slides är på engelska)
+
+20:10 Mingel, en öl eller två och lite snacks
+
+Ca 21:00 Eventet avslutas
+
+'''Abstracts:'''
+
+''Security assessment of the E-valg system''
+
+Norge har under hösten 2011 genomfört elektroniska val med ett nyframtaget system som kallas för E-valg. Säkerheten i ett sådant system är naturligtvis mycket viktig för att kunna genomföra fria val med lika rösträtt och där man kan hålla hemligt vad man röstar på. Ett viktigt krav är att man ska kunna avge sin röst utan att rösten kan kopplas till väljaren, man ska vara säker på att rösten har blivit registrerad på rätt kandidat och parti och endast en röst per person ska räknas. Ett annat krav är att ingen ska kunna forcera systemets säkerhet för att påverka valresultatet (integritet) eller ta reda på vad någon har röstat på (sekretess). 
+Säkerhetsarbetet har varit en viktig del i framtagningen av E-valg och varit del av alla faser (iterationer) av projektet. Combitech har haft rollen som oberoende säkerhetsgranskare och utfört granskning av design, kodgranskning och penetrationstester på det färdiga systemet. I princip all information om systemet är dessutom öppen för att göra det möjligt för alla som vill att granska säkerheten.
+Presentationen kommer att beskriva principerna i säkerhetslösningen och hur säkerhetsgranskning och penetrationstest har utförts.
+
+''Cross domain communication and browser security features''
+
+Developers frequently see the need to be able to request data from several sources on different domains.
+Traditionally this has been solved in many ways, some of them not very secure. We will take a look at
+some of these approaches, why they are flawed, and why the new approaches are better. We will also
+look at common mistakes made when setting up cross domain communication.
+We will also take a look at some of the new browser security features, and how these support cross
+domain communication and can help mitigate other security problems.
+
+
+ '''2012-03-03 - Jim "@manicode" Manico till Sverige'''
+
+Jim Manico är på nordisk turné för att bland annat berätta om hur man skyddar sig mot Cross-site scripting. Den 22e mars landar Jim i Göteborg för att 18:00 hålla en presentation i Chalmers kårhus. Det kommer finnas mackor, öl, snacks och dricka. Mer info kommer allt eftersom den blir tillgänglig. Håll också ögonen öppna för Eventbrite-länk.
+
+''Uppdatering 2012-03-12''
+
+Här kommer nu Jims abstract och länken till anmälan via [http://owaspgbg-manico.eventbrite.com/ Eventbrite].
+
+Jim Manico is a profile in the OWASP community, working with the OWASP podcasts and ESAPI amongst other things. During March he is doing a Nordic tour and will be visiting the chapters in Finland, Sweden, Norway and Denmark and we have the pleasure of welcoming him to Gothenburg on March 22.
+
+Chalmers University of Technology is sponsoring the venue and will also provide some light snacks, coffee beer as well as non-alcoholic drinks. Jim's visit is made possible thanks to F5.
+
+Please note that the event will be held in '''English'''.
+
+Abstract: Web Application Access Control Design Excellence
+Access Control is a necessary security control at almost every layer within a web application. This talk will discuss several of the key access control anti-patterns commonly found during website security audits. These access control anti-patterns include hard-coded security policies, lack of horizontal access control, and "fail open" access control mechanisms.
+
+In reviewing these and other access control problems, we will discuss and design a positive access control mechanism that is data contextual, activity based, configurable, flexible, and deny-by-default - among other positive design attributes that make up a robust web-based access-control mechanism.
+
+ '''2012-02-27 - Snabbt påkommen säkpub'''
+
+Vi tänkte att vi skulle avrunda februari med en tämligen snabbt påkommen säkpub. Åtminstone någon av oss i boardet kommer finnas på [http://olrepubliken.se Ölrepubliken] under denna veckas torsdagskväll (29e februari, alltså) om någon vill titta in en stund. Tilläggas kan att det ryktas om att ett öl kallat Ctrl Alt Delete (jodå, ni läste rätt) skall finnas i lokalen under sagda torsdagskväll. Väl mött!
+
+
+ '''2012-02-25 - Missa inte dev:mobile'''
+
+En utvecklarkonferens för mobilutveckling ([http://devmobile.se dev:mobile]) kommer att gå av stapeln i Göteborg den 12e juni. Säkerligen har några av er börjat fundera kring säkerhetsproblem för mobila applikationer och har ni något intressant och/eller spännande att dela med er av skulle jag rekommendera att ni skickar in ert abstract till info@devmobile.se före 16 mars. Som inspiration kan ni titta på [https://www.owasp.org/index.php/OWASP_Mobile_Security_Project OWASP Mobile Security Project] och dess relaterade sidor.
+
+
+
+ '''2012-02-06 - Öppningsceremoni för Software Center'''
+
+Den förträfflige säkerhetsforskaren Andrei Sabelfeld bad mig att meddela den intresserade communitymedlemmen (japp, det är Du) att Software Center officiellt öppnar på tisdagen den 14e februari. Arrangören har dessutom haft den goda smaken att välja Kuggen på Lindholmen för ceremonin. Dessutom utlovas både tal och poster presentationer av intressant och aktuell forskning. Kort sagt, det finns ingen anledning att inte gå dit. Här kommer [http://www.lindholmen.se/en/node/22046 länken]. Vi ses där! 
+
+ '''2012-01-17 - Communityhack'''
+
+Nu går det bra att anmäla sig till OWASP Göteborgs communityhack som går av stapeln 18e februari på Chalmers. Mer info hittar ni på [http://communityhack-feb-2012.eventbrite.com/ Eventbrite], där ni även kan anmäla er. Vi ses där!
+
+''Uppdatering 2012-02-12''
+
+Adressen är Rännvägen 4. Följ [https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=r%C3%A4nnv%C3%A4gen+4,+g%C3%B6teborg,+sverige&aq=&sll=57.687406,11.979418&sspn=0.051477,0.154324&vpsrc=0&ie=UTF8&hq=&hnear=R%C3%A4nnv%C3%A4gen+4,+412+58+G%C3%B6teborg,+Sweden&ll=57.688311,11.97808&spn=0.006434,0.01929&t=m&z=16&iwloc=A denna länk] för att hitta dit.
+
+Det kommer finnas en person på plats för att släppa in er från ca 08:45.
+
+''Uppdatering 2012-01-30''
+
+Det är nu klart att det serveras frukost på communityhacket.
+
+''Uppdatering 2012-01-27''
+
+Tusen tack [[File:Omegapoint_logo.png|100px]] som står för pizza och dricka. Vill ditt företag också synas på denna sida så kontakta någon av oss. Epostadresserna finns ovan.
+
+Vill du skylta med ditt kommande projekt inför communityhacket redan nu? Gå in på [http://www.insto.org/communityhack/index.php/Main_Page Projektwikisidan] och lägg in era förslag. Ett par förslag har redan ramlat in!
+
+
+ '''2012-01-17 - Så där ja!'''
+
+Då har vi bokat Erlend Oftedal (@webtonull) till vårt april-event. Sök på Erlend så ser ni själva vilken kanonbokning vi gjort! 
+
+I skuggan av detta har vi dessutom bekräftat lokal till vårt communityhack. Lunchrummet på 7e våningen i D&IT-huset på Chalmers. Tack Chalmers och D&IT!
+
+ '''2012-01-16 - Vårens aktiviteter'''
+
+Väl mött!
+
+Vi har, julen till trots, inte riktigt bara legat på sofflocket och slöat. Vi har flera aktiviteter på gång. Bland annat kommer Jim Manico(!) på Norden-turné och OWASP Göteborg kommer att arrangera en presentationskväll med Jim längre fram i mars! 
+Inte nog med det. Ett communityhack kommer att gå av stapeln i mitten på februari. Hacket kommer hållas på Chalmers, mycket sannolikt i D&ITs förträffliga lunchrum på 7e våningen. Inte fy skam alls!
+
+Till allt detta kommer en ordinare presentationskväll i april och som om inte allt detta är nog går ryktet att en mycket känd och otroligt spännande säkerhetsforskare kommer befinna sig i Sverige längre fram i vår. Givetvis kommer OWASP att göra sitt yttersta för att blanda sig i detta besök och kanalisera det ut till Er!
+
+Stay tuned!
+
+ '''2011-11-04 - Ett par små uppdateringar'''
+
+Riktigt kul igår! Har man grymma talare, intressanta diskussioner och 55 personer i lokalen. Då är det rätt svårt att misslyckas...
+
+Slides från gårdagens träff kommer att publiceras här så fort de blir tillgängliga.
+
+Nästa träff är ett community hack, preliminärt schemalagt till 18-19 februari. Community-hacket skiljer sig från de presentations-orienterade kvällsträffarna. Här dyker du upp med din laptop, penna, papper och möjligen en påse ideer som du funderat över. Sen hackar vi loss så mycket vi orkar och ser vart det slutar! Tänk på att det finns inget som säger att du måste koda php, linuxmoduler eller regexpar för att få utbyte. Har du nån kul ide om ett alternativt sätt att genomföra en hotmodellering eller vill testa hur ZAP fungerar är det fritt fram. 
+
+För att genomföra denna träff skull vi behöva Er hjälp. Vi behöver en '''samarrangör''' och '''en eller flera sponsorer'''. Känner du att just ditt företag skulle vara intresserad av att ställa upp, kontakta oss. Tillförordnad general för detta event är Erik (erik.brannstrom@gmail.com).
+
+
+ '''2011-10-18 - Meeting outline for November 3rd'''
+
+17:00 - 17:30 Startup mingle with food and some drinks
+
+17:30 - 17:45 Community update
+
+17:45 - 18:30 OWASP Hatkit (presented in English)
+
+18:30 - 18:45 Short break
+
+18:45 - 19:45 DOMinator (presented in English)
+
+[19:45 - 20:30 After event mingle]
+
+Lets have a beer or two and talk security!
+
+
+Mötet kommer denna gång att sponsras av Adecco IT & Engineering och hållas på Götgatan 11, 41105 Göteborg (mitt i Nordstan). Mötet startar 17:00 och slutar runt 19:30, följt av öl och mingel. För att anmäla dig till mötet ber vi dig besöka/To sign up for the event, please visit [http://owaspgbg-nov2011.eventbrite.com/ Eventbrite]. 
+
+
+'''Talarinformation/Presenter information'''
+
+''Martin Holst Swende''
+
+Martin Holst Swende is a security consultant at the Swedish company 2Secure, where he primarily is involved with application security testing, but also does network penetration testing, IT forensics and source code auditing. Martin has a background as an Ms.C in Computer Science and Engineering from Linköping University and worked as a software developer for among others Yahoo before entering the field of security. Martin is the project leader for the Owasp Hatkit and the Owasp Hatkit Datafiddler projects.
+
+Presentation abstract
+
+The Hatkit Project was created to provide a framework for web application security testing. It consists of two parts; the Hatkit Proxy and the Hatkit Datafiddler. The proxy is a minimalist intercepting proxy which records data to a MongoDB database, while the Datafiddler is a tool to view, sort, filter, aggregate, replay and analyse data through a lot of different mechanisms, with the aim of providing a highly customizable framework which can be used to analyse modern complex web applications. 
+The tools became Owasp projects in 2011.
+
+Martin's slides: [[Media:Martin_Swende-Hatkit_Owasp-Gothenburg.pdf|OWASP Hatkit]] 
+
+
+''Stefano Di Paola''
+
+Stefano Di Paola is the CTO and a cofounder of Minded Security, where  he is responsible for the Research and Development Lab. Prior to founding Minded Security, Stefano was a freelance security consultant, working for several private and public companies. He also worked in collaboration with University of Florence at the Faculty of Computer Engineering. Stefano is recognized as one of the top application security researchers. In past years he released several cutting edge security advisories and researches presented at several international events  (Flash application security testing, Subverting Ajax). He is the Research & Development Director of OWASP Italian Chapter and contributor to several chapters of the OWASP testing guide.
+
+Presentation abstract
+
+Cross Site Scripting is one of the most difficult issues to fix since it involves several contexts on different platforms. And it is well known. With the advent of complex web application with heavy client side programming, DOM based Cross Site Scripting is becoming more and more interesting in the application security field. The difference between vanilla Xss and the latter is how hard is to find issues among thousands of JavaScript lines of code, and how contexts and attacks move from classical HTML format and client side execution to programming logic and paradigms. This talk will try to fill the emptiness of awareness about DOM Xss by showing new attacks and a new analysis technique whose implementation is a tool named "DOMinator". DOMinator is a Firefox based application that can ease the pain of finding DOM based Cross Site Scripting issues by using runtime tainting analysis at JavaScript level.
+
+Stefano's slides: [[Media:AnalyzingDOMXssWithDOMinator.pdf| DOMinator]] 
+
+ '''2011-10-14 - OWASP Göteborg den 3e november - uppdatering'''
+
+Nu är sponsor fixad och vi har någonstans att vara och mat att äta! Nu finns det alltså INGA hinder för att anmäla er. Kom ihåg, först till kvarn gäller även denna gång! Mötet kommer denna gång att hållas helt på engelska/the meeting will be held in its entirety in English och innehåller presentationer av Stefano Di Paola och Martin Holst Swende.
+
+Mötet kommer denna gång att sponsras av Adecco IT & Engineering och hållas på Götgatan 11, 41105 Göteborg (mitt i Nordstan). Mötet startar 17:00 och slutar runt 20:00, följt av öl och mingel. För att anmäla dig till mötet ber vi dig besöka/To sign up for the event, please visit [http://owaspgbg-nov2011.eventbrite.com/ Eventbrite]. 
+
+
+
+ '''2011-09-17 - OWASP Göteborg den 3e november'''
+
+Vi har spikat datum för nästa träff till den tredje november. Denna träff kommer innehålla presentationer av Stefano Di Paola och Martin Holst Swende. Vi jagar för närvarande sponsorer och har därför ingen plats bestämd än. Är Ditt företag intresserat av att sponsra en denna träff är ni välkomna att höra av er till Ulf eller Mattias! 
+
+Att vi inte har någon plats än skall dock inte få förhindra någon att anmäla sig, så det är bara att sätta igång. Anmälningsformuläret finns [http://owaspgbg-nov2011.eventbrite.com/ här]. 
+
+ '''2011-09-17 - Ännu ett wow!'''
+
+Vi har det stora nöjet att presentera vår andra spikade talare för vår nästa träff! Denna person är ingen mindre än Martin Holst Swende. Martin har utvecklat verktyget OWASP Hatkit och även presenterat detta på DEFCON 19 i år. Martin har utlovat en demobaserad presentation som garanterat kommer att bli både spännande och lärorik! Därav ännu ett wow! 
+
+ '''Nästa träff + wow!'''
+
+Det ser ut som om vi har spikat första talaren till nästa träff (tack Jonas!). Denna person är ingen mindre än Stefano Di Paola, a.k.a WisecWisec, a.k.a mannen bakom DOMinator. Därav wow! 
+
+Det lutar också åt att nästa träff kommer att hållas den tredje november. Mer information kommer allt eftersom. Stay tuned och prelboka upp tredje november för OWASP-träff redan nu! 
+
+ '''Presentationsmaterial'''
+
+Presentationsmaterial kommer att länkas till från denna sida i anslutning till våra träffar. 
+
+ '''OWASP Gothenburg web site goes Swedish + surprise!'''
+
+OWASP Göteborgs webbsida (den här alltså) kommer från idag att i huvudsak vara på svenska. Vi vänder oss till största del till svensktalande och har därför valt att använda svenska som språk. Det innehåll som redan fanns på sidan (före 11 augusti 2011) kommer att fortsätta vara på engelska. Viss generell information kommer att översättas. 
+
+Överraskning! OWASP Göteborg kommer att göra en kort videoinspelning där vi skickar "en hälsning från Göteborgskapitlet". Denna hälsning, tillsammans med hälsningar från andra kapitel kommer att visas upp på OWASP AppSecUSA senare i höst. Själva överraskningen består i att vi har tänkt att spela in videosnutten under vårt möte den 25e augusti. Detta innebär också att alla som deltar på mötet också får vara med och medverka i hälsningsvideon. De ni&nbsp;;-) 
+
+ '''OWASP Gothenburg Meeting, August 25 2011''', '''Welcome to Owasp Gothenburg''' + '''Owasp top ten w/ demo''' + '''Webappsec from a programming language perspective'''
+
+'''Meeting agenda''' 
+
+''17:00 - 17:30, Welcome and sandwiches'' 
+
+''17:30 - 17:45, OWASP Gothenburg Local Chapter - who are we, what do we do?'' 
+
+Introduction to the Gothenburg chapter, co-Leaders and Board-members, and the vision for making Gothenburg to a more interesting place for people interested in security. 
+
+<br> ''17:45 - 18:45, OWASP Top 10 - DEMO'' 
+
+Per Josefsson and Ulf Larson walks through the latest version of the top list and demonstrates a few of the attacks. 
+
+OWASP Top 10 is a list of the ten most dangerous threats with respect to application security. The latest version is from 2010 and the next version is expected during 2013. 
+
+Pers slides: [[Media:Per_Josefsson_OWASP_Topp_Tio_20110825.ppt|OWASP Top Ten]] 
+
+''18:45 - 19:00, Short break'' 
+
+''19:00 - 19:30, Web application security from a programming language perspective'' 
+
+15 years ago the concept of "Same-Origin Policy" (SOP) was introduced. SOP controls the interaction between web browser components. Current web applications differ radically in how they interact and they also use certain "hacks" to bypass the outdated policy. Jonas Magazinius introduces ongoing research at Chalmers University regarding programming language security and how a fine granular policy can replace SOP by allowing more interaction without compromising security. 
+
+Jonas slides: [[Media:Jonas_Magazinius_OWASP_Appsec_Proglang_20110825.pptx|A Language-based Perspective on Web Application Security]] 
+
+''19:30 - 20:30, Beer'' 
+
+[http://www.omegapoint.se Omegapoint] are sponsors and there will be lighter food and beers. Omegapoint is located at Rosenlundsgatan 3, Göteborg. The event will start at 5 pm and end around 8 pm. To sign up for the event, please visit [http://owaspgbg-aug2011.eventbrite.com/ this] site. 
+
+<br> 
+
+ '''July 4th, 2011 - OWASP-Gothenburg opens!'''
+
+Finally, OWASP Gothenburg has been formed, bringing application security closer to developers and security professionals on the west coast of Sweden. Ulf, Mattias and Jonas, the local chapter leaders, welcome members! 
+
+== Deltagande  ==
+
+OWASP Foundation is a professional association of global members and is and open to anyone interested in learning more about application security. Local chapters are run independently and governed by the following [[Chapter Leader Handbook]]. As a [http://www.owasp.org/index.php/About_OWASP 501(c)(3)] non-profit professional association your support and sponsorship of a meeting venue and/or refreshments is tax-deductible. Financial contributions should be made online using the online chapter donation button. To be a '''SPEAKER''' at ANY OWASP Chapter in the world simply review the [http://www.owasp.org/index.php/Speaker_Agreement speaker agreement] and then contact the local chapter leader with details of what [http://www.owasp.org/index.php/Category:OWASP_Project OWASP PROJECT], independent research or related software security topic you would like to present on. 
+
+
+
+<paypal>Gothenburg</paypal>
+
+
+'''<center>[http://lists.owasp.org/mailman/listinfo/owasp-sweden Klicka här för att gå med i din lokalavdelnings mailinglista]</center>'''
+
+<!--
+Stop remove here
+--> 
+
+Anmäl Er gärna till vår mailinglista. '''Notera''' dock att när du anmäler dig kommer du att anmäla dig till OWASP ''Sweden''-listan och inte ''Gothenburg''-listan. Detta beror på att Göteborgs och Sverige-kapitlen tillsammans har bestämt oss för att endast använda en lista. 
+
+Vem som helst är välkommen till våra möten (det enda som krävs för deltagande är att du har gått med i OWASP Sweden-mailinglistan). Är du intresserad av att hjälpa till eller har förslag på spännande och intressanta föredrag och/eller talare är du välkommen att kontakta oss. 
+
+== OWASP Sverige-bloggen  ==
+
+För längre nyhetsinlägg och rapporter från konferenser och annat hänvisar vi till [http://owaspsweden.blogspot.com/ OWASP Sverige-bloggen]. 
+
+== OWASP Göteborgs vision  ==
+
+OWASP Göteborgs vision är att väcka intresse för och sprida kunskap om hur man bygger säkra mjukvarusystem. Den är att tillhandahålla en balanserad mix av de senaste rönen inom akademisk säkerhetsforskning (spets och framkant), etablerade säkerhetstekniker och designprinciper för direkt tillämpning (bredd och mogenhet). De viktigaste elementen i konstruktionen av säkra applikationer är design och utvecklingsmetodik. OWASP Göteborg skall därför bidra till att öka säkerhetstänkandet hos programvaruutvecklare. 
+
+OWASP Göteborg når ut till utvecklare, projektledare och säkerhetspersoner genom att erbjuda intressanta föredrag och demonstrationer kring säkerhet - både i stort och i smått. Communityhack-dagar, mingel, inhemska och utländska talare profilerar oss som en seriös aktör som erbjuder intresserade en mötesplats där de kan träffa likasinnade, utbyta idéer samt diskutera de senaste inom området. 
+
+
+[[Category:OWASP_Chapter]] [[Category:Sweden]] [[Category:Gothenburg]]

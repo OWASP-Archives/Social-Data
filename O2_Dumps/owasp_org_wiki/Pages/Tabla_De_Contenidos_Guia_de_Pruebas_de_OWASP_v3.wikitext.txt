@@ -1,0 +1,250 @@
+__NOTOC__
+
+'''20 de Mayo, 2008'''
+Este es el borrador de la tabla de contenido de la nueva guía de pruebas
+Puede bajar la versión estable [http://www.owasp.org/index.php/Image:OWASP_Testing_Guide_v2_pdf.zip aqui] o leerla en línea [http://www.owasp.org/index.php/OWASP_Testing_Guide_v2_Table_of_Contents aqui]
+
+ Guía de Pruebas de OWASP v3 (borrador 20 de mayo, 2008) (OTG por sus siglas en inglés)
+
+ El índice principal es el OTG v2. (nuevo): nuevos artículos, (mejora): necesita mejorar
+
+ ==[[Testing Guide Foreword|(mejorar)Prólogo]]==
+
+==[[Testing Guide Frontispiece |(mejorar)1. Portada]]==
+
+'''[[Testing Guide Frontispiece|(mejorar)1.1 Sobre el proyecto de pruebas de OWASP]]'''
+
+'''[[About The Open Web Application Security Project|1.2 Sobre el proyecto abierto en seguridad de aplicaciones]]'''
+
+
+==[[Testing Guide Introduction|2. Presentación]]==
+
+'''2.1 El proyecto de pruebas de OWASP'''
+
+'''2.2 Principios de las pruebas'''
+
+'''2.3 Explicación de las técnicas de pruebas''' 
+
+(nuevo) 2.4 Derivación de requerimientos para pruebas de seguridad, requerimientos de pruebas funcionales y no funcionales, y casos de pruebas a través de casos de uso y mal uso
+
+(nuevo) 2.4.1 Pruebas de seguridad integradas en los flujos de trabajo de desarrolladores y probadores
+
+(nuevo) 2.4.2 Pruebas de seguridad de los desarrolladores: Pruebas unitarias, pruebas a nivel de componente, etc
+
+(nuevo) 2.4.3 Pruebas de seguridad de los probadores funcionales: pruebas integrales de sistema, pruebas de aceptación, y ambientes de producción
+
+(nuevo) 2.5 Análisis de datos y reporte de las pruebas de seguridad: identificación de causas raíz y reporte de pruebas de datos basado en el negocio y rol
+
+==[[The OWASP Testing Framework|3. El marco de pruebas de OWASP]]==
+
+'''3.1. Descripción'''
+
+'''3.2. Fase 1: Anstes que empiece el desarrollo'''
+
+'''3.3. Fase 2: Durante la definición y diseño'''
+
+'''3.4. Fase 3: Durante el desarrollo'''
+
+'''3.5. Fase 4: Durante la publicación'''
+
+'''3.6. Fase 5: Mantenimiento y operaciones'''
+
+'''3.7. Un típico flujo de trabajo en el ciclo de desarrollo '''
+
+==[[Web Application Penetration Testing |4. (mejorar) Pruebas de intrusion en aplicaciones Web ]]==
+
+[[Testing: Introduction and objectives|'''4.1 Presentación y Objetivos''']]
+
+[[Testing: Information Gathering|'''(mejorar) 4.2 Recopilación de información''']]
+
+[[Testing for Web Application Fingerprint (OWASP-IG-004)|4.2.1 (mejorar) Pruebas de identificación de aplicaciones Web]]
+
+[[Testing for Application Discovery|4.2.2 Descubrimiento de aplicaciones]]
+
+[[Testing: Spiders, Robots, and Crawlers (OWASP-IG-001)|(new:Christian Heinrich)4.2.3 "Spiders", Robots y "Crawlers"]]
+
+[[Testing: Search engine discovery/reconnaissance (OWASP-IG-002)|(new:Christian Heinrich)4.2.4 Descubrimiento y reconocimiento con buscadores"]]
+
+[[Testing for Error Code (OWASP-IG-006)|(mejorar)4.2.5 Análisis de códigos de error]]
+
+[[Testing for infrastructure configuration management  (OWASP-CM-003)|4.2.6 Pruebas de configuración en la infraestructura]]
+
+[[Testing for SSL-TLS (OWASP-CM-001)|4.2.6.1 Pruebas de SSL/TLS]]
+
+[[Testing for DB Listener  (OWASP-CM-002)|4.2.6.2 Pruebas en el "listener" de bases de datos]]
+
+[[Testing for application configuration management (OWASP-CM-004)|4.2.7 Pruebas de configuración en la aplicación]]
+
+[[Testing for file extensions handling  (OWASP-CM-005)|4.2.7.1 Pruebas sobre el manejo de extensiones de archivos]]
+
+[[Testing for Old, Backup and Unreferenced Files (OWASP-CM-006)|4.2.7.2 Archivos viejo, de respaldo o sin referencia]]
+
+[[Testing for business logic   (OWASP-BL-001)|'''(mejorar)4.3 Pruebas de reglas de negocio''']]
+
+[[Testing for authentication|'''(mejorar)4.4 Pruebas de autenticación''']]
+
+[[Testing for credentials transport  (OWASP-AT-001)|(nuevo)4.4.1 Transporte de credenciales en un canal cifrado]]
+
+[[Testing for Default or Guessable User Account (OWASP-AT-003)|4.4.2 Probar cuentas de usuario previsibles (de diccionario)]]
+
+[[Testing for Brute Force (OWASP-AT-004)|4.4.3 Pruebas de fuerza bruta]]
+
+[[Testing for Bypassing Authentication Schema (OWASP-AT-005)|4.4.4 Pruebas para sobrepasar el esquema de autentificación]]
+
+[[Testing for Directory Traversal|4.4.5 Pruebas de acceso a directorios protegidos/inclusión de archivos]]
+
+[[Testing for Vulnerable Remember Password and Pwd Reset  (OWASP-AT-006)|4.4.6 Pruebas en "olvide mi contraseña" y "restauración de contraseña" vulnerables]]
+
+[[Testing for Logout and Browser Cache Management (OWASP-AT-007)|4.4.7 Pruebas de terminación de sesión y manejo de memoria de acceso rápido del navegador]]
+
+[[Testing for Authorization|'''(nuevo) 4.x Pruebas de autorización''']]
+
+[[Testing for Path Traversal  (OWASP-AZ-001)|(nuevo) 4.x.x Pruebas de acceso a directorios protegidos]]
+
+[[Testing for Bypassing Authorization Schema|(nuevo)4.x.x Pruebas para sobrepasar el esquema de autorización]]
+
+[[Testing fot Privilege escalation|(nuevo)4.x.x Pruebas de elevación de privilegios]]
+
+[[Testing for Session Management|'''4.5 Pruebas de manejo de sesión''']]
+
+[[Testing for Session_Management_Schema (OWASP-SM-001)|4.5.1 Pruebas del esquema de manejo de sesión]]
+
+[[Testing for Cookie and Session Token Manipulation|(nuevo)4.5.2 Pruebas de fortaleza de testígos (anterior 4.5.2 Pruebas del esquema de manejo de sesión)]]
+
+[[Testing for Exposed Session Variables  (OWASP-SM-004)|4.5.3 Probando variables de sesion expuestas ]]
+
+[[Testing for CSRF  (OWASP-SM-005)|4.5.4 Probando CSRF]]
+
+[[Testing for HTTP Splitting/Smuggling   (OWASP-DV-016)|4.5.5 Probando vulnerabilidades de HTTP]]
+
+[[Testing for Data Validation|'''4.6 Pruebas de validación de datos''']]
+
+[[Testing for Reflected Cross site scripting (OWASP-DV-001) |(nuevo)4.6.1 Pruebas de "Reflected Cross Site Scripting"]]
+
+[[Testing for Stored Cross site scripting  (OWASP-DV-002) |(nuevo)4.6.2 Pruebas de "Cross Site Scripting" almacenado]]
+
+[[Testing for DOM-based Cross site scripting  (OWASP-DV-003)|4.6.3 Probando "Cross Site Scripting" basado en el DOM]]
+
+[[Testing for Cross site flashing   (OWASP-DV-004)|(nuevo)4.6.4 Probando "Cross Site Flashing"]]
+
+[[Testing for HTTP Methods and XST (OWASP-CM-008)|4.6.1.1 Probando metodos HTTP y XST]]
+
+[[Testing for SQL Injection  (OWASP-DV-005)|4.6.2 Probando inyección de SQL ]]
+
+[[Testing for Oracle|4.6.2.1 Pruebas para Oracle ]]
+
+[[Testing for MySQL|4.6.2.2 Pruebas para MySql ]]
+
+[[Testing for SQL Server |4.6.2.3 Pruebas para Sql Server]]
+
+[[Testing for LDAP Injection  (OWASP-DV-006)|4.6.3 Pruebas de inyección de LDAP]]
+
+[[Testing for ORM Injection   (OWASP-DV-007)|4.6.4 Pruebas de inyección de ORM]]
+
+[[Testing for XML Injection (OWASP-DV-008)|4.6.5 Pruebas de inyección de XML]]
+
+[[Testing for SSI Injection  (OWASP-DV-009)|4.6.6 Pruebas de inyección en SSI]]
+
+[[Testing for XPath Injection  (OWASP-DV-010)|4.6.7 Pruebas de inyección de XPath]]
+
+[[Testing for IMAP/SMTP Injection  (OWASP-DV-011)|4.6.8 Inyección en IMAP/SMTP]]
+
+[[Testing for Code Injection  (OWASP-DV-012)|4.6.9 Pruebas de inyección de código]]
+
+[[Testing for Command Injection   (OWASP-DV-013)|4.6.10 Pruebas de inyección de comandos]]
+
+[[Testing for Buffer Overflow (OWASP-DV-014)|4.6.11 Pruebas de desbordamiento de memoria]]
+
+[[Testing for Heap Overflow|4.6.11.1 Pruebas de desbordamiento de Heap]]
+
+[[Testing for Stack Overflow|4.6.11.2 Pruebas de desbordamiento de pila]]
+
+[[Testing for Format String|4.6.11.3 Pruebas de formato de cadenas]]
+
+[[Testing for Incubated Vulnerability (OWASP-DV-015)|4.6.12 Probando incubación de vulnerabilidades]]
+
+[[Testing for Denial of Service|'''4.7 Pruebas de negación de servicio (NdS)''']]
+
+[[Testing for DoS Locking Customer Accounts  (OWASP-DS-002)|4.7.1 Pruebas de NdS bloqueando cuentas de cliente]]	
+
+[[Testing for DoS Buffer Overflows (OWASP-DS-003)|4.7.2 Pruebas de NdS en desbordamientos de meoria]]
+
+[[Testing for DoS User Specified Object Allocation (OWASP-DS-004)|4.7.3 Pruebas de NdS en asignación de objectos específicos al usuario]]
+
+[[Testing for User Input as a Loop Counter  (OWASP-DS-005)|4.7.4 Pruebas de entradas de usuario como contadores en ciclos]]
+
+[[Testing for Writing User Provided Data to Disk   (OWASP-DS-006)|4.7.5 Pruebas sobre escritura en disco de datos proveídos por el usuario]]
+
+[[Testing for DoS Failure to Release Resources (OWASP-DS-007)|4.7.6 Pruebas de NdS por fallas al liberar recursos]]
+
+[[Testing for Storing too Much Data in Session (OWASP-DS-008)|4.7.7 Pruebas de demasiada información en la sesión]]
+
+[[Testing for Web Services|'''4.8 Pruebas en servicios Web''']]
+
+[[Testing for XML Structural  (OWASP-WS-003)|4.8.1 Pruebas estructurales de XML]]
+
+[[Testing for XML Content-Level  (OWASP-WS-004)|4.8.2 Pruebas a nivel de contenido en XML ]]
+
+[[Testing for WS HTTP GET parameters/REST attacks  (OWASP-WS-005)|4.8.3 Pruebas de parametros Get de HTTP y REST ]]
+
+[[Testing for Naughty SOAP Attachments   (OWASP-WS-006)|4.8.4 Pruebas de datos adjuntos en SOAP]]
+
+[[Testing for WS Replay   (OWASP-WS-007)|4.8.5 Pruebas de repeticion en WebServices]]
+
+[[Client-Side Testing|(nuevo)4.10 Pruebas del lado del cliente]]
+
+[[Testing for AJAX  (OWASP-AJ-002)|(nuevo) 4.10.1 Probando AJAX]]
+
+[[Flash Testing|(nuevo)4.10.2 Probando Flash]]
+
+[[RIA Testing|(nuevo)4.10.3 Probando RIA]]
+
+==[[Writing Reports: value the real risk |(mejorar)5. Escribiendo Reportes: valor del riesgo real ]]==
+
+[[How to value the real risk |5.1 Como valuar el riesgo real]]
+
+[[How to write the report of the testing |5.2 Como escribir el reporte de pruebas]]
+
+ OTGv3 Distribución del equipo
+
+Vea también [http://www.owasp.org/index.php/OWASP_Testing_Guide_v3_Startup http://www.owasp.org/index.php/OWASP_Testing_Guide_v3_Startup].
+
+<br>La nueva guia de pruebas de OWASP v3:
+<br>Este [http://www.owasp.org/index.php/Image:Planning_OTGv3.doc documento] analiza el checklist de la guía de pruebas de OWASP y una plan para crear na nueva v3.
+
+* 1) Pruebas metodológicas (Nueva categoría) <-- (Mat) Necesita explicación
+* 2) Faltan las pruebas de autorizacion. (Nueva categoría)
+* 3) Recopilación de información no es una vulnerabilidad
+* 4) Pruebas de reglas de negocio
+* 5) Pruebas de infraestructura ? (Nueva categoría) *esto se debe de concentrar solamente en el puerto 80 y 443 y otras pruebas relacionados con la Web
+* 6) La sección de web services necesita mejoras
+* 7) La sección de pruebas de AJAX necestia mejoras
+* 8) Actualizacion a la seccion de metodologías de pruebas (requerimientos, planes, niveles y ambientes)
+* 9) Nueva Categoría: Pruebas del lado del cliente
+* 10) Nueva Categoría: Pruebas de clientes pesados
+* 11) Nueva Categoría: Aplicaciones de Flash/Silverlight
+* 12) Nueva Categoría: Probando aplicaciones financieras
+* 13) Nueva Categoría: Fuzzing (tenemos vectores, pero debe explicar todo el concepto) 
+
+Nuevas categorias propuestas para la OTG v3:
+* OTG plantillas de formas
+** OTG Petición de citas (nuevo)
+** OTG Forma de autorizacion para pruebas en terceros (nuevo)
+** OTG Reporte de ejemplo (nuevo)
+* Modo Pasivo
+* Recopilación de información
+* Pruebas de reglas de negocio
+* Pruebas de intrusión en aplicaciones Web
+** Pruebas de infraestructura
+** Pruebas de autentificación
+** Pruebas de autorización (nuevo)
+** Pruebas de manejo de sesión
+** Pruebas de validación de datos
+** Pruebas de negación de servicios
+** Pruebas de servicios Web
+** Pruebas del lado del cliente
+*** Pruebas de AJAX
+*** Pruebas de Flash (nuevo)
+*** Pruebas en RIA (nuevo)
+
+[[Category:OWASP Testing Project]]

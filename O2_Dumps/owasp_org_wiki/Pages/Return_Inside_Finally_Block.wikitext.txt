@@ -1,0 +1,73 @@
+{{Template:Vulnerability}}
+{{Template:Fortify}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+
+==Description==
+Returning from inside a finally block will cause exceptions to be lost.
+
+A return statement inside a finally block will cause any exception that might be thrown in the try block to be discarded.
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+In the following code excerpt, the IllegalArgumentException will never be delivered to the caller. The finally block will cause the exception to be discarded.
+
+<pre>
+	try {
+	  ...
+	  throw IllegalArgumentException();
+	}
+	finally {
+	  return r;
+	}
+</pre>
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* [[Error Handling]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+Note: A reference to related [http://cwe.mitre.org/ CWE] or [http://capec.mitre.org/ CAPEC] article should be added when exists. Eg:
+
+* [http://cwe.mitre.org/data/definitions/79.html CWE 79].
+* http://www.link1.com
+* [http://www.link2.com Title for the link2]
+
+
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Error Handling Vulnerability]]
+[[Category:Java]]
+[[Category:Implementation]]
+[[Category:Code Snippet]]
+[[Category:Vulnerability]]

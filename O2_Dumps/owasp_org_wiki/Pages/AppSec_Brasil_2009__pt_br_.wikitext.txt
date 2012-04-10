@@ -1,0 +1,327 @@
+= Conferência Internacional de Segurança de Aplicações (AppSec Brasil 2009)  =
+
+A comunidade [http://www.ticontrole.gov.br Comunidade TI-Controle] e o Centro de Informática da [http://www.camara.gov.br Câmara dos Deputados] apresentam a '''Conferência Internacional de Segurança de Aplicações''', que será realizada com o apoio do OWASP ([http://www.owasp.org/index.php/About_OWASP Open Web Application Security Project]) em [http://en.wikipedia.org/wiki/Brasília Brasília], capital do Brasil. A conferência consistirá de dois dias de treinamentos, seguidos de dois dias de plenárias em trilha única. 
+
+[[Image:Brasilia Panorama.jpg]] 
+
+== Datas  ==
+
+A Conferência ocorrerá do dia 27 ao 30 de outubro de 2009. Os dias 27 e 28 de outubro serão dedicados ao mini-cursos e os dias 29 e 30 terão as sessões plenárias. 
+
+<br> 
+
+==== Promoção  ====
+
+Esta conferência é promovida pela Comunidade [http://www.ticontrole.gov.br TI-Controle] e organizada pelo Centro de Informática da [http://www.camara.gov.br/ Câmara dos Deputados]. 
+
+A Conferência tem o apoio do OWASP, [[Brazilian|Capítulo Brasil]], como provedor de conteúdo (seleção de palestras e cursos e montagem da grade de horários). 
+
+A Conferência tem o apoio da [http://www.unb.br Universidade de Brasília (UnB)] [[Image:Unb.gif|60px]] 
+
+A Conferência tem o patrocínio de [http://www.conviso.com.br Conviso IT Security] [[Image:CorVersao BR Small.jpg|100px]] e [http://www.leadcomm.com.br LeadComm] [[Image:LeadComm Logo Screen.jpg|100px]] 
+
+==== Keynotes  ====
+
+'''Gary McGraw''' 
+
+CTO, [http://www.cigital.com Cigital] 
+
+<br> 
+
+[[Image:GaryMcGraw.JPG|left|60px]] 
+
+''Título:'' '''O Modelo de Maturidade Building Security In (BSIMM)''' 
+
+''Biografia:'' Gary McGraw é o CTO da Cigital, Inc., uma empresa de segurança e qualidade de software com sede em Washington, Estados Unidos. Ele é reconhecido mundialmente como uma autoridade em segurança de software e é autor de oito importantes livros sobre este tópico, incluindo: "Java Security", "Building Secure Software", "Exploiting software", "Software Security" e "Exploiting Online Games". Ele é também editor da série de livros sobre segurança de software na editora Addison-Wesley. Dr. McGraw também escreveu mais de 100 artigos científicos, escreve uma coluna mensal para o site informIT e é frequentemente citado na mídia. Além de servir como consultor estratégico para importantes empresas e executivos de TI, Gary faz parte dos Conselhos Administrativos das empresas Fortify Software e Raven White. Ele recebeu um PhD duplo em Ciência Cognitiva e Ciência da Computação pela Universidade de Indiana, onde ele faz parte do Conselho Consultivo da Escola de Informática. Ele também produz o podcast "Silver Bullet" para a revista IEEE Security &amp; Privacy e produz o podcast Reality Check Security para o site CSO online. 
+
+<br> 
+
+'''Jason Li''' 
+
+[http://www.aspectsecurity.com Aspect Security] 
+
+''Título:'' '''Ágil e Seguro: É possível fazer os dois?''' 
+
+Co-autor: '''Jerry Hoff''', Aspect Security 
+
+''Biografias:'' Jason Li é engenheiro senior de segurança de aplicações na Aspect Security. Jason conduz revisões de arquiteturas de segurança, revisão de segurança em código de aplicações, testes de segurança e provê treinamentos de segurança em aplicações Web para diversas empresas do ramo de varejo, financeiro e governamentais. Ele também é ativamente envolvido na OWASP, apoiando do Comitê de Projetos Globais da OWASP e como co-autor do Projeto Antisamy da OWASP (versão Java). Jason obteve seu pós-mestrado em Ciências da Computação com concentração em Segurança da Informação pela Universidade Johns Hopkins. Ele obteve seu grau de Mestre em Ciências da Computação pela Universidade Cornell, onde obteve também sua graduação dupla, em Ciências da COmputação e Pesquisador de Operações. 
+
+Jerry Hoff é engenheiro senior de segurança de aplicações na Aspect Security. Jerry coordena e executa numerosas revisões de segurança em código de aplicações para clientes de diversas industrias. Jerry também fornece treinamentos para clientes e possui mais de 10 anos de experiência ensinando e desenvolvendo. Jerry também é envolvido com a OWASP e foi o líder do projeto AntiSamy .net. Ele possui mestrado em Ciências da Computação pela Universidade de Washington em St. Louis. 
+
+<br> 
+
+'''Dinis Cruz''' 
+
+OWASP Board 
+
+''Título:'' '''A Definir''' 
+
+''Biografia:'' 
+
+A definir. 
+
+<br> 
+
+'''Kuai Hinojosa''' 
+
+OWASP 
+
+''Título:'' '''Implementando Aplicações Web Seguras Usando Recursos do OWASP''' 
+
+''Biografia:'' 
+
+Kuai Hinojosa desenvolve e protege aplicações Web por mais de 12 anos. Anteriormente, ele trabalhou no setor bancário como administrador de segurança de base de dados para o quinto maior banco dos Estados Unidos, onde ele trabalhou em um pequeno time de desenvolvimento de aplicações para proteção dos ativos da empresa. Ele trabalha agora na Universidade de Nova Yorque como Especialista de Aplicações Web onde ele continua a empregar o desenvolvimento de aplicações Web e a experiência em segurança de aplicações para proteger os recursos da universidade. Em seu tempo livre, Kuai se voluntaria para catequisar sermões de segurança de aplicações and liderar o capítulo de Mineapolis da OWASP. Kuai é membro do Comitê Global de Edução da OWASP. 
+
+<br> 
+
+==== Agenda  ====
+
+'''Programa da Conferência - Dia 1 - 29 de outubro de 2009 ''' 
+<center>
+{| width="80%" class="t"
+|-
+| width="14%" height="17" align="right" | 08:30 - 09:00 
+| bgcolor="#8595c2" align="CENTER" | '''Recepção'''
+|-
+| width="14%" height="17" align="right" | 09:00 - 10:00 
+| bgcolor="#eeeeee" align="CENTER" | '''Abertura'''
+|-
+| width="14%" height="49" align="right" | 10:00 - 10:30 
+| bgcolor="#b9c2dc" align="CENTER" | '''Dinis Cruz<br>''' Apresentação do Projeto OWASP
+|-
+| width="14%" height="32" align="right" | 10:30 - 12:30 
+| bgcolor="#eeeeee" align="CENTER" | '''Gary McGraw (Cigital)<br>''' Modelo de Maturidade Building Security In (BSIMM)
+|-
+| width="14%" height="17" align="right" | 12:30 - 14:00 
+| bgcolor="#d98b66" align="CENTER" | '''Almoço'''
+|-
+| width="14%" height="47" align="right" | 14:00 - 14:50 
+| bgcolor="#b9c2dc" align="CENTER" | '''Dinis Cruz<br>''' Apanhado dos Projetos do OWASP
+|-
+| width="14%" height="32" align="right" | 14:50 - 15:40 
+| bgcolor="#eeeeee" align="CENTER" | '''Thomas Schreiber<br>''' As Camadas Lógica e Semântica da Segurança de Aplicações Web
+|-
+| width="14%" height="17" align="right" | 15:40 - 16:00 
+| bgcolor="#d98b66" align="CENTER" | '''Break'''
+|-
+| width="14%" height="47" align="right" | 16:00 - 16:50 
+| bgcolor="#b9c2dc" align="CENTER" | '''Brian Contos<br>''' O Uso de Web Application Firewalls (WAF) e Sistemas de Database Activity Monitoring (DAM) Para Melhorar a Segurança de Código
+|-
+| width="14%" height="32" align="right" | 16:50 - 17:40 
+| bgcolor="#eeeeee" align="CENTER" | '''Matt Tesauro<br>''' ROI: Otimize os Gastos com Segurança
+|-
+| width="14%" height="47" align="right" | 17:40 - 18:30 
+| bgcolor="#b9c2dc" align="CENTER" | '''Pravir Chandra <br>''' O Modelo de Maturidade “Software Assurance Maturity Model (SAMM)”
+|-
+| width="14%" height="17" align="right" | 18:30 - 18:35 
+| bgcolor="#cccccc" align="CENTER" | '''Encerramento do Primeiro Dia'''
+|}
+</center> 
+<br> 
+
+<br> '''Programa da Conferência - Dia 2 - 30 de outubro de 2009''' 
+<center>
+{| width="80%" class="t"
+|-
+| width="14%" height="17" align="right" | 08:30 - 09:00 
+| bgcolor="#8595c2" align="CENTER" | '''Recepção'''
+|-
+| width="14%" height="32" align="right" | 09:00 - 10:30 
+| bgcolor="#b9c2dc" align="CENTER" | '''Jason Li e Jerry Hoff (Aspect Security) '''<br> Ágil e Seguro - É possível fazer os dois?
+|-
+| width="14%" height="17" align="right" | 10:30 - 10:50 
+| bgcolor="#d98b66" align="CENTER" | '''Intervalo'''
+|-
+| width="14%" height="47" align="right" | 10:50 - 11:40 
+| bgcolor="#eeeeee" align="CENTER" | '''Cassio Goldschmidt'''<br> Praticas e ferramentas fundamentais para o desenvolvimento de software seguro
+|-
+| width="14%" height="32" align="right" | 11:40 - 12:30 
+| bgcolor="#b9c2dc" align="CENTER" | '''Luiz Otávio Duarte'''<br> Abordagem Preventiva para Teste de Segurança em Aplicações Web
+|-
+| width="14%" height="17" align="right" | 12:30 - 14:00 
+| bgcolor="#d98b66" align="CENTER" | '''Almoço'''
+|-
+| width="14%" height="32" align="right" | 14:00 - 15:10 
+| bgcolor="#eeeeee" align="CENTER" | '''Ulisses Castro'''<br>SQL Injection: Amplifying Data Leakeage<br>
+|-
+| width="14%" height="32" align="right" | 15:10 - 16:00 
+| bgcolor="#b9c2dc" align="CENTER" | '''Sebastian Cufre'''<br> Técnicas Automáticas para “SQL Ownage”
+|-
+| width="14%" height="17" align="right" | 16:00 - 16:20 
+| bgcolor="#d98b66" align="CENTER" | '''Intervalo'''
+|-
+| width="14%" height="32" align="right" | 16:20 - 17:10 
+| bgcolor="#eeeeee" align="CENTER" | '''Klaubert Herr da Silveira'''<br> ModSecurity: Firewall OpenSource para Aplicações Web (WAF)
+|-
+| width="14%" height="32" align="right" | 17:10 - 18:00 
+| bgcolor="#b9c2dc" align="CENTER" | '''Philippe Sevestre'''<br> Programação Segura utilizando Análise Estática
+|-
+| width="14%" height="17" align="right" | 18:00 - 18:30 
+| bgcolor="#cccccc" align="CENTER" | '''Encerramento'''
+|}
+</center> 
+<br> 
+
+==== Arquivos das Apresentações  ====
+
+'''Vídeos completos''' 
+
+dia 1 (29/10): http://vod.camara.gov.br/cgi-bin/playlist.pl?p=auditorio1_2009-10-29-09-18-00-000_36000000&amp;d=1&amp;i=1&amp;v=0 
+
+dia 2 (30/10): http://vod.camara.gov.br/cgi-bin/playlist.pl?p=auditorio1_2009-10-30-09-00-00-000_36000000&amp;d=1&amp;i=1&amp;v=0 
+
+<br> '''Apresentações''' 
+
+<br> Abertura <br> Vídeo: http://vod.camara.gov.br/cgi-bin/playlist.pl?p=auditorio1_2009-10-29-09-18-00-000_2730000&amp;d=1&amp;i=1&amp;v=0 <br> Vídeo: http://vimeo.com/7461881
+
+<br> Dinis Cruz, ''Apresentação do Projeto OWASP'' <br> Vídeo: http://vod.camara.gov.br/cgi-bin/playlist.pl?p=auditorio1_2009-10-29-10-03-00-000_1300000&amp;d=1&amp;i=1&amp;v=0 <br> Vídeo: http://vimeo.com/7482554
+
+<br> Gary McGraw, ''O Modelo de Maturidade Building Security In'' <br> Transparências: [[Media:Bsimm09.pdf]] <br> Vídeo: http://vod.camara.gov.br/cgi-bin/playlist.pl?p=auditorio1_2009-10-29-10-25-00-000_7070000&amp;d=1&amp;i=1&amp;v=0 <br> Vídeo: http://vimeo.com/7476912
+
+<br> Dinis Cruz, ''Apanhado dos Projetos do OWASP'' <br> Vídeo: http://vod.camara.gov.br/cgi-bin/playlist.pl?p=auditorio1_2009-10-29-14-08-00-000_2800000&amp;d=1&amp;i=1&amp;v=0<br> Vídeo: http://vimeo.com/7506297
+
+<br> Brian Contos, ''O Uso de Web Application Firewalls (WAF) e Sistemas de Database Activity Monitoring (DAM) Para Melhorar a Segurança de Código'' <br> Transparências: [[Media:OWASP_Brian_Contos_Making_a_Case_for_Data_Security_to_Network-Centric_Peers_and_Managers_October2009_Final.zip]] <br> Vídeo: http://vod.camara.gov.br/cgi-bin/playlist.pl?p=auditorio1_2009-10-29-14-56-00-000_3300000&amp;d=1&amp;i=1&amp;v=0<br>Vídeo: http://vimeo.com/7505808
+
+<br> Dinis Cruz, ''O Projeto O2'' <br> Vídeo: http://vod.camara.gov.br/cgi-bin/playlist.pl?p=auditorio1_2009-10-29-16-05-00-000_3300000&amp;d=1&amp;i=1&amp;v=0 <br>Vide: http://vimeo.com/7506929
+
+<br> Matt Tesauro, ''ROI: Otimize os Gastos com Segurança'' <br> Transparências: [[Media:AppSec_Brazil_OWASP_ROI-mtesauro.pdf]] <br> 
+
+Vídeo: http://vod.camara.gov.br/cgi-bin/playlist.pl?p=auditorio1_2009-10-29-17-03-00-000_2700000&amp;amp;d=1&amp;amp;i=1&amp;amp;v=0 <br> Vídeo: http://vimeo.com/7461624 
+
+<br> Pravir Chandra, ''O Modelo de Maturidade “Software Assurance Maturity Model (SAMM)'' <br> Transparências: http://www.opensamm.org/downloads/OpenSAMM-1.0.ppt <br> 
+
+Vídeo: http://vod.camara.gov.br/cgi-bin/playlist.pl?p=auditorio1_2009-10-29-17-48-00-000_2750000&amp;amp;d=1&amp;amp;i=1&amp;amp;v=0 <br> Vídeo: http://vimeo.com/7461495 
+
+<br> Jerry Hoff, ''Ágil e Seguro - É possível fazer os dois?'' <br> Transparências: [[Media:Jerry.Hoff.brazil_presentation.pdf]] <br> 
+
+Vídeo: http://vod.camara.gov.br/cgi-bin/playlist.pl?p=auditorio1_2009-10-30-09-21-00-000_2620000&amp;amp;d=1&amp;amp;i=1&amp;amp;v=0 <br> Vídeo: http://vimeo.com/7461340 
+
+<br> Cassio Goldschmidt, ''Práticas e ferramentas fundamentais para o desenvolvimento de software seguro'' <br> Transparências: [[Media:Praticas_e_ferramentas_fundamentais_para_o_desenvolvimento_de_software_seguro_-_AppSec_Brasil.pptx]] <br> 
+
+Vídeo: http://vod.camara.gov.br/cgi-bin/playlist.pl?p=auditorio1_2009-10-30-10-35-00-000_3500000&amp;amp;d=1&amp;amp;i=1&amp;amp;v=0 <br> Vídeo: http://vimeo.com/7461207 
+
+<br> Luiz Otávio Duarte, ''Abordagem Preventiva para Teste de Segurança em Aplicações Web'' <br> Transparências: [[Media:AprOwasp_LOD_FER_WAL_NewVersion.pdf]] <br> 
+
+Vídeo: http://vod.camara.gov.br/cgi-bin/playlist.pl?p=auditorio1_2009-10-30-11-34-00-000_3650000&amp;amp;d=1&amp;amp;i=1&amp;amp;v=0 <br> Vídeo: http://vimeo.com/7460959 
+
+<br> Ulisses Castro, ''SQL Injection: Amplificação de Data Leakage'' <br> 
+
+Vídeo: http://vod.camara.gov.br/cgi-bin/playlist.pl?p=auditorio1_2009-10-30-14-02-00-000_2300000&amp;amp;d=1&amp;amp;i=1&amp;amp;v=0 <br> Vídeo: http://vimeo.com/7460521 
+
+<br> Gary McGraw, ''Exploiting Online Games'' <br> Transparências: [[Media:EOG09.pdf]] <br> Vídeo: http://vod.camara.gov.br/cgi-bin/playlist.pl?p=auditorio1_2009-10-30-14-41-00-000_3000000&amp;d=1&amp;i=1&amp;v=0<br>Vídeo: http://vimeo.com/7507515
+
+<br> Sebastián Cufre, ''Técnicas Automáticas para “SQL Ownage”'' <br> Transparências: [[Media:OWASP_Brasil_2009_-_Automated_SQL_Ownage_Techniques.pptx]] <br> 
+
+Vídeo: http://vod.camara.gov.br/cgi-bin/playlist.pl?p=auditorio1_2009-10-30-15-35-00-000_2450000&amp;amp;d=1&amp;amp;i=1&amp;amp;v=0 <br> Vídeo: http://vimeo.com/7462181 
+
+<br> Anúncio do AppSec Brasil 2010 <br> 
+
+Vídeo: http://vod.camara.gov.br/cgi-bin/playlist.pl?p=auditorio1_2009-10-30-16-16-00-000_120000&amp;amp;d=1&amp;amp;i=1&amp;amp;v=0 <br> Vídeo: http://vimeo.com/7461914 
+
+<br> Klaubert Herr da Silveira, ''ModSecurity: Firewall OpenSource para Aplicações Web'' <br> Transparências: [[Media:OWASP_BSB_ModSecurity_Klaubert-Herr.ppt]] <br> 
+
+Vídeo: http://vod.camara.gov.br/cgi-bin/playlist.pl?p=auditorio1_2009-10-30-16-30-00-000_3520000&amp;amp;d=1&amp;amp;i=1&amp;amp;v=0 <br> Vídeo: http://vimeo.com/7462060 
+
+<br> Philippe Sevestre, ''Programação Segura utilizando Análise Estática'' <br> Transparências: [[Media:AppSec_Brasil_2009-SecureProgrammingWithStaticAnalysis.pdf]] <br> 
+
+Vídeo: http://vod.camara.gov.br/cgi-bin/playlist.pl?p=auditorio1_2009-10-30-17-42-00-000_2850000&amp;amp;d=1&amp;amp;i=1&amp;amp;v=0 <br> Vídeo: http://vimeo.com/7461756 
+
+<br> 
+
+==== Mini-Cursos  ====
+
+'''Gestão de Riscos de Segurança Aplicada a Web Services''' 
+
+''José Eduardo Malta de Sá Brandão'', IPEA 
+
+Transparências: [[Media:Owasp2009_brandao.ppt]] 
+
+O objetivo deste minicurso é apresentar a disciplina de gestão de riscos de segurança associada a web Services. O enfoque do curso visa elucidar aspectos conceituais e sistemáticos nestas metodologias, exemplificado em um estudo de caso que visa reforçar a utilidade e necessidade do uso destas metodologias para o entendimento e o desenvolvimento de web services. O curso deverá fornecer aos alunos base para desenvolverem seus próprios projetos de gestão de riscos. As apresentações deverão discorres sobre conceitos, descrição de modelos e na comparação dos principais padrões relacionados à gestão de riscos na segurança. 
+
+<br> '''Segurança  Web:  Técnicas  para  Programação  Segura  de  Aplicações''' 
+
+''André Ricardo Abed Grégio e Vitor Monte Afonso'', CTI/MCT, ''Paulo Licio de Geus'', IC/UNICAMP 
+
+Transparências: [[Media:AppSecBR2009_VAfonso_AGregio_PGeus.pdf]] 
+
+O treinamento visa apresentar os princípios e técnicas de programação segura, principalmente programação de aplicações Web, abordando conceitos fundamentais da área, detalhando as vulnerabilidades possíveis de serem exploradas e com foco nos métodos de mitigação destas falhas. São abordados exemplos práticos de como corrigir vulnerabilidades baseadas no OWASP top 10 em diferentes linguagens de programação, com trechos de código vulnerável de aplicações Web retirados de revisões de código realizadas pelos autores. São apresentadas também algumas ferramentas para detecção de ataques e testes de vulnerabilidades em aplicações Web. 
+
+<br> '''Segurança&nbsp;Computacional&nbsp;no&nbsp;Desenvolvimento&nbsp;de&nbsp;Web&nbsp;Services''' 
+
+''Júlio Cesar Estrella et al'', ICMC/USP 
+
+Transparências: [[Media:AppSec_Brasil_2009_Web_Services_Security.pdf]]
+
+Este minicurso apresenta o desenvolvimento de aplicações distribuídas utilizando o conceito de SOA levando em consideração os aspectos de segurança computacional. Para o desenvolvimento das aplicações clientes e servidoras serão considerados o uso da engine Apache Axis2. São abordados os componentes básicos do Axis2, os tipos e modelos de invocação de Web Services bem como suas principais características. Dois padrões de segurança para a construção de Web Services são abordadas no contexto da engine Apache Axis2: WS-Security e SAML. A metodologia utilizada para este minicurso envolve a utilização de tópicos expositivos e de exercícios práticos, abordando os conceitos fundamentais da engine Axis2, e a construção de aplicações reais com foco em segurança. 
+
+<br> '''Tecnologias de Segurança em Web Services''' 
+
+''Eduardo Takeo Ueda e Wilson Vicente Ruggiero'', Poli/USP 
+
+<br> Devido a sua característica de integração e por fazer uso de padrões abertos, os web services se tornaram uma área de grande interesse para acadêmicos e a indústria nos últimos anos. Inicialmente, pretendemos introduzir aos participantes os conceitos básicos da arquitetura orientada a serviços, com o intuito do treinamento ser auto-suficiente. Posteriormente serão apresentados os principais padrões e especificações de segurança que estão sendo desenvolvidos e devem ser adotados em web services. Por fim, o treinamento culmina com a exposição e caracterização de desafios atuais em segurança de web services. 
+
+<br> '''Hands on Web Application Testing using the OWASP Testing Guide.''' 
+
+''Matt Tesauro'', OWASP 
+
+Transparências: [[Media:Matt.tesauro.hands.on.zip]] 
+
+O treinamento irá cobrir as áreas críticas do teste de aplicações Web utilizando o Guia de Testes (Testing Guide) da OWASP v3, como framework de testes de aplicação, e o OWASP Live CD, com as ferramentas para realizar os testes. Uma versão customizada do OWASP Live CD irá ser criada para o treinamento. Ela irá incluir um ambiente controlado de testes oferecendo aplicações vulneráveis de forma que tanto as ferramentas e as aplicações para testar as ferramentas serão incluídas. 
+
+<br> 
+
+==== Local  ====
+
+'''Local das plenárias''' 
+
+[[Image:CongressoNacional.jpg|The Palácio do Congresso building]] 
+
+O evento será na Câmara dos Deputados em Brasília, DF, Brasil no endereço: Auditório Nereu Ramos, Câmara dos Deputados - Anexo II, Praça dos Três Poderes. 
+
+Veja a localização no [http://maps.google.com/maps?f=q&source=s_q&hl=pt-BR&geocode=&q=anexo+II,+camara+dos+deputados,+brasilia&sll=37.0625,-95.677068&sspn=43.934478,79.101563&ie=UTF8&t=h&ll=-15.800058,-47.865822&spn=0.01309,0.019312&z=16 Google Maps] 
+
+''Como chegar ao local da Conferência'' 
+
+A definir 
+
+<br> '''Local dos Mini-cursos''' 
+
+Os mini-cursos ocorrerão no Centro de Formação, Treinamento e Aperfeiçoamento da Câmara dos Deputados, localizado na via N3, Projeção L, Setor de Garagens Ministeriais Norte, Complexo Avançado da Câmara dos Deputados, Bloco B. Veja a localização no [http://maps.google.com.br/maps/ms?ie=UTF8&hl=pt-BR&msa=0&ll=-15.793895,-47.864009&spn=0.005017,0.006866&t=h&z=17&msid=106468407154665154285.0004577c477849eda80f3 mapa]. 
+
+''Como chegar ao local dos Mini-cursos'' 
+
+Estamos verificando a possibilidade de haver transporte de algum ponto da Esplanada dos Ministérios até o local dos mini-cursos. Assim que tivermos mais informações, divulgaremos nesta página. 
+
+Para ir de táxi, mostre o mapa acima para o motorista. É pouco provável que o motorista consiga chegar apenas com o endereço do local. 
+
+Não aconselhamos ir de carro, pois há séria dificuldade em encontrar vagas para estacionar na região do Congresso e Ministérios. 
+
+<br> 
+
+==== Organização  ====
+
+'''Comitês''' 
+
+OWASP Conferences Chair: Dave Wichers - Aspect Security - dave.wichers 'at' owasp.org 
+
+2009 AppSec Brasil - Comitê de Programa (appsec.brasil@camara.gov.br): 
+
+*Coordenador Geral: Lucas C. Ferreira (lucas.ferreira at owasp.org) 
+*Coordenador de Tutoriais: Eduardo V. C. Neves (eduardo.neves at owasp.org) 
+*Coordenador do Programa: Wagner Elias (wagner.elias at owasp.org)
+
+Equipe Organizadora 
+
+*Cassio Goldschmidt (cassio 'at' owasp.org) 
+*Kuai Hinojosa (kuai.hinojosa 'at' owasp.org) 
+*Leonardo Cavallari - (leo.cavallari 'at' owasp.org) 
+*Thiago Lechuga (thiagoalz 'at' gmail.com) 
+*Dinis Cruz (dinis.cruz 'at' owasp.org)
+
+==== Links  ====
+
+Página do evento no LinkedIn: http://events.linkedin.com/OWASP-AppSec-Brasil/pub/65160 
+
+<br> __NOTOC__ <headertabs /> 
+
+[[Category:OWASP_AppSec_Conference]]

@@ -1,0 +1,70 @@
+{{Top_10_2007:TopTemplate|usenext=NextLink|next=-Referencias|useprev=PrevLink|prev=-Falla de restricción de acceso a URL|usemain=MainLink|main=}}
+
+El Top 10 de OWASP es sólo el comienzo de tu viaje hacia la seguridad en aplicaciones Web. 
+
+''Los seis billones de personas que habitan en este mundo se pueden dividir en dos grupos: grupo uno, que sabe por qué todas las buenas compañías de software producen productos con defectos conocidos; y el grupo dos, que no lo sabe. Aquellos en grupo 1 tienden a olvidarse lo que era la vida en nuestro optimismo juvenil antes de ser arruinada por la realidad. Algunas veces nos encontramos con una persona del grupo 2... quien se encuentra sorprendido que las compañías de software entregan productos sin antes haber corregido todos los defectos.''
+''Eric Sink, Guardian May 25, 2006'' La mayoría de sus usuarios y clientes se encuentran en el grupo dos. Cómo resolver este problema es una oportunidad para mejorar su código fuente y el estado de la seguridad de las aplicaciones Web en general. Billones de dólares se pierden cada año, y muchos millones de personas sufren robo de identidad y fraude debido a las vulnerabilidades discutidas en este documento. 
+
+==Para arquitectos y diseñadores==
+
+Para asegurar apropiadamente sus aplicaciones, primero usted debe saber qué es lo que esta asegurando, conocer las amenazas y riesgos, y tratar estos en una manera estructurada. 
+
+Diseñar cualquier aplicación no trivial requiere de una buena dosis de seguridad. 
+
+* '''Asegúrese que aplica solo la "seguridad necesaria" basada en un modelo de riesgo y clasificación de activos.''' Sin embargo, como el cumplimiento de las leyes (SOX, HIPAA, Basel, etc) está tomando un papel preponderante, sería apropiado invertir mayor tiempo y recursos que satisfagan el mínimo indispensable, particularmente si las "mejores practicas" son bien conocidas y considerablemente más estrictas que el mínimo requerido.
+* '''Haga preguntas sobre requerimientos de negocio, '''particularmente requerimientos no funcionales que falten.
+* Trabaje sobre un [http://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex Anexo de Contrato en Código Seguro OWASP] con su cliente.
+* '''Fomente el diseño mas seguro - '''incluyendo la defensa a profundidad y construcciones más simples usando modelado de amenazas <nowiki>(ver [HOW1] en las referencias de libros)</nowiki>
+* '''Asegúrese de que ha considerado confidencialidad, integridad, disponibilidad y no repudio'''
+* '''Asegúrese de que sus diseños son compatibles con las políticas de seguridad y normas''', tales como COBIT o PCI DSS 1.1
+
+==Para Desarrolladores==
+
+Muchos desarrolladores ya tienen un buen manejo básico de seguridad en aplicaciones Web. Para garantizar un manejo efectivo dentro del dominio de seguridad en aplicaciones Web es necesaria la práctica. Cualquiera puede destruir (ej. Realizar pruebas de penetración) - pero solo un experto puede construir software seguro. Intente convertirse en dicho experto.
+
+* Considere [http://www.owasp.org/index.php/Membership unirse a OWASP] y participar de reuniones de [http://www.owasp.org/index.php/Category:OWASP_Chapter capítulos en su área]
+* '''Pregunte por entrenamiento en desarrollo seguro de aplicaciones''' si dispone de un presupuesto para formación. En caso que no disponga de un presupuesto para formación, pídalo.
+* '''Diseñe sus funcionalidades de forma segura''' - considere defensa a profundidad y la simplicidad en el diseño.
+* '''Adopte estándares de programación''' que fomenten construcciones de código seguro.
+* '''Rediseñe código existente para utilizar construcciones más seguras''', tales como consultas parametrizadas.
+* '''Revise la [http://www.owasp.org/index.php/OWASP_Guide_Project Guía OWASP] y comience a aplicar controles en su código'''. A diferencia de la mayoría de estas guías, está diseñada para ayudarlo a construir código seguro, no romperlo.
+* '''Teste su código en busca de defectos de seguridad''' y haga de esta práctica un régimen de testeo en su área.
+* '''Revise los libros de referencia''', y observe si existe alguno aplicable a su entorno de trabajo.
+
+==Para Proyectos de Código Abierto==
+
+El código abierto es un particular desafió para la seguridad en aplicaciones Web. Existen millones de proyectos de código abierto, desde unipersonales hasta proyectos gigantescos tales como Apache, Tomcat, y aplicaciones Web de larga escala, tales como PostNuke. 
+
+* Considere [http://www.owasp.org/index.php/Membership unirse a OWASP] y participar de reuniones de [http://www.owasp.org/index.php/Category:OWASP_Chapter capítulos en su área]
+* Si su proyecto tiene más de 4 desarrolladores, '''considere convertir al menos un desarrollador en un experto en seguridad.'''
+* '''Diseñe sus funcionalidades de forma segura''' - considere defensa a profundidad y la simplicidad en el diseño.
+* '''Adopte estándares de programación que fomenten construcciones de código seguro.'''
+* '''Adopte una política de divulgación responsable''' para asegurar que los defectos de seguridad son manejados apropiadamente.
+* '''Revise los libros de referencia''', y observe si existe alguno aplicable a su entorno de trabajo.
+
+==Para Dueños de Aplicaciones==
+Los dueños de aplicaciones en ambientes comerciales se encuentran frecuentemente limitados en tiempo y recursos. 
+
+Los dueños de aplicaciones deberían:
+
+* Trabajar sobre un [http://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex Anexo de Contrato en Código Seguro OWASP] con los productores del software.
+* '''Asegúrarse que los requerimientos de negocio incluyan requerimientos no comerciales (NFRs) tales como requerimientos de seguridad.'''
+* '''Alentar diseños que incluyan seguridad por defecto''', defensa en profundidad y simplicidad en diseño.
+* '''Contratar (o formar) desarrolladores que tengan experiencia en seguridad.'''
+* '''Teste su código en busca de defectos de seguridad''' en todas las etapas del proyecto: diseño, construcción, testeo, e implementación
+* '''Asigne recursos, presupuesto y tiempo en el plan del proyecto para remediar problemas de seguridad.'''
+
+==Para Ejecutivos de Nivel-C==
+
+Su organización tiene que disponer de un ciclo de vida de desarrollo seguro (SDLC) que se adecue a su organización. Las vulnerabilidades son menos costosas si se arreglan durante el desarrollo en lugar que después de la implementación del producto. Un SDLC razonable no solo incluye testeo para el Top 10, también incluye:
+
+* Para productos empaquetados, '''asegúrese que las políticas de compra y los contratos incluyan los requerimientos de seguridad'''.
+* Para código a la medida, '''adopte principios de codificación segura en sus políticas y estándares.'''
+* '''Forme a sus desarrolladores en técnicas de codificación segura''' y asegúrese de que mantengan estas habilidades al día.
+* '''Incluya herramientas de análisis de código seguro dentro de su presupuesto.'''
+* '''Notifique a sus productores de software la importancia de la seguridad para su organización.'''
+* '''Forme a sus arquitectos, diseñadores, y gente de negocios en los fundamentos de seguridad en aplicaciones Web.'''
+* '''Considere utilizar auditores externos''', que pueden proporcionar una evaluación independiente.
+* '''Adopte prácticas responsables de divulgación''' y construya un proceso para responder adecuadamente a reportes de vulnerabilidades en sus productos.
+
+{{Top_10_2007:TopTemplate|usenext=NextLink|next=-Referencias|useprev=PrevLink|prev=-Falla de restricción de acceso a URL|usemain=MainLink|main=}}

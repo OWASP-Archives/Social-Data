@@ -1,0 +1,103 @@
+{{Template:Vulnerability}}
+{{Template:Fortify}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+
+==Description==
+
+===Creating Debug Binary===
+Debugging messages help attackers learn about the system and plan a form of attack.
+
+ASP .NET applications can be configured to produce debug binaries. These binaries give detailed debugging messages and should not be used in production environments. The debug attribute of the <compilation> tag defines whether compiled binaries should include debugging information. Symbols (.pdb files) tell the debugger how to find the original source files for a binary, and how to map breakpoints in code to lines in those source files.
+
+The use of debug binaries causes an application to provide as much information about itself as possible to the user. Debug binaries are meant to be used in a development or testing environment and can pose a security risk if they are deployed to production. Attackers can leverage the additional information they gain from debugging output to mount attacks targeted on the framework, database, or other resources used by the application.
+
+'''Examples'''
+
+To identify this vulnerablity, look for the following pattern on the compilation section within the system.web group of the Web.config file at the application's root directory:
+
+<pre>
+
+ <configuration>
+   <compilation debug="true"/>
+ </configuration>
+
+</pre>
+
+===Missing Custom Error Handling===
+An ASP .NET application must enable custom error pages in order to prevent attackers from mining information from the framework's built-in error responses.
+
+ASP.NET applications should be configured to use custom error pages instead of the framework default page. In the event of an application exception, use the <customErrors> element to configure custom, generic error messages that should be returned to the client. The default error page provides detailed information about the error that occurred, and should not be used in production environments. Attackers can leverage the additional information provided by a default error page to mount attacks targeted on the framework, database, or other resources used by the application.
+
+Make sure that the mode attribute is set to "RemoteOnly" in the web.config file as shown in the following example.
+
+ <customErrors mode="RemoteOnly" />
+
+The mode attribute of the <customErrors> tag in the Web.config file defines whether custom or default error pages are used. It should be configured to use a custom page as follows:  
+
+ <customErrors mode="On" defaultRedirect="YourErrorPage.htm" />
+
+'''Related Threats'''
+Information leakage is the major threat due to the improper error handling. Error messages provide quite useful information to the attacker that can be used to launch further attacks such as SQL Injection. Below are a few examples of threats because of the improper error handling:
+A. Error messages can be used by an attacker to extract specific information about the System and Application.
+B. An unexpected error can be used to crack the application off line thus creating a denial-of-service attack by an attacker.
+C. Unexpected errors may provide an attacker with a buffer or stack overflow condition that sets the stage for an arbitrary code execution.
+
+'''Examples'''
+Two typical misconfigurations:
+ <customErrors mode="Off" />
+Custom error message mode is turned off. An ASP.NET error message with detailed stack trace and platform versions will be returned.
+
+ <customErrors mode="RemoteOnly" />
+Custom error message mode for remote user only. No defaultRedirect error page specified. The local user on the web server will see a detailed stack trace. For remote users, an ASP.NET error message with the server customError configuration setting and the platform version will be returned.
+
+===Password in Configuration File===
+The clear-text passwords are in the configuration files. Clear-text passwords in the configuration files are subject to exposure in a variety of ways, including people getting access to the file, the file being served directly to a user due to a server error, a file download flaw, access to a backup copy, or some other exposure.
+
+==Risk Factors==
+TBD
+
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+* Follow a common and standard approach for exception handling.
+* Do not display detailed error messages to the end-user such as Path Information, Database related information, stack traces, etc. In short, disable or limit error messages.
+* Override the default error handler so that it should always return a "200 OK" error message. This will reduce the ability of automated vulnerability scanning tools from making conclusions from any serious error message.
+* Always provide customized error pages for any kind of error (i.e. Database of application error). Configure the Web Server to redirect to the customized error page in the event of an error.
+
+[[Category:FIXME|need links instead of text]]
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+* [http://www.SearchSecurity.com Web application threats and vulnerabilities Quiz]
+* [http://www.CoderSource.net Asp.Net Web.Config Configuration File]
+* OWASP Top 10 2007 - [[Top_10_2007-A6|Information Leakage and Improper Error Handling]]
+[[Category:FIXME|Please check the first two links. They don't appear to be connecting to the intended page.]]
+
+[[Category:Environmental Vulnerability]]
+[[Category:Deployment]]
+[[Category:Error Handling Vulnerability]]
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:.NET]]

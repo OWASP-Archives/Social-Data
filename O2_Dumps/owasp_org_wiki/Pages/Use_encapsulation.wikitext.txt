@@ -1,0 +1,41 @@
+{{Template:Principle}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+<br>
+[[Category:OWASP ASDR Project]]
+
+
+==Description==
+
+Draw strong boundaries among application elements, including modules, functions and data, to limit the impact of potential attacks. 
+
+==Examples ==
+* Design 
+** Separate internal administrator's functions from external users' functions  
+** Differentiate between validated data and unvalidated data, between one user's data and another's, or between data users are allowed to see and data that they are not.
+** In a web browser ensure that your mobile code cannot be abused by other mobile code.
+* Implementation
+** Hide internal details of a class, including data and methods, using private access modifier.
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* [[Controls 1]]
+* [[Controls 2]]
+
+
+==References==
+
+* http://www.link1.com
+* [http://www.link2.com Title for the link2]
+
+
+__NOTOC__
+
+[[Category:Principle]]

@@ -1,0 +1,66 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Failure to follow guideline/specification]]
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+
+==Description==
+
+Socket-based communication in web applications is prone to error.
+
+The J2EE standard permits the use of sockets only for the purpose of communication with legacy systems when no higher-level protocol is available. Authoring your own communication protocol requires wrestling with difficult security issues, including:
+
+* In-band versus out-of-band signaling 
+* Compatibility between protocol versions 
+* Channel security 
+* Error handling 
+* Network constraints (firewalls) 
+* Session management 
+
+Without significant scrutiny by a security expert, chances are good that a custom communication protocol will suffer from security problems.
+
+Many of the same issues apply to a custom implementation of a standard protocol. While there are usually more resources available that address security concerns related to implementing a standard protocol, these resources are also available to attackers.
+
+
+==Risk Factors==
+
+* Talk about the [[OWASP Risk Rating Methodology|factors]] that make this vulnerability likely or unlikely to actually happen
+* Discuss the technical impact of a successful exploit of this vulnerability
+* Consider the likely [business impacts] of a successful attack
+
+
+==Examples==
+
+* When using URLConnection to one restricted URL resource which is not available (offline) there is posibility that OS will leave those sockets opened (z/OS, Windows). When system starts new URLConnection opened sockets may be reused (including authentication). The URL destination may be reached by the user with lower credentials using previous credentials on that same socket.
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+URLConnection does not directly supports timeout. There is thread scenario possible which is a bit dirty. 
+Solution: Use client socket and set timeout and linger flags.
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD

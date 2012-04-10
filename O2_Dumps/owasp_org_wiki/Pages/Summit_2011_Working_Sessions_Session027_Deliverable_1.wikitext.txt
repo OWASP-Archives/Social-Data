@@ -1,0 +1,8 @@
+== '''Deliverable 1''' ==
+
+'''Increase coverage and functionality of existing Output Encoding Codecs''' 
+
+# Ensure that existing codecs are working to specification for their context and cover all escaping and encoding rules for that context
+## Are there any new escaping rules for HTML5, ES5, or CSS3 that are not addressed by the current codecs?
+## Can we improve the MySQL Codec to account for additional modes of operation?
+## Is documentation on these codecs and when/where they should be used sufficient?

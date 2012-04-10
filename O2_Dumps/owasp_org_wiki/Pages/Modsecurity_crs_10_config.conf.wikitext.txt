@@ -1,0 +1,28 @@
+The data within this conf file may be specified within Apache virtual host containers.  The following ModSecurity directives are set within this file -
+
+ SecRuleEngine
+ SecRequestBodyAccess
+ SecResponseBodyAccess
+ SecResponseBodyMimeType
+ SecResponseBodyLimit
+ SecResponseBodyLimitAction
+ SecDefaultAction
+ SecUploadDir
+ SecUploadKeepFiles
+ SecAuditEngine
+ SecAuditLogRelevantStatus
+ SecAuditLogType
+ SecAuditLog
+ SecAuditLogParts
+ SecCookieFormat
+ SecRequestBodyInMemoryLimit
+ SecDebugLog
+ SecDebugLogLevel
+ SecTmpDir
+
+See the [http://www.modsecurity.org/documentation/modsecurity-apache/2.5.9/modsecurity2-apache-reference.html | ModSecurity Reference Manual] for directive documentation.
+
+{{:Key Project Information:OWASP ModSecurity Core Rule Set Project}}
+[[Category:OWASP Project]]
+[[Category:OWASP Document]]
+[[Category:OWASP Alpha Quality Document]]

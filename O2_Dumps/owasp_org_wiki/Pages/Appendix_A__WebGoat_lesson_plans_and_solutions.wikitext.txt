@@ -1,0 +1,73 @@
+<font><u>Phase 1 (first 50% of project)</u></font>
+
+The zip file contains the WebGoat lesson plans and solutions. The current version needs some work (an index.html file, fix broken links, etc.) and a new version will be available on 28 July 2008 (note: the new version is available as of 27 July 2008).
+
+Please see readme.txt for instructions. The specific lesson solutions in this zip file are the ones not in the Phase 2 zip file listed below.
+
+[[Image:OWASP_Securing_WebGoat_using_ModSecurity_WebGoat_Lessons.zip]]
+
+
+<font><u>Phase 2 (second 50% of project)</u></font>
+
+The zip files contain the WebGoat lesson solutions for the project lessons for Phase 2 that can be viewed off-line (meaning, not as a part of WebGoat plus with no broken links to the images). The files total around 12 meg but are broken into smaller chunks (unzip in the same directory). They allow someone to understand the WebGoat lessons fairly well without having to install and use WebGoat. Many images embedded in the pages are low-resolution *.png files; in the lesson's respective subdirectories, there are higher resolution *.jpg files which are helpful, for example, to get the exact text being used in WebScarab.
+
+[[Image:ModSec_on_WebGoat_solutions1_Phase2.zip]]
+
+[[Image:ModSec_on_WebGoat_solutions2_Phase2.zip]]
+
+[[Image:ModSec_on_WebGoat_solutions3_Phase2.zip]]
+
+[[Image:ModSec_on_WebGoat_solutions4_Phase2.zip]]
+
+
+The lessons contained in the Phase 2 zip files are:
+
+1.1 Http Basics
+
+2.2 Bypass a Path Based Access Control Scheme
+
+2.3 LAB: Role Based Access Control
+
+3.1 LAB: DOM-Based cross-site scripting
+
+3.2 LAB: Client Side Filtering
+
+3.4 DOM Injection
+
+3.5 XML Injection
+
+3.6 JSON Injection
+
+3.7 Silent Transactions Attacks
+
+3.8 Dangerous Use of Eval
+
+3.9 Insecure Client Storage
+
+7.1 Thread Safety Problem
+
+7.2 Shopping Cart Concurrency Flaw
+
+8.3 Stored XSS Attacks
+
+8.6 HTTPOnly Test
+
+9.1 Denial of Service from Multiple Logins
+
+12.1 Insecure Login
+
+14.1 Encoding Basics
+
+15.3 Bypass Client Side JavaScript Validation
+
+16.1 Hijack a Session
+
+16.2 Spoof an Authentication Cookie
+
+16.3 Session Fixation
+
+17.1 Create a SOAP Request
+
+17.2 WSDL Scanning
+
+All other lesson solutions are in the Phase 1 zip file.

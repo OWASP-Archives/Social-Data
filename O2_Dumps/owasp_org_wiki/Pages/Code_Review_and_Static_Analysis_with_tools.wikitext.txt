@@ -1,0 +1,185 @@
+Chapter: [[Virginia_(Northern_Virginia)#OWASP_Washington_VA_Local_Chapter | OWASP NoVA]] >> [[Virginia_(Northern_Virginia)#Knowledge | Knowledge]]
+
+== Static Analysis Curriculum ==
+
+* For an introduction to the OWASP Static Analysis (SA) Track goals, objectives, and session roadmap, please see [http://www.owasp.org/index.php/Image:OWASP_NoVA_SA_Track_Final_20090408.ppt this presentation].
+
+The following is the agenda of the OWASP Static Analysis track roadmap for the [http://www.owasp.org/index.php/Virginia_(Northern_Virginia) Northern Virginia Chapter].
+
+[[Image:Owasp SAtrack plan.png|OWASP Static Analysis Roadmap - Northern Virginia Chapter 2009]]
+
+===Contacts===
+Questions related to this curriculum should be sent to [mailto:John.Steven@owasp.org John Steven], who is the Northern Virginia chapter leader.
+
+===Registration=== 
+Classroom’s size estimate for hands on: 30 stations max. Physical number of students can be larger as people may want to pair up. But we may have a hard limit of 40 students. 
+
+Registration for sessions will be on first come and first served basis. Although we will give preference to people who show regularity and sign up for many sessions. Students will have to fill up a small interview before the session so the instructors get to know their skill level and motivation. Students are required to meet the prerequisites for the sessions that they sign for. We ask to the students to bring their laptop in the hands on session, and to have software such as SSH pre-installed. Basic knowledge about code is also required in all sessions, except the last one. We will start registration by email mid-June or earlier.
+
+===Student’s prerequisites===
+All students will need to bring their own laptop and use them as client to connect to the host machines; we will support windows users, MacOS and Unix. They should have at least 2 Gig of Ram, and have a version of SSH installed. 
+
+===Tool license and Vendor IP===
+Vendors will need to provide tools license for the hands on sessions. This is NOT a competition. The purpose is NOT to compare tools, different source code will be picked for each vendor. Vendors are not allowed to interfere with other vendors’ session or demo. Questions related to tool comparison between the vendors are out of scope. Vendors are free to present features and particularities exclusive to their tools.
+
+===Session 1: Intro To Static Analysis, May 7th 2009===
+*Speaker: Dalci, Eric (Cigital)
+*Time: 2 hours + open discussion
+*Classroom size: This is open. 
+This presentation will give a taste about what Static Analysis is.
+*Download slide from [http://www.owasp.org/index.php/Virginia_(Northern_Virginia) here]
+
+===Session 2: Tool Assisted Code Reviews with Fortify SCA, September 17th 2009===
+*Speaker: Dalci, Eric (Cigital), Fortify (Erik Klein)
+*Time: 2hours and half
+*Location: AOL, 22260 Pacific blvd, Sterling, VA. 20166
+
+This is an introduction course to the Fortify SCA Static Analysis tool:
+* Fortify will demo its tool and scan Webgoat. We will have an open discussion session after the demo for students to ask questions to the vendor.
+
+===Session 3: Customization Lab for Fortify SCA, date: TBD ===
+*Speaker: Mike Ware
+*Time: 3 hours
+*Logistics: Hands on setup as in logistic section.
+*Location: TBD
+*Classroom size: 30 stations, 40 attendees max
+*Prerequisite: Attended session 2
+
+Mike will train the students on how to customize the Fortify Source Code Analyzer (SCA)
+Agenda (draft):
+*	Approach to auditing scan results to determine true positives and false positives (.5 hours)
+*	Custom rules (2 hours)
+**	Hands on examples of different rule types applied to code that resembles real business logic
+*	Data flow sources and sinks [private data sent to custom logger, turn web service entry points into data flow rules?]
+*	Data flow cleanse and pass through [cleanse: HTML escaping, pass through: third party library]
+*	Semantic [use of a sensitive API [getEmployeeSSN()]
+*	Structural [all Struts ActionForms must extend custom base ActionForm]
+*	Configuration [properties: data.encryption = off]
+*	Control flow [always call securityCheck() before downloadFile()] 
+*	Filtering (.5 hours)
+**	Prioritizing remediation efforts
+*	Priority filters (e.g., P1, P2, etc) 
+**	Isolating findings ("security controls" example)
+*	Authentication
+*	Authorization
+*	Data validation
+*	Session management
+*	Etc.
+
+===Session 4: Tool Assisted Code Reviews with Ounce Lab, (date to be confirmed)===
+*Speaker: Dalci, Eric (Cigital), Ounce Lab (tbd)
+*Time: 2hours and half
+*Logistics: Hands on setup as in logistic section.
+*Location: AOL, 22000 AOL Way, Dulles, VA 20166
+*Classroom size: 30 stations, 40 attendees max
+
+This is an introduction course to the Ounce Lab Static Analysis tool:
+* Ounce Lab will demo its tool and scan Webgoat. We will have an open discussion session after the demo for students to ask questions to the vendor. After this course, student should be able to scan code by their own. Student should feel free to bring code to scan.
+
+===Session 5: Customization Lab for Ounce Lab, September 2009 (date to be confirmed)===
+*Speaker: Nabil Hannan (Cigital)
+*Time: 3 hours
+*Logistics: Hands on setup as in logistic section.
+*Location: TBD
+*Classroom size: 30 stations, 40 attendees max
+*Prerequisite: Attended session 2
+
+Nabil will train the students on how to customize the Ounce Labs 6 tool
+Agenda (draft):
+*	Approach to auditing scan results to determine true positives and false positives (.5 hours)
+*	Custom rules (1.5 hours)
+**	Hands on examples of different rule types applied to code that resembles real business logic
+*	Data flow sources and sinks [private data sent to custom logger]
+*	Data flow cleanse [cleanse: HTML encoding]
+*	Semantic [use of a sensitive API e.g. getEmployeeSSN()] 
+*	Filtering (.5 hours)
+**	Prioritizing remediation efforts
+*	Understanding the Ounce Vulnerability Matrix
+*	Modifying finding severity/category 
+**	Isolating findings (using "bundles")
+*	Input Validation
+*	SQL Injection
+*	Cross-Site Scripting
+*	Etc.
+*	Reporting (.5 hours)
+**	Demonstrate compliance with industry regulations and best practices
+*	OWASP Top 10
+*	PCI
+
+===Session 6: Tool Adoption and Deployment, September 2009 (date to be confirmed)===
+*Speaker: Shivang Trivedi (Cigital)
+*Time: 2 hours
+*Location: TBD
+*Prerequisite: Preferably attended session 2, but not mandatory 
+*Classroom size: Open
+
+Shivang will talk about integration of a Static Analysis tool into the SDLC.
+Agenda (draft):
+*	Tool Selection
+**	Flexible with Static Analysis and/or Penetration Testing
+**	Coverage
+**	Enterprise Support
+**	Quality of Security Findings 
+*	Phases of Integration
+**	Pre-requisites
+**	Goals and Challenges
+**	Distribution of Roles and Responsibilities
+**	Considering LOE 
+*	Model Per Activity
+**	Activity Flow
+**	Phase Transition 
+*	Deployment Model
+**	Advantages
+**	Disadvantages 
+*	Free and Handy Tools to
+**	Continuously Integrate
+**	Join activity flow 
+*	Improvements and Lessons Learned
+**	Effective use of tool’s capabilities
+**	Expanding Coverage
+**	Analysis Techniques
+**	Improving Results Accuracy
+
+== Code Review and Static Analysis with tools ==
+
+<UL>
+<LI>What: [[Security_Code_Review_in_the_SDLC | Secure Code Review]]
+<LI>Who: Performed by Security Analysts
+<LI>Where it fits: [http://bsi-mm.com/ssf/ssdl/cr/ BSIMM Secure Code Review]
+<LI>Cost: Scales with depth, threat facing application, and application size/complexity
+</UL>
+
+This article will answer the following questions about secure code review and use of static analysis tools:
+<OL>
+<LI>What are static analysis tools and how do I use them?
+<LI>How do I select a static analysis tool?
+<LI>How do I customize a static analysis tool?
+<LI>How do I scale my assessment practices with secure code review?
+</OL> 
+
+== Organizational == 
+How do I scale my assessment practices with secure code review?<p>
+
+Implementing a static analysis tool goes a long way to providing a force multiplier for organizations. The following presentation discusses a comprehensive set of steps organizations can undertake to successfully adopt such tools. The presentation discusses who should adopt the tool, what steps they should take, who they should involve, and how long/much it will cost.<br>
+
+[[Media:Cigital_-_Fortify_Implementation_Preso.ppt|Implementing a Static Analysis Tool.ppt]]<br>
+
+For those with existing assessment practices involving secure code review (whether or not those practices leverage tools) the question often becomes, "I can review an application, but how do I scale the practice to my entire organization without astronomic cost?" The following presentation addresses this question:
+
+[[Maturing_Software_Assessment_Through_Static_Analysis | Maturing Assessment Through Static Analysis]]
+
+== Customization ==
+People who believe that the value of static analysis is predominantly within their core capabilities "out of the box" come up incredibly short. By customizing your chosen tool you can expect:
+
+<UL>
+<LI>Dramatically better accuracy (increased true positives, decreased false positives, and decreased false negatives)
+<LI>Automated scanning for corporate security standards
+<LI>Automated scanning for an organization's top problems
+<LI>Visibility into adherence to (or inclusion of) sanctioned toolkits
+</UL>   
+
+The following presentation was given at the NoVA chapter in '06 and discusses deployment and customization:
+
+[[Media:OWASP_Adopting_a_Static_Analysis_Tool.ppt|Adopting a Static Analysis Tool]]
+
+Warning: this presentation is old and gives examples using the now defunct "CodeAssure" from what was then SecureSoftware.

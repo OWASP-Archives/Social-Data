@@ -1,0 +1,94 @@
+==Status==
+Released 14/1/2008
+
+==Introduction==
+JAAS provides a powerful mechanism for integrating any authentication scheme into a Java application.  But using JAAS for Java web applications is not as simple as just plugging in a standard JAAS module, because of the limited security functionality of the EE specification (users and roles), versus JAAS's more flexible approach to granting Principals.  Luckily, Tomcat's requirements for a JAAS module are very easy to implement, all that's required is to use separate classes, derived from <code>java.security.Principal</code>, for users and roles.
+
+==Process==
+Adapted from the [http://tomcat.apache.org/tomcat-5.5-doc/realm-howto.html#JAASRealm Tomcat JAASRealm Quick Start] guide.
+=== 1 - Create a custom JAAS LoginModule ===
+There are many resources on the Internet explaining how this is done, including: [http://java.sun.com/j2se/1.4.1/docs/guide/security/jaas/JAASLMDevGuide.html the JAAS Developers guide].  Or use an existing LoginModule such as the OWASP TomcatTimedLoginModule which is part of the [http://code.google.com/p/owasp-java/ OWASPTimedLoginModule package].  More information about JAAS can be found at [http://java.sun.com/j2se/1.4.1/docs/guide/security/jaas/tutorials/GeneralAcnOnly.html the JAAS tutorial]
+=== 2 - Convert the LoginModule to work with Tomcat===  
+The OWASP TomcatTimedLoginModule already works with Tomcat, but if you're developing one from scratch, then the following changes will have to be made.  This involves assigning a class derived from <code>java.security.Principal</code> for the user Principal and another class for the roles that the user belongs to.  Note that the first Principal returned ''must'' be the user Principal.  For example, we could define a user principal class such as:
+<code>  public class UserPrincipal implements java.security.Principal</code> 
+and a role principal such as:
+<code>  public class RolePrincipal implements java.security.Principal</code>
+When a user successfully authenticates, we add a UserPrincipal to the subject:
+    <code>
+    principals.add(new UserPrincipal("bob"));
+    </code>
+And then add any relevant roles:
+    <code>
+    psr = con.prepareStatement(rolesQuery);
+    psr.setInt(1, uid);
+    rsr = psr.executeQuery();
+    while (rsr.next()) {
+         principals.add(new RolePrincipal(rsr.getString(1));
+    }
+    </code>
+
+=== 3 - Copy the necessary files to Tomcat's classpath ===
+In the case of the OWASP TomcatTimedLoginModule, copy both the LoginModule itself: <code>./dist/OWASPJaasLoginModule.jar</code> and the <code>hsqldb.jar</code> files (for DB access) to <code>$CATALINA_HOME/server/lib</code>
+
+=== 4 - Create a JAAS login configuration file ===
+The configuration file should contain startup parameters needed by the module.  For the TomcatTimedLoginModule, the configuration file is:
+  <code>
+  TomcatTimedLogin
+  {
+    org.owasp.java.jaas.TomcatTimedLogin required 
+        dbDriver="org.hsqldb.jdbcDriver" 
+        dbURL="jdbc:hsqldb:hsql://localhost/jaastestdb"
+        debug=true 
+        loginTable="login" 
+        clippingLevel="3" 
+        interval="180"
+        loginQuery="SELECT UserID,Password FROM Users WHERE UserName=?"
+        rolesQuery="SELECT Roles.RoleName FROM Users_Roles,Roles WHERE Users_Roles.UserID=? AND Users_Roles.RoleID=Roles.RoleID";
+  };
+  </code>
+Point Tomcat at the login file:
+    <code>
+    export JAVA_OPTS=-Djava.security.auth.login.config==$CATALINA_HOME/conf/login.config
+    </code>
+=== 5 - Configure the security constraints in web.xml ===
+Remember that the roles defined here are case-sensitive.
+    <code>
+    <security-constraint>
+        <display-name>AdminConstraint</display-name>
+        <web-resource-collection>
+            <web-resource-name>Admin</web-resource-name>
+            <description>Only for administrators</description>
+            <url-pattern>/admin/*</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <description/>
+            <role-name>Admin</role-name>
+            </auth-constraint>
+        </security-constraint>
+    <security-constraint>
+    
+    <security-role>
+        <description>Administrators</description>
+        <role-name>Admin</role-name>
+    </security-role>
+    </code>
+=== 6 - Configure the JAASRealm in Tomcat's server.xml ===
+For OWASP TomcatTimedLoginModule, the entry should be:
+        <code>
+    <Realm className="org.apache.catalina.realm.JAASRealm"                 
+                appName="TomcatTimedLogin"       
+                userClassNames="com.tagish.auth.TypedPrincipal"       
+                roleClassNames="org.owasp.java.jaas.RolePrincipal"/>
+        </code>
+The userClassNames and roleClassNames values correspond to the classes used to store the user and role Principals respectively.
+The ''appName'' value corresponds to the name given to the entry in the login.config file defined in step 4.
+The className is always <code>org.apache.catalina.realm.JAASRealm</code>
+
+=== 7 - Start dependant resources and restart Tomcat ===
+To test the TomcatTimedLoginModule, a simple HSQLDB database is provided.  Edit the build.xml and change the location of the hsqldb.jar file, and run <code>ant db-start</code> to start the database, and <code>ant db-populate</code> to populate it with some test data.
+
+==Additional resources==
+* [http://www.oracle.com/technology/products/jdev/howtos/10g/jaassec/index.htm Declarative J2EE authentication and authorization with JAAS] 
+[[Category:OWASP Java Project]]

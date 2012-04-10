@@ -1,0 +1,300 @@
+This page provide a commented overview of the OWASP presentations available.<br>
+Please use the last line of the tables as template.<br>
+Presentions can be tracked through:
+* the [http://www.owasp.org/index.php/Category:OWASP_Presentations OWASP Presentations Category]
+* [http://www.owasp.org/index.php/Category:OWASP_AppSec_Conference Past OWASP Conference agenda's]
+* From the chapter pages
+Everybody is encouraged to link the presentations and add their findings on this page !
+There are currently hundreds of presentations all over the OWASP web site. 
+If you search google with “site:owasp.org filetype:ppt” there are 166 hits. “site:owasp.org filetype:pdf” returns 76.
+Feel free to “mine” them and add them to the overview.
+
+== OWASP Education Presentations ==
+{|class="wikitable sortable" style="text-align: top;" border="1" cellpadding="2"
+|+ OWASP Education Presentations
+!width="30%" |Title
+!width="40%" |Comment
+!width="15%" |Level
+!width="15%" |Date (yyyy-mm-dd)
+|-valign="top"
+|[[:Image:OWASP Overview Winter 2009v1.pptx|OWASP Overview Winter 2009]]|| Updated overview of OWASP || Novice || 2009-12-08
+|-valign="top"
+|[[:Image:Programa_de_Educacion_OWASP.ppt|Programa de Educacion OWASP]]|| Una introduccion a OWASP para Universidades y Centros Educativos por Fabio Cerullo|| Novice || 2009-03-20
+|-valign="top"
+|[[:Image:OWASP_Educational_Programme.ppt|OWASP Educational Programme]]|| An introduction to OWASP for Universities & Educational Institutions by Fabio Cerullo|| Novice || 2009-03-20
+|-valign="top"
+|[[:Image:OWASP Overview Summer 2009.pptx|OWASP Overview Summer 2009]]|| Recent overview of OWASP by Jeff Williams || Novice || 2009-08-25
+|-valign="top"
+|[[:Image:Education Module Why WebAppSec Matters.ppt|Why WebAppSec Matters]]|| This module explains why security should be considered when developping or deploying web applications as part of the [[:Category:OWASP Education Project|Education Project]] || Novice || 2007-11-01
+|-valign="top"
+|[[:Image:OWASP-Intro-2008-portuguese.ppt|OWASP Intro 2008 Portuguese]]|| Este módulo é uma intrudução sobre o projeto OWASP. || Novice || 2008-07-06
+|-valign="top"
+|[[:Image:Education Module OWASP Top 10 Introduction and Remedies.ppt|OWASP Top 10 Introduction and Remedies]]|| This module explains the OWASP Top 10 web application vulnerabilities as part of the [[:Category:OWASP Education Project|Education Project]] || Novice || 2007-11-01
+|-valign="top"
+|[[:Image:Education Module Embed within SDLC.ppt|Embed within SDLC]]|| This module explains the complete approach of Web Application Security when developping or deploying web applications as part of the [[:Category:OWASP Education Project|Education Project]] || Novice || 2007-11-01
+|-valign="top"
+|[[:Image:Education Module Good Secure Development Practices.ppt|Good Secure Development Practices]]|| This module explains some good secure development practices when developping or deploying web applications as part of the [[:Category:OWASP Education Project|Education Project]] || Novice || 2007-11-01
+|-valign="top"
+|[[:Image:Education Module Testing for Vulnerabilities.ppt|Testing for Vulnerabilities]]|| This module explains application security testing when developping or deploying web applications as part of the [[:Category:OWASP Education Project|Education Project]] || Novice || 2007-11-01
+|-valign="top"
+|[[:Image:Education Module Good WebAppSec Resources.ppt|Good WebAppSec Resources]]|| This module points you to some good web application security resources when developping or deploying web applications as part of the [[:Category:OWASP Education Project|Education Project]] || Novice || 2007-11-01
+|-valign="top"
+|Example (include link) || Fill in your comments || Novice/Intermediate/Expert || yyyy-mm-dd
+|}
+
+<br>
+
+== OWASP Project Presentations ==
+{|class="wikitable sortable" style="text-align: top;" border="1" cellpadding="2"
+|+ OWASP Project Presentations
+!width="30%" |Title
+!width="40%" |Comment
+!width="15%" |Level
+!width="15%" |Date (yyyy-mm-dd)
+|-valign="top"
+|[[:Image:Germany 2008 Conference OWASP Introduction v1.pptx|OWASP Introduction]] || OWASP Overview presentation covering OWASP, project parade and OWASP near you. Given by Seba during the Germany 2008 Conference || Novice || 2008-11-25
+|-valign="top"
+|[[:Image:OWASP Foundation The story so far and beyond - Part 1.ppt|India08 Keynote - Part 1]] || OWASP Overview presentation. Part 1 of 2. Given by Dinis and Jason during the India08 Conference || Novice || 2008-08-16
+|-valign="top"
+|[[:Image:OWASP Foundation The story so far and beyond - Part 2.ppt|India08 Keynote - Part 2]] || OWASP Overview presentation. Part 2 of 2. Given by Dinis and Jason during the India08 Conference || Novice || 2008-08-16
+|-valign="top"
+|[[:Image:OWASP India - Tour of OWASP projects.ppt|Tour of OWASP’s projects]] || Given by Dinis and Jason during the India08 Conference || Novice || 2008-08-16
+|-valign="top"
+|[https://www.owasp.org/images/5/59/RISK_2008_OWASP_Introduction_v1.pptx OWASP @ RISK08 (Norway)] || OWASP introduction at Norway RISK2008 conference by Seba || Novice || 2008-04-23
+|-valign="top"
+|[[:Image:OWASP NY Keynote.ppt|OWASP NY Keynote by Jeff]] also available in [[:Image:20070620-FR-OWASP NY Keynote.ppt|French]]|| OWASP Overview presentation with slide "OWASP by the numbers" and slide with the sorry state of Tools (at best 45%) which caused some controverse || Novice || 2007-06-12
+|-valign="top"
+|[http://www.owasp.org/images/a/af/OWASP_Testing_Guide_Presentation.zip The OWASP Testing Guide (Jeff Williams)] || Overview of the OWASP Testing Guide || Novice || 2007-01-23
+|-valign="top"
+|[http://www.owasp.org/images/e/e9/OWASP_Testing_Guide_Presentation_EUSecWest07.zip The OWASP Testing Guide v2 EUSecWest07 (Matteo Meucci, Alberto Revelli)] || Presentation at EUSecWest07 || Intermediate || 2007-03-01
+|-valign="top"
+|[http://www.owasp.org/images/3/3c/OWASP_Flyer_Sep06.ppt OWASP Project Overview] || High level overview of projects and how OWASP works || Novice || 2006-09-19 
+|-valign="top"
+|[http://www.owasp.org/images/4/49/OWASPAppSec2006Seattle_Security_Metrics.ppt The OWASP Application Security Metrics Project (Bob Austin)] || Presentation on the Application Security Metrics project || Novice || 2006-10-17
+|-valign="top"
+|[http://www.owasp.org/images/5/53/OWASPAppSecEU2006_CLASP_Project.ppt OWASP CLASP Project (Pravir Chandra)] || OWASP CLASP project presentation given at the 2006 European AppSec conference || Novice || 2006-05-30
+|-valign="top"
+|[http://www.owasp.org/images/3/30/OWASPAppSec2006Seattle_UsingSprajaxToTestAJAXSecurity.ppt Sprajax (Dan Cornell)] || OWASP Sprajax presentation given at the 2006 Seattle AppSec conference || Intermediate || 2006-10-17
+|-valign="top"
+|Example (include link) || Fill in your comments || Novice/Intermediate/Expert || yyyy-mm-dd
+|}
+
+<br>
+
+== OWASP Conference Presentations ==
+{|class="wikitable sortable" style="text-align: top;" border="1" cellpadding="2"
+|+ OWASP Conference Presentations 
+!width="30%" | Title
+!width="40%" | Comment
+!width="15%" | Level
+!width="15%" |Date (yyyy-mm-dd)
+
+|-valign="top"
+|[[:Image:OWASPAppSec2007Milan ModSecurityCoreRuleSet.ppt | Mod Security Core Rule Set (Ofer Shezaf)]] ||Ofer Shezaf's presentation on the Core Ruleset for the latest version of ModSecurity presented at 6th OWASP AppSec conference in Milan, Italy, in May 2007.|| Intermediate || 2007-05-16
+|-valign="top"
+|[[:Image:OWASPAppSec2007Milan OWASPTestingGuide2v1.ppt | OWASP Testing Guide v2.1 (Matteo Meucci)]] ||Matteo Meucci's presentation on the OWASP Testing Guide v2 at the 6th OWASP AppSec conference in Milan, Italy in May 2007. || Intermediate || 2007-05-16
+|-valign="top"
+|[[:Image:OWASPAppSec2007Milan CLASP.ppt | CLASP (Pravir Chandra)]] ||Pravir Chandra's presentation on the upcoming 2007 update to CLASP presented at 6th OWASP AppSec conference in Milan, Italy in May 2007. || Intermediate || 2007-05-16
+|-valign="top"
+|[[:Image:OWASPAppSec2007Milan AdvancedWebHacking.ppt | Advanced Web Hacking (PDP)]] ||PDPs presentation at the 6th OWASP AppSec conference in Milan, Italy in May 2007. || Expert || 2007-05-16
+|-valign="top"
+|[[:Image:OWASPAppSec2007Milan XMLSecurityGatewayEvalCriteria.ppt | XML Security Gateway Evaluation Criteria (Gunnar Peterson)]] ||Gunnar Peterson's presentation about the new XML Security Gateway Evaluation Criteria project at 6th OWASP AppSec conference in Milan, Italy in May 2007. || Intermediate || 2007-05-16
+|-valign="top"
+|[[:Image:OWASPAppSec2007Milan TestingFlashApplications.ppt | Testing Flash Applications (Stephano Di Paolo)]] ||Stephano Di Paolo's presentation on how to test Flash applications presented at the 6th OWASP AppSec conference in Milan, Italy in May 2007. || Expert|| 2007-05-16
+|-valign="top"
+|[[:Image:OWASPAppSec2007Milan OvertakingGoogleDesktop.ppt | Overtaking Google Desktop (Yair Amit)]] ||Yair Amit's presentation on XSS Flaws in Google Desktop that can be exploited through google.com presented at 6th OWASP AppSec conference in Milan, Italy in May 2007. || Expert || 2007-05-16
+|-valign="top"
+|[[:Image:OWASPAppSec2007Milan MS ACETeamAppSecfromTheCore.ppt | ACE Team Application Security from the Core (Simon Roses Femerling)]] ||Simon Roses Femerling's presentation on the Microsoft ACE team's application security process at the 6th OWASP AppSec conference in Milan, Italy in May 2007. || Intermediate || 2007-05-16
+|-valign="top"
+|[[:Image:OWASPAppSec2007Milan Pantera.ppt | Pantera (Simon Roses Femerling)]] ||Simon Roses Femerling's presentation on the new OWASP tool Pantera at the 6th OWASP AppSec conference in Milan, Italy in May 2007. || Intermediate || 2007-05-16
+|-valign="top"
+|[[:Image:OWASPAppSec2007Milan ProtectingWebAppsfromUniversalPDFXSS.ppt | Protecting Web applications from universal PDF XSS (Ivan Ristic)]] ||Ivan Ristic's Universal XSS PDF presentation at 6th OWASP AppSec conference in Milan, Italy in May 2007. || Intermediate || 2007-05-16
+|-valign="top"
+|[[:Image:OWASPAppSec2007Milan SoftwareSecurity.ppt | Software Security (Rudolph Araujo)]] ||Rudolph Araujo's presentation on Application Security best practices at the 6th OWASP AppSec conference in Milan Italy, May 2007. || Intermediate || 2007-05-16
+|-valign="top"
+|[[:Image:OWASPAppSec2007Milan WebGoatv5.ppt | WebGoat v5 (Dave Wichers)]] ||WebGoat v5 presentation by Dave Wichers at the 6th OWASP AppSec Conference in Milan, Italy, May 2007. || Intermediate || 2007-05-16
+|-valign="top"
+|[[:Image:OWASPAppSec2007Milan WebScarabNG.ppt | WebScarab NG (Dave Wichers)]] ||Description of the new WebScarab-NG efforts presented by Dave Wichers at the 6th OWASP AppSec conference in Milan, Italy in May 2007.|| Intermediate || 2007-05-16
+|-valign="top"
+|[[:Image:OWASPAppSec2007Milan SANS SPSA Initiative.ppt | SANS SPSA Initiative (Dave Wichers)]] ||Description of the SANS Secure Coding Exam Initiative presented by Dave Wichers at the 6th OWASP AppSec conference in Milan Italy, May 2007.|| Novice || 2007-05-16
+|-valign="top"
+|[[:Image:OWASPAppSec2007Milan OWASPItalyActivities.ppt | OWASP Italy Activities (Raoul Chiesa)]] ||Raoul Chiesa's keynote for day 2 of the 6th OWASP AppSec conference on the state of application security in Italy including OWASP's activities in that country.|| Novice || 2007-05-16
+|-valign="top"
+|[[:Image:OWASPAppSec2007Milan SecurityEngineeringInVista.ppt | Security engineering in Vista (Alex Lucas)]] ||Alex Lucas' from Microsoft's keynote presentation for Day 1 of the 6th OWASP AppSec conference in Milan on the benefits of Microsoft's SDL to the security of Vista. || Intermediate || 2007-05-16
+|-valign="top"
+|[http://www.owasp.org/images/5/5f/OWASPAppSec2006Seattle_SecurityEngineeringInVista.ppt How the Security Development Lifecycle(SDL) Improved Windows Vista (Michael Howard)] || Michael Howard's talk on SDL from the OWASP Seattle AppSec Conference in 2006 || Intermediate || 2006-10-18
+|-valign="top"
+|[http://www.owasp.org/images/3/34/OWASPAppSecEU2006_Bootstrapping_the_Application_Assurance_Process.ppt Bootstrapping the Application Assurance Process (Sebastien Deleersnyder)] || Presentation given during the European 2006 AppSec conference on the application assurance process || Novice || 2006-05-30
+|-valign="top"
+|[http://www.owasp.org/images/8/8b/OWASPAppSecEU2006_InlineApproachforSecureSOAPRequests.ppt Inline Approach for Secure SOAP Requests and Early Validation (Mohammad Ashiqur Rahaman, Maartin Rits and Andreas Schaad SAP Research, Sophia Antipolis, France)] || Presentation given at the European 2006 AppSec conference about security and soap message structure issues || Intermediate || 2006-05-31
+|-valign="top"
+|[http://www.owasp.org/images/9/9c/OWASPAppSecEU2006_WAFs_WhenAreTheyUseful.ppt Web Application Firewalls:When Are They Useful? (Ivan Ristic)] || Presentation about Web Application Firewalls || Novice || 2006-05-31
+|-valign="top"
+|[http://www.owasp.org/images/1/1a/OWASPAppSecEU2006_HTTPMessageSplittingSmugglingEtc.ppt HTTP Message Splitting, Smuggling and Other Animals (Amit Klein)] || A presentation about Message splitting other attacks around the HTTP protocol || Intermediate || 2006-05-31
+|-valign="top"
+|[http://www.owasp.org/images/f/f6/OWASPAppSec2006Seattle_WebAppForensics.ppt Web Application Incident Response & Forensics: A Whole New Ball Game! (Rohyt Belani & Chuck Willis)] || Talk about Web Application Security incident handling and forensics given at the OWASP 2006 Seattle AppSec conference || Intermediate || 2006-10-18
+|-valign="top"
+|[http://www.owasp.org/images/d/d2/OWASPAppSecEU2006_CanTestingToolsReallyFindOWASPTop10.ppt Can (Automated) Testing Tools Really Find the OWASP Top 10? (Erwin Geirnaert) ] || A talk about how automated testing tools stack up against the OWASP top 10 || Intermediate || 2006-05-30
+|-valign="top"
+|[http://www.owasp.org/images/2/28/OWASPAppSecEU2006_RequestRodeo.ppt RequestRodeo: Client Side Protection against Session Riding (Martin Johns / Justus Winter)] || Presentation given about how Sessions can be hi-jacked, etc... || Novice  || 2006-05-31
+|-valign="top"
+|[http://www.owasp.org/images/6/62/OWASPAppSecEU2006_SecurityTestingthruAutomatedSWTests.ppt Security Testing through Automated Software Tests (Stephen de Vries)] || Presentation given at the 2006 EuSec conference || Intermediate || 2006-05-31
+|-valign="top"
+|[http://www.owasp.org/images/0/0e/AppSec2005DC-Jeremy_Poteet-In_the_Line_of_Fire.ppt In the Line of Fire: Defending Highly Visible Targets (Jeremy Poteet)] || Conference given at the 2005 DC AppSec conference || Novice || 2005-10-1
+|-valign="top"
+|[http://www.owasp.org/images/9/93/AppSec2005DC-Matt_Fisher-Google_Hacking_and_Worms.ppt Google Hacking and Web Application Worms (Matt Fisher)] || Talk given at the 2005 DC AppSec conference || Novice || 2005-10-01
+|-valign="top"
+|[http://www.owasp.org/images/0/05/AppSec2005DC-Anthony_Canike-Enterprise_AppSec_Program.ppt Establishing an Enterprise Application Security Program (Tony Canike)] || Talk given at the 2005 DC AppSec Conference || Novice || 2005-10-01
+|-valign="top"
+|[https://owasp.org/images/0/0d/OWASPAppSec2006Seattle_Why_AJAX_Applications_More_Likely_Insecure.ppt Why AJAX Applications Are Far More Likely To Be Insecure (And What To Do About It) (Dave Wichers)] || Dave's talk on AJAX given at the Seattle 2006 AppSec conference || Intermediate || 2006-10-01
+|-valign="top"
+|Example (include link) || Fill in your comments || Novice/Intermediate/Expert || yyyy-mm-dd
+|}
+
+<br>
+
+== Web Application Security Presentations ==
+{|class="wikitable sortable" style="text-align: top;" border="1" cellpadding="2"
+|+ Web Application Security Presentations 
+!width="30%" |Title
+!width="40%" |Comment
+!width="15%" |Level
+!width="15%" |Date (yyyy-mm-dd)
+|-valign="top"
+|[[:Image:Protecting Web Applications from Universal PDF XSS.ppt| Universal PDF XSS by Ivan Ristic]] || Protecting Web Applications from Universal PDF XSS || Intermediate || 2007-06-28
+|-valign="top"
+|[[:Image:IdM-OWASP.v.0.2.14.pdf|Identity Management Basics (Derek Brown)]] ||Identity Management Basics|| Novice || 2007-05-09
+|-valign="top"
+|[[http://www.owasp.org/images/7/74/Advanced_SQL_Injection.ppt Advanced SQL Injection (Victor Chapela)] || Detailed methodology for analyzing applications for SQL injection vulnerabilities || Expert || 2005-11-04
+|-valign="top"
+|[[http://www.owasp.org/images/7/7d/Advanced_Topics_on_SQL_Injection_Protection.ppt Advanced Topics on SQL Injection Protection (Sam NG)] || 7 methods to prevent SQL injection attacks correctly and in a more integrated approach. Methods 1 to 3 are applicable during design or development life cycle. Method 4 is mainly from QA’s perspective. Methods 5 and 6 can be applied to production environment and are applicable even if you do not have access to or if you cannot change the source code. Other non-main stream technology are discussed in Method 7.  || Intermediate || 2006-02-27
+|-valign="top"
+|[[http://www.owasp.org/images/d/d1/AppSec2005DC-Alex_Stamos-Attacking_Web_Services.ppt Attacking Web Services (Alex Stamos)] || Web Services Introduction and Attacks  || Intermediate || 2005-10-11
+|-valign="top"
+|[http://www.owasp.org/images/7/72/MMS_Spoofing.ppt MMS Spoofing (Matteo Meucci)] || A Case-study of a vulnerable web application || Intermediate
+|-valign="top"
+|[http://www.owasp.org/images/f/f9/OWASPAppSecEU2006_AJAX_Security.ppt Ajax Security (Andrew van der Stock)] || Presentation on Ajax security for OWASP AppSec Europe 2006 || Intermediate || 2006-05-30
+|-valign="top"
+|[http://www.owasp.org/images/3/3a/OWASPAppSec2006Seattle_Web_Services_Security.ppt Advanced Web Services Security & Hacking (Justin Derry)] || Presentation given on Webservice security at the Seattle 2006 AppSec conference || Intermediate  || 2006-10-18
+|-valign="top"
+|[http://www.owasp.org/images/f/f6/Integration_into_the_SDLC.ppt Integration into the SDLC (Eoin Keary)] || A presentation about why and how to integrate the SDLC. || Novice || 2005-04-09
+|-valign="top"
+|Example (include link) || Fill in your comments || Novice/Intermediate/Expert || yyyy-mm-dd
+|}
+
+
+<br>
+
+== Chapter Presentations ==
+{|class="wikitable sortable" style="text-align: top;" border="1" cellpadding="2"
+|+ Chapter Presentations
+!width="30%" |Title
+!width="30%" |Comment
+!width="10%" |Level
+!width="10%" |Month (Mon-yyyy)
+!width="10%" |Chapter
+
+|-valign="top"
+|[[:Image:Common_Application_Flaws.ppt| Common Application Flaws (Brett Moore) ]] ||OWASP New Zealand chapter presentation on Common Application Flaws|| Novice/Intermediate ||November 2008 || [[New Zealand]]
+|-valign="top"
+|[[:Image:Time_Based_SQL_Injections.ppt| Time Based SQL Injections (Muhaimin Dzulfakar) ]] ||OWASP New Zealand chapter presentation on Time Based SQL Injections|| Intermediate ||September 2008 || [[New Zealand]]
+|-valign="top"
+|[[:Image:Browser_security.ppt| Browser Security (Roberto Suggi Liverani) ]] ||OWASP New Zealand chapter presentation on Browser Security|| Intermediate ||September 2008 || [[New Zealand]]
+|-valign="top"
+|[[:Image:OWASP_CMH_SQLInjection__20080707.zip| 7/7/2008 SQL Injection (Columbus, OH)]] || SQL Injection Presentation given at the Columbus, OH OWASP Chapter Meeting. Powerpoint, derby DB, and applicable java code. || Novice / Intermediate || July 2008 || [[Columbus]]
+|-valign="top"
+|[[:Image:OWASP_ellak-Greece.ppt| Detecting Web Application Vulnerabilities Using Open Source Means (Konstantinos Papapanagiotou) ]] ||OWASP Greek Chapter presentation given at the Open Source Software (FLOSS) Conference in Athens|| Novice ||May 2008 || [[Greece]]
+|-valign="top"
+|[[:Image:Hacking_The_World_With_Flash.ppt| Hacking The World With Flash (Paul Craig) ]] ||OWASP New Zealand chapter presentation on Flash security|| Intermediate ||April 2008 || [[New Zealand]]
+|-valign="top"
+|[[:Image:Web_spam_techniques.ppt| Web Spam Techniques (Roberto Suggi Liverani) ]] ||OWASP New Zealand chapter presentation on Web Spam Techniques|| Intermediate ||April 2008 || [[New Zealand]]
+|-valign="top"
+|[[:Image:Xpath_Injection.ppt| Xpath Injection Overview (Roberto Suggi Liverani) ]] ||OWASP New Zealand chapter presentation on Xpath Injection|| Intermediate ||February 2008 || [[New Zealand]]
+|-valign="top"
+|[[:Image:Owasp security4mobileJava.pdf| Dependability for Java Mobile Code (Pierre Parrend) ]] ||OWASP Swiss chapter presentation on Mobile Java Security || Expert ||July 2007 || [[Switzerland]]
+|-valign="top"
+|[[:Image:Trust Security Usability - v1.0.pdf|Trust, Security and Usability (Roger Carhuatocto) in Spanish]]||OWASP Spain chapter meeting (July'07) || Intermediate ||July 2007 || [[Spain]]
+|-valign="top"
+|[[:Image:OWASP-tratamiento_de_datos.pdf|Tratamiento seguro de datos en aplicaciones in Spanish]]||OWASP Spain chapter meeting (July'07) || Intermediate ||July 2007 || [[Spain]]
+|-valign="top"
+|[[:Image:Conferencia_OWASP.pdf|Ataques DoS en aplicaciones Web (Jaime Blasco Bermejo) in Spanish]]||OWASP Spain chapter meeting (July'07) || Intermediate ||July 2007 || [[Spain]]
+|-valign="top"
+|[[:Image:Seguridad en entornos financieros.pdf|Seguridad en entornos financierosPedro (Pedro Sánchez) in Spanish]]||OWASP Spain chapter meeting (July'07) || Intermediate ||July 2007 || [[Spain]]
+|-valign="top"
+|[[:Image:Java_Open_Review.ppt|Brian Chess from Fortify shared what's going on with the Java Open Source review project at the June NoVA OWASP meeting]] || Java Open Review || Intermediate ||June 2007 || [[Virginia (Northern Virginia)]]
+|-valign="top"
+|[[:Image:Bytecode_injection.ppt|Brian Chess from Fortify, presentation to NoVA OWASP chapter in June 2007.]] || Bytecode injection || Expert ||June 2007 || [[Virginia (Northern Virginia)]]
+|-valign="top"
+|[[:Image:Security at the VMM Layer - OWASP.ppt|Security at the VMM Layer by Ted Winograd]] || Security at the VMM Layer || Expert ||June 2007 || [[Virginia (Northern Virginia)]]
+|-valign="top"
+|[[:Image:KC June 2007 Evaluating and Tuning WAFs.pdf|Evaluating and Tuning Web Application Firewalls (Barry Archer)]] ||Presentation given at Kansas City June 2007 chapter meeting|| Intermediate ||June 2007 || [[Kansas City]]
+|-valign="top"
+|[[:Image:OWASP_SDL-IT.pdf|Microsoft Security Development Lifecycle for IT (Rob Labbé)]] ||Presentation by Rob Labbe at Ottawa OWASP Chapter|| Novice ||May 2007|| [[Ottawa]]
+|-valign="top"
+|[[:Image:OWASP_IL_7_Application_DOS.pdf|Application Denial of Service (Shaayy Cheen)]] ||Is it Really That Easy? Presentation given at the Israel Mini Conference in May 2007|| Intermediate ||May 2007 || [[Israel]]
+|-valign="top"
+|[[:Image:OWASP_IL_7_FuzzGuru.pdf|Fuzzing in Microsoft and FuzzGuru framework (John Neystadt)]] ||Presentation given at the Israel Mini Conference in May 2007|| Intermediate ||May 2007 || [[Israel]]
+|-valign="top"
+|[[:Image:OWASP_IL_7_AppSec_and_Beyond.pdf|Application Security, not just development (David Lewis)]] ||Presentation given at the Israel Mini Conference in May 2007|| Intermediate ||May 2007 || [[Israel]]
+|-valign="top"
+|[[:Image:OWASP IL 7 Overtaking Google Desktop.pdf|Overtaking Google Desktop, Leveraging XSS to Raise Havoc (Yair Amit)]] ||Presentation given at the Israel Mini Conference in May 2007|| Intermediate ||May 2007 || [[Israel]]
+|-valign="top"
+|[[:Image:OWASP IL 7 UnregisterAttackInSip.pdf|Unregister Attack in SIP (Anat Bremler-Barr, Ronit Halachmi-Bekel and Jussi Kangasharju)]] ||Presentation given at the Israel Mini Conference in May 2007|| Intermediate ||May 2007 || [[Israel]]
+|-valign="top"
+|[[:Image:OWASP IL 7 WAF Positive Security.pdf|Positive Security Model for Web Applications, Challenges and Promise (Ofer Shezaf)]] ||Presentation given at the Israel Mini Conference in May 2007|| Intermediate ||May 2007 || [[Israel]]
+|-valign="top"
+|[[:Image:OWASP IL 7 DOT NET Reverse Engineering.pdf|.NET Reverse Engineering (Erez Metula)]] ||Presentation given at the Israel Mini Conference in May 2007|| Expert ||May 2007 || [[Israel]]
+|-valign="top"
+|[[:Image:OWASP IL 7 OWASP Introduction.pdf|OWASP introduction (Ofer Shezaf)]] ||2nd OWASP IL mini conference at the Interdisciplinary Center (IDC) Herzliya|| Intermediate ||May 2007 || [[Israel]]
+|-valign="top"
+|[[:Image:OWASP BeLux 2007-06-22 Update on Internet Attack Statistics for Belgium in 2006.ppt|Update on Internet Attack Statistics for Belgium in 2006 by Hilar Leoste (Zone-H)]] || Update on Internet Attack Statistics for Belgium in 2006  || Novice ||May 2007 || [[Belgium]]
+|-valign="top"
+|[http://www.owasp.org/index.php/Image:InfoSec_World_2007_-_Web_services_gateways.ppt Securing Web Services using XML Security Gateways by Tim Bond] || Securing Web Services using XML Security Gateways || Intermediate ||May 2007 || [[Virginia (Northern Virginia)]]
+|-valign="top"
+|[http://www.owasp.org/index.php/Image:SwA_Acquisition_WG_-_Overview.ppt Software Assurance in the Acquisition Process by Stan Wisseman] || Software Assurance in the Acquisition Process || Intermediate ||May 2007 || [[Virginia (Northern Virginia)]]
+|-valign="top"
+|[http://www.owasp.org/index.php/Image:OWASP_BeLux_2007-05-10_Legal_Aspects_Jos_Dumortier.zip Legal Aspects of (Web) Application Security by Jos Dumortier] || Legal Aspects of (Web) Application Security  || Intermediate ||May 2007 || [[Belgium|Belgium]]
+|-valign="top"
+|[http://www.owasp.org/index.php/Image:OWASP_BeLux_2007-05-10_AppSec_Research_Lieven_Desmet.zip AppSec Research (University Leuven Belgium)] ||  Formal absence of implementation bugs in web applications: a case study on indirect data sharing by Lieven Desmet || Expert ||May 2007 || [[Belgium|Belgium]]
+|-valign="top"
+|[[:Image:Scanner-Sparkly.ppt|A Scanner Sparkly]] || A Scanner Sparkly, taken from the Phoenix OWASP presentations on Application Security Tools, May 2007 || Intermediate ||May 2007 || [[Phoenix]]
+|-valign="top"
+|[[:Image:Owasp-lessonslearned.ppt|Grey Box Assessment Lessons Learned]] || "Grey Box Assessment Lessons Learned", taken from the Phoenix OWASP presentations, Application Security Tools, May 2007 || Intermediate ||May 2007 || [[Phoenix]]
+|-valign="top"
+|[http://www.owasp.org/index.php/Image:OWASP_BeLux_2007-05-10_OWASP_Update.zip OWASP Update and OWASP BeLux Board Presentation (Seba)] || OWASP Update and OWASP BeLux Board Presentation || Novice||May 2007 || [[Belgium|Belgium]]
+|-valign="top"
+|[[:Image:Security Metics- What can we measure- Zed Abbadi.pdf|Metics- What can we measure (Zed Abbadi)]] ||19 April NoVa chapter meeting presentation on Security Metrics || Novice ||April 2007 || [[Virginia (Northern Virginia)]]
+|-valign="top"
+|[[:Image:Web Services Hacking and Hardening.pdf| Web Services Hacking and Hardening (Adam Vincent) ]] ||3/8/07 NoVA chapter meeting, Adam Vincent from Layer7  || Expert ||March 2007 || [[Virginia (Northern Virginia)]]
+|-valign="top"
+|[http://www.owasp.org/index.php/Image:OWASP_BE_2007-01-23_OWASP_Update.zip OWASP Update (Seba)] || OWASP Update  || Novice||Jan 2007 || [[Belgium|Belgium]]
+|-valign="top"
+|[http://www.owasp.org/images/f/fe/Pres_20070206_04_svetsch_xss_worms_owasp.zip XSS Worms (Sven Vetsch)] || XSS Worms || Intermediate  ||Feb 2007 || [[Switzerland|Switzerland]]
+|-valign="top"
+|[http://www.owasp.org/index.php/Image:OWASP_BE_2007-01-23_OWASP_Update.zip OWASP Update (Seba)] || OWASP Update  || Novice||Jan 2007 || [[Belgium|Belgium]]
+|-valign="top"
+|[http://www.owasp.org/index.php/Image:OWASP_BE_2007-01-23_WebGoat-Pantera.zip WebGoat and Pantera presentation (Philippe Bogaerts)] || WebGoat and Pantera presentation   || Novice || Jan 2007 || [[Belgium|Belgium]]
+|-valign="top"
+|[http://www.owasp.org/index.php/Image:OWASP_BE_2007-01-23_AOP_security.zip Security implications of AOP for secure software (Bart De Win)] || Security implications of AOP for secure software || Expert || Jan 2007 || [[Belgium|Belgium]]
+|-valign="top"
+|[http://www.owasp.org/images/1/12/OWASP_Denver_Nov-06_presentation.ppt testing for common security flaws (David Byrne)] || testing for common security flaws || Intermediate || Nov 2006 || [[Denver|Denver]]
+|-valign="top"
+|[http://www.owasp.org/images/7/7c/Owasp-olli.pdf 40-ish slides on analyzing threats (Olli)] || Analyzing Threats || Novice || Dec 2006 || [[Helsinki|Helsinki]]
+|-valign="top"
+|[http://www.owasp.org/images/2/2c/KC_Dec2006_Attacking_The_App.pdf Attacking the Application (Dave Ferguson)] || Vulnerabilities, attacks and coding suggestions || Intermediate || Dec 2006 || [[Kansas City|Kansas City]]
+|-valign="top"
+|[http://www.owasp.org/images/6/6a/KC_Dec2006_Ajax_Security_Concerns.pdf Ajax Security Concerns (Rohini Sulatycki)] || Ajax Security Concerns || Intermediate ||Dec 2006 || [[Kansas City|Kansas City]]
+|-valign="top"
+|[http://www.owasp.org/images/8/8c/Anatomy_of_2_Web_App_Testing.zip Anatomy of 2 Web Application Testing (Matteo Meucci)] || Anatomy of 2 Web Application Testing || Intermediate || Mar 2006 || [[Italy|Italy]]
+
+|-valign="top"
+
+|[https://www.owasp.org/images/9/99/WTE-Cloud-Austin-2012-02.pdf Testing From the Cloud: Is the Sky Falling? ] || WTE Cloud-based Testing || Intermediate || Feb 2012 || [[Austin|Austin]]
+|-valign="top"
+
+|Example (include link) || Fill in your comments || Novice/Intermediate/Expert || Mon Year || Chapter
+|}
+
+[[Category:OWASP Education Project]]
+[[Category:OWASP Presentations]]
+[[Category:Chapter Resources]]

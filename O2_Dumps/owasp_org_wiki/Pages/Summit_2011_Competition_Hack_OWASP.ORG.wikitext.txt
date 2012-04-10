@@ -1,0 +1,54 @@
+'''OWASP HackContest 2011'''
+
+The Open Web Application Security Project (OWASP) is willing to announce the 2011 OWASP HackContest.
+As the Project tries to address the need to constantly update the security measures required to protect web applications, it would try to leverage this objective through an hacking contest where people all over the world can put in practice their skills to find vulnerabilities on our website www.owasp.org and win the opportunity to participate at the OWASP Summit 2011 in Lisbon (Portugal).
+
+The aim of the contest is to get as soon as possible the root on the owasp.org server (ofcourse!) or find and report the highest number of vulnerabilities from the latest OWASP Top 10 providing their evidences by listing them to hackcontest@owasp.org.
+For each vulnerability found and highlighted in the report will be assigned a score from 1 to 10 as shown in the following table:
+
+
+{| border=1
+| '''Vulnerability'''	
+| '''Score'''
+|-
+| Injection	
+| 10
+|-
+| Cross-Site Scripting (XSS)	
+| 9
+|-
+| Broken Authentication and Session Management
+| 8
+|-
+| Insecure Direct Object References
+| 7
+|-
+| Cross-Site Request Forgery (CSRF)
+| 6
+|-
+| Security Misconfiguration
+| 5
+|-
+| Insecure Cryptographic Storageù
+| 4
+|-
+| Failure to Restrict URL Access
+| 3
+|-
+| Insufficient Transport Layer Protection
+| 2
+|-
+| Unvalidated Redirects and Forwards
+| 1
+|}
+
+
+The activity of Penetration Testing is set from 01/28/2011 00:00 am to 01/31/2011 12.00 pm.
+The report must be sent no later than 02/02/2011 to hackcontest@owasp.org.
+
+Owasp will offer to the winner a free journey (travel + accommodation) for the  summit.
+
+
+'''NOTE''':
+<br>
+'''this is still NOT LIVE and it will need an OWASP Board decision to authorize it!'''

@@ -1,0 +1,45 @@
+Every '''[[Threat Agent]]''' should follow this template.
+
+{{Template:Threat}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+==Description==
+
+A threat agent is a group of "attackers" that carry out an [[attack]]. They can be human (intentional or unintentional) or natural (flood, fire, etc...).
+# Start with a one-sentence description of the threat agent
+# Who are the people that make up this threat agent?
+# Discuss characteristics of the threat agent.
+
+
+==Risk Factors==
+
+* Talk about the [[OWASP Risk Rating Methodology|factors]] that make this threat agent likely or unlikely to attack
+* Be sure to discuss the size, motivation, capabilities, and opportunity of this threat agent
+
+==Examples==
+
+===Short example name===
+: A short example description, small picture, or sample code with [http://www.site.com links]
+
+===Short example name===
+: A short example description, small picture, or sample code with [http://www.site.com links]
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+Note: the contents of "Related Problems" sections should be placed here
+
+==References==
+
+* http://www.link1.com
+* [http://www.link2.com Title for the link2]
+
+__NOTOC__

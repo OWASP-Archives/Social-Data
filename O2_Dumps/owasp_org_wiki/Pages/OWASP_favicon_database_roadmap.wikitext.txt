@@ -1,0 +1,19 @@
+The project team is setting out to make the first review of this project.
+
+== Current status ==
+
+The current release has latest favicon MD5 database. Scripts for internet wide gathering of favicon are working and there are stable plugin implementations for most popular open source products (OpenVAS, GPL Nessus and w3af). 
+
+== Future (ToDo items) ==
+
+* Implement better hashing function (currently it uses MD5). 
+
+* Implement following <META> tags in order to find favicon.ico
+
+* Work with other OWASP project leaders to include the project into their projects (OWASP guide, OWASP testing guide, web scarab, ..)
+
+== Complete ==
+
+None
+
+[[Category:OWASP_Favicon_Database_Project]]

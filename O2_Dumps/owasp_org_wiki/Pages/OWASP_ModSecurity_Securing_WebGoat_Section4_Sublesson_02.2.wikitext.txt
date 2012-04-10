@@ -1,0 +1,25 @@
+2. Access Control Flaws -> 2.2 Bypass a Path Based Access Control Scheme
+
+=== Lesson overview ===
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution === 
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information. 
+
+=== Strategy ===
+
+This WebGoat lesson demonstrates access control bypass: a file from a dropdown list is chosen and sent, but intercepted in the web proxy and substituted with '../../../conf/tomcat-users.xml', which reveals tomcat users and passwords.
+
+The solution to this WebGoat lesson is to prevent directory traversal.
+
+=== Implementation === 
+
+The lesson is mitigated in the ruleset 'rulefile_02_access-control-flaws.conf':
+<pre>
+  # Lesson 2.2; directory traversal in 'File' parameter of POST request
+  SecRule &ARGS:File "!@eq 0" "chain,log,auditlog,deny,msg:'Path Traversal Attack', \
+tag:'PATH_TRAVERSAL',redirect:/_error_pages_/lesson02-2.html"
+  SecRule ARGS:File "\.\.[/\x5c]" "t:urlDecodeUni"
+</pre>

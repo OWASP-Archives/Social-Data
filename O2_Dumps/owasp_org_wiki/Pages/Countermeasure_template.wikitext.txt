@@ -1,0 +1,66 @@
+Every '''[[Countermeasure]]''' should follow this template.
+
+==Description==
+
+An countermeasure (or security control) is a protection mechanism that prevents, deters, or detects attacks, or prevents or reduces vulnerabilities.
+
+# Start with a one-sentence description of the countermeasure
+# How does the countermeasure work?
+# What are some examples of implementations of the countermeasure (steer clear of specific products)
+
+
+==Risk Factors==
+
+* Talk about the [[OWASP Risk Rating Methodology|factors]] that this countermeasure affects
+* What effect does this countermeasure have on the attack or vulnerability?
+* Does this countermeasure reduce the technical or business impact?
+
+
+==Difficulty to Implement==
+
+* Discuss the typical difficulty of implementing this control, emphasizing the factors that make it easier or harder
+* Steer clear of language/platform specific information here
+
+
+==Examples==
+
+; Short example name
+: One paragraph example description with [http://www.site.com links]
+
+; Short example name
+: One paragraph example description with [http://www.site.com links]
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+Note: the contents of "Related Problems" sections should be placed here
+
+
+==Related [[Countermeasures]]==
+
+* [[Countermeasure 1]]
+* [[Countermeasure 2]]
+
+Note: contents of "Avoidance and Mitigation" Sections should be placed here
+
+
+==References==
+
+* http://www.link1.com
+* [http://www.link2.com Title for the link]
+
+
+When the article is reviewed, the "Honeycomb" category can be removed and replaced with the "ASDR" category
+<nowiki>[[Category:OWASP Honeycomb Project]]</nowiki>
+<nowiki>[[Category:OWASP ASDR Project]]</nowiki>
+
+__NOTOC__

@@ -1,0 +1,39 @@
+== '''DNIe-2: Vulnerabilidades de seguridad en aplicaciones web basadas en el DNIe''' ==
+
+* Fecha de inicio: Febrero 2012
+
+* Descripción: El propósito del segundo subproyecto de OWASP DNIe, "Vulnerabilidades de seguridad en aplicaciones web basadas en el DNIe" (DNIe-2), es proporcionar información y detalles técnicos de las vulnerabilidades más comunes en aplicaciones web que utilizan el DNIe para la autenticación de usuarios, incluyendo vulnerabilidades en la autenticación, la gestión de sesiones y los controles de acceso de la aplicación web.
+
+* Objetivo: El objetivo principal es reflejar las vulnerabilidades más comunes en aplicaciones web que hacen uso del DNIe. El análisis se centra en vulnerabilidades de las aplicaciones web en tres áreas diferenciadas (autentificación, gestión de sesiones y controles de acceso) y en su interacción con el protocolo HTTPS (SSL/TLS). Esta información permitirá a la comunidad española de seguridad y desarrollo de aplicaciones web conocer las vulnerabilidades y errores de seguridad presentes actualmente en entornos reales, y así poder evitarlas mediante la aplicación de las recomendaciones y mejores prácticas asociadas (qué serán detalladas en una actividad futura). 
+
+''NOTA'': Los resultados de estas vulnerabilidades han sido obtenidos tras la realización de numerosas pruebas de intrusión y auditorías web en aplicaciones web españolas que hacen uso del DNIe, tanto en el sector público (Administraciones Públicas o AAPP) como en el sector privado (financiero, seguros, infraestructuras, telecomunicaciones, etc).
+
+* Alcance: Esta actividad se centra únicamente en las vulnerabilidades asociadas a los mecanismos de '''autentificación''' mediante el DNIe, donde el protocolo '''HTTPS''' juega un papel muy relevante, y en consecuencia, a los mecanismos de '''gestión de sesiones y control de acceso o autorización de los usuarios'''. Los mecanismos de '''creación y verificación de firma electrónica''' mediante el DNIe no se incluyen en esta actividad y serán analizados en actividades futuras del proyecto [https://www.owasp.org/index.php/Spain/Projects/DNIe OWASP DNIe].
+
+* Resultados: La información de las vulnerabilidades de seguridad más comunes en aplicaciones web basadas en el DNIe serán publicadas en la página web del proyecto OWASP DNIe en forma de presentaciones, guías o documentos que ayuden a entender las debilidades y riesgos de seguridad de estas aplicaciones web.
+
+* Participación: El proyecto OWASP DNIe invita a la comunidad de seguridad y desarrollo de aplicaciones web que hacen uso del DNIe a participar en esta actividad, compartiendo sus conocimientos, vulnerabilidades identificadas, herramientas de auditoría, mejores prácticas para incrementar la seguridad de estas aplicaciones, etc, a través de la [https://lists.owasp.org/mailman/listinfo/owasp-spain lista de correo electrónico del capítulo español de OWASP], o contactando directamente con Raul Siles (raul.siles -AT- gmail.com).
+
+
+== '''RESULTADOS DNIe-2''': Vulnerabilidades de seguridad en aplicaciones web basadas en el DNIe  ==
+
+''Próximamente...''
+
+La seguridad de las aplicaciones web basadas en el DNIe será analizada durante la conferencia [https://www.rootedcon.es RootedCON 2012] que se celebrará  en Madrid del 1-3 de marzo de 2012, y en concreto en la ponencia [http://www.rootedcon.es/index.php/agenda/ "Seguridad de aplicaciones web basadas en el DNIe"] impartida por Raúl Siles y José A. Guasch.
+
+=== Vulnerabilidades del protocolo HTTPS ===
+
+''Próximamente...''
+
+=== Vulnerabilidades de los mecanismos de registro y autentificación de usuarios mediante el DNIe ===
+
+''Próximamente...''
+
+=== Vulnerabilidades de los mecanismos de gestión de sesiones ===
+
+''Próximamente...''
+
+
+== OWASP DNIe  ==
+
+Esta actividad o subproyecto (DNIe-2) forma parte del proyecto [https://www.owasp.org/index.php/Spain/Projects/DNIe OWASP DNIe].

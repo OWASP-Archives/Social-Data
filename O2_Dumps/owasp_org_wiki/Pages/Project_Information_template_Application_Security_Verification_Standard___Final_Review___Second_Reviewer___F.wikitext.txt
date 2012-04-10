@@ -1,0 +1,122 @@
+[[Project Information:template Application Security Verification Standard|Clik here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''FINAL REVIEW''' 
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART I''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications#OWASP Application Security Verification Standard|OWASP Application Security Verification Standard Project's Deliveries & Objectives]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#OWASP Application Security Verification Standard|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+'''The opportunity, challenges, issues or need your proposal addresses'''
+
+OWASP is looking for a commercially-workable open standard for performing application security verification efforts. The problem is that there is a huge range in the coverage and level of rigor available in the market, and consumers have no way to tell the difference between someone just running a grep tool, and someone doing painstaking code review and manual testing. So, a standard is needed. 
+
+''Comment: The draft proposes a standard of high quality which is adequate and suitable for use in commercial projects''.
+
+'''Objectives or ways in which you will meet the goal(s)'''
+
+The applicant’s proposal will address the above challenges as follows: 
+The applicant will define an evaluation framework that may be used to conduct OWASP Application Security Verification Standard certifications. 
+The applicant will define an OWASP Application Security Verification Standard which defines levels that applications may be certified against. 
+
+''Comments: Those goals are met''.
+
+'''Long-term vision for the project'''
+
+The long-term vision for the project is to normalize the range in the coverage and level of rigor available in the market when it comes to performing application security verification. 
+
+''Comments: The ASVS Draft proposes a comprehensive document which can fully play this role and  be a support for making this vision a reality. The actual fullfillment of the vision will depend on the dissemination of the work and of its actual efficiency for web application projects''.
+
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#OWASP Application Security Verification Standard|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+'''The opportunity, challenges, issues or need your proposal addresses'''
+
+100%
+
+'''Objectives or ways in which you will meet the goal(s)'''
+
+100%
+
+'''Long-term vision for the project'''
+
+50% (Dissemination would be the remaining 50%, and do not pertain to the OWASP Summer of Code time frame).
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[https://www.owasp.org/images/7/78/Remarks_pparrend_2008_10_20.doc Comments on the ASVS Draft, 2008/10/20 ]]
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART II''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Assessment Criteria
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[:Category:OWASP Project Assessment|OWASP Project Assessment Criteria]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Alpha Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+
+None.
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Beta Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+None
+
+* The Beta version of the OWASP Application Security Verification Standard 2008 – Web Application Edition, should comply with following quality criteria according to the OWASP Project Assessment guidelines:
+
+- All Alpha Quality Requirements
+
+''Have been asserted in the first review round.''
+
+- The document seems sufficiently or substantially complete with respect to the topic or process it is intended to cover. 
+
+''It is. The remarks from my previous comments are solved.''
+
+- All wiki content has been reviewed by a technical editor to ensure that English grammar is correct, understandable, and the content flows well. 
+''OK. No particular comment, the online documentation is of quality.''
+
+- Clear efforts to interlink this document to other appropriate Beta and Release Quality OWASP Documentation and Tools projects have been made.
+
+'' OK (reference to the Owasp Top Ten, etc.)''
+
+* When approved to be Beta Quality: Update the link to it on: the OWASP Project page and update its project quality tag on its project page to be Beta. 
+
+''OK.''
+
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+3. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Release Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+
+Following aspects are to be checked:
+
+- Compliance to the Owasp Writing Style
+
+- Availability at the OWASP Lulu Bookstore
+
+- Maybe experience reports with the ASVS would be a plus to validate it or decide to bring still further improvements to the ASVS Standard Beta Quality Draft before releasing it as a 'Release Quality' document.
+
+ |-  
+ | style="width:25%; background:#7B8ABD" align="center"|
+4. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+None.
+|}

@@ -1,0 +1,61 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Failure to follow guideline/specification]]
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+==Description==
+
+The J2EE standard forbids the direct management of connections.
+
+The J2EE standard requires that applications use the container's resource management facilities to obtain connections to resources.
+
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+For example, a J2EE application should obtain a database connection as follows:
+
+  ctx = new InitialContext();
+  datasource = (DataSource)ctx.lookup(DB_DATASRC_REF);
+  conn = datasource.getConnection();
+
+and should avoid obtaining a connection in this way:
+
+  conn = DriverManager.getConnection(CONNECT_STRING);
+
+Every major web application container provides pooled database connection management as part of its resource management framework. Duplicating this functionality in an application is difficult and error prone, which is part of the reason it is forbidden under the J2EE standard.
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD

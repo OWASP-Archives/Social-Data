@@ -1,0 +1,82 @@
+{{Template:Vulnerability}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+The method throws a generic exception making it harder for callers to do a good job of error handling and recovery.
+
+Declaring a method to throw Exception or Throwable makes it difficult for callers to do good error handling and error recovery. Java's exception mechanism is set up to make it easy for callers to anticipate what can go wrong and write code to handle each specific exceptional circumstance. Declaring that a method throws a generic form of exception defeats this system.
+
+
+==Risk Factors==
+
+TBD
+
+
+==Examples==
+
+The following method throws three types of exceptions.
+
+<pre>
+	public void doExchange()
+	  throws IOException, InvocationTargetException,
+			 SQLException {
+	  ...
+	}
+</pre>
+
+While it might seem tidier to write 
+
+
+<pre>
+	public void doExchange()
+	  throws Exception {
+	  ...
+	}
+</pre>
+
+doing so hampers the caller's ability to understand and handle the exceptions that occur. Further, if a later revision of doExchange() introduces a new type of exception that should be treated differently than previous exceptions, there is no easy way to enforce this requirement.
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Implementation]]
+[[Category:Error Handling Vulnerability]]
+[[Category:Java]]
+[[Category:Implementation]]
+[[Category:Code Snippet]]
+[[Category:Vulnerability]]

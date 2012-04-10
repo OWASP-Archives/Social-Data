@@ -1,0 +1,32 @@
+<center>
+{| style="width: 75%; align:center; text-align:center; border:2px solid #4F81BD; background-color:#F2F2F2; padding=2;"
+|- style="background-color: #000; color: #FFF;"
+! style="color: #FFF" | Top 10 2010
+! style="color: #FFF" colspan="2" | ESAPI Control / ASVS Requirements
+|- style="background-color: #FFF"
+| rowspan="2" width="34%" style="background-color: #D9D9D9" | [[Top 10 2010-A1|A1-Injection]] 
+| width="33%" style="background-color: lightgreen" | [[ESAPI Mapping Encoder A1|Encoder]] 
+| width="33%" style="background-color: lightgreen" | [[ESAPI Mapping Validator A1|Validator]] 
+|- style="background-color: #FFF"
+| style="background-color: #FFB200" | [http://code.google.com/p/owasp-asvs/wiki/Verification_V6 V6: Output Encoding/Escaping]
+| style="background-color: #FFB200" | [http://code.google.com/p/owasp-asvs/wiki/Verification_V5 V5: Input Validation]
+|- style="background-color: #FFF"
+| rowspan="2" | [[Top 10 2010-A2|A2-Cross Site Scripting (XSS)]] 
+| style="background-color: lightgreen" | [[ESAPI Mapping Encoder A2|Encoder]] 
+| style="background-color: lightgreen" | [[ESAPI Mapping Validator A2|Validator]]
+|- style="background-color: #FFF"
+| style="background-color: #FFB200" | [http://code.google.com/p/owasp-asvs/wiki/Verification_V6 V6: Output Encoding/Escaping]
+| style="background-color: #FFB200" | [http://code.google.com/p/owasp-asvs/wiki/Verification_V5 V5: Input Validation]
+|- style="background-color: #FFF"
+| rowspan="2" style="background-color: #D9D9D9" | [[Top 10 2010-A3|A3-Broken Authentication and Session Management]] 
+| style="background: lightgreen" | [[ESAPI Mapping Authenticator A3|Autenticator]]
+| style="background: lightgreen" | [[ESAPI Mapping HttpUtilities A3|HttpUtilities]]
+|- style="background-color: #FFF"
+| style="background-color: #FFB200" | [http://code.google.com/p/owasp-asvs/wiki/Verification_V2 V2: Authentication]
+| style="background-color: #FFB200" | [http://code.google.com/p/owasp-asvs/wiki/Verification_V11 V11: HTTP Security]
+|}
+
+
+</center>
+
+[[Category:OWASP Enterprise Security API]]

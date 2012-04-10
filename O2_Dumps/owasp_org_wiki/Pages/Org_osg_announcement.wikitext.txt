@@ -1,0 +1,65 @@
+== ORG Announcement ==
+'''Subject:''' Announcing the release of OWASP Report Generator!
+
+'''Body:'''
+
+We are proud to release OWASP Report Generator (ORG).  ORG is a project that aims at fulfilling the role of reporting related to security assessments. 
+
+It has the ability to do the following tasks:
+* Maintain a list of current, archived and future projects
+* Handle tasks for multiple targets per project
+* Keep track of all the findings for each project
+* Generate reports in multiple formats (PDF and HTML)
+* Issue tracking for projects
+
+ORG still has a long way to go some of the features we are looking to implement shortly are:
+* Verify all current data against a schema and ensure that consistency is maintained (especially with IP Address / DNS Name fields)
+* Manage exceptions relating to creating a duplicate finding name more effectively
+* Add a find function to the source code editor
+* Add default values to all fields where applicable 
+* Add a drop down menu to the findings screen to allow for the selection of a recommendation from the recommendations database
+* Create a Microsoft Word version of the report
+* Paste tables into Appendix
+* Paste images into Appendix
+* Add Spellchecking capabilities (using Authentic's component support for it)
+
+To see a more complete to-do list you can go to http://www.owasp.org/index.php/ORG_%28Owasp_Report_Generator%29_-_To_Do
+
+The latest version of the installer can be found at http://sourceforge.net/project/downloading.php?group_id=64424&use_mirror=osdn&filename=ORG_v0.88.msi
+
+The source is at http://owasp-code-central.googlecode.com/svn/trunk/labs/ReportGenerator
+
+
+If you have any problems or would like to give us feedback please get in contact with Dinis Cruz (dinis_AT_ddplus.net) or Mike de Libero (mikede_AT_mde-dev.com).
+
+== Old Announcement ==
+'''Subject:''' Release of OWASP ReportGenerator and SiteGenerator
+
+'''Body:'''
+OWASP is happy to announce new versions of two new tools
+
+SiteGenerator v.88 - http://www.owasp.org/index.php/Owasp_SiteGenerator
+
+SiteGenerator allows the creation of dynamic websites for the purpose of testing web application security tools and techniques. The websites are generated based on XML files and predefined vulnerabilities (some simple, some complex) covering .Net languages and other web development architectures (for example, navigation: Html, Javascript, Flash, Java, etc...).
+
+Enhancements in v.80:
+
+* Internal improvements
+* Implemented correct css handling
+* General bug fixes and code clean-up
+* Basic documentation created
+
+
+ReportGenerator v.88 - http://www.owasp.org/index.php/ORG_%28Owasp_Report_Generator%29
+
+ReportGenerator is a full featured tool to handle all reporting and tracking tasks related to penetration test and code review activities. The tool takes code review and penetration test findings and produces nice looking PDF reports.
+
+Enhancements in ReportGenerator v.88:
+
+* Lots of bug fixes and code clean-up
+* Created an installer
+* Upgrade of authentic editor
+* Ability to implement targets from an nmap scan (xml output only)
+
+
+Any feedback would be appreciated on ways to make these tools better for the community.  Please contact Dinis Cruz (dinisATddplus.net) or Mike de Libero (mikedeATmde-dev.com).

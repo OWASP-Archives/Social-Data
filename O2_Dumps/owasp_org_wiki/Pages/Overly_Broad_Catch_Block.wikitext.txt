@@ -1,0 +1,85 @@
+{{Template:Vulnerability}}
+{{Template:Fortify}}
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+The catch block handles a broad swath of exceptions, potentially trapping dissimilar issues or problems that should not be dealt with at this point in the program.
+
+Multiple catch blocks can get ugly and repetitive, but "condensing" catch blocks by catching a high-level class like Exception can obscure exceptions that deserve special treatment or that should not be caught at this point in the program. Catching an overly broad exception essentially defeats the purpose of Java's typed exceptions, and can become particularly dangerous if the program grows and begins to throw new types of exceptions. The new exception types will not receive any attention.
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+The following code excerpt handles three types of exceptions in an identical fashion.
+
+<pre>
+	  try {
+		doExchange();
+	  }
+	  catch (IOException e) {
+		logger.error("doExchange failed", e);
+	  }
+	  catch (InvocationTargetException e) {
+		logger.error("doExchange failed", e);
+	  }
+	  catch (SQLException e) {
+		logger.error("doExchange failed", e);
+	  }
+</pre>
+
+At first blush, it may seem preferable to deal with these exceptions in a single catch block, as follows:
+
+<pre>
+	  try {
+		doExchange();
+	  }
+	  catch (Exception e) {
+		logger.error("doExchange failed", e);
+	  }
+</pre>
+
+However, if doExchange() is modified to throw a new type of exception that should be handled in some different kind of way, the broad catch block will prevent the compiler from pointing out the situation. Further, the new catch block will now also handle exceptions derived from RuntimeException such as ClassCastException, and NullPointerException, which is not the programmer's intent.
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Implementation]]
+[[Category:Error Handling Vulnerability]]
+[[Category:Java]]
+[[Category:Code Snippet]]
+[[Category:Vulnerability]]

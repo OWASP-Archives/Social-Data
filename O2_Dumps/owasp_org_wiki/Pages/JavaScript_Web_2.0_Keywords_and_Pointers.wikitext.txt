@@ -1,0 +1,50 @@
+{{LinkBar
+  | useprev=PrevLink | prev=Searching for Code in Classic ASP | lblprev=
+  | usemain=MainLink | main=OWASP Code Review Guide Table of Contents | lblmain=Table of Contents
+  | usenext=NextLink | next=Code Reviews and Compliance | lblnext=
+}}
+__TOC__
+
+Ajax and JavaScript have brought functionality back to the client side, which has brought a number of old security issues back to the forefront. The following keywords relate to API calls used to manipulate user state or the control the browser. The event of AJAX and other Web 2.0 paradigms has pushed security concerns back to the client side, but not excluding traditional server side security concerns.
+
+Look for Ajax usage, and possible JavaScript issues: 
+
+eval( <br>
+document.cookie <br>
+document.referrer <br>
+document.attachEvent <br>
+document.body <br>
+document.body.innerHtml <br>
+document.body.innerText <br>
+document.close <br>
+document.create <br>
+document.createElement <br>
+document.execCommand <br>
+document.forms[0].action <br>
+document.location <br>
+document.open <br>
+document.URL <br>
+document.URLUnencoded <br>
+document.write <br>
+document.writeln <br>
+location.hash <br>
+location.href <br>
+location.search <br>
+window.alert <br>
+window.attachEvent <br>
+window.createRequest <br>
+window.execScript <br>
+window.location <br>
+window.open <br>
+window.navigate <br>
+window.setInterval <br>
+window.setTimeout <br>
+XMLHTTP <br>
+ 
+{{LinkBar
+  | useprev=PrevLink | prev=Searching for Code in Classic ASP | lblprev=
+  | usemain=MainLink | main=OWASP Code Review Guide Table of Contents | lblmain=Table of Contents
+  | usenext=NextLink | next=Code Reviews and Compliance | lblnext=
+}}
+
+[[Category:OWASP Code Review Project]]

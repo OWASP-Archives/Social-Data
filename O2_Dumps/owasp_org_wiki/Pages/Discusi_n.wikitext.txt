@@ -1,0 +1,162 @@
+== Modelo de Auditoría de sistemas:  ==
+
+Éste es un modelo universal para securizar en un alto grado de seguridad al sistema operativo. 
+
+#Sistema de cifrado congelado: Mantiene en secreto la ubicación del archivo del sistema, previniendo ataques de tipo monitoreo de redes. 
+#OpenVAS: Línea de comandos para cifrar- descifrar el protocolo TCP/Ip 
+#Filtro Web: Previene intrusiones a través de puertos inseguros 
+#Clam Antivirus: Previene, detecta y corrige virus informático
+
+<br>
+
+{| border="1" cellspacing="1" cellpadding="1" width="200" align="center"
+|-
+| Clam Antivirus 
+{| border="1" cellspacing="1" cellpadding="1" width="200" align="center"
+|-
+| Filtro Web 
+{| border="1" cellspacing="1" cellpadding="1" width="200" align="center"
+|-
+| OpenVAS 
+{| border="1" cellspacing="1" cellpadding="1" width="200" align="center"
+|-
+| Sistema de Cifrado Congelado
+|}
+
+|}
+
+|}
+
+|}
+
+== Descripción softwares de auditoría ==
+
+*El sistema de cifrado http://truecrypt.org cifra el núcleo del sistema operativo y los discos lógicos impidiendo ataques espía.
+
+*Los comandos shell http://openvas.org sirven para analizar protocolos de red, detección de virus y cifrado del protocolo IpV4-6
+
+*El filtro web http://freenetproject.org es una técnica que reemplaza al Firewall, discriminando puertos inseguros, ahorrando tiempo de procesamiento en el núcleo del sistema.
+
+*Clamwin.com es un software de código abierto, no usa computación en la nube y tiene una GUI que detecta virus en línea http://sourceforge.net/projects/clamsentinel
+
+== Macroinformática  ==
+
+La macroinformática comprende eficiencia, seguridad y naturaleza. La eficacia de un sistema operativo se mide por la interacción hombre-máquina, sintetizando aplicaciones minimalistas y ejecutándolas nuestro sistema operativo procesará los datos eficientemente, ejemplos: 
+
+*Transmisión cifrada: Cliente e-mail con GnuPG
+
+http://fellowship.fsfe.org 
+
+*Sistema de cifrado: Cifra y descifra texto plano, imágenes, etc..
+
+#ftp://ftp.gnupg.org/gcrypt/binary/gnupg-w32cli-1.4.11.exe 
+#http://cryptophane.googlecode.com/files/cryptophane-0.7.0.exe
+
+*Ruby: Lenguaje de programación experimental
+
+http://ruby-lang.org 
+
+*J2re1.3.1_20: Ejecutable de objetos interactivos o applets
+
+http://java.sun.com/products/archive/j2se/1.3.1_20/index.html 
+
+*Escritorio: Gestor de ventanas X11
+
+http://windowmaker.info 
+
+*Gnuzilla: Navegador seguro y de uso libre
+
+http://code.google.com/p/iceweaselwindows/downloads/list 
+
+*Gnupdf: Visor de formato de texto universal pdf
+
+http://blog.kowalczyk.info/software/sumatrapdf 
+
+*Gnuflash: Jugador alternativo a flash player
+
+http://gnu.org/software/gnash 
+
+*Zinf: Reproductor de audio
+
+http://zinf.org 
+
+*Informática forense: Análisis de datos ocultos en el disco duro
+
+http://sleuthkit.org 
+
+*Compresor: Comprime datos sobreescribiendo bytes repetidos
+
+http://peazip.sourceforge.net 
+
+*Ftp: Gestor de descarga de archivos
+
+http://dfast.sourceforge.net 
+
+*AntiKeylogger: Neutraliza el seguimiento de escritorios remotos (Monitoring)
+
+http://psmantikeyloger.sourceforge.net 
+
+*Password manager: Gestión de contraseñas
+
+http://passwordsafe.sourceforge.net 
+
+*Limpiador de disco: Borra archivos innecesrios del sistema
+
+http://bleachbit.sourceforge.net 
+
+*Desfragmentador: Reordena los archivos del disco duro, generando espacio virtual
+
+http://kessels.com/jkdefrag 
+
+*X11: Gestor de ventanas, reemplazo de escritorio Xwindow's
+
+http://bb4win.org 
+
+*Open Hardware: Hardware construído por la comunidad Linux
+
+http://open-pc.com 
+
+*Open WRT: Firmware libre para configurar transmisión de Internet
+
+http://openwrt.org 
+
+*Gnu- Linux: Sistema operativo universal
+
+http://gnewsense.org
+
+== Biocriptoseguridad ==: Es la unión de la biología, criptografía y hacking ético para formar una defensa stándar contra virus complejos. 
+
+Implementación de la biocriptoseguridad informática: 
+
+#Amplificar la banda ancha 
+#Optimizar (limpiar- modificar) el sistema operativo 
+#Desfragmentar los discos lógicos 
+#Ocultar el sistema operativo 
+#Configurar antivirus 
+#Limpiar y desfragmentar 
+#Congelar
+
+*Sistema inmune._ Defensa biológica natural contra infecciones como virus http://immunet.com
+
+*Criptografía._ Método de escritura oculta por caractes, números y letras:—{H}/gJa¢K¡Ng÷752%\*)A&gt;¡#(W|a— http://diskcryptor.net
+
+*Hacking ético._ Auditoría de sistemas informáticos que preserva la integridad de los datos.
+
+Congelador: Mantiene el equilibrio en la integridad de los datos, el sistema operativo, red , memoria ram, ciclos de CPU, espacio en disco duro e incidencias de malware 
+
+*http://code.google.com/p/hzr312001/downloads/detail?name=Deep%20systemze%20Standard%20Version%206.51.020.2725.rar&amp;can=2&amp;q= (para Window's) 
+*http://sourceforge.net/projects/lethe (para GNU/Linux)
+
+<br>Auditoría de virus cifrado._ Un criptovirus se oculta tras un algoritmo de criptografía, generalmente es híbrido simétrico-asimétrico con una extensión de 1700bit's, burla los escáneres antivirus con la aleatoriedad de cifrado, facilitando la expansión de las botnet's. La solución es crear un sistema operativo transparente, anonimizarlo y usar herramientas de cifrado stándar de uso libre: 
+
+*Gnupg: Sirve para cifrar mensajes de correo electrónico http://gpg4win.org/download.html
+
+*Open Secure Shell: Ofuscador TcpIp, protege el túnel de comunicación digital cifrando la Ip. http://openvas.org
+
+*Red protegida: DNS libre http://namespace.org/switch
+
+*Criptosistema simétrico: Encapsula el disco duro, incluyendo el sistema operativo,usando algoritmo Twofish http://truecrypt.org/downloads.php
+
+*Proxy cifrado: Autenticación de usuario anónimo http://torproject.org
+
+Energías renovables._ Son energías adquiridas por medios naturales: hidrógeno, aire, sol que disminuyen la toxicidad de las emisiones de Co2 en el medio ambiente, impulsando políticas ecologistas contribuímos a preservar el ecosistema. Ejm: Usando paneles solares fotovoltaicos.

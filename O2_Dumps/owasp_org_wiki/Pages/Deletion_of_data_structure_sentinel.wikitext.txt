@@ -1,0 +1,126 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+The accidental deletion of a data structure sentinel can cause serious programing logic problems.
+
+'''Consequences'''
+
+* Availability: Generally this error will cause the data structure to not work properly.
+* Authorization: If a control character, such as NULL, is removed it may cause resource access control problems.
+
+'''Exposure period'''
+
+* Requirements specification: The choice could be made to use a language that is not susceptible to these issues.
+* Design: Mitigating technologies such as safe-string libraries and container abstractions could be introduced.
+* Implementation: Many logic errors can lead to this condition. It can be exacerbated by lack of or misuse of mitigating technologies.
+
+'''Platform'''
+
+* Languages: C, C++, Fortran, Assembly
+* Operating platforms: All, although partial preventative measures may be deployed depending on environment.
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Very High
+
+'''Likelihood of exploit'''
+
+High to Very High
+
+Often times data-structure sentinels are used to mark structure of the data structure. A common example of this is the null character at the end of strings. Another common example is linked lists which may contain a sentinel to mark the end of the list.
+
+It is, of course, dangerous to allow this type of control data to be easily accessible. Therefore, it is important to protect from the deletion or modification outside of some wrapper interface which provides safety.
+
+==Risk Factors==
+TBD
+
+==Examples==
+
+In C/C++:
+
+<pre>
+char *foo;
+int counter;
+foo=malloc(sizeof(char)*10);
+for (counter=0;counter!=14;counter++){
+  foo[counter]='a';
+  printf("%s\n",foo);
+}
+</pre>
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+* Pre-design: Use a language or compiler that performs automatic bounds checking.
+* Design: Use an abstraction library to abstract away risky APIs. Not a complete solution.
+* Pre-design through Build: Compiler-based canary mechanisms such as StackGuard, ProPolice and the Microsoft Visual Studio / GS flag. Unless this provides automatic bounds checking, it is not a complete solution.
+* Operational: Use OS-level preventative functionality. Not a complete solution.
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:General Logic Error Vulnerability]]
+[[Category:OWASP_CLASP_Project]]
+[[Category:Implementation]]
+[[Category:Code Snippet]]
+[[Category:C]]

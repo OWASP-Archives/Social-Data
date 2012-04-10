@@ -1,0 +1,14 @@
+A list of third party (i.e. not part of Java SE or EE) security frameworks.
+
+==Enterprise==
+* [[ESAPI|OWASP Enterprise Security API]] a new OWASP project to provide all essential security services under one roof.
+
+== Access Control (Authentication and Authorisation) ==
+* [http://www.acegisecurity.org/ Acegi Security] - Acegi Security is a powerful, flexible security solution for enterprise software, with a particular emphasis on applications that use Spring. Using Acegi Security provides your applications with comprehensive authentication, authorization, instance-based access control, channel security and human user detection capabilities.
+* [http://sourceforge.net/projects/jguard jGuard] - jGuard is written in Java. Its goal is to provide a security framework based on JAAS (Java Authentication and Authorization Security). The framework is written for web and standalone applications, to easily provide solutions for access control problems.
+
+== Encryption ==
+* [http://www.bouncycastle.org/ Bouncycastle] - Lightweight Java cryptography APIs
+* [http://www.jasypt.org/ Jasypt] - Jasypt is a java library which allows the developer to add basic encryption capabilities to his/her projects with minimum effort, and without the need of having deep knowledge on how cryptography works.
+
+[[Category:OWASP Java Project]]

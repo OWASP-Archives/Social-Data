@@ -1,0 +1,135 @@
+2.  Access Control Flaws -> 2.4  Remote Admin Access
+
+=== Lesson overview === 
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution ===
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information.
+
+=== Strategy ===
+
+The solution is to prevent <font face="Courier New">'admin=true'</font> from appearing in the query string.
+
+=== Implementation === 
+
+The lesson is mitigated in the ruleset 'rulefile_02_access-control-flaws.conf'.
+
+<pre>
+  # Lesson 2.4: Remote Admin Access; don't allow 'admin=true' in the querystring
+  SecRule &ARGS:admin "!@eq 0" "chain,log,auditlog,deny,\
+    msg:'Admin Function Attack',tag:'ADMIN_FUNCTION', \
+    redirect:/_error_pages_/lesson02-4.html"
+  SecRule ARGS:admin "true" "t:lowercase"
+</pre>
+
+=== Reviewer comments ===
+
+While your suggested ModSecurity rule set certainly works to identify/block if the argument 'admin=true' is ever present, I would recommend some additional logic.  The idea here is that we are assuming that what was intended was that the Admin function should only be accessible by the Admin user; however, the application has insufficient authorization protections.  So, we can update this to correlate the following 3 pieces of data:
+
+* When someone first logs in, we need to associate the authenticated username with the same JSESSIONID that the app does
+** We do this by creating a session collection and then using the base64decode function to extract out the username and save it in the session collection
+* When we see that the parameter admin is set to true, we then need to verify the authenticated username
+** We could inspect the current basic Auth request header however it is not trusted at this point as WebGoat doesn’t evaluate this data as part of any authorization for the URL.
+** Therefore, we need to evaluate the username that we previously saved during the successful auth process.
+* If the username is not admin, then we block.
+
+If all of the above is true then serve the admin interface response otherwise deny it.  Considering that the only time the Basic auth credentials matter is when you are first logging in, that is when we need to check for the correct credentials and associate the username with the JSESSIONID.  A rule set would look something like this:
+
+<pre>
+#
+# Initiate the session and user collections. 
+#
+SecAction "phase:1,t:none,pass,setsid:%{REQUEST_COOKIES.JSESSIONID},setuid:%{session.username}"
+
+#
+# Associate the Basic Auth username submitted when first logging in with the Set-Cookie JSESSIONID
+# We do this with base64decode and then using setvar to save the data in the collections
+# We can then inspect the username data that we saved later in the actual lesson
+# 
+
+SecRule REQUEST_FILENAME "@streq /WebGoat/attack" "chain,phase:3,t:none,pass,log,auditlog"
+
+SecRule RESPONSE_HEADERS:Set-Cookie "JSESSIONID=(\w*)\;" "chain,capture,t:none,setsid:%{tx.1}"
+
+SecRule &REQUEST_HEADERS:Authorization "@eq 1" "chain,t:none"
+
+SecRule REQUEST_HEADERS:Authorization "^Basic ([\w]+=*)$" "chain,capture,t:none"
+
+SecRule TX:1 "^([\w-]+)\:" \
+"t:none,t:base64Decode,t:removeNulls,capture,\
+setvar:session.username=%{tx.1},setuid:%{tx.1}"
+
+#
+# If admin=true is set, deny if the username associated with the JSESSIONID is not “admin”
+#
+
+SecRule ARGS:admin "^true$" "chain,phase:1,t:lowercase,log,auditlog,\
+msg:'Admin Function Attack',tag:'ADMIN_FUNCTION',\
+redirect:/_error_pages_/lesson02-4.html,status:302"
+
+SecRule SESSION:USERNAME "!@streq admin" "t:none"
+</pre>
+
+After I log in with guest/guest and then I attempt to access the URL: 
+<pre>
+http://www.webgoat.net/WebGoat/attack?Screen=233&menu=10&admin=true 
+</pre>
+
+I get redirected and the following ModSecurity audit log is created:
+
+<pre>
+--6119fe10-A--
+
+[23/Jul/2008:16:01:52 --0400] aWlKjX8AAAEAACCjX5QAAAAA 192.168.110.1 10181 192.168.110.140 80
+
+--6119fe10-B--
+
+GET /WebGoat/attack?Screen=233&menu=10&admin=true HTTP/1.1
+Host: www.webgoat.net
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.16) Gecko/20080702 Firefox/2.0.0.16
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Keep-Alive: 300
+Proxy-Connection: keep-alive
+Cookie: JSESSIONID=0D0A6E64B3FC9A361242AE12570F7086
+Authorization: Basic Z3Vlc3Q6Z3Vlc3Q=
+
+--6119fe10-F--
+
+HTTP/1.1 302 Found
+Location: /_error_pages_/lesson02-4.html
+Content-Length: 214
+Content-Type: text/html; charset=iso-8859-1
+
+--6119fe10-H--
+
+Message: Access denied with redirection to /_error_pages_/lesson02-4.html using status 302 (phase 1). \
+Match of "streq admin" against "SESSION:username" required. \
+[file "/var/etc/sites/www.webgoat.net_192.168.110.140_80.conf"] \
+[line "90"] [msg "Admin Function Attack"] [tag "ADMIN_FUNCTION"]
+
+Action: Intercepted (phase 1)
+Stopwatch: 1216843312876173 2289 (- - -)
+Producer: ModSecurity for Apache/2.5.0-breach1 (http://www.modsecurity.org/); Enhanced ruleset/1.6.1.
+Server: ModSecurityProxy/1.6.0 (Unix) mod_ssl/1.6.0 OpenSSL/0.9.8g
+WebApp-Info: "Webgoat III" "0D0A6E64B3FC9A361242AE12570F7086" "guest"
+
+--6119fe10-K--
+
+SecAction "phase:1,log,status:500,t:none,pass,setsid:%{REQUEST_COOKIES.JSESSIONID},\
+setuid:%{session.username}"
+
+SecRule "ARGS:admin" "@rx ^true$" "phase:1,status:302,chain,t:lowercase,log,\
+auditlog,msg:'Admin Function Attack',tag:ADMIN_FUNCTION,\
+redirect:/_error_pages_/lesson02-4.html"
+
+SecRule "SESSION:USERNAME" "!@streq admin" "phase:1,log,deny,status:500,t:none"
+
+SecRule "REQUEST_FILENAME" "@streq /WebGoat/attack" "phase:3,status:500,chain,t:none,pass,log,auditlog"
+
+--6119fe10-Z--
+</pre>

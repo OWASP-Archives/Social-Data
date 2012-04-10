@@ -1,0 +1,123 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+[[Category:FIXME|Can this be combined with the Insufficient Entropy article?]]
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+The lack of entropy available for, or used by, a PRNG can be a stability and security threat.
+
+'''Consequences'''
+
+* Availability: If a pseudo-random number generator is using a limited entropy source which runs out (if the generator fails closed), the program may pause or crash.
+* Authentication: If a PRNG is using a limited entropy source which runs out, and the generator fails open, the generator could produce predictable random numbers. Potentially a weak source of random numbers could weaken the encryption method used for authentication of users. In this case, potentially, a password could be discovered.
+
+'''Exposure period'''
+
+* Design through Implementation: It is important - if one is utilizing randomness for important security - to use the best random numbers available.
+
+'''Platform'''
+
+* Languages: Any
+* Operating platforms: Any
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Medium
+
+'''Likelihood of exploit'''
+
+Medium
+
+When deciding which PRNG to use, look at its sources of entropy. Depending on what your security needs are, you may need to use a random number generator which always uses strong random data - i.e., a random number generator which attempts to be strong but will fail in a weak way or will always provide some middle ground of protection through techniques like re-seeding. Generally something which always provides a predictable amount of strength is preferable and should be used.
+
+
+==Risk Factors==
+
+TBD
+
+
+==Examples==
+
+In C/C++ or Java:
+
+<pre>
+while (1){
+  if (OnConnection()){
+    if (PRNG(...)){
+      //use the random bytes
+    }
+    else {
+      //cancel the program
+  }
+</pre>
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* Implementation: Perform FIPS 140-1 tests on data to catch obvious entropy problems.
+* Implementation: Consider a PRNG which re-seeds itself as needed from a high quality pseudo-random output, like hardware devices. 
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Environmental Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

@@ -1,0 +1,45 @@
+{{Delete}}
+ #REDIRECT [[Path Traversal]]
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+==Description==
+If a product expects a filename as input it is possible that it can construct an absolute path such as "/rootdir/subdir," which is then processed by the operating system to access a file or resource that is outside of a restricted path that was intended by the developer.
+
+This is similar to path traversal but uses only "/" and not ".." to gain access.
+More detailed information can be found on [[Path_Traversal]]
+
+==Risk Factors==
+
+==Examples==
+
+===How does the attack work?===
+:The following URLs maybe are vulnerable to this attack:
+
+ <nowiki>http://testsite.com/get.php?f=list</nowiki>
+ <nowiki>http://testsite.com/get.cgi?f=2</nowiki>
+ <nowiki>http://testsite.com/get.asp?f=test</nowiki>
+
+:A simple way to execute this attack is like this:
+
+ <nowiki>http://testsite.com/get.php?f=/var/www/html/get.php</nowiki>
+ <nowiki>http://testsite.com/get.cgi?f=/var/www/html/admin/get.inc</nowiki>
+ <nowiki>http://testsite.com/get.asp?f=/etc/passwd</nowiki>
+
+:When the web server returns information about errors in a web application, it is much easier for the attacker to guess the correct locations (e.g. path to the file with a source code, which then may be displayed).
+
+==Related [[Threat Agents]]==
+
+==Related [[Attacks]]==
+* [[Path Manipulation]]
+* [[Path Traversal]]
+* [[Resource Injection]]
+
+==Related [[Vulnerabilities]]==
+* [[:Category:Input Validation Vulnerability]]
+
+
+==Related [[Controls]]==
+* [[:Category:Input Validation]]
+
+==References==

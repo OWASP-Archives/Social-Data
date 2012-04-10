@@ -1,0 +1,35 @@
+{{Template:SecureSoftware}}
+
+==Overview==
+
+Purpose:	
+
+* Provide the stakeholder with a way to validate the origin and integrity of the software.
+
+Role:
+
+* Integrator
+
+Frequency:
+
+* Once per release build
+
+
+
+==Obtain code signing credentials ==
+
+A prerequisite for code signing are credentials that establish your identity to a trusted third party. Most PKI (public key infrastructure) vendors (also known as certification authorities, or CAs), offer Software publishing Certificates (i.e., code signing credentials), including Verisign. Process for obtaining credentials differs, depending on the CA.
+
+==Identify signing targets ==
+
+Signatures are generally performed on a unit that contains all parts of an application, such as a single archive file (JAR, WAR, or CAB). Generally, the unit is an installable package. Any other granularity requires multiple signature checks per application install, which is inconvenient for the end user.
+
+==Sign identified targets ==
+
+Running the code signing tools usually will automatically add a signature to the packaging unit, which can then be distributed directly.
+
+
+[[Category:Activity]]
+[[Category:CLASP Activity]]
+[[Category:BP4 Implement secure development practices]]
+[[Category:OWASP_CLASP_Project]]

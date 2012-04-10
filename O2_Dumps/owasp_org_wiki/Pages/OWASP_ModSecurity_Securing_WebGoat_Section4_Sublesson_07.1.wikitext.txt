@@ -1,0 +1,170 @@
+7. Concurrency -> 7.1 Thread Safety Problem
+
+=== Lesson overview ===
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution === 
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information. 
+
+=== Strategy ===
+
+This WebGoat lesson demonstrates a thread safety problem: when 2 users login almost simultaneously, the first user receives the second user's data.
+
+To solve this lesson, at first an attempt to use ModSecurity rules was made, but figuring out how global persistence works and debugging got too time-consuming for an inexperienced ModSec user, so Lua was chosen.
+
+When the first user logs in, a lock is set and the 2nd user is not allowed to log in until the first user's request returns.
+
+=== Implementation === 
+
+For this lesson solution, we will walk through the development process from a standalone Lua script on Windows to the ModSecurity solution on Linux.
+
+Retrieved from the web proxy are the POST body parameters: 
+<pre>
+username=jeff&SUBMIT=Submit
+</pre>
+
+A class and method is used for standalone development and testing that closely resembles the ModSecurity implementation of writing to the debug log file:
+<pre>
+-- BEGIN: CUT HERE WHEN IN MODSEC   
+-- for standalone testing, simulate ModSec functions 
+-- have to replace ':' with '.'; e.g. 'm:log' with 'm.log'
+
+ModSec = {}	
+    
+function ModSec:new (o)
+	o = o or {}
+  setmetatable(o, self)
+  self.__index = self
+  return o
+end
+    
+function ModSec:log (loglevel, msg)
+  print(msg)
+end    
+    
+m = ModSec:new()
+-- END: CUT HERE WHEN IN MODSEC  
+</pre>
+
+So, 'm:log(9, msg2)' in the standalone version, which prints the debug messages to the command line, needs to be edited to 'm.log(9, msg2)' for writing to the ModSecurity debug log.
+
+The project also standardized on debug log messaging:
+<pre>
+  msg0 = "Luascript (request-on_07-1.lua): "
+  msg2 = ""
+</pre>
+
+A debug log message would be assembled like this:
+<pre>
+  msg1 = string.format("Request is already pending; user name is '%s'", username)
+  msg2 = msg0 .. msg1
+  m:log(9, msg2)
+</pre>
+
+This ensures a consistent format and it makes searching through a debug log easier.
+
+The solution is started using a standalone Lua script and simulating an HTTP request which is simple because we only have to run the script to increment the number of users logging in.
+
+The format of the data file 'lesson07-1.data' is:
+<pre>
+Entry{
+  requestpending = 0
+}
+</pre>
+
+The source code to process a request (minus the debug messages) from 'request-on_07-1.lua' is:
+<pre>
+  local username = "jsnow"
+
+  function Entry (b) 
+    local ecount = b.requestpending
+    
+    if ecount >= 1 then
+      msg1 = string.format("Request is already pending; user name is '%s'", username)
+      retval = msg1   
+    end 
+    
+    -- increment count and build string to write back to file
+    ecount = ecount + 1
+    outstr = string.format("Entry{\n  requestpending = %d\n}\n\n", ecount) 
+  end
+	
+  dofile(datafile)
+</pre>
+
+The 'dofile' function only makes one pass because there is only one entry in the data file.
+
+Test the standalone program (in this case on Windows) by running from the command line:
+<pre>
+C:\lua\bin> lua request-on_07-1.lua
+</pre>
+
+Each time the program is run, the number of logged in users should increment by 1 in the data file until the maximum allowed is reached.
+
+If the number of users logging in is greater or equal to 1, the function returns with a non-nil value, which causes a match for the ModSecurity rule. When the count is incremented, the data file with the new count is written back to disk:
+<pre>
+  local fh2 = io.open(datafile, "w+")
+  fh2:write(outstr)
+  fh2:flush()
+  fh2:close()
+</pre>
+
+Once the program works as intended, modify it and integrate it into ModSecurity on Linux.
+
+To convert to ModSecurity, we only have to:
+1. Cut out the log class and method
+2. Change m:log to m.log
+3. replace the hard-coded 'username' with:
+<pre> 
+  local username = m.getvar("ARGS_POST.username", "none")
+</pre>
+4. Remove the 'main()' call at the end of the file.
+
+It's that simple!
+
+The Modsecurity rules are in the file 'rulefile_07-1_thread-safety.conf'.
+
+For the request:
+<pre>
+  SecRule ARGS:menu "!@eq 800" "phase:2,t:none,skip:4"
+  SecRule &ARGS_POST:SUBMIT "@eq 0" "nolog,skip:3"
+  SecRule &ARGS_POST:username "@eq 0" "nolog,skip:2"
+
+  # action is triggered if script returns non-nil value
+  SecRuleScript "/etc/modsecurity/data/request-on_07-1.lua" "phase:2,t:none,log,auditlog, \
+deny,severity:3,msg:'Luascript: Concurrency -> Thread Safety: request is pending', \
+tag:'CONCURRENCY',redirect:/_error_pages_/lesson07-1.html"
+  SecAction "phase:2,allow:request,t:none,log,auditlog, \
+msg:'Luascript: Concurrency -> Thread Safety: request is NOT pending'"
+</pre>
+
+For the HTTP response, the user count is decremented each time so running another Lua script, 'request-off_07-1.lua', simulates that in standalone mode. You can view the source - it's exactly the same as above except it decrements the count instead of incrementing the user count.
+
+Once the Lua program is working in standalone mode, convert it and move it over to ModSecurity.
+
+The ModSecurity rules are:
+<pre>
+  SecRule TX:MENU "!@eq 800" "phase:4,t:none,pass,skip:1"
+
+  # this will decrement the request-in-progress for any request in Lesson 7 
+  #   but will not go less than zero
+  SecRuleScript "/etc/modsecurity/data/request-off_07-1.lua" \ 
+"phase:4,t:none,log,auditlog,allow,msg:'Luascript: Concurrency -> \ 
+Thread Safety: in RESPONSE; decrementing requests by 1'"
+</pre>
+
+The best way to test the Lua scripts when integrating into ModSecurity is to first comment out the response rules, then when the request rules are working, do the opposite; then enable both sets once the request set of rules are working properly.
+
+When enabled and doing the WebGoat sublesson, Dave logs in first:
+
+[[Image:OWASP_ModSecurity_Securing_WebGoat_Thread_safety_SS0.jpg]]
+
+Quickly followed by Jeff, who gets blocked and receives this message:
+
+[[Image:OWASP_ModSecurity_Securing_WebGoat_Thread_safety_SS1.jpg]]
+
+=== Comments ===
+
+* This solution shows the process of developing a standalone Lua script on Windows and then integrating it into ModSecurity on Linux.

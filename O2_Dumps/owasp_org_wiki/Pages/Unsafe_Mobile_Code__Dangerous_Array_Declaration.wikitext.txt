@@ -1,0 +1,64 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Unsafe Mobile Code]]
+
+
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+==Description==
+
+The program violates secure coding principles for mobile code by declaring an array public, final and static.
+
+In most cases an array declared public, final and static is a bug. Because arrays are mutable objects, the final constraint requires that the array object itself be assigned only once, but makes no guarantees about the values of the array elements. Since the array is public, a malicious program can change the values stored in the array. In most situations the array should be made private.
+
+For more details about mobile code and its security concerns, please see [[:Category:Unsafe Mobile Code]].
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+The following Java Applet code mistakenly declares an array public, final and static.
+
+<pre>
+	public final class urlTool extends Applet {
+		public final static URL[] urls;
+		...
+	}
+</pre>
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+__NOTOC__

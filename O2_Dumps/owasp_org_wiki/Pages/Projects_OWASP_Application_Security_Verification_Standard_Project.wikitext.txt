@@ -1,0 +1,61 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Project About</noinclude>
+
+| project_name = OWASP Application Security Verification Standard Project 
+
+| project_home_page = :Category:OWASP_Application_Security_Verification_Standard_Project
+
+| project_description = 
+The primary aim of the OWASP Application Security Verification Standard (ASVS) Project is to normalize the range in the coverage and level of rigour available in the market when it comes to performing Web application security verification using a commercially-workable open standard. The standard provides a basis for testing application technical security controls, as well as any technical security controls in the environment, that are relied on to protect against vulnerabilities such as Cross-Site Scripting (XSS) and SQL injection. This standard can be used to establish a level of confidence in the security of Web applications. The requirements were developed with the following objectives in mind:
+
+* Use as a metric - Provide application developers and application owners with a yardstick with which to assess the degree of trust that can be placed in their Web applications,
+* Use as guidance - Provide guidance to security control developers as to what to build into security controls in order to satisfy application security requirements, and
+* Use during procurement - Provide a basis for specifying application security verification requirements in contracts.
+
+| project_license = [http://creativecommons.org/licenses/by-sa/3.0/ Creative Commons Attribution ShareAlike 3.0]
+| leader_name1 = Sahba Kazerooni
+| leader_email1 = sahba@securitycompass.com
+| leader_username1 = skazerooni
+| leader_name2 = Daniel Cuthbert
+| leader_email2 = daniel.cuthbert@owasp.org
+| leader_username2 = 
+
+| contributor_name1 = Dave Wichers
+| contributor_email1 = dave.wichers@owasp.org
+| contributor_username1 = wichers
+
+| contributor_name2 = Jeff Williams
+| contributor_email2 = jeff.williams@owasp.org
+| contributor_username2 = Jeff_Williams
+
+| contributor_name3 = Mike Boberski
+| contributor_email3 =
+| contributor_username3 = Mike.boberski
+
+| pamphlet_link = http://www.owasp.org/images/4/41/ASVS_One_Page_Handout.pdf
+
+| presentation_link = http://www.owasp.org/images/7/71/About_OWASP_ASVS.ppt
+
+| mailing_list_name = https://lists.owasp.org/mailman/listinfo/owasp-application-security-verification-standard
+
+| project_road_map = 
+
+| links_url1 = http://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Downloads
+| links_name1 = ASVS Downloads
+
+| links_url2 = http://www.owasp.org/index.php/Project_Information:template_Application_Security_Verification_Standard
+| links_name2 = ASVS Former Template 
+
+| links_url3 = 
+| links_name3 = 
+
+| release_1 = ASVS - SoC 2008 Edition 
+
+| release_2 = ASVS - 2009 Edition
+
+| release_3 =
+
+| release_4 =
+
+| project_about_page = Projects/OWASP_Application_Security_Verification_Standard_Project
+
+}}

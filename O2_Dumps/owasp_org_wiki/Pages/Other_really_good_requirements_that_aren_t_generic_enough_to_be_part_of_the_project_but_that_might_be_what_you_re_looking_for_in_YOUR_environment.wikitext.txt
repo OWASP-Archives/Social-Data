@@ -1,0 +1,22 @@
+==Intro==
+==Infrastructure Tips and Requirements==
+===DNS===
+#No internal hostnames or addresses will be published on internet-facing DNS servers
+===Network Equipment===
+#Management interfaces will never be on internet-facing interfaces
+#Egress-blocking will be strictly enforced in DMZs.  Only necessary traffic will be permitted to be initiated outbound.
+==OS and Webserver Tips and Requirements==
+===Windows===
+#All Windows systems will be members of a dedicated DMZ domain/forest
+===Apache===
+====ModSecurity will be running with a basic ruleset====
+==iPhone Tips and Requirements==
+#I have no idea but there's probably SOMETHING
+#Maybe "checks for jailbreak and won't install"
+==Language Tips and Requirements==
+===Java===
+#Will adhere to [http://www.owasp.org/index.php/ESAPI#tab=Java_EE ESAPI guidelines], standards, and code to the maximum extent possible. 
+===.Net===
+#Will adhere to [http://www.owasp.org/index.php/ESAPI#tab=.NET .Net ESAPI] guidelines, standards, and code to the maximum extent possible.
+===PHP===
+#<sarcasm>Shall be discarded in favor of dang near anything else</sarcasm>

@@ -1,0 +1,138 @@
+{{Top_10_2007:TopTemplate|usenext=NextLink|next=-Cross Site Scripting-Finnish|useprev=PrevLink|prev=|usemain=MainLink|main=_Finnish}}
+
+
+
+Our methodology for the Top 10 2007 was simple: take the [http://cwe.mitre.org/documents/vuln-trends.html MITRE Vulnerability Trends for 2006], and distill the Top 10 ''web application security ''issues. The ranked results are as follows:
+
+'''[[Image:Top_10_2007-MitreDataChart.gif|thumb|650px|center|<div align="center">(Click chart to view full-size version)</div>]]'''
+
+'''<center>Figure 2: MITRE data on Top 10 web application vulnerabilities for 2006</center>'''
+
+Although we tried to preserve a one to one mapping of MITRE raw vulnerability data to our section headings, we have deliberately changed some of the later categories to more closely map to root causes. If you are interested in the final 2006 data from MITRE, we have included an Excel worksheet on the OWASP Top 10 web site.
+
+All of the protection recommendations provide solutions for the three most prevalent web application frameworks: Java EE, ASP.NET, and PHP. Other common web application frameworks, such as Ruby on Rails or Perl can easily adapt the recommendations to suit their specific needs.
+
+== Why we have dropped some important issues ==
+
+'''Unvalidated input''' is a major challenge for any development team, and is at the root of many application security problems. In fact, many of the other items in the list recommend validating input as a part of the solution. We still strongly recommend creating a centralized input validation mechanism as a part of your web applications. For more information, read the following data validation articles at OWASP:
+
+*[http://www.owasp.org/index.php/Data_Validation http://www.owasp.org/index.php/Data_Validation]
+*[http://www.owasp.org/index.php/Testing_for_Data_Validation http://www.owasp.org/index.php/Testing_for_Data_Validation]
+'''Buffer overflows, integer overflows and format string issues''' are extremely serious vulnerabilities for programs written in languages such as C or C++. Remediation for these issues is covered by the traditional non-web application security community, such as SANS, CERT, and programming language tool vendors. If your code is written in a language that is likely to suffer buffer overflows, we encourage you to read the buffer overflow content on OWASP:
+
+*[http://www.owasp.org/index.php/Buffer_overflow http://www.owasp.org/index.php/Buffer_overflow] 
+*[http://www.owasp.org/index.php/Testing_for_Buffer_Overflow http://www.owasp.org/index.php/Testing_for_Buffer_Overflow] 
+'''Denial of service''' is a serious attack that can affect any site written in any language. The ranking of DoS by MITRE is insufficient to make the Top 10 this year. If you have concerns about denial of service, you should consult the OWASP site and Testing Guide:
+
+*[http://www.owasp.org/index.php/Category:Denial_of_Service_Attack http://www.owasp.org/index.php/Category:Denial_of_Service_Attack] 
+*[http://www.owasp.org/index.php/Testing_for_Denial_of_Service http://www.owasp.org/index.php/Testing_for_Denial_of_Service] 
+'''Insecure configuration management''' affects all systems to some extent, particularly PHP. However, the ranking by MITRE does not allow us to include this issue this year. When deploying your application, you should consult the latest OWASP Development Guide and the OWASP Testing Guide for detailed information regarding secure configuration management and testing:
+
+*[http://www.owasp.org/index.php/Configuration http://www.owasp.org/index.php/Configuration]
+*[http://www.owasp.org/index.php/Testing_for_infrastructure_configuration_management http://www.owasp.org/index.php/Testing_for_infrastructure_configuration_management]
+
+== Why we have ADDED some important issues ==
+
+'''Cross Site Request Forgery (CSRF) '''is the major new addition to this edition of the OWASP Top 10. Although raw data ranks it at #36, we believe that it is important enough that applications should start protection efforts today, particularly for high value applications and applications which deal with sensitive data. CSRF is more prevalent than its current ranking would indicate, and it can be highly dangerous.
+
+'''Cryptography'''  The insecure uses of cryptography are not the #8 and #9 web application security issues according to the raw MITRE data, but they do represent a root cause of many privacy leaks and compliance issues (particularly with PCI DSS 1.1 compliance).
+
+== Vulnerabilities, not attacks ==
+
+The previous edition of the Top 10 contained a mixture of attacks, vulnerabilities and countermeasures. This time around, we have focused solely on vulnerabilities, although commonly used terminology sometimes combines vulnerabilities and attacks. If organizations use this document to secure their applications, and reduce the risks to their business, it will lead to a direct reduction in the likelihood of:
+
+*'''Phishing attacks''' that can exploit any of these vulnerabilities, particularly XSS, and weak or non-existent authentication or authorization checks ([[Top 10 2007-A1|A1]], [[Top 10 2007-A4|A4]], [[Top 10 2007-A7|A7]], [[Top 10 2007-A10|A10]])
+*'''Privacy violations''' from poor validation, business rule and weak authorization checks ([[Top 10 2007-A2|A2]], [[Top 10 2007-A4|A4]], [[Top 10 2007-A6|A6]], [[Top 10 2007-A7|A7]], [[Top 10 2007-A10|A10]])
+*'''Identity theft''' through poor or non-existent cryptographic controls ([[Top 10 2007-A8|A8]] and [[Top 10 2007-A9|A9]]), remote file include ([[Top 10 2007-A3|A3]]) and authentication, business rule, and authorization checks ([[Top 10 2007-A4|A4]], [[Top 10 2007-A7|A7]], [[Top 10 2007-A10|A10]])
+*'''Systems compromise, data alteration, or data''' destruction attacks via Injections ([[Top 10 2007-A2|A2]]) and remote file include ([[Top 10 2007-A3|A3]]) 
+*'''Financial loss''' through unauthorized transactions and CSRF attacks ([[Top 10 2007-A4|A4]], [[Top 10 2007-A5|A5]], [[Top 10 2007-A7|A7]], [[Top 10 2007-A10|A10]])
+*'''Reputation loss''' through exploitation of any of the above vulnerabilities ([[Top 10 2007-A1|A1]] - [[Top 10 2007-A10|A10]])
+Once an organization moves away from worrying about reactive controls, and moves forward to proactively reducing risks applicable to their business, they will improve compliance with regulatory regimes, reduce operational costs, and hopefully will have far more robust and secure systems as a result. 
+
+== Biases ==
+[[category:FIXME|is the link below (actual attack) correct?]]
+The methodology described above necessarily biases the Top 10 towards discoveries by the security researcher community. This pattern of discovery is similar to the methods of [http://www.zone-h.org/component/option,com_attacks/Itemid,43/ actual attack], particularly as it relates to entry-level ("script kiddie") attackers. Protecting your software against the Top 10 will provide a modicum of protection against the most common forms of attack, but far more importantly, help set a course for improving the security of your software.
+
+== Mapping ==
+
+There have been changes to the headings, even where content maps closely to previous content. We no longer use the WAS XML naming scheme as it has not kept up to date with modern vulnerabilities, attacks, and countermeasures. The table below depicts how this edition maps to the Top 10 2004, and the raw MITRE ranking:
+
+{| border='1' cellpadding='2' 
+!style='background:#FFFF99'|'''<center>OWASP Top 10 2007</center>''' 
+!style='background:#FFFF99'|'''<center>OWASP Top 10 2004</center>'''
+!style='background:#FFFF99'|'''<center>MITRE 2006 Raw Ranking</center>''' 
+|-
+
+|'''[[Top 10 2007-A1|A1 - Cross Site Scripting (XSS)]]''' 
+|'''A4 - Cross Site Scripting (XSS)''' 
+|'''1'''
+|-
+
+|'''[[Top 10 2007-A2|A2 - Injection Flaws]]''' 
+|'''A6 - Injection Flaws''' 
+|'''2'''
+|-
+
+|'''[[Top 10 2007-A3|A3 - Malicious File Execution (NEW)]]''' 
+| 
+|'''3'''
+|-
+
+|'''[[Top 10 2007-A4|A4 - Insecure Direct Object Reference]]''' 
+|'''A2 - Broken Access Control (split in 2007 T10)''' 
+|'''5'''
+|-
+
+|'''[[Top 10 2007-A5|A5 - Cross Site Request Forgery (CSRF) (NEW)]]''' 
+| 
+|'''36'''
+|-
+
+|'''[[Top 10 2007-A6|A6 - Information Leakage and Improper Error Handling]]''' 
+|'''A7 - Improper Error Handling''' 
+|'''6'''
+|-
+
+|'''[[Top 10 2007-A7|A7 - Broken Authentication and Session Management]]''' 
+|'''A3 - Broken Authentication and Session Management ''' 
+|'''14'''
+|-
+
+|'''[[Top 10 2007-A8|A8 - Insecure Cryptographic Storage]]''' 
+|'''A8 - Insecure Storage''' 
+|'''8'''
+|-
+
+|'''[[Top 10 2007-A9|A9 - Insecure Communications (NEW)]]''' 
+|'''Discussed under A10 - Insecure Configuration Management''' 
+|'''8'''
+|-
+
+|'''[[Top 10 2007-A10|A10 - Failure to Restrict URL Access]]''' 
+|'''A2 - Broken Access Control (split in 2007 T10)''' 
+|'''14'''
+|-
+
+|'''&lt;removed in 2007&gt;''' 
+|'''A1 - Unvalidated Input''' 
+|'''7'''
+|-
+
+|'''&lt;removed in 2007&gt;''' 
+|'''A5 - Buffer Overflows''' 
+|'''4, 8, and 10'''
+|-
+
+|'''&lt;removed in 2007&gt;''' 
+|'''A9 - Denial of Service''' 
+|'''17'''
+|-
+
+|'''&lt;removed in 2007&gt;''' 
+|'''A10 - Insecure Configuration Management''' 
+|'''29'''
+|}
+
+
+
+{{Top_10_2007:BottomTemplate|usenext=NextLink|next=-Cross Site Scripting-Finnish|useprev=PrevLink|prev=|usemain=MainLink|main=_Finnish}}

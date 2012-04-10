@@ -1,0 +1,123 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+Serializable classes are effectively open classes since data cannot be hidden in them. 
+
+'''Consequences'''
+
+* Confidentiality: Attacker can write out the class to a byte stream in which they can extract the important data from it. 
+
+'''Exposure period'''
+
+* Implementation: This is a style issue which needs to be adopted throughout the implementation of each class.
+
+'''Platform'''
+
+* Languages: Java, C++
+* Operating platforms: Any
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood of exploit'''
+
+High
+
+Classes which do not explicitly deny serialization can be serialized by any other class which can then in turn use the data stored inside it.
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+<pre>
+class Teacher
+{
+        
+        private String name;
+        private String clas;
+        public Teacher(String name,String clas)
+        {
+               //...//Check the database for the name and address
+                this.SetName() = name;
+                this.Setclas() = clas;
+
+        }
+}
+</pre>
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* Implementation: In Java, explicitly define final writeObject() to prevent serialization. This is the recommended solution. Define the writeObject() function to throw an exception explicitly denying serialization.
+* Implementation: Make sure to prevent serialization of your objects.
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Environmental Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

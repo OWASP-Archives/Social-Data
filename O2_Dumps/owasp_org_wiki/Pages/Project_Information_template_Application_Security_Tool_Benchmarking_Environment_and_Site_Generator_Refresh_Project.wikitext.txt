@@ -1,0 +1,36 @@
+----
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Application Security Tool Benchmarking Environment and Site Generator Refresh Project''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|This project's idea is to split destination web application technology from the three reusable libraries: library of navigational elements, library of vulnerabilities and library of language constructs. Library of navigational elements is required to assess spidering features and library of language constructs is required to assess source code scanners this constructs can be in programming language or preferable in language-independent form of Abstract Syntax Tree. Navigation and vulnerability libraries are independent from technology web application built in. This make is possible to create web applications with similar vulnerabilities in different technologies.
+
+User can create target XML application configuration similar to SiteGenerator's in terms of site structure, navigational elements and vulnerabilities. After that web application can be generated using technology specific generator. Generators can create source code or binary application but not a stub like SiteGenerator. This allows static and dynamic code analysis to be performed on web application and penetration testing too.
+
+This tool and components library should be platform-independent unlike SiteGenerator. And only technology-specific generators may be platform-dependent. Such technology-specific generators can be source code generators or can be binary application template. 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Key Project Information'''
+ | style="width:14%; background:#cccccc" align="center"|Project Leader<br>[[:User:Ddk|'''Dmitry Kozlov''']]
+ | style="width:16%; background:#cccccc" align="center"|Project Contributors<br>(if any)
+ | style="width:10%; background:#cccccc" align="center"|Mailing list<br>[https://lists.owasp.org/mailman/listinfo/owasp-appcec-tool-benchmarking-project '''Subscribe here''']<br>[mailto:owasp-appcec-tool-benchmarking-project@lists.owasp.org '''Use here''']
+ | style="width:16%; background:#cccccc" align="center"|License<br>[http://www.gnu.org/licenses/old-licenses/gpl-2.0.html '''GNU General Public License v2''']
+ | style="width:14%; background:#cccccc" align="center"|Project Type<br>[https://www.owasp.org/index.php/Category:OWASP_Project#tab=Alpha_Status_Projects '''Tool''']
+ | style="width:15%; background:#cccccc" align="center"|Sponsors<br>[[OWASP Summer of Code 2008|'''OWASP SoC 08''']] 
+ |}
+
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|
+'''[[:Category:OWASP_Project_Assessment#Alpha_Quality_Tool_Criteria|Alpha Quality]]'''<br>[[:OWASP Application Security Tool Benchmarking Environment and Site Generator Refresh Project - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="center"|
+[https://www.owasp.org/images/c/c4/Site_generator.pptx PowerPoint Presentation]<br>http://code.google.com/p/osg2/
+ | style="width:29%; background:#cccccc" align="center"|
+[[SpoC 007 - OWASP Site Generator|OWASP Site Generator]]
+ |}
+----

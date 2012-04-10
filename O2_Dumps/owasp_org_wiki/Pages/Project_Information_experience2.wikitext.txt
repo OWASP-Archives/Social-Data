@@ -1,0 +1,35 @@
+==== Project Information ====
+----
+{| style="width:100%" border="0" align="center"
+ | style="width:15%; background:#7B8ABD" align="center"|'''Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Live CD Project''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''[[Image:OWASP Live CD.JPG|75px|center]]''' 
+ | colspan="6" style="width:85%; background:#cccccc" align="left"|
+The OWASP Live CD is a project that collects some of the best open source security projects in a single environment.  Web developers, testers and security professionals can boot from this Live CD and have access to a full security testing suite. This allows its users to test for various security issues in web applications and web sites. The OWASP Live CD also contains documentation and an interactive learning environment ([[:Category:OWASP_WebGoat_Project|Web Goat]]) to enhance users web application security knowledge.  This presentation will cover the current state of the OWASP Live CD as well as the plans for future developments.  The OWASP Live CD is free for commercial or non­commercial use. 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Key Information'''
+ | style="width:14%; background:#cccccc" align="center"|Project Leader<br>[[User:Mtesauro|'''Matt Tesauro''']]
+ | style="width:16%; background:#cccccc" align="center"|Project Contributors<br>(if applicable)
+ | style="width:10%; background:#cccccc" align="center"|Mailing List<br>[https://lists.owasp.org/mailman/listinfo/owasp-live-cd-2008-project '''Subscribe here''']<br>[mailto:Owasp-Live-CD-2008-Project(at)lists.owasp.org '''Use here''']
+ | style="width:16%; background:#cccccc" align="center"|License<br>[http://www.gnu.org/copyleft/fdl.html '''GNU Free Documentation License 1.2''']
+ | style="width:14%; background:#cccccc" align="center"|Project Type<br>[[:Category:OWASP_Project#Release_Quality_Projects|'''Tool''']]
+ | style="width:15%; background:#cccccc" align="center"|Sponsors<br>[[OWASP Summer of Code 2008|'''OWASP SoC 08''']]
+ |}
+
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|
+'''[[:Category:OWASP_Project_Assessment#Release_Quality_Tool_Criteria|Release Quality]]'''<br>[[:OWASP Live CD 2008 Project - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="center"|
+'''[http://mtesauro.com/livecd/index.php?title=Main_Page#Downloads Download Site]'''<br />
+''(more links below)''
+| style="width:29%; background:#cccccc" align="center"|
+[[:Category:OWASP_Live_CD_2007_Project|OWASP Live CD 2007 Project - A]]<br>[[SpoC 007 - OWASP LiveCD Project|OWASP Live CD 2007 Project - B]]
+ |}
+----
+==== Fill in (if needed) ====
+<headertabs/>

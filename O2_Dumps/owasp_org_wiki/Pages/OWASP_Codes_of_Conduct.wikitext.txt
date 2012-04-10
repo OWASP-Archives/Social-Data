@@ -1,0 +1,189 @@
+= Main  =
+===Project's Purpose ===
+
+OWASP needs to take advantage of every opportunity to affect software development everywhere to achieve our mission "to make application security visible so that people and organizations can make informed decisions about application security risks"
+
+At the [[Summit 2011]] in Portugal, the idea was created to try to influence educational institutions, government bodies, standards groups, and trade organizations. We set out to define a set of minimal requirements for these organizations specifying what we believe to be the most effective ways to support our mission. We call these requirements a “code of conduct” to imply that these are normative standards, they represent a minimum baseline, and that they are not difficult to achieve.
+
+This project develops and maintains OWASP Codes of Conduct, and began with those initially created at the following working sessions at the 2011 OWASP Summit:
+* [[:Summit 2011 Working Sessions/Session255|Defining a Minimal AppSec Program for Universities, Governments, and Standards Bodies]]
+* [[:Summit 2011 Working Sessions/Session039|Certification]] 
+* [[:Summit 2011 Working Sessions/Session012|Outreach to Educational Institutions]]
+
+===The Codes of Conduct===
+
+The current versions (all DRAFT) are listed below.  See each tab for more project details or read the summary pamphlet (English version [https://www.owasp.org/index.php/File:OWASP_Codes-of-Conduct_Pamphlet.pdf PDF] and [https://www.owasp.org/index.php/File:OWASP_Codes-of-Conduct_Pamphlet.docx MS Word]) and [http://www.appsecusa.org/p/codesofconduct.pdf presentation].  The Codes of Conduct are all licensed with a [http://creativecommons.org/licenses/by-sa/3.0/ Creative Commons Attribution ShareAlike 3.0 license].
+
+{| width="100%" cellspacing="20" cellpadding="10"
+|- valign="top"
+| width="33%" style="background:#e6f5e9" |
+== OWASP Green Book ==
+
+''The OWASP Application Security Code of Conduct for Government Bodies''
+
+'''Download the current release'''
+
+v1.11:
+
+* [[Media:OWASP_Green_Book-Governmental_Bodies.pdf|English version PDF]]
+* [[Media:OWASP_Green_Book-Governmental_Bodies.docx|English version MS Word]]
+
+'''Translations'''
+
+None are currently available.
+
+
+| width="33%" style="background:#e6eef6" |
+== OWASP Blue Book ==
+
+''The OWASP Application Security Code of Conduct for Educational Institutions''
+
+'''Download the current release'''
+
+v1.11:
+
+* [[Media:OWASP_Blue_Book-Educational_Institutions.pdf|English version PDF]]
+* [[Media:OWASP_Blue_Book-Educational_Institutions.docx|English version MS Word]]
+
+'''Translations'''
+
+None are currently available.
+
+
+| width="33%" style="background:#fafcdb" |
+
+== OWASP Yellow Book ==
+
+''The OWASP Application Security Code of Conduct for Standards Groups''
+
+'''Download the current release'''
+
+v1.11:
+
+* [[Media:OWASP_Yellow_Book-Standards_Groups.pdf|English version PDF]]
+* [[Media:OWASP_Yellow_Book-Standards_Groups.docx|English version MS Word]]
+
+'''Translations'''
+
+None are currently available.
+
+
+|- valign="top"
+| style="background:#ecdcfd" |
+
+== OWASP Purple Book ==
+
+''The OWASP Application Security Code of Conduct for Trade Organizations''
+
+'''Download the current release'''
+
+v1.11:
+
+* [[Media:OWASP_Purple_Book-Trade_Organizations.pdf|English version PDF]]
+* [[Media:OWASP_Purple_Book-Trade_Organizations.docx|English version MS Word]]
+
+'''Translations'''
+
+None are currently available.
+
+
+| style="background:#f1d8d7" |
+
+== OWASP Red Book ==
+
+''The OWASP Application Security Code of Conduct for Certifying Bodies''
+
+'''Download the current release'''
+
+v1.11:
+
+* [[Media:OWASP_Red_Book-Certifying_Bodies.pdf|English version PDF]]
+* [[Media:OWASP_Red_Book-Certifying_Bodies.docx|English version MS Word]]
+
+'''Translations'''
+
+None are currently available.
+
+| style="background:#cccccc" |
+
+== OWASP Gray Book ==
+
+''The OWASP Application Security Code of Conduct for Development Organizations''
+
+'''Download the current release'''
+
+v1.11:
+
+* [[Media:OWASP_Gray_Book-Development_Organizations.pdf‎|English version PDF]]
+* [[Media:OWASP_Gray_Book-Development_Organizations.docx|English version MS Word]]
+
+'''Translations'''
+
+None are currently available.
+
+
+
+|}
+
+=== <div id="missing">What's missing?</div> ===
+
+What other types of organization might be able to support OWASP's mission?  What are the most important things they should do?
+
+Join in the [https://lists.owasp.org/mailman/listinfo/owasp-codes-of-conduct OWASP Codes of Conduct Mailing List] with your suggestions and feedback.
+
+=== <div id="compliance">Statements of Compliance</div> ===
+
+The implications and format of any statements of compliance is currently being discussed on the Codes of Conduct Project mailing list.  The [https://lists.owasp.org/pipermail/owasp-codes-of-conduct/2011-September/000012.html thread starts here].
+
+===Project Details===
+
+Click on the other tabs to see project information on each of the codes, including contributors, releases, assessment status and prior versions.  All the Codes are discussed on a single shared [https://lists.owasp.org/mailman/listinfo/owasp-codes-of-conduct mailing list].  It is free and open.
+
+
+===Lost?  Not What You Were Looking For?===
+
+These Codes relate to OWASP's aspirations for other types of organization.  If you were looking for OWASP internal strategic and operational policies and processes, you might want to look at some of the following.  They are ''not'' part of the OWASP Codes of Conduct Project.
+
+* [[:About OWASP|OWASP Core Values, Core Purpose, Code of Ethics and Principles]]
+** [[:OWASP brand usage rules|Brand usage]]
+** [[:File:2012ByLawsFINAL.pdf|By-laws]]
+** [[:OWASP:General disclaimer|General disclaimer]]
+* Projects
+** Projects Handbook (coming soon)
+* Local Chapters
+** [[:Category:Chapter Handbook|Chapter Handbook]]
+** [[:Speaker Agreement|Speaker Agreement]]
+** [[:Chapter Finance Policy and Procedure|Finance]]
+* Conferences
+** [[:Speaker Agreement|Speaker Agreement]]
+** [[:File:Training Instructor Agreement.doc|Training Instructor Agreement]]
+** [[:Global Conferences Committee/Policies|All Global Conferences Committee Policies]]
+* [[:OWASP:Privacy policy|Privacy]]
+
+
+=  Government Bodies =
+{{:Projects/The OWASP "Green Book" | Project About}}
+
+= Educational Institutions =
+{{:Projects/The OWASP "Blue Book" | Project About}} 
+
+= Standards Groups =
+{{:Projects/The OWASP "Yellow Book" | Project About}} 
+
+=Trade Organizations =
+{{:Projects/The OWASP "Purple Book" | Project About}} 
+
+= Certifying Bodies =
+{{:Projects/The OWASP "Red Book" | Project About}} 
+
+= Development Organizations =
+{{:Projects/The OWASP "Gray Book" | Project About}} 
+
+<!---==== Project About  ====
+
+{{:Projects/OWASP Codes of Conduct | Project About}}----> 
+
+
+__NOTOC__ <headertabs /> 
+
+[[Category:OWASP_Project|Codes of Conduct]] [[Category:OWASP_Document]] [[Category:OWASP_Download]] [[Category:OWASP_Alpha_Quality_Document]]

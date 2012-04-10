@@ -1,0 +1,146 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+Data which is untrusted cannot be trusted to be well formed.
+
+'''Consequences'''
+
+* Availability: If a function is making an assumption on when to terminate, based on a sentry in a string, it could easily never terminate.
+* Authorization: Potentially code could make assumptions that information in the deserialized object about the data is valid. Functions which make this dangerous assumption could be exploited.
+
+'''Exposure period'''
+
+* Requirements specification: A deserialization library could be used which provides a cryptographic framework to seal serialized data. 
+* Implementation: Not using the safe deserialization/serializing data features of a language can create data integrity problems. 
+* Implementation: Not using the protection accessor functions of an object can cause data integrity problems 
+* Implementation: Not protecting your objects from default overloaded functions - which may provide for raw output streams of objects - may cause data confidentiality problems. 
+* Implementation: Not making fields transient can often may cause data confidentiality problems.
+
+'''Platform'''
+
+* Languages: C, C++, Java
+* Operating platforms: Any
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Medium
+
+'''Likelihood of exploit'''
+
+Medium
+
+It is often convenient to serialize objects for convenient communication or to save them for later use. However, deserialized data or code can often be modified without using the provided accessor functions if it does not use cryptography to protect itself. Furthermore, any cryptography would still be client-side security - which is of course a dangerous security assumption.
+
+An attempt to serialize and then deserialize a class containing transient fields will result in NULLs where the non-transient data should be. This is an excellent way to prevent time, environment-based, or sensitive variables from being carried over and used improperly.
+
+
+==Risk Factors==
+
+TBD
+
+
+==Examples==
+
+In Java:
+
+<pre>
+  try {
+    File file = new File("object.obj");
+    ObjectInputStream in = new ObjectInputStream(new 
+        FileInputStream(file));
+    javax.swing.JButton button = (javax.swing.JButton) 
+        in.readObject();
+    in.close();
+    byte[] bytes = getBytesFromFile(file);
+    in = new ObjectInputStream(new ByteArrayInputStream(bytes));
+    button = (javax.swing.JButton) in.readObject();
+    in.close();
+  }
+</pre>
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+* Requirements specification: A deserialization library could be used which provides a cryptographic framework to seal serialized data. 
+* Implementation: Use the signing features of a language to assure that deserialized data has not been tainted. 
+* Implementation: When deserializing data, populate a new object rather than just deserializing. The result is that the data flows through safe input validation and that the functions are safe. 
+* Implementation: Explicitly define final readObject() to prevent deserialization. 
+
+An example of this is:
+
+<pre>
+private final void readObject(ObjectInputStream in)
+throws java.io.IOException {
+     throw new java.io.IOException("Cannot be deserialized");
+}
+</pre>
+
+* Implementation: Make fields transient to protect them from deserialization.
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Range and Type Error Vulnerability]]
+[[Category:OWASP_CLASP_Project]]
+[[Category:Code Snippet]]
+[[Category:Java]]

@@ -1,0 +1,45 @@
+{| style="width:90%" border="0" cellpadding="0" align="center"
+ | valign="middle" bgcolor="#white" align="center" colspan="5" | 
+ |-
+ | valign="middle" height="50" bgcolor="#CCCCEE" align="center" colspan="6" |<font size="4"> '''{{#if: {{{project_url|}}}|  [{{{project_url}}} {{#if: {{{project_name|}}} | {{{project_name}}} | }}] |  N/A }}'''
+ |-
+ |- valign="bottom"
+ | width="40" valign="middle" bgcolor="#CCCCEE" align="center" rowspan="3" colspan="1" | First Reviewer
+ | width="40" valign="middle" height="30" bgcolor="#CCCCEE" align="center" | Name
+ | width="100" valign="middle" height="30" bgcolor="#CCCCEE" align="center" | {{Template:Contact | name= {{#if: {{{project_reviewer_name1|}}} | {{{project_reviewer_name1}}} | }} | email = {{#if: {{{project_reviewer_email1|}}} | {{{project_reviewer_email1}}} | }} | username = {{#if: {{{project_reviewer_wiki_username1|}}} | {{{project_reviewer_wiki_username1}}} | }} }}
+ | width="100" valign="middle" bgcolor="#CCCCEE" align="center" rowspan="3" colspan="1" | Test
+ |- valign="bottom"
+ | width="100" valign="middle" height="30" bgcolor="#CCCCEE" align="center" | Assessment Starting Date
+ | width="100" valign="middle" height="30" bgcolor="#CCCCEE" align="center" | 25 Nov 09
+ |- valign="bottom"
+ | width="100" valign="middle" height="30" bgcolor="#CCCCEE" align="center" | Assessment Closing Date
+ | width="100" valign="middle" height="30" bgcolor="#CCCCEE" align="center" | 25 Dec 09
+ |-
+ |- valign="bottom"
+ | width="40" valign="middle" bgcolor="#CCCCEE" align="center" rowspan="4" colspan="1" | Second Reviewer
+ | width="40" valign="middle" height="30" bgcolor="#CCCCEE" align="center" | Name
+ | width="200" valign="middle" height="30" bgcolor="#CCCCEE" align="center" | {{Template:Contact | name= {{#if: {{{project_reviewer_name2|}}} | {{{project_reviewer_name2}}} | }} | email = {{#if: {{{project_reviewer_email2|}}} | {{{project_reviewer_email2}}} | }} | username = {{#if: {{{project_reviewer_wiki_username2|}}} | {{{project_reviewer_wiki_username2}}} | }} }}
+ |- valign="bottom"
+ | width="40" valign="middle" height="30" bgcolor="#CCCCEE" align="center" | Assessment Starting Date
+ | width="200" valign="middle" height="30" bgcolor="#CCCCEE" align="center" | 25 Nov 09
+ |- valign="bottom"
+ | width="40" valign="middle" height="30" bgcolor="#CCCCEE" align="center" | Assessment Closing Date
+ | width="200" valign="middle" height="30" bgcolor="#CCCCEE" align="center" | 25 Dec 09
+ |- valign="bottom"
+ | width="40" valign="middle" height="30" bgcolor="#CCCCEE" align="center" | Assessment link
+ | width="200" valign="middle" height="30" bgcolor="#CCCCEE" align="center" | Click to see
+ |-
+ |- valign="bottom"
+ | width="40" valign="middle" bgcolor="#EEEEEE" align="center" rowspan="4" colspan="1" | GPC/Board Reviewer
+ | width="40" valign="middle" height="30" bgcolor="#EEEEEE" align="center" | Name
+ | width="200" valign="middle" height="30" bgcolor="#EEEEEE" align="center" | {{Template:Contact | name= {{#if: {{{project_reviewer_name3|}}} | {{{project_reviewer_name3}}} | }} | email = {{#if: {{{project_reviewer_email3|}}} | {{{project_reviewer_email3}}} | }} | username = {{#if: {{{project_reviewer_wiki_username3|}}} | {{{project_reviewer_wiki_username3}}} | }} }}
+ |- valign="bottom"
+ | width="40" valign="middle" height="30" bgcolor="#EEEEEE" align="center" | Assessment Starting Date
+ | width="200" valign="middle" height="30" bgcolor="#EEEEEE" align="center" | 25 Nov 09
+ |- valign="bottom"
+ | width="40" valign="middle" height="30" bgcolor="#EEEEEE" align="center" | Assessment Closing Date
+ | width="200" valign="middle" height="30" bgcolor="#EEEEEE" align="center" | 25 Dec 09
+ |- valign="bottom"
+ | width="40" valign="middle" height="30" bgcolor="#EEEEEE" align="center" | Assessment link
+ | width="200" valign="middle" height="30" bgcolor="#EEEEEE" align="center" | Click to see
+ |}

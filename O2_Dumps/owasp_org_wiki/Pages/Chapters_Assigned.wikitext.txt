@@ -1,0 +1,60 @@
+==Methodology==
+
+#Code Review Introduction
+#Steps and Roles
+#Code Review Processes
+#Transaction Analysis - E Keary
+
+== Design review ==
+#Designing for security 
+## - M Roxberry(.NET)
+## - Paolo Perego (Java)
+## - Andrew van der Stock (PHP) 
+## - Paolo Perego (C)
+## - C++
+## - Andrew van der Stock (MySQL)
+## - Mallory (AJAX)
+
+==Examples by Vulnerability==
+#Reviewing Code for Buffer Overruns and Overflows - 100%
+#Reviewing Code for OS Injection - 100%
+#Reviewing Code for SQL Injection - 100%
+#Reviewing Code for Data Validation - - 100%
+#Reviewing code for XSS issues - 100%
+#Reviewing Code for Error Handling - 100%
+#Reviewing Code for Logging Issues - 100%
+#Reviewing The Secure Code Environment - 100%
+#Authorization (Currently linked to "The Development Guide")
+#Authentication (Code review)
+#Session Integrity
+#Cross Site Request Forgery
+#Cryptography (Currently linked to "The Development Guide")
+#Dangerous HTTP Methods ( Secure deployment)
+#Race Conditions
+
+
+== Language specific best practice ==
+
+===.NET===
+
+===PHP===
+
+Assigned to Andrew van der Stock
+
+===MySQL===
+
+Assigned to Andrew van der Stock
+
+===C/C++===
+
+# Memory management (Paolo Perego)
+# String management (Paolo Perego)
+# Secure access to file system items (Paolo Perego)
+
+==Automating Code Reviews==
+#Preface
+#Reasons for using automated tools
+#Education and cultural change
+#Tool Deployment Model
+#Code Auditor Workbench Tool (100%)
+==References==

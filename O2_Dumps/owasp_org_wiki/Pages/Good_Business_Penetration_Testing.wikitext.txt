@@ -1,0 +1,19 @@
+'''Business Penetration Testing, KK Mookney (OWASP Mumbai)'''
+
+Penetration testing is an extensively discussed topic, and there are numerous books, articles, and online resources that cover the tools and techniques that are available for carrying out a comprehensive penetration testing exercise.
+
+However, during the large number of penetration testing exercises carried out by professionals, a very important aspect that is often overlooked is the business side of penetration testing. That is to say, understanding the risk that the business faces, and then building security test cases accordingly. The focus of modern-day penetration testing exercises should be on corporate espionage, financial fraud, and realistic security compromise scenarios. 
+
+When the business perspective is adopted, it also becomes evident that physical security testing and social engineering are integral parts of the penetration testing engagement.
+
+For example, during the penetration test of a local search engine, the business risk is not so much from a cross-site scripting, as it would be from someone running repeated search requests, downloading the HTML results, and then parsing the results to recreate the database – essentially an online data mining attack.
+
+Similarly, while penetration testing an ERP system, the emphasis would not be so much on unpatched vulnerabilities, as it would be on executing attacks that would simulate a financial fraud. For instance, can we violate the existing access controls to not only accept vendor quotations, but also to approve a selected vendor, under the guise of another user? So privilege escalation attacks would be of far greater consequence than regular SQL injection and cross-site scripting attacks.
+
+Another very illustrative example is once while doing a penetration test, we hacked into the Oracle database but with read-only access. We were able to view the payroll information of the entire staff. However, on revealing this to the client we were told that it was a public sector organization, and all the employees were at specific grades. And if one knows the grade of an employee, one would also know their salary. So not understanding the business perspective, resulted in a finding appearing much more significant to us than it was to the client.
+
+Again, when a client is required to comply with regulations such as HIPAA and PCI DSS, the encryption of data over the network becomes a mandatory requirement, whereas for other web sites, it may not be absolutely necessary for them to accept login credentials over an SSL-enabled page.
+
+Thus, understanding the actual business of the client, and listing out the high-level risks that the client would face, would help conduct a more valuable penetration test, than simply applying standard pen-testing methodologies to the client’s infrastructure.
+
+This presentation/article discusses the process of penetration testing from the business risk perspective, and includes numerous examples of such penetration tests conducted and how the results help the client address these risks. It also discusses how various legal and regulation requirements drive penetration testing and require refocusing the tests to determine compliance. The objective of the presentation is to help take penetration testing to the next level and increase its business relevance.

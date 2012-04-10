@@ -1,0 +1,88 @@
+== OWASP Training Courses ==
+
+
+{| style="width:80%" border="0" align="center"
+ ! align="center" style="background:#4058A0; color:white" | T1. Foundations of Web Application Security - One Day Course - October 16th, 2006
+ |-
+ | style="background:#F2F2F2" | This powerful one day course focuses on the most common web application security problems, including the OWASP Top Ten. The course will introduce and demonstrate hacking techniques, illustrating how application vulnerabilities can be exploited so students really understand how to avoid introducing such vulnerabilities into their code. [[AppSec_Seattle_2006/Training | Read more here!]]
+ |-
+ ! align="center" style="background:#4058A0; color:white" | T2. WebServices and XML Security - One Day Course - October 16th, 2006
+ |-
+ | style="background:#F2F2F2" | Many enterprises are currently developing new Web Services and/or adding and acquiring Web Services functionality into existing applications -- now is the time to build security into the system! [[AppSec_Seattle_2006/Training | Read more here!]]
+ |-
+ ! align="center" style="background:#4058A0; color:white" | T3. Advanced ASP.NET Exploits and Countermeasures - One Day Course - October 16th, 2006
+ |-
+ | style="background:#F2F2F2" | In this one day course you will push ASP.NET to the limit and will be shown how ASP.NET applications and environments can be exploited by skilled attackers. Advanced exploitation techniques will be presented together with low-level technical analysis of the .NET Framework. You will also learn advanced defense techniques such as: Building an ASP.NET Security Protection layer (also called a Web Application Firewall) and Real time patching of vulnerabilities in the target application, the .NET Framework or the CLR. [[AppSec_Seattle_2006/Training | Read more here!]]
+|}
+
+== OWASP Seattle 2006 Conference Schedule ==
+
+{| style="width:80%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white" | Day 1 - October 17th, 2006
+ |-
+ | style="width:10%; background:#7B8ABD" | || style="width:40%; background:#BC857A" | Track 1: Bay Auditorium
+ | style="width:40%; background:#BCA57A" | Track 2: Harbor Dining Room
+ |-
+ | style="width:10%; background:#7B8ABD" | 08:00-09:00 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Registration and Coffee
+ |-
+ | style="width:10%; background:#7B8ABD" | 09:00-09:10 || colspan="2" style="width:80%; background:#F2F2F2" align="left" | Welcome to AppSec 2006 Seattle: Dave Wichers, OWASP Conferences Chair
+ |-
+ | style="width:10%; background:#7B8ABD" | 09:10-10:10 || colspan="2" style="width:80%; background:#F2F2F2" align="left" | Keynote: Security in the Payment Card Industry, Hap Huynh, Information Security Specialist, VISA USA ([http://www.owasp.org/index.php/Image:OWASPAppSec2006Seattle_SecurityPCI.pdf pdf])
+ |-
+ | style="width:10%; background:#7B8ABD" | 10:10-11:10 || colspan="2" style="width:80%; background:#F2F2F2" align="left" | OWASP 2.0 - Enabling organizations to develop, maintain, and acquire applications they can trust, Dinis Cruz, OWASP .Net Project Lead ([http://www.owasp.org/index.php/Image:OWASPAppSec2006Seattle_OWASP2.0-KeyNote.ppt ppt])
+ |-
+ | style="width:10%; background:#7B8ABD" | 11:10-11:30 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Break
+ |-
+ | style="width:10%; background:#7B8ABD" | 11:30-12:30 || style="width:40%; background:#BC857A" align="left" | Why AJAX Applications are far more likely to be insecure, and What to do about it, Dave Wichers, COO Aspect Security ([http://www.owasp.org/index.php/Image:OWASPAppSec2006Seattle_Why_AJAX_Applications_More_Likely_Insecure.ppt ppt])
+ | style="width:40%; background:#BCA57A" align="left" | OWASP Application Security Metrics ([http://www.owasp.org/index.php/Image:OWASPAppSec2006Seattle_Security_Metrics.ppt ppt])<br/>and Assessment Standards Projects ([http://www.owasp.org/index.php/Image:OWASPAppSec2006Seattle_OWASP_Assessment_Standards_Project.ppt ppt])
+Bob Austin, OWASP Application Security Metrics Project Lead President, KoreLogic Security and Cliff Barlow, OWASP Application Security Assessment Standards Project Lead Director Security Services, KoreLogic Security 
+ |-
+ | style="width:10%; background:#7B8ABD" | 12:30-13:45 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Lunch
+ |-
+ | style="width:10%; background:#7B8ABD" | 13:45-15:00 || style="width:40%; background:#BC857A" align="left" | Using Sprajax to Test AJAX Security, Dan Cornell, Principal, Denim Group ([http://www.owasp.org/index.php/Image:OWASPAppSec2006Seattle_UsingSprajaxToTestAJAXSecurity.ppt ppt])
+ | style="width:40%; background:#BCA57A" align="left" | Home-grown Crypto (aka Taking a Knife to a Gun Fight), Hank Leininger, Senior Security Consultant, KoreLogic Security ([http://www.owasp.org/index.php/Image:OWASPAppSec2006Seattle_Homegrown_Crypto.ppt ppt])
+ |-
+ | style="width:10%; background:#7B8ABD" | 15:00-15:20 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Break
+ |-
+ | style="width:10%; background:#7B8ABD" | 15:20-16:30 || style="width:40%; background:#BC857A" align="left" | Agile and Secure: Can We Be Both?, Dan Cornell, Principal, Denim Group ([http://www.owasp.org/index.php/Image:OWASPAppSec2006Seattle_AgileAndSecure.ppt ppt])
+ | style="width:40%; background:#BCA57A" align="left" | The OWASP Code review, Testing guide & Live CD, an introduction., Eoin Keary, Sr Security Consultant, Rits (Ireland), OWASP Testing and Code Review Lead ([http://www.owasp.org/index.php/Image:OWASPAppSec2006Seattle_OWASPTesting-CodeReviewGuides-LiveCD.ppt ppt])
+ |-
+ | style="width:10%; background:#7B8ABD" | 16:30-16:50 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Break
+ |-
+ | style="width:10%; background:#7B8ABD" | 16:50-18:00 || colspan="2" style="width:40%; background:#F2F2F2" align="left" | Panel: "The role of frameworks (e.g., .Net, Java, Enterprise Library, Struts, JaCorb) in 'forcing' developers to create and deploy 'secure' applications"
+Moderator: Dave Wichers, COO, Aspect Security and OWASP Conferences Chair<br/>
+Panelists: Dinis Cruz, OWASP .Net Project Lead; Charlie Kaufman, Microsoft Security Architect for the CLR; Brad Hill, iSEC Partners; Walter Pearce, IOActive; Dan Cornell, Principal, Denim Group
+ |-
+ | style="width:10%; background:#7B8ABD" | 19:00-21:00 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Social Gathering: Dinner and Drinks at Anthony’s Pier 66
+ |-
+ ! colspan="3" align="center" style="background:#4058A0; color:white" | Day 2 - October 18th, 2006
+ |-
+ | style="width:10%; background:#7B8ABD" | || style="width:40%; background:#BC857A" | Track 1: Bay Auditorium
+ | style="width:40%; background:#BCA57A" | Track 2: Harbor Dining Room
+ |-
+ | style="width:10%; background:#7B8ABD" | 08:00-09:00 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Coffee
+ |-
+ | style="width:10%; background:#7B8ABD" | 09:00-10:20 || colspan="2" style="width:80%; background:#F2F2F2" align="left" | Keynote: The Benefits of the SDL initiative to Microsoft and its Customers – Michael Howard, Senior Security Program Manager, Microsoft and coauthor of Writing Secure Code, 2nd Ed., 19 Deadly Sins of Software Security, and the recently released Microsoft Security Development Lifecycle (SDL). ([http://www.owasp.org/index.php/Image:OWASPAppSec2006Seattle_SecurityEngineeringInVista.ppt ppt])
+ |-
+ | style="width:10%; background:#7B8ABD" | 10:20-11:10 || colspan="2" style="width:80%; background:#F2F2F2" align="left" | OWASP 2.0 (continued) - Enabling organizations to develop, maintain, and acquire applications they can trust, Dinis Cruz, OWASP .Net Project Lead
+ |-
+ | style="width:10%; background:#7B8ABD" | 11:10-11:30 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Break
+ |-
+ | style="width:10%; background:#7B8ABD" | 11:30-12:30 || style="width:40%; background:#BC857A" align="left" | Buffer Overflows on the .Net Framework, Dinis Cruz, OWASP .Net Project Lead
+ | style="width:40%; background:#BCA57A" align="left" | From Startup to IPO: Managing Security Risk in a Rapidly Growing Enterprise, Brian Chess, Chief Scientist, Fortify ([http://www.owasp.org/index.php/Image:OWASPAppSec2006Seattle_FromStartuptoIPO-Managing_Security_Risk.ppt ppt])
+ |-
+ | style="width:10%; background:#7B8ABD" | 12:30-13:45 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Lunch
+ |-
+ | style="width:10%; background:#7B8ABD" | 13:45-15:10 || style="width:40%; background:#BC857A" align="left" | Advanced Web Services Security and Hacking, Justin Derry, Application Security Practice Leader, b-sec Consulting Pty Ltd (Australia) ([http://www.owasp.org/index.php/Image:OWASPAppSec2006Seattle_Web_Services_Security.ppt ppt])
+ | style="width:40%; background:#BCA57A" align="left" | "Web Application Incident Response & Forensics: A Whole New Ball Game" ([http://www.owasp.org/index.php/Image:OWASPAppSec2006Seattle_WebAppForensics.ppt ppt]) and "OWASP Java Project Status", Chuck Willis, Sr. Consultant, Mandiant ([http://www.owasp.org/index.php/Image:OWASPAppSec2006Seattle_OWASP-Java-Project-Status.ppt ppt])
+ |-
+ | style="width:10%; background:#7B8ABD" | 15:10-15:30 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Break
+ |-
+ | style="width:10%; background:#7B8ABD" | 15:30-16:30 || colspan="2" style="width:40%; background:#F2F2F2" align="left" | Panel: “What is in your application security toolbox?” 
+Moderator: Gunnar Peterson, Managing Principal, Arctec Group<br/>
+Panelists: Dave Wichers, COO, Aspect Security; Brian Chess, Chief Scientist, Fortify; Alan Murphy, Product Management Engineer, F5; Danny Allan, Director, Security Research, Watchfire; James Whittaker, Security Architect, Microsoft
+ |-
+ | style="width:10%; background:#7B8ABD" | 16:30-16:50 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Break
+ |-
+ | style="width:10%; background:#7B8ABD" | 16:50-17:30 || colspan="2" style="width:40%; background:#F2F2F2" align="left" | Conference Wrap Up - Dave Wichers, OWASP Conferences Chair
+|}

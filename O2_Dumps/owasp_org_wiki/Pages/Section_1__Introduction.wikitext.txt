@@ -1,0 +1,148 @@
+== Background ==
+
+ModSecurity is an open source web application firewall that can work either embedded in an Apache web server or as a reverse proxy. The new features in version 2.0 and version 2.5 (released in February 2008) allow for a highly configurable capability that can address vulnerabilities (e.g. discovered during black-box penetration testing) on a per-application basis. ModSecurity provides for free a broad set of generic [http://www.modsecurity.org/projects/rules/ Core Rulesets] that cover areas such as protocol compliance, malicious client software detection, XML protection, error detection, and generic attack detection ("Detect application level attacks such as described in the OWASP top 10"). However, the Core Set rule documentation (see README in modsecurity-core-rules_2.5-1.6.0.tar.gz) cautions that since attackers may examine the freely-available core rules to get around them, some core rules should be viewed more as a "nuisance reduction" mechanism instead of a security mechanism.
+
+The lessons in WebGoat 5.2 detail over 30 different types of attacks on the WebGoat application (see the WebGoat v5 User & Install Guide).
+
+== Purpose ==
+
+The purpose of this project is to create custom ModSecurity rulesets that, in addition to the Core Set, will protect WebGoat 5.2 Standard Release from as many of its vulnerabilities as possible (the goal is 90%) without changing one line of source code. To ensure that it will be a complete 'no touch' on WebGoat and its environment, ModSecurity 2.5.5 will be configured on Apache server as a remote proxy server.
+
+For those vulnerabilities that cannot be prevented (partially or not at all), I will document my efforts in attempting to protect them. Business logic vulnerabilities will be particularly challenging to solve.
+
+The opportunity, challenges, issues or need this project addresses:
+* Provides application-level protection for those web applications that cannot be touched
+* New custom rulesets can be added as new attack types are discovered
+* This solution is programming language and platform agnostic
+* With outside help from consultants, this solution can be used by companies that have zero knowledge of software security
+* A possible unintended side-effect: introduce software security awareness into an organization, which may lead to software security development lifecycle practices for future projects
+* Common types of business logic vulnerabilities (this will be a challenge)
+
+== Tasks and deliverables ==
+
+* Set up and test the development environment. The initial Reverse Proxy server OS will be Kubuntu 7.10.
+
+* Identify WebGoat vulnerabilities and exploitation methods. Publish to wiki for review, feedback, and modification.
+
+* Develop rulesets for 50% of the vulnerabilities, starting with the low-hanging fruit. Deliver user documentation. Publish progress to wiki as each vulnerability is addressed. 
+
+* Peer review, feedback, modification at 50% project completion (Milestone 1)
+
+* Develop rulesets for the 2nd 50% of the vulnerabilities. Publish progress to wiki as each vulnerability is addressed.
+
+* Test final rulesets and ModSecurity Reverse Proxy on two other Linux distros.
+
+* Produce final rulesets and documentation.
+
+* Peer review, feedback, modification, deliver final product (Project completion)
+
+== Project member comments at 100% ==
+
+The project has a heavy Lua scripting influence simply because it was easier for me with my background being software development; the project's subtitle could almost be "ModSecurity for Software Developer Dummies" and the project probably entered into a realm where no one person has gone before.
+
+One of my security hats is pentesting, and this project has put ModSecurity in my toolbox. Now instead of only "Modify the source code and fix the vulnerability" as a recommendation for particular vulnerabilities, I can also recommend "Or, deploy a WAF and write a custom ruleset to mitigate the vulnerability". This is particularly applicable to PCI-DSS compliance, which for application security contains a triumvirate of penetration testing, code review, and a Web Application Firewall. Now I have all three of those in my arsenal of solutions that I can provide to the customer.
+
+Using ModSecurity's Lua scripting on the back end and its Javascript injection functionality on the front end lends itself to mitigating almost any type of vulnerability, including business logic flaws. Of course, performance considerations must be taken into account and in high octane scenarios using these features might not be feasible.
+
+Thanks to Ryan Barnett at Breach Security for turning the project almost into a contest; he presented a "traditional" ModSecurity solution to counter many of my Lua lesson solutions. You can compare them and decide which is easier to develop, test, and debug.
+
+A thank you also goes out to Christian Folini, especially for (perhaps unknowingly) giving me moral support when it was needed.
+
+Stephen Evans - 27 October 2008
+
+== Future development and long-term vision ==
+
+The following are possibilities for future development:
+
+1. <font><u>Package Lua script functionality:</u></font> 
+
+Several business logic flaws were solved using Lua scripting. Perhaps these examples can be expanded into more robust solutions, or as a project reviewer stated: "In some scenarios it may be advantageous to use Lua scripts to provide “packaged” functionality for some complex issues..." 
+
+2. <font><u>Use ModSecurity to protect Hacme Bank:</u></font> 
+
+A description: Hacme Bank (v2.0 Released 5/19/2006) is designed to teach application developers, programmers, architects and security professionals how to create secure software. Hacme Bank simulates a "real-world" webservices-enabled online banking application, which was built with a number of known and common vulnerabilities. This allows users to attempt real exploits against a web application and thus learn the specifics of the issue and how best to fix it. The web services exposed by Hacme Bank are used by our other testing applications including Hacme Books and Hacme Travel.
+
+Hacme Bank is .NET-based and uses Microsoft IIS so ModSecurity would have to be deployed in a reverse proxy configuration.
+
+3. <font><u>Implement security event logging as a ModSecurity add-on:</u></font>
+
+The lack of security logging in an application can make it difficult to trace security breaches and violations of security policy. Get Ken van Wyk's take on this at 12m35s to 15m22s of Cigital's Silver Bullet podcast #30 (http://www.cigital.com/silverbullet/show-030/) with Gary McGraw. To roughly quote: "For incident response after an attack, you have monitoring data from the network components, from the firewalls, even from the web server; but once you start talking application servers and the application itself, the monitoring pretty much goes to zero."
+
+The steps would be:
+
+(1) Identify areas of an application that require security events.
+
+(2) Write traditional ModSecurity rules for these events and write to the audit log file.
+
+(3) Write Lua scripts that, if possible, modify existing log files written by other applications; or, that write to a new, standalone file in a different format that integrates with other log file formats that are used by other ecosystems.
+
+Perhaps the OWASP ESAPI project can be referenced and the relevant portions of it be implemented for this.
+
+4. <font><u>Modifying the HTTP request:</u></font>
+
+Perhaps there is merit from a pure research standpoint to be able modify the HTTP request within ModSecurity then send it on to the application.
+ 
+Work was started on it as part of the solution for Sublesson 12.1 - Insecure Login - but not completed and it's not known whether this approach will work, although it should: 
+* Using a Lua script
+** Extract the HTTP request 
+** Modify the HTTP request
+** Write a Perl script to disk with the modified HTTP request 
+* Execute the Perl script using a ModSecurity SecAction, which sends the new request to the server
+: The Perl script to date - which does not yet work - is: 
+<pre>
+#!/usr/bin/perl
+
+use LWP::Debug qw(+);
+
+use LWP::UserAgent;  # This will cover all of them!
+use URI::URL;
+
+$hdrs = new HTTP::Headers(Accept => 'text/plain',
+                          User-Agent => 'MegaBrowser/1.0');
+
+$hdrs = new HTTP::Headers(Host => '192.168.0.5',
+User-Agent => 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.16)',
+Accept => 'text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5',
+Accept-Language => 'en-us,en;q=0.5',
+Accept-Charset => 'ISO-8859-1,utf-8;q=0.7,*;q=0.7',
+Keep-Alive => '300',
+Proxy-Connection => 'keep-alive',
+Referer => 'http://192.168.0.5/WebGoat/attack?Screen=97&menu=800',
+Cookie => 'JSESSIONID=E99C3EBA1803A5EB493C7DB181C4E46E',
+Authorization => 'Basic Z3Vlc3Q6Z3Vlc3Q=',
+Content-Type => 'application/x-www-form-urlencoded',
+Content-Length => '46',
+Content => [ QTY1 => '0',
+             QTY2 => '0',
+             QTY3 => '0',
+             QTY4 => '0',
+             SUBMIT => 'Update+Cart',
+           ]);
+
+$url = new URI::URL('http://192.168.0.5/WebGoat/attack?Screen=97&menu=800');
+
+$req = new HTTP::Request(POST, $url, $hdrs);
+$ua = new LWP::UserAgent;
+
+$resp = $ua->request($req);
+
+if ($resp->is_success) {
+        print $resp->content;}
+else {
+        print $resp->message;}
+</pre>
+
+== Contributors ==
+
+Project team: Stephen Evans
+
+1st reviewer: Ivan Ristic ([https://www.owasp.org/index.php/OWASP_Summer_of_Code_2008_Projects_Authors_Status_Target_and_Reviewers_Ivan_Ristic Curriculum]) & Breach Research Labs (Ryan Barnett, Brian Rectanus)
+
+2nd reviewer: Christian Folini ([http://www.netnea.com/cms/?q=christian_folini Curriculum])
+
+Special thanks go out to the reviewers for graciously volunteering their time for this project.
+
+Other contributors: 
+* Dinis Cruz, who sculpted the original project proposal into something useful. 
+* Paulo Coimbra, who exhibits extreme patience in his dealings with the project team.
+* Bruce Mayhew of the [https://www.owasp.org/index.php/Category:OWASP_WebGoat_Project OWASP WebGoat] project.

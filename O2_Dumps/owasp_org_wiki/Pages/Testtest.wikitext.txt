@@ -1,0 +1,8 @@
+== The Moderated OWASP AppSec News Feed ==
+ 
+Subscribe to the moderated [http://www.google.com/reader/public/atom/user/16712724397688793161/state/com.google/broadcast OWASP AppSec News Feed]
+ 
+<feed entries=10 length=500 url="http://www.google.com/reader/public/atom/user/16712724397688793161/state/com.google/broadcast" date="j M">
+;{DATE} - [{PERMALINK} {TITLE}] - ({AUTHOR})
+:{DESCRIPTION}
+</feed>

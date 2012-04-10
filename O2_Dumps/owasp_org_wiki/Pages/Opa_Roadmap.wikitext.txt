@@ -1,0 +1,27 @@
+*June 2011<br>
+**Public release of the Opa platform, including:<br>
+***the compiler Opa<br>
+***its runtime system<br>
+***its standard library<br>
+***its database engine<br>
+***the corresponding user documentation<br>
+**Source code made publicly available on github under a FSF license.
+**The Opa Book released in beta version.
+**Main features added to the compiler and its documentation:
+***introduction tutorial for developing in Opa
+***tutorial for developing scalable web applications in Opa
+***tutorial for developing web services in Opa
+***simple RDF support for programming "semantic web" applications 
+***connector to the EC2 web service of Amazon
+***documented methods for including JS, Ocaml and C code in Opa applications
+*Sept 2011
+**Full version of the Opa book released.
+**Main features added to the compiler and its documentation:
+***dedicated application for browsing the standard library online
+***tutorial for secure development in Opa
+***tutorials provided for making external contributions to Opa easier, in particular on the following topics:
+****graphical libraries (widgets, CSS skins , etc)
+****APIs for commonly used database engines
+****additional data serialization formats
+****APIs for common web services
+****APIs for standard data exchange protocols

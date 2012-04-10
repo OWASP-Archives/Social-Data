@@ -1,0 +1,3 @@
+Testing CSRF. 
+
+Click [http://was.sntest.sn:3000/account/transfer_chips?transfer=1000&login%5b%5d=andy_aces&commit=Transfer+Chips here].

@@ -1,0 +1,53 @@
+= DRAFT CHEAT SHEET - WORK IN PROGRESS =
+= Introduction  =
+
+'''Application Security Threat Modeling''' 
+
+= Steps =
+
+= Define The Target Of Evaluation =
+== Create a logical map of the Target of Evaluation ==
+== Create a physical map of the Target of Evaluation ==
+== Identify the Assets within the physical and logical Targets of Evaluation ==
+
+= Define The Attackers = 
+== Identify Possible Attackers that could exist within the Target Of Evaluation ==
+* Use Means, Motive, and Opportunity to understand Threats posed by Attackers
+* Rank Attackers from least dangerous to most dangerous based on Means, Motive & Opportunity
+==Select the most dangerous Attacker in your Target Of Evaluation ==
+
+= Conduct the Threat Model =
+* Assume the attacker has a zero day, because he does. In this methodology we assume compromise; because a zero day will exist or already does exist (even if we don't know about it). This is about what can be done by skilled attackers, with much more time, money, motive and opportunity than we have.
+== Enumerate Threats posed by most dangerous Attacker in Target of Evaluation ==
+=== Enumerate Threats posed by most dangerous attacker in designated areas of the physical & logical Maps of the Target of Evaluation ===
+* For logical map example: External firewall boundary, Internal firewall boundary, application server, and internal network.
+* For physical map example: External to company (wifi attacks from parking lots for example), inside company branch (consultant on local network), in data centre (oops!).
+=== Enumerate Attacks posed by most dangerous attacker in designated areas of the logical and physical maps of the target of evaluation ===
+
+* Not used in this methodology (compromise is assumed and not demonstrated - just because we can't get in doesn't make it risk free...)
+  - Application Decomposition
+  - Attack Tree
+  - Vulnerability/Exploit Mapping
+  - Application Testing
+
+== create risks in risk log for every identified threat or attack to any assets == 
+== rank risks using [http://en.wikipedia.org/wiki/Risk_Matrix risk matrix] from most severe to least severe == 
+== Identify risk owners ==
+
+= Remediation/Countermeasures =
+== Agree on risk mitigation with risk owners and stakeholders ==
+* tolerate, transfer, treat, terminate 
+== Treat risks accordingly ==
+== Test risk treatment to verify remediation ==
+=== Reduce risk in risk log for verified treated risk ===
+=== Periodically retest risk ===
+
+= Related Articles  =
+
+{{Cheatsheet_Navigation}} 
+
+= Authors and Primary Editors  =
+
+
+
+[[Category:Cheatsheets]]

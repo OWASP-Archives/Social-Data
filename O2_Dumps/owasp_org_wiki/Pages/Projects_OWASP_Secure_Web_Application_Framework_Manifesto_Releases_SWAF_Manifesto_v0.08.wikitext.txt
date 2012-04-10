@@ -1,0 +1,34 @@
+{{Template: <includeonly>{{{1}}}</includeonly><noinclude>Release About</noinclude>
+| project_name = OWASP Secure Web Application Framework Manifesto
+| project_home_page = http://www.owasp.org/index.php/OWASP_Secure_Web_Application_Framework_Manifesto#tab=Main
+
+| release_name = SWAF Manifesto v0.08
+| release_date = 01/10/2010
+| release_description =
+Developers are increasingly relying on scaffolding-based systems like Rails and Django to build applications. The number of web application frameworks, scaffolding or otherwise, is constantly growing and it's becoming increasingly clear that securing these frameworks will be a major boon for the future of secure web applications. 
+Recognizing that many developers are gravitating to leveraging web application frameworks, we decided it was time to provide a list of positive features that these frameworks should include. 
+This "Secure Web Application Framework Manifesto" must, of course, be a living document. At any given point, it should provide a minimum baseline of what a web application framework should include to appeal to security-conscious developers. We contend that if such a web application framework is broadly adopted, it will have far reaching effects into web application security. 
+| release_license = [http://creativecommons.org/licenses/by-sa/3.0/ Creative Commons Attribution ShareAlike 3.0 license]
+| release_download_link = http://www.owasp.org/index.php/File:Secure_Web_Application_Framework_Manifesto_v0_08.pdf
+
+| leader_name1 = Rohit Sethi 
+| leader_email1 = rohit@securitycompass.com 
+| leader_username1 = rksethi
+
+| leader_name2 = Sahba Kazerooni 
+| leader_email2 = sahba@securitycompass.com 
+| leader_username2 = Skazerooni
+
+| leader_name3 = Patrick Szeto 
+| leader_email3 = patrick@securitycompass.com 
+| leader_username3 =
+
+| leader_name4 = Tom Aratyn 
+| leader_email4 = tom@securitycompass.com
+| leader_username4 = 
+
+| release_notes = http://www.owasp.org/index.php/Projects/OWASP_Secure_Web_Application_Framework_Manifesto/Releases/SWAF_Manifesto_v0.08/Notes
+
+| links_url1 = http://www.owasp.org/index.php/Projects/OWASP_Secure_Web_Application_Framework_Manifesto/Releases/Current/Manifesto
+| links_name1 = OWASP Secure Web Application Framework Manifesto (Wiki Format)
+}}

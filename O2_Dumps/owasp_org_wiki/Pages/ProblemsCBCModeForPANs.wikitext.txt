@@ -1,0 +1,32 @@
+Link To Document - 
+[https://www.owasp.org/index.php/Image:PanEncryption.pdf Problems With Using CBC Mode For PAN Encryption]
+
+'''Author Ashok Misra''' 
+
+''
+Abstract''
+
+Permanant Account Number (PAN) encryption in an ecommerce merchant
+databases presents unique application issues.
+
+Block encryption primitives using Cipher Block Chaining (CBC) mode
+preclude the possibility of supporting an efficient lookup
+functionality.
+
+Since CBC encryption mode is not idempotent, one way hashes for
+PANs are needed in order to support lookup.
+
+The payment community does not view a one way hash of a PAN as a
+security violation. Ironicaly, its use is recommended by PCI DSS best
+practices.
+
+On the other hand, security experts categorically proscribe the use of
+an idempotent block cipher implementation such as Electronic Code Book
+(ECB).
+
+Storage of SHA1 hashes for payment information follows best practise,
+PCI guidelines and buzzword compliance.
+
+This paper presents a minority opinion and argues that security is
+weakened dramatically by employing one way cryptographic primitives
+for PANs in order to support lookup.

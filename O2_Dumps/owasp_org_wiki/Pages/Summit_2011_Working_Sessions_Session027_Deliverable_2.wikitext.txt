@@ -1,0 +1,17 @@
+== '''Deliverable 2''' ==
+
+'''New drop in set of codecs for the ESAPI Encoder to use for additional contexts''' 
+
+# Create a new set of Codecs to address additional popular encoding contexts
+## Database Codecs
+### Sybase
+### Postgres
+## Client Side
+### Flash
+### Applet
+### JavaFX
+### ECMA
+## Data-Grid and DA
+### Gigaspaces
+### Hibernate Query Language
+### SparQL

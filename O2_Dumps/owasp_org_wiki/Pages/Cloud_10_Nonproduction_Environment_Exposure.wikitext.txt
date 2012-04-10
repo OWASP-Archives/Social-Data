@@ -1,0 +1,38 @@
+An IT organization that develops software applications internally
+employs a set of non-production environments for design, development,
+and test activities. The non-production environments are generally not
+secured to the same extent as the production environment. This is to
+ease and facilitate the development and test cycles. Such
+non-production environments are not only accessed by the employees of
+the organization, but also by the outsourced vendors. In a non-cloud
+environment, the non-production environments are in the data-center of
+the organization, and are under complete ownership of the organization.
+Therefore, the organization can appropriately control the access of these
+environments.
+
+If an organization chooses to use a cloud provider for a
+non-production environment, then the organization loses control over
+them. Since cloud is publicly accessible, there is a high risk that an
+unauthorized user may get access to the non-production environment. A
+malicious user may alter the environment in such a way that it becomes
+unusable. Or even worse, a malicious user may completely delete the
+environment.
+
+A non-production environment may use generic authentication
+credentials. The passwords used in non-production environment may not
+conform to the standard password policy of the organization. In such a
+case, unauthorized access becomes very easy. 
+
+An organization may create a non-production environment by copying
+data from its production equivalent. In such a case, an unauthorized
+user can steal the sensitive production data. Examples of such data
+are credit card and social security numbers.
+
+To mitigate non-production environment exposure risk, an organization 
+should consider the following:
+
+1. Ensure that the credentials used for accessing non-production environments
+are strong, and conform to the same standards as the production environment.
+
+2. The data in the non-production environment is not a copy of the data in
+the production environment.

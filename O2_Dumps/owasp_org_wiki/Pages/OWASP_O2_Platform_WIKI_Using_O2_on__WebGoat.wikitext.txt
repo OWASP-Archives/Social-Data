@@ -1,0 +1,15 @@
+This page contains information about WebGoat and O2 can be used to find, exploit and mitigate its vulnerabilities
+
+== main links==
+* WebGoat page at OWASP WIKI: [[:Category:OWASP_WebGoat_Project|OWASP WebGoat Project]]
+* To get started, read the [[WebGoat_User_and_Install_Guide_Table_of_Contents|WebGoat User and Install Guide]]
+* The WebGoat downloads are available at [[http://code.google.com/p/webgoat/downloads/list|WebGoat Google code downloads]]
+* You can synch to the current WebGoat source tree at [[http://code.google.com/p/webgoat/ Google code]]
+
+
+== FAQ ==
+
+=== what is the url for webgoat on your local host?===
+Once you start webgoat using the provided bat file you can open your browser and browse to: http://localhost/WebGoat/attack. Notice the capital 'W' and 'G' (login in as: user = guest, password = guest ). See also [[WebGoat Installation]]
+
+{{:OWASP_O2_Platform/WIKI/bottom}}

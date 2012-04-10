@@ -1,0 +1,83 @@
+8. Cross-Site Scripting (XSS) -> 8.3 Stored XSS Attacks
+
+=== Lesson overview ===
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution === 
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information. 
+
+=== Strategy ===
+
+This WebGoat lesson appears to be broken. The solution is supposed to demonstrate stored XSS attacks by allowing the user to enter:
+<pre>
+<script language="javascript" type="text/javascript">alert("Ha Ha Ha");</script>
+</pre>
+into the message box and then receive a pop-up alert saying "Ha Ha Ha". The lesson is broken on many different levels:
+
+1. The script should be entered in the 'Title' text field instead of the message box:
+
+[[Image:OWASP_ModSecurity_Securing_WebGoat_Stored_xss_SS0.jpg]]
+
+(screenshot lesson08-3a.jpg)
+
+
+2. The script is encoded in the response body and is displayed non-maliciously on the returned page without the alert message (the text below should be on one line and it is not properly displayed):
+
+<pre>
+&lt;script language=&quot;javascript&quot; 
+type=&quot;text/javascript&quot;&gt;alert(&quot;Ha Ha Ha&quot;);&lt;/script&gt;
+</pre>
+
+The above javascript source should read (or view the source code on this wiki page):
+
+[[Image:OWASP_ModSecurity_Securing_WebGoat_Stored_xss_SS0aaa.jpg]]
+
+
+
+3. The script is output in a table cell so the alert message would not pop-up even if the script was not encoded.
+
+=== Implementation === 
+
+The ModSecurity solution for this WebGoat lesson is to fix it and then mitigate it. 
+
+For the WebGoat lesson to behave as it should, intercept the response body in a web proxy and insert the script outside of the table in order to get the alert message box displayed:
+
+[[Image:OWASP_ModSecurity_Securing_WebGoat_Stored_xss_SS1.jpg]]
+
+(screenshot lesson08-3b.jpg)
+
+
+[[Image:OWASP_ModSecurity_Securing_WebGoat_Stored_xss_SS2.jpg]]
+
+(screenshot lesson08-3c.jpg)
+
+
+If the WebGoat lesson was implemented correctly, it would be mitigated by checking for '<script...' tags in the response body that do not have the format of WebGoat's Javascript tags (all Javascript rendered by WebGoat has a unique format). Unfortunately, we cannot test the solution because modifying the response body to correctly display the alert message box comes after the rule has been processed by ModSecurity. 
+
+The solution is in 'rulefile_08-3_stored-xss.conf':
+<pre>
+  SecRuleScript "/etc/modsecurity/data/jscript_08-3.lua" \ 
+"phase:4,t:none,log,auditlog,deny,msg:'Lesson 8.3 Stored XSS, \ 
+found nonconformant javascript tags using luascript',\ 
+redirect:/_error_pages_/lesson08-3.html"
+</pre>
+
+The Lua script in 'jscript_08-3.lua' that achieves this:
+<pre>
+  local tbuff = m.getvar("RESPONSE_BODY", "none")
+  
+  for a in string.gmatch(tbuff, "<script.->") do
+    if string.match(a, 
+        "^<script%s+language=\"JavaScript1.2\"%s+src=\"javascript/") == nil then
+      str1 = string.format("Luascript: invalid script tag found: %s; exiting", a)
+      m.log(9, str1)
+      return str1
+    end
+  end
+</pre>
+
+=== Comments ===
+
+* This solution demonstrates rudimentary output sanitization using Lua.

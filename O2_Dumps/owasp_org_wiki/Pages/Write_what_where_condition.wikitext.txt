@@ -1,0 +1,139 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+Any condition where the attacker has the ability to write an arbitrary value to an arbitrary location, often as the result of a buffer overflow.
+
+'''Consequences'''
+
+* Access control (memory and instruction processing): Clearly, write-what-where conditions can be used to write data to areas of memory outside the scope of a policy. Also, they almost invariably can be used to execute arbitrary code, which is usually outside the scope of a program's implicit security policy. 
+* Availability: Many memory accesses can lead to program termination, such as when writing to addresses that are invalid for the current process.
+* Other: When the consequence is arbitrary code execution, this can often be used to subvert any other security service. 
+
+'''Exposure period'''
+
+*	Requirements: At this stage, one could specify an environment that abstracts memory access, instead of providing a single, flat address space.
+*	Design: Many write-what-where problems are buffer overflows, and mitigating technologies for this subset of problems can be chosen at this time.
+*	Implementation: Any number of simple implementation flaws may result in a write-what-where condition.
+
+'''Platform'''
+
+* Languages: C, C++, Fortran, Assembly
+* Operating platforms: All, although partial preventative measures may be deployed depending on environment.
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Very High
+
+'''Likelihood of exploit'''
+
+High
+
+When the attacker has the ability to write arbitrary data to an arbitrary location in memory, the consequences are often arbitrary code execution. If the attacker can overwrite a pointer's worth of memory (usually 32 or 64 bits), he can redirect a function pointer to his own malicious code.
+
+Even when the attacker can only modify a single byte using a write-what-where problem, arbitrary code execution can be possible. Sometimes this is because the same problem can be exploited repeatedly to the same effect. Other times it is because the attacker can overwrite security-critical application-specific data - such as a flag indicating whether the user is an administrator.
+
+==Risk Factors==
+
+* Talk about the [[OWASP Risk Rating Methodology|factors]] that make this vulnerability likely or unlikely to actually happen
+* Discuss the technical impact of a successful exploit of this vulnerability
+* Consider the likely [business impacts] of a successful attack
+
+
+==Examples==
+
+The classic example of a write-what-where condition occurs when the accounting information for memory allocations is overwritten in a particular fashion.
+
+Here is an example of potentially vulnerable code:
+
+<pre>
+#define BUFSIZE 256
+
+int main(int argc, char **argv) {
+  char *buf1 = (char *) malloc(BUFSIZE);
+  char *buf2 = (char *) malloc(BUFSIZE);
+
+  strcpy(buf1, argv[1]);
+  free(buf2);
+}
+</pre>
+
+Vulnerability in this case is dependent on memory layout. The call to strcpy() can be used to write past the end of buf1, and, with a typical layout, can overwrite the accounting information that the system keeps for buf2 when it is allocated. This information is usually kept before the allocated memory. Note that - if the allocation header for buf2 can be overwritten - buf2 itself can be overwritten as well.
+
+The allocation header will generally keep a linked list of memory "chunks". Particularly, there may be a "previous" chunk and a "next" chunk. Here, the previous chunk for buf2 will probably be buf1, and the next chunk may be null. When the free() occurs, most memory allocators will rewrite the linked list using data from buf2. Particularly, the "next" chunk for buf1 will be updated and the "previous" chunk for any subsequent chunk will be updated. The attacker can insert a memory address for the "next" chunk and a value to write into that memory address for the "previous" chunk. 
+
+This could be used to overwrite a function pointer that gets dereferenced later, replacing it with a memory address that the attacker has legitimate access to, where he has placed malicious code, resulting in arbitrary code execution.
+
+There are some significant restrictions that will generally apply to avoid causing a crash in updating headers, but this kind of condition generally results in an exploit.
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Buffer Overflow]]
+* [[Format String]]
+
+==Related [[Controls]]==
+
+* Pre-design: Use a language that provides appropriate memory abstractions.
+* Design: Integrate technologies that try to prevent the consequences of this problems.
+* Implementation: Take note of mitigations provided for other flaws in this taxonomy that lead to write-what-where conditions.
+* Operational: Use OS-level preventative functionality integrated after the fact. Not a complete solution.
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Range and Type Error Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

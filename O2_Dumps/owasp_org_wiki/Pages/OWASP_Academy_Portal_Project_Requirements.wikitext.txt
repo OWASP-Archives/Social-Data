@@ -1,0 +1,100 @@
+= Vision =
+
+The Academy Portal will deliver high high valuable material that can be used in Academies to help teaching application security related subjects.
+Should have tools useful to help teachers/trainer deliver the contents and motivate the students to learn application security.
+
+= Requirements =
+
+== Site static contents ==
+The tool should support the creation and management of content pages. At least the following pages should be created:
+* Homepage: Should be a teaser for the portal contents, with call for actions for both Teachers and Students
+* About: Explanation about the Portal, the vision and the relation with OWASP.
+* How to Use: Simple instructions / suggestions on how to use the portal and portal contents
+* How to contribute: Simple instructions / suggestions on how to contribute
+* FAQ: Simple Q&A around portal use and features.
+* Disclaimer: Like the one in the OWASP wiki?
+* ... TBD ...
+
+== Registration ==
+
+The users should be able to create accounts in the portal that will enable the users to use some features like the exam tool.
+
+TBD: Type of users / Privacy
+
+== Content Availability ==
+
+As a general rule, contents should be available to every one.
+
+Specific tools a/or features can request registration or some form of user validation to be used/accessed.
+
+TBD: Witch tools should need registering.
+
+== Learning Blocks ==
+This are in fact course materials that could be used to teach classes / subjects in classes.
+Each block will have:
+* Metadata: A standard set of proprieties that will help describe the content of a course
+** Subject:
+** Categories:
+** Keywords:
+** Description:
+** Learning Outcomes:
+** Requirements/Pre-req to understand:
+** Theatrical/Practical
+** Incl. Hands-on labs
+** Should be self-contained
+** Should handle a single subject
+** Target audience:
+** Ability level: 100|200|300|400
+** Rough guide to presentation time:
+** Effort
+* Training Materials: A set of files that can be used to deliver the block and can be (one or more of the following)
+** Teacher Presentation Slides
+** Student Handouts
+** Video
+** Lab Files
+* Extra Metadata and Materials:
+** Lab links:
+** Outside links:
+** Text books: 
+* Non funtional Requirements regarding the blocks
+** Should be self-contained
+** Should handle a single subject
+** Corresponding OWASP effort 
+
+Also, each block will allow users to comment on the block to help share specific tips around this block.
+
+== Forums ==
+
+The portal should provide a forum that will allow teachers and/or students to collaborate around the Academy portal Concept and tools.
+
+TBD:
+* Will it have a moderator? Who will moderate the forum?
+* Different forum to students and teacher?
+
+== Tool: Questions ==
+
+This tool will provide a simple interface for teacher to set a question pool (like and exam) that can be used to test (or in a wide context: challenge) the students.
+
+This tool will work in the following way (Generic description):
+
+* A teacher creates an exam as a pool of questions
+* The exam is sent to the students
+* The student answers the exam
+* The teacher will have a dashboard where it can see who have answered as well as the answer.
+
+== Tool: Laboratories ==
+
+This tool will provide a simple interface for teacher to set a laboratory that can be used to test (or in a wide context: challenge) the students.
+
+This tool will work in the following way (Generic description):
+
+* A teacher creates an assignment
+* The assignment is sent to the students
+* The student do the lab
+* The teacher will have a score board.
+
+= Glossary =
+
+* TBD: To be Defined
+* Academy: A place here application security content are delivered, can be for example a school, university, training center, etc.
+* Learning Block: A unit of information useful to deliver a given subject.

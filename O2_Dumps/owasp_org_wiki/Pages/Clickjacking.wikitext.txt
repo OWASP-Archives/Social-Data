@@ -1,0 +1,193 @@
+* Note: Most of this article is directly cited from [http://w2spconf.com/2010/papers/p27.pdf a study] by the Stanford Web Security group. Please see the CodeMagi defense (with help from Jason Li) at [https://www.codemagi.com/blog/post/194 https://www.codemagi.com/blog/post/194] for an improvement on the original "Stanford Defense".
+
+Clickjacking, also known as a "UI redress attack", is when an attacker uses multiple transparent or opaque layers to trick a user into clicking on a button or link on another page when they were intending to click on the the top level page. Thus, the attacker is "hijacking" clicks meant for their page and routing them to other another page, most likely owned by another application, domain, or both.
+
+Using a similar technique, keystrokes can also be hijacked. With a carefully crafted combination of stylesheets, iframes, and text boxes, a user can be led to believe they are typing in the password to their email or bank account, but are instead typing into an invisible frame controlled by the attacker.
+
+=Examples=
+
+For example, imagine an attacker who builds a web site that has a button on it that says "click here for a free iPod".  However, on top of that web page, the attacker has loaded an iframe with your mail account, and lined up exactly the "delete all messages" button directly on top of the "free iPod" button.  The victim tries to click on the "free iPod" button but instead actually clicked on the invisible "delete all messages" button.  In essence, the attacker has "hijacked" the user's click, hence the name "Clickjacking".
+
+One of the most notorious examples of Clickjacking was an attack against the [http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager06.html Adobe Flash plugin settings page]. By loading this page into an invisible iframe, an attacker could trick a user into altering the security settings of Flash, giving permission for any Flash animation to utilize the computer's microphone and camera.
+
+Clickjacking also made the news in the form of a [http://shiflett.org/blog/2009/feb/twitter-dont-click-exploit Twitter worm]. This clickjacking attack convinced users to click on a button which caused them to re-tweet the location of the malicious page, and propagated massively.
+
+Recently, clickjacking attacks abusing Facebook's "Like" functionality has grown significantly. [http://threatpost.com/en_us/blogs/facebook-jacking-scams-expand-060310 Attackers can trick logged-in Facebook users to arbitrarily like fan pages, links, groups, etc] 
+
+=Defending against Clickjacking=
+There are two main ways to prevent clickjacking: 
+# Employing defensive code in the UI to ensure that the current frame is the most top level window, and 
+# Sending the proper browser response headers that instruct the browser to not allow framing from other domains
+
+==Defending with Frame Breaking Scripts==
+===Specifics===
+The most popular way to defend against clickjacking is to include a "frame-breaker" script in each page that should not be framed. Consider the following snippet which is '''NOT recommended''' for defending against clickjacking:
+
+<pre><script>if (top!=self) top.location.href=self.location.href</script></pre>
+
+===Limitations===
+This simple frame breaking script attempts to prevent the page from being incorporated into a frame or iframe by forcing the parent window to load the current frame's URL. Unfortunately, multiple ways of defeating this type of script have been made public. We outline some here.
+
+====Double Framing====
+Some frame busting techniques navigate to the correct page by assigning a value to parent.location. This works well if the victim page is framed by a single page. However, if the attacker encloses the victim in one frame inside another (a double frame), then accessing parent.location becomes a security violation in all popular browsers, due to the '''descendant frame navigation policy'''. This security violation disables the counter-action navigation.
+
+'''Victim frame busting code:'''
+<pre>
+if(top.location!=self.locaton) {
+  parent.location = self.location;
+}
+</pre>
+
+'''Attacker top frame:'''
+<pre>
+<iframe src="attacker2.html">
+</pre>
+
+'''Attacker sub-frame:'''
+<pre>
+<iframe src="http://www.victim.com">
+</pre>
+
+====The onBeforeUnload Event====
+A user can manually cancel any navigation request submitted by a framed page. To exploit this, the framing page registers an onBeforeUnload handler which is called whenever the framing page is about to be unloaded due to navigation. The handler function returns a string that becomes part of a prompt displayed to the user. Say the attacker wants to frame PayPal. He registers an unload handler function that returns the string "Do you want to exit PayPal?". When this string is displayed to the user is likely to cancel the navigation, defeating PayPal's frame busting attempt.
+
+The attacker mounts this attack by registering an unload event on the top page using the
+following code:
+<pre>
+<script>
+window.onbeforeunload = function()
+{
+  return "Asking the user nicely";
+}
+</script>
+<iframe src="http://www.paypal.com">
+</pre>
+PayPal's frame busting code will generate a BeforeUnload event activating our function and prompting the user to cancel the navigation event.
+
+====No-Content Flushing====
+While the previous attack requires user interaction, the same attack can be done without prompting the user. Most browsers (IE7, IE8, Google Chrome, and Firefox) enable an attacker to automatically cancel the incoming navigation request in an onBeforeUnload event handler by repeatedly submitting a navigation request to a site responding with \204 - No Content." Navigating to a No Content site is effectively a NOP, but flushes the request pipeline, thus canceling the original navigation request. Here is sample code to do this:
+
+<pre>
+var preventbust = 0
+window.onbeforeunload = function() { killbust++ }
+setInterval( function() {
+  if(killbust > 0){
+  killbust = 2;
+  window.top.location = 'http://nocontent204.com'
+  }
+}, 1);
+<iframe src="http://www.victim.com">
+</pre>
+
+====Exploiting XSS filters====
+IE8 and Google Chrome introduced reflective XSS filters that help protect web pages from certain types of XSS attacks. Nava and Lindsay (at Blackhat) observed that these filters can be used to circumvent frame busting code. The IE8 XSS filter compares given request parameters to a set of regular expressions in order to look for obvious attempts at cross-site scripting. Using "induced false positives", the filter can be used to disable selected scripts. By matching the beginning of any script tag in the request parameters, the XSS filter will disable all inline scripts within the page, including frame busting scripts. External scripts can also be targeted by matching an external include, effectively disabling all external scripts. Since subsets of the JavaScript loaded is still functional (inline or external) and cookies are still available, this attack is effective for clickjacking.
+
+'''Victim frame busting code:'''
+<pre>
+<script>
+if(top != self) {
+  top.location = self.location;
+}
+</script>
+</pre>
+
+'''Attacker:'''
+<pre>
+<iframe src="http://www.victim.com/?v=<script>if''>
+</pre>
+
+The XSS filter will match that parameter "<script>if" to the beginning of the frame busting script on the victim and will consequently disable all inline scripts in the victim's page, including the frame busting script. The XSSAuditor filter available for Google Chrome enables the same exploit.
+
+====Clobbering top.location====
+Several modern browsers treat the location variable as a special immutable attribute across all contexts. However, this is not the case in IE7 and Safari 4.0.4 where the location variable can be redefined.
+
+'''IE7'''
+Once the framing page redefines location, any frame busting code in a subframe that tries to read top.location will commit a security violation by trying to read a local variable in another domain. Similarly, any attempt to navigate by assigning top.location will fail.
+
+'''Victim frame busting code:'''
+
+<pre>
+if(top.location != self.location) {
+  top.location = self.location;
+}
+</pre>
+
+'''Attacker:'''
+
+<pre>
+<script> var location = "clobbered";
+</script>
+<iframe src="http://www.victim.com">
+</iframe>
+</pre>
+
+'''Safari 4.0.4'''
+
+We observed that although location is kept immutable in most circumstances, when a custom location setter is defined via defineSetter (through window) the object location becomes undefined. The framing page simply does:
+<pre>
+<script>
+  window.defineSetter("location" , function(){});
+</script>
+</pre>
+Now any attempt to read or navigate the top frame's location will fail.
+
+====Restricted zones====
+
+Most frame busting relies on JavaScript in the framed page to detect framing and bust itself out. If JavaScript is disabled in the context of the subframe, the frame busting code will not run. There are unfortunately several ways of restricting JavaScript in a subframe:
+
+* '''In IE 8:''' <pre><iframe src="http://www.victim.com" security="restricted"></iframe></pre>
+* '''In Chrome:''' <pre><iframe src="http://www.victim.com" sandbox></iframe></pre>
+*''' In Firefox and IE:''' Activate designMode in parent page.
+
+===Best-for-now implementation===
+Although no completely reliable JavaScript exists (since new attacks surface regularly), a best-for-now snippet is often used:
+<pre>
+<head>
+<style> body { display : none;} </style>
+</head>
+<body>
+
+<script> 
+if (self == top) {
+  var theBody = document.getElementsByTagName('body')[0];
+  theBody.style.display = "block";
+} else { 
+  top.location = self.location; 
+}
+</script>
+
+Note that this should be used in combination with a secure response header as well.
+</pre>
+==Defending with response headers==
+
+===X-FRAME-OPTIONS===
+====Specifics====
+There's an alternative approach to custom frame busting code that may be simpler to implement. Microsoft has recently included a [http://blogs.msdn.com/ie/archive/2009/01/27/ie8-security-part-vii-clickjacking-defenses.aspx defense] in IE8 that allows developers to specify that pages should not be framed. This new (nonstandard) X-FRAME-OPTIONS header is used to mark responses that shouldn't be framed. There are two options with X-FRAME-OPTIONS. The first is DENY, which prevents everyone from framing the content. The other option is SAMEORIGIN, which only allows the current site to frame the content. X-FRAME-OPTIONS has seen good adoption by major browsers, unfortunately studies have shown the header [http://blogs.sans.org/appsecstreetfighter/2009/10/15/adoption-of-x-frame-options-header/ not to be widely deployed by sites].
+
+====Limitations====
+
+* '''Per-page policy specifcation''' 
+The policy needs to be specifed for every page, which can complicate deployment. Providing the ability to enforce it for the entire site, at login time for instance, could simplify adoption.
+
+* '''Problems with multi-domain sites'''
+The current implementation does not allow the webmaster to provide a whitelist of domains that are allowed to frame the page. While whitelisting can be dangerous, in some cases a webmaster might have no choice but to use more than one hostname.
+
+* '''Proxies'''
+Web proxies are notorious for adding and stripping headers. If a web proxy strips the X-FRAME-OPTIONS header then the site loses its framing protection.
+
+====Implementation====
+To implement this protection, you need to add the header to any page that you want to protect from being clickjacked. One way to do this is to add the header manually to every page.  A possibly simpler way is to implement a filter that automatically adds the header to every page.
+
+OWASP has an [[ClickjackFilter for Java EE|article and some code]] that provides all the details for implementing this in the Java EE environment.
+
+The SDL blog has posted an [http://blogs.msdn.com/sdl/archive/2009/02/05/clickjacking-defense-in-ie8.aspx article] covering how to implement this in a .NET environment.
+
+== References ==
+* [http://w2spconf.com/2010/papers/p27.pdf Busting Frame Busting: A study of clickjacking vulnerabilites on top sites]
+: A study by the Stanford Web Security Group outlining problems with deployed frame busting code.
+
+* [http://www.sectheory.com/clickjacking.htm Clickjacking, Sec Theory]
+: A paper by Robert Hansen defining the term, its implications against Flash at the time of writing, and a disclosure timeline.
+
+* [[ClickjackFilter_for_Java_EE|Anti-clickjacking J2EE filter]]
+: A simple J2EE servlet filter that sends anti-framing headers to the browser.

@@ -1,0 +1,91 @@
+{{Template:Vulnerability}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+Cross site Scripting (XSS) attacks are a type of injection problem, in which malicious scripts are injected into otherwise benign and trusted web sites. Cross site scripting flaws are the most prevalent flaw in web applications today. Cross site scripting attacks occur when an attacker uses a web application to send malicious code, generally in the form of a browser side script, to a different end user. Flaws that allow these attacks to succeed are quite widespread and occur anywhere a web application uses input from a user in the output it generates without validating or encoding it.
+
+Attackers frequently use a variety of methods to encode the malicious portion of the tag, such as using Unicode, so the request is less suspicious looking to the user. There are hundreds of variants of these attacks, including versions that do not even require any < > symbols. For this reason, attempting to “filter out” these scripts is not likely to succeed. Instead we recommend validating input against a rigorous positive specification of what is expected. XSS attacks usually come in the form of embedded JavaScript. However, any embedded active content is a potential source of danger, including: ActiveX (OLE), VBscript, Shockwave, Flash and more.
+
+XSS issues can also be present in the underlying web and application servers as well. Most web and application servers generate simple web pages to display in the case of various errors, such as a 404 ‘page not found’ or a 500 ‘internal server error.’ If these pages reflect back any information from the user’s request, such as the URL they were trying to access, they may be vulnerable to a reflected XSS attack.
+
+The likelihood that a site contains XSS vulnerabilities is extremely high. There are a wide variety of ways to trick web applications into relaying malicious scripts. Developers that attempt to filter out the malicious parts of these requests are very likely to overlook possible attacks or encodings. Finding these flaws is not tremendously difficult for attackers, as all they need is a browser and some time. There are numerous free tools available that help hackers find these flaws as well as carefully craft and inject XSS attacks into a target site.
+
+===Environments Affected===
+All web servers, application servers, and web application environments are susceptible to cross site scripting. 
+
+===How to Determine If You Are Vulnerable===
+There are three known types of cross site scripting: [[Cross-site_Scripting_(XSS)#Reflected_XSS_Attacks | reflected]], [[Cross-site_Scripting_(XSS)#Stored_XSS_Attacks | stored]], and [[DOM_Based_XSS | DOM injection]]. Reflected XSS is the easiest to exploit – a page will reflect user supplied data directly back to the user:
+
+echo $_REQUEST['userinput'];
+
+Stored XSS takes hostile data, stores it in a file, a database, or other back end system, and then at a later stage, displays the data to the user, unfiltered. This is extremely dangerous in systems such as CMS, blogs, or forums, where a large number of users will see input from other individuals.
+
+With DOM based XSS attacks, the site’s JavaScript code and variables are manipulated rather than HTML elements. Alternatively, attacks can be a blend or hybrid of all three types. The danger with cross site scripting is not the type of attack, but that it is possible.
+
+Attacks are usually implemented in JavaScript, which is a powerful scripting language. Using JavaScript allows attackers to manipulate any aspect of the rendered page, including adding new elements (such as adding a login tile which forwards credentials to a hostile site), manipulating any aspect of the internal DOM tree, and deleting or changing the way the page looks and feels. JavaScript allows the use of XmlHttpRequest, which is typically used by sites using AJAX technologies, even if victim site does not use AJAX today. 
+
+Using XmlHttpRequest (AJAX), it is sometimes possible to get around a browser’s same source origination policy - thus forwarding victim data to hostile sites, and to create complex worms and malicious zombies that last as long as the browser stays open. AJAX attacks do not have to be visible or require user interaction to perform dangerous cross site request forgery (CSRF) attacks (see [[CSRF]]).
+
+XSS flaws can be difficult to identify and remove from a web application. The best way to find flaws is to perform a security review of the code and search for all places where input from an HTTP request could possibly make its way into the HTML output. Note that a variety of different HTML tags can be used to transmit a malicious JavaScript. Nessus, Nikto, and some other available tools can help scan a website for these flaws, but can only scratch the surface.
+
+==Prevention==
+OWASP's recommended defenses against XSS are documented in the OWASP [[XSS (Cross Site Scripting) Prevention Cheat Sheet]].
+<!--
+==Risk Factors==
+
+TBD
+-->
+
+==Examples==
+* http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4206  
+* http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3966  
+* http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-5204  
+
+==Related [[Attacks]]==
+* [[Cross-site Scripting (XSS)]]
+* [[Cross Site History Manipulation (XSHM)]]
+<!--
+==Related [[Vulnerabilities]]==
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+* [[Control 1]]
+* [[Control 2]]
+
+==Related [[Technical Impacts]]==
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+-->
+
+==References==
+* [[XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet]]
+* OWASP Guide to Building Secure Web Applications and Web Services, [[Data Validation]]
+* OWASP Testing Guide, [[Testing for Cross site scripting]]
+* The Cross Site Scripting FAQ: http://www.cgisecurity.com/articles/xss-faq.shtml 
+* XSS Cheat Sheet: http://ha.ckers.org/xss.html
+* CERT Advisory on Malicious HTML Tags: http://www.cert.org/advisories/CA-2000-02.html 
+* CERT "Understanding Malicious Content Mitigation" http://www.cert.org/tech_tips/malicious_code_mitigation.html 
+* Understanding the cause and effect of CSS Vulnerabilities: http://www.technicalinfo.net/papers/CSS.html 
+* [[How_to_Build_an_HTTP_Request_Validation_Engine_for_Your_J2EE_Application|How to Build an HTTP Request Validation Engine (J2EE validation with Stinger)]]
+* XSSed - Cross-Site Scripting (XSS) Information and Mirror Archive of Vulnerable Websites http://www.xssed.com 
+
+[[Category:FIXME|links not working
+
+* Cross-Site Scripting Security Exposure Executive Summary: http://www.microsoft.com/technet/treeview/default.asp?url=/technet/security/topics/ExSumCS.asp 
+* Have Your Cake and Eat it Too (.NET validation) http://www.owasp.org/columns/jpoteet/jpoteet2 
+
+]]
+
+[[Category:FIXME|add links
+<nowiki>[[Category:Input Validation Vulnerability]]</nowiki>
+]]
+
+__NOTOC__
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Externally Linked Page]]

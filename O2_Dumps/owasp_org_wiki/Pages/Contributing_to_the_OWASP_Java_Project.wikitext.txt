@@ -1,0 +1,22 @@
+== Who should contribute? ==
+Anyone with knowledge or experience about one of the topics covered in the [[OWASP Java Project Roadmap|Roadmap]] is invited to contribute.  There's no need to commit to contributing a whole section, even contributing to a single heading would be great.    
+== How do I Contribute? ==
+You can contribute to the project as a Contributor by submitting material to the project, or as a Reviewer by reviewing existing material, or as both!  There can be multiple contributors for a single heading, but a maximum of 2 reviewers.  This is done on a first come first served basis.  You can't be a reviewer and contributor to a given heading.
+# Sign up for a wiki account and join the mailing list (No mailing list yet, problems at sourceforge)
+# Read the [[OWASP Java Project Roadmap]] and choose a topic you'd like to contribute towards.  Add your name to the contributors or reviewers list using the wiki signature formatting (minus minus tilde tilde tilde tilde).  And add your name next to the heading you'd like to contribute towards.  
+# Take note of the deadlines at the top of the section and the status of the section you'll be contributing to.
+# If you're not familiar with MediaWiki formatting, have a look at [http://en.wikipedia.org/wiki/Wikipedia:How_to_edit_a_page|Wikipedia's page editing guide]
+# Read and post your ideas on the discussions page for each heading to reach a consensus with your fellow contributors about the approach and what material to include
+# Submit the goods!
+
+== What do the deadlines mean? ==
+A wiki is a dynamic growing beast and while we embrace the freedom that this gives us, we would like to produce a quality product in a reasonable amount of time.  To this end, we've agreed on deadlines for wiki contributions so that we a goal to work towards and a good review process in place to provide quality control.  The process and deadlines are defined below:
+<table border=1 cellpadding=5>
+  <tr><td><b>Deadline for first draft:</b></td><td>The first draft should include all the required information for the given heading.  If a heading does not have information at this stage, it will be removed.  On this date no more submissions should be made, the reviewers will take the material that's there and comment and edit it.  Edit's should only be minor ones, if major changes are required, then this should be fed back to the contributors stating the rationale behind the proposed changes.</td></tr>
+  <tr><td><b>Deadline for first review:</b></td><td>Once the first draft has been reviewed and commented, it should be given back to the contributors on this date.</td></tr>
+  <tr><td><b>Deadline for final draft:</b></td><td>Contributors should act on the comments made by reviewers.</td></tr>
+  <tr><td><b>Deadline for final review:</b></td><td>Reviewers should finalise changes.</td></tr>
+</table>
+
+==Guide for Commercial Contributors==
+The OWASP Java project is not the appropriate forum for product sales pitches.  But, there are many commercial Java tools and frameworks that provide valuable security services to users and we would welcome information on the features and usage of these tools.  If you feel that your tool should be included in the project, please submit <b>balanced and practical</b> information for current as well as prospective users.  If the information submitted is clearly marketing material or too one-sided, it will be deleted.

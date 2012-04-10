@@ -1,0 +1,38 @@
+'''NB: This page is a rough draft of an idea we are working on and should not be used yet'''
+
+==Background==
+
+OWASP recognizes that many software developers are doing the hard work to become capable of repeatably producing secure applications. These individuals deserve a way to promote the fact that they are doing the right things.
+
+We have created the "OWASP Personal Application Security Pledge" to recognize these individuals and set a goal for other individuals to strive for.
+
+There is much more that developers can do, but we believe that these are the most critical steps that all individuals should have in place.
+
+==Participation==
+
+To participate in the OWASP Pledge, please identify yourself and confirm that you are meeting the practices. None of the information from the program will be shared other than aggregate information and metrics.
+
+Once you have taken the pledge, you can use the pledge LOGO to promote the fact that you are taking steps to produce secure software.
+
+OWASP does not verify compliance with your pledge, but will assist in notifying you of any issue related to failure to keep your pledge. Failure to respond in a timely manner to an issue will result in revocation of the privilege of using the OWASP logo.
+
+==The OWASP Developer Application Security Pledge==
+
+'''NB: Need to add verifiable items'''
+
+To demonstrate my commitment to designing, building, and testing applications that are trustworthy enough for my business and its customers, I hereby confirm that:
+
+; 1. I follow [[:Category:Principle|application security principles]].
+: I understand the foundational principles of application security and interpret them for the environment and application I am building. 
+
+; 2. I understand the threat model and verify security requirements and architecture before coding.
+: Before I start coding, I make sure that I understand who the threat agents are, what kinds of attacks are possible in my environment, and what functions and assets are potentially vulnerable. I ensure that the requirements and architecture specify countermeasures to address these risks before I start coding.
+
+; 3. I understand the common application security vulnerabilities.
+: I've had training in application security and understand how common application security issues such as those described in the [[Top Ten|OWASP Top Ten]] apply in my development environment. I keep abreast of developments in application security such as new attacks and vulnerabilities.
+
+; 4. I use standard security mechanisms and patterns.
+: I understand that security mechanisms are difficult to build correctly, and that the use of established, tested, and centralized security mechanisms is much more likely to result in a secure system than attempting to build custom security mechanisms.
+
+; 5. I perform security testing and code review for common application security vulnerabilities.
+: I review my application's code for potential vulnerabilities, using both manual review and tools. I use proxy tools to expose my code to attacks not possible with the standard user interface, and I use fuzzing tools to expose my code to input that could make it misbehave.

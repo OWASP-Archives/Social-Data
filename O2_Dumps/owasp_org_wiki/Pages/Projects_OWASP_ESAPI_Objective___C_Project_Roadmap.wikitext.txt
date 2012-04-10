@@ -1,0 +1,28 @@
+'''V1 – Mac Release'''
+<br>
+The first release will focus on general cocoa applications and the ESAPI will reflect the developments in java. The implementation in v1 will include a sub-set from the following components [Exact sub-set is not decided yet]:
+
+* ESAPI Encoder
+* ESAPI Validator
+* ESAPI Randomizer
+* ESAPI Utilities
+* ESAPI Access Controller
+* ESAPI Authenticator
+* ESAPI Encryptor
+* Logging
+* Intrusion Detector
+* Web Application Firewall
+
+<br>
+'''V2 – Mac Release'''
+<br>
+The version for the next release will be focused on implementation of the other components in the above set.
+
+This release will also focus on bridging the gap between the ESAPI Java – the most advanced implementation of ESAPI currently and ESAPI Objective-C. It is also in ESAPI Objective-C’s interests to dictate some Apple Macintosh specific components such as Keychain Access into the API.
+
+<br>
+'''V3 – Cocoa Touch''' 
+<br>
+Implementation of this release is not finalized and may be aborted.
+
+In the cocoa touch the project would focus on just a few components of ESAPI which would make sense to be part of a client module in the iOS interfaces.

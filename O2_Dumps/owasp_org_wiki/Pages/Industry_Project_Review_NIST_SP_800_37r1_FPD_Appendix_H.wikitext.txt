@@ -1,0 +1,34 @@
+{| align="right"
+| __TOC__
+|}
+
+<big>APPENDIX H</big>
+
+<big>'''OPERATIONAL SCENARIOS'''</big>
+
+APPLYING THE [http://fismapedia.org/index.php?title=Term:Risk_Management RISK MANAGEMENT] FRAMEWORK IN DIFFERENT ENVIRONMENTS
+
+
+Managing risk from information systems in modern computing environments with a diverse set of potential business relationships can be challenging for organizations. Relationships are established and maintained in a variety of ways, for example, through joint ventures, business partnerships, outsourcing arrangements (i.e., through contracts, [http://fismapedia.org/index.php?title=Term:Lines_of_Business lines of business] arrangements, interagency and intra-agency agreements), licensing agreements, and [http://fismapedia.org/index.php?title=Term:Supply_Chain supply chain] exchanges (i.e., [http://fismapedia.org/index.php?title=Term:Supply_Chain supply chain] collaborations or partnerships).<ref>NIST [http://fismapedia.org/index.php?title=Doc:Special_Publication_800-53 Special Publication 800-53] provides additional guidance on the application and use of [http://fismapedia.org/index.php?title=Term:Security_Controls security controls] in external environments to include relationships with external service providers.</ref> The [http://fismapedia.org/index.php?title=Term:Risk_Management Risk Management] Framework ([http://fismapedia.org/index.php?title=AnA:RMF RMF]) applies only to federal information systems. There are two distinct types of operational scenarios that affect how organizations address the [http://fismapedia.org/index.php?title=AnA:RMF RMF] steps and associated tasks:
+
+* Information systems used or operated by federal agencies;<ref>References to federal agencies include organizations that are subordinate to those agencies.</ref> and
+* Information systems used or operated by other organizations<ref>Organizations that use or operate an information system on behalf of a [http://fismapedia.org/index.php?title=Term:Federal_Agency federal agency] or one of its subordinate organizations can include, for example, other federal agencies or their subordinate organizations, state and local government agencies, contractors, and academic institutions.</ref> on behalf of federal agencies.
+
+SCENARIO 1: For an information system that is used or operated by a [http://fismapedia.org/index.php?title=Term:Federal_Agency federal agency], the system [http://fismapedia.org/index.php?title=Term:Boundary boundary] is defined by the agency. The agency conducts all [http://fismapedia.org/index.php?title=AnA:RMF RMF] tasks to include information system authorization. The agency maintains control over the [http://fismapedia.org/index.php?title=Term:Security_Controls security controls] employed within and inherited by the information system.
+
+SCENARIO 2: For an information system that is used or operated by another organization on behalf of a [http://fismapedia.org/index.php?title=Term:Federal_Agency federal agency], the system [http://fismapedia.org/index.php?title=Term:Boundary boundary] is defined by the agency in collaboration with the other organization and one of the following situations applies:
+
+:-  If the organization is contracted to a [http://fismapedia.org/index.php?title=Term:Federal_Agency federal agency], the [http://fismapedia.org/index.php?title=Term:Contractor contractor] can conduct all [http://fismapedia.org/index.php?title=AnA:RMF RMF] tasks except those tasks which must be carried out by the [http://fismapedia.org/index.php?title=Term:Federal_Agency federal agency] as part of its inherent governmental responsibilities.<ref>Organizations ensure that requirements for conducting the specific tasks in the [http://fismapedia.org/index.php?title=AnA:RMF RMF] are included in appropriate contractual vehicles, including requirements for independent assessments, when appropriate.</ref> The agency provides [http://fismapedia.org/index.php?title=AnA:RMF RMF]-related inputs to the [http://fismapedia.org/index.php?title=Term:Contractor contractor], as needed, and maintains strict oversight on all [http://fismapedia.org/index.php?title=Term:Contractor contractor]-executed [http://fismapedia.org/index.php?title=AnA:RMF RMF] tasks. The [http://fismapedia.org/index.php?title=Term:Contractor contractor] provides appropriate evidence in the [http://fismapedia.org/index.php?title=Term:Security_Authorization security authorization] package for the authorization decision by the [http://fismapedia.org/index.php?title=Term:Authorizing_Official authorizing official] from the [http://fismapedia.org/index.php?title=Term:Federal_Agency federal agency].
+:-  If the organization is a [http://fismapedia.org/index.php?title=Term:Federal_Agency federal agency], the organization can conduct all [http://fismapedia.org/index.php?title=AnA:RMF RMF] tasks to include the information system authorization. The information system authorization can also be a joint authorization if both parties agree to share the authorization responsibilities. In situations where a [http://fismapedia.org/index.php?title=Term:Federal_Agency federal agency] uses or operates an information system on behalf of multiple federal agencies, the joint authorization can include all participating agencies.
+
+
+
+==Footnotes==
+<references />
+
+
+== Sources ==
+
+* [http://csrc.nist.gov/publications/drafts/800-37-Rev1/SP800-37-rev1-FPD.pdf NIST SP 800-37 Rev. 1 DRAFT Guide for Applying the Risk Management Framework to Federal Information Systems: A Security Life Cycle Approach]
+
+[[Category:GIC-NISTSP80037r1FPD]]

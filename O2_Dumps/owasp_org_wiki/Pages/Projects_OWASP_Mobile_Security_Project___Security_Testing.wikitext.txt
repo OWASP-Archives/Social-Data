@@ -1,0 +1,65 @@
+== Mobile Security Testing  ==
+
+A major priority of the OWASP Mobile Security Project is to help standardize and disseminate mobile application testing methodologies. While specific techniques exist for individual platforms, the general "mobile" threat model can be used to create a generic testing methodology. 
+
+The below outline describes a general mobile application assessment methodology. 
+
+# Dynamic Analysis 
+## Debug the running app (on device or in emulator) 
+## Analyze network traffic 
+## Analyze remote services (HTTP/SOAP/etc) 
+# Static Analysis 
+## Get Application
+### Extract application from device 
+### Receive application package from developers 
+## Source Code Review 
+## Reverse Engineering 
+## Disassembly 
+## Patching
+
+== Testing Tools ==
+
+=== Network Traffic Analysis ===
+
+* [http://intrepidusgroup.com/insight/mallory/ Mallory]&nbsp;- Mallory is an open source transparent tcp/udp proxy that allows a tester to step through network traffic bytes at a time. Mallory is designed to function as a network gateway, thus facillitating the testing of embedded devices and applications that cannot easily be proxified.
+* [http://mitmproxy.org/index.html mitmproxy]
+
+=== Disassembly Tools & Resources ===
+
+Disassembling applications provides a wealth of information for a security researcher.  Platform differences lead to different toolsets for investigation of application internals.
+
+==== Android ====
+
+[http://code.google.com/p/smali/ smali/basksmali]&nbsp;- smali and baksmali are an assembler/disassembler pair that can be used to analyze the Dalvik byte code of an Android application.&nbsp;
+
+[http://jack-mannino.blogspot.com/2010/09/reversing-android-apps-101.html Reversing Android Apps 101] - Blog post describing the process of disassembling / reversing Android applications
+
+==== RIM ====
+
+TBD
+
+==== iOS ====
+
+''(This page is a work in progress so check back regularly...)''
+
+The approach is somewhat different (in comparison to others platforms) when carrying out dynamic and static analysis on iOS applications.  One approach is to become a registered Apple Developer to gain access to the goodness that is Xcode, Simulator, etc. and the other is jail breaking your phone.  We will look at this from the perspective of being a registered Apple Developer for and using Apple's Simulator for now.  You will need to be running a recent version of Snow Leopard to carry out testing using this route.
+
+'''Methodology'''
+
+First download the iOS Software Development Kit - inside this contains Xcode, the iPhone and iPad simulators and some other goodies.
+
+Using Mallory with airbase-ng.
+
+... TO DO.
+
+'''Tool dump''':
+
+* Charles Proxy - transparent proxy tool even with cert support.
+* otool - Mach-O Object file reader.  Use to disassemble and inspect iOS applications
+* class-dump-x - read class declarations and structs
+* clang analyzer - static analysis for C, C++, and Objective-C source code
+* Instruments - the sysinternals for Mac OS X
+* Shark - analyze assembly level operations
+* Mallory - to perform MiTM on iOS applications
+* IDA Pro - Commercial disassembler and debugger.
+* Hex Rays Decompiler - IDA Pro plug-in for decompilation of ARM assembly

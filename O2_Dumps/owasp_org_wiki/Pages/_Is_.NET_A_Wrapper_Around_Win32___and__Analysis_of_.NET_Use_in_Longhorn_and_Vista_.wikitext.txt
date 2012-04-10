@@ -1,0 +1,27 @@
+On Richard Grimes website (http://www.richardgrimes.com/) I found two very well written white papers which describe in details the consistent lack of focus and effort that Microsoft has been putting in .Net: [http://www.grimes.demon.co.uk/dotnet/vistaAndDotnet.htm Analysis of .NET Use in Longhorn and Vista] and [http://www.grimes.demon.co.uk/dotnet/dotnetWrappers.htm Analysis of .NET's Use of Win32 (Is .NET A Wrapper Around Win32?])
+
+Here are the executive summary of both documents:
+<i>
+"'''Analysis of .NET Use in Longhorn and Vista'''
+This article presents results of an investigation of the usage of .NET on five versions of Windows. The operating system files for the first version of Windows tested, XP Pro with Service Pack 2 applied, did not use .NET at all. This is understandable because XP was released before .NET was first released. The next version of Windows was the PDC 2003 build of Longhorn. This has a similar number of unmanaged executable files as XPSP2 but it also had thirty five .NET assemblies. Amongst these assemblies were two services. In addition, the desktop shell, through Windows Explorer, hosted the .NET runtime. It is clear that Microsoft intended the .NET framework to be an important constituent of the Longhorn operating system.
+
+Vista Beta 1 had 20% more unmanaged executable files than XPSP2 or PDC03LH, but it only had ten managed files. Furthermore, the next two builds of Vista (5219 handled out at PDC 2005, and 5231) had a similar number of executables as Vista Beta 1 and they had a few more managed files: fifteen for 5219 and 25 for 5231. However, even though there are more managed files, these are for fairly trivial applications and so they represent no significant increase in the amount of .NET applications doing work in Vista.
+
+Microsoft appears to have concentrated their development effort in Vista on native code development. In contrast to PDC03LH, Vista has no services implemented in .NET and Windows Explorer does not host the runtime, which means that the Vista desktop shell is not based on the .NET runtime. The only conclusion that can be made from these results is that between PDC 2003 and the release of Vista Beta 1 Microsoft has decided that it is better to use native code for the operating system, than to use the .NET framework."
+</i>
+
+
+and
+
+
+<i>"'''Analysis of .NET's Use of Win32 (Is .NET A Wrapper Around Win32?)'''
+Five versions of the .NET framework are analyzed for their use of unmanaged code. The analysis measures how many methods are implemented as Intermediate Language (IL) and how many are implemented in unmanaged code. It also measures how many method calls are to methods that are IL and how many calls are to methods that are implemented with unmanaged code. These measurements give a metric of how 'managed' the framework is; and the more managed, the better.
+
+The results show that all versions of .NET from 1.0.3705 (the first version) to 2.0.50727 (the released version of .NET v2.0) contain unmanaged code in the framework library. Furthermore, the proportion of managed code increased steadily and reached a peak at the version 1.2.4322 (the version supplied with the first publicly available version of Longhorn). However, after that version the proportion of managed code in the framework has decreased for versions after 1.2.4322. The current version of the .NET library (2.0.50727) is the worst yet in terms of the number of calls to unmanaged code, and the second worst (to 1.1.4322) in terms of the number of methods implements with unmanaged code.
+
+The conclusion to be drawn is that Microsoft made an effort to make the framework as managed as possible in versions of the framework up to and including 1.2.4322 (the first version of Longhorn), but after this Microsoft retreated from this aspiration and now it appears they are no longer determined to make the .NET framework entirely managed."<i>
+
+I started reading them and have to say that so far I agree with most of Richard's comments and share is disapoitment in Microsoft's current direction.
+
+
+[[Category:OWASP .NET Project]]

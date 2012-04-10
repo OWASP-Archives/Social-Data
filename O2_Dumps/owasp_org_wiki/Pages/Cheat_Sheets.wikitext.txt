@@ -1,0 +1,73 @@
+=Cheat Sheets=
+The following cheat sheets are currently available.
+
+{{Cheatsheet_Navigation}}
+
+=Project Overview=
+The OWASP Prevention Cheat Sheet Series was created to provide a concise collection of high value information on specific web application security topics. These cheat sheets were created by multiple application security experts and provide excellent security guidance in an easy to read format.
+
+{{Social Media Links}}
+
+{{:Projects/OWASP Cheat Sheets Project | Project About}} 
+
+<br>
+
+=Master Cheat Sheet=
+==Authentication==
+Ensure all entities go through an appropriate and adequate form of authentication. All the application non-public resource must be protected and shouldn't be bypassed.
+
+For more information, check [https://www.owasp.org/index.php/Authentication_Cheat_Sheet Authentication Cheat Sheet]
+
+==Session Management==
+
+Use secure session management practices that ensure that users authenticated users have a robust and cryptographically secure association with their session. 
+
+For more information, check [https://www.owasp.org/index.php/Session_Management_Cheat_Sheet Session Management Cheat Sheet]
+
+==Access Control==
+
+Ensure that a user has access only to the resources they are entitled to. Perform access control checks on the server side on every request. All user-controlled parameters should be validated for entitlemens checks. Check if user name or role name is passed through the URL or through hidden variables. Prepare a ACL containing the Role-to-Function mapping and validate if the users are granted access as per the ACL.
+
+==Input Validation==
+
+Input validation is performed to minimize malformed data from entering the system. Input Validation is NOT the primary method of preventing XSS, SQL Injection. These are covered in output encoding below.
+
+For more information, check [https://www.owasp.org/index.php/Input_Validation_Cheat_Sheet Input Validation Cheat Sheet]
+
+==Output Encoding==
+
+Output encoding is the primary method of preventing XSS and injection attacks. Input validation helps minimize the introduction of malformed data, but it is a secondary control.
+
+For more information, please see the [[XSS (Cross Site Scripting) Prevention Cheat Sheet]].
+
+==Cross Domain==
+
+Ensure that adequate controls are present to prevent against Cross-site Request Forgery, Clickjacking and other 3rd Party Malicious scripts.
+
+For more information, check [https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet Cross Site Request Forgery]
+
+==Secure Transmission==
+
+Ensure that all the applications pages are served over cryptographically secure HTTPs protocols. Prohibit the transmission of session cookies over HTTP.
+
+For more information, check [https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet Transport Protection Cheat Sheet]
+
+==Logging==
+
+Ensure that all the security related events are logged. Events include: User log-in (success/fail); view; update; create, delete, file upload/download, attempt to access through URL, URL tampering. Audit logs should be immutable and write only and must be protected from unauthorized access.
+
+==Admin Pages==
+
+Ensure that admin pages are segregated from user page. Appropriate and adequate access controls must be utilized to prevent users from gaining access to admin pages. Ensure that necessary audit trails are saved for all the administrative transactions.
+
+==Uploads==
+
+Ensure that the size, type, contents and name of the uploaded files are validated. Uploaded files must not be accessible to users by direct browsing. Preferably store all the uploaded files in a different file server/drive on the server. All files must be virus scanned using a regularily updated scanner.
+
+==Error Handling==
+
+Detailed exceptions and stack traces should never be displayed to the user. Instead a generic error page should be displayed for all the application error scenarios. All exceptions must be logged and examined later on. The application must always fale safe from all the error scenarios.
+
+<br> __NOTOC__ <headertabs /> 
+
+[[Category:OWASP_Project|OWASP Cheat Sheets Project]] [[Category:OWASP_Document]] [[Category:OWASP_Alpha_Quality_Document]]

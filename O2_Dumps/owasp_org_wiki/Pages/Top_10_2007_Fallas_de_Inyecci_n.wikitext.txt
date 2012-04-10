@@ -1,0 +1,90 @@
+{{Top_10_2007:TopTemplate|usenext=NextLink|next=-Ejecución de Ficheros Malintencionados|useprev=PrevLink|prev=-Secuencia de Comandos en Sitios Cruzados (XSS)|usemain=MainLink|main=}}
+
+Las fallas de inyección, en particular la inyección SQL, son comunes en aplicaciones Web. Existen distintos tipos de inyecciones: SQL, LDAP, XPath, XSLT. HTML, XML, inyección de órdenes en el sistema operativo y otras muchas.
+
+La inyección ocurre cuando los datos proporcionados por el usuario son enviados e interpretados como parte de una orden o consulta. Los atacantes interrumpen el intérprete para que ejecute comandos mal intencionados proporcionando datos especialmente modificados. Las fallas de inyección permiten a un atacante crear, modificar o borrar cualquier información arbitraria disponible en la aplicación. En el peor de los escenarios, estas fallas permiten a un atacante comprometer totalmente la aplicación y los sistemas subyacentes, incluso sobrepasar entornos con cortafuegos.
+
+==Entornos Afectados==
+
+Todas las plataformas de aplicación Web que usen intérpretes o invoquen otros procesos son vulnerables a las fallas de inyección. Esto incluye cualquier componente del marco de trabajo, que pueda usar intérpretes en la capa de bases de datos. 
+
+==Vulnerabilidad==
+
+Si la entrada de usuario se pasa a un intérprete sin validación o codificación, la aplicación es vulnerable.
+
+Revisar si se proporciona la entrada de usuario a consultas dinámicas como: 
+
+ ''PHP:''
+ <nowiki>$sql = "SELECT * FROM table WHERE id = '" . $_REQUEST['id'] . "'";</nowiki>
+
+ ''Java:''
+ String query = "SELECT user_id FROM user_data WHERE user_name = '" + req.getParameter("userID") + "' and user_password = '" + req.getParameter("pwd") +"'";
+
+==Verificando la seguridad==
+
+El objetivo es verificar que los datos del usuario no puedan modificar el significado de las órdenes y las consultas enviadas a ninguno de los intérpretes invocados por la aplicación.
+
+Enfoques automatizados: Muchas herramientas de escaneo de vulnerabilidades buscan fallas de inyección, en particular, inyecciones de SQL. Las herramientas de análisis estático que buscan el uso de APIs inseguras del intérprete son prácticas, pero con frecuencia no pueden verificar que pueda existir una validación o codificación apropiada para proteger contra la vulnerabilidad.
+
+Si la aplicación captura errores internos del servidor (501/500), o errores detallados de la base de datos, puede dificultar significativamente el uso de herramientas automáticas, pero el código puede seguir en riesgo. Las herramientas automáticas deben ser capaces de detectar inyecciones de LDAP/XML e inyecciones de XPath.
+
+Enfoques manuales: El enfoque más eficiente y preciso para revisar el código que invoca intérpretes. La persona que revise el código verificará el uso de una API segura o que se haya realizado una validación o codificación adecuada. El análisis puede consumir tiempo en exceso y puede conllevar una cobertura irregular debido a que la superficie de ataque de la mayoría de aplicaciones es demasiado grande.
+
+==Protección==
+
+
+Evitar el uso de intérpretes cuando sea posible. Si se tiene que invocar un intérprete, el mecanismo clave para evitar inyecciones es el uso de APIs seguras, como consultas con parámetros de asignación rigurosa y bibliotecas de mapeo relacional de objetos (ORM) 
+
+Estas interfaces manejan todo el escape de datos, o no requieren escaparlos. Tenga en cuenta que aunque las interfaces seguras resuelven el problema, se recomienda usar la validación de todas maneras para detectar ataques. 
+
+
+El uso de intérpretes es peligroso, hay que prestar especial atención en casos como:
+
+
+* '''Validación de entrada''': Usar un mecanismo estándar de validación de entradas para validar todas las entradas contra el tamaño, el tipo, la sintaxis y las reglas de negocio antes de aceptar los datos que se van a mostrar o almacenar. Usar una estrategia de validación para aceptar las entradas reconocidas como buenas. Rechazar las entradas inválidas en lugar de intentar desinfectar datos potencialmente hostiles. No olvidar que los mensajes de error pueden incluir datos inválidos. 
+* '''Usar APIS de consultas con parámetros''' de asignación rigurosa que reemplacen los parámetros de sustitución, incluso cuando se llame a procedimientos almacenados.
+* '''Conceder los mínimos privilegios''' cuando se conecte a bases de datos y otros sistemas de bases de datos.
+* '''Evitar los mensajes de error detallados''' que son útiles para un atacante.
+* '''Usar procedimientos almacenados''' ya que generalmente no les afectan las inyecciones SQL.. Sin embargo, tener cuidado ya que estos pueden ser inyectables (como a través del uso de exec() o concatenando argumentos a el procedimiento almacenado).
+* '''No usar interfaces de consultas dinámicas''' (como mysql_query() o similares)
+* '''No usar funciones de escape simples''', como addslashes() de PHP o funciones de reemplazo de caracteres como str_replace(""'"", ""). ''Estas son débiles y han sido explotadas satisfactoriamente por atacantes. Para PHP, usar mysql_real_escape_string() si se usa MySQL, o preferiblemente usar PDO que no requiere escapar.''
+* Cuando se usen mecanismos de escape simples, tenga en cuenta que las '''funciones simples de escape no pueden escapar los nombres de tabla'''. Los nombres de tabla deben ser sentencias SQL legales, y por lo tanto son completamente inapropiadas como datos de entrada del usuario.
+* '''Preste atención a errores de canonización'''. Las entradas deben ser decodificadas y formalizadas en la representación interna de la aplicación actual antes de ser validadas. Asegurarse de que la aplicación no decodifica la misma entrada dos veces. Estos errores pueden ser utilizados para evadir esquemas de listas blancas introduciendo entradas peligrosas después de que hayan sido comprobadas. 
+
+Recomendaciones específicas del lenguaje:
+
+
+* Java EE - Usar PreparedStatement de asignación rigurosa, u ORMs como Hibernate o Spring.
+* .Net - usar consultas con parámetros de asignación rigurosa, como SQlCommand con SqlParameter o un ORM como Hibernate.
+* PHP - Usar PDO con consultas parametrizadas de asignación rigurosa (usando bindParam())
+
+==Ejemplos==
+
+* [http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-5121 http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-5121] 
+* [http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4953 http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4953] 
+* [http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4592 http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4592] 
+
+== Sitios Relacionados ==
+
+*[[SQL Injection|Inyección SQL]]
+*[[Reviewing Code for SQL Injection|Revisando el código por Inyección SQL]]
+*[[Testing for SQL Injection  (OWASP-DV-005)|Probando por Inyección SQL]]
+*[[Guide to SQL Injection|Guía de Inyección SQL]]
+
+==Referencias==
+
+* CWE: CWE-89 (SQL Injection), CWE-77 (Command Injection), CWE-90 (LDAP Injection), CWE-91 (XML Injection), CWE-93 (CRLF Injection), others.
+* WASC Threat Classification: [http://www.webappsec.org/projects/threat/classes/ldap_injection.shtml http://www.webappsec.org/projects/threat/classes/ldap_injection.shtml][http://www.webappsec.org/projects/threat/classes/sql_injection.shtml http://www.webappsec.org/projects/threat/classes/sql_injection.shtml]http://www.webappsec.org/projects/threat/classes/os_commanding.shtml
+* OWASP, [http://www.owasp.org/index.php/SQL_Injection http://www.owasp.org/index.php/SQL_Injection]
+* OWASP Guide, [http://www.owasp.org/index.php/Guide_to_SQL_Injection http://www.owasp.org/index.php/Guide_to_SQL_Injection] 
+* OWASP Code Review Guide, [http://www.owasp.org/index.php/Reviewing_Code_for_SQL_Injection http://www.owasp.org/index.php/Reviewing_Code_for_SQL_Injection] 
+* OWASP Testing Guide, [http://www.owasp.org/index.php/Testing_for_SQL_Injection http://www.owasp.org/index.php/Testing_for_SQL_Injection] 
+* SQL Injection, [http://www.spidynamics.com/papers/SQLInjectionWhitePaper.pdf http://www.spidynamics.com/papers/SQLInjectionWhitePaper.pdf] 
+* Advanced SQL Injection, [http://www.ngssoftware.com/papers/advanced_sql_injection.pdf%20 http://www.ngssoftware.com/papers/advanced_sql_injection.pdf ]
+* More Advanced SQL Injection, [http://www.nextgenss.com/papers/more_advanced_sql_injection.pdf%20 http://www.nextgenss.com/papers/more_advanced_sql_injection.pdf ]
+* Hibernate, an advanced object relational manager (ORM) for J2EE and .NET, [http://www.hibernate.org/ http://www.hibernate.org/] 
+* J2EE Prepared Statements, [http://java.sun.com/docs/books/tutorial/jdbc/basics/prepared.html http://java.sun.com/docs/books/tutorial/jdbc/basics/prepared.html] 
+* How to: Protect from SQL injection in ASP.Net,[http://msdn2.microsoft.com/en-us/library/ms998271.aspx http://msdn2.microsoft.com/en-us/library/ms998271.aspx] 
+* PHP PDO functions, [http://php.net/pdo http://php.net/pdo] 
+
+{{Top_10_2007:BottomTemplate|usenext=NextLink|next=-Ejecución de Ficheros Malintencionados|useprev=PrevLink|prev=-Secuencia de Comandos en Sitios Cruzados (XSS)|usemain=MainLink|main=}}

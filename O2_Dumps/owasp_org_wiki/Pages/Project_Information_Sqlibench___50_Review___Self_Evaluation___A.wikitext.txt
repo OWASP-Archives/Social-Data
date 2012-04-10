@@ -1,0 +1,39 @@
+[[Category:OWASP_Sqlibench_Project|Clik here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#SQL_Injector_Benchmarking_Project_.28SQLiBENCH.29|Sqlibench Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#SQL_Injector_Benchmarking_Project_.28SQLiBENCH.29|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+
+%50 of the deliverables are finished. The two unfinished jobs we have are; creating videos of the preparing the environment (nevertheless written documentation has been produced) and integrating the vulnerable application into OWASP Site Generator, (we won't pursue this).
+
+1. test environment and detailed documentation (http://code.google.com/p/sqlibench/wiki/PrepareTheEnvironment), however, we haven't created the videos yet.
+
+2. the benchmarking list, plus an interactive criteria listing application (http://code.google.com/p/sqlibench/wiki/BenchmarkingCriteria, http://www.webguvenligi.org/sqlibench/web).
+
+3. the vulnerable application supporting all of the dbmss, injection types. Additionally we utilized nHibernate in the same application for all of the dbmss and injection types. But we won't (can't) incorporate this application in OWASP Site Generator (It seems pretty hard if not impossible and adds little value to the work).
+
+4. the sql injectors that will be benchmarked (http://code.google.com/p/sqlibench/wiki/Specification).
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#SQL_Injector_Benchmarking_Project_.28SQLiBENCH.29|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+Four of the four objectives are accomplished. %50 of the deliverables are finished with only one empty spot (creating videos of the preparing the testing environment). We've also contacted the most of the sql injectors authors. They'll send us the non-published new versions of their tools.
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+We'd love to hear comments on the criteria list we have produced 
+(http://code.google.com/p/sqlibench/wiki/BenchmarkingCriteria). 
+ |-
+|}

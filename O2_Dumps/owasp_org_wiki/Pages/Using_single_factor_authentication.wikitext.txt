@@ -1,0 +1,103 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+The use of single-factor authentication can lead to unnecessary risk of compromise when compared with the benefits of a dual-factor authentication scheme.
+
+'''Consequences'''
+
+* Authentication: If the secret in a single-factor authentication scheme gets compromised, full authentication is possible.
+
+'''Exposure period'''
+
+* Design: Authentication methods are determined at design time.
+
+'''Platform'''
+
+* Languages: All
+* Operating platform: All
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood of exploit'''
+
+High
+
+While the use of multiple authentication schemes is simply piling on more complexity on top of authentication, it is inestimably valuable to have such measures of redundancy. 
+
+The use of weak, reused, and common passwords is rampant on the internet. Without the added protection of multiple authentication schemes, a single mistake can result in the compromise of an account. For this reason, if multiple schemes are possible and also easy to use, they should be implemented and required. 
+
+==Risk Factors==
+
+TBD
+
+
+==Examples==
+
+In C:
+
+<pre>
+unsigned char *check_passwd(char *plaintext){
+        ctext=simple_digest("sha1",plaintext,strlen(plaintext)...);
+        if (ctext==secret_password())
+          // Log me in
+}
+</pre>
+
+In Java:
+
+<pre>
+String plainText = new String(plainTextIn)
+MessageDigest encer = MessageDigest.getInstance("SHA");
+encer.update(plainTextIn);
+byte[] digest = password.digest();
+if (digest==secret_password())
+  //log me in
+</pre>
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Using password systems]]
+
+
+==Related [[Controls]]==
+
+* Design: Use multiple independent authentication schemes, which ensures that - if one of the methods is compromised - the system itself is still likely safe from compromise.
+
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Authentication Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

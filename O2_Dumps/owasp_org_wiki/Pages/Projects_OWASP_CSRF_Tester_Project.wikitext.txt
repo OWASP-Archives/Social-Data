@@ -1,0 +1,52 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Project About</noinclude>
+
+| project_name = OWASP CSRF Tester Project
+
+| project_home_page = :Category:OWASP CSRFTester Project
+
+| project_description = The OWASP CSRFTester Project attempts to give developers the ability to test their applications for CSRF flaws. 
+
+| project_license = [http://www.gnu.org/licenses/old-licenses/gpl-2.0.htmll GNU GPL v2]
+
+| leader_name1 = Eric Sheridan
+| leader_email1 = eric.sheridan@owasp.org
+| leader_username1 = Esheridan
+
+| contributor_name1 =
+| contributor_email1 = 
+| contributor_username1 = 
+
+| contributor_name2 =
+| contributor_email2 = 
+| contributor_username2 = 
+
+| pamphlet_link = 
+
+| presentation_link = http://www.owasp.org/images/c/c9/CSRF_DangerDetectionDefenses.ppt
+
+| mailing_list_name = 
+
+| project_road_map = https://www.owasp.org/index.php/CSRFTester_Roadmap
+
+| links_url1 = http://www.owasp.org/index.php/CSRFTester_Usage
+| links_name1 = Documentation regarding the use of the CSRFTester 
+ 
+| links_url2 = http://owaspcsrftester.googlecode.com/
+| links_name2 = Source Code Repository
+
+| links_url3 = http://www.owasp.org/index.php/Image:CSRFTester-1.0.zip
+| links_name3 = OWASP CSRFTester 1.0 binary and startup script
+
+| links_url4 = http://www.owasp.org/index.php/Image:CSRFTester-1.0-src.zip
+| links_name4 = OWASP CSRFTester 1.0 source and binary
+
+| links_url[5-10] = 
+| links_name[5-10] = 
+
+| release_1 = CSRFTester 1.0
+| release_2 = 
+| release_3 =
+| release_4 =
+<!--- The line below is for GPC usage only. Please do not edit it --->
+| project_about_page = Projects/OWASP_CSRF_Tester_Project
+}}

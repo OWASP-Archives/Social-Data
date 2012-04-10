@@ -1,0 +1,743 @@
+[[Guide Table of Contents|Development Guide Table of Contents]]__TOC__
+
+==Objective ==
+
+To ensure that applications are secure from well-known parameter manipulation attacks against common interpreters.
+
+==Platforms Affected ==
+
+All
+
+==Relevant COBIT Topics ==
+
+DS11 – Manage Data – All sections should be reviewed
+
+DS11.9 – Data processing integrity
+
+DS11.20 – Continued integrity of stored data
+
+==User Agent Injection ==
+
+User agent injection is a significant problem for web applications. We cannot control the user's desktop (nor would we want to), but it is part of the trust equation. 
+
+There are several challenges to trusting input and sending output from the user:
+
+* The browser may be compromised with spyware or Trojans
+
+* The browser has several in-built renderers, including: HTML, XHTML, XML, Flash (about 90% of all browsers), JavaScript (nearly 99%), XUL (Firefox and Mozilla), XAML (IE 7 and later) and so on. 
+
+Render engines and plug-ins can be abused by:
+
+* As phishing attempts - pure HTML can be used to fake up a convincing site
+
+* As trust violations - XUL and XAML are used to write the user interface - if they can be abused, nothing on the browser is trustworthy, including the URL, padlock and certificate details
+
+* As malware injection paths - all software has bugs, and spyware is adept at abusing these bugs to install or run malicious software on the user's machine
+
+* As information gatherers - stealing the user's cookies and details allows the attacker to resume the user's session elsewhere
+
+===Vectors of user agent injection ===
+
+* Cross-site scripting using DHTML / JavaScript
+
+* Flash / Shockwave
+
+* Mocha (old Netscape)
+
+* ActiveX (IE only)
+
+* Plugins (such as Quicktime, Acrobat, or Windows Media Player) 
+
+* BHOs (often used by spyware and Trojans) – the user may not be aware of these babies
+
+* HTML bugs (all browsers)
+
+* XUL (Firefox) Chrome
+
+* XAML (IE 7) Chrome – untested at the time of writing
+
+===Immediate Reflection ===
+
+This is the most typical form of user agent injection as it is trivial to find and execute.
+
+The victim is encouraged / forced to a vulnerable page, such as a link to cute kittens, a redirect page to “activate” an account, or a vulnerable form which contains an improperly sanitized field. Once the user is on the vulnerable destination, the embedded reflection attack launches the attacker’s payload. There are limits to the size of embedded reflection attacks – most GET requests need to be less than 2 or 4 KB in size. However, this has proved ample in the past.
+
+Nearly all phishing attempts would be considered immediate reflection attacks.
+
+===Stored  ===
+
+In this model, the injection occurs at a previous time and users are affected at a later date. The usual type of attack are blog comments, forum, and any relatively public site which can be obviated in some fashion.
+
+===DOM-based XSS Injection ===
+
+[[DOM Based XSS]] (detailed in the Klein whitepaper in the Further References section) allows an attacker to use the Document Object Model (DOM) to introduce hostile code into vulnerable client-side JavaScript embedded in many pages. For more information, please refer to OWASP article on [[DOM Based XSS]] and Amit's DOM-based XSS Injections paper in the Further Reading section.
+
+===Protecting against DOM based attacks ===
+
+From Klein’s paper:
+
+* Avoid client side document rewriting, redirection, or other sensitive actions, using client side data. Most of these effects can be achieved by using dynamic pages (server side).
+
+*  Analyzing and hardening the client side (Javascript) code. Reference to DOM objects that may be influenced by the user (attacker) should be inspected, including (but not limited to):
+** document.URL
+** document.URLUnencoded
+** document.location (and many of its properties)
+** document.referrer
+** window.location (and many of its properties)
+
+Note that a document object property or a window object property may be referenced syntactically in many ways - explicitly (e.g. window.location), implicitly (e.g. location), or via obtaining a handle to a window and using it (e.g. handle_to_some_window.location).
+
+*  Special attention should be given to scenarios wherein the DOM is modified, either explicitly or potentially, either via raw access to the HTML or via access to the DOM itself, e.g. (by no means an exhaustive list, there are probably various browser extensions):
+
+Write raw HTML, e.g.:
+
+* document.write(…)
+
+* document.writeln(…)
+
+* document.body.innerHtml=…
+
+* Directly modifying the DOM (including DHTML events), e.g.:
+
+* document.forms[0].action=… (and various other collections)
+
+* document.attachEvent(…)
+
+* document.create…(…)
+
+* document.execCommand(…)
+
+* document.body. … (accessing the DOM through the body object)
+
+* window.attachEvent(…)
+
+Replacing the document URL, e.g.:
+
+* document.location=… (and assigning to location’s href, host and hostname)
+
+* document.location.hostname=…
+
+* document.location.replace(…)
+
+* document.location.assign(…)
+
+* document.URL=…
+
+* window.navigate(…)
+
+Opening/modifying a window, e.g.:
+
+* document.open(…)
+
+* window.open(…)
+
+* window.location.href=… (and assigning to location’s href, host and hostname)
+
+Directly executing script, e.g.:
+
+* eval(…)
+
+* window.execScript(…)
+
+* window.setInterval(…)
+
+* window.setTimeout(…)
+
+===How to protect yourself against reflected and stored XSS ===
+
+'''''Protecting against Reflected Attacks'''''
+
+Input validation should be used to remove suspicious characters, preferably by strong validation strategies; it is always better to ensure that data does not have illegal characters to start with. 
+
+In ASP.NET, you should add this line to your web.config:
+
+<pre>
+<pages validateRequest="true" />
+</pre>
+
+in the <system> </system> area. 
+
+'''''Protecting against stored attacks'''''
+
+As data is often obtained from unclean sources, output validation is required. 
+
+ASP.NET: Change web.config – validateRequest to be true and use HTTPUtility.HTMLEncode() for body variables.
+
+ColdFusion MX: Enable Global Script Protection in the ColdFusion Administrator and use escape or URLEncodeFormat() for GET parameters. 
+
+PHP: Use htmlentities(), htmlspecialchars(), for HTML output, and urlencode() for GET arguments.
+
+JSP: Output validation is actually very simple for those using Java Server Pages - just use Struts, such as using <bean:write ... > and friends:
+
+Good:
+
+<pre>
+<html:submit styleClass="button" value="<bean:message key="button.submitText"/> "/>
+</pre>
+
+
+
+Bad:
+
+
+<pre>
+out.println('<input type="submit" class="button" value="<%=buttonSubmitText%>" />');
+</pre>
+
+
+
+The old JSP techniques such as <%= ... %> and out.print* do not provide any protection from XSS attacks. They should not be used, and any code including them should be rejected. 
+
+With a small caveat, you can use <%= ... %> as an argument to Struts tags:
+
+
+<pre>
+<html:submit styleClass="button" value="<%=button.submitText%>"/> "/>
+</pre>
+
+
+
+But it is still better to use the <bean:message ...> tag for this purpose. Do not use System.out.* for output, even for output to the console - console messages should be logged via the logging mechanism.
+
+==HTTP Response Splitting ==
+
+This attack, described in a 2004 paper by Klein (see ''HTTP Response Splitting Whitepaper ''in the Further Reading section), uses a weakness in the HTTP protocol definition to inject hostile data into the user’s browser. Klein describes the following classes of attacks:
+
+* [[Cross-site Scripting (XSS)]]
+
+* Web Cache Poisoning (defacement) 
+
+* Cross User attacks (single user, single page, temporary defacement) 
+
+* Hijacking pages 
+
+* Browser cache poisoning
+
+===How to determine if you are vulnerable ===
+
+In HTTP, the headers and body are separated by a double carriage return line feed sequence. If the attacker can insert data into a header, such as the location header (used in redirects) or in the cookie, and if the application does not protect against [[CRLF Injection]], it is quite likely that the application will be vulnerable to HTTP Response Splitting. The attack injects two responses (thus the name), where the first response is the attacker’s payload, and the second response containing the rest of the user’s actual output, is usually ignored by the web server.
+
+===How to protect yourself ===
+
+Investigate all uses of HTTP headers, such as 
+
+* setting cookies
+
+* using location (or redirect() functions)
+
+* setting mime-types, content-type, file size, etc.
+
+* or setting custom headers
+
+If these contain unvalidated user input, the application is vulnerable when used with application frameworks that cannot detect this issue. 
+
+If the application has to use user-supplied input in HTTP headers, it should check for double “\n” or “\r\n” values in the input data and eliminate it. 
+
+Many application servers and frameworks have basic protection against HTTP response splitting, but it is not adequate to task, and you should not allow unvalidated user input in HTTP headers.
+
+==SQL Injection ==
+
+[[SQL Injection]] can occur with every form of database access. However, some forms of SQL injection are harder to obviate than others:
+
+* Parameterized stored procedures, particularly those with strongly typed parameters
+
+* = Prepared statements
+
+* = ORM (eg Hibernate) 
+
+* Dynamic queries
+
+It is best to start at the top and work to the lowest form of SQL access to prevent injection issues. 
+
+Although old-fashioned dynamic SQL injection is still a favorite amongst PHP programs, it should be noted that the state of the art has advanced significantly:
+
+* It is possible to perform blind (and complete) injection attacks (see the NGS papers in the references section of this chapter) using timing based attacks.
+
+* It is possible to obviate certain forms of stored procedures, particularly when the stored procedure is just a wrapper.
+
+The application should:
+
+* All SQL statements should ensure that where a user is affecting data, that the data is selected or updated based upon the user's record.
+
+* In code which calls whichever persistence layer, escape data as per that persistence layer's requirements to avoid SQL injections.
+
+* Have at least one automated test to try to perform a SQL injection. 
+
+This will ensure the code has an extra layer of defense against SQL injections, and ensure that if this control fails, that the likelihood of the injection working is known.
+
+==ORM Injection ==
+
+It is commonly thought that ORM layers, like Hibernate, are immune to SQL injection. This is not the case as Hibernate includes a subset of SQL called HQL, and allows "native" SQL queries. Often the ORM layer only minimally manipulates the inbound query before handing it off to the database for processing. 
+
+If using Hibernate, do not use the deprecated session.find() method without using one of the query binding overloads. Using session.find() with direct user input allows the user input to be passed directly to the underlying SQL engine and will result in SQL injections on all supported RDBMS. 
+
+
+<pre>
+Payment payment = (Payment) session.find("from com.example.Payment as payment where payment.id = " + paymentIds.get(i));
+</pre>
+
+
+
+The above Hibernate HQL will allow SQL injection from paymentIds, which are obtained from the user. A safer way to express this is:
+
+<pre>
+int pId = paymentIds.get(i);
+
+TsPayment payment = (TsPayment) session.find("from com.example.Payment as payment where payment.id = ?", pId, StringType);
+</pre>
+
+
+It is vital that input is properly escaped before use on a SQL database. Luckily, the current Oracle JDBC driver escapes input for prepared statements and parameterized stored procedures. However, if the driver changes, any code that assumes that input is safe will be at risk. 
+
+The application should:
+
+* Ensure that all native queries are properly escaped or do not contain user input.
+
+* Ensure that all ORM calls which translate into dynamic queries are re-written to be bound parameters.
+
+* In code which calls whichever persistence layer, escape data as per that persistence layer's requirements to avoid SQL injections.
+
+* Have at least one automated test to try to perform a SQL injection. 
+
+* This will ensure the code has an extra layer of defense against SQL injections, and ensure that if this control fails, that the likelihood of the injection working is known.
+
+==LDAP Injection ==
+
+[[LDAP injection|LDAP injections]] are relatively rare at the time of writing, but they are devastating if not protected against. LDAP injections are thankfully relatively easy to prevent: use positive validation to eliminate all but valid username and other dynamic inputs. 
+
+For example, if the following query is used:
+
+
+<pre>
+String principal = "cn=" + getParameter("username") + ", ou=Users, o=example";
+
+String password = getParameter("password");
+
+
+
+env.put(Context.SECURITY_AUTHENTICATION, "simple");
+
+env.put(Context.SECURITY_PRINCIPAL, principal);
+
+env.put(Context.SECURITY_CREDENTIALS, password);
+
+
+
+// Create the initial context
+
+DirContext ctx = new InitialDirContext(env);
+</pre>
+
+
+the LDAP server will be at risk from LDAP injection. It is vital that LDAP special characters are removed prior to any LDAP queries taking place:
+
+
+<pre>
+// if the username contains LDAP specials, stop now
+
+if ( containsLDAPspecials(getParameter("username")) ) {
+
+	throw new javax.naming.AuthenticationException();
+
+}
+
+
+
+String principal = "cn=" + getParameter("username") + ", ou=Users, o=example";
+
+String password = getParameter("password");
+
+
+
+env.put(Context.SECURITY_AUTHENTICATION, "simple");
+
+env.put(Context.SECURITY_PRINCIPAL, principal);
+
+env.put(Context.SECURITY_CREDENTIALS, password);
+
+
+
+// Create the initial context
+
+DirContext ctx = new InitialDirContext(env);
+
+</pre>
+
+==XML Injection ==
+
+Many systems now use XML for data transport and transformation. It is vital that XML injection is not possible. 
+
+===Attack paths - blind XPath Injection ===
+
+Amit Klein details a variation of the blind SQL injection technique, [[XPATH Injection|XPath Injection]], in the paper in the references section below. The technique allows attackers to perform complete XPath based attacks, as the technique does not require prior knowledge of the XPath schema. 
+
+As XPath is used for everything from searching for nodes within an XML document right through to user authentication, searches and so on, this technique can be devastating if the system is vulnerable. 
+
+The technique Klein describes is also a useful extension for other blind injection-capable interpreters, such as many SQL dialects.
+
+===How to determine if you are vulnerable ===
+
+* If you allow unvalidated input from untrusted sources, such as the user; AND 
+
+* If you use XML functions, such as constructing XML transactions, use XPath queries, or use XSLT template expansion with the tainted data, you are most likely vulnerable.
+
+===How to protect yourself ===
+
+This requires the following characters to be removed (i.e. prohibited) or properly escaped:
+
+* < >  / ' = " to prevent straight parameter injection
+
+* XPath queries should not contain any meta characters (such as ' = * ? // or similar)
+
+* XSLT expansions should not contain any user input, or if they do, that you comprehensively test the existence of the file, and ensure that the files are within the bounds set by the Java 2 Security Policy
+
+==Code Injection ==
+
+ASP.NET does not contain any functions to include injected code, but can do it through the use of CodeProvider classes along with reflection. See the “ASP.NET Eval” reference.
+
+Any PHP code which uses eval() is at risk from code injection. 
+
+Java generally does not contain the ability to evaluate dynamic JSPs. 
+
+However, there are three exceptions to this:
+
+* Dynamic JSP inclusion (<jsp:include ...>)
+
+* Using a third party JSP eval taglibs.
+
+* Portals and other community-based software often require the evaluation of dynamic code for templates and skinning. If the portal software requires dynamic includes and dynamic code execution, there is a risk of Java or JSP code injection. 
+
+To combat this, the primary defenses are to
+
+* Always prefer static include ( <% include ... %> ).
+
+* Not allow the inclusion of files outside of the server by using Java 2 Security policies.
+
+* Establish firewall rules to prevent outbound Internet connectivity.
+
+* Ensure that code does not interpret user data without prior validation.
+
+In a theoretical example, the user may choose to use "Cats" as their primary theme. In this theoretical example, the code dynamically includes a file called "Cats.theme.jsp" using simple concatenation. However, if the user types in something else, they may be able to get Java code interpreted on the server. At that stage, the application server is no longer owned by the user. Generally, dynamic inclusion and dynamic code evaluation should be frowned upon.
+
+==Further Reading ==
+
+* Klein, A., ''Blind XPath Injection''
+
+<u>http://www.packetstormsecurity.com/papers/bypass/Blind_XPath_Injection_20040518.pdf</u> 
+
+* Klein, A., ''DOM Based XSS Injection''
+
+<u>http://www.webappsec.org/projects/articles/071105.html</u> 
+
+* ''Adding XSS protection to .NET 1.0''
+
+<u>http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnaspp/html/scriptingprotection.asp</u> 
+
+* ASP.NET Eval 
+
+<u>http://www.eggheadcafe.com/articles/20030908.asp</u>
+
+* Malicious code mitigation
+
+<u>http://www.cert.org/tech_tips/malicious_code_mitigation.html</u>  
+
+* XSLT injection in Firefox
+
+<u>http://www.securityfocus.com/advisories/8185</u> 
+
+* XML Injection in libxml2 packages
+
+<u>http://www.securityfocus.com/advisories/7439</u> 
+
+* XML injection in PHP
+
+<u>http://www.securityfocus.com/advisories/8786</u> 
+
+* SQL Injection papers
+
+<u>http://www.nextgenss.com/papers/advanced_sql_injection.pdf</u> 
+
+<u>http://www.nextgenss.com/papers/more_advanced_sql_injection.pdf</u>
+
+<u>http://www.sqlsecurity.com/faq-inj.asp</u> [[category:FIXME|link broken]]
+
+<u>http://www.spidynamics.com/papers/SQLInjectionWhitePaper.pdf</u> [[category:FIXME|link broken]]
+
+== PHP specific examples ==
+
+Consider a guestbook application written in PHP. The visitor is presented with a form where he/she enters a message. This form is then posted to a page which saves the data to a database. When someone wishes to view the guestbook all messages are fetched from the database to be sent to the browser. For each message in the database the following code is executed: 
+
+<pre>
+// $aRow contains one row from a SQL-query 
+
+echo '<td>';
+
+echo $aRow['sMessage']; 
+
+echo '</td>'; 	... 
+
+</pre>	 
+
+What this means is that exactly what is entered in the form is later sent unchanged to every visitor's browser. Why is this a problem? Picture someone entering the character < or >, that would probably break the page's formatting. However, we should be happy if that is all that happens. This leaves the page wide open for injecting JavaScript, HTML, VBScript, Flash, ActiveX etc. A malicious user could use this to present new forms, fooling users to enter sensitive data. Unwanted advertising could be added to the site. Cookies can be read with JavaScript on most browsers and thus most session IDs, leading to hijacked accounts. 
+
+What we want to do here is to convert all characters that have special meaning to HTML into HTML entities. Luckily PHP provides a function for doing just that, this function is called htmlspecialchars() and converts the characters  “, &, < and > into &amp; “ &lt; and &gt;. (PHP has another function called htmlentities() which converts all characters that have HTML entities equivalents, but htmlspecialchars suits our needs perfectly.) 
+
+<pre>
+// The correct way to do the above would be: 
+
+echo '<td>'; 
+
+echo htmlspecialchars($aRow['sMessage']); 
+
+echo '</td>'; 	... 	  
+
+</pre>
+
+One might wonder why we do not do this right away when saving the message to the database. Well that is just begging for trouble, then we would have to keep track of where the data in every variable comes from, and we would have to treat input from GET, POST differently from data we fetch from a database. It is much better to be consistent and call htmlspecialchars() on the data right before we send it to the browser. This should be done on all unfiltered input before sending it to the browser. 	
+
+===Why htmlspecialchars is not always enough ===
+
+Let's take a look at the following code: 
+
+<pre>
+// This page is meant to be called like: page.php?sImage=filename.jpg 	
+
+echo '<img src= “' . htmlspecialchars($_GET['sImage']) . '” />'; 	  
+</pre>
+
+The above code without htmlspecialchars would leave us completely vulnerable to XSS attacks but why is not htmlspecialchars enough? 
+
+Since we are already in a HTML tag we do not need < or > to be able to inject malicious code. Look at the following: 
+
+<pre>
+
+// We change the way we call the page:
+
+// page.php?sImage=javascript:alert(document.cookie); 
+
+// Same code as before: 
+
+echo '<img src= “' . htmlspecialchars($_GET['sImage']) . '” />'; <!—
+
+</pre>
+
+The above would result in: 
+
+<pre>
+--> 	<img src= “javascript:alert(document.cookie);” /> 	   
+</pre>
+
+“javascript:alert(document.cookie);” passes right through htmlspecialchars without a change. Even if we replace some of the characters with HTML numeric character references the code would still execute in some browsers. 
+
+<pre>
+<!-- This would execute in some browsers: -->
+
+<img src= “javascript&#58;alert&#40;document.cookie&#41;;” /> 	  
+</pre>
+
+There is no generic solution here other than to only accept input we know is safe, trying to filter out bad input is hard and we are bound to miss something. Our final code would look like the following:
+
+<pre>
+// We only accept input we know is safe (in this case a valid filename)
+
+if ( preg_match('/^[0-9a-z_]+\.[a-z]+$/i', $_GET['sImage']) ) {
+
+	echo '<img src="' . $_GET['sImage'] . '" />;';
+
+}
+
+</pre>
+
+===SQL injection ===
+
+The term [[SQL Injection]] is used to describe the injection of commands into an existing SQL query. The Structured Query Language (SQL) is a textual language used to interact  with database servers like MySQL, MS SQL and Oracle. 
+
+<pre>
+
+$iThreadId = $_POST['iThreadId'];
+
+// Build SQL query 
+
+$sSql = “SELECT sTitle FROM threads WHERE iThreadId = “ . $iThreadId;    
+
+</pre>
+
+To see what's wrong with to code above, let's take a look at the following HTML code:    
+
+<pre>
+<form method=“post” action=“insecure.php”>
+
+<input type=“text” name=“iThreadId” value=“4; DROP TABLE users” />      <input type=“submit” value=“Don't click here” />
+
+</form>       
+
+</pre>
+
+If we submit the above form to our insecure page, the string sent to the database server  would look like the following, which is not very pleasant:     
+
+<pre>
+SELECT sTitle FROM threads WHERE iThreadId = 4; DROP TABLE users       
+</pre>
+
+There are several ways you can append SQL commands like this, some dependent of the database server. To take this further, this code is common in PHP applications:   
+
+<pre>
+
+$sSql = “SELECT iUserId FROM users” .
+
+“ WHERE sUsername = '“ . 
+
+$_POST['sUsername'] . 
+
+“' AND sPassword = '“ . 
+
+$_POST['sPassword'] . “'“;      
+</pre>
+
+We can easily skip the password section here by entering “theusername'--” as the username or “' OR '' = '“ as the password (without the double-quotes), resulting in:     
+
+<pre>
+
+// Note: -- is a line comment in MS SQL so everything after it will be skipped 
+
+SELECT iUserId FROM users WHERE sUsername = 'theusername'--' AND sPassword =  '' 
+
+// Or: 
+
+SELECT iUserId FROM users WHERE sUsername = 'theusername' AND sPassword = ''  OR '' = ''      
+
+</pre>
+
+Here is where validation comes into play, in the first example above we must check that  $iThreadId really is a number before we append it to the SQL-query. 
+
+<pre>
+if ( !is_numeric($iThreadId) ) {
+
+// Not a number, output error message and exit. 
+
+...''
+
+}       
+
+</pre>
+
+The second example is a bit trickier since PHP has built in functionality to prevent this, if it is set. This directive is called magic_quotes_gpc, which like register_globals never  should have been built into PHP, in my opinion that is, and I will explain why. To have characters like ' in a string we have to escape them, this is done differently depending on the database server:     
+
+<pre>
+// MySQL: 
+
+SELECT iUserId FROM users WHERE sUsername = 'theusername\'--' AND sPassword  = ''  
+
+// MS SQL Server: SELECT iUserId FROM users WHERE sUsername = 'theusername''--' AND sPassword  = ''      
+</pre>
+
+Now what magic_quotes_gpc does, if set, is to escape all input from GET, POST and COOKIE (gpc). This is done as in the first example above, that is with a backslash. So if you enter “theusername'--” into a form and submit it, $_POST['sUsername'] will contain  “theusername\'--”, which is perfectly safe to insert into the SQL-query, as long as the  database server supports it (MS SQL Server doesn't). This is the first problem the second  is that you need to strip the slashes if you're not using it to build a SQL-query. A general rule here is that we want our code to work regardless if magic_quotes_gpc is set or not. The following code will show a solution to the second example:     
+
+<pre>
+
+// Strip backslashes from GET, POST and COOKIE if magic_quotes_gpc is on 
+
+if (get_magic_quotes_gpc()) {
+
+	// GET     
+
+	if (is_array($_GET)) {
+
+		// Loop through GET array         
+
+		foreach ($_GET as $key => $value) {
+
+			$_GET[$key] = stripslashes($value);
+
+		}
+
+	}
+
+	// POST     
+
+	if (is_array($_POST)) {
+
+		// Loop through POST array 
+
+		foreach ($_POST as $key => $value) {
+
+			$_POST[$key] = stripslashes($value);
+
+		}
+
+	}
+
+	// COOKIE     
+
+	if (is_array($_COOKIE)) {
+
+		// Loop through COOKIE array         
+
+		foreach ($_COOKIE as $key => $value) {
+
+			$_COOKIE[$key] = stripslashes($value);
+
+		}
+
+	}
+
+}
+
+
+
+function sqlEncode($sText)
+
+{
+
+	$retval = '';
+
+	if ($bIsMySql) {
+
+		$retval = addslashes($sText);
+
+	} else {
+
+		// Is MS SQL Server         
+
+		$retval = str_replace("'", "''", $sText);
+
+	}
+
+	return $retval;
+
+}
+
+
+
+$sUsername = $_POST['sUsername'];
+
+$sPassword = $_POST['sPassword'];
+
+$sSql = "SELECT iUserId FROM users ".
+
+			" WHERE sUsername = '" . sqlEncode($sUsername) . "'" . 
+
+			" AND sPassword = '". sqlEncode($sPassword)."'"; 
+
+</pre>
+
+Preferably we put the if-statement and the sqlEncode function in an include. Now as you probably can imagine a malicious user can do a lot more than what I’ve shown you here, that is if we leave our scripts vulnerable to injection. I have seen examples of complete databases being extracted from vulnerabilities like the ones described above.
+
+===Code Injection ===
+
+* include() and require() - Includes and evaluates a file as PHP code. 	
+
+* eval() - Evaluates a string as PHP code. 	
+
+* preg_replace() - The /e modifier makes this function treat the replacement parameter as PHP code.
+
+===Command injection  ===
+
+exec(), passthru(), system(), popen() and the backtick operator (`) - Executes its input as a shell command. 
+
+When passing user input to these functions, we need to prevent malicious users from tricking us into executing arbitrary commands. PHP has two functions which should be used for this purpose, they are escapeshellarg() and escapeshellcmd(). 
+
+
+[[Guide Table of Contents|Development Guide Table of Contents]]
+[[Category:OWASP_Guide_Project]]
+[[Category:Injection Attack]]

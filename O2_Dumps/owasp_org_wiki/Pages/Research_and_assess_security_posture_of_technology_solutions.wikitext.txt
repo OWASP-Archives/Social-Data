@@ -1,0 +1,63 @@
+{{Template:SecureSoftware}}
+
+==Overview==
+
+Purpose:	
+
+* Assess security risks in third-party components.
+
+*	Determine how effective a technology is likely to be at alleviating risks.
+
+Role:
+
+* Designer
+
+Frequency:
+
+* As necessary.
+
+
+
+==Get structured technology assessment from vendor ==
+
+If a technology is to be integrated into your system - even if it is for the purposes of mitigating risk in your own system - you will generally assume the risks associated with that technology.
+
+For this reason (among others), it is most desirable to assess the security risks of such components in the same way as your own software. Vendors are rarely cooperative in giving the access required for this; and in cases where they are (e.g., open source software), the effort involved in a full assessment is rarely cost-effective.
+
+Instead, one will generally want to collect relevant data that will provide insight into the likely security posture of software through interaction with the vendor. See CLASP Resource F for a sample "self-assessment worksheet" that either the vendor can fill out, or (more often) you can fill out, based on interaction with the vendor.
+
+A good product assessment worksheet should give insight into the following:
+
+*	At a high level, what are the trust boundaries, resources, and roles in the system?
+
+*	Has an independent assessment been performed by a respected third-party? And if so, what business risks did it identify, and what has changed since the assessment?
+
+*	What are the security qualifications of the development team?
+
+*	What are the major areas of risk in the product?
+
+*	What were the security requirements that were used for development (implicit and explicit)?
+
+This assessment should essentially be a structured interview with the purpose of collecting as much documentation as possible about the product and the process used to develop that product.
+
+==Perform security risk assessment ==
+
+Perform due diligence on the vendor-reported assessment information to the degree possible. For example, validate data with other customers and/or through information available on the Internet. 
+
+Perform a requirements analysis from the material collected to assess resource risks that may be present but that are not addressed by the product. For any risk that would not be acceptable if incorporated into your effort, identify possible mitigating controls, the likely cost to implement, and who would need to implement the control - particularly if it is the vendor.
+
+If desirable, attempt to resolve risks with the vendor. Based on the assessment, make a determination on whether to proceed with the technology. 
+
+==Receive permission to perform security testing of software ==
+
+A way to gain additional confidence in software is to test it. However, testing software for security vulnerabilities may be in violation of a software licensing agreement. To avoid any potential issues, vendor acknowledgement should be sought.
+
+==Perform security testing ==
+
+Perform security testing as described in the CLASP activity ''Identify, implement and perform security tests''.
+
+
+[[Category:Activity]]
+[[Category:CLASP Activity]]
+[[Category:BP2 Perform application assessments]]
+[[Category:OWASP_CLASP_Project]]

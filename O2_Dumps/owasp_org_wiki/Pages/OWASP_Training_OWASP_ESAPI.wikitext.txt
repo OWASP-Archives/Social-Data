@@ -1,0 +1,24 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>OWASP Training Modules</noinclude>
+| Module_designation = [[:Category:OWASP Enterprise Security API|OWASP Enterprise Security API]]
+| Module_Overview_Goal =
+ESAPI is Enterprise security api’s for remediation of OWASP Top 10 vulnerabilities. It has generic api's for each of these vulnerability. This is a great source where application developers can see how specific issues can be remediated. The ESAPI libraries are designed to make it easier for programmers to retrofit security into existing applications. The ESAPI libraries also serve as a solid foundation for new development.
+
+| Content = 
+&nbsp;
+ESAPI is a collection security building blocks. All ESAPI language versions have the same basic design. There is a set of security control interfaces. There is a reference implementation for each security control. There are optionally your own implementations for each security control. 
+<br><br>
+You can download ESAPI from [http://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API#tab=Downloads here.]  The [[ESAPI_Swingset | ESAPI Swingset]] sample application demonstrates how to leverage ESAPI to protect a web application.
+
+&nbsp;
+| Material = 
+&nbsp;
+
+* ESAPI Project presentation ( [http://owasp-esapi-java.googlecode.com/files/OWASP%20ESAPI.ppt PowerPoint] )
+* ESAPI Video presentation ( [http://www.youtube.com/watch?v=QAPD1jPn04g YouTube] )
+* ESAPI Data sheet ( [http://www.owasp.org/images/8/81/Esapi-datasheet.pdf PDF], [http://www.owasp.org/images/3/32/Esapi-datasheet.doc Word] )
+
+
+}}
+
+
+[[Category:OWASP_Training|Training]]

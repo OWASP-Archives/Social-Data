@@ -1,0 +1,28 @@
+[[http://www.owasp.org/index.php/Web_Application_Penetration_Testing_AoC Up]]<br>
+{{Template:OWASP Testing Guide v2}}
+
+== Brief Summary ==
+<br>
+..here: we describe in "natural language" what we want to test.
+<br>
+== Description of the Issue == 
+<br>
+...here: Short Description of the Issue: Topic and Explanation
+<br>
+== Black Box testing and example ==
+'''Testing for Topic X vulnerabilities:''' <br>
+...<br>
+'''Result Expected:'''<br>
+...<br><br>
+== Gray Box testing and example == 
+'''Testing for Topic X vulnerabilities:'''<br>
+...<br>
+'''Result Expected:'''<br>
+...<br><br>
+== References ==
+'''Whitepapers'''<br>
+...<br>
+'''Tools'''<br>
+...<br>
+
+{{Category:OWASP Testing Project AoC}}

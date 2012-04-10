@@ -1,0 +1,22 @@
+== Writing Secure Java (J2EE) Code ==
+
+=== Overview ===
+The core issue due to which most security vulnerabilities arise is poor programming practices. The lack of proper secure coding guidelines and adherence to secure coding best practices results in security issues such as SQL Injection, Cross-Site Scripting, Weak Encryption, Logical Flaws, Parameter Manipulation, etc. 
+ 
+One of the most popular application development platforms is J2EE. Java not only offers cross-platform flexibility, but is also extensible with pluggable modules, and has inherent security features implemented through the Sandbox and the security policy. However, insecure coding practices can often lead to the same sort of vulnerabilities occuring in Java as they do in any other programming language. During our penetration testing and application security assessments, we have seen numerous instances of insecure programming leading to serious security issues with the application. 
+ 
+This workshop begins with an explanation of Threat Modeling - the approach to analyzing an application into its components, analyzing the threats to each component, and then building in the right set of safeguards.
+ 
+It then focuses on two aspects - Secure Coding with Java and Java Security Programming. The first section - secure coding - looks at the best practices with regards to securely coding your applications, including the right input validation routines, the correct error handling, implementing proper access control, secure authentication mechanisms, etc. It also explores the entire Java security architecture, including the Sandbox, the Java Security Manager, and most importantly JAAS - Java Authentication and Authorization Service. 
+ 
+The Java Security Programming aspect looks at the proper use of Java Crypto API and Libraries, and how to use them to ensure maximum security within the applications.
+ 
+The entire workshop will use an open-source Java application to run through typical security bugs, and bug fixes for the various concepts covered in the training.
+
+== About Instructor ==
+[[Image:KKM.gif|thumb|10px|frame|left|K.K. Mookhey]]
+<b>K. K. Mookhey</b> (CISA, CISSP, CISM, & BS 7799 LA) is the Principal Consultant and Founder at NII Consulting. He is a well-regarded expert in the field of IT Governance, information risk management, and has worked with prestigious clients such as the United Nations WFP, Dubai Stock Exchange, Saudi Telecom, Capgemini, Royal Sun & Alliance, and many others.
+
+His skills and know-how encompass risk management, compliance, business continuity, application security, computer forensics, and penetration testing. He is well-versed with international standards such as CoBIT, ISO 27001, BS 25999, and ISO 20000 .
+
+He is the author of two books (Linux Security And Controls by ISACA, and Metasploit Framework, by Syngress Publishing), and of numerous articles on information security. He has also presented at conferences such as Blackhat, Interop, IT Underground and others.

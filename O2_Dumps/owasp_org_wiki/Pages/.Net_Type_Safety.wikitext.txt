@@ -1,0 +1,20 @@
+'''Issues:'''
+* [[Possible Type Confusion issue in .Net 1.1 (only works in Full Trust)]]
+* [[Full Trust CLR Verification issue: changing the Method Parameters order]]
+* [[Full Trust CLR Verification issue: changing the return address order]]
+* [[Full Trust CLR Verification issue: Changing Private Field using Proxy Struct]]
+* [[Full Trust CLR Verification issue: Exploiting Passing Reference Types by Reference]]
+* [[Manipulating private method behaviour by overriding public virtual methods in public classes]]
+* [[CSharp readonly modifier is not inforced by the CLR (when in Full Trust)]]
+* [[ANSI/UNICODE bug in System.Net.HttpListenerRequest]]
+
+'''Further Research:'''
+* [[RuntimeMethodHandle.GetFunctionPointer() doesn't demand UnmanagedCode Security Permission]]
+* [[ECall methods must be packaged into a system module]]
+* [[JIT prevents short overflow (and PeVerify doesn't catch it)]]
+
+
+Other
+* [[Microsoft's Comments on the Full Trust Type Safety issues]]
+
+[[Category:OWASP .NET Project]]

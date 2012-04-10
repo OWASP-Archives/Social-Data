@@ -1,0 +1,136 @@
+= Examples =
+To better understand how to secure code a PHP application some examples of
+vulnerable code is provided in this paragraph.  
+
+== Login Form ==
+On this example we're going to see a tipical Login Form. On our example WEB SITE user need to supply a username/password pair in order to be authenticated.
+                                                        
+                                                                                                                                                    
+Here follows the authentcation form:                                 
+
+[[Image:Owasp_bsp_php_1.jpg]]
+
+Such a login page well call ''login.php'' with supplied user credentials.
+
+  <nowiki>
+<?php
+include('./db.inc');
+
+function sAuthenticateUser($username, $password){
+  $authenticatedUserName="";
+  if ($link = iMysqlConnect()) {
+
+    $query  = "SELECT username FROM users";
+    $query .=                " WHERE username = '".$username."'";
+    $query .=                " AND   password = md5('".$password."')";
+    $result = mysql_query($query);
+
+    if ($result) {
+      if ($row = mysql_fetch_row($result)) {
+	$authenticatedUserName =  $row[0];
+      }
+    }
+  }
+
+  return $authenticatedUserName;
+
+}
+
+if ($sUserName = sAuthenticateUser($_POST["username"], 
+				   $_POST["password"])) {
+  echo "Wellcome ".$sUserName;
+ } else {
+  die('Unauthorized Access');
+ }
+
+?>
+</nowiki>
+
+'''db.inc:'''
+  <nowiki>
+
+<?php
+
+define('DB_HOST',     "localhost");
+define('DB_USERNAME', "user");
+define('DB_PASSWORD', "password");
+define('DB_DATABASE', "owasp");
+
+
+function iMysqlConnect(){
+  $link = mysql_connect(DB_HOST,
+  	  DB_USERNAME,
+			DB_PASSWORD);
+
+  if ($link && mysql_select_db(DB_DATABASE))
+    return $link;
+  return FALSE;
+}
+
+?></nowiki>
+
+== Online Catalog ==
+
+Let take another example: an Online Book Store:
+
+[[Image:Owasp_bsp_php_3.jpg]]
+
+
+
+
+'''catalog.php:'''
+
+  <nowiki>
+function aGetBookEntry($id) {
+  $aBookEntry = NULL;
+  $link = iMysqlConnect();
+
+  $query = "SELECT * FROM books WHERE id = $id";
+  $result = mysql_query($query);
+
+  if ($result) {
+    if ($row = mysql_fetch_array($result)) {
+      $aBookEntry = $row;
+    }
+  }
+
+  return $aBookEntry;
+
+}
+
+
+$id = $_GET['id'];
+$aBookEntry = aGetBookEntry($id);
+
+showBook($aBookEntry);
+</nowiki>
+
+Basicaly it retrieves ''id'' parameter on GET query string and perform the following SQL query:
+* ''SELECT * FROM book WHERE id = $_GET['id']''
+
+As in ''Login Form'' no input validation is performed and SQL Query can be manipulated to returns
+arbitrary data and DBMS stored relations/records/functions as well.
+
+= Application Security strategies =
+
+== Hiding DBMS connection strings ==
+
+== Single Quotes Escape ==
+
+== Prepared Statement ==
+
+== Data Validation ==
+
+== Security in Depth ==
+
+= Examples Revisited =
+
+== Login Form ==
+
+== Online Catalog ==
+
+= Defeating Automated Tools =
+
+= References =
+
+= Tools =

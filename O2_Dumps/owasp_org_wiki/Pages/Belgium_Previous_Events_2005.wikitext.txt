@@ -1,0 +1,73 @@
+[[Belgium]] events held in 2005
+
+===Meeting Notes second OWASP Belgium Chapter meeting (Leuven, 28-Sep-2005)===
+On 28th of September 2005 we had our second OWASP Belgium Chapter meeting. We had nearly 50 people coming to the meeting!<br>
+
+'''WHEN'''<br>
+Wednesday 28th of September 2005, 18h00 - 21h00 at Ubizen in Leuven.<br>
+
+'''PROGRAM'''<br>
+18h00 - 18h15: Welcome & get a drink <br>
+
+18h15 - 18h45: Sebastien Deleersnyder, Ascure <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'''[http://www.owasp.org/index.php/Image:OWASP_Belgium_Chapter_Meeting_-_Leuven_-_28_Sep_2005_-_1_OWASP_and_OWASP_Membership.ppt  OWASP & OWASP Membership]''' <br>
+
+18h45 - 19h30: Emmanuel Bergmans, I-logs<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'''[http://www.owasp.org/index.php/Image:OWASP_Belgium_Chapter_Meeting_-_Leuven_-_28_Sep_2005_-_2_Securing_Web_Applications_with_ModSecurity.ppt Securing Web Applications with ModSecurity]'''<br>
+Emmanuel gave an interesting introduction on ModSecurity.<br>
+The presentation is included as attachment and contains a lot of great pointers and SWOT analysis.<br>
+Conclusions were:<br>
+ModSecurity can be particularly useful in an ISP environment<br>
+Increased effort is necessary to synchronize multiple ModSecurity configurations in a Webfarm<br>
+
+19h30 - 20h45: <br>
+OWASP Top 10 Vulnerabilities: Panel Discussion<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'''[http://www.owasp.org/index.php/Image:OWASP_Belgium_Chapter_Meeting_-_Leuven_-_28_Sep_2005_-_3_OWASP_Top_10_-_Panel.ppt The presentation is included with an introduction of the TOP 10.]'''<br>
+Then we had a lively panel Discussion with: <br>
+* Erwin Geirnaert, Security Innovation<br>
+* Dirk Dussart, Belgian Post<br>
+* Eric Devolder, Mastercard<br>
+* Herman Stevens, Ubizen<br>
+* Frank Piessens, KU Leuven<br>
+<br>
+We handled questions about the Top 10:<br>
+* Is the OWASP Top 10 still necessary?<br>
+* Are we talking vulnerabilities, solutions or threats?<br>
+* Can we base our best practices / standards on the Top 10?<br>
+* How to test your web site security on the Top 10?<br>
+* …<br>
+
+The overall discussion was interesting, and at times diverted to an overall application security discussion. <br>
+Some of the remarkable opinions covered:<br>
+Can / or should the OWASP Top 10 form the basis for a certification scheme<br>
+If it is used as an awareness tool, can we promote it with an OWASP magazine?<br>
+The OWASP Top 10 is too vague<br>
+A bigger exhaustive list is needed with a clear classification and taxonomy<br>
+It should be based on threat modelling.<br>
+One of the more pertinent questions: how did the original authors come to the Top 10?<br>
+
+----
+
+===Meeting Notes First OWASP Belgium Chapter Meeting (Gent, 26-May-2005)===
+
+On 26th of May 2005 we held the first OWASP Belgium Chapter meeting!<br>
+
+It was a big success: we had nearly 40 people attending, despite the Belgium-unlike hot weather.<br>
+
+
+'''PROGRAM'''<br>
+17h30 - 18h00: Welcome & get a drink<br>
+
+18h00 - 18h45: Sebastien Deleersnyder, Ascure <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'''[http://www.owasp.org/index.php/Image:First_OWASP_Belgium_Chapter_Meeting_-_Gent_-_26_May_2005_-_I_OWASP_Introduction.ppt OWASP Introduction]'''<br>
+
+19h00 - 19h45: Erwin Geirnaert, Security Innovation<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'''[http://www.owasp.org/index.php/Image:First_OWASP_Belgium_Chapter_Meeting_-_Gent_-_26_May_2005_-_II_How_to_Break_Web_Application_Security.ppt How to Break Web Application Security]'''<br>
+
+20h00 - 20h45: professor Frank Piessens, KU Leuven<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'''[http://www.owasp.org/index.php/Image:First_OWASP_Belgium_Chapter_Meeting_-_Gent_-_26_May_2005_-_III_How_to_Build_Secure_Web_Applications.ppt How to Build Secure Web Applications]'''<br>
+
+We had some interesting discussions with Frank on the position of security controls: within the code or within the supporting infrastructure?<br>
+Another idea is also to look for a top 10 solutions for Web Applications and have some guidance system when selecting countermeasures.<br>
+
+----

@@ -1,0 +1,338 @@
+{{Chapter Template|chaptername=Toronto|extra=The chapter leaders are [mailto:nish@securitycompass.com Nish Bhalla] and [mailto:yuk.fai.chan@owasp.org Yuk Fai Chan].
+<paypal>Toronto</paypal>
+|mailinglistsite=http://lists.owasp.org/mailman/listinfo/owasp-toronto|emailarchives=http://lists.owasp.org/pipermail/owasp-toronto}}
+
+The mailing list archive can be accessed from [http://sourceforge.net/mailarchive/forum.php?forum=owasp-toronto here.]
+
+
+
+== '''Upcoming Presentations''' ==
+
+[To be announced]
+
+== '''Previous Presentations''' ==
+
+'''Wednesday, September 14th 2011, 6:30-8:00 PM EDT ''' - ''Introducing Vega, a New Open Source Web Vulnerability Scanner
+
+'''Location: [http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=425+Adelaide+Street+West,+Toronto,+Ontario,+Canada, Suite 201, 425 Adelaide Street West, Toronto, ON M5V 3C1]'''
+
+Please RSVP to '''owasp-rsvp@securitycompass.com''' to confirm you attendance.
+
+'''Description:''' David will be presenting Vega, a new free and open source vulnerability scanner for web applications developed by Subgraph, his Montreal-based security startup.  Vega allows anyone to scan their web applications for vulnerabilities such as cross-site scripting or SQL injection. Written in Java, Vega is cross-platform. It's also extensible, with a built-in Javascript interpreter and API for custom module development. Vega also includes an intercepting proxy for manual inspection of possible vulnerabilities and penetration testing.
+
+'''Speaker bio:''' David has over 10 years in the information security business. He started his professional experience as a founding member of Security Focus, which was acquired by Symantec in 2002. David also moderated the Bugtraq mailing list, a historically important forum for discussion of security vulnerabilities, for over four years. He has spoken at Black Hat, Can Sec West, AusCERT and numerous other security conferences, as well as made contributions to books, magazines and other publications. David also participated in a NIAC working group on behalf of Symantec to develop the first version of the CVSS (Common Vulnerability Scoring System) model and was an editor for IEEE Security & Privacy. His current obsession is building Subgraph, his information security startup in Montréal.
+
+
+
+----
+'''Wednesday, May 11th 2011, 5:00-6:00 PM ''' - ''Mobile Security for the Forgetful''
+
+'''Location: [http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=315+Front+Street+West,+Toronto,+Ontario,+Canada, Auditorium C, 315 Front Street West, Toronto, ON M5V 3A4]'''
+
+Please RSVP to '''yukfai at securitycompass dotcom'''
+
+'''Description:''' You’ve accidentally misplaced your company or personal mobile phone in a public location. In this scenario, what threats do you and/or your organization face?  
+
+This talk will be about the worst case scenario in mobile security: when the attacker has physical access to the phone. According to DataLossDB, about 1/5 of all data breaches they have recorded are due to lost or stolen laptops. Phones are much easier to lose (or steal) then laptops, and these days the data on our phones can be as confidential as the data on our laptops.
+
+This talk will go over physical access attacks from an attacker’s perspective, discuss ways of coding mobile applications to defend against these kinds of attacks, and discuss some ways of securing our phones as users. Technical details in this talk will focus on the Android platform.
+
+Length: 60 minutes
+
+'''Speaker Bio:''' Max Veytsman is a Security Consultant with Security Compass. He specializes in web and mobile security assessments. Max also leads Security Compass' training development in the mobile space. Max studied Computer Science at the University of Toronto. His interests include cryptography, programming language design, and computer vision.
+
+
+
+----
+'''Wednesday, February 16th, 6:00 PM'''- ''How Auditors Certify Computer Systems – A Look at Third Party, Non-Vendor, Legally Mandated System Certifications''
+
+'''Location: [http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=425+adelaide+street+west+toronto&sll=37.0625,-95.677068&sspn=36.915634,52.382813&ie=UTF8&hq=&hnear=425+Adelaide+St+W,+Toronto,+Toronto+Division,+Ontario,+Canada&ll=43.647846,-79.398043&spn=0.008245,0.012789&z=16&iwloc=A, 425 Adelaide Street West, Suite 702]'''
+
+Please RSVP to '''laura at securitycompass dotcom'''
+
+'''Description:'''“Certifications” abound in the world of IT – from signoffs by internal security professionals to the advertising claims of vendors, but few, if any of these, have true legal standing.  As a consequence,  customers and clients of organizations which process sensitive transactions or retain confidential data are increasingly demanding third party, non-vendor, legally mandated system certification as a pre-requisite to doing business. 
+
+•	What are these certifications and who can issue them?
+
+•	Under what circumstances are certifications likely to be required? 
+
+•	What standards do certifiers use – and does it matter?
+
+•	What information and evidence do auditors need in order to complete their work?
+
+•	How can information systems professionals prepare for a certification audit and ensure that the process is ultimately successful?
+
+
+Our speaker, Jerrard Gaertner, CA•CISA/IT, CGEIT, CISSP, CIPP/IT, I.S.P., ITCP, CIA, CFI, Director of Technology Assurance Services at Soberman LLP, will address these and related questions based on his 25+ years as a systems auditor.
+
+
+
+----
+'''Wednesday, November 10th, 6:30 PM'''- ''Using Open Standards to Break the Vulnerability Wheel of Pain''
+
+'''Location: [http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=425+adelaide+street+west+toronto&sll=37.0625,-95.677068&sspn=36.915634,52.382813&ie=UTF8&hq=&hnear=425+Adelaide+St+W,+Toronto,+Toronto+Division,+Ontario,+Canada&ll=43.647846,-79.398043&spn=0.008245,0.012789&z=16&iwloc=A, 425 Adelaide Street West, Suite 702]'''
+
+Please RSVP to '''laura at securitycompass dotcom'''
+
+'''Description:''' Ed is the Chief Information Security Officer responsible for the protection and security of all information and electronic assets as well as compliance and ethics across the wide array of business units that make up Orbitz Worldwide on a global basis. These assets include Orbitz, CheapTickets, eBookers, Away.com, HotelClub, RatesToGo, AsiaHotels, and Orbitz for Business.
+ 
+With over 18 years of experience in information security and technology, Ed has worked with and been involved in protecting information assets at several Fortune 500 companies. Prior to joining Orbitz, Ed served as VP of Corporate Information Security for Bank of America within their Global Corporate and Investment Banking division. His credentials also include several security technology and management roles at organizations such as Ernst & Young, Ford Motor Company, and Young & Rubicam. Ed is a CISSP, CISM, a contributor to the ISM Community, serves on the advisory board to the Society of Payment Security Professionals as well as its Application Security Working Group.
+ 
+Ed is a frequent speaker at information security events across North America and Europe. Past talks have included venues such as BlackHat, Metricon, CSO, OWASP, The MIS Institute, The Association of Information Technology Professionals, Technology Executives Club, and the National Business Travel Association. Additionally Ed is a contributing author to the O’Reilly book Beautiful Security.
+
+
+
+----
+''' Meetings November 5th, 2009 (THURSDAY)'''
+
+<B>Location:</B> [http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=285+Victoria+Street,+toronto&sll=37.0625,-95.677068&sspn=42.987658,93.076172&ie=UTF8&z=16&iwloc=A, 285 Victoria Street, 3rd Floor (Room number VIC306)] '''NEW Location'''.
+
+'''Date/Time:''' : November 5th, 2009, 6:00-7:30 PM EST  (THURSDAY)
+
+'''Title:''' Software Assurance Maturity Model
+
+'''Speaker:''' Pravir Chandra, Fortify Software
+
+'''Description:'''Software Assurance Maturity Model (OpenSAMM) 
+The Software Assurance Maturity Model (SAMM) into a software development organization. Covering more than typical SDLC-based models for security, SAMM enables organizations to self-assess their security assurance program and then use recommended roadmaps to improve in a way that's aligned to the specific risks facing the organization. Beyond that, SAMM enables creation of scorecards for an organization's effectiveness at secure software development throughout the typical governance, development, and deployment business functions. Scorecards also enable management within an organization to demonstrate quantitative improvements through iterations of building a security assurance program. This workshop will introduce the SAMM framework and walk through useful activities such as assessing an assurance program, mapping an existing organization to a recommended roadmap, and iteratively building an assurance program. Time allowing, additional case studies will also be discussed. OpenSAMM is an open a free project and has recently been donated to the Open Web Application Security Project (OWASP) Foundation. For more information on OpenSAMM, visit http://www.opensamm.org/ 
+
+'''Bio: '''
+Pravir Chandra is Director of Strategic Services at Fortify Software and works with clients on software security assurance programs. Pravir is recognized for his expertise in software security, code analysis, and his ability to strategically apply technical knowledge. Prior to Fortify, he was a Principal Consultant affiliated with Cigital and led large software security programs at Fortune 500 companies. Pravir Co-Founded Secure Software, Inc. and was Chief Security Architect prior to its acquisition by Fortify. He recently created and led the Open Software Assurance Maturity Model (OpenSAMM) project with the OWASP Foundation, leads the OWASP CLASP project, and also serves as member of the OWASP Global Projects Committee. Pravir is author of the book Network Security with OpenSSL.
+
+
+
+----
+''' Meetings August 19th, 2009 '''
+
+<B>Location:</B> [http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=285+Victoria+Street,+toronto&sll=37.0625,-95.677068&sspn=42.987658,93.076172&ie=UTF8&z=16&iwloc=A, 285 Victoria Street, 4th Floor (Room number VIC405)] '''NEW Location'''.
+
+'''Date/Time:''' August 19th, 2009, 6:00-7:30 PM EST
+
+'''Title:''' Will you be PCI DSS Compliant by September 2010?
+
+'''Speaker:''' Michael D’Sa, Visa Canada
+
+'''Description and Bio:'''   At this informative session, Michael D'Sa, Visa Canada's Senior Manager of Data Security and Investigations will talk to you about PCI DSS compliance within the Canadian marketplace. Michael will present the emerging data compromise trends, and will review the Canadian deadlines and mandates for Visa merchants.
+Michael D’Sa is the Senior Manager responsible for Data Security and Investigations at Visa Canada.  Working at Visa Canada for over 14 years, Mr. D’Sa is currently in the Payment System Risk group.  His responsibilities include managing the Account Information Security program, managing Data Compromise incidents, and supporting Visa banks on fraud investigations.  Mr. D’Sa also acts as the primary liaison for Law Enforcement on Visa related fraud matters.   
+
+
+
+----
+''' Meetings May 13th, 2009 '''
+
+<B>Location:</B> [http://maps.google.com/maps?f=q&hl=en&geocode=&q=121+King+Street+West,+Toronto&sll=43.649973,-79.37798&sspn=0.006785,0.018797&ie=UTF8&ll=43.647908,-79.383473&spn=0.01357,0.037594&z=15&iwloc=addr 4-179B, 121 King Street West, Toronto] (same as last time)
+
+'''Date/Time:''' May 13th, 2009, 6:45-8:00 PM EST
+
+'''Title:''' Cross Site AJAX Hacking
+
+'''Description:''' The era of AJAX technologies has only been possible after XMLHttpRequest released its full potential. But XMLHttpRequest has had a number of security concerns, in particular due to its ability to create flexible requests against web sites without the users knowledge. Up to now, the same origin policy limited the impact of this issue.
+
+The Web 2.0 vision calls for the flexible use and rendering of information in mash-ups created by mixing content from various sources on the fly. This idea is not easily implemented in Javascript due to same origin restrictions. In order to allow for these features, XHR Level 2 and XDR have been developed to remove the same origin policy and allow the ability to request information from various sites. Current browsers make these functions available to developers and you will soon find sites that require them. The presentation will provide information on the mechanics of these cross site AJAX calls and their security impact.  
+
+As an add-on to the discussion - It has been a year since Johannes Ullrich have given a talk on Dshield Web App honeypot project. I will provide a small update on the progress of this project. It's a low key project but you may be amazed at what we are doing. 
+
+'''Presenter:''' Jason Lam
+
+'''BIO:'''Jason is a senior security analyst at a major financial institute in Canada. He is also an author and instructor for SANS Institute where he writes courses on pentesting and defending web applications. In his ever diminishing free time, he helps with the SANS Internet Storm Center as an incident handler. He took on the role to be a leader for the Dshield honeypot project where logs from web honeypot all over the world are collected and analyzed.
+
+
+
+----
+''' Meetings April 8th 2009 '''
+
+
+<B> Wednesday April 8th 2009</B>, 6:00-8:00 PM EST   at D&T, 4-179B, 121 King Street West, Toronto. 
+
+<B> Topic: </B> A Laugh RIAt  – Rich Internet Application Security
+
+<B> Speaker: </B> Rafal M. Los 
+
+<B> Description: </B> Rich Internet Applications [RIA] are popping up everywhere!  Enterprises and boutique online shops alike are rushing to adopt these technologies without really thinking of the implications of moving pseudo-server functionality to the user’s desktop and browser.  Hacking these applications has now moved from the challenge of compromising the server, to the significantly smaller challenge of compromising the client.  You’ll be able to witness (and try!) first-hand how to manipulate an AJAX-rich web application you or your colleagues probably use many times; as well as see and understand how breaking down a Flash binary object (SWF file) isn’t difficult.  These types of applications are now treasure-troves of goodies… don’t miss out on the simple ways you can security test these technologies on your desktop today!
+ 
+
+
+<B> Future Talks: </B> 
+<B> May: </B> Douglas Simpson, Cenzic
+<B> Jun: </B> Jamie Gamble, Security Compass
+<B> Jul: </B> Jason Lam, 
+<B> Aug: </B> Joe Bates
+<B> Sep: </B> Tyler Reguly, nCircle
+
+We are looking for speakers, if you are interested in speaking on security topics please email [mailto:nish@securitycompass.com Nish Bhalla]
+
+
+
+----
+''' Meetings November 13th 2008 '''
+
+<B>Location:</B> [http://maps.google.com/maps?f=q&hl=en&geocode=&q=121+King+Street+West,+Toronto&sll=43.649973,-79.37798&sspn=0.006785,0.018797&ie=UTF8&ll=43.647908,-79.383473&spn=0.01357,0.037594&z=15&iwloc=addr 4-179B, 121 King Street West, Toronto] (same as last time)
+
+'''Date/Time:''' November 13th 2008, 6:00-7:30 PM EST
+
+'''Title:''' Web Application Security and the PA-DSS
+
+'''Description:''' The Payment Card Industry's (PCI) Payment Application Data Security Standards (PA-DSS) version 1.1 was released in April 2008, and has implications for every payment application vendor whose product is sold, distributed, or licensed “as is”. This discussion will provide a soft introduction to the payment application audit procedures and will match PA requirements to each phase of the software development lifecycle. Whether you are a web application developer, tester, vendor or just interested in PCI and Payment Applications, this talk will have a message for you. 
+
+'''Presenter:''' A M Westgate M.Sc., B.Ed., CISSP, QSA, PA-QSA
+
+'''BIO:''' A M brings a range of experience as a security systems analyst, a software engineer and as an information security instructor. She has participated in PCI Compliance engagements and PCI gap assessments. In addition, she has been the primary consultant on PA-DSS Validation, PA gap assessments and remediation engagements. A M has over 5 years experience in security software engineering, and has worked in Canada, USA, Ireland and England. She is a confident speaker, and a part time instructor of the CISSP preparation course in the continuing education department at a local university.
+
+
+
+----
+''' Meetings August 14th 2008 '''
+
+<B>Location:</B> [http://maps.google.com/maps?f=q&hl=en&geocode=&q=121+King+Street+West,+Toronto&sll=43.649973,-79.37798&sspn=0.006785,0.018797&ie=UTF8&ll=43.647908,-79.383473&spn=0.01357,0.037594&z=15&iwloc=addr 4-179B, 121 King Street West, Toronto] (same as last time)
+
+<B>Date/Time:</B> August 14th 2008, 6:00-7:30 PM EST 
+
+<B>Title:</B> An Introduction To Reverse Engineering Malware
+
+<B>Session Abstract:</B> This talk will cover the basics of setting up an environment to reverse engineer malware, and an introduction to some tools and techniques that can be used to determine what exactly that bit of unknown, potentially hostile code does. While this is an introductory talk, we'll definitely cover more than "run strings on the binary and see what you get!"
+
+<B>Presenters:</B>  Seth Hardy, MessageLabs Inc.
+
+<B>BIO:</B> Seth Hardy recently moved to Toronto to do reverse engineering work for MessageLabs, as part of their antivirus research and response group. 
+Before that, he worked mostly in the areas of vulnerability research and cryptography. In his spare time, Seth likes to work on community-building projects both online and off. He currently holds the GIAC GREM certification, and should have the CISSP before this presentation; if not, feel free to mock him mercilessly for it.
+
+
+
+----
+''' Meetings July 16th 2008 '''
+
+<B>Location:</B> [http://maps.google.com/maps?f=q&hl=en&geocode=&q=121+King+Street+West,+Toronto&sll=43.649973,-79.37798&sspn=0.006785,0.018797&ie=UTF8&ll=43.647908,-79.383473&spn=0.01357,0.037594&z=15&iwloc=addr 4-179B, 121 King Street West, Toronto] (same as last time)
+
+<B>Date/Time:</B> July 16th 2008, 6:00-7:30 PM EST 
+
+<B>Title:</B> Business Logic Flaws
+
+<B>Session Abstract:</B> How they put your Websites at Risk Session handling, credit card transactions, and password recovery are just a few examples of Web-enabled business logic processes that malicious hackers have abused to compromise major websites. These types of vulnerabilities are routinely overlooked during QA because the process is intended to test what a piece of code is supposed to do and not what it can be made to do. The other problem(s) with business logic flaws is scanners can't identify them, IDS can't detect them, and Web application firewalls can't defend them. Plus, the more sophisticated and Web 2.0 feature-rich a website, the more prone it is to have flaws in business logic.The presentation will provide real-world examples of how pernicious and dangerous business logic flaws are to the security of a website. We'll also show how best to spot them and provide organizations with a simple and rational game plan to prevent them.
+
+<B>Presenters:</B>  Trey Ford, Director, Solutions Architecture, WhiteHat Security, Inc.
+
+<B>BIO:</B> Trey Ford is the Director of Solutions Architecture at WhiteHat Security, providing strategic guidance to WhiteHat customers and prospects on their website security programs.  Mr. Ford also spearheads WhiteHat's participation in the PCI Standards Council and assists customers in selecting WhiteHat services for compliance with the PCI Data Security Standard.  In addition, Mr. Ford is a frequent speaker at industry events.  Prior to WhiteHat, he was the Compliance Practice Lead at FishNet Security, an information security services provider based in Kansas City.  Mr. Ford also founded and operated, Eclectix, a technology consultancy.  He is a certified information system security professional (CISSP), a Microsoft Certified Systems Engineer, a Cisco Certified Networking Associate (CCNA), and a Payment Card Industry Qualified Data Security Professional.
+
+
+
+----
+''' Meetings June 18th 2008 '''
+
+'''Location:''' The next chapter meeting will be held on June 18th June at D&T, 4-179B, 121 King Street West, Toronto.
+
+'''Date/Time:''' June 18th 2008, 6:00-7:30 PM EST 
+
+'''Description:''' Testing for certain web application vulnerabilities is tedious and time-consuming, and when combined with time constraints, full testing coverage is often not achieved.  ExploitMe is a series of Open Source Firefox plugins released by Security Compass for this purpose - automated detection of XSS, SQL Injection, and access control (including the recently released HTTP verb tampering) vulnerabilities. 
+
+In this presentation Tom Aratyn and Sahba Kazerooni of Security Compass will demonstrate how the Exploit-Me series of tools can be used during penetration testing to find security vulnerabilities in real web applications.
+
+'''Presenters:''' Tom Aratyn (Developer ExploitMe Series), Sahba Kazerooni (Security Consultant, Security Compass)
+[[[[Link title]]]]
+
+
+
+----
+''' May 13th 2008 Meeting '''
+<br/>
+The next chapter meeting will be held on May 13th at a <B>Different Location</B> Delta Meadowvale Resort & Conference Center, 6750 Mississauga Road, Mississauga, ON CA, Phone: 905-821-1981  [http://maps.google.com/maps?f=q&hl=en&geocode=&q=6750+Mississauga+Road,+Mississauga&sll=37.0625,-95.677068&sspn=34.724817,82.265625&ie=UTF8&ll=43.602708,-79.742246&spn=0.015507,0.040169&t=h&z=15 Directions to the meetings]<br/><br/>
+
+<B>Topic: </B> A Distributed Web Application Honeypot <br/><br/>
+<B>Date/Time:</B> May 13th 2008, 6:00-7:00 PM EST <br/><br/>
+<B>Description:</B>
+DShield.org has been extremely helpful in understanding network based attacks. However, over the last few years many interesting attacks target specific web application flaws which are not detected by DShield's sensor system. Collecting similar data for web applications has been challenging for a number of reasons. First of all, the data needed to understand a web application attack is much richer and a simple efficient data model as the one used by DShield will not provide sufficient details. If more detailed data, like complete requests, are collected, data privacy issues become more of a problem. Simple obfuscation or pattern replacement techniques are usually not sufficient to safeguard this information, or they will make it impossible to understand the attack. Lastly, many web application attacks use search engines to find vulnerable systems, instead of just attacking random servers. Over the next few months we plan to roll out a distributed web application honeypot. We will describe how this honeypot will be implemented to address these issues.
+
+
+
+<B>Speaker BIO: Dr. Johannes Ullrich</B>
+SANS Institute As Chief Research Officer for the SANS Institute, Johannes is currently responsible for the SANS Internet Storm Center (ISC) and the GIAC Gold program. He founded DShield.org in 2000, which is now the data collection engine behind the ISC. His work with the ISC has been widely recognized, and in 2004, Network World named him one of the 50 most powerful people in the networking industry. Prior to working for SANS, Johannes worked as a lead support engineer for a web development company and as a research physicist. Johannes holds a Ph.D. in Physics from SUNY Albany and is located in Jacksonville FL.
+
+OWASP Toronto chapter meetings are open to the public '''RSVP''' is requested by sending an [mailto:owasp-rsvp@securitycompass.com email]
+
+
+
+----
+''' 22nd January 2008 Meeting '''
+
+The next chapter meeting will be held on Jan 22nd at <B>20the floor, 79 Wellington Street West, Toronto, ON M5K 1B9 </B>. [http://maps.google.com/maps?q=79+Wellington+St+W,+Toronto,+ON,+Canada&spn=0.006033,0.020385&t=h&iwloc=A&hl=en Directions to the meetings]
+
+<B>Topic: </B>Modern Trends in Network Fingerprinting<br/><br/>
+<br/>
+<B>Description:</B>
+
+<B>Speaker BIO:</B>
+Jay Graver and Ryan Poppa are Lead Engineers at nCircle Network Security. They specialize in interrogating Applications and Services over the network. Their years of experience have been focused on the non invasive detection of vulnerabilities.
+
+Current Areas of research include; HTTP server analysis, graph theory, SSL library fingerprinting and unobfuscation techniques.
+
+Based in Toronto Ontario, they hold degrees from University of Guelph and the University of Waterloo. You can find their latest posts at blog.glaciertech.ca & numerophobe.com
+
+
+
+OWASP Toronto chapter meetings are open to the public '''RSVP''' is requested by sending an [mailto:owasp-rsvp@securitycompass.com email]
+
+== Sponsorship ==
+<!--
+Many thanks to Deloitte & Touche LLP. for sponsoring the location and food for these meetings.
+-->
+We always welcome sponsors for our chapter meetings. If you are interested, please contact [mailto:yuk.fai.chan@owasp.org Yuk Fai Chan]
+
+== Speakers ==
+
+We are always looking for speakers to present on their topic of choice. If you are interested please contact [mailto:yuk.fai.chan@owasp.org Yuk Fai Chan]
+
+
+== OWASP Toronto Chapter Committee ==
+
+The current chapter leaders are [mailto:nish@securitycompass.com Nish Bhalla] and [mailto:yuk.fai.chan@owasp.org Yuk Fai Chan].
+
+<!--
+The OWASP Toronto Chapter has formed a committee which would help with direction of the chapter. Deloitte & Touches' Application Security Group and Security Compass's Professional Services Group are helping lead this initiative. We are looking for additional members to expand our chapter.
+
+
+== Current Committe Members ==
+
+Nish Bhalla (Chapter Leader)<br/>
+Reza Kopaee
+-->
+
+== Meetings ==
+
+Everyone is welcome to join us at our chapter meetings. These meetings are held every '''Second Wednesday''' of the month. Beverages and snacks are provided. 
+
+<!--
+'''Address and Directions''' to the meeting are:
+
+20th floor, the TLC Room (signs will be provided on the floor)<br/>
+TD Centre, TD Waterhouse Tower<br/>
+79 Wellington Rd. W.<br/>
+Toronto<br/>
+
+<br/>
+<br/>
+
+[http://maps.google.com/maps?q=79+Wellington+St+W,+Toronto,+ON,+Canada&spn=0.006033,0.020385&t=h&iwloc=A&hl=en Directions to the meetings]
+-->
+
+OWASP Toronto chapter meetings are open to the public '''RSVP''' is requested by sending an [mailto:owasp-rsvp@securitycompass.com email]
+
+== Past Presentations For Download ==
+
+The past presentations are available for download from here. If you have any comments on the presentations please send them to us.
+
+
+[http://www.owasp.org/images/0/06/SecurityCompassPresentation.pdf Basic Web Application Testing Methodology] by Nish Bhalla [http://www.securitycompass.com Security Compass]
+
+[http://www.owasp.org/images/5/50/SecurityCompass_Web_Services.pdf Basic Web Services Security ] by Rohit Sethi [http://www.securitycompass.com Security Compass]
+
+[http://www.owasp.org/images/d/d0/Authentication_security.pdf Authentication Security] by Hui Zhu
+
+[https://www.owasp.org/images/9/9b/IdM-OWASP.v.0.2.14.pdf Identity Management Basics] by Derek Browne
+
+[https://www.owasp.org/index.php/Image:2008.07.17.OWASP.ppt.pdf Business Logic Flaws] by Trey Ford
+
+[http://www.owasp.org/images/c/c2/ALaughRIAt.pdf A Laugh RIAt – Rich Internet Application Security] by Rafal M. Los 
+
+[http://www.owasp.org/images/1/18/MichaelDSa-OWASP_Aug_09.pdf Will you be PCI DSS Compliant by September 2010? ] by Michael D'Sa
+
+[https://www.owasp.org/images/5/5b/2011_mobile_security_forgetful.pdf Mobile Security for the Forgetful] by Max Veytsman, May 2011 
+[[Category:Ontario]]

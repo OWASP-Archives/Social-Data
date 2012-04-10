@@ -1,0 +1,44 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Project About</noinclude>
+| project_name = OWASP Open Review Project
+
+| project_home_page = :Category:OWASP Open Review Project
+
+| project_description = 
+*The OWASP Open Review Project (ORPRO) is a project to openly check open source libraries and software that are vital to most commercial and non-commercial apps around.
+*We are surrounded by open source software. Not only the open source software all of us use, also many of the commercial applications contain open source libraries. Think of server and desktop software, but don't forget routers, cars, phones.  Open source is everywhere.
+*The OWASP Open Review Project (ORPRO) exists to act as a resource providing automated static analysis of OWASP projects.
+*'''Fortify Software has made their [https://www.fortify.com/products/fortify-on-demand/index.html Fortify on Demand (FoD) technology] available to OWASP projects at [http://owasp.fortifyondemand.com owasp.fortifyondemand.com].
+'''
+| project_license =
+
+| leader_name1 =Dan Cornell
+| leader_email1 = dan.cornell@owasp.org
+| leader_username1 = Dancornell
+
+| contributor_name[1-10] = 
+| contributor_email[1-10] = 
+| contributor_username[1-10] = 
+
+| pamphlet_link = 
+
+| presentation_link =
+
+| mailing_list_name = https://lists.owasp.org/mailman/listinfo/open-review-project
+
+| project_road_map = https://www.owasp.org/index.php/Category:OWASP_Open_Review_Project/Roadmap
+
+| links_url1 = http://owasp.fortifyondemand.com
+| links_name1 = Fortify on Demand (FoD) 
+
+| links_url[1-10] = 
+| links_name[1-10] = 
+
+| release_1 = 
+| release_2 = 
+| release_3 =
+| release_4 =
+
+<!--- The line below is for GPC usage only. Please do not edit it --->
+| project_about_page = Projects/OWASP_Open_Review_Project
+
+}}

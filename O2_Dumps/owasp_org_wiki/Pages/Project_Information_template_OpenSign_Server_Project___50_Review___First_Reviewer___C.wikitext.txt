@@ -1,0 +1,93 @@
+[[Project Information:template OpenSign Server Project|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications#Online code signing and integrity verification service for open source community (OpenSign Server)|OWASP OpenSign Server Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#Online code signing and integrity verification service for open source community (OpenSign Server)|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| 
+
+'''Alpha Quality for Tools'''
+
+*  Agree to OWASP's open source license
+
+OK
+
+* The "main" page for any OWASP tool must be on the OWASP website.
+
+OK
+
+* This page must:
+o describe the tool, the project leader, contact info, and include all relevant links, including a download link for the code and the executable version,
+
+OK
+
+o includes a roadmap/guideline pointing out the steps to achieve the purpose of project.
+
+OK
+
+o include the Alpha Quality Tool project tag. (Which we still need to define),
+WHEN ACHIEVED
+
+o be placed at OWASP Project page.
+
+OK
+
+* Have its code and any documentation in Googlecode, or Sourceforge.
+
+OK
+
+* Mailing list for project created.
+
+OK
+
+* Solves a core application security need.
+
+OK since selected for the OWASP SoC
+
+
+'''What has been done by the authors'''
+
+* documents:
+
+server concept and architecture : to be completed, Alpha quality OK
+
+
+* implementation:
+
+draft of the welcome page of the OpenSign Server Web Interface.
+
+code structure
+
+'''Summary'''
+
+* The criteria for alpha quality of the OpenSign Projects have been met before the 2008.07.15
+
+
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#Online code signing and integrity verification service for open source community (OpenSign Server)|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| 
+
+Alpha Quality: 100 %.
+
+Overall project: 50 %
+
+Software development: 30 %
+
+ |- 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+Document sent to the authors, 1. week of July  [https://www.owasp.org/images/5/51/Review_opensign_pparrend_2008_07_04.doc]
+|}

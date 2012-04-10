@@ -1,0 +1,45 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Project About</noinclude>
+| project_name = OWASP Passw3rd Project
+| project_home_page = OWASP Passw3rd Project
+| project_description = Store passwords in encrypted files with an easy to use command line interface, and utilities to use the passwords in code.  In its simplest form, the keys are generated per environment with OS access controls while the password files are stored in SCM.
+
+| project_license = MIT
+
+| leader_name1 = Neil Matatall
+| leader_email1 = neil@owasp.org
+| leader_username1 = nmatatal
+
+| contributor_name[1-10] = Brendon Murphey
+| contributor_email[1-10] = 
+| contributor_username[1-10] = 
+
+| pamphlet_link = https://www.owasp.org/images/8/86/Passw3rd-Pamphlet.pptx
+
+| presentation_link = https://www.owasp.org/images/f/f7/Passw3rd.pptx
+
+| mailing_list_name = https://lists.owasp.org/mailman/listinfo/owasp-passw3rd-project
+
+| project_road_map = https://www.owasp.org/index.php/OWASP_Passw3rd_Project/Roadmap
+
+| links_url1 = https://github.com/oreoshake/passw3rd
+| links_name1 = Passw3rd @ Github
+
+| links_url4 = http://rubygems.org/gems/passw3rd
+| links_name4 =  Passw3rd @ Ruby Gems
+
+| links_url3 = https://github.com/bemurphy
+| links_name3 = Brendon Murphey's Github Page
+| links_url2 = http://www.youtube.com/watch?v=BzbiSPOJUxc&feature=channel_video_title
+| links_name2 = OC Rails Passw3rd Presentation on youtube
+| links_url[5-10] = 
+| links_name[5-10] = 
+
+| release_1 = password-0.0.5
+| release_2 = passw3rd-0.1.0
+| release_3 =
+| release_4 =
+
+<!--- The line below is for GPC usage only. Please do not edit it --->
+| project_about_page = Projects/OWASP Passw3rd Project
+
+}}

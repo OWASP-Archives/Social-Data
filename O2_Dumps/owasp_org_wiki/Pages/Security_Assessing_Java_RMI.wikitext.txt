@@ -1,0 +1,26 @@
+== Introduction ==
+The talk will describe the process for performing a security assessment on Java RMI services, including identifying and making unauthorised calls to the service.  There are currently no available tools to perform object and method identification.  The techniques described in this talk will be used together with an innovative prototype for an RMI assessment tool to demonstrate how an RMI service can be interrogated and manipulated from a zero knowledge perspective.
+ 
+== Outline ==
+* Introduction to Java RMI - What is RMI, how and where is it used.
+* RMI Architecture - How are RMI Client/Server applications structured and what is exposed?
+* Objectives of assessing RMI:
+** Identify the objects and methods that are exposed
+** Make arbitrary calls to those methods.
+* Enumerating bound objects - supported by the standard RMI API
+* Enumerating remote methods - Methods are not exposed, but they can still be obtained!
+** Using existing method signatures
+** Sniffing the wire
+** Brute force - is realistically feasible
+* Determining the number of parameters
+* Determining parameter type
+* Calling remote methods
+* Fuzzing
+* Securing RMI
+** Network controls
+** Security on the server
+** Secure coding of the exposed methods
+
+== About the Author ==
+Adam Boulton is a Research Developer and Security Consultant for Corsaire. He has been involved in all aspects on the SDLC with a focus upon security. He graduated from Sheffield Hallam University with a 1st Class Software Engineering Degree and is also certified for secure code assessments.
+Adam’s past roles have included that of a Software Engineer for the Ministry of Defence and a Virus Analyst for Sophos Plc. At both positions he was heavily involved in Software Development, Reverse Engineering and implementing security.

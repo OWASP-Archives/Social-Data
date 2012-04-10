@@ -1,0 +1,42 @@
+[[Project Information:template AppSensor Project|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#P017 - OWASP AppSensor - Detect and Respond to Attacks from Within the Application|OWASP AppSensor Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#P017 - OWASP AppSensor - Detect and Respond to Attacks from Within the Application|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+The goals for the 50% deliverable include: High level planning & design: Complete
+Identify and define attack patterns against applications: This has been integrated as examples for each of the detection points.
+Document points of detection within the application for the attack patterns & identify key information to log: 40 Detection points have been documented and categorized by exception type. A description and attack example has been provided for each along with any limitations for the specific detection item.
+Each of these objectives have been met. The documentation will be updated per reviewer comments. 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"|
+
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#P017 - OWASP AppSensor - Detect and Respond to Attacks from Within the Application|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+Objectives for Phase 1:
+* High Level Planning 100%
+* Attack Patterns 100%
+* Detection Points 100%
+ |- 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+* The biggest issue I had was the general look and feel – wanted to make the document more visually appealing. (Eric did a great job reworking the document format -MC)
+* Make sure you run spell and grammar check. Found a number of small issues, fixed most.
+* Based on prior discussions, this was supposed to incorporate ESAPI. Are you still planning on this?
+* I'd like to see some implementation guidance for some key technologies (i.e. J2EE and .NET). I'm thinking "this control can be a J2EE filter utilizing ESAPI method N".
+* Document seems unclear if AppSensor is purely guidance for an implementation or the requirements of an implementation yet to come.
+
+|}

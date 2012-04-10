@@ -1,0 +1,62 @@
+{{Template:Attack}}
+<br>
+[[Category:OWASP ASDR Project]]
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+==Description==
+Network Eavesdropping or network sniffing is a network layer attack consisting of capturing packets from the network transmitted by others' computers and reading the data content in search of sensitive information like passwords, session tokens, or any kind of confidential information.
+
+The attack could be done using tools called network sniffers. These tools collect packets on the network and, depending on the quality of the tool, analyze the collected data like protocol decoders or stream reassembling.
+
+Depending on the network context, for the sniffing to be the effective, some conditions must be met:
+
+'''• LAN environment with HUBs'''
+
+This is the ideal case because the hub is a network repeater that duplicates every network frame received to all ports, so the attack is very simple to implement because no other condition must be met.
+
+'''• LAN environment with switches'''
+
+To be effective for eavesdropping, a preliminary condition must be met. Because a switch by default only transmits a frame to the port,  a mechanism that will duplicate or will redirect the network packets to an evil system is necessary. For example, to duplicate traffic from one port to another port, a special configuration on the switch  is necessary.
+To redirect the traffic from one port to another, there must be a preliminary exploitation like the arp spoof attack. In this attack, the evil system acts like a router between the victim’s communication, making it possible to sniff the exchanged packets.
+
+'''• WAN environment'''
+
+In this case, to make a network sniff it's necessary that the evil system becomes a router between the client server communications. One way to implement this exploit is with  a DNS spoof attack to the client system.
+
+Network Eavesdropping is a passive attack which is very difficult to discover. It could be identified by the effect of the preliminary condition or, in some cases, by inducing the evil system to respond a fake request directed to the evil system IP but with the MAC address of a different system.
+
+==Risk Factors==
+TBD
+
+==Examples ==
+When a network device called a HUB is used on the Local Area Network topology, the Network Eavesdropping become easier  because the device repeats all traffic received on one port to all other ports. Using a protocol analyzer, the attacker can capture all traffic on the LAN discovering sensitive information.
+
+<center>
+ 
+https://www.owasp.org/images/4/48/Eavesdropping.jpg
+
+Figure 1. Local Eavesdropping attack.
+
+</center>
+
+==Related [[Threat Agents]]==
+* TBD
+[[Category:FIXME|need links]]
+
+==Related [[Attacks]]==
+* [[Man-in-the-middle attack]]
+
+==Related [[Vulnerabilities]]==
+
+==Related [[Controls]]==
+* [[:Category:Encryption]]
+
+==References==
+* http://www.ethereal.com/
+
+
+[[Category:Sniffing Attacks]]
+[[Category:Attack]]

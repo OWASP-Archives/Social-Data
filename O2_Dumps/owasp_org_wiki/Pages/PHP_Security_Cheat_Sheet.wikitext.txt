@@ -1,0 +1,57 @@
+= DRAFT CHEAT SHEET - WORK IN PROGRESS =
+= Introduction  =
+
+This article is focused on providing PHP-specific guidance to securing web applications.
+
+== Don't use $_REQUEST - use $_GET or $_POST or $_SERVER instead ==
+
+== Use PDO with prepared statements or an ORM like Doctrine ==
+
+== Use a framework like Zend or Symfony - Stop re-writing the same code again and again ==
+
+== Input nput validation ==
+Use $_dirty['foo'] = $_GET['foo'] and then $foo = validate_foo($dirty['foo']); 
+
+== Output encoding is entirely up to you. Just do it, ESAPI for PHP is ready for this job. ==
+
+== Not every PHP installation has a working mhash extension, so if you need to do hashing, check it before using it. Otherwise you can't do SHA-256 ==
+
+== Not every PHP installation has a working mcrypt extension, and without it you can't do AES. Do check if you need it ==
+
+== Code with most of your code outside of the webroot. This is automatic for Symfony and Zend. Stick to these frameworks ==
+
+== Use PHP 5.3.8. Anything less is unsafe ==
+
+== There is no authentication or authorization classes in native PHP. Use ZF or Symfony instead ==
+
+== When developing PHP code, make sure you develop with PHP Unit and Jenkins - see http://qualityassuranceinphpprojects.com/pages/tools.html for more details. ==
+
+== Consider using Stefan Esser's Hardened PHP patch - http://www.hardened-php.net/suhosin/index.html ==
+(not maintained now, but the concepts are very powerful)
+
+== In terms of secure coding with PHP, do not use globals unless absolutely necessary ==
+Check your php.ini to ensure register_globals is off Do not run at all with this setting enabled It's extremely dangerous (register_globals has been disabled since 5.0 / 2006, but .... most PHP 4 code needs it, so many hosters have it turned on)
+
+== Ensure allow_url_fopen and allow_url_include are both disabled to protect against RFI ==
+ But don't cause issues by using the pattern include $user_supplied_data or require "base" + $user_supplied_data - it's just unsafe as you can input /etc/passwd and PHP will try to include it
+
+== Avoid Eval() ==
+ It basically allows arbitrary PHP code execution, so do not evaluate user supplied input. and if you're not doing that, you can just use PHP directly. eval() is at least 10-100 times slower than native PHP
+
+== Watch for executable regexes (!) ==
+== Session rotation is very easy - just after authentication, plonk in session_regenerate_id() and you're done. ==
+== Set display_errors to 0, and set up logging to go to a file you control, or at least syslog. This is the most commonly neglected area of PHP configuration ==
+
+== Be aware of PHP filters ==
+
+These are transparent to you and you need to know about them. php://input: takes input from the console gzip: takes compressed input and might bypass input validation http://au2.php.net/manual/en/filters.php 
+
+= Related Cheat Sheets  =
+
+{{Cheatsheet_Navigation}} 
+
+= Authors and Primary Editors  =
+
+Andrew van der Stock
+
+[[Category:How_To]] [[Category:Cheatsheets]]

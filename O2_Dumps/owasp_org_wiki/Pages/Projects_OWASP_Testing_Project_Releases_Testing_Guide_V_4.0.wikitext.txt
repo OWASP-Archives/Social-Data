@@ -1,0 +1,46 @@
+{{Template: <includeonly>{{{1}}}</includeonly><noinclude>Release About</noinclude>
+| project_name = OWASP Testing Project
+| project_home_page = :Category:OWASP Testing Project
+| release_name = Testing Guide V 4.0
+| release_date = 15th January 2011
+| release_description =
+* Review all the control numbers to adhere to the [http://www.owasp.org/index.php/Common_OWASP_Numbering OWASP Common numbering], 
+* Review all the sections in v3,
+* Create a more readable guide, eliminating some sections that are not really useful,
+* Insert new testing techniques: HTTP Verb tampering, HTTP Parameter Pollutions, etc.,
+* Rationalize some sections as Session Management Testing,
+* Create a new section: Client side security and Firefox extensions testing.
+| release_license = [http://creativecommons.org/licenses/by-sa/3.0/ '''Creative Commons Attribution Share Alike 3.0''']
+| release_download_link = 
+| leader_name1 = Matteo Meucci
+| leader_username1 = Mmeucci
+| leader_email1 = matteo.meucci@owasp.org
+
+| contributor_name1 = Roberto Suggi Liverani
+| contributor_email1 =
+| contributor_username1 =
+
+| contributor_name2 = Nick Freeman
+| contributor_email2 =
+| contributor_username2 =
+
+| contributor_name3 = Stefano Di Paola
+| contributor_email3 = stefano.dipaola@gmail.com
+| contributor_username3 =
+
+| contributor_name4 = Marco Morana
+| contributor_email4 = marco.morana@owasp.org
+| contributor_username4 =
+
+| contributor_name5 = Giorgio Fedon
+| contributor_email5 = giorgio.fedon@gmail.com
+| contributor_username5 =
+
+| contributor_name6 =  Kevin Horvath
+| contributor_email6 = kevin.horvath@gmail.com
+| contributor_username6 =
+
+| release_notes = http://www.owasp.org/index.php/Projects/OWASP_Testing_Project/Releases/Testing_Guide_V_4.0/Roadmap
+| links_url1 = https://spreadsheets.google.com/ccc?key=0An4Puwz7EA41dDV6cUY2YWpGaHdEbFktbklNMUFiSEE&hl=en
+| links_name1 = Testing Guide's (Version 4.0) Approved Budget
+}}

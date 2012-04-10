@@ -1,0 +1,20 @@
+ESAPI is easy to build yourself using [http://subversion.tigris.org/ Subversion] and [http://maven.apache.org/ Maven]. Ensure that you are using UTF-8 for all source code.
+
+  $ svn checkout http://owasp-esapi-java.googlecode.com/svn/trunk ESAPI
+  $ cd ESAPI
+  $ mvn -Dmaven.test.skip=true package  # Build ESAPI
+
+Maven will generate a "target" directory that contains the ESAPI jar file.
+
+To generate project reports use:
+
+  $ mvn site
+
+To generate documentation use:
+
+  $ mvn javadoc:jar
+
+
+__NOTOC__
+
+[[Category:OWASP Enterprise Security API]]

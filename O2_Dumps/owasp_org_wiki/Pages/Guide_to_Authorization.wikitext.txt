@@ -1,0 +1,318 @@
+[[Guide Table of Contents|Development Guide Table of Contents]]__TOC__
+
+Authorization ensures that the authenticated user has the appropriate privileges to access resources. The resources a user has access to depend on his/her role. 
+
+==Objectives ==
+
+* To ensure only authorized users can perform allowed actions within their privilege level.
+
+* To control access to protected resources using decisions based upon role or privilege level.
+
+* To prevent privilege escalation attacks, for example using administration functions whilst only an anonymous user or even an authenticated user.
+
+==Environments Affected ==
+
+All applications. 
+
+==Relevant COBIT Topics ==
+
+DS5 – All sections should be reviewed. This section covers nearly all COBIT detailed control objectives.
+
+==Best Practices ==
+
+If your application allows users to be logged in for long periods of time, ensure that controls are in place to revalidate a user’s authorization to a resource. For example, if Bob has the role of “Top Secret” at 1:00, and at 2:00 while he is logged in his role is reduced to Secret he should not be able to access “Top Secret” data any more. 
+
+Architect your services (i.e., data source, web service) to query a user’s role directly from the credential store instead of trusting the user to provide accurate listing of their roles.
+
+==Best Practices in Action ==
+
+Continuing with the previous code, the following extends the code in the dbLogin method of the auth.cfc to return the user’s roles. The roles are passed to the <cfloginuser> to provide authentication to ColdFusion’s built-in login structure. The roles are also used to provide authorization to ColdFusion Components. 
+
+<pre>
+Auth.cfc
+
+<cffunction name="dblogin" access="public" output="false" returntype="struct">
+
+<cfargument name="strUserName" required="true" type="string">
+
+<cfargument name="strPassword" required="true" type="string">
+
+<cfset var retargs = StructNew()>
+
+<cfif IsValid("regex", strUserName, "[A-Za-z0-9%]*") AND IsValid("regex", strPassword, "[A-Za-z0-9%]*")>
+
+<cfquery name="loginQuery" dataSource="#Request.DSN#" >
+
+SELECT userid, hashed_password, salt
+
+FROM UserTable
+
+WHERE UserName =
+
+<cfqueryparam value="#strUserName#" cfsqltype="CF_SQL_VARCHAR" maxlength="25">
+
+</cfquery>
+
+<cfif loginQuery.hashed_password EQ Hash(strPassword & loginQuery.salt, "SHA-256" )>
+
+<cfset retargs.authenticated="YES">
+
+<cfset Session.UserName = strUserName>
+
+<!-- Add code to get roles from database -->
+
+<cfquery name="authQuery" dataSource="#Request.DSN#" >
+
+SELECT roles.role
+
+FROM roles INNER JOIN (users INNER JOIN userroles ON users.userid = userroles.userid) ON roles.roleid = userroles.roleid
+
+WHERE (((users.usersid)='<cfqueryparam value=“#loginQuery.userid#” cfsqltype=”CF_SQL_INTEGER”>'))
+
+</cfquery>
+
+<cfif authQuery.recordCount>
+
+<cfset retargs.roles = valueList(authQuery.role)>
+
+<cfelse>
+
+<cfset retargs.roles = “user”>
+
+</cfif>
+
+<cfelse>
+
+<cfset retargs.authenticated="NO">
+
+</cfif>
+
+<cfelse>
+
+<cfset retargs.authenticated="NO">
+
+</cfif> ---><cfset retargs.authenticated = true><cfset retargs.roles = "Admin">
+
+<cfreturn retargs>
+
+</cffunction>
+
+</pre>
+
+==Principle of least privilege ==
+
+In security, the Principle of Least Privilege encourages system designers and implementers to allow running code only the permissions needed to complete the required tasks and no more. When designing web applications, the capabilities attached to running code should be limited in this manner. This spans the configuration of the web and application servers through the business capabilities of business logic components.
+
+Far too often, web and application servers run at too great a permission level. They execute using privileged accounts such as root in UNIX environment or LOCALSYSTEM in Windows environments. When web and application servers run as root or LOCALSYSTEM, the processes and the code on top of these processes run with all of the rights of these users. Malicious code will execute with the authority of the privileged account, thus increasing the possible damage from an exploit. Web and application servers should be executed under accounts with minimal permissions.
+
+The database accounts used by web applications often have privileges beyond those actually required or advisable. Allowing web applications to use sa or other privileged database accounts destroys the database server’s ability to defend against access to or modification of unauthorized resources. Accounts with db_owner equivalent privileges such as schema modification or unlimited data access typically have far more access to the database than is required to implement application functionality. Web applications should use one or more lesser-privileged accounts that are prevented from making schema changes or sweeping changes to or requests for data.
+
+The J2EE and .NET platforms provide developers the ability to limit the capabilities of code running inside of their virtual machines. Often web applications run in environments with AllPermission (Java) or FullTrust (.NET) turned on. This limits the ability of the virtual machine to control the actions of code running under its control. Implementing code access security measures is not only useful for mitigating risk when running untrusted code – it can also be used to limit the damage caused by compromises to otherwise trusted code.
+
+Finally, the business logic of web applications must be written with authorization controls in mind. Once a user has authenticated to the running system, their access to resources should be limited based on their identity and roles. In addition, users’ attempts to perform actions should also be authorized. Both the J2EE and ASP.NET web application platforms provide the ability to declaratively limit a user’s access to web resources by their identity and roles (as configured in web.xml and web.config respectively). The J2EE platform provides controls down to the method-level for limiting user access to the capabilities of EJB components. By designing file resource layouts and components APIs with authorization in mind, these powerful capabilities of the J2EE and .NET platforms can be used to enhance security.
+
+===How to determine if you are vulnerable ===
+
+* Do the web and application server processes run as root, Administrator, LOCALSYSTEM or other privileged accounts?
+
+* Does the web application access the database via sa or other administrative account?
+
+* Does the web application access the database via accounts using more privileges than required?
+
+* In J2EE and .NET environments, do the application server virtual machines run with AllPermission or FullTrust security capabilities?
+
+* Are platform capabilities being used to limit access to web resources?
+
+* Are platform capabilities being used to limit what users can make calls to component methods?
+
+===How to protect yourself ===
+
+* Development, test, and staging environments must be set up to function with the lowest possible privilege so that production will also work with lowest possible privileges.
+
+* Ensure that system level accounts (those that run the environment) have privileges limited to the greatest degree possible. Web and application servers should never execute as “Administrator”, “root”, “sa”, “sysman”, “Supervisor”, or any other privileged account.
+
+* User accounts should possess just enough privileges within the application to perform their assigned tasks. These user accounts should be created unprivileged and be given permissions incrementally until they have the full capabilities required. They should not be created with high privileges and then arbitrarily limited.
+
+* Business user accounts should not be administrator accounts and vice versa. Separate accounts should be used to perform these different sets of tasks even if the same user needs to be able to perform tasks in both realms.
+
+* Web applications should access the database through one or more limited accounts that do not have schema-modification privileges unless required. If the web application requires the ability to modify the database schema, then the design should be analyzed to determine if and why functionality must be implemented in such a potentially hazardous manner.
+
+* Database access should be performed through parameterized stored procedures (or similar) to allow all table access to be revoked (i.e. select, drop, update, insert, etc). This should be done using a low privilege database account. This account should not hold any SQL roles above “user” (or similar).
+
+* Code access security should be evaluated and implemented if possible. If a component only needs the ability to perform DNS queries, it should only be granted the code access permissions to permit this. That way if the code attempts to read from the file system or make arbitrary network connections, this will not be allowed and an error will be raised.
+
+==Centralized authorization routines ==
+
+A common mistake is to perform an authorization check by cutting and pasting an authorization code snippet into every page containing sensitive information. Worse yet would be re-writing this code for every page. Well written applications centralize access control routines, so if any bugs are found, they can be fixed once and the results apply throughout the application immediately. 
+
+===How to determine if you are vulnerable ===
+
+* Does the application implement authorization controls by including a file or web control or code snippet on every page in the application?
+
+===How to protect yourself ===
+
+* Minimize the use of custom authorization code
+
+* Use built-in platform or framework authorization facilities.
+
+==Authorization matrix ==
+
+Access controlled applications must check that users are allowed to view a page or use an action before performing the rendering or action. If these checks are not performed then users who are able to learn or guess the URLs of sensitive resources will be able to view these resources without proper controls being applied.
+
+===How to determine if you are vulnerable ===
+
+* Does each non-anonymous entry point have an access control check?
+
+* Is an authorization check at or near the beginning of code implementing sensitive activities?
+
+===How to protect yourself ===
+
+Either use the built in authorization facilities of the framework, or place the call to a centralized authorization check at the beginning of sensitive resource views or actions.
+
+==Controlling access to protected resources ==
+
+Some applications check to see if a user is able to undertake a particular action, but then do not check if access to all resources required to complete the requested action is allowed. For example, forum software may check to see if a user is allowed to reply to a previous message, but then fails to check that the requested message is not within a protected or hidden forum or thread. Another example would be an Internet Banking application that checks to see if a user is allowed to transfer money, but does not validate that the “from account” is one of the user’s accounts. 
+
+===How to determine if you are vulnerable ===
+
+* Does the application verify all resources required to complete a user-requested action should be accessible to the user?
+
+* Is your application divided into distinct logical tiers? Code that uses resources directly, such as dynamic SQL queries, are often more at risk than code that uses a model-view-controller or other separation-of-responsibilities paradigm. It is easier to implement consistent authorization controls in logically tiered systems versus systems making ad hoc SQL queries and other resource requests.
+
+===How to protect yourself ===
+
+* Use logical tier separation and patterns such as Model View Controller instead of directly accessing protected resources from the web tier.
+
+* Ensure that Model code checks to ensure that the requesting user should have access to the protected resource.
+
+* Ensure that the code requesting the resource has adequate error checking and does not assume that access will always be granted. Failure cases should be accounted for.
+
+==Protecting access to static resources ==
+
+Some applications generate static content such as a PDF transaction report and allow the underlying static web server to provide access to these files. Often this means a confidential report may be available to unauthorized access if a malicious user is able to determine a valid filename for a sensitive yet static resource.
+
+===How to determine if you are vulnerable ===
+
+* Does the application generate or allow access to static content that also contains sensitive information?
+
+* Is access to the static content controlled based on the current authenticated user? 
+
+* Could an anonymous user with knowledge of resource naming retrieve that protected content?
+
+===How to protect yourself ===
+
+* Ideally generate sensitive content on the fly and send directly to the browser rather than saving to the web server’s file system.
+
+* If protecting static sensitive content, implement authorization checks to prevent anonymous access. 
+
+* If you have to save to disk (not recommended), use random filenames (such as a GUID) and clean up temporary files regularly.
+
+* Do not store sensitive static content in web-accessible directory paths. Rather, store this content in non-web accessible directories and proxy access to this content through a handler that will implement proper authorization, logging, and other security functions. On the ASP.NET platform, the HTTPResponse.WriteFile() method can be used to implement this functionality. NOTE: Whenever accessing the file system from web-facing code be sure to guard against potential injection attacks.
+
+==Reauthorization for high value activities or after idle out ==
+
+===How to determine if you are vulnerable ===
+
+===How to protect yourself ===
+
+==Time based authorization ==
+
+===How to determine if you are vulnerable ===
+
+===How to protect yourself ===
+
+==Be cautious of custom authorization controls ==
+
+Most of the major application frameworks have a well developed authorization mechanism (such as Java’s JAAS or .NET’s built in authorization capabilities configured in web.config).
+
+However, many applications contain their own custom authorization code. This adds complexity and potentially creates flaws where attackers are able to bypass ad hoc authorization controls. Unless there is a specific reason to override the built in functionality, web applications should leverage the framework support.
+
+===How to determine if you are vulnerable ===
+
+* Does the code leverage the build in authorization capabilities of the framework? 
+
+* Could the application be simplified by moving to the built in authentication / authorization model?
+
+* If custom code is used to provide authorization controls, consider positive authentication issues and exception handling. Does the system fail in a closed manner or can a user be “authorized” if an exception occurs?
+
+* What coverage is obtained by the use of the custom authentication controls? Are all code and resources protected by this mechanism? If the authorization capabilities are implemented as a file or web control that must be included in every page do all pages contain this control? Are there process measures in place to ensure that all new pages include this feature?
+
+===How to protect yourself ===
+
+* Always prefer to write less code in applications, particularly when frameworks provide presumably high quality and well-tested alternatives. 
+
+* If custom code is required to perform authorization functions, consider fail-safe authentication and exception handling – ensure that if an exception is thrown, the user is logged out or at least prevented from accessing the protected resource or function.
+
+* Ensure that coverage approaches 100% by default.
+
+==Never implement client-side authorization tokens ==
+
+Many web application developers wish to avoid server-side session storage. Instead, they rely on client-side state maintenance mechanisms such as cookies, hidden form fields, or request/response headers. Often this is misguided when applied to access control and secrets because any information transmitted from the client is open to manipulation unless properly secured using cryptographic techniques. 
+
+===How to determine if you are vulnerable ===
+
+Does the application retrieve security-sensitive data such as user identification or user role information from client-controlled facilities such as cookies, hidden form parameters, or request headers?
+
+===How to protect yourself ===
+
+When your application is satisfied that a user is authenticated, associate the session ID with the authentication tokens, flags or state. For example, once the user is logged in, a flag with their authorization levels is set in the session object. 
+
+	
+
+'''Java'''
+
+<pre>
+
+if ( authenticated ) {
+
+	request.getSession(true).setValue(“AUTHLEVEL”) = X_USER;
+
+}
+
+</pre>
+
+'''.NET (C#)'''
+
+<pre>
+
+if ( authenticated ) {
+
+	Session[“AUTHLEVEL”] = X_USER;
+
+}
+
+</pre>
+
+
+'''PHP'''
+
+<pre>
+
+if ( authenticated ) {
+
+	$_SESSION[‘authlevel’] = X_USER; 	// X_USER is defined elsewhere as meaning, the user is authorized
+
+}
+
+</pre>
+
+Check your application:
+
+* Do not trust any client-side authentication or authorization tokens in headers, cookies, hidden form fields, or in URL arguments unless they have been cryptographically secured via signing or encryption. 
+
+* If your application uses an SSO agent, such as IBM’s Tivoli Access Manager, Netegrity’s SiteMinder, or RSA’s ClearTrust, ensure your application validates the agent tokens rather than simply accepting them, and ensure these tokens are not visible to the end user in any form (header, cookie, hidden fields, etc). If the tokens are visible to the end user, ensure that all the properties of a cryptographically secure session handler as per chapter 12 are taken into account.
+
+==Further Reading ==
+
+* ASP.Net Authorization:
+
+http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpguide/html/cpconaspnetauthorization.asp 
+
+* J2EE Authorization: 
+
+http://www.devarticles.com/c/a/Java/JAAS-Securing-J2EE-Applications-Securing-Web-Components/
+
+
+[[Guide Table of Contents|Development Guide Table of Contents]]
+[[Category:OWASP_Guide_Project]]
+[[Category:Access Control]]

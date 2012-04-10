@@ -1,0 +1,6 @@
+* Implement third-party plugin tools API:
+** Implement w3af-plugin to grep traffic (working code exists but is not finished),
+** Implement rat-proxy plugin to replay traffic through the passive Rat proxy and gather results (PoC exists),
+** Implement httprint-plugin to perform server identification (not started).
+* Implement replayer, to replay requests to the original server.
+* Implement cacher, to use the gathered data as a cache-repository where the datafiddler acts as a forwarding proxy - but does not forward, only fetches from db.

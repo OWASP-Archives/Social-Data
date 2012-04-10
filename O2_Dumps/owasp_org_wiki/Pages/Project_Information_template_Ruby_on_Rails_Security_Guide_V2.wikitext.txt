@@ -1,0 +1,35 @@
+----
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Ruby on Rails Security Guide V2''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="6" style="width:85%; background:#cccccc" align="left"|The last security guide for [[:Category:OWASP Web Application Security Put Into Practice|Rails]] was a great success, with a lot of more secure web applications and continued awareness in the community of security issues. The [http://www.rorsecurity.info/ Ruby on Rails Security Project] is the one and only source of information about Rails security topics, and I keep the community up-to-date with blog posts and conference talks in Europe. The Guide and the Project has been mentioned in several Rails books and web-sites.
+
+Version 1 of the Ruby on Rails Security Guide was sponsored by the SpoC 07, set the standard for OWASP programming language specific guides in terms of the topic outline and has been published as a [http://www.lulu.com/content/1412042 book]. Nevertheless I'm convinced that a more compact design and a "question-and-answer" style of writing will reach an even larger audience. Of course the new Guide will still include answers to the OWASP Top Ten security vulnerabilities.
+
+A lot has changed since the publishing of the first Guide. Some new security holes have been found, there are new advises and most importantly Rails version 2.0 has been released. The new Ruby on Rails Security Guide aims at providing an up-to-date coding and configuration guide for the Rails community.  
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project key Information'''
+ | style="width:14%; background:#cccccc" align="center"|Project Leader<br>[mailto:heikowebers(at)gmx.net '''Heiko Webers''']
+ | style="width:15%; background:#cccccc" align="center"|Project Contributors<br>(if applicable)
+ | style="width:10%; background:#cccccc" align="center"|Mailing List<br>[https://lists.owasp.org/mailman/listinfo/owasp-ruby-on-rails-v2 '''Subscribe here''']<br>[mailto:OWASP-Ruby-on-Rails-V2(at)lists.owasp.org '''Use here''']
+ | style="width:17%; background:#cccccc" align="center"|License<br>[http://creativecommons.org/licenses/by-sa/3.0/ '''Creative Commons Attribution Share Alike 3.0''']
+ | style="width:14%; background:#cccccc" align="center"|Project Type<br>[[:Category:OWASP_Project#Release Quality Projects|'''Documentation''']]
+ | style="width:15%; background:#cccccc" align="center"|Sponsor<br>[[OWASP Summer of Code 2008|'''OWASP SoC 08''']]  
+ |}
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|
+[[:Category:OWASP_Project_Assessment#Release Quality Documentation Criteria|'''Release Quality''']]<br>[[:OWASP Ruby on Rails Security Guide V2 - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="center"|
+OWASP Ruby on Rails Security Guide V.2: [https://www.owasp.org/images/8/89/Rails_Security_2.pdf '''PDF''']&[https://www.owasp.org/images/d/d4/Rails_Security_2.doc '''Word'''] - NEW RELEASE!<br>[https://www.owasp.org/images/3/32/Rails_security_2_presentation.pdf '''PDF Presentation''']  
+ | style="width:29%; background:#cccccc" align="center"|
+[[:Category:OWASP Web Application Security Put Into Practice|OWASP Web Application Security Put Into Practice]]<br>[[:Category:OWASP Testing Project|OWASP Testing Project]]
+ |}
+----

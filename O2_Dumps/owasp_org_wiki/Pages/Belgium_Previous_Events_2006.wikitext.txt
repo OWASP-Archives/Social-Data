@@ -1,0 +1,86 @@
+[[Belgium]] events held in 2006
+
+=== JavaPolis 2006 -  Stephen de Vries - Security Sins and their Solutions ===
+Stephen de Vries (project leader of the [[:Category:OWASP Java Project|OWASP Java Project]]) did a talk at [http://www.javapolis.com JavaPolis in Belgium] about "Security Sins and their Solutions" that can be viewed again online on [http://www.bejug.org/confluenceBeJUG/display/PARLEYS/Security+Sins+and+their+Solutions Parleys]. 
+
+The talk covers the most insidious security vulnerabilities in Java Web and EE applications through practical demonstration of how to exploit these vulnerabilities and recommendations on how to prevent them. The threat posed by each vulnerability is explained and strategies for mitigating the flaw are introduced. 
+
+===Meeting Notes OWASP Belgium Chapter Meeting (Antwerp, 14-Sep-2006) ===
+'''WHEN'''<br>
+Thursday 14th of September 2006, 18h00 - 21h00.<BR>
+'''WHERE'''<br>
+ING sponsored the venue and sandwiches.<br>
+'''PROGRAM'''<br>
+* 18h00 - 18h30: Welcome, get drink & sandwiches<BR>
+* 18h20 - 18h40: Sebastien Deleersnyder, Ascure <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'''[http://www.owasp.org/index.php/Image:OWASP_Belgium_Chapter_Meeting_-_Antwerp_-_14_Sep_2006_-_1_OWASP_2.0_Update.ppt OWASP 2.0 Update]'''<BR>
+* 18h45 – 19h00: Toon Mordijck, ISSA<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'''[http://www.owasp.org/index.php/Image:OWASP_Belgium_Chapter_Meeting_-_Antwerp_-_14_Sep_2006_-_2_ISSA-BE_Presentation.ppt ISSA Introduction]'''<BR>
+* 19h00 - 19h55: Serge Moreno, ING<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'''[http://www.owasp.org/index.php/Image:OWASP_Belgium_Chapter_Meeting_-_Antwerp_-_14_Sep_2006_-_3_Business_Application_security_through_Information_Risk_Management_-_OWASPv1.2.ppt Business Application Security through Information Risk Management]'''<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;''Presentation + Discussion''<BR>
+The presentation showed how ING has implemented business application security by implementing a risk management approach. By starting from the definition of risks and risk management, we have changed the program governance and project lifecycle to ensure that security is not seen as an add-on in a late stage of the project, but that the security requirements are defined in the early start of a project. By this approach the security requirements are becoming real functional requirements which are supported by the business. The net result is that security is not an after-thought anymore but totally integrated in the product and its (functional) requirements. As security requirements have become demands of the business, they are not taken out when the project is getting in time and budget constraints. These are all the positive consequences we have obtained from the method that will be explained throughout the presentation.
+*20h05 - 21h00: Guy Crets, Apogado<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'''[http://www.owasp.org/index.php/Image:OWASP_Belgium_Chapter_Meeting_-_Antwerp_-_14_Sep_2006_-_4_Secure_and_Reliable_WS_Guy_Crets.pdf Secure and Reliable Web Services]'''<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;''Presentation + Discussion''<BR>
+Web Services are becoming a very popular protocol for communication between IT systems within and between organizations.  Web services offer a nice alternative for all sorts of communication middleware. The security of Web Services is a major attention point, now being well addressed with the WS-Security standards. Guy Crets not only explains what WS-Security is, but also opens up the subject by addressing many related topics: how does WS-* compare to B2B protocols such as EDIINT AS2, why not use SOAP over email or FTP, the importance of WS-Addressing, shortcomings in WS-ReliableMessaging, what is the importance of Microsoft WCF (aka Indigo), ...  and many more.
+
+===Meeting Notes OWASP Belgium Chapter Meeting (Brussels, 8-May-2006) ===
+'''WHEN'''<br>
+Monday 8th of May 2006, 18h30 - 22h30.<BR>
+'''WHERE'''<br>
+Deloitte sponsored the venue, drinks and snacks.<br>
+'''PROGRAM'''<br>
+* 18h00 - 18h30: Welcome, get drink & snack <BR>
+* 18h20 - 18h40: Sebastien Deleersnyder, Ascure <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'''[http://www.owasp.org/index.php/Image:OWASP_Belgium_Chapter_Meeting_-_Brussels_-_8_May_2006_-_1_OWASP_Update.ppt OWASP Update]'''<BR>
+
+* 18h45 - 19h15: Hillar Leoste, Zone-H<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'''[http://www.owasp.org/index.php/Image:OWASP_Belgium_Chapter_Meeting_-_Brussels_-_8_May_2006_-_2_2005_Internet_Attack_Statistics_for_Belgium_v1_0.ppt Internet Attack Statistics for Belgium in 2005]'''<br>
+
+* 19h15 - 20h30: Johan Peeters, Program Director secappdev.org <br>
+Can "Agile" Development Produce Secure Applications?<br>
+Received wisdom has it that secure development and agile processes do <br>
+not mix. Is that really so? Agile practices have proven in many <br>  
+projects to yield applications with fewer functional defects. Can they <br>
+also be put to work to reduce the number of security vulnerabilities?<br>
+The audience added to the discussion with questions and remarks!<br>  
+
+===Meeting Notes OWASP Belgium Chapter Meeting (Leuven, 22-Feb-2006) ===
+'''WHEN'''<br>
+Wednesday 22nd of February 2006, 18h00 - 21h00.<br>
+
+'''WHERE'''<br>
+KUL sponsored the venue:<BR> 
+BeeWare sponsored the Pizza and Drinks!<br>
+
+'''PROGRAM'''<br>
+18h00 - 18h20: Welcome, get Pizza & Drink<BR>
+18h20 - 18h40: Sebastien Deleersnyder, Ascure <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'''[http://www.owasp.org/index.php/Image:OWASP_Belgium_Chapter_Meeting_-_Leuven_-_22_Feb_2006_-_1_OWASP_and_OWASP_Membership.ppt OWASP (Membership) and new OWASP Projects]'''<BR>
+18h40 - 19h30: Philippe Bogaerts, BeeWare<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'''[http://www.owasp.org/index.php/Image:OWASP_Belgium_Chapter_Meeting_-_Leuven_-_22_Feb_2006_-_2_WebScarab_Demo.ppt WebScarab demonstration]'''<br>
+19h30 - 20h45: Web Application Firewalls (WAF): Panel Discussion<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'''[http://www.owasp.org/index.php/Image:OWASP_Belgium_Chapter_Meeting_-_Leuven_-_22_Feb_2006_-_3_WAF_Panel.ppt First a WAF Primer was presented.]'''<br>
+Then we organized a panel discussion with people from industry, vendors and research:<br>
+How mature are WAFs?<br>
+What do WAFs protect you from? What not?<br>
+Where do you position WAFs in your architecture?<br>
+What WAF functionality do you really need?<br>
+…<br>
+We then had an interesting panel Discussion with: <br>
+<br>
+* Philippe Bogaerts, BeeWare<br>
+* Jaak Cuppens, F5 Networks<br>
+* David Van der Linden, ING Belgium<br>
+* Lieven Desmet, K.U.Leuven<br>
+
+The audience (up to 50 !) added to the discussion with questions and remarks!<br>
+----
+
+===Belgium OWASP 2006 New Year Drink ===
+On January 19th we had a New Years Drink.<br>
+It was sponsored by Zion Security<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'''[http://www.owasp.org/index.php/Image:Belgian_OWASP_Chapter_2006_New_Years_Drink_2006-01-19.ppt Presentation]'''
+
+----

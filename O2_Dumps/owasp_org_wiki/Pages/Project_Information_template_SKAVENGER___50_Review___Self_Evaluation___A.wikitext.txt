@@ -1,0 +1,36 @@
+[[Project Information:template SKAVENGER|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#Skavenger|Skavenger Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#Skavenger|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+The tool was extensively tested and used on several security pentest projects by a couple of testes. As re result, some parts where rewritten and various bugs very fixed.
+Furthermore, I concentrated mainly on building a useful GUI application around the console scanner. Other ideas, like other language support, database integration or a plugin for WebScarab, where posponed to a next release to hava more time to work on the GUI.
+
+At this moment, the Perl code is heavely tested and revied, mostly by myself. The GUI application is nearly finished too, the code must be rewritten and the application itself has to be tested more. The documentation has to be extended and reviewed as well. However, by now, the project (console app and GUI) is updated on sourceforge an can already be downloaded.
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#Skavenger|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+Skavenger Console (Perl): 95 % 
+
+Skavenger GUI (C#): 85 %
+
+project documentation (CHM & HTML): 80%
+ |- 
+|-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+|}

@@ -1,0 +1,121 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+Not using a random initialization vector with Cipher Block Chaining (CBC) Mode causes algorithms to be susceptible to dictionary attacks.
+
+'''Consequences'''
+
+* Confidentiality: If the CBC is not properly initialized, data which is encrypted can be compromised and therefore be read.
+* Integrity: If the CBC is not properly initialized, encrypted data could be tampered with in transfer or if it accessible.
+* Accountability: Cryptographic based authentication systems could be defeated.
+
+'''Exposure period'''
+
+* Implementation: Many logic errors can lead to this condition if multiple data streams have common beginning sequences.
+
+'''Platform'''
+
+* Languages: Any
+* Operating platforms: Any
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood of exploit'''
+
+Medium
+
+CBC is the most commonly used mode of operation for a block cipher. It solves electronic code book's dictionary problems by XORing the ciphertext with plaintext. If it is used to encrypt multiple data streams, dictionary attacks are possible, provided that the streams have a common beginning sequence.
+
+==Risk Factors==
+
+* Talk about the [[OWASP Risk Rating Methodology|factors]] that make this vulnerability likely or unlikely to actually happen
+* Discuss the technical impact of a successful exploit of this vulnerability
+* Consider the likely [business impacts] of a successful attack
+
+
+==Examples==
+
+In C/C++:
+
+<pre>
+#include <openssl/evp.h>
+
+EVP_CIPHER_CTX ctx;
+char key[EVP_MAX_KEY_LENGTH];
+char iv[EVP_MAX_IV_LENGTH];
+
+RAND_bytes(key, b);
+memset(iv,0,EVP_MAX_IV_LENGTH);
+EVP_EncryptInit(&ctx,EVP_bf_cbc(), key,iv);
+</pre>
+
+In Java:
+
+<pre>
+public class SymmetricCipherTest {
+   public static void main()  {
+      byte[] text ="Secret".getBytes();
+      byte[] iv ={0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};
+
+      KeyGenerator kg = KeyGenerator.getInstance("DES");
+      kg.init(56);
+      SecretKey key = kg.generateKey();
+     
+      Cipher cipher = Cipher.getInstance("DES/ECB/PKCS5Padding");
+      IvParameterSpec ips = new IvParameterSpec(iv);
+      cipher.init(Cipher.ENCRYPT_MODE, key, ips);
+      return cipher.doFinal(inpBytes);
+   }
+ }
+</pre>
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* Integrity: It is important to properly initialize CBC operating block ciphers or their use is lost.
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+Note: A reference to related [http://cwe.mitre.org/ CWE] or [http://capec.mitre.org/ CAPEC] article should be added when exists. Eg:
+
+* [http://cwe.mitre.org/data/definitions/79.html CWE 79].
+* http://www.link1.com
+* [http://www.link2.com Title for the link2]
+
+
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Cryptographic Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

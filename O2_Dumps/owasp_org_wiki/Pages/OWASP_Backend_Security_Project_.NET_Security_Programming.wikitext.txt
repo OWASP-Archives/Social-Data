@@ -1,0 +1,610 @@
+= Overview =
+
+In this section are explained the best solution to avoid two of the most dangerous vulnerabilities of web applications, the sql injection and ldap injection on .NET programming 
+
+It will be analized the interactions between a web application written in C# in ASP.NET technology, .NET Framework 2.0 and two kinds of data provider: a SQL Server 2005 data provider and an OpenLdap Server data provider.
+
+For the first interaction imagine a database called “ExampleDB” in which there are some tables. One of these tables is “Users”. From a 
+web application is possible to query the database to extract information about the users through their name. 
+
+For the second interaction imagine an Ldap server called “ExampleLDAP”.
+
+The project is simple and is made by some .aspx page with a textbox in which is possible to insert the name of the user and the program will return the information, reading from ExampleDB (or ExampleLDAP).
+It's not important to specify how it's possible to create an aspx page So the focus is on the code that we have to write to interact with the server data provider.
+
+= Description =
+
+== .NET Preventing SQL Injection ==
+
+Two approaches are likely: inline query or stored procedure.
+
+[[Image:owasp_bsp_net_1.jpg]]
+
+=== Case 1: Inline query ===
+
+Inline queries are the queries in which is possible to compose a sql statement through string concatenation. By clicking on the first button, the execution of the OnClick event is generated, doing the following:
+
+  protected void btnQueryInline_OnCLick(object sender, EventArgs e)
+ {
+        DbHelper dbHelper = new DbHelper();
+        string connectionString = dbHelper.returnConnectionString();
+        SqlConnection sqlConnection = new SqlConnection(connectionString); 
+        try
+        {
+            sqlConnection.Open(); 
+            SqlCommand cmd = new SqlCommand("select Name,Surname,Code from  dbo.Users where Name LIKE '%" 
+                                             + txtQueryInline.Text + "%'", sqlConnection); 
+            txtQueryInline.Text + "%'", sqlConnection); 
+            cmd.CommandType = CommandType.Text;
+            DataSet ds = new DataSet();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
+            sqlDataAdapter.Fill(ds, "ResultTable");
+            gridresult.DataSource = ds;
+            gridresult.DataBind();
+        }
+        catch (SqlException ex)
+        {
+            throw ex;
+        }
+        finally
+        {
+            if(sqlConnection != null)
+                sqlConnection.Close(); //close the connection               
+        }
+ }
+
+''' First Section: '''
+
+        DbHelper dbHelper = new DbHelper();
+        string connectionString = dbHelper.returnConnectionString();
+        SqlConnection sqlConnection = new SqlConnection(connectionString); 
+
+This section of code provides the sqlConnection, reading the connectionString from the Web.Config file. This is an important task for the application because it represents the entry point to the database, the credentials of the user that can authenticate on the ExampleDB. 
+
+''' Second Section: '''
+
+        sqlConnection.Open(); 
+        SqlCommand cmd = new SqlCommand("select Name,Surname,Code from  dbo.Users where Name LIKE '%" + 
+                                        txtQueryInline.Text + "%'", sqlConnection);			                              
+        cmd.CommandType = CommandType.Text; 
+
+In this section is used the SqlCommand class, in which is written the sql code, concatenating with the text to search. The type of the SqlCommand is “Text”, so it's clear that the sql code is provided directly. This code is prone to sql injection, because we can manipulate the statement, injecting in the textbox, for example, the string: 
+
+'' '; sql statement -- ''
+
+where sql statement is any sql code (it is possible to drop tables, add users, reconfigure the xp_cmdshell, etc.) 
+
+''' Third Section: '''
+
+            DataSet ds = new DataSet();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
+            sqlDataAdapter.Fill(ds, "ResultTable");
+            gridresult.DataSource = ds;
+            gridresult.DataBind();
+
+The third section is useful to represent the result set of the query. It uses the ADO.NET “Dataset”, and an intermediate class called SqlDataAdapter, that adapts the sql data in a form that can be used by the Dataset Object.
+
+It is possible to improve this query, using the second form of interaction that make use of a stored procedure
+
+=== Case 2: Parametrized query + Stored Procedure vulnerable ===
+
+By clicking on the second button, the execution of the OnClick event is generated, doing the following: 
+
+ protected void btnQueryStoredVuln_OnCLick(object sender, EventArgs e)
+ {
+        DbHelper dbHelper = new DbHelper(); 
+        string connectionString = dbHelper.returnConnectionString();
+        SqlConnection sqlConnection = new SqlConnection(connectionString); 
+        try
+        {
+            sqlConnection.Open();
+            SqlCommand cmd = new SqlCommand("USP_SearchUserByNameVuln", sqlConnection);  
+            cmd.CommandType = CommandType.StoredProcedure; 
+            SqlParameter pName = new SqlParameter("@Name", SqlDbType.VarChar, 50);
+            pName.Value = txtQueryStoredVuln.Text;
+            cmd.Parameters.Add(pName);
+            DataSet ds = new DataSet();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
+            sqlDataAdapter.Fill(ds, "ResultTable");
+            gridresult.DataSource = ds;
+            gridresult.DataBind();
+        }
+        catch (SqlException ex)
+        {
+            throw ex;
+        }
+        finally
+        {
+            if (sqlConnection != null)
+                sqlConnection.Close(); //close the connection               
+        }
+ }
+
+ CREATE PROCEDURE [dbo].[USP_SearchUserByNameVuln]
+       @Name varchar(50)
+ AS 
+ BEGIN 
+       SET NOCOUNT ON;				
+       DECLARE @StrSQL varchar(max)
+       SET @StrSQL = 	
+                'SELECT U.Name,U.Surname,U.Code
+                FROM dbo.Users U 
+                WHERE U.Name LIKE ' + &#39;&#39;&#39;%'+  @Name+  '%&#39;&#39;&#39;
+       EXEC (@StrSql)	
+ END
+
+This kind of stored procedure are not rare. In this case is possible to compose the statement in many ways using parameters, function and so on.
+
+Altough it is a parametrized query with a stored procedure, as the code shows, it is possible to inject the same string
+
+'' '; sql statement -- ''
+
+to inject a sql statement. Using the SQL Server function REPLACE, it is possible to “patch” the problem without rewrite the store procedure, replacing all the single quote with a couple of single quote.
+
+ ALTER PROCEDURE [dbo].[USP_SearchUserByNameVuln]
+      @Name varchar(50)
+ AS
+ BEGIN
+      SET NOCOUNT ON;				
+      DECLARE @StrSQL varchar(max)
+      SET @Name = REPLACE(@Name,&#39;&#39;&#39;&#39;,&#39;&#39;&#39;&#39;&#39;&#39;)
+      SET @StrSQL = 	
+            'SELECT U.Name,U.Surname,U.Code
+            FROM dbo.Users U 
+            WHERE U.Name LIKE ' + &#39;&#39;&#39;%'+  @Name+  '%&#39;&#39;&#39;
+       EXEC (@StrSql)	
+ END
+
+This second case explains the fact that the use of parametrized query with stored procedure not always resolve the security flaws caused by sql injection.
+
+=== Case 3: Parametrized query + Stored Procedure not vulnerable ===
+
+It is possible to modify the way to execute the same query, using parametrized query in conjunction with stored procedures. By clicking on the second button, the execution of the OnClick event is generated, doing the following: 
+
+ protected void btnQueryStored_OnCLick(object sender, EventArgs e)
+ {
+        DbHelper dbHelper = new DbHelper(); 
+        string connectionString = dbHelper.returnConnectionString();
+        SqlConnection sqlConnection = new SqlConnection(connectionString); 
+        try
+        {                       
+            sqlConnection.Open();
+            SqlCommand cmd = new SqlCommand("USP_SearchUserByNameNotVuln", sqlConnection);  
+            cmd.CommandType = CommandType.StoredProcedure; 
+            SqlParameter pName = new SqlParameter("@Name", SqlDbType.VarChar, 50);
+            pName.Value = txtQueryStored.Text;
+            cmd.Parameters.Add(pName);
+            DataSet ds = new DataSet();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
+            sqlDataAdapter.Fill(ds, "ResultTable");
+            gridresult.DataSource = ds;
+            gridresult.DataBind();
+        }
+        catch (SqlException ex)
+        {
+            throw ex;
+        }
+        finally
+        {
+            if(sqlConnection != null)
+                sqlConnection.Close(); //close the connection               
+        }
+ }
+
+''' First Section: '''
+
+        DbHelper dbHelper = new DbHelper(); 
+        string connectionString = dbHelper.returnConnectionString(); 
+        SqlConnection sqlConnection = new SqlConnection(connectionString);
+
+This section is the same of the example above.
+
+''' Second Section: '''
+
+            sqlConnection.Open();
+            SqlCommand cmd = new SqlCommand("USP_SearchUserByNameNotVuln", sqlConnection);  
+            cmd.CommandType = CommandType.StoredProcedure; 
+            SqlParameter pName = new SqlParameter("@Name", SqlDbType.VarChar, 50);
+            pName.Value = txtQueryStored.Text;
+            cmd.Parameters.Add(pName);
+
+In this section is used the SqlCommand class as above, but, the type of the SqlCommand is “StoredProcedure” , so the sql code is not provided directly, but there is a procedure inside the database that makes the job. This procedure is called USP_SearchUserByNameNotVuln and accept a Varchar(50) parameter called @Name. 
+The code of the stored is simply: 
+
+ CREATE PROCEDURE [dbo].[USP_SearchUserByNameNotVuln]
+       @Name varchar(50)
+ AS 
+ BEGIN 
+       SET NOCOUNT ON;				
+ SELECT
+       U.Name,
+       U.Surname,
+       U.Code
+ FROM 
+       dbo.Users U 
+ WHERE
+       U.Name LIKE &#39;&#39;&#39;%' + @Name + '%&#39;&#39;&#39;
+ END
+
+Three steps for each parameter passed to the stored procedure are needed to use the SqlParameter class:
+
+* Instantiate the parameter with the right name and type used in the stored procedure
+* Assign the value (in this case the value given by the user in the textbox)
+* Add the parameter to the SqlCommand 
+
+When the sql command is executed, the parameters will be replaced with values specified by the SqlParameter object.
+
+In conclusion, this kind of query is not prone to sql injection, because it is not possibile to build ad hoc sql statements, due to the correct use of Stored Procedure and the SqlParameter class.
+
+''' Third Section: '''
+
+            DataSet ds = new DataSet();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
+            sqlDataAdapter.Fill(ds, "ResultTable");
+            gridresult.DataSource = ds;
+            gridresult.DataBind();
+
+This section is the same of the example above.
+
+=== Input validation ===
+
+Another point that is important to consider is the validation of the input. For example in a context in which a user has to insert (or select) some data in (or from) the database let’s think about the worst case, that is a user that can digit anything and submit anything to the server. To avoid this the only choiche is to validate the user's input. Two strategies are possible:
+
+1.	White list
+
+2.	Black list
+
+The first solution answers at the condition: "deny all, except what is explicitly signed in the list".
+The second solution answers at the condition: "allow all, except what is explicitly signed in the list".
+
+The best solution for the security of the application is try to implement a validation of the input based on the first case. This comes more simply with numeric input, range input or strings that follow a specific pattern (for example an e-mail or a date). It becomes more difficult for strings with a not specific pattern (for example strings inserted in a search engine) in which often only a solution based on a black list is reasonably possible. 
+
+In a Web Application, there are two kinds of input validation:
+
+1.	client validations
+
+2.	server validations
+
+There are a couple of reasons to use both types of validation summarized in the following points: 
+
+* client validations increase performance (the application doesn't postback to the server) but cause a false sense of security (the validation can be bypassed intercepting and manipulating the client request).
+* server validations make worse performance but increase the security, because the validation is made by the server.
+
+In ASP.NET to realize these concepts there are the server web control Validators: 
+
+* RequiredFieldValidator
+* CompareValidator
+* RangeValidator
+* RegularExpressionValidator
+* CustomValidator
+
+Technically these objects realize both type of validations: that is if the client support Javascript, the Validator uses first the client validation, and after that the page is validated on then server side too. If the client doesn't support Javascript, the validation is made only on the server side. In this manner the application validate the input in a progressive mode and the design of the application doesn't follow a '' "Minimum-Denominator-Multiplier" ''.
+
+To explain the concept in code, it's possible to analyze the CustomValidator, that is the higher generalization because it's possible to use a personalized validation logic.
+
+=== CustomValidator ===
+
+We can think symply to a textbox with a button, like the example above, in which it gives the way to search all the suppliers with a specific code (a string of 16 char) For security reasons it is imagined that a specific user can only see the suppliers that have a code in which the first 4 character are "PFHG".
+
+Any other string that doesn't match this pattern has to be exclude from the search (white list approach) 
+
+[[Image:owasp_bsp_net_2.jpg]]
+
+The XML part of the page is like that:
+
+ <asp:Label ID="lblQuerySearch" runat="server" Text="Digit the first four numbers"></asp:Label>
+ <asp:TextBox ID="txtQuerySearch" Width="5em" runat="server"></asp:TextBox>
+ <asp:RequiredFieldValidator ID="RequiredFieldValidatorQuerySearch" runat="server" ErrorMessage="Required Code" 
+ ControlToValidate="txtQuerySearch"></asp:RequiredFieldValidator>
+ <asp:CustomValidator ID="CustomValidatorQuerySearch" runat="server" ErrorMessage="Wrong code"
+             ControlToValidate="txtQuerySearch" OnServerValidate="ValidateCode"></asp:CustomValidator>
+
+The control Label and Button are intuitive web controls.
+It's clear to see that two Validator have been applied to the textbox whose ID is '' "txtQuerySearch" ''. 
+The Validators are:
+
+* RequiredFieldValidator: we don't accept an empty textbox when we submit our request to the server
+* CustomValidator: we would implement some custom logic to our textbox
+
+In fact the CustomValidator tag has a particular event called "OnServerValidate" that we can hook to a custom callback function, whose code is executed on the server side.
+For this example it's like that: 
+
+ protected void ValidateCode(object source, ServerValidateEventArgs args)
+    {
+        try
+        {
+            string textToValidate = args.Value;
+            if (textToValidate.Equals("PFHG"))
+                args.IsValid = true;
+            else
+                args.IsValid = false;
+        }
+        catch (Exception ex)
+        {
+            args.IsValid = false;
+        }
+    }
+
+The function handles the argument "arg" that brings the text inserted by the user. 
+If this text match with our pattern, the argument is valid and the server executes the code associated to the button, querying the database in the same manner seen above; however the code is now conditioned by the statement "if(Page.IsValid)". 
+
+ protected void btnQuerySearch_OnCLick(object sender, EventArgs e)
+    {
+        DbHelper dbHelper = new DbHelper(); 
+        string connectionString = dbHelper.returnConnectionString();
+        SqlConnection sqlConnection = new SqlConnection(connectionString); 
+        if (Page.IsValid)
+        {
+            try
+            {
+                sqlConnection.Open();
+                SqlCommand cmd = new SqlCommand("USP_SearchUserByCode", sqlConnection); 
+                cmd.CommandType = CommandType.StoredProcedure;              
+                SqlParameter pCode = new SqlParameter("@Code", SqlDbType.VarChar, 4);
+                pCode.Value = txtQuerySearch.Text;
+                cmd.Parameters.Add(pCode);
+                DataSet ds = new DataSet();
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
+                sqlDataAdapter.Fill(ds, "ResultTable");
+                gridresult.DataSource = ds;
+                gridresult.DataBind();
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (sqlConnection != null)
+                    sqlConnection.Close(); //close the connection   
+            }
+        }
+    }
+
+This is only an example but the use of the Validators can be very important in all the contexts in which the protection of a database from malicious input is needed.
+
+== .NET Preventing LDAP Injection ==
+
+It’s not important here to explain how LDAP works. The focus is explain how it’s possible to avoid the injection of special character, that are responsible of a unpredictable behaviour of the LDAP server.
+LDAP search are often made with a distinguished name (DN) and a filter. So if the user input is not properly validated, the user can manipulate the input to craft a malicious filter, to obtain more informations from the server.
+LDAP search are made with string, so the best solution to analyze a string searching particular characters is a Regular Expression.
+In this example there is the code associated to a event ButtonClick, and two TextBox called "txtUid" and "txtSn" are used to give input to the system
+
+    protected void btnQuerySearch_OnCLick(object sender, EventArgs e)
+    {
+        string regExString = "^[a-zA-Z_0-9 @.]+$";
+        RegexStringValidator regEx = new RegexStringValidator(regExString);
+        if (regEx.CanValidate(txtUid.Text.GetType()))
+            try
+            {
+                regEx.Validate(txtUid.Text);
+            }
+            catch (ArgumentException argExec)
+            {
+                // Validation failed.
+                Response.Write("wrong uid");
+                return;
+            }
+        if (regEx.CanValidate(txtSn.Text.GetType()))
+            try
+            {
+                regEx.Validate(txtSn.Text);
+            }
+            catch (ArgumentException argExec)
+            {
+                // Validation failed.
+                Response.Write("wrong sn");
+                return;
+            }
+        LdapConnection connection = new LdapConnection ("192.168.1.36");
+        connection.AuthType = AuthType.Anonymous;
+        string DN = "uid=john,ou=people,dc=example,dc=com";
+        LdapSessionOptions options = connection.SessionOptions;
+        options.ProtocolVersion = 3;
+        try
+        {
+            Response.Write("\r\nPerforming a simple search ...");
+            // create a search filter to find all objects
+            string ldapSearchFilter = "(&(uid=" + txtUid.Text + ")(sn=" + txtSn.Text + "))";
+            DirectoryRequest searchRequest = new SearchRequest
+                                            (DN,
+                                              ldapSearchFilter,
+                                              System.DirectoryServices.Protocols.SearchScope.Base,
+                                              null);
+            //cast the returned directory response as a SearchResponse object
+            DirectoryResponse response;
+            response = (SearchResponse)connection.SendRequest(searchRequest);
+            SearchResponse searchResponse =
+                        (SearchResponse)connection.SendRequest(searchRequest);
+            Response.Write("\r\nSearch Response Entries " + searchResponse.Entries.Count);
+            // enumerate the entries in the search response
+            foreach (SearchResultEntry entry in searchResponse.Entries)
+            {
+                Response.Write("indexof , DN " + searchResponse.Entries.IndexOf(entry) + entry.DistinguishedName);
+            }
+        }
+        catch (Exception ex)
+        {
+            throw ex;
+        }
+    }
+
+''' First Section '''
+
+        string regExString = "^[a-zA-Z_0-9 @.]+$";
+        RegexStringValidator regEx = new RegexStringValidator(regExString);
+
+The first section uses a Regular Expression, using the class “RegExStringValidator”, very useful to analyze a string. 
+The string can contain only alphanumeric characters, @, blank or dot. 
+Others characters different from the indicated subset are not allowed, according to the white list approach.
+ 
+''' Second Section '''
+
+        if (regEx.CanValidate(txtUid.Text.GetType()))
+            try
+            {
+                regEx.Validate(txtUid.Text);
+            }
+            catch (ArgumentException argExec)
+            {
+                // Validation failed.
+                Response.Write("wrong uid");
+                return;
+            }
+        if (regEx.CanValidate(txtSn.Text.GetType()))
+            try
+            {
+                regEx.Validate(txtSn.Text);
+            }
+            catch (ArgumentException argExec)
+            {
+                // Validation failed.
+                Response.Write("wrong sn");
+                return;
+            }
+
+In this section there is the code to check if the strings inserted in the textbox “txtUid” and “txtSn” match the rule of the RegExp or not. There is a try-catch block and the object method "Validate" is used to make the job. If the validation passes, the catch block is not processed. 
+
+
+''' Third Section '''
+
+        LdapConnection connection = new LdapConnection ("192.168.1.36");
+        connection.AuthType = AuthType.Anonymous;
+        string DN = "uid=john,ou=people,dc=example,dc=com";
+        LdapSessionOptions options = connection.SessionOptions;
+        options.ProtocolVersion = 3;
+
+The third section is the place for the connection to the server. 
+
+''' Fourth Section '''
+
+        try
+        {
+            Response.Write("\r\nPerforming a simple search ...");
+            // create a search filter to find all objects
+            string ldapSearchFilter = "(&(uid=" + txtUid.Text + ")(sn=" + txtSn.Text + "))";
+            DirectoryRequest searchRequest = new SearchRequest
+                                            (DN,
+                                              ldapSearchFilter,
+                                              System.DirectoryServices.Protocols.SearchScope.Base,
+                                              null);
+            //cast the returned directory response as a SearchResponse object
+            DirectoryResponse response;
+            response = (SearchResponse)connection.SendRequest(searchRequest);
+            SearchResponse searchResponse =
+                        (SearchResponse)connection.SendRequest(searchRequest);
+            Response.Write("\r\nSearch Response Entries " + searchResponse.Entries.Count);
+            // enumerate the entries in the search response
+            foreach (SearchResultEntry entry in searchResponse.Entries)
+            {
+                Response.Write("indexof , DN " + searchResponse.Entries.IndexOf(entry) + entry.DistinguishedName);
+            }
+        }
+        catch (Exception ex)
+        {
+            throw ex;
+        }
+
+Finally it's made the request and the server make the response, giving the number of entries that found
+
+== Web.config Encryption ==
+
+Web.config (and others file with .config extension) could contain sensitive informations that should be protected. For a .NET Web Application tipically the parameters to acces to a database are stored in plain text, in a form like this:
+
+ <configuration>  
+  <connectionStrings>
+    <add name="Connection_SQLServer2005" connectionString="Data Source=WIN2K3\SQLInstance; Initial Catalog=Exampledb;
+               User Id=user; Password=clgir3s2s;" providerName=""/>
+  </connectionStrings>
+ </configuration>
+
+It's possible to notice:
+
+* Name of the server machine
+* Name of the instance of SQL Server
+* Name of the database
+* Username
+* Password
+
+Gaining the access to directory of the web application, these informations are freely accessible. 
+The solution to mantain the confidentiality is always one: encryption.
+Because encryption is not costless, it's not a good choice to encrypt the Web.config in its totality. It's better to select only the sensitive informations, that often are stored in the "configuration" sections of the file.
+In .NET there are two mode to encrypt configuration section:
+
+* Coding with some classes of the Framework
+* Using the command line tool "aspnet_regiis.exe" (located in %SystemRoot%\Microsoft.NET\Framework\versionNumber folder)
+
+In both cases the encryption is potentially provided in three modes:
+
+* Windows Data Protection API Provider (DPAPI)
+* RSA Protected Configuration Provider
+* Custom Provider
+
+DPAPI is the simplest manner. It uses a machine (or user) level key storage, so it's possible to share the secret with all the applications of the machine or not. Additionally it uses an encryption mode based on the login of the user, storing the information in the registry, so no key creation needed. But if the application is deployed in a Web farm, the better is RSA protected configuration provider due to the ease with which RSA keys can be exported.
+So it's confortable to use the command line tool "aspnet_regiis.exe" with RSA provider.
+First thing it's necessary to create a key container, for the public key encryption; open the SDK command prompt of the Framework and digit:
+
+ aspnet_regiis.exe -pc keycontainer1 
+
+in this manner a file with public and private key is stored at the path 
+%ALLUSERSPROFILE%\Application Data\Microsoft\Crypto\RSA\MachineKeys
+with a unique code. It's possible to recognize the creation's datetime. It's important to know that this file is protected by the NTFS ACL, so only the creator and the SYSTEM account can manipulate it.
+So if the web application run with another account (for example MACHINENAME\ASPNET user), it's necessary to grant the read permission  for the key container with the command:
+
+ aspnet_regiis -pa keycontainer1 MACHINENAME\ASPNET
+
+On the other hand add these lines in the Web.Config:
+
+ <configuration xmlns="http://schemas.microsoft.com/.NetConfiguration/v2.0">
+  <configProtectedData>
+      <providers>        
+        <add name="NameProvider1"
+             type="System.Configuration.RsaProtectedConfigurationProvider, System.Configuration, 
+                   Version=2.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a,processorArchitecture=MSIL"
+                   UseMachineContainer="true"
+                   KeyContainerName="keycontainer1"
+          />       
+      </providers>
+    </configProtectedData>
+
+in which there are references of the name of the provider (NameProvider1) that is based on RSA and key container (keycontainer1) used by the provider.
+Now it's possible to encrypt the "connectionStrings" section using the physical path of the directory storing the web.config (and the the web application):
+
+ aspnet_regiis -pef connectionStrings C:\Project\BackendSecProj -prov NameProvider1
+
+The result is that the connectionStrings section is comparable to:
+
+ <connectionStrings configProtectionProvider="NameProvider1">
+  <EncryptedData Type="http://www.w3.org/2001/04/xmlenc#Element"
+   xmlns="http://www.w3.org/2001/04/xmlenc#">
+   <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc" />
+   <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <EncryptedKey xmlns="http://www.w3.org/2001/04/xmlenc#">
+     <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-1_5" />
+     <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <KeyName>Rsa Key</KeyName>
+     </KeyInfo>
+     <CipherData>
+      <CipherValue>XV8DCEfUymYphQaL5GTqCQGhrNoED+/rIKNXS3l44exGiQWx2FH0Rq.....</CipherValue>
+     </CipherData>
+    </EncryptedKey>
+   </KeyInfo>
+  </EncryptedData>
+ </connectionStrings>
+
+The application that must access to this section do automatically the decryption, due the read permission for the key container granted to the running user.
+In any case it's always possible to decrypt the section with:
+
+ aspnet_regiis -pdf connectionStrings C:\Project\BackendSecProj
+
+= References =
+
+* http://msdn.microsoft.com/en-us/library/default.aspx
+* http://msdn.microsoft.com/en-us/library/6759sth4.aspx
+* http://directoryprogramming.net/
+* http://msdn.microsoft.com/en-us/library/system.configuration.regexstringvalidator.aspx
+* http://www.ietf.org/rfc/rfc2254.txt
+* http://msdn.microsoft.com/en-us/library/az24scfc(VS.80).aspx
+* http://msdn.microsoft.com/en-us/library/k6h9cz8h(VS.80).aspx
+* http://msdn.microsoft.com/en-us/library/dtkwfdky(VS.80).aspx
+* http://blogs.vertigosoftware.com/snyholm/archive/2005/12/16/1746.aspx

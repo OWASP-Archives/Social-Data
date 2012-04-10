@@ -1,0 +1,14 @@
+==The Presentation: "CWE/SANS Top 25: Towards Minimum Due Care in Software Security"==
+
+The CWE/SANS Top 25 Most Dangerous Programming Errors list was released on January 12, 2009, and quickly achieved the rare accomplishment of actually getting noticed by people who don't do security full time.  But once January 13 rolled around, the overall response can be summarized in two words: "NOW what?"  What place does the Top 25 have in the grand scheme of software security, when there are already competing efforts like the OWASP Top Ten?  How was the Top 25 arrived at, and what should its role be in compliance, software acquisition, developer awareness, and - perhaps most importantly - starting the conversation about software security?  What are these "weakness" things anyway?  If the Top 25 is covered, how much assurance does that really provide, and does anything else get covered for free?  And finally: what next?  Mr Christey will answer and re-ask these questions in order to frame the Top 25 as an early step in a long journey towards software security.  Along the way, he will discuss the Top 25's role in the web world (and outside of it), highlight the two entries that tied for Number 26 and why they didn't make it, and how the Top 25 can concretely demonstrate how there still isn't a "Silver Bullet" for software security.
+
+Download: [[Media:CWE_Top_25_Minimum_Due_Care.pdf‎ ‎| CWE Top 25 Minimum Due Care.pdf‎ ]]
+
+==The Speaker: Steve Christey==
+Steve Christey is a Principal Information Security Engineer in the Security and Information Operations Division at The MITRE Corporation.
+Since 1999, he has been the Editor of the Common Vulnerabilities and Exposures (CVE) list and the Chair of the CVE Editorial Board.  He is the technical lead of the Common Weakness Enumeration (CWE) project.
+He was the technical editor of the 2009 CWE/SANS Top 25 Most Dangerous Programming Errors list and an active contributor to other efforts including the SANS Secure Programming exams, NIST's Static Analysis Tool Exposition (SATE), and the Common Vulnerability Scoring System (CVSS).  His current interests include secure software development and testing, the theoretical underpinnings of vulnerabilities, making software security accessible to the general public, vulnerability information management including post-disclosure analysis, and vulnerability research.  Past work, which dates back to 1993, includes co-authoring the "Responsible Vulnerability Disclosure Process" draft with Chris Wysopal in 2002, reverse engineering of malicious code, automated vulnerability analysis of source code, and vulnerability scanning and incident response.  He holds a B.S. in Computer Science from Hobart College.
+
+
+
+[[OWASP_Software_Assurance_Day_DC_2009#Agenda and Presentations:_13_March_2009|back to Presentation Agenda]]

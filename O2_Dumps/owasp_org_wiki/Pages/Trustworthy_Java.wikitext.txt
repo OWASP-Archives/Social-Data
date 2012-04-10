@@ -1,0 +1,50 @@
+'''Author: [[:User:Jeff Williams|Jeff Williams]], [http://www.aspectsecurity.com Aspect Security]'''
+
+== Overview ==
+
+For the first article in this series on Java security, I thought it would be appropriate to discuss what makes a Java application trustworthy. I know Trustworthy Computing is a Microsoft thing but in this article I'm going to argue that Java folks ought to be paying close attention to what's going on in Redmond.
+
+There are two things we have to do to make our application trustworthy. First, we've got to provide security mechanisms to counter likely attacks. Java shines here, with strong mechanisms for authentication, authorization, cryptography, logging, and more. Most developers can easily find and use appropriate mechanisms to use for their applications.
+
+The second thing, making sure that our code doesn't have vulnerabilities, is far more difficult. Most OWASP readers already know that many web applications are riddled with vulnerabilities. Despite the fact that the security community has understood application security problems for many years, we are still producing vulnerable code at an alarming rate. Developers are frequently surprised to learn about vulnerabilities such as SQL injection, cross site scripting, and the rest of the OWASP Top Ten. Most studies have found that programs average ten to fifteen bugs in every 1000 lines of code. If even a small percentage of those are security critical flaws, most applications are in big trouble.
+
+So, if we use the right mechanisms and keep out the vulnerabilities, we've got a pretty good argument that someone can trust our application. But it's far easier said than done.
+
+==Isn't Java a "secure" language?==
+
+Java is not a "secure" programming language. In fact, there is no such thing. Other languages have just made better targets. But J2EE developers who have been relaxing while a continuous stream of buffer overflows has plagued C and C++ applications should start preparing for attack. The reason? Microsoft .NET applications, like Java, are not susceptible to buffer overflows. .NET also has a full suite of security mechanisms. So the days of Java applications being more difficult to attack are just about over. And that means the hackers aren't far behind.
+
+Actually, Java developers have been shielded from many security issues. The Java security model is quite powerful, and it creates the misperception of security for applications that don't even use it. The vast majority of J2EE applications run with the sandbox turned off. But even if the sandbox is enabled, it is disturbingly easy to accidentally create a vulnerability in a J2EE program. We frequently uncover all of the OWASP Top Ten vulnerabilities and more in J2EE application code.
+
+==Who moved my cheese?==
+
+The application security market reminds me of what happened in the automobile industry. For years, car manufacturers paid little attention to safety. Then, in a relatively short amount of time, a combination of factors tipped the market towards today's seatbelts, speed limits, airbags, and crash tests. Currently, a combination of factors including terrorism, high profile security campaigns from a few vendors, regulation, spam, and virus and worm attacks are causing the software market to tip towards security.
+
+Java software companies should be very aware of this trend and think about why Microsoft and a few others are pushing this direction. Of course Microsoft is going to continue to struggle with security problems for years to come, they've got hundreds of millions of lines of code! But they're changing the way software is developed, and it's not because they're altruistic. They've seen where the market is going and, predictably, they're leading the way.
+
+The change is going to affect the software market in a number of different ways. Some companies are going to resist, but the companies that realize that the cheese has moved can adjust and thrive. Like the automobile industry and safety, software companies will be increasingly measured based on whether they're focusing on security. Nobody is going to come tell you that the market is changing. You're going to have to look at the signs yourself and decide how long you can continue to produce insecure code with obvious flaws.
+
+==What can we do?==
+
+There is no quick fix for insecure code. Companies that look for shortcuts to writing good code are kidding themselves. Slapping technology around bad code is very unlikely to create any meaningful security in the long term. We're talking about changing the development culture at your organization from "get it working" to "make it bulletproof."
+
+If you're a developer who's never learned security, the best thing you can do is to start learning about the common vulnerabilities. Truly novel vulnerabilities are exceedingly rare and the vast majority of these are minor variations on a theme. If you sign up for bugtraq at SecurityFocus, there are daily messages about application layer attacks to study. Just as lawyers learn the law by studying great cases, learning how a few of these vulnerabilities work will start you thinking in a new way. You'll start to realize that your code can be tricked into doing things it was never intended to do.
+
+Java software companies should start their own trustworthy software initiative that includes secure development training, secure coding standards, application security requirements, configuration management, security code review, and security testing. Set a goal to eliminate the OWASP Top Ten vulnerabilities from your code! Start keeping track of how many security bugs you uncover and eliminate early in the process. My guess is that you'll end up saving money in the long run, as security holes cost less the earlier they are uncovered.
+
+Don't let application security fall on the floor between the network security group and your developers. In many organizations, the software developers will point to the network security team, while the network folks will tell you that securing the code is not their job. Someone needs to take responsibility for the security of the code.
+
+Frankly, I'm confused by the number of companies who are spending tons of money on network security while ignoring their applications. Application layer holes are fairly easy to find and exploit, the consequences are devastating, and the likelihood of detecting an attacker is very low. This represents a huge risk to an online enterprise. It's time to change the way we fund security activities. Somehow, organizations will need to figure out how to make sure security money gets spent on the biggest risks first, whether they're network or application security issues.
+
+==Conclusion==
+
+Microsoft's Trustworthy Computing campaign is raising the security bar for everyone developing software, especially in Java. The good news is that market changes mean opportunities for those companies alert enough to realize what's going on. Companies that recognize this sea change and start their own trustworthy software initiative are going to be far better off over the next decade.
+
+==For more information==
+
+:# [http://www.cl.cam.ac.uk/users/rja14/econsec.html Ross Anderson's Economics and Security Resource page]
+:# [http://www.microsoft.com/security Microsoft's Security Page] (compare [http://java.sun.com/security Java Security Page])
+:# [http://www.cio.com/archive/051503/bugs.html The Bugs Stop Here] an interesting article on how to deal with application security problems
+
+[[Category:OWASP Columns]]
+[[Category:OWASP Java Project]]

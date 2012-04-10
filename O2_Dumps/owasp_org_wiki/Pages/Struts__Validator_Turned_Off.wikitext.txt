@@ -1,0 +1,65 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Improper Data Validation]]
+
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+==Description==
+
+This action form mapping disables the form's validate() method.
+
+An action form mapping should never disable validation. Disabling validation disables the Struts Validator as well as any custom validation logic performed by the form.
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+An action form mapping that disables validation.
+
+<pre>
+	<action path="/download"
+		type="com.website.d2.action.DownloadAction"
+		name="downloadForm"
+		scope="request"
+		input=".download"
+		validate="false">
+	</action>
+</pre>
+
+Disabling validation exposes this action to numerous types of attacks. Unchecked input is the root cause of vulnerabilities like cross-site scripting, process control, and SQL injection. Although J2EE applications are not generally susceptible to memory corruption attacks, if a J2EE application interfaces with native code that does not perform array bounds checking, an attacker may be able to use an input validation mistake in the J2EE application to launch a buffer overflow attack.
+
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* [[:Category:Input Validation]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+
+__NOTOC__

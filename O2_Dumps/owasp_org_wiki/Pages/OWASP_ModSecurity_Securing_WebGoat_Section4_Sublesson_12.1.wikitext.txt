@@ -1,0 +1,200 @@
+12. Insecure Communication -> 12.1 Insecure Login
+
+=== Lesson overview ===
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution === 
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information. 
+
+=== Strategy ===
+
+The WebGoat lesson shows a password being sent in clear text vs. encrypted over SSL and observed using Wireshark. It is actually more of a demo than a vulnerability lesson, but this is chosen as a project solution because it introduces some new ModSecurity functionality and capabilities.
+
+The ModSecurity solution is: whatever is typed in for the password on the client side without SSL is MD5-hashed on the client and and then sent to the server; a Lua script on the back end hashes the user name and compares it to the hashed password. If the user name and typed-in password are the same, there is a match (the WebGoat lesson structure is being followed here and not a real world scenario).
+
+One should be able to see how this solution can be modified for real-world uses.
+
+What this lesson will demonstrate:
+* The powerful concept of being able to program on both ends - client and server - from within ModSecurity
+* Encrypting the HTTP-sent plain-text password with an MD5 hash by including a JavaScript MD5 hash library and some extra JavaScript code
+* Using a Lua script on the back end to MD5-hash a message (in our case, it will be the user name)
+* The core Lua script shared object library that ModSecurity uses can be rebuilt to include a 3rd party crypto library (MD5 and DES56), which also shows that Lua functionality in ModSecurity is fully extensible
+* A fully compatible Lua standalone engine with the new functionality is also built for the server, meaning Lua scripts can be fully tested as standalone before integration into Modsecurity. Also, these test scripts can be used as unit tests; for example, input data - HTTP request parameters or an HTTP response body - can be saved into a file off-line and the scripts can be tested outside of ModSecurity.
+
+The steps for this solution:
+(1) Identify the problem:
+The first part of the WebGoat lesson shows a password being sent over HTTP in clear text without SSL.
+
+(2) Theorize a solution:
+Encrypt the password on the client side using JavaScript content injection, then send it over the wire and compare it with a message string that has been MD5-hashed in a Lua script on the back end; the result is then returned to the ModSecurity rule.
+
+(3) Implement the solution.
+
+=== Implementation === 
+
+<font><u>Step 1:</u></font>
+There is a minor issue with the way that the WebGoat lesson is configured; it uses the 'readonly' attribute in the username and password fields which restricts our flexibility to test the project solution (and also it will not occur in a real-world scenario). If the 'readonly' attribute cannot be worked around, the importance of the mitigating solution diminishes. There are 2 ways to work around this: (1) modify the WebGoat source code; or (2) use a web proxy, intercept and modify the user name and password values for experimentation, and observe the results there. The latter work-around is the obvious choice.
+
+<font><u>Step 2:</u></font>
+Ensure that the Lua extension that includes the crypto library is working on your ModSecurity/Apache platform, which includes building Lua from source code and running a test program using the standalone Lua engine. For more information, see "Rebuilding the Lua library and standalone engine" towards the end of this solution. Linux using gcc version 4 is supported; Kubuntu 7.10 is the target platform but other Linux distros should work with just a little tweaking. Other platforms such as Windows will require more effort such as knowledge of the compiler, linker, and build process is necessary in order to modify the make file.
+ 
+<font><u>Step 3:</u></font>
+Ensure that MD5 hashing is working inside of ModSecurity. Modify the Lua script to hash a hard-coded string:
+<pre>
+function main()  
+  m.log(9, "Starting luascript file md5_12.lua")
+  print ("Executing luascript md5_12.lua")
+
+  local username = "sniffy" 
+  binstr1 = md5.sum(username)
+
+	-- this converts binary string to lowercase hex string of length 32
+  str2 = string.gsub(binstr1, ".", function (c)
+           return string.format("%02x", string.byte(c))
+         end)
+
+  str1 = string.format("\nLuascript: Hashed user name is %s;" str2)
+  m.log(9, str1)
+
+  m.log(9, "Ending luascript file md5_12.lua")
+end
+</pre>
+
+The ModSecurity rule is:
+<pre>
+  SecRuleScript "/etc/modsecurity/data/md5_12.lua" \
+"phase:2,t:none,log,auditlog,allow:request,msg:'Luascript in \
+rulefile_12-1-initialize.conf: In request (md5_12.lua)'"
+</pre>
+
+Turn DebugLevel to 9, submit the WebGoat lesson page, then search the ModSecurity debug level for the string 'luascript' and check that it worked. As with testing all Lua scripts in ModSecurity, make sure the last log message is there; if not then the script bombed somewhere - probably accessing a variable with a value of 'nil'.
+
+<font><u>Step 4:</u></font>
+Implement the client-side MD5 hashing of the password.
+
+A popular JavaScript MD5 hash routine from Webtoolkit is used (http://www.webtoolkit.info/javascript-md5.html); its description is: "This script is used to process a variable length message into a fixed-length output of 128 bits using the MD5 algorithm. It is fully compatible with UTF-8 encoding. It is very useful when u want to transfer encrypted passwords over the internet."
+
+Download and copy the MD5 library, webtoolkit.md5.js, to the 'javascript' directory where WebGoat stores its JavaScript files; e.g. '/var/lib/tomcat5.5/webapps/WebGoat/javascript'.
+
+The ModSecurity rule that includes the library by prepending it to the response body is:
+<pre>
+	SecRule RESPONSE_CONTENT_TYPE "^text/html" \
+"phase:4,t:none,log,auditlog,pass,msg:'prepending javascript in \
+rulefile12-1_insecure-login.conf', \
+prepend:'<script language=\"JavaScript1.2\" src=\"javascript/webtoolkit.md5.js\" \
+type=\"text/javascript\"></script>'"
+</pre>
+
+Note that double-quotes within the the JavaScript code has to be escaped with a back slash.
+
+In the same HTTP response, a chunk of JavaScript is appended to the response body; after the 'Submit' button is pushed but before the form is submitted, the chunk takes the password, MD5 hashes it, and sets it to the new hashed value.
+
+<font><u>Step 5:</u></font>
+Implement the server-side MD5 hashing of the user name. Replace the hard-coded string the Lua script that was done in Step 2 to include the HTTP post parameters of the form:
+<pre>
+  local submit = m.getvar("ARGS_POST.Submit", "none")
+  local username = m.getvar("ARGS_POST.clear_user", "none")
+  local hashpwd = m.getvar("ARGS_POST.clear_pass", "none")
+
+  if submit == nil or username == nil or hashpwd == nil then
+    str1 = string.format("\nLuascript: Returning; not a form submit")
+    m.log(9, str1)
+    return nil
+  end
+</pre>
+
+If user name is 'sniffy' and the password is 'sniffy', the post parameters will look like this:
+<pre>
+clear_user=sniffy&clear_pass=31036dfdb9c254fe161e9a1e9c76cd74&Submit=Submit
+</pre>
+
+Next, compare the values and return 'nil' or non-nil accordingly:
+<pre>
+  if str2 == hashpwd then
+    str1 = string.format("\nLuascript: Hashed user name matches hashed password")
+    retval = str1
+    m.log(9, str1)
+  else
+    str1 = string.format("\nLuascript: Hashed user name does not match hashed password")
+    retval = nil
+    m.log(9, str1)
+  end
+
+  return str2
+</pre>
+
+<font><u>Step 6:</u></font>
+Next, we need to pass the result of the matching in the request phase to the response because we need to notify the end user somehow whether the match failed or succeeded. This is achieved by setting a session variable in Phase 2 and reading it in Phase 4. 
+
+Put this at the beginning of Phase 2:
+<pre>
+  SecRule REQUEST_COOKIES:JSESSIONID "!^$" \
+"chain,log,auditlog,pass,msg:'rulefile_12-1: Setting session collection'"
+  SecAction setsid:%{REQUEST_COOKIES.JSESSIONID} 
+  SecAction "log,setvar:session.lesson12=0,msg:'setting session.lesson12=0 \
+initially after setsid from rulefile_12-1-initialize.conf'"
+</pre>
+
+and modify the SecRuleScript directive:
+<pre>
+  # the lua script takes the user name, md5 hashes it, 
+  #   and compares it with the md5hashed password.
+  # If a match, then it returns a non-nil string that triggers the rule
+  SecRuleScript "/etc/modsecurity/data/md5_12.lua" \
+"phase:2,t:none,log,auditlog,allow:request,setvar:session.lesson12=1,\
+msg:'Luascript in rulefile_12-1-initialize.conf: In request (md5_12.lua); \
+user name matches password'"
+</pre>
+
+The response rule section of 'rulefile_12-1_insecure-login.conf' is modified to:
+<pre>
+  # Here check if session variable is set; 
+  #   if so, then send alert that hashed user name & password are same
+  SecAction "phase:4,log,initcol:session=%{SESSIONID},\
+msg:'rulefile_12-1: getting session.lesson12 DEBUG4'"
+
+  SecRule SESSION:LESSON12 "@eq 1" \
+"phase:4,chain,pass,log,auditlog,msg:'rulefile_12-1:user name matches password'"
+  SecAction "phase:4,allow,log,auditlog,\
+msg:'rulefile_12-1:user name does not match password',skip:1"
+</pre>
+
+<font><u>Step 7:</u></font>
+Notify the end user somehow whether the match failed or succeeded. In a perfect world, we should be able to append JavaScript code like:
+<pre>
+  SecRule SESSION:LESSON12 "@eq 1" "phase:4,allow,log,auditlog,\
+msg:'rulefile_12-1:user name matches password',\
+append:'<script type=\"text/javascript\" language=\"JavaScript\"> \
+alert(\"User name matches password\");</script>'"
+  SecAction "phase:4,allow,log,auditlog,msg:'rulefile_12-1:user name does not \ 
+match password',append:'<script type=\"text/javascript\" language=\"JavaScript\"> \
+alert(\"User name does not match password\");</script>'"
+</pre>
+
+But this doesn't work because now we are appending code twice in the same pass, and evidently ModSecurity does not treat this as 2 append actions; it replaces the first append action - which calculates the MD5 hash of the password on the client - with the second append action, which clearly we don't want. To workaround this, the 2 append actions have to be combined into one. The result is not pretty so it is not shown in its gory detail and understanding it is left as an exercise for the reader.
+
+That's it. The password can be encrypted before it goes over the wire and compared with another value on the back end - all within ModSecurity.
+
+
+<font><u>Rebuilding the Lua library and standalone engine</u></font>
+
+See 'Appendix C: Building the Lua library and standalone executable' for details.
+
+=== Comments ===
+
+* First, it must be noted that long after this solution was implemented, it was discovered that ModSecurity provides an MD5 transformation function. Obviously, that would have been the easiest solution for the back end by far but there's no time machine to go back in time.
+
+* What this solution showed:
+** The potency of having access to a programming language on both ends of the pipe: JavaScript on the client side via content injection and Lua script on the server side.
+** Lua in ModSecurity is extensible and, at the same time, a fully compatible Lua standalone engine is built.
+** Lua scripts can almost be fully built before integration into ModSecurity; the modules at this stage could also be used as standalone test cases.
+** JavaScript 'append' and 'prepend' in ModSecurity is directly useful for security when the attacker is not the end user; in this case, it is a man-in-the-middle attack.
+
+* Some limitations were observed with ModSecurity:
+** ModSecurity only takes a binary return code from a Lua script - either nil or non-nil. A nice feature would be to have a built-in variable that sets a return string (or empty string for nil)
+** JavaScript content cannot be appended to a response body twice in same pass of a phase; the 2nd append will replace the first one.
+** The current JavaScript 'prepend' & 'append' implementation is not placed in the proper position in the HTML file; 'prepend' should go just before the '<body>' or the '<head>' tag (preferably both choices) and not before 'DOCTYPE' and '<html>' tags as is done now; 'append' content should be placed after the '</body>' end tag and before the '</html>' end tag - now it is place after the '</html>' tag. Not only is the current implementation contrary to the HTML 4.01 and HTML 5 Specification, well-formedness for HTML documents is being pushed as a best practice security measure, and the current 'prepend' and 'append' implementation will cause a document not to be well-formed.
+
+* A nice enhancement to this solution would be the ability to use asymmetric key encryption such as PGP and encrypt the payload with a public key - sent to the client as a hidden field - and decrypt it on the back end with the private key. However, a PGP implementation (e.g. via GnuPGP) for Lua does not seem to be currently available.

@@ -1,0 +1,11 @@
+*The application is in Beta and uses ESAPI Release Candidate 4. 
+
+*From the existing application, the major change we made was the inclusion of labs where users get a chance to get their hands dirty with ESAPI. In the labs users are presented with common security vulnerabilities and use ESAPI to resolve the issues. We tried to cover as many of the Owasp Top 10 as possible in the labs, and changed the grouping of the chapters to map to ASVS verification requirements. 
+
+*We were conscious of overlap with WebGoat but felt that where WebGoat demonstrates vulnerabilities and gives people an understanding of them, it doesn’t really go into the coding techniques used to protect against the vulnerabilities. We felt the inclusion of labs in SwingSet would provide an opportunity for developers to learn how to protect applications against these vulnerabilities and also demonstrate the different aspects of the ESAPI library. 
+
+*We also felt that with the inclusion of labs, the application would be more suitable to be used as a training tool. The application could potentially be used in a classroom environment for a Security Awareness Course, Specific ESAPI course, and maybe ASVS?
+
+*We would welcome any feedback on the existing labs, and take any suggestions for vulnerabilities or parts of the ESAPI library that we have not covered.
+
+*In the longer term, if a demand for this type of application exists. We could try and incorporate the labs into a real world application. In its present form the labs are very much ‘quick and dirty’. A real word application with some continuity to the labs might be beneficial.

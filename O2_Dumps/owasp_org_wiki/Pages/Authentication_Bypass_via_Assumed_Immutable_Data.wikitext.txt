@@ -1,0 +1,51 @@
+{{Template:Stub}}
+{{Template:Vulnerability}}
+<br>
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+Assumed-immutable authentication data can be modified by attackers to bypass the authentication. Most of the time, this vulnerability results from inappropriate session management, i.e., important data that is used for authentication decisions is sent to the client side and subject to user modification. This kind of data should be stored in the server-side session as much as possible. 
+
+==Risk Factors==
+TBD
+
+==Examples==
+TBD
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+
+__NOTOC__
+
+
+[[Category:Vulnerability]]
+[[Category:Authentication Vulnerability]]
+[[Category:OWASP ASDR Project]]

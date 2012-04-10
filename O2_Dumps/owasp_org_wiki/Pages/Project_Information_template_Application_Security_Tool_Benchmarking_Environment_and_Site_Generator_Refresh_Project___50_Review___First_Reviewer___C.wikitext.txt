@@ -1,0 +1,37 @@
+[[Project Information:template Application Security Tool Benchmarking Environment and Site Generator Refresh Project|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#P003/P013 - OWASP Application Security Tool Benchmarking Environment and Site Generator refresh.=|OWASP Application Security Tool Benchmarking Environment and Site Generator refresh Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#P003/P013 - OWASP Application Security Tool Benchmarking Environment and Site Generator refresh.=|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|I'm unsure what the OWASP Application Security Tool Benchmarking Environment refers to, and was unable to assess its completeness.  The project application does not provide specifics for the Application Security tool Benchmarking Environment.
+Regarding the Site Generator UI refresh and componentization, the UI has been improved and there is a separation of code into components.  I was able to download and install the application and generate sites.
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#P003/P013 - OWASP Application Security Tool Benchmarking Environment and Site Generator refresh.=|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| From my observation, and no real quantification of the project requirements, the Site Generator refresh is at 50%.
+ |- 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|The following are notes that I have for the project:
+# Help link is needed (for both v1 and v2).  A concise how-to would be helpful.  I reviewed the User Guide NG and maybe have a help toolbar item in the toolbar that opens that up (for a start)
+# Maximized the application doesn't stretch well.  You probably should disable maximization.
+# What is the www.adrianTNT.com url link in the web directory of the generated site?
+# How is the database installed for SQL injection vulns?  Right now I'm getting an error that login for 'webuser' does not exist.  I don't see any added databases.
+# Are dependencies for SiteGen checked on install?  If a user does not have .NET 2.0, is there a dep check?
+# The web output looks dated.  I don't like the flash menu and the web layout can be better.
+# There are vulns in Site Generator 1 that are not in the update (e.g. HiddenFormField, IntegerOverflow, PoorEncryption, etc.).  Have they been consolidated or removed?  If so, was there a justification
+# Is there a guide on adding my own vulnerabilities to the Site Generator templates?
+# Is it possible to add templates for other languages?
+|}

@@ -1,0 +1,112 @@
+{{Chapter Template|chaptername=Belgium|extra=The chapter leader is [mailto:seba@owasp.org Sebastien Deleersnyder]|mailinglistsite=http://lists.owasp.org/mailman/listinfo/owasp-belgium|emailarchives=http://lists.owasp.org/pipermail/owasp-belgium}} 
+
+= Local News  =
+
+Block your agenda's for our next chapter meeting on 6 March in Leuven, co-organized with [http://www.secappdev.org SecAppDev 2012]. More details in the Chapter Meetings tab.
+
+== Structural Sponsors 2011/2012  ==
+OWASP Member affiliated to the Belgium chapter:
+
+{{MemberLinks|link=http://www.ascure.com|logo=Ascure_Logo.jpg}}
+
+OWASP Belgium thanks its structural chapter supporters for 2011 and the OWASP BeNeLux Day 2011: 
+
+[http://www.zionsecurity.com https://www.owasp.org/images/e/e6/Zionsecurity.jpg]
+[http://www.zenitelbelgium.com https://www.owasp.org/images/d/df/SAIT_Zenitel.jpg]
+[http://www.barracuda.com https://www.owasp.org/images/f/f6/Bnl11-Barracuda_Logo-4C.png]
+[http://www.f5.com https://www.owasp.org/images/f/fd/AppSec_Research_2010_sponsor_F5_logo.jpg]
+
+If you want to support our chapter, please contact [mailto:seba@owasp.org Seba Deleersnyder] 
+
+<paypal>Belgium</paypal>
+
+= Chapter Meetings  =
+
+
+
+
+== Next Meeting (6th of March 2012) in Leuven ==
+
+=== WHEN ===
+
+6th of March 2012 18h-21h00
+
+=== WHERE  ===
+
+Hosted by [http://distrinet.cs.kuleuven.be Distrinet Research Group (K.U.Leuven)].
+
+Co-organized with [http://www.secappdev.org SecAppDev 2012]
+
+Address: <br> Department of Computer Science (auditorium 00.225)<br> Celestijnenlaan 200 A<br> 3001 Heverlee <br> 
+
+Routemap: http://distrinet.cs.kuleuven.be/about/route/
+
+=== PROGRAM ===
+
+The agenda: 
+
+*18h00 - 18h45: Welcome &amp; Pizzas<br> 
+*18h45 - 19h00: '''OWASP Update ([https://www.owasp.org/images/c/c9/Owasp_Belgium_update_2012-03-06.pptx PPT])''' (by Sebastien Deleersnyder, SAIT Zenitel, OWASP Board)<br> 
+*19h00 - 20h00: '''Common iOS Pitfalls vs. OWASP's iGoat ([https://www.owasp.org/images/c/c3/Appsecusa2011-bechapterbyKen-owasptop10mobilerisks.pptx PPT])''' (by Ken van Wyk, KRvW Associates)<br>
+:In this session, Ken will spotlight and demonstrate several security "gotchas" in Apple's iOS platform (iPhone and iPad). He'll then introduce the OWASP iGoat tool and demonstrate how it can be used (and extended) to help train iOS coders. Like the other OWASP *Goat tools, iGoat is a great learning platform that can help iOS developers internalize the big issues they face in building bulletproof apps. Ken is the project leader for iGoat, and we're always looking for contributors.
+:'''KenKenneth R. van Wyk''' is an internationally recognized information security expert and author of the O’Reilly and Associates books, Incident Response and Secure Coding. Ken provides consulting and training services through his company, KRvW Associates, LLC (http://www.KRvW.com). Ken has 22 years experience as an IT Security practitioner in the academic, military, and commercial sectors. He has held senior and executive technologist positions at Tekmark, Para-Protect, Science Applications International Corporation (SAIC), the U.S. Department of Defense, Carnegie Mellon University, and Lehigh University.  
+*20h00 - 20h15: Break<br> 
+*20h15 - 21h15: '''Access Control Design Best Practices ([https://www.owasp.org/images/8/84/Be_chapter_presentation_by_jim_manico_Access_Control_Pitfalls_v1.1.pptx PPT])''' (by Jim Manico, WhiteHat Security)<br>
+:Access Control is a necessary security control at almost every layer within a web application. This talk will discuss several of the key access control anti-patterns commonly found during website security audits. These access control anti-patterns include hard-coded security policies, lack of horizontal access control, and "fail open" access control mechanisms. In reviewing these and other access control problems, we will discuss and design a positive access control mechanism that is data contextual, activity based, configurable, flexible, and deny-by-default - among other positive design attributes that make up a robust web-based access-control mechanism.
+:'''Jim Manico''' is the VP of Security Architecture for WhiteHat Security, a web security firm.  Jim is a participant and project manager of the OWASP Developer Cheatsheet series. He is also the producer and host of the OWASP Podcast Series.
+
+=== REGISTRATION  ===
+
+Please register via http://owasp-belgium-2012-03-06.eventbrite.com/
+
+== Previous Meeting (25th of January 2012) in Brussels ==
+
+=== WHEN ===
+
+25th of January 2012 18h-21h00
+
+=== WHERE  ===
+
+Location is sponsored by [http://www.cisco.com/web/BE/index.html Cisco Belgium].
+
+Location: Cisco, Pegasus Park, De Kleetlaan, 6A, B-1831 Diegem. See [http://www.cisco.com/web/BE/pdfs/contact_plan.pdf directions].
+
+=== PROGRAM ===
+
+The agenda: 
+
+*18h00 - 18h30: Welcome &amp; Sandwiches<br> 
+*18h30 - 18h45: '''OWASP Update ([https://www.owasp.org/images/1/1f/Owasp_Belgium_update_2012-01-25.pptx ppt])''' (by Sebastien Deleersnyder, SAIT Zenitel, OWASP Board)<br> 
+*18h45 - 19h45: '''devops, secops, devsec or *ops ? A gentle introduction to Devops([https://www.owasp.org/images/0/0f/Owasp_belgium_chapter_2012-01-25_devops-secops-kris-buytaert.pdf pdf])''' (by Kris Buytaert, Inuits)<br>
+:This talk will summarize the different ideas behind devops, and will show that this goes beyond tooling and becomes a way of thinking, where ultimately everybody  will stand together to support the business.
+:Some call this phenomenon devops, others hate the word and want to call it *ops or ops* ,  truth is that agile techniques used in development have an impact on the way operations organizes it work.  Similar, operations and sysadmins are becoming programmers because of the virtualization and automation trend where everything is managed through an API.    And security is imvolved everywhere.
+:'''[http://www.krisbuytaert.be/bio.shtml Kris Buytaert]'''  is a long time Linux and Open Source Consultant. He's one of instigators of the devops movement, currently working for Inuits. Kris is the Co-Author of [http://www.amazon.co.uk/Virtualization-Xen-Including-Xenenterprise-Xenexpress/dp/1597491675/ref=pd_bbs_sr_1/002-0083558-4788061?ie=UTF8&s=books&qid=1179251994&sr=8-1 Virtualization with Xen], used to be the maintainer of the [http://howto.krisbuytaert.be/ openMosix HOWTO] and author of [http://www.krisbuytaert.be/ different technical publications]. He is frequently speaking at, or organizing different international conferences. He spends most of his time working on Linux Clustering (both High Availability, Scalability and HPC), Virtualisation and Large Infrastructure Management projects hence trying to build infrastructures that can survive the 10th floor test, better known today as the cloud while actively promoting the devops idea ! His blog titled "Everything is a Freaking DNS Problem" can be found at [http://www.krisbuytaert.be/blog/ http://www.krisbuytaert.be/blog/]
+*19h45 - 20h00: Break<br> 
+*20h00 - 21h00: '''Hardening web applications against malware attacks ([https://www.owasp.org/images/6/62/OWASP_Presentation_January2012_Erwin_Geirnaert.ppt ppt])''' (by Erwin Geirnaert, Zion Security)<br>
+:During this presentation we give an overview of how we can harden web applications against different types of attacks used by malware to bypass the existing security controls in the web application. We discuss the OWASP Top 10 and how malware can abuse these attacks and how the developer must implement a different strategy. We explain why (mobile) browser security is an important aspect of web application hardening and most importantly that the battle against malware is an ongoing battle. For every countermeasure the security industry develops to protect web applications and is used by a lot of companies today we will show how malware is being developed to bypass these solutions. To finalize we give some advice on how to protect against these malware attacks, using pro-active and detective controls.
+:'''Erwin Geirnaert''' founded [http://www.zionsecurity.com/ ZION SECURITY] in 2005 to help companies to protect against the latest threats, attacks against web applications. ZION SECURITY is nowadays a Belgian market leader in the field of security testing, vulnerability management, penetration testing and banking security. Erwin has more than 10 years of experience in web security, graduating with a Master of Science in Software Development from the University of Ghent. Erwin executes different types of projects for a lot of international software companies, financial institutions, telecom and web agencies. Specialist in executing code reviews in different development languages for critical applications, executing continuous penetration tests of their infrastructure and Internet applications. A specialist in J2EE security, .NET security and web services security. Erwin architects secure e-business projects for web agencies and software companies. He is a recognized application security expert and speaker at international events like Javapolis, OWASP, Eurostar,
+
+
+== Past Events  ==
+*Events held in [[Belgium Previous Events 2011|2011]] 
+*Events held in [[Belgium Previous Events 2010|2010]] 
+*Events held in [[Belgium Previous Events 2009|2009]] 
+*Events held in [[Belgium Previous Events 2008|2008]] 
+*Events held in [[Belgium Previous Events 2007|2007]] 
+*Events held in [[Belgium Previous Events 2006|2006]] 
+*Events held in [[Belgium Previous Events 2005|2005]]
+
+= Belgium OWASP Chapter Leaders  =
+
+The Belgium Chapter is supported by the following board: 
+
+*Erwin Geirnaert, Zion Security 
+*Philippe Bogaerts, F5 
+*André Mariën, Inno.com 
+*Lieven Desmet, K.U.Leuven 
+*Sebastien Deleersnyder, SAIT Zenitel 
+*Bart De Win, Ascure
+*David Mathy, Focus ICT
+
+Our goal is to professionalize the local OWASP functioning, provide in a bigger footprint to detect OWASP opportunities such as speakers/topics/sponsors/… and set a 5 year target on: Target audiences, Different events and Interactions of OWASP global – local projects. __NOTOC__ <headertabs/>
+[[Category:Europe]]

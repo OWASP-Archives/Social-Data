@@ -1,0 +1,70 @@
+{{Template:Attack}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+==Description==
+
+[[Binary planting]] is a general term for an attack where the attacker places (i.e., plants) a binary file containing malicious code to some local or remote file system location in order for a vulnerable application to load and execute it.
+
+There can be various reasons why an application would load a malicious binary:
+
+# Insecure access permissions on a local directory allow a local attacker to plant the malicious binary in a trusted location. (A typical example is an application installer not properly setting access permissions on application directories.)
+# One application may be used for planting a malicious binary in another application's trusted location. (An example is the Internet Explorer - Safari blended threat vulnerability)
+# The application searches for a binary in untrusted locations, possibly on remote file systems. (A typical example is a Windows application loading a dynamic link library from the current working directory after the latter has been set to a network shared folder.)
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+=== Insecure Access Permissions-based Attack ===
+
+# A Windows application installer creates a root directory (C:\Application) and installs the application in it, but fails to limit write access to the directory for non-privileged users.
+# Suppose the application (C:\Application\App.exe) loads the WININET.DLL library by calling LoadLibrary("WININET.DLL"). This library is expected to be found in the Windows System32 folder.
+# Local user A plants a malicious WININET.DLL library in C:\Application
+# Local user B launches the application, which loads and executes the malicious WININET.DLL instead of the legitimate one.
+
+=== Current Working Directroy-based Attack ===
+
+# Suppose a Windows application loads the DWMAPI.DLL library by calling LoadLibrary("DWMAPI.DLL"). This library is expected to be found in the Windows System32 folder, but only exists on Windows Vista and Windows 7.
+# Suppose the application is associated with the ".bp" file extension.
+# The attacker sets up a network shared folder and places files honeypot.bp and DWMAPI.DLL in this folder (possibly marking the latter as hidden).
+# The attacker invites a Windows XP user to visit the shared folder with Windows Explorer.
+# When the user double-clicks on honeypot.bp, user's Windows Explorer sets the current working directory to the remote share and launches the application for opening the file.
+# The application tries to load DWMAPI.DLL, but failing to find it in the Windows system directories, it loads and executes it from the attacker's network share.
+
+
+==Related [[Threat Agents]]==
+
+* [[:Category:Internet_attacker]]
+* [[:Category:Intranet_attacker]]
+
+
+==Related [[Attacks]]==
+
+* [[:Category:Embedded Malicious Code]]
+* [[Code Injection]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Portability Flaw]]
+* [[Process Control]]
+
+
+==Related [[Controls]]==
+
+TBD
+
+
+==References==
+
+* [http://cwe.mitre.org/data/definitions/114.html CWE-114: Process Control]
+* [http://www.securityfocus.com/archive/1/510426 Elevation of Privilege Vulnerability in iTunes for Windows] - example of  Insecure Access Permissions-based Attack
+* [http://www.securityfocus.com/archive/1/513190 Remote Binary Planting in Apple iTunes for Windows] - example of Current Working Directroy-based Attack 
+
+__NOTOC__
+
+[[Category:Attack]]

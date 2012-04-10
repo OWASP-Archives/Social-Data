@@ -1,0 +1,28 @@
+= '''SANS : Essential Secure Coding in Java / JEE:DEV530 (Alligned with GSSP Certification)'''<br> =
+
+Course: Essential Secure Coding in Java / JEE<br>Course ID: SB2DSCJ / SANS Course ID : DEV530<br>Instructor: SANS Instructor<br>CPE Credits: 12 CPE’s<br>Duration: 2 Days <br>Date: November 19th - 20th, 2009 (9 AM – 6 PM)<br>
+
+Learn about [http://www.sans.org/training/essential-secure-coding-in-java-jee-1332-mid DEV530 course at SANS]
+
+'''Who should attend?'''<br>• Developers who want to build more secure applications <br>• Java EE programmers <br>• Software engineers <br>• Software architects <br>• Application security auditors <br>• Technical project managers <br>• Senior software QA specialists <br>• Penetration testers who want a deeper understanding of target applications or who want to provide more detailed vulnerability remediation options 
+
+'''Class Pre-requisite:'''<br>• Students should have at least one year's experience working with the JEE framework and should have thorough knowledge of Java language and web technology.
+
+'''Class Requirement:''' <br>• Laptop with administrative level access <br>• 5 GB available hard drive space <br>• 1 GB RAM or higher <br>• DVD drive (minimum 12x recommended) <br>• x86 compatible 2Ghz CPU minimum or higher 
+
+'''''VMWare<br>'''''You will use VMware to perform exercises in class. You must have a working copy of one of the following installed on your system prior to coming to class:<br>• VMware Player 2.0 or later <br>• VMware Workstation 6.0 or later <br>• VMware Fusion for Max OS X 
+
+VMware Player can be downloaded for free. Alternatively, if you want a more configurable and flexible tool, you can download a free 30-day trial copy of VMware Workstation or VMware Fusion. These products are available at www.vmware.com. VMware will send you a time-limited serial number for VMware Workstation or VMware Fusion if you register for the trial at their Web site. No serial number is required for VMware Player.
+
+'''''Java Documentation'''''<br>It is recommended that students download the Java SE 6 and Java EE 5 Javadoc documentation for use as reference material while doing the in-class exercises (the Javadoc license prohibits redistribution). The documentation can be found at java.sun.com.<br>You will receive a DVD containing a Linux VMware image that contains all the course exercises.
+
+'''Course Description:''' 
+
+This course covers the essential Java/JEE topics that are relevant to a large number of web application developers. It's not a high level theory course. It's about real programming. In this course you will examine actual code, work with real tools, build applications, and gain confidence in the resources you need for the journey to improving the security of your Java applications.<br>Rather than teaching students to use a set of tools, we're teaching students concepts of secure programming. This involves looking at a specific piece of code, identifying a security flaw, and implementing a fix for that flaw. The course is full of hands on exercises where you can apply practical techniques that you can use to prevent common attacks.<br>'''''Topics Covered'''''<br>• Web Application Attacks <br>• Web Application Proxy <br>• Validation Concerns <br>• Validation Techniques <br>• Authentication <br>• Session management <br>• Servlet access control <br>• Encryption
+
+#Encryption of data in transit with JSSE
+#Encryption of data at rest with JCA
+
+• String immutability
+
+• Integer and Double Overflows <br>• Numeric data issues <br>• Race conditions <br>• Collections <br>• Singletons <br>

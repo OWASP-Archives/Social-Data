@@ -1,0 +1,30 @@
+2010 OWASP Infrastructure
+
+
+# Web Server
+## Fedora Linux
+## Hosts
+### Wiki
+### MySQL
+### Virtual Domain for ads.owasp.org 
+#### Runs openx ad server for banner ads on owasp.org site.
+## Sends and receives email
+## Current hardware running at ~50-60% usage
+### Dell PowerEdge 1325
+### Dual Core, 4 GB RAM, 2 mirrored drives
+### 240 GB drive
+#### ~ 39% full (84 GB)
+#### ~4 GB in DB backups of the wiki (done nightly)
+### Backed up 2x per month locally and on Aspect hardware
+# List Server
+## Fedora
+## Hosts
+### lists.owasp.org (mailman email lists)
+### MySQL
+## Sends and receives email
+## Current hardware
+### Dell 750 PowerEdge
+### 4 GB RAM, 80 GB mirrored drives
+### Frequently chokes on owasp mail list volume - esp sends to owasp-all list
+# Gmail handles email for owasp.org email domain
+# DNS managed by the current ISP (Verio)

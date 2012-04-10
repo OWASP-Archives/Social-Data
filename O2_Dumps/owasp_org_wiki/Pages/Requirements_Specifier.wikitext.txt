@@ -1,0 +1,13 @@
+{{Template:SecureSoftware}}
+
+==Role Description==
+The requirements specifier has these major tasks:
+* He is first responsible for detailing business requirements that are security relevant, particularly those things that will need to be considered by an architect. In most organizations, these two roles will work closely on security concerns and will generally iterate frequently.
+* After the team has identified a candidate architecture, the requirements specifier should look at the resources present in that architecture and determine what the protection requirements for those resources are. CLASP promotes a structured approach to deriving these requirements, categorizing resources into protection levels, and addressing each core security service for each protection level.
+* Particularly when using a protection-level abstraction, it is possible to reuse security requirements across projects. This not only saves a tremendous amount of time for requirements specifiers; it also prompts organizations to compare the relative security of multiple projects.
+* In organizations that develop use cases, a requirements specifier can also specify misuse cases, which demonstrate to the stakeholder the major security considerations that manifest themselves in the system design. For example, they may document mitigation technologies and how they impact the user, as well as risks that may still be present in a system, thereby allowing the stakeholder to develop compensating controls at an operational level.
+Requirements specifiers traditionally do not have the breadth of security expertise necessary to build highly effective security requirements. For that reason, we recommend reading CLASP Resources A, B, C and D thoroughly.
+
+[[Category:Role]]
+[[Category:CLASP Role]]
+[[Category:OWASP CLASP Project]]

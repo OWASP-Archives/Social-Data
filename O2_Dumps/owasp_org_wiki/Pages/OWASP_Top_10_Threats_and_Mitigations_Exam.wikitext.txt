@@ -1,0 +1,659 @@
+<center>'''Course Title: OWASP Top 10 Threats and Mitigation'''</center>
+
+<center></center>
+
+<center>'''Exam Questions'''</center>
+
+
+
+
+
+Which of the following can be caused by an injection attack? 
+
+# Spoofing 
+# Data loss '''(Correct)'''
+# Denial of service '''(Correct)'''
+# Insecure direct object references
+
+
+
+Which threat can occur in languages that do not support a clear distinction between code and data? 
+
+# Injection '''(Correct)'''
+# Insecure direct object references 
+# Failure to restrict URL access 
+# Insufficient transport layer protection 
+
+
+
+Which of the following scenarios can lead to an injection attack?
+
+# Unvalidated input is embedded in an instruction stream. '''(Correct)'''
+# Unvalidated input cannot be distinguished from valid instructions. '''(Correct)'''
+# A Web application does not validate a client’s access to a resource. 
+# A Web action performs an operation on behalf of the user without checking a shared secret. 
+
+
+
+Which threat is your Web application susceptible to if a user can pass specially crafted input that invokes semantic control codes? 
+
+# Injection '''(Correct)'''
+# Insecure direct object references 
+# Failure to restrict URL access 
+# Insufficient transport layer protection 
+
+
+
+Which of the following techniques can be used to protect against injection attacks?
+
+# Input validation '''(Correct)'''
+# Allow list '''(Correct)'''
+# Escaping '''(Correct)'''
+# Memory size checks
+# Validate integer values before referencing arrays
+
+
+
+
+
+Which of the following components are vulnerable to injection attacks? 
+
+# Control constructs
+# Registry keys 
+# Regular expressions '''(Correct)'''
+# SQL queries based on user input '''(Correct)'''
+
+
+
+Which control construct can be used to perform an SQL injection attack? 
+
+# Single quote (') '''(Correct)'''
+# Null (\0) byte
+# Less than sign(&lt;)
+# Greater than sign(&gt;)
+
+
+
+Which two mitigation techniques when used in combination can help you strictly define valid input? 
+
+# Allow list ('''Correct''')
+# Block list '''(Correct)'''
+# Table indirection 
+# Escaping
+
+
+
+Which of the following are architecture-level techniques used to prevent attacks based on malicious input? 
+
+# Allow list 
+# Table indirection '''(Correct)'''
+# Escaping 
+# Object class for user input '''(Correct)'''
+
+
+
+Which mitigation technique helps you tell the parser that a specific character is a literal and not a control character? 
+
+# Table indirection 
+# Allow list 
+# Escaping '''(Correct)'''
+# Block list 
+
+
+
+State whether the following statement is True or False.
+
+You should use a blacklist wherever possible; use whitelists only as a secondary defense. 
+
+# True 
+# False '''(Correct)'''
+
+
+
+Which mitigation technique helps you define disallowed inputs? 
+
+# Allow list 
+# Block list '''(Correct)'''
+# Table indirection 
+# Escaping 
+
+
+
+Which threat is caused by an injection attack into a browser?
+
+# Cross-site scripting '''(Correct)'''
+# Cross-site request forgery 
+# Insecure direct object references 
+# Broken authentication and session management 
+
+
+
+Which of the following languages are the primary targets of cross-site scripting? 
+
+# HTML '''(Correct)'''
+# SQL 
+# XSLT
+# JavaScript '''(Correct)'''
+
+
+
+Which type of attack occurs when a malicious user convinces a victim to send a request containing malicious input to a server? 
+
+# Reflected XSS '''(Correct)''' 
+# Persistent XSS 
+# Insecure direct object references
+# Failure to restrict URL access
+
+
+
+What should you do to prevent a DOM-based XSS attack? 
+
+# Set the HttpOnly flag in cookies 
+# Ensure that session IDs are not exposed in a URL 
+# Ensure that a different nonce is created for each request 
+# Validate any input that comes from another Web site '''(Correct)'''
+
+
+
+How does malicious input flow in a DOM-based XSS? 
+
+# From server to client
+# From client to itself '''(Correct)'''
+# From attacker to server (M1_T3_P3)
+# From victim to server (M1_T3_P2)
+
+
+
+Which of the following techniques should you use to prevent malicious input?
+
+# Allow List '''(Correct)'''
+# Block list''' (Correct)'''
+# Escaping '''(Correct)'''
+# Encryption 
+# Table indirection 
+
+
+
+You should set the HttpOnly flag in a cookie to ensure that: 
+
+# The cookie is not available to client scripts '''(Correct)'''
+# The cookie is deleted when the user closes the browser
+# The cookie is sent over an encrypted channel 
+# The cookie is a persistent cookie
+
+
+
+You should set a secure flag in a cookie to ensure that:
+
+# The cookie is a persistent cookie.
+# The cookie is not available to client script. 
+# The cookie is sent over an encrypted channel. '''(Correct)'''
+# The cookie is deleted when the user closes the browser.
+
+
+
+Which type of attack occurs when an attacker submits data to the server and the data is stored on the server? 
+
+# DOM-based XSS 
+# Reflected XSS 
+# Persistent XSS '''(Correct)'''
+# Cross-site request forgery 
+
+
+
+Which of the following input sources can be controlled by a malicious user? 
+
+# <nowiki>Window.lo</nowiki>cation '''(Correct)'''
+# GET/POST parameters '''(Correct)'''
+# Server configuration files
+# Ports and network resources 
+
+
+
+Which of the following scenarios may result in broken authentication and session management vulnerabilities? 
+
+# Poorly implemented custom code is used. '''(Correct)'''
+# Misconfigured off-the-shelf code''' '''is used.''' (Correct)'''
+# Unvalidated input cannot be distinguished from valid instructions. 
+# Unvalidated input is embedded in an instruction stream. 
+
+
+
+Which of the following actions should you take before implementing a custom authentication and session management system?
+
+# Find out if a suitable framework component already exists. '''(Correct)'''
+# Find out if you can use a small extension to an existing component to implement the system. '''(Correct)'''
+# Find out if form variables are available to store data. 
+# Find out if you need to use session-based indirection. 
+
+
+
+State whether the following statement is True or False. 
+
+When implementing an authentication or session system, you should ensure that new session IDs are not created at login.
+
+# True
+# False ('''Correct''')
+
+
+
+Which of the following functionalities should you include in an authentication and session management system?
+
+# Logout functionality '''(Correct)''' 
+# Inactivity timeout functionality '''(Correct)'''
+# Escaping functionality
+# Forwarding system functionality
+
+
+
+Why should you use CAPTCHA? 
+
+# To create cryptographically random session IDs 
+# To protect credentials  by using encryption or cryptographic salt and hash 
+# To protect authentication systems from automated or brute-force attacks '''(Correct)'''
+# To ensure that authentication systems implement inactivity timeout functionality 
+
+
+
+What should you do before passing credentials over the network? 
+
+# Replace the credentials with a cryptographic salt and hash ('''Correct''')
+# Accept session IDs from URLs 
+# Share the credentials with the client. 
+# Use persistent cookies to manage session IDs. 
+
+
+
+Which location should you ideally use to store a session ID?
+
+# URLs 
+# Form variables
+# Persistent cookies 
+# Non-persistent cookies '''(Correct)'''
+
+
+
+What should you do to ensure that JavaScript cannot be used to access a cookie?
+
+# Set the secure flag in the cookie 
+# Set the HttpOnly flag in the cookie '''(Correct)'''
+# Use the CAPTCHA system
+# Use non-persistent cookies 
+
+
+
+Which of the following are authentication system mandatory requirements?
+
+# Strong passwords are required. '''(Correct)'''
+# Use a GOTCHA to prevent automated attacks.
+# User logout and session inactivity are required.''' (Correct)'''
+# Session IDs are only accepted from cookies and parameter variables.
+# Credentials are always protected with encryption or cryptographic salting and hashing. '''(Correct)'''
+
+
+
+Which of the following are requirements for an authentication token? 
+
+# It should identify returning users to the site 
+# It should be used as a replacement for a user's credentials '''(Correct)'''
+# It should always use a persistent cookie 
+# It should always use a non-persistent cookie '''(Correct)'''
+
+
+
+State whether the following statement is True or False. 
+
+An identification token is a replacement for a user’s credentials and should allow access to restricted resources of a Web site. 
+
+# True 
+# False '''(Correct)'''
+
+
+
+Which of the following tasks are performed by a session-based system? 
+
+# Identifying returning users '''(Correct)'''
+# Providing access to restricted resources '''(Correct)'''
+# Using the HTTP protocol 
+# Sending successful logins to a well-known location 
+
+
+
+Which threat can occur when a Web application fails to validate a client's access to a resource?
+
+# Injection
+# Cross-site scripting 
+# Insecure direct object reference '''(Correct)'''
+# Cross-site request forgery 
+
+
+
+Which of the following objects are susceptible to an insecure direct object reference attack? 
+
+# Files '''(Correct)'''
+# Registry keys '''(Correct)'''
+# Conditional constructs 
+# GET/POST parameters 
+
+
+
+Which of the following vulnerabilities may be caused by an insecure direct object reference attack? 
+
+# Executing commands on the server.
+# Impersonating any user on the system.
+# Modifying SQL data pointed to by the query.
+# Modifying data without authorization. '''(Correct)'''
+# Accessing a resource without authorization. '''(Correct)'''
+
+
+
+What should you do to mitigate the threat of an insecure direct object reference attack?
+
+# Use session-based indirection. '''(Correct)'''
+# Use POST parameters instead of GET parameters. 
+# Perform an access check each time a resource identifier arrives as input. '''(Correct)'''
+# Send successful logins to a well-known location instead of automatic redirection. 
+
+
+
+State whether the following statement is True or False.
+
+Time of Check Time of Use (TOCTOU) occurs if the authorization check is performed on one page of a Web site and the resource is used on a different page.
+
+# True '''(Correct)'''
+# False
+
+
+
+Your Web application stores information about many accounts. Which threat is your Web application susceptible to if you can manipulate the URL of an account page to access all accounts? 
+
+# Cross-site request forgery
+# Insecure direct object reference '''(Correct)'''
+# Cross-site scripting
+# Injection
+
+
+
+Which of the following threats are caused by poor input validation?
+
+# Injection '''(Correct)'''
+# Cross-site scripting '''(Correct)'''
+# Insecure direct object reference '''(Correct)''' 
+# Insecure cryptographic storage 
+# Insufficient transport layer protection
+
+
+
+Which threat can occur when a POST parameter performs an operation on behalf of a user without checking a shared secret?
+
+# Cross-site request forgery '''(Correct)'''
+# Insecure direct object reference 
+# Cross-site scripting 
+# Injection 
+
+
+
+Which of the following are the results of a cross-site request forgery?
+
+# Elevation of privilege '''(Correct)'''
+# Denial of service '''(Correct)'''
+# Spoofing and tampering '''(Correct)'''
+# Enabling of IPSec
+# Misconfigured or disabled security features
+
+
+
+Which of the following attacks can occur when a malicious user lures victims to malicious content on a Web site?
+
+# Injection 
+# Cross-site scripting
+# Insecure direct object reference
+# Cross-site request forgery '''(Correct)'''
+
+
+
+State whether the following statement is True or False.
+
+The downside of a nonce is that it needs to be stored on the client.
+
+# True
+# False '''(Correct)'''
+
+
+
+What should you add to an HMAC to ensure that the secret value is unique for each request?
+
+# Salt 
+# Nonce 
+# Session ID 
+# Timestamp'''(Correct)'''
+
+
+
+Which of the following practices should you observe in order to implement defense-in-depth techniques against CSRF attacks?
+
+# Use GET parameters
+# Use automatic redirection. 
+# Don’t include secrets in the URL. '''(Correct)'''
+# Resubmit POST parameters during redirection.
+
+
+
+State whether the following statement is True or False.
+
+GET parameters limit the types of manipulation a malicious user can perform on the victim to forge a request.
+
+# True
+# False '''(Correct)'''
+
+
+
+Which of the following may cause a security misconfiguration threat?
+
+# Unused services '''(Correct)'''
+# Default accounts '''(Correct)'''
+# Bad cryptography 
+# Unsafe key storage 
+
+
+
+You have not yet applied some recent service packs and updates to your Web application. Which of the following threats is your Web server susceptible to? 
+
+# Injection 
+# Security misconfiguration '''(Correct)'''
+# Insecure cryptographic storage 
+# Cross-site request forgery 
+
+
+
+
+
+Which of the following actions should you take to reevaluate your environment and address new threats? 
+
+# Add or remove network segments '''(Correct)'''
+# Apply the latest service packs, patches, hotfixes, and updates '''(Correct)''' 
+# Use custom cryptographic algorithms 
+# Use your browser to forge unauthorized requests
+
+
+
+Which of the following procedures are involved in the hardening process? 
+
+# Disable unnecessary features. '''(Correct)'''
+# Review all settings/configurations. '''(Correct)'''
+# Repeat the process at random intervals.
+# Update the environment with changes only when needed.
+
+
+
+Which of the following consequences can occur if your production environment does not match your development, testing, and staging environments? 
+
+# Your application may not work. '''(Correct)'''
+# Your application may not perform some authentication checks '''(Correct)'''. 
+# Your application may elevate privileges.
+# Your application may deny service. 
+
+
+
+Which of the following can cause insecure cryptography?
+
+# Unsalted hash '''(Correct)'''
+# Unused services
+# Default accounts 
+# Failure to rotate keys '''(Correct)'''
+
+
+
+Which of the following can lead to bad cryptography?
+
+# Custom cryptographic algorithms '''(Correct)'''
+# Insufficient cryptographic protocols '''(Correct)'''
+# New products 
+# Missing patches 
+
+
+
+Which of the following may result in cryptographic weakness?
+
+# Poor/weak algorithm choice '''(Correct)'''
+# Custom cryptographic algorithms '''(Correct)'''
+# Insufficient cryptographic protocols '''(Correct)'''
+# Missing patches
+# Unnecessary/unused services or features
+
+
+
+Which of the following protocols are network encryption protocols?
+
+# SSL '''(Correct)'''
+# EFS 
+# IPSec '''(Correct)'''
+# Kerberos 
+
+
+
+Which of the following factors help you secure keys? 
+
+# Complexity '''(Correct)'''
+# Rotation '''(Correct)'''
+# Randomness '''(Correct)'''
+# Encryption 
+
+
+
+Which of the following combines public-key cryptography with a cryptographic hash?
+
+# Nonce
+# Digital signature '''(Correct)'''
+# SSL
+# Salt
+
+
+
+Which of the following depicts the typical impact of failure to restrict URL access?
+
+# Attackers access other users’ accounts and data. '''(Correct)'''
+# Attackers impersonate any user on the system.
+# Attackers invoke functions and services they have no authorization for. '''(Correct)'''
+# Attackers perform all actions that the victims themselves have permission to perform.
+
+
+
+When users log on to your Web site, they are directed to a page with a URL that authorizes them using their role. Which threat is your Web application susceptible to if users can modify their role? 
+
+# Injection
+# Cross-site scripting
+# Failure to restrict URL access '''(Correct)'''
+# Unvalidated redirects and forwards
+
+
+
+Which of the following actions should you take to verify the implementation of your Web application? 
+
+# Use policy mechanisms 
+# Use a simple and positive model at every layer 
+# Verify that each URL in your application is protected. '''(Correct)'''
+# Use your browser to forge unauthorized requests '''(Correct)'''
+
+
+
+Which of the following should you use to protect the connections between the physical tiers of your application?
+
+# EFS 
+# SSL '''(Correct)'''
+# IPSec '''(Correct)'''
+# Kerberos 
+
+
+
+Which of the following actions should you take to implement transport layer protection? 
+
+# Install IDS
+# Enable SSL'''(Correct)'''
+# Set the HttpOnly flag on session ID cookies 
+# Enable IPSec '''(Correct)'''
+
+
+
+
+
+Which of the following can result from unvalidated redirects and forwards?
+
+# Brute force attack 
+# Network sniffing 
+# Man-in-the-middle attack 
+# Bypassed authorization checks '''(Correct)'''
+
+
+
+Which of the following actions should you take to protect a Web application from unvalidated redirects and forwards?
+
+# Validate the referrer header '''(Correct)'''
+# Use extended validation certificates 
+# Validate all input from the client '''(Correct)'''
+# Disallow requests to unauthorized file types 
+
+
+
+Which of the following actions should you take to detect unvalidated redirects and forwards?
+
+# Use internal transfers without authorizing the user for target URL 
+# Use your browser to forge unauthorized requests
+# Use weblogs to identify redirects and forwards '''(Correct)'''
+# Use policy mechanisms 
+
+
+
+What should you do to prevent security issues if a user submits some data to your Web application? 
+
+# Validate the data. '''(Correct)'''
+# Use session-based indirection. 
+# Use POST parameters. 
+# Set the secure flags in cookies. 
+
+
+
+State whether the following statement is True or False.
+
+If the input can be confused for instructions in the language or the way the language is applied, then the language is vulnerable to the cross-site request forgery attack. 
+
+# True
+# False ('''Correct''')
+
+
+
+In which of the following scenarios should you use the escaping technique? 
+
+# When user input is echoed back to the user in HTML '''(Correct)'''
+# When you need to validate any input as valid input 
+# When you are trying to protect against regular expression injection 
+# When you need to tell the interpreter that input is data and not code '''(Correct)'''
+
+
+
+What should you do to prevent unvalidated redirect and forwards vulnerabilities? 
+
+# Use table indirection '''(Correct)'''
+# Use an allow list
+# Allow only relative redirects '''(Correct)'''
+# Use session-based indirection

@@ -1,0 +1,28 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>New Project Leader Applicants</noinclude>
+
+| Applicant_Name = Sahba Kazerooni
+| Applicant_Email = sahba@securitycompass.com
+| Applicant_Wiki_Username = skazerooni
+| Curriculum_Vitae_url = <!--Please replace all this text by your CV's web link  (REQUIRED field)-->
+
+| Proposed_Roadmap_url =  
+
+| Proposed_Roadmap_Text = I am the co-leader of the OWASP Web Services Security Project, OWASP Toronto chapter co-leader, and a regular presenter on various application security topics, from Threat Modeling to innovative vulnerability assessment methodologies.  But enough about me.  ASVS is definitely not a "nice to have" but something that the security industry needs.  The content is there, and should now only require tweaking/updates on an annual basis at most.  Like most other standards, the biggest hurdle that we will face is adoption, and I have some preliminary thoughts on how to speed that up:  
+
+1. Let's hook into as many other OWASP projects as we can.  I think we all agree with this one.
+
+2. Let's consider mapping ASVS to common security standards like PCI.  Any sort of development to bring the two together would open up some doors to present ASVS not only at security conferences, but also at compliance and regulatory conferences. 
+
+3. From a security tester’s perspective, I think an excel template/macro to guide you through testing the right detailed requirements would go a long way.  Our consultants use similar types of tools to guide their testing, and we are considering creating ASVS ones that we expect from our contractors.
+
+4. Let's somehow interface with major automated scanners to either certify them (say that they help satisfy 1A or 1B) or have them comply with 1A or 1B.  We could possibly write plugins for popular scanners to make them compliant with 1A or 1B.
+
+5. Maybe some graphic design help to make the document an easier read.
+
+I believe this project would benefit from the attention of two leaders, and so I am very interested in co-leadership opportunities. 
+
+<!--##### Please replace/edit these variables ##### --> 
+| Applicant_name_mask = Application_4 
+| Applicant_home_page = :OWASP_Request_for_Proposals/New_Project_Leader/ASVS/Application_4 
+| Applications_home_page = Seeking_New_Project_Leader_For/ASVS
+}}

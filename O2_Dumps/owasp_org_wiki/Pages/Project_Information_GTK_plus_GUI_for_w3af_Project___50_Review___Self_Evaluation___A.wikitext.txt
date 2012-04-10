@@ -1,0 +1,103 @@
+[[Project Information:template GTK plus GUI for w3af Project|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#GTK+ GUI for w3af project|GTK + GUI for w3af Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#GTK+ GUI for w3af project|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+
+The project is ahead from schedule, because I addressed first the longest tasks, and those tasks that implied new windows (the new windows always get feedback from the community, and we use those first impressions to enhance the GUI usability and overall quality)
+
+Although a detailed progress can be seen in the [http://sourceforge.net/pm/task.php?group_id=170274&set=custom&group_project_id=56282&_assigned_to=0&_status=100&SUBMIT=Browse w3af SourceForge project page], I will include here the tasks with a small comment.
+
+
+The following are the tasks that are already finished and closed (the number between square brackets is the SourceForge task id). Note that some of this tasks weren't planned at the beggining of the project, but included after it, in response to community or project leader request (the idea is not to minimize the work, but to maximize the tool quality and usefulness).
+
+- [148110] Manually send a request and analyze the response.
+
+- [148111] Manually create a fuzzed requests based on tokens
+
+- [148113] Embebed tool to encode/decode URL/Base64 and to hash sha1/md5
+
+- [148114] HTTP response side by side content compare
+
+- [148198] log graph - debug lines overwrite axis
+
+- [148220] Colorize KB Browser names
+
+- [148224] Resend request
+
+- [148261] Remember size of all windows
+
+- [148428] Detailed sintax help
+
+- [148429] ? signs in fuzzer window
+
+- [148430] fuzzer analysis
+
+- [148431] Manual request and fuzzer window icons
+
+- [148511] Results - URLs - Right button over tree entry
+
+- [148623] Add icons for http-config and misc-config
+
+- [148673] log graph
+
+- [148674] encode decode window
+
+- [149208] Version in crash
+
+
+Some of the following tasks are already started, some are still to start, but all of those are pending from the Project Administrator:
+
+- [148109] (40%) Local proxy to trap and modify requests and responses
+
+- [148112] ( 0%) Reload a plugin after its edited from within the GUI
+
+- [148802] ( 0%) cluster window TODO
+
+- [148701] (50%) error messages in log window
+
+
+The following are the tasks that are not yet defined, I need to get together with the Project Administrator before going on (with the exception of the bug killing, that is an always ongoing task).
+
+- Meetings with a usability expert that the w3af team leader has already contacted and worked with.
+
+- Wizard to perform a vulnerability assessment.
+
+- Graphical display of site map and vulnerabilities.
+
+- Kill all pending bugs and make a stable release.
+
+- Users guide for the pyGTK user interface.
+
+- Help system for the GUI itself 
+
+
+
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#GTK+ GUI for w3af project|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+
+Evaluating all the planed work done, and taking in consideration of what is still to be done, I think we're at a 65% of the project.
+
+ |- 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+
+It'd be great if you join to the w3af community, use the tool, and give us feedback. Thank you!
+
+|}

@@ -1,0 +1,107 @@
+{{Template:Vulnerability}}
+{{Template:Fortify}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+Passing an inadequately-sized output buffer to a path manipulation function can result in a buffer overflow.
+
+Windows provides a large number of utility functions that manipulate buffers containing filenames. In most cases, the result is returned in a buffer that is passed in as input. (Usually the filename is modified in place.) Most functions require the buffer to be at least MAX_PATH bytes in length, but you should check the documentation for each function individually. If the buffer is not large enough to store the result of the manipulation, a buffer overflow can occur.
+
+
+==Risk Factors==
+TBD
+
+
+==Examples==
+
+<pre>
+char *createOutputDirectory(char *name) {
+	char outputDirectoryName[128];
+	if (getCurrentDirectory(128, outputDirectoryName) == 0) {
+		return null;
+	}
+	if (!PathAppend(outputDirectoryName, "output")) {
+		return null;
+	}
+	if (!PathAppend(outputDirectoryName, name)) {
+		return null;
+	}
+	if (SHCreateDirectoryEx(NULL, outputDirectoryName, NULL) 
+               != ERROR_SUCCESS) {
+		return null;
+	}
+	return StrDup(outputDirectoryName);
+}
+
+</pre>
+
+In this example the function creates a directory named "output\<name>" in the current directory and returns a heap-allocated copy of its name. For most values of the current directory and the name parameter, this function will work properly. However, if the name parameter is particularly long, then the second call to PathAppend() could overflow the outputDirectoryName buffer, which is smaller than MAX_PATH bytes.
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Buffer Overflow]]
+
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Use of Dangerous API]]
+[[Category:API Abuse]]
+[[Category:C]]
+[[Category:Implementation]]
+[[Category:Code Snippet]]
+[[Category:File System]]
+[[Category:Windows]]
+[[Category:Vulnerability]]

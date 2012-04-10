@@ -1,0 +1,90 @@
+=Introduction=
+As part of its 2009 agenda, the [[:Category:Global Projects Committee|Global Projects Committee]] is undertaking the task of improving the OWASP Project structure. This task includes determining orphaned projects, updating and augmenting the existing project criteria, and reclassifying projects to help users find OWASP Projects that are relevant and important to them.
+
+To help us with this task, we have created a number of surveys that we have distributed to the OWASP Community. Each survey serves a different purpose as explained below. For any questions, please contact the Global Projects Committee.
+
+=OWASP Project Owner Spring 2009 Self Update=
+
+The project owner(s) for each OWASP Project (both tools and documents) are asked to complete a self update on the status of their project. This information will help the Global Projects Committee discover orphan projects, create processes to help mature existing projects, and to collect metadata about projects that will allow us to re-design the OWASP Project pages. This self-update can be found [https://spreadsheets.google.com/viewform?hl=en&formkey=cEp6TlUxeU5KZDdWQkgxYlM2clkwRVE6MA.. here].
+
+=OWASP Project Sponsorship Survey=
+
+The Global Projects Committee is currently exploring corporate sponsorship of individual OWASP Projects. Any project that indicates they would be interested in corporate sponsorship should fill out [https://spreadsheets.google.com/viewform?hl=en&formkey=cEp6TlUxeU5KZDdXZmhudlFKa3BiYXc6MA.. this survey] in addition to the Self Update.
+
+=OWASP Project Feedback=
+
+The Global Projects Committee would also like to facilitate feedback to OWASP Projects from the OWASP Community. Our first attempt to do so is the [https://spreadsheets.google.com/viewform?hl=en&formkey=cEp6TlUxeU5KZDdXaTdlNk5PRUgxWVE6MA.. Project Feedback form]. If you are interested in providing feedback for a particular project, please use this form. Also, if you are a project owner, please feel free to distribute this form to your users and we will forward you the feedback from any surveys for your project. Please be constructive in your feedback and note that all feedback will be made public.
+
+=Results=
+The OWASP Project Owner Spring 2009 Self Update was closed on May 1st, 2009. Fifty-seven projects were updated by their owners (or a contributor/reviewer). The following is a summary of the results of the survey.
+
+==Adoption==
+The following projects had leaders that ''responded'' to the survey and explicitly stated that they are willing to cede control of the project to a new project owner. The GPC will evaluate whether the project should have a new "leader", a "maintainer", or the project should be archived.
+* CAL9000 - recommend that this should be given to a maintainer
+* Java Project - recommend that this should be given to a new leader
+* Sprajax - recommendation TBA
+* SqliBench - recommendation TBA
+* WebScarab - recommend that this should be given to a maintainer
+* Google Hacking - recommend that this should be archived. The search API used by the Google Hacking project is due to be deprecated and discontinued by Google in August 2009.
+
+==Orphaned Projects==
+The following projects are listed in the [[Category:OWASP Project]] page but did not respond to the Self Update. As a result, these projects will be considered orphaned and inactive. The Global Projects Committee is working on determining whether a project is eligible for adoption or if the project should be archived.
+* [[:Category:OWASP AIR Security Project|OWASP AIR Security Project]]
+* [[:Category:OWASP AJAX Security Project|OWASP AJAX Security Guide]]
+* [[:Category:OWASP Application Security Assessment Standards Project|OWASP Application Security Assessment Standards Project]]
+* [[:Category:OWASP Application Security Metrics Project|OWASP Application Security Metrics Project]]
+* [[:Category:OWASP AppSec FAQ Project|OWASP AppSec FAQ Project]]
+* [[:Category:OWASP Career Development Project|OWASP Career Development Project]]
+* [[:Category:OWASP Certification Criteria Project|OWASP Certification Criteria Project]]
+* [[:Category:OWASP Communications Project|OWASP Communications Project]]
+* [[:OWASP Corporate Application Security Rating Guide|OWASP Corporate Application Security Rating Guide]]
+* [[:Category:OWASP CRM Project|CRM Project]]
+* [[:Category:OWASP Education Project|OWASP Education Project]]
+* [[:Category:OWASP Encoding Project|OWASP Encoding Project]]
+* [[ESAPI Swingset|ESAPI Swingset]] - this should be a child project to ESAPI
+* [[:Category:OWASP Flash Security Project|Flash Security Project]]
+* [[:Category:OWASP Fuzzing Code Database|OWASP Fuzzing Code Database]]
+* [[:Category:OWASP Honeycomb Project|OWASP Honeycomb Project]] - project absorved by ASDR
+* [[:Category:OWASP Insecure Web App Project|OWASP Insecure Web App Project]]
+* [[:Category:OWASP Interceptor Project|OWASP Interceptor Project]]
+* [[:Category:OWASP JBroFuzz|OWASP JBroFuzz Project]]
+* [[:Category:OWASP Jobs Project|OWASP Jobs Project]]
+* [[:Category:OWASP Joomla Vulnerability Scanner Project|OWASP Joomla Vulnerability Scanner Project]]
+* [[:Category:OWASP LAPSE Project|LAPSE Project]]
+* [[:Category:OWASP LiveCD Education Project|LiveCD Education Project]]
+* [[:Category:OWASP Logging Project|OWASP Logging Guide]]
+* [[:Category:OWASP Mutillidae|OWASP Mutillidae]]
+* [[:Category:OWASP OpenSign Server Project|OpenSign Server Project]]
+* [[:Category:OWASP Oracle Project|Oracle Project]]
+* [[:Category:OWASP Pantera Web Assessment Studio Project|OWASP Pantera Web Assessment Studio Project]]
+* [[:Category:OWASP PHP AntiXSS Library Project|OWASP PHP AntiXSS Library Project]]
+* [[:Category:OWASP PHP Project|OWASP PHP Project]]
+* [[ORG (Owasp Report Generator)|OWASP Report Generator]]
+* [[:Category:OWASP SASAP Project|OWASP Scholastic Application Security Assessment Project]]
+* [[:Category:OWASP Security Spending Benchmarks|OWASP Security Spending Benchmarks]]
+* [[Owasp SiteGenerator|OWASP Site Generator]]
+* [[:Category:OWASP Source Code Review OWASP Projects Project|OWASP Source Code Review for OWASP-Projects]]
+* [[:Category:OWASP Speakers Project|OWASP Speakers Project]]
+* [[:Category:OWASP SQLiX Project|OWASP SQLiX Project]]
+* [[:Category:OWASP Stinger Project|OWASP Stinger Project]]
+* [[:Category:OWASP SWAAT Project|OWASP SWAAT Project]]
+* [[OWASP Tiger|OWASP Tiger]]
+* [[:Category:OWASP Tools Project|OWASP Tools Project]]
+* [[:Category:OWASP Validation Project|OWASP Validation Project]]
+* [[:Category:OWASP Vicnum Project|OWASP Vicnum Project]]
+* [[: Category:OWASP Web 2.0 Project|OWASP Web 2.0 Project]]
+* [[: Category:OWASP Web Application Scanner Specification Project|OWASP Web Application Scanner Specification Project]]
+* [[: Category:OWASP Web Application Security Metric using Attack Patterns Project|OWASP Web Application Security Metric using Attack Patterns Project]]
+* [[: Category:OWASP Web Application Security Put Into Practice|OWASP Web Application Security Put Into Practice]]
+* [[: Category:OWASP Web Services Security Project|OWASP Web Services Security Project]]
+* [[: Category:OWASP Webekci Project|OWASP WeBekci Project]]
+* [[: Category:OWASP WSFuzzer Project|OWASP WSFuzzer Project]]
+* [[: Category:OWASP XML Security Gateway Evaluation Criteria Project|OWASP XML Security Gateway Evaluation Criteria]]
+
+==Grants==
+The following projects were identified as an OWASP "project" but should be recategorized as an OWASP Grant under the new grant framework.
+* [[: Category:OWASP Book Cover %26 Sleeve Design|OWASP Book Cover & Sleeve Design]]
+* [[: Category:OWASP on the Move Project|OWASP on The Move Project]]
+* [[:Category:OWASP Individual and Corporate Member Packs plus Conference Attendee Packs Brief|OWASP Individual and Corporate Member Packs plus Conference Attendee Packs Brief]]
+
+[[Category:Global_Projects_Committee]]

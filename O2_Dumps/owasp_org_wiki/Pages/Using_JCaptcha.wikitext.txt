@@ -1,0 +1,11 @@
+=== Overview ===
+Captcha stands for "'''C'''ompletely '''A'''utomated '''P'''ublic '''T'''uring test to tell '''C'''omputers and '''H'''umans '''A'''part". A [http://en.wikipedia.org/wiki/Captcha captcha] typically takes the form of an image containing distorted letters and/or numbers and is often used on web sites where it is important to determine whether the user is a real person or a computer program.  Captcha's have some drawbacks such as accessibility for the visually impaired, high CPU requirements, and possible circumvention techniques.  In many cases, however, Captcha's can help mitigate certain types of attacks launched by malicious individuals using automated tools.  At a minimum they can raise the bar enough to deter a casual attacker.
+
+==== JCaptcha ====
+''[http://forge.octo.com/jcaptcha/confluence/display/general/Home JCaptcha]'' is a Java implementation of captcha technology developed by Marc Antoine Garrigue and released as open source. JCaptcha provides Java programmers with a framework and toolset for deploying captcha's in their web applications.  You can download the full package that includes JARs, API documentation, and source code from [http://sourceforge.net/projects/jcaptcha SourceForge]. The latest release of JCaptcha (1.0) is available under the GNU General Public License, but later releases will be under the LGPL license.
+
+=== Examples ===
+* A Simple Captcha Servlet: [[JCaptcha servlet example|how it works]] | [http://owasp-java.googlecode.com/svn/trunk/JCaptcha/captcha-demos.war download the war]
+
+
+[[Category:OWASP Java Project]]

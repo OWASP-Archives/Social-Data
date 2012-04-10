@@ -1,0 +1,287 @@
+This page contains Projects, Authors, Status Target and Reviewers of the sponsored programme [[OWASP Summer of Code 2008]].<br>
+'''* Please note: The reference ‘Confirmed’ means reviewers' approval by both projects’ authors and OWASP Board.'''
+
+== DOCUMENTATION PROJECTS ==
+{| class="wikitable" style="text-align:center"
+! width="600" height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | Application
+! width="220" align="CENTER" | '''Author'''
+! width="60" align="CENTER" | [[:Category:OWASP Project Assessment|'''Status Target''']]
+! width="108" align="CENTER" | '''1st<br>Reviewer'''
+! width="108" align="CENTER" | '''2nd<br>Reviewer '''
+! width="108" align="CENTER" | '''OWASP<br>Board<br>Reviewer
+'''
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Application Security Verification Standard Project|OWASP Application Security Verification Standard]]'''
+| align="CENTER" | Mike Boberski 
+| align="CENTER" | Beta
+| align="CENTER" | [mailto:jeff.williams(at)owasp.org Jeff Williams]<br>(Confirmed)
+| align="CENTER" | [mailto:pierre.parrend(at)insa-lyon.fr Pierre Parrend]<br>[http://www.rzo.free.fr Curriculum]<br>(Confirmed)
+| align="CENTER" | Not applicable
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP AppSensor Project|OWASP AppSensor - Detect and Respond to Attacks from Within the Application]]'''
+| align="CENTER" | [mailto:michael.coates(at)aspectsecurity.com Michael Coates]
+| align="CENTER" | Beta
+| align="CENTER" | [mailto:eric.sheridan(at)aspectsecurity.com Eric Sheridan]<br>(Confirmed)
+| align="CENTER" | [mailto:randy(at)janinda.com Randy Janinda]<br>[https://www.owasp.org/index.php/OWASP_Summer_of_Code_2008_Projects_Authors_Status_Target_and_Reviewers_Randy_Janinda_Curriculum Curriculum]<br>(Confirmed)
+| align="CENTER" | Not applicable
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Backend Security Project|OWASP Backend Security Project]]'''
+| align="CENTER" | Carlo Pelliccioni
+| align="CENTER" | Beta
+| align="CENTER" | [mailto:kisero(at)gmail.com Esteban Ribičić]<br>[http://docs.google.com/Doc?id=df9vbj96_120fzfj4kfk Curriculum]<br>(Confirmed)
+| align="CENTER" | [mailto:spyroinc(at)gmail.com Josh Sweeney]<br>(Confirmed)
+| align="CENTER" | Not applicable
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Classic ASP Security Project|OWASP Classic ASP Security Project]]'''
+| align="CENTER" | Juan Carlos Calderon
+| align="CENTER" | Beta
+| align="CENTER" | [mailto:kisero(at)gmail.com Esteban Ribičić]<br>[http://docs.google.com/Doc?id=df9vbj96_120fzfj4kfk Curriculum]<br>(Confirmed)
+| align="CENTER" | [mailto:andres(at)neurofuzz.com Andres Andreu]<br>(Confirmed)
+| align="CENTER" | Not applicable
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Code Review Project|OWASP Code review guide, V1.1]]'''
+| align="CENTER" | Eoin Keary
+| align="CENTER" | Quality
+| align="CENTER" | [mailto:rahim.jina@ie.ey.com Rahim Jina]<br>[[OWASP Summer of Code 2008 Projects Authors Status Target and Reviewers Rahim Jina Curriculum|Curriculum]]<br>(Confirmed)
+| align="CENTER" | [mailto:psatishkumar(at)gmail.com P.Satish Kumar]<br>[https://www.owasp.org/index.php/User:Satishkumar  Curriculum]<br>(Confirmed)
+| align="CENTER" | Jeff Williams
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:OWASP Corporate Application Security Rating Guide|OWASP Corporate Application Security Rating Guide]]'''
+| align="CENTER" | Parvathy Iyer
+| align="CENTER" | Quality
+| align="CENTER" | [mailto:nkirschner@eisnerllp.com Neal Kirschner]<br>[[OWASP Summer of Code 2008 Projects Authors Status Target and Reviewers Neal Kirschner Curriculum|Curriculum]]<br>(Confirmed)
+| align="CENTER" | [mailto:Omar.Sherin(at)infosec2.com Omar Sherin]<br>[http://www.infosec2.com/aboutme/about_me.html Curriculum]<br>(Confirmed) 
+| align="CENTER" | 
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Education Project|OWASP Education Project]]'''
+| align="CENTER" | Martin Knobloch
+| align="CENTER" | Quality
+| align="CENTER" | [mailto:sebastien.gioria@owasp.fr Sebastien Gioria]<br>[http://www.linkedin.com/in/gioria Curriculum]<br>(Confirmed)
+| align="CENTER" | [mailto:namn(at)bluemoon.com.vn Nam Nguyen]<br>[[OWASP Summer of Code 2008 Projects Authors Status Target and Reviewers Nguyen Curriculum|Curriculum]]<br>(Confirmed)
+| align="CENTER" | Sebastien Deleersnyder
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:OWASP Internationalization|OWASP Internationalization Guidelines Project]]'''
+| align="CENTER" | Juan Carlos Calderon 
+| align="CENTER" | Beta
+| align="CENTER" | [mailto:fabio.e.cerullo(at)aib.ie Fabio Cerullo]<br>[https://www.owasp.org/index.php/User:Fabio.e.cerullo Curriculum]<br>(Confirmed)
+| align="CENTER" | [mailto:rodrigo(at)rmarcos.com Rodrigo Marcos]<br>[https://www.owasp.org/index.php/User:Rodrigo.marcos Curriculum]<br>(Confirmed)
+| align="CENTER" | Not applicable
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP .NET Project#OWASP .NET Project Leader|OWASP .NET Project Leader]]'''
+| align="CENTER" | Mark Roxberry 
+| align="CENTER" | Quality
+| align="CENTER" | [mailto:eoinkeary(at)gmail.com Eoin Keary]<br>(Confirmed)
+| align="CENTER" | [mailto:dennis.hurst(at)LifeCycleSecurity.com Dennis Hurst]<br>[http://www.linkedin.com/pub/0/636/2a3 Profile]<br>(Confirmed)
+| align="CENTER" | Dinis Cruz
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Positive Security Project|OWASP Positive Security Project]]'''
+| align="CENTER" | Eduardo Vianna de Camargo Neves 
+| align="CENTER" | Beta
+| align="CENTER" | [mailto:welias(at)conviso.com.br Wagner Elias]<br>[https://www.owasp.org/index.php/OWASP_Summer_of_Code_2008_Projects_Authors_Status_Target_and_Reviewers_Wagner_Elias#.27.27.27Wagner_Elias.2C_CBCP.2C_SANS_GIAC.2C_CobiTc.2C_ITILc.27.27.27 Curriculum]<br>(Confirmed)
+| align="CENTER" | [mailto:ken(at)krvw.com Kenneth Wyk]<br>[https://www.owasp.org/index.php/OWASP_Summer_of_Code_2008_Projects_Authors_Status_Target_and_Reviewers_Kenneth_R._Wyk Curriculum]<br>(Confirmed)
+| align="CENTER" | Not applicable
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Ruby on Rails Security Guide V2|OWASP Ruby on Rails Security Guide v2]]'''
+| align="CENTER" | Heiko Webers
+| align="CENTER" | Quality
+| align="CENTER" | [mailto:mendrel-a-gmail.com Anthony Shireman]<br>[[:OWASP Summer of Code 2008 Projects Authors Status Target and Reviewers Anthony Shireman Background|Bio]]<br>(Confirmed)
+| align="CENTER" | [mailto:jons0022-at-unf.edu Steve Jones]<br> [https://www.owasp.org/index.php/OWASP_Summer_of_Code_2008_Projects_Authors_Status_Target_and_Reviewers_Steve_Jones_Background Profile]<br>(Confirmed)
+| align="CENTER" |
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Securing WebGoat using ModSecurity Project|OWASP Securing WebGoat using ModSecurity]]'''
+| align="CENTER" | Stephen Evans 
+| align="CENTER" | Beta
+| align="CENTER" | [mailto:ivan.ristic(at)breach.com Ivan Ristic] ([https://www.owasp.org/index.php/OWASP_Summer_of_Code_2008_Projects_Authors_Status_Target_and_Reviewers_Ivan_Ristic Curriculum]) & Breach Research Labs<br>(Confirmed)
+| align="CENTER" | [mailto:christian.folini(at)netnea.com Christian Folini]<br>[http://www.netnea.com/cms/?q=christian_folini Curriculum]<br>(Confirmed)
+| align="CENTER" | Not applicable
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE"|'''[[:Category:OWASP Source Code Review OWASP Projects Project|OWASP Source Code Review OWASP Projects]]'''
+| align="CENTER" | James Walden
+| align="CENTER" | Quality
+| align="CENTER" | [mailto:afry(at)strongcrypto.biz Alexander Fry]<br>[http://www.linkedin.com/in/alexanderfry Profile]<br>(Confirmed)
+| align="CENTER" | [mailto:marco.m.morana(at)gmail.com Marco M. Morana]<br>[[OWASP Summer of Code 2008 Projects Authors Status Target and Reviewers Marco M Morana Curriculum|Curriculum]]<br>(Confirmed)
+| align="CENTER" | [[User:Sdeleersnyder|Sebastien Deleersnyder]]
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:OWASP Spanish|OWASP Spanish Project]]'''
+| align="CENTER" | Juan Carlos Calderon 
+| align="CENTER" | Beta
+| align="CENTER" | [mailto:fabio.e.cerullo(at)aib.ie Fabio Cerullo]<br>[https://www.owasp.org/index.php/User:Fabio.e.cerullo Curriculum]<br>(Confirmed)
+| align="CENTER" | [mailto:rodrigo(at)rmarcos.com Rodrigo Marcos]<br>[https://www.owasp.org/index.php/User:Rodrigo.marcos Curriculum]<br>(Confirmed)
+| align="CENTER" | Not applicable
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Testing Project|OWASP Testing Guide v3]]'''
+| align="CENTER" | Matteo Meucci 
+| align="CENTER" | Quality
+| align="CENTER" | [mailto:namn@bluemoon.com.vn Nam Nguyen]<br>[[OWASP Summer of Code 2008 Projects Authors Status Target and Reviewers Nguyen Curriculum|Curriculum]]<br>(Confirmed)
+| align="CENTER" | [mailto:KFuller@dmv.ca.gov Kevin Fuller]<br>[[OWASP Summer of Code 2008 Projects Authors Status Target and Reviewers Fuller Curriculum|Curriculum]]<br>(Confirmed) 
+| align="CENTER" | [[User:Sdeleersnyder|Sebastien Deleersnyder]]
+|}
+
+{| class="wikitable" style="text-align:center"
+! width="400" height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | Application
+! width="120" align="CENTER" | '''Author'''
+! width="60" align="CENTER" | [[:Category:OWASP Project Assessment|'''Status Target''']]
+! width="108" align="CENTER" | '''1st<br>Reviewer'''
+! width="108" align="CENTER" | '''2nd<br>Reviewer '''
+! width="108" align="CENTER" | '''3rd<br>Reviewer '''
+! width="108" align="CENTER" | '''4th<br>Reviewer '''
+! width="108" align="CENTER" | '''OWASP<br>Board<br>Reviewer
+'''
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP ASDR Project|OWASP Application Security Desk Reference (ASDR)]]'''
+| align="CENTER" | Leonardo Cavallari Militelli 
+| align="CENTER" | Quality
+| align="CENTER" | [mailto:williamtsmith(at)gmail.com William Smith]<br>[[OWASP SoC 2008 ASDR Reviewers#William Smith | Bio]]<br>(Confirmed)
+| align="CENTER" | [mailto:ken(at)krvw.com Kenneth Wyk]<br>[[OWASP SoC 2008 ASDR Reviewers#Kenneth R. van Wyk| Bio]]<br>(Confirmed)
+| align="CENTER" | [mailto:kcfredman(at)gmail.com Frederick Donovan]<br>[[OWASP SoC 2008 ASDR Reviewers#Frederick Donovan | Bio]]<br>  (Confirmed)
+| align="CENTER" | [mailto:Darren.Challey(at)ge.com Darren W. Challey]<br>[[OWASP SoC 2008 ASDR Reviewers#Darren W. Challey | Bio]]<br>  (Confirmed)
+| align="CENTER" | Jeff Williams<br>(Confirmed)
+|}
+
+== TOOLS PROJECTS ==
+{| class="wikitable" style="text-align:center"
+! width="600" height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | Application
+! width="220" align="CENTER" | '''Author'''
+! width="60" align="CENTER" | [[:Category:OWASP Project Assessment|'''Status Target''']]
+! width="108" align="CENTER" | '''1st<br>Reviewer'''
+! width="108" align="CENTER" | '''2nd<br>Reviewer '''
+! width="108" align="CENTER" | '''OWASP<br>Board<br>Reviewer
+'''
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:GTK plus GUI for w3af Project|GTK+ GUI for w3af project]]'''
+| align="CENTER" | Facundo Batista
+| align="CENTER" | Beta
+| align="CENTER" | [mailto:andres.riancho(at)gmail.com Andres Riancho]<br>[http://www.linkedin.com/in/ariancho Profile]<br>(Confirmed)
+| align="CENTER" | [mailto:ah(at)securenet(dot)de Achim Hoffmann]<br>[https://www.owasp.org/index.php/User:Achim Profile]<br>(Confirmed)
+| align="CENTER" | Not applicable
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Access Control Rules Tester Project|OWASP Access Control Rules Tester]]'''
+| align="CENTER" | Andrew Petukhov
+| align="CENTER" | Beta
+| align="CENTER" | [mailto:santon(at)owasp.org Steve Antoniewicz]<br>(Confirmed)
+| align="CENTER" | [mailto:mg_chen(at)yahoo.com Min Chen]<br>[http://www.linkedin.com/in/mgchen Profile]<br>(Confirmed)
+| align="CENTER" | Not applicable
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP AntiSamy Project .NET| OWASP AntiSamy .NET]]'''
+| align="CENTER" | Arshan Dabirsiaghi
+| align="CENTER" | Quality
+| align="CENTER" | [mailto:kisero(at)gmail.com Esteban Ribičić]<br>[http://docs.google.com/Doc?id=df9vbj96_120fzfj4kfk Curriculum]<br>(Confirmed)
+| align="CENTER" | [mailto:marcin(at)tssci-security.com Marcin Wielgoszewski]<br>[[:Image:Mwielgoszewski-CV.pdf|Profile]]<br>(Confirmed)
+| align="CENTER" | Jeff Williams
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Application Security Tool Benchmarking Environment and Site Generator Refresh Project|OWASP Application Security Tool Benchmarking Environment and Site Generator refresh]]'''
+| align="CENTER" | Dmitry Kozlov
+| align="CENTER" | Quality
+| align="CENTER" | [mailto:mark.roxberry(at)owasp.org Mark Roxberry]<br>[http://www.linkedin.com/in/roxberry Profile]<br>(Confirmed)
+| align="CENTER" | [mailto:medelibero(at)gmail.com Mike de Libero]<br>(Confirmed)
+| align="CENTER" | Dinis Cruz
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Code Crawler|OWASP Code Crawler ]]'''
+| align="CENTER" | Alessio Marziali 
+| align="CENTER" | Beta
+| align="CENTER" | [mailto:eoinkeary@gmail.com Eoin Keary]<br>(Confirmed)
+| align="CENTER" | [mailto:dinis.cruz(at)owasp.org Dinis Cruz]<br>(Confirmed)
+| align="CENTER" | Not applicable
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Interceptor Project|OWASP Interceptor Project - 2008 Update]]'''
+| align="CENTER" | Justin Derry
+| align="CENTER" | Quality
+| align="CENTER" | [mailto:ngreen16(at)yahoo.com Nathan Green]<br>[https://www.owasp.org/index.php/User:Ngreen16 Profile]<br>(Confirmed)
+| align="CENTER" | [mailto:kisero(at)gmail.com Esteban Ribičić]<br>[http://docs.google.com/Doc?id=df9vbj96_120fzfj4kfk Curriculum]<br>(Confirmed)
+| align="CENTER" | 
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP JSP Testing Tool Project|OWASP UI Component Verification Project (a.k.a. OWASP JSP Testing Tool)]]'''
+| align="CENTER" | Jason Li
+| align="CENTER" | Beta
+| align="CENTER" | [mailto:markkerzner(at)gmail.com Mark Kerzner]<br>[http://www.linkedin.com/in/markkerzner Profile]<br>(Confirmed)
+| align="CENTER" | [mailto:fabricio.fujikawa(at)infoglobo.com.br Fabrício Fujikawa]<br>(Confirmed)
+| align="CENTER" | Not applicable
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Live CD 2008 Project|OWASP Live CD 2008 Project]]'''
+| align="CENTER" | Matt Tesauro
+| align="CENTER" | Quality
+| align="CENTER" | [mailto:admin@wirefall.com Dustin Dykes]<br>[http://www.linkedin.com/pub/1/607/6b1 Curriculum]<br>(Confirmed)
+| align="CENTER" | [mailto:jkpoots(at)rogers.com Kent Poots] <br> [http://www.linkedin.com/pub/5/25B/114 Curriculum]<br>(Confirmed)
+| align="CENTER" | Sebastien Deleersnyder
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP OpenSign Server Project|OWASP Online code signing and integrity verification service for open source community (OpenSign Server)]]'''
+| align="CENTER" | Phil Potisk and Richard Conway
+| align="CENTER" | Beta
+| align="CENTER" | [mailto:pierre.parrend@insa-lyon.fr Pierre Parrend]<br>[http://www.rzo.free.fr Curriculum]<br>(Confirmed)
+| align="CENTER" | [mailto:gary.m.burns@gmail.com Gary Burns]<br>[http://www.linkedin.com/in/garymburns Curriculum]<br>(TBC)
+| align="CENTER" | Not applicable
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP OpenPGP Extensions for HTTP - Enigform and mod openpgp|OWASP OpenPGP Extensions for HTTP - Enigform and mod_openpgp]]'''
+| align="CENTER" | Arturo 'Buanzo' Busleiman
+| align="CENTER" | Beta
+| align="CENTER" | [mailto:mark.roxberry(at)owasp.org Mark Roxberry]<br>[http://www.linkedin.com/in/roxberry Profile]<br>(Confirmed)
+| align="CENTER" | [mailto:dinis.cruz(at)owasp.org Dinis Cruz]<br>(Confirmed)
+| align="CENTER" | Not applicable
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Orizon Project|OWASP Orizon Project]]'''
+| align="CENTER" | Paolo Perego
+| align="CENTER" | Quality
+| align="CENTER" | [mailto:eoinkeary@gmail.com Eoin Keary]<br>(Confirmed)
+| align="CENTER" | [mailto:seba@deleersnyder.eu Sebastien Deleersnyder]<br>(Confirmed)
+| align="CENTER" | [mailto:dinis.cruz@owasp.org Dinis Cruz]<br>(Confirmed)
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Python Static Analysis Project|OWASP Python Static Analysis]]'''
+| align="CENTER" | Georgy Klimov
+| align="CENTER" | Beta
+| align="CENTER" | [mailto:namn@bluemoon.com.vn Nam Nguyen]<br>[[OWASP Summer of Code 2008 Projects Authors Status Target and Reviewers Nguyen Curriculum|Curriculum]]<br>(Confirmed)
+| align="CENTER" | [mailto:diepvien00thayh@gmail.com P.Q.Huy]<br>[[OWASP Summer of Code 2008 Projects Authors Status Target and Reviewers Huy Curriculum|Curriculum]]<br>(Confirmed) 
+| align="CENTER" | Not applicable
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Skavenger Project|OWASP Skavenger]]'''
+| align="CENTER" | [mailto:mro(at)securenet.de Matthias Rohr]
+| align="CENTER" | Beta
+| align="CENTER" | [mailto:rogan(at)dawes.za.net Rogan Dawes]<br>(Confirmed)
+| align="CENTER" | [mailto:ah(at)securenet(dot)de Achim Hoffmann]<br>[https://www.owasp.org/index.php/User:Achim Profile]<br>(Confirmed)
+| align="CENTER" | Not applicable
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Sqlibench Project|OWASP SQL Injector Benchmarking Project (SQLiBENCH)]]'''
+| align="CENTER" | [mailto:urgunb@hotmail.com Bedirhan Urgun]<br>[mailto:mesut@h-labs.org Mesut Timur]
+| align="CENTER" | Beta
+| align="CENTER" | [mailto:ferruh@mavituna.com Ferruh Mavituna]<br/> [[Project Information:Sqlibench:Ferruh|background info]]<br/>(Confirmed) 
+| align="CENTER" | [mailto:kfuller@dmv.ca.gov Kevin Fuller] <br/>[[Project Information:Sqlibench:Kevin|background info]]<br/>(Confirmed) 
+| align="CENTER" | Not applicable
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Teachable Static Analysis Workbench Project|OWASP Teachable Static Analysis Workbench]]'''
+| align="CENTER" | [mailto:ddk(at)cs.msu.su Dmitry Kozlov]<br>Igor Konnov
+| align="CENTER" | Beta
+| align="CENTER" | [mailto:afry(at)strongcrypto.biz Alexander Fry]<br>[http://www.linkedin.com/in/alexanderfry Profile]<br>(Confirmed)
+| align="CENTER" | [mailto:mwcoates(at)gmail.com Michael Coates]<br>(Confirmed)
+| align="CENTER" | Not applicable
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP WeBekci Project|OWASP WeBekci Project]]'''
+| align="CENTER" | [mailto:bunyamin@owasp.org Bunyamin Demir]
+| align="CENTER" | Beta
+| align="CENTER" | [mailto:afry(at)strongcrypto.biz Alexander Fry]<br>[http://www.linkedin.com/in/alexanderfry Profile]<br>(Confirmed)
+| align="CENTER" | [mailto:stefano.dipaola(at)wisec.it Stefano Di Paola]<br/>[[User:Wisec|Profile]]<br>(Confirmed)
+| align="CENTER" | Not applicable
+|}
+
+== DESIGN/CORPORATE PROJECTS ==
+{| class="wikitable" style="text-align:center"
+! width="600" height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | Application
+! width="220" align="CENTER" | '''Author'''
+! width="60" align="CENTER" | [[:Category:OWASP Project Assessment|'''Status Target''']]
+! width="108" align="CENTER" | '''1st<br>Reviewer'''
+! width="108" align="CENTER" | '''2nd<br>Reviewer '''
+! width="108" align="CENTER" | '''OWASP<br>Board<br>Reviewer
+'''
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Book Cover & Sleeve Design|OWASP Book Cover & Sleeve Design]]'''
+| align="CENTER" | LXstudios,<br>[mailto:deb@lxstudios.com Deb Brewer] 
+| align="CENTER" | Quality
+| align="CENTER" | [mailto:yiannis@owasp.org Yiannis Pavlosoglou]<br>[[OWASP NYC AppSec 2008 Conference-SPEAKER-Yiannis Pavlosoglou|Short Bio]]<br>(Confirmed)
+| align="CENTER" | [mailto:eoinkeary@gmail.com Eoin Keary]<br>(Confirmed)
+| align="CENTER" | Dinis Cruz
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Individual and Corporate Member Packs plus Conference Attendee Packs Brief|OWASP Individual & Corporate Member Packs, Conference Attendee Packs Brief]]'''
+| align="CENTER" | LXstudios,<br>[mailto:deb@lxstudios.com Deb Brewer] 
+| align="CENTER" | Quality
+| align="CENTER" | [mailto:eoinkeary@gmail.com Eoin Keary]<br>(Confirmed)
+| align="CENTER" | [mailto:yiannis@owasp.org Yiannis Pavlosoglou]<br>[[OWASP NYC AppSec 2008 Conference-SPEAKER-Yiannis Pavlosoglou|Short Bio]]<br>(Confirmed)
+| align="CENTER" | Dinis Cruz
+|-

@@ -1,0 +1,202 @@
+This page contains the Change log for the ORG's version v0.85 (see [[ORG (Owasp Report Generator) - To Do]] for the current development focus)
+
+
+== Change Log v0.86 ==
+{|class="wikitable" 
+|-
+! ID !! Date !! By !! Type ||Issue !! Comment
+|-
+!
+| 20-Nov || DC || Features || Multiple || 
+* in ascxProjects.cs
+** Finished implementation of xsdVerification (now the project file is checked when it is open and the user can click on the label (with the 'xsd verification error') to see details about where the current file is breaking the schema)
+* in xml.cs
+** made some changes to make the XSD verification generic and flexible
+** added ToolTip Funcionality (for now only on the 'XSD verification label')
+
+*in ascxTargets.cs
+** changed the SPS from obpPaths.SpsTargetPath to obpPaths.SpsTargetTasksPath (i.e use the SPS with the Tasks details)
+** Added XSD verification funcionality
+** Added Spliter betweem Authentic and File explorer view to accommodate the targets that have tasks
+
+* in frmCurrentAndArchivedProjects
+** Removed the 'Target Tasks' since it was redundant
+** BUG fix: added method setEnableFlagOnAllAscxControls which is used when ORG first loads to disable all tabs (exception would occur if the user clicked on a save button when a project wasn't loaded)
+
+* in MDI_PenTest_Reporter.cs
+** made the plug-ins link to a main button in the top bar (before it was in the 'Beta and Experimental stuff' menu)
+
+* in ascxFindings.cs
+** Added XSD verification funcionality
+** Added Row and Col information (Bottom right) when in Notepad Mode
+
+* in ascxPlugins.cs	
+** Added 'Save Plugin Data' button and 'unsaved' changed funcionality (to make it in par with all other views)
+** Added XSD verification funcionality
+** Added Notepad Edit for Plug-In data (needed when fixing XSD problems in the Template files)
+** Added Row and Col information (Bottom right) when in Notepad Mode
+
+* in DefaultProjects.sps removed the Report_author and Report_reviewer (so they don't show in the project's view)
+|-
+!
+| 19-Nov || DC || Features || Multiple || 
+* Bug: Fixed Search engine for XSTL (now the search works properly and the page is automatically scrolled to the selected text)
+* Feature: XSD verification for Project Xml files. 
+** Implemented new utils.xml.xsdVerification which verifies a given XML against the main project's XSD with the following added funcionlity: setLabelBasedOnResult and showMessageBoxWithVerificationResult
+|-
+!
+| 18-Nov || DC || Features || Multiple ||  
+*ascxFindings.cs : 
+** Solved bug that was causing the 'Changes made, do you want to save it' not to appear (Also added this check when changing the 'Edit Template to use')
+** Regression testing for new use of GUID directories to store temp files
+** Added method  loadDummyXmlFileInAuthenticControl in order to resolve a current race condition with open handles in non-visible authentic controls
+** Bug: Fixed race condition that happened if the user clicked to quickly on the listbox with findings, listbox with Targets or listbox with Projects (i.e. lbFindingsInCurrentTarget, lbTargetsInCurrentProject and lbCurrentProjects). Now these listboxes are disabled until everything is loaded
+** Bug: Rename and delete Funcionality was not working in 'Windows Explorer View'
+** BUG: Fixed error that ocurred when deleting previously opened Findings 
+** BUG: Fixed errors that occured when multiple findings with the same name where created (in different findings)
+** BUG: Fixed exception that occured when the finding that was open in the finding view was modified after the Report PDF was created
+** Feature: added the "Text Editor (i.e. Notepad)" View to the Findings editor (this makes it much easier to manually edit the xml files)
+** Fixed bug of autoassign Issue-ID (fixed with the new CustomORG funcionality)
+** Regression  BUG: Fixed authentic issue that was preventing the images from showing in the authentic view
+*Added special file called CustomORG.xml which will contain specfic Customization Data (for example the custom value of findingIDAttributeName (this file is expected to be on the root of the ORG_CONFIG_FILES directory))
+*in Project.cs
+** added a Setter for FindingIDAttributeName
+*in VulnReportHelpers
+** added method loadCustomORGdata() and implemented code to load CustomORG value FindingIDAttributeName (from xml file CustomORG.xml)
+*in Main.cs
+** added call to method VulnReportHelpers.loadCustomORGdata();
+*Using mdbg (MS Managed Debugger) found a NASTY bug that was Crashing Visual Studio 2005  (!!!) when I opened the frmCurrentAndArchivedProjects form. The bug was on the constructor of ascxTargetTasks() which was populating the spsTargetTasksPath variable (need to do more research in the real causes of this, and why VS 2005 was not able to recover this error).
+** in the fix of this bug, made changes to: OrgBasePaths.cs (added get for SpsTargetTasksPath) and ascxTargetTasks.cs (made this.strSpsTargetTasksPath = obpPaths.SpsTargetTasksPath;
+*in ascxSplashPage 
+** Usability: Profile's Name are Sorted in Splash screen
+*in MDI_PenTest_Reporter.cs
+** Made the top buttons smaller look better
+** Feature: the 'Window' menu now shows in its items a list of the current opened windows (before this list was in the sub-menu 'lists' which was not very practical)
+*authentic.cs 
+** refactured a bit the code that handles the keyboard hooks
+** level 3 now supports paste of text with newlines in it
+** Fixed a NASTY bug introduced by the use of Split Containers in the Findings view which basicaly made the Keyboard Hooks not work!. I solved this by implementing a recursive search for the selected control (note: still now working 100% since I still need to fix the schema, and it doesn't seem to work when there is nothing selected (i.e. the paste of images only work if there is something selected)	
+|-
+!
+| 15-Nov || DC || Features || Multiple ||  
+* in asxPlugIns.cs: 
+** added new referencePlugInAssemblies capability so that we can now indicate with the dlls to load come from (the path indicated will be expected to a virtual reference to the local plug-in directory)
+*  in ascxReportPdf.cs: 
+** Made some small design changed. 
+** Added btCreateAndShowConsolidatedXmlFile button that calculates and shows in the XML file that is used by the xslt engine (basically a call to createReportXmlFile(); and axWebBrowser_WithXslResult.Navigate) 
+** Changed the way the images and compiled in the creation of the xml file, so that duplicate images don't show as alert (before it was blocking while trying to move the folder). Note: Need to add an image checksum check to detect the very fringe of same finding with same temp image name.
+* In Findings.aspx.cs 
+** changed the what temp Finding files are created. Now all temp Findings are placed inside a directory named after a GUID
+|-
+!
+| 06-Nov || DC || Features || Multiple || 
+* authentic.cs : Commented MessageBox from catch exception since it was being thrown during normal ORG usage,
+* ascxFindings.cs: cleaned up a bit the "Add Findings using template" feature (it is now on a separate groupbox and you need to click on 'Add'). Also changed the code so that it detects duplicate entries and auto selects the newly added Finding.
+* ascxFindings.cs: lbFindingsInCurrentTarget is now sorted and updated the code of 'Add new finding' so that it finds the newly added item. 
+* ascxFindings.cs: Bug fix, rename funcionality now auto select the renamed Finding
+* ascxExecutiveSummary: new feature: 'Report Contents' templates, now you can just select a template Report Finding
+|-
+!
+| 05-Nov || DC || Features || Multiple || 
+* in ascxTargets.cs - bug fix: in lbTargetsInCurrentProject_SelectedIndexChanged detect if there is a  project selected
+* in ascxTargets.cs - added some funcionionatity to the nmap imported: filter by status[@state='up'],   provide default target type name, detailed reporting of what was imported, ignored or not added due to  duplicated target
+* in ascxTargets.cs - added a check box (cbShowContentOfProjectFolder) controls if the  axWebBrowserContentsOfProjectFolder is show and updated
+* in ascxFindings.cs - added 4 spliter between Targets and Findings (i.e. everywhere), 
+|-
+!
+| 02-Nov || DC || Features || Multiple || 
+* in scriptHost.cs: Make compilation errors show in a Messagebox instead of throwing an ApplicationException
+* in ascxFindings.cs: fix bug 'previous finding is shown when changing to a target that has no findings'
+|-
+!
+| 24-Nov || MD || Bug Fixes || Multiple Altova fixes || 
+* When putting enter you lose focus on the altova component so you can't do double enters.
+* When pasting content with newlines in it the xml element would be shown as an escaped entity "<newline />" instead of the actual xml entity which would give the desired result of a newline.  
+|-
+!
+| 22-Nov || DC || Features || Multiple || 
+* Findings tab: lbTargetsInCurrentProject is now sorted
+* Findings tab: New feature to filter lbTargetsInCurrentProject (combo box of Available Targets)
+* Findings tab: Added new Template_Findings funcionality (requires the existence of a Template_Findings folder in the plugins area)
+* Target tab: Add new Web Browser view into the 'projects' folder
+* Target Tab: lbTargetsInCurrentProject is now sorted
+* Target Tab: Added abilty to search in target contents for DNS or IPs (good when making sure an IP is not already in the system)
+|-
+!
+| 19-Nov || MD || Update || Fixed image issue || Fixed the problem with the images not displaying inside of the new verion of the Altova component.
+|-
+!
+| 15-Nov || MD || Update || Created Installer || Created rough draft of installer using WiX 
+|-
+!
+| 06-Nov || MD || Update || Removed the global variable class || Removed the global variable class and moved many of the paths to the OrgPath class.  I did this for ease of maintenance and a little bit of code cleaniness. 
+|-
+!
+| 04-Nov || MD || Update || Added in the initial zips that are used for config files, etc... || Had to add these because of a change made by Dinis.
+|}
+
+== Change Log v0.85 ==
+{|class="wikitable" 
+|-
+! ID !! Date !! By !! Type ||Issue !! Comment 
+|-
+!
+| 02-Nov || DC || Feature || View Findings in Explorer || When editing Findings there is now a new 'Viewing Modw' which gives the user a 'Window Explorer' view of the finding uncompressed files
+|-
+!
+| 02-Nov || DC || Update || Changed the current version to v0.85 || Since that is the version we are working on at the moment
+|-
+!
+| 02-Nov || DC || Fix || Changed the layout of the Findings page || In the previous layout, the 'target' window was occuping too much space
+|-
+!
+| 02-Nov || DC || Feature || Left navigation on main projects window now resizes || before it was hard to see the name of long projects
+|-
+!
+| 27-Oct || MD || Fix || Fixed a few bugs related to getting the next id and started a project class || The finding ID's functionality was not working. I am moving project specific information to its own class because it is spread over at least three different objects which is hard to maintain and keep track of (at least for my small brain).
+|-
+! 
+| 27-Oct || DC || Patch ||Hide CVS folders || changed loadDirectoriesIntoListBox loadDirectoriesIntoComboBox so that any folder named CVS will not appear in those lists (so now all files that start with an _ or are called CVS don't appear)
+|-
+! 
+| 27-Oct || DC || Breaking Change || UserProfiles folder || Since a) the UserProfiles point to the location of the data files, b) the ORG_CONFIG_FILES might now come from multiple places, c) the UserProfiles are usually specifically to each user (namely for working offline), I moved the UserProfiles to the Application Execution folder
+|-
+! 
+| 27-Oct || DC || Code Cleanup || Allow ORG_CONFIG_FILES to be loaded from a specified location || This is needed for the cases where the developers are using different ORG_CONFIG_FILES directories (which is my case). To make this work I removed all references to VulnReport_Files and made sure that all references to config files are made via GlobalVariables.****. I also added a quick check on load for the DevPath.org file. If it exists ORG will load it and use it as a virtual reference to the location of the config files (for example mine points to ..\..\..\..\ORG\ORG_CONFIG_FILES), if it doesn't exist, then ORG will look for those files in the current application execution directory
+|-
+! 
+| 26-Oct || MD || Code Cleanup || Removed a few more global variable references || Removed some more global variable references, hopefully the whole global variable class will be gone soon
+|-
+!
+| 26-Oct || DC || Maintenence || Removed all references to Office assemblies || namely the Powerpoint assembly,  since that funcionality is now in the Plugins
+|-
+! 
+| 25-Oct || MD || Bug || Fixed the issue related to the Altova component.  || My solution was to load the xml files into xml document objects and then feed them into the altova component.  This got around the handle being left opened issue without any functionality changes for the rest of the code.  
+|-
+! 
+| 25-Oct || DC || Bug || Race condition on new altova component locks the directory so that it cannot be used twice || The issue seems to be related to a directory handle that exists on the ORG process (created by the Altova component) that prevents the directory from being completely deleted and means that when the same finding is opened again an error is thrown. The current solution is based on saving the temporary files in a folder named after a unique GUID. This solves the problem in the short term. but we still need to figure out how to close the handle properly (since at the moment not all directories are properly deleted)
+|-
+! 
+| 25-Oct || DC || Bug ||  When a project is loaded in the findings tab the list of available findings was not cleared || this showed it self in new projects which had no targets (and if the user had the findings tab open)
+|-
+!
+| 22-Oct || MD || Upgrade || New Altova Authentic component || Upgrade the Alotva Authentic component 
+|-
+!
+| 23-Sep || MD || Feature || Nmap Import || Added in the ability to import in a xml output file from nmap scanner. 
+|- 
+! 
+| 13-Sep || MD || Feature || Added in check for program pre-reqs || Added in the VulnReportHelpers.confirmExistenceOfRequiredFilesAndFolders so we can make sure the running environment is stable before executing the program. 
+|-
+!
+| 12-Sep || MD || Refactoring || New user profile class || Worked on the UserProfile class. Reason for creating a seperate class was for code cleanliness and everything was getting confusing for loading, projects, etc.. from the yucky global variables.
+|-
+!
+| 09-Sep || MD || Bug || Access Violation when doing alt + f4 on splash screen || This was caused by the program not checking to see if the user wanted to continue or exit the program.  
+|-
+!
+| 07-Sep || MD || Upgrade || Update to .Net 2.0 || Upgraded to .NET 2.0 and got all of the compiler errors and most of the warnings cleared out.
+|}
+
+-----
+back to [[ORG (Owasp Report Generator)]]

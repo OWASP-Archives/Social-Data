@@ -1,0 +1,107 @@
+This page contains OWASP News Stories from 2006. For the latest news, see [[OWASP News]].
+
+==Stories==
+
+; '''Dec 10 - [http://www.sans.org/top20/?ref=1697#c1 SANS and OWASP Partner to Add #1 Web Application Security to SANS Top 20]'''
+: The SANS document is widely used, and we're extremely pleased that we could work with them to recognize the risks associated with web applications. From the document... "Every week hundreds of vulnerabilities are being reported in these web applications, and are being actively exploited. The number of attempted attacks every day for some of the large web hosting farms range from hundreds of thousands to even millions. All web frameworks (PHP, .NET, J2EE, Ruby on Rails, ColdFusion, Perl, etc) and all types of web applications are at risk from web application security defects, ranging from insufficient validation through to application logic errors."
+
+{| align="center" 
+| [http://www.sans.org/top20/?ref=1697#c1 https://www.owasp.org/images/8/80/SANS_Logo.jpg]
+| [http://www.owasp.org https://www.owasp.org/images/f/f0/OWASP_Logo.gif]
+|}
+
+; '''Nov 28 - [[OWASP JBroFuzz|JBroFuzz 0.3 Released]]'''
+: This version adds a more stable core, length updating for fuzzed POST requests and allows you to specify your own fuzz vectors in a separate file.
+
+; '''Nov 26 - [[OWASP Report Generator|OWASP Report Generator 0.88 Released]]'''
+: A tool for security consultants that supports the documentation and reporting of security vulnerabilities discovered during security.
+
+; '''Nov 26 - [[OWASP Site Generator|OWASP Site Generator v.70 Released]]'''
+: A tool that allows the creating of dynamic websites based on XML files and predefined vulnerabilities (some simple, some complex) for testing application security tools.
+
+; '''Nov 14 - [[:Category:OWASP_Project|Three great new OWASP projects]]
+: 1) [[:Category:OWASP Encoding Project|OWASP Encoding Project]] A nice encoding library that supports Java, .NET, PHP, Python, Perl, JavaScript, and Ajax.  2) [[:Category:OWASP WSFuzzer Project|OWASP WSFuzzer Project]] A fuzzing tool for Web Services to support penetration testing efforts.  3) [[:Category:OWASP Insecure Web App Project|OWASP Insecure Web App Project]] A realistic but insecure Java EE web application for use in learning and testing tools.
+
+; '''Nov 12 - [http://www.owasp.org/google/results.html New OWASP Application Security Search Engine]
+: We're beta-testing a new Google-powered search engine for application security. The engine indexes the OWASP site and all the other sites dedicated to application security on the Internet. We've set up some simple refinements so that you can ignore commercial, product, or non-OWASP sites if you like. Please give us some [mailto:owasp@owasp.org?subject=Search_engine_feedback feedback] if you have ideas for improvement.
+
+; '''Nov 7 - [[Special:Statistics|OWASP Hits Two-Million Page Views]]'''
+: Thank you all for your support!  We serve approximately 1/2 million page views every month.
+
+; '''Oct 25 - [[OWASP_AppSec_Seattle_2006/Agenda|OWASP AppSec Conference Presentations]]'''
+: All the presentations are available on the [[OWASP_AppSec_Seattle_2006/Agenda|conference agenda page]]. Stay tuned for all the audio from the conference.
+
+; '''Oct 19 - [[:Category:OWASP WebGoat Project|WebGoat 5.0 is coming!]]'''
+: Thanks to the OWASP Autumn of Code project award and the many contributions from individuals and companies the 5.0 release will have many new lessons and improvements.  Now is the time to provide your feedback on existing WebGoat functionality and new lesson ideas.  If you've made corrections/improvements to the existing installation and would like to have those changes integrated into the baseline, send the changes to me and I will merge your changes in. The 5.0 release will occur early 2007 so time is running out...  
+
+; '''Oct 15 - [[:Category:OWASP Video|OWASP Videos Released]]'''
+: Hours and hours of application security fun!
+
+; '''Sep 29 - [[OWASP Autumn Of Code 2006 : Selected Projects Press Release | OWASP Autumn Of Code 2006 Projects Selected]]''' 
+: OWASP has completed the selection process for the OWASP Autumn of Code 2006 sponsorship program and 9 projects have been selected in total from 26 entries.
+
+; '''Sep 26 - [http://www.infosecurityevent.com Infosecurity NY 2006 20% OWASP Discount]'''
+: OWASP Members are entitled to a discount off full conference registration – a $200 savings! Conference is October 24-25 at the Jacob Javits Convention Center, NYC. [http://www.infosecurityevent.com/app/homepage.cfm?appname=100004&moduleid=0&campaignid=9294660 Register today] and provide Priority Code CD25 to receive your discount.
+
+; '''Sep 7 - [https://www.pcisecuritystandards.org/pdfs/pci_dss_v1-1.pdf New PCI requires code review or WAF]'''
+: Under the new requirements, applications processing cardholder information MUST get either a [[:Category:OWASP Code Review Project|code review]] or a [[web app firewall]]. The language isn’t exactly clear about what happens in 2008. In addition, the OWASP [[Top Ten]] must still be addressed.
+
+; '''Aug 31 - [[OWASP Autumn Of Code 2006 : Press Release | OWASP Autumn Of Code 2006]]''' 
+: Today we are lauching a new project called "OWASP Autumn of Code 2006" which will sponsor individuals to work on existing OWASP Projects.
+
+; '''Aug 31 - [http://video.google.com/videoplay?docid=941077664562737284 Dinis Cruz video interview]'''
+: Dinis talks about .NET security, the future of OWASP, and the brand new [[Autumn of Code]] project.
+
+; '''Aug 31 - [http://www.owasp.org/index.php/Italy#Aug.2C_2006_-_Article_on_Banca_Finanza_magazine Article about OWASP on Banca Finanza magazine]''' 
+: Banca Finanza mag has interviewed Raoul Chiesa talking about the new risks for the on-line banking security. Raoul speaks about OWASP and web application security.
+
+; '''Aug 14 - [http://www.iese.fraunhofer.de/download/Security-Checker-Tools-for-Web-Applications.pdf Detailed analysis of application security tools]'''
+: Holger Peine of the Fraunhofer Institute compares a number of free tools (WebScarab, Paros, Burp Suite, Spike Proxy), and commercial tools (AppScan, WebInspect, Acunetix). The methodology is quite detailed and uses OWASP's WebGoat and a 'normal' web application.
+
+; '''Aug 14 - [http://www.owasp.org/index.php/Image:Threat_modelling_of_pharming.doc When Phishing Evolves to Pharming]
+: "Phishing is evolving into a new type of attack called pharming. Pharming redirects users to fraudulent websites seamlessly without any suspicious activity such as spam mail that asks a user to login at a website. This paper analyses possible vectors of pharming and creates a threat model for it with attack tree." OWASP would like to thank Cheong Kai Wee for the submission of this paper! [[:Category:OWASP_Papers|Click here]] for details on submitting your own paper to the [[:Category:OWASP_Papers|OWASP Papers Program]].
+
+; '''Jul 31 - [[:Category:OWASP CAL9000 Project|CAL9000 v1.1 released]]'''
+: The in-browser JavaScript based web app testing framework has added enhanced encode/decode functions and several bugfixes.
+
+; '''Jul 31 - [[:Category:OWASP Honeycomb Project|Fortify donates vulnerability research to OWASP]]'''
+: Announcing a new extensive classification of software security vulnerabilities created and donated by Fortify Software Inc. The full set of vulnerabilities and the research that accompanies it is available in the [[:Category:OWASP Honeycomb Project|OWASP Honeycomb Project]].
+
+; '''Jul 11 - [[OWASP AJAX Security Project|Two part interview on Ajax with OWASP's Andrew van der Stock]]'''
+: In this two part interview, Andrew discusses the key security threats facing Ajax applications and practical advice for securing them. "I expect more Ajax vulnerabilities and exploits to surface, and I expect researchers to come up with additional "new" flaws that need to be protected against."
+
+;'''Jun 29 - [[OWASP_.NET_Project|OWASP .NET Project in now hosted at www.owasp.org]]
+:Coming full circle, the OWASP .NET Project (lead by Dinis Cruz) is now hosted here at the www.owasp.org website. The objective is to consolidate all Owasp projects in one location, and to benefit from cross projects linkage. All information that was hosted at the previous www.owasp.net wiki has now been ported and in the comming weeks, more will be added.
+
+;'''Jun 26 - [[PHP Top 5|OWASP PHP Top 5 Released]]'''
+:OWASP is pleased to announce the immediate availability of OWASP [[PHP Top 5]]. The OWASP Top 5 is an education piece which provides up to date advice to PHP developers, hosters, and other PHP users. The Top 5 is produced by the [[:Category:OWASP_PHP_Project|OWASP PHP Project]].
+
+; '''Jun 23 - [[OWASP WebScarab Project|New version of WebScarab released]]'''
+: The new version has a new logo, several new features, and some bugfixes. There are better capabilities for authentication and certificates, dropping conversations, and searching results. There are plugin enhancements to the spider, session id analyzer, and fuzzer. There's also a new extension for forced browsing to obvious extensions.
+
+'''Jun 21 - [http://sectools.org/tools2.html OWASP WebScarab Ranked 35th on Insecure.org's Top 100 Security Tools]'''
+:Nmap's Fyodor asked users from the nmap-hackers mailing list to share their favorite tools, and 3,243 people responded. This allowed him to expand the list to 100 tools, and even subdivide them into categories. Anyone in the security field would be well advised to go over the list and investigate tools they are unfamiliar with. Respondents were allowed to list open source or commercial tools on any platform.
+
+; '''Jun 20 - [http://www.amazon.com/gp/product/0471789666/sr=8-1/qid=1150819640/002-1402412-9970431 Professional pen testers rely on OWASP]'''
+: [[Image:pentestbook.jpg|100px|right]] This new book is organized around the OWASP Top Ten, and goes into detail about WebScarab and WebGoat. "OWASP's WebScarab is rock solid and a must-have for any serious Web app pen tester"
+
+; '''Jun 8 - [[:Category:OWASP CAL9000 Project|New OWASP CAL9000 Project Unveiled]]''' 
+: Chris Loomis has created an interesting JavaScript driven web application testing tool that allows manual requests, RSnake powered XSS verification, and many other utilities.
+
+; '''Jun 6 - [[OWASP Java Project]]''' 
+: Stephen de Vries and Rohyt Belani have taken on the OWASP Java project and will be building the project roadmap shortly.
+
+; '''Jun 3 - [[How to test session identifier strength with WebScarab]]''' 
+: New article shows you how to use one of the advanced features of WebScarab!
+
+; '''Jun 1 - [http://www.uribe100.com OWASP selected in top 100 security websites]'''
+: OWASP has been selected as one of the top 100 security websites. Thanks to everyone who's helped us along the way!
+
+; '''May 26 - [[:Category:OWASP WebGoat Project|OWASP WebGoat 4.0 released]]'''
+: Lots of new features, including multi-stage hands-on '''coding''' labs for [[Authorization|access control]], [[SQL injection]], and [[Cross Site Scripting|cross site scripting]].
+
+; '''May 25 - [[:Category:OWASP CLASP Project|OWASP CLASP project launched]]'''
+: Thanks to Secure Software for donating the CLASP materials to bootstrap our [[:Category:Activity|secure lifecycle]] efforts.
+
+; '''May 23 - [[About_The_Open_Web_Application_Security_Project|OWASP 2.0 released]]'''
+: OWASP is moving to the MediaWiki platform to encourage greater collaboration. We're in the process of moving over all the old content. You can still view the [http://old.owasp.org previous website].

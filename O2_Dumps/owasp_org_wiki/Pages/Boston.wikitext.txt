@@ -1,0 +1,491 @@
+{{Chapter Template|chaptername=Boston|extra=The chapter leader is [mailto:jim.weiler@owasp.org Jim Weiler]|mailinglistsite=http://lists.owasp.org/mailman/listinfo/owasp-Boston|emailarchives=http://lists.owasp.org/pipermail/owasp-Boston}} 
+ 
+==== Local News  ====
+ 
+<paypal>Boston</paypal> 
+
+To find out more about the Boston chapter, just join the [http://lists.owasp.org/mailman/listinfo/owasp-boston OWASP Boston mailing list]. 
+
+== Local Chapter Information --- Our Eighth Year ==
+
+The chapter shipping/mailing address is: 
+
+OWASP Boston 35 Wachusett Dr Lexington, MA. 02421 
+
+== Links ==
+
+[http://www.owasp.org/index.php/Reviews_of_security_podcasts Reviews of security podcasts] 
+
+[[2011 BASC Homepage|Boston Application Security Conference 2011]] 
+
+[[2010 BASC Homepage|Boston Application Security Conference 2010]] 
+
+== Chapter Meetings  ==
+
+We usually meet the FIRST WEDNESDAY of EVERY MONTH (Unless a speaker can only present another night), 6:30 to 9 pm. 
+
+Everyone is welcome to come to any meeting, there is no signup or joining criteria, just come if it sounds interesting. Feel free to sign up to the [http://lists.owasp.org/mailman/listinfo/owasp-boston OWASP Boston mailing list]. This list is very low volume (2 - 3 emails/month); it is used to remind people about each monthly meeting, inform about local application security events and special chapter offers. 
+
+Information for meeting updates about this and other Boston area user groups can also be found at [http://bug.bostonusergroups.org/Lists/Groups%20Calendar/calendar.aspx BostonUserGroups]. 
+
+==== Locations  ====
+
+The Boston OWASP Chapter meets the FIRST WEDNESDAY of every month ('''Unless a speaker can only present another night'''). We usually meet at 6:30 pm in one of these two locations:
+
+''Microsoft Waltham'' -- the Microsoft offices at the Waltham Weston Corporate Center, 201 Jones Rd., Sixth Floor Waltham, MA. 
+
+From Rt. 128 North take exit 26 toward Waltham, East up the hill on Rt. 20. From Rt 128 South take exit 26 but go around the rotary to get to 20 East to Waltham. Follow signs for Rt. 117 (left at the second light). When you get to 117 turn left (West). You will cross back over Rt. 128. Jones Rd. (look for the Waltham Weston Corporate Center sign) is the second left, at a blinking yellow light, on Rt. 117 going west about 0.1 miles from Rt. 128 (I95). The office building is at the bottom of Jones Rd. Best parking is to turn right just before the building and park in the back. Knock on the door to get the security guard to open it. The room is MPR C. 
+
+''Microsoft NERD Cambridge'' -- the Microsoft New England Research and Development Center
+
+Directions and information: http://microsoftcambridge.com/About/Directions/tabid/89/Default.aspx
+
+==== Upcoming Meetings ====
+
+ '''April 11, 2012'''
+
+Location - Microsoft Waltham (201 Jones Rd., Sixth Floor Waltham, MA) 
+
+Speaker - '''David Eoff, Senior Product Marketing Manager, HP Enterprise Security'''
+
+David is a Senior Product Marketing Manager, within the Enterprise Security Products division of HP focused on Fortify application security. His 18+ years of background in software and hardware enterprise marketing provides a solid foundation for his marketing of the HP security solutions. 
+ 
+Prior to joining Fortify in 2009 and being acquired by HP, David ran Firewall and IPS marketing for the Security division of Nokia Corporation. In addition, he has held multiple positions in product marketing, product management, channel marketing and sales while working for Oracle, EMC, Legato, BMC Software and several start-ups.
+
+Topic - '''Gray, the New Black:  Gray-Box Vulnerability Testing'''
+
+Over the years, two key techniques have emerged as the most effective for finding security vulnerabilities in software:  Dynamic Application Security Testing (DAST) and Static Application Security Testing (SAST).  While DAST and SAST each possess unique strengths, the “Holy Grail” of security testing is thought to be “hybrid” – a technique that combines and correlates the results from both testing methods, maximizing the advantages of each. Until recently, however, a critical element has been missing from first generation hybrid solutions:  information about the inner workings and behavior of applications undergoing DAST and SAST analysis.
+ 
+This presentation will introduce you to the next generation of hybrid security analysis – what it is, how it works, and the benefits it offers.  It will also address (and dispel) the claims against hybrid, and leave you with a clear understanding of how the new generation of hybrid will enable organizations to resolve their most critical software security issues faster and more cost-effectively than any other available analysis technology.
+
+==== Past Meetings ====
+
+ '''March 8, 2012, with the Boston Security Meetup group'''
+
+Location - [http://maps.google.com/maps?q=Jobspring+Partners,+Boylston+Street,+Boston,+MA&hl=en&sll=42.362243,-71.081628&sspn=0.019549,0.037594&oq=jobspring&t=v&hq=Jobspring+Partners,&hnear=Boylston+St,+Boston,+Massachusetts&z=17 JobSpring, Boylston St.]
+
+Topic - '''Corporate Espionage for Dummies: The Hidden Threat of Embedded Web Servers'''
+
+Speaker - VP for Security Research at ZScaler, along with other speakers at the security meetup.
+ 
+Today, everything from kitchen appliances to television sets come with an IP address. Network connectivity for various hardware devices opens up exciting opportunities. Forgot to lower the thermostat before leaving the house? Simply access it online. Need to record a show? Start the DVR with a mobile app. While embedded web servers are now as common as digital displays in hardware devices, sadly, security is not. What if that same convenience exposed photocopied documents online or allowed outsiders to record your telephone conversations? A frightening thought indeed.
+ 
+Software vendors have been forced to climb the security learning curve. As independent researchers uncovered embarrassing vulnerabilities, vendors had little choice but to plug the holes and revamp development lifecycles to bake security into products. Vendors of embedded web servers have faced minimal scrutiny and as such are at least a decade behind when it comes to security practices. Today, network connected devices are regularly deployed with virtually no security whatsoever.
+ 
+The risk of insecure embedded web servers has been amplified by insecure networking practices. Every home and small business now runs a wireless network, but it was likely set up by someone with virtually no networking expertise. As such, many devices designed only for LAN access are now unintentionally Internet facing and wide open to attack from anyone, regardless of their location.
+ 
+Leveraging the power of cloud based services, Zscaler spent several months scanning large portions of the Internet to understand the scope of this threat. Our findings will make any business owner think twice before purchasing a 'wifi enabled' device. We'll share the results of our findings, reveal specific vulnerabilities in a multitude of appliances and discuss how embedded web servers will represent a target rich environment for years to come. 
+
+ '''December 13, 2011, 6:30, Microsoft NERD, Cambridge, Horace Mann Room'''
+
+'''Jeremiah Grossman – Founder and CTO WhiteHat Security'''
+ 
+Directions: http://microsoftcambridge.com/About/Directions/tabid/89/Default.aspx
+
+ '''September 14 2011'''
+
+'''Dinis Cruz   -  OWASP O2 Platform'''
+
+The O2 Platform is focused on automating application security knowledge and workflows. It is a library of scriptable objects specifically designed for developers and security consultants to be able to perform quick, effective and thorough source code-driven application security reviews (blackbox + whitebox). 
+
+ '''September 7 2011'''
+
+'''Adriel Desautels –  Differences between Penetration Testing and Vulnerability Scanning'''
+
+
+ '''July  2011'''
+
+'''Anurag Agarwal, the founder of MyAppSecurity'''
+
+'''Session 1 - Managing Risk with Threat Modeling''' 
+Threat Modeling can help by guiding the Application Development Teams to ensure your Security Policies get properly coded into the Applications at time of Development.  By creating pre-approved methods of coding for your development teams, and applying them in a repeatable and scalable process, you can assist your development teams in building a secure application easily and effortlessly.
+
+'''Session 2 - False Positive, False Negative and False Sense of Security''' 
+This interactive session will talk about the pros and cons of using black box testing tools and discuss their effectiveness in building a mature software security program. 
+
+ '''Thursday June 2'''
+
+Location - '''Microsoft NERD''' - http://microsoftcambridge.com/About/Directions/tabid/89/Default.aspx 
+
+'''Topic - Bringing Sexy Back: Defensive Measures That Actually Work''' 
+
+Presenter - Paul Asadoorian, Founder &amp; CEO, PaulDotCom Enterprises 
+
+There is a plethora of information available on how to break into systems, steal information, and compromise users. As a penetration tester, I have performed testing on a regular basis that reveals severe security weaknesses in several organizations, and many of my peers have reported on the same. However, once you "own" the network and report on how you accomplished your goals, now what? Sure, we make defensive recommendations, but consistently it has been proven that security can be bypassed. Not enough focus is given to what works defensively. We have a lot of technology at our disposal: firewalls, intrusion detection, log correlation, but it provides little protection from today's threats and is often not implemented effectively. This talk will focus on taking an offensive look at defense. Applying techniques that are simple, yet break the mold of traditional defensive measures. We will explore setting up "traps" for attackers, slowing them down with simple scripts, using honeypots, planting bugs, and most importantly tying these methods to "enterprise security". This talk will also include real-world examples of the techniques in action from a live, heavily attacked site. Topics will include: 
+
+*Using wireless “attacks” on the attackers
+*Implementing the Metasploit Decloak engine to find the attackers
+*Setting traps to detect web application attacks
+*Integrating results into your enterprise log management tool
+
+The goal of this talk is to make defense “sexy”… 
+
+'''Presenter Bio''' 
+
+Paul Asadoorian is currently the "Product Evangelist" for Tenable Network Security, where he showcases vulnerability scanning and management through blogs, podcasts and videos. Paul is also the founder of PaulDotCom, an organization centered around the award winning "PaulDotCom Security Weekly" podcast that brings listeners the latest in security news, vulnerabilities, research and interviews with the security industry's finest. Paul has a background in penetration testing, intrusion detection, and is the co-author of "WRT54G Ultimate Hacking", a book dedicated to hacking Linksys routers. 
+
+ '''Thursday May 26'''
+
+Location - Microsoft Waltham (201 Jones Rd., Sixth Floor Waltham, MA) 
+
+'''Topic - OWASP Top 10 issue #4 – Insecure Direct Object Reference''' 
+
+Presenter - Jim Weiler, Sr. Mgr. Information Security, Starwood Hotels and President of OWASP Boston 
+
+Jim Weiler will discuss threat models, risks and various remediations of issue #4 in the 2010 OWASP Top 10 – Insecure Direct Object References. 
+
+'''Topic - A Web-Application Architecture for Regulatory Compliant Cloud Computing''' 
+
+Presenter - Arshad Noor, StrongAuth 
+
+The emergence of cloud-computing as an alternative deployment strategy for IT systems presents many opportunities, yet challenges traditional notions of data-security. The fact that data-security regulations are developing teeth, leaves information technology professionals perplexed on how to take advantage of cloud-computing while proving compliance to regulations for protecting sensitive information. 
+
+This presentation presents an architecture for building the next generation of web-applications. This architecture allows you to leverage emerging technologies such as cloud-computing, cloud-storage and enterprise key-management (EKM) to derive benefits such as lower costs, faster time-to-market and immense scalability with smaller investments - while proving compliance to PCI-DSS, HIPAA/HITECH and similar data-security regulations. 
+
+'''Presenter Bio''' 
+
+Arshad Noor is the CTO of StrongAuth, Inc, a Silicon Vally-based company that specializes in enterprise key management. He is the designer and lead-developer of StrongKey, the industry's first open-source Symmetric Key Management System, and the KeyAppliance - the industry's first appliance combining encryption, tokenization, key-management and a cryptographic hardware module at an unprecedented value. He has written many papers and spoken at many forums on the subject of encryption and key-management over the years. 
+
+ ''' CANCELLED   ''' 
+
+'''Topic – Secure Application design and Coding''' -- CANCELLED 
+
+Presenter - Josh Abraham, Rapid 7 
+
+'''Speaker Bio ''' 
+
+ '''April 2011'''
+
+Ed Adams Security Innovation -- the new OWASP Exams Project and the work being done by the OWASP Academies Working Group 
+
+<br> 
+
+ '''March 2011'''
+
+Josh Abraham, Rapid 7 
+
+Owning the world, one mobile app at a time, and web services pen testing. 
+
+<br> 
+
+ '''Febrary 2011'''
+
+Rob Cheyne, CEO of Safelight Security - 
+
+Security Leadership series: Delivering a successful security presentation 
+
+<br> 
+
+ '''December 2010'''
+
+Application Architecture Security Assessment - Second session 
+
+Rob Cheyne, CEO SafeLight Security Advisors 
+
+<br> 
+
+ '''November 2010'''
+
+Open SAMM – Software Assurance Maturity Model 
+
+Shakeel Tufail is the Federal Practice Manager at Fortify, an HP company. 
+
+<br> 
+
+ '''October 2010'''
+
+Rob Cheyne, CEO SafeLight Security Advisors Overview: In this highly interactive two-part workshop, Rob Cheyne of Safelight Security will show you the basics of conducting a real-world architecture &amp; design review. This workshop draws from Safelight's Security Architecture Fundamentals training course, a two-day course frequently used to teach Fortune 500 companies how to look at their system architectures from both the hacker's and the designer’s point of view. 
+
+ '''July 2010'''
+
+Lightning Talk – Rob Cheyne, CEO Safelight Security Advisors In this installment of the Safelight lightning talks series, Rob will present the basics of a Cross-site Request Forgery (CSRF). 
+
+Main Presentation - Drive-by Pharming with MonkeyFist 
+
+Joey Peloquin - Director of Application Security, Fishnet Security 
+
+ '''June 2010'''
+
+Rob Cheyne Lightning Talk - topic to be announced 
+
+Main Presentation - Ryan Barnett The Web Hacking Incident Database (WHID) is a Web Application Security Consortium project dedicated to maintaining a list of web applications related security incidents. Ryan Barnett is director of application security research at Breach Security where he leads Breach Security Labs. 
+
+ '''May 2010'''
+
+Rob Cheyne Lightning Talk - SQL Injection 
+
+Vinnie Liu - Data Exposure, New Approaches to Open Source Intelligence Techniques, and Incident Handling 
+
+<br> 
+
+ '''April 2010'''
+
+Dan Hestad Security Innovation Dan will be talking about his experiences with PCI and web applications, and answering questions about do's and don'ts of acceptable PCI practices in web applications. 
+
+ '''March 2010'''
+
+Zack Lanier - Disclosure Samsara, or "the endless vulnerability disclosure debate" 
+
+http://n0where.org/talks/samsara_20100310.html 
+
+http://n0where.org/talks/samsara_20100310.pdf (very large PDF) 
+
+<br> 
+
+ '''February 2010'''
+
+Rob Cheyne of Safelight Security Advisors; New Technology, Same Old Vulnerabilities 
+
+<br> 
+
+ '''January 2010 at Microsoft NERD, Cambridge'''
+
+Josh Abraham, Rapid 7 Technologies 
+
+ '''December 2009'''
+
+Eric Bender, Cenzic 
+
+ '''November 2009'''
+
+Jim Weiler, Sr. Mgr. Information Security, Starwood Hotels - Web Application Vulnerability Scanners 
+
+Mush Hakhinian, Leader, Application Security Practice, IntraLinks - Secure coding with no money down using SONAR: unleashing the power of open-source code analysis tools 
+
+<br> 
+
+ '''October 2009'''
+
+Paul Schofield, Senior Security Engineer, Imperva - From Rivals to BFF: WAF &amp; VA Unite 
+
+<br> 
+
+ '''September 2009 at CORE Technologies, Boston'''
+
+Paul Asadoorian, Pauldotcom.com 
+
+Alex Horan, CORE Security 
+
+<br> 
+
+ '''May 2009'''
+
+Joey Peloquin, Fishnet Security, Secure SDLC: The Good, the Bad and the Ugly [http://www.owasp.org/images/4/48/SecureSDLC-GoodBadUgly.pdf presentation pdf] 
+
+<br> 
+
+ '''March 2009'''
+
+Sabha Kazerooni, Security Compass - Exploit Me tools; Framework Level Threat Analysis 
+
+[http://www.owasp.org/images/5/5a/Security_Compass_Exploilt_Me.pdf ExploitMe Document] 
+
+[http://www.owasp.org/images/e/ef/Security_Compass_Framework-level_Threat_Analysis.pdf Framework Level Threat Analysis document] 
+
+Meeting Pizza Sponsor - Arcot 
+
+Arcot is a leader in online fraud prevention, strong authentication and eDocument security. Arcot's solutions are easily deployed, low-cost and extremely scalable, allowing organizations to transparently protect their users from fraud without changing user behavior or requiring expensive hardware. 
+
+Arcot can be contacted thru Michael Kreppein, michael.kreppein@arcot.com, 617-467-5200 
+
+ '''December 2008'''
+
+Brian Holyfield, Gothem Digital Science 
+
+Tamper Proofing Web Applications http://www.gdssecurity.com/l/b/2008/12/04/ 
+
+ '''June 2008'''
+
+Jeremiah Grossman; Founder and CTO, Whitehat Security 
+
+Appetizer - Hacking Intranets from the Outside (Just when you thought your network was safe) Port scanning with JavaScript 
+
+Main Topic - Business Logic Flaws: How they put your Websites at Risk 
+
+ '''March 2008'''
+
+Chris Eng; Senior Director, Security Research, Veracode 
+
+Description – Attacking crypto in web applications 
+
+ '''December 2007'''
+
+Scott Matsumoto; Principal Consultant, Cigital 
+
+Description – You Say Tomayto and I Say Tomahto – Talking to Developers about Application Security 
+
+[https://www.owasp.org/images/5/5b/BostonOWASP200712-Cigital.pdf Cigital Presentation] 
+
+ '''November 2007'''
+
+Tom Mulvehill Ounce Labs 
+
+Description – Tom will share his knowledge and expertise on implementing security into the software development life cycle. This presentation will cover how to bring practicality into secure software development. Several integration models will be explored as well as solutions for potential obstacles 
+
+[https://www.owasp.org/images/f/f8/Ounce_OWASP_07NOV07ppt.zip Ounce presentation] 
+
+<br> 
+
+ '''October 2007'''
+
+George Johnson, Principal Software Engineer EMC; CISSP 
+
+An Introduction to Threat Modeling. 
+
+<br> 
+
+ '''September 2007'''
+
+Day of Worldwide OWASP 1 day conferences on the topic "Privacy in the 21st Century" 
+
+ '''June 2007'''
+
+Tool Talk - Jim Weiler - WebGoat and Crosssite Request Forgeries 
+
+Danny Allan; Director, Security Research, Watchfire 
+
+Topic: Exploitation of the OWASP Top 10: Attacks and Strategies 
+
+ '''March 2007'''
+
+Jeremiah Grossman, CTO Whitehat Security: Top 10 Web Application Hacks of 2006 
+
+<br> 
+
+ '''January 2007'''
+
+Dave Low, RSA the Security Division of EMC: encryption case studies 
+
+<br> 
+
+ '''November 2006'''
+
+<br> 
+
+ '''September 2006'''
+
+Mike Gavin, Forrester Research: Web Application Firewalls 
+
+<br> 
+
+ '''June 2006'''
+
+Imperva - Application and Database Vulnerabilities and Intrusion Prevention 
+
+Jim Weiler - Using Paros Proxy Server as a Web Application Vulnerability tool 
+
+<br> 
+
+ '''May 2006'''
+
+<br> 
+
+ '''April 2006'''
+
+Dennis Hurst; SPI Dynamics: A study of AJAX Hacking 
+
+Jim Weiler; OWASP Boston: Using Paros HTTP proxy, part 1. first meeting with all demos, no powerpoints! 
+
+<br> 
+
+ '''March 2006'''
+
+Mateo Meucci; OWASP Italy [http://www.owasp.org/images/8/8c/Anatomy_of_2_Web_App_Testing.zip Anatomy of 2 web attacks] 
+
+Tom Stracener; Cenzic Web Application Vulnerabilities 
+
+<br> 
+
+ '''February 2006'''
+
+Ron Ben Natan; Guardium CTO Database Security: Protecting Identity Information at the Source 
+
+<br> 
+
+ '''January 2006'''
+
+David Low, Senior Field Engineer: RSA Practical Encryption 
+
+<br> 
+
+ '''December 2005'''
+
+Paul Galwas, Product Manager: nCipher [http://www.owasp.org/docroot/owasp/misc/OWASP051207.ppt Enigma variations: Key Management controlled] 
+
+<br> 
+
+ '''November 2005'''
+
+Robert Hurlbut, Independent Consultant [http://www.owasp.org/docroot/owasp/misc/OWASP_Hurlbut_ThreatModelingforWebApplicaitons.zip Threat Modeling for web applications] 
+
+<br> 
+
+ '''October 2005'''
+
+Prateek Mishra, Ph.D. Director, Security Standards and Strategy: Oracle Corp Chaiman of the OASIS Security Services (SAML) Technical Committee - [http://www.owasp.org/docroot/owasp/misc/Federation-Introduction-Overview-01.ppt Identity Federation&nbsp;: Prospects and Challenges] 
+
+Ryan Shorter, Sr. System Engineer: Netcontinuum - Application Security Gateways 
+
+<br> 
+
+ '''September 2005'''
+
+Dr. Herbert Thompson, Chief Security Strategist: SecurityInnovation - How to Break Software Security 
+
+<br> 
+
+ '''July 2005'''
+
+Mark O'Neill, CTO: Vordel - [http://www.owasp.org/docroot/owasp/misc/MarkOneill.pdf Giving SOAP a REST? A look at the intersection of Web Application Security and Web Services Security] 
+
+ '''June 2005'''
+
+Arian Evans, National Practice Lead, Senior Security Engineer: Fishnet Security [http://www.owasp.org/conferences/appsec2005dc/schedule.html Overview of Application Security Tools] 
+
+<br> 
+
+ '''May 2005'''
+
+Patrick Hynds, CTO: Critical Sites - [http://www.owasp.org/docroot/owasp/misc/Passwords-Keys_to_the_Kingdom_Dev_V1.ppt Passwords - Keys to the Kingdom] 
+
+<br> 
+
+ '''April 2005'''
+
+Jonathan Levin - [http://www.owasp.org/docroot/owasp/misc/JLevinRandoms.pdf Of Random Numbers] 
+
+Jothy Rosenberg, Founder and CTO: Service Integrity - [http://www.owasp.org/docroot/owasp/misc/JothyRWebSvcsSec.ppt Web Services Security] 
+
+<br> 
+
+ '''March 2005'''
+
+Joe Stagner: Microsoft Let's talk about Application Security 
+
+<br> 
+
+ '''Feb 2005'''
+
+Application Security Inc. PowerPoint slides for the [http://www.owasp.org/docroot/owasp/misc/Anatomy+of+an+Attack.ppt Anatomy of a Database Attack.] 
+
+<br> 
+
+==== Boston OWASP Chapter Leaders  ====
+
+'''President''' 
+
+- [mailto:jim.weiler@owasp.org Jim Weiler] 781 356 0067 
+
+'''Program Committee''' 
+
+- Mark Arnold 
+
+'''Communications Director''' 
+
+- Yolanda Liu 
+
+<br> 
+
+__NOTOC__ <headertabs /> 
+
+[[Category:Boston]] [[Category:OWASP_Chapter]] [[Category:Massachusetts]]

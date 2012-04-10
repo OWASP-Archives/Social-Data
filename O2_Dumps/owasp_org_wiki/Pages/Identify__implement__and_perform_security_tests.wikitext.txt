@@ -1,0 +1,61 @@
+{{Template:SecureSoftware}}
+
+==Overview==
+
+Purpose:	
+
+*	Find security problems not found by implementation review.
+
+*	Find security risks introduced by the operational environment.
+
+*	 Act as a defense-in-depth mechanism, catching failures in design, specification, or implementation.
+
+Role:
+
+* Test Analyst
+
+Frequency:
+
+* As necessary; generally multiple times per iteration.
+
+
+
+==Identify security tests for individual requirements ==
+
+For any requirement previously identified to have security relevance, identify an implementable testing strategy, looking to provide as complete assurance as possible and noting that some testing may be best performed statically - which is therefore potentially outside the scope of the actual QA organization. However, it is a good idea to dynamically test even those things that are assured statically, particularly if something in the operational environment could adversely affect the original test result.
+
+Build these security tests into your test plan as with any other test. For example, specify the frequency at which the test should be run.
+
+See the security testing techniques in CLASP Resources A, B and C.
+
+==Identify resource-driven security tests ==
+
+Usually, a system will not have resource-driven security requirements, or those requirements will somehow be inadequate if only in minor ways.
+
+If necessary, identify the resources available to the system on the basis of the architectural documentation and use of the software. 
+
+For each resource, identify whether that resource was addressed adequately by testable security requirements - i.e., that it had testable protection mechanisms in place for the core security services.
+
+Note that in many cases security requirements will be left implicit, leaving the tester or analyst to guess what a violation of security policy entails. In such cases, the analyst should particularly focus on identifying tests that can ferret out non-obvious users of resources. That is, identify tests that will determine which system roles can gain access to each resource, paying attention to the case of unauthorized parties, as well as valid users attempting to access the resources that should only be accessible to the owning user.
+
+Again, integrate any identified tests into the existing test plan.
+
+==Identify other relevant security tests ==
+
+Using a common testing checklist, determine what other security tests are appropriate to the system. For an example, see the checklists in the book ''How to Break Software Security ''by Whittaker and Thompson.
+
+Missing tests will point out a weakness in the resource-driven security requirements, and the gap should be communicated to the requirement specifier. Often, these gaps will be a failure in specifying the operational security requirements. If security testing determines that the security depends on the operational environment, or if it is obvious that security depends on the operational environment, then the test analyst should inform the owner of the operational security guide, who should document the issue appropriately.
+
+==Implement test plan ==
+
+Implement the test plan as normal. For example, the test plan may indicate acquiring tools, writing test scripts, or other similar activity.
+
+==Execute security tests ==
+
+Perform the identified security tests as specified in the test plan.
+
+
+[[Category:Activity]]
+[[Category:CLASP Activity]]
+[[Category:BP2 Perform application assessments]]
+[[Category:OWASP_CLASP_Project]]

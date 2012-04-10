@@ -1,0 +1,25 @@
+== Authentication ==
+== Session Management ==
+== Access Control ==
+== Input Validation ==
+== Output Encoding/Escaping ==
+== Cryptography ==
+== Error Handling and Logging ==
+== Data Protection ==
+Android code examples for Data Protection:
+<tt>
+    try {
+        Context context = getApplicationContext();
+        FileOutputStream stream;
+        stream = context.openFileOutput("local_filename", Context.MODE_PRIVATE);
+        OutputStreamWriter bw = new OutputStreamWriter(stream);
+        bw.write(sb.toString());
+        bw.flush();
+        bw.close();
+    } catch (IOException ioe) {
+        // Handle the exception
+    }
+</tt>
+== Communication Security ==
+== HTTP Security ==
+== Security Configuration ==

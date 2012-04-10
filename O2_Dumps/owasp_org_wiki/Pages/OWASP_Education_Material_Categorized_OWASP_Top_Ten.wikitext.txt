@@ -1,0 +1,122 @@
+<includeonly>===</includeonly>= OWASP Top Ten =<includeonly>===</includeonly>
+The [[:Category:OWASP_Top_Ten_Project |'''OWASP Top Ten''']] represents a broad consensus about what the most critical web application security flaws are. Project members include a variety of security experts from around the world who have shared their expertise to produce this list. There are currently versions in English, French, Japanese, Korean and Turkish. A Spanish version is in the works. We urge all companies to adopt this awareness document within their organization and start the process of ensuring that their web applications do not contain these flaws. Adopting the OWASP Top Ten is perhaps the most effective first step towards changing the software development culture within your organization into one that produces secure code.
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#FFFFFF; color:white"|<font color="white">
+'''[[Top_10_2007-A1|A1 - Cross Site Scripting (XSS)]]''' 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Presentation''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Video's ''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training video 
+|}
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#FFFFFF; color:white"|<font color="white">
+'''[[Top_10_2007-A2|A2 - Injection Flaws]]''' 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Presentation''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Video's ''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training video 
+|}
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#FFFFFF; color:white"|<font color="white">
+'''[[Top_10_2007-A3|A3 - Malicious File Execution]]''' 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Presentation''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Video's ''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training video 
+|}
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#FFFFFF; color:white"|<font color="white">
+'''[[Top_10_2007-A4|A4 - Insecure Direct Object Reference]]''' 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Presentation''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Video's ''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training video 
+|}
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#FFFFFF; color:white"|<font color="white">
+'''[[Top_10_2007-A5|A5 - Cross Site Request Forgery (CSRF)]]''' 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Presentation''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Video's ''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training video 
+|}
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#FFFFFF; color:white"|<font color="white">
+'''[[Top_10_2007-A6|A6 - Information Leakage and Improper Error Handling]]''' 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Presentation''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Video's ''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training video 
+|}
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#FFFFFF; color:white"|<font color="white">
+'''[[Top_10_2007-A7|A7 - Broken Authentication and Session Management]]''' 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Presentation''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Video's ''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training video 
+|}
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#FFFFFF; color:white"|<font color="white">
+'''[[Top_10_2007-A8|A8 - Insecure Cryptographic Storage]]''' 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Presentation''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Video's ''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training video 
+|}
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#FFFFFF; color:white"|<font color="white">
+'''[[Top_10_2007-A9|A9 - Insecure Communications]]''' 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Presentation''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Video's ''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training video 
+|}
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#FFFFFF; color:white"|<font color="white">
+'''[[Top_10_2007-A10|A10 - Failure to Restrict URL Access]]''' 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Presentation''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training material 
+ |-
+ | style="width:25%; background:#7B8ABD" align="left"| '''Video's ''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* training video 
+|}

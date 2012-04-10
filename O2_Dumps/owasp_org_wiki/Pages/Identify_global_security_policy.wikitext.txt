@@ -1,0 +1,52 @@
+{{Template:SecureSoftware}}
+
+==Overview==
+
+Purpose:	
+
+*	Provide default baseline product security business requirements.
+
+* Provide a way to compare the security posture of different products across an organization.
+
+Role:
+
+* Requirements Specifier
+
+Frequency:
+
+* As necessary; generally, once per iteration.
+
+
+
+==Build a global project security policy, if necessary ==
+
+If the organization is lacking a global project security policy, then the CISO, head of engineering and managers of significant projects (or the equivalents) should work together to determine whether a policy is valuable, and if so, produce the policy. It is generally a good idea to maintain this policy as a group, although it is particularly reasonable to entrust it to a single individual when the head of engineering has a strong security background.
+
+Particularly in large organizations with many separate projects, it is useful to have a set of baseline security requirements for software projects. Not only does this ease the burden of requirements specifiers in the long term, it also provides a way to compare the security posture of applications within the organization, and can be a framework for per-project accountability.
+
+If some projects are deployed on the company's network, such requirements are even more valuable since they serve as a concrete documentation of internal procedures that documentation teams should be following. Some organizations even have separate policies for both internally deployed software and externally delivered software.
+
+A global project security policy should detail a minimum baseline for protecting data resources, with respect to the basic security services. It can (and should) break resources up into categories (or specific technologies), providing different guidance for each, where appropriate. Such guidance should include when to apply technologies as well as how to apply technologies when they are used on a project.
+
+When designing such requirements, one should avoid making choices that are arbitrary, and potentially limiting. For example, it is fine to specify a particular minimum key size for a cryptographic algorithm, but a policy shouldn"t disallow a project from choosing larger keys, unless there is a strong reason for it.
+
+We provide a sample list of global security requirements in CLASP Resource D and in Activity-Implementation View (activity: "Identify global security policy").
+
+==Determine suitability of global requirements to project ==
+
+For each of the requirements in the global requirement list, one should determine whether it is appropriate to the project. If it is not appropriate to the project, that fact should be documented explicitly. Preferably, this would be done by maintaining an annotated copy of the global requirements document, so that one can easily demonstrate coverage of the global policy. However, it is also reasonable to incorporate irrelevant requirements directly into a requirements document, with an annotation indicating that it is believed to be irrelevant to the project, but must be followed per the global policy, if it becomes relevant.
+
+If the global requirement is relevant to the project, determine how it is relevant:
+
+*	The global requirement is already addressed by one or more of the other system requirements. In this case, one should denote explicitly that the global requirement is addressed, and which project requirement(s) address it. This can be done either on a marked up version of the global policy, or in place in the system requirements document, depending on the organization's preferences.
+
+*	The global requirement contradicts the project requirements (implicit or explicit). Generally, this should result in a change of the project requirements. If not, it should be escalated beyond the project to the global policy maintainer(s), resulting either in a change of the global requirements or an exception that gets explicitly documented.
+
+*	The global requirement does not contradict existing requirements, but has not yet been addressed. The requirements specifier should determine how to incorporate the requirement. Sometimes the global requirement can be copied directly, and sometimes it will need to be elaborated. Often, however, global requirements will provide general, high-level guidance that an individual project may elaborate. For example, a global requirement may be to allow any cryptographic algorithm that was a finalist in the AES competition with 128-bit keys or larger for providing symmetric confidentiality, but a particular system may specify AES with 256 bit keys.
+
+
+[[Category:Activity]]
+[[Category:CLASP Activity]]
+[[Category:BP3 Capture security requirements]]
+[[Category:OWASP_CLASP_Project]]
+[[Category:Requirements]]

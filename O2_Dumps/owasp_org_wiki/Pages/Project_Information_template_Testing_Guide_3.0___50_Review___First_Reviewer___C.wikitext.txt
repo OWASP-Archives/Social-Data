@@ -1,0 +1,28 @@
+[[Project Information:template Testing Guide 3.0|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Testing Project v3 Roadmap|OWASP Testing Project V3.0 Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Testing Project v3 Roadmap|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+The project has basically completed its reorganization from v2 to v3. About 50 percents of additional materials have not been written. Some of those are the new validation tests such as Test for reflected XSS, Test for Cross Site Flashing, Test Postgres; session management tests such as Test for Session Fixation; configuration management tests such as Test for Admin Interfaces, Test for Misconfiguration; client tests such as Flash Test, RIA Test.
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Testing Project v3 Roadmap|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+Overall, the project is about 50% done. The reorganization is complete at 95%. New materials are at 50% mark.
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+Please complete new materials before September so that we, reviewers, have a little time to review the guide thoroughly.
+|}

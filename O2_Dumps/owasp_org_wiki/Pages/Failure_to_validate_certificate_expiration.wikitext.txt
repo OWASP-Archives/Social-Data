@@ -1,0 +1,118 @@
+{{Template:SecureSoftware}}
+{{Template:Vulnerability}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+The failure to validate certificate operation may result in trust being assigned to certificates which have been abandoned due to age.
+
+'''Consequences'''
+
+* Integrity: The data read from the system vouched for by the expired certificate may be flawed due to malicious spoofing.
+* Authentication: Trust afforded to the system in question - based on the expired certificate - may allow for spoofing attacks.
+
+'''Exposure period'''
+
+* Design: Certificate expiration handling should be performed in the design phase.
+
+'''Platform'''
+
+* Languages: All
+* Platforms: All
+
+'''Required resources'''
+
+Minor trust: Users must attempt to interact with the malicious system.
+
+'''Severity'''
+
+Low
+
+'''Likelihood   of exploit'''
+
+Low
+
+
+When the expiration of a certificate is not taken in to account, no trust has necessarily been conveyed through it; therefore, all benefit of certificate is lost.
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+<pre>
+if (!(cert = SSL_get_peer(certificate(ssl)) || !host)
+  foo=SSL_get_veryify_result(ssl);
+  if ((X509_V_OK==foo) || (X509_V_ERRCERT_NOT_YET_VALID==foo))
+//do stuff 
+</pre>
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Failure to follow chain of trust in certificate validation]]
+* [[Failure to validate host-specific certificate data]]
+* [[Key exchange without entity authentication]]
+* [[Failure to check for certificate revocation]]
+* [[Using a key past its expiration date]]
+
+==Related [[Controls]]==
+
+* Design: Check for expired certificates and provide the user with adequate information about the nature of the problem and how to proceed. 
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+Note: A reference to related [http://cwe.mitre.org/ CWE] or [http://capec.mitre.org/ CAPEC] article should be added when exists. Eg:
+
+* [http://cwe.mitre.org/data/definitions/79.html CWE 79].
+* http://www.link1.com
+* [http://www.link2.com Title for the link2]
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Protocol Errors]]
+[[Category:OWASP_CLASP_Project]]

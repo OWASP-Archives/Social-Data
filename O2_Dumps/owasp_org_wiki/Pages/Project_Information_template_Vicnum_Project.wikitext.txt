@@ -1,0 +1,39 @@
+----
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT INFORMATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Vicnum Project'''
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|
+A lightweight vulnerable web application based on a game played to kill time. It demonstrates common web application vulnerabilities such as cross site scripting . Vicnum is especially helpful to IT auditors who need to hone web security skills.
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|
+'''Key Project Information'''
+ | style="width:14%; background:#cccccc" align="center"|
+Project Leader<br>[[:user:Vicnum|'''Mordecai Kraushar''']]
+ | style="width:15%; background:#cccccc" align="center"|
+Project Contibutors<br>''(if any, add names)''
+ | style="width:10%; background:#cccccc" align="center"|
+Mailing List<br>[https://lists.owasp.org/mailman/listinfo/owasp-vicnum-project '''Subscribe here''']<br>[mailto:owasp-vicnum-project@lists.owasp.org '''Use here''']
+ | style="width:17%; background:#cccccc" align="center"|
+License<br>[http://creativecommons.org/licenses/by-sa/3.0/ '''Creative Commons Attribution Share Alike 3.0''']
+ | style="width:14%; background:#cccccc" align="center"|
+Project Type<br>[[:Category:OWASP_Project#Alpha_Status_Projects|'''Tool''']]
+ | style="width:15%; background:#cccccc" align="center"|
+Sponsors<br>''(if any, add link)''
+ |}
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|
+'''[[:Category:OWASP Project Assessment#Alpha Quality Tool Criteria|Apha Quality]]'''<br>[[:OWASP Vicnum Project - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="center"|
+http://vicnum.sourceforge.net/
+ | style="width:29%; background:#cccccc" align="center"|
+*  if any, add link(s)
+ |}
+----

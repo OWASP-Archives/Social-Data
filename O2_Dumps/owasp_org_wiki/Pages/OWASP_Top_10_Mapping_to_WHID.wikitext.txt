@@ -1,0 +1,11 @@
+Here is a mapping of the [[OWASP Top 10]] entries to the [http://projects.webappsec.org/w/page/13246995/Web-Hacking-Incident-Database WASC Web Hacking Incident Database (WHID)]:
+
+* A1: Injection - http://www.google.com/fusiontables/DataSource?snapid=S2086702IR5
+* A2: Cross-site Scripting - http://www.google.com/fusiontables/DataSource?snapid=S208907th50
+* A3: Broken Authentication and Session Management - http://www.google.com/fusiontables/DataSource?snapid=S203191wChw&pli=1
+* A4: Insecure Direct Object Reference - http://www.google.com/fusiontables/DataSource?snapid=S208914Efwz 
+* A5: Cross-site Request Forgery - http://www.google.com/fusiontables/DataSource?snapid=S203191wChw&pli=1
+* A6: Security Misconfiguration - http://www.google.com/fusiontables/DataSource?snapid=S208909HtmA
+* A8: Failure to Restrict URL Access - http://www.google.com/fusiontables/DataSource?snapid=S208910u7mt
+* A9: Insufficient Transport Layer Protection - http://www.google.com/fusiontables/DataSource?snapid=S2089112yxM
+* A10: Unvalidated Redirects and Forwards - http://www.google.com/fusiontables/DataSource?snapid=S2089124qF5

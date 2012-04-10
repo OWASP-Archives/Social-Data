@@ -1,0 +1,127 @@
+{{Top_10_2007:TopTemplate|usenext=NextLink|next=-Methodology|useprev=Nothing|usemain=Nothing}}
+
+==Introduction==
+
+Welcome to the OWASP Top 10 2007!  This edition, totally re-written from the previous [[Top_10_2004 | 2004 version]], lists the most serious web application vulnerabilities, discusses how to protect against them, and provides links to more information.
+
+The OWASP Top 10 for Java Enterprise Edition is available for download [http://www.owasp.org/images/8/89/OWASP_Top_10_2007_for_JEE.pdf here]
+
+== Aim ==
+
+'''The primary aim of the OWASP Top 10 is to educate developers, designers, architects, and organizations''' about the consequences of the most common web application security vulnerabilities. The Top 10 provides basic methods to protect against these vulnerabilities – a great start to your secure coding security program. 
+
+'''Security is not a one-time event'''. It is insufficient to secure your code just once. By 2008, this Top 10 will have changed, and without changing a line of your application’s code, you may be vulnerable. Please review the advice in [[Top_10_2007-Where to Go From Here|Where to Go From Here]] for more information.
+
+'''A secure coding initiative must deal with all stages of a program’s lifecycle'''. Secure web applications are '''''only''''' possible when a secure SDLC (Software Development Life Cycle) is used. Secure programs are secure by design, during development, and by default. There are at least 300 issues that affect the overall security of a web application. These 300+ issues are detailed in the [[OWASP_Guide_Project|OWASP Development Guide]], which is essential reading for anyone developing web applications today.
+
+'''This document is first and foremost an education piece, not a standard'''. Please do not adopt this document as a policy or standard without [mailto:owasp@owasp.org talking to us] first! If you need a secure coding policy or standard, OWASP has secure coding policies and standards projects in progress. Please consider joining or financially assisting with these efforts.
+
+== Acknowledgements ==
+
+{| 
+|-
+
+|We thank [http://www.mitre.org/ MITRE] for making ''Vulnerability Type Distribution in [http://cve.mitre.org/ CVE]'' data freely available for use. The OWASP Top Ten project is led and sponsored by [http://www.aspectsecurity.com https://www.owasp.org/images/d/d1/Aspect_logo.gif].  
+|}
+
+Project Lead: 	Andrew van der Stock (Executive Director, OWASP Foundation)
+
+Co-authors: 	Jeff Williams (Chair, OWASP Foundation), Dave Wichers (Conference Chair, OWASP Foundation)
+
+We’d like to thank our reviewers:
+
+*Raoul Endres for help in getting the Top 10 going again and with his valuable comments. 
+*[mailto:coley...at...mitre.org Steve Christey](MITRE) for an extensive peer review and adding the MITRE CWE data
+*[http://jeremiahgrossman.blogspot.com/ Jeremiah Grossman] ([http://www.whitehatsec.com/ WhiteHat Security]) for peer reviewing and contributing information about the success (or otherwise) of automated means of detection.
+*[http://www.smithline.net/ Neil Smithline] ([http://www.OneStopAppSecurity.com/ OneStopAppSecurity.com]) for comments and producing the Wiki version.
+*Sylvan von Stuppe for an exemplary peer review.
+*Colin Wong, Nigel Evans and Andre Gironda for e-mailed comments.
+
+== Summary ==
+
+{| border='1' cellpadding='2' 
+|-	
+|[[Top_10_2007-A1|A1 - Cross Site Scripting (XSS)]]
+|XSS flaws occur whenever an application takes user supplied data and sends it to a web browser without first validating or encoding that content. XSS allows attackers to execute script in the victim's browser which can hijack user sessions, deface web sites, possibly introduce worms, etc.
+|-
+
+|[[Top_10_2007-A2|A2 - Injection Flaws]]
+|Injection flaws, particularly SQL injection, are common in web applications. Injection occurs when user-supplied data is sent to an interpreter as part of a command or query. The attacker's hostile data tricks the interpreter into executing unintended commands or changing data.
+|-
+
+|[[Top_10_2007-A3|A3 - Malicious File Execution]]
+|Code vulnerable to remote file inclusion (RFI) allows attackers to include hostile code and data, resulting in devastating attacks, such as total server compromise. Malicious file execution attacks affect PHP, XML and any framework which accepts filenames or files from users. 
+|-
+
+|[[Top_10_2007-A4|A4 - Insecure Direct Object Reference]]
+|A direct object reference occurs when a developer exposes a reference to an internal implementation object, such as a file, directory, database record, or key, as a URL or form parameter. Attackers can manipulate those references to access other objects without authorization.
+|-
+
+|[[Top_10_2007-A5|A5 - Cross Site Request Forgery (CSRF)]]
+|A CSRF attack forces a logged-on victim's browser to send a pre-authenticated request to a vulnerable web application, which then forces the victim's browser to perform a hostile action to the benefit of the attacker. CSRF can be as powerful as the web application that it attacks.
+|-
+
+|[[Top_10_2007-A6|A6 - Information Leakage and Improper Error Handling]]
+|Applications can unintentionally leak information about their configuration, internal workings, or violate privacy through a variety of application problems. Attackers use this weakness to steal sensitive data, or conduct more serious attacks. 
+|-
+
+|[[Top_10_2007-A7|A7 - Broken Authentication and Session Management]]
+|Account credentials and session tokens are often not properly protected. Attackers compromise passwords, keys, or authentication tokens to assume other users' identities.
+|-
+
+|[[Top_10_2007-A8|A8 - Insecure Cryptographic Storage]]
+|Web applications rarely use cryptographic functions properly to protect data and credentials. Attackers use weakly protected data to conduct identity theft and other crimes, such as credit card fraud.
+|-
+
+|[[Top_10_2007-A9|A9 - Insecure Communications]]
+|Applications frequently fail to encrypt network traffic when it is necessary to protect sensitive communications.
+|-
+
+|[[Top_10_2007-A10|A10 - Failure to Restrict URL Access]]
+|Frequently, an application only protects sensitive functionality by preventing the display of links or URLs to unauthorized users. Attackers can use this weakness to access and perform unauthorized operations by accessing those URLs directly.
+|}
+'''<center>Table 1: Top 10 Web application vulnerabilities for 2007</center>'''
+
+
+There are several pages in this document that are not dedicated to a specific vulnerability and hence are not listed in the table. Here is the list of them.
+
+{| border='1' cellpadding='2' 
+|-	
+|[[Top 10 2007]]
+|The main page for the document (this page). Besides providing an introduction, bookmarking the "Summary" section (this can be done by dragging [https://www.owasp.org/index.php/Top_10_2007#Summary this link] to your browser's bookmarks) gives you quick access to the entire document.
+|-
+|[[Top 10 2007-Methodology]]
+|A description of the methodology used to select the vulnerabilities for this document. 
+|-
+|[[Top 10 2007-Where to Go From Here]]
+|Some advice as to how to proceed once you have read this document.
+|-
+|[[Top 10 2007-References]]
+|Recommendations for further reading.
+|}
+'''<center>Table 1a: Pages in the ''OWASP Top Ten 2007'' document other than the vulnerability pages listed above.</center>'''
+
+==A Note About The Different Versions==
+While the only official version of the ''OWASP Top Ten 2007'' list is the downloadable English PDF version, OWASP has put together this Wiki that initially contains the same content as the PDF. But OWASP hopes that will change with your help. OWASP encourages community involvement and wants your help to make the Wiki version even better. To aid in this they have put together a brief [[Editing:Top_10_2007|tutorial]] to get you started.
+
+==Downloadable Versions==
+You can download the Top 10 2007 (Final) here:
+
+* [http://www.owasp.org/images/e/e8/OWASP_Top_10_2007.pdf (PDF, 930 kb)]
+<!--* [http://www.owasp.org/images/2/24/OWASP_Top_10_2007.doc (Word, 514 kb)]-->
+
+* [https://www.owasp.org/images/c/ce/OWASP_Top_10_2007_-_French.pdf (French Version PDF, 455 kb)]
+
+* [http://www.metasecurity.org/owasp/OWASP_Top_10_2007_Korean.pdf (Korean Version PDF, 768 kb)]
+
+* [http://csirt.ulakbim.gov.tr/dokumanlar/Ceviri_OWASP_ilk10_2007.pdf (Turkish Version PDF, 718 kb)]
+
+* [http://www.owasp.org/images/4/42/OWASP_TOP_10_2007_PT-BR.pdf (Brazilian Portuguese PDF, 329 kb)]
+
+* [https://www.owasp.org/images/a/ae/OWASP_Top_10_2007_Spanish.pdf (Spanish PDF, 488kb)]
+
+* [https://www.owasp.org/images/8/89/OWASP_Top_10_2007_for_JEE.pdf OWASP Top 10 for Java Enterprise Edition (PDF, 630 kb)]
+
+{{Top_10_2007:BottomTemplate|usenext=NextLink|next=-Methodology|useprev=Nothing|usemain=Nothing}}
+
+[[Category:OWASP Top Ten Project]]

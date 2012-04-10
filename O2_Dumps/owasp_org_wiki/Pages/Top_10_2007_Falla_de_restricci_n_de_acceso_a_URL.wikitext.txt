@@ -1,0 +1,56 @@
+{{Top_10_2007:TopTemplate|usenext=NextLink|next=-¿A dondé sigo Ahora?|useprev=PrevLink|prev=-Almacenamiento Criptográfico Inseguro|usemain=MainLink|main=}}
+
+Comúnmente, la única protección de una URL, es que el enlace a esa página no se muestre a usuarios no autorizados. Sin embargo, un atacante motivado, habilidoso o simplemente con suerte, puede ser capaz de encontrar el acceso a estas páginas, invocar funciones, y visualizar información. La seguridad por oscuridad no es suficiente para proteger la funcionalidad e información en una aplicación. La revisión de control de acceso debe ser realizada antes de que una petición a una función sensible se conceda, lo cual asegura que el usuario está autorizado para acceder a esa función.
+
+==Entornos afectados==
+
+Todos los entornos de aplicaciones Web son vulnerables a las fallas de restricciones de acceso a URL. 
+
+==Vulnerabilidad==
+
+El método primario de ataque para esta vulnerabilidad es llamado "navegación forzada", que abarca adivinado de enlaces y técnicas de fuerza bruta para encontrar paginas desprotegidas. Las aplicaciones permiten con frecuencia que el código de control de acceso se desarrolle y se separe a través de código fuente, dando como resultado un modelo complejo que sea difícil de entender para los desarrolladores y para los especialistas de la seguridad también. Esta complejidad hace que sea probable que se produzcan errores de páginas perdidas, dejándolas expuestas
+
+Algunos ejemplos comunes de estos defectos incluyen:
+
+* URL "ocultas" o "especiales", suministradas sólo a administradores o usuarios con privilegios, pero accesibles a todos los usuarios si ellos saben que existen, tales como /administrar/agregarusuario.php o /aprobarTransferencia.do. Esto es particularmente predominante con código de menú.
+* Las aplicaciones a menudo permiten el acceso a archivos "ocultos", tales como XML estáticos o reportes generados por el sistema, confiando en la seguridad por oscuridad para ocultarlos.
+* Código que implementa una política de control de acceso pero no esta actualizado o es insuficiente. Por ejemplo, imagine /aprobarTransferencia.do que alguna vez estuvo disponible para todos los usuarios, pero desde que los controles de SOX fueron traídos, se supone que solo está disponible a los 'aprobadores'. Una solución podría haber sido la de no presentarlo a usuarios no autorizados, pero actualmente no hay un control de acceso implementado, cuando se solicite esa página.
+* Código que evalúa privilegios en el cliente pero no en el servidor, como en este ataque en [http://grutztopia.jingojango.net/2007/01/your-free-macworld-expo-platinum-pass_11.html MacWorld 2007] que permite la aprobación de pases "Platinum" por valor de $1700 a través de JavaScript en el navegador en lugar de en el servidor.
+
+==Verificando la seguridad==
+
+El objetivo es verificar que el control de acceso se aplique de forma consistente en la capa de presentación y la lógica de negocio en todas las URL en la aplicación.
+
+Enfoques automatizados: Los escáneres de vulnerabilidades y los motores de análisis estático tienen dificultades con la verificación de control de acceso a URLs, pero por razones diferentes. Los escáneres de vulnerabilidades tienen dificultades para adivinar las páginas ocultas y determinar qué páginas se deben permitir para cada usuario, mientras que los motores de análisis estático batallan para identificar los controles de acceso personalizado en el código y vincular la capa de presentación con la lógica de negocio.
+
+Enfoques manuales: El método más exacto y eficiente consiste en utilizar una combinación de revisión de código y pruebas de seguridad para verificar el mecanismo de control de acceso. Si el mecanismo es centralizado, la verificación puede ser bastante eficaz. Si el mecanismo esta distribuido a través de todo el código fuente, la verificación puede llevar más tiempo. Si el mecanismo se aplica de manera externa, la configuración debe ser examinada y probada.
+
+==Protección==
+
+Tomarse el tiempo para planificar la autorización creando una matriz para definir los roles y las funciones de la aplicación es un paso clave en el logro de la protección contra las fallas de restricción de acceso a URL. Las aplicaciones Web deben hacer cumplir el control de acceso en cada URL y en las funciones de negocio. No basta con poner el control de acceso en la capa de presentación y dejar la lógica de negocio sin protección. Tampoco es suficiente revisar una sola vez durante el proceso para garantizar que el usuario esta autorizado, y no volver a comprobar en las etapas subsiguientes. De lo contrario, un atacante simplemente evitará el paso donde la autorización es revisada, y falsificara los valores de los parámetros indicados para continuar en el siguiente paso.
+
+Habilitar control de acceso a URLs requiere una planificación cuidadosa. Entre las consideraciones más importantes se encuentran las siguientes:
+
+* '''Garantizar la matriz de control de acceso como parte del negocio, la arquitectura y el diseño de la aplicación.'''
+* '''Garantizar que todas las URLs y las funciones de negocio estén protegidas por un control de acceso eficaz''' que verifique el rol y los derechos del usuario antes de ejecutar cualquier proceso. Asegúrese de que este se hace durante cada paso, y no sólo una vez al principio de un proceso con etapas intermedias.
+* '''Realice una prueba de intrusión''' antes de la implantación o entrega del código para asegurar que la aplicación no puede ser usada de manera malintencionada por un atacante experto motivado.
+* '''Preste mucha atención al incluir archivos de librerías''', especialmente si tienen una extensión ejecutable tal como .php. Cuando sea posible, deben mantenerse fuera del directorio raíz de la Web. Se debe verificar que no están siendo accedidas directamente, por ejemplo, revisando una constante que solo puede ser creada por el llamante de la biblioteca.
+* '''No asuma que pasarán desapercibidas para los usuarios las URLs ocultas o las APIs'''. Siempre asegúrese de que las acciones administrativas o de altos privilegios están protegidas.
+* '''Bloquear el acceso a todos los tipos de archivo que su aplicación no deberá servir nunca'''. Lo ideal sería que este filtro siga el método "aceptar buenos conocidos" y sólo permita tipos de archivos que usted tiene la intención de servir, por ejemplo .html, .pdf, .php. Esto bloqueara cualquier intento de acceder archivos de bitácora, archivo XML, etc., que nunca tuvo la intención de servir directamente.
+* '''Manténgase al día con la protección antivirus y parches''' a los componentes, tales como procesadores de XML, los procesadores de texto, procesadores de imagen, etc., que manejan la información de usuario suministrada.
+
+==Ejemplos==
+
+* [http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0147 http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0147]
+* [http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0131 http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0131] 
+* [http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-1227 http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-1227] 
+
+==Referencias==
+
+* CWE: CWE-325 (Direct Request), CWE-288 (Authentication Bypass by Alternate Path), CWE-285 (Missing or Inconsistent Access Control)
+* WASC Threat Classification: [http://www.webappsec.org/projects/threat/classes/predictable_resource_location.shtml http://www.webappsec.org/projects/threat/classes/predictable_resource_location.shtml] 
+* OWASP, [http://www.owasp.org/index.php/Forced_browsing http://www.owasp.org/index.php/Forced_browsing] 
+* OWASP Guide, [http://www.owasp.org/index.php/Guide_to_Authorization http://www.owasp.org/index.php/Guide_to_Authorization]
+
+
+{{Top_10_2007:BottomTemplate|usenext=NextLink|next=-¿A dondé sigo Ahora?|useprev=PrevLink|prev=-Almacenamiento Criptográfico Inseguro|usemain=MainLink|main=}}

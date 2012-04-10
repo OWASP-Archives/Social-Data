@@ -1,0 +1,16 @@
+==Tech Session 2==
+This session should focus on an instructor led focused implementation of mitigations to the OWASP Top 10, using Java.  Yes, the PHP and .NET devs will be disappointed, but we agreed at our meeting on 30 Nov 07 that we don't have enough resources to cover multiple languages at this time.
+
+==Ideas==
+;Prepare Linux VM with the following:
+: Webgoat
+: WebScarab
+: [http://www.owasp.org/index.php/ESAPI OWASP Enterprise Security API Reference Architecture]
+
+''Pre-req for the session will be a Linux or Windows laptop (bring your own) w/ VMware player''
+
+;Instructor will lead attendees via projected laptop, whilst attendees perform hands-on work on their VM'd laptops
+
+
+----
+[[Front Range Web Application Security Summit Planning Page|Back to FRWASS Planning]]

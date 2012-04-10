@@ -1,0 +1,220 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Summit 2011 Working Sessions test tab</noinclude>
+|-
+| summit_session_attendee_name1 = John Wilander
+| summit_session_attendee_email1 = john.wilander@owasp.org
+| summit_session_attendee_username1 = 
+| summit_session_attendee_company1=
+| summit_session_attendee_notes,_reason_for_participating_and_issues_to_be discussed1=
+
+| summit_session_attendee_name2 = Michael Coates
+| summit_session_attendee_email2 = michael.coates@owasp.org 
+| summit_session_attendee_username2 = 
+| summit_session_attendee_company2=
+| summit_session_attendee_notes,_reason_for_participating_and_issues_to_be discussed2=
+
+| summit_session_attendee_name3 = 
+| summit_session_attendee_email3 = 
+| summit_session_attendee_username3 = 
+| summit_session_attendee_company3=
+| summit_session_attendee_notes,_reason_for_participating_and_issues_to_be discussed3=
+
+| summit_session_attendee_name4 = 
+| summit_session_attendee_email4 = 
+| summit_session_attendee_username4 = 
+| summit_session_attendee_company4=
+| summit_session_attendee_notes,_reason_for_participating_and_issues_to_be discussed4=
+
+| summit_session_attendee_name5 = 
+| summit_session_attendee_email5 = 
+| summit_session_attendee_username5 = 
+| summit_session_attendee_company5=
+| summit_session_attendee_notes,_reason_for_participating_and_issues_to_be discussed5=
+
+| summit_session_attendee_name6 = 
+| summit_session_attendee_email6 = 
+| summit_session_attendee_username6 = 
+| summit_session_attendee_company6=
+| summit_session_attendee_notes,_reason_for_participating_and_issues_to_be discussed6=
+
+| summit_session_attendee_name7 = 
+| summit_session_attendee_email7 = 
+| summit_session_attendee_username7 = 
+| summit_session_attendee_company7=
+| summit_session_attendee_notes,_reason_for_participating_and_issues_to_be discussed7=
+
+| summit_session_attendee_name8 = 
+| summit_session_attendee_email8 = 
+| summit_session_attendee_username8 = 
+| summit_session_attendee_company8=
+| summit_session_attendee_notes,_reason_for_participating_and_issues_to_be discussed8=
+
+| summit_session_attendee_name9 = 
+| summit_session_attendee_email9 = 
+| summit_session_attendee_username9 = 
+| summit_session_attendee_company9=
+| summit_session_attendee_notes,_reason_for_participating_and_issues_to_be discussed9=
+
+| summit_session_attendee_name10 = 
+| summit_session_attendee_email10 = 
+| summit_session_attendee_username10 = 
+| summit_session_attendee_company10=
+| summit_session_attendee_notes,_reason_for_participating_and_issues_to_be discussed10=
+
+| summit_session_attendee_name11 = 
+| summit_session_attendee_email11 = 
+| summit_session_attendee_username11 = 
+| summit_session_attendee_company11=
+| summit_session_attendee_notes,_reason_for_participating_and_issues_to_be discussed11=
+
+| summit_session_attendee_name12 = 
+| summit_session_attendee_email12 = 
+| summit_session_attendee_username12 = 
+| summit_session_attendee_company12=
+| summit_session_attendee_notes,_reason_for_participating_and_issues_to_be discussed12=
+
+| summit_session_attendee_name13 = 
+| summit_session_attendee_email13 = 
+| summit_session_attendee_username13 = 
+| summit_session_attendee_company13=
+| summit_session_attendee_notes,_reason_for_participating_and_issues_to_be discussed13=
+
+| summit_session_attendee_name14 = 
+| summit_session_attendee_email14 = 
+| summit_session_attendee_username14 = 
+| summit_session_attendee_company14=
+| summit_session_attendee_notes,_reason_for_participating_and_issues_to_be discussed14= 
+
+| summit_session_attendee_name15 = 
+| summit_session_attendee_email15 = 
+| summit_session_attendee_username15 = 
+| summit_session_attendee_company15=
+| summit_session_attendee_notes,_reason_for_participating_and_issues_to_be discussed15=
+
+| summit_session_attendee_name16 = 
+| summit_session_attendee_email16 = 
+| summit_session_attendee_username16 = 
+| summit_session_attendee_company16=
+| summit_session_attendee_notes,_reason_for_participating_and_issues_to_be discussed16=
+
+| summit_session_attendee_name17 = 
+| summit_session_attendee_email17 = 
+| summit_session_attendee_username17 = 
+| summit_session_attendee_company17=
+| summit_session_attendee_notes,_reason_for_participating_and_issues_to_be discussed17=
+
+| summit_session_attendee_name18 = 
+| summit_session_attendee_email18 = 
+| summit_session_attendee_username18 = 
+| summit_session_attendee_company18=
+| summit_session_attendee_notes,_reason_for_participating_and_issues_to_be discussed18=
+
+| summit_session_attendee_name19 = 
+| summit_session_attendee_email19 = 
+| summit_session_attendee_username19 = 
+| summit_session_attendee_company19=
+| summit_session_attendee_notes,_reason_for_participating_and_issues_to_be discussed19=
+
+| summit_session_attendee_name20 = 
+| summit_session_attendee_email20 = 
+| summit_session_attendee_username20 = 
+| summit_session_attendee_company20=
+| summit_session_attendee_notes,_reason_for_participating_and_issues_to_be discussed20=
+
+|-
+| summit_track_logo = [[Image:T._browser_security.jpg]]
+| summit_ws_logo = [[Image:WS._browser_security.jpg]]
+| summit_session_name = OS Integration
+| summit_session_url = http://www.owasp.org/index.php/Summit_2011_Working_Sessions/Session008
+| mailing_list = https://groups.google.com/group/owasp-summit-browsersec
+|-
+
+| short_working_session_description= More and more features in browsers get integrated with the underlying operating system. Processes, fonts, filesystem, 3D graphics. How do we secure this?
+<br>
+|-
+
+| related_project_name1 = Browser Security Track - main page
+| related_project_url_1 = http://www.owasp.org/index.php/Category:Summit_2011_Browser_Security_Track
+
+| related_project_name2 = Google Group for the Browser Security Track
+| related_project_url_2 = https://groups.google.com/group/owasp-summit-browsersec
+
+| related_project_name3 = 
+| related_project_url_3 = 
+
+| related_project_name4 = 
+| related_project_url_4 = 
+
+| related_project_name5 = 
+| related_project_url_5 = 
+
+|-
+
+| summit_session_objective_name1= 
+
+| summit_session_objective_name2 = 
+
+| summit_session_objective_name3 = 
+
+| summit_session_objective_name4 =  
+
+| summit_session_objective_name5 =  
+|-
+
+| working_session_date_and_time = Tuesday, 09 February <br> Time: TBA
+
+|-
+
+| discussion_model = The working form will most probably be short presentations to frame the topic and then round table discussions. Depending on number of attendees we'll break into groups.
+
+|-
+
+| operational_resources = Projector, whiteboards, markers, Internet connectivity, power
+
+|-
+
+| working_session_additional_details = <br>
+
+
+|-
+
+|summit_session_deliverable_name1 =  Browser Security Report
+
+|summit_session_deliverable_name2 = Browser Security Priority List
+
+|summit_session_deliverable_name3 = 
+
+|summit_session_deliverable_name4 = 
+
+|summit_session_deliverable_name5 = 
+
+|summit_session_deliverable_name6 = 
+
+|summit_session_deliverable_name7 = 
+
+|summit_session_deliverable_name8 = 
+
+|-
+
+| summit_session_leader_name1 = 
+| summit_session_leader_email1 = 
+| summit_session_leader_username1 =
+
+| summit_session_leader_name2 = 
+| summit_session_leader_email2 = 
+| summit_session_leader_username2 =
+
+| summit_session_leader_name3 =
+| summit_session_leader_email3 = 
+| summit_session_leader_username3 =
+
+|-
+
+| operational_leader_name1 = John Wilander
+| operational_leader_email1 = john.wilander@owasp.org
+
+|-
+| meeting_notes = 
+|-
+| session_name_mask = <!--Please replace DO NOT EDIT this string --> Session008
+| session_home_page = <!--Please replace DO NOT EDIT this string --> Summit_2011_Working_Sessions/Session008
+}}

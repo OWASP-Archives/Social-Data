@@ -1,0 +1,1275 @@
+__NOTOC__ 
+
+==== Welcome  ====
+
+== Thank You!  ==
+
+Ladies and Gentlemen, 
+
+June 21-24, 2010 ~275 appsec people met in beautiful Stockholm, Sweden. The OWASP chapters in [http://www.owasp.org/index.php/Sweden Sweden], [http://www.owasp.org/index.php/Norway Norway], and [http://www.owasp.org/index.php/Denmark Denmark] together with Stockholm University hosted OWASP AppSec Research 2010. 
+
+If you have any questions, please email the conference chair: john.wilander at owasp.org
+
+'''See you all at OWASP AppSec Research 2011 in Dublin, Ireland. Cheers!'''
+
+[[Image:Stockholm old town small.jpg]] 
+
+=== Sponsors  ===
+
+Diamond sponsor:<br> [[Image:AppSec Research 2010 Microsoft diamond sponsor.jpg]] 
+
+Gold sponsors:<br> [[Image:Cybercom logo.png]] [[Image:Portwise logo.png]]<br> [[Image:Fortify logo AppSec Research 2010.png]] [[Image:Omegapoint logo.png]] 
+
+Silver sponsors:<br> [[Image:Mnemonic logo.png]] [[Image:AppSec Research 2010 sponsor Nixu logo.jpg]] <br>
+[http://www.hps.se/ http://www.owasp.org/images/6/6f/Hps_logo.png] [[Image:AppSec Research 2010 sponsor F5 logo.jpg]] <br>
+[[Image:AppSec Research 2010 sponsor Imperva logo.jpg]] [[Image:AppSec_Research_2010_sponsor_Promon_logo.jpg]]‎ 
+
+Dinner Party sponsor:<br> [http://www.google.com/EngineeringEMEA http://www.owasp.org/images/thumb/8/86/AppSec_Research_2010_Google_20k_sponsor.jpg/150px-AppSec_Research_2010_Google_20k_sponsor.jpg]
+
+
+Lunch sponsors (1 taken, 1 open):<br> [[Image:IIS logo.png]] 
+
+Coffee break sponsors (1 taken, 3 open):<br> [[Image:MyNethouse logo.png]] 
+
+Media sponsors:<br> [[Image:AppSec Research 2010 Help Net Security sponsor.jpg]] 
+
+Notepad sponsors:<br>
+[[Image:TrustwaveLogo.jpg|Trustwave - Notepad sponsor]]
+
+For full sponsoring program see the Sponsoring tab above.
+
+=== "AppSec Research".equals("AppSec Europe")  ===
+
+This conference was formerly known as OWASP AppSec Europe. We have added 'Research' to highlight that we invite both industry and academia. All the regular AppSec Europe visitors and topics are welcome along with contributions from universities and research institutes. 
+
+This simply is ''the'' European conference for anyone interested in or working with application security. Co-host 2010 was the [http://dsv.su.se/en/ Department of Computer and Systems Science] at Stockholm University, offering a great venue in the fabulous Aula Magna. 
+
+=== Countdown Challenges -- Free Tickets to Win!  ===
+
+There was a challenge posted on the conference wiki page the 21st every month up until the event. The winner got free entrance to the conference.
+
+=== Organizing Committee  ===
+
+• John Wilander, chapter leader Sweden (chair)<br> • Mattias Bergling (vice chair)<br> • Alan Davidson, Stockholm University/Royal Institute of Technology (co-host)<br> • Ulf Munkedal, chapter leader Denmark<br> • Kåre Presttun, chapter leader Norway<br> • Stefan Pettersson (sponsoring coordinator)<br> • Carl-Johan Bostorp (schedule and event coordinator)<br> • Martin Holst Swende (coffee/lunch/dinner)<br> • Michael Boman (conference guide/attendee pack)<br> • Predrag Mitrovic, OWASP Sweden Board<br> • Kate Hartmann, OWASP<br> • Sebastien Deleersnyder, OWASP Board 
+
+'''We sure hope you enjoyed Stockholm this year!'''<br> Regards, John Wilander 
+
+==== June 21-22 (Training)  ====
+
+== Schedule  ==
+10:30-10:50 Coffee break<br>
+12:15-13:00 Lunch in the canteen<br>
+15:00-15:20 Coffee break<br>
+
+17:00 End of training for the day
+
+18:00 Monday we'll just go somewhere to eat, Tuesday we have the official meet up at "Mosebacke". Check the "Social Events" tab above.
+
+== Training Registration is closed  ==
+
+Application security training is given the first two days, '''June 21-22'''. The price was '''€990''' (~$1.350) for a two-day course. 65 people took the chance to learn from the best!
+
+=== Course 1: Threat Modeling and Architecture Review (two days)  ===
+
+[[Image:AppSec Research 2010 Pravir Chandra.jpg]] 
+
+Pravir Chandra, Fortify Software 
+
+'''Abstract''': Threat Modeling and Architecture Review are the cornerstones of a preventative approach to Application Security. By combining these topics into single comprehensive course attendees can get a complete understanding of how to understand the threat an application faces and how the application will handle those potential threats. This enables the risk to be accurately assessed and appropriate changes or mitigating controls recommended. From the course outline:
+
+1. Overview
+* Scope and problem definition
+* High‐level view of the overall process
+* Core techniques
+2. Threat assessment and modeling
+* Overall threat modeling process
+* Preparation and background information
+* Capturing business and security goals
+* Identify vulnerabilities and other risks
+* Establish weighting and prioritization of risks
+* Guard against risks with compensating controls
+* EXERCISE  -  Threat model a real‐life problem
+3. Architecture review techniques
+* Authentication
+* Authorization
+* EXERCISE  - Apply the techniques from Authentication and Authorization
+* Input validation
+* Output encoding
+* EXERCISE - Apply the techniques from Input Validation and Output Encoding
+* Error handling
+* Audit logging
+* EXERCISE - Apply the techniques from Error Handling and Audit Logging
+* Encryption
+* Configuration management
+* EXERCISE - Apply the techniques from Encryption and Configuration Management
+4. Specifying security requirements
+* Writing positive security requirements
+* Deriving security requirements from functional requirements
+* Thinking broadly about requirements coverage
+* Balancing security requirements with functionality
+
+'''Trainer Bio''': Pravir Chandra is Director of Strategic Services at Fortify where he works with clients to build and optimize software security assurance programs. Pravir is widely recognized in the industry for his expertise in software security and code analysis, and also for his ability to apply technical knowledge strategically from a business perspective. His book, Network Security with OpenSSL is a popular reference on protecting software applications through cryptography and secure communications. His varied special project experience includes creating and leading the Open Software Assurance Maturity Model (OpenSAMM) project 
+
+=== Course 2: Introduction to Malware Analysis (two days)  ===
+
+[[Image:AppSec Research 2010 Jason Geffner.jpg]] 
+
+Jason Geffner, Next Generation Security Software (NGS), and Scott Lambert, Microsoft 
+
+'''Abstract''': Security researchers are facing a growing problem in the complexity of malicious executables. While dynamic black-box automation tools exist to discover what malware will do on a given execution, it is often important for an analyst to know the full capabilities of a given malware sample. What port does it listen on? What password does it expect for backdoor access? What files will it write to? What will it do tomorrow that it didn't do today? This class will focus on teaching attendees the steps required to understand the functionality of given malware samples. This is a hands-on course. Attendees will work on real-world malware through a series of lab exercises designed to build their expertise in understanding the analysis process. 
+
+Learning Objectives: 
+
+*An understanding of how to use reverse engineering tools 
+*An understanding of low-level code and data flow 
+*PE File format 
+*x86 Assembly language 
+*API functions often used by malware 
+*Anti-analysis tricks and how to defeat them 
+*Exploits and Shellcode 
+*A methodology for analyzing malware with and without the use of specialized tools
+
+'''Trainer Bio''': Jason Geffner joined Next Generation Security Software Ltd. in June of 2007 as a Principal Security Consultant. Jason focuses on performing security reviews of source code and designs, reverse engineering software protection methods and DRM protection methods, deobfuscating and analyzing malware, penetration testing web applications and network infrastructures, and developing automated security analysis tools. 
+
+=== Course 3: Building Secure Ajax and Web 2.0 Applications (two days)  ===
+
+[[Image:AppSec Research 2010 Dave Wichers.jpg]] 
+
+Dave Wichers, Aspect Security 
+
+'''Abstract''': Rich Internet applications using technologies like Ajax, Flash, ActiveX, and Java Applets require special attention to secure. This course addresses the special issues with this type of application development. Students will gain hands-on testing experience with freely available web application security test tools to find and diagnose such flaws and learn how to identify, fix, and avoid them in their own projects. In addition, Aspect’s engineers are leaders in the AppSec Community and will offer the students an amazing perspective.
+
+'''Trainer Bio''': Dave Wichers is a member of the OWASP Board and a coauthor, along with Jeff Williams, of all previous versions of the OWASP Top Ten. Dave is also the Chief Operating Officer of Aspect Security, a company that specializes in application security services. Mr. Wichers brings over twenty years of experience in the information security field. Prior to cofounding Aspect, he ran the Application Security Services Group at a large data center company, Exodus Communications. His current work involves helping customers, from small e-commerce sites to Fortune 500 corporations and the U.S. Government, secure their applications by providing application security design, architecture, and SDLC support services: including code review, application penetration testing, security policy development, security consulting services, and developer training. 
+
+=== Course 4: Assessing and Exploiting Web Apps with Samurai-WTF (two days)  ===
+
+[[Image:AppSec Research 2010 Justin Searle.jpg]] 
+
+Justin Searle, InGuardians 
+
+'''Abstract''': This course will focus on using open source tools to perform web application assessments. The course will take attendees through the process of application assessment using the open source tools included in the Samurai Web Testing Framework Live CD (Samurai-WTF). Day one will take students through the steps and open source tools used to assess applications for vulnerabilities. Day two will focus on the exploitation of web app vulnerabilities, spending half the day on server side attacks and the other half of the day on client side attacks. The latest tools and techniques will be use throughout the course, including several tools developed by the trainers themselves. From the course outline:
+
+Samurai-WTF Project and Distribution (about, using ...)<br>
+Web Application Assessment Methodology (pentest types, four step methodology ...)<br>
+Step 1: Reconnaissance
+* Overview of Web Application Recon
+* Domain and IP Registration Databases  (Labs: whois)
+* Google Hacking  (Labs: gooscan, gpscan)
+* Social Networks  (Labs: Reconnoiter)
+* DNS Interrogation  (Labs: host, dig, nslookup, fierce)
+Step 2: Mapping
+* Overview of Mapping
+* Port Scanning and Fingerprinting  (Labs: nmap, zenmap, Yokoso!)
+* Web Service Scanning  (Labs: Nikto)
+* Spidering  (Labs: wget, curl, Paros, WebScarab, BurpSuite)
+* Discovering "Non-Discoverable" URLs  (Labs: DirBuster)
+Step 3: Discovery
+* Using Built-in Tools  (Labs: Page Info, Error Console, DOM Inspector, View Source)
+* Poking and Prodding  (Labs: Default User Agent, Cookie Editor, Tamper Data)
+* Interception Proxies  (Labs: Paros, WebScarab, BurpSuite)
+* Semi-Automated Discovery  (Labs: RatProxy)
+* Automated Discovery  (Labs: Grendel-Scan, w3af)
+* Information Discovery  (Labs: CeWL)
+* Fuzzing  (Labs: JBroFuzz, BurpIntruder)
+* Finding XSS  (Labs: TamperData, XSS-Me, BurpIntruder)
+* Finding SQL Injection  (Labs: SQL Inject-Me, SQL Injection, BurpIntruder)
+* Decompiling Flash Objects  (Labs: Flare)
+Step 4: Exploitation
+* Username Harvesting  (Labs: python)
+* Brute Forcing Passwords  (Labs: python)
+* Command Injection  (Labs: w3af)
+* Exploiting SQL Injection  (Labs: SQLMap, SQLNinja, Laudanum)
+* Exploiting XSS  (Labs: Durzosploit)
+* Browser Exploitation  (Labs: BeEF, BrowserRider, Yokoso!)
+* Advanced exploitation through tool integration (MSF + sqlninga/sqlmap/BeEF)
+
+'''Trainer Bio''': Justin Searle, a Senior Security Analyst with InGuardians, specializes in web application, network, and embedded penetration testing. Justin has presented at top security conferences including DEFCON, ToorCon, ShmooCon, and SANS. Justin has an MBA in International Technology and is CISSP and SANS GIAC-certified in incident handling and hacker techniques (GCIH) and intrusion analysis (GCIA). Justin is one of the founders and lead developers of Samurai-WTF. 
+
+=== Course 5: Securing Web Services (two days)  ===
+
+[[Image:AppSec Research 2010 Jason Li.jpg]] 
+
+Jason Li, Aspect Security 
+
+'''Abstract''': Aspect Security offers this two day Securing Web Services course which focuses on the most important messages regarding the development of secure web services. This course helps developers understand the real risks associated with Security in Web Services and Service Oriented Architectures, what standard are available to help, and how to use the standards. The course includes a combination of lecture, demonstrations, and hands on testing designed to provide detailed guidance regarding the implementation of specific security principles and functions in web services.
+
+From the course outline:
+
+* Web Service and SOA Threat Model
+* Data Formats: XML, JSON
+* Protocols: SOAP, REST
+* Overview of the Standards (WS-Security, SAML, XACML)
+* Common Communications Vulnerabilities
+* Using SSL for Simple Web Services
+* XML Encryption
+* XML Signature
+* WS-Security
+* How to Manage Web Service Identities
+* Federated Identities
+* Common Authentication Vulnerabilities
+* WSDL Examples of Implementing WS-Security
+* Common Access Control Vulnerabilities
+* How to Validate Web Service Input (XML Schema, Business Logic Validation)
+* Common XML Attacks (Recursion, References, Overflow, Transforms)
+* State Management
+* Using Interpreters Safely (SQL Injection, LDAP Injection, Command Injection, XPath Injection)
+* Denial of Service and Availability
+
+'''Trainer Bio''': Jason Li is a Senior Application Security Engineer for Aspect Security where he performs application security assessments and architecture reviews, as well as application security training, to a wide variety of financial and government customers. Jason is an active OWASP leader, contributing to several OWASP projects and serving on the OWASP Global Projects Committee. He holds a Post-Masters certificate in Computer Science and concentration in Information Security from Johns Hopkins University and a Masters degree in Computer Science from Cornell University. 
+
+==== June 23  ====
+
+{| border="0" align="center" style="width: 80%;"
+|-
+| align="center" colspan="4" style="background: none repeat scroll 0% 0% rgb(64, 88, 160); color: white;" | '''Conference Day 1 - June 23, 2010''' 
+[[Image:OWASP AppSec Research 2010 Research R.gif]] = Research paper [[Image:OWASP AppSec Research 2010 Demo D.gif]] = Demo [[Image:OWASP AppSec Research 2010 Presentation P.gif]] = Presentation 
+
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | <br> 
+| style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 133, 122);" | Track 1 
+| style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 165, 122);" | Track 2 
+| style="width: 30%; background: none repeat scroll 0% 0% rgb(153, 255, 153);" | Track 3
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | 08:00-08:50 
+| align="left" colspan="3" style="width: 80%; background: none repeat scroll 0% 0% rgb(194, 194, 194);" | Registration and Breakfast + Coffee
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | 08:50-09:00 
+| align="center" colspan="3" style="width: 80%; background: none repeat scroll 0% 0% rgb(242, 242, 242);" | Welcome to OWASP AppSec Research 2010 Conference (John Wilander &amp; [http://www.owasp.org/index.php/About_OWASP OWASP Global Board Members]) ([[Media:OWASP_AppSec_Research_2010_Opening_Talk_by_Wilander.pdf|pdf]])
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | 09:00-10:00 
+| align="center" colspan="3" style="width: 80%; background: none repeat scroll 0% 0% rgb(252, 252, 150);" | [[#Keynote: Cross-Domain Theft and the Future of Browser Security]] ([[Media:OWASP_AppSec_Research_2010_Keynote_1_by_Evans_and_Fette.pdf|pdf]]) ([http://owasp.blip.tv/file/3917599/ video])
+''Chris Evans, Information Security Engineer, and Ian Fette, Product Manager for Chrome Security, Google'' 
+
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | 10:10-10:45 
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 133, 122);" | [[Image:OWASP AppSec Research 2010 Research R.gif]] [[#BitFlip: Determine a Data's Signature Coverage from Within the Application]] ([[Media:OWASP_AppSec_Research_2010_BitFlip_by_Poehls.pdf|pdf]]) ([http://owasp.blip.tv/file/3917734/ video])
+''Henrich Christopher Poehls, University of Passau''<br> 
+
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 165, 122);" | [[Image:OWASP AppSec Research 2010 Presentation P.gif]] [[#CsFire: Browser-Enforced Mitigation Against CSRF]] ([[Media:OWASP_AppSec_Research_2010_CsFire_by_Desmet_and_DeRyck.pdf|pdf]]) ([http://owasp.blip.tv/file/3917849/ video])
+''Lieven&nbsp;Desmet&nbsp;and&nbsp;Philippe&nbsp;De&nbsp;Ryck,&nbsp;Katholieke Universiteit Leuven''<br> 
+
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(153, 255, 153);" | [[Image:OWASP AppSec Research 2010 Presentation P.gif]] [[#Deconstructing ColdFusion]] ([[Media:OWASP_AppSec_Research_2010_Deconstructing_ColdFusion_by_Eng.pdf|pdf]]) ([http://owasp.blip.tv/file/3917750/ video])
+''Chris Eng,&nbsp;Veracode'' 
+
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | 10:45-11:10 
+| align="left" colspan="3" style="width: 90%; background: none repeat scroll 0% 0% rgb(194, 194, 194);" | Break - Expo - CTF kick-off, '''Coffee break sponsoring position open''' ($2,000)
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | 11:10-11:45 
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 133, 122);" | [[Image:OWASP AppSec Research 2010 Research R.gif]] [[#Towards Building Secure Web Mashups]] ([[Media:OWASP_AppSec_Research_2010_Secure_Mashups_by_DeRyck.pdf|pdf]]) ([http://owasp.blip.tv/file/3918092/ video])
+''M Decat, P De Ryck, L Desmet, F Piessens, W Joosen,&nbsp;Katholieke Universiteit Leuven'' 
+
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 165, 122);" | [[Image:OWASP AppSec Research 2010 Presentation P.gif]] [[#New Insights into Clickjacking]] ([[Media:OWASP_AppSec_Research_2010_Clickjacking_by_Balduzzi.pdf|pdf]]) ([http://owasp.blip.tv/file/3918233/ video])
+''Marco Balduzzi,&nbsp;Eurecom<br><br>''
+
+<br> 
+
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(153, 255, 153);" | [[Image:OWASP AppSec Research 2010 Presentation P.gif]] [[#How to Render SSL Useless]] ([[Media:Ivan_Ristic_-_Breaking_SSL_-_OWASP.pdf|pdf]]) ([http://owasp.blip.tv/file/3918288/ video])
+''Ivan Ristic, Qualys<br>'' 
+
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | 11:55-12:30 
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 133, 122);" | 
+[[Image:OWASP AppSec Research 2010 Research R.gif]] [[#Busting Frame Busting]] ([[Media:OWASP_AppSec_Research_2010_Busting_Frame_Busting_by_Rydstedt.pdf|pdf]]) ([http://owasp.blip.tv/file/3918217/ video])
+
+''Gustav Rydstedt,&nbsp;Stanford Web Security Research''<br> 
+
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 165, 122);" | [[Image:OWASP AppSec Research 2010 Presentation P.gif]] [[#Web Frameworks and How They Kill Traditional Security Scanning]] ([[Media:OWASP_AppSec_Research_2010_Frameworks_Security_by_Hang.pdf|pdf]]) ([http://owasp.blip.tv/file/3917978/ video])
+''Christian Hang and Lars Andren,&nbsp;Armorize Technologies'' 
+
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(153, 255, 153);" | [[Image:OWASP AppSec Research 2010 Demo D.gif]] [[#The State of SSL in the World]] ([[Media:OWASP_AppSec_Research_2010_State_of_SSL_by_Boman.pdf|pdf]]) ([http://owasp.blip.tv/file/3917760/ video without sound :(])
+''Michael Boman, Omegapoint<br>'' 
+
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | 12:30-13:45 
+| align="left" colspan="3" style="width: 80%; background: none repeat scroll 0% 0% rgb(194, 194, 194);" | Lunch - Expo - CTF, Lunch sponsor: [[Image:OWASP AppSec Research 2010 IIS logo for program.png]]
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | 13:45-14:20 
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 133, 122);" | [[Image:OWASP AppSec Research 2010 Research R.gif]] [[#(New) Object Capabilities and Isolation of Untrusted Web Applications]] ([[Media:OWASP_AppSec_Research_2010_Obj_Capabilities_by_Maffeis.pdf|pdf]]) ([http://owasp.blip.tv/file/3918179/ video])
+''Sergio Maffeis, Imperial College, London'' 
+
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 165, 122);" | [[Image:OWASP AppSec Research 2010 Presentation P.gif]] [[#Beyond the Same-Origin Policy]] ([[Media:OWASP_AppSec_Research_2010_Beyond_SOP_by_Nagra_and_Samuel.pdf|pdf]]) ([http://owasp.blip.tv/file/3917705/ video])
+''Jasvir Nagra and Mike Samuel, Google<br>'' 
+
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(153, 255, 153);" | [[Image:OWASP AppSec Research 2010 Demo D.gif]] [[#SmashFileFuzzer - a New File Fuzzer Tool]] ([[Media:OWASP_AppSec_Research_2010_Smash_File_Fuzzer_by_Randive.pdf|pdf]]) ([http://owasp.blip.tv/file/3917961/ video])
+''Komal Randive, Symantec'' 
+
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | 14:30-15:05 
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 133, 122);" | [[Image:OWASP AppSec Research 2010 Demo D.gif]] [[#Security Toolbox for .NET Development and Testing]] ([[Media:OWASP_AppSec_Research_2010_NET_Toolbox_by_Lindfors_and_Konig.pdf|pdf]]) ([http://owasp.blip.tv/file/3917695/ video])
+''Johan Lindfors and Dag König, Microsoft'' 
+
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 165, 122);" | [[Image:OWASP AppSec Research 2010 Demo D.gif]] [[#Cross-Site Location Jacking (XSLJ) (not really)]] ([[Media:OWASP_Appsec_Research_2010_Redirects_XSLJ_by_Sirdarckcat_and_Thornmaker.pdf|pdf]]) ([http://owasp.blip.tv/file/3917823/ video])
+''David Lindsay, Cigital<br>Eduardo Vela Nava,&nbsp;sla.ckers.org''
+
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(153, 255, 153);" | [[Image:OWASP AppSec Research 2010 Demo D.gif]] [[#Owning Oracle: Sessions and Credentials]] ([[Media:OWASP_AppSec_Research_2010_Owning_Oracle_by_Henrique_and_Ocepek.pdf|pdf]]) ([http://owasp.blip.tv/file/3917882/ video])
+''Wendel G. Henrique and Steve Ocepek, Trustwave'' 
+
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | 15:05-15:30 
+| align="left" colspan="3" style="width: 80%; background: none repeat scroll 0% 0% rgb(194, 194, 194);" | Break - Expo - CTF, '''Coffee break sponsoring position open''' ($2,000)
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | 15:30-16:05 
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 133, 122);" | [[Image:OWASP AppSec Research 2010 Demo D.gif]] [[#Value Objects a la Domain-Driven Security: A Design Mindset to Avoid SQL Injection and Cross-Site Scripting]] ([[Media:OWASP_AppSec_Research_2010_VOs_a_la_DDS_by_Johnsson.pdf|pdf]]) ([http://owasp.blip.tv/file/3918040/ video])
+''Dan Bergh Johnsson, Omegapoint'' 
+
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(188, 165, 122);" | [[Image:OWASP AppSec Research 2010 Presentation P.gif]] [[#Automated vs. Manual Security: You Can't Filter "The Stupid"]] (pdf not available yet) ([http://owasp.blip.tv/file/3917807/ video])<br>
+''David Byrne and Charles Henderson, Trustwave''
+
+| align="left" style="width: 30%; background: none repeat scroll 0% 0% rgb(153, 255, 153);" | [[Image:OWASP AppSec Research 2010 Research R.gif]] [[#Session Fixation - the Forgotten Vulnerability?]] ([[Media:OWASP_AppSec_Research_2010_Session_Fixation_by_Schrank_Braun_Johns_and_Poehls.pdf|pdf]]) ([http://owasp.blip.tv/file/3918310/ video])
+''Michael Schrank and Bastian Braun, University of Passau<br>Martin Johns, SAP Research'' 
+
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | 16:15-17:00 
+| align="center" colspan="3" style="width: 90%; background: none repeat scroll 0% 0% rgb(242, 242, 242);" | Panel Discussion: "Is Application Security a Losing Battle?"  ([http://owasp.blip.tv/file/3918133/ video, partly poor sound])
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | 19:00-23:00 
+| align="center" colspan="1" style="background: none repeat scroll 0% 0% rgb(43, 58, 109);" | [[Image:OWASP_AppSec_Research_2010_Stockholm_City_Hall_exterior_small.jpg|Stockholm City Hall, photo by Yanan Li]]
+| align="center" colspan="1" style="background: none repeat scroll 0% 0% rgb(43, 58, 109); color: white;" | '''Gala Dinner''' at [http://international.stockholm.se/Tourism-and-history/The-Famous-City-Hall/Pictures-of-the-City-Hall/ <span style="color:rgb(163, 178, 229);">Stockholm City Hall<span>]<br>Sponsored by<br>[[Image:OWASP AppSec Research 2010 Google logo for program.png]] 
+| align="center" colspan="1" style="background: none repeat scroll 0% 0% rgb(43, 58, 109);" | [[Image:OWASP_AppSec_Research_2010_Stockholm_City_Hall_Golden_Hall_small.jpg|The Golden Hall, photo by Yanan Li]]
+|}
+<center>
+[[Image:AppSec Research 2010 Microsoft diamond sponsor.jpg|250px|Microsoft - Diamond Sponsor]] [[Image:AppSec Research 2010 Google 20k sponsor.jpg|150px|Google - Dinner Party and Expo Sponsor]] [[Image:Portwise logo.png|130px|PortWise - Gold and Badge Sponsor]] [[Image:Cybercom logo.png|100px|Cybercom - Gold Sponsor]] [[Image:Fortify logo AppSec Research 2010.png|120px|Fortify - Gold Sponsor]] [[Image:Omegapoint logo.png|110px|Omegapoint - Gold Sponsor]] [[Image:Mnemonic logo.png|100px|Mnemonic - Silver Sponsor]] [[Image:AppSec Research 2010 sponsor Nixu logo.jpg|100px|NIXU - Silver Sponsor]] [[Image:Hps_logo.png|140px|High Performance Systems - Silver Sponsor]] [[Image:AppSec Research 2010 sponsor F5 logo.jpg|70px|F5 - Silver Sponsor]] [[Image:AppSec Research 2010 sponsor Imperva logo.jpg|100px|Imperva - Silver Sponsor]] [[Image:AppSec_Research_2010_sponsor_Promon_logo.jpg|100px|Promon - Silver Sponsor]] [[Image:IIS logo.png|100px|Stiftelsen för Internetinfrastruktur - Lunch Sponsor]] [[Image:MyNethouse logo.png|100px|MyNethouse - Coffee Break Sponsor]] [[Image:AppSec Research 2010 Help Net Security sponsor.jpg|100px|Help Net Security - Media Sponsor]] [[Image:TrustwaveLogo.jpg|100px|Trustwave - Notepad sponsor]]
+</center>
+
+== Keynote: Cross-Domain Theft and the Future of Browser Security  ==
+
+[[Image:Appsec research 2010 invited talk 1.jpg]] 
+
+'''Chris Evans'''<br> Troublemaker, Information Security Engineer, and Tech Lead at Google inc.<br> Also the sole author of vsftpd. 
+
+'''Ian Fette'''<br> Product Manager for Chrome Security and Google's Anti-Malware initiative 
+
+'''Abstract'''<br> The web browser, and associated machinery, is on the front line of attacks. We will first look at design-level problems with the traditional browser in terms of monolithic architecture and fundamental problems with the same-origin policy. We will then look at the types of solution that are starting to appear in browsers such as Google Chrome and Internet Explorer. We will look at other important browser-based defenses such as Safe Browsing. We will detail what a future browser might look like that has a much more secure design, but is still usable on the wide variety of web sites that people use daily. 
+
+== DAY 1, TRACK 1  ==
+
+=== [[Image:OWASP AppSec Research 2010 Research word.gif]] BitFlip: Determine a Data's Signature Coverage from Within the Application  ===
+
+''Henrich Christopher Poehls, University of Passau - ISL'' 
+
+Despite applied cryptographic primitives applications are working on data that was not protected by them. We show by abstracting the message flow between the application and the underlying wire, that protection is applied to a different data model. Taking problems from real life, like XML wrapping attacks and digital signatures on XML, we show that establishing the right linkage between the security checked on lower levels and the application above is practically difficult. We propose a application controlled check, the BitFlip-test. By this simple test an application can test if the application's assumed protection of a data value was indeed provided by the digital signature applied to the message that contained the value. 
+
+=== [[Image:OWASP AppSec Research 2010 Research word.gif]] Towards Building Secure Web Mashups  ===
+
+''Maarten Decat, Philippe De Ryck, Lieven Desmet, Frank Piessens, and Wouter Joosen, Katholieke Universiteit Leuven'' 
+
+Web mashups combine components from multiple sources into a single, interactive application. This kind of setup typically requires both interaction between the components to achieve the necessary functionality, as well as component separation to achieve a secure execution. Unfortunately, the traditional web is not designed to easily fulfill both requirements, which can be seen in the restrictions imposed by traditional development techniques. This paper gives an overview of these traditional techniques and investigates new developments, specifically aimed at combining components in a secure manner. In addition, topics for further improvement are identified to ensure a wide adaptation of secure mashups. 
+
+=== [[Image:OWASP AppSec Research 2010 Research word.gif]] Busting Frame Busting  ===
+
+''Gustav Rydstedt, Stanford Web Security Research''<br>
+Joint work with Elie Bursztein, Dan Boneh, and Collin Jackson.
+
+Web framing attacks such as clickjacking use iframes to hijack a user's web session. The most common defense, called frame busting, prevents a site from functioning when loaded inside a frame. We study frame busting practices for the Alexa Top-500 sites and show that all can be circumvented in one way or another. Some circumventions are browser-specific while others work across browsers. We conclude with recommendations for proper frame busting.
+
+=== [[Image:OWASP AppSec Research 2010 Research word.gif]] (New) Object Capabilities and Isolation of Untrusted Web Applications ===
+
+''Sergio Maffeis, Imperial College, London'' 
+
+The object-capability model provides an appealing approach for isolating untrusted content in mashups: if untrusted applications are provided disjoint capabilities they still can interact with the user or the hosting page, but they cannot directly interfere with each other. We develop language-based foundations for isolation proofs based on object-capability concepts, and we show the applicability of our framework for a specific class of mashups. As an application, we prove that a JavaScript subset based on Google Caja is capability safe.
+
+=== [[Image:OWASP AppSec Research 2010 Demo word.gif]] Security Toolbox for .NET Development and Testing  ===
+
+''Johan Lindfors and Dag König, Microsoft'' 
+
+Being a developer on the Microsoft platform leveraging .NET doesn’t only involve keeping up with the continuous development of the underlying framework and technologies. It also means to be on top of the latest security threats and naturally the available mitigations and best practices to protect the customers and users of the applications and solutions being developed. 
+
+In this session we will demonstrate how you as a .NET developer can leverage existing tools and technologies to build safer applications. During the demonstrations you will get more familiar with the existing tools within Visual Studio but also be introduced and educated in more tools that will help you build a toolbox for secure development and security testing. 
+
+But one must also remember that tools will never replace knowledge and hence we will also show you how you can regularly get updated with the latest information from Microsoft on security including how to leverage SDL – Security Development Lifecycle, within your own projects. 
+
+=== [[Image:OWASP AppSec Research 2010 Demo word.gif]] Value Objects a la Domain-Driven Security: A Design Mindset to Avoid SQL Injection and Cross-Site Scripting  ===
+
+''Dan Bergh Johnsson, Omegapoint'' 
+
+SQL Injection and Cross-Site Scripting have been topping the OWASP Top Ten for the last years. It must be a top priority for the community to evolve designs and mindsets that help the programmers to avoid these traps in their day-to-day work, where they have so much else but security that calls for their attention. The ambition of this presentation is to show design and coding practices that are well established in other fields of software development and put them to use to avoid just-mentioned traps. We also show some small refactorings that can be immediately applied to an existing codebase to make significant improvements to its security. Attendants of the session should be able to go back to work Monday morning and finish an improvement in this style before Monday lunch. 
+
+We take inspiration from Domain Driven Design (DDD), which is characterized by its focus on what the software intend to represent. In particular, we make heavy use of the Value Object design pattern, where strict typing help us enforce that the incoming data is truthful to the restrictions of the domain. We start out with Injection Flaws and use the canonical username SQL Injection attack (“’OR 1=1 --“) as an example. Realizing that mentioned string was not intended as a valid username we elaborate the model to reflect this. Further more we make this change explicit in the code by introducing the new type and class Username. This also gives a natural place to put validation code, which otherwise often is placed in utility classes where it is easily forgotten and seldom called. In fact, we can even design service methods to require a validated Username, thus using the strong typing to enforce validation in the calling client system tier. 
+
+Making this re-design with associated code changes is performed as a demo, and en route we discuss other design options and their relative merits and drawbacks. Again using DDD we proceed to analyse XSS. In the same way we see that XSS is in the general case not an indata validation problem. An extended analysis proposes that it can be phrased as an output-encoding problem. Using a similar technique we model the target domain of web content as the new type HTMLString, and can thereby enforce conversion from ordinary strings to strings with the proper encoding. If you have multiple content channels, then each channel will. 
+
+All steps needed are shown in code, starting with a vulnerable application and through controlled refactoring steps ending up with a version without the vulnerability. In summary, we will take an established quality practice from another field of software development and use it to get security improvements. The main benefits are two: firstly, the method gently guides and reminds the programmers to include validation and encoding in an unobtrusive way. Secondly, the work can be performed in very small steps, where the first can be finished before lunch Monday after the conference. 
+
+== DAY 1, TRACK 2  ==
+
+=== [[Image:OWASP AppSec Research 2010 Presentation word.gif]] CsFire: Browser-Enforced Mitigation Against CSRF  ===
+
+''Lieven Desmet and Philippe De Ryck, Katholieke Universiteit Leuven'' 
+
+Cross-Site Request Forgery (CSRF) is a web application attack vector that can be leveraged by an attacker to force an unwitting user's browser to perform actions on a third party website, possibly reusing all cached authentication credentials of that user. 
+
+Currently, a whole range of techniques exist to mitigate CSRF, either by protecting the server application or by protecting the end-user. Unfortunately, the server-side protection mechanisms are not yet widely adopted, and the client-side solutions provide only limited protection or cannot deal with complex web 2.0 applications, which use techniques such as AJAX, mashups or single sign-on (SSO). 
+
+In this talk, we will presents three interesting results of our research: (1) an extensive, real‐world traffic analysis to gain more insights in cross‐domain web interactions, (2) requirements for client‐side mitigation against CSRF and an analysis of existing browser extensions and (3) CsFire, our newly developed FireFox extension to mitigate CSRF. 
+
+=== [[Image:OWASP AppSec Research 2010 Presentation word.gif]] Automated vs. Manual Security: You Can't Filter "The Stupid"  ===
+
+''David Byrne and Charles Henderson, Trustwave'' 
+
+Everyone wants to stretch their security budget, and automated application security tools are an appealing choice for doing so. However, manual security testing isn’t going anywhere until the HAL application scanner comes online. This presentation will use often humorous, real-world examples to illustrate the relative strengths and weaknesses of automated solutions and manual techniques. 
+
+Automated tools certainly have some strengths (namely low incremental cost, detecting simple vulnerabilities, and performing highly repetitive tasks). In addition to preventing some attacks, WAFs also have advantages for some compliance frameworks. However, automated solutions are far from perfect. To begin with, there are entire classes of very important vulnerabilities that are theoretically impossible for automated software to detect (at least until HAL comes online). Examples include complex information leakage, race conditions, logic flaws, design flaws, subjective vulnerabilities such as CSRF, and multistage process attacks. 
+
+Beyond that, there are many vulnerabilities that are too complicated or obscure to practically detect with an automated tool. Automated tools are designed to cover common application designs and platforms. Applications using an unusual layout or components will not be thoroughly protected by automated tools. Realistically, only the most vanilla of web applications written on common, simple platforms will receive solid code coverage from an automated tool. 
+
+On the other hand, manual testing is far more versatile. An experienced penetration tester can identify complicated vulnerabilities in the same way that an attacker does. Specific, real-world examples of vulnerabilities only recognizable by humans will be provided. The diversity of vulnerabilities shown will clearly demonstrate that all applications have the potential for significant vulnerabilities not detectable by automated tools. 
+
+Manual source code reviews present even more benefits by identifying vulnerabilities that require access to source code. Examples include “hidden” or unused application components, SQL injection with no evidence in the response, exotic injection attacks (e.g. mainframe session attacks), vulnerabilities in back-end systems, and intentional backdoors. Many organizations assume that this type of vulnerability is not a large threat, but source code can be obtained by disgruntled developers, by internal attackers when the repository isn’t properly secured, by exploiting platform bugs or path directory traversal attacks, and by external attackers using a Trojan horse or similar technique. 
+
+=== [[Image:OWASP AppSec Research 2010 Presentation word.gif]] Web Frameworks and How They Kill Traditional Security Scanning  ===
+
+''Christian Hang and Lars Andren, Armorize Technologies'' 
+
+Modern web application frameworks present a challenge to static analysis technologies due to how they influence application behavior in ways not obvious from the source code. This prevents efficient security scanning and can cause up to 80% of total potential issues to remain undetected due to the incorrect framework handling. After explaining the underlying problems, we demonstrate in a real world walk through using code analysis to scan actual application code. By extending static analysis with new framework specific components, even applications using complex frameworks like Struts and Smarty can be inspected automatically and code coverage of security analysis can be greatly enhanced. 
+
+=== [[Image:OWASP AppSec Research 2010 Presentation word.gif]] Beyond the Same-Origin Policy  ===
+
+''Jasvir Nagra and Mike Samuel, Google Inc'' 
+
+The same-origin policy has governed interaction between client-side code and user data since Netscape 2.0, but new development techniques are rendering it obsolete. Traditionally, a website consisted of server-side code written by trusted, in-house developers&nbsp;; and a minimum of client-side code written by the same in-house devs. The same-origin policy worked because it didn't matter whether code ran server-side or client-side&nbsp;; the user was interacting with code produced by the same organization. But today, complex applications are being written almost entirely in client-side code requiring developers to specialize and share code across organizational boundaries. 
+
+This talk will explain how the same-origin policy is breaking down, give examples of attacks, discuss the properties that any alternative must have, introduce a number of alternative models being examined by the Secure EcmaScript committee and other standards bodies, demonstrate how they do or don't thwart these attacks, and discuss how secure interactive documents could open up new markets for web developers. We assume a basic familiarity with web application protocols&nbsp;: HTTP, HTML, JavaScript, CSS&nbsp;; and common classes of attacks&nbsp;: XSS, XSRF, Phishing. 
+
+=== [[Image:OWASP AppSec Research 2010 Demo word.gif]] Cross-Site Location Jacking (XSLJ) (not really)  ===
+
+''David Lindsay, Cigital Inc, and Eduardo Vela Nava sla.ckers.org'' 
+
+Redirects are commonly used on many websites and are an integral part of many web frameworks. However, subtle and not so subtle issues can lead to security holes and privacy issues. In this presentation, we will discuss several high and low level issues related to redirects and demonstrate how the issues can be exploited. 
+
+=== [[Image:OWASP AppSec Research 2010 Presentation word.gif]] New Insights into Clickjacking  ===
+
+''Marco Balduzzi, Eurecom'' 
+
+Over the past year, clickjacking received extensive media coverage. News portals and security forums have been overloaded by posts claiming clickjacking to be the upcoming security threat. In a clickjacking attack, a malicious page is constructed (or a benign page is hijacked) to trick the user into performing unintended clicks that are advantageous for the attacker, such as propagating a web worm, stealing confidential information or abusing of the user session. In this talk, we formally define the problem and introduce our novel solution for automated detection of clickjacking attacks. We present the details of the system architecture and its implementation, and we evaluate the results we obtained from the analysis of over a million unique Internet pages. We conclude by discussing the clickjacking phenomenon and its future implications. 
+
+== DAY 1, TRACK 3  ==
+
+=== [[Image:OWASP AppSec Research 2010 Presentation word.gif]] Deconstructing ColdFusion  ===
+
+''Chris Eng, Veracode'' 
+
+This presentation is a technical survey of ColdFusion security, which will be of interest mostly to code auditors and penetration testers. We’ll cover the basics of ColdFusion markup, control flow, functions, and components and demonstrate how to identify common web application vulnerabilities at the source code level. We’ll also delve into ColdFusion J2EE internals, describing some of the unexpected properties we’ve observed while decompiling ColdFusion applications for static analysis. 
+
+=== [[Image:OWASP AppSec Research 2010 Presentation word.gif]] How to Render SSL Useless  ===
+
+''Ivan Ristic, Feisty Duck'' 
+
+SSL is the technology that secures the Internet, but it is effective only when deployed properly. While the SSL protocol itself is very robust and easy to use, the same cannot be said for the usability of the complete ecosystem, which includes server configuration, certificates and application implementation details. In fact, SSL deployment is generally plagued with traps at every step of the way. As a result, too many web sites use insecure deployment practices that render SSL completely useless. In this talk I will present a list of top ten (or thereabout) deployment mistakes, based on my work on the SSL Labs assessment platform (https://www.ssllabs.com). 
+
+=== [[Image:OWASP AppSec Research 2010 Demo word.gif]] The State of SSL in the World  ===
+
+''Michael Boman, Omegapoint'' 
+
+What is the status of SSL deployments in Fortune 500 companies and the top 10'000 websites (according to Alexa)? While developing a tool that was needed to perform the test-case OWASP-CM-001 (Testing for SSL-TLS) it was noticed that some sites had very good SSL-configuration, sometimes unexpectedly, and some sites has very poor security configuration, even when you could expect the site to have good security standard. Does the organization behind the site has any bearing on how good the security standard the site has in regards to HTTPS-support and configuration? The talk will highlight the findings and the tools and process of obtaining the underlying data, while also trying to answer the questions: - How many of the Fortune 500 and Top 10'000 websites offer an HTTPS-enabled browser experience to their visitors? - How is the HTTPS-server configured in regards to SSL-protocols offered, key exchange and key lengths (bit-size)? - Are there any correlation between company size, industry or popularity and the HTTPS-enabled browsing experience and the HTTPS-configuration? 
+
+=== [[Image:OWASP AppSec Research 2010 Demo word.gif]] SmashFileFuzzer - a New File Fuzzer Tool  ===
+
+''Komal Randive, Symantec'' 
+
+Here is a tool SmashFileFuzzer designed and developed to address the same problem with ease. SmashFileFuzzer understands the file formats and then user can specify the fields in the file to be fuzzed. SmashFileFuzzer acts on a sample file of the required format and generates multiple fuzzed file copies from this sample file. SmashFileFuzzer also has the support to add more custom file formats to be able to fuzz them, especially .dat formats. In comparison with the existing file fuzzers and frameworks this fuzzer has simple language for adding new formats, many more modes of fuzzing and attack oriented fuzzing. Following are the highlights of this fuzzer 
+
+*Support to understand the file formats and fuzz specific fields with specified/random data 
+*Understands the correlation between different fields and manipulates them in accordance with the fuzzed content. 
+*Can generate valid fuzzed files even based on the partial format understanding. Only the portions of file format which are understood by the user can be used to generate valid fuzzed files. 
+*Understands the custom formats for file types and also for the configuration files(e.g key value pair format or .dat formats) 
+*Tool is designed to be easily extended for any new file formats 
+*Fuzz strings are read from a dictionary file. Users can add application specific input string to this dictionary for testing. 
+*It’s a unix shell based tool which can be easily scripted.
+
+=== [[Image:OWASP AppSec Research 2010 Demo word.gif]] Owning Oracle: Sessions and Credentials  ===
+
+''Wendel G. Henrique and Steve Ocepek, Trustwave'' 
+
+In a world of free, ever-present encryption libraries, many penetration testers still find a lot of great stuff on the wire. Database traffic is a common favorite, and with good reason: when the data includes PAN, Track, and CVV, it makes you stop and wonder why this stuff isn’t encrypted across the board. However, despite this weakness, we still need someone to issue queries before we see the data. Or maybe not… after all, it’s just plaintext. 
+
+Wendel G. Henrique and Steve Ocepek of Trustwave’s SpiderLabs division offer a closer look at the world’s most popular relational database: Oracle. Through a combination of downgrade attacks and session take-over exploits, this talk introduces a unique approach to database account hijacking. Using a new tool, thicknet, the team will demonstrate how deadly injection and downgrade attacks can be to database security. 
+
+The Oracle TNS/Net8 protocol was studied extensively during presentation for this talk. Very little public knowledge of this protocol exists today, and much of the data gained is, as far as we know, new to Oracle outsiders. 
+
+Also, during the presentation we will be offering to attendants: 
+
+*Knowledge about man-in-the-middle and downgrade attacks, especially the area of data injection. 
+*A better understanding of the network protocol used by Oracle. 
+*The ability to audit databases against this type of attack vector. 
+*Ideas for how to prevent this type of attack, and an understanding of the value of encryption and digital signature technologies. 
+*Understanding of methodologies used to reverse-engineer undocumented protocols.
+
+=== [[Image:OWASP AppSec Research 2010 Research word.gif]] Session Fixation - the Forgotten Vulnerability?  ===
+
+''Michael Schrank and Bastian Braun, University of Passau, and Martin Johns, SAP Research'' 
+
+The term 'Session Fixation vulnerability' subsumes issues in Web applications that under certain circumstances enable the adversary to perform a session hijacking attack through ontrolling the victim's session identier value. We explore this vulnerability pattern. First, we give an analysis of the root causes and document existing attack vectors. Then we take steps to assess the current attack surface of Session Fixation. Finally, we present a transparent server-side method for mitigating vulnerabilities. 
+
+==== June 24  ====
+
+{| style="width:80%" border="0" align="center"
+|-
+| colspan="4" align="center" style="background:#4058A0; color:white" | '''Conference Day 2 - June 24, 2010''' 
+[[Image:OWASP AppSec Research 2010 Research R.gif]] = Research paper [[Image:OWASP AppSec Research 2010 Demo D.gif]] = Demo [[Image:OWASP AppSec Research 2010 Presentation P.gif]] = Presentation 
+
+|-
+| style="width:10%; background:#7B8ABD" | 
+| style="width:30%; background:#BC857A" | Track 1 
+| style="width:30%; background:#BCA57A" | Track 2 
+| style="width:30%; background:#99FF99" | Track 3
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | 08:00-08:50 
+| align="left" colspan="3" style="width: 80%; background: none repeat scroll 0% 0% rgb(194, 194, 194);" | Breakfast + Coffee
+|-
+| style="width: 10%; background: none repeat scroll 0% 0% rgb(123, 138, 189);" | 08:50-09:00
+| align="left" colspan="3" style="width: 80%; background: none repeat scroll 0% 0% rgb(194, 194, 194);" | Three Announcements from OWASP ([http://owasp.blip.tv/file/3918100/ video])
+|-
+| style="width:10%; background:#7B8ABD" | 09:00-10:00 
+| colspan="3" style="width:80%; background:rgb(252, 252, 150)" align="center" | [[#Keynote: The Security Development Lifecycle - The Creation and Evolution of a Security Development Process]]  ([[Media:OWASP_AppSec_Research_2010_Keynote_2_by_Lipner.pdf|pdf]]) ([http://owasp.blip.tv/file/3917790/ video])<br>''Steve Lipner, Senior Director of Security Engineering Strategy, Microsoft Corporation''
+|-
+| style="width:10%; background:#7B8ABD" | 10:10-10:45 
+| style="width:30%; background:#BC857A" align="left" | 
+[[Image:OWASP AppSec Research 2010 Presentation P.gif]] [[#The Anatomy of Real-World Software Security Programs]] ([[Media:OWASP_AppSec_Research_2010_OpenSAMM_by_Chandra.pdf|pdf]]) ([http://owasp.blip.tv/file/3917922/ video])
+
+''Pravir Chandra, Fortify'' 
+
+| style="width:30%; background:#BCA57A" align="left" | 
+[[Image:OWASP AppSec Research 2010 Demo D.gif]] [[#Promon TestSuite: Client-Based Penetration Testing Tool]] (pdf not available yet) ([http://owasp.blip.tv/file/3917626/ video])
+
+''Folker den Braber and Tom Lysemose Hansen, Promon'' 
+
+| style="width:30%; background:#99FF99" align="left" | 
+[[Image:OWASP AppSec Research 2010 Research R.gif]] [[#A Taint Mode for Python via a Library]]  ([[Media:OWASP_AppSec_Research_2010_Taint_Mode_for_Python_by_Conti_and_Russo.pdf|pdf]]) ([http://owasp.blip.tv/file/3918194/ video])
+
+''Juan José Conti, Universidad Tecnológica Nacional<br>Alejandro Russo, Chalmers Univ. of Technology'' 
+
+|-
+| style="width:10%; background:#7B8ABD" | 10:45-11:10 
+| colspan="3" style="width:90%; background:#C2C2C2" align="left" | Break - Expo - CTF, Coffee sponsor: [[Image:OWASP AppSec Research 2010 MyNethouse logo for program.png]]
+|-
+| style="width:10%; background:#7B8ABD" | 11:10-11:45 
+| style="width:30%; background:#BC857A" align="left" | 
+[[Image:OWASP AppSec Research 2010 Presentation P.gif]] [[#Microsoft's Security Development Lifecycle for Agile Development]] ([[Media:OWASP_AppSec_Research_2010_Microsoft_SDL_Agile_by_Coblentz.pdf|pdf]]) ([http://owasp.blip.tv/file/3918259/ video])
+
+''Nick Coblentz, OWASP Kansas City Chapter and AT&T Consulting'' 
+
+| style="width:30%; background:#BCA57A" align="left" | 
+[[Image:OWASP AppSec Research 2010 Presentation P.gif]] [[#Detecting and Protecting Your Users from 100% of all Malware - How?]] ([[Media:OWASP_AppSec_Research_2010_Detecting_100%_Malware_by_Anstis_Pogulievsky.pdf|pdf]]) ([http://owasp.blip.tv/file/3917670/ video])
+
+''Bradley Anstis and Vadim Pogulievsky, M86 Security'' 
+
+| style="width:30%; background:#99FF99" align="left" | 
+[[Image:OWASP AppSec Research 2010 Research R.gif]] [[#OPA: Language Support for a Sane, Safe and Secure Web]] ([[Media:OWASP_AppSec_Research_2010_OPA_by_Rajchenbach-Teller.pdf‎|pdf]]) ([http://owasp.blip.tv/file/3918159/ video without sound :( ])
+
+''David Rajchenbach-Teller and François-Régis Sinot, MLstate'' 
+
+|-
+| style="width:10%; background:#7B8ABD" | 11:55-12:30 
+| style="width:30%; background:#BC857A" align="left" | 
+[[Image:OWASP AppSec Research 2010 Presentation P.gif]] [[#Secure Application Development for the Enterprise: Practical, Real-World Tips]] ([[Media:OWASP_AppSec_Research_2010_Real-World_Tips_by_Craigue.pdf|pdf]]) ([http://owasp.blip.tv/file/3918017/ video])
+
+''Michael Craigue, Dell'' 
+
+| style="width:30%; background:#BCA57A" align="left" | 
+[[Image:OWASP AppSec Research 2010 Presentation P.gif]] [[#Responsibility for the Harm and Risk of Software Security Flaws]] ([[Media:OWASP_AppSec_Research_2010_Responsibility_for_Sec_Flaws_by_Goldschmidt.pdf|pdf]]) ([http://owasp.blip.tv/file/3917898/ video])
+
+''Cassio Goldschmidt, Symantec'' 
+
+| style="width:30%; background:#99FF99" align="left" | 
+[[Image:OWASP AppSec Research 2010 Research R.gif]] [[#Secure the Clones: Static Enforcement of Policies for Secure Object Copying]] ([[Media:OWASP_AppSec_Research_2010_Secure_Cloning_by_Jensen.pdf|pdf]]) ([http://owasp.blip.tv/file/3918334/ video])
+
+''Thomas Jensen and David Pichardie, INRIA Rennes - Bretagne Atlantique'' 
+
+|-
+| style="width:10%; background:#7B8ABD" | 12:30-13:45 
+| colspan="3" style="width:80%; background:#C2C2C2" align="left" | Lunch - Expo - CTF, '''Lunch break sponsoring position open''' ($4,000)
+|-
+| style="width:10%; background:#7B8ABD" | 13:45-14:20 
+| style="width:30%; background:#BC857A" align="left" | 
+[[Image:OWASP AppSec Research 2010 Presentation P.gif]] [[#Product Security Management in Agile Product Management]] ([[Media:OWASP_AppSec_Research_2010_Agile_Prod_Sec_Mgmt_by_Vaha-Sipila.pdf|pdf]]) ([http://owasp.blip.tv/file/3917970/ video])
+
+''Antti Vähä-Sipilä, Nokia'' 
+
+| style="width:30%; background:#BCA57A" align="left" | 
+[[Image:OWASP AppSec Research 2010 Presentation P.gif]] [[#Hacking by Numbers]] ([[Media:OWASP_AppSec_Research_2010_Hacking_by_Numbers_by_Brennan.pdf|pdf]]) ([http://owasp.blip.tv/file/3918065/ video])
+
+''Tom Brennan, WhiteHat Security and OWASP Foundation<br>'' 
+
+| style="width:30%; background:#99FF99" align="left" | 
+[[Image:OWASP AppSec Research 2010 Research R.gif]] [[#Safe Wrappers and Sane Policies for Self Protecting JavaScript]] ([[Media:OWASP_AppSec_Research_2010_Safe_Wrappers_by_Magazinius.pdf|pdf]]) ([http://owasp.blip.tv/file/3917719/ video])
+
+''Jonas Magazinius, Phu H. Phung, and David Sands, Chalmers Univ. of Technology'' 
+
+|-
+| style="width:10%; background:#7B8ABD" | 14:30-15:05 
+| style="width:30%; background:#BC857A" align="left" | 
+[[Image:OWASP AppSec Research 2010 Presentation P.gif]] [[#OWASP_Top_10_2010]] ([[Media:OWASP_AppSec_Research_2010_OWASP_Top_10_by_Wichers.pdf|pdf]]) ([http://owasp.blip.tv/file/3917942/ video])
+
+''Dave Wichers, Aspect Security and OWASP Foundation<br>'' 
+
+| style="width:30%; background:#BCA57A" align="left" | 
+[[Image:OWASP AppSec Research 2010 Presentation P.gif]] [[#Application Security Scoreboard in the Sky]] ([[Media:OWASP_AppSec_Research_2010_Appsec_Scoreboard_by_Eng.pdf|pdf]]) ([http://owasp.blip.tv/file/3918005/ video])
+
+''Chris Eng, Veracode'' 
+
+| style="width:30%; background:#99FF99" align="left" | 
+[[Image:OWASP AppSec Research 2010 Research R.gif]] [[#On the Privacy of File Sharing Services]] (pdf & video not available because of potential zero-day)
+
+''N Nikiforakis, F Gadaleta, Y Younan, and W Joosen, Katholieke Universiteit Leuven'' 
+
+|-
+| style="width:10%; background:#7B8ABD" | 15:05-15:30 
+| colspan="3" style="width:80%; background:#C2C2C2" align="left" | Break - Expo - CTF, '''Coffee break sponsoring position open''' ($2,000)
+|-
+| style="width:10%; background:#7B8ABD" | 15:30-16:00 
+| colspan="3" style="width:90%; background:#F2F2F2" align="center" | CTF Price Ceremony, Announcement of OWASP AppSec EU 2011, Closing Notes ([[Media:OWASP_AppSec_Research_2010_Closing_Talk_by_Wilander.pdf|pdf]])
+|}
+<center>
+[[Image:AppSec Research 2010 Microsoft diamond sponsor.jpg|250px|Microsoft - Diamond Sponsor]] [[Image:AppSec Research 2010 Google 20k sponsor.jpg|150px|Google - Dinner Party and Expo Sponsor]] [[Image:Portwise logo.png|130px|PortWise - Gold and Badge Sponsor]] [[Image:Cybercom logo.png|100px|Cybercom - Gold Sponsor]] [[Image:Fortify logo AppSec Research 2010.png|120px|Fortify - Gold Sponsor]] [[Image:Omegapoint logo.png|110px|Omegapoint - Gold Sponsor]] [[Image:Mnemonic logo.png|100px|Mnemonic - Silver Sponsor]] [[Image:AppSec Research 2010 sponsor Nixu logo.jpg|100px|NIXU - Silver Sponsor]] [[Image:Hps_logo.png|140px|High Performance Systems - Silver Sponsor]] [[Image:AppSec Research 2010 sponsor F5 logo.jpg|70px|F5 - Silver Sponsor]] [[Image:AppSec Research 2010 sponsor Imperva logo.jpg|100px|Imperva - Silver Sponsor]] [[Image:AppSec_Research_2010_sponsor_Promon_logo.jpg|100px|Promon - Silver Sponsor]] [[Image:IIS logo.png|100px|Stiftelsen för Internetinfrastruktur - Lunch Sponsor]] [[Image:MyNethouse logo.png|100px|MyNethouse - Coffee Break Sponsor]] [[Image:AppSec Research 2010 Help Net Security sponsor.jpg|100px|Help Net Security - Media Sponsor]] [[Image:TrustwaveLogo.jpg|100px|Trustwave - Notepad sponsor]]
+</center> 
+== Keynote: The Security Development Lifecycle - The Creation and Evolution of a Security Development Process  ==
+
+[[Image:Appsec research 2010 invited talk 2.jpg]] 
+
+'''Steve Lipner'''<br> Senior Director of Security Engineering Strategy, Trustworthy Computing Security, Microsoft Corporation.<br> Co-author of "The Security Development Lifecycle", Microsoft Press (book cover above). 
+
+'''Abstract'''<br> This keynote will review the evolution of the Security Development Lifecycle (SDL) from its origins in the Microsoft “security pushes” of 2002-3 through its current status and application in 2010. It will emphasize the aspects of change and change management as the SDL and its user community have matured and grown and will conclude with a summary of some recent changes and additions to the SDL. Specific topics to be addressed include: 
+
+*Motivations for introducing both the SDL and its predecessor processes. 
+*Considerations in selling the process to management and sustaining a mandate over a prolonged period. 
+*Scaling the SDL to an organization with tens of thousands of engineers. 
+*Managing change. 
+*The role of automation in the SDL. 
+*Adaptation of the SDL to agile development processes. 
+*Thoughts for organizations that are considering implementing the SDL.
+
+The presentation will cover technical aspects of the SDL including a brief review of requirements and tools, and results. 
+
+'''Speaker Bio'''<br> Steven B. Lipner is senior director of Security Engineering Strategy at Microsoft Corp where he is responsible for programs that provide improved product security for Microsoft customers. Lipner leads Microsoft’s Security Development Lifecycle (SDL) team and is responsible for the definition of Microsoft’s SDL and for programs to make the SDL available to organizations beyond Microsoft. Lipner is also responsible for Microsoft’s corporate strategies related to government security evaluation of Microsoft products. 
+
+Lipner is coauthor with Michael Howard of The Security Development Lifecycle (Microsoft Press, 2006) and is named as inventor on twelve U.S. patents and two pending applications in the field of computer and network security. He has authored numerous professional papers and conference presentations, and served on several National Research Council committees. He served two terms – a total of more than ten years – on the United States Information Security and Privacy Advisory Board and its predecessor. Lipner holds S.B. and S.M. degrees in Civil Engineering from the Massachusetts Institute of Technology and attended the Harvard Business School’s Program for Management Development. 
+
+== DAY 2, TRACK 1  ==
+
+=== [[Image:OWASP AppSec Research 2010 Presentation word.gif]] The Anatomy of Real-World Software Security Programs  ===
+
+''Pravir Chandra, Fortify'' 
+
+Effectively reducing risk from software vulnerabilities remains a challenge for most organizations despite the existence of several secure SDLC models. From conducting technical assessments to earning management buy-in, there may not seem to be a lot of easy answers along the way, but experiences from the field shows that there is indeed hope. We've learned that the hard questions of "what", "when", and "how much" simply require the answers to be customized to each organization. Whether you’re a developer or a CISO, this talk will leave you with actionable advice that you can use to help take your software security assurance program to the next level.
+ 
+To help organizations formulate their own solutions, we'll discuss several real-world examples of programs in action. From there, we’ll talk about lessons learned and introduce the ''Open Software Assurance Maturity Model'' (OpenSAMM), a flexible framework for building a balanced software security assurance program (OpenSAMM is an open and free OWASP project and more information is available at http://www.opensamm.org). Using the framework, attendees will learn how to self-assess their security activities and use available resources to drive improvement in small and measurable iterations. With time remaining, we’ll also discuss the latest work on the OpenSAMM project and how it relates to other modern approaches to building out assurance programs.
+
+=== [[Image:OWASP AppSec Research 2010 Presentation word.gif]] Microsoft's Security Development Lifecycle for Agile Development  ===
+
+''Nick Coblentz, OWASP Kansas City Chapter and AT&amp;T Consulting'' 
+
+Many development and security teams believe Agile development cannot be accomplished securely.  During this presentation, Nick Coblentz will discuss the recent guidance from Microsoft that enables development teams to include secure development activities within their Agile processes without compromising features or functionality. Nick will also demonstrate ASP.NET libraries, strategies, and automated tools to reduce the effort required by developers.
+
+=== [[Image:OWASP AppSec Research 2010 Presentation word.gif]] Secure Application Development for the Enterprise: Practical, Real-World Tips  ===
+
+''Michael Craigue, Dell'' 
+
+Dell has a reputation for IT simplification and a lean cost structure. We take the same approach with our application security program. This talk covers money-saving tips in the creation and evolution of Dell's Security Development Lifecycle, including risk assessments, security reviews, threat modeling, source code scans, awareness/training, application security user groups, security consulting staff development, and assurance scans/penetration testing. We’ll discuss how we have adapted our program to our IT, Product Group, and Services organizations. 
+
+=== [[Image:OWASP AppSec Research 2010 Presentation word.gif]] Product Security Management in Agile Product Management  ===
+
+''Antti Vähä-Sipilä, Nokia'' 
+
+This paper provides a model for product security risk management and security requirements elicitation in an agile product management framework, using the concepts of Scrum and an epics-based agile requirements model. The paper documents some real-life experiences of rolling out such a risk management model. The model addresses security threat analysis and risk acceptance, and is agnostic to the actual security engineering practices employed in the Scrum teams, and is scalable over large and small enterprises. 
+
+=== [[Image:OWASP AppSec Research 2010 Presentation word.gif]] OWASP Top 10 2010  ===
+
+''Dave Wichers, Aspect Security and OWASP Foundation'' 
+
+This presentation will cover the OWASP Top 10 - 2010 (final version). The OWASP Top 10 was originally released in 2003 to raise awareness of the importance of application security. As the field evolves, the Top 10 needs to be periodically updated to keep with up with the times. The Top 10 was updated in 2004 and the last update was in 2007, where it introduced Cross Site Request Forgery (CSRF) as the big new emerging web application security risk. 
+
+This update will be based on more sources of web application vulnerability information than the previous versions were when determining the new Top 10. It will also present this information in a more concise, compelling, and consumable manner, and include strong references to the many new openly available resources that can help address each issue, particularly OWASP's new Enterprise Security API (ESAPI) and Application Security Verification Standard (ASVS) projects. 
+
+A significant change for this update will be that the OWASP Top 10 will be focused on the Top 10 Risks to Web Applications, not just the most common vulnerabilities. 
+
+== DAY 2, TRACK 2  ==
+
+=== [[Image:OWASP AppSec Research 2010 Demo word.gif]] Promon TestSuite: Client-Based Penetration Testing Tool  ===
+
+''Folker den Braber and Tom Lysemose Hansen, Promon'' 
+
+Vulnerability analysis has a wide scope containing both social and technical aspects. An important part of technical vulnerability analysis consists of penetration testing. In most cases, penetration testing is focused on either server side or network layer vulnerabilities. In this demonstration we will have a closer look at vulnerability analysis on the client side, while demonstrating the use of the Promon Testuite testing tool. 
+
+Promon TestSuite is designed to use the same vectors as common malware but in a clear and visual way, with varying payloads to illustrate the security issues involved with giving injected code free access to a programs memory. 
+
+=== [[Image:OWASP AppSec Research 2010 Presentation word.gif]] Detecting and Protecting Your Users from 100% of all Malware - How?  ===
+
+''Bradley Anstis and Vadim Pogulievsky, M86 Security'' 
+
+100% Malware detection is the goal but is it really achievable?  This session looks at the traditional Malware detection technologies and how well they perform today and then compares this to some newer approaches with demonstrations of Real-time code analysis and Behavioral Analysis technologies to see what is better or worse.
+
+100% detection rates are the goal, but how close can we get with a single technology, or what combination of technologies can we use to get as close as possible?
+
+This session is all about challenging the existing accepted practices for Malware protection. We want to open the minds of the attendees, encourage them to question existing solutions and the incumbent market leading vendors. We want you to also re-evaluate their environment to see if improvements can be made.
+
+=== [[Image:OWASP AppSec Research 2010 Presentation word.gif]] Responsibility for the Harm and Risk of Software Security Flaws  ===
+
+''Cassio Goldschmidt, Symantec Corp'' 
+
+Who is responsible for the harm and risk of security flaws? The advent of worldwide networks such as the internet made software security (or the lack of software security) become a problem of international proportions. There are no mathematical/statistical risk models available today to assess networked systems with interdependent failures. Without this tool, decision-makers are bound to overinvest in activities that don’t generate the desired return on investment or under invest on mitigations, risking dreadful consequences. Experience suggests that no party is solely responsible for the harm and risk of software security flaws but a model of partial responsibility can only emerge once the duties and motivations of all parties are examine and understood. 
+
+State of the art practices in software development won’t guarantee products free of flaws. The infinite principles of mathematics are not properly implemented in modern computer hardware without having to truncate numbers and calculations. Many of the most common operating systems, network protocols and programming languages used today were first conceived without the basic principles of security in mind. Compromises are made to maintain compatibility of newer versions of these systems with previous versions. Evolving software inherits all flaws and risks that are present in this layered and interdependent solution. Lastly, there are no formal ways to prove software correctness using neither mathematics nor definitive authority to assert the absence of vulnerabilities. The slightest coding error can lead to a fatal flaw. Without a doubt, vulnerabilities in software applications will continue to be part of our daily lives for years to come. 
+
+Decisions made by adopters such as whether to install a patch, upgrade a system or employed insecure configurations create externalities that have implications on the security of other systems. Proper cyber hygiene and education are vital to stop the proliferation of computer worms, viruses and botnets. Furthermore, end users, corporations and large governments directly influence software vendors’ decisions to invest on security by voting with their money every time software is purchased or pirated. 
+
+Security researchers largely influence the overall state of software security depending on the approach taken to disclose findings. While many believe full disclosure practices helped the software industry to advance security in the past, several of the most devastating computer worms were created by borrowing from information detailed by researcher’s full disclosure. Both incentives and penalties were created for security researchers: a number of stories of vendors suing security researchers are available in the press. Some countries enacted laws banning the use and development of “hacking tools”. At the same time, companies such as iDefense promoted the creation of a market for security vulnerabilities providing rewards that are larger than a year’s worth of salary for a software practitioner in countries such as China and India. 
+
+Effective policy and standards can serve as leverage to fix the problem either by providing incentives or penalties. Attempts such PCI created a perverse incentive that diverted decision makers’ goals to compliance instead of security. Stiff mandates and ineffective laws have been observed internationally. Given the fast pace of the industry, laws to combat software vulnerabilities may become obsolete before they are enacted. Alternatively, the government can use its own buying power to encourage adoption of good security standards. One example of this is the Federal Desktop Core Configuration (FDCC). 
+
+=== [[Image:OWASP AppSec Research 2010 Presentation word.gif]] Hacking by Numbers  ===
+
+''Tom Brennan, WhiteHat Security and OWASP Foundation'' 
+
+There is a difference between what is possible and what is probable, something we often lose sight of in the world of information security. For example, a vulnerability represents a possible way for an attacker to exploit an asset, but remember not all vulnerabilities are created equal. Obviously we must also keep in mind that just because a vulnerability exists does not necessarily mean it will be exploited, or indicate by whom or to what extent. Clearly, many vulnerabilities are very serious leaving the door open to compromise of sensitive information, financial loss, brand damage, violation of industry regulations, and downtime. Some vulnerabilities are more difficult to exploit than others and therefore attract different attackers. Autonomous worms &amp; viruses may attack one type of issue, while a sentient targeted attacker may prefer another path. Better understanding of these factors enables us to make informed business decisions about website risk management and what is probable. 
+
+=== [[Image:OWASP AppSec Research 2010 Presentation word.gif]] Application Security Scoreboard in the Sky  ===
+
+''Chris Eng, Veracode'' 
+
+This presentation will discuss vulnerability metrics gathered from real-world applications. The statistics are derived from continuously updated data collected by Veracode’s cloud-based code analysis service. The anonymized data represents a total of nearly 1,600 applications submitted for analysis by large and small companies, commercial software providers, open source projects, and software outsourcers between February 2007 and January 2010. This is the first vulnerability analytics study of this magnitude that incorporates data from both static analysis and dynamic analysis. 
+
+We will compare the relative security of applications by industry and origin, and we will examine detailed vulnerability distribution data in the context of taxonomies such as the OWASP Top Ten and the CWE/SANS Top 25 Programming Errors. 
+
+== DAY 2, TRACK 3  ==
+
+=== [[Image:OWASP AppSec Research 2010 Research word.gif]] A Taint Mode for Python via a Library  ===
+
+''Juan José Conti, Universidad Tecnológica Nacional, and Alejandro Russo, Chalmers University of Technology'' 
+
+Vulnerabilities in web applications present threats to on-line systems. SQL injection and cross-site scripting attacks are among the most common threats found nowadays. These attacks are often result of improper or none input validation. To help discover such vulnerabilities, taint analyses have been developed in popular web scripting languages like Perl, Ruby, PHP, and Python. Such analysis are often implemented as an execution monitor, where the interpreter needs to be adapted to provide a taint mode. However, modifying interpreters might be a major task in its own right. In fact, it is very probably that new releases of interpreters require to be adapted to provide a taint mode. Differently from previous approaches, we show how to provide a taint analysis for Python via a library written entirely in Python, and thus avoiding modifications in the interpreter. The concepts of classes, decorators and dynamic dispatch makes our solution lightweight, easy to use, and particularly neat. With minimal or none effort, the library can be adapted to work with different Python interpreters. 
+
+=== [[Image:OWASP AppSec Research 2010 Research word.gif]] OPA: Language Support for a Sane, Safe and Secure Web  ===
+
+''David Rajchenbach-Teller and François-Régis Sinot, MLstate'' 
+
+Web applications and services have critical needs in terms of safety, security and privacy: they need to remain available constantly and can at any time be the object of attacks by malicious and anonymous distant users attempting to take control, alter data or steal it, or cause unwanted behaviors. Unfortunately, recent history shows numerous cases of popular web applications falling victim to such attacks, despite careful attempts to secure them. 
+
+In this paper, we introduce OPA (One Pot Application), a new platform designed to make web development sane, safe and secure. OPA provides an integrated methodology where the complete application is written with one simple language with consistent semantics, enforces safe use of the infrastructure through compile-time static checking and a novel programming paradigm suited to the web and encourages correct-by-construction development. 
+
+=== [[Image:OWASP AppSec Research 2010 Research word.gif]] Secure the Clones: Static Enforcement of Policies for Secure Object Copying  ===
+
+''Thomas Jensen and David Pichardie, INRIA Rennes - Bretagne Atlantique'' 
+
+Exchanging mutable data objects with untrusted code is a delicate matter because of the risk of creating a data space that is accessible by both a code and an attacker. Consequently, secure programming guidelines for Java stress the importance of using defensive copying before accepting or handing out references to an internal mutable object. However, implementation of a copy method (like clone()) is entirely left to the programmer. It may not provide a sufficiently deep copy of an object and is subject to overriding by a malicious sub-class. Currently no language-based mechanism supports secure object cloning. 
+
+This paper proposes a type-based annotation system for defining modular cloning policies for class-based object-oriented programs. It provides a static enforcement mechanism that will guarantee that all classes fulfill their copying policy, even in the presence of overriding of copy methods, and establishes the semantic correctness of the overall approach. 
+
+=== [[Image:OWASP AppSec Research 2010 Research word.gif]] Safe Wrappers and Sane Policies for Self Protecting JavaScript  ===
+
+''Jonas Magazinius, Phu H. Phung, and David Sands, Chalmers Univ. of Technology'' 
+
+Phung et al (ASIACCS’09) describe a method for wrapping built-in methods of JavaScript programs in order to enforce security policies. The method is appealing because it requires neither deep transformation of the code nor browser modification. Unfortunately the implementation outlined suffers from a range of vulnerabilities, and policy construction is restrictive and error prone. In this paper we address these issues to provide a systematic way to avoid the identified vulnerabilities, and make it easier for the policy writer to construct declarative policies – i.e. policies upon which attacker code has no side effects. 
+
+=== [[Image:OWASP AppSec Research 2010 Research word.gif]] On the Privacy of File Sharing Services  ===
+
+''Nick Nikiforakis, Francesco Gadaleta, Yves Younan, and Wouter Joosen, Katholieke Universiteit Leuven'' 
+
+File sharing services are used daily by tens of thousands of people as a way of sharing files. Almost all such services, use a security-through-obscurity method of hiding the files of one user from others. For each uploaded file, the user is given a secret URL which supposedly cannot be guessed. The user can then share his uploaded file by sharing this URL with other users of his choice. Unfortunately though, a number of file sharing services are incorrectly implemented allowing an attacker to guess valid URLs of millions of files and thus allowing him to enumerate their file database and access all of the uploaded files. In this paper, we study some of these services and we record their incorrect implementations. We design automatic enumerators for two such services and a privacy-classifying module which characterises an uploaded file as private or public. Using this technique we gain access to thousands of private files ranging from private and company documents to personal photographs. We present a taxonomy of the private files found and ways that the users and services can protect themselves against such attacks. 
+
+==== Registration  ====
+
+== Registration is closed  ==
+
+'''[http://guest.cvent.com/i.aspx?4W%2cM3%2c717e8a7c-4453-47ff-addb-721306529534 You used to click here to register :)]''' 
+
+Note: To save on processing expenses, all fees paid for the OWASP conference are non-refundable. OWASP can accommodate transfers of registrations from one person to another, if such an adjustment becomes necessary.
+
+== Stay Informed ... and Tell Others  ==
+
+[https://lists.owasp.org/mailman/listinfo/appsec_eu_2010 People subscribed to the conference '''mailing list''']. This was the official information channel and you'd be sure to get any updates and practical info before the conference. 
+
+[http://events.linkedin.com/OWASP-AppSec-Research-2010/pub/185990 People added the event to their '''LinkedIn''' profle] to tell all their business contacts that AppSec Research 2010 was the place to be. 
+
+Then people got on the '''Twitter''' stream by using the tags '''#OWASP''' and '''#AppSecEU'''.
+
+== Conference Fees (June 23-24)  ==
+
+*Regular registration: €350 
+*OWASP individual member (not just chapter member): €300 
+*Full-time students*: €225
+
+<nowiki>*</nowiki> We need some kind of proof of your full-time student status. Either ask your local OWASP chapter leader to vouch for you by email to Kate.Hartmann@owasp.org, or email Kate a scanned image of your student ID (please compress the file size&nbsp;:). 
+
+== Training Fee (June 21-22)  ==
+
+*Training fee is €990 for two days, see Training tab above
+
+==== Practical Info  ====
+
+== Tailor-Made Visitors' Guide ==
+
+We have tailor-made a 15-page visitors' guide to the conference and Stockholm. With this guide you'll know how to get to and from the airport, find your way to the hotel and conference, know where good bars are, know when and how to tip etc. Check it out! [http://www.owasp.org/images/e/eb/OWASP_AppSec_Research_2010_Visitors_Guide_A4.pdf pdf]
+
+== Swedish Wall Plugs ==
+
+This is how Swedish wall plugs look like (image below). The left one is not grounded and the right one is, having small metal connectors on the sides. Be sure to bring adapters, for instance like [http://international-electrical-supplies.com/sweden-plug-adapters.html these], if your's look different.
+
+[[Image:Swedish_wall_plugs.jpg]]
+
+== Weather Forecast ==
+
+YR.no has good coverage of the weather in Stockholm. Checkit out [http://www.yr.no/place/Sweden/Stockholm/Stockholm/ here].
+
+== Travel  ==
+
+Stockholm's foremost international airport is Arlanda (ARN). Clean and convenient speed trains will take you between Arlanda and Stockholm Central in 20 minutes. You can also fly to Stockholm Skavsta (NYO) or Stockholm Västerås (VST) where coaches take you to Stockholm Central in 1 h 20 min. 
+
+== Accommodation  ==
+
+You can choose hotel/hostel freely in Stockholm but we provided three suggestions with pre-booked rooms so many OWASPers are staying there. '''Check with sites like [http://www.hotels.com hotels.com] since they might have better prices than the hotels state themselves!''' 
+
+[[Image:Stockholm map with hotels and public transportation.jpg]] 
+
+Subways and buses are convenient and safe and will take you right up to the venue (station/stop "Universitetet") from these three hotels: 
+
+'''Best Western Time Hotel'''<br> Why? Closest to the university, direct bus or subway to the conference<br> [http://www.timehotel.se/index.aspx?languageID=5 Best Western Time Hotel]<br> Single room: 1395 SEK/€145/$195<br> Double room: 1575 SEK/€160/$220<br> (Rooms were pre-booked until May 18 under code "G#73641 OWASP")<br> 
+
+'''Scandic Continental'''<br> Why? Right at the Central Station, convenient travel to and from airport, direct subway to the conference<br> [http://www.scandichotels.com/en/Hotels/Countries/Sweden/Stockholm/Hotels/Scandic-Continental-Stockholm/ Scandic Continental]<br> Single room: 1590 SEK/€165/$220<br> Double room: 1690 SEK/€175/$235<br> (Rooms were pre-booked until early May under code "OWASP")<br> 
+
+'''Fridhemsplan's Hostel'''<br> Why? Affordable stay in Stockholm's nicest hostel, direct bus to the conference<br> [http://fridhemsplan.se/?p=Main&c= Fridhemsplan's Hostel]<br> Rooms cost €35-€55 ($50-$80)<br> Book directly with them through their webpage. 
+
+==== Social Events ====
+
+== Official Meet Up at "Mosebacke", Tuesday, June 22  ==
+Regardless whether you're one of the lucky ones who will attend training or you'll just attend the conference you are invited to join us at "Mosebacke" on the evening the 22nd. Mosebacke is one of Stockholm's older establishments and is beautifully situated in the south of Stockholm city (only 2 subway stations from Central Station). The official meet up time is 20:00 CEST. We plan on beverage only, but for those who don't mind spending a little extra money on food, you can reserve a table for early evening by calling +46 8 556 098 90 during 2 pm - 5 pm (work days) or with some luck by e-mailing to mosebacke@mosebacke.se.
+
+How will you recognize all the other OWASPers? Some of us will have OWASP-branded grey caps, some you met earlier, some you recognize from pictures, and if you hear any non-Swedish speaking male I guess chances are they're just like you - here for the AppSec conference :).
+
+'''What''': Informal gathering, beer etc.<br>
+'''When''': 8 pm CEST<br>
+'''Where''': Mosebacke, Mosebacke Torg 3 [http://maps.google.se/maps?f=q&source=s_q&hl=sv&geocode=&q=Mosebacke+Etablissement,+Stockholm&sll=59.320492,18.074398&sspn=0.024831,0.077162&gl=se&ie=UTF8&hq=Mosebacke&hnear=Mosebacke,+Mosebacke+Torg+3,+116+46+Stockholm&ll=59.320492,18.074398&spn=0.024831,0.077162&t=h&z=14&iwloc=A Google Maps]<br>
+'''How to get there''': Subway to "Slussen" (2 stops from "T-centralen"), best exit towards "Götgatan". Walk upwards but take the first left to "Hökens gata". Straight up on that one.<br>
+'''How to get there + short sightseeing''': Walk from "T-centralen" along "Drottninggatan" towards Old Town, then towards Slussen and Götgatan. Takes about 30 minutes.<br>
+
+Hope to meet you there!
+
+== Gala Dinner at City Hall, Wednesday, June 23  ==
+All two-day conference attendees including sponsors are welcome to the official AppSec Gala Dinner at Stockholm City Hall on Wednesday June 23rd. We start with a drink at 6:30 pm and sit down for a three course dinner with entertainment at 7 pm. Don't be late.
+
+'''What''': Gala dinner, three course dinner with entertainment<br>
+'''Clothes''': Nice pants/trousers + shirt or a suit is appropriate for men. Women have so many more choices so we opt-out of any suggestions. :)<br>
+'''When''': 6:30 pm CEST<br>
+'''Where''': City Hall, Ragnar Östbergs plan 1 [http://maps.google.se/maps?um=1&ie=UTF-8&q=stadshuset&fb=1&gl=se&hq=stadshuset&hnear=Stockholm&cid=0,0,15456533754099492758&ei=t8wYTJ7IGd6jOJqd6aEL&sa=X&oi=local_result&ct=image&resnum=1&ved=0CB0QnwIwAA Google Maps]<br>
+'''How to get there''': Walk from Central Station / "T-centralen"). Takes about 10 minutes. Or take a taxi/cab and tell the driver "City Hall, please"<br>
+
+Whatever you do, don't skip the gala dinner!
+
+==== Venue  ====
+
+The venue for both training and conference is Aula Magna at Stockholm University.
+
+'''Address''' (for instance for deliveries):<br>
+Aula Magna<br>
+Stockholms universitet<br>
+Frescativägen 6<br>
+SE-106 91 Stockholm<br>
+Sweden<br>
+
+[[Image:AppSec Research 2010 Aula Magna.jpg]] 
+
+==== Sponsoring  ====
+<center>
+[[Image:AppSec Research 2010 Microsoft diamond sponsor.jpg|250px|Microsoft - Diamond Sponsor]] [[Image:AppSec Research 2010 Google 20k sponsor.jpg|150px|Google - Dinner Party and Expo Sponsor]] [[Image:Portwise logo.png|130px|PortWise - Gold and Badge Sponsor]] [[Image:Cybercom logo.png|100px|Cybercom - Gold Sponsor]] [[Image:Fortify logo AppSec Research 2010.png|120px|Fortify - Gold Sponsor]] [[Image:Omegapoint logo.png|110px|Omegapoint - Gold Sponsor]] [[Image:Mnemonic logo.png|100px|Mnemonic - Silver Sponsor]] [[Image:AppSec Research 2010 sponsor Nixu logo.jpg|100px|NIXU - Silver Sponsor]] [[Image:Hps_logo.png|140px|High Performance Systems - Silver Sponsor]] [[Image:AppSec Research 2010 sponsor F5 logo.jpg|70px|F5 - Silver Sponsor]] [[Image:AppSec Research 2010 sponsor Imperva logo.jpg|100px|Imperva - Silver Sponsor]] [[Image:AppSec_Research_2010_sponsor_Promon_logo.jpg|100px|Promon - Silver Sponsor]] [[Image:IIS logo.png|100px|Stiftelsen för Internetinfrastruktur - Lunch Sponsor]] [[Image:MyNethouse logo.png|100px|MyNethouse - Coffee Break Sponsor]] [[Image:AppSec Research 2010 Help Net Security sponsor.jpg|100px|Help Net Security - Media Sponsor]] [[Image:TrustwaveLogo.jpg|100px|Trustwave - Notepad sponsor]]
+</center> 
+We are still welcoming sponsors for OWASP AppSec Research 2010. Take the opportunity to support this year's major appsec event in Europe! The full sponsoring program is available as pdfs: 
+
+Sponsoring program in English:&nbsp;[[Image:OWASP Sponsorship AppSec Research 2010 (eng).pdf]] 
+
+Sponsoring program in Swedish:&nbsp;[[Image:OWASP Sponsorship AppSec Research 2010 (swe).pdf]] 
+
+==== Challenges  ====
+
+=== Countdown Challenges -- Free Tickets to Win!  ===
+
+There will be a challenge posted on the conference wiki page the 21st every month up until the event. The winner will get free entrance to the conference. Be sure to sign up for [https://lists.owasp.org/mailman/listinfo/appsec_eu_2010 the conference mailing list] to get a monthly reminder.
+
+== AppSec Research Final Challenge: Internet Treasure Hunt  ==
+
+It's May 21st, one month to AppSec Research 2010, and '''the last chance to win a free ticket''' to this year's number one conference in appsec.
+
+
+'''The Treasure Hunt in a Nutshell'''<br>
+Your mission is to find several small AppSec Research logotypes hidden among the websites of our sponsors and hosts. Every logo found is associated with a keyword (a dictionary word) in some way. When you've found all the keywords you email them to us.
+
+[[Image:Owasp_appsec_research_2010_logo_by_daniel_kozlowski.jpg|40px|OWASP AppSec Research 2010 logo by Daniel Kozlowski]]
+
+
+'''Instructions'''<br>
+* Please don't do anything malicious during your hunt. And don't produce considerable load on the websites. You should be able to find the keywords anyway :).
+* To check if you found all keywords you compare the md5 of all keywords concatenated in alphabetical order with this hash: 1a7b54ba9cee6cccd9890e7800b83208
+* You can calculate the hash by doing the following in a shell: echo "Keywords concatenated in alphabetical order" | md5
+* To ensure your hash function produces the same as our you can try: echo "owasp" | md5 ... which should result in the hash 2bdce47b1a6c527b134d4b658b033702
+
+
+'''How to Win'''<br>
+To win you email all keywords (not the hash) concatenated in alphabetical order to stefan dot pettersson at owasp dot org. Stefan will let you know if you were the first one with the correct answer!
+
+
+'''Example:'''<br>
+* You found three logos and the keywords were: golf, king, apple
+* You calculate the hash by doing: echo "applegolfking" | md5
+* If the hash matches 1a7b54ba9cee6cccd9890e7800b83208 you email applegolfking to Stefan.
+
+Let the best hunter win!
+
+== AppSec Research Challenge 11: Share Your OWASP AppSec Postcards  ==
+
+Here's the second last chance to win a free ticket to the conference. This time we challenge you to create OWASP AppSec Research Postcards (digital ones of course) from nice places throughout the world hold a paper like the picture below.
+
+[[Image:OWASP_AppSec_Research_2010_Postcard_Challenge.jpg‎]]
+
+== How to Win ==
+Create and share the most "digital postcards" showing you, the conference logo on paper ([http://www.owasp.org/images/5/52/OWASP_AppSec_Research_2010_Postcard_Challenge.pdf pdf]), and ...
+
+* Your work office or "computer room" at home: 1 point
+* A major city (> 1 million inhabitants) with the city sign "Welcome to ...": 2 points
+* On a continent which you don't live: 2 points
+* Under water (outside, not in a pool or a bathtub): 2 points
+* A capital city with a typical sight, e g The Eiffel Tower in Paris: 3 points
+* With someone from our "Who's Who in Security" challenge holding the logo: 3 points
+* With an international celebrity holding the logo: 5 points
+* 4,000 meters or more above sea level, not flying: 6 points
+* With Chuck Norris, Mr. T, or Paris Hilton: 30 points
+
+You get points for every unique postcard, meaning once under water, once in a specific city, once with a unique celebrity, once per mountain above 4,000 meters etc. If you combine categories you get the sum of the points. Most points by May 20th wins a free conference ticket!
+
+== How to Compete ==
+Share your postcards on http://www.Flickr.com following this example (3 points for Eiffel Tower in Paris):
+
+* '''Photo''' of you, the conference logo on paper using [http://www.owasp.org/images/5/52/OWASP_AppSec_Research_2010_Postcard_Challenge.pdf this pdf], and the Eiffel Tower in the background
+* '''Title''': OWASP Challenge Postcard Paris
+* '''Description''': Capital city Paris, typical site The Eiffel Tower, 3 points
+* '''Tag''': #AppSecEu
+
+== AppSec Research Challenge X: Build an Enterprise Java Rootkit ==
+
+The tenth challenge is here! 
+
+Jeff Williams, chairman of OWASP, gave a very interesting talk at last year's Black Hat US and OWASP AppSec US -- [http://www.blackhat.com/presentations/bh-usa-09/WILLIAMS/BHUSA09-Williams-EnterpriseJavaRootkits-PAPER.pdf "Enterprise Java Rootkits -- Hardly Anyone Watches the Developers"]. Now it's time for you to write a rootkit yourself, exploring Jeff's techniques and more. 
+
+'''The Project to Fool'''<br> Your assignment is to be the evil developer who implements and hides a backdoor in a Java servlet. We've implemented a very simple login web application and exported the Eclipse project ([http://www.owasp.org/images/1/16/OWASP_AppSec_Research_2010_Challenge_X.zip zip here]). We will use this project to evaluate your submissions. It's a simple servlet/jsp project that we deployed on Tomcat 6.0. It even contains an evil output of user credentials to a temp file (not yet hidden though) to get you started. Screenshot from the app and the project structure: 
+
+<br> [[Image:Appsec research 2010 challenge X eclipse project.jpg]] [[Image:Appsec research 2010 challenge X login screen.jpg]] 
+
+'''Rules'''<br> 
+
+*You must explain what your changes do (we need to evaluate your rootkit!) 
+*The original features + look and feel must be preserved 
+*Your additions should preferably look like security features such as IP whitelisting, logging, anti-CSRF, frequency blocking etc. 
+*You're only allowed to change the servlet (Login.java), and the gif image (appsec_research_challenge_X.gif) 
+*You do not have to use the jsps 
+*The original size of Login.java is 1,856 bytes and it mustn't grow to more than 4,000 bytes 
+*The gif image mustn't grow in size and should look close enough to the original to fool the committee 
+*Code should "look" readable, i e not minimized too heavily
+
+'''How To Win'''<br> The organization committee will evaluate who has been able to hide the most evil stuff while complying to the rules. The more malicious functionality and the more clever disguise -- the more "points". All submissions must be posted as links or pasted code in [http://sla.ckers.org/forum/read.php?11,33928 this sla.ckers.org thread]. Send an email to john.wilander@owasp.org when you post code or need attention. Deadline April 20. 
+
+<br> 
+
+== AppSec Research Challenge 9: Crack 'Em Hashes (closed)  ==
+
+February's AppSec Research 2010 challenge is about breaking hashed passwords. It starts off easy with the old LM hash and ends with SHA256 and GOST3411. 
+
+[[Image:Owasp appsec research 2010 hash challenge.jpg]] 
+
+'''How To Win'''<br> The first one to publish each broken password gets points according to the table below but at the same time helps the others since the password is the salt of the next hash. So you have to decide -- should you publish your cracked password and collect your points before the others or should you keep it a secret to get a head start cracking the next one? Deadline it March 21st. 
+
+To collect points for a password you must be the first one to publish that broken password on [http://sla.ckers.org/forum/read.php?11,33533 this sla.ckers.org thread]. Please send an email to john.wilander@owasp.org at the same time so we can correct any misunderstandings. For instance we can happen to run into hash collisions, where someone finds another mixed alpha password of max 5 characters that concatenated with the right salt produces the same hash. In such a case we will publish the real password and give points to the one who found the collision. 
+
+The one with the most points on March 21st wins a free ticket to the conference! 
+
+'''Points to Earn'''<br> 
+
+*pwd1 (LM) =&gt; 1 point 
+*pwd2 (MD2) =&gt; 3 points 
+*pwd3 (MD4) =&gt; 5 points 
+*pwd4 (MD5) =&gt; 9 points 
+*pwd5 (RIPEMD160) =&gt; 15 points 
+*pwd6 (SHA1) =&gt; 25 points 
+*pwd7 (SHA256) =&gt; 50 points 
+*pwd8 (GOST3411) =&gt; 100 points
+
+'''The Hashes'''<br> Each password comprises of a-zA-Z (mixed alpha) and is max 5 characters long. With salt that means max 10 mixed alpha characters as input to the hash function. All hashes here are in hex format. The Java source code has all the details. The plus operator means string concatenation. 
+
+*LM(pwd1) 0C04DACA901299DBAAD3B435B51404EE 
+*MD2(pwd2 + pwd1) 16189F5462BF906E9D88CF6F152DE86F 
+*MD4(pwd3 + pwd2) FA8F46A6D347087D6980C3FA77DD4DE9 
+*MD5(pwd4 + pwd3) 425B33D6F60394C897B8413B5C185845 
+*RIPEMD160(pwd5 + pwd4) 35F34671D30472D403937820DCABC1C78C837071 
+*SHA1(pwd6 + pwd5) AE81A30510B2931921934218636B26A803330EB1 
+*SHA256(pwd7 + pwd6) B2FF0269E927C6559804A37590A0688C45DF143F85CEE0E3F239F846B65C9644 
+*GOST3411(pwd8 + pwd7) 16CC9F1FF65688E040F5ADA82A41A258FF948769CDA4C4A17D85228A6F358971
+
+Example: Given that pwd1 is "Win" and pwd2 is "You", the hash 16189F5462BF906E9D88CF6F152DE86F is the result of MD2("YouWin"). Now pwd2 will be the salt when you crack pwd3. 
+
+'''The Source Code'''<br> The source code we've used to produce the hashes is available here [http://www.owasp.org/images/7/79/OwapsAppSecResearch2010HashChallenge.zip zip]. It's Java and all but the LM hash is done with [http://www.bouncycastle.org/latest_releases.html Bouncy Castle 1.4.5]. 
+
+<br> 
+
+== AppSec Research Challenge 8: Construct an OWASP Polyglot (closed)  ==
+
+January's AppSec Research Challenge is to construct an OWASP polyglot, more specifically '''an OWASP logo that also can be run as JavaScript''': 
+
+Show image: &lt;img src="owasp_logo.gif"&gt;<br>Run script: &lt;script src="owasp_logo.gif"&gt;&lt;/script&gt; 
+
+[http://en.wikipedia.org/wiki/Polyglot_(computing) Wikipedia] says: "a ''polyglot'' is a computer program or script written in a valid form of multiple programming languages". This is about as cool as it gets&nbsp;:). 
+
+'''Rules''' 
+
+*Make your polyglot out of the regular OWASP logo in the upper left corner of this wiki (circle with the wasp). 
+*The file size must not grow. 
+*Pixel colors in the gif must not differ more than 5 in red, green, or blue. Ex: If a pixel originally had rgb 100,100,100 then 104,95,96 is OK. 
+*No malicious stuff of course 
+*When your polyglot is run as JavaScript it should execute as many of the following features as possible, starting from the top:
+
+#alert(all cookies belonging to the current domain); 
+#alert(the last keystrokes on the keyboard every ten keystrokes); 
+#alert(the current time in Stockholm, once every minute); 
+#A quine. The polyglot outputs its own source code on the HTML page.
+
+'''How to get started''' 
+
+Jasvir Nagra gave a talk on these kind of polyglots and published a gif/JavaScript polyglot on [http://www.thinkfu.com/blog/gifjavascript-polyglots his blog]. A good starting point is his gif file.&nbsp;Jasvir has also written an extensive article on gif/perl polyglots which explains how to get code into the gif file. Check out [http://search.cpan.org/~jnagra/Perl-Visualize-1.02/Visualize.pm#HOW_IT_ALL_WORKS his guide]. 
+
+'''How to win''' 
+
+Submit your entries in [http://sla.ckers.org/forum/read.php?11,33121 this sla.ckers.org thread]. Either the first complete polyglot or the most complete polyglot wins. We will most probably provide you with a gif checker that validates the color differences. Check the thread.&nbsp; 
+
+== AppSec Research Challenge 7: X-Mas Capture the Flag (closed)  ==
+
+[[Image:AppSec Research 2010 Stocking.gif]] '''Merry Christmas everyone!'''[[Image:AppSec Research 2010 Stocking.gif]] 
+
+It's the 21st and a new AppSec Research Challenge is posted. 
+
+Setting up the AppSec Research 2010 X-mas Challenge was a cooperative effort by the winner of AppSec Research Challenge 3, Mario Heiderich, and Martin Holst Swende. It is a multi-step challenge which involves finding a vulnerability in a web application and locating a hidden message. The winner gets free entrance to next year's conference. Start by subscribing to [https://lists.owasp.org/mailman/listinfo/appsec_eu_2010 the conference mailing list]. Then check the simple rules below and get going. 
+
+'''Rules''': 
+
+*Please do not perform any resource-intensive tests, as the machine is pretty low-end and can be DoS:ed without much effort. 
+*The computer at the given IP address is the only system involved in this challenge, so please do not perform any tests of neighboring systems. 
+*Otherwise, you are free to hack away!
+
+'''Challenge-page''': [http://66.249.7.26 66.249.7.26] 
+
+Discussions, QnA and reports about how far you have made it is welcome at [http://sla.ckers.org/forum/read.php?11,32779 the official sla.ckers thread]. 
+
+Good luck and happy holidays! (And don't forget the submission deadline for the conference -- February 7) 
+
+<br> 
+
+== AppSec Research Challenge 6: Design the Conference Logo (closed)  ==
+
+'''Note''': This challenge is re-opened. Submit by February 21st. 
+
+November's AppSec Research 2010 Challenge asks you to design the conference logotype. So far we have used this: 
+
+[[Image:Appsec research 2010 logo prototype (small).png]] 
+
+... but would like something less "word processor-like". 
+
+'''How to win''' 
+
+*The logo should be suitable for both large printing and small web banners 
+*If you make a color logo, please submit a b/w version too 
+*"OWASP AppSec Research 2010" should in some way be part of the logo&nbsp;:)
+
+'''Copyright?'''<br> By submitting your logo you agree to share it according to [http://creativecommons.org/licenses/by/3.0/legalcode Creative Commons Attributions] and that we credit you in the conference brochure and on the conference wiki but not in all places where we use the logo (i e we will not credit you on banners, sponsoring program, powerpoint presentations etc). 
+
+'''How to submit'''<br> Email jpg + svg to john.wilander [at] owasp.org before Monday December 14th 23:59 [http://www.worldtimeserver.com/current_time_in_UTC.aspx UTC]. The creator of the best logo wins a free ticket to the AppSec Research 2010 conference! 
+
+== AppSec Research Challenge 5: Graphical Effects (closed)  ==
+
+The October OWASP AppSec Research 2010 challenge is over. The winner of a free entrance ticket to next year's AppSec conference in Stockholm is "sirdarckcat" with FireworksIsNotABrowser_v4 (although we like the slightly oversized v6 better). 
+
+The challenge was about '''writing the coolest graphical effect in a 2010 character script'''. 
+
+=== An Example  ===
+
+As an example, copy the script below and paste the script over the URL in the URL bar. 
+
+<nowiki>javascript:R=0; x1=.1; y1=.05; x2=.25; y2=.24; x3=1.6; y3=.24; x4=300; y4=200; x5=300; y5=200; DI=document.getElementsByTagName("img"); DIL=DI.length; function A(){for(i=0; i-DIL; i++){DIS=DI[ i ].style; DIS.position='absolute'; DIS.left=(Math.sin(R*x1+i*x2+x3)*x4+x5)+"px"; DIS.top=(Math.cos(R*y1+i*y2+y3)*y4+y5)+"px"}R++}setInterval('A()',5); void(0)</nowiki> 
+
+As a simple teaser we give these png letters for the script to play with. 
+
+[[Image:AppSec Research 2010 O.png]][[Image:AppSec Research 2010 W.png]][[Image:AppSec Research 2010 A.png]][[Image:AppSec Research 2010 S.png]][[Image:AppSec Research 2010 P.png]] 
+
+=== Rules  ===
+
+*The script should work in Firefox 3.5 (yeah, that means HTML5 and CSS3&nbsp;:) 
+*Any resource, linked document, script, or image defined on the AppSec Research 2010 wiki page may be loaded/accessed/used 
+*No requests to any other location is allowed 
+*No obfuscation is allowed 
+*The script may only use ASCII 
+*Max length of the script is 2010 characters 
+*You have to give your effect an id and a version number (further explanation below) 
+*Any form of malicious code is of course banned&nbsp;;)
+
+=== How to Compete  ===
+
+There's an [http://sla.ckers.org/forum/read.php?11,31944 official thread on sla.ckers] were you share your code and thoughts (Worried someone will steal you code? Check the originality bullet below). You can enter as many effects as you like but '''each effect has to have an id and a version number''', e.g. JohnWobbler_v1.3 for version 1.3 of John's Wobbler effect. Deadline is November 14th, 23:59 [http://www.worldtimeserver.com/current_time_in_UTC.aspx UTC]. 
+
+=== Choosing the Winner  ===
+
+Since this is a creative challenge the OC will choose the winner based on the following: 
+
+*'''Originality''' (tweaking someone's code is cool and encouraged but changing a few magic numbers or inverting a function won't make you the winner) 
+*'''Coolness''' (yeah, you need to convince a few Scandinavian people + Seba and Kate that your script is the coolest)
+
+Either the OC will choose a winner by ourselves or we choose the top effects and let you guys vote for the winner. 
+
+== AppSec Research Challenge 4: Who's Who in Security? (closed)  ==
+
+September's AppSec Research 2010 Challenge was to identify a number of people that are, in one way or another, known in the security business, by their picture. There were thirteen photos in total, portraiting thirteen different individuals. 
+
+'''The winner of a free ticket to the OWASP AppSec Research conference in 2010 was Thomas Vollstädt''' who submitted the correct solution just one day after the challenge was posted. 
+
+=== The Solution  ===
+
+[[Image:Owasp appsec research 2010 challenge 4 solution.png]] 
+
+=== The Names  ===
+
+Dinis Cruz, Gordon "Fyodor" Lyon, David Litchfield, Dave Aitel, Bruce Schneier, Dave Wichers, Gene Spafford, MafiaBoy, MySpace Samy, Tom Brennan, Halvar Flake, Alex Sotirov, Jeff Williams, Jennifer Granick, Kate Hartmann, Mudge, Lance Spitzner, Dan Kaminsky, Brian Chess, Joanna Rutkowska, Crispin Cowan, Michael Howard, Jay Beale, Ross Anderson, Dawn Song, Robert "rsnake" Hansen, and Solar Designer. 
+
+=== The Pictures  ===
+
+If you'd like to see the original pictures without the names, here's the link: [[http://www.owasp.org/index.php/File:Owasp_appsec_research_2010_challenge_4.png]] 
+
+== AppSec Research Challenge 3: Non-Alphanumeric JavaScript (closed)  ==
+
+The August AppSec Research 2010 Challenge was to create a JavaScript alert("owasp") that pops up the word 'owasp', case-insensitive, without using any alphanumeric characters (0-9a-zA-Z).&nbsp;There was a tremendous activity and we want to thank everyone who participated. The size of the final result was almost a third of the first entry (see chart below). '''Want to check out the winning snippet by .mario? Enter the following in the Firebug console''':&nbsp;<nowiki>ω=[[Ṫ,Ŕ,,É,,Á,Ĺ,Ś,,,Ó,Ḃ]=!''+[!{}]+{}][Ś+Ó+Ŕ+Ṫ],ω()[Á+Ĺ+É+Ŕ+Ṫ](Ó+ω()[Ḃ+Ṫ+Ó+Á]('Á«)'))</nowiki> 
+
+It is based on a few different ideas. First of all, a variable assignment on the form 
+
+<nowiki>[a,b,c,,e]="abcde" // a="a", c="c",e="e"</nowiki> 
+
+Which is performed on the string "truefalse[object Object]" 
+
+<nowiki>[Ṫ,Ŕ,,É,,Á,Ĺ,Ś,,,Ó,Ḃ]=!''+[!{}]+{}]</nowiki> // right-hand side is "truefalse[object Object]" 
+
+Also, the following construction obtains the window.sort-function, which leaks the window-object when called without arguments&nbsp;: 
+
+ω=[]["sort"] //ω is now window.sort 
+
+Therefore, calling ω()["alert"] invokes window.alert. To generate the string "owasp", the string "wasp" can be obtained by calling btoa on the characters <nowiki>"Á«)"</nowiki>. 
+
+This was really a great team effort, and I think a lot of us learned some new tricks. The final winner was .mario. Congratulations! 
+
+[[Image:Appsec research 2010 challenge 3 chart.jpg]] 
+
+=== JavaScript Without Alphanumeric Characters?  ===
+
+It is possible to write valid javascript completely without alphannumeric characters (0-9a-zA-Z). To produce a number, you can instead use for example an empty string, <nowiki>''</nowiki>, interpret it as a boolean with a bang: <nowiki>!''</nowiki> -- which leads to the boolean object true. true, interpreted as a numeric value, equals one. Thus, 
+
+<nowiki>$ = +!''; // $ === 1</nowiki> 
+
+<nowiki>$++;$++; // $ === 3</nowiki> 
+
+In a similar fashion, strings can be created from strings embedded in the language. The boolean object true can be converted to string by concatenation, and then accessed by numeric index to, for example, produce the letter 'e'&nbsp;: 
+
+<nowiki>â = (!''+'')[$] // â[$] === "true"[3] === e</nowiki> 
+
+=== Previous Similar Contest  ===
+
+These two techniques are behind a [http://sla.ckers.org/forum/read.php?24,28687 previous contest at the forum "sla.ckers.org"], where the contest was to create alert(1) with as few non-alphanumeric characters as possible. Currently, the code actually being executed was: 
+
+<nowiki>([],"sort")()["alert"](1) // since ([],"sort")()</nowiki> leaks window object in FF, ==&gt; <nowiki>window["alert"](1)</nowiki> is called, which is another form of <nowiki>window.alert(1)</nowiki> 
+
+The winner, or at least current leading entry is 84 bytes long, and looks like this: 
+
+<nowiki>(Å='',[Į=!(ĩ=!Å+Å)+{}][Į[Š=ĩ[++Å]+ĩ[Å-Å],Č=Å-~Å]+Į[Č+Č]+Š])()[Į[Å]+Į[Å+Å]+ĩ[Č]+Š](Å)</nowiki> 
+
+=== The Challenge  ===
+
+August's challenge was to, in a similar fashion, create an alert("owasp"), case-insensitive, not using any alphanumeric characters. The shortest working code snippet submitted by September 18th 23:59:59 [http://www.worldtimeserver.com/current_time_in_UTC.aspx UTC] won a free ticket. By "working" we meant JavaScript that executes in Firefox/Firebug, not depending on any Firebug DOM variables for execution. 
+
+'''Submissions were made as comments to the [http://owaspsweden.blogspot.com/2009/08/appsec-research-2010-challenge-3.html challenge 3 blogpost on Owasp Sweden].''' Check it out. 
+
+== AppSec Research Challenge 2: OWASP Crossword Puzzle (closed)  ==
+
+July's crossword challenge is over. Many permutations arrived in our inbox but it was tricky to get it completely right. Congratulations to Johannes Dahse and Johan Nilsson who in the end were allowed to join forces to be able to find the correct solution. They win a 50&nbsp;% conference ticket discount each. 
+
+You find the solution below. 
+
+[[Image:Appsec research 2010 challenge 2 solution.gif]] 
+
+== AppSec Research Challenge 1: Input Validation and Regular Expressions (closed)  ==
+
+'''This challenge is over'''. The winner was Partik Nordlén. To see the solution(s), please visit the [https://lists.owasp.org/pipermail/appsec_eu_2010/2009-July/000000.html appsec_eu_2010 mailing list archive]. 
+
+''Some people, when confronted with a problem, think “I know, I'll use regular expressions.” Now they have two problems.''<br> &nbsp; &nbsp; &nbsp; &nbsp; --Jamie Zawinski, in comp.emacs.xemacs 
+
+The 21st of each month up until the conference in June 2010 we'll have a countdown challenge posted here. The winner each month will get a free entrance ticket worth about €300/$400. Be sure to sign up for [https://lists.owasp.org/mailman/listinfo/appsec_eu_2010 the conference mailing list] to get a monthly reminder. 
+
+=== The Challenge  ===
+
+A community is hosted on a very large domain, yahoogle.com. The users of that community all have profiles, where they are allowed to use basic HTML for customization, as well as JavaScript files hosted on the domain. 
+
+All the code for the profile pages are filtered on the server side, and whenever a piece of code containing "&lt;script..." is encountered, the following regular expression is used to validate that the script loaded is hosted on a subdomain of yahoogle.com: 
+
+.*(&lt;script){1}([^&gt;]+)src=('http:\/\/[a-zA-Z]+.yahoogle.com\/scripts\/[0-9A-Za-z]+\.js').*\/&gt; 
+
+Capture group 3 is then also checked against a whitelist of allowed scripts on that domain. The whitelist consists of "http://secure.yahoogle.com" and "http://scripts.yahoogle.com". 
+
+Your task is to formulate a snippet of HTML that goes correctly through the filter and the whitelist, but loads the script "http://insecure.com/evil.js" instead. Also, rework the regular expression to defend against your "attack". 
+
+'''Email your solution to Martin Holst Swende &lt;martin.holst_swende@owasp.org&gt;'''. The first correct answer wins a free ticket to the conference. The free ticket is personal and the judgement of the organizing committee can not be overruled&nbsp;:).
+
+==== Archive  ====
+
+== Call for Papers and Proposals (closed)  ==
+
+[[Image:AppSec Research 2010 2nd cfp.png]] 
+
+<br> 1. '''Publish or Perish'''. Peer-reviewed 12 page papers to be published in formal proceedings by Springer-Verlag ([http://www.springer.com/lncs Lecture Notes in Computer Science, LNCS]). Presentation slides and video takes will be posted on the OWASP wiki after the conference.<br> 2. '''Demo or Die'''. A demo proposal should consist of a pdf with a 1 page abstract summarizing the matter proposed by the speaker(s) ''and'' 1 page containing demo screenshot(s). Demos will have ordinary speaker slots but the speakers are expected to run a demo during the talk (live coding counts as a demo), not just a slideshow. Presentation slides and video takes will be posted on the OWASP wiki after the conference.<br> 3. '''Present or Repent'''. A presentation proposal should consist of a 2 page extended abstract representing the essential matter proposed by the speaker(s). Presentation slides and video takes will be posted on the OWASP wiki after the conference. 
+
+If you have any questions regarding submissions etc, please email john.wilander@owasp.org. 
+
+=== Topics of Interest  ===
+
+We encourage the publication and presentation of new tools, new methods, empirical data, novel ideas, and lessons learned in the following areas: 
+
+•&nbsp; &nbsp; Web application security<br> • &nbsp; &nbsp;Security aspects of new/emerging web technologies/paradigms (mashups, web 2.0,&nbsp; offline support, etc)<br> •&nbsp; &nbsp; Security in web services, REST, and service oriented architectures<br> •&nbsp; &nbsp; Security in cloud-based services<br> •&nbsp; &nbsp; Security of frameworks (Struts, Spring, ASP.Net MVC etc)<br> •&nbsp; &nbsp; New security features in platforms or languages<br> •&nbsp; &nbsp; Next-generation browser security<br> •&nbsp; &nbsp; Security for the mobile web<br> •&nbsp; &nbsp; Secure application development (methods, processes etc)<br> •&nbsp; &nbsp; Threat modeling of applications<br> •&nbsp; &nbsp; Vulnerability analysis (code review, pentest, static analysis etc)<br> •&nbsp; &nbsp; Countermeasures for application vulnerabilities<br> •&nbsp; &nbsp; Metrics for application security<br> • &nbsp; &nbsp;Application security awareness and education 
+
+=== Submission Deadline and Instructions  ===
+
+'''Update''': Submission deadline for full-papers ("Publish or Perish") has been '''extended to March 7th 23:59''' (Apia, Samoa time) due to numerous requests. Submit your paper to [https://www.easychair.org/login.cgi?a=c01e98d04e4e;iid=20045 AppSec Research 2010 (EasyChair)]. 
+
+Full-paper submissions should be at most 12 pages long and must be in the Springer LNCS style for "Proceedings and Other Multiauthor Volumes". Templates for preparing papers in this style for LaTeX, Word, etc can be downloaded from: http://www.springer.com/computer/lncs?SGWID=0-164-7-72376-0. Full papers must be submitted in a form suitable for anonymous review: '''remove author names and affiliations from the title page, and avoid explicit self-referencing in the text'''. 
+
+Submission for "Demo or Die" and "Present or Repent" closed on February 7th. 
+
+Decision notification: April 7th 
+
+=== Program Committee (for review of full-papers)  ===
+
+• John Wilander, Omegapoint and Linköping University (chair)<br> • Alan Davidson, Stockholm University/Royal Institute of Technology (co-host)<br> • Lieven Desmet, Katholieke Universiteit Leuven<br> • Úlfar Erlingsson, Reykjavík University and Microsoft Research<br> • Martin Johns, University of Passau<br> • Christoph Kern, Google<br> • Engin Kirda, Institute Eurecom<br> • Ulf Lindqvist, SRI International<br> • Benjamin Livshits, Microsoft Research<br> • Sergio Maffeis, Imperial College London<br> • John Mitchell, Stanford University<br> • William Robertson, UC Berkeley<br> • Andrei Sabelfeld, Chalmers UT<br> 
+
+== Call for Training (closed)  ==
+
+(Info kept here for reference)<br> OWASP is currently soliciting training proposals for the OWASP AppSec Research 2010 Conference which will take place at Stockholm University in Sweden, on June 21st through June 24th 2010. There will be training courses on June 21st and 22nd followed by plenary sessions on the 23rd and 24th with three tracks per day. 
+
+We are seeking training proposals on the following topics (in no particular order): 
+
+*Security in Web 2.0, Web Services/XML 
+*Advanced penetration testing 
+*Static analysis for security 
+*Threat modeling of applications 
+*Secure coding practices 
+*Security in J2EE/.NET patterns and frameworks 
+*Application security with ESAPI 
+*OWASP tools in practice
+
+We will look favourably on laboration-based/hands-on training. 
+
+=== Submission Deadline and Instructions  ===
+
+Submission '''deadline is Sunday February 7th 23:59''' (Apia, Samoa time). To submit your training proposal please fill out the [[Image:OWASP AppSec Research 2010 Call for Training.docx]] and email it to john.wilander@owasp.org with subject "AppSec Research 2010: Training proposal". 
+
+Upon acceptance you'll be requested to fill out the ''Training Instructor Agreement'' where you'll find details on revenue split etc. The agreement will be reworked but the previous one is here: [[Image:Training Instructor Agreement.doc]]. 
+
+=== Upcoming List of Trainers on OWASP Wiki  ===
+
+As part of the [http://www.owasp.org/index.php/Category:OWASP_Education_Project OWASP Education Project], OWASP is starting an official list of trainers on the OWASP web site. This list (mentioning the trainer - course and contact details) will cover all trainers that performed training at OWASP conferences, together with their aggregated scores on the course feedback forms. Of course, this is opt-in. Please let us know if you are interested to participate in this program (tick the check-box on the application form). 
+<br> <headertabs />

@@ -1,0 +1,41 @@
+[[Project Information:template Teachable Static Analysis Workbench|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#Teachable Static Analysis Workbench|OWASP Teachable Static Analysis Workbench Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#Teachable Static Analysis Workbench|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| 
+# TeSA plugin allows the user to mark the sources and sinks in the Eclipse text editor.  
+# FindBugs plugin was written which performs tainted analysis in more precise way than LAPSE, but does not yet have a  GUI. 
+# A command "ant run-tests" can be run from the command-line which consists of unit-tests for generating FindBugs configuration files that can then be reviewed using FindBugs. 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#Teachable Static Analysis Workbench|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+# The project appears to be 50% completed according to the stated deliverables. 
+# The major issue remains that FindBugs is planned to be integrated with TeSA and LAPSE for 100%. 
+# The documentation needs heavy editing for 100%, some of the editing recommendations are listed below. 
+ |- 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+# Change the Install Guide on the Wiki to refer to the specific versions of Eclipse, FindBugs, e.g., FindBugs 1.3.4, Eclipse 3.4 JEE 
+# Modify the Install Guide to say that in editing the build.properties file, it is necessary to use forward slashes for the directory paths even on Windows. 
+# Add the download location for the secbugs subtree to the Install Guide, i.e. http://code.google.com/p/teachablesa/source/browse/#svn/trunk/secbugs 
+# To support the esapi-demo-app in the Project Technical Report Draft, add the URL path for downloading the demo application to the Install Guide, i.e., http://code.google.com/p/teachablesa/source/browse/#svn/trunk/webapps/esapi_demo_app 
+# Update the Install Guide to download Ant from apache.org for running the "ant run-tests" command. 
+# Update the Install Guide to download Tomcat from apache.org for satisfying the esapi-demo-app dependencies in Eclipse for the servlet-api.jar file. 
+# In the User's Guide Step 5, you need to right-click in the "Lapse View Sources" to select "Find Sources".  
+# The Install Guide or User's Guide has be updated with instructions for viewing the results of the "ant run-tests" with FindBugs.
+|}

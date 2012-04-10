@@ -1,0 +1,12 @@
+Basically this will cover any attacks on web applications which use AJAX in the front end and communicates with the Asp.net server side scripts. 
+
+The Following points should be taken into consideration when assessing such environments. 
+
+*The Client side JavaScript code should not contain sensitive information, since they will be cached in most of the frameworks. 
+*The Server side pages which serve the AJAX request should be XSRF free. 
+*Page Authorization logic should be eliminated from the ajax code. 
+*Incase JSON is used, don't send critical business data in the JSON response. 
+*Some frameworks convert ajax methods from c# to javascript by setting the method attributes. Make sure the method is robust and has got minimal functionality. 
+*Do not use the server side ajax methods extensively as it will overload the handlers and can potentially cause a denial of service attack.
+
+<br>

@@ -1,0 +1,127 @@
+''Sent to owasp-all mailing list on 17 April 2007''  __NOEDITSECTION__
+==  OWASP Newsletter #8 (17-Apr-2007) ==
+A bit later than normal, welcome to the 8th OWASP Newsletter, featuring the [[OWASP Spring Of Code 2007]], details on the [[6th_OWASP_AppSec_Conference_-_Italy_2007|6th AppSec Conference]], the [[:Category:OWASP Code Review Project|Code Review Project]], the [[:Category:OWASP WeBekci Project|WeBekci Project]] and the [[:Category:OWASP Code Review Project|OWASP Code Review Project]] is seeking for volunteers.
+
+Note that we also scan blogs for OWASP references.
+
+If you have any content to add to the next edition, feel free to add it directly to its WIKI page ([[OWASP Newsletter 9]]).
+
+Sebastien Deleersnyder
+
+Belgium Chapter Leader
+
+== Featured Item: [[OWASP Spring Of Code 2007]] ==
+
+We have received lots of [[OWASP Spring Of Code 2007 Applications]]! The submission period is now closed. The OWASP board is now evaluating the proposals and will publish the results as soon as possible.
+
+== Featured Item: Milan (Italy) Conference Agenda details! ==
+
+Join us for our [[6th_OWASP_AppSec_Conference_-_Italy_2007|6th AppSec Conference]] May 15-17 in Milan, Italy. Microsoft will be presenting "The Benefits of the SDL initiative to Microsoft and its Customers" and there will be expert talks on Web Services Security, Securing AJAX, the Microsoft Secure Development Lifecycle, all the new OWASP projects, and much more. 
+
+== Featured Project: [[:Category:OWASP Code Review Project|OWASP Code Review Project]] ==
+The OWASP Code Review project was concieved by Eoin Keary the OWASP Ireland Founder and Chapter Lead. We are actively seeking techies to add new sections as new web technologies emerge. Need help on this one, don't be shy, all help appreciated.
+
+View the [[OWASP Code Review Project Roadmap]].
+
+== Featured Project: [[:Category:OWASP WeBekci Project|OWASP WeBekci Project]] ==
+WeBekci is a web based ModSecurity 2.x management tool. WeBekci is written in PHP, Its backend is powered by MySQL and the frontend by XAJAX framework. It will remove management overhead of ModSecurity 2.x. You can configure modsecurity.conf, add special rules and watch system, apache and modsecurity logs (only guardianlog has been implemented in this version). 
+
+== Web Application Security Metrics Survey Participants Needed ==
+Since meaningful web application security metrics are very lacking, the [[:Category:OWASP_Application_Security_Metrics_Project|Web Application Security Metrics]] seeks to identify and provide the web application security community with a basic set of application security metrics that have been found by contributors to be effective in measuring web application security effectiveness.   
+
+Since this Project was launched, it has proven to be challenging to get survey participants (e.g., customers too busy or have no metrics).  As a result, Bob Austin (the project leader) is turning directly to you:the OWASP community. He would be very grateful to OWASP members who are willing to take 30 minutes to complete a survey with him by phone (and/or to support collection of metric data from an organization you support).  The key data he seeks is as follows: 
+* Description of Metric, 
+* why the metric was created, 
+* how the metric is created, 
+* source of the data used to produce the metric, 
+* and how is the metric used.
+
+Bob can be contacted at  austinb <at> korelogic <dot> com or +1.804.379.4656
+
+== Latest additions to the WIKI ==
+
+==== New Pages====
+* [[‎Denver February 2007 meeting]]
+* [[‎6th OWASP AppSec Conference - Italy 2007/Agenda]]
+* [[‎Comprehensive list of Threats to Authentication Procedures and Data]]
+* [[‎WebScarab SSL Certificates]]
+
+==== Updated pages==== 
+Updated chapter pages:
+* [[Taiwan]]
+* [[Phoenix]]
+* [[New Jersey]]
+* [[Switzerland]]
+* [[OWASP Community]]
+* [[Greece]]
+* [[Belgium]]
+* [[Denver]]
+* [[Washington DC]]
+* [[Boston]]
+* [[London]]
+* [[Virginia (Northern Virginia)]]
+* [[San Francisco]]
+* [[SoCal]]
+
+Other pages:
+* [[OWASP Spring Of Code 2007 Applications]]
+* [[Testing for Directory Traversal]]
+* [[Testing for Session Management Schema (OWASP-SM-001)|Testing for Session Management Schema]]
+* [[OWASP Education Presentation‎]]
+* [[Phishing]]
+* [[Comprehensive list of Threats to Authentication Procedures and Data]]
+* [[Authentication Error‎]]
+* [[:Category:OWASP Interceptor Project]]
+* [[:Category:OWASProfiler Project]]
+* [[OWASP AppSec Conference Sponsors]]
+* [[:Category:OWASP WebGoat Project]]
+* [[Fuzzing]]
+* [[:Category:OWASP WeBekci Project]]
+* [[Main Page]]
+* [[:Category:OWASP AJAX Security Project]]
+* [[OWASP Code Review Guide Table of Contents]]
+* [[Java Security Frameworks]]
+* [[OWASP Java Table of Contents]]
+* [[PDF Attack Filter for Apache mod rewrite]]
+* [[Member Offers]]
+* [[Data Validation]]
+* [[OWASP Application Security FAQ]]
+* [[Phoenix/Tools]]
+* [[OWASP Tiger]]
+
+==== New Documents & Presentations from chapters ==== 
+For a complete list of chapter presentations see [[OWASP_Education_Presentation|the online table of presentations]].
+
+==== Latest Blog entries ==== 
+* [http://blogs.owasp.org/diniscruz/2007/03/26/lists-of-tools-for-vmware-box/ Lists of tools for VMWare box]
+* [http://blogs.owasp.org/orizon/2007/03/19/today-mantra/ Today mantra]
+
+==== OWASP Community====
+* '''May 15 (18:00h) - [[Rochester|Rochester chapter meeting]]'''
+* '''May 10 (18:00h) - [[Belgium|Belgium chapter meeting]]'''
+* '''May 9 (18:00h) - [[Toronto|Toronto chapter meeting]]'''
+* '''May 9 (18:00h) - [[Ottawa|Ottawa Chapter Meeting]] '''
+* '''May 8 (18:00h) - [[Virginia (Northern Virginia)|Washington DC (N. VA) chapter meeting]]'''
+* '''May 2 (18:30h) - [[Boston|Boston chapter meeting]]'''
+* '''May 1 (18:00h) - [[Melbourne|Melbourne chapter meeting]]'''
+* '''May 21 (14:00h) - [[Israel|2nd OWASP Israel mini conference]]'''
+* '''Apr 26 (17:00h) - [[Switzerland|Switzerland chapter meeting and "Swiss Security Dinner"]]'''
+* '''Apr 20 (19:00h) - [[Hong Kong|Hong Kong chapter meeting - Objectives for 2007]]'''
+* '''Apr 17 (18:00h) - [[Rochester|Rochester chapter meeting]]'''
+* '''Apr 12 (18:00h) - [[Netherlands|Netherlands chapter meeting]]'''
+* '''Apr 11 (18:00h) - [[Toronto|Toronto chapter meeting]]'''
+* '''Apr 10 (18:00h) - [[Virginia (Northern Virginia)|Washington DC (N. VA) chapter meeting]]'''
+* '''Apr 4 (18:30h) - [[Boston|Boston chapter meeting]]'''
+* '''Apr 3 (18:00h) - [[Melbourne|Melbourne chapter meeting]]'''
+* '''Mar 30 - [[http://www.owasp.org/index.php/Italy#March_30th.2C_2007_-_Master_in_Security_-_University_of_Rome_.22La_Sapienza.22| Italy@Master in Security at "La Sapienza"]]'''
+
+== OWASP references in the Media / Blogs ==
+* [http://www.windowsitpro.com/Article/ArticleID/95598/Windows_95598.html SANS Launches Security Certification for Programmers]
+* [http://denimgroup.typepad.com/denim_group/2007/03/web_application.html Web Application Remediation - OWASP San Antonio Meeting Tomorrow]
+* [http://www.disenchant.ch/blog/owasp-meeting-and-swiss-security-dinner/54 OWASP Meeting and “Swiss Security Dinner”]
+* [http://ajaxian.com/archives/owasp-testing-guide-20 OWASP Testing Guide 2.0]
+* [http://shiflett.org/blog/2007/mar/owasp-spring-of-code-2007 OWASP Spring of Code 2007]
+* [http://www.darknet.org.uk/2007/03/jbrofuzz-05-from-owasp-stateless-network-protocol-fuzzer/ JBroFuzz 0.5 from OWASP - Stateless Network Protocol Fuzzer]
+* [http://www.disenchant.ch/blog/owasp-appsec-conference-italy-2007/60 OWASP AppSec Conference - Italy 2007]
+* [http://www.javascriptsearch.com/news/press/070413WhiteHat.html WhiteHat Security Chief Technology Officer Jeremiah Grossman To Present at OWASP New York/New Jersey Meeting]
+* [http://www.darkreading.com/document.asp?doc_id=120550&WT.svl=news1_1 Security's New School]

@@ -1,0 +1,42 @@
+{{Template:Principle}}
+<br>
+[[Category:OWASP ASDR Project]]
+
+==Description==
+
+A "positive" security model (also known as "whitelist") is one that defines what is allowed, and rejects everything else. This should be contrasted with a "negative" (or "blacklist") security model, which defines what is disallowed, while implicitly allowing everything else.
+
+The positive security model can be applied to a number of different application security areas. For example, when performing input validation, the positive model dictates that you should specify the characteristics of input that will be allowed, as opposed to trying to filter out bad input.  In the access control area, the positive model is to deny access to everything, and only allow access to specific authorized resources or functions.  If you've ever had to deal with a network firewall, then you've probably encountered this application of the positive model.
+
+The benefit of using a positive model is that new attacks, not anticipated by the developer, will be prevented. However, the negative model can be quite tempting when you're trying to prevent an attack on your site. Ultimately, however, adopting the negative model means that you'll never be quite sure that you've addressed everything. You'll also end up with a long list of negative signatures to block that has to be maintained.
+
+==Examples==
+
+===isAuthorized===
+
+ <% if ( ESAPI.accessController().isAuthorizedForFunction( ADMIN_FUNCTION ) ) { %>
+  <a href="/doAdminFunction">ADMIN</a>
+ <% } else { %>
+  <a href="/doNormalFunction">NORMAL</a>
+ <% } %>
+
+: In this example, if there is explicit authorization for the function then it is authorized. The default action is to execute the normal function.
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Improper error handling]]
+
+==Related [[Controls]]==
+
+* [[Authorization]]
+* [[Error handling]]
+* [[Web Application Firewall]]
+
+
+==References==
+
+* [[:Category:OWASP Enterprise Security API]]
+
+
+[[Category:Principle]]

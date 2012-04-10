@@ -1,0 +1,107 @@
+This section details the strategy and work done in order to reach the goals of the project. When the term 'mitigated' is used throughout this document, it is used in the sense that the WebGoat vulnerability in a lesson has been prevented by ModSecurity from being exploited.
+
+
+=== Project Setup and Environment ===
+
+Disclaimer: The background of the project team member is software development and not system/network administration, so any suggestions or comments to improve the following configurations are welcome.
+
+==== Network/hardware/software ==== 
+
+The operating system is Kubuntu 7.10 on a Dell Inspiron laptop. Apache 2.2.7 and Tomcat 5.5 from the Kubuntu distribution is used; mod_jk glues Tomcat to Apache. Mod_proxy is used and configured so that Apache has a static IP address, WebGoat is accessible via port 80, and is available to other PCs on the internal network. For security, the NetGear wireless router is configured to block all HTTP & HTTPS traffic to and from the Web server to the outside world.
+
+Firefox 2.0, Internet Explorer 7.0, and Opera 9.26 were used remotely on Windows XP SP2, and occasionally Firefox 2.0 was used on the Web server itself.
+
+WebGoat version 5.2 beta 1 was used. The standard release of WebGoat 5.2 was posted to Google Code on 12 July 2008 and the second half of this project will be based on the standard release. Also, the ModSecurity solutions provided for the first 50% will be re-tested.
+	
+ModSecurity 2.5.1 was compiled, installed and used. For the 2nd half of the project, ModSecurity 2.5.5 (or a newer version if available) will be utilized.
+
+==== Tools used ==== 
+
+* WebScarab/Paros Proxy web proxies: The solutions use WebScarab and the project member used both WebScarab and Paros Proxy interchangeably throughout the project.
+
+* Remo - Rule Editor for ModSecurity (http://remo.netnea.com/): Remo was invaluable to get started with an easy-to-use GUI that builds ModSecurity rules. Besides the tutorial video on the Remo site, another very helpful tutorial is at http://www.howtoforge.com/remo_modsecurity_apache. 
+
+* Regex tools: The Regex Coach 0.9.2 (http://weitz.de/regex-coach/) and Expresso 3.0 (http://www.ultrapico.com/Expresso.htm) were used for building, testing, and analyzing regular expressions. 
+
+* Lua tools: The standalone binaries and all related documentation and artifacts for using the Lua scripting language can be found starting at http://www.lua.org. A big help was a version of Notepad2 with Lua support (http://zigmar.googlepages.com/notepad2withluasupport).
+
+* The ModSecurity debug file: It's simply not possible to go without the ModSecurity debug file set at level 9 for debugging.
+
+* A text editor with line numbers: the ModSecurity debug file makes extensive references to line numbers with rulesets, so having a text editor with line numbers is essential for a debugging session. 'kate' was used on Kubuntu 7.10 and 'Notepad2' was used on WinXP.
+
+=== Doing the WebGoat lessons - tips and tricks ===
+
+Here are some tips and tricks to consider while using the ModSecurity rules from this project with WebGoat:
+
+* WebGoat keeps track of the user's position within WebGoat on the back end out of the reach of ModSecurity. For instance, typing in the URL http://192.168.0.5/WebGoat/attack when the session ID (the JSESSIONID cookie) still exists will take the user directly to the position that they were previously. Since there is no 'menu' parameter in the URL, the ModSecurity rule for that lesson will not be invoked. It is necessary to explicitly choose the sublesson from the left side menu to invoke the ModSecurity rules for that lesson. To get WebGoat to forget the user's current position, erase the session cookie from within the browser and empty the cache (Firefox requires the fewest clicks to do this). In some scenarios, it is also necessary to intercept the HTTP request in a proxy and remove the Basic Authentication line (e.g 'Authorization: Basic Z3Vlc3Q6Z3Vlc3Q='), which will require the user to re-login.
+
+* Within lessons, there is no unique identifier to easily distinguish a sublesson or stage of a sublesson from the others. The best way is to determine uniqueness by parameter names (ARG_NAMES in ModSecurity lingo). But this can get tricky; for example, in one lesson, one key in one sublesson is 'Username' while in another sublesson the key is 'username'. However, it is technically possible to key on the sublesson name in the web page banner, but the trade-off in extra clutter in the rulesets is not deemed a worthy trade-off.
+		
+* Different browsers have their pluses and minuses:
+** Internet Explorer 7: The solutions were done with IE7 (or, at least, the screenshots in the solutions are of IE7) so use it if all else fails. But, to toggle IE7 to use a web proxy requires closing the browser and re-opening it.
+** Firefox 2: The fewest mouse clicks are required to remove the WebGoat session cookies and clear the cache. Also, reconfiguring a web proxy is done on the fly and does not require restarting the browser. One sublesson, 3.8 Insecure Client Storage, uses Firebug - a Firefox extension - but the other browsers have similar browser plug-ins (e.g. Opera has Dragonfly as of version 9.5).
+** Opera 9.26: The AJAX Security lessons seemed to work best with Opera.
+** Keep in mind that when a browser is going through a web proxy and you want to block requests and/or responses, unwanted crap gets sent from the browser to the outside world (anything Google-related was the biggest culprit, with Yahoo coming in second) and interferes with the Web proxy session. So, you might want to have more than one browser open; either your browser of choice to use with the proxy, or your browser of choice to use for general surfing and research while you are using WebGoat.
+
+=== Testing ModSecurity rules - tips and tricks ===
+
+The following are 2 contributor's suggestions to speed up the process of writing ModSecurity rules (especially RegExs) and testing them:
+
+"I work with 4 shells on a single screen and I believe I get quite close to what you
+are looking for:
+
+* 1 (top left): Apache config
+* 2 (bottom left): Apache commands (-> alias "apareload")
+* 3 (bottom right): curl commands
+* 4 (top right): tail on the debug log (this can be filtered with tail -f ... | grep -v (...|...|...)
+
+Alias apareload: That is a command alias to reload apache with the latest timestamp on the command line. This is very helpful when you play around with multiple apaches and configs. If you want to be really nifty, then you can script apareload into a while loop and whenever you press enter in that shell window, it reloads apache.
+
+I do almost all my testing with "curl -v". Sometimes directly, sometimes scripted into an adhoc shell script (like: proceed by entering different strings). Looking at the http status, I can determine whether it matched or not. Sometimes I write multiple rules and have each one return a redirect to a different location. That way I can determine which one triggered. The same information is also in the debug log, but most of the time, the http response is enough for me.
+
+Note the counterclockwise arrangement of the shell windows. Edit Apache, reload Apache, run curl, check the debug log, run curl, check the output or proceed with the debug log on top. Then eyes to the left again to the apache config. Of course, you can also arrange it clockwise or any other way. It's just the way the works for me. Your mileage may vary.
+
+Maybe that's all obvious to experienced ModSec users. But I believe it is useful for newbies to get into a short reconfigure->tryout cycle. With the setup pointed out above, it takes merely a few seconds."
+- Christian Folini
+
+
+"For the mean-time I have a very tiny tool (product of another night of coding) attached to this mail. You can run it by:
+
+  java -jar RegexpSelector.jar  [/path/to/samples.txt]
+
+[[Image:OWASP_Securing_WebGoat_using_ModSecurity_RegexpSelector.zip]]
+
+(Or by double-clicking the jar-Archive on some systems)
+
+It will present you a list of string-values and provide you with a box for entering a regular expression. As soon as you type your regex it will show, which string do match and which do not.
+
+This very closely resembles ModSecurity's regexp matching. If you provide it with a file as an optional attribute, then it loads the sample strings from that file line-by-line.
+"
+- Christian Bockermann
+
+=== Project organization ===
+
+Following is how the project has been organized. The overall intent is to formulate the rulesets and the mitigating solutions in the most modular and granular fashion possible with the fewest dependencies on each other. Another consideration was to introduce a file-naming and numbering system that is as intuitive as possible. Simplicity is favored over complexity. 
+
+==== ModSecurity rules ====
+
+The numbering convention is 'rulefile', lesson number, sublesson number (if applicable), and description; e.g. 'rulefile_15_parameter-tampering.conf' is for Lesson 15: Parameter Tampering. 
+
+There is an 'initialization' rulefile, rulefile_00_initialize.conf, that contains all of the global configuration parameter needed by ModSecurity (e.g. SecRuleEngine, SecRequestBodyAccess, SecResponseBodyAccess, SecDataDir, SecDebugLog) plus a few rules that make the most sense - for clarity - to put there.
+
+In most cases, each ruleset from a lesson applies to only that lesson; however, the Cross-site Scripting (Lesson 8) and Command Injection rulesets (Lesson 11) can act globally on all lessons. Otherwise, the initialization ruleset plus any other ruleset can act on their own for that particular lesson.
+
+==== SecDirData directory ====
+
+The SecDirData for ModSecurity persistence is configured in the initialization file. Since it already has the correct Apache read/write permissions, the same directory is used for Lua persistence and to store the Lua scripts. Also, this directory is hard-coded inside the Lua scripts.
+
+==== Error pages ====
+
+In the real world, only generic error messages should be reflected back to the end user. In our situation, this is an educational project so each rule in each ruleset has its own HTML error file page that it is redirected to; for example, the error file 'lesson08a.html' for many of the XSS vulnerabilities in Lesson 8 is:
+
+[[Image:OWASP_ModSecurity_Securing_WebGoat_Section_3_SS1.jpg]]
+
+
+==== Informational and debug messages ====
+
+Rules and Lua scripts contain informational and debug messages. It is a good practice to use unique and specific words in them (per rule and per ruleset) to make it easier to search through the ModSecurity debug and audit log files.

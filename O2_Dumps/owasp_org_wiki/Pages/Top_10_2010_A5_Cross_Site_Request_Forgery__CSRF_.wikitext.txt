@@ -1,0 +1,49 @@
+{{Top_10_2010:TopTemplate|useprev=2010PrevLink|usenext=2010NextLink|prev=A4-Insecure Direct Object References|next=A6-Security Misconfiguration}}
+
+{{Top_10_2010:SummaryTableHeaderBeginTemplate}}
+{{Top_10_2010:SummaryTableValue-2-Template|Exploitability|AVERAGE}}
+{{Top_10_2010:SummaryTableValue-1-Template|Prevalence|WIDESPREAD}}
+{{Top_10_2010:SummaryTableValue-1-Template|Detectability|EASY}}
+{{Top_10_2010:SummaryTableValue-2-Template|Impact|MODERATE}}
+{{Top_10_2010:SummaryTableHeaderEndTemplate}}
+     <td {{Template:Top 10 2010:SummaryTableRowStyleTemplate}}>Consider anyone who can trick your users into submitting a request to your website. Any website or other HTML feed that your users access could do this.</td>
+     <td {{Template:Top 10 2010:SummaryTableRowStyleTemplate}}>Attacker creates forged HTTP requests and tricks a victim into submitting them via image tags, XSS, or numerous other techniques. If the <u>user is authenticated</u>, the attack succeeds.</td>
+     <td colspan=2  {{Template:Top 10 2010:SummaryTableRowStyleTemplate}}>[[CSRF]] takes advantage of web applications that allow attackers to predict all the details of a particular action.<br/><br/>Since browsers send credentials like session cookies automatically, attackers can create malicious web pages which generate forged requests that are indistinguishable from legitimate ones.<br/><br/>Detection of CSRF flaws is fairly easy via penetration testing or code analysis.</td>
+     <td {{Template:Top 10 2010:SummaryTableRowStyleTemplate}}>Attackers can cause victims to change any data the victim is allowed to change or perform any function the victim is authorized to use</td>
+     <td {{Template:Top 10 2010:SummaryTableRowStyleTemplate}}>Consider the business value of the affected data or application functions. Imagine not being sure if users intended to take these actions.<br/><br/>Consider the impact to your reputation.</td>
+{{Top_10_2010:SummaryTableEndTemplate}}
+
+{{Top_10_2010:SubsectionAdvancedTemplate|type={{Top_10_2010:StyleTemplate}}|number=1|risk=5}}
+The easiest way to check whether an application is vulnerable is to see if each link and form contains an unpredictable token for each user. Without such an unpredictable token, attackers can forge malicious requests. Focus on the links and forms that invoke state-changing functions, since those are the most important CSRF targets.
+
+You should check multi-step transactions, as they are not inherently immune. Attackers can easily forge a series of requests by using multiple tags or possibly JavaScript.
+
+Note that session cookies, source IP addresses, and other information that is automatically sent by the browser doesn’t count since this information is also included in forged requests.
+
+OWASP’s [[CSRFTester | CSRF Tester]] tool can help generate test cases to demonstrate the dangers of CSRF flaws.
+{{Top_10_2010:SubsectionAdvancedTemplate|type={{Top_10_2010:StyleTemplate}}|number=2|risk=5}}
+Preventing CSRF requires the inclusion of an unpredictable token in the body or URL of each HTTP request. Such tokens should at a minimum be unique per user session, but can also be unique per request.
+#The preferred option is to include the unique token in a hidden field. This causes the value to be sent in the body of the HTTP request, avoiding its inclusion in the URL, which is subject to exposure.
+#The unique token can also be included in the URL itself, or a URL parameter. However, such placement runs the risk that the URL will be exposed to an attacker, thus compromising the secret token.
+
+OWASP’s [[CSRFGuard | CSRF Guard]] can be used to automatically include such tokens in your Java EE, .NET, or PHP application. OWASP’s [http://owasp-esapi-java.googlecode.com/svn/trunk_doc/latest/org/owasp/esapi/HTTPUtilities.html ESAPI] includes token generators and validators that developers can use to protect their transactions.
+{{Top_10_2010:SubsectionAdvancedTemplate|type={{Top_10_2010:StyleTemplate}}|number=3|risk=5}}
+The application allows a user to submit a state changing request that does not include anything secret. Like so:
+{{Top_10_2010:ExampleBeginTemplate}}<nowiki>http://example.com/app/transferFunds?amount=1500&amp;destinationAccount=4673243243</nowiki>{{Top_10_2010:ExampleEndTemplate}}
+So, the attacker constructs a request that will transfer money from the victim’s account to their account, and then embeds this attack in an image request or iframe stored on various sites under the attacker’s control.
+{{Top_10_2010:ExampleBeginTemplate}}<nowiki>&lt;img src="http://example.com/app/transferFunds?amount=1500&destinationAccount=attackersAcct#" width="0" height="0" /&gt;</nowiki>{{Top_10_2010:ExampleEndTemplate}}
+If the victim visits any of these sites while already authenticated to example.com, any forged requests will include the user’s session info, inadvertently authorizing the request.
+{{Top_10_2010:SubsectionAdvancedTemplate|type={{Top_10_2010:StyleTemplate}}|number=4|risk=5}}
+{{Top_10_2010:SubSubsectionOWASPReferencesTemplate}}
+*[[CSRF | OWASP CSRF Article]]
+*[[Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet | OWASP CSRF Prevention Cheat Sheet]]
+*[[CSRFGuard | OWASP CSRFGuard - CSRF Defense Tool]]
+*[[ESAPI | ESAPI Project Home Page]]
+*[http://owasp-esapi-java.googlecode.com/svn/trunk_doc/latest/org/owasp/esapi/HTTPUtilities.html ESAPI HTTPUtilities Class with AntiCSRF Tokens]
+*[[Testing_for_CSRF_(OWASP-SM-005) | OWASP Testing Guide: Chapter on CSRF Testing]]
+*[[CSRFTester | OWASP CSRFTester - CSRF Testing Tool]]
+{{Top_10_2010:SubSubsectionExternalReferencesTemplate}}
+*[http://cwe.mitre.org/data/definitions/352.html CWE Entry 352 on CSRF]
+{{Top_10_2010:BottomAdvancedTemplate|type={{Top_10_2010:StyleTemplate}}|useprev=2010PrevLink|usenext=2010NextLink|prev=A4-Insecure Direct Object References|next=A6-Security Misconfiguration}}
+
+[[Category:OWASP Top Ten Project]]

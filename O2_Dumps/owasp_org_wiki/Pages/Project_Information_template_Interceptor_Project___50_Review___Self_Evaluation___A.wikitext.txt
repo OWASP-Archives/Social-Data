@@ -1,0 +1,27 @@
+[[Project Information:template Interceptor Project|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#OWASP Interceptor Project - 2008 Update| OWASP Interceptor Project - 2008 Update/Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#OWASP Interceptor Project - 2008 Update|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| Project is actually only about 30% complete currently, though i am putting alot of evening effort in currently to complete the project by the end of the month. (it's going to be tight). Ended up having to completely rebuild the UI for VISTA which is a little painful.
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#OWASP Interceptor Project - 2008 Update|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| Getting there, UI is nearly complete, Attack DB is being extended significantly and have completely rebuilt the TCP stack backend. Basically it's putting it all together now and building the HELP files. I may choose after this project to introduce SSL support something which i have built into the project but have to do some more work on it and don't know if i will get time.
+ |- 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| Nothing really at the moment. If anyone has the attack data that would be a great help (i.e a list of common attacks against web services) to compare to my list.
+|}

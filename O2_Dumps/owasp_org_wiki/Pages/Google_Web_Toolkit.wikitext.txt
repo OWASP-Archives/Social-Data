@@ -1,0 +1,17 @@
+==Overview==
+Google Web Toolkit (GWT) is an open source Java development framework that facilitates the development and debuggging of AJAX applications in the Java language using Java development tools. When a GWT application is deployed to production, the GWT compiler translates the Java application to browser-compliant JavaScript and HTML.
+
+== GWT development cycle ==
+
+1. Use Java IDE to write and debug an application in the Java language<br />
+2. Utilize GWT libraries <br />
+3. Use GWT's Java-to-JavaScript compiler to distill application into a set of JavaScript and HTML files <br />
+4. Test application in different browsers<br />
+
+== GWT security ==
+Due to the fact that Google Web Toolkit (GWT) produces JavaScript code, GWT applications are no less vulnerable to JavaScript attacks than anyone else.
+
+This article [http://groups.google.com/group/Google-Web-Toolkit/web/security-for-gwt-applications] provides a good explanation of these vulnerabilities and mitigation strategies.
+
+
+[[Category:OWASP AJAX Security Project]]

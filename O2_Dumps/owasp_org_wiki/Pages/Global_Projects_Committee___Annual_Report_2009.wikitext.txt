@@ -1,0 +1,25 @@
+= Global Projects Committee - OWASP Annual Report 2009 =
+
+The Global Projects Committee was created during the OWASP EU Summit in Portugal 2008. The primary mission of the committee is to oversee the prioritization and execution of current projects, support and provide direction for new tools and documentation, and foster a community that facilitate contributions from OWASP community members and adoption of OWASP Projects by the global community at large. At the end of the 2009, OWASP had 86 active projects and 17 orphaned projects.
+<br>
+== In 2009 the committee focused on the following goals: ==
+Inventory existing OWASP projects
+The Projects Committee solicited OWASP project leaders through the OWASP Projects Spring 2009 Self Update survey to identify existing projects and their statuses, details, licenses, and availability. The survey also asked leaders to self assess their status as an OWASP project. The effort obtained 61 responses and the responses were used to populate the OWASP projects metadata.
+
+=== Identify orphaned and inactive projects for adoption ===
+The Projects Committee took the results of the OWASP Projects Spring 2009 Self Update survey and followed up with 51 projects leaders that did not reply to the original survey. Of these projects, 27 projects remained inactive or abandoned after attempts to follow up with the project leader. These “orphan” projects were advertised to OWASP leaders for adoption. Of these projects, 10 have been or are in the process of being adopted by new leaders.
+
+===Establish Project Assessment Criteria and apply to existing projects ===
+One of the long term visions of the Projects Committee is to establish consistent quality across OWASP’s entire portfolio of projects. To that end, the Projects Committee created the Project Assessment Criteria v2. This criterion is an extension of the existing Project Assessment Criteria that were previously applied to Season of Code projects. The biggest addition to the Project Assessment Criteria v2 is the separation of the assessment of the quality of individual project releases and the overall health and activity of a project as a whole. The Projects Committee has started an ongoing effort to apply the new Project Assessment Criteria v2 to all OWASP projects.
+
+===Establish Season of Code and OWASP Grant Framework=== 
+In 2009, the OWASP Board elected to alter the traditional strategy of the Season of Code to support development of OWASP projects. To facilitate this shift, the Projects Committee was delegated the task of establishing the framework for OWASP grants, including Season of Code grants. While the 2009 Season of Code was not launched, the framework was created and leverages the Project Assessment Criteria v2 as a means of establishing accountability and progress.
+
+===Integrate Project Assessment metadata into OWASP website===
+Another long term vision of the Projects Committee is to improve the brand quality and presence of the OWASP project pages and OWASP website in general. The Projects Committee has taken the first steps towards this goal by creating wiki-templates with associated Project Assessment metadata. These templates help establish a consistent look and feel and aid potential OWASP users to easily find key details about OWASP projects. The majority of the core wiki-templates are complete and integration into existing projects pages will commence shortly.
+== In 2010 the Projects Committee plans to: ==
+*Integrate all remaining Project Assessment metadata into OWASP project pages,
+*Redesign the OWASP projects page and related web pages with dynamic, metadata driven content in order to: simplify navigation of the OWASP projects portfolio, establish look-and-feel consistency of OWASP projects, and create an incentive for project leaders by awarding rotating high-profile status in the OWASP projects page for top projects,
+*Investigate the usage of a centralized OWASP project repository for all OWASP projects,
+*Continue soliciting leaders to adopt orphaned OWASP projects,
+*Launch and administer future Seasons of Code as conditions merit.

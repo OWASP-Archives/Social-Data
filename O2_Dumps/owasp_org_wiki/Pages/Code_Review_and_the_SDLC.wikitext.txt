@@ -1,0 +1,51 @@
+[[OWASP Code Review Guide Table of Contents]]__TOC__
+
+==Introduction==
+Integration of secure code review into the System Development Life Cycle (SDLC) should yield dramatic results to the overall quality of the code developed. Secure code review is not a silver bullet but is part of a healthy application development diet. Consider it as one of the layers in a defence-in-depth approach to application security. Secure code review is also a cornerstone of the approach to developing secure software. 
+The idea of integrating a phase into your SLDC may sound daunting, yet another layer of complexity or an additional cost, but in the long term and in today's cyber landscape it is cost effective, reputation building and in the best interest of any business to do so.
+
+===Where to start===
+To be honest, secure code review is not simply about reviewing code. If all that was required was to review code for correctness, any automated grep tool could perform this. Code review is about establishing some context in the business sense around the code. At the end of the day we are not securing code for the code's sake, but for what the code or application is protecting: the money, the business intelligence, the good stuff that gives business an edge or the data which equates to financial and capital assets.
+
+So the context wherein an application is used is of key importance. An application is going to be attacked by professional criminals only if there is something within the application worth stealing.
+
+In the case of code review, prior to reviewing code we need to establish the risk profile of the application to be reviewed. The attack surface needs to be established which includes the probability and impact of individual threat agents successfully executing an exploit.
+
+Internal corporate policies and standards would also dictate the requirements for various categories of web application be it internal, external public, external B2B etc.
+
+So on with the code review...
+
+
+
+[[Image:Code_Review_-_SDLC1.jpg]]
+
+==Code review Operational Process==
+
+===Business requirements & functional context===
+
+*'''Design Risk Analysis'''
+Design risk analysis focuses on the design of the application from a high level. This includes examining the semantics relating to the business process and also the logical relationships between components of the design. Performing a design risk analysis is an opportunity for the review team to examine the baseline architecture from a risk perspective and challenge assumptions made by the business sponsor and development team.<br>
+''The [[Application_Threat_Modeling|Threat Modeling]] chapter goes into this in more detail.''
+
+*'''User Risk Analysis'''
+The business context for the proposed solution is what defines the types of user (be a user a human or other IT entity) of the application.<br>
+
+
+'''The user may be''':
+* a member of the public; the application is exposed to the public Internet.  
+* a broker or agent; a trust relationship exists, the application is exposed to a defined audience.
+* an internal employee; the application has only internal exposure. <br>
+
+
+*'''Architecture Risk Analysis'''<br>
+''The [[Application_Threat_Modeling|Threat Modeling]] chapter goes into this in more detail.''
+
+===Identification of entry & exit points===
+''See the [[Transaction Analysis]] chapter''
+
+===Identification of potential solutions===
+*Leading practice
+''See [[OWASP_Guide_Project|The OWASP Development Guide]]''
+
+===Execurity Summary & detailed report===
+*Technological risk Vs Business risk

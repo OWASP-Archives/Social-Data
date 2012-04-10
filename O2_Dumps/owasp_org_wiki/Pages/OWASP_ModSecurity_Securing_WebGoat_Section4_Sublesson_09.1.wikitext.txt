@@ -1,0 +1,120 @@
+9. Denial of Service -> 9.1 Denial of Service from Multiple Logins
+
+=== Lesson overview ===
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution === 
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information. 
+
+=== Strategy ===
+
+This WebGoat lesson has a database connection pool of 2 and provides 3 user names and passwords: jsnow:passwd1, jdoe:passwd2, and jplane:passwd3. Multiple logins by the same user is also allowed, so there are different variations of having a 3rd user logging in and resulting in a Denial of Service.
+
+The ModSecurity solution to this lesson is to keep a list of logged in users and do not allow a user to log in more than once. Also, a 3rd user is not allowed to log in, which of course is a Denial of Service in itself but at least it is restricted to that user and does not affect the first 2 logged in users (which could occur in a real-world situation). 
+
+There is one small problem with our solution at this point: When we intercept the request, we don't know if the login at the server is successful or not. Therefore, we have to assume that the login is successful upon the request, write to the *.data file as such if the conditions are not violated, then in the response check if the login was successful or not. If the login failed then we need to remove the entry; we know it is the last entry in the data file, so we don't have to go through the headache of retaining the user name from the request to the response phase within Lua and then afterwards have to do any matching on the user name in the data file.
+
+=== Implementation === 
+
+A sample of the POST parameters is: 
+<pre>
+Username=jsnow&Password=passwd1&SUBMIT=Login'
+</pre>
+
+We will persist a logged-in user to a file 'lesson09-1.data'; the user name is the only bit of information that is needed. At the beginning of the lesson, it has to be blank (use 'touch' on Linux) with the correct file permissions. The data file after 2 distinct users have logged in would consist of:
+<pre>
+Entry{
+  username = "jsnow"
+}
+
+Entry{
+  username = "jdoe"
+}
+</pre>
+
+The phase 2 request portion of the configuration file is:
+<pre>
+  SecRule ARGS:menu "!@eq 1000" "phase:2,t:none,skip:3"
+  SecRule &ARGS_POST:SUBMIT "@eq 0" "nolog,skip:2"
+  SecRule &ARGS_POST:Username "@eq 0" "nolog,skip:1"
+
+  # action is triggered if script returns non-nil value
+  SecRuleScript "/etc/modsecurity/data/denial-of-service-request_09-1.lua" \
+"phase:2,t:none,log,auditlog,deny,severity:3, \
+msg:'Luascript: Denial of Service -> 9.1 Denial of Service from Multiple Logins: \
+request is pending',tag:'DENIAL_OF_SERVICE',redirect:/_error_pages_/lesson09-1.html"
+  SecAction "phase:2,allow:request,t:none,log,auditlog,msg:'Luascript: Denial of \
+Service -> 9.1 Denial of Service from Multiple Logins: request is NOT pending'"
+</pre>
+
+The relevant section of the Lua script 'denial-of-service-request_09-1.lua' is:
+<pre>
+  datafile = "/etc/modsecurity/data/lesson09-1.data"
+  local username = m.getvar("ARGS_POST.Username", "none")
+
+    function Entry (b) 
+      local ename = b.username
+		
+      usercount = usercount + 1
+		
+      if usercount >= 2 or username == ename then
+        adduser = "no"
+        msg1 = string.format("User '%s' is already logged in 
+           or the maximum number of users has been reached", username)
+        msg2 = msg0 .. msg1
+        m.log(9, msg2)
+        retval = msg2   
+      end 
+    	
+      outstr = string.format("Entry{\n  username = \"%s\"\n}\n\n", ename) 
+      tbuff = tbuff .. outstr
+    end
+	
+    dofile(datafile)
+	
+    if adduser == "yes" then	
+      outstr = string.format("Entry{\n  username = \"%s\"\n}\n\n", username) 
+      tbuff = tbuff .. outstr
+    end	
+	
+   -- write back to data file and return 'retval'...
+</pre>
+
+What the program does:
+* 'dofile(datafile)' invokes the function 'Entry', which loops and processes each entry in the data file.
+* If the conditions will be violated - either login count is more than 2 or the same user will be logged in - then the return value will be set to non-nil which will match the ModSecurity SecRuleScript directive and cause the request to be blocked
+* While each datafile entry is being processed, it is being written back to a buffer which will be used to replace the existing data file.
+* After the data file has been processed, if there is a new user then add it to the list of current users
+
+The Phase 4 response portion of the configuration file is:
+<pre>
+  SecRule TX:MENU "!@eq 1000" "phase:4,t:none,pass,skip:1"
+
+  SecRuleScript "/etc/modsecurity/data/denial-of-service_response_09-1.lua" \
+"phase:4,t:none,log,auditlog,allow,msg:'Luascript: Denial of Service -> \
+9.1 Denial of Service from Multiple Logins; checking for failed login'"
+</pre>
+
+In the response body, indicators of a failed or successful login attempt are:
+<pre>
+  "Login Failed"
+	"Successfull login count: 0"
+</pre>
+and 
+<pre>
+  "Login Succeeded: Total login count: 1"
+</pre>
+
+Refer to the Lua script 'denial-of-service-response_09-1.lua'. The steps are:
+* Determine whether login succeeded or failed
+* If it succeeded, do nothing and return nil. If it failed, then:
+* Remove the last user from the data file by:
+** Read the entries into an array
+** Write back the entries to the data file except for the last entry
+
+=== Comments ===
+
+* This lesson shows the use of an array in Lua.
+* It would be nice if this WebGoat lesson had a logout mechanism which would make it easier to experiment with the total login count and the ModSecurity solution.

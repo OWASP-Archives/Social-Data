@@ -1,0 +1,64 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Failure to follow guideline/specification]]
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+==Description==
+
+Double-checked locking is an incorrect idiom that does not achieve the intended effect.
+
+Many talented individuals have spent a great deal of time pondering ways to make double-checked locking work in order to improve performance. None have succeeded.
+
+==Risk Factors==
+TBD
+
+==Examples ==
+
+At first blush it may seem that the following bit of code achieves thread safety while avoiding unnecessary synchronization.
+
+<pre>
+	if (fitz == null) {
+	  synchronized (this) {
+		if (fitz == null) {
+		  fitz = new Fitzer();
+		}
+	  }
+	}
+	return fitz;
+</pre>
+
+The programmer wants to guarantee that only one Fitzer() object is ever allocated, but does not want to pay the cost of synchronization every time this code is called. This idiom is known as double-checked locking.
+
+Unfortunately, it does not work, and multiple Fitzer() objects can be allocated. See The "Double-Checked Locking is Broken" Declaration for more details [1].
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+* [[1] D. Bacon et al. The "Double-Checked Locking is Broken" Declaration. http://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html.

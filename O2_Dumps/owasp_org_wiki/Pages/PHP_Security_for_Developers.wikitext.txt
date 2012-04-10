@@ -1,0 +1,206 @@
+=[[PHP Project Frontispiece|Frontispiece]]=
+=[[PHP Project Authentication|Authentication]]=
+#Objective
+#Environments Affected
+#Relevant COBIT Topics
+#Best Practices
+#Forms based authentication
+#Strong Authentication
+#Federated Authentication
+#Positive Authentication
+#Multiple Key Lookups
+#Referer Checks
+#Browser remembers passwords
+#Default accounts
+#Choice of usernames
+#Change passwords
+#Weak password controls
+#Reversible password encryption
+#Automated password resets
+#Brute Force
+#Remember Me
+#Idle Timeouts
+#Logout
+#Account Expiry
+#Self registration
+#CAPTCHA
+#Further Reading
+=[[PHP Project Authorization|Authorization]]=
+#Objectives
+#Environments Affected
+#Relevant COBIT Topics
+#Best Practices
+#Best Practices in Action
+#Principle of least privilege
+#Centralized authorization routines
+#Authorization matrix
+#Controlling access to protected resources
+#Protecting access to static resources
+#Reauthorization for high value activities or after idle out
+#Time based authorization
+#Be cautious of custom authorization controls
+#Never implement client-side authorization tokens
+#Further Reading
+=[[PHP Project Session Management|Session Management]]=
+#Objective
+#Environments Affected
+#Relevant COBIT Topics
+#Description
+#Best practices
+#Exposed Session Variables
+#Page and Form Tokens
+#Weak Session Cryptographic Algorithms
+#Session Token Entropy
+#Session Time-out
+#Regeneration of Session Tokens
+#Session Forging/Brute-Forcing Detection and/or Lockout
+#Session Token Capture and Session Hijacking
+#Session Tokens on Logout
+#Session Validation Attacks
+#Further Reading
+=[[PHP Project Data Validation|Data validation]]=
+#Objective
+#Platforms Affected
+#Relevant COBIT Topics
+#Description
+#Definitions
+#Where to include integrity checks
+#Where to include validation
+#Where to include business rule validation
+#Data Validation Strategies
+#Prevent parameter tampering
+#Hidden fields
+#ASP.NET Viewstate
+#URL encoding
+#HTML encoding
+#Encoded strings
+#Data Validation and Interpreter Injection
+#Delimiter and special characters
+#Further Reading
+=[[PHP Project Interpreter Injection|Interpreter Injection]]=
+#Objective
+#Platforms Affected
+#Relevant COBIT Topics
+#User Agent Injection
+#HTTP Response Splitting
+#SQL Injection
+#ORM Injection
+#LDAP Injection
+#XML Injection
+#Code Injection
+#Further Reading
+#SQL-injection
+#Code Injection
+#Command injection
+=[[PHP Project Canoncalization, locale and Unicode|Canoncalization, locale and Unicode]]=
+#Objective
+#Platforms Affected
+#Relevant COBIT Topics
+#Description
+#Unicode
+#http://www.ietf.org/rfc/rfc#
+#Input Formats
+#Locale assertion
+#Double (or n-) encoding
+#	HTTP Request Smuggling
+#	Further Reading
+=[[PHP Project Error Handling, Auditing and Logging|Error Handling, Auditing and Logging]]=
+#Objective
+#Environments Affected
+#Relevant COBIT Topics
+#Description
+#Best practices
+#Error Handling
+#Detailed error messages
+#Logging
+#Noise
+#Cover Tracks
+#False Alarms
+#Destruction
+#Audit Trails
+#Further Reading
+#Error Handling and Logging
+=[[PHP Project File System|File system]]=
+#Objective
+#Environments Affected
+#Relevant COBIT Topics
+#Description
+#Best Practices
+#Defacement
+#Path traversal
+#Insecure permissions
+#Insecure Indexing
+#Unmapped files
+#Temporary files
+#PHP
+#Includes and Remote files
+#File upload
+#Old, unreferenced files
+#Second Order Injection
+#Further Reading
+#File System
+=[[PHP Project Distributed Computing|Distributed Computing]]=
+#Objective
+#Environments Affected
+#Relevant COBIT Topics
+#Best Practices
+#Race conditions
+#Distributed synchronization
+#Further Reading
+=[[PHP Project Administrative Interfaces|Administrative Interfaces]]=
+#Objective
+#Environments Affected
+#Relevant COBIT Topics
+#Best practices
+#Administrators are not users
+#Authentication for high value systems
+#Further Reading
+=[[PHP Project Cryptography|Cryptography]]=
+#Objective
+#Platforms Affected
+#Relevant COBIT Topics
+#Description
+#Cryptographic Functions
+#Cryptographic Algorithms
+#Algorithm Selection
+#Key Storage
+#Insecure transmission of secrets
+#Reversible Authentication Tokens
+#Safe UUID generation
+#Summary
+#Further Reading
+#Cryptography
+=[[PHP Project Configuration|Configuration]]=
+#Objective
+#Platforms Affected
+#Relevant COBIT Topics
+#Best Practices
+#Default passwords
+#Secure connection strings
+#Secure network transmission
+#Encrypted data
+#PHP Configuration
+#Global variables
+#register_globals
+#Database security
+#Further Reading
+#No backup or old files
+#Unnecessary features are off by default
+#Setup log files are clean
+#No default accounts
+#Easter eggs
+#Further Reading
+=[[GNU Free Documentation License]]=
+#PREAMBLE
+#APPLICABILITY AND DEFINITIONS
+#VERBATIM COPYING
+#COPYING IN QUANTITY
+#MODIFICATIONS
+#COMBINING DOCUMENTS
+#COLLECTIONS OF DOCUMENTS
+#AGGREGATION WITH INDEPENDENT WORKS
+#TRANSLATION
+#TERMINATION
+#FUTURE REVISIONS OF THIS LICENSE
+=Reference=
+[[Category:OWASP PHP Project]]

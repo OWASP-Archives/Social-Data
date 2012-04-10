@@ -1,0 +1,173 @@
+= Introduction =
+
+Cross site scripting is the most common web vulnerability.  Cross Site Scripting is a dangerous threat since it allows an attacker to trick a victim into executing malicious client-side script in a browser.  This cheat sheet is a derivative work of the [[XSS (Cross Site Scripting) Prevention Cheat Sheet]] and will assist web developers in eliminating XSS from their applications.
+
+= XSS Prevention Safe Contexts =
+
+The following snippets of HTML demonstrate how to safely render untrusted data in a variety of different contexts. 
+
+{| class="wikitable nowraplinks"
+|-
+! Data Type
+! Context
+! Code Sample
+! Defense
+|-
+| String
+| HTML Body
+| &lt;span><span style="color:red;">UNTRUSTED DATA</span>&lt;/span>
+| <ul><li>[https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet#RULE_.231_-_HTML_Escape_Before_Inserting_Untrusted_Data_into_HTML_Element_Content HTML Entity Encoding]</li></ul>
+|-
+| String
+| Safe HTML Attributes
+| &lt;input type="text" name="fname" value="<span style="color:red;">UNTRUSTED DATA</span>">
+| <ul><li>[https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet#RULE_.232_-_Attribute_Escape_Before_Inserting_Untrusted_Data_into_HTML_Common_Attributes Aggressive HTML Entity Encoding]</li><li>Only place untrusted data into a whitelist of safe attributes (listed below).</li><li>Strictly validate unsafe attributes such as background, id and name.</ul>
+|-
+| String
+| GET Parameter
+| &lt;a href="/site/search?value=<span style="color:red;">UNTRUSTED DATA</span>">clickme&lt;/a>
+| <ul><li>[https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet#RULE_.235_-_URL_Escape_Before_Inserting_Untrusted_Data_into_HTML_URL_Parameter_Values URL Encoding]</li></ul>
+|-
+| String
+| Untrusted URL in a SRC or HREF attribute
+| &lt;a href="<span style="color:red;">UNTRUSTED URL</span>">clickme&lt;/a><br/>&lt;iframe src="<span style="color:red;">UNTRUSTED URL</span>" />
+| <ul><li>Cannonicalize input</li><li>URL Validation</li><li>Safe URL verification</li><li>Whitelist http and https URL's only ([[Avoid the JavaScript Protocol to Open a new Window]])</li><li>Attribute encoder</li></ul>
+|-
+| String
+| CSS Value
+| &lt;div style="width: <span style="color:red;">UNTRUSTED DATA</span>;">Selection&lt;/div>
+| <ul><li>[https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet#RULE_.234_-_CSS_Escape_And_Strictly_Validate_Before_Inserting_Untrusted_Data_into_HTML_Style_Property_Values Strict structural validation]<li>CSS Hex encoding<li>Good design of CSS Features</ul>
+|-
+| String
+| JavaScript Variable
+| &lt;script>var currentValue='<span style="color:red;">UNTRUSTED DATA</span>';&lt;/script><br/>&lt;script>someFunction('<span style="color:red;">UNTRUSTED DATA</span>');&lt;/script>
+| <ul><li>Ensure JavaScript variables are quoted</li><li>JavaScript Hex Encoding</li><li>JavaScript Unicode Encoding</li><li>Avoid backslash encoding (\" or \' or \\)</li></ul>
+|-
+| HTML
+| HTML Body
+| &lt;div><span style="color:red;">UNTRUSTED HTML</span>&lt;/div>
+| <ul><li>[https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet#RULE_.236_-_Use_an_HTML_Policy_engine_to_validate_or_clean_user-driven_HTML_in_an_outbound_way HTML Validation (JSoup, AntiSamy, HTML Sanitizer)]</li></ul> 
+|-
+| JavaScript
+| HTML Body
+| &lt;div><span style="color:red;">UNTRUSTED JAVASCRIPT</span>&lt;/div>
+| <ul><li>Sandboxing with tools such as [http://code.google.com/p/jsreg/ JSReg]</li></ul>
+|-
+| String
+| DOM XSS
+| TODO
+| <ul><li>[[DOM based XSS Prevention Cheat Sheet]]</li></ul>
+|-
+| String
+| AJAX/JSON Parsing
+| JSON.parse(<span style="color:red;">UNTRUSTED JSON DATA</span>)
+| <ul><li>Use JSON.parse or json2.js library to parse JSON</li><li>Avoid parsing JSON with eval() as it will execute any script included with the JSON</li></ul>
+|-
+| String
+| AJAX/XML Parsing
+| TODO
+| TODO
+|-
+| String
+| Framework Protections
+| &lt;span><span style="color:red;">UNTRUSTED DATA</span>&lt;/span>
+| <ul><li>Content Security Policy</li><li>[https://www.owasp.org/index.php/HTML5_Security_Cheat_Sheet#Use_the_sandbox_attribute_of_an_iframe_for_untrusted_content HTML5 Frame Sandbox]</li></ul>
+|-
+| String
+| Loading HTML fragments using AJAX
+| TODO
+| <ul><li>When building HTML fragments from trusted HTML and untrusted data, adhere to the rules for HTML body, attributes, css, javascripts and URLs as stated above</li></ul>
+|}
+
+'''''Safe HTML Attributes include:''''' align, alink, alt, bgcolor, border, cellpadding, cellspacing, class, color, cols, colspan, coords, dir, face, height, hspace, ismap, lang, marginheight, marginwidth, multiple, nohref, noresize, noshade, nowrap, ref, rel, rev, rows, rowspan, scrolling, shape, span, summary, tabindex, title, usemap, valign, value, vlink, vspace, width
+
+= XSS Prevention Dangerous Contexts =
+
+The following snippets of HTML demonstrate dangerous contexts that developers <b><u>should always avoid</u></b>. 
+
+{| class="wikitable nowraplinks"
+|-
+! Data Type
+! Context
+! Code Sample
+! Danger
+|-
+| String
+| JavaScript eval(), setTimeout(), setInterval()
+| &lt;script>eval(<span style="color:red;">UNTRUSTED DATA</span>);&lt;script&gt;
+| <ul><li>Untrusted data will still execute in JavaScript code execution contexts, even when encoded. Consider using a [[JavaScript Closure Within Eval]].</li></ul>
+|-
+| String
+| HTML Comment
+| &lt;!-- <span style="color:red;">UNTRUSTED DATA</span> --&gt;
+| <ul><li>There are a variety of browser quirks that make this context dangerous, even when encoded.</li></ul>
+|-
+| String
+| JavaScript Comment
+| /* <span style="color:red;">UNTRUSTED DATA</span> */
+| <ul><li>Danger, for example Chrome JavaScript comments [http://sla.ckers.org/forum/read.php?24,36929]</li></ul>
+|}
+
+= How to Output Encode =
+
+The purpose of output encoding (as it relates to Cross Site Scripting) is to convert untrusted input into a safe form where the input is displayed as '''data''' to the user without executing as '''code''' in the browser. The following charts details a list of critical output encoding methods needed to stop Cross Site Scripting.
+
+{| class="wikitable"
+|-
+! Encoding Type
+! Encoding Mechanism
+|-
+| HTML Entity Encoding
+|   Convert & to &amp;amp;<br/>Convert < to &amp;lt;<br/>Convert > to &amp;gt;<br/>Convert " to &amp;quot;<br/>Convert ' to &amp;#x27;<br/>Convert / to &amp;#x2F;
+|-
+| HTML Attribute Encoding
+| Except for alphanumeric characters, escape all characters with the HTML Entity &amp;#xHH; format, including spaces. (HH = Hex Value)
+|-
+| URL Encoding
+| Standard percent encoding, see: [http://www.w3schools.com/tags/ref_urlencode.asp http://www.w3schools.com/tags/ref_urlencode.asp]
+|-
+| JavaScript Encoding
+| Except for alphanumeric characters, escape all characters with the \uXXXX unicode escaping format (X = Integer).
+|-
+| CSS Hex Encoding
+| CSS escaping supports \XX and \XXXXXX. Using a two character escape can cause problems if the next character continues the escape sequence. There are two solutions (a) Add a space after the CSS escape (will be ignored by the CSS parser) (b) use the full amount of CSS escaping possible by zero padding the value.
+|}
+
+= <b>Experimental</b> Minimal Encoding Rules =
+
+The following examples demonstrate minimal experiential encoding rules. 
+
+{| class="wikitable nowraplinks"
+|-
+! Context
+! Code Sample
+! Rules
+|-
+| JavaScript, quoted string in a script block
+| alert("Hello "+"&lt;%= <span style="color:red;">UNTRUSTED DATA</span> %>")
+| <ul><li>Use these escapes: \\ \r \n \b \t \f \' \" \/</li><li>For any other character in range 0..0x19, use hex escapes</li><li>If using non-Unicode charset, any character above 0x7e, use '\u' encoding</li></ul>
+|-
+| JavaScript, quoted string in an event handler attribute
+| example: onclick="alert('<%= <span style="color:red;">UNTRUSTED DATA</span> %>')";
+| <ul><li>Use these escapes: \\ \r \n \b \t \f</li><li>Use hex escapes for these characters: ' " &</li><li>For any other character in range 0..0x19, use hex escapes</li><li>If using non-Unicode charset, any character above 0x7e, use '\u' encoding</li></ul>
+|-
+| HTML Body (up to HTML 4.01):
+| &lt;div><%= <span style="color:red;">UNTRUSTED DATA</span> %>")&lt;/div>
+| <ul><li>HTML Entity encode &lt; &amp;</li><li>specify charset in metatag to avoid UTF7 XSS</li></ul>
+|-
+| <b>X</b>HTML Body:
+| &lt;div><%= <span style="color:red;">UNTRUSTED DATA</span> %>")&lt;/div>
+| <ul><li>HTML Entity encode &lt; &amp; &gt;</li><li>limit input to charset http://www.w3.org/TR/2008/REC-xml-20081126/#charsets</li></ul>
+|-
+|}
+
+= Related Articles =
+
+{{Cheatsheet_Navigation}}
+
+= Authors and Primary Editors  =
+
+Jim Manico - jim [at] owasp.org<br/>
+Jeff Williams - jeff [at] aspectsecurity.com
+
+[[Category:Cheatsheets]]

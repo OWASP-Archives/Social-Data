@@ -1,0 +1,91 @@
+== Local Witnesses ==
+
+ '''OWASP en la Universitat Oberta de Catalunya'''
+
+<table>
+<tr>
+<td valign="top">
+[[Image:Logo_uoc.png]]
+</td>
+<td valign="top">
+<p align="justify">
+En la actualidad, la mayoría de las páginas web se construyen en torno a las aplicaciones para proporcionar servicios de calidad a sus usuarios y los atacantes han visto en este ámbito un campo abonado para la realización de actividades ilícitas. Debido a la naturaleza interactiva de estos sistemas, donde la entrada de los usuarios es fundamental, es importante pensar en la seguridad, a fin de evitar la explotación de vulnerabilidades por parte de terceros maliciosos  y garantizar la mejor experiencia por parte del usuario.</p>
+</td>
+</tr>
+</table>
+
+<div align="justify">
+La Universitat Oberta de Catalunya UOC tiene como objetivo primordial que cada persona pueda satisfacer sus necesidades de aprendizaje con el máximo acceso al conocimiento. Con esta finalidad, la UOC utiliza de forma intensiva las tecnologías de la información y de la comunicación (TIC) y ofrece un modelo educativo basado en la personalización y el apoyo permanente al alumno. Por ello el Área de Sistemas de la Información inició un plan de apoyo y mejora de la seguridad de las aplicaciones web, especialmente en el área de la comunicación y aprendizaje del estudiante.<br><br>
+
+La UOC cuenta con más de 54.000 estudiantes y 2.300 profesores repartidos en más de 60 países en todo el mundo que realizan todas sus actividades docentes y su ciclo de aprendizaje de forma remota utilizando únicamente el espació web a través de Internet como canal de comunicación. Para ello, los desarrolladores de la UOC y el equipo de integración han hecho que las necesidades de los estudiantes y profesores puedan verse cumplidas mediante el desarrollo de aplicaciones a medida, desarrollos internos y la integración de software tanto en un modelo Open Source como propietario.<br><br>
+
+La estrategia de seguridad de la UOC ha debido por tanto diversificarse y adaptarse a cualquiera de los modelos de implantación de software que se han precisado en cada caso concreto. OWASP ha facilitado de manera decisiva la posibilidad de aplicar criterios de seguridad en la integración de los diferentes modelos de desarrollo de aplicaciones web en la plataforma educativa de la UOC. El hecho que la mayoría de trabajos y documentos públicos en OWASP no hagan referencia a una tecnología o modelo determinado ha facilitado en gran medida la implantación de buenas prácticas en el ciclo de vida del desarrollo e integración de aplicaciones web.<br><br>
+
+Los proyectos OWASP que cuentan como parte fundamental de la estrategia UOC para securizar sus aplicaciones Web han sido:<br>
+
+<ul>
+<li><b>Secure Software Development Contract Annex</b>. Nos ha ayudado enormemente a racionalizar los aspectos contractuales con los proveedores, al mismo tiempo que obliga a los analistas a pensar y detallar los aspectos de seguridad relacionados con la aplicación antes de iniciar los desarrollos.</li>
+<li><b>Top Ten</b>. A partir de la formación realizada a nuestros desarrolladores y analistas este documento forma la base para mitigar las vulnerabilidades de nuestras aplicaciones web y focalizar los esfuerzos en los aspectos claves del desarrollo seguro de aplicaciones.</li>
+<li><b>Testing Guide</b>. Constituye para la UOC un esfuerzo de normalización de las técnicas de test de aplicaciones y su integración en el ciclo de vida de desarrollo de las mismas.</li>
+<li><b>WebGoat</b>. Forma una pieza importante en el plan de formación a nuestros desarrolladores y en la concienciación de los aspectos de seguridad relativos a las aplicaciones web.</li>
+</ul>
+<br>
+
+Otras iniciativas como OWASP Enterprise Security API (ESAPI) Project o OWASP Live CD Project, serán integradas en la estrategia de seguridad para desarrolladores internos y externos de la UOC con toda certeza.<br><br>
+</div>
+
+<table>
+<tr>
+<td valign="top">
+[[Image:Frovirosa.png]]
+</td>
+<td valign="top">
+<i>Francesc Rovirosa Raduà</i><br>
+<i>Responsable de Seguretat Tecnològica de la UOC</i>
+</td>
+</tr>
+</table>
+
+ '''OWASP en la Universidad de Castilla-La Mancha'''
+
+<table>
+<tr>
+<td valign="top">
+[[Image:Logouclm_thumb.jpg]]
+</td>
+<td valign="top">
+<p align="justify">
+Los entornos Web se han convertido en el principal foco de ataque a los sistemas informáticos de las organizaciones. Consciente de este hecho, el Área de Tecnología y Comunicaciones de la UCLM arrancó en enero de 2008 un plan de mejora de la seguridad,  centrado específicamente en las aplicaciones Web. Durante el diseño de este plan, los proyectos de la OWASP han aportado respuestas a cada una de nuestras preguntas,  hasta el punto de convertirse en nuestra principal fuente de documentación.</p>
+</td>
+</tr>
+</table>
+
+<div align="justify">
+La UCLM cuenta con más de 30.000 estudiantes, de los cuales un porcentaje cada vez más significativo cursan enseñanzas de forma telemática. Este enorme número de usuarios, unido a su creciente globalización, hace que Internet, y concretamente la Web, se hayan convertido en la vía principal de canalización de sus servicios.<br><br>
+
+El perfil de las aplicaciones Web explotadas por la Universidad es muy diverso: desarrollos internos conviven con aplicaciones a medida,  software empaquetado, e incluso SaaS. En lugar de centrar el foco exclusivamente en los desarrollos internos, nuestra estrategia consistirá en actuar sobre cualquier actividad del ciclo de vida de las aplicaciones que puedan tener repercusión en su seguridad. Así, existirán directrices de seguridad para la selección, la adquisición, la contratación, el desarrollo interno, la explotación o la evaluación.<br><br>
+
+Para materializar este enfoque, el Área de Tecnología y Comunicaciones puso en marcha en enero de 2008 un Plan de Mejora de la Seguridad de las Aplicaciones Web. Varios proyectos de la OWASP cuentan con un papel fundamental en el mismo:<br>
+<ul>
+<li><b>Top Ten</b>. Constituirá un requisito de las aplicaciones Web desarrolladas o contratadas por la UCLM que estás sean diseñadas para evitar las vulnerabilidades específicas que aparecen en esta relación.</li>
+<li><b>Legal Project</b>. El Secure Software Contract Annex ha servido de base para determinar qué cláusulas de desarrollo seguro se incluirán en la contratación de aplicaciones a medida.</li>
+<li><b>Testing Guide</b>. Esta guía conformará el estándar metodológico y de medida del riesgo para las evaluaciones de seguridad, tanto internas como externas.</li>
+<li><b>Building Guide y Code Review Guide</b>. Servirán como referencia esencial para el personal de desarrollo.</li>
+</ul>
+<br>
+Sin duda otras iniciativas como ESAPI, WebScarab o WebGoat encontrarán su sitio en nuestro plan a medida que avancemos en su implementación.<br><br>
+
+En definitiva, la información que la OWASP ofrece, de forma pública y gratuita, ha sido imprescindible para la concepción y desarrollo de nuestra estrategia de seguridad en entornos Web.<br><br>
+</div>
+
+<table>
+<tr>
+<td valign="top">
+[[Image:Evan_thumb.jpg]]
+</td>
+<td valign="top">
+<i>Evangelino Valverde Álvarez</i><br>
+<i>Analista de Sistemas del Área de Tecnología y Comunicaciones de la UCLM</i>
+</td>
+</tr>
+</table>

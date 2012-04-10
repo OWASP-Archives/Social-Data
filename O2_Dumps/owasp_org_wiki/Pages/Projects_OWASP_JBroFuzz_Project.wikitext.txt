@@ -1,0 +1,56 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Project About</noinclude>
+| project_name = OWASP JBroFuzz Project
+| project_home_page = JBroFuzz
+
+| project_description =
+JBroFuzz is a stateless web application fuzzer for requests being made over [http://en.wikipedia.org/wiki/HTTP HTTP] and/or [http://en.wikipedia.org/wiki/Https HTTPS]. Its purpose is to provide a single, portable application that offers stable web protocol fuzzing capabilities. As a tool, it emerged from the needs of penetration testing.
+
+| project_license = [http://www.gnu.org/licenses/gpl-3.0-standalone.html GNU General Public License v3]
+
+| leader_name1 = Ranulf Green
+| leader_email1 = ranulf.green@owasp.org
+| leader_username1 = Ranulf Green
+
+| contributor_name1 = Yiannis Pavlosoglou
+| contributor_email1 = yiannis@owasp.org
+| contributor_username1 = Yiannis
+
+| contributor_name2 = Markus Miedaner
+| contributor_email2 = markusmiedaner@googlemail.com
+| contributor_username2 = 
+
+| pamphlet_link = 
+
+| presentation_link =
+
+| mailing_list_name = https://lists.owasp.org/mailman/listinfo/owasp-jbrofuzz 
+
+| project_road_map = http://www.owasp.org/index.php/Category:OWASP_JBroFuzz_Project_-_Roadmap
+
+| links_url1 = http://www.sourceforge.net/projects/jbrofuzz JBroFuzz's 
+| links_name1 = Sourceforge Repository
+
+| links_url2 = http://video.google.co.uk/videoplay?docid=6388655108193715653&q=jbrofuzz  
+| links_name2 = Video Tutorial (to watch)
+
+| links_url3 = http://sourceforge.net/project/showfiles.php?group_id=180679&package_id=209088&release_id=461300 Video Tutorial
+| links_name3 = Video Tutorial (to download); 
+
+| links_url4 = http://jbrofuzz.svn.sourceforge.net/viewvc/jbrofuzz/ 
+| links_name4 = Java Documenation, source code and latest build
+
+| links_url5 = http://java.sun.com/ 
+| links_name5 = Run the JBroFuzz's application (you will need Java 1.6 Runtime Environment) 
+
+| release_1 = JBroFuzz 2.4
+
+| release_2 = JBroFuzz 1.9
+
+| release_3 = JBroFuzz 1.7
+
+| release_4 =
+
+<!--- The line below is for GPC usage only. Please do not edit it --->
+| project_about_page = Projects/OWASP_JBroFuzz_Project
+
+}}

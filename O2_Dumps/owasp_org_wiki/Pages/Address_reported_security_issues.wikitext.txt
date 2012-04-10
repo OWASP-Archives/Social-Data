@@ -1,0 +1,59 @@
+{{Template:SecureSoftware}}
+
+==Overview==
+
+Purpose:	
+
+* Ensure that identified security risks in an implementation are properly considered
+
+Role:
+
+* Designer
+
+Frequency:
+
+* As required
+
+
+
+==Assign issue to investigator ==
+
+When a security issue is identified in a system, further investigation should be assigned to the appropriate designer if it can be determined from known information about the problem. Otherwise, it should be assigned to the chief architect until the determination of the most appropriate designer can be made.
+
+==Assess likely exposure and impact ==
+
+If the problem exists in released software and was reported by a security researcher, attempt to reproduce the exploit in order to determine whether the vulnerability actually exists. If it cannot be reproduced, work with the researcher to determine whether the problem does not actually exist or whether it could have been a side effect of something in the researcher's test environment.
+
+When reproducing the exploit is too difficult or when there is no risk of disclosure, at least determine whether there is enough evidence to demonstrate that the vulnerability is likely to exist.
+
+Determine the circumstances when the vulnerability could potentially be exploited in order to get a sense of the overall risk level, focusing on the following:
+
+*	Which builds of the product contain the risk, if any?
+
+*	Which configuration options are required in order for the risk to exist?
+
+*	What must the operational environment look like for the risk to be relevant?
+
+This information will allow you to determine how many customers will - or would be - at risk.
+
+Determine what the worst case and likely consequences are for the risk. From this information, determine how responding to this risk will be handled from a resourcing perspective. That is, will it be handled at all, immediately, or at a particular point in time? Further: Will there be an effort to provide more immediate remediation guidelines to customers while a permanent patch is being devised?
+
+If the risk involves software that may be in use by other vendors in their products, contact either the vendors directly or a coordinating body - such as the CERT (Computer Emergency Response Team) coordination center.
+
+==Determine and execute remediation strategies ==
+
+Identify how the problem is to be addressed, in the short term and in the long term, if the short-term solution is not a permanent fix. Incorporate the task of addressing the problem into the development lifecycle if appropriate.
+
+If part or all of the remediation strategy involves implementing external controls, task an appropriate party to document the implementation of those controls in the operational security guide.
+
+The architect should review all remediation strategies that impact the code base before they are implemented in order to ensure that they are valid in the context of the entire system.
+
+==Validation of remediation ==
+
+Perform testing to ensure that the risk was properly addressed. This should include production of regression tests meant to detect the vulnerability if accidentally introduced. See the CLASP activity on testing for more information.
+
+
+[[Category:Activity]]
+[[Category:CLASP Activity]]
+[[Category:BP5 Build vulnerability remediation procedures]]
+[[Category:OWASP_CLASP_Project]]

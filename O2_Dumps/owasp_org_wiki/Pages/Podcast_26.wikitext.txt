@@ -1,0 +1,40 @@
+'''[[OWASP_Podcast|OWASP Podcast Series]] #26'''
+
+OWASP NEWS April 2009 (part 2)<br/>
+Recorded May 28th, 2009<br/>
+Published June 17th, 2009<br/>
+
+ [http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=300769012 http://images.apple.com/itunes/overview/images/overview-icon-itunes20081106.jpg] [http://www.owasp.org/download/jmanico/podcast.xml https://www.owasp.org/images/d/d3/Feed-icon-32x32.png] [http://www.owasp.org/download/jmanico/owasp_podcast_26.mp3 mp3]
+
+==Participants==
+
+Host: Jim Manico<br/>
+Copy Editor: Andre Gironda<br/>
+Participants: Tom Brennan, Jeff Williams, Alex Smolen, Andre Gironda<br/>
+
+==Articles==
+
+;4/16 http://www.informit.com/articles/article.aspx?p=1338343<br />
+:http://www.cigital.com/justiceleague/2009/04/16/software-security-2008/ Gary McGraw uses statistics to show that Software Security has come of age<br />
+;4/17 http://research.zscaler.com/2009/04/we-used-to-laugh-at-xss.html<br />
+:Michael Sutton discusses history of XSS from Defcon 10 (2002) to the present day (Twitter worm)<br />
+;4/17 http://jeremiahgrossman.blogspot.com/2009/04/software-security-grew-to-nearly-500m.html<br />
+:Jeremiah uses McDonalds and Mortons as comparatives for black-box vs. white-box security testing<br />
+;4/17 http://jeremiahgrossman.blogspot.com/2009/04/website-threats-and-their-capabilities.html<br />
+:OWASP Catalyst announced<br />
+;4/20 http://paco.to/?p=305<br />
+:Paco lists 5 reasons for software certifications<br />
+;4/20 http://www.greensheet.com/newswire.php?newswire_id=11693<br />
+:Qualys, Inc., the leading provider of on demand IT security risk and compliance management solutions, today announced QualysGuard(R) PCI Connect which is the industry's first Software-as-as-Service (SaaS) ecosystem for PCI compliance connecting merchants to multiple partners and security solutions in order to document and meet all 12 requirements for PCI DSS<br />
+;4/20 http://labs.securitycompass.com/index.php/2009/04/20/security-analysis-of-core-j2ee-design-patterns/<br />
+:Rohit Sethi of SecurityCompass posts a blog post on a new Security Compass Labs blog about "Security Analysis of Core Java Enterprise Patterns"<br />
+;4/21 http://docs.google.com/Doc?id=dd7x5smw_16hdd34ggz<br/>
+:mario heiderich posts some results of browser fuzzing on extraneous characters in tags<br/>
+;4/22 http://plynt.com/blog/2009/04/how-frequently-should-an-appli/<br />
+:The Plynt blog asks the question, "How frequently shoud Applications be Tested?"<br />
+;4/24 http://www.troopers09.org/content/e3/e445/index_eng.html
+:Wendel Guglielmetti Henrique from Trustwave and Sandro Gauchi of EnableSecurity spoke at TROOPERS09 in Munch about "The Truth of Web Application Firewalls: what the vendors do NOT want you to know"<br />
+;4/27 http://tacticalwebappsec.blogspot.com/2009/04/scanner-and-waf-data-sharing.html<br />
+:Ryan Barnett gives guidance on how best to make VA+WAF work together<br />
+;4/27 http://www.owasp.org/index.php/Category:OWASP_PCI_Project <br />
+:Ed Bellis and Trey Ford start a PCI effort to ensure their activities uniformly meet PCI requirements, and for those getting started - to aid in building a website security strategy that also ensures sustainable PCI compliance.

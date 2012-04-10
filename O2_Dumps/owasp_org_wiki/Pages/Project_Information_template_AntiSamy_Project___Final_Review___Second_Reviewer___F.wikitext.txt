@@ -1,0 +1,63 @@
+[[Project Information:template AntiSamy Project|Clik here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''FINAL REVIEW''' 
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART I''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications#OWASP AntiSamy .NET| OWASP AntiSamy .NET Project's Deliveries & Objectives]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#OWASP AntiSamy .NET|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+The OWASP AntiSamy.NET project is aimed to provide an API for .NET applications  for validating rich HTML/CSS input from users without exposing the web application to cross site scripting and phishing attacks.  The project is a direct port of the AntiSamy Java API. Currently, the project has one outstanding feature left to be implemented – Cascading Style Sheet (CSS) support.  Support for CSS would allow users to wrap input within inline style and div elements.  Arshan Dabirsiaghi stated that at the beginning of the project, it would not include support for CSS by the conclusion of Summer of Code 2008.  This is noted here for reference as it is not stated on the project site.
+
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#OWASP AntiSamy .NET|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+Overall, AntiSamy.NET is 100% complete.
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+The offsiteURL regular expression in the policy files could be more restrictive.  Looking up until the TLD, there are several characters, such as Unicode characters allowed within the FQDN where it should only be allowed in the path and the colon (:) character allowed outside of the FQDN.  More time should be allotted to look at the regular expression pattern -- http://www.w3.org/Addressing/URL/uri-spec.html should be consulted.  There are no performance measurements that show how much impact AntiSamy.NET puts on processing of input.
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART II''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Assessment Criteria
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[:Category:OWASP Project Assessment|OWASP Project Assessment Criteria]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Alpha Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+All project criteria to meet Alpha Quality status have been fulfilled.
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Beta Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+AntiSamy.NET is an API for .NET projects.  There is no “installer” associated with such a project.  Basic usage instructions are included on the wiki, but there could be more effort put here.  See below for more.
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+3. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Release Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+All features have been implemented, including CSS support.  A Fortify open review scan was completed and no issues were found.
+ |-  
+ | style="width:25%; background:#7B8ABD" align="center"|
+4. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+It would be nice to see all functions documented and a data flow graph that shows how input flows through the API and is acted on.  I (Marcin Wielgoszewski) would be willing to create this documentation for the project.  See http://osteele.com/tools/reanimator and http://osteele.com/archives/2006/02/reanimator.  Also, with regards to unit testing, see the chapter on "Code Coverage" written by Charlie Miller in "Open Source Fuzzing Tools."  It discusses how to increase code coverage with fuzzing.  This directly relates to the unit tests as we cannot guarantee they test all functionality implemented within AntiSamy.NET.
+|}

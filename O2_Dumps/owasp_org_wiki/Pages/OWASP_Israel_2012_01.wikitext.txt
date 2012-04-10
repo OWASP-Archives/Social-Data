@@ -1,0 +1,70 @@
+The meeting will be held in Wednesday, January 4th, 2012. 
+
+Location: Imperva, Hayovel Building (Kiryat HaMemshala), 125 Menachem Begin, Tel Aviv - 27th Floor. 
+
+Parking can be found in the building itself, in Azrieli center, or in one of the parking lots in Ha'Arbaa St. (cheaper, few minutes walking) 
+
+Detailed instructions and a map are available at the bottom of the document. 
+
+<br>
+
+'''PLEASE NOTE: YOU MUST CONFIRM YOUR ARRIVAL IN ADVANCE'''<br>
+
+The guard at the entrance will have a list of everybody who confirmed.<br>Please confirm your arrival by email to ofer.maor@owasp.org. <br>
+
+<br>
+
+== '''Sponsors''' ==
+{{Template:OWASP_IL_2011_Sponsors}}
+== '''Agenda'''  ==
+
+== 16:45 - 17:15&nbsp;: Gathering, Mingling &amp; Refreshments  ==
+
+== 17:15 - 17:30&nbsp;: OWASP Israel 2012 Opening Notes  ==
+
+'''Ofer Maor, Chairman, OWASP Israel''' 
+
+== 17:30 - 18:15&nbsp;: Top 9 Data Security Trends for 2012  ==
+
+'''Amichai Shulman, Imperva''' 
+
+With the Epsilon mega-breach, malicious mobile apps on the rise, Lulzsec, Anonymous, APT and the collapse of News of the World all within the past 12 months, 2011 was a good year if you were a hacker. Join Imperva CTO, Amichai Shulman, as he reveals the Imperva Application Defense Center's top nine security predictions for 2012 as well as key changes in the legal/compliance landscape. 
+
+== 18:15 - 19:00&nbsp;: AJAX’ Hammer - Harnessing AJAX for CSRF Attacks  ==
+
+'''Oren Ofer, Ernst & Young''' 
+
+As the security level of web sites and browsers improves, hackers devise creative ways to achieve their goals - small loopholes within the browsers security rules. One of these ways is the Cross-Site Request Forgery attack – an attack that enables malicious 3rd parties to instruct users’ browsers to perform operations in vulnerable applications on their behalf. 
+
+AJAX XMLHttpRequest object was a previously considered a fortress, presumably more protected against CSRF than "normal" HTTP requests, due to the restrictive same origin policy which browsers impose, a policy that prevents it from being "redirected" to 3rd party web sites...
+
+But good things never last forever... and in this lecture we will present how AJAX can be harnessed for elaborate CSRF attacks that can even bypass commonly flawed ANTI-CSRF implementations.
+
+== 19:00 - 19:30&nbsp;: DoS via Hash Collisions in Web Platforms  ==
+
+'''Raviv Raz, Hybrid Security''' 
+
+In this lecture Raviv will present a vulnerability which allows performing Denial of Service attacks via hash collisions. This vulnerability has been identified in most common web platforms including: Ruby, Python, ASP.NET, PHP and more...  
+
+<br>
+
+== '''Arrival Instructions'''  ==
+
+Imperva offices are located in Hayovel/Kiryat Hamemshala bldg., 125 Menachem Begin street, 27 floor. The building is right across the street from Azrieli towers, so one option is to park there and cross the street to enter our building. 
+
+Main office phone 03-6840101 
+
+To reach the parking lot in our building (to be paid by the attendees), drive southward on Mencahem begin street, turn right to Hashmonaim street, take first right to Arenia street, and again first right to Arbaa street. Continue to the end of Arbaa street (street curves toward left) – the road ends with the entrance to our parking lot, with a sign outside saying “kiryat hamemshala”. 
+
+Visitors parking at the building will go through security when entering the parking lot. They should take the elevator to E1, change to the elevator going to the 25 floor and change elevators again going to the 27 floor. 
+
+Visitors who are arriving to the building by foot should go through street level kiryat hamemshala security check and then take the left annex to Hayovel bldg., this is level E1, so they should take the elevator to the 25 floor and change elevators going to the 27 floor. 
+
+<br>
+
+== Map  ==
+
+[[Image:ImpervaArrival.png]] 
+
+
+[[Category:Israel]]

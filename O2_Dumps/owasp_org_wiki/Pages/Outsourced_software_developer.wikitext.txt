@@ -1,0 +1,28 @@
+{{template:CandidateForDeletion}}
+<!--Marked for deletion because it's a duplicate-->
+<br>
+ #REDIRECT [[::Category:Vulnerability]]
+
+==Description==
+
+Outsourced software developers are hired to write code to a specification provided by the procuring company. Their deliverable may include source code, but is sometimes only a compiled version of the application.
+
+A malicious developer is one of the most difficult threats to deal with, as it is extremely difficult to identify malicious code. A talented attacker will make attacks look exactly like an inadvertent error for plausible deniability. In addition, malicious code may be obfuscated to prevent easy detection. Some techniques include spreading an attack throughout a software baseline, using inheritance and class loading tricks to hide calls, and even formatting tricks.
+
+An outsourced software developer may have no ties with the procuring company and may see an opportunity to steal information or money via a software attack.
+
+==Examples==
+
+* Java software developer
+* SQL developer
+* Mainframe developer
+
+==Related [[Threat Agents]]==
+
+* [[Internal software developer]]
+* [[Logic/time bomb]]
+
+==Related Attacks==
+
+* [[Backdoor attack]]
+* [[Salami attack]]

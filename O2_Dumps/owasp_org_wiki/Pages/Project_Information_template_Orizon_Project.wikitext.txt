@@ -1,0 +1,43 @@
+----
+
+{| style="width:100%" border="0" align="center"
+|-
+! colspan="8" align="center" style="background:#4058A0; color:white" | <font color="white">'''PROJECT IDENTIFICATION'''</font>
+|-
+| style="width:15%; background:#7B8ABD" align="center" | '''Project Name''' 
+| colspan="7" style="width:85%; background:#cccccc" align="left" | <font color="black">'''OWASP Orizon Project'''</font>
+|-
+| style="width:15%; background:#7B8ABD" align="center" | '''Short Project Description''' 
+| colspan="7" style="width:85%; background:#cccccc" align="left" | This project born in 2006 in order to provide a framework to all Owasp projects developing code review services. The project is in a quite stable stage and it is usable for Java static code review and some dynamic tests against XSS. Owasp Orizon includes also APIs for code crawling, usable for code crawling tools.
+|-
+| style="width:15%; background:#7B8ABD" align="center" | '''Key Project Information''' 
+| style="width:14%; background:#cccccc" align="center" | Project Leader<br>[[User:Thesp0nge|'''Paolo Perego''']] 
+| style="width:15%; background:#cccccc" align="center" | Project Contributors<br>[[:Category:OWASP Orizon Project - Contributors|'''See here''']] 
+| style="width:10%; background:#cccccc" align="center" | Mailing list<br>[https://lists.owasp.org/mailman/listinfo/owasp-orizon '''Subscribe here''']<br>[mailto:owasp-orizon(at)lists.owasp.org '''Use here'''] 
+| style="width:17%; background:#cccccc" align="center" | 
+License<br>[http://creativecommons.org/licenses/by-sa/3.0/ '''Creative Commons Attribution Share Alike 3.0'''] 
+
+| style="width:14%; background:#cccccc" align="center" | 
+Project Type<br>[http://www.owasp.org/index.php/Category:OWASP_Project#tab=Beta_Status_Projects '''Tool'''] 
+
+| style="width:15%; background:#cccccc" align="center" | Sponsor<br>[[OWASP Summer of Code 2008|'''OWASP SoC 08''']]
+|}
+
+{| style="width:100%" border="0" align="center"
+|-
+! align="center" style="background:#7B8ABD; color:white" | <font color="black">'''Release Status'''</font>
+! align="center" style="background:#7B8ABD; color:white" | <font color="black">'''Main Links'''</font>
+! align="center" style="background:#7B8ABD; color:white" | <font color="black">'''Related Projects'''</font>
+|-
+| style="width:29%; background:#cccccc" align="center" | 
+'''[[:Category:OWASP Project Assessment#Beta_Quality_Tool_Criteria|Beta Quality]]'''<br>[[:Category:OWASP Orizon Project - Assessment Frame|Please see here for complete information.]] 
+
+| style="width:42%; background:#cccccc" align="center" | 
+[https://www.owasp.org/images/9/9b/OWASP_EU_Summit_2008_The_Owasp_Orizon_Project.ppt The Owasp OrizonProject in Power Point]<br>[https://www.owasp.org/images/6/67/OWASP_Orizon_Safe_coding_and_beyond.docx Orizon Safe coding and beyond - Word File]<br>[https://sourceforge.net/projects/orizon/files/orizon-devel/v1.19/orizon_bin_1.19.tar.gz/download Orizon 1.19 - '''The Latest Release''']<br>[[:Image:Orizon internal draft.doc|Orizon internal draft]]<br>[http://orizon.sourceforge.net Orizon site at sourceforge]<br>[http://orizon.sourceforge.net/blog Orizon blog] 
+
+| style="width:29%; background:#cccccc" align="center" | 
+[[:Category:OWASP Code Review Project|OWASP Code Review Guide]] 
+
+|}
+
+----

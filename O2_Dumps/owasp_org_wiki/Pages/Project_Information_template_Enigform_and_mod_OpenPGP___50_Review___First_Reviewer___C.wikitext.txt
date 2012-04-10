@@ -1,0 +1,29 @@
+[[Project Information:template Enigform and mod OpenPGP|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#OpenPGP Extensions for HTTP - Enigform and mod_openpgp|OWASP OpenPGP Extensions for HTTP - Enigform and mod_openpgp  Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#OpenPGP Extensions for HTTP - Enigform and mod_openpgp|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+Demo of enigform/OpenPGP authentication and secure session management proved successful.  For final we need how-to documentation that Buanzo is working on at his wiki site published on the OWASP Enigform / mod_OpenPGP site.   Also, final review will require a website (Buanzo has one in SVN, but Dinis was interested in using WebGoat) and I'd like a demo of session based attacks against the site with the extensions (maybe we can we use OWASP testing guide examples, see [[Testing for Session Management]])
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#OpenPGP Extensions for HTTP - Enigform and mod_openpgp|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+60% (I worked with Buanzo on testing Enigform and mod_openpgp for secure sessions, extensions appear to work).
+ |- 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+Buanzo is a motivated security developer.  Maybe he can provide development guidance after the SoC 2008 for others to learn from.
+|}

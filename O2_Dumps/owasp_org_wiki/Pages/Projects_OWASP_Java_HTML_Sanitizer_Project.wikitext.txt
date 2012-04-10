@@ -1,0 +1,62 @@
+==== Project Info ====
+
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Project About</noinclude>
+
+| project_name = OWASP Java HTML Sanitizer
+
+| project_home_page = OWASP Java HTML Sanitizer
+
+| project_description = 
+*The OWASP Java HTML Sanitizer Project is a fast and easy to configure HTML Sanitizer written in Java which lets you include HTML authored by third-parties in your web application while protecting against XSS.
+*This code was written with security best practices in mind and has an extensive test suite but it has not yet undergone an adversarial security review. Please treat it as alpha software.
+*The existing dependencies are on guava and JSR 305. The JSR 305 dependency is a compile-only dependency, only needed for annotations. The other jars are only needed by the unittests. 
+*Provides 4X the speed of AntiSamy sanitization in DOM mode and 2X the speed of AntiSamy in SAX mode.
+*Very easy to use. It allows for simple programmatic POSITIVE policy configuration (see below). No XML config.
+*Actively maintained by Mike Samuel from Google's AppSec team!
+*Passing 95+% of AntiSamy's unit tests plus many more.
+*This is code from the Caja project that was donated by Google. It is rather high performance and low memory utilization.
+*Java 1.5+
+
+| project_license = [http://www.opensource.org/licenses/bsd-license.php New BSD License]
+
+| leader_name1 = Mike Samuel 
+| leader_email1 = msamuel@google.com
+| leader_username1 = 
+
+| leader_name2 = Jim Manico
+| leader_email2 = jim@owasp.org
+| leader_username2 = jmanico
+
+| contributor_name[1-10] = 
+| contributor_email[1-10] = 
+| contributor_username[1-10] = 
+
+| pamphlet_link = 
+
+| presentation_link =
+
+| mailing_list_name = https://lists.owasp.org/mailman/listinfo/owasp-java-html-sanitizer
+
+| project_road_map = http://www.owasp.org/index.php/OWASP_Java_HTML_Sanitizer/Roadmap
+
+| links_url1 = https://code.google.com/p/owasp-java-html-sanitizer/
+| links_name1 = https://code.google.com/p/owasp-java-html-sanitizer/
+| links_url2 = http://code.google.com/p/owasp-java-html-sanitizer/wiki/Maven
+| links_name2 = http://code.google.com/p/owasp-java-html-sanitizer/wiki/Maven
+
+| release_1 = We are currently at Alpha right now - but will be production ready and soon. 
+| release_2 = 
+| release_3 =
+| release_4 =
+<!--- The line below is for GPC usage only. Please do not edit it --->
+| project_about_page = Projects/OWASP Java HTML Sanitizer Project
+
+}}
+
+==== Questions ====
+
+*How was this project tested?
+**This code was written with security best practices in mind and has an extensive test suite but it has not yet undergone an adversarial security review. Please treat it as alpha software.
+*How is this project deployed?
+**This project is best deployed through Maven [https://code.google.com/p/owasp-java-html-sanitizer/wiki/Maven https://code.google.com/p/owasp-java-html-sanitizer/wiki/Maven]
+__NOTOC__ <headertabs /> <br>

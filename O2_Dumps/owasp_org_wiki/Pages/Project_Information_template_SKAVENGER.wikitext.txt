@@ -1,0 +1,35 @@
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Skavenger Project''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|
+Skavenger is a web application security assessment toolkit which arised from many years of professional experience in the web application assessment field and is the result of nearly one year of work. It passively analyzes traffic logged by various MITM proxies (such as WebScarab and Burp) as well as other sources (like Firefox's LiveHTTPHeader plugin) and helps to identify various kinds of possible vulnerabilities (such as XSS, CRLF injection, an insecure session management and several kinds of information disclosure). Skavenger's modular design allows the integration of custom scanning modules without any knowledge about the tool at all. 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Key Project Information'''
+ | style="width:14%; background:#cccccc" align="center"|Project Leader<br>[[User:Mrohr|'''Matthias Rohr''']]
+ | style="width:16%; background:#cccccc" align="center"|Project Contributors<br>(if any) 
+ | style="width:10%; background:#cccccc" align="center"|Mailing list<br>[https://lists.owasp.org/mailman/listinfo/owasp-skavenger '''Subscribe here''']<br>[mailto:Owasp-skavenger@lists.owasp.org '''Use here''']
+| style="width:16%; background:#cccccc" align="center"|
+License<br>[http://sourceforge.net/softwaremap/trove_list.php?form_cat=15 '''GNU General Public License''']
+ | style="width:14%; background:#cccccc" align="center"|
+Project Type<br>[[:Category:OWASP_Project#Beta Status Projects|'''Tool''']]
+ | style="width:15%; background:#cccccc" align="center"|Sponsor<br>[[OWASP Summer of Code 2008|'''OWASP SoC 08''']]
+ |}
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|
+'''[[:Category:OWASP Project Assessment#Beta Quality Tool Criteria|Beta Quality]]'''<br>[[:Category:OWASP Skavenger Project - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="center"|
+The tool is written in C# with .NET 2.0 WinForms (for the  GUI) as well as Perl (for the CLI) and can be downloaded from [https://sourceforge.net/projects/skavenger/ sourceforge.net]
+ | style="width:29%; background:#cccccc" align="center"|
+[[OWASP WebScarab Project]]<br />
+[[OWASP WebGoat Project]]<br />
+[[OWASP Testing Guide]]
+ |}
+----

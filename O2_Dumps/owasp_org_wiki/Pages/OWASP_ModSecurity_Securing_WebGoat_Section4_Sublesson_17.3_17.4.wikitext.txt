@@ -1,0 +1,63 @@
+17.  Web Services -> 17.3  Web Service SAX Injection
+
+17.  Web Services -> 17.4  Web Service SQL Injection
+
+The lessons are combined because the strategy and the ruleset to solve them are the same.
+
+=== Lesson overviews === 
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solutions === 
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information. 
+
+=== Strategy === 
+
+Mitigating these 2 lessons is done with a whitelist, using pinpoint strategy. 
+
+=== Implementation === 
+
+The lesson is mitigated by the ruleset and the solution is self-explanatory:
+
+<pre>
+<LocationMatch "^/WebGoat/attack$">
+
+  # 'menu=1800'
+  SecRule ARGS:menu "!@eq 1800" "t:none,pass,skipAfter:170"
+
+  # The following rule is for lesson '17.4 WS SQL Injection'.
+  # The regex is a whitelist only for this particular lesson and for 
+  #   the 'account number' parameter. The criteria is that only digits and no 
+  #   spaces or special chars are allowed. Modify the regex if something like 
+  #   '-' is allowable.
+  SecRule &ARGS_POST:SUBMIT "@eq 0" "nolog,skip:4"
+  SecRule ARGS_POST:SUBMIT "!@streq Go!" "nolog,skip:3"
+  SecRule &ARGS_POST:account_number "@eq 0" "nolog,skip:2"
+  SecRule ARGS_POST:account_number "^([0-9]+)$" \ 
+    "t:urlDecodeUni,t:htmlEntityDecode,allow:request,skip:1"
+  SecAction "deny,log,auditlog,msg:'WS SQL Injection', \ 
+    tag:'Returning from 17.4 WS SQL Injection (rulefile_17).', \ 
+    severity:'3',redirect:/_error_pages_/lesson17-4.html"
+
+  # The following rule is for lesson '17.3 SAX Injection'.
+  # The regex is a whitelist only for this particular lesson and 
+  #   for the 'password' parameter. The criteria is that no spaces are allowed.
+  SecRule &ARGS_POST:SUBMIT "@eq 0" "nolog,skip:4"
+  SecRule ARGS_POST:SUBMIT "!@streq Go!" "nolog,skip:3"
+  SecRule &ARGS_POST:password "@eq 0" "nolog,skip:2"
+  SecRule ARGS_POST:password "[ ]" \
+    "t:urlDecodeUni,t:htmlEntityDecode,deny,log,auditlog, \ 
+    msg:'WS SAX Injection',tag:'WEB_ATTACK/SAX_INJECTION', \ 
+    severity:'3',redirect:/_error_pages_/lesson17-3.html"
+  SecAction "allow:request,t:none,id:'170', \ 
+    msg:'Returning from 17.3 SAX Injection (rulefile_17).'"
+
+  SecAction "allow:request,t:none,msg:'Returning; nothing bad on this page (rulefile_17).'"
+</LocationMatch>
+</pre>
+
+
+Note that 'skipAfter' is used so the order of the rule groupings cannot be swapped.
+
+For some reason, the project member had difficulty using 'chain' to chain rules together - in this lesson it simply was not working so the kludgey 'skip' actions were used instead; not elegant, but it works.

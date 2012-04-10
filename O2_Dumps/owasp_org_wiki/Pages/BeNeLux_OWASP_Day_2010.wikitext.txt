@@ -1,0 +1,238 @@
+__NOTOC__ 
+<center>[[File:OWASP_BeNeLux_2010.jpg]]<br></center> 
+<br> <!-- Header --> 
+
+==== Welcome  ====
+
+<br> 
+<center>
+===Presentations online===
+First presentations are available online. Check out the conference agenda page.
+
+===blog===
+Xavier did blog a nice wrap-up of the BeNeLux day: see his [http://blog.rootshell.be/2010/12/03/owasp-benelux-day-2010-wrap-up/ blog].
+
+The Luxembourg Chapter published on Flickr a set of pictures: [http://www.flickr.com/photos/owasplux/sets/72157625432687293/ OWASP BeNeLux Days 2010 set].
+
+If you know of other coverage, photo's: send them to seba@owasp.org
+
+===Tweet!===
+Event tag is [http://twitter.com/#search?q=%23owaspbnl10 #owaspbnl10]
+
+===Confirmed Speakers:===
+Sebastien Deleersnyder (OWASP Board, SAIT Zenitel)<br> Radu State (University of Luxembourg)<br> N Nikiforakis (Katholieke Universiteit Leuven)<br> Marco Balduzzi (Eurecom)<br> Walter Belgers (Madison Gurkha)<br> Thierry Zoller<br> ... 
+
+Download the conference flyer [http://www.owasp.org/images/8/8d/OWASP_BeNeLux_2010_flyer_v1.5%282%29.jpg here].<br> All the presentations will be available for download in the [http://www.owasp.org/index.php/BeNeLux_OWASP_Day_2010#tab=Conference.2C_December_2nd agenda] tab. 
+
+<br> <br> 
+</center> 
+<br> 
+
+==== Training, December 1st  ====
+
+{{:Benelux Training}}
+
+==== Conference, December 2nd  ====
+
+{| border="0" align="center" style="width: 80%;"
+|-
+! align="center" colspan="3" | '''Location''' - December 2nd, 2010
+|-
+| style="background: none repeat scroll 0% 0% rgb(123, 138, 189); width: 15%; -moz-background-inline-policy: continuous;" | 09h00-10h00 
+| align="left" style="background: none repeat scroll 0% 0% rgb(194, 194, 194); width: 75%; -moz-background-inline-policy: continuous;" colspan="2" | '''Registration'''
+|-
+| style="background: none repeat scroll 0% 0% rgb(123, 138, 189); width: 15%; -moz-background-inline-policy: continuous;" | 10h00-10h15 
+| align="left" style="background: none repeat scroll 0% 0% rgb(242, 242, 242); width: 75%; -moz-background-inline-policy: continuous;" colspan="2" | '''Welcome''' (by Martin Knobloch and Ferdinand Vroom, OWASP NL Chapter)
+|-
+| style="background: none repeat scroll 0% 0% rgb(123, 138, 189); width: 15%; -moz-background-inline-policy: continuous;" | 10h15-10h45 
+| align="left" style="background: none repeat scroll 0% 0% rgb(242, 242, 242); width: 75%; -moz-background-inline-policy: continuous;" colspan="2" | '''OWASP Update''' (by Seba Deleersnyder, OWASP Board, SAIT Zenitel)
+|-
+| style="background: none repeat scroll 0% 0% rgb(123, 138, 189); width: 15%; -moz-background-inline-policy: continuous;" | 10h45-11h00 
+| align="left" style="background: none repeat scroll 0% 0% rgb(194, 194, 194); width: 75%; -moz-background-inline-policy: continuous;" colspan="2" | '''Coffee Break'''
+|-
+| style="background: none repeat scroll 0% 0% rgb(123, 138, 189); width: 15%; -moz-background-inline-policy: continuous;" | 11h00-11h40 
+| align="left" style="background: none repeat scroll 0% 0% rgb(242, 242, 242); width: 75%; -moz-background-inline-policy: continuous;" colspan="2" | '''Clickjacking: an empirical study with an automated testing/detection system''' (by Marco Balduzzi, Eurecom)  [http://www.owasp.org/images/d/d2/OWASPBeNeLux2010-Balduzzi-Clickjacking.pdf Presentation]
+:Clickjacking recently received new media attentions: Thousands of Facebook users have fallen victims of a worm that uses clickjacking techniques to propagate.
+:In a clickjacking attack, a malicious page is constructed (or a benign page is hijacked) to trick the user into performing unintended clicks that are advantageous for the attacker, such as propagating a web worm, stealing confidential information or abusing of the user session.
+:However it is currently unclear to what extent clickjacking is being used by attackers in the wild and how significant the attack is for the security of Internet users.
+:In this talk, we presents a solution we designed for studying the prevalence of clickjacking on the Internet and for detecting possible malicious pages in an automated fashion. We deployed our system over 10 distinct virtual machines to test more then a million unique web-pages in two months. From the analysis of our experimental results we discuss the clickjacking phenomenon and its future implications.
+|-
+| style="background: none repeat scroll 0% 0% rgb(123, 138, 189); width: 15%; -moz-background-inline-policy: continuous;" | 11h40-12h20 
+| align="left" style="background: none repeat scroll 0% 0% rgb(242, 242, 242); width: 75%; -moz-background-inline-policy: continuous;" colspan="2" | '''Privacy of file sharing service''' (by Nick Nikiforakis, Katholieke Universiteit Leuven) [http://www.owasp.org/images/1/14/OWASPBeNeLux2010-Nikiforakis-FileSharing.pdf Presentation]
+:File sharing services are used daily by tens of thousands of people as a way of sharing files. Almost all such services, use a security-through-obscurity method of hiding the files of one user from others. For each uploaded file, the user is given a secret URL which supposedly cannot be guessed. The user can then share his uploaded file by sharing this URL with other users of his choice. Unfortunately though, a number of file sharing services are incorrectly implemented allowing an attacker to guess valid URLs of millions of files and thus allowing him to enumerate their file database and access all of the uploaded files. In this paper, we study some of these services and we record their incorrect implementations. We design automatic enumerators for two such services and a privacy-classifying module which characterises an uploaded file as private or public. Using this technique we gain access to thousands of private files ranging from private and company documents to personal photographs. We present a taxonomy of the private files found and ways that the users and services can protect themselves against such attacks.
+|-
+| style="background: none repeat scroll 0% 0% rgb(123, 138, 189); width: 15%; -moz-background-inline-policy: continuous;" | 12h20-13h00 
+| align="left" style="background: none repeat scroll 0% 0% rgb(242, 242, 242); width: 75%; -moz-background-inline-policy: continuous;" colspan="2" | '''Finding Backdoors in Code''' (by Matias Madou, Fortify) [http://www.owasp.org/images/8/8f/OWASPBeNeLux2010-Madou-RepellingTheWilyInsider.pdf Presentation]
+:Insiders who write code, whether they are developers working for an enterprise or contributors to an open source project, have an almost unlimited number of ways to put chinks in the armor of their software. Many times, these holes are put in place for seemingly good reasons—to facilitate easy debugging, make working from home easier, or as a failsafe in case other mechanisms for interfacing with the system fail. Worse still, malicious insiders can plant logic bombs or insert backdoors so that they can embezzle funds, steal private information, or exact revenge if they become disgruntled.<BR>
+:Whether unintentional or malicious, code that performs questionable behavior or permits unauthorized access can be introduced with relative ease and can persist in a code base almost indefinitely without being discovered. Until it's too late. In this talk, we discuss techniques for applying static analysis to program source code to assist auditors hunting for backdoors, logic bombs, and other threats introduced by insiders. We give detailed examples of insider threats that have been uncovered in real software systems, outline possible motives for malicious insiders, and discuss how external stimuli like layoffs are increasing the attention paid to insider threats. We conclude the talk with results of applying the detection techniques discussed in this talk to real-world software. 
+|-
+| style="background: none repeat scroll 0% 0% rgb(123, 138, 189); width: 15%; -moz-background-inline-policy: continuous;" | 13h00-14h00 
+| align="left" style="background: none repeat scroll 0% 0% rgb(194, 194, 194); width: 75%; -moz-background-inline-policy: continuous;" colspan="2" | '''Lunch'''
+|-
+| style="background: none repeat scroll 0% 0% rgb(123, 138, 189); width: 15%; -moz-background-inline-policy: continuous;" | 14h00-14h40 
+| align="left" style="background: none repeat scroll 0% 0% rgb(242, 242, 242); width: 75%; -moz-background-inline-policy: continuous;" colspan="2" | '''How NOT to implement a Payback/Cashback System''' (by Thierry Zoller)
+:Casback is a name given to progams where participants  will earn points  for  every  net  euro/dollar in purchases made. There are many ways this can go wrong. We will revisit the design, architecture of common Cashback systems on every operational level. We will take one particular interesting Payback program as an example and show how NOT to deploy. Death by a thousand cuts.<br>
+:Beware : Hilarity will ensue.
+|-
+| style="background: none repeat scroll 0% 0% rgb(123, 138, 189); width: 15%; -moz-background-inline-policy: continuous;" | 14h40-15h20 
+| align="left" style="background: none repeat scroll 0% 0% rgb(242, 242, 242); width: 75%; -moz-background-inline-policy: continuous;" colspan="2" | '''Botnets/Bredolab''' (by Michael Sandee, Fox-IT)
+:Botnets are a hot debated topic, with much controversies on how to fight them. Recently there was headline news regarding the takedown of the Bredolab botnet, which caused a lot of discussion and contained a lot of conflicting views on the subject. During this presentation the facts of this Bredolab botnet takedown will be discussed,  alongside the views of a Cybercriminal on how to setup your own botnet. You will be given a crash-course Cybercrime in 30 minutes.<br>
+|-
+| style="background: none repeat scroll 0% 0% rgb(123, 138, 189); width: 15%; -moz-background-inline-policy: continuous;" | 15h20-16h00 
+| align="left" style="background: none repeat scroll 0% 0% rgb(242, 242, 242); width: 75%; -moz-background-inline-policy: continuous;" colspan="2" | '''0wning Networks with VoIP and Web attacks''' (by Radu State, University of Luxembourg) [http://www.owasp.org/images/6/6a/OWASPBeNeLux2010-State-VoipHacking.pdf Presentation]
+:Voice over IP is the current de facto technology for delivering voice data in both enterprise and  service provider infrastructure. Although , security threats specific to VoIP signalling have been known for a while, few is known about cross-layer attacks in which Web enabled VoIP devices allow for efficient attacks against the VoIP infrastructure and general IT networks .
+:This talk will give a short introduction to VoIP and continue with a series of attacks that leverage SIP as efficient transport vehicle for billing attacks , disclosure attacks and  network penetration.     The talk will show how one single phone call can compromise even the best secured and hardened network perimeter .
+|-
+| style="background: none repeat scroll 0% 0% rgb(123, 138, 189); width: 15%; -moz-background-inline-policy: continuous;" | 16h00-16h20 
+| align="left" style="background: none repeat scroll 0% 0% rgb(194, 194, 194); width: 75%; -moz-background-inline-policy: continuous;" colspan="2" | '''Coffee Break'''
+|-
+| style="background: none repeat scroll 0% 0% rgb(123, 138, 189); width: 15%; -moz-background-inline-policy: continuous;" | 16h20-17h00 
+| align="left" style="background: none repeat scroll 0% 0% rgb(242, 242, 242); width: 75%; -moz-background-inline-policy: continuous;" colspan="2" | '''The Social Networking Corporate Threat''' (by Chen Gour-Arie, Comsec Consulting)
+:Social Networking Sites (SNS) and Web 2.0 platforms have been growing rapidly over the past few years, with multi-millions utilizing these platforms on a daily basis. In this talk, we will present some of the threats that SNS introduces to the corporate environment. 
+|-
+| style="background: none repeat scroll 0% 0% rgb(123, 138, 189); width: 15%; -moz-background-inline-policy: continuous;" | 17h00-17h40 
+| align="left" style="background: none repeat scroll 0% 0% rgb(242, 242, 242); width: 75%; -moz-background-inline-policy: continuous;" colspan="2" | '''Attacking is easy, defending is hard''' (by Walter Belgers, Madison Gurkha) [http://www.owasp.org/images/d/d3/OWASPBeNeLux2010-Belgers-DefendingIsHard.pdf Presentation]
+:An attacker has an easy job. They need only find one security hole, and they've broken the system. The system, application and network administrators :have a much harder task. They have to find not just one, but each and every one of the holes. Preferably before the bad guys do.
+:And, these holes can be at several different layers. In the presentation, we will look at those layers (system level, application level, but also user :level) and observe what goes wrong and how to fix it. The observations come from the daily work at Madison Gurkha.
+:Examples of problems are lack of patches, problems during the development phase, susceptibility to social engineering attacks and more. 
+|-
+| style="background: none repeat scroll 0% 0% rgb(123, 138, 189); width: 15%; -moz-background-inline-policy: continuous;" | 17h40-17h50 
+| align="left" style="background: none repeat scroll 0% 0% rgb(242, 242, 242); width: 75%; -moz-background-inline-policy: continuous;" colspan="2" | '''Closing''' (by Martin Knobloch and Ferdinand Vroom, OWASP NL Chapter)
+
+|}
+==== Speakers  ====
+{|
+|-
+|'''Sebastien Deleersnyder (OWASP Board, SAIT Zenitel)''' 
+|-
+|Sebastien started the successful Belgian OWASP Chapter and performed several public presentations on web application and web services security. Sebastien specialises in (web) application security, combining his software development and information security experience. He is currently OWASP Foundation board member and Managing Technical Consultant at SAIT Zenitel.
+|}
+{|
+|-
+|'''Radu State (University of Luxembourg)''' 
+|-
+|Radu received his PhD degree from INRIA, Nancy – University Henri Poincaré in 2001.<br>
+Radu has held positions as Research Engineer and Senior Engineer at INRIA-LORIA and has been working as Senior Researcher at the University of Luxembourg, FSTC-CSC Research Unit from October 2008 to September 2010. Radu's research activity will be on one side investigate interoperability aspects to supply security components in the area of ubiquitous computing and on the other side set up a project specific interoperability research lab in close cooperation with industry.
+|}
+{|
+|-
+|'''Nick  Nikiforakis (Katholieke Universiteit Leuven)''' 
+|-
+|Nick Nikiforakis is a PhD student at the Katholieke Universiteit Leuven, in Belgium. He belongs to the DistriNet research group and specifically in the “Security & Languages” task-force. His current research interests are: low-level security for unsafe languages and web application security. <br>
+Nick holds a BSc in Computer Science and a MSc on Distributed Systems from the University of Crete in Greece. He worked for 3 years as a research assistant in the Distributed Computing Systems group at the Foundation of Research and Technology in Crete where he did research in network data visualization, authentication schemes using mobile devices and phishing countermeasures. In the past, Nick has presented his work in academic conferences as well as hacking conventions. His work can be found online at www.securitee.org.
+|}
+{|
+|-
+|'''Matias Madou (Fortify)''' 
+|-
+|Matias Madou is principal security researcher at Fortify's Security Research Group, which is responsible for building security knowledge into Fortify's products. His work focuses on developing new techniques to detect vulnerabilities. Matias holds a Ph.D. in computer engineering from Ghent University, where he studied application security through program obfuscation to hide the inner workings of an application. During his Ph.D., he collaborated with top research and industry players in the field of program obfuscation. 
+|}
+{|
+|-
+|'''Marco Balduzzi (Eurecom)''' 
+|-
+|
+Marco Balduzzi is an IT security specialist with several years of experience as engineer and consultant for different international
+companies located in Milan, Munich and Nice. At the moment, he is a PhD researcher in EURECOM and a proud member of the [http://www.iseclab.org International Secure System Lab]. He designs systems for the detection of botnets/malware, the analysis of
+web threats and the security of cloud computing. <br>
+Marco owns a MSc in Computer Engineering from the University of Bergamo and is a co-founder of the Bergamo Linux User Group. He contributed to several Free Software projects (e.g. Nast) and has been involved in many underground non-profit organizations.
+|}
+{|
+|-
+|'''Walter Belgers (Madison Gurkha) ''' 
+|-
+|Walter Belgers heeft Technische Informatica gestudeerd aan de Technische Universiteit Eindhoven met als extra vak o.a. Computercriminaliteit (Universiteit van Tilburg). Walter is in 1994 begonnen bij Philips C&P (tegenwoordig Atos Origin) als ontwikkelaar van wereldwijde firewall-diensten en de uitrol daarvan. Daarna heeft hij enkele jaren lesgegeven op het gebied van UNIX en Internet beveiliging bij AT Computing. In 2002 is hij toegetreden tot Madison Gurkha als partner. Naast zijn technische consultancy-activiteiten, houdt Walter zich bezig met het schrijven van artikelen en columns, het geven van lezingen en voorlichten van de pers. Walter is gecertificeerd security professional (CISSP) en security auditor (CISA).
+|}
+{|
+|-
+|'''Martin Knobloch (Sogeti Nederland B.V.) ''' 
+|-
+|Martin Knobloch is employed at Sogeti Netherlands as Senior Security Consultant. He is founder and thought leader of the Sogeti task force PaSS, Proactive Security Strategy, with an integral solution of information security within organisation, infrastructure and software. <br>
+At OWASP, Martin is board member of the OWASP Netherlands Chapter and member of the Global Education Committee.
+|}
+{|
+|-
+|'''Michael Sandee (Fox-IT)'''
+|-
+|Michael Sandee, Lead Expert Cybercrime at Fox-IT, has been working analyzing Cybercrime for over 5 years. With day-to-day analysis of malware and cybercrime activities he has developed a good understanding on how the underground economy operates and how large this market is, and also how we are affected by this every day.
+|}
+{|
+|-
+|'''Chen Gour-Arie (Comsec Consulting)'''
+|-
+|Chen Gour-Arie has years of experience in information security, with a specific expertise in application level security. Chen
+has conducted projects in all areas of information security, in diverse environments, utilizing a wide range of professional
+tools. Some of his notable projects have focused on: complex penetration testing, comprehensive White Box audits,
+network security, policy and procedure formulation, manual and automated security testing, security evaluation of
+products, leading secure software development lifecycles, infrastructure security audits, risk assessments, PCI and PA-DSS
+consulting, and more.
+|}
+====  CTF  ====
+During both days, a '''C'''apture '''T'''he '''F'''lag challenge will be online and available!
+<br>
+Do you have the skills to hack websites? Can you crack various codes? Can you think outside the box? Do you like challenges?<br>
+Then come and participate in the OWASP Capture The Flag Competition. Test your webhacking/codecracking skills against various challenges. Compete against yourself and others. The CTF will run the complete conference, so you can logon and play anytime you want. We will announce the winner at the last day of the conference. The winner will earn $100 worth of OWASP books and gets a OWASP membership for a year, the runner up wins $50 of OWASP books and gets a OWASP membership for a year, the person on third place will win a OWASP membership for a year.<br>
+So come and play and earn the bragging rights for the OWASP CTF Challenge at OWASP BeNeLux 2010.<br>
+<br>
+<br>
+==== Registration  ====
+<center>
+'''The training day and the conference are free!'''&nbsp;
+
+<br> 
+
+[http://owaspbenelux.eventbrite.com?ref=ebtn http://www.owasp.org/images/7/77/Buttoncreate.png] 
+
+<br> To support the OWASP organisation, consider to become a member, it's only US$50!<br> Check out the [[Membership]] page to find out more.<br> 
+
+<br> 
+</center> 
+==== Venue  ====
+<center>
+'''Hogeschool Fontys''' <br> 
+Building R5 , Rachelsmolen 1 <br>
+5612 AM Eindhoven, The Netherlands<br> 
+
+[http://maps.google.com/maps?f=q&source=s_q&hl=nl&geocode=&q=Hogeschool+Fontys,+Rachelsmolen+1,+5612+AM+Eindhoven&sll=51.502694,5.262446&sspn=0.541971,0.907745&ie=UTF8&hq=Hogeschool+Fontys,&hnear=Rachelsmolen+1,+Woenselse+Watermolen,+Eindhoven,+Noord-Brabant,+Nederland&ll=51.453071,5.481298&spn=0.008478,0.014184&t=h&z=16&iwloc=A '''Campus Rachelsmolen''']<br>
+
+</center> 
+<br> '''Hotels nearby''': [http://maps.google.com/maps?near=Rachelsmolen+1,+5612+MA+Eindhoven,+Nederland+(Fontys+Hogescholen+|+Campus+Rachelsmolen)&geocode=CYt8kT41vzHwFdMZEQMdSaNTACF7CO7YoPOYHA&q=hotel&f=l&dq=Hogeschool+Fontys,+loc:+Rachelsmolen+1,+5612+AM+Eindhoven&sll=51.452371,5.481289&sspn=0.006295,0.006295&ie=UTF8&hq=hotel&hnear=&t=h&z=14 maps.google.nl/maps]<br> 
+
+==== Organisation  ====
+
+The BeNeLux Day 2010 Program Committee: 
+
+*Martin Knobloch / Ferdinand Vroom ([[Netherlands|OWASP Netherlands]]) 
+*Bart De Win / Sebastien Deleersnyder ([[Belgium|OWASP Belgium]]) 
+*Jocelyn Aubert / Andre Adelsbach ([[Luxembourg|OWASP Luxembourg]])
+
+==== Sponsorship  ====
+
+Contact netherlands &lt;at&gt; owasp.org for sponsorship 
+
+<paypal>BeNeLux OWASP Day 2010</paypal> 
+
+==== Social Event  ====
+
+The social event is scheduled for Wednesday, 1st of December:
+[http://www.effenaar.nl/over-de-effenaar Effenaar], starting from 7 pm!
+
+
+<br> <headertabs /> 
+<center>Made possible by our [http://www.owasp.org/index.php/BeNeLux_OWASP_Day_2010#tab=Sponsorship sponsors]:<br> 
+{{MemberLinks|link=http://www.ascure.com|logo=Ascure_Logo.jpg}}
+[http://www.f5.com http://www.owasp.org/images/7/7e/50px-F5_50px.jpg]
+[http://www.zionsecurity.com http://www.owasp.org/images/e/e6/Zionsecurity.jpg]
+[http://www.radware.com http://www.owasp.org/images/8/82/Rad_logo.gif]
+[http://www.zenitelbelgium.com http://www.owasp.org/images/d/df/SAIT_Zenitel.jpg]
+[http://www.sogeti.nl http://www.owasp.org/images/3/31/Sogeti_Nederland_b_v_Logo.jpg]
+[http://www.comsec.nl/ http://www.owasp.org/images/c/c1/Comsec.gif]
+[http://www.fortify.com/ http://www.owasp.org/images/c/cf/Fortify_HP_cmyk1-200.jpg]
+
+
+<br><br> '''Supported by:'''<br>
+[[File:Bnl10 Fontys.jpg|200px]]
+
+<br> 
+</center> 
+[[Category:OWASP_AppSec_Conference]] [[Category:OWASP_BeNeLux_Archives]]

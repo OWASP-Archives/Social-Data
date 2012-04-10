@@ -1,0 +1,102 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Race Conditions]]
+
+
+__TOC__
+
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+==Description==
+
+If the variable which is switched on is changed while the switch statement is still in progress, undefined activity may occur.
+
+'''Consequences'''
+
+* Undefined: This flaw will result in the system state going out of sync.
+
+'''Exposure period'''
+
+* Implementation: Variable locking is the purview of implementers.
+
+'''Platform'''
+
+* Languages: All that allow for multi-threaded activity
+* Operating platforms: All
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Medium
+
+'''Likelihood of exploit'''
+
+Medium
+
+This issue is particularly important in the case of switch statements that involve fall-through style case statements - i.e., those which do not end with break. 
+
+If the variable which we are switching on change in the course of execution, the actions carried out may place the state of the process in a contradictory state or even result in memory corruption. 
+
+For this reason, it is important to ensure that all variables involved in switch statements are locked before the statement starts and are unlocked when the statement ends.
+
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+
+In C/C++:
+
+<pre>
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main(argc,argv){
+        struct stat *sb;
+        time_t timer;
+
+        lstat("bar.sh",sb);
+
+        printf("%d\n",sb->st_ctime);
+        switch(sb->st_ctime % 2){
+                case 0: printf("One option\n");break;
+                case 1: printf("another option\n");break;
+                default: printf("huh\n");break;
+        }
+
+        return 0;
+}
+</pre>
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+==Related [[Controls]]==
+
+* Implementation: Variables that may be subject to race conditions should be locked for the duration of any switch statements.
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD

@@ -1,0 +1,194 @@
+{{Template:OWASP Testing Guide v3}}
+
+
+
+
+
+== Brief Summary of Business Logic Vulnerability==
+The most recent research represented about the concept Business Logic vulnerability by Jr.Scientist Faisal Nabi in the 24th Annual Computer Security Application Conference (ACSAC, 08)California, Dec 8-12 ,2008.
+
+(ACSAC,08)work in progress session:
+
+Designing a Secure Framework Method for Business Application Logic Integrity in e-Commerce Systems,Faisal Nabi, Distributed System Research Group, Department of Computer Science, Victoria University of Wellington, Wellington, New Zealand. http://www.acsac.org/2008/program/wip/
+
+Business-level- Process Integration is based on business components integration, which takes part to process a certain job/task event, which comes into being because of business logic inside a component. When we talk about business process integration, which means integrating business component’s business processing logic,this integration completely rely upon that Business component’s Interface. A component interface is self descriptor which provides specification, which defines that which component offers, what service (such as,Account service provided by Account Component interface, this is called Component interface specification,which reflects component’s business process functionality, which indicates a component offer a particular service)Integration of components is limited through only the interface. Therefore, business process integration, which depends on component’s interface specification in business component, it refers to business function / processing logic, specification of that business component (Components are reusable units for composition. This statement captures the very fundamental concept of component-based development, that an application is made up and composed of a number of individual parts,and that these parts are specifically designed for integration in a number of different applications. It also captures the “idea that one component may be part of another component” , or part of a sub-system or system, both of which represent components in their own right), and integration of all this process, then develop overall business processing logic for a business component-based software to develop an application in the middle-tier, which connected with information system in the back-end systems of organization.
+
+Since, this business process integration is made on the base of business functional concern; it can not be dealt with technological point of view, because problem is not based on technical or technological specific principle of Integration, which is based on related to some particular component model, but as it is stated above, issue identifies that business processing designed solution based on business components and their business processing integration. This is a point , where the focus is set to the logical structure of the “business solution”, this is the stage where logical problems occurs due to lack of paying attention to the design-based testing environment for Logical structure of the business solution , are known as Business Logic Vulnerabilities (Faisal Nabi, 2008). 
+
+Testing for business logic flaws in a multi-functional dynamic web application requires thinking in unconventional ways.  If an application's authentication mechanism is developed with the intention of performing steps 1,2,3 in order to authenticate, what happens if you go from step 1 straight to step 3?  In this simplistic example, does the application provide access by failing open, deny access, or just error out with a 500 message? There are many examples that can be made, but the one constant lesson is "think outside of conventional wisdom". This type of vulnerability cannot be detected by a vulnerability scanner and relies upon the skills and creativity of the penetration tester.  In addition, this type of vulnerability is usually one of the hardest to detect, but, at the same time, usually one of the most detrimental to the application, if exploited.
+
+Business logic may include: 
+* Business rules that express business policy (such as channels, location, logistics, prices, and products); and
+* Workflows based on the ordered tasks of passing documents or data from one participant (a person or a software system) to another.
+
+Attacks on the business logic of an application are dangerous, difficult to detect, and are usually specific to the application being tested.
+
+==Description of the Issue==
+ 
+Business logic can have security flaws that allow a user to do something that isn't allowed by the business. For example, if there is a limit on reimbursement of $1000, could an attacker misuse the system to request more money than it is intended? Or, perhaps, users are supposed to do operations in a particular order, but an attacker could invoke them out of sequence. Or can a user make a purchase for a negative amount of money? Frequently, these business logic checks simply are not present in the application.
+
+Automated tools find it hard to understand context, hence it's up to a person to perform these kinds of tests.  The following two examples will illustrate how understanding the functionality of the application, the developer's intentions, and some creative "out-of-the-box" thinking can break the application's logic and pay huge dividends.  The first example starts with a simplistic parameter manipulation, whereas the second is a real world example of a multi-step process leading to complete destruction of the application. (Note that this was a real world application penetration test, so complete destruction was not actually carried out but a proof of concept was done instead).
+
+'''Business Limits and Restrictions'''<br>
+
+Consider the rules for the business function being provided by the application. Are there any limits or restrictions on people's behavior? Then, consider whether the application enforces those rules. It's generally pretty easy to identify the test and analysis cases to verify the application if you're familiar with the business. If you are a third-party tester, then you're going to have to use your common sense and ask the business if different operations should be allowed by the application.  Sometimes, in very complex applications, you will not have a full understanding of every aspect of the application initially.  In these situations, it is best to have the client walk you through the application, so that you may gain a better understanding of the limits and intended functionality of the application, before the actual test begins.  Additionally, having a direct line to the developers (if possible) while the testing proceeds will help out greatly, if any questions arise regarding the application's functionality.
+
+'''Example 1''': 
+
+Setting the quantity of a product on an e-commerce site as a negative number may result in funds being credited to the attacker. The countermeasure to this problem is to implement stronger data validation, as the application permits negative numbers to be entered in the quantity field of the shopping cart.
+
+'''Example 2''': 
+
+Another more complex example  pertains to a commercial financial application that a large institution uses for their business customers.  This application provides banking ACH (Automated Clearing House) electronic funds transfer and payment services to its business customers.  Initially when a business purchases this service, they are provided two administrative level accounts for their company, in which they can create users at different privilege levels, such as one user can make transfers, another (e.g., a manager) can approve transfers over a designated dollar amount, etc.  When a user is created by an administrator account, a new userid is associated with this new account.  The userids that are created are predictable. For example, if an admin from a fictitious customer of "Spacely Sprockets" creates two accounts consecutively, their respective userids will be 115 and 116.  To make things worse, if two more accounts are created and their respective userids are 117 and 119, then it can be assumed that another company's admin has created a user account for their company with the userid of 118.  
+
+The business logic error here is that the developers assume that no one would ever see or attempt to manipulate the userid that was associated with the username when the account was created (since it was passed within a POST request).  To make things worse, this parameter is predictable (a linear sequence of numbers initiating from 0 and incrementing by 1), which allows userids to be enumerated within the application.
+
+With the understanding of how the application functions and the understanding of the developers' misguided assumptions, it is possible to break the logic of the application.  Now that an account for a user of a different company has been enumerated (remember userid 118 from above), let's create another user account of our own with privileges limited to only being able to transfer funds internally and update our user preferences.  When this new user account is created, it is assigned a userid of 120.  If we log in with this newly created account, we can't do anything but update our own user preferences and make limited transfers internally.  If we make any change to this user's profile, the userid is submitted to the application with our preference change.  If we trap this request within our intercepting proxy and change the userid to 118 (remember that userid 118 was found by enumerating user accounts and that it belongs to a different company), then that user is effectively removed from the other company and added to our company.  Two things will result from this.  First, this will perform a denial of service for the other customer, since they can no longer access this account (since it is now associated with our company). Second, we can now run reports and see every transaction that the company's user performed (including money transfers with bank account numbers, routing numbers, balances, etc) now that this userid is associated to our company.  The application logic saw a request from an authorized user (via a valid session token), but did not cross reference this valid token to see if the userid really belonged to this company.  Since it didn't cross check that the userid that was submitted in the request belonged to the current authorized user's company, it associated that userid to the current company of the authorized user.
+
+Now let's take this a step further.  Suppose a new customer is given two admin accounts, with the userids starting at 113 and 114 for our current company. What would happen if we automated the attack above (i.e., sending an authenticated request with a different userid) with a fuzzer, utilizing the same request but starting at userid 0 and incrementing to 112.  If this was completed, then our company would now have 113 new accounts, of which many could be admin accounts, user accounts with different privileges, etc. We could now run as many reports as we like, harvesting account numbers, routing numbers (of individuals and other companies), personal information, etc.  Unfortunately, once an account has been removed from its previous, legitimate company and has been added to our company, we lose the capability of transferring money using the privileges of this account.  Regardless, the damage has been done, since no other company can access the banking application using these accounts any longer, since they now belong to our company.  Effectively, this is a complete DoS for every company but ours, and we can now harvest a lot of sensitive information from these accounts (e.g., previous transactions) by running reports for these users that are now within our current company.
+
+As you can see, the vulnerability within the business logic was due to assumptions made by the developers and how the application reacted when it received unexpected data.  First, developers assumed that all data (in particular, the userids) passed with the body of a POST request was valid and did not verify it on the server-side before processing it.  Second, the application did not verify that the authentication/authorization session token (a cookie, in this scenario) for a user belonging to one company actually was a valid userid for that same company. As a consequence, the application logic was completely vulnerable: once the user's profile was updated using the current user's session token and another user's userid (corresponding to a different company), the application removed the user account from the victim company and moved it to the current user's company.  
+
+This example shows how understanding the functionality of the application, the intentions of the developers, and some creative thinking, can break the application's logic and pay huge dividends.  Thankfully, we are ethical penetration testers and can inform our clients of this vulnerability and remediate it, before a malicious user attempts to exploit it.
+
+=='''Functional testing and Examples'''==
+
+Although uncovering logical vulnerabilities will probably always remain an art, one can attempt to go about it systematically, to a great extent. Here is one suggested approach:
+* Understanding the application
+* Creating raw data for designing logical tests
+* Designing the logical tests
+* Standard prerequisites
+* Execution of logical tests
+
+===Understanding the application===
+
+Understanding the application thoroughly is a prerequisite for designing logical tests. To start with: 
+* Get any documentation describing the application's functionality. Examples of this include:
+** Application manuals
+** Requirements documents
+** Functional specifications
+** Use or Abuse Cases
+* Explore the application manually and try to understand all the different ways in which the application can be used, the acceptable usage scenarios, and the authorization limits imposed on various users.
+
+===Creating raw data for designing logical tests===
+
+In this phase, one should ideally come up with the following data: 
+* All application '''business scenarios'''. For example, for an e-commerce application this might look like:
+** Product ordering
+** Checkout
+** Browse
+** Search for a product
+* '''Workflows'''. This is different from business scenarios, since it involves a number of different users. Examples include:
+** Order creation and approval
+** Bulletin board (one user posts an article that is reviewed by a moderator and ultimately seen by all users)
+* Different '''user roles'''
+** Administrator
+** Manager
+** Staff
+** CEO
+* Different '''groups or departments'''. Note that there could be a tree (e.g. the Sales group of the heavy engineering division) or tagged view (e.g. someone could be a member of Sales as well as Marketing) associated with this. 
+** Purchasing
+** Marketing
+** Engineering
+* '''Access rights of various user roles and groups''' - The application allows various user privileges on some resource (or asset) and we need to specify the constraints of these privileges.  One simple way to know these business rules/constraints is to make use of the application documentation effectively.  For example, look for clauses like "If the administrator allows individual user access..", "If configured by the administrator.." and you know the restriction imposed by the application. 
+* '''Privilege Table''' – After learning about the various privileges on the resources along with the constraints, you are all set to create a Privilege Table.  Get answers to: 
+** What can each user role do on which resource with what constraint(s)?  This will help you in deducing who cannot do what on which resource.  
+** What are the policies across groups? 
+
+<span style="display: block; margin-left: 16px;">Consider the following privileges: "Approve expense report", "Book a conference room", "Transfer money from own account to another user's account". A privilege could be thought of as a combination of a verb (e.g., Approve, Book, Withdraw) and one or more nouns (e.g., Expense report, conference room, account). The output of this activity is a grid with the various privileges forming the leftmost column, while all user roles and groups would form the column headings of other columns. There would also be a “Comments” column that qualifies data in this grid.</span>
+
+<blockquote style="background: white; border: 1px solid rgb(153, 153, 153); padding: 1em;">
+{| class="wikitable" style="margin: 1em auto 1em auto"
+| '''Privilege''' || '''Who can do this''' || '''Comment'''
+|-
+| Approve expense report || Any supervisor may approve reports submitted by his subordinate(s) || 
+|-
+| Submit expense report || Any employee may do this for himself || 
+|-
+| Transfer funds from one account to another || An account holder may transfer funds from their own account to another account || 
+|-
+| View payslip || Any employee may see his own payslip || 
+|-
+|}
+</blockquote>
+
+This data is a key input for designing logical tests.
+
+===Developing logical tests===
+
+Here are several guidelines to designing logical tests from the raw data gathered. 
+
+* '''Privilege Table''' - Make use of the privilege table as a reference while creating application-specific logical tests. In general, develop a test for each admin privilege to check if it could be executed illegally by a user role with less privileges or no privilege.  For example:
+** Privilege: Operations Manager cannot approve a customer order
+** Logical Test: Operations Manager approves a customer order
+
+* '''Improper handling of special user action sequences''' - Navigating through an application in a certain way or revisiting pages out of sync can cause logical errors which may cause the application to do something it's not meant to. For example:
+** A wizard application where one fills in forms and proceeds to the next step. One cannot in any normal way (according to the developers) enter the wizard in the middle of the process. Bookmarking a middle step (say, step 4 of 7), then continuing with the other steps until completion or form submission, then revisiting the middle step that was bookmarked may "upset" the back-end logic due to a weak ''state model''.
+
+* '''Cover all business transaction paths''' - While designing tests, check for alternate ways to perform the same business transaction. For example, create tests for both cash and credit payment modes.
+
+* '''Client-side validation''' - Look at all client side validations and see how they could be the basis for designing logical tests.  For example, a fund transfer transaction has a validation for negative values in the amount field.  This information can be used to design a logical test such as "A user transfers negative amount of money".
+
+===Standard prerequisites===
+
+Typically, some initial activities useful as setup are: 
+* Create test users with different permissions/privileges
+* Browse all the important business scenarios/workflows in the application
+
+===Execution of logical tests=== 
+
+Pick each logical test and do the following:
+* Analyze the HTTP/S requests underlying the acceptable usage scenario corresponding to the logical test
+** Check the order of HTTP/S requests
+** Understand the purpose of hidden fields, form fields, and query string parameters being passed
+* Try and subvert the expected process/flow by exploiting the known vulnerabilities
+* Verify that the application fails for the test 
+
+===A real world example===
+
+In order to provide the reader with a better understanding of this issue and how to test it, we describe another real world case that was investigated by one of the authors in 2006.  
+At that time, a mobile telecom operator (we'll call it FlawedPhone.com) launched a webmail+SMS service for its customers, with the following characteristics:
+
+* New customers, when buying a SIM card, can open a free, permanent email account with the flawedphone.com domain
+* The email is preserved even if the customer “transfers” the SIM card to another telecom operator
+* However, as long as the SIM card is registered to FlawedPhone, each time an email is received, a SMS message is sent to the customer, including sender and subject of the email
+* The SMS application checks that the target phone number is a legitimate customer from its own copy of the FlawedPhone customers list, which is automatically updated every ~8 hours.
+
+The application had been developed following security best practices, but it suffered from a business logic flaw and FlawedPhone was soon targeted by the following fraud attack:
+
+* The attacker bought a new FlawedPhone SIM card
+* The attacker immediately requested to transfer the SIM card to another mobile carrier, which credits 0.05 € for each received SMS message
+* As soon as the SIM card was “transferred” to the new provider, the malicious user started sending hundreds of emails to their FlawedPhone email account
+* The malicious user had an ~8 hours window before the email+SMS application had its list updated and stopped delivering messages
+* By that time, the malicious user had accumulated ~50-100  € on the card, and proceeded to sell it on eBay
+
+The developers thought that SMS messages delivered during the 8 hours period would have introduced a negligible cost but failed to consider the likelihood of an automated attack like the one described.
+As we can see, the customer list synchronization time combined with the lack of limit to the number of messages that could be delivered in a given period of time, introduced a critical flaw in the system that was soon exploited by malicious users.
+
+==References==
+Designing a Secure Framework Method for Business Application Logic Integrity in e-Commerce Systems,Faisal Nabi, Distributed System Research Group, Department of Computer Science, Victoria University of Wellington, Wellington, New Zealand. http://www.acsac.org/2008/program/wip/
+
+'''Whitepapers'''<br>
+* Business logic - http://en.wikipedia.org/wiki/Business_logic
+* Prevent application logic attacks with sound app security practices - http://searchappsecurity.techtarget.com/qna/0,289202,sid92_gci1213424,00.html?bucket=NEWS&topic=302570<br>
+
+'''Tools'''<br>
+
+Automated tools are incapable of detecting logical vulnerabilities. For example, tools have no means of detecting if a bank’s "fund transfer" page allows a user to transfer a negative amount to another user (in other words, it allows a user to transfer a positive amount into his own account) nor do they have any mechanism to help the human testers to suspect this state of affairs.  
+
+'''Intercepting Proxy:'''<br>
+
+*OWASP: [[OWASP WebScarab Project|Webscarab]]
+*Dafydd Stuttard: Burp proxy -
+http://portswigger.net/proxy/
+*MileSCAN: Paros Proxy - 
+http://www.parosproxy.org/download.shtml
+
+'''Browser Plug-in:'''<br>
+
+*"TamperIE" for Internet Explorer - 
+http://www.bayden.com/TamperIE/
+*Adam Judson: "Tamper Data" for Firefox -
+https://addons.mozilla.org/en-US/firefox/addon/tamper-data/
+
+<br>

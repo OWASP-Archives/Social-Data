@@ -1,0 +1,28 @@
+{{Template: <includeonly>{{{1}}}</includeonly><noinclude>Release About</noinclude>
+| project_name = OWASP ModSecurity Core Rule Set Project
+| project_home_page = :Category:OWASP ModSecurity Core Rule Set Project
+
+| release_name = ModSecurity 2.1.2
+| release_date = 02/17/2011 
+| release_description = 
+*Improvements:
+- Added experimental real-time application profiling ruleset.
+- Added experimental Lua script for profiling the # of page scripts, iframes, etc.. which will help to identify successful XSS attacks and planting of malware links.
+- Added new CSRF detection rule which will trigger if a subsequent request comes too quickly (need to use the Ignore Static Content rules).
+
+*Bug Fixes:
+- Added missing " in the skipAfter SecAction in the CC Detection rule set
+
+
+| release_license = [http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU General Public License - Version 2.0]
+
+| release_download_link = http://sourceforge.net/projects/mod-security/files/modsecurity-crs/0-CURRENT/modsecurity-crs_2.1.2.zip/download  
+
+| leader_name1 = Ryan Barnett
+| leader_email1 = Ryan.Barnett@owasp.org
+| leader_username1 = Rcbarnett 
+
+| release_notes = http://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project_-_ModSecurity_2.1.2_-_Notes
+
+
+}}

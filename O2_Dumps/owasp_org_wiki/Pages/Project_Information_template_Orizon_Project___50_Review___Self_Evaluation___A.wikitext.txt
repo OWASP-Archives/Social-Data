@@ -1,0 +1,57 @@
+[[Project Information:template Orizon Project|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#The Owasp Orizon Project|OWASP Orizon Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#The Owasp Orizon Project|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+For the first half of the SPOC 2008, the main goal that has been reached is the release of the version [http://downloads.sourceforge.net/orizon/orizon-0.90.jar?modtime=1213231813&big_mirror=0 0.90] of the tool. 
+This release includes the plugin support allowing people extending the framework with external code in separated JAR file. This custom code can be used to implement custom specific security checks.
+
+Another big issues is the release of a GUI for Orizon inside the 0.90 JAR file itself, however not all Orizon features are implemented via GUI.
+
+Aside for these two major key points, small deliverables are:
+* A proposal for dividing source code flaws into [http://www.owasp.org/index.php/The_Owasp_Code_Review_Top_10_flaw_categories categories] that can be used in code review reports as well as the Owasp Top 10 points are used in ethical hacking reports.
+* A [http://www.owasp.org/index.php/OWASP_Orizon_Project_XML proposal] for refactoring XML schema used in Orizon library
+* A [http://downloads.sourceforge.net/orizon/The_Owasp_Orizon_Project_Internals_v2.2.ppt?modtime=1214301931&big_mirror=0 slideshow] used in Owasp AppSec EU 2008, in Ghent, last may. This slideshow can be considered the major project documentation
+
+Deliverables that have '''NOT''' been realized are:
+* source code assessment of 4 Java Owasp projects
+* support for C# language
+* fully support for Orizon features in GUI
+
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#The Owasp Orizon Project|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+
+Considering the objectives that Owasp gave me I can evaluate that about 60% of the goals have been reached.
+
+To reach the SPOC 2008 final goal, a better approach to documentation will be taken, with the release of a "Owasp Orizon Guide" using Owasp template for books. I'll plan to release this for next Owasp AppSec World 2008 in New York next september. 
+
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+To Reviewers I don't need special help in order to meet my requirements. I need them to make some beta testing and providing me some feedbacks on Project architecture and project management issues.
+
+To Owasp Community I'll ask a lot of help. Indeed I'm still the one developer for the project, except for Alessio Marziali that will use Orizon into his project and he will make some hack over my code.
+I need:
+* developers with skills in this programming languages
+** java, to implement Orizon features
+** C#, to help me and Alessio making the translator from C# to XML
+** C, C++ to implement in Java a translator for these languages to XML
+* people who wants to write down some documentation
+* people who wants to review the documentation for grammar errors
+* beta testers
+|}

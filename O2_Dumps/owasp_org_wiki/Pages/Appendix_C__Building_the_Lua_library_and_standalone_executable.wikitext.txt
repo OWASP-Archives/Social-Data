@@ -1,0 +1,161 @@
+This section details how to add MD5 and DES 56 encryption to Lua and how to build liblua5.1.so and the standalone executable, lua5.1, from sources on Linux. The target system used gcc version 4 on Kubuntu 7.10 (a 2.6 kernel), but should work on almost all versions of Linux.
+
+=== Strategy ===
+
+Implementing MD5 hashing in Lua was not so easy. It is not part of the core library so a 3rd party module was used:
+
+MD5 - Cryptographic Library for Lua:
+http://www.keplerproject.org/md5/manual.html
+
+To backtrack a little, ModSecurity loads the Lua shared object file when Apache starts:
+<pre>
+LoadFile /usr/lib/libxml2.so
+LoadFile /usr/lib/liblua5.1.so
+LoadModule security2_module /usr/lib/apache2/modules/mod_security2.so
+</pre>
+
+The 3rd party MD5 library (which also includes DES56) is offered as a shared object library, and this caused problems as it was not possible to add it as a separate add-in to the existing Lua library as in:
+<pre>
+LoadFile /usr/lib/libxml2.so
+LoadFile /usr/lib/liblua5.1.so
+LoadFile /usr/lib/libluacrypt.so
+LoadModule security2_module /usr/lib/apache2/modules/mod_security2.so
+</pre>
+
+So the decision was made to try to integrate the crypto library source code into the Lua core with the result of only one Lua *.so library. This presented its own challenges because: (1) The makefile for a source code build did not implement building a *.so library (only an archive *.a library); and (2) The 3rd party crypto library was presented as a *.so library and not as a part of one executable or shared object library.
+
+Another obstacle was that the Lua source code makefile has no provision to be built as a standalone executable.	 
+
+However, these obstacles were overcome. The MD5/DES56 crypto library was successfully added to the Lua core as one *.so library plus it was integrated into the Lua stand-alone engine. Building an executable vs. a shared object library is accomplished by changing a few lines of the makefile.
+
+=== Implementation ===
+
+To download the Lua source code, click on the 'source code' link at 'http://www.lua.org/download.html'; the file is:
+<pre>
+156540 2008-07-30 19:03 lua5_1_3_Sources.tar.gz
+</pre>
+
+Note: The source code files are in C.
+
+Note: Lua 5.1.4 was released on 22 Aug 2008; it is not known if the makefiles are exactly the same from version 5.1.3 and can be simply interchanged to build MD5 into version 5.1.4. 
+
+Get the MD5 information and sources from here:
+<pre>
+MD5 - Cryptographic Library for Lua
+http://www.keplerproject.org/md5/manual.html (see the end of this Appendix to view the Kepler Project license)
+
+Luaforge: MD5: Filelist
+http://luaforge.net/frs/?group_id=155
+
+ 29768 2008-07-30 15:04 md5-1.1.2.tar.gz
+</pre>
+
+It's a long story to describe how the Lua makefile and source code files were edited, and how the MD5/DES56 files were added, so here is the entire subdirectory of everything:
+
+[[Image:OWASP_ModSecurity_Securing_WebGoat_lua513_Jul31.zip]]
+
+How it works:
+* There are 2 Makefiles off of 'lua513/src' directory:
+** Copy the Makefile from 'org' into 'src', 'make clean', 'make linux', to build the standalone lua engine. Then move that to '../bin' directory and run any tests from there
+** Copy from 'save' to 'src' subdirectory to build the 'liblua5.1.so.3.0.0' file
+
+For the curious, the modified sections of the source code are designated by comments with 'SCE', the project member's initials, so search on that. The key to getting it to work was to declare the accessible functions as 'LUALIB_API', which is  'extern'. Then load the md5 and des56 libraries in 'linit.c'; declare strings and define lib functions in 'lualib.c'; change the declarations in md5.c & ldes56.c from 'static' to 'LUALIB_API' and add the declarations in md5.h & ldes56.h.
+
+Build both the executable and the *.so library.
+
+Next, create a Lua source file, 'md5_standalone-test.lua' to test standalone without ModSecurity.
+
+<pre>
+function main()  
+  print ("Executing luascript md5_12.lua")
+
+  local username = "sniffy" 
+  binstr1 = md5.sum(username)
+
+  -- this converts binary string to lowercase hex string of length 32
+  str2 = string.gsub(binstr1, ".", function (c)
+           return string.format("%02x", string.byte(c))
+         end)
+
+  str1 = string.format("\nLuascript: Hashed user name for user '%s' is %s;", username, str2)
+  print (str1)
+  
+  return
+end
+
+main()
+</pre>
+
+Run the program from the command line:
+<pre>
+root@www:/opt/lua513/bin# ./lua5.1 md5_standalone-test.lua
+Executing luascript md5_12.lua
+
+Luascript: Hashed user name for user 'sniffy' is 31036dfdb9c254fe161e9a1e9c76cd74;
+</pre>
+
+Next, ensure that MD5 hashing is working inside of ModSecurity. 
+
+Copy the *.so file that was built, 'liblua5.1.so.3.0.0', into a standard library directory. Do 'chmod 644 liblua5.1.so.3.0.0'. Then create links to it so that a 'ls -alt' looks like this:
+<pre>
+root@www:/usr/lib# ls -alt liblua*
+-rw-r--r-- 1 root root 497278 2008-07-31 15:33 liblua5.1.so.3.0.0
+lrwxrwxrwx 1 root root     18 2008-07-31 11:33 liblua5.1.so.0 -> liblua5.1.so.3.0.0
+lrwxrwxrwx 1 root root     18 2008-07-31 11:23 liblua5.1.so -> liblua5.1.so.3.0.0
+</pre>
+
+Use this Lua script to hash a hard-coded string:
+<pre>
+function main()  
+  m.log(9, "Starting luascript file md5_12.lua")
+  print ("Executing luascript md5_12.lua")
+
+  local username = "sniffy" 
+  binstr1 = md5.sum(username)
+
+  -- this converts binary string to lowercase hex string of length 32
+  str2 = string.gsub(binstr1, ".", function (c)
+           return string.format("%02x", string.byte(c))
+         end)
+
+  str1 = string.format("\nLuascript: Hashed user name for 'sniffy' is %s;" str2)
+  m.log(9, str1)
+
+  m.log(9, "Ending luascript file md5_12.lua")
+end
+</pre>
+
+The ModSecurity rule is:
+<pre>
+  SecRuleScript "/etc/modsecurity/data/md5_12.lua" \
+"phase:2,t:none,log,auditlog,allow:request,msg:'Luascript in \
+rulefile_12-1-initialize.conf: In request (md5_12.lua)'"
+</pre>
+
+Turn DebugLevel to 9, submit the WebGoat lesson page, then search the ModSecurity debug level for the string 'luascript' and check that it worked. As with testing all Lua scripts in ModSecurity, make sure the last log message is there; if not then the script bombed somewhere - probably accessing a variable with a value of 'nil'.
+
+=== Comments ===
+
+Some of the benefits of this approach:
+
+(1) Almost all of the functionality can be implemented in a Lua module run by the stand-alone engine before integrating it with ModSecurity. This approach makes debugging much, much easier.
+
+(2) Combining all Lua functionality into one *.so file means that the ModSecurity configuration does not have to be touched; only replacing the *.so file is necessary.
+
+(3) Lua is extensible and any 3rd party library with source code can be included. Note: The source code files are in C.
+
+=== Kepler project license (for Lua MD5/DES56 library) ===
+
+From http://www.keplerproject.org/en/License:
+
+:The spirit of the license is that you are free to use Kepler for any purpose at no cost without having to ask us. The only requirement is that if you do use Kepler, then you should give us credit by including the appropriate copyright notice somewhere in your product or its documentation.
+
+:Kepler is designed and implemented by the Kepler team. The implementation is not derived from licensed software.
+
+:Copyright © 2004 Kepler Project.
+
+:Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+:The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+:THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

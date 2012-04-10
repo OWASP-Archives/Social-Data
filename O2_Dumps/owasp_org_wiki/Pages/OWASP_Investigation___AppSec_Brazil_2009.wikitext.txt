@@ -1,0 +1,71 @@
+==OWASP Investigation Report==
+
+===Subject: AppSec Brazil 2009===
+
+====Overview====
+
+AppSec Brazil 2009 took place from October 27th, 2009 to October 30th, 2009 in in Brasilia, Brazil.&nbsp; The parties involved in this issues investigated are:
+* Leo Cavallari – leo.cavallari@owasp.org – who is the origin of the questions/issues raised about the administration of AppSec Brazil. Leo was also part of the team organizing the conference.
+* Lucas Ferreira – lucas@sapao.net – who was the principal person in charge of organizing AppSec Brazil 2009
+* Eduardo V. C. Neves – eduardo@camargoneves.com – part of the team organizing the conference
+* Wagner Elias – wagner.elias@gmail.com – part to the team organizing the conference
+
+Four specific issues were raised and can be summarized as "Reserved Seats", "Sponsor Selection", "Travel Reimbursement", and "Defamation".&nbsp; Each issue will be analyzed below and specific and general recommendations determined where appropriate.
+
+Further summary details are enumerated in the document presented at the OWASP Board's December 1st 2009 [http://www.owasp.org/index.php/OWASP_Board_Meeting_December_1,_2009_Agenda meeting] which can be found [https://docs.google.com/Doc?docid=0ATb3QwFMHCXrZGdubjI3ZHNfMTFndmRoNm5keg&amp;hl=en here].
+
+====Analysis====
+
+<u>Issue 1 (Reserved seats)</u> - To ensure that OWASP is not abused by sponsors, we do not want training sessions to be dominated by people using reserved seats. However, putting together a successful conference means that the sponsors, attendees, and OWASP all need to get something out of the arrangement. It is for this reason that we allow sponsors to have reserved seats. Currently we rely on the discretion of the conference organizing team to use this policy to create the best outcome for everyone involved. Specific recommendations going forward are below but we find nothing here that violates OWASP's ethics or principles.
+
+<u>Issue 2 (Sponsor selection)</u> - In general, OWASP is committed to working with sponsors in a fair and unbiased way. In this case, the emergency nature of the situation made the typical openness difficult.&nbsp; In this case, some of the issue stems from the primary sponsor not fully fulfilling the terms it agreed to causing a untenable and urgent situation.&nbsp; While we encourage better planning to ensure appropriate funds are available, nothing in the record suggests anything improper about the arrangements made.&nbsp;
+
+<u>Issue 3 (Travel reimbursement)</u> - Like the reserved seats policy, OWASP relies on the discretion of the conference organizing team to use limited funds carefully to create the best conference possible. The Brazil 2010policy seems clear and is consistent with other conferences. Fundamentally, ineffective communication between the parties lead to a misunderstanding of the benefits provided to volunteers.&nbsp;
+
+<u>Issue 4 (Defamation)</u> - In general, OWASP encourages open discussion of issues, particularly about our own processes and ethics. This transparency and freedom are the only way to protect ourselves against the abuses of power possible in a distributed organization. However, the OWASP Leaders list, Global Conferences Committee, and OWASP Board are the appropriate forums for initial discussions about issues. Issues not resolved in these forums can and should be taken to outside forums. We strongly encourage anyone with an issue about any aspect of how OWASP is being run to raise it in a constructive way with an eye towards making things better as we go forward. In this case, nothing suggests that any of the "friendly fire" was intended to injure or impugn anyone, but to protect the openness, ethics, and reputation of OWASP.
+
+====Recommendations====
+
+<u>Issue 1 (Reserved seats) </u>
+
+* Future conferences should consider reserving 50% of the training seats as the absolute maximum. 
+* Ideally, training should be open freely to all on a first come first served basis.&nbsp; Exceptions to this should be presented to the Global Conferences Committee for official OWASP AppSec conferences. (see General recommendations below about 'official' OWASP conferences) 
+
+<u>Issue 2 (Sponsor selection) </u>
+
+* Better pre-planning is necessary for future conferences to avoid, as best is possible, looking for sponsors with inadequate time to be fully open.&nbsp; Conference budgets should be set in advance of OWASP sponsorship. 
+* All OWASP hosted conferences that will solicit open sponsorship opportunities to all interested parties. 
+** A pre-requisites for planning an OWASP conference involving sponsorships should be a sponsorship document (templates are available) outlining the types and costs of all sponsorships that the conference intends to solicit. 
+** The sponsorship document should be clear what this entitles the sponsor to do and be clear what is required of the sponsor to obtain sponsorship. 
+** The sponsorship document should submitted to the Global Conference Committee when proposing the event for consideration. 
+** The sponsorship document should be posted to the conference wiki page (publicly accessible) before the organizers go soliciting sponsorships from specific companies. 
+* There should not be a restriction on how much an entity wants to sponsor BUT they will be held to their obligations specified in the sponsorship document. 
+* Sponsors who fail to fulfill any clear terms of sponsorship should not be offered the opportunity to sponsor in the future. 
+
+<u>Issue 3 (Travel reimbursement) </u>
+
+* Before establishing a planning committee, it should be made clear to all parties exactly what will and will not be provided to different volunteer groups with a focus on clearly setting expectations and pre-coordination.&nbsp; 
+* Conference planners should strive to have local conference planning support do the heavy lifting as it logistically efficient to have someone who can be on site when needed. 
+
+<u>General Recommendations </u>
+
+* The Global Conferences Committee reach out to the participants to see if there are any further policies that should be enacted beyond these findings. 
+* The Global Conferences Committee split the [http://www.owasp.org/index.php/How_to_Host_a_Conference guidelines] between to "how to tips" and "must" actions. This difference must be very clear.&nbsp; 
+* The Global Conferences Committee [http://www.owasp.org/index.php/How_to_Host_a_Conference guidelines] must allow for flexibility considering that conferences are run by volunteers and there is limit to the effort and risk they are willing to take. Potential methods to allow for flexibility:  
+** Every rule can have exceptions IF authorized by the Global Conferences Committee 
+** OWASP needs an intermediate level of conferences (something like "OWASP sponsored") which essentially would have less rules and limited OWASP responsibility - i.e. OWASP will not resolve conflicts as it did in this circumstance. 
+* The Global Conference Committee should consider establishing a defined, official and open channel for a conference's information (e.g. a dedicated mailing list) 
+
+====Conclusions====
+
+First, thanks should be given to all the participants for their willingness to participate in resolving the issues raised.&nbsp; Thanks is extended to both the immediate parties as well as those who collected and reviewed the data and produced this report.
+
+The Global Conferences Committee will be presented with a copy of this report to review the above recommendations and determine the best method to integrate them into the current practice of holding OWASP conferences.
+
+Investigation Team:Jeff Williams, Mark Bristow, John Wilander, Ofer Shezaf
+
+Data Collection:&nbsp;Matt Tesauro
+
+__NOTOC__
+
+[[Category:OWASP_Inquiry]]

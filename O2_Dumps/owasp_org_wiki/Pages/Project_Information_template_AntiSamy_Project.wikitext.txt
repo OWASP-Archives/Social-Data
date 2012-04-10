@@ -1,0 +1,34 @@
+----
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP AntiSamy .NET Project''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="6" style="width:85%; background:#cccccc" align="left"|This project is API for validating rich HTML/CSS input from users without exposure to cross-site scripting and phishing attacks.
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Key Project Information'''
+ | style="width:14%; background:#cccccc" align="center"|Project Leader<br>[[User:Jerryhoff|'''Jerry Hoff''']]
+ | style="width:14%; background:#cccccc" align="center"|Project Contributors<br>[[User:Jason Li|'''Jason Li''']]<br>[mailto:j(at)lollyshouse.net '''J Irving''']<br>[[User:Arshan|'''Arshan Dabirsiaghi''']]
+
+ | style="width:14%; background:#cccccc" align="center"|
+Mailing List<br>[https://lists.owasp.org/mailman/listinfo/owasp-antisamy '''Subscribe here''']<br>
+[mailto:owasp-antisamy@lists.owasp.org '''Use here''']
+| style="width:14%; background:#cccccc" align="center"|License<br>[http://www.opensource.org/licenses/bsd-license.php '''New BSD License''']
+ | style="width:14%; background:#cccccc" align="center"|Project Type<br>[https://www.owasp.org/index.php/Category:OWASP_Project#tab=Release_Quality_Projects '''Tool''']
+ | style="width:15%; background:#cccccc" align="center"|Sponsors<br>[[OWASP Summer of Code 2008|'''OWASP SoC 08''']]
+ |}
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|
+'''[[:Category:OWASP_Project_Assessment#Release_Quality_Tool_Criteria|Release Quality]]'''<br>[[:OWASP AntiSamy Project .NET - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="center"|
+[http://code.google.com/p/owaspantisamy/downloads/list Owasp Anti-Samy Tool]<br>[http://www.antisamy.net/  A test site set up to bang on it]  
+ | style="width:29%; background:#cccccc" align="center"|
+[[:Category:OWASP AntiSamy Project|OWASP AntiSamy Project - Java]] 
+ |}
+----

@@ -1,0 +1,281 @@
+{| align="right"
+| __TOC__
+|}
+
+<big>APPENDIX B</big>
+
+<big>'''GLOSSARY'''</big>
+
+COMMON TERMS AND DEFINITIONS
+
+
+Appendix B provides definitions for security terminology used within [http://fismapedia.org/index.php?title=Doc:Special_Publication_800-37 Special Publication 800-37]. Unless specifically defined in this glossary, all terms used in this publication are consistent with the definitions contained in [http://fismapedia.org/index.php?title=Doc:CNSS_Instruction_4009 CNSS Instruction 4009], National [http://fismapedia.org/index.php?title=Term:Information_Assurance Information Assurance] Glossary.
+
+; Adequate Security [OMB [http://fismapedia.org/index.php?title=Doc:Circular_A-130 Circular A-130], Appendix III]
+: Security commensurate with the risk and the magnitude of harm resulting from the loss, misuse, or [http://fismapedia.org/index.php?title=Term:Unauthorized_Access unauthorized access] to or modification of information.
+
+; Agency 
+: See [http://fismapedia.org/index.php?title=Term:Executive_Agency Executive Agency].
+
+; Assurance 
+: The grounds for confidence that the set of intended [http://fismapedia.org/index.php?title=Term:Security_Controls security controls] in an information system are effective in their application.
+
+; Authorization (to operate) 
+: The official management decision given by a senior organizational official to authorize operation of an information system and to explicitly accept the risk to organizational operations (including mission, functions, image, or reputation), organizational assets, individuals, other organizations, and the Nation based on the implementation of an agreed-upon set of [http://fismapedia.org/index.php?title=Term:Security_Controls security controls].
+
+; Authorization Boundary 
+: All components of an information system to be authorized for operation by an [http://fismapedia.org/index.php?title=Term:Authorizing_Official authorizing official] and excludes separately authorized systems, to which the information system is connected.
+
+; Authorize Processing 
+: See Authorization.
+
+; Authorizing Official 
+: A senior (federal) official or executive with the authority to formally assume responsibility for operating an information system at an [http://fismapedia.org/index.php?title=Term:Acceptable_Level_of_Risk acceptable level of risk] to organizational operations (including mission, functions, image, or reputation), organizational assets, individuals, other organizations, and the Nation.
+
+; Authorizing Official Designated Representative 
+: An organizational official acting on behalf of an [http://fismapedia.org/index.php?title=Term:Authorizing_Official authorizing official] in carrying out and coordinating the required activities associated with [http://fismapedia.org/index.php?title=Term:Security_Authorization security authorization].
+
+; Availability [44 [http://fismapedia.org/index.php?title=AnA:U.S.C. U.S.C.], [http://fismapedia.org/index.php?title=AnA:SEC Sec]. 3542]
+: Ensuring timely and reliable access to and use of information.
+
+; Chief Information Officer [PL 104-106, [http://fismapedia.org/index.php?title=AnA:SEC Sec]. 5125(b)]
+: Agency official responsible for:</br>:(i) Providing advice and other assistance to the head of the [http://fismapedia.org/index.php?title=Term:Executive_Agency executive agency] and other senior management personnel of the agency to ensure that information technology is acquired and [http://fismapedia.org/index.php?title=Term:Information_Resources information resources] are managed in a manner that is consistent with laws, Executive Orders, directives, policies, regulations, and priorities established by the [http://fismapedia.org/index.php?title=Term:Head_of_the_Agency head of the agency];</br>:(ii) Developing, maintaining, and facilitating the implementation of a sound and integrated [http://fismapedia.org/index.php?title=Term:Information_Technology_Architecture information technology architecture] for the agency; and</br>:(iii) Promoting the effective and efficient design and operation of all major [http://fismapedia.org/index.php?title=Term:Information_Resources_Management information resources management] processes for the agency, including improvements to work processes of the agency.</br>Note: Organizations subordinate to federal agencies may use the term [http://fismapedia.org/index.php?title=Term:Chief_Information_Officer Chief Information Officer] to denote individuals filling positions with similar security responsibilities to agency-level Chief Information Officers.
+
+; Chief Information Security Officer 
+: See [http://fismapedia.org/index.php?title=Term:Senior_Agency_Information_Security_Officer Senior Agency Information Security Officer].
+
+; Common Control 
+: A security control that is inherited by one or more organizational information systems. See [http://fismapedia.org/index.php?title=Term:Security_Control_Inheritance Security Control Inheritance].
+
+; Common Control Provider 
+: An organizational official responsible for the development, implementation, [http://fismapedia.org/index.php?title=Term:Assessment assessment], and monitoring of common controls (i.e., [http://fismapedia.org/index.php?title=Term:Security_Controls security controls] inherited by information systems).
+
+; Compensating Security Controls 
+: The management, operational, and [http://fismapedia.org/index.php?title=Term:Technical_Controls technical controls] (i.e., safeguards or countermeasures) employed by an organization in lieu of the recommended controls in the low, moderate, or high baselines described in [http://fismapedia.org/index.php?title=Doc:NIST_Special_Publication_800-53 NIST Special Publication 800-53], that provide equivalent or comparable protection for an information system.
+
+; Confidentiality [44 [http://fismapedia.org/index.php?title=AnA:U.S.C. U.S.C.], [http://fismapedia.org/index.php?title=AnA:SEC Sec]. 3542]
+: Preserving authorized restrictions on information access and [http://fismapedia.org/index.php?title=Term:Disclosure disclosure], including means for protecting personal privacy and [http://fismapedia.org/index.php?title=Term:Proprietary_Information proprietary information].
+
+; Configuration Control [CNSSI 4009]
+: Process for controlling modifications to hardware, [http://fismapedia.org/index.php?title=Term:Firmware firmware], software, and documentation to protect the information system against improper modifications before, during, and after system implementation.
+
+; Controlled [http://fismapedia.org/index.php?title=Term:Unclassified Unclassified] Information 
+: A categorical designation that refers to [http://fismapedia.org/index.php?title=Term:Unclassified unclassified] information that does not meet the standards for [http://fismapedia.org/index.php?title=Term:National_Security National Security] [http://fismapedia.org/index.php?title=Term:Classification Classification] under [http://fismapedia.org/index.php?title=Term:Executive_Order Executive Order] 12958, as amended, but is</br>:(i) pertinent to the national interests of the [http://fismapedia.org/index.php?title=Term:United_States United States] or to the important interests of entities outside the federal government; and</br>:(ii) under law or policy requires protection from [http://fismapedia.org/index.php?title=Term:Unauthorized_Disclosure unauthorized disclosure], special handling safeguards, or prescribed limits on exchange or [http://fismapedia.org/index.php?title=Term:Dissemination dissemination]. Henceforth, the designation [http://fismapedia.org/index.php?title=AnA:CUI CUI] replaces [http://fismapedia.org/index.php?title=Term:Sensitive_But_Unclassified Sensitive But Unclassified] ([http://fismapedia.org/index.php?title=AnA:SBU SBU]).
+
+; Countermeasures [CNSSI 4009]
+: Actions, devices, procedures, techniques, or other [http://fismapedia.org/index.php?title=Term:Measures measures] that reduce the vulnerability of an information system. Synonymous with [http://fismapedia.org/index.php?title=Term:Security_Controls security controls] and safeguards.
+
+; Domain [CNSSI 4009]
+: An environment or context that includes a set of system resources and a set of system entities that have the right to access the resources as defined by a common [http://fismapedia.org/index.php?title=Term:Security_Policy security policy], security model, or security [http://fismapedia.org/index.php?title=Term:Architecture architecture]. See [http://fismapedia.org/index.php?title=Term:Security_Domain Security Domain].
+
+; Dynamic Subsystem 
+: A [http://fismapedia.org/index.php?title=Term:Subsystem subsystem] that is not continually present during the execution phase of an information system. Service oriented [http://fismapedia.org/index.php?title=Term:Architectures architectures] and cloud computing [http://fismapedia.org/index.php?title=Term:Architectures architectures] are examples of [http://fismapedia.org/index.php?title=Term:Architectures architectures] that employ dynamic subsystems.
+
+; Environment of Operation 
+: The physical surroundings in which an information system processes, stores, and transmits information.
+
+; Executive Agency [41 [http://fismapedia.org/index.php?title=AnA:U.S.C. U.S.C.], [http://fismapedia.org/index.php?title=AnA:SEC Sec]. 403]
+: An executive department specified in [http://fismapedia.org/index.php?title=Doc:5_U.S.C.,_Sec._101 5 U.S.C., Sec. 101]; a military department specified in [http://fismapedia.org/index.php?title=Doc:5_U.S.C.,_Sec._102 5 U.S.C., Sec. 102]; an independent establishment as defined in [http://fismapedia.org/index.php?title=Doc:5_U.S.C.,_Sec._104(1) 5 U.S.C., Sec. 104(1)]; and a wholly owned Government [http://fismapedia.org/index.php?title=Term:Corporation corporation] fully subject to the provisions of [http://fismapedia.org/index.php?title=Doc:31_U.S.C.,_Chapter_91 31 U.S.C., Chapter 91].
+
+; External Information System (or Component) 
+: An information system or component of an information system that is outside of the [http://fismapedia.org/index.php?title=Term:Authorization_Boundary authorization boundary] established by the organization and for which the organization typically has no direct control over the application of required [http://fismapedia.org/index.php?title=Term:Security_Controls security controls] or the [http://fismapedia.org/index.php?title=Term:Assessment assessment] of security control effectiveness.
+
+; External Information System Service 
+: An information system service that is implemented outside of the [http://fismapedia.org/index.php?title=Term:Authorization_Boundary authorization boundary] of the organizational information system (i.e., a service that is used by, but not a part of, the organizational information system) and for which the organization typically has no direct control over the application of required [http://fismapedia.org/index.php?title=Term:Security_Controls security controls] or the [http://fismapedia.org/index.php?title=Term:Assessment assessment] of security control effectiveness.
+
+; External Information System Service Provider 
+: A provider of [http://fismapedia.org/index.php?title=Term:External_Information_System external information system] services to an organization through a variety of [http://fismapedia.org/index.php?title=Term:Consumer consumer]-producer relationships including but not limited to: joint ventures; business partnerships; outsourcing arrangements (i.e., through contracts, interagency agreements, [http://fismapedia.org/index.php?title=Term:Lines_of_Business lines of business] arrangements); licensing agreements; and/or [http://fismapedia.org/index.php?title=Term:Supply_Chain supply chain] exchanges.
+
+; Federal Agency 
+: See [http://fismapedia.org/index.php?title=Term:Executive_Agency Executive Agency].
+
+; Federal Information System [40 [http://fismapedia.org/index.php?title=AnA:U.S.C. U.S.C.], [http://fismapedia.org/index.php?title=AnA:SEC Sec]. 11331]
+: An information system used or operated by an [http://fismapedia.org/index.php?title=Term:Executive_Agency executive agency], by a [http://fismapedia.org/index.php?title=Term:Contractor contractor] of an [http://fismapedia.org/index.php?title=Term:Executive_Agency executive agency], or by another organization on behalf of an [http://fismapedia.org/index.php?title=Term:Executive_Agency executive agency].
+
+; High-Impact System [FIPS 200]
+: An information system in which at least one [http://fismapedia.org/index.php?title=Term:Security_Objective security objective] (i.e., confidentiality, integrity, or availability) is assigned a [http://fismapedia.org/index.php?title=Doc:FIPS_199 FIPS 199] [http://fismapedia.org/index.php?title=Term:Potential_Impact potential impact] value of high.
+
+; Hybrid Security Control 
+: A security control that is implemented in an information system in part as a [http://fismapedia.org/index.php?title=Term:Common_Control common control] and in part as a system-specific control.</br>See [http://fismapedia.org/index.php?title=Term:Common_Control Common Control] and [http://fismapedia.org/index.php?title=Term:System-specific_Security_Control System-Specific Security Control].
+
+; Information [FIPS 199]
+: An instance of an [http://fismapedia.org/index.php?title=Term:Information_Type information type].
+
+; Information Owner [CNSSI 4009]
+: Official with statutory or operational authority for specified information and responsibility for establishing the controls for its generation, collection, [http://fismapedia.org/index.php?title=Term:Processing processing], [http://fismapedia.org/index.php?title=Term:Dissemination dissemination], and [http://fismapedia.org/index.php?title=Term:Disposal disposal].
+
+; Information Resources [44 [http://fismapedia.org/index.php?title=AnA:U.S.C. U.S.C.], [http://fismapedia.org/index.php?title=AnA:SEC Sec]. 3502]
+: Information and related resources, such as personnel, equipment, funds, and information technology.
+
+; Information Security [44 [http://fismapedia.org/index.php?title=AnA:U.S.C. U.S.C.], [http://fismapedia.org/index.php?title=AnA:SEC Sec]. 3542]
+: The protection of information and information systems from [http://fismapedia.org/index.php?title=Term:Unauthorized_Access unauthorized access], use, [http://fismapedia.org/index.php?title=Term:Disclosure disclosure], [http://fismapedia.org/index.php?title=Term:Disruption disruption], modification, or [http://fismapedia.org/index.php?title=Term:Destruction destruction] in order to provide confidentiality, integrity, and availability.
+
+; Information Security Architect 
+: Individual, group, or organization responsible for ensury.
+
+; Information Security Architect 
+: Individual, group, or organization responsible for ensuring that the information [http://fismapedia.org/index.php?title=Term:Security_Requirements security requirements] necessary to protect the organization’s core missions and business processes are adequately addressed in all aspects of [http://fismapedia.org/index.php?title=Term:Enterprise_Architecture enterprise architecture] including [http://fismapedia.org/index.php?title=Term:Reference reference] models, segment and solution [http://fismapedia.org/index.php?title=Term:Architectures architectures], and the resulting information systems supporting those missions and business processes.
+
+; Information Security Policy [CNSSI 4009]
+: [http://fismapedia.org/index.php?title=Term:Aggregate Aggregate] of directives, regulations, rules, and practices that prescribes how an organization manages, protects, and distributes information.
+
+; Information [http://fismapedia.org/index.php?title=Term:Security_Program Security Program] Plan 
+: Formal document that provides an overview of the [http://fismapedia.org/index.php?title=Term:Security_Requirements security requirements] for an organization-wide information [http://fismapedia.org/index.php?title=Term:Security_Program security program] and describes the program [http://fismapedia.org/index.php?title=Term:Management_Controls management controls] and common controls in place or planned for meeting those requirements.
+
+; Information Steward 
+: Individual or group that helps to ensure the careful and responsible management of federal information belonging to the Nation as a whole, regardless of the [http://fismapedia.org/index.php?title=Term:Entity entity] or source that may have originated, created, or compiled the information. Information stewards provide maximum access to federal information to elements of the federal government and its customers, balanced by the [http://fismapedia.org/index.php?title=Term:Obligation obligation] to protect the information in accordance with the provisions of FISMA and any associated security-related federal policies, directives, regulations, standards, and guidance.
+
+; Information System [44 [http://fismapedia.org/index.php?title=AnA:U.S.C. U.S.C.], [http://fismapedia.org/index.php?title=AnA:SEC Sec]. 3502]
+: A discrete set of [http://fismapedia.org/index.php?title=Term:Information_Resources information resources] organized for the collection, [http://fismapedia.org/index.php?title=Term:Processing processing], [http://fismapedia.org/index.php?title=Term:Maintenance maintenance], use, sharing, [http://fismapedia.org/index.php?title=Term:Dissemination dissemination], or [http://fismapedia.org/index.php?title=Term:Disposition disposition] of information.    [Note: Information systems also include specialized systems such as industrial/process controls systems, telephone switching and [http://fismapedia.org/index.php?title=Term:Private_Branch_Exchange private branch exchange] ([http://fismapedia.org/index.php?title=AnA:PBX PBX]) systems, and environmental control systems.]
+
+; Information System Owner (or [http://fismapedia.org/index.php?title=Term:Program_Manager Program Manager]) 
+: Official responsible for the overall [http://fismapedia.org/index.php?title=Term:Procurement procurement], development, integration, modification, or operation and [http://fismapedia.org/index.php?title=Term:Maintenance maintenance] of an information system.
+
+; Information System Security Engineer 
+: Individual assigned responsibility for conducting [http://fismapedia.org/index.php?title=Term:Information_System_Security_Engineering information system security engineering] activities.
+
+; Information System Security Engineering 
+: Process that captures and refines information [http://fismapedia.org/index.php?title=Term:Security_Requirements security requirements] and ensures their integration into information technology component products and information systems through purposeful security design or configuration.
+
+; Information System-related Security Risks 
+: [http://fismapedia.org/index.php?title=Term:Information_System-related_Security_Risks Information system-related security risks] are those risks that arise through the loss of confidentiality, integrity, or availability of information or information systems and consider impacts to the organization (including assets, mission, functions, image, or reputation), individuals, other organizations, and the Nation.</br>See Risk.
+
+; Information System Security Officer [CNSSI 4009]
+: Individual with assigned responsibility for maintaining the appropriate operational security posture for an information system or program.
+
+; Information Technology [40 [http://fismapedia.org/index.php?title=AnA:U.S.C. U.S.C.], [http://fismapedia.org/index.php?title=AnA:SEC Sec]. 1401]
+: Any equipment or interconnected system or [http://fismapedia.org/index.php?title=Term:Subsystem subsystem] of equipment that is used in the automatic acquisition, storage, manipulation, management, movement, control, display, switching, interchange, [http://fismapedia.org/index.php?title=Term:Transmission transmission], or reception of data or information by the [http://fismapedia.org/index.php?title=Term:Executive_Agency executive agency]. For purposes of the preceding sentence, equipment is used by an [http://fismapedia.org/index.php?title=Term:Executive_Agency executive agency] if the equipment is used by the [http://fismapedia.org/index.php?title=Term:Executive_Agency executive agency] directly or is used by a [http://fismapedia.org/index.php?title=Term:Contractor contractor] under a [http://fismapedia.org/index.php?title=Term:Contract contract] with the [http://fismapedia.org/index.php?title=Term:Executive_Agency executive agency] which: (i) requires the use of such equipment; or (ii) requires the use, to a significant extent, of such equipment in the performance of a service or the furnishing of a product. The term information technology includes computers, ancillary equipment, software, [http://fismapedia.org/index.php?title=Term:Firmware firmware], and similar procedures, services (including support services), and related resources.
+
+; Information Type [FIPS 199]
+: A specific category of information (e.g., privacy, medical, [http://fismapedia.org/index.php?title=Term:Proprietary proprietary], financial, investigative, [http://fismapedia.org/index.php?title=Term:Contractor contractor] sensitive, security management) defined by an organization or in some instances, by a specific law, [http://fismapedia.org/index.php?title=Term:Executive_Order Executive Order], [http://fismapedia.org/index.php?title=Term:Directive directive], policy, or regulation.
+
+; Integrity [44 [http://fismapedia.org/index.php?title=AnA:U.S.C. U.S.C.], [http://fismapedia.org/index.php?title=AnA:SEC Sec]. 3542]
+: Guarding against improper information modification or [http://fismapedia.org/index.php?title=Term:Destruction destruction], and includes ensuring information [http://fismapedia.org/index.php?title=Term:Non-Repudiation non-repudiation] and [http://fismapedia.org/index.php?title=Term:Authenticity authenticity].
+
+; Low-Impact System [FIPS 200]
+: An information system in which all three [http://fismapedia.org/index.php?title=Term:Security_Objectives security objectives] (i.e., confidentiality, integrity, and availability) are assigned a [http://fismapedia.org/index.php?title=Doc:FIPS_199 FIPS 199] [http://fismapedia.org/index.php?title=Term:Potential_Impact potential impact] value of low.
+
+; Management Controls [FIPS 200]
+: The [http://fismapedia.org/index.php?title=Term:Security_Controls security controls] (i.e., safeguards or countermeasures) for an information system that focus on the management of risk and the management of information system security.
+
+; Moderate-Impact System [FIPS 200]
+: An information system in which at least one [http://fismapedia.org/index.php?title=Term:Security_Objective security objective] (i.e., confidentiality, integrity, or availability) is assigned a [http://fismapedia.org/index.php?title=Doc:FIPS_199 FIPS 199] [http://fismapedia.org/index.php?title=Term:Potential_Impact potential impact] value of moderate, and no [http://fismapedia.org/index.php?title=Term:Security_Objective security objective] is assigned a [http://fismapedia.org/index.php?title=Doc:FIPS_199 FIPS 199] [http://fismapedia.org/index.php?title=Term:Potential_Impact potential impact] value of high.
+
+; National Security System [44 [http://fismapedia.org/index.php?title=AnA:U.S.C. U.S.C.], [http://fismapedia.org/index.php?title=AnA:SEC Sec]. 3542]
+: Any information system (including any telecommunications system) used or operated by an agency or by a [http://fismapedia.org/index.php?title=Term:Contractor contractor] of an agency, or other organization on behalf of an agency—(i) the function, operation, or use of which involves [http://fismapedia.org/index.php?title=Term:Intelligence_Activities intelligence activities]; involves [http://fismapedia.org/index.php?title=Term:Cryptologic cryptologic] activities related to [http://fismapedia.org/index.php?title=Term:National_Security national security]; involves [http://fismapedia.org/index.php?title=Term:Command_and_Control command and control] of military forces; involves equipment that is an integral part of a weapon or [http://fismapedia.org/index.php?title=Term:Weapons_System weapons system]; or is critical to the direct fulfillment of military or [http://fismapedia.org/index.php?title=Term:Intelligence intelligence] missions (excluding a system that is to be used for routine administrative and business applications, for example, payroll, finance, logistics, and personnel management applications); or (ii) is [http://fismapedia.org/index.php?title=Term:Protected protected] at all times by procedures established for information that have been specifically authorized under criteria established by an [http://fismapedia.org/index.php?title=Term:Executive_Order Executive Order] or an Act of Congress to be kept classified in the interest of [http://fismapedia.org/index.php?title=Term:National_Defense national defense] or foreign policy.
+
+; Net-centric Architecture 
+: A complex system of systems composed of subsystems and services that are part of a continuously evolving, complex community of people, devices, information and services interconnected by a network that enhances [http://fismapedia.org/index.php?title=Term:Information_Sharing information sharing] and collaboration. Subsystems and services may or may not be developed or owned by the same [http://fismapedia.org/index.php?title=Term:Entity entity], and, in general, will not be continually present during the full [http://fismapedia.org/index.php?title=Term:Life_Cycle life cycle] of the system of systems. Examples of this [http://fismapedia.org/index.php?title=Term:Architecture architecture] include service-oriented [http://fismapedia.org/index.php?title=Term:Architectures architectures] and cloud computing [http://fismapedia.org/index.php?title=Term:Architectures architectures].
+
+; Operational Controls [FIPS 200]
+: The [http://fismapedia.org/index.php?title=Term:Security_Controls security controls] (i.e., safeguards or countermeasures) for an information system that are primarily implemented and executed by people (as opposed to systems).
+
+; Organization [FIPS 200, Adapted]
+: An [http://fismapedia.org/index.php?title=Term:Entity entity] of any size, complexity, or positioning within an organizational structure (e.g., a [http://fismapedia.org/index.php?title=Term:Federal_Agency federal agency] or, as appropriate, any of its operational elements).
+
+; Plan of Action and Milestones [OMB Memorandum 02-01]
+: A document that identifies tasks needing to be accomplished. It details resources required to accomplish the elements of the plan, any milestones in meeting the tasks, and scheduled completion dates for the milestones.
+
+; Potential Impact [FIPS 199]
+: The loss of confidentiality, integrity, or availability could be expected to have: (i) a limited adverse effect ([http://fismapedia.org/index.php?title=Doc:FIPS_199 FIPS 199] low); (ii) a serious adverse effect ([http://fismapedia.org/index.php?title=Doc:FIPS_199 FIPS 199] moderate); or (iii) a severe or catastrophic adverse effect ([http://fismapedia.org/index.php?title=Doc:FIPS_199 FIPS 199] high) on organizational operations, organizational assets, or individuals.
+
+; Reciprocity 
+: Mutual agreement among participating enterprises to accept each other’s security assessments in order to reuse information system resources and/or to accept each other’s assessed security posture in order to share information.
+
+; Risk [FIPS 200, Adapted]
+: A measure of the extent to which an [http://fismapedia.org/index.php?title=Term:Entity entity] is threatened by a potential circumstance or event, and typically a function of: (i) the adverse impacts that would arise if the circumstance or event occurs; and (ii) the likelihood of occurrence.</br>Information system-related security risks are those risks that arise from the loss of confidentiality, integrity, or availability of information or information systems and reflect the potential adverse impacts to organizational operations (including mission, functions, image, or reputation), organizational assets, individuals, other organizations, and the Nation.
+
+; Risk Assessment 
+: The process of identifying risks to organizational operations (including mission, functions, image, reputation), organizational assets, individuals, other organizations, and the Nation, resulting from the operation of an information system. Part of [http://fismapedia.org/index.php?title=Term:Risk_Management risk management], incorporates threat and vulnerability analyses, and considers mitigations provided by [http://fismapedia.org/index.php?title=Term:Security_Controls security controls] planned or in place. Synonymous with [http://fismapedia.org/index.php?title=Term:Risk_Analysis risk analysis].
+
+; Risk Executive (Function) 
+: An individual or group within an organization that helps to ensure that: (i) [http://fismapedia.org/index.php?title=Term:Security_Risk security risk]-related considerations for individual information systems, to include the authorization decisions for those systems, are viewed from an organization-wide perspective with regard to the overall strategic goals and objectives of the organization in carrying out its missions and business functions; and (ii) managing risk from individual information systems is consistent across the organization, reflects organizational [http://fismapedia.org/index.php?title=Term:Risk_Tolerance risk tolerance], and is considered along with other organizational risks affecting mission/business success.
+
+; Risk Management [FIPS 200, Adapted]
+: The process of managing risks to organizational operations (including mission, functions, image, reputation), organizational assets, individuals, other organizations, and the Nation, resulting from the operation of an information system, and includes: (i) the conduct of a [http://fismapedia.org/index.php?title=Term:Risk_Assessment risk assessment]; (ii) the implementation of a [http://fismapedia.org/index.php?title=Term:Risk_Mitigation risk mitigation] strategy; and (iii) employment of techniques and procedures for the continuous monitoring of the security state of the information system.
+
+; Safeguards [CNSSI 4009]
+: [http://fismapedia.org/index.php?title=Term:Protective_Measures Protective measures] prescribed to meet the [http://fismapedia.org/index.php?title=Term:Security_Requirements security requirements] (i.e., confidentiality, integrity, and availability) specified for an information system. Safeguards may include security features, management constraints, [http://fismapedia.org/index.php?title=Term:Personnel_Security personnel security], and security of physical structures, areas, and devices. Synonymous with [http://fismapedia.org/index.php?title=Term:Security_Controls security controls] and countermeasures.
+
+; Security Authorization 
+: See Authorization.
+
+; Security Categorization 
+: The process of determining the [http://fismapedia.org/index.php?title=Term:Security_Category security category] for information or an information system. [http://fismapedia.org/index.php?title=Term:Security_Categorization Security categorization] methodologies are described in [http://fismapedia.org/index.php?title=Doc:CNSS_Instruction_1253 CNSS Instruction 1253] for [http://fismapedia.org/index.php?title=Term:National_Security_Systems national security systems] and in [http://fismapedia.org/index.php?title=Doc:FIPS_199 FIPS 199] for other than [http://fismapedia.org/index.php?title=Term:National_Security_Systems national security systems].
+
+; Security Controls [FIPS 199]
+: The management, operational, and [http://fismapedia.org/index.php?title=Term:Technical_Controls technical controls] (i.e., safeguards or countermeasures) prescribed for an information system to protect the confidentiality, integrity, and availability of the system and its information.
+
+; Security Control Assessment 
+: The testing and/or evaluation of the management, operational, and [http://fismapedia.org/index.php?title=Term:Technical_Security technical security] controls in an information system to determine the extent to which the controls are implemented correctly, operating as intended, and producing the desired outcome with respect to meeting the [http://fismapedia.org/index.php?title=Term:Security_Requirements security requirements] for the system.
+
+; Security Control Assessor 
+: The individual, group, or organization responsible for conducting a [http://fismapedia.org/index.php?title=Term:Security_Control_Assessment security control assessment].
+
+; Security Control Inheritance 
+: A situation in which an information system or application receives protection from [http://fismapedia.org/index.php?title=Term:Security_Controls security controls] (or portions of [http://fismapedia.org/index.php?title=Term:Security_Controls security controls]) that are developed, implemented, assessed, authorized, and monitored by entities other than those responsible for the system or application; entities either internal or external to the organization where the system or application resides. See [http://fismapedia.org/index.php?title=Term:Common_Control Common Control].
+
+; Security Domain [CNSSI 4009]
+: A domain that implements a [http://fismapedia.org/index.php?title=Term:Security_Policy security policy] and is administered by a single authority.
+
+; Security Impact Analysis 
+: The analysis conducted by an organizational official to determine the extent to which changes to the information system have affected the security state of the system.
+
+; Security Objective [FIPS 199]
+: Confidentiality, integrity, or availability.
+
+; Security Plan 
+: Formal document that provides an overview of the [http://fismapedia.org/index.php?title=Term:Security_Requirements security requirements] for an information system or an information [http://fismapedia.org/index.php?title=Term:Security_Program security program] and describes the [http://fismapedia.org/index.php?title=Term:Security_Controls security controls] in place or planned for meeting those requirements.</br>See [http://fismapedia.org/index.php?title=Term:System_Security_Plan System Security Plan] or [http://fismapedia.org/index.php?title=Term:Information_Security_Program_Plan Information Security Program Plan].
+
+; Security Policy [CNSSI 4009]
+: A set of criteria for the provision of [http://fismapedia.org/index.php?title=Term:Security_Services security services].
+
+; Security Requirements [FIPS 200]
+: Requirements levied on an information system that are derived from applicable laws, Executive Orders, directives, policies, standards, instructions, regulations, procedures, or organizational mission/business case needs to ensure the confidentiality, integrity, and availability of the information being processed, stored, or transmitted.
+
+; Senior (Agency) Information Security Officer [44 [http://fismapedia.org/index.php?title=AnA:U.S.C. U.S.C.], [http://fismapedia.org/index.php?title=AnA:SEC Sec]. 3544]
+: Official responsible for carrying out the [http://fismapedia.org/index.php?title=Term:Chief_Information_Officer Chief Information Officer] responsibilities under FISMA and serving as the Chief Information Officer’s primary liaison to the agency’s authorizing officials, information system owners, and information system security officers.</br>Note: Organizations subordinate to federal agencies may use the term [http://fismapedia.org/index.php?title=Term:Senior_Information_Security_Officer Senior Information Security Officer] or [http://fismapedia.org/index.php?title=Term:Chief_Information_Security_Officer Chief Information Security Officer] to denote individuals filling positions with similar responsibilities to [http://fismapedia.org/index.php?title=Term:Senior_Agency Senior Agency] Information Security Officers.
+
+; Senior Information [http://fismapedia.org/index.php?title=Term:Security_Officer Security Officer]
+: See [http://fismapedia.org/index.php?title=Term:Senior_Agency_Information_Security_Officer Senior Agency Information Security Officer].
+
+; Subsystem 
+: A major subdivision or component of an information system consisting of information, information technology, and personnel that performs one or more specific functions.
+
+; System 
+: See Information System.
+
+; System Security Plan [NIST [http://fismapedia.org/index.php?title=Term:SP SP] 800-18]
+: Formal document that provides an overview of the [http://fismapedia.org/index.php?title=Term:Security_Requirements security requirements] for an information system and describes the [http://fismapedia.org/index.php?title=Term:Security_Controls security controls] in place or planned for meeting those requirements.
+
+; System-Specific Security Control 
+: A security control for an information system that has not been designated as a [http://fismapedia.org/index.php?title=Term:Common_Security_Control common security control] or the portion of a hybrid control that is to be implemented within an information system.
+
+; Tailored Security Control Baseline 
+: A set of [http://fismapedia.org/index.php?title=Term:Security_Controls security controls] resulting from the application of [http://fismapedia.org/index.php?title=Term:Tailoring tailoring] guidance to the [http://fismapedia.org/index.php?title=Term:Security_Control_Baseline security control baseline]. See [http://fismapedia.org/index.php?title=Term:Tailoring Tailoring].
+
+; Tailoring 
+: The process by which a [http://fismapedia.org/index.php?title=Term:Security_Control_Baseline security control baseline] is modified based on: (i) the application of [http://fismapedia.org/index.php?title=Term:Scoping_Guidance scoping guidance]; (ii) the specification of [http://fismapedia.org/index.php?title=Term:Compensating_Security_Controls compensating security controls], if needed; and (iii) the specification of organization-defined parameters in the [http://fismapedia.org/index.php?title=Term:Security_Controls security controls] via explicit assignment and selection statements.
+
+; Technical Controls [FIPS 200]
+: The [http://fismapedia.org/index.php?title=Term:Security_Controls security controls] (i.e., safeguards or countermeasures) for an information system that are primarily implemented and executed by the information system through mechanisms contained in the hardware, software, or [http://fismapedia.org/index.php?title=Term:Firmware firmware] components of the system.
+
+; Threat [CNSSI 4009, Adapted]
+: Any circumstance or event with the potential to adversely impact organizational operations (including mission, functions, image, or reputation), organizational assets, individuals, other organizations, or the Nation through an information system via [http://fismapedia.org/index.php?title=Term:Unauthorized_Access unauthorized access], [http://fismapedia.org/index.php?title=Term:Destruction destruction], [http://fismapedia.org/index.php?title=Term:Disclosure disclosure], modification of information, and/or [http://fismapedia.org/index.php?title=Term:Denial_of_Service denial of service].
+
+; Threat Source [FIPS 200]
+: The intent and method targeted at the intentional exploitation of a vulnerability or a situation and method that may accidentally trigger a vulnerability. Synonymous with [http://fismapedia.org/index.php?title=Term:Threat_Agent threat agent].
+
+; Vulnerability [CNSSI 4009]
+: Weakness in an information system, system security procedures, internal controls, or implementation that could be exploited or triggered by a [http://fismapedia.org/index.php?title=Term:Threat_Source threat source].
+
+; Vulnerability Assessment [CNSSI 4009]
+: Formal description and evaluation of the vulnerabilities in an information system.
+
+
+
+== Sources ==
+
+* [http://csrc.nist.gov/publications/drafts/800-37-Rev1/SP800-37-rev1-FPD.pdf NIST SP 800-37 Rev. 1 DRAFT Guide for Applying the Risk Management Framework to Federal Information Systems: A Security Life Cycle Approach]
+
+[[Category:GIC-NISTSP80037r1FPD]]

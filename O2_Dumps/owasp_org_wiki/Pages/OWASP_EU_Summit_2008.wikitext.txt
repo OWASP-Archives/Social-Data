@@ -1,0 +1,576 @@
+{| 
+! width="315" align="left"|
+! width="190" align="center" | 
+! width="300" align="center" | 
+|-
+| align="center"|__TOC__
+| align="center"|[[Image:OWASP EU Summit Portugal 2008.jpg]]<br>''''SETTING THE WEB APPLICATION SECURITY AGENDA FOR 2009''''<br>3th - 7th November 2008
+| align="left"|
+* [https://www.owasp.org/index.php/OWASP_EU_Summit_2008_Media_Coverage Summit media coverage]
+* [http://spreadsheets.google.com/pub?key=pAX6n7m2zaTVLrPtR07riBA Sponsored Participants]
+|}
+{| style="width:80%" border="0" align="center"
+ | align="center" |
+ |-
+ | style="width:100%; align="center"|[[Image:Summit Group 4.jpg]]
+|}
+
+{|
+== KEY RESULTS FROM THE OWASP SUMMIT ==
+
+=== SUMMIT CONCLUSIONS DOCUMENT ===
+
+"ALGARVE, PORTUGAL, November 7, 2008 – The Open Web Application Security Project (OWASP) today announced results from the annual OWASP Summit. Over 80 application security experts from over 20 countries joined forces to identify, coordinate, and prioritize our 2009 efforts to create a more secure Internet.
+
+OWASP is a free and open community that focuses on improving application security. There is overwhelming evidence that the vast majority of web applications contain security holes that are increasingly putting people and organizations at serious risk. Securing web applications is an extraordinarily difficult technical challenge that demands a concerted effort.
+
+“OWASP came together for a week and produced a stunning amount of new ideas,” said OWASP Chair Jeff Williams. “Our community is growing and organizing into a powerful movement that will affect software development worldwide.  This summit marks a major milestone our efforts to improve application security. (...)”<b> [https://www.owasp.org/images/4/46/Board_signed_Document.pdf See here the fully OWASP Board's signed document with OWASP Summit 2008's conclusions"] and watch OWASP Board's ([[User:Dinis.cruz|'''Dinis Cruz''']] and [[User:Jeff Williams|'''Jeff Williams''']]) videos:</b>
+
+<center>{{#ev:youtube|kHAC7skATQg}} {{#ev:youtube|skTNrQOGLOc}} <hr>
+|}
+
+
+Key results from the OWASP Summit include:
+
+=== UPDATED OWASP PRINCIPLES ===
+
+•	Free & Open,
+
+•	Governed by rough consensus & running code,
+
+•	Abide by a code of ethics (see ethics),
+
+•	Not-for-profit,
+
+•	Not driven by commercial interests,
+
+•	Risk based approach.
+
+=== UPDATED CODE OF ETHICS ===
+•	Support the implementation of and promote compliance with standards, procedures, controls for application security,
+
+•	Have objectivity, due diligence and professional care in accordance with established standards,
+
+•	Responsible disclosure.
+
+=== NEW OUTREACH PROGRAMS === 
+•	OWASP has expanded its outreach efforts by building relationships with technology vendors, framework providers, and standards bodies. In addition, we piloted a new program to provide free one-day seminars at universities and developer conferences worldwide.
+
+=== NEW GLOBAL COMMITTEE STRUCTURE ===
+•	OWASP recognized the extraordinary contribution of our most active leaders by engaging them to lead a set of six new committees.  Each democratically established committee will focus on a key function or geographic region, such as OWASP projects, conferences, local chapters, membership and industry outreach.
+
+{| style="width:90%" border="0" align="center"
+ | colspan="7" align="center" style="background:#4058A0; color:white" | '''OWASP GLOBAL COMMITTEES (OWASP GC) - ELECTED AT THE OWASP SUMMIT 08'''
+ |-
+ | style="width:15%; background:#f2984c" align="center" | OWASP GLOBAL COMMITTEES
+ | style="width:15%; background:#f2984c" align="center" | [[Global Projects and Tools Committee|'''Projects & Tools''']]   
+ | style="width:14%; background:#f2984c" align="center" | [[Global Membership Committee|'''Membership''']]
+ | style="width:14%; background:#f2984c" align="center" | [[Global Education Committee|'''Education''']]
+ | style="width:14%; background:#f2984c" align="center" | [[Global Conferences Committee|'''Conferences''']]  
+ | style="width:14%; background:#f2984c" align="center" | [[Global Industry Committee|'''Industry''']]
+ | style="width:14%; background:#f2984c" align="center" | [[Global Chapter Committee|'''Chapters''']]   
+ |-
+ | style="width:15%; background:#cccccc" align="center" | Current committee members
+ | style="width:15%; background:#cccccc" align="center" | 
+* [[:User:Dinis.cruz|Dinis Cruz]] 
+* [[:Image:Image021-Jason Li.jpg|Jason Li]] 
+* [[:Image:Image019-Matt Tesauro.jpg|Matt Tesauro]] 
+* [[:Image:Image022-Leo Cavallari.jpg|Leo Cavallari]] 
+* [[:Image:Image020-Pravir Chandra.jpg|Pravir Chandra]] 
+ | style="width:14%; background:#cccccc" align="center" |
+* [[:User:Brennan|Tom Brennan]] 
+* [[:Image:Image018-Dan Cornell.jpg|Dan Cornell]] 
+* [[:Image:Image017-Michael Coates.jpg|Michael Coates]] 
+ | style="width:14%; background:#cccccc" align="center" | 
+* [[User:Sdeleersnyder|Seba Deleersnyder]]
+* [[:Image:Image007-Martin Knobloch.jpg|Martin Knobloch]]
+* [[:Image:Image012-Mano Paul.jpg|Mano Paul]]
+* [[:Image:Image008-Eduardo Neves.jpg|Eduardo Neves]]
+* [[:Image:Image010-Kuai Hinjosa.jpg|Kuai Hinjosa]]
+* [[:Image:Image011-Cecil Su.jpg|Cecil Su]] 
+* [[:Image:Image009-Fabio Cerullo.jpg|Fabio Cerullo]]
+ | style="width:14%; background:#cccccc" align="center" | 
+* [[User:Wichers|Dave Wichers]]
+* [[:Image:Image005-Wayne Huang.jpg|Wayne Huang]] 
+* [[:Image:Image003-Steve Antoniewicz.jpg|Steve Antoniewicz]] 
+* [[:Image:Image004-Dhruv Soi.jpg|Dhruv Soi]]
+* [[:Image:Image006-David Campbell.jpg|David Campbell]]    
+ | style="width:14%; background:#cccccc" align="center" | 
+* [[:User:Brennan|Tom Brennan]] 
+* [[:Image:Image014 Rex Booth.jpg|Rex Booth]]
+* [[:Image:Image016-Georg Hess.jpg|Georg Hess]]
+* [[:Image:Image013-Eoin Keary.jpg|Eoin Keary]] 
+* [[:Image:Image015-David Campbell.jpg|David Campbell]]
+ | style="width:14%; background:#cccccc" align="center" |
+* [[User:Sdeleersnyder|Seba Deleersnyder]]
+* [[:Image:Image001-Wayne Huang.jpg|Wayne Huang]] 
+* [[:Image:Image002-Puneet Mehta.jpg|Puneet Mehta]]  
+ |}
+
+
+See here [https://www.owasp.org/index.php/How_to_Join_a_Committee '''How to Join a Global Committee'''].
+
+=== NEW FREE TOOLS AND GUIDANCE ===
+
+•	OWASP announced the release of Live CD 2008, many new testing tools, static analysis tools, the Enterprise Security API (ESAPI v1.4), AntiSamy, the Application Security Verification Standard (ASVS), guidance for Ruby on Rails and Classic ASP, international versions of our materials, and much more.
+
+{| style="width:85%" border="0" align="center"
+ | colspan="2" align="center" style="background:#4058A0; color:white" | '''OWASP is proud to launch the following new or updated tools:'''
+ |-
+ | style="width:80%; background:#a0c0e0" align="center"|'''PROJECT'''
+ | style="width:20%; background:#C2C2C2" align="center"|'''AUTHOR''' 
+ |-
+ | style="width:80%; background:#a0c0e0" align="center"|[[:Category:OWASP Application Security Verification Standard Project|'''OWASP Application Security Verification Standard - SoC 08''']]
+ | style="width:20%; background:#C2C2C2" align="center"|Mike Boberski
+ |-
+ | style="width:80%; background:#a0c0e0" align="center"|[[:Category:OWASP AppSensor Project|'''OWASP AppSensor - SoC 08''']] 
+ | style="width:20%; background:#C2C2C2" align="center"|Michael Coates
+ |-
+ | style="width:80%; background:#a0c0e0" align="center"|[[:Category:OWASP Access Control Rules Tester Project|'''OWASP Access Control Rules Tester - SoC 08''']] 
+ | style="width:20%; background:#C2C2C2" align="center"|Andrew Petukhov 
+ |-
+ | style="width:80%; background:#a0c0e0" align="center"|[[:Category:OWASP AntiSamy Project .NET|'''OWASP AntiSamy Project - SoC 08''']]
+ | style="width:20%; background:#C2C2C2" align="center"|Arshan Dabirsiaghi 
+ |-
+ | style="width:80%; background:#a0c0e0" align="center"|[[:Category:OWASP Application Security Tool Benchmarking Environment and Site Generator Refresh Project|'''OWASP Application Security Tool Benchmarking Environment and Site Generator Refresh Project - SoC 08''']] 
+ | style="width:20%; background:#C2C2C2" align="center"|Dmitry Kozlov 
+ |-
+ | style="width:80%; background:#a0c0e0" align="center"|[[:Category:OWASP Code Crawler|'''OWASP Code Crawler - SoC 08''']]<br>[https://www.owasp.org/images/6/61/OWASP_CodeCrawler_Presentation.ppt Power Point Presentation]
+ | style="width:20%; background:#C2C2C2" align="center"|Alessio Marziali 
+ |-
+ | style="width:80%; background:#a0c0e0" align="center"|[[:Category:OWASP JSP Testing Tool Project|'''OWASP JSP Testing Tool - SoC 08''']]
+ | style="width:20%; background:#C2C2C2" align="center"|Jason Li 
+ |-
+ | style="width:80%; background:#a0c0e0" align="center"|[[:Category:OWASP Live CD 2008 Project|'''OWASP Live CD - SoC 08''']]
+ 
+ | style="width:20%; background:#C2C2C2" align="center"|Matt Tesauro 
+ |-
+ | style="width:80%; background:#a0c0e0" align="center"|[[:Category:OWASP OpenPGP Extensions for HTTP - Enigform and mod openpgp|'''OWASP OpenPGP Extensions for HTTP - Enigform and mod openpgp - SoC 08''']]
+ | style="width:20%; background:#C2C2C2" align="center"|Arturo ‘Buanzo’
+ |-
+ | style="width:80%; background:#a0c0e0" align="center"|[[:Category:OWASP Orizon Project|'''OWASP Orizon Project - SoC 08''']]
+ | style="width:20%; background:#C2C2C2" align="center"|Paolo Perego 
+ |-
+ | style="width:80%; background:#a0c0e0" align="center"|[[:Category:OWASP Python Static Analysis Project|'''OWASP Python Static Analysis Project - SoC 08''']] 
+ | style="width:20%; background:#C2C2C2" align="center"|Georgy Kilmov
+ |-
+ | style="width:80%; background:#a0c0e0" align="center"|[[:Category:OWASP Skavenger Project|'''OWASP Skavenger Project - SoC 08''']]
+ | style="width:20%; background:#C2C2C2" align="center"|Matthias Rohr 
+ |-
+ | style="width:80%; background:#a0c0e0" align="center"|[[:Category:OWASP Teachable Static Analysis Workbench Project|'''OWASP Teachable Static Analysis Workbench - SoC 08''']]
+ | style="width:20%; background:#C2C2C2" align="center"|Dmitry Kozlov & Igor Konnov 
+ |}
+
+
+{| style="width:85%" border="0" align="center"
+ | colspan="2" align="center" style="background:#4058A0; color:white" | '''OWASP is proud to launch the following new or updated documents and resources:'''
+ |-
+ | style="width:80%; background:#FFDF80" align="center"|'''PROJECT'''
+ | style="width:20%; background:#C2C2C2" align="center"|'''AUTHOR''' 
+ |-
+ | style="width:80%; background:#FFDF80" align="center"|[[:Category:OWASP ASDR Project|'''OWASP Application Security Desk Reference - SoC 08''']]
+ | style="width:20%; background:#C2C2C2" align="center"|Leonardo Cavallari  
+ |-
+ | style="width:80%; background:#FFDF80" align="center"|[[:Category:OWASP Backend Security Project|'''OWASP Backend Security Project - SoC 08''']] 
+ | style="width:20%; background:#C2C2C2" align="center"|Carlo Pelliccioni 
+ |-
+ | style="width:80%; background:#FFDF80" align="center"|[[:Classic ASP Security Project|'''OWASP Classic ASP Security Project - SoC 08''']] 
+ | style="width:20%; background:#C2C2C2" align="center"|Juan Carlos Calderon 
+ |-
+ | style="width:80%; background:#FFDF80" align="center"|[[:Category:OWASP Code Review Project|'''OWASP Code Review Project - SoC 08''']] 
+ | style="width:20%; background:#C2C2C2" align="center"|Eoin Keary 
+ |-
+ | style="width:80%; background:#FFDF80" align="center"|[[:Category:OWASP Education Project|'''OWASP Education Project - SoC 08''']]
+ | style="width:20%; background:#C2C2C2" align="center"|Sebastien Deleersnyder, Martin Knobloch 
+ |-
+ | style="width:80%; background:#FFDF80" align="center"|[[:OWASP Internationalization|'''OWASP Internationalization Project - Soc 08''']]
+ | style="width:20%; background:#C2C2C2" align="center"|Juan Carlos Calderon 
+ |-
+ | style="width:80%; background:#FFDF80" align="center"|[[:OWASP Spanish|'''OWASP Spanish Project - SoC 08''']]
+ | style="width:20%; background:#C2C2C2" align="center"|Juan Carlos Calderon 
+ |-
+ | style="width:80%; background:#FFDF80" align="center"|[[:Category:OWASP Positive Security Project|'''OWASP Positive Security Project - SoC 08''']] 
+ | style="width:20%; background:#C2C2C2" align="center"|Eduardo V.C. Neves 
+ |-
+ | style="width:80%; background:#FFDF80" align="center"|[[:Category:OWASP Ruby on Rails Security Guide V2|'''OWASP Ruby on Rails Security Project - SoC 08''']] 
+ | style="width:20%; background:#C2C2C2" align="center"|Heiko Webers
+ |-
+ | style="width:80%; background:#FFDF80" align="center"|[[:Category:OWASP Securing WebGoat using ModSecurity Project|'''OWASP Securing WebGoat using ModSecurity Project - SoC 08''']]  
+ | style="width:20%; background:#C2C2C2" align="center"|Stephen Craig Evans 
+ |-
+ | style="width:80%; background:#FFDF80" align="center"|[[:Category:OWASP Source Code Review OWASP Projects Project|'''OWASP Source Code Review - SoC 08''']] 
+ | style="width:20%; background:#C2C2C2" align="center"|James Walden 
+ |-
+ | style="width:80%; background:#FFDF80" align="center"|[[:Category:OWASP Testing Project|'''OWASP Testing Guide V3 - SoC 08''']]<br>[http://www.owasp.org/images/2/2c/OWASP_EU_Summit_2008_OWASP_Testing_Guide_v3.ppt PowerPoint Presentation] 
+ | style="width:20%; background:#C2C2C2" align="center"|Matteo Meucci 
+ |}
+
+Find more OWASP Projects at the [https://www.owasp.org/index.php/Category:OWASP_Project OWASP Projects Page].
+
+== EVENT AGENDA == 
+
+{| style="width:80%" border="0" align="center"
+ | colspan="5" align="center" style="background:#4058A0; color:white" | Agenda for Monday, November 3rd, 2008
+ |-
+ | style="width:10%; background:#7B8ABD" align="center"| 13:00 
+ | colspan="4" style="width:90%; background:#C2C2C2" align="center" | Lunch
+ |-
+ | style="width:10%; background:white" align="center"|  
+ | colspan="4" style="width:90%; background:white" align="center" | Training Sessions
+ |-
+ | style="width:10%; background:#7B8ABD" align="center"| 15:00 - 17:00 
+ | style="width:30%; background:#c0a0a0" align="center" |  Securing WebGoat with ModSecurity<br>Stephen Craig Evans
+ | style="width:30%; background:#c0a0a0" align="center" |  WebSec Apps for Managers and Executives<br>[http://uk.youtube.com/watch?v=r04EOuukvMQ Video]<br>Mano Paul
+ | style="width:30%; background:#c0a0a0" align="center" |  OWASP Testing Guide<br>Matteo Meucci
+ |-
+ | style="width:10%; background:#7B8ABD" align="center" | 19:00 
+ | colspan="4" style="width:90%; background:#F2F2F2" align="center" | Summit Briefing<br>Dinis Cruz and Summit Organization Team
+ |-
+ | style="width:10%; background:#7B8ABD" align="center" | 20:00 
+ | colspan="4" style="width:90%; background:#C2C2C2" align="center" | Dinner
+ |-
+ |}
+
+
+{| style="width:80%" border="0" align="center"
+ | colspan="5" align="center" style="background:#4058A0; color:white" | Agenda for Tuesday, November 4th, 2008
+ |-
+ | style="width:10%; background:#7B8ABD" align="center" | 08:00 
+ | colspan="4" style="width:80%; background:#C2C2C2" align="center" | Registration
+ |-
+ | style="width:10%; background:#7B8ABD" align="center"| 09:00 
+ | colspan="4" style="width:80%; background:#F2F2F2" align="center" | Summit Keynote<br>Dinis Cruz and Summit Organization Team
+ |-
+ | style="width:10%; background:#7B8ABD" align="center" | 
+ | colspan="2" style="width:45%; background:#FFDF80" align="center" |  '''Documents''' 
+ | colspan="2" style="width:45%; background:#a0c0e0" align="center" |  '''Tools'''  
+ |-
+ | style="background:#7B8ABD" align="center" | 09:30 
+ | colspan="2" style="background:#FFDF80" align="center" | [[:Category:OWASP Testing Project|'''OWASP Testing Guide - SoC 08''']]<br>[http://www.owasp.org/images/2/2c/OWASP_EU_Summit_2008_OWASP_Testing_Guide_v3.ppt PowerPoint Presentation]<br>Matteo Meucci
+ | colspan="2" style="background:#a0c0e0" align="center" | [[:Category:OWASP JSP Testing Tool Project|'''OWASP JSP Testing Tool - SoC 08''']]<br>Jason Li
+ |-
+ | style="background:#7B8ABD" align="center" | 09:45 
+ | colspan="2" style="background:#FFDF80" align="center" | [[:Category:OWASP Code Review Project|'''OWASP Code Review Project - SoC 08''']]<br>[https://www.owasp.org/images/5/59/Code_Review_Eoin.pptx PowerPoint Presentation]<br>Eoin Keary
+ | colspan="2" style="background:#a0c0e0" align="center" | [[:Category:OWASP Orizon Project|'''OWASP Orizon Project - SoC 08''']]<br>[https://www.owasp.org/images/9/9b/OWASP_EU_Summit_2008_The_Owasp_Orizon_Project.ppt PowerPoint Presentation]<br>Paolo Perego 
+ |-
+ | style="background:#7B8ABD" align="center" | 10:00 
+ | colspan="2" style="background:#FFDF80" align="center" | [[:Category:OWASP ASDR Project|'''OWASP Application Security Desk Reference - SoC 08''']]<br>Leonardo Cavallari Militelli
+ | colspan="2" style="background:#a0c0e0" align="center" | [[:Category:OWASP Live CD 2008 Project|'''OWASP Live CD - SoC 08''']]<br>Matt Tesauro
+ |-
+ | style="background:#7B8ABD" align="center" | 10:15 
+ | colspan="2" style="background:#FFDF80" align="center" | [[:OWASP Spanish|'''OWASP Spanish Project - SoC 08''']]<br>Juan Carlos Calderon
+ | colspan="2" style="background:#a0c0e0" align="center" | [[:Category:OWASP WebScarab Project|'''OWASP WebScarab Project''']]<br>[https://www.owasp.org/images/8/88/OWASP_EU_Summit_2008_WebScarab_treasures.ppt PowerPoint Presentation]<br>Rogan Dawes
+ |-
+ | style="background:#7B8ABD" align="center"| 10:30 
+ | colspan="5" style="background:#C2C2C2" align="center" | Coffee Break
+ |-
+ | style="background:#7B8ABD" align="center"| 10:45 
+ | colspan="2" style="background:#FFDF80" align="center" | .NET ESAPI<br>Alex Smolen
+ | colspan="2" style="background:#a0c0e0" align="center" | 
+ |-
+ | style="width:10%; background:#7B8ABD" align="center" | 11:00 
+ | colspan="4" style="width:90%; background:#F2F2F2" align="center" | Working Sessions Briefing<br>Dinis Cruz
+ |-
+ | style="width:10%; background:white" align="center"|  
+ | colspan="4" style="width:90%; background:white" align="center" | Working Sessions
+ |}
+{| style="width:80%" border="0" align="center" | 
+ | colspan="5" align="center" style="background:white" | 
+ |-
+ | style="width:10%; background:#7B8ABD" align="center" | 11:15 - 13:00
+ | style="width:30%; background:#B3FF99" align="center" |  [[:OWASP Working Session - OWASP Documentation Projects|'''Documentation Projects/Guides Integration and Unified 4.0 Version''']]<br>[https://www.owasp.org/images/9/92/Final_OWASP_Guidelines_Ideas_List_.docx WS Conclusions]<br>Eduardo Neves
+ | style="width:30%; background:#B3FF99" align="center" |  [[:OWASP Working Session - Browser Security|'''OWASP Intrinsic Security Working Group - Browser Security ''']]<br>Arshan Dabirsiaghi
+ | style="width:30%; background:#B3FF99" align="center" |  [[:OWASP Working Session - OWASP Tools Projects|'''Tools Projects]]'''<br>[https://www.owasp.org/images/5/51/EUSummit08_OWASP_Tools_Working_Session_Suggestions.doc WS Conclusions]<br>Matt Tesauro
+ |-
+ | style="background:#7B8ABD" align="center" | 13:00
+ | colspan="4" style="background:#C2C2C2" align="center" | Lunch
+ |-
+ | style="width:10%; background:white" align="center"|  
+ | colspan="4" style="width:90%; background:white" align="center" | Training Sessions
+ |-
+ | style="background:#7B8ABD" align="center" | 14:00
+ | style="background:#c0a0a0" align="center" | '''The Art and Science of Threat Modeling Web Applications'''<br>[http://uk.youtube.com/watch?v=r04EOuukvMQ Video]<br>Mano Paul
+ | style="background:#c0a0a0" align="center" | '''Web Server Hardening SELinux'''<br>[https://www.owasp.org/images/d/db/SELinux-course-OWASP.pdf PDF Presentation]<br>Pavol Luptak
+ | style="background:#c0a0a0" align="center" | '''Offensive WebApp Hacking'''<br>[http://www.youtube.com/watch?v=cl6BHhi2Dys Video - LDAP, XML and SQL injection]<br>[http://www.carlosserrao.net/files/owasp/owaspdemo02.swf Video - LDAP injection demo]<br>[http://www.carlosserrao.net/files/owasp/owaspdemo04.swf XML injection demo]<br>[http://www.carlosserrao.net/files/owasp/owaspdemo03.swf Video - SQL injection demo ]<br>Marco Slaviero
+ |-
+ | style="background:#7B8ABD" align="center" | 15:00
+ | style="background:#c0a0a0" align="center" | '''Phishing attack'''<br>[http://www.youtube.com/watch?v=uf9hw-qvx-I Video]<br>Matt Teasuro & Brad Causey 
+ | colspan="2" style="background:#c0a0a0" align="center" | '''Clickjacking'''<br>[http://www.youtube.com/watch?v=H9srYh0HMP4 Video]<br>[http://www.carlosserrao.net/files/owasp/owaspdemo01.swf Demonstration]<br>Arshan Dabirsiaghi 
+ |-
+ | style="background:#7B8ABD" align="center" | 16:00 
+ | colspan="4" style="background:#C2C2C2" align="center" | Coffee Break
+ |-
+ | style="width:10%; background:white" align="center"|  
+ | colspan="4" style="width:90%; background:white" align="center" | Working Sessions
+ |-
+ | style="width:10%; background:#7B8ABD" align="center" | 16:30 
+ | colspan="4" style="width:90%; background:#B3FF99" align="center" |[[:OWASP Working Session Enterprise Security API Project|'''OWASP Enterprise Security API Project (ESAPI)''']]<br>[http://uk.youtube.com/watch?v=-D_bymZ-8vI Video]<br>[https://www.owasp.org/images/7/70/ESAPI_Ideas_List.docx WS Conclusions]<br>Jeff Williams 
+ |-
+ | style="background:#7B8ABD" align="center" | 18:30 
+ | colspan="2" style="background:#B3FF99" align="center" | [[:OWASP Working Session - OWASP ASDR|'''OWASP Application Security Desk Reference - ASDR]]'''<br>Leonardo Cavallari
+ | style="background:#B3FF99" align="center" | [[:OWASP Working Session - .NET Project|'''.NET Project''']]<br>Dinis Cruz
+|}
+
+
+
+{| style="width:80%" border="0" align="center"
+ | colspan="5" align="center" style="background:#4058A0; color:white" | Agenda for Wednesday, November 5th, 2008
+ |-
+ | style="width:10%; background:#7B8ABD" align="center"| 09:15 
+ | colspan="4" style="width:80%; background:#F2F2F2" align="center" | Daily Briefing<br>Dinis Cruz
+ |-
+ | style="width:10%; background:#7B8ABD" |  
+ | colspan="2" style="width:30%; background:#FFDF80" align="center" |  '''Standards and Education'''  
+ | colspan="2" style="width:30%; background:#a0c0e0" align="center" |  '''Tools''' 
+ |-
+ | style="background:#7B8ABD" align="center" | 10:00
+ | colspan="2" style="background:#FFDF80" align="center" | [[:Category:OWASP Positive Security Project|'''OWASP Positive Security Project - SoC 08''']]<br>Eduardo Neves
+| colspan="2" style="background:#a0c0e0" align="center" | [[:Category:OWASP Access Control Rules Tester Project|'''OWASP Access Control Rules Tester - SoC 08''']]<br>[https://www.owasp.org/images/3/32/OWASP_EU_Summit_2008_AcCoRuTe.pptx PowerPoint Presentation]<br>Andrew Petukhov
+ |-
+ | style="background:#7B8ABD" align="center" | 10:15 
+ | colspan="2" style="background:#FFDF80" align="center" | [[:Category:OWASP Education Project|'''OWASP Education Project - SoC 08''']]<br>Sebastien Deleersnyder, Martin Knobloch
+ | colspan="2" style="background:#a0c0e0" align="center" | [[:Category:OWASP Teachable Static Analysis Workbench Project|'''OWASP Teachable Static Analysis Workbench - SoC 08''']]<br>[https://www.owasp.org/images/6/69/Teachable_static_analysis_workbench.pptx PowerPoint Presentation]<br>Dmitry Kozlov
+ |-
+ | style="background:#7B8ABD" align="center" | 10:30 
+ | colspan="2" style="background:#FFDF80" align="center" | [[:OWASP Internationalization|'''OWASP Internationalization Project - Soc 08''']]<br>Juan Carlos Calderon
+ | colspan="2" style="background:#a0c0e0" align="center" | [[:Category:OWASP AppSensor Project|'''OWASP AppSensor - SoC 08''']]<br>[https://www.owasp.org/images/7/77/Presentation_AppSensor.ppt PowerPoint Presentation]<br> Michael Coates
+ |-
+ | style="background:#7B8ABD" align="center" | 10:45 
+ | colspan="2" style="background:#FFDF80" align="center" | '''PASSWD Project: Metrics and Vulnerabilities'''<br>[https://www.owasp.org/images/f/f6/PASSWD.ppt PowerPoint Presentation]<br>Lucilla Mancini 
+ | colspan="2" style="background:#a0c0e0" align="center" | [[:Category:OWASP Backend Security Project|'''OWASP Backend Security Project - SoC 08''']]<br>[https://www.owasp.org/images/2/20/OWASP_EU_Summit_2008_Presentation_Model.ppt PowerPoint Prsentation]<br>Carlo Pelliccioni
+ |-
+ | style="background:#7B8ABD" align="center" | 11:00 
+ | colspan="2" style="background:#FFDF80" align="center" | [[:Category:OWASP Open Review Project|'''OWASP Open Review Project''']]<br>Dan Cornell
+ | colspan="2" style="background:#a0c0e0" align="center" | [[:Category:OWASP Application Security Tool Benchmarking Environment and Site Generator Refresh Project|'''OWASP Application Security Tool Benchmarking Environment and Site Generator Refresh Project - SoC 08''']]<br>[https://www.owasp.org/images/c/c4/Site_generator.pptx PowerPoint Presentation]<br>Dmitry Kozlov
+ |-
+ | style="background:#7B8ABD" align="center" | 11:15 
+ | colspan="4" style="background:#f2984c" align="center" | [[OWASP EU Summit 2008#NEW GLOBAL COMMITTEE STRUCTURE|'''OWASP Global Committee Elections''']]
+ |-
+ | style="background:#7B8ABD" align="center" | 11:30 
+ | colspan="4" style="background:#C2C2C2" align="center" | Coffee Break
+ |-
+ | style="width:10%; background:white" align="center"|  
+ | colspan="4" style="width:90%; background:white" align="center" | Working Sessions
+ |-
+ | style="background:#7B8ABD" align="center" | 12:45 
+ | colspan="2" style="background:#B3FF99" align="center" | [[OWASP Working Session Education Project|'''Education Project''']]<br>[https://www.owasp.org/images/3/33/OWASP_Education_Working_Session_Notes_-_Ideas.ppt WS Conclusions]<br>Sebastien Deleersnyder
+ | style="background:#B3FF99" align="center" | [[:OWASP Working Session - OWASP Testing Guide|'''Testing Guide''']]<br>Matteo Meucci
+ | style="background:#B3FF99" align="center" | [[:OWASP Working Session - Web Application Framework Security|'''Web Application Framework Security''']]<br>Arshan Dabirsiaghi
+ |-
+ | style="background:#7B8ABD" align="center" | 14:45 
+ | colspan="4" style="background:#C2C2C2" align="center" | Lunch (During Working Sessions)
+ |-
+ | style="width:10%; background:white" align="center"|  
+ | colspan="4" style="width:90%; background:white" align="center" | Training Sessions
+ |-
+ | style="background:#7B8ABD" align="center" | 15:00
+ | style="background:#c0a0a0" align="center" | '''Flash Player Security'''<br>Peleus Uhley
+ | style="background:#c0a0a0" align="center" | '''OWASP Top 10'''<br>[http://uk.youtube.com/watch?v=GsRbpshqqII Video]<br>Sebastien Deleersnyder and Martin Knobloch
+ | style="background:#c0a0a0" align="center" | '''Uncovering WebScarab's Secret Treasures'''<br>[https://www.owasp.org/images/8/88/OWASP_EU_Summit_2008_WebScarab_treasures.ppt PowerPoint Presentation]<br>Rogan Dawes
+ | style="background:#c0a0a0" align="center" | '''Hacking the Orizon'''<br>[http://www.owasp.org/index.php/Image:Hacking_the_Owasp_Orizon.ppt PowerPoint Presentation]<br>Paolo Perego
+ |-
+ | style="background:#7B8ABD" align="center"| 17:00 
+ | colspan="5" style="background:#C2C2C2" align="center" | Coffee Break
+ |-
+ | style="width:10%; background:white" align="center"|  
+ | colspan="4" style="width:90%; background:white" align="center" | Working Sessions
+ |-
+ | style="background:#7B8ABD" align="center" | 17:30 
+ | style="background:#B3FF99" align="center" | [[:OWASP Working Session - Code Review Guide|'''Code Review Guide''']]<br>Eoin Keary
+ | style="background:#B3FF99" align="center" | EU Funding for OWASP Projects<br>Carlos Serrao
+ | style="background:#B3FF99" align="center" | [[:OWASP Working Session - OWASP Certification|'''OWASP Certification''']]<br>Tom Brennan
+ | style="background:#B3FF99" align="center" | Software Assurance Maturity Model<br>Pravir Chandra
+ |-
+ | style="background:#7B8ABD" align="center" | 19:00 
+ | style="background:#B3FF99" align="center" | [[:OWASP Working Session - OWASP Website|'''OWASP Website''']]<br>[https://www.owasp.org/images/8/8b/EUSummit08_OWASP_Web_Site_Working_Session_Suggestions.doc WS Conclusions]<br>[https://www.owasp.org/images/2/2e/Website.ppt PPT Presentation]<br>Fabio Cerullo
+ | style="background:#B3FF99" align="center" | '''Metrics & Vulnerabilities'''<br>[https://www.owasp.org/images/0/0d/PASSWD_description.doc Word Presentation]<br>Lucilla Mancini
+ | colspan="2" style="background:#B3FF99" align="center" | OWASP Orizon<br>Paolo Perego
+ |}
+
+
+{| style="width:80%" border="0" align="center"
+ | colspan="6" align="center" style="background:#4058A0; color:white" | Agenda for Thursday, November 6th, 2008
+ |-
+ | style="width:10%; background:#7B8ABD" align="center"| 09:15 
+ | colspan="5" style="width:80%; background:#F2F2F2" align="center" | Daily Briefing<br>Dinis Cruz
+ |-
+ | style="width:10%; background:#7B8ABD" |  
+ | colspan="2" style="width:30%; background:#FFDF80" align="center" |  '''Technology''' 
+ | colspan="3" style="width:30%; background:#a0c0e0" align="center" |  '''Tools''' 
+ |-
+ | style="background:#7B8ABD" align="center" | 10:00
+ | colspan="2" style="background:#FFDF80" align="center" | [[:Classic ASP Security Project|'''OWASP Classic ASP Security Project - SoC 08''']]<br>Juan Carlos Calderon
+ | colspan="3" style="background:#a0c0e0" align="center" | [[:Category:OWASP Source Code Review OWASP Projects Project|'''OWASP Source Code Review - SoC 08''']]<br>[https://www.owasp.org/images/c/c9/OWASPEU_SourceReview.ppt PowerPoint Presentation]<br>James Walden
+ |-
+ | style="background:#7B8ABD" align="center" | 10:15 
+ | colspan="2" style="background:#FFDF80" align="center" | [[:Category:OWASP Ruby on Rails Security Guide V2|'''OWASP Ruby on Rails Security Project - SoC 08''']]<br>[https://www.owasp.org/images/3/32/Rails_security_2_presentation.pdf PDF Presentation]<br>Heiko Webers
+ | colspan="3" style="background:#a0c0e0" align="center" | [[:Category:OWASP OpenPGP Extensions for HTTP - Enigform and mod openpgp|'''OWASP OpenPGP Extensions for HTTP - Enigform and mod openpgp - SoC 08''']]<br>Arturo Alberto Busleiman 
+ |-
+ | style="background:#7B8ABD" align="center" | 10:30 
+ | colspan="2" style="background:#FFDF80" align="center" | [[:Category:OWASP Webslayer Project|'''OWASP Webslayer Project''']]<br>Christian Martorella
+ | colspan="3" style="background:#a0c0e0" align="center" | [[:Category:OWASP Securing WebGoat using ModSecurity Project|'''OWASP Securing WebGoat using ModSecurity Project - SoC 08''']]<br>Stephen Evans and Christian Folini
+ |-
+ | style="background:#7B8ABD" align="center" | 11:00 
+ | colspan="2" style="background:#FFDF80" align="center" | [[:Category:OWASP Skavenger Project|'''OWASP Skavenger Project - SoC 08''']]<br>Matthias Rohr
+ | colspan="3" style="background:#a0c0e0" align="center" | [[:Category:OWASP AntiSamy Project .NET|'''OWASP AntiSamy Project - SoC 08''']]<br>Marcin Wielgoszewski
+ |-
+ | style="background:#7B8ABD" align="center"| 11:15 
+ | colspan="5" style="background:#C2C2C2" align="center" | Coffee Break
+ |-
+ | style="width:10%; background:white" align="center"|  
+ | colspan="5" style="width:90%; background:white" align="center" | Working Sessions
+ |-
+ | style="background:#7B8ABD" align="center" | 11:30 
+ | style="background:#B3FF99" align="center" | [[:OWASP Working Session Top 10 2009|'''OWASP Top 10 - 2009''']]<br>Dave Wichers
+ | style="background:#B3FF99" align="center" | [[:OWASP Working Session - OWASP Intra Governmental Affairs|'''OWASP Intra Governmental Affairs''']]<br>David Campbell
+ | style="background:#B3FF99" align="center" | SAMM v2
+ | style="background:#B3FF99" align="center" | [[:OWASP Working Session - OWASP Website|'''OWASP Website''']]<br>Fabio Cerullo
+ | style="background:#B3FF99" align="center" | Handling Web MalWare
+ |-
+ | style="background:#7B8ABD" align="center" | 13:00 
+ | colspan="5" style="background:#C2C2C2" align="center" | Lunch (During Working Sessions)
+ |-
+ | style="width:10%; background:white" align="center"|  
+ | colspan="5" style="width:90%; background:white" align="center" | Training Sessions
+ |-
+ | style="background:#7B8ABD" align="center" | 14:00 
+ | style="background:#c0a0a0" align="center" | Ajax Security
+ | colspan="2" style="background:#c0a0a0" align="center" | Auditing Flash Applications<br>Peleus Uhley
+ | style="background:#c0a0a0" align="center" | WebApp Assessment<br>Vicente Aguilera Diaz
+ | style="background:#c0a0a0" align="center" | Mod Security<br>Lucas C. Ferreira
+ |-
+ | style="width:10%; background:white" align="center"|  
+ | colspan="5" style="width:90%; background:white" align="center" | Working Sessions
+ |-
+ | style="background:#7B8ABD" align="center" | 16:30 
+ | colspan="5" style="background:#B3FF99" align="center" |  [[:Working Session OWASP Strategic Planning|'''OWASP Strategic Planning and Business Models compatible with OWASP values''']]<br>Jeff Williams, Dinis Cruz, Dave Wichers, Sebastien Deleersnyder, Tom Brennan & Kate Hartmann and Paulo Combra
+ |-
+ | style="background:#7B8ABD" align="center" | 18:30 
+ | colspan="2" style="background:#B3FF99" align="center" | [[:OWASP Working Session - Two-way Internationalization of OWASP Content|'''Two-way Internationalization of OWASP Content''']]<br>Juan Carlos Calderon & Sebastien Deleersnyder
+ | colspan="2" style="background:#B3FF99" align="center" | [[:Best Practices for OWASP Chapter Leaders|'''OWASP Best Practices for Chapter Leaders''']]<br>[https://www.owasp.org/images/0/01/BestPractices_2008.pptx WS Conclusions]<br>Georg Hess
+ | colspan="2" style="background:#B3FF99" align="center" | [[:OWASP Working Session - OWASP Live CD&DVD|'''OWASP Live CD & DVD''']]<br>Matt Tesauro
+ |-
+ | style="background:#7B8ABD" align="center" | 20:00 
+ | colspan="5" style="background:#C2C2C2" align="center" | Gala Dinner 
+ |-
+ | style="background:#7B8ABD " align="center" | 22:00 
+ | colspan="5" style="background:#C2C2C2" align="center" | OWASP Band 
+|}
+
+
+{| style="width:80%" border="0" align="center"
+ | colspan="2" align="center" style="background:#4058A0; color:white" | Agenda for Friday, November 7th, 2008
+ |-
+ | style="width:10%; background:#7B8ABD" align="center" | 10:00 
+ | style="width:80%; background:#F2F2F2" align="center" | Daily Briefing<br>Dinis Cruz
+ |-
+ | style="width:10%; background:#7B8ABD" align="center" | 10:15 
+ | style="width:80%; background:#f2984c" align="center" | OWASP AppSec Agenda 2009:  Working Session Outcomes
+ |-
+ | style="width:10%; background:#7B8ABD" |  
+ | style="width:80%; background:#C2C2C2" align="center" | Documentation Projects/Guides Integration and Unified 4.0 Version<br>Eduardo Neves
+ |-
+ | style="width:10%; background:#7B8ABD" | 
+ | style="width:80%; background:#C2C2C2" align="center" | Browser Security<br>Arshan Dabirsiaghi
+ |-
+ | style="width:10%; background:#7B8ABD" | 
+ | style="width:80%; background:#C2C2C2" align="center" | ESAPI<br>Jeff Williams
+ |-
+ | style="width:10%; background:#7B8ABD" |  
+ | style="width:80%; background:#C2C2C2" align="center" | Tools Projects<br>Matt Tesauro
+ |-
+ | style="width:10%; background:#7B8ABD" |  
+ | style="width:80%; background:#C2C2C2" align="center" | Code Review Guide<br>Eoin Keary
+ |-
+ | style="width:10%; background:#7B8ABD" |  
+ | style="width:80%; background:#C2C2C2" align="center" | OWASP Certification<br>Tom Brennan
+ |-
+ | style="width:10%; background:#7B8ABD" |  
+ | style="width:80%; background:#C2C2C2" align="center" | Software Assurance Maturity Model<br>Pravir Chandra
+ |-
+ | style="width:10%; background:#7B8ABD" |  
+ | style="width:80%; background:#C2C2C2" align="center" | Top 10 2009<br>Dave Wichers
+ |-
+ | style="width:10%; background:#7B8ABD" |  
+ | style="width:80%; background:#C2C2C2" align="center" | Intra Governmental Affairs<br>David Campbell
+ |-
+ | style="width:10%; background:#7B8ABD" |  
+ | style="width:80%; background:#C2C2C2" align="center" | Best Practices for Chapter Leaders<br>Georg Hess
+ |-
+ | style="width:10%; background:#7B8ABD" align="center" | 11:15 
+ | style="width:80%; background:#f2984c" align="center" | Coffee Break and Vote (put your dots on the wall)
+ |-
+ | style="width:10%; background:#7B8ABD" align="center" | 11:30 
+ | style="width:80%; background:#C2C2C2" align="center" | Live CD & DVD<br>Matt Tesauro
+ |-
+ | style="width:10%; background:#7B8ABD" |  
+ | style="width:80%; background:#C2C2C2" align="center" | ADSR<br>Leonardo Cavallari
+ |-
+ | style="width:10%; background:#7B8ABD" |  
+ | style="width:80%; background:#C2C2C2" align="center" | Education Project<br>Sebastien Deleersnyder
+ |-
+ | style="width:10%; background:#7B8ABD" |  
+ | style="width:80%; background:#C2C2C2" align="center" | Web Application Framework Security<br>Arshan Dabirsiaghi
+ |-
+ | style="width:10%; background:#7B8ABD" |  
+ | style="width:80%; background:#C2C2C2" align="center" | Testing Guide<br>Matteo Meucci
+ |-
+ | style="width:10%; background:#7B8ABD" |  
+ | style="width:80%; background:#C2C2C2" align="center" | OWASP Censorship<br>Tom Brennan
+ |-
+ | style="width:10%; background:#7B8ABD" |  
+ | style="width:80%; background:#C2C2C2" align="center" | EU Funding for OWASP Projects<br>Carlos Serrao
+ |-
+ | style="width:10%; background:#7B8ABD" |  
+ | style="width:80%; background:#C2C2C2" align="center" | OWASP Website<br>Fabio Cerullo
+ |-
+ | style="width:10%; background:#7B8ABD" |  
+ | style="width:80%; background:#C2C2C2" align="center" | OWASP Orizon<br>Paolo Perego
+ |-
+ | style="width:10%; background:#7B8ABD" |  
+ | style="width:80%; background:#C2C2C2" align="center" | Handling Web MalWare
+ |-
+ | style="width:10%; background:#7B8ABD" |  
+ | style="width:80%; background:#C2C2C2" align="center" | 2-Way Internationalization<br>Juan Carlos Calderon
+ |-
+ | style="width:10%; background:#7B8ABD" |  
+ | style="width:80%; background:#C2C2C2" align="center" | Portuguese Public & Private Organizations<br>Carlos Serrao
+ |-
+ | style="width:10%; background:#7B8ABD" align="center" |  
+ | style="width:80%; background:#C2C2C2" align="center" | Winter of Code 2009<br>Dinis Cruz and Sebastien Deleersnyder
+ |-
+ | style="width:10%; background:#7B8ABD" align="center" | 13:00 
+ | style="width:80%; background:#F2F2F2" align="center" | Lunch 
+ |-
+ | style="width:10%; background:#7B8ABD" align="center"| 14:00 
+ | style="width:80%; background:#f2984c" align="center" | [http://www.owasp.org/index.php/Owasp_Board_Meetings_11-07-08 Board Meeting]
+ |-
+ | style="width:10%; background:#7B8ABD" align="center" | 17:00 
+ | style="width:80%; background:#f2984c" align="center" | Announcement of Summit Procedings
+ |}
+
+== OWASP BOARD MEETING ==
+Board meeting was held at the OWASP Summit - [http://www.owasp.org/index.php/Owasp_Board_Meetings_11-07-08 RESULTS].
+
+== EVENT'S PHOTOS ==
+
+More event's photos can be seen [http://picasaweb.google.com/paulocoimbra7/OWASPSummitEUPortugal2008# here].<br>[http://picasaweb.google.com/paulocoimbra7/OWASPSummitEUPortugal2008#slideshow Summit's slide show].
+
+==ARCHIVED DATA==
+
+'''FORMER AGENDA''': [[:OWASP EU Summit 2008 Former Agenda|Click here to see.]]
+
+'''SUMMIT BROCHURE''': [https://www.owasp.org/images/8/89/OWASP_EU_Summit_2008-Overview.pdf 6 page brochure] or this [https://www.owasp.org/images/3/3d/OWASP_EU_Summit_2008_-Full_Brochure.pdf 33 page brochure].
+
+'''VENUE & TRAVEL ARRANGEMENTS''': The OWASP European Summit 2008 was hosted at the 5 start Resort in Algarve Portugal ([http://www.granderealsantaeulaliahotel.com/index.html '''Grande Real Santa Eulália Resort & Hotel''']). Hotel booking and the travel arrangements were be handled via [http://www.diplomatatours.pt/owasp.php '''Diplomata Tours'''], the assigned travel agency. The venue location - [http://maps.google.com/maps?f=q&hl=en&geocode=&q=Grande+Real+Santa+Eul%C3%A1lia+Resort+%26+Hotel+algarve&sll=37.015438,-7.919769&sspn=0.084982,0.176468&ie=UTF8&ll=37.124054,-8.182583&spn=0.08486,0.176468&z=13&iwloc=B Google Maps Link]. Nearest Airport - [http://maps.google.co.uk/maps?f=q&hl=en&geocode=&q=Aeroporto+de+Faro,+Montenegro,+Faro,+8005,+Portugal&ie=UTF8&ll=37.096812,-7.967834&spn=0.502766,1.235962&z=10&output=html Faro].
+
+'''OTHER LINKS''': [[OWASP EU Summit 2008--PRESS|Press Information]], [[:OWASP Working Session - Browser Security Letters|Open Letter to Browsers&Frameworks]], [[:OWASP Summit UALG 1 Day Conference|OWASP Summit UALG 1 Day Conference]], [http://twitter.com/OwaspEU08Summit OwaspEU08Summit on Twitter!], [[OWASP EU Summit 2008 Internals|OWASP EU Summit 2008 Internals]]. 
+
+'''SPONSORS''':
+{| style="width:100%" border="0" align="center"
+ ! colspan="0" align="center" style="background:white; color:white" | 
+ |-
+ | style="width:100%; background:#FFDF80"; align="center" | https://www.owasp.org/images/5/5a/AOD_Logo_2c.gif https://www.owasp.org/images/9/9e/Mnemonic_logo.png    https://www.owasp.org/images/1/1a/Softtek_logo.gif  
+ |}
+
+[[Category:OWASP AppSec Conference]]

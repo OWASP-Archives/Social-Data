@@ -1,0 +1,15 @@
+{{Template: <includeonly>{{{1}}}</includeonly><noinclude>Release About</noinclude>
+| project_name = OWASP Watcher Project
+| project_home_page = OWASP Fiddler Addons for Security Testing Project
+| release_name = Watcher v1.5.0
+| release_date = Nov 17 2010
+
+| release_description = Watcher is a Fiddler addon which aims to assist penetration testers in passively finding Web-application vulnerabilities. The security field today has several good choices for HTTP proxies which assist auditors and pen-testers. We chose to implement this as a plugin for Fiddler which already provides the proxy framework for HTTP debugging. 
+
+| release_license = [http://en.wikipedia.org/wiki/BSD_license New BSD]
+| release_download_link = http://websecuritytool.codeplex.com/releases/view/22212
+| leader_name1 = Chris Weber
+| leader_email1 = chris.weber@owasp.org
+| leader_username1 = ChrisWeber 
+| release_notes = http://www.owasp.org/index.php/Projects/OWASP_Watcher_Project/Releases/Watcher_v1.5.0/Notes
+}}

@@ -1,0 +1,116 @@
+{{Template:SecureSoftware}}
+{{Template:Vulnerability}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+The failure to validate host-specific certificate data may mean that, while the certificate read was valid, it was not for the site originally requested.
+
+'''Consequences'''
+
+* Integrity: The data read from the system vouched for by the certificate may not be from the expected system.
+* Authentication: Trust afforded to the system in question - based on the expired certificate - may allow for spoofing or redirection attacks.
+
+'''Exposure period'''
+
+* Design: Certificate verification and handling should be performed in the design phase.
+
+'''Platform'''
+
+* Language: All
+* Operating platform: All
+
+'''Required resources'''
+
+Minor trust: Users must attempt to interact with the malicious system.
+
+'''Severity'''
+
+High
+
+'''Likelihood   of exploit'''
+
+High
+
+If the host-specific data contained in a certificate is not checked, it may be possible for a redirection or spoofing attack to allow a malicious host with a valid certificate to provide data, impersonating a trusted host.
+
+While the attacker in question may have a valid certificate, it may simply be a valid certificate for a different site. In order to ensure data integrity, we must check that the certificate is valid and that it pertains to the site that we wish to access.
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+<pre>
+if (!(cert = SSL_get_peer(certificate(ssl)) || !host)
+  foo=SSL_get_veryify_result(ssl);
+  if ((X509_V_OK==foo) || X509_V_ERR_SUBJECT_ISSUER_MISMATCH==foo))
+//do stuff 
+</pre>
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Failure to follow chain of trust in certificate validation]]
+* [[Failure to validate certificate expiration]]
+* [[Failure to check for certificate revocation]]
+
+
+==Related [[Controls]]==
+
+* Design: Check for expired certificates and provide the user with adequate information about the nature of the problem and how to proceed. 
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Protocol Errors]]
+[[Category:OWASP_CLASP_Project]]

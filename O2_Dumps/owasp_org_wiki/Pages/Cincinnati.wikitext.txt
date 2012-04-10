@@ -1,0 +1,369 @@
+Welcome to the Cincinnati U.S.A. OWASP Local Chapter. The chapter lead is Andy Willingham. The OWASP chapter meetings are free and open to anyone interested in information security, risk management, data protection and application secirty. Chapter meetings are usually held monthly, please consult the [[#2012_Meeting_Calendar|calendar]] for the date of the upcoming meeting. If you have never attended a meeting before and you are interested to attend one in the future please join first the [https://lists.owasp.org/mailman/listinfo/owasp-cincinnati mailing list]. The mailing list is also used for sharing application security knowledge among the local community members. You can also review the [https://lists.owasp.org/pipermail/owasp-cincinnati/ email archives] to see what local folks have been talking about. 
+
+<paypal>Cincinnati</paypal>
+
+OWASP is a non profit organization and as such operates thanks to the volunteering effort of his members as well as on [https://www.owasp.org/index.php/Membership OWASP Membership] fees and sponsorship for financial support of the organization's projects and activities. Organization memberships & direct donations to OWASP are fully tax deductible. If you are interested to participate to OWASP meetings as well as OWASP projects and/or activities, we encourage your financial support to the chapter as well as to the OWASP organization.
+
+If you are interested to present at one of the chapter meetings please send an abstract and bio to the chapter chair. Prior to participating to OWASP please review the [https://www.owasp.org/index.php/Chapter_Rules Chapter Rules].
+
+==April Meeting==
+*<b>When: April 16, 2012  12:00 PM to 1:30 PM (ET)</b>
+*<b>Location</b>
+    Citi
+    9997 Carver Rd
+    Blue Ash, OH 45242
+*<b>Register by RSVP here:</b> http://www.eventbrite.com/event/3288081741
+*<b>Who: </b> Jim Manico from [https://www.whitehatsec.com/ WhiteHat Security]
+
+*<b>Abstract:</b>
+We cannot hack or firewall our way secure. Application programmers need to learn to code in a secure fashion if we have any chance of providing organizations with proper defenses in the current threatscape. This talk will discuss the 10 most important security-centric computer programming techniques necessary to build low-risk web-based applications.
+
+* <b>Speaker Bio:</b>
+Jim Manico is the VP of Security Architecture for WhiteHat Security, a web security firm.  Jim is a participant and project manager of the OWASP Developer Cheatsheet series. He is also the producer and host of the OWASP Podcast Series.
+
+    Meeting Sponsor [https://www.whitehatsec.com https://www.owasp.org/images/4/4d/Whitehat.gif]
+
+== 2012 Meeting Calendar ==
+* January 26th John Steven and Jason Rouse of [http://www.cigital.com Cigital]
+* Feburary 21st Jeremy Allen CTO of [http://www.intrepidusgroup.com The Intrepidus Group] on "Mobile Application Assessment" 
+* March 20th Michael Farnum  Security Advocate  for [http://www.accuvant.com Accuvant]
+* April 16th Jim Manico from [https://www.whitehatsec.com WhiteHat Security] on "Top Ten Web Defenses" 
+* May 16th David Mortman of [http://www.enstratus.com enStratus] on "Building an Incident Response Team"
+* June 12 Josh Corman of [http://www.akamai.com Akamai] on "Building Rugged Software"
+
+== 2012 Presentations (Archived) ==
+
+
+===March Meeting===
+*<b>When: March 20, 2012  </b>
+*<b>Location</b>
+    Citi
+    9997 Carver Rd
+    Blue Ash, OH 45242
+*<b>Who: </b> Michael Farnum, Security Advocate for [http://www.accuvant.com/ Accuvant]
+
+*<b>Abstract:</b> The Danger of the Security ASS-umption
+Many enterprise technical security assessments look at too few attack vectors or do not dig far enough into the attack vectors once a vulnerability has been discovered. This is often due to risk ASS-umptions that are made by security staff / management, and these ASS-umptions often cause failures in findings. Come join a discussion on the breakdown of a technical security assessment, explore the essential attack vectors, and debate the depth to which the assessment should go.  
+
+* <b>Speaker Bio:</b>
+Michael is the Security Advocate for Accuvant. Michael has over 17 years experience in IT and security, specializing in security infrastructure design and information security management. A skilled communicator, Michael is a well known security blogger and podcaster. Michael has spoken on various security topics at several conferences and events across the United States. He holds several security and technology certifications, including the ever-controversial CISSP. Prior to joining Accuvant, Michael was the Information Security Manager at The Menninger Clinic in Houston, TX. Before that, Michael performed random acts of security lunacy at companies all over Houston, TX.
+
+    Meeting Sponsor [http://www.accuvant.com https://www.owasp.org/images/5/5e/Accuvant.png]
+
+===February Meeting===
+*<b>When: Feb 21, 2012  </b>
+*<b>Location</b>
+    Citi
+    9997 Carver Rd
+    Blue Ash, OH 45242
+*<b>Who: </b> Jeremy Allen CTO of [http://www.intrepidusgroup.com The Intrepidus Group]
+
+*<b>Abstract:</b>How To Do Mobile Application Assessments
+This talk will focus on mobile application assessment techniques. The assessment techniques will focus on how to test applications for the OWASP Mobile Top 10 issues. Mitigation techniques for both Android and iOS will be discussed. Mallory, Intrepidus Group’s Man in The Middle tool designed to test mobile devices and applications, will be demonstrated throughout the presentation. Additionally, usage of other open source tools will be demonstrated. Both iOS and Android will be discussed.   
+
+* <b>Speaker Bio:</b>
+Jeremy Allen is the Chief Technology Officer with the Intrepidus Group. Jeremy is a regular speaker at popular security conferences such as BlackHat, SOURCE and OWASP AppSec. He is currently the lead on the development of the SANS �-Y΄Secure Mobile Application Development: iOS App Security‘  course. He has conducted numerous application assessments against iOS applications. 
+
+    Meeting Sponsor [http://www.intrepidusgroup.com https://www.owasp.org/images/7/70/150-22.png]
+
+===January Meeting===
+*<b>When: Jan 6, 2012  </b>
+*<b>Who: </b> John Steven and Jason Rouse 
+*<b>Abstract:</b>Mobile Application Security
+
+Mobile devices are on your network and they are out to get you. Are you ready?
+ 
+* <b>Speaker Bio:</b>
+John and Jason both work for Cigital.
+
+John Steven, Internal CTO
+John’s expertise runs the gamut of software security from threat modeling and architectural risk analysis, through static analysis (with an emphasis on automation), to security testing. As a consultant, John has provided strategic direction to many multi-national corporations, and his keen interest in automation keeps Cigital technology at the cutting edge. He has served as co-editor of the Building Security In department of IEEE Security & Privacy magazine, speaks with regularly at conferences and trade shows, and is the leader of the Northern Virginia OWASP chapter.
+
+Jason Rouse, Principal Consultant
+Jason has spent the last five years designing, implementing, and deploying state of the art wireless security solutions for mobile environments, spanning access control, application management, payment systems, and hybrid J2EE-and-mobile systems. His work has helped clients to identify the biggest risks in their mobile applications, for example after reviewing a mobile payment system which used SMS messages to alert the user to opportunities in the market, errors were found in the handset and back-end that could lead to denial of service on both the handsets and the back-end servers. The mobile environment’s mix of custom hardware, software, and architectures can make finding, verifying, and remediating these types of issues exceptionally difficult, showing the unique security threats present in mobile environments. As a trusted advisor, Jason has led standards efforts, chairing the FSTC Mobile Payment Security workgroup to identify and document technology-based opportunities for banks in the mobile arena. The project aims to define standards for technology and interoperability that give all mobile phone users a seamless, secure, and easy-to-use payment option for everyday banking.
+
+== 2011 Presentations (Archived) ==
+
+===November Meeting===
+*<b>When: November 2nd  </b>
+*<b>Who: </b> Allison Shubert 
+
+*<b>Register by RSVP here  http://www.eventbrite.com/event/2415906040</b>
+
+*<b>Location</b> Citi
+9997 Carver Rd
+Blue Ash, OH 45242
+
+
+*<b>Abstract:</b>The Alphabet Soup of Security Certifications
+
+Certifications are a part of our life whether we like it or not. What are your choices? Are any of them worth the time and effort it takes to get them and then to maintain them? It's a jungle out there and luckily we have a guide to help us sort it all out. Allison will help us sort out the mess that we call Alphabet Soup and help us understand whether or not certifications are worth it for you.
+ 
+* <b>Speaker Bio:</b>
+Allison Shubert has over 11  years of experience in IT concentrating on security and risk management. she is CISSP and CSSLP certified and also serves as a subject matter expert for ISC2 for the CISSP and CSSLP certifications.
+
+===October Meeting===
+*<b>When: October 11th  </b>
+*<b>Who: </b> Blaine Wilson 
+
+*<b>Register by RSVP here  http://www.eventbrite.com/event/2287195062</b>
+
+*<b>Location</b> Citi
+9997 Carver Rd
+Blue Ash, OH 45242
+
+
+*<b>Abstract:</b>Debugging The Attack
+
+Please join us as Blaine Wilson attaches a debugger to some of the OWASP Top Ten Web Application Vulnerabilities.  No technical experience is required.  Blaine will explain each vulnerability in plain English and then he will launch an attack so you watch the vulnerability be exploited step by step.
+
+
+* <b>Speaker Bio:</b>
+Blaine has 18 years experience in database design, web application architecture and information systems security. He currently works for CitiGroup as an Information Security Officer.
+
+
+
+=== September Meeting ===
+*<b>Presentation Title: Software Security and the Building Security in Maturity Model, Dr Gary McGraw, CTO of Cigital  </b>
+:Using the framework described in my book "Software Security: Building Security In", I will discuss and describe the state of the practice in software security.  This talk is peppered with real data from the field, based on my work with several large companies as a Cigital consultant. As a discipline, software security has made great progress over the last decade.  Of the sixty large-scale software security initiatives we are aware of, forty two all household names are currently included in the BSIMM study. Those companies among the forty-two who graciously agreed to be identified include: Adobe, Aon, Bank of America, Capital One, The Depository Trust & Clearing Corporation (DTCC), EMC, Google, Intel, Intuit, McKesson, Microsoft, Nokia, QUALCOMM, Sallie Mae, SAP, Standard Life, SWIFT, Symantec, Telecom Italia, Thomson Reuters, VMware, and Wells Fargo. The BSIMM was created by observing and analyzing real-world data from leading software security initiatives. The BSIMM can help you determine how your organization compares to other  real software security initiatives and what steps can be taken to make your approach more effective.
+
+=== August Meeting ===
+* <b>Presentation Title: Defending against XSS, Jason Montgomery, SANS Instructor, Secure Coding in .NET: Developing Defensible Applications</b>
+:<b> The presentation can be downloaded [https://www.owasp.org/images/4/41/OWASP_Cinci_-_Defending_ASP.NET_Apps_From_XSS_8_30_2011_-_Copy.pptx herein] </b>
+:A video recorded at the Ohio Information Security Forum is available from [http://www.irongeek.com/i.php?page=videos/oisf-2011#Defending_against_XSS here]
+ 
+=== July Meeting ===
+* <b>Presentation Title:Managing Risk with Threat Modeling, Anurag Agarwal, MyAppSecurity Founder</b>
+:<b>The presentation can be downloaded  from [https://www.owasp.org/images/9/98/Manage_Your_Risk_With_ThreatModeler.pdf here]</b>
+:Threats & vulnerabilities exploits are gaining momentum at many companies today because of the recent hacks at Sony, PBS, CIA and other high profile companies. Since these companies have already adopted mature vulnerability assessment and secure code analysis processes/tools and yet, there were negatively impacted by these hacks, proves the point that it's not enough to rely solely upon traditional application security assessments & tools to mitigate the risk and the impact of these hacks. The new approach is to use a threat modeling tool and a process to identify vulnerabilities during design and use Vulnerability Assessment  (VA)  and/or  Static  Code  Analysis  (SCA) tools to validate that these threats and vulnerabilties are mitigated in the application and/or source code. More and more organizations have realized today, that identifying threats during the design phase and planning a technical risk mitigation strategy earlier in the SDLC helps in controlling of risks as well in the saving time and money. Threat Modeling can guide application development teams in ensuring that the organization's security policies are followed at time of design prior to the development and testing of the application. By creating pre-approved security requirements and by applying them with a repeatable and scalable process, you can assist your organization development teams in building a secure application easily and effortless.
+
+=== June Meeting ===
+* <b>Presentation Title:"Magic Numbers - Proving Success Through 5 Powerful KPIs" Rafal Los, Application Security Evangelist at HP</b>
+:By now, most enterprises have figured out the dire need for software security assurance (SSA) programs, and are working on improving the security of their applications.  The problems these organizations face now is that these initiatives are most often security-team-driven and either fear-based or run on "black magic".  As organizations  mature and start to examine budgets and program spending more  carefully - these SSA programs are having a difficult time explaining  what they do, and how (if at all) they're succeeding in lowering the  risk posture of their parent organization. This talk defines Key Performance Indicators (KPIs) which will help bridge the gaps between the business and the technical security team that supports it.  The KPIs presented will provide business context and assist in having a more intelligent conversation with the rest of the technology organization when it comes to answering the question "Is the [SSA] program working?".
+
+=== April Meeting ===
+* <b>Presentation Title: How to Develop Secure Web Applications with the OWASP Enteprise Security API (ESAPI),Andrea Cogliati Owner & Security Consultant, Dollos Srl</b>
+:[https://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API ESAPI (The OWASP Enterprise Security API)] is a free, open source, web application security control library that makes it easier for programmers to write lower-risk applications. The ESAPI libraries are designed to make it easier for programmers to retrofit security into existing applications. The ESAPI libraries also serve as a solid foundation for new development. The following organizations are a few of the many organizations that are starting to adopt ESAPI to secure their web applications: American Express, Apache Foundation, Booz Allen Hamilton, Aspect Security, Foundstone(McAfee), The Hartford, Infinite Campus, Lockheed Martin, MITRE, U.S. Navy - SPAWAR, The World Bank, SANS Institute. 
+
+=== March Meetings ===
+* <b>Presentation Title: Top Website Vulnerabilities: Trends, Business Effects and How to Fight Them, Jeremiah Grossman, Founder & CTO of WhiteHat Security </b>
+
+     Meeting Sponsor [https://www.whitehatsec.com/ https://www.owasp.org/images/4/4d/Whitehat.gif]   
+
+: Jeremiah Grossman, Founder & CTO of WhiteHat Security, will draw from their most recent Website Security Statistics Report - A statistical picture from over five years of continuous vulnerability assessment results taken from over 3,000 websites across 400 organizations. This represents the largest, most complete, and unique dataset of its kind. The presentation will be purely metrics focused, specifically discussing which classes of vulnerabilities are the most prevalent, measured remediation rates, time-to-fix analysis, and sorted by industry and organization size. While already incredibly revealing, the discussion will also go further back into the SDLC to better understand how many and how often vulnerabilities are introduced. For some organizations the problem area may simply be the volume of vulnerabilities introduced. For other organizations the primary challenge is obtaining the resources to fix the vulnerabilities that are identified. For others, the greatest need is to accelerate the vulnerability resolution process. This is the level of detail organizations need to measurably improve their application security programs.
+
+* <b>Presentation Title: "ATM Threats, Vulnerabilities and Exploits", Barnaby Jack, Director of Research IOActive</b>
+:The most common attacks on Automated Teller Machines (ATMs) typically involve the use of card skimmers or the physical theft of the machines. Barnaby Jack research goes beyond physical vulnerabilities and reveals software-based attacks. He will demonstrate both local and remote attacks, and reveal a multi-platform rootkit. The rootkit was specifically designed for ATMs to give an attacker the ability to dispense cash from the machine, retrieve ATM passwords and settings, and retrieve tracking data remotely.
+
+=== February Meeting ===
+* <b>Presentation Title: Cloud Computing Security, Dr. James Walden, Assistant Professor Department of Computer Science at Northern Kentucky University</b>
+:<b>The presentation can be downloaded from [http://www.owasp.org/images/d/d1/Cloud-security.pdf here]</b>
+
+: Cloud computing is an emerging paradigm for large scale web application deployment.  While cloud computing may reduce the complexity and costs of web application deployment, it also introduces new risks and requires a fundamentally different approach to security.  Traditional security approaches such as firewalls and network intrusion detection are either impossible or inappropriate for cloud applications. New risks include loss of governance, failure of compliance with regulations that assume infrastructure is physical rather than virtual, an expanded attack surface resulting from the connection between your organization and the cloud, and hypervisor attacks that may enable attackers on the same physical server to access your data.  This talk will address how these risks occur in the context of cloud computing and will examine ways to mitigate them.
+
+=== January Meeting ===
+* <b>Presentation Title: How to Prevent Business Flaws Vulnerabilities In Web Applications, Marco Morana, OWASP Cincinnati Chapter Lead [http://www.owasp.org OWASP] [http://www.owasp.org/index.php/Marco_Morana Bio]</b> 
+:<b>The presentation can be downloaded from [http://www.owasp.org/images/a/aa/OWASP_Cincinnati_Jan_2011.pdf here]</b>
+
+:Business logic attacks (BLA) represent a growing threat for web applications. BLA specifically target the business logic of the application to exploit vulnerabilities that are uncommon and specific to the application logic. Example of these vulnerabilities include a flaw in the shopping cart of the application that allows a malicious user to alter the price of an item and access to unauthorized business transactions through forceful browsing to a web page bypassing the normal workflow of the application. Scope of the presentation is to analyze the threat posed by BLA and provide example on how a threat modeling methodology can be used to identify application specific application flaws and devise countermeasures so that these attacks can be both prevented and detected.
+
+== 2010 Presentations (Archived) ==
+
+=== November Meeting ===
+* <b>Presentation Title: Vulnerability Analysis, Secure Development and Risk Management of Web 2.0 Applications, Marco Morana, OWASP Cincinnati Chapter Lead [http://www.owasp.org OWASP] [http://www.owasp.org/index.php/Marco_Morana Bio]</b> 
+:<b>The presentation can be downloaded from [http://www.owasp.org/images/c/c1/OWASP_Cincy_Web2_Threats_and_Countermeasures.pdf here]</b>
+
+:According to the Gartner hype curve, Web 2.0 technologies have reached a stage of mainstream adoption by businesses, therefore is critical for information and application security to understand the security implications of the adoption of Web 2.0 technologies. Web 2.0 not only amplify traditional Web 1.0 vulnerabilities such as XSS, CSRF and data injection vulnerabilities but also introduces new threats: this is due to the intrinsic functionality that Web 2.0 technology is designed to provide. For example, Web 2.0 technologies provide a richer client and user experience than Web 1.0, foster user’s collaboration to the sites through user's provided content and brings customers closer to businesses through participation to social networking sites. The first step is to perform a vulnerability and threat analysis of Web 2.0 applications. From vulnerability and threat analysis perspective, Web 2.0 application vulnerabilities can be analyzed using both OWASP Top 10 and WASC Top 50 threats categorizations. Critical to the vulnerability analysis of Web 2.0 applications is the determination of the vulnerability root causes. Only through the identification of the vulnerabilities root causes vulnerabilities can be eradicated. The second step is build secure Web 2.0 applications. Secure design and implementation of Web 2.0 applications starts with a plan for adoption of software security activities as part of the SDLC. Essential software security activities include the documentation of secure coding requirements for Web 2.0 such as for AJAX, secure design and review of Web 2.0 architectures, manual/automatic secure code reviews/analysis and security testing. Security testing need to target both Web 2.0 client/desktop components (e.g. FLASH, RIA, mashups) as well as server components/functionality (e.g. Web services). Finally, the third step includes managing the business risks that Web 2.0 design flaws and bugs might pose to the business. The OWASP risk methodology and a web 2.0 risk framework is proposed as methodology to analyze and manage Web 2.0 security risks. A simple example on how to integrate with Web 2.0 technology securely such as a twitter interface to a web site, it is also presented.
+
+=== October Meeting ===
+* <b>Presentation Title: TLS Renegotiation, the vulnerability, the twitter attack and ways to tell if your application is vulnerable and how to fix it</b> Mr. Blaine Wilson, Information Security Architect at Great American Insurance :<b>The presentation can be downloaded from [http://www.owasp.org/images/f/f8/OWASP_-_TLS_Renegotiation_Vulnerability.pdf here]</b>
+
+=== September Meeting ===
+* <b>Presentation Title:Data Security challenges in the all too Public and not so Private sectors</b> Mr. Patrick Gray, Principal Security Strategist of [http://www.cisco.com Cisco Systems]
+:<b>The presentation can be downloaded from [http://www.owasp.org/images/6/6e/OWASP.v.2.pdf here]</b>
+:The Internet threat landscape has shifted. What used to be a playground for hackers, crackers, script kiddies and packet monkeys is now a borderless abyss of organized crime fueled by financial gain and state sponsored forays into our critical infrastructures. Cisco Systems' Patrick Gray, a twenty-year veteran of the FBI, will explore the current threat landscape by highlighting the newest cyber criminals and examining the latest tactics employed by these predators. Gray will address how spammers, phishers, botmasters and hackers interact with this new crime element utilizing Web 2.0 technologies and how we can prepare our infrastructures to stave off these relentless attacks and protect our critical business assets. 
+
+=== July Meeting ===
+* <b>Presentation Title:Botnet Attacks and Web Application Defenses </b>Gunter Ollmann VP of Research, Damballa
+:<b>The presentation can be downloaded from [http://www.owasp.org/images/b/bd/OWASP_Cincinnati_July2010_GunterOllmann.pdf here]</b>
+:Security researcher Gunter Ollmann of Damballa provides an analysis of the botnet threats and the  crimeware used by cybercriminals including banking trojans such as Zeus. Information about the attacks used toward the soft targets such as the user's browser is dealt with including Man-in-The-Browser(MiTB)and Man In The Middle (MiTM) attacks. Examples on how these attacks techniques can be used for attacking banking customers are included as well as the protection strategies that banks can adopt for protecting from these attacks with specific emphasis on-line banking applications.
+
+=== June Meeting ===
+* <b>Presentation Title:Security of plugins compared to the main applications</b> Dr James Walden, Assistant Professor Department of Computer Science at Northern Kentucky University
+:<b>The presentation can be downloaded from [http://www.owasp.org/images/0/04/Plugins_Security_OWASP_Cincinnati-2010-Prezo.pdf here]</b>
+:Popular open source web applications have evolved into complex software ecosystems, consisting of a core maintained by a set of long term developers and a range of plugins developed by third parties. These plugins accomplish such tasks as adding forms to a content management system, connecting a blog with social networking systems, or even scanning for malware infecting the application. The security of such web applications depends as much on vulnerabilities found in plugins as it does in vulnerabilities in the application core. In this talk, we will examine the security of plugins and the impact of adding plugins to the security of those applications. We will look at empirical data, such as the number, types, and locations of vulnerabilities in these web applications, and examine how we can use such data to decide which applications to use and to decide how to focus our efforts security such applications.
+
+=== May Meeting ===
+* <b>Protecting Your Applications from Backdoors: How to Secure Your Business Critical Applications</b> Clint Pollock, Senior Solutions Architect at Veracode 
+
+     Meeting Sponsor [http://www.veracode.com http://www.veracode.com/images/veracode.logo2.gif]   
+
+:<b>The presentation can be downloaded from [http://www.owasp.org/images/8/81/Protecting_the_Enterprise_-_Software_Backdoors.pdf here]</b>
+:With the increasing practice of outsourcing and using 3rd party libraries, it is nearly impossible for an enterprise to identify the pedigree and security of the software running its business critical applications. As a result backdoors and malicious code are increasingly becoming the prevalent attack vector used by hackers. Whether you manage internal development activities, work with third party developers or are developing a COTS application for enterprise, your mandate is clear- safeguard your code and make applications security a priority for internal and external development teams. In this session we will cover; (1) Prevalence of backdoors and malicious code in third party attacks; (2) Definitions and classifications of backdoors and their impact on your applications; (3) Methods to identify, track and remediate these vulnerabilities
+
+=== April Meeting ===
+* <b>Measuring Your Proactive Security Efforts </b> Cassio Goldschmidt Senior Manager Symantec Corporation. 
+:<b>The presentation can be downloaded from [http://www.owasp.org/images/4/4a/Tracking_the_Progress_of_an_SDL_Program_-_OWASP.pptx  here]</b>
+:Forcing muscle growth is a long process which requires high intensity weight training and high mental concentration. While the ultimate goal is often clear, one of the greatest mistakes bodybuilders consistently make is to overlook the importance of tracking their weight lifting progress. Like a successful bodybuilding workout, a security development lifecycle program must consistently log simple to obtain, yet meaningful metrics throughout the entire process. Good metrics must lack subjectivity and clearly aid decision makers to determine areas that need improvement. In this pragmatic presentation we’ll discuss metrics used at Symantec, the world’s largest security ISV, to classify and appropriately compare security vulnerabilities found in different phases of the SDL by different teams working in different locations and in different products. We’ll also discuss how to easily provide decision makers different views of the same data and verify whether the process is indeed catching critical vulnerabilities internally and how the numbers compare with the competition
+
+=== March Meeting ===
+*<b>Thick Client Application (In)Security</b> Mr. Neelay S Shah Senior Software Security Consultant Foundstone Professional Services, A Division of McAfee Strategic Security
+:<b>The presentation can be downloaded from [http://www.owasp.org/images/e/e7/Thick_Client_%28In%29Security_-_Neelay_S_Shah_-_Mar_24.pdf here]</b>  
+:Applications are becoming richer in terms of their user interface, attempting to leave a lasting impression on the users and wanting them to come back for more.  Applications these days expose various ways for the user to interact with the application to create a “rich” application experience for the user. Thick client applications are the preferred choice to guarantee the above principles since they can leverage existing robust frameworks such as JAVA and .NET to create a rich user interface and are not limited by the browsers’ (in)ability to render the user interface elements. However with the increased sophistication, comes increased complexity and hence it is not uncommon to find client applications that are not only serving as the “presentation” tier but also potentially comprise of business logic to a varied extent. Security testing for thick client applications is a fairly involved and specialized task as compared to security testing web applications since each thick client is custom designed and developed for the application at hand. As such security testing each thick client application potentially involves dealing with different technologies and communication protocols and hence necessitates the use of different approaches. Attendees will learn the different strategies and methods that can be used for successfully testing thick client applications. We will discuss the different techniques to be able to bypass client side checks including methods for successfully understanding and intercepting client – server network communication. We will also evaluate the above mentioned techniques at depth in terms of their advantages, disadvantage and when to use the particular technique. This talk is intended for application testers, developers, project managers and application security professionals.
+
+=== February Meeting === 
+* <b>Modern Application Testing Methodologies, Mr. Mark Maxey</b> Principal Consultant [http://www.accuvant.com/ Accuvant]
+ 
+     Meeting Sponsor [http://www.accuvant.com http://www.owasp.org/images/d/dc/Accuvant.jpg]   
+
+:This talk will give an overview of contemporary application testing methodologies and tools. A comparison of the various methodologies will be provided in conjunction with the results of an in depth analysis of the various methodologies when paired against real world applications.
+
+=== January Meeting === 
+* <b>Microsoft Security Development Lifecycle Tools </b> Russell McMahon, Associate Professor of IT at the College of Applied Science, University of Cincinnati.
+:<b>The presentation can be downloaded from [http://www.owasp.org/images/4/42/Microsoft-SDL2.pdf here]</b>  
+:This talk will focus on the tools that Microsoft has developed for aiding in creating more secure applications. Microsoft developed the SDL system back in 2004 and it has begun to mature, but it still has a way to go. They have incorporated their Threat Analysis Modeling (TAM) tool into their SDL system and now call it SDL-Line of Business (LOB) tool. This talk will also look at some of the other systems that exist for developing secure applications
+
+== 2009 Presentations (Archived) ==
+=== November Meeting === 
+* <b>Virtual Patching for Web Applications: Theory and Practice</b> Ryan Barnett, Director of Application Security Research, Breach Security Inc
+:Fixing identified vulnerabilities in web application always requires time. Organizations often do not have access to a commercial application's source code and are at the vendor's mercy while waiting for a patch. Even if they have access to the code, implementing a patch in development takes time. This leaves a window of opportunity for the attacker to exploit. External patching (also called "just-in-time patching" and "virtual patching") is one of the biggest advantages of web application firewalls as they can fix this problem externally. A fix for a specific vulnerability is usually very easy to design and in most cases it can be done in less than 15 minutes. This presentation will outline exactly when and where Virtual Patching is appropriate and will show the proper steps for their creation and testing.
+
+=== October Meeting === 
+*<b> Threat analysis as methodology for deriving risk-based security tests of web application software</b> Marco Morana OWASP Chapter Lead (presented at [http://imi.nku.edu/security/2009_Symposium/default.aspx 2009 IMI Security Symposium & Expo])
+:<b>The presentationcan be downloaded [http://www.owasp.org/index.php/File:IMI_2009_Security_Summit.ppt from here] </b>
+:The risk that a web application might incur in a security incident such a major data breach depends on several risk factors such as the exposure into the public internet, the likelihood of being a target as well as the knowledge, tools and techniques available to the attacker to break into the application. In order to mitigate such risks, web applications are security tested with testing techniques such as penetration testing and secure code analysis. The aim of this presentation is first to introduce the audience to the basics of security testing such as the derivation of functional and non functional security requirements, the execution of security testing as part of the SDLC and as part of developers and tester workflows. The presentation will also cover the most used security testing techniques, OWASP testing guide, tools and vulnerability reporting and testing metrics. Often companies use security tests for meeting compliance requirements such as PCI-DSS, passing such security tests provides a level of application security assurance but in light of several data breaches occurring to organizations today it is logical to ask whether we can consider an application secure because security testing did not found any high and medium risk vulnerabilities. From the perspective of security testing, this status quo advocates the need to a new approach toward security testing: a risk based, threat driven approach. From the risk mitigation perspective, security tests need to validate mitigations against new attack techniques used by cybercriminals and fraudsters and focus on tests where the difficulty of the attack is the least and the impact is the highest. The presentation will provide examples of derivation of risk based security test cases using data from cyber-intelligence reports, attack tree analysis, attack vector analysis, security flaw analysis, use and misuse cases and application threat modeling/secure architecture analysis.
+
+=== September Meeting ===
+*<b>The rise of threat analysis and the fall of compliance in mitigating cybercrime risks</b> Marco Morana OWASP Chapter Lead (also presented to [http://www.owasp.org/index.php/Los_Angeles OWASP LA] and [http://www.owasp.org/index.php/Orange_County Orange County Chapters])
+:On August 5 of 2009, Federal prosecutors charged [http://en.wikipedia.org/wiki/Albert_Gonzalez Albert Gonzales] with the largest case of credit and debit card data theft ever occurred in the United States: the theft of 130 million credit cards numbers by hacking into [http://datalossdb.org/incidents/1518-malicious-software-hack-compromises-unknown-number-of-credit-cards-at-fifth-largest-credit-card-processor Heartland Payment Systems], [http://datalossdb.org/incidents/932-4-2-million-credit-card-and-debit-card-numbers-exposed-in-breach Hannaford Brothers], 7-Eleven and two unnamed national retailers. This massive theft of credit card data happened despite Heartland Payment Systems and Hannaford Bros companies passed security audits in compliance with [https://www.pcisecuritystandards.org/ PCI-DSS standard]. This fact, let to question the effectiveness of regulatory compliance frameworks, and specifically compliance with PCI-DSS standards in reducing the likelihood of data breaches, identity theft, and the credit card fraud. This presentation will further analyze the impact of these data breaches by monetizing the losses as being reported in quarterly earnings reports (e.g. [http://www.consumeraffairs.com/news04/2007/02/tjx_date.html TJX]) as well as impact on stock price (e.g. HPY) at the time of public disclosure of the incident. It is shown as monetizing the loss due to data breaches helps to frame non-compliance risks as a factor of business impact to mitigate non compliance fines. Traditional compliance and audit driven security assessments efforts are compared with a threat analysis approach: it is demonstrated that cybercrime risks require organizations to move beyond audit and compliance. Moving beyond means understanding complex threat scenarios  and study attacks in the wild with [http://www.ic3.gov/default.aspx cyber-intelligence]. Cases of publicly reported cybercrime attacks are used to outline the new threat landscape and the attack scenarios. The attacker motives and the means to achieve them will be analyzed by using [http://en.wikipedia.org/wiki/Attack_tree attack trees]:an attack tree can be used to analyze cyber attacks against web applications, breaches of credit card data as well as ATM fraud. [http://en.wikipedia.org/wiki/Misuse_case Use and misuse cases] will be used to evaluate the strength of multi-factor authentication against attacks such as MiTM (Man In The Middle). Examples of [http://ha.ckers.org/xss.html attack vectors] for testing defenses against cybercrime attacks (e.g. [http://www.gnucitizen.org/blog/frame-injection-fun/ HTML-IFRAME Injection Attack Vectors] and [http://en.wikipedia.org/wiki/Drive-by_download drive by download]) will be provided. [http://www.owasp.org/index.php/Application_Threat_Modeling Data Flow Diagrams (DFD)] Analysis and [https://buildsecurityin.us-cert.gov/daisy/bsi/articles/best-practices/architecture.html Architecture Risk Analysis examples] will be presented to identify the entry points for attack vectors, the user access levels that can be exploited and to enumerate threats, attacks, vulnerabilities and countermeasures. Security by deployment and security by design concepts will be elaborated as strategy to build countermeasures using [http://blogs.msdn.com/jmeier/archive/2008/04/07/security-principles.aspx security by design architecture principles]. Finally, risk mitigation strategies will be discussed as self-awareness questions. The presentation re-affirms that audit and compliance needs to be approached as factor of minimum business risk mitigation. A cybercrime risk mitigation strategy needs to consider[http://www.owasp.org/index.php/Application_Threat_Modeling application threat modeling] as critical assessment for high risk web applications.
+
+=== August Meeting ===
+*<b>OWASP T10 For Web Services </b> Marco Morana OWASP Chapter Lead
+:<b>The presentation is available [http://www.slideshare.net/marco_morana/owasp-forum-web-services-security-1929468 herein]</b>
+:Following the video presentation from Gunnar Peterson talk at OWASP USA NYC 08 AppSec Conference a summary of OWASP T10 Vulnerabilities for Web Services is highlighted as well as the recommended countermeasures. Discussion points around Web Services security were proposed for discussion as well further reference to OWASP Web Services Security resources.
+
+=== July Meeting ===
+*<b>An Empirical Study of Web Application Security Trends </b> Dr. James Walden Assistant Professor Department of Computer Science Northern Kentucky University  
+:What is the current state of web application security?  Are web applications more or less secure than they were last year?  This presentation will attempt to answer those questions through an empirical study of popular open source web applications over the past two years.  Data and statistics on vulnerability density, vulnerability types, and vulnerability severity will be analyzed, along with software metrics that may reflect application security.
+
+=== June Meeting ===
+*<b>The Web Hacking Incidents Database (WHID) – 2009 Analysis</b> <i> Ryan Barnett -[http://www.breach.com Breach Security Inc]</i>
+
+     Meeting Sponsor [http://www.breach.com https://www.owasp.org/images/9/9c/Breach_logo.gif]   
+
+:<b>The presentation is available [http://www.owasp.org/images/e/e5/The_Web_Hacking_Incidents_Database_-_2009_Bi-Annual_Report.pdf herein]</b>
+: The web hacking incident database (WHID) is a Web Application Security Consortium project dedicated to maintaining a list of web applications related security incidents. WHID goal is to serve as a tool for raising awareness of the web application security problem and provide information for statistical analysis of web applications security incidents. The database is unique in tracking only media reported security incidents that can be associated with a web application security vulnerability. This presentation will highlight the statistics gathered from the 1st half of 2009 (January – June) and provide insight into categories such as: 1) Top Attack Methods, 2) Top Compromise Outcomes, 3) Top Target Geographic Region, 4) Top Vertical Markets Hit. The presenter will also provide some in-depth analysis for emerging threats/attack techniques such as planting of malware on websites and reflected cross-site scripting through sql injection.
+
+=== May Meeting ===
+*<b>OWASP T10 Vulnerabilities and Security Design Flaws Root Causes</b> <i> Marco Morana [http://www.owasp.org/index.php/Marco_Morana OWASP Chapter Lead]</i>
+:<b>The presentation is available [http://www.owasp.org/images/c/c0/OWASP_Top_10_And_Security_Flaws_Root_Causes_Cincy_May_26_09_Final.pdf herein].</b>
+: The fact that security flaws are still so pervasive in web applications today highlights the need to identify and fix them by looking at the root causes in the application architecture. This presentation will look at OWASP T10 vulnerabilities from the perspective of root causes in design and provide examples on how these vulnerabilities can be identified in a threat model and mitigated at different layers of the application architecture. Strategic and tactical approaches to the OWASP T10 will be discussed. The strategic approach will cover concepts and principles of security by design such as secure architecture principles and requirements for designing security controls. The OWASP Application Threat Modeling process is provided as reference even if not discussed with this presentation.
+
+=== April Meeting ===
+*<b>April 28th Presentation: Bad Cocktail: Application Security Flaws + Targeted Phishing</b> <i> Rohyt Belani is CEO and co-founder of </i> [http://intrepidusgroup.com/default.htm Intrepidus Group]
+:<b>The presentation is available [http://www.owasp.org/images/5/55/OWASP-Cin-April2009.pdf herein].</b>
+: Site takedown services, anti-phishing filters, and millions of dollars worth of protective technologies...and the spear phishers are still successful! This presentation will discuss why this is the case. Today, phishing is a key component in a "hackers" repertoire. Phishers are combining social engineering with application security flaws in well known websites to make automated detection of targeted phishing attacks almost impossible. The result - hijacked online brokerage accounts, stolen identities and e-bank robberies. During this talk, I will present the techniques used by attackers to execute such spear phishing attacks, and real-world cases that I have responded to that will provide perspective on the impact. I will then discuss countermeasures that have been proven to be effective and are recommended by reputed bodies like SANS and Carnegie Mellon University.
+
+=== March Meeting ===
+*<b>March 24th Presentation: Application Testing Methods and Modern Threats</b> <i> Presenter: Mark Maxey Principal Consultant – Application Specialist – </i>[http://accuvant.com Accuvant, Inc]
+:Walk through the state of the available tools and around finding vulnerabilities, and tie the discussion into PCI DSS
+=== January Meeting ===
+*<b>Threat Analysis and Modeling</b> <i> Russell McMahon, associate professor of IT at the College of Applied Science, [http://www.uc.edu/ University of Cincinnati].</i>
+:Security is a big issue and all too often it is only thought of as it applies to the network administrator. However, programmers face a host of threats to their applications. The solution is to build a threat model. The purpose of a threat model is to aid in identifying potential threats before a system is built, not after. This talk will cover some of the common threats to applications and how to prevent them. This talk is based upon [http://msdn.microsoft.com/en-us/security/dd206731.aspx Microsoft's Threat Analysis and Modeling (TAM) tool] and their newest version which is now part of their Security Development Lifecycle (SDL). This tool has been used by companies such as Ford and Boeing as a part of their total information life cycle process. Additional resources will also be discussed.
+
+== 2008 Presentations (Archived)==
+=== November Meeting ===
+* Web App Hacking for Developers <i>Jeremiah Blatz, Senior Security Consultant, [http://www.foundstone.com/us/index.asp Foundstone Professional Services]</i>
+:<b>The presentation is available [http://www.foundstone.com/us/resources/owasp_cincinnati_nov.pdf herein].</b>
+:How safe are your web applications? You'll think twice after seeing how Foundstone security experts dig into their hacker's toolbox and rip open web applications by exploiting simple software bugs. Common problems such as Cross-Site Scripting (XSS) and SQL Injection will be demonstrated and explained, along with more subtle vulnerabilities including privilege escalation, data tampering, and Cross-Site Request Forgery. Even if you've seen XSS and SQL Injection before, advanced techniques will be presented that can slip through many protections. As a finale, the holy grail of web security will be broken with a Man-In-The-Middle attack on SSL. Countermeasures to prevent mistakes will then be shared.
+
+=== October Meeting ===
+* Phishing: Trends and Countermeasures<i> Blaine Wilson, Information Security Architect, [http://www.greatamericaninsurance.com/ Great American Insurance Group]</i>
+:<b>The presentation is available [https://www.owasp.org/index.php/Image:Phishing.pptx herein].</b>
+:The presentation covered the current trends in phishing and how to establish countermeasures both from an infrastructure perspective, an application development perspective and the user awareness training.
+
+=== September Meeting ===
+* Input Validation Vulnerabilities, Encoded Attack Vectors and Mitigations<i> Marco Morana (TISO [http://www.citibank.com/us/index.htm Citigroup]) & Scott Nusbaum (Security Analyst [http://www.citibank.com/us/index.htm Citigroup])</i>
+:<b>The presentation is available [https://www.owasp.org/index.php/Image:Encoded_Attacks_Threats_Countermeasures_9_30_08.pdf herein].</b>
+
+:Input validation vulnerabilities in web applications can be exploited with attack vectors to cause business impacts such as information disclosure, data alteration and destruction, denial or degradation of service, financial loss fraud and reputation brand damage. Several web applications today have implemented filtering techniques to block such attack vectors; unfortunately such filtering techniques are seldom based on black lists that fail when attackers use filter evasion techniques such as single and double encoding. This presentation will cover the basic understanding of attack vectors, the malicious payloads that can be carried out and the techniques used by attackers to evade input validation filters. Lists of different variations of encoded XSS attack vectors and constructed SQL injection vectors will be presented. From the defensive perspective, these lists can be used as cheat sheets for testing the efficacy of the input filtering techniques. A demonstration of a sample implementation of effective input validation using J2EE struts framework is also presented. During the presentation, web application developers and architects will be introduced to the concepts of canonicalization, encoding and sanitization and guided on the most effective input validation strategies and techniques as well as on the best use of available input validation resources from OWASP.
+
+=== August Meeting ===
+* The OWASP Enterprise Security API (ESAPI)<i> Joe Combs, Staff Consultant, [http://www.sysev.com/index.asp SEI-Cincinnati LLC]</i>
+:<b>The presentation is available [https://www.owasp.org/index.php/Image:OWASP_Cincy_ESAPI.pdf herein].</b>
+
+:Security controls are central to developing secure applications, yet few development teams code them properly (if they code them at all!).  The [http://www.owasp.org/index.php/ESAPI OWASP Enterprise Security API (ESAPI)] provides a set of well defined interfaces for doing security "right" within your application and provides a reference implementation of these interfaces.  ESAPI handles difficult tasks such as validation, encoding, encryption, and more.  This presentation will provide a guided tour of ESAPI capabilities and recommended usage to combat the most pernicious vulnerabilities.
+
+=== July Meeting ===
+*  Building Security Into Applications - <i>Marco M. Morana, TISO [http://www.citibank.com/us/index.htm Citigroup] </i>
+:<b>The presentation is available [https://www.owasp.org/index.php/Image:Build_Security_Into_Applications_Short.pdf herein].</b>
+
+:What is the best way to start a software security initiative within your organization? First you need to present the business case to the management in terms of costs, threats and root causes. Subsequently you need to provide a roadmap. The first step of the roadmap is to evaluate the maturity of secure software development processes, tools and training. The next step is to adopt a framework for software security activities, software development and risk management processes: software security enhanced process models such as MS SDL, OWASP CLASP and Cigital TP are examples of security engineering frameworks that can be used. Software security activities such as threat modeling, secure code reviews and security testing work as checkpoints to validate software artifacts and manage software security risks. Finally data such as vulnerability metrics and process management metrics helps to manage and optimize the software security processes in the long term and show the effectiveness of the software security initiative to the organization.
+
+=== June Meeting ===
+*  SQl Injection - <i>Dr. James Walden, [http://www.nku.edu/ Northern Kentucky University]</i>
+:<b>The presentation is available [http://www.nku.edu/~waldenj1/talks/InjectionAttacks.ppt herein].</b>
+
+:Hackers use injection attacks to bypass firewalls and take control of web applications so that they can grab sensitive data or use the site to distribute malware to users.  While the most common type of this attack is SQL injection, injection attacks can target any interpreter used by the web application, including ASP, LDAP, PHP, shells, SMTP, SOAP, and XPath. This talk will demonstrate step by step how injection attacks work and show how to eliminate injection vulnerabilities with secure programming techniques.
+
+=== May Meeting ===
+
+*  Cross Site Request Forgery Vulnerability In Depth Dive In - <i>Marco M. Morana, Technologist/Author, TISO [http://www.citibank.com/us/index.htm Citigroup]</i>
+:<b>The presentation is available [https://www.owasp.org/images/b/b5/OWASP_CSRF_May_27_DRAFT.pdf herein].</b>
+
+:CSRF vulnerabilities can be exploited to perform un-authorized transactions on behalf of a logged in user by exploiting the trust between the browser session and the web application. Such un-authorized transactions include transfer of funds in an on-line banking application, denial of service through forced logout, data tampering and information disclosure as well as un-authorized access. The in-depth session will cover how and where CSRF happen, how can be identified (e.g. tested for) and prevented with the adoption of effective countermeasures.  [http://www.owasp.org/index.php/Cross-Site_Request_Forgery OWASP documentation] will be covered in detail as well as CSRF tools such as [http://www.owasp.org/index.php/CSRF_Guard CSRF guard]
+
+=== April Meeting ===
+*[http://www.fortify.com/cybercrime/ The New Face of Cybercrime Movie] Premiere And Follow Up Discussion.  
+:<i>Major Bruce C. Jenkins, (USAF, Ret.)- Security Practice Director at [http:///www.fortify.com Fortify Software] Inc.</i>
+
+     Meeting Sponsor [http://www.fortify.com http://www.owasp.org/images/4/4b/Fortify_1.jpg]     
+
+:The revealing documentary features candid interviews with criminal hackers and those industry executives taking steps against their persistent attacks. Learn the shocking exposure of IT systems and how to address the changes.
+
+=== March Meeting ===
+*Source Code Reviews and Open Source Static Analysis Tools - <i>Allison Shubert, Security Specialist, [http://www.citibank.com/us/index.htm Citigroup]</i>
+:Static analysis is the process of analyzing software for security vulnerabilities.  Static analysis can be a costly and time consuming process, but is a link in the chain for producing secure software.  Join us as we explorer building a business case for static analysis and review the current open source static analysis tools.
+
+*An Introduction to Web Proxies - <i>Blaine Wilson, Technology Information Security Officer,  [http://www.citibank.com/us/index.htm Citigroup]</i>
+:Web proxies will be explained and the group will be shown how to install and configure WebScarab.  WebScarab operates as an intercepting proxy, allowing the operator to review and modify requests created by the browser before they are sent to the server, and to review and modify responses returned from the server before they are received by the browser.  The presentation will include several examples of intercepting, reviewing and modifying HTTP requests and responses.
+
+=== February Meeting ===
+
+*OWASP Top Ten Vulnerabilities and Software Root Causes: Solving The Software Security Problem From an Information Security Perspective - <i>Marco Morana ([http://www.citibank.com/us/index.htm Citigroup], TISO, OWASP Chapter Leader, Security Blogger)</i>
+:'''The presentation is available [https://www.owasp.org/images/e/eb/OWASP_Top_10_And_Root_Causes_Cincy_Feb_26_08_Final.pdf  herein].'''
+
+:Before to diagnose the disease and provide the cure a doctor looks at the root causes of the sickness, the risk factors and the symptoms. In case of application security the majority of the root causes of the security issues are in-secure software, the risk factors can be found in how bad the application is designed, the software is coded and the application is tested and the symptoms in how the application vulnerabilities are exposed. The presentation will articulate the problem of secure software, the costs, the software security risks and how these are typically dealt with by most organizations. Solving the problem of software security requires people, process and tools. From the information security perspective we will look at ways to enforcing software security by looking at risks that threat agents (attacks) can exploit vulnerabilities due to insecure software and the resulting impact on company assets. Implementing a set of software security requirements is the best place to start to address the root causes of web application vulnerabilities. With a categorization of web application vulnerabilities as weakness in application security controls, it is easier to describe the root cases as coding errors. A good place to start documenting software security requirements is the OWASP Top Ten, for each of these vulnerabilities we will discuss the threat, the risk factors, the software root causes of the vulnerability, how to find if you are vulnerable and if you are which countermeasures need to be implemented.
+
+=== January Meeting ===
+*Introduction to OWASP- <i>Marco Morana ([http://www.citibank.com/us/index.htm Citigroup], TISO, OWASP Chapter Leader, Security Blogger)</i>
+:'''The presentation is available [https://www.owasp.org/images/5/53/Introduction_to_OWASP.pdf  herein].'''
+
+:OWASP plays a special role in the application security ecosystem, is vehicle for sharing knowledge and lead best practices across organizations. As an example OWASP is a community of people passionate about application security. We all share a vision of a world where you can confidently trust the software you use.  One of our primary missions is to make application security visible so that people can make informed decisions about risk. OWASP is the most authoritative and resourceful application security organization to share and open source tools, documents, basic information, guidelines, presentations projects worldwide. The OWASP Top Ten list includes a reference for most critical web application security flaws compiled by a variety of security experts from around the world. The list is recommended by U.S. Federal Trade Commission, the U.S. Defense Information Systems Agency and is adopted by Payment Card Industry (PCI) as a requirement for security code reviews.Through OWASP you’ll find a rich community of people to connect through mailing lists, participating in the local chapters, and attending conferences. The people involved in OWASP recognize the world’s software is most likely getting less and less secure. As we increase our interconnections and use more and more powerful computing technologies, the likelihood of introducing vulnerabilities increases exponentially. Whatever the internet becomes, OWASP can play a key role in making sure that it is a place we can trust. This meeting will provide an opportunity to meet local OWASP affiliates and members and know more about how to contribute to OWASP. 
+
+*Webgoat and Webscarab Security Tools Use Cases - Blaine Wilson ([http://www.citibank.com/us/index.htm Citigroup], TISO)
+
+:The presentation will show how to use popular OWASP tools such as Webscarab web proxy and Webgoat to  learn about common security vulnerabilities in applications
+
+== Cincinnati OWASP Chapter Board Members==
+Scope of the board is to discuss and approve local activities, meetings and plans.The board meets informally on the by-weekly basis every other Friday at 7.30 AM at Panera Bread in Blue Ash [http://maps.google.com/maps?f=q&hl=en&geocode=&q=paner+bread+blue+ash&ie=UTF8&ll=39.318894,-84.395599&spn=0.251794,0.422974&z=11&iwloc=A Directions]
+
+The board currently includes the following members:
+<ul>
+*<b>Chapter Leader:</b> [mailto:andywillingham@gmail.com Andy Willingham]
+*<b>Chapter Leader On Leave:</b> [mailto:marco.m.morana@gmail.com Marco Mirko Morana] 
+*<b>Vice Chapter Leader:</b> [mailto:allisonshubert@yahoo.com Allison Shubert] 
+*<b>Secretary:</b> [mailto:blainekwilson@msn.com Blaine Wilson] 
+*<b>Chairman of the Board:</b> [mailto:wayne.browning@citi.com H. Wayne Browning]
+*<b>Job Postings/Linkedin:</b> [mailto:Brianvn2010@gmail.com Brian Van Norman]
+</ul>
+
+== About OWASP ==
+The OWASP Foundation is a 501(c)3 non-profit organization incorporated in the United States of America. OWASP's all-volunteer participants produce free, professional quality, open-source documentation, tools, and standards. Consult the [http://www.owasp.org/index.php/How_OWASP_Works how OWASP works] web page for more information about projects and governance.
+
+==OWASP Membership==
+OWASP is an open source project dedicated to finding and fighting the causes of insecure software. All of our materials are free and offered under an open source license, so you do not have to become a member to use them or participate in our projects, mailing lists, conferences, meetings or other activities. On the other hand OWASP rely membership fees and sponsorship to support his activities. There are also unique benefits to become a corporate member such as the use of OWASP materials within your organization without the restrictions associated with the various open source licenses. OWASP individual members also get discounts to security conferences and other perks. For more information consult the [http://www.owasp.org/index.php/Membership OWASP Membership] web page.
+
+
+[[Category:OWASP Chapter]]
+[[Category:Ohio]]

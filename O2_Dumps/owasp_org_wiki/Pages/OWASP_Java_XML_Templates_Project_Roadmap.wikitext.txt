@@ -1,0 +1,52 @@
+This project is meant to be a secure and XHTML-compliant alternative to JSP that runs with a model that is “compatible” with JSP.  It provides automatic contextual escaping of XHTML contexts by default (such as HTML content, HTML attributes, JavaScript data elements, etc…), but allows for users to override the escape (if they know what they are doing and have a reason).  Thus it effectively inverts the decision of whether or not to escape to protected against XSS, making it easy to be secure (or overly secure), instead of being easy to be insecure.
+
+For example, in the snippets of code below, the output of the two files below would be the same.  If the variable “user” contained characters such as “<” or “&”, they would be escaped in the outputs of both (e.g. as “&lt;” and “&amp;”).  At the source level it is easy to see how a developer might miss or get the incorrect escape in a JSP file for the common case of wanting to output text without introducing XSS.  On the other hand, in the relatively rare case of a developer needing to write out un-escaped (or already escaped) data directly, they can do it really easily in JSP, but with JXT an encoding override is required.
+
+
+'''Sample JSP'''<br>
+Hello <%= ESAPI.encoder().encodeForHTML(user) %>!
+Dangerous un-escaped content: <%= data %>.
+ 
+'''Sample equivalent JXT'''<br>
+Hello ${user}!
+Dangerous un-escaped content: <jxt:out value="${data}" escape="none"/>.
+
+
+This example only scratches the surface of JXT.  In addition to making it easy to escape data, it also is context-aware and as such alleviates the necessity of the developer having to choose the correct encoding for the context (ESAPI Encoders provides 5 different applicable escapes for HTML generation).
+
+The version we will be releasing is effectively a 1.0 version that addresses the primary concerns SuccessFactors was facing when we created this technology and includes:
+<br>
+
+* JSP-Compatible runtime
+** Ability to include existing JSP tags and tag libraries
+** Ability to change formatting of well-formed JSPs to convert to JXT
+** Support for some existing jsp framework tags, such as “jsp:include”, “jsp:include”, and “jsp:useBean”
+<br>
+
+* Automatic context-aware escaping for
+** HTML text content
+** HTML script block content (JS strings only for now)
+** HTML text attributes
+** HTML URI attributes (e.g. href="/path?${key}=${value}")
+** HTML script attributes (onclick, etc…)
+<br>
+
+* Improved compliance with XHTML (basic attribute types and content models are understood and used to control encoding)
+<br>
+
+* Fast runtime performance (everything is compiled to Java bytecode and run on the JVM directly)
+<br>
+
+For future versions, we will be looking to the community to provide feedback on what would be useful, but some features planned are (in no particular order):
+* Translation-time tag-libraries (Translation time occurs when the JXT file is compiled to Java, as opposed to Runtime tag-libraries, for which we already support JSP tag-libraries)
+* Full <script> tag context awareness
+* Full <style> tag and style="…" attribute context awareness
+* Improved compilation performance (already pretty good with ECJ)
+* Supporting additional jasper-like options (such as “keepGenerated”, “mappedFile”, “trimspaces”, etc…)
+* SMAP (JSR45) support for easier debugging
+* JSTL support
+* Template composition/extensibility
+* ESAPI encoders support
+* Additional JSP compatibility (full standard “jsp” tags support, static JSP fragment inclusion, etc…)
+* More complete XHTML understanding—check and enforce compliance, even in the presence of conditionals
+* Automated JSP to JXT conversion

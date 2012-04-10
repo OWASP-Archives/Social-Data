@@ -1,0 +1,64 @@
+;What's new?
+:OWASP has come a long way since the last top was released in January 2003. This update incorporates all the discussion and up to date views, opinions and debate in the OWASP community over the past 12 months. Overall, there have been minor improvements to all parts of the Top Ten, and only a few major changes:
+
+;WAS-XML Alignment
+:One of the new projects initiated in 2003 is the Web Application Security Technical Committee (WAS TC) at OASIS. The purpose of the WAS TC is to produce a classification scheme for web security vulnerabilities, a model to provide guidance for initial threat, impact and therefore risk ratings, and an XML schema to describe web security conditions that can be used by both assessment and protection tools. The OWASP Top Ten project has used the WAS TC as a reference for reprofiling the Top Ten to provide a standardized approach to the classification of web application security vulnerabilities. The WAS Thesaurus defines a standard language for discussing web application security, and we adopt that vocabulary here.
+
+;Addition of Denial of Service
+:The only top level category that changed was the addition of the A9 Denial of Service category to the list. Our research has shown that a broad array of organizations are susceptible to this type of attack. Based on the likelihood of a denial of service attack and the consequences if the attack succeeds, we have determined that it warrants inclusion in the Top Ten. To accommodate this new entry, we have combined last year’s A9 Remote Administration Flaws into the A2 Broken Access Control category as it is a special case of that category. We believe this is appropriate, as the types of flaws in A2 are typically the same as those in A9 and require the same types of remediation.
+
+The table below highlights the relationship between the new Top Ten, last year’s Top Ten, and the WAS TC Thesaurus.
+
+{| width="95%" border="1" cellpadding="4" align="center" bgcolor="eeeeff"
+|- class="mainText2"
+|
+<div align="center">'''New Top Ten 2004'''</div>
+|
+<div align="center">'''Top Ten 2003'''</div>
+|
+<div align="center">'''New WAS Thesaurus'''</div>
+|- class="mainText2"
+| A1 Unvalidated Input
+| A1 Unvalidated Parameters
+| Input Validation
+|- class="mainText2"
+| A2 Broken Access Control
+| A2 Broken Access Control<br /> (A9 Remote Administration Flaws)
+| Access Control
+|- class="mainText2"
+| A3 Broken Authentication and Session Management
+| A3 Broken Account and Session Management
+| Authentication and Session Management
+|- class="mainText2"
+| A4 Cross Site Scripting (XSS) Flaws
+| A4 Cross Site Scripting (XSS) Flaws
+| Input Validation->Cross site scripting
+|- class="mainText2"
+| A5 Buffer Overflows
+| A5 Buffer Overflows
+| Buffer Overflows
+|- class="mainText2"
+| A6 Injection Flaws
+| A6 Command Injection Flaws
+| Input Validation->Injection
+|- class="mainText2"
+| A7 Improper Error Handling
+| A7 Error Handling Problems
+| Error Handling
+|- class="mainText2"
+| A8 Insecure Storage
+| A8 Insecure Use of Cryptography
+| Data Protection
+|- class="mainText2"
+| A9 Denial of Service
+| N/A
+| Availability
+|- class="mainText2"
+| A10 Insecure Configuration Management
+| A10 Web and Application Server Misconfiguration
+| Application Configuration Management<br /> Infrastructure Configuration Management
+|}
+
+[[Category:OWASP Top Ten Project]]
+
+__NOEDITSECTION__

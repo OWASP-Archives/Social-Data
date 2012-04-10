@@ -1,0 +1,433 @@
+==== About  ====
+
+[[Image:Owasp-nova.JPG|right|275px|Owasp-nova.JPG]]The '''OWASP Northern VA Local Chapter''' meetings are FREE and OPEN to anyone interested in learning more about application security. We encourage individuals to provide knowledge transfer via hands-on training and presentations of specific OWASP projects and research topics and sharing SDLC knowledge. 
+
+We the encourage vendor-agnostic presentations to utilize the OWASP Powerpoint template when applicable and individual volunteerism to enable perpetual growth. As a 501(3)c non-profit association donations of meeting space or refreshments sponsorship is encouraged, simply contact the local chapter leaders listed on this page to discuss. Prior to participating with OWASP please review the Chapter Rules. 
+
+The chapter is committed to providing an engaging experience for a variety of audience types ranging from local students and those beginning in app-sec, to those experienced and accomplished professionals who are looking for competent collaborators for OWASP-related projects. To this end, we will continue to conduct both monthly chapter meetings as well as out-of-band curricula, on application security topics. 
+
+{{Chapter Template|chaptername=Virginia|extra =Come see us at a chapter meeting, jump on our Google Group, or email any of us directly.
+
+=== Chapter Board ===
+Previously having had a Chapter Leader, then a Chapter "Program Committee", the chapter is now run by a full board (alphabetical order):
+
+* Jeremy Long
+* Jack Mannino
+* John Steven - Board Chair
+* Ben Tomhave
+
+Board member responsibilities include:
+
+<pre style="white-space: pre-wrap;">   * Providing governance for chapter and member activities in terms chapter mission and OWASP code of ethics
+   * Recruiting OWASP membership
+   * Driving OWASP NoVA Chapter attendance and involvement
+   * Deferring to, facilitating, and supporting the activities and projects of chapter membership
+   * Eliciting, scheduling, and coordinating chapter panels, speakers, and other sessions
+   * Scouting, clearing, and scheduling chapter meeting venues and catering
+   * Identifying opportunities for collaboration between chapter membership, OWASP global committees, and other organizations
+   * Collecting and auditing use of chapter funds
+   * Voting on chapter matters
+</pre>
+fckLRFor more information on how the board was elected and what it's responsibilities are, please see:fckLRfckLR[https://docs.google.com/document/d/1h8GTqsWg2xiTwWAWS-Ra6_GU4eJGt44aa1hFc9EQloU/edit?hl=en_US&amp;authkey=CIS9zFM Chapter Board Election]fckLRfckLR|mailinglistsite=https://groups.google.com/forum/#!forum/owasp-nova|emailarchives=https://groups.google.com/forum/#!forum/owasp-nova}}
+
+
+
+You may also want to follow [http://twitter.com/OWASPNoVA/ @OWASPNoVA] on Twitter. 
+
+==== Schedule  ====
+
+Meetings are (generally) held the first Thursday of the month. 
+
+=== Next Meeting  ===
+'''Date/Time:''' December 1st, 2011 @ 6pm 
+
+'''Location Sponsor:''' [http://www.qinetiq.com/ QinetiQ], 11091 Sunset Hills Road, ''1st floor (Rooms 207/208)'', Reston VA 20190
+
+'''AGENDA:''' 
+ # News / Updates
+ # Talk: "Cloud Control: Assurance in a Massively Scalable World" by Ben Tomhave
+ # Firetalks!&nbsp;:)
+
+
+'''[http://owaspnova120111.eventbrite.com/ Please RSVP]'''
+
+
+'''Presentation Title:''' "Cloud Control: Assurance in a Massively Scalable World"
+
+'''Abstract:'''
+Ubiquitous access to data and applications is here. No longer are our resources confined to enterprise networks and data centers of our own making. Rather, applications and platforms are now available on-demand, anywhere, anytime, to virtually anybody. Moreover, these environments can scale on demand, automating what has traditionally required expertise in system design and capacity planning. Assuring security in this environment poses new and evolving challenges. While they may resemble the same obstacles we've been managing for decades, they are increasingly more difficult to address. Now, more than ever, companies need to extend their governance, risk, and compliance initiatives to take cloud-related strategies and initiatives into account to proactively protect their data and their bottom line.
+
+
+'''Speaker Bio:'''
+[mailto:benjamin.tomhave@owasp.org Ben Tomhave] (Twitter: [http://twitter.com/#!/falconsview @falconsview]) Ben Tomhave, MS, CISSP, helps global enterprises, SMBs and service partners unlock the real promise of integrated governance, risk and compliance in his current role as Principal Consultant for LockPath, a market-changing GRC software company. A distinguished author and experienced speaker, he currently serves on the OWASP NoVA chapter board and as the co-vice-chair of the ABA InfoSec Committee. He is also a member of ISSA and the IEEE Computer Society, and earned a MS in Engineering Management from The George Washington University with an InfoSec Management concentration.
+
+
+Please check back for updates, join the mailing list, or follow us on Twitter ([http://twitter.com/OWASPNoVA/ @OWASPNoVA]). 
+
+----
+
+=== Upcoming Speakers  ===
+
+We need speakers and topics! If you want to present, please contact [mailto:John.Steven@owasp.org John] or [mailto:benjamin.tomhave@owasp.org Ben]. We're very open to hearing from all our members. 
+
+[http://www.google.com/calendar/hosted/owasp.org/embed?src=owasp.org_1ht5oegk8kd0dtat5cko71e7dc%40group.calendar.google.com&ctz=America/New_York View the OWASP NoVA Chapter Calendar]<br> 
+
+<br> 
+
+----
+
+==== Past meetings  ====
+
+=== November 2011 ===
+'''Date/Time:''' November 3rd, 2011 @ 6pm 
+
+'''Location Sponsor:''' [http://www.qinetiq.com/ QinetiQ], 2677 Prosperity Ave Fairfax, VA 22031
+
+'''AGENDA:''' 
+ # News / Updates
+ # Talk: "Lessons Learned from the SQL Injection Challenge" by Ryan Barnett (Trustwave SpiderLabs)
+ # Firetalks!&nbsp;:)
+
+'''Presentation Title:''' "Lessons Learned from the SQL Injection Challenge"
+
+'''Abstract:'''
+How effective are blacklist filters vs. SQL Injection attacks?  What is the failure rate vs. automated scanning or manual testing?  Are there any "Time-to-Bypass" metrics?  In an attempt to answer these questions, Trustwave SpiderLabs' Research Team (the development team behind the ModSecurity WAF and the OWASP ModSecurity Core Rule Set) held a community "SQL Injection Challenge" to test the effectiveness of the OWASP ModSecurity Core Rule Set protections.  This presentation will provide an overview of the challenge, a step-by-step walk-through of the bypass tactics used by the winners, as well as, present a new approach to attack detection using ModSecurity's Lua API to perform Bayesian analysis.
+
+'''Speaker Bio:'''
+[mailto:ryan.barnett@owasp.org Ryan C. Barnett] (Twitter: [http://twitter.com/#!/ryancbarnett @ryancbarnett]) is a senior security researcher on Trustwave's SpiderLabs Team. He is a SANS Institute certified instructor and a member of both the Top 20 Vulnerabilities and CWE/SANS Top 25 Most Dangerous Programming Errors teams. In addition to working with SANS, he is also a WASC Member where he leads the Web Hacking Incidents Database (WHID) and Distributed Web Honeypots Projects and is also the OWASP ModSecurity Core Rule Set (CRS) project leader. Mr. Barnett has also authored a Web security book for Addison/Wesley Publishing entitled "Preventing Web Attacks with Apache".
+
+
+=== October 2011 ===
+'''Date/Time:''' October 6th, 2011 @ 6pm 
+
+'''Location/Food Sponsor:''' [http://www.cigital.com/ Cigital], 21351 Ridgetop Circle, Suite 400, Sterling, VA 20166 
+
+'''AGENDA:''' 
+ # News / Updates
+ # AppSec USA 2011 Recap
+ # Talk: Jack Mannino: [http://www.slideshare.net/JackMannino/owasp-top-10-mobile-risks "OWASP Top 10 Mobile Risks"]
+ # Firetalks!&nbsp;:)
+
+
+=== September 2011 ===
+
+The September meeting was cancelled due to inclement weather (flash flooding).
+
+=== August 2011  ===
+
+We held a "social" event at Sweetwater Tavern in Sterling, VA. 
+
+=== July 2011  ===
+
+'''Date/Time:''' July 7th, 2011 @ 6pm<br> '''Location Sponsor:''' [http://www.cigital.com Cigital], Suite 400 21351 Ridgetop Circle, Dulles, VA, 20166<br> '''Food Sponsor:'''<br> '''AGENDA:''' 
+
+ * News / Updates
+ * Topic of the Month: iGoat - Ken Van Wyk
+
+=== June 2011  ===
+
+'''Date/Time:''' June 9th, 2011 @ 6pm (*Note: 2nd Thursday of June!)<br> '''Location Sponsor:''' [http://about.collegeboard.org/ The College Board], 11955 Democracy Drive Reston, VA 20190<br> '''Food Sponsor:''' The College Board<br> '''AGENDA:''' 
+
+ * News / Updates
+ * Topic of the Month: [https://www.owasp.org/index.php/Top_10_2010-A4 A4 "Insecure Direct Object References"]
+ * College Board Speaker: "Attack-in-Depth:  Exploits of the OWASP Top Ten in Action"
+ * Firetalks!&nbsp;:)
+ - Jack Mannino: "Android Security 101"
+ - Others!
+
+=== May 2011  ===
+
+'''Date/Time:''' Cinco de Mayo (May 5th), 2011 @ 6pm <br> '''Location Sponsor:''' [http://www.akamai.com/ Akamai], 11111 Sunset Hills Dr, Suite 250, Reston, VA 20190<br> '''Food Sponsor:''' Akamai<br> '''AGENDA:''' 
+
+  * News / Updates
+ * 2011 Election (voice vote on the entire slate)
+ * Topic of the Month: [http://www.owasp.org/index.php/Top_10_2010-A3 A3 "Broken Authentication and Session Management"]
+ * Speaker: Steve Witmer on A3 from the "breakers" perspective
+ * Speaker:&nbsp;??? on A3 from the "fixers/defenders" perspective
+ * Firetalks!&nbsp;:)
+ * '''Update:''' All election candidates were elected by voice vote. 
+    * Please see: [https://docs.google.com/document/d/1h8GTqsWg2xiTwWAWS-Ra6_GU4eJGt44aa1hFc9EQloU/edit?hl=en_US&authkey=CIS9zFM '11 Chapter Board Election Material]
+
+=== April 2011  ===
+
+'''Date/Time:''' April 7, 2011 @ 6pm <br> '''Location Sponsor:''' [http://www.reversespace.com/ ReverseSpace], 13505 Dulles Technology Dr, Suite 3, Herndon, VA 20171 <br> '''Food Sponsor:''' [https://www.cigital.com Cigital]<br> '''AGENDA:''' 
+
+  * News / Updates
+ * 2011 Election
+ * Topic of the Month: [http://www.owasp.org/index.php/Top_10_2010-A2 A2 "Cross-Site Scripting (XSS)"]
+ * Preso:"Cross-Site Scripting is Not Your Friend: XSS and the Facebook Platform" by Joey Tyson ([https://www.owasp.org/images/9/92/Xssnotfriend-edited.pptx PPTX] or [https://www.owasp.org/images/0/06/Xssnotfriend-edited.pdf PDF])
+ * Preso:“XSS Remediation” by Cassia Martin ([https://www.owasp.org/images/6/66/XSS_Remediation.ppt PPT])
+ * Preso:"Growing the secure application developer community through expanded curricula" by Tony Gottlieb
+ * FireTalks (bring it!)
+
+<br> 
+
+=== March 2011  ===
+
+'''Date/Time:''' March 3, 2011 @ 6pm <br> '''Location Sponsor:''' [http://www.boozallen.com/ Booz Allen Hamilton], 13200 Woodland Park Road, Herndon, VA 20171 <br> '''AGENDA:''' 
+
+   * News / Updates
+  * [http://www.owasp.org/index.php/OWASP_Summit_2011 OWASP Summit 2011] In Review
+  * Preso: [http://www.owasp.org/index.php/Top_10_2010-A1-Injection A1 "Injection"]
+  * Briefing: Training/Preso Plan for the Year
+
+=== February 2011  ===
+
+'''Date/Time:''' February 3, 2011 @ 6pm<br> '''Location Sponsor:''' [http://www.akamai.com/ Akamai], 11111 Sunset HIlls Dr, Suite 250, Reston, VA 20190<br> '''AGENDA:''' 
+
+   * News / Updates
+  * Feedback for [http://www.owasp.org/index.php/OWASP_Summit_2011 OWASP Summit 2011]
+  * Preso: Intro to [http://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project OWASP Top 10] + 2
+  * Briefing: Training/Preso Plan for the Year
+
+=== December 2010  ===
+
+'''Date/Time:''' December 2, 2010 @ 6pm<br> '''Location Sponsor:''' [http://hackerspaces.org/wiki/Reverse_Space ReverseSpace], 13505 Dulles Technology Drive, Herndon, VA<br> '''AGENDA:''' 
+
+   * 2011 Planning Session (Schedule, Volunteers, Speakers, Topics)
+  * Lightning Talks!! (Bring an idea, a question, a topic, whatever - 5-10 minute talks max!)
+  * Social / Networking (BYOB!)
+
+=== November 2010  ===
+
+'''Date/Time:''' November 4, 2010 @ 6pm<br> '''Location Sponsor:''' Akamai, 11111 Sunset Hills Rd, Suite #250, Reston, VA<br> '''Speaker:''' Ben Tomhave<br> '''Title:''' The Unintended Consequences of Beating Users with Carrot Sticks: Radical Thoughts on Security Reform<br> '''Description:''' What we're doing today is not working and isn't sustainable. The fundamental culture of the average business does not encourage making good security decisions. Software shops continue to focus on functionality and timelines, neglecting information security. In spite of regulations like PCI and HIPAA+HITECH, which are levying fines against organizations for their security failures, the tipping point has clearly not been reached to cause meaningful change. Much of this problem can be attributed to the excessive use of negative incentives (sticks) instead of providing positive incentives (carrots) that inspire better decision making and motivate true change. Fortunately, it's not too late to change tactics and start achieving demonstrable success.<br> '''Speaker Bio:''' Ben Tomhave is a Senior Security Analyst with Gemini Security Solutions in Chantilly, VA, specializing in solutions architecture, security planning, program development and management, and other strategic security solutions. He holds a MS in Engineering Management with an Information Security Management concentration from The George Washington University and is a CISSP. 
+
+=== June 2010  ===
+
+'''DATE''': Thursday, June 3rd, 6pm Eastern Daylight Time<br> '''LOCATION''': Booz Allen Hamilton - 13200 Woodland Park Road Herndon, VA 20171<br> '''SPEAKER''': Alex Hutton, Verizon Business and http://www.newschoolsecurity.com/<br> '''TOPIC''': Risk Management - Time to blow it up and start over?<br> 
+
+'''DESCRIPTION''': 
+
+A redux of the presentation that Alex delivered at B-Sides San Francisco during RSA 2010. "Now that the industry is trying to formalize the concept of risk management into neat little compartments like standards (ISO 27005/31000), certifications (CRISC) and products (GRC) guess what? We're doing it wrong. Fundamentally wrong. This talk will discuss why all this current risk management stuff is goofy and what sort of alternatives we have that might help us understand our ability to protect, our tendency towards failure, and how to match that up with what management will stomach." 
+
+Slides are available from: http://www.slideshare.net/BSides/risk-management-time-to-blow-it-up-and-start-over-alex-hutton 
+
+<br> '''SPECIAL SPEAKER''': 
+
+[http://twitter.com/tiffanyrad Tiffany Rad] provided an overview and update on [http://twitter.com/reversespace Reverse Space] in Herndon, VA. For more information, or to help out, please join the [http://groups.google.com/group/ReverseSpace Reverse Space Google Group]. 
+
+<br> 
+
+=== May 2010  ===
+
+'''DATE''': Tuesday, May 18th, 6pm Eastern Daylight Time<br> '''LOCATION''': Booz Allen Hamilton - 13200 Woodland Park Road Herndon, VA 20171<br> '''SPEAKER'''': Jeff Ennis, Senior Solutions Architect, Veracode<br> '''TITLE''': State of Software Security ([[Image:State of Software Security-Ennis.ppsx.zip]])<br> '''DESCRIPTION''': 
+
+A discussion of the current state of software security based on the compiled findings by Veracode from the dynamic and static code analysis they have performed for customers. 
+
+<br> 
+
+=== September 2009  ===
+
+'''DATE''': Thursday, September 17, 2009. 6:00pm Eastern Daylight Time<br> '''LOCATION''': 22260 Pacific blvd, Sterling, VA. 20166<br> '''TOPIC''': "Fortify 360"<br> '''SPEAKER''': Erik Klein (Fortify Software), Eric Dalci (Cigital)<br> '''DESCRIPTION''': 
+
+We're pleased to invite you to our next week's OWASP Session (Thursday September 17th). We will be hosting a presentation, demo and hands on session of Fortify 360 (http://www.fortify.com). Fortify 360 includes Fortify SCA (Source Code Analyzer) and the Fortify 360 Server which is Fortify's solution for an enterprise deployment of SCA. The session will start with a presentation by Fortify engineers, followed by a demo and finally a hands on session where the audience will be free to install Fortify SCA on the machine and try it the SCA tool on a sample application that we will provide. The audience will also be introduced with the Fortify 360 Server and try some of the enterprise level features such as collaborative code review, metrics and so on. Bring your laptop if you want to try Fortify 360! 
+
+The target audience is anyone interested in Secure Code Review with a Static Analysis tool at the desktop level and/or enterprise level. We will need to register visitors before hand...please email wade.woolwine@owasp.org for registration and confirm attendance. Pizza and refreshments will be served. 
+
+<br> 
+
+'''DATE''': Thursday, September 3, 2009. 6:00pm.<br> '''LOCATION''': 13200 Woodland Park Road Herndon, VA 20171<br> '''TOPIC''': "Conducting Application Assessment"<br> '''SPEAKER''': Jeremy Epstein, SRI<br> '''DESCRIPTION''': 
+
+After the 2000 election, many states launched headlong into electronic voting systems to avoid the problems with "hanging chads". Once problems with those systems started appearing, many localities started moving to optical scan, which was used by a majority of US voters in the 2008 election. There are other technologies in use around the country, including lever machines, vote-by-mail, vote-by-phone, and Internet voting. What are the tradeoffs among these technologies? Particularly relevant to OWASP, what are the security issues associated with different types of equipment, and what measures do vendors of voting equipment use to try to address the security problems? Are software security problems important, or can non-technical measures protect against them? In this talk, we'll discuss a wide variety of voting technologies, and their pros and cons from both a technical and societal perspective. 
+
+'''ABOUT THE SPEAKER''': 
+
+Jeremy Epstein is Senior Computer Scientist at SRI International. His background includes more than 20 years experience in computer security research, product development, and consulting. Prior to joining SRI International, he was Principal Consultant with Cigital, and before that spent nine years as Senior Director of Product Security at Software AG, an international business software company. Within the area of voting systems, Jeremy has been involved for over five years in voting technology and advocacy, both as an employee and as an independent consultant. 
+
+<br> 
+
+=== July 2009  ===
+
+'''DATE''': July 9th 6pm-9pm EST<br> '''LOCATION''': 13200 Woodland Park Road Herndon, VA 20171<br> '''TOPIC''': "Ounce's 02"<br> '''SPEAKER(S)''': Dinis Cruz, OWASP, Ounce Labs.<br> '''DESCRIPTION''': So what is O2? 
+
+Well in my mind O2 is a combination of advanced tools (Technology) which are designed to be used on a particular way (Process) by knowledgeable Individuals (People) 
+
+Think about it as a Fighter Jet who is able to go very fast, has tons of controls, needs to be piloted by somebody who knows what they are doing and needs to have a purpose (i.e. mission). 
+
+Basically what I did with O2 was to automate the workflow that I have when I'm engaged on a source-code security review. 
+
+Now, here is the catch, this version is NOT for the faint-of-heart. I designed this to suit my needs, which although are the same as most other security consultants, have its own particularities&nbsp;:) 
+
+The whole model of O2 development is based around the concept of automating a security consultant’s brain, so I basically ensure that the main O2 Developer (Dinis Cruz) has a very good understanding of the feature requirements of the targeted Security Consultant (Dinis Cruz)&nbsp;:) . And this proved (even to my surprise) spectacularly productive, since suddenly I (i.e. the security consultant) didn't had to wait months for new features to be added to its toolkit. If there was something that needed to be added, it would just be added in days or hours. 
+
+=== June 2009  ===
+
+''Gary McGraw, Cigital Inc.'':''Building Security In Maturity Model''<br> Later, an interview: ''Jim Routh, formerly of DTCC'':''The Economic Advantages of a Resilient Supply Chain- Software Security'' ''<br>'' 
+
+Gary McGraw talked about the experience he, Sammy Migues, and Brian Chess gained conducting a survey of some of America's top Software Security groups. Study results are available under the [http://creativecommons.org/licenses/by-sa/3.0/ Creative Commons Share Alike license] at [http://www.bsi-mm.com www.bsi-mm.com]. Gary described the common structural elements and activities of successful software security programs, present the maturity model that resulted from survey data, and discuss lessons learned from listening to those leading these groups. 
+
+Jim Routh gave an incredibly insightful interview regarding his own experiences crafting their security group. 
+
+Download presentation notes at: [http://www.owasp.org/images/0/03/JMR-Economics_of_Security_Goups.ppt The Economic Advantages of a Resilient Supply Chain- Software Security] 
+
+=== May 2009  ===
+
+''Eric Dalci, Cigital Inc.'':''Introduction to Static Analysis''<br> Later, a panel: 
+
+*Steven Lavenhar, Booz Allen Hamilton; 
+*Eric Dalci, Cigital Inc.
+
+Panel moderated by John Steven <br> 
+
+This session is an introductory to Static Analysis. This session presents the different types of analysis used by today's Static Analysis tools. Examples of direct application to find vulnerabilities will be shown (ex: Data Flow Analysis, Semantic, Control Flow, etc.). Current limitations of Static Analysis will also be exposed. This session is tool agnostic, but will cover the approach taken by various leading commercial (as well as open-source) tools. 
+
+Download: [http://www.owasp.org/images/e/ea/OWASP_Virginia_Edalci_May09.pdf Intro to Static Analysis] 
+
+=== April 2009  ===
+
+''Jeremiah Grossman, Whitehat Security'': '''Top 10 Web Hacking Techniques 2008'''<br> Jeremiah Spoke on (what he and colleagues determined were the) top ten web hacking techniques of 2008. This talk was a preview of his RSA '09 talk.<br> 
+
+Download http://www.whitehatsec.com/home/assets/presentations/09PPT/PPT_OWASPNoVA04082008.pdf 
+
+<br> Later, 
+
+*Nate Miller, Stratum Security; 
+*Jeremiah Grossman, Whitehat Security; 
+*Tom Brennan, Whitehat Security; and 
+*Wade Woolwine, AOL
+
+served as penetration testing panels answering questions posed and moderated by Ken Van Wyk. 
+
+=== February 2009  ===
+
+''Ryan C. Barnett, Breach Security'': '''Patching Challenge: Securing WebGoat with ModSecurity''' 
+
+Identification of web application vulnerabilities is only half the battle with remediation efforts as the other. Let's face the facts, there are many real world business scenarios where it is not possible to update web application code in either a timely manner or at all. This is where the tactical use-case of implementing a web application firewall to address identified issues proves its worth. 
+
+This talk will provide an overview of the recommended practices for utilizing a web application firewall for virtual patching. After discussing the framework to use, we will then present a very interesting OWASP Summer of Code Project where the challenge was to attempt to mitigate as many of the OWASP WebGoat vulnerabilities as possible using the open source ModSecurity web application firewall. During the talk, we will discuss both WebGoat and ModSecurity and provide in-depth walk-throughs of some of the complex fixes. Examples will include addressing not only attacks but the underlying vulnerabilities, using data persistence for multiple-step processes, content injection and even examples of the new LUA programming language API. The goal of this talk is to both highlight cutting edge mitigation options using a web application firewall and to show how it can effectively be used by security consultants who traditionally could only offer source code fixes. 
+
+Ryan C. Barnett is the Director of Application Security Research at Breach Security and leads Breach Security Labs. He is also a Faculty Member for the SANS Institute, Team Lead for the Center for Internet Security Apache Benchmark Project and a Member of the Web Application Security Consortium where he leads the Distributed Open Proxy Honeypot Project. Mr. Barnett has also authored a web security book for Addison/Wesley Publishing entitled "Preventing Web Attacks with Apache." 
+
+(This talk is a preview of Ryan's talk at Blackhat Federal the following week - see https://www.blackhat.com/html/bh-dc-09/bh-dc-09-speakers.html#Barnett ) 
+
+Download [[Media:Virtual_Patching_Ryan_Barnett_Blackhat_Federal_09.zip|WAF Virtual Patching Challenge: Securing WebGoat with ModSecurity]] 
+
+''John Steven, Cigital'': '''Moving Beyond Top N Lists''' 
+
+Download [[Media:Moving_Beyond_Top_N_Lists.ppt.zip|Moving Beyond Top N Lists]] 
+
+<br> Cigital published an article: The Top 11 Reasons Why Top 10 (or 25) Lists Don’t Work. Yet, these lists are a staple of conference abstracts, industry best practice lists, and the like. Are they good or bad? We’ll explore how to get beyond the Top 10 (or 25) list in making your software security effort real. 
+
+John is Senior Director, Advanced Technology Consulting at Cigital. His experience includes research in static code analysis and hands-on architecture and implementation of high-performance, scalable Java EE systems. John has provided security consulting services to a broad variety of commercial clients including two of the largest trading platforms in the world and has advised America's largest internet provider in the Midwest on security and forensics. John led the development of Cigital's architectural analysis methodology and its approach to deploying enterprise software security frameworks. He has demonstrated success in building Cigital's intellectual property for providing cutting-edge security. He brings this experience and a track record of effective strategic innovation to clients seeking to change, whether to adopt more cutting-edge approaches, or to solidify ROI. John currently chairs the SD Best Practices security track and co-edits the building security in department of IEEE's Security and Privacy magazine. John has served on numerous conference panels regarding software security, wireless security and Java EE system development. He holds a B.S. in Computer Engineering and an M.S. in Computer Science from Case Western Reserve University. 
+
+=== January 2009  ===
+
+To kick off 2009, our January meeting featured a discussion of the relationship between application security and CMMI, and an overview of the OWASP ASVS project. 
+
+''Michele Moss, Booz Allen Hamilton'': '''Evolutions In The Relationship Between Application Security And The CMMI''' 
+
+Addressing new and complex threats and IT security challenges requires repeatable, reliable, rapid, and cost effective solutions. To implement these solutions, organizations have begun to align their security improvement efforts with their system and software development practices. During a “Birds of a Feather” at the March 2007 SEPG, a group of industry representatives initiated an effort which led to the definition of assurance practices that can be applied in the context of the CMMI. This presentation will provide an understanding how applying the assurance practices in the context of security contribute to the overall increased quality of products and services, illustrate how the a focus on assurance in the context of CMMI practices is related to application security practices, and present and approach to evaluate and improve the repeatability and reliability of assurance practices. 
+
+Michele Moss, CISSP, is a security engineer with more than 12 years of experience in process improvement. She specializes in integrating assurance processes and practices into project lifecycles. Michele is the Co-Chair of the DHS Software Assurance Working Group on Processes &amp; Practices. She has assisted numerous organizations with maturing their information technology, information assurance, project management, and support practices through the use of the capability maturity models including the CMMI, and the SSE-CMM. She is one of the key contributors in an effort to apply an assurance focus to CMMI. 
+
+Slides available: [[http://www.epsteinmania.com/owasp/Moss-AppSecurityAndCMMI.pdf]] 
+
+''Mike Boberski, Booz Allen Hamilton'': '''About OWASP ASVS''' 
+
+The primary aim of the OWASP ASVS Project is to normalize the range of coverage and level of rigor available in the market when it comes to performing application-level security verification. The goal is to create a set of commercially-workable open standards that are tailored to specific web-based technologies. 
+
+Mike Boberski works at Booz Allen Hamilton. He has a background in application security and the use of cryptography by applications. He is experienced in trusted product evaluation, security-related software development and integration, and cryptomodule testing. For OWASP, he is the project lead and a co-author of the OWASP Application Security Verification Standard, the first OWASP standard. 
+
+Slides available: [[https://www.owasp.org/images/5/52/About_OWASP_ASVS_Web_Edition.ppt]] 
+
+=== November 2008  ===
+
+For our November 2008 meeting, we had two great presentations on software assurance and security testing. 
+
+''Nadya Bartol, Booz Allen Hamilton'': '''Framework for Software Assurance''' 
+
+Nadya's presentation will provide an update on the Software Assurance Forum efforts to establish a comprehensive framework for software assurance (SwA) and security measurement. The Framework addresses measuring achievement of SwA goals and objectives within the context of individual projects, programs, or enterprises. It targets a variety of audiences including executives, developers, vendors, suppliers, and buyers. The Framework leverages existing measurement methodologies, including Practical Software and System Measurement (PSM); CMMI Goal, Question, Indicator, Measure (GQ(I)M); NIST SP 800-55 Rev1; and ISO/IEC 27004 and identifies commonalities among the methodologies to help organizations integrate SwA measurement in their overall measurement efforts cost-effectively and as seamlessly as possible, rather than establish a standalone SwA measurement effort within an organization. The presentation will provide an update on the SwA Forum Measurement Working Group work, present the current version of the Framework and underlying measures development and implementation processes, and propose example SwA measures applicable to a variety of SwA stakeholders. The presentation will update the group on the latest NIST and ISO standards on information security measurement that are being integrated into the Framework as the standards are being developed. 
+
+Slides available: [[http://www.epsteinmania.com/owasp/Bartol-MeasurementForOWASP11-13-08.pdf]] 
+
+''Paco Hope, Cigital'': '''The Web Security Testing Cookbook''' 
+
+The Web Security Testing Cookbook (O'Reilly &amp; Associates, October 2008) gives developers and testers the tools they need to make security testing a regular part of their development lifecycle. Its recipe style approach covers manual, exploratory testing as well automated techniques that you can make part of your unit tests or regression cycle. The recipes cover the basics like observing messages between clients and servers, to multi-phase tests that script the login and execution of web application features. This book complements many of the security texts in the market that tell you what a vulnerability is, but not how to systematically test it day in and day out. Leverage the recipes in this book to add significant security coverage to your testing without adding significant time and cost to your effort. 
+
+Congratulations to Tim Bond who won an autographed copy of Paco's book. Get your copy here [[http://www.amazon.com/Security-Testing-Cookbook-Paco-Hope/dp/0596514832]] 
+
+Slides available: [[http://www.epsteinmania.com/owasp/PacoHope-WebSecCookbook.pdf]] 
+
+=== October 2008  ===
+
+For our October 2008 meeting, we had two fascinating talks relating to forensics. 
+
+''Dave Merkel, Mandiant'': '''Enterprise Grade Incident Management - Responding to Persistent Threats''' 
+
+Dave Merkel is Vice President of Products at Mandiant, a leading provider of information security services, education and products. Mr. Merkel has worked in the information security and incident response industry for over 10 years. His background includes service as a federal agent in the US Air Force and over 7 years experience directing security operations at America Online. He currently oversees the product business at Mandiant, and is in charge of building Mandiant Intelligent Response - an enterprise incident response solution. But no, he won't be selling you anything today. 
+
+Slides available: [[http://www.epsteinmania.com/owasp/Mandiant-EnterpriseIRandAPTpresentation.pdf]] 
+
+''Inno Eroraha, NetSecurity'': '''[Responding to the Digital Crime Scene: Gathering Volatile Data''' 
+
+Inno Eroraha is the founder and chief strategist of NetSecurity Corporation, a company that provides digital forensics, hands-on security consulting, and Hands-on How-To® training solutions that are high-quality, timely, and customer-focused. In this role, Mr. Eroraha helps clients plan, formulate, and execute the best security and forensics strategy that aligns with their business goals and priorities. He has consulted with Fortune 500 companies, IRS, DHS, VA, DoD, and other entities. 
+
+Slides available: [[http://www.epsteinmania.com/owasp/NetSecurity-RespondingToTheDigitalCrimeScene-GatheringVolatileData-TechnoForensics-102908.pdf] ] 
+
+=== History  ===
+
+The original DC Chapter was founded in June 2004 by [mailto:jeff.williams@owasp.org Jeff Williams] and has had members from Virginia to Delaware. In April 2005 a new chapter, OWASP Washington VA Local Chapter, was formed and the DC Chapter was renamed to DC-Maryland. The two are sister chapters and include common members and shared discourse. The chapters meet in opposite halves of the month to facilitate this relationship. 
+
+==== Chapter Groups  ====
+
+Within the chapter, various common interests spring up. We've created Google groups to manage collaboration amongst participants for these topics. Feel free to join and participate in: 
+
+*[http://groups.google.com/group/novaowasp_threatmodeling Threat Modeling] 
+*[http://groups.google.com/group/novaowasp_mobile Mobile]
+
+=== OWASP NoVa Members On Twitter  ===
+
+John Steven [http://twitter.com/m1splacedsoul http://twitter.com/m1splacedsoul] 
+
+Jack Mannino [http://twitter.com/jack_mannino http://twitter.com/jack_mannino] 
+
+Ben Tomhave [http://twitter.com/falconsview http://twitter.com/falconsview] 
+
+Ken Johnson [http://twitter.com/cktricky http://twitter.com/cktricky] 
+
+Mike Smith [http://twitter.com/rybolov http://twitter.com/rybolov] 
+
+Trevor Hawthorn [http://twitter.com/packetwerks http://twitter.com/packetwerks] 
+
+Joey Tyson [http://twitter.com/theharmonyguy http://twitter.com/theharmonyguy] 
+
+Jeremy Long [http://twitter.com/ctxt http://twitter.com/ctxt] 
+
+Ari Elias-Bachrach [http://twitter.com/angelofsecurity http://twitter.com/angelofsecurity] 
+
+Venkat Sundaram [http://twitter.com/Vnk3889 http://twitter.com/Vnk3889] 
+
+==== Knowledge  ====
+
+The Northern Virginia (NoVA) chapter is committed to compiling resources on interesting and valuable topic areas. We hope that this structure helps you access information pertinent to your tasks at hand as you move through a secure application development life cycle. Currently, our topic areas of focus include activities such as: 
+
+*Threat Modeling 
+*[[Code Review and Static Analysis with tools]] 
+*Penetration Testing and Dynamic Analysis tools 
+*Monitoring/Dynamic patching (WAFs)
+
+Certain projects our members are involved in cross-cut these activities, providing value throughout. They include: 
+
+*ASVS
+
+=== Static Analysis Curriculum  ===
+
+*For an introduction to the OWASP Static Analysis (SA) Track goals, objectives, and session roadmap, please see [http://www.owasp.org/index.php/Image:OWASP_NoVA_SA_Track_Final_20090408.ppt this presentation].
+
+The following is the agenda of the OWASP Static Analysis track roadmap for the [http://www.owasp.org/index.php/Virginia_(Northern_Virginia) Northern Virginia Chapter]. 
+
+[[Image:Owasp SAtrack plan.png|OWASP Static Analysis Roadmap - Northern Virginia Chapter 2009]] 
+
+'''Contacts'''<br> Questions related to this curriculum should be sent to [mailto:John.Steven@owasp.org John Steven], who is the Northern Virginia chapter leader. 
+
+<br> 
+
+=== Flash Talk Resources  ===
+
+Chandu Ketkar on OFS. Download: [http://www.owasp.org/images/1/1c/OFS.pptx OFS Presentation.] <br> [http://jack-mannino.blogspot.com/ Jack Mannino] on Google and Searching for Personal Information <br> Jesse Ou on XML Bombs. Download: [http://www.owasp.org/images/1/18/OWASP_JOU_XML_DTD_Attacks.pptx XML DTD Presentation] <br> 
+
+__NOTOC__ <headertabs /> 
+
+<paypal>Northern Virginia</paypal> 
+
+[[Category:Virginia]] [[Category:Washington,_DC]]

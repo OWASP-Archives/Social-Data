@@ -1,0 +1,48 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT[[::Category:Attack]]
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+==Description==
+
+Application reveals details about its inner working by behaving differently, or sending different responses, to different user inputs. 
+
+Attackers try to observe the internal working of the application to obtain clues of attacks. 
+
+
+==Risk Factors==
+
+TBD
+
+
+==Examples==
+
+===Short example name===
+: A short example description, small picture, or sample code with [http://www.site.com links]
+
+===Short example name===
+: A short example description, small picture, or sample code with [http://www.site.com links]
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+* Attacks that can take advantage of the information revealed in this vulnerability. For example, if an attacker knows whether a user name exists or not through the login response, he can accordingly change his strategy of a brute-force attack.
+
+
+
+==Related [[Vulnerabilities]]==
+
+==Related [[Controls]]==
+* [[Error Handling]]
+
+==Related [[Technical Impacts]]==
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD

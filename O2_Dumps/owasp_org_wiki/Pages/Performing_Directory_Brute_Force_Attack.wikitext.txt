@@ -1,0 +1,13 @@
+'''Description'''
+
+There are dozens of tools that let us brute-forcing directories names for sensitive information digging. In this movie, we illustrated Directory Brute-Forcing with the tool called 'JBroFuzz'. The reason why we like it is that it can brute force a large number of directories. As of this writing,the latest version JBroFuzz 0.8 has 58658 directories names that are commonly used by today's web sites. The only defense is you must not place/protect sensitive information in server-side (.htaccess). Just wanna show you - Security Through Obscurity is broken.
+Size: 3.51 MB 
+
+
+'''Download:'''
+
+http://yehg.net/lab/pr0js/files.php/performing_directory_bruteforce_attack.zip
+
+
+
+[[Category:Non-OWASP_Trainings]]

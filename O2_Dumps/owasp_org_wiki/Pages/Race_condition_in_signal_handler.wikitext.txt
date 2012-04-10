@@ -1,0 +1,113 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Race Conditions]]
+
+
+__TOC__
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+
+==Description==
+
+Race conditions occur frequently in signal handlers, since they are asynchronous actions. These race conditions may have any number of Problem Types and symptoms.
+
+'''Consequences'''
+
+* Authorization: It may be possible to execute arbitrary code through the use of a write-what-where condition.
+* Integrity: Signal race conditions often result in data corruption.
+
+'''Exposure period'''
+
+* Requirements specification: A language might be chosen which is not subject to this flaw.
+* Design: Signal handlers with complicated functionality may result in this issue.
+* Implementation: The use of any non-reentrant functionality or global variables in a signal handler might result in this race conditions.
+
+'''Platform'''
+
+* Languages: C, C++, Assembly
+* Operating platforms: All
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood of exploit'''
+
+Medium
+
+Signal race conditions are a common issue that have only recently been seen as exploitable. These issues occur when non-reentrant functions, or state-sensitive actions occur in the signal handler, where they may be called at any time. If these functions are called at an inopportune moment - such as while a non-reentrant function is already running -, memory corruption occurs that may be exploitable.
+
+Another signal race condition commonly found occurs when free is called within a signal handler, resulting in a double free and therefore a write-what-where condition. This is a perfect example of a signal handler taking actions which cannot be accounted for in state. Even if a given pointer is set to NULL after it has been freed, a race condition still exists between the time the memory was freed and the pointer was set to NULL. This is especially prudent if the same signal handler has been set for more than one signal - since it means that the signal handler itself may be reentered.
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+<pre>
+#include <signal.h>
+#include <syslog.h>
+#include <string.h>
+#include <stdlib.h>
+
+void *global1, *global2;
+char *what;
+
+void sh(int dummy) {  
+  syslog(LOG_NOTICE,"%s\n",what);  
+  free(global2);  
+  free(global1);  
+  sleep(10);  
+  exit(0);
+}
+
+int main(int argc,char* argv[]) {  
+  what=argv[1];  
+  global1=strdup(argv[2]);  
+  global2=malloc(340);  
+  signal(SIGHUP,sh);  
+  signal(SIGTERM,sh);  
+  sleep(10);  
+  exit(0);
+}
+</pre>
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Doubly freeing memory]]
+* [[Using freed memory]]
+* [[Unsafe function call from a signal handler]]
+* [[Write-what-where]]
+
+
+==Related [[Controls]]==
+
+* Requirements specification: A language might be chosen, which is not subject to this flaw, through a guarantee of reentrant code.
+* Design: Design signal handlers to only set flags rather than perform complex functionality.
+* Implementation: Ensure that non-reentrant functions are not found in signal handlers. Also, use sanity checks to ensure that state is consistent be performing asynchronous actions which effect the state of execution. 
+
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD

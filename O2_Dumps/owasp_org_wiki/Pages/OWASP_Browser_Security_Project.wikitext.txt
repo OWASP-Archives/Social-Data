@@ -1,0 +1,60 @@
+==== Main  ====
+
+The purpose of this project is to provide insight into security features built into the web browser.
+
+Currently information is available for [http://www.owasp.org/index.php/OWASP_Browser_Security_Project#tab=Mozilla_Firefox Mozilla Firefox]
+==== Project About ====
+{{:Projects/OWASP Browser Security Project | Project About}}
+
+
+==== Mozilla Firefox ====
+
+=Firefox Security Features=
+Below is a list of some of the security features within Firefox and links to additional information:
+
+==Content Security Policy (CSP) ==
+[https://developer.mozilla.org/en/Introducing_Content_Security_Policy Introducing CSP]
+
+[https://wiki.mozilla.org/Security/CSP/Specification CSP Specification]
+
+[https://wiki.mozilla.org/Security/CSP/Design_Considerations Design Considerations]
+
+[https://wiki.mozilla.org/Security/CSP/Deploying How To Deploy CSP]
+
+==Strict Transport Security (STS) ==
+http://blog.mozilla.com/security/2010/08/27/http-strict-transport-security/
+
+http://tools.ietf.org/html/draft-hodges-strict-transport-sec-02
+
+==X-Frame-Options ==
+http://blog.mozilla.com/security/2010/09/08/x-frame-options/
+
+https://developer.mozilla.org/en/The_X-FRAME-OPTIONS_response_header
+
+
+
+=Help Make Firefox Better!=
+==Security Bug Bounty Program==
+http://blog.mozilla.com/security/2010/07/15/refresh-of-the-mozilla-security-bug-bounty-program/
+
+http://www.mozilla.org/security/bug-bounty.html
+
+==Report a Firefox Security Bug==
+https://bugzilla.mozilla.org/
+
+Please [https://bugzilla.mozilla.org/ file a bug] describing the security bug; be sure to check the box near the bottom of the entry form that marks this bug report as confidential. We encourage you to attach a "proof of concept" testcase or link to the bug report that demonstrates the vulnerability. While not required, such a testcase will help us judge submissions more quickly and accurately.
+
+Notify the [mailto:security@mozilla.org Mozilla Security Group] by email and include the number of the bug you filed and a brief summary. If you cannot file a bug include the full details in the email and attach any proof of concept testcases or links. Mozilla Foundation staff and the Mozilla Security Group will consider your submission for the Security Bug Bounty and will contact you.
+
+=Firefox Source Code=
+https://developer.mozilla.org/en/Download_Mozilla_Source_Code
+
+=Download Firefox=
+The current version of Firefox can be downloaded [http://www.mozilla.com/en-US/firefox/firefox.html here]
+
+
+__NOTOC__ <headertabs />
+
+
+[[Category:OWASP_Project|OWASP Browser Security Project]] [[Category:OWASP_Document]] 
+[[Category:OWASP_Alpha_Quality_Document|OWASP Alpha Quality Document]]

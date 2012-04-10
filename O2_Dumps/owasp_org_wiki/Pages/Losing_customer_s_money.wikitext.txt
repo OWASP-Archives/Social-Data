@@ -1,0 +1,46 @@
+{{Template:Business Impact}}
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+==Description==
+Losing a customer’s money can occur by an attacker, to the network going down, to a customer incurring costs for a product or service which was never used or received.
+
+
+==Risk Factors==
+* Unhappy customer 
+
+* Disgruntle customers will leave 
+
+* New and existing customers talk badly about their experiences to friends. 
+
+* Company’s reputation is smudged 
+
+* Legal action occurs 
+
+* Threat to the network or an application
+
+* Invasion of customer’s privacy
+
+
+==Example==
+===Missing Equipment===
+
+The application doesn’t reflect the correct status of the inventory and a customer purchases a device which is backordered. The customer becomes frustrated with the company when the item is not received. This customer talks to their colleagues about their experiences with your company. The company's reputation is smudged in the community. 
+
+===Hackers===
+
+A hacker invades a network and finds its way through an application wall.  Customer’s unencrypted credit card data was located within an application database.  The data was opened and the credit card info was retrieved.  The customer is now experiencing identity fraud.  The customer now feels violated and doesn’t know how or why this occurred.
+
+
+
+==Related Technical Impacts==
+* Loss of confidentiality
+
+* Loss of accountability
+
+
+==References==
+*OWASP Top 10 - Ruby on Rails version [http://www.lulu.com/items/volume_62/1412000/1412042/1/print/Owasp-rails-security.pdf]
+
+*OWASP CLASP v1.2 [http://www.lulu.com/items/volume_62/1401000/1401307/3/print/OWASP_CLASP_v1.2_for_print_LULU.pdf]
+
+[[Category:Financial damage]]

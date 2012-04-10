@@ -1,0 +1,140 @@
+{{Top_10_2007:TopTemplate|usenext=NextLink|next=-Secuencia de Comandos en Sitios Cruzados (XSS)|useprev=PrevLink|prev=|usemain=MainLink|main=}}
+
+Nuestra metodología para el Top 10 2007 fue simple: tomar el [http://cwe.mitre.org/documents/vuln-trends.html MITRE Vulnerability Trends for 2006], y filtrar los Top 10 problemas de ''seguridad en aplicaciones Web''. El ranking es el siguiente:
+
+'''[[Image:Top_10_2007-MitreDataChart.gif|thumb|650px|center|<div align=="center">(de clic en la imagen para verla en tamaño completo)</div>]]'''
+
+<center>'''Figura 2: Datos de MITRE sobre las Top 10 vulnerabilidades de aplicaciones Web en 2006'''</center>
+
+A pesar de que intentamos preservar una relación uno-a-uno entre los datos sobre vulnerabilidades proporcionados por MITRE y nuestros encabezados de sección, hemos cambiado deliberadamente cambiado algunas de las siguientes categorías para adecuarse mejor a las causas fundamentales. Si se encuentra interesado en el informe completo de MITRE 2006, hemos incluido una hoja/planilla de calculo Excel en el sitio Web OWASP.
+
+Todas las recomendaciones de protección detalladas aquí proveen soluciones a los tres entornos más prevalentes comunes ende aplicaciones Web: Java EE, ASP.NET, y PHP. Otros entornos comúnmente utilizados, tales como Ruby o Perl se pueden fácilmente adaptar las recomendaciones a sus necesidades específicas.
+
+==POR QUE HEMOS ELIMINADO ALGUNAS CUESTIONES IMPORTANTES==
+
+'''Las entradas sin validar''' son un desafío mayor para cualquier equipo de desarrollo, y son la raíz de muchos problemas de seguridad en aplicaciones. De hecho, muchos de los otros elementos en esta lista recomiendan validar entradas como parte de la solución. Nosotros recomendamos crear un mecanismo de validación de entradas centralizado como parte de vuestras aplicaciones Web. Para mayor información, lea los siguientes artículos sobre validación de entradas en OWASP:
+
+* [http://www.owasp.org/index.php/Data_Validation http://www.owasp.org/index.php/Data_Validation]
+* [http://www.owasp.org/index.php/Testing_for_Data_Validation http://www.owasp.org/index.php/Testing_for_Data_Validation]
+
+'''Desbordamientos de pila, desbordamientos de enteros y cuestiones de formato en cadenas de caracteres''' son vulnerabilidades extremadamente serias vulnerabilidades para programas escritos en lenguajes tales como C o C++. La resolución de dichos problemas es cubierta por las comunidades de seguridad no especializadas en aplicaciones Web, tales como SANS, CERT, y vendedores de herramientas de lenguajes de programación. Si su código está escrito en un lenguaje que puede sufrir desbordamientos de pila, lo alentamos a leer el siguiente contenido en OWASP:
+
+* [http://www.owasp.org/index.php/Buffer_overflow http://www.owasp.org/index.php/Buffer_overflow] 
+* [http://www.owasp.org/index.php/Testing_for_Buffer_Overflow http://www.owasp.org/index.php/Testing_for_Buffer_Overflow] 
+
+'''Negación de servicio (NdSDoS) '''es un ataque serio que puede afectar cualquier sitio escrito en cualquier lenguaje. El ranking sobre NdSDoS de MITRE es insuficiente para alcanzar el Top 10 este año. Si desea conocer más sobre negación de servicio, le aconsejamos visite el sitio OWASP y la Guía de Testeo:
+
+* [http://www.owasp.org/index.php/Category:Denial_of_Service_Attack http://www.owasp.org/index.php/Category:Denial_of_Service_Attack] 
+* [http://www.owasp.org/index.php/Testing_for_Denial_of_Service http://www.owasp.org/index.php/Testing_for_Denial_of_Service] 
+
+'''La gestión insegura de configuraciones '''afecta a todos los sistemas''' '''hasta cierto punto, particularmente PHP. Sin embargo, el ranking de MITRE no nos permite incluir este tema este año. Cuando distribuya su aplicación, deberá consultar la última Guía OWASP y la Guía de Testeo OWASP para obtener información detallada acerca de gestión insegura de configuraciones y testeo:
+
+* [http://www.owasp.org/index.php/Configuration http://www.owasp.org/index.php/Configuration]
+* [http://www.owasp.org/index.php/Testing_for_infrastructure_configuration_management http://www.owasp.org/index.php/Testing_for_infrastructure_configuration_management]
+
+==¿PORQUE AGREGAMOS ALGUNAS cuestiones importantes?==
+
+'''Falsificación de Petición en Sitios Cruzados (CSRF) '''es la mayor nueva incorporación en esta edición del OWASP Top 10. Si bien los datos en bruto de MITRE la colocan en posición #36, creemos que es lo suficientemente importante como para protegerse de ella hoy en día, particularmente para aplicaciones de alto coste y aplicaciones que manejan información sensible. CSRF es más predominante común de lo que su actual ranking indica, y puede ser altamente gravementeextremadamente peligrosa.
+
+'''Criptografía''' Los usos inseguros de criptografía no son las posiciones #8 y #9 de en cuanto a problemasáticas de seguridad en aplicaciones Web tal como lo indican los datos de MITRE, pero representan una causa fundamental de muchos problemas de privacidad y conformidad cumplimiento de normativas (particularmente para la conformidad con PCI DSS 1.1).
+
+==VULNERABILIDADES, NO ATAQUES==
+
+La edición previa del Top 10 contenía una mezcla de ataques, vulnerabilidades y contramedidas. Esta vez en cambio, nos focalizamos centramos solamente en vulnerabilidades, aunque la terminología comúnmente utilizada en esta edición a veces combina las vulnerabilidades y los ataques. Si las organizaciones utilizan este documento para asegurar sus aplicaciones, y reducir los riesgos en sus negocios, esto dará lugar a una reducción directa en la probabilidad de:
+
+* '''Ataques de “Phishing” ''' que pueden explotar cualquiera de estas vulnerabilidades, particularmente XSS, y chequeos comprobaciones débiles o no existentes de autenticación y autorización (A1, A4, A7, A10)
+* '''Violaciones de Privacidad''' debido a una pobre validación insuficiente, reglas de negocio y comprobaciones  de autorización débiles (A2, A4, A6, A7, A10)
+* '''Robo de identidad '''debido a pobres o no existentes controles criptográficos''' '''(A8 y A9), inclusión de archivos remoto (A3) y autenticación, reglas de negocio, y chequeos comprobaciones de autenticación (A4, A7, A10)
+* '''Compromiso '''La acepción de “Compromiso” según la RAE no puede aplicarse a este contexto''' Tomar de control de sistemas, alteración de datos o destrucción de datos '''a través de inyecciones (A2) e inclusión de archivos remotos (A3) 
+* '''Perdidas financieras '''debido a transacciones desautorizadas no autorizadas y ataques CSRF''' '''(A4, A5, A7, A10)
+* '''Pérdida de reputación '''a través de la explotación''' '''de cualquiera de estas vulnerabilidades (A1 a A10)
+
+Cuando una organización comienza a superar el preocuparse las preocupaciones por controles reactivos, y mira hacia adelante comienza a reducir proactivamente riesgos aplicables a sus negocios, entonces mejorarán el cumplimiento de los regímenes de conformidad con regímenes regulatorios, reducirán costos operativos, y es de esperar que como resultado tengan sistemas más robustos y seguros como resultado. 
+
+==Sesgos==
+
+La metodología descripta aquí necesariamente sesga el Top 10 hacia descubrimientos realizados por la comunidad de investigadores de seguridad. Este patrón de descubrimiento es similar a los métodos de [http://www.zone-h.org/component/option,com_attacks/Itemid,43/ ataque real], en particular en lo que se refiere a atacantes principiantes ("script kiddy"). La protección de su software contra el Top 10 ofrecerá un mínimo de protección contra las formas más comunes de ataque, pero mucho más lo que es más importante es que, ayudará a fijar un curso para mejorar la seguridad de su software.
+
+==Semejanzas==
+
+Se han producido cambios en los encabezados, aun donde los contenidos eran similares con los anteriores. No utilizamos más el nombre de esquemas XML, ya que no se ha mantenido al día con las modernas vulnerabilidades actuales, los ataques y las contramedidas. La siguiente tabla muestra como esta edición se asemeja con la edición Top 10 2004, y el ranking completo de MITRE:
+
+
+{| class=="prettytable"
+! <center>OWASP Top 10 2007</center>
+! <center>OWASP Top 10 2004</center>
+! <center>MITRE 2006Ranking</center>
+
+|-
+| '''A1. Secuencia de Comandos en Sitios Cruzados (XSS)'''
+| '''A4. Secuencia de Comandos en Sitios Cruzados (XSS)'''
+| '''1'''
+
+|-
+| '''A2. Fallas de inyección'''
+| '''A6. Fallas de inyección'''
+| '''2'''
+
+|-
+| '''A3. Ejecución de ficheros malintencionados (NUEVO)'''
+| 
+| '''3'''
+
+|-
+| '''A4. Referencia insegura y directa a objetos insegura'''
+| '''A2. Falla de Control de Accesos (dividido en 2007 T10)'''
+| '''5'''
+
+|-
+| '''A5. Falsificación de Petición en Sitios Cruzados (CSRF) (NUEVO)'''
+| 
+| '''36'''
+
+|-
+| '''A6. Revelación de información y gestión incorrecta de errores incorrecta'''
+| '''A7. Gestión Inapropiada de Errores Inapropiada'''
+| '''6'''
+
+|-
+| '''A7. Perdida de Autenticación y Gestión de Sesiones disfuncionales'''
+| '''A3. Autenticación y Gestión de Sesiones disfuncionales de Autenticación y Gestión de Sesiones'''
+| '''14'''
+
+|-
+| '''A8. Almacenamiento Criptográfico Inseguro'''
+| '''A8. Almacenamiento Inseguro'''
+| '''8'''
+
+|-
+| '''A9. Comunicaciones Inseguras (NUEVO)'''
+| '''Discutido bajo A10. Gestión Insegura de Configuraciones'''
+| '''8'''
+
+|-
+| '''A10. Falla de restricción de acceso a URL'''
+| '''A2. Falla de Control de Accesos (dividido en 2007 T10)'''
+| '''14'''
+
+|-
+| '''<nowiki><eliminado en 2007></nowiki>'''
+| '''A1. Entradas sin validar'''
+| '''7'''
+
+|-
+| '''<nowiki><eliminado en 2007></nowiki>'''
+| '''A5. Desbordamiento de Pila'''
+| '''4, 8, y 10'''
+
+|-
+| '''<nowiki><eliminado en 2007></nowiki>'''
+| '''A9. Negación de Servicio'''
+| '''17'''
+
+|-
+| '''<nowiki><eliminado en 2007></nowiki>'''
+| '''A10. Gestión Insegura de Configuraciones'''
+| '''29'''
+
+|}
+
+{{Top_10_2007:BottomTemplate|usenext=NextLink|next=-Secuencia de Comandos en Sitios Cruzados (XSS)|useprev=PrevLink|prev=|usemain=MainLink|main=}}

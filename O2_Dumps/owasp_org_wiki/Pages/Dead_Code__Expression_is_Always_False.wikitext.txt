@@ -1,0 +1,66 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Failure to follow guideline/specification]]
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+==Description==
+
+This expression will always evaluate to false.
+
+This expression will always evaluate to false; the program could be rewritten in a simpler form. The nearby code may be present for debugging purposes, or it may not have been maintained along with the rest of the program. The expression may also be indicative of a bug earlier in the method.
+
+
+==Risk Factors==
+
+TBD
+
+
+==Examples==
+The following method never sets the variable secondCall after initializing it to false. (The variable firstCall is mistakenly used twice.) The result is that the expression firstCall && secondCall will always evaluate to false, so setUpDualCall() will never be invoked.
+
+<pre>
+	public void setUpCalls() {
+	  boolean firstCall = false;
+	  boolean secondCall = false;
+	
+	  if (fCall > 0) {
+		setUpFCall();
+		firstCall = true;
+	  }
+	  if (sCall > 0) {
+		setUpSCall();
+		firstCall = true;
+	  }
+	
+	  if (firstCall && secondCall) {
+		setUpDualCall();
+	  }
+	}
+</pre>
+
+
+==Related [[Attacks]]==
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD

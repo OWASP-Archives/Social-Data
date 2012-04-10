@@ -1,0 +1,171 @@
+[[Image:OWASP_TW_Banner.png]]
+
+歡迎加入OWASP台灣分會！「網站安全的第一步，從加入OWASP台灣分會開始」。
+
+<paypal>Taiwan</paypal>
+
+台灣分會會長[mailto:wayne@owasp.org.tw 黃耀文先生（Wayne Huang）]暨分會工作同仁衷心肯定您的參與，不管您在何處，甚至您僅曾留下網路足跡於台灣，感謝您願意跟大家一起分享，讓我們用更多不同的角度來檢視Web安全的趨勢、威脅、問題與解決方案。
+
+== 歡迎光臨 OWASP 台灣分會 ==
+
+== 最新活動 ==
+=== [[OWASP_AppSec_Asia_2007|第一屆OWASP官方亞洲年會(OWASP Asia 2007)]] ===
+'''Security 3.0 in Web 2.0 Age — Practices and Challenges of Web 2.0 Security'''
+
+[OWASP_AppSec_Asia_2007 http://www.owasp.org/images/f/f7/Owasp_taiwan_2007small.png]
+
+Whitehat Security、美國運通(American Express)、阿碼科技(Armorize)、Qualys等跨國企業與資安公司的高階主管與首席研究員齊聚台灣，您知道他們如何看待Web 2.0時代之 Security 3.0嗎？對台灣與全球的含意是什麼？我政府、企業與一般使用者又該如何因應？從下面這些2007年的資安界大新聞，透露著怎樣的訊息？
+* 5月11日起，Google開始監控遭駭網站，並貼上危險網站之標籤!
+* 5月15日月OWASP公佈2007年最新的十大Web弱點，跨站腳本攻擊(XSS)登上榜首!
+* 6月6日IBM購併Watchfire，HP隨即於6月19日購併SPI Dynamics!而僅存的Cenzic以滲透測試技術於6月18日獲得美國專利!
+* Web 2.0的資安威脅？因應之道？Security 3.0？成功的實務案例？
+[[OWASP_AppSec_Asia_2007|第一屆OWASP官方亞洲年會]]將於9月27日(週四)下午1點於台大醫院國際會議中心201室(台北市中正區徐州路二號)'''舉辦，歡迎您來共襄盛舉，滿載而歸![[OWASP_AppSec_Asia_2007|還有更多...]]
+
+=== [http://hitcon.org 第三屆台灣駭客年會(HIT 2007)] ===
+
+[http://hitcon.org 第三屆台灣駭客年會(HIT 2007)]已於2007年7月21日(週六)至22日(週日)在國立臺灣科技大學公館校區圓滿落幕，活動盛況空前，詳情請見 HIT 2007 官方網站:
+[http://hitcon.org http://www.owasp.org/images/b/b5/Owasp_taiwan_HIT-linkLOGO.gif] http://hitcon.org
+
+== 歡迎您的參與 ==
+加入OWASP台灣分會不需任何費用，會員資格完全開放給任何對於應用程式安全有興趣的人士，
+我們鼓勵會員於OWASP台灣分會分享他們的知識並提供專題演講，
+而在加入會員前，請您仔細閱讀[https://www.owasp.org/index.php/Chapter_Rules 分會會員手則]。
+若要加入本分會的mailing list，請連結到[http://lists.owasp.org/mailman/listinfo/owasp-taiwan mailing list]網頁，
+所有的活動討論與活動地點將透過這個清單來討論，
+您也可以從[http://lists.owasp.org/pipermail/owasp-taiwan/ email 討論備份]中找到我們之前討論的備份。
+最後提醒您，參加活動前，請再次檢查您mailing list的信件以確定活動地點與時間，或是任何有關活動記錄的事項。
+
+== 有關OWASP (About OWASP) ==
+OWASP(開放Web軟體安全計畫 - Open Web Application Security Project)是一個開放社群、非營利性組織，目前全球有82個分會近萬名會員，其主要目標是研議協助解決Web軟體安全之標準、工具與技術文件，長期致力於協助政府或企業瞭解並改善網頁應用程式與網頁服務的安全性。由於應用範圍日廣，網頁應用安全已經逐漸的受到重視，並漸漸成為在安全領域的一個熱門話題，在此同時，駭客們也悄悄的將焦點轉移到網頁應用程式開發時所會產生的弱點來進行攻擊與破壞。
+
+美國聯邦貿易委員會(FTC)強烈建議所有企業需遵循OWASP所發佈的十大Web弱點防護守則、美國國防部亦列為最佳實務，國際信用卡資料安全技術PCI標準更將其列為必要元件。目前OWASP有30多個進行中的計畫，包括最知名的OWASP Top 10(十大Web弱點)、WebGoat(代罪羔羊)練習平台、安全PHP/Java/ASP.Net等計畫，針對不同的軟體安全問題在進行討論與研究。
+
+當貴單位決定開放網頁服務時，就必須讓來自於全球的網頁請求進入單位內部的網頁伺服器。駭客可以藉由隱藏在合法的網頁請求內，通過防火牆、入侵偵測系統或其他防禦系統的偵測，堂而皇之的進入單位內部或藉由單位網站充當跳板與中繼站而向其他受害者發動攻擊。這意味著企業的網頁程式碼也必須成為機關(構)單位周邊的安全防護之一，當單位網頁服務的規模與複雜性增加時，單位暴露於外的風險也逐漸增加。
+
+== OWASP 台灣分會 (OWASP Taiwan Chapter) ==
+*網頁:http://www.owasp.org.tw
+*電郵:info@owasp.org.tw
+*群組:owasp-taiwan@lists.owasp.org
+*住址:台北市115南港區三重路19-13號(南港軟體園區)E棟5樓554室
+
+{{Chapter Template|chaptername=Taiwan|extra=The chapter leader is [mailto:wayne@owasp.org.tw Wayne Huang]|mailinglistsite=http://lists.owasp.org/mailman/listinfo/owasp-taiwan|emailarchives=http://lists.owasp.org/pipermail/owasp-taiwan}}
+
+Chapter meetings are held several times a year, typically in the offices of our sponsor. 
+
+Please subscribe to the mailing list for meeting announcements.
+
+== 免費加入OWASP台灣分會 ==
+
+<font color="#FF0000">
+
+
+'''加入OWASP台灣分會不需任何費用'''
+'''加入會員方法請見本頁下方'''</font> '''[[#如何加入會員|如何加入會員]]'''
+
+加入OWASP台灣分會不需任何費用，會員資格完全開放給任何對於應用程式安全有興趣的人士，<br>
+我們鼓勵會員於OWASP台灣分會分享他們的知識並提供專題演講，<br>
+而在加入會員前，請您仔細閱讀[https://www.owasp.org/index.php/Chapter_Rules 分會會員手則]。
+
+若要加入本分會的mailing list，請連結到[http://lists.owasp.org/mailman/listinfo/owasp-taiwan mailing list]網頁，<br>
+所有的活動討論與活動地點將透過這個清單來討論，<br>
+您也可以從[http://lists.owasp.org/pipermail/owasp-taiwan/ email 討論備份]中找到我們之前討論的備份。
+
+最後提醒您，參加活動前，請再次檢查您mailing list的信件以確定活動地點與時間，或是任何有關活動記錄的事項。
+
+== OWASP台灣分會 部落格 blog ==
+<font color="#FF0000">需要一手資安情報，技術分析，市場資訊嗎？
+
+歡迎常來 [http://www.owasp.org.tw/blog OWASP台灣分會 部落格 blog]
+
+[http://www.owasp.org.tw/blog http://www.owasp.org/images/d/da/OWASP_Banner_Blog.png]
+</font>
+
+== 如何加入會員 ==
+歡迎免費加入OWASP Taiwan台灣分會！加入方式有三種，線上報名，email報名以及傳真報名：
+工作同仁會持續通知所有會員有關OWASP最新活動資訊與座談會議程.
+
+
+=== 線上報名 ===
+請[http://www.owasp.org.tw/member/registration.php 按此填寫線上報名單]
+
+=== Email報名 ===
+請email：[mailto:info@owasp.org.tw info@owasp.org.tw]加入台灣分會,請註明下列資訊.
+#姓名
+#單位
+#職稱
+#電子郵件
+#聯絡電話
+
+=== 傳真報名 ===
+請列印此報名表,填寫後傳真至(02)6616-1100即可.
+
+[[Image:owasp_taiwan_opening.jpg|800px]]
+
+== 近期消息 ==
+
+*Web應用程式安全研討會:在2008年7月22日起，行政院研考會與資通安全會報技服中心舉辦之[http://www.icst.org.tw/content/application/icst2005/a1001001100110151/guest-cnt-browse.php?var=0,1001,111,100100110017,3353,plan&PHPSESSID=d4815b38629332871cf75bb829fd5546 政府機關軟體安全技術研討會]，透過Web 應用程式安全參考指引導入案例，瞭解Web應用程式可能弱點，提供各機關(構)委外管理參考。
+
+*Web安全新聞:在2007年6月11日，iThome報導「[http://www.ithome.com.tw/itadm/article.php?c=43813 網站安全潰堤，不安全就沒顧客]」，深入追蹤Google搜尋引擎因應惡意網站之新措施，其搜尋結果會為有資安問題的網站貼上警告標籤，並阻止使用者直接瀏覽。
+
+*OWASP台灣分會參展:在2007年4月16至18日，台北國際資安展(http://www.secutech.com/tw/is/index.asp) 隆重登場，OWASP台灣分會邀您蒞臨攤位A402與A404，即可獲得Web資安光碟一張，並親自動手體驗比滲透測試、弱點稽核等傳統資安檢測方式更為優異的自動源碼檢測技術。
+
+*Web安全新聞:在2007年4月11日，iThome報導「[http://www.ithome.com.tw/itadm/article.php?c=42866 OWASP台灣分會成立會員免費招募中，盼助我國Web安全防護跟上國際趨勢]」。
+
+*Web安全新聞:在2007年4月9日，蘋果日報報導台灣已有ESPN體育台等許多與民眾生活息息相關的二十七個官網，三月以來陸續遭駭客植入木馬後門，藉由軟體廠商尚無修補程式的「零時差攻擊」（Zero-Day Attack），無辜使用者只要連上網瀏覽，電腦就中獎，輕者帳號、密碼遭竊，身分被盜用；重者機敏資料外洩或財物損失。
+
+*Web應用程式安全研討會:在2007年3月27至4月11日，行政院研考會與資通安全會報技服中心舉辦之[http://sid.iii.org.tw/96Q1_ISMS/ 政府資通安全防護巡迴研討會－資安發展趨勢及網路應用服務資訊安全]，歡迎政府機關(構)負責資通安全相關人員踴躍參加。NEW![https://www.owasp.org/images/b/b1/%E5%B7%A1%E8%BF%B4%E7%A0%94%E8%A8%8E%E6%9C%83%E8%AC%9B%E7%BE%A9_Web.pdf 研討會講義下載]
+
+*Web安全新聞:在2007年3月21日，中國時報報導「上網最不安全國家，台灣高居第二」，由法務部調查局、刑事局等單位共同針對台灣網路安全進行觀察發現，台灣網路的資訊安全威脅，高居亞洲第二，僅次於中國。2007年初至今，平均每天都會發生5件駭客入侵事件。
+
+*Web安全新聞:在2007年3月8日，東森新聞報導「台灣駭客攻擊事件四小龍之冠，90％銀行曾遭入侵」，然而許多企業都以沒有預算為由，不願意增加防護設備與人力，被駭客竄改入侵網頁，不瞭解背後嚴重的意義，網頁改回後，並沒有增加防護設備，甚至還有單一企業被駭連續高達82次。[http://www.ettoday.com/2007/03/08/339-2063921.htm 原新聞連結]
+
+
+
+[[Image:Owasp taiwan first gathering.png]]
+
+== 網站與Web服務的五大資安困境 ==
+#IT人員不足
+#缺乏資安領域專業知識
+#功能性驗收為主
+#缺乏自動化工具
+#成本、效率導向專案模式不利確保專案品質
+
+==最新2007年OWASP十大Web資安漏洞 (2007 OWASP Top 10)==
+===十大Web資安漏洞列表===
+*A1. 跨網站的入侵字串(Cross Site Scripting，簡稱XSS，亦稱為跨站腳本攻擊)：Web應用程式直接將來自使用者的執行請求送回瀏覽器執行，使得攻擊者可擷取使用者的Cookie或Session資料而能假冒直接登入為合法使用者。
+*A2. 注入缺失(Injection Flaw)：Web應用程式執行來自外部包括資料庫在內的惡意指令，SQL Injection與Command Injection等攻擊包括在內。
+*A3. 惡意檔案執行(Malicious File Execution)：Web應用程式引入來自外部的惡意檔案並執行檔案內容。
+*A4. 不安全的物件參考(Insecure Direct Object Reference)：攻擊者利用Web應用程式本身的檔案讀取功能任意存取檔案或重要資料，案例包括http://example/read.php?file=../../../../../../../c:\boot.ini。
+*A5. 跨網站的偽造要求 (Cross-Site Request Forgery，簡稱CSRF): 已登入Web應用程式的合法使用者執行到惡意的HTTP指令，但Web應用程式卻當成合法需求處理，使得惡意指令被正常執行，案例包括社交網站分享的 QuickTime、Flash影片中藏有惡意的HTTP請求。
+*A6. 資訊揭露與不適當錯誤處置 (Information Leakage and Improper Error Handling)：Web應用程式的執行錯誤訊息包含敏感資料，案例包括:系統檔案路徑的揭露或資料庫欄位名稱。
+*A7. 遭破壞的鑑別與連線管理(Broken Authentication and Session Management)：Web應用程式中自行撰寫的身分驗證相關功能有缺陷。
+*A8. 不安全的密碼儲存器 (Insecure Cryptographic Storage)：Web應用程式沒有對敏感性資料使用加密、使用較弱的加密演算法或將金鑰儲存於容易被取得之處。
+*A9. 不安全的通訊(Insecure Communication)：傳送敏感性資料時並未使用HTTPS或其他加密方式。
+*A10. 疏於限制URL存取(Failure to Restrict URL Access)：某些網頁因為沒有權限控制，使得攻擊者可透過網址直接存取，案例包括允許直接修改Wiki或Blog網頁內容。
+
+這次OWASP公布新版Top 10反映出目前的攻擊現況，以今年為例，Cross-Site Scripting(XSS)調整為10大攻擊之首，真實的反映出目前網路釣魚與詐欺的攻擊濫用XSS的情形，事實上，美國國防部的BSI計畫(Build-Security In,https://buildsecurityin.us-cert.gov/) 及Mitre研究機構的CVE資安脆弱性列表(http://cve.mitre.org/) 亦顯示1)Cross Site Scripting與2)SQL Injection已連續兩年列為全球頭號嚴重資安弱點.
+
+===直接與程式碼安全品質有關=== 
+*[必要*]A1. 跨網站入侵字串(Cross Site Scripting)
+*[必要*]A2. 注入缺失(Injection Flaw)
+*[建議*]A3. 惡意檔案執行(Malicious File Execution)
+*[建議*]A4. 不安全的物件參考(Insecure Direct Object Reference)
+*[選擇*]A5. 跨網站要求偽造 (Cross-Site Request Forgery)
+
+
+<nowiki>*</nowiki>OWASP台灣分會強烈建議各單位在進行源碼檢測時，尤以政府機關(構)，應遵循政府資通安全作業規範(http://www.giscc.org.tw) 之「Web應用程式安全參考指引」，並將1與2列為必要檢測項目，3與4列為建議檢測項目，而5列為選擇檢測項目。 
+
+＊在實務案例上，檢測並修正1與2即可避免絕大多數的Web資安威脅。
+
+===因上述漏洞間接造成或與Web伺服器及外部設定有關===
+*Information Leakage and Improper Error Handling 
+*Broken Authentication and Session Management 
+*Insecure Cryptographic Storage 
+*Insecure Communications 
+*Failure to Restrict URL Access
+
+== 會員列表 (Member List) ==
+Coming up soon!
+
+[http://www.owasp.org.tw http://www.owasp.org.tw/dot.png]
+[[Category:Asia]]

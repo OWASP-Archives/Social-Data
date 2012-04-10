@@ -1,0 +1,32 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>OWASP Training Modules</noinclude>
+| Module_designation = [[:Category:OWASP_WebScarab_Project|OWASP WebScarab Project]]
+| Module_Overview_Goal =
+Web Scarab is a framework for analyzing applications that communicate using the HTTP and HTTPS protocols. It is a proxy tool, which intercepts Http request and response. It lets us review and modify requests created by the browser before they are sent to the server, and review and modify responses returned from the server before the browser receives them. It allows editing and replay of previous requests, or creation of entirely new requests. The goal of this project is to have a great tool for manual penetration testing.
+
+The training will take the format of a demonstration of setting up and using WebScarab.  It will cover:
+* Installing WebScarab
+* Setting up
+* Logging
+* Requests and responses
+* Additional resources
+
+There are two resources specifically created for this training:
+* [http://www.owasp.org/index.php/File:Owasp-training-2010-webscarab-slides.pdf Demonstration screen captures and diagrams]
+* [http://www.owasp.org/index.php/File:Owasp-training-2010-webscarab-notes.pdf Demonstration notes (including all the screen captures and diagrams)]
+
+| Content =
+WebScarab has a large amount of functionality, and as such can be quite intimidating to the new user. [http://www.owasp.org/index.php/WebScarab_Getting_Started WebScarab Getting Started] is a great place to start. You can download builds of WebScarab from [http://sourceforge.net/project/showfiles.php?group_id=64424&package_id=61823 here].
+
+| Material = 
+&nbsp;
+* [http://www.owasp.org/index.php/File:Owasp-training-2010-webscarab-slides.pdf WebScarab Presentation]
+* [https://www.owasp.org/images/8/88/OWASP_EU_Summit_2008_WebScarab_treasures.ppt Uncovering WebScarab's Hidden Treasures]
+* [http://yehg.net/lab/pr0js/training/webscarab.php WebScarab movies] 
+* [http://www.owasp.org/index.php/File:OWASPAppSec2007Milan_WebScarabNG.ppt WebScarab NG]
+&nbsp;
+}}
+
+
+
+
+[[Category:OWASP_Training|Training]]

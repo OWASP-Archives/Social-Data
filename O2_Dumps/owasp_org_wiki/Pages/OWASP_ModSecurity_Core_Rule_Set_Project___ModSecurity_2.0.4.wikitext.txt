@@ -1,0 +1,51 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Detailed_Release_Information</noinclude>
+
+| Release Name and Version 
+= ModSecurity 2.0.4
+
+| Release Date
+= 2009-11-30
+
+| Release Download Link 
+= [http://sourceforge.net/projects/mod-security/files/modsecurity-crs/0-CURRENT/modsecurity-crs_2.0.4.tar.gz.md5/download download]
+
+| Main Features
+= ModSecurity is a web application firewall that can work either embedded or as a reverse proxy. It provides protection from a range of attacks against web applications and allows for HTTP traffic monitoring, logging and real-time analysis. 
+
+| Release Leader - Wiki Account= [[User:Rcbarnett|Ryan Barnett]] 
+
+| Release Contributor(s)
+= 
+
+| Release Reviewer(s)
+= [[User:name|TBD]]  
+
+| Release Mentor(s)
+= if any
+
+| Release Sponsor(s)
+= if any
+
+| Release Flyer/Pamphlet
+= 
+
+| Release Notes
+= [[:Category:OWASP ModSecurity Core Rule Set Project - ModSecurity 2.0.4 - Notes|Click to view]]
+
+| Release Main Links
+= <br>
+[https://sourceforge.net/projects/mod-security/files/modsecurity-crs/0-CURRENT/ ModSecurity on SourceForge]<br>
+[https://www.modsecurity.org/tracker/browse/CORERULES Bug Tracker]<br>
+[http://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project#tab=Installation Installation]<br>
+[http://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project#tab=Documentation Documentation]<br>
+[http://www.owasp.org/images/2/21/OWASPAppSec2007Milan_ModSecurityCoreRuleSet.ppt PPT Presentation]<br>
+[https://www.owasp.org/images/0/07/OWASP6thAppSec_ModSecurityCoreRuleSet_OferShezaf.pdf PDF Withepaper] 
+
+| Release Assessment
+= [[Image:Yellow button.JPG|25px]] [[:Category:OWASP ModSecurity Core Rule Set Project - ModSecurity 2.0.4 - Assessment|Not reviewed/Targeted at Stable Release]]
+ 
+
+| Assessment Criteria Version
+= [[:Assessing Project Health|Assessment Criteria v2.0]]
+
+}}

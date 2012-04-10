@@ -1,0 +1,26 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>OWASP Training Modules</noinclude>
+| Module_designation = [[:Category:Software Assurance Maturity Model|Software Assurance Maturity Model]]
+| Module_Overview_Goal =
+The Software Assurance Maturity Model (SAMM) is an open framework to help organizations formulate and implement a strategy for software security that is tailored to the specific risks facing the organization. The resources provided by SAMM will aid in:<br>
+Evaluating an organization’s existing software security practices<br>
+Building a balanced software security assurance program in well-defined iterations<br>
+Demonstrating concrete improvements to a security assurance program<br>
+Defining and measuring security-related activities throughout an organization
+
+| Content = 
+&nbsp;
+SAMM was defined with flexibility in mind such that it can be utilized by small, medium, and large organizations using any style of development. Additionally, this model can be applied organization-wide, for a single line-of-business, or even for an individual project. 
+
+The foundation of the model is built upon the core business functions of software development with security practices tied to each. The building blocks of the model are the three maturity levels defined for each of the twelve security practices. These define a wide variety of activities in which an organization could engage to reduce security risks and increase software assurance. Additional details are included to measure successful activity performance, understand the associated assurance benefits, estimate personnel and other costs.
+
+&nbsp;
+| Material = 
+&nbsp;
+
+* [http://www.owasp.org/images/1/1e/03_OWASP_BNL10_Training_-_SAMM.pptx BeNeLux Training slides SAMM (based on EU talks by Pravir)]
+
+
+}}
+
+
+[[Category:OWASP_Training|Training]]

@@ -1,0 +1,107 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>OWASP Project Identification Tab</noinclude>
+| project_name = OWASP ESAPI for Java EE
+| project_description = This is the Java EE language version of OWASP ESAPI. The ESAPI for Java EE is the baseline ESAPI design.
+* The current release of this project '''is''' suitable for production use
+* The ESAPI 2.0 branch supports Java 1.5 and above. You may view the Javadocs here http://owasp-esapi-java.googlecode.com/svn/trunk_doc/latest/index.html 
+* The ESAPI 1.4 branch supports Java 1.4 and above. Complete information on latest 1.4 branch dependencies can be found here http://owasp-esapi-java.googlecode.com/svn/trunk_doc/1.4.4/site/dependencies.html
+* The OWASP AppSensor-ESAPI integration guide is out! [[AppSensor_GettingStarted]]
+
+<!-- We are not keeping this up to date....
+'''''Latest News:'''''
+<twitter>90496975</twitter>
+-->
+
+| project_license = [http://en.wikipedia.org/wiki/BSD_license BSD license]
+| leader_name = Jeff Williams
+| leader_email = jeff.williams@owasp.org
+| leader_username = Jeff_Williams
+| past_leaders_special_contributions = 
+| maintainer_name = 
+| maintainer_email = 
+| maintainer_username =
+| contributor_name1 = Chris Schmidt
+| contributor_email1 = chrisisbeef@gmail.com
+| contributor_username1 = Chris_Schmidt
+| contributor_name2 = Kevin W. Wall
+| contributor_email2 = kevin.w.wall@gmail.com
+| contributor_username2 = Kevin_W._Wall
+| contributor_name3 = 
+| contributor_email3 =
+| contributor_username3 = 
+| contributor_name4 = 
+| contributor_email4 = 
+| contributor_username4 = 
+| contributor_name5 = 
+| contributor_email5 = 
+| contributor_username5 = 
+| contributor_name6 = 
+| contributor_email6 = 
+| contributor_username6 = 
+| contributor_name7 = 
+| contributor_email7 = 
+| contributor_username7 = 
+| contributor_name8 = 
+| contributor_email8 = 
+| contributor_username8 = 
+| contributor_name9 = 
+| contributor_email9 = 
+| contributor_username9 = 
+| contributor_name10 = 
+| contributor_email10 = 
+| contributor_username10 =  
+| pamphlet_link = 
+| presentation_link = 
+| mailing_list_name = esapi-dev
+| links_url1 = http://code.google.com/p/owasp-esapi-java/downloads/list
+| links_name1 = All ESAPI Downloads
+| links_url2 = http://owasp-esapi-java.googlecode.com/files/ESAPI-1.4.4.zip
+| links_name2 = ESAPI 1.4.4 - complete zip (Java 1.4+) 
+| links_url3 = http://code.google.com/p/owasp-esapi-java
+| links_name3 = Google code repository for ESAPI JAVA
+| links_url4 = http://code.google.com/p/owasp-esapi-java/issues/list
+| links_name4 = Report a bug! (requires Google account)
+| links_url5 = http://owasp-esapi-java.googlecode.com/svn/trunk_doc/latest/index.html
+| links_name5 = ESAPI 2.0.1 Javadocs
+| links_url6 = http://owasp-esapi-java.googlecode.com/svn/trunk_doc/1.4.4/index.html
+| links_name6 = ESAPI 1.4.4 Javadocs
+| links_url7 = http://www.owasp.org/index.php/ESAPI-Building
+| links_name7 = How to build ESAPI 2.0 with Maven
+| links_url8 = http://www.owasp.org/index.php/ESAPI-BuildingWithEclipse
+| links_name8 = How to build ESAPI 2.0 with Maven via Eclipse
+| project_road_map = 
+| project_health_status = 
+| current_release_name = 
+| current_release_date = 
+| current_release_download_link = 
+| current_release_rating = 
+| current_release_leader_name = 
+| current_release_leader_email = 
+| current_release_leader_username =
+| current_release_details =  
+| last_reviewed_release_name = 
+| last_reviewed_release_date = 
+| last_reviewed_release_download_link = 
+| last_reviewed_release_rating = 
+| last_reviewed_release_leader_name = 
+| last_reviewed_release_leader_email = 
+| last_reviewed_release_leader_username = 
+| old_release_name1 = 
+| old_release_date1 = 
+| old_release_download_link1 = 
+| old_release_name2 = 
+| old_release_date2 = 
+| old_release_download_link2 = 
+| old_release_name3 = 
+| old_release_date3 = 
+| old_release_download_link3 = 
+| old_release_name4 = 
+| old_release_date4 = 
+| old_release_download_link4 = 
+| old_release_name5 = 
+| old_release_date5 = 
+| old_release_download_link5 = 
+| last_GPC_update = 4/10/2009
+| GPC_Notes = Empty template (Java EE Version)
+| project_home_page = :Category:OWASP_Enterprise_Security_API
+| project_details_wiki_page = GPC_Project_Details/OWASP_Enterprise_Security_API_Java_EE_Version
+}}

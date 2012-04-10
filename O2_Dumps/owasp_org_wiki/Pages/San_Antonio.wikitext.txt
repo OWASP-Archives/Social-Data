@@ -1,0 +1,577 @@
+{{Chapter Template|chaptername=San Antonio|extra=The chapter leader is [mailto:dan@denimgroup.com Dan Cornell]
+<paypal>San Antonio</paypal>
+|mailinglistsite=http://lists.owasp.org/mailman/listinfo/owasp-sanantonio|emailarchives=http://lists.owasp.org/pipermail/owasp-sanantonio}} 
+
+== Local News  ==
+'''San Antonio OWASP Chapter:  Wednesday, April 18, 2012'''
+
+Topic:  Secure Coding Practices for 2012
+
+Presenter: Keith Turpin
+
+Date: Wednesday, February 22, 2012
+
+Time:  11:30am-1:00pm
+
+Location:
+San Antonio Technology Center (Web Room)
+
+3463 Magic Drive
+
+San Antonio, TX 78229
+
+http://maps.google.com/maps?f=q&hl=en&q=3463+Magic+Drive,+San+Antonio,+TX+78229
+
+Abstract:
+Keith Turpin will present OWASP's "The Secure Coding Practices Quick Reference Guide." The guide is a technology agnostic set of software security coding practices, in a comprehensive checklist format, that can be integrated into the development life-cycle. At only 13 pages long, it is easy for development teams to read and use. The coding practices are mapped to functional requirements, so you can quickly locate the practices you need. It also provides a brief introduction to security principles and vocabulary to help developers and security folks get on the same page, but the focus is on requirements not vulnerabilities or exploits. This presentation will provide an overview of the guide and discuss some concepts about how to use it. Keith will cover the guide as well as the direction of the project for 2012, and alignment with integrating components of the guide with an organizations application security policy.
+
+
+Presenter Bio:
+Keith leads Boeing’s enterprise application security assessment team. He previously served as the lead IT security advisor for all of Boeing’s international operations. Keith represents Boeing on the International Committee for Information Technology Standard’s cyber security technical committee and serves as a U.S. delegate to the International Standards Organization’s sub committee on cyber security.
+ 
+Keith is the project leader for the OWASP Secure Coding Practices Quick Reference Guide and is a member of the Software Assurance Working Group. He also spent four years as the Director of Communication for the Puget Sound chapter of the Information Systems Security Association. He is a frequent speaker at colleges, professional organizations, corporations, and conferences on a variety of technical topics and in his spare time he is the director of a nationally recognized intercollegiate engineering competition. 
+
+He holds a BS in Mechanical Engineering and MS in Computer Systems. 
+
+
+Lunch will be provided. 
+
+Please RSVP: E-mail owasprsvp@denimgroup.com  or call (210) 572-4400.
+
+'''San Antonio OWASP Chapter:  Tuesday, February 22, 2012'''
+
+Topic:  Testing from the Cloud: Is the Sky Falling?
+
+Presenter: Matt Tesauro
+
+Date: Wednesday, February 22, 2012
+
+Time:  11:30am-1:00pm
+
+Location:
+Geekdom
+The Weston Centre
+112 East Pecan, 11th floor
+San Antonio TX 78205
+Map: http://www.geekdom.com/location/
+Check map for parking info.
+
+Abstract:
+More and more IT is being moved to the cloud, why shouldn't your testing move there too? This talk will cover what it takes to take your testing tools from your laptop to the cloud using new features of the OWASP Web Testing Environment (WTE). WTE allows you to create custom installations of application security tools in the cloud on demand. Has your IP been shunned? No problem, kill that cloud instance and startup another. Is your life as mobile as your phone? No problem, a laptop + Internet = access to all your favorite tools from anywhere. Multiple clients? No problem, start an an instance for each one. By the end of this talk, you'll know all you need to fire up an cloud instance with all of your favorite tools and start having fun.
+
+
+Presenter Bio:
+Matt has been involved in the Information Technology industry for more than 10 years. Prior to joining Rackspace, Matt was a security consultant for security firms such as Trustwave as well as running an internal application security effort. Matt's focus has been in application security including testing, code reviews, design reviews and training. His background in web application development and system administration helped bring a holistic focus to Secure SDLC efforts he's driven. He has taught both graduate level university courses and for large financial institutions. Matt has presented and provided training a various industry events including DHS Software Assurance Workshop, AppSec EU, AppSec US, AppSec Academia, and AppSec Brazil.
+
+Matt is currently on the board of the OWASP Foundation and highly involved in many OWASP projects and committees. Matt is the project leader of the OWASP WTE (Web Testing Environment) which is the source of the OWASP Live CD Project and Virtual Machines pre-configured with tools and documentation for testing web applications.
+
+Industry designations include the Certified Information Systems Security Professional (CISSP) and Certified Ethical Hacker (CEH). Matt Tesauro has a B.S. in Economics and a M.S in Management Information Systems from Texas A&M University.
+
+Lunch will be provided. 
+
+Please RSVP: E-mail owasprsvp@denimgroup.com  or call (210) 572-4400.
+
+
+'''San Antonio OWASP Chapter:  Wednesday, November 16, 2011'''
+
+Topic:  You're Bleeding Sensitive Data - Find it Before They Do
+
+Presenter: Steve Werby
+
+Date: Wednesday, November 16, 2011
+
+Time:  11:30am-1:00pm
+
+Location:
+San Antonio Technology Center (Web Room)
+3463 Magic Drive
+San Antonio, TX 78229
+http://maps.google.com/maps?f=q&hl=en&q=3463+Magic+Drive,+San+Antonio,+TX+78229
+
+
+Abstract:
+With the proliferation of Internet accessible applications and files within organizations and the number of employees capable of making sensitive content available growing rapidly, knowing what sensitive information is accessible is increasingly difficult. And expensive DLP and scanning tools are not the only option. I will cover management strategies to reduce the risk, as well as demonstrate free and low-cost tools (FOCA, Shodan, Google Hacking Database and more) to discover sensitive data.
+
+
+Presenter Bio:
+Steve Werby is Chief Information Security Officer at the University of Texas at San Antonio, where he leads the university's 10-person Office of Information Security. He has also served as CISO for Virginia Commonwealth University and the Virginia Department of Corrections (where he gained a new appreciation for physical security). Prior to that, he operated an information security consultancy with an international client base consisting largely of ISPs, web hosting companies and online businesses. Steve has an engineering degree, an MBA and numerous certs, but he is prouder of the fact that he hasn't signed his name the same way twice since 2009.
+
+
+Lunch will be provided. 
+
+Please RSVP: E-mail owasprsvp@denimgroup.com  or call (210) 572-4400.
+
+
+
+'''San Antonio OWASP Chapter:  Wednesday, August 17, 2011'''
+
+Topic:  Secure Development Lifecycle at Symantec
+
+Presenter: Edward Bonver
+
+Date: Wednesday, August 17, 2011
+
+Time:  11:30am-1:00pm
+
+Location:
+San Antonio Technology Center (Web Room)
+3463 Magic Drive
+San Antonio, TX 78229
+http://maps.google.com/maps?f=q&hl=en&q=3463+Magic+Drive,+San+Antonio,+TX+78229
+
+
+Abstract:
+Given complexities and diversity of development technologies and processes as well as the deployment environments, in combination with customer expectations, software development in modern world is an immense undertaking. Building security into a development lifecycle of a large software vendor could prove quite challenging. This presentation covers how security practices are being followed by various product teams across Symantec, including the related processes and guidelines from Symantec’s Product Security Team. 
+
+
+Presenter Bio:
+A senior principal software engineer on the product security team at Symantec Corporation, Edward Bonver is responsible for working with software developers and quality assurance professionals across Symantec to continuously enhance the company’s software security practices through the adoption of methodologies, procedures, and tools for secure coding and security testing. Edward teaches secure coding and security testing classes for Symantec engineers and leads the company’s QA Security Task Force, which he founded. He is a Certified Information Systems Security Professional (CISSP) and a Certified Secure Software Lifecycle Professional (CSSLP).
+
+
+Lunch will be provided. 
+
+Please RSVP: E-mail owasprsvp@denimgroup.com  or call (210) 572-4400.
+
+
+
+
+
+
+'''San Antonio OWASP Chapter:  Thursday, June 16, 2011'''
+
+Topic:  Building a Secure Login
+
+Presenter: Ben Broussard
+
+Date: Thursday, June 16, 2011
+
+Time:  11:30am-1:00pm
+
+Location:
+San Antonio Technology Center (Web Room)
+3463 Magic Drive
+San Antonio, TX 78229
+http://maps.google.com/maps?f=q&hl=en&q=3463+Magic+Drive,+San+Antonio,+TX+78229
+
+
+Abstract:
+This talk takes the standard, cookie-based login and authorization functionality through its paces. First I will walk through the requirements of common, single sign-on functionality. Then I will walk through attacks and their countermeasures including SQL injection and parameterized queries, session fixation and cookie cycling, session hijacking and about a dozen necessary countermeasures, and so on. The discussion will be programming language agnostic, instead focusing on the functional specifications.
+
+
+Presenter Bio:
+Ben Broussard has been involved in the Austin OWASP chapter since 2008, giving technical talks, serving on the LASCON board, the chapter board, and organizing a study group. Outside of OWASP he has worn the hats of mainframe and web application developer, cryptographer, pentester, and he recently launched his own application security business, Kedalion Security, LLC. On the side he does research into brains and AI, and is an avid 80's dancer.
+
+
+Lunch will be provided. 
+
+Please RSVP: E-mail owasprsvp@denimgroup.com  or call (210) 572-4400.
+
+
+
+'''San Antonio OWASP Chapter: Wednesday, April 20, 2011'''
+
+Topic:  Vulnerable Frameworks Yield Vulnerable Apps
+
+Presenter: Javier Castro
+
+Date: Wednesday, April 20, 2011
+
+Time:  11:30am-1:00pm
+
+Location:
+San Antonio Technology Center (Web Room) 3463 Magic Drive, San Antonio, TX 78229
+http://maps.google.com/maps?f=q&hl=en&q=3463+Magic+Drive,+San+Antonio,+TX+78229
+
+
+Abstract:
+Major software vendors such as VMware and SAP are getting significantly better at writing 
+secure software, but all of this effort is lost when they forget to properly configure or secure 
+the frameworks that their software is built upon. This talk gives an overview of several 
+recently discovered vulnerabilities in the products of major software companies. In each 
+case the flaw leads to a complete system compromise and was located in a framework that 
+the product was built upon. We as software developers can learn from these cases and 
+avoid similar scenarios.
+
+Bio: 
+Javier Castro is a senior vulnerability researcher at Digital Defense, Inc. where he writes explicit vulnerability checks, develops proprietary exploits, and researches popular software deployments. As exciting as vulnerability exploitation is, Javier finds it more rewarding to find ways to develop a secure application in the first place.
+
+
+Lunch will be provided. 
+
+Please RSVP: E-mail owasprsvp@denimgroup.com or call (210) 572-4400. 
+
+
+<br>
+
+'''San Antonio OWASP Chapter: Wednesday, March 23, 2011''' 
+
+Topic: Attack Aware Applications 
+
+Presenter: Michael Coates 
+
+Date: Wednesday, March 23, 2011 
+
+Time: 11:30am-1:00pm 
+
+Location: San Antonio Technology Center (Web Room) 3463 Magic Drive San Antonio, TX 78229 http://maps.google.com/maps?f=q&amp;hl=en&amp;q=3463+Magic+Drive,+San+Antonio,+TX+78229 
+
+<br> Abstract: Attack Aware Applications: Imagine being able to detect an attacker in your application while they are searching for vulnerability and then locking out their account before they can do any harm. The OWASP AppSensor project provides a strategy for enabling your applications to detect and respond to attackers in real time. More powerful then generic detection with a WAF, the AppSensor approach allows detection of targeted application attacks attempting to exploit all areas including: business logic, access control, session management, injection attacks and more. This presentation will discuss techniques for implementing such a system within your application using existing technologies or by leveraging ESAPI. 
+
+Presenter Bio: Michael Coates has extensive experience in application security, security code review and penetration assessments. He has conducted numerous security assessments for financial, enterprise and cellular customers worldwide. Michael holds a MS in Computer Security from DePaul University and a BS in Computer Science from the University of Illinois. 
+
+Michael is the creator and leader of the AppSensor project and a contributor to the 2010 OWASP Top 10. He is a frequent speaker at international OWASP security conferences and has also spoken at the Chicago Thotcon conference and provided security training at BlackHat. 
+
+As the web security lead at Mozilla, Michael protects web applications used by millions of users each day. 
+
+<br> Lunch will be provided. 
+
+Please RSVP: E-mail owasprsvp@denimgroup.com or call (210) 572-4400. 
+
+<br> 
+
+<br> '''San Antonio OWASP Chapter: Wednesday, January 19, 2011''' 
+
+Topic: Smart Phones with Dumb Apps 
+
+Presenter: Dan Cornell 
+
+Date: Wednesday, January 19, 2011 
+
+Time: 11:30am-1:00pm 
+
+Location: San Antonio Technology Center (Web Room) 3463 Magic Drive San Antonio, TX 78229 [http://maps.google.com/maps?f=q&hl=en&q=3463+Magic+Drive,+San+Antonio,+TX+78229 http://maps.google.com/maps?f=q&amp;hl=en&amp;q=3463+Magic+Drive,+San+Antonio,+TX+78229] 
+
+<br> Abstract: Enterprises are targeting both internal users and customers with smartphone applications for platforms such as Apple iPhone and Google Android. Many of these applications are constructed without fully considering the associated security implications of their deployment. Breaches can impact both users as well as the enterprise distributing the application as attackers take advantage of expanded access to sensitive data and network services. This talk discusses emerging threats associated with deploying smartphone applications and provides an overview of the threat modeling process. The presentation then walks example applications from an attacker’s perspective demonstrating the sort of information they are able to extract allowing for more advanced attacks. 
+
+Presenter Bio: Dan Cornell has over ten years of experience architecting and developing web-based software systems. As CTO of Denim Group, he leads the organization’s technology team overseeing methodology development and project execution for Denim Group’s customers. He also heads the Denim Group security research team, investigating the application of secure coding and development techniques to the improvement of web-based software development methodologies. 
+
+Dan Cornell has performed as the CTO of BrandDefense, as founder and Vice President of Engineering for Atension prior to its acquisition by Rare Medium, Inc. and as the Vice President, Global Competency Leader for Rare Medium’s Java and Unix Competency Center. Cornell has also developed simulation applications for the Air Force with Southwest Research Institute. 
+
+Dan was the founding coordinator and chairman for the Java Users Group of San Antonio (JUGSA) and is currently the chapter leader of the San Antonio chapter of the Open Web Application Security Project (OWASP). He is a recognized expert in the area of web application security for SearchSoftwareQuality.com and the primary author of Sprajax, Denim Group's open source tool for assessing the security of AJAX-enabled web applications. 
+
+Sodas and snacks will be provided. Feel free to bring a brown-bag lunch. 
+
+Please RSVP: E-mail owasprsvp@denimgroup.com or call (210) 572-4400. 
+
+<br> 
+
+'''San Antonio OWASP Chapter: Tue, November 16, 2010''' 
+
+Topic: OWASP Top 10: What is it all about? 
+
+Presenter: Dean Bushmiller 
+
+Date: Tuesday, November 16, 2010 
+
+Time: 12:00pm-1:00pm 
+
+Location: Methodist Health System – System Office 8109 Fredericksburg Road San Antonio, TX 78229-3311 Women’s Center Classroom 1 http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=8109+fredericksburd+rd,+78229&amp;sll=37.0625,-95.677068&amp;sspn=35.494074,72.070313&amp;ie=UTF8&amp;hq=&amp;hnear=8109+Fredericksburg+Rd,+San+Antonio,+Bexar,+Texas+78229&amp;z=16 
+
+<br> Abstract: Everyone knows exactly what the OWASP top ten security threats are, right? Well sort of... I ask people if they have heard of the top ten they say yes. I ask them to name a few they pause, then they blurt out 2-3. Then I ask them to explain those 2-3 and they look at me like a deer-in-the-headlights. I want to make sure that everyone who walks out of the presentation can clearly define the top ten and be able to communicate to another what each of the top ten vulnerabilities are. 
+
+<br> Presenter Bio: Dean Bushmiller has taught for 12 years. He is the recipient of five Mission Coins from various military branches. He has led national certification organizations in development, policy, and educational materials for over 10 years. He has presented, consulted, and instructed government, education, military, and private organizations. Dean has worked for SANS, ISC2, and other security training organizations. He has bee the keynote speaker at information security conferences as well as state and local colleges. He is now Director of Training for Expanding Security. 
+
+Feel free to bring a brown bag lunch. 
+
+Please RSVP: E-mail owasprsvp@denimgroup.com or call (210) 572-4400. 
+
+<br> 
+
+'''San Antonio OWASP Chapter: Wed August 18, 2010''' 
+
+Topic: Which Web Programming Languages are Most Secure? 
+
+Presenter: Jeremiah Grossman, Founder and CTO, WhiteHat Security 
+
+Date: Wednesday, August 18, 2010 11:30am – 1:00pm 
+
+Location: San Antonio Technology Center (Web Room) 3463 Magic Drive San Antonio, TX 78229 http://maps.google.com/maps?f=q&amp;hl=en&amp;q=3463+Magic+Drive,+San+Antonio,+TX+78229 
+
+<br> Abstract: Security-conscious organizations make implementing a software security development lifecycle a priority. As part of the process, they evaluate a large number of development technologies for building websites. The assumption by many is that not all development environments are created equal. So the question often asked is, “What is the most secure programming language or development framework available?” 
+
+<br> Clearly, familiarity with a specific product, whether it is designed to be secure-by-default or must be configured properly, and whether various libraries are available, can drastically impact the outcome. Still, conventional wisdom suggests that most popular modern languages / frameworks (commercial &amp; open source) perform relatively similarly when it comes to an overall security posture. At least in theory, none is markedly or noticeably more secure than another. Suggesting PHP, Java, C# and others are any more secure than other frameworks is sure to spark heated debate. 
+
+<br> As has been said in the past, “In theory, there is no difference between theory and practice. But, in practice, there is.” Until now, no website security study has provided empirical research measuring how various Web programming languages / frameworks actively perform in the field. To which classes of attack are they most prone, how often and for how long; and, how do they fare against popular alternatives? Is it really true that popular modern languages / frameworks yield similar results in production websites? 
+
+<br> By analyzing the vulnerability assessment results of nearly 1,700 websites under WhiteHat Sentinel management, we may begin to answer some of these questions. These answers may enable the website security community to ask better and deeper questions, which will eventually lead to more secure websites. Organizations deploying these technologies can have a closer look at particularly risk-prone areas; software vendors may focus on areas found lacking; and, developers will increase their familiarity with the strength and weaknesses of their technology stack. All of this is vitally important because security must be baked into development frameworks and be virtually transparent. Only then will application security progress be made. 
+
+<br> Presenter Bio: Jeremiah Grossman founded WhiteHat Security in August 2001. 
+
+<br> A world-renowned expert in Web security, Mr. Grossman is a founder of the Web Application Security Consortium (WASC), and was named to InfoWorld's Top 25 CTOs for 2007. 
+
+<br> Mr. Grossman is a frequent speaker at industry events including the Black Hat Briefings, RSA Conference, ISACA, CSI, InfoSec World, OWASP, ISSA, and Defcon as well as a number of large universities. He has authored dozens of articles and white papers, is credited with the discovery of many cutting-edge attack and defensive techniques and is a co-author of XSS Attacks: Cross Site Scripting Exploits and Defense. 
+
+<br> Mr. Grossman is frequently quoted in major media outlets such as USA Today, the Washington Post, The Financial Times, InformationWeek, InfoWorld, USA Today, PC World, Dark Reading, SC Magazine, CNET, CSO and NBC news. He frequently alerts the media community to the latest attacks and is not only able to offer in-depth commentary, but also provide his perspective of what’s to come. 
+
+<br> Mr. Grossman was named a “friend of Google” and is also an influential blogger (www.jeremiahgrossman.blogspot.com) who offers insight and encourages open dialogue regarding current research and vulnerability trend information. 
+
+<br> Prior to WhiteHat, Mr. Grossman was an information security officer at Yahoo! responsible for performing security reviews on the company's hundreds of websites. Before Yahoo!, Mr. Grossman worked for Amgen, Inc. 
+
+Pizza will be served. 
+
+Please RSVP: E-mail owasprsvp@denimgroup.com or call (210) 572-4400. 
+
+<br> 
+
+<br> '''San Antonio OWASP Chapter: Fri. August 13, 2010''' 
+
+Topic: 1)How OWASP Works and Guided Tour of OWASP Projects / 2) Using the O2 Platform to Consume OWASP projects 
+
+Presenter: Dinis Cruz 
+
+Date: Friday, August 13, 2010, 2010 11:30am – 1:00pm 
+
+Location: San Antonio Technology Center (Web Room) 3463 Magic Drive San Antonio, TX 78229 http://maps.google.com/maps?f=q&amp;hl=en&amp;q=3463+Magic+Drive,+San+Antonio,+TX+78229 
+
+<br> Abstract: 1) How OWASP Works and Guided Tour of OWASP Projects - This presentation will focus on my experience in getting things done at OWASP, what resources are available and what types of initiatives should the local chapters be doing. In addition to a quick overview of a number of key OWASP projects, this talk will also provide a tutorial on how the OWASP WIKI (MediaWiki based) can be used as a database (using the MediaWiki templates technology) 
+
+2) Using the O2 Platform to Consume OWASP projects - This presentation will focus on how to consume the OWASP Wiki and a number of OWASP projects using the OWASP O2 Platform. The O2 Platform has powerful technology and capabilities for both BlackBox and WhiteBox analysis and this presentation will provide examples on how to use O2 with: WebGoat, WebScarab, Code Crawler, Dir Buster, Testing Guide, Code Review Guide and OpenSAMM 
+
+The O2 Platform is focused on automating application security knowledge and workflows. It is specifically designed for developers and security consultants to be able to perform quick, effective and thorough 'source-code-driven' application security reviews (BlackBox + WhiteBox). In addition to the manual findings created/discovered by security consultants, the OWASP O2 Platform allows the easy consumption of results from multiple OWASP projects and commercial scanning tools. This allows security consultants to find, exploit and automate (via Unit Tests) security vulnerabilities usually dismissed by the community as impossible to find/recreate. More importantly, it provides the Security Consultants a mechanism to: a) 'talk' with developers (via UnitTest) , b) give developers a way to replicate + "check if it's fixed" the vulnerabilities reported and c) engage on a two-way conversion on the best way to fix/remediate those vulnerabilities. 
+
+<br> Presenter Bio: Dinis Cruz is a Security Consultant based in London (UK) and specialized in: ASP.NET/J2EE Application Security, Application Security audits and .NET Security Curriculum Development. For the past years Dinis has focused on the field of Static Source Code analysis, from May 2007 to Dec 2009 he worked as a independent consultant for Ounce Labs (bought by IBM in July 2009) where during active security engagements using Ounce's technology he developed the Open Source codebase which now is the foundation of the OWASP O2 Platform. Dinis is currently focused on making the O2 Platform the industry standard for consuming, instrumenting and data-sharing between the multiple WebAppSec tools, the Security consultants and the final developers. Dinis is a also active trainer on .Net security having written and delivered courses for IOActive, Foundstone, Intense School and KPMG (at multiple locations including BlackHat), and has delivered a number of presentations and keynote speeches at multiple OWASP and Security related conferences At OWASP, Dinis is the leader of the OWASP O2 Platform project, member of the OWASP Global Projects Committee, chair of the OWASP Connections Committee and member of the OWASP 
+
+<br> Sodas and snacks will be provided. Feel free to bring a brown-bag lunch. 
+
+<br> Please RSVP: E-mail owasprsvp@denimgroup.com or call (210) 572-4400. 
+
+<br> 
+
+'''San Antonio OWASP Chapter: Wed July 21, 2010''' 
+
+Topic: A Caching Technique (PHP Implementation) 
+
+Presenter: Dan Ross, VP Engineering, PIC Business Systems 
+
+Date: Wednesday July 19, 2010 11:30am – 1:00pm 
+
+Location: San Antonio Technology Center (Web Room) 3463 Magic Drive San Antonio, TX 78229 http://maps.google.com/maps?f=q&amp;hl=en&amp;q=3463+Magic+Drive,+San+Antonio,+TX+78229 
+
+<br> Abstract: Reduce 304's and improve web application performance. A caching technique is demonstrated using PHP. Easy implementation as well as caching override are discussed. 
+
+<br> Presenter Bio: Dan Ross has been VP Engineering for over 20 years at PIC Business Systems, which provides integrated business software for the several industries. He has led the design, development, and maintenance of many commercial web applications and programs. He has a BS in Industrial Engineering from St. Mary's University in San Antonio. 
+
+Sodas and snacks will be provided. Feel free to bring a brown-bag lunch. 
+
+Please RSVP: E-mail owasprsvp@denimgroup.com or call (210) 572-4400. 
+
+<br> 
+
+'''San Antonio OWASP Chapter: Wed June 16, 2010''' 
+
+Topic: Securing Software Applications Using Dynamic Dataflow Analysis 
+
+Presenter: Steve Cook, Senior Research Analyst, SwRI 
+
+Date: Wednesday June 16, 2010 11:30am – 1:00pm 
+
+Location: San Antonio Technology Center (Web Room) 3463 Magic Drive San Antonio, TX 78229 
+
+http://maps.google.com/maps?f=q&amp;hl=en&amp;q=3463+Magic+Drive,+San+Antonio,+TX+78229 
+
+<br> Abstract: In this presentation, we present an ongoing research effort that ensures that a wide variety of user-defined security policies are enforced on executing C programs while keeping runtime overhead low and with little disruption to the development process by leveraging Dynamic Dataflow Analysis (DDFA). The DDFA system is built upon the Broadway static data flow analysis and error checking system, which is a source-to-source translator for C developed by the computer sciences department at the University of Texas at Austin (UT-Austin). UT-Austin and the Southwest Research Institute (SwRI) recently collaborated to further enhance the system through a government research project funded by Intelligence Advanced Research Projects Activity (IARPA) and a SwRI internal research project. 
+
+The system works by automatically instrumenting the original source, guided by the security policy, with DDFA runtime library calls. The modified program is then compiled for the platform of choice so that its security policy can be enforced at runtime through the DDFA runtime library. 
+
+The runtime overhead is kept low by leveraging the semantic information provided by the security policy and a sophisticated dependence analysis to enable optimizations beyond standard compiler techniques. This results in a program that is instrumented with additional code only where provably necessary, so innocuous flows of data are not tracked at runtime. 
+
+Disruption to the development process is minimized through the security policy specification. The security policy is defined once by a security expert using a simple language, which has a direct mapping to the application programming interface to which the program is written. The policy, once defined, can be applied to many different programs. The DDFA approach is easily integrated into the development workflow, adding only an additional compilation step before application deployment. 
+
+The system does not require any modification to the original source code by the programmer, and does not require hardware or operating system changes. In the future, our system can be extended to handle multiple languages and complement new security solutions. 
+
+Presenter Bio: Steve Cook is a senior research analyst in the System Security and High Reliability Software section at the SwRI. His background and expertise are in distributed and parallel computing, compilers, as well as object-oriented and generic programming. He received his master’s degree in computer science from Texas A&amp;M University. While at Texas A&amp;M, he worked as a research assistant for Dr. Bjarne Stroustrup, creator of the C++ Programming Language, where he helped develop a new approach to writing concurrent programs that allows programmers to quickly turn a sequential C++ program into a parallel one that is race and deadlock free. 
+
+<br> Sodas and snacks will be provided. Feel free to bring a brown-bag lunch. 
+
+Please RSVP: E-mail owasprsvp@denimgroup.com or call (210) 572-4400. 
+
+<br> 
+
+<br> 
+
+'''San Antonio OWASP Chapter: Wed May 19th, 2010''' 
+
+Topic: The Open Software Assurance Maturity Model 
+
+Presenter: Dan Cornell, Principal, Denim Group 
+
+Date: Wednesday May 19th, 2010 11:30am – 1:00pm 
+
+Location: San Antonio Technology Center (Web Room) 3463 Magic Drive San Antonio, TX 78229 
+
+http://maps.google.com/maps?f=q&amp;hl=en&amp;q=3463+Magic+Drive,+San+Antonio,+TX+78229 
+
+Abstract: The Open Software Assurance Maturity Model (SAMM) (http://www.opensamm.org/) is a flexible and prescriptive framework for building security into a software development organization. Covering more than typical SDLC-based models for security, SAMM enables organizations to self-assess their security assurance program and then use recommended roadmaps to improve in a way that's aligned to the specific risks facing the organization. Beyond that, SAMM enables creation of scorecards for an organization's effectiveness at secure software development throughout the typical governance, development, and deployment business functions. Scorecards also enable management within an organization to demonstrate quantitative improvements through iterations of building a security assurance program. 
+
+This workshop will introduce the SAMM framework and walk through useful activities such as assessing an assurance program, mapping an existing organization to a recommended roadmap, and iteratively building an assurance program. Time allowing, additional case studies will also be discussed. OpenSAMM is an open a free project and has recently been donated to the Open Web Application Security Project (OWASP) Foundation. For more information on OpenSAMM, visit http://www.opensamm.org/. 
+
+Presenter Bio: Dan Cornell has over ten years of experience architecting, developing and securing web-based software systems. As a Principal of Denim Group, he leads the organization’s technology team overseeing methodology development and project execution for Denim Group’s customers. He also heads the Denim Group application security research team, investigating the application of secure coding and development techniques to the improvement of web based software development methodologies. He is also the primary author of sprajax, Denim Group’s open source tool for assessing the security of AJAX-enabled web applications 
+
+<br> Sodas and snacks will be provided. Feel free to bring a brown-bag lunch. 
+
+Please RSVP: E-mail owasprsvp@denimgroup.com or call (210) 572-4400. 
+
+<br> 
+
+<br> 
+
+<br> 
+
+'''San Antonio OWASP Chapter: Wed March 17, 2010''' 
+
+Topic: Protecting Your Applications: How to Secure Business Critical Applications from Time Bombs, Backdoors &amp; Data Exfiltration 
+
+Presenter: Clint Pollock 
+
+Date: Wednesday, March 17th, 2010 11:30am – 1:00pm 
+
+Location: San Antonio Technology Center (Web Room) 3463 Magic Drive San Antonio, TX 78229 
+
+http://maps.google.com/maps?f=q&amp;hl=en&amp;q=3463+Magic+Drive,+San+Antonio,+TX+78229 
+
+Sponsored by: VERACODE 
+
+Abstract: With the increasing practice of outsourcing and using 3rd party libraries, it is nearly impossible for an enterprise to identify the pedigree and security of the software running its business critical applications. As a result backdoors and malicious code are increasingly becoming the prevalent attack vector used by hackers. Whether you manage internal development activities, work with third party developers or are developing a COTS application for enterprise, your mandate is clear- safeguard your code and make applications security a priority for internal and external development teams. In this session we will cover; · Prevalence of backdoors and malicious code in third party attacks · Definitions and classifications of backdoors and their impact on your applications · Methods to identify, track and remediate these vulnerabilities 
+
+Presenter Bio: Clint Pollock is a Senior Solutions Architect at Veracode. Since 1997, he has also created security solutions for large-scale enterprise environments on behalf of CREDANT Technologies and Netegrity. In his current role, Clint helps globally distributed organizations evaluate, track, and mitigate their online business risk. Clint’s greatest strengths are his enthusiasm, experience and determination to help customers succeed in maintaining secure, compliant systems, and avoid the consequences and bad headlines that come with application security breaches. Clint resides in Chicago, IL. 
+
+<br> FREE PIZZA will be provided, courtesy of our friends from Veracode. 
+
+Please RSVP: E-mail owasprsvp@denimgroup.com or call (210) 572-4400. 
+
+<br> 
+
+<br> '''Meeting Schedule for 2010''' 
+
+Dates are set - speakers and topics are firming up as well speak. All meetings are from 11:30am - 1:00pm at the San Antonio Technology Center (Web Room) 3463 Magic Drive San Antonio, TX 78229. 
+
+Wednesday January 20th - OWASP LiveCD: An Open Environment for Web Application Security by Matt Tesauro 
+
+Wednesday March 17th - TBD 
+
+Wednesday May 19th - TBD 
+
+Wednesday July 21st - TBD 
+
+Wednesday September 15th - TBD 
+
+Wednesday November 10th - TBD 
+
+<br> '''San Antonio OWASP Chapter: Wed January 20th, 2010''' 
+
+Topic: OWASP LiveCD: An Open Environment for Web Application Security Presenter: Matt Tesauro, OWASP Board Member, LiveCD Project Lead Date: Wednesday January 20th, 2010 11:30am – 1:00pm Location: San Antonio Technology Center (Web Room) 3463 Magic Drive San Antonio, TX 78229 http://maps.google.com/maps?f=q&amp;hl=en&amp;q=3463+Magic+Drive,+San+Antonio,+TX+78229 
+
+Abstract: The OWASP Live CD is a project that collects some of the best open source security projects in a single environment. Web developers, testers and security professionals can boot from this Live CD and have access to a full security testing suite. This allows its users to test for various security issues in web applications and web sites. The Live CD also contains documentation and an interactive learning environment to enhance users’ web application security knowledge. This presentation will cover the current state of the OWASP Live CD as well as the plans for future developments. Time permitting, a live demonstration of the OWASP Live CD will be conducted. The OWASP Live CD is a project of the Open Web Application Security Project (OWASP) and is free for commercial or non-commercial use. More information is available at: http://www.owasp.org/index.php/Category:OWASP_Live_CD_Project 
+
+Presenter Bio: Matt Tesauro has worked in web application development and security since 2000. He has worn many different hats, from developer to DBA to System Administrator to Penetration Tester. Matt also taught graduate and undergraduate classes on web application development and XML at Texas A&amp;M University. Currently, he's focused on implementing a comprehensive web application security program for the Texas Education Agency (TEA). Outside work, he is a member of the OWASP Foundation's Board of Directors, the project lead for the OWASP Live CD, a member of the OWASP Global Projects Committee, assists the OWASP Austin chapters leadership and a member of ISSA of Austin, Texas. Matt Tesauro has a B.S. in Economics and a M.S in Management Information Systems from Texas A&amp;M University. He is also has the CISSP, CEH (Certified Ethical Hacker), RHCE (Red Hat Certified Engineer), and Linux+ certifications. 
+
+Sodas and snacks will be provided. Feel free to bring a brown-bag lunch. 
+
+Please RSVP: E-mail owasprsvp@denimgroup.com or call (210) 572-4400. 
+
+<br> 
+
+Recent Meetings: 
+
+<br> '''San Antonio OWASP Chapter: October 21, 2009''' 
+
+Topic: Rolling Out an Enterprise Source Code Review Program 
+
+Presenter: Dan Cornell, Principal at Denim Group Date: October 21, 2009 11:30 a.m. – 1:00 p.m. 
+
+Location: San Antonio Technology Center (Web Room) 3463 Magic Drive San Antonio, TX 78229 
+
+http://maps.google.com/maps?f=q&amp;hl=en&amp;q=3463+Magic+Drive,+San+Antonio,+TX+78229 
+
+Abstract: Source code review technology has rapidly advanced over the past several years and offers great promise of helping organizations detect and address software security defects. However, many organizations stumble as they try to roll out these technologies because they fail to understand the people and process issues that must also be addressed. This talk will present lessons learned from the creation of several enterprise source code review programs, including: identifying all sources of custom code in an organization including custom extensions to ERP systems and enterprise portals, selecting the first round of applications to scan and successfully interpreting results and driving resolution to identified issues. 
+
+<br> Presenter Bio: Dan Cornell has over ten years of experience architecting and developing web-based software systems. As CTO of Denim Group, he leads the organization’s technology team overseeing methodology development and project execution for Denim Group’s customers. He also heads the Denim Group security research team, investigating the application of secure coding and development techniques to the improvement of web-based software development methodologies. 
+
+Dan Cornell has performed as the CTO of BrandDefense, as founder and Vice President of Engineering for Atension prior to its acquisition by Rare Medium, Inc. and as the Vice President, Global Competency Leader for Rare Medium’s Java and Unix Competency Center. Cornell has also developed simulation applications for the Air Force with Southwest Research Institute. 
+
+Dan was the founding coordinator and chairman for the Java Users Group of San Antonio (JUGSA) and is currently the chapter leader of the San Antonio chapter of the Open Web Application Security Project (OWASP). He is a recognized expert in the area of web application security for SearchSoftwareQuality.com and the primary author of Sprajax, Denim Group's open source tool for assessing the security of AJAX-enabled web applications. 
+
+<br> '''San Antonio OWASP Chapter: August 19, 2009''' 
+
+Topic: Web Application Firewalls (WAFs) 
+
+Presenter: Matt Burriola &amp; Mario Flores, Randolph-Brooks Federal Credit Union Date: August 19, 2009 11:30am – 1:00pm 
+
+Location: San Antonio Technology Center (Web Room) 3463 Magic Drive San Antonio, TX 78229 
+
+http://maps.google.com/maps?f=q&amp;hl=en&amp;q=3463+Magic+Drive,+San+Antonio,+TX+78229 
+
+Abstract: Web Application Firewalls Web application firewalls (WAFs) have gained considerable momentum as web vulnerabilities have grown. WAFs now have a proven record of reducing exposures to web vulnerabilities by blocking malicious activity much like a typical firewall. While WAFs help, it does take time to consider when a WAF is appropriate. It also takes time to evaluate and implement the WAF as well. Come listen to reasons why Randolph-Brooks Federal Credit Union chose a WAF and what they learned in the process. 
+
+Presenter Bio: Matt is a Senior Developer on the RBFCU Web Team, but mainly serves the roles of Configuration Management lead and Systems Admin for the team. Matt maintains the source control repository, application build and release processes, and QA server environments. Matt also works on web infrastructure initiatives such as Web Application Firewall. Matt has 10 years IT industry experience, including Java/web technologies, C, C++, Unix/Linux, shell scripting, and Symbol mobile handheld programming. Matt has a degree in Management Information Systems from Texas A&amp;M University-Corpus Christi. 
+
+Mario is currently the Web Development manager for RBFCU. In this current role, Mario manages the development efforts for the online banking site and the intranet. Mario also has a solid background in web security and has addressed issues with web application penetration assessments. Mario has worked for RBFCU for 14 years and he has a degree in Information Systems from Texas Lutheran University. 
+
+<br> 
+
+'''San Antonio OWASP Chapter: June 17, 2009'''' Topic: What is Cross Site Scripting And Why Is It bad? Date: June 17, 2009 11:30am – 1:00pm Location: San Antonio Technology Center (Web Room) 3463 Magic Drive San Antonio, TX 78229 
+
+http://maps.google.com/maps?f=q&amp;hl=en&amp;q=3463+Magic+Drive,+San+Antonio,+TX+78229 
+
+Abstract: The presentation will cover background information on cross-site scripting (XSS) attacks as well as real world examples of what can happen when this type of vulnerability is present and the different ways that it can be exploited. The presentation will also include language agnostic ways to mitigate this sort of risk and how developers and security professionals can identify these risks. 
+
+Presenter Bio: David is currently a Security Architect for Rackspace IT Hosting. In this current role, David is responsible for designing and implementing network security solutions, as well as software development in support of automation. In previous roles he was a software developer on various projects written in a mix of PHP, Python, Perl, Ruby, c#, and asp.net. Prior to Rackspace, David worked for Digital Defense and he holds a B.B.A. in Information Systems from the University of Texas San Antonio. He also has an extensive background in application security and is actively researching botnet mitigation techniques. Certifications held include CISSP, RHCE, and CCNA. 
+
+<br> 
+
+'''San Antonio OWASP Chapter: January 2009 Meeting''' 
+
+Topic: "Vulnerability Management in an Application Security World." 
+
+Presenter: Dan Cornell, Principal, Denim Group Date: January 29, 2009 11:30am – 1:00pm 
+
+Location: 
+
+San Antonio Technology Center (Web Room) 3463 Magic Drive San Antonio, TX 78229 http://maps.google.com/maps?f=q&amp;hl=en&amp;q=3463+Magic+Drive,+San+Antonio,+TX+78229 
+
+Abstract:Identifying application-level vulnerabilities via penetration tests and code reviews is only the first step in actually addressing the underlying risk. Managing vulnerabilities for applications is more challenging than dealing with traditional infrastructure-level vulnerabilities because they typically require the coordination of security teams with application development teams and require security managers to secure time from developers during already-cramped development and release schedules. In addition, fixes require changes to custom application code and application-specific business logic rather than the patches and configuration changes that are often sufficient to address infrastructure-level vulnerabilities. This presentation details many of the pitfalls organizations encounter while trying to manage application-level vulnerabilities as well as outlines strategies security teams can use for communicating with development teams. Similarities and differences between security teams’ practice of vulnerability management and development teams’ practice of defect management will be addressed in order to facilitate healthy communication between these groups. 
+
+Presenter Bio: 
+
+Dan Cornell has over ten years of experience architecting, developing and securing web-based software systems. As a Principal of Denim Group, he leads the organization’s technology team overseeing methodology development and project execution for Denim Group’s customers. He also heads the Denim Group application security research team, investigating the application of secure coding and development techniques to the improvement of web based software development methodologies. He is also the primary author of sprajax, Denim Group’s open source tool for assessing the security of AJAX-enabled web applications. 
+
+<br> 
+
+----
+
+'''Previous News''' 
+The slide deck from OWASP San Antonio February 2012 meeting is available online here: https://www.owasp.org/images/b/b0/WTE-Cloud-San_Antonio-2012-02.pdf
+
+The slide deck from OWASP San Antonio June 2011 meeting is available online here: https://www.owasp.org/images/2/21/How_to_Build_a_Secure_Login_BenBroussard_June2011.pdf
+
+The slide deck from OWASP San Antonio April 2011 meeting is available online here: https://www.owasp.org/images/0/05/Vulnerable_frameworks_yield_vulnerable_apps.pdf 
+
+The slide deck from OWASP San Antonio March 2011 meeting is available online here: http://www.owasp.org/images/c/cb/MichaelCoates-AppSensor.pdf 
+
+The slide deck from OWASP San Antonio August 2010 meeting available online here: http://www.owasp.org/images/0/0e/OWASP_San_Antonio_0818.pdf.pdf http://www.owasp.org/images/5/5a/WPstats_spring10_9th.pdf 
+
+The slide deck from OWASP San Antonio June 2010 meeting available online here: http://www.owasp.org/images/2/24/OWASPSanAntonio06162010_DDFA_PresentationFinal.pdf 
+
+The slide deck from OWASP San Antonio May 2010 meeting available online here: http://www.owasp.org/images/b/b9/OpenSAMM10_OWASPSanAntonio_20100519.pdf 
+
+The slide deck from OWASP San Antonio March 2010 meeting available online here: http://www.owasp.org/index.php?title=File:Protecting_the_Enterprise_-_Software_Backdoors.pptx&amp;oldid=80140#filelinks 
+
+The slide deck from OWASP San Antonio January 2010 meeting available online here: http://www.owasp.org/index.php/File:San_Antonio_Chapter-OWASP_WTE_Jan-2010.pdf#filelinks 
+
+The slide deck from OWASP San Antonio October 2008 meeting available online here: http://www.owasp.org/index.php/San_Antonio 
+
+The slide deck from OWASP San Antonio September 2007 meeting available online here: [[Image:Fortify-bjenkins-AppSecStrategy-20070906.pdf]]. 
+
+The slide deck from OWASP San Antonio March 2007 meeting will be available online shortly 
+
+The slide deck from OWASP San Antonio September 2006 meeting available online here: [[Image:OWASPSanAntonio 2006 09 AgileAndSecure.pdf]]. 
+
+The slide deck from OWASP San Antonio August 2006 meeting available online here: [[Image:OWASPSanAntonio 2006 08 SingleSignOn.ppt]]. 
+
+The slide deck from OWASP San Antonio June 2006 meeting available online here: [[Image:OWASPSanAntonio 2006 06 Crypto Content.pdf]]. 
+
+The slide deck from OWASP San Antonio May 2006 meeting available online here: [[Image:OWASPSanAntonio 2006 05 ForcefulBrowsing Content.pdf]]. 
+
+The slide deck from OWASP San Antonio September 2004 meeting available online here: [[Image:OWASPSanAntonio 20040922.pdf]]. 
+
+[[Category:Texas]]

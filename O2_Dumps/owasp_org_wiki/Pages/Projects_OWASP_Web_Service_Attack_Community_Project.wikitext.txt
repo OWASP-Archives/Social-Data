@@ -1,0 +1,47 @@
+{{Template:Project About
+| project_name = OWASP Web Service Attack Community Project
+| project_home_page = OWASP Web Service Attack Community Project
+
+| project_description =
+Besides the huge success of web services throughout all major industries, web service security is not fully understood by developers and users alike. Web services are vulnerable not only to all known attacks of regular web applications, but also to new web service specific attacks. Up to now, no comprehensive database exists that describes all major web service specific attacks in a stringent fashion.
+
+To close this gap all major web service attacks have been enumerated. Furthermore, a rigorous attack meta structure has been developed. Each attack is described in detail, categorized and explained with an example. At the end of each attack description a detailed list of countermeasures is given, for mitigating or even preventing the attack.
+
+<!---'''Note''' that since the project is not public, access is restricted via Http-Authentication. Your http-authentication login credentials are as follows:<br>
+username: student<br>
+password: SjtxCCJXB<br>
+
+Your personal Wiki user is as follows:<br>
+username: OWASP<br>
+password: x34trs<br> --->
+
+| project_license = [http://creativecommons.org/licenses/by-sa/3.0/ Creative Commons Attribution ShareAlike 3.0]
+
+| leader_name1 = Andreas Falkenberg
+| leader_email1 = andreas.falkenberg@rub.de
+| leader_username1 = Andreas Falkenberg 
+
+| contributor_name1 = Meiko Jensen 
+| contributor_email1 = Meiko.Jensen@ruhr-uni-bochum.de 
+| contributor_username1 = Meiko Jensen
+
+| contributor_name2 = Juraj Somorovsky 
+| contributor_email2 = juraj.somorovsky@ruhr-uni-bochum.de 
+| contributor_username2 = 
+
+| pamphlet_link = http://www.owasp.org/index.php/File:WS-Attacks.org_project_Flyer.pdf
+
+| presentation_link = http://www.owasp.org/index.php/File:WS-Attacks.org_3Slides.ppt
+
+| mailing_list_name = 
+
+| project_road_map = http://www.owasp.org/index.php/OWASP_Web_Service_Attack_Community_Project/Roadmap
+
+| links_url1 = http://clawslab.nds.rub.de/wiki/index.php/Main_Page
+| links_name1 = Welcome to WS-Attacks.org!
+
+| release_1 = WS - Attacks.org V0.1
+| release_2 = 
+| release_3 =
+| release_4 =
+}}

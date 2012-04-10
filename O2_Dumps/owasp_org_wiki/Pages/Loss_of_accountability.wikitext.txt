@@ -1,0 +1,57 @@
+{{Template:Stub}}
+
+Every '''[[Technical Impact]]''' should follow this template.
+
+{{Template:Technical Impact}}
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+==Description==
+
+A technical impact is the system damage that results from a successful security breach. This is just the effect on the technology, not the business.
+# Start with a one-sentence description of the technical impact
+# Describe the technical damage done to the system
+# Note the security interest that is damaged - confidentiality, integrity, availability, accountability
+# Is the damage immediate or spread over a time period?
+
+
+==Risk Factors==
+
+* Talk about the [[OWASP Risk Rating Methodology|factors]] that govern this technical impact
+* Try to be clear about the factors that make this impact serious
+
+
+==Examples==
+
+===Short example name===
+: A short example description, small picture, or sample code with [http://www.site.com links]
+
+===Short example name===
+: A short example description, small picture, or sample code with [http://www.site.com links]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Business Impacts]]==
+
+* [[Business Impact 1]]
+* [[Business Impact 2]]
+
+
+==References==
+
+* http://www.link1.com
+* [http://www.link2.com Title for the link2]
+
+__NOTOC__
+
+[[Category:Technical Impact]]

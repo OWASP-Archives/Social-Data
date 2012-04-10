@@ -1,0 +1,68 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Failure to follow guideline/specification]]
+
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+
+==Description==
+
+This method fails to override a similar method in its superclass because their parameter lists do not match.
+
+This method declaration looks like an attempt to override a method in a superclass, but the parameter lists do not match, so the superclass method is not overridden.
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+The class DeepFoundation is meant to override the method getArea() in its parent class, but the parameter lists are out of sync.
+
+<pre>
+	public class Foundation
+	{
+	  public int getArea() {
+		...
+	  }
+	}
+	
+	class DeepFoundation extends Foundation
+	{
+	  public int getArea(int a) {
+		...
+	  }
+	}
+</pre>
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD

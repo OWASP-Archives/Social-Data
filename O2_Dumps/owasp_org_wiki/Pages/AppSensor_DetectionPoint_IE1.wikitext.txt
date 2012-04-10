@@ -1,0 +1,11 @@
+Here is some sample code that can be used to detect IE1. 
+
+<pre>
+String myInputParameter = ...;
+
+//the execution of this line will create an exception if an attack is found 
+boolean isAttack = AttackDetectorUtils.verifyXSSAttack(myInputParameter); 
+if (isAttack) {
+    notify user ...&nbsp;???
+}
+</pre>

@@ -1,0 +1,15 @@
+<p>Microsoft's ClickOnce technology, which is quite similar to Java WebStart has a number of vulnerabilities&nbsp;and&nbsp;any ClickOnce client server application developed on dotnet technology&nbsp;can be completely compromised if appropriate security controls are not used.&nbsp;
+</p><p>1. The&nbsp;ILDASM tool available within the .net framework&nbsp;can be used to disassemble the application client and any database related logic/info can be exposed to hackers.
+</p><p>2. The Disassembled code can even leak encryption keys initialized inside the client code.
+</p><p>3. The code can be reassembled back to DLLs and EXEs using the ILASM tool from the command line.
+</p><p>4. Code signed by Authenticode can also be bypassed by intercepting the response data and removing the signature. (Please&nbsp;visit the link below)
+</p><p>5. By cracking the client application, every possible security control implemented on the client can be broken. For eg: Authorization, Input Validation &amp; Cryptographic storage.
+</p><p>&nbsp;
+</p><p>Possible Mitigation controls include:
+</p><p>1. Complete code obfuscation on the client side application to prevent easy tampering of Intermediate Language code.
+</p><p>2. Sign all the client&nbsp;assemblies with a strong name. (Assembly loader can detect tampered assembly)
+</p><p>3. Use Authenticode to sign the application.
+</p><p>&nbsp;
+</p><p>Please see the below link for Man-In-The-Middle vulnerabilities:
+</p><p>http://www.securityfocus.com/archive/1/512450
+</p>

@@ -1,0 +1,640 @@
+{{Social Media Links}}
+This page captures important references to [http://www.owasp.org/index.php/Main_Page OWASP] in official, or otherwise important, documents. It does not include presentational or educational materials, sales literature, forum messages, blog postings, news stories or press releases. 
+
+Hyperlinks have not been added within the text, other than those automatically added by the wiki, to reduce the risk of mis-interpretation. Please read the source documents in full to understand the context. Entries in each each category are ordered by organisation name ascending, then date ascending. 
+
+__TOC__ 
+
+<br> 
+
+=== OWASP Projects and Events ===
+
+Some OWASP projects maintain their own lists of citations, quotations, recommendations, testimonials and users: 
+
+*[http://www.owasp.org/index.php/ASVS#tab=Users.2FContributors OWASP Application Security Verification Standard (ASVS) Project - Users] 
+*[http://www.owasp.org/index.php/ESAPI#tab=Contributors.2FUsers OWASP Enterprise Security API (ESAPI) Project - Users and Adopters] 
+*[http://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project#tab=Contributors.2C_Users_and_Adopters OWASP ModSecurity Core Rule Set Project - Contributors, Users and Adopters] 
+*[http://www.owasp.org/index.php/Category:OWASP_Security_Spending_Benchmarks#News_Coverage_of_OWASP_SSB_Project OWASP Security Spending Benchmarks (SSB) Project - News Coverage] 
+*[http://www.owasp.org/index.php/Testing_Guide_Quotes OWASP Testing Guide Quotes] 
+*[http://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project#Users_and_Adopters OWASP Top Ten Project - Users and Adopters] and [http://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project#tab=How_Are_Companies.2FProjects.2FVendors_Using_the_OWASP_Top_10.3F  How Are Companies/Projects/Vendors Using the OWASP Top_10]
+*[http://www.owasp.org/index.php/AppSec_Brasil_2010_(pt-br)#tab=Links_e_Imprensa Notícias publicadas sobre o AppSec Brasil 2010]
+
+=== National &amp; International Legislation, Standards, Guidelines, Committees and Industry Codes of Practice  ===
+
+{| class="prettytable"
+|-
+! Organisation 
+! Scope 
+! Document 
+! Date 
+! Version 
+! Comments
+|- valign="top"
+| rowspan="2" | [http://www.ssi.gouv.fr/index.html L'Agence Nationale de la Sécurité des Systèmes d’Information (ANSSI)] 
+| rowspan="2" | France 
+| [http://www.ssi.gouv.fr/IMG/pdf/JavaSec-Recommandations.pdf Sécurité et langage Java - Guide de Règles et de Recommandations Relatives au Développement d’Applications de Sécurité en Java] 
+| 6 November 2009 
+| 1.3 
+| In "3 Définitions et Présentation de la Démarche", "l’OWASP fournit également des informations de sensibilisation des développeurs d’applications Java EE aux problématiques de sécurité. Bien que la plupart de ces informations sortent du périmètre de l’étude JAVASEC qui se concentre sur Java SE, ce document constitue un complément intéressant. Il est accessible à l’adresse http://www.owasp.org/index.php/OWASP_Java_Table_of_Contents#J2EE_Security_for_Developers." and in "4.8 Gestion des entrées/sorties - Identifiant&nbsp;: 16 Nom&nbsp;: Vérification des données en entrée", "Références&nbsp;: [1] http://www.owasp.org/index.php/OWASP_Java_Table_of_Contents# 
+Input_Validation_Overview" 
+|- valign="top"
+| [http://www.ssi.gouv.fr/IMG/pdf/referentiel-exigences_labellisation_prestataires-audit-teleservices_v1-0.pdf Prestataires D’Audit de la Securite des Systemes D’Information (Information System Security Audit Guide)]
+| 31 October 2011
+| 1.0
+| In "7.2. Normes et documents techniques", "Guides et documentation de l’Open Web Application Security Project (OWASP)"
+
+|- valign="top"
+| [http://www.publicsafety.gc.ca/prg/em/ccirc/index-eng.aspx Canadian Cyber Incident Response Centre] 
+| Canada 
+| [http://www.publicsafety.gc.ca/prg/em/ccirc/_fl/tr08-001-eng.pdf TR08-001 Alleviating the Threat of Mass SQL Injection Attacks] (also in [http://www.publicsafety.gc.ca/prg/em/ccirc/_fl/tr08-001-fra.pdf French]) 
+| 18 June 2008 
+| 1.0.0 
+| In "3.2 Application security best practices", "... The following elements should be considered as part of the SDLC for application security: ... Adopt and apply secure design and coding practices for web application software development. Guidance is available from numerous sources including ... and the Open Web Application Security Project (OWASP) http://www.owasp.org." and in "5 Resources", "Open Web Application Security Project (OWASP): http://www.owasp.org ... OWASP Testing Guide v2: http://www.owasp.org/images/e/e0/OWASP_Testing_Guide_v2_pdf.zip". 
+The Canadian Cyber Incident Response Centre is part of [http://www.publicsafety.gc.ca Public Safety Canada]. 
+
+|- valign="top"
+| rowspan="7" | [http://www.cisecurity.org/ Center for Internet Security (CIS)] 
+| rowspan="7" | USA 
+| Apache Benchmark for Unix 
+| October 2006 
+| 1.4 &amp; 1.5 
+| "... added reference to Web Application Security Consortium along with OWASP ..." - see revision history in version 1.6 below
+|- valign="top"
+| [http://www.cisecurity.org/tools2/apache/CIS_Apache_Benchmark_v1.6.pdf Apache Benchmark for Unix] 
+| November 2006 
+| 1.6 
+| In "Introduction", "... For Web Application security issues, visit the Open Web Application Security Project (OWASP) website - http://www.owasp.org and ...", in "L1 20 Implementing Secure Socket Layer (SSL) with Mod_SSL", "The openssl command can be very useful in debugging and testing the SSL configurations. See http://www.openssl.org/docs/apps/ciphers.html as well as OWASP testing tips http://www.owasp.org/index.php/SSL/TLS_Testing:_support_of_weak_ciphers" and in "Appendix C - References", "The Open Web Application Security Project. 'A Guide To Building Secure Web Applications', September 22, 2002. http://www.cgisecurity.com/owasp/html/index.html".
+|- valign="top"
+| [http://www.cisecurity.org/tools2/apache/CIS_Apache_Benchmark_v1.7.pdf Apache Benchmark for Unix] 
+| July 2007 
+| 1.7 
+| (As above in version 1.6)
+|- valign="top"
+| [http://www.cisecurity.org/tools2/apache/CIS_Apache_Benchmark_v2.0.pdf Benchmark for Apache Web Server] 
+| December 2007 
+| 2.0 
+| In "Pre-configuration Checklist", "Educated developers about writing secure code ... OWASP Top Ten - http://www.owasp.org/index.php/OWASP_Top_Ten_Project", and in "1.3 ModSecurity Core Rules Overview", "... Description ... You can learn more about the pros and cons of a negative security model in the presentation 'The Core Rule Set: Generic detection of application layer', presented at OWASP Europe 2007 ... Attack Detection ... Generic Attack Detection - Detect application level attacks such as described in the OWASP top 10. These rules employ context based patterns match over normalized fields. Detected attacks include:...", and in "1.15 Implementing Mod_SSL", "... Action ... The openssl command can be very useful in debugging and testing the SSL configurations. See http://www.openssl.org/docs/apps/ciphers.html as well as OWASP testing tips http://www.owasp.org/index.php/SSL/TLS_Testing:_support_of_weak_ciphers ...".
+|- valign="top"
+| [http://www.cisecurity.org/tools2/apache/CIS_Apache_Benchmark_v2.1.pdf Benchmark for Apache Web Server] 
+| January 2008 
+| 2.1 
+| (As above in version 2.0)
+|- valign="top"
+| [http://www.cisecurity.org/tools2/apache/CIS_Apache_Benchmark_v2.2.pdf Benchmark for Apache Web Server] 
+| November 2008 
+| 2.2 
+| (As above in version 2.0)
+|- valign="top"
+| [https://www.cisecurity.org/tools2/metrics/CIS_Security_Metrics_v1.0.0.pdf The CIS Security Metrics - Consensus Metric Definitions] 
+| 11 May 2009 
+| 1.0 
+| In "Defined Metrics - Information Security Budget as&nbsp;% of IT Budget - References", "... Open Web Application Security Project, Security Spending Benchmark Project https://www.owasp.org/index.php/Category:OWASP_Security_Spending_Benchmarks ..." and in "Defined Metrics - Information Security Budget Allocation - References", "Open Web Application Security Project, Security Spending Benchmak Project https://www.owasp.org/index.php/Category:OWASP_Security_Spending_Benchmarks".
+
+|- valign="top"
+| rowspan="3" | [http://www.cpni.gov.uk/ Centre for the Protection of National Infrastructure (CPNI)] 
+| rowspan="3" | UK 
+| [http://www.cpni.gov.uk/Docs/secureWebApps.pdf Secure web applications - Development, installation and security testing (NISCC Briefing 10/2006)] 
+| 27 April 2006 
+| - 
+| In References "OWASP Secure Web Application Guide [http://www.owasp.org/documentation/guide/guide_about.html http://www.owasp.org/documentation/guide/guide_about.html]". 
+Originally published by the former National Infrastructure Security Co-ordination Centre (NISCC). 
+|- valign="top"
+| [http://www.cpni.gov.uk/Docs/re-20060508-00338.pdf Commercially Available Penetration Testing - Best Practice Guide] 
+| 8 May 2006 
+| - 
+| In "Methodologies", "There are a number of open source penetration testing methodologies that can be used as a reference when examining provider methodologies. Examples include... OWASP - Open Web Application Security Project ([http://www.owasp.org http://www.owasp.org])". 
+Originally published by the former National Infrastructure Security Co-ordination Centre (NISCC).
+|- valign="top"
+| [http://www.cpni.gov.uk/Documents/Publications/2011/2011Aug-development_and_implementation_of_secure_web%20applications.pdf Development and Implementation of Secure Web Applications]
+| August 2011 
+| -
+| In "Introduction to web application security", "Organisations such as the Open Web Application Security Project (OWASP) have expanded and have been involved in a large number of projects to promote many different aspects of web application security from risk assessment guides to security testing tools. One of these projects, OWASP Top Ten aims to provide a list of the most critical web application security risks. It is not surprising that such a list evolves dramatically over time as shown in the table below" and in "References", "OWASP Top Ten http://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project", "Threat Risk Modelling http://www.owasp.org/index.php/Threat_Risk_Modeling", "HTTP Parameter Pollution www.owasp.org/images/b/ba/AppsecEU09_CarettoniDiPaola_v0.8.pdf", "Transport Layer Protection Cheat Sheet http://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet" and "Curphy, Mark et al, A Guide to Building Secure Web Applications and Web Services, OWASP, 2005 http://www.owasp.org/index.php/Category:OWASP_Guide_Project".
+
+|- valign="top"
+| rowspan="4" | [http://www.cloudsecurityalliance.org/ Cloud Security Alliance (CSA)] 
+| rowspan="4" | Worldwide 
+| [http://www.cloudsecurityalliance.org/guidance/csaguide.v1.0.pdf Security Guidance for Critical Areas of Focus in Cloud Computing] 
+| April 2009 
+| 1.0 
+| In "Section III. Operating in the Cloud - Domain 10: Incident Response, Notification, and Remediation", "There are other types of incidents that can affect an application in the cloud, which relate to data access, but stand alone as potentially serious for a user, and they are the OWASP Top 10 security vulnerabilities." and "The application framework can also provide components that provide protection against OWASP vulnerabilities.", and in "Domain 11: Application Security", "References... OWASP Top Ten Project, http://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project".
+|- valign="top"
+| [http://www.cloudsecurityalliance.org/guidance/csaguide.v2.1.pdf Security Guidance for Critical Areas of Focus in Cloud Computing] 
+| December 2009 
+| 2.1 
+| In "References", "OWASP Top Ten Project, http://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project".
+|- valign="top"
+| [http://www.cloudsecurityalliance.org/guidance/CSA-ccm-v1.00.xls Cloud Controls Matrix] 
+| 27 April 2010 
+| 1.0 
+| In "Security Architecture - Application Security (SA-04)", "Applications shall be designed in accordance with industry accepted security standards (i.e., OWASP for web applications) and complies with applicable regulatory and business requirements.".
+|- valign="top"
+| [http://www.cloudsecurityalliance.org/guidance/csaguide-dom10.pdf Domain 10 Guidance for Application Security] 
+| July 2010 
+| 2.1 
+| In "PaaS - Tools and Services", "Web-based, n-Tier applications have a rich body of knowledge about common types of vulnerabilities and their mitigation through groups such as the Open Web Application Security Project (OWASP), but similar knowledge bases for PaaS environments are scarce and will need time to mature." and in "References" "OWASP Top Ten Project, http://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project".
+|- valign="top"
+| [http://www.clusif.fr/en/clusif/present/ Club de la Sécurité de l'Information Français (CLUSIF)] 
+| France 
+| [http://www.clusif.fr/fr/production/ouvrages/pdf/CLUSIF-2009-Securite-des-applications-Web.pdf Sécurité des applications Web - Comment maîtriser les risques liés à la sécurité des applications Web?] (also in [http://www.clusif.asso.fr/fr/production/ouvrages/pdf/CLUSIF-2010-Web-application-security.pdf English]) ''Translation: How to control the risks related to Web Application Security?'' 
+| September 2009 
+| - 
+| In "II - Les technologies Web, incontournables, mais porteuses de nouveaux risques - II.3 - Des réglementations et des responsabilités", "Par voie de conséquence, la mise à disposition d’un service applicatif par une société peut engager la responsabilité [4] ... [4] https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex OWASP Secure Software Contract Annex&nbsp;: Cette annexe de contrat est destinée à aider les développeurs de logiciels et leurs clients à négocier d’importantes conditions contractuelles relatives à la sécurité du logiciel à développer ou à livrer. La raison en est que rien n’est prévu dans la plupart des contrats, les parties ayant souvent des points de vue radicalement différents sur ce qui a été initialement effectivement convenu. De fait, la définition claire des responsabilités et limites de chacun est la meilleure façon de s'assurer que les parties puissent prendre des décisions éclairées sur la façon de procéder.", in "IV - Les principales failles de sécurité des applications Web - IV.3 - Les fuites d’information", "Pour plus de précision sur les failles de sécurité des applications Web, le lecteur pourra se référer au Top Ten de l’OWASP [6] ... [6] http://www.owasp.org/index.php/OWASP_Top_Ten_Project", in "V - Quelles bonnes pratiques pour mettre en oeuvre une application Web sécurisée&nbsp;? - V.2 - Identification des besoins et appréciation des risques", "Une première évaluation du coût peut être réalisée à ce stade afin de rester cohérent avec les objectifs de la maîtrise d’ouvrage, en utilisant une méthodologie comme OpenSAMM, qui permet d’estimer des coûts pour les différentes étapes du cycle de développement [7] ... [7] http://www.opensamm.org/" and "Des méthodes et des outils de modélisation de menaces accessibles existent afin de faciliter cette démarche. [8] ... [8] http://www.owasp.org/index.php/Threat_Risk_Modeling", in "V.3 - Conception et implémentation", "Les équipes peuvent également se référer au Guide de conception et d’implémentation d’applications Web sécurisées de l’OWASP [9] ... [9] http://www.owasp.org/index.php/Category:OWASP_Guide_Project", in "VI - Vérification de la sécurité des applications Web - VI.2.2 - Audit de code", "L’OWASP a publié un manuel de revue de code des applications Web [10] ... [10] http://www.owasp.org/index.php/Category:OWASP_Code_Review_Project", in "VI.2.3 - Test d’intrusion", "Pour plus d’information, on pourra consulter le manuel de test de la sécurité des applications Web publié par l’OWASP [11] ... [11] http://www.owasp.org/index.php/Category:OWASP_Testing_Project". 
+''Translation: In "II - Web technologies, essential, but carrying new risks - II.3 - Regulations and responsibilities", "Consequently, the provision of an application service by a company may engage the responsibility [4] ... [4] https://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex OWASP Secure Software Contract Annex&nbsp;: This appendix of contract is intended to help the developers of software and their customers to negotiate important contractual conditions relating to the integrity of the software to be developed or deliver. The reason is that nothing is envisaged in most contracts, the parties having often radically different points of view on what was initially indeed agreed. In fact, the clear definition of the responsibilities and limits for each one are the best way of ensuring itself than the parts can make decisions informed on the way of proceeding.", in "IV - The main vulnerabilities of Web applications - IV.3 - The information leakage", "For more details on the vulnerabilities of Web applications, the reader may refer to the Top Ten of the OWASP [6] ... [6] http://www.owasp.org/index.php/OWASP_Top_Ten_Project", in "V - Which good practices for implementing a secure Web application? - V.2 - Identification of needs and risk assessment", "A first costing can be realized at this stage in order to remain coherent with the objectives of the control of work, by using a methodology like OpenSAMM, which makes it possible to estimate costs for the various stages of the development cycle [7] ... [7] http://www.opensamm.org/" and "Methods and modeling tools available threats exist to facilitate this. [8] ... [8] http://www.owasp.org/index.php/Threat_Risk_Modeling", in "V.3 - Design and Implementation", "The teams can also refer to the OWASP Guide to Build and Implement Secure Web Applications [9] ... [9] http://www.owasp.org/index.php/Category:OWASP_Guide_Project", in "VI - Web Application Security checking - VI.2.2 - Code Review", "The OWASP published a Web Applications' code review' handbook [10] ... [10] http://www.owasp.org/index.php/Category:OWASP_Code_Review_Project", in "VI.2.3 - PenTest", "For more information, one can consult the Web Applications Security test' handbook published by the OWASP [11] ... [11] http://www.owasp.org/index.php/Category:OWASP_Testing_Project".'' 
+
+|- valign="top"
+| rowspan="5" | [http://www.disa.mil/ Defense Information Systems Agency (DISA)] 
+| rowspan="5" | USA 
+| [http://iase.disa.mil/stigs/stig/applicationsecurityrequirements.pdf Recommended Standard Application Security Requirements (Draft)] 
+| 11 March 2003 
+| 2.0 (draft) 
+| In "Appendix B References", "B.5 Best Practices... 32. Open Web Application Security Project (OWASP): “The Ten Most Critical Web Application Security Vulnerabilities” (13 January 2003)".
+|- valign="top"
+| [http://iase.disa.mil/stigs/stig/Web-Server-STIG-V6R1.pdf Web Server Technical Implementation Guide] 
+| 11 December 2006 
+| 6 Rel 1 
+| In "1.1 Background", "Major security forums (e.g., SysAdmin, Audit, Network, Security (SANS) Institute and the Open Web Application Security Project (OWASP)) publish reports describing the most critical Internet security threats. From these reports, some threats unique to web server technology are as follows...".
+|- valign="top"
+| [http://iase.disa.mil/stigs/stig/application_security_and_development_stig_v2r1_final_20080724.pdf Application Security and Development - Security Technical Implementation Guide] 
+| 24 July 2008 
+| 2 Rel 1 
+| In "Appendix A References", "Open Web Application Security Project [http://www.owasp.org/ http://www.owasp.org/]" and "Open Web Application Security Project Threat Risk Modeling [http://www.owasp.org/index.php/Threat_Risk_Modeling http://www.owasp.org/index.php/Threat_Risk_Modeling]".
+|- valign="top"
+| [http://iase.disa.mil/stigs/checklist/application_security_and_development_checklist_v2_r1_final_24_jul_2008.doc Application Security and Development Checklist] 
+| 24 July 2008 
+| 2 Rel 1.1 
+| Multiple OWASP website references providing vulnerability examples. 
+Superseded (see below). 
+
+|- valign="top"
+| [http://iase.disa.mil/stigs/checklist/application_security_checklist_v2r1-5.pdf Application Security and Development Checklist] 
+| 26 June 2009 
+| 2 Rel 1.5 
+| OWASP referenced in "APP3020 Threat model not established or updated... Detailed information on threat modeling can be found at the OWASP website. http://www.owasp.org/index.php/Threat_Risk_Modeling", "APP3550 Application is vulnerable to integer overflows... Examples of Integer Overflow vulnerabilities can be obtained from the OWASP website. http://www.owasp.org/index.php/Integer_overflow", "APP3560 Application contains format string vulnerabilities... Examples of Format String vulnerabilities can be obtained from the OWASP website. http://www.owasp.org/index.php/Format_string_problem", "APP3570 Application vulnerable to Command Injection... Examples of Command Injection vulnerabilities can be obtained from the OWASP website. http://www.owasp.org/index.php/Command_Injection", "APP3580 Application vulnerable to Cross Site Scripting... Examples of Cross Site Scripting vulnerabilities can be obtained from the OWASP website. http://www.owasp.org/index.php/Cross_Site_Scripting", "APP3600 Vulnerable to canonical representation attacks... Examples of Canonical Representation vulnerabilities can be obtained from the OWASP website. http://www.owasp.org/index.php/Canonicalization,_locale_and_Unicode", "APP3630 Application vulnerable to race conditions... Examples of Race Conditions vulnerabilities can be obtained from the OWASP website. https://www.owasp.org/index.php/Reviewing_Code_for_Race_Conditions", and "APP5100 Fuzz testing is not performed... The following website provides an overview of fuzz testing and examples: http://www.owasp.org/index.php/Fuzzing".
+|- valign="top"
+| [http://www.dsd.gov.au Defence Signals Directorate] 
+| Australia 
+| [http://www.dsd.gov.au/_lib/pdf_doc/ism/ISM_Sep08_unclass.pdf Australian Government Information and Communications Technology Security Manual (ACSI 33)] 
+| September 2008 
+| - 
+| In "Web applications - Guidance", "G#101 3.6.2.14. Agencies are recommended to follow the documentation provided in the Open Web Application Security Project (OWASP) guide to building secure Web applications and Web services.", in "Web applications - Rationale", "Web applications 3.6.2.16. The OWASP guide provides a comprehensive resource to consult when developing Web applications." and in "Web applications - References", "3.6.2.17. Further information on Web application security is available from the OWASP at http://www.owasp.org.".
+|- valign="top"
+| rowspan="3" | [http://www.enisa.europa.eu European Network and Information Security Agency (ENISA)] 
+| rowspan="3" | Europe 
+| [http://www.enisa.europa.eu/act/it/oar/web-2.0-security-and-privacy/web-2.0-security-and-privacy Web 2.0 Security and Privacy Position Paper] 
+| 10 December 2008 
+| - 
+| In '6.1.6 Developer Issues/Browser Vendors', 'There already exists quite a large body of development best-practice and descriptions of common pitfalls so, rather than re-inventing the wheel, we would refer the reader to the following as examples: The OWASP Guide to Building Secure Web Applications (84), ...', in '5.5.1 Fraudulent Pedigree/Provenance - 5.5.1.2 Example 2: Control of Botnets via Mashups', 'Mashups are perfectly suited to massively distributed systems with untraceable control structures and are therefore likely to lead to a variety of related attacks (see Use of Web 2.0 technologies to control botnets (38) and ...' and in '8 References and Links', '38. Use of Web 2.0 technologies to control botnets. http://www.owasp.org/images/0/02/OWASP_Day_Belgium_2007-pdp.ppt ' and '84. The OWASP Guide to Building Secure Web Applications v2. http://www.owasp.org/index.php/Category:OWASP_Guide_Project '.
+|- valign="top"
+| [http://www.enisa.europa.eu/act/rm/files/deliverables/cloud-computing-risk-assessment Cloud Computing Risk Assessment] 
+| 20 November 2009 
+| - 
+| In "Application Security in Infrastructure as a Service", "... They must be designed or be embedded with standard security countermeasures to guard against the common web vulnerabilities (see OWASP top ten (40)). ... In summary: enterprise distributed cloud applications must run with many controls in place to secure the host (and network – see previous section), user access, and application level controls (see OWASP (41) guides relating to secure web/online application design). ... ", in "Software Assurance", "Include any standards that are followed, e.g., OWASP (46), SANS Checklist (47), SAFECode (48)." and in References, "40. OWASP [Online] http://www.owasp.org/index.php/OWASP_Top_Ten_Project ... 41. — [Online] http://www.owasp.org/index.php/Category:OWASP_Guide_Project ... 46. OWASP [Online] http://www.owasp.org/index.php/Main_Page".
+|- valign="top"
+| [http://www.enisa.europa.eu/act/it/oar/smartphones-information-security-risks-opportunities-and-recommendations-for-users/at_download/fullReport Smartphones: Information Security Risks, Opportunities and Recommendations for Users] 
+| December 2010 
+| - 
+| In "Consulted experts", "Gunnar Peterson, OWASP".
+|- valign="top"
+| [http://www.cio.gov Federal Chief Information Officers (CIO) Council] 
+| USA 
+| [http://www.cio.gov/Library/documents_details.cfm?id=Guidelines%20for%20Secure%20Use%20of%20Social%20Media%20by%20Federal%20Departments%20and%20Agencies,%20v1.0&structure=Information%20Technology&category=Best%20Practices Guidelines for Secure Use of Social Media by Federal Departments and Agencies] 
+| September 2009 
+| 1.0 
+| In "The Threat - Web Application Attacks", "The Open Web Application Security Project (OWASP) has published 
+guidance to improve the level of web application security, but it is not easy to determine if a social media website is following OWASP principles and building more secure web applications[20] ... OWASP Foundation, A Guide to Building Secure Web Applications and Web Services, in What are web applications? 2006, © 2001 – 2006 OWASP Foundation.". 
+
+Issued by the [http://www.cio.gov/InformationSecurity.cfm Information Security and Identity Management Committee (ISIMC)]. 
+
+|- valign="top"
+| [http://www.ffiec.gov/ Federal Financial Institutions Examination Council (FFIEC)] 
+| USA 
+| [http://www.ffiec.gov/ffiecinfobase/html_pages/it_01.html#infosec Information Technology Examination Handbook] 
+| July 2006
+| - 
+| In "Information Security - Systems Development, Acquisition, and Maintenance - Security Control Requirements", "Management may also refer to published, widely recognized industry standards as a baseline for establishing their security requirements.  For example, for externally facing Web applications the Open Web Application Security Project (www.owasp.org) produces one commonly accepted guideline.".
+|- valign="top"
+| [http://www.ftc.gov/ Federal Trade Commission] 
+| USA 
+| [http://business.ftc.gov/documents/bus69-protecting-personal-information-guide-business Protecting Personal Information: A Guide for Business] 
+| October 2007 
+| - 
+| In "Security Check - I'm not really a “tech” type. Are there steps our computer people can take to protect our system from common hack attacks?", "Yes. There are relatively simple fixes to protect your computers from some of the most common vulnerabilities.... Bookmark the websites of groups like the Open Web Application Security Project, www.owasp.org, or ..." and in "Additional Resources - These websites and publications have more information on securing sensitive data:", "The Open Web Application Security Project www.owasp.org".
+Also available in Spanish [http://business.ftc.gov/documents/sbus69-como-proteger-la-informacion-personal-una-gui-para-negocios En español]. 
+
+|- valign="top"
+| [http://www.fsround.org/ Financial Services Roundtable] 
+| USA 
+| [http://www.bits.org/publications/security/BITSSoftwareAssurance0112.pdf BITS Software Assurance Framework] 
+| January 2012 
+| - 
+| In "Chapter 4: Coding Practices", "Several secure coding practices processes are available in the marketplace (e.g., OWASP Secure Coding Practices Guide, ...", in "Chapter 8: Post Implementation Phase Controls", "All of these controls today are based on either OWASP Top 10 or SANS Top 25 Application Programming Errors." and four places in "Appendix A - Education & Training". 
+
+|- valign="top"
+| [http://www.govcertuk.gov.uk/ GovCertUK] 
+| UK 
+| [http://www.govcertuk.gov.uk/pdfs/sql_injection.pdf SQL Injection] 
+| 16 January 2009 
+| 1.0 
+| In "3.2 SQL Injection", "The OWASP Foundation has produced two tools that can be used to learn about and analyse attacks. The WebGoat application has been developed to demonstrate web application security errors, including SQL injection, and educate developers in how to avoid them. A web proxy, such as OWASP’s WebScarab, is needed to complete some of the WebGoat activities. Such a proxy is used to intercept communications between the browser and application, providing a means of changing the data in each message. Where appropriate examples have been taken (with permission) from the WebGoat application and WebScarab proxy output.", extensive use of screen captures from WebGoat and WebScarab, in "6.4 Education", "The key contributors in SQL injection protection are usually the application and web developers and system administrators... There are free resources on the Internet to encourage a better awareness of SQL injection techniques and guides on how to avoid it. Two examples of such free resources are OWASP Foundation’s WebGoat and ...", in "7 Acknowledgements", "Thanks to the OWASP Foundation’s WebGoat Project and WebScarab Project for their permission to use examples from these tools in this paper. They are published under the Creative Commons Licence" and in "8 References", "[i] OWASP WebGoat Project, OWASP Foundation, 15 January 2009, [http://www.owasp.org/index.php/Category:OWASP_WebGoat_Project http://www.owasp.org/index.php/Category:OWASP_WebGoat_Project] [j] OWASP WebScarab Project, OWASP Foundation, 17 November 2008, [http://www.owasp.org/index.php/Category:OWASP_WebScarab_Project http://www.owasp.org/index.php/Category:OWASP_WebScarab_Project]". 
+GovCertUK is the UK Government Emergency Response Team and is part of [http://www.cesg.gov.uk/ CESG]. 
+
+|- valign="top"
+| rowspan="4" | [http://www.ipa.go.jp/ Information-Technology Promotion Agency (IPA)] 
+| rowspan="4" | Japan 
+| Secure Programming Course from the IPA [http://www.ipa.go.jp/security/english/aboutisec-e.html Information-technology SEcurity Center (ISEC)] 
+| 2002 
+| - 
+| In [http://www.ipa.go.jp/security/awareness/vendor/programmingv1/pdf/a02_01.pdf SQL Argument Validation], "...Direct SQL Command Injection (English), Open Web Application Security Project 
+http://www.owasp.org/projects/asac/iv-sqlinjection.shtml http://www.owasp.org/projects/asac/iv-sqlinjection.shtml", in [http://www.ipa.go.jp/security/awareness/vendor/programmingv1/pdf/a04_02.pdf Dangerous Perl Functions], "...Direct OS Command Injection (English), Open Web Application Security Project http://www.owasp.org/projects/asac/iv-dosinjection.shtml", and in [http://www.ipa.go.jp/security/awareness/vendor/programmingv1/pdf/b07_07.pdf Unix Path Security], "...Directory Traversal (English)，Open Web Application Security Project http://www.owasp.org/projects/asac/iv-directorytraversal.shtml". 
+
+|- valign="top"
+| [http://www.ipa.go.jp/security/fy16/reports/mandatory_access_contol/documents/web_server_study.pdf Study of Web Server Mandatory Access Control] 
+| March 2005 
+| - 
+| In section 3.3, "...様 々 な 方 針 が 考 え ら れ る が、 こ こ で は、 The Open Web Application Security Project の 示 す Web ア プ リ ケーシ ョ ンに お ける セ キ ュ リ テ ィの 指 針 を 元 に 脆 弱 性 対 策 の 方 向 性 を 示 す http://www.owasp.org/documentation/guide/guide_about.html"
+|- valign="top"
+| [http://www.ipa.go.jp/security/jisec/certified_products/c0097/c0097_st.pdf Symfoware ST (Symfo-06-DS3001)] in the [http://www.ipa.go.jp/security/jisec/jisec_e/index.html JISEC] [http://www.ipa.go.jp/security/jisec/jisec_e/certified_products/certfy_list.html Certified/Validated Products List]. 
+| 9 May 2007 
+| 2.3 
+| In Table 6.2 on vulnerability assessment information assurance measures "ＡＶＡ＿ＶＬＡ．２ ... ＯＷＡＳＰ （Ｏｐｅｎ Ｗｅｂ Ａｐｐｌｉｃａｔｉｏｎ Ｓｅｃｕｒｉｔｙ Ｐｒｏｊｅｃｔ） が 発 表 し て い る、 Ｗｅｂ サ イ ト の セ キ ュ リ テ ィ 脆 弱 性 の 情 報 "
+|- valign="top"
+| [http://www.ipa.go.jp/software/open/ossc/2007/labo/openlab3koubo.odt Open Source Software Evaluation Lab Environment] 
+| November 2007 
+| - 
+| In "Intercepting proxies" of the "Security evaluation" category, "...WebScarab ... http://www.owasp.org/index.php/Category:OWASP_WebScarab_Project".
+|- valign="top"
+| [http://www.ieee.org Institute of Electrical and Electronics Engineers (IEEE)] 
+| Worldwide 
+| [http://www.computer.org/portal/web/swebok/v3guide Software Engineering Body of Knowledge (SWEBOK)] [http://www.computer.org/portal/c/document_library/get_file?uuid=047a1bb4-b27a-4bfa-be75-d15bbdc69226&groupId=103107 Software Security Specialized Knowledge Area]
+| Q4 2010
+| V3 alpha
+| In "9 Software Engineering Process", "Life cycle processes and more localized methods, practices, and techniques have been developed to aid with software security concerns. Published life cycle processes (or increments from life cycle processes that are not security-oriented) include ones from Microsoft [How06] and at OWASP (www.owasp.org)." and in "15 Appendix A: Further Reading", "[OWASP] Open Web Application Security Project www.owasp.org (website).".
+|- valign="top"
+| [http://www.iso.org/ International Organization for Standardization (ISO)] and [http://www.iec.ch/ International Electrotechnical Commission (IEC)] 
+| Worldwide 
+| [http://webstore.iec.ch/Webstore/webstore.nsf/0/D2422D1EF9D89BC2C125757C0010F414 ISO/IEC TR24729-4, Information technology — Radio frequency identification for item management — Implementation guidelines — Part 4: Tag data security] 
+| March 2009 
+| - 
+| In "Normative references", "Open Web Application Security Project (OWASP) http://www.owasp.org/index.php/Main_Page". See http://www.grifs-project.eu/db/?q=node/129
+|- valign="top"
+| rowspan="2" | [http://www.ism3.com/ ISM3 Corporation] 
+| rowspan="2" | Worldwide 
+| [http://www.ism3.com/ism3v210.php Information Security Management Maturity Model] 
+| April 2009 
+| 2.10 
+| In "OSP-8 Software Development Lifecycle Control - Related Methodologies", "OWASP" and in "OSP-19 Internet Technical Audit - Related Methodologies", "OWASP". 
+Superseded (see below). 
+
+|- valign="top"
+| [http://www.lulu.com/content/paperback_book/information_security_management_maturity_model_v23/6441763 Information Security Management Maturity Model] 
+| November 2007 
+| 2.3 
+| (As above in version 2.10)
+|- valign="top"
+| rowspan="2" | [http://www.developpement-durable.gouv.fr/ Ministère de l’Écologie, de l’Énergie, du Développement durable et de l’Aménagement du territoire] 
+| rowspan="2" | France 
+| [http://www.informatique.dgpa.equipement.gouv.fr/IMG/pdf/Java_cle5c3a51-1.pdf Guide de réalisation Java] ''Translation: Java Development Guide'' 
+| July 2009 
+| 2.1 
+| In "Commun-24-01", "... ou de l'OWASP (Open Web Application Security Project) pour la lutte contre les causes d'insécurité(http://www.owasp.org) font référence." 
+''Translation: In "Commun-24-01", "... or of OWASP (Open Web Application Security Project) for the fight against the causes of insecurity (http://www.owasp.org) are a reference."'' 
+
+|- valign="top"
+| [http://www.informatique.dgpa.equipement.gouv.fr/IMG/pdf/PHP_cle0214e1.pdf Guide de réalisation PHP ] ''Translation: PHP Development Guide'' 
+| July 2009 
+| 2.1 
+| (As above)
+
+|- valign="top"
+| rowspan="7" | [http://www.us-cert.gov/ National Cyber Security Division] 
+| rowspan="7" | USA
+| [https://buildsecurityin.us-cert.gov/swa/pocket_guide_series.html Software Assurance Pocket Guide Series] - [https://buildsecurityin.us-cert.gov/swa/downloads/ContractLanguage_MWV11_02AM091012.pdf Acquisition & Outsourcing Volume I - Software Assurance in Acquisition and Contract Language]
+| 31 July 2009
+| 1.1
+| In "Resources for Procurement, Acquisition and Outsourcing", "Open web Application Security project (OWASP) Contract Annex - The OWASP provides a sample contract Annex that can be used as a framework for discussing expectations and negotiating responsibilities between acquirers (clients) and developers. The contract Annex is intended to help software developers and their clients negotiate and capture important contractual terms and conditions related to the security of the software to be developed or delivered. The language in the Annex may be used whole, in part, or as tailored to communication requirements in a work statement or stated as terms and conditions. The Annex can be obtained from: http://www.owasp.org/index.php/OWASP_Secure_Software_Contract_Annex" and "Application Security Procurement Language - Application Security Procurement Language ... These guidelines incorporate substantial language from the OWASP Secure Software Contract Annex. These help enable buyers of custom software to more explicitly make code writers responsible for checking the code and for fixing security flaws before software is delivered."
+|- valign="top"
+| Software Assurance Pocket Guide Series - [https://buildsecurityin.us-cert.gov/swa/downloads/KeyPracticesMWV13_02AM091111.pdf Development Volume II - Key Practices for Mitigating the Most Egregious Exploitable Software Weaknesses]
+| 24 May 2009 
+| 1.3
+| In "Key Practices - Table 3 – Requirements, Architecture, and Design Phases - Prevention and Mitigation Practices", "Use an input validation framework such as ... or the OWASP ESAPI Validation API.", "Use languages, libraries, or frameworks that make it easier to generate properly encoded output. Examples include ... the OWASP ESAPI Encoding module, and...", "Use anti-Cross Site Request Forgery (CSRF) packages such as the OWASP CSRFGuard." and "With a stateless protocol such as HTTP, use a framework that maintains the state automatically. Examples include ... and the OWASP ESAPI Session Management feature.", "Use authorization frameworks such as ... and the OWASP ESAPI Access Control feature.".  In "Key Practices - Table 4 – Build, Compilation, Implementation, Testing, and Documentation Phases - Prevention and Mitigation Practices", "Use libraries such as the OWASP ESAPI Canonicalization control.", "Use OWASP CSRFTester to identify potential issues.", 
+|- valign="top"
+| Software Assurance Pocket Guide Series - [https://buildsecurityin.us-cert.gov/swa/downloads/software_security_testing.pdf Development Volume III - Software Security Testing]
+| 10 May 2010 
+| 0.7
+| In "Resources, "“OWASP Testing Guide v3”, The Open Web Application Security Project at http://www.owasp.org/index.php/Category:OWASP_Testing_Project#OWASP_Testing_Guide_v3_2".  In "Risk Analysis", "The OWASP Code Review Guide Uhttp://www.owasp.org/index.php/Application_Threat_ModelingU outlines a methodology that can be used as a reference for the testing for potential security flaws."
+|- valign="top"
+| Software Assurance Pocket Guide Series - [https://buildsecurityin.us-cert.gov/swa/downloads/RequirementsMWV1001AM091111.pdf Development Volume IV - Requirements and Analysis for Secure Software]
+| 5 October 2009 
+| 1.0
+| In "Requirements Elicitation - Misuse/Abuse Cases", "The OWASP CLASP process recommends describing misuse cases as follows...".  In "Requirements Elicitation - Threat Modeling", "The OWASP Review Guide at http://www.owasp.org/index.php/Application_Threat_Modeling outlines a methodology that can be used as a reference for the testing for potential security flaws.".  In "Processes", "The Comprehensive, Lightweight Application Security Process (CLASP), sponsored by the Open Web Application Security Project (OWASP), is designed to help software development teams build security into the early stages of existing and new-start software development life cycles in a structured, repeatable, and measurable way..." and "CLASP Best Practice 3: Capture Security Requirements at http://www.owasp.org/index.php/Category:BP3_Capture_security_requirements.".  In "Documenting Security Requirements", "The OWASP CLASP document recommends a resource-centric approach to deriving requirements" and "OWASP CLASP v1.2 at
+http://www.lulu.com/items/volume_62/1401000/1401307/3/print/OWASP_CLASP_v1.2_for_print_LULU.pdf".
+
+|- valign="top"
+| Software Assurance Pocket Guide Series - [https://buildsecurityin.us-cert.gov/swa/downloads/Architecture_and_Design_Pocket_Guide_v1.3.pdf Development Volume V - Architecture and Design Considerations for Secure Software]
+| 22 February 2011 
+| 1.3
+| In "Misuse Cases and Threat Modeling - Misuse/Abuse Cases", "Figure 2 shows an example of a use/misuse case diagram from OWASP's Testing Guide (reference: OWASP Testing Guide, OWASP.org. 2008 version 3.0, OWASP, 30 November 2010 http://www.owasp.org/images/5/56/OWASP_Testing_Guide_v3.pdf)" and "The OWASP Comprehensive, Lightweight application Security Process (CLASP) process recommends describing misuse cases as follows: ... (reference: OWASP Comprehensive, Lightweight Application Security Process (CLASP) project, OWASP.org, 3 July 2009, The Open Web Application Security Project [OWASP], 19 July 2010 http://www.owasp.org/index.php/Category:OWASP_CLASP_Project)".  In "Misuse Cases and Threat Modeling - Threat Modeling", "The OWASP Code Review Guide at http://www.owasp.org/index.php/Application_Threat_Modeling outlines a methodology that can be used as a reference for the testing for potential security flaws.".  In "Secure Design Patterns - Architectural-level Patterns", "Use authorization frameworks such as ... and the OWASP ESAPI Access Control feature.".  In "Secure Design Patterns - Design-level Patterns", "Do use a framework that maintains the state automatically with a stateless protocol such as HTTP. Examples include ... and the OWASP ESAPI Session Management feature.".  in "Design Review and Verification", "Checklists on verification requirements are also useful, such as the one OWASP provides from their OWASP Application Security Verification Standard 2009 – Web Application Standard document (reference: OWASP Application Security Verification Standard 2009 – Web Application Standard, OWASP at http://www.owasp.org/images/4/4e/OWASP_ASVS_2009_Web_App_Std_Release.pdf).".  In "Key Architecture and Design Practices for Mitigating Exploitable Software Weaknesses", "Mitigate risk from Cross-Site Request Forgery (CSRF) by using the ESAPI Session Management control and anti-CSRF packages such as the OWASP CSRFGuard".
+
+|- valign="top"
+| Software Assurance Pocket Guide Series - [https://buildsecurityin.us-cert.gov/swa/downloads/Secure_Coding_v1.1.pdf Development Volume VI - Secure Coding]
+| 22 February 2011 
+| 1.1
+| In "Acknowledgements - Resources" , "OWASP Comprehensive, Lightweight Application Security Process (CLASP) project, OWASP.org, 3 July 2009, The Open Web Application Security Project [OWASP], 19 July 2010 http://www.owasp.org/index.php/Category:OWASP_CLASP_Project" and "OWASP Secure Coding Practices Quick Reference Guide, OWASP.org,November 2010 Version 2.0, The Open Web Application Security Project [OWASP], 17 November 2010 http://www.owasp.org/index.php/OWASP_Secure_Coding_Practices_-_Quick_Reference_Guide".  In "Preparing to Write Secure Code - Identify Safe and Secure Software Libraries", "Examples of libraries to consider are: ... Open Web Applications Security Project’s (OWASP) Enterprise Security API (ESAPI) simplifies many security tasks such as input validation or access controls [Melton] (references: Melton, John, The OWASP Top Ten and ESAPI, John Melton‘s Weblog: Java, Security and Technology, 3 January 2009, 4 August 2010 http://www.jtmelton.com/2009/01/03/the-owasp-top-ten-and-esapi/; OWASP Enterprise Security API, OWASP.org. 2 July 2010, The Open Web Application Security Project [OWASP], 4 August 2010 http://www.owasp.org/index.php/Category: OWASP_Enterprise_Security_API)" and "antiXSS libraries are available for web applications. AntiXSS libraries focus on preventing Cross Site Scripting (XSS) attacks. These antiXSS libraries, at a minimum, allow the HTML-encoding of all output derived from un-trusted input. Examples include the OWASP PHP AntiXSS Library and ...".  In "Secure Coding Practices - SANS Top 25 Error List/OWASP Top 10 List", "SANS has published a list of the most common programming errors, and OWASP has done the same for the web application space.".  In "Conclusion", "... and OWASP also offer teaching tools — ... and WebGoat, respectively".
+
+|- valign="top"
+| Software Assurance Pocket Guide Series - [https://buildsecurityin.us-cert.gov/swa/downloads/SwAWETPG-02-25-11v2.1.pdf Life Cycle Support Volume I - Software Assurance in Education, Training & Certification]
+| 1 March 2011
+| 2.1
+| In "Tools - Table 4 – Tools and web resources for hands-on classroom experience with SWA Concepts", "OWASP Learning Environments http://www.owasp.org/index.php/Phoenix/Tools Comprehensive collection of security tools, exploits, vulnerability scanners, defensive tools, application security." and "OWASP Web Goat http://www.owasp.org/index.php/OWASP_WebGoat_Project WebGoat is a deliberately insecure J2EE web application maintained by OWASP designed to teach web application security lessons." and "OWASP Broken Web Applications Project http://www.owasp.org/index.php/OWASP_Broken_Web_Applications_Project A collection of applications with known vulnerabilities.". In "Standards of Practice - Table 6– Domain-specific SwA standards used in practice", "openSAMM: Open Web Application Security Project (OWASP) Open Software Assurance Maturity Model http://www.opensamm.org/ An open framework to help organizations formulate and implement a strategy for software security that is tailored to the specific risks facing the organization.".
+
+|- valign="top"
+| rowspan="4" | [http://www.nist.gov National Institute of Standards and Technology (NIST)] 
+| rowspan="4" | USA 
+| [http://www.nist.gov/public_affairs/releases/upload/smartgrid_interoperability_final.pdf SP 1108 - Framework and Roadmap for Smart Grid Interoperability Standards, Release 1.0] 
+| January 2010 
+| 1.0 
+| In "Task 2. Performance of a risk assessment", "The initial draft list of vulnerability classes was developed using information from several existing documents and Web sites, .... the Open Web Application Security Project (OWASP) vulnerabilities list." and in "8 List of Acronyms", "OWASP Open Web Application Security Project". 
+See also NIST IR 7628 below. 
+
+|- valign="top"
+| [http://csrc.nist.gov/publications/nistir/ir7581/nistir-7581.pdf Interagency Report 7581 - System and Network Security Acronyms and Abbreviations] 
+| September 2009 
+| - 
+| "OWASP Open Web Application Security Project". 
+Issued by the [http://csrc.nist.gov Computer Security Division (CSD)]. 
+
+|- valign="top"
+| [http://csrc.nist.gov/publications/nistir/ir7628/nistir-7628_vol1.pdf Interagency Report 7628 - Guidelines for Smart Grid Cyber Security: Vol. 1, Smart Grid Cyber Security Strategy, Architecture, and High-Level Requirements] 
+| August 2010 
+| - 
+| in "Task 2. Performance of a risk assessment - Vulnerability classes", "The initial list of vulnerability classes  was developed using information from several existing documents and Web sites, e.g., ... the Open Web Application Security Project (OWASP) vulnerabilities list.".
+
+Issued by the [http://www.nist.gov/smartgrid/ Smart Grid Interoperability Panel] – Cyber Security Working Group
+
+See also Volume 3 below.
+|- valign="top"
+| [http://csrc.nist.gov/publications/nistir/ir7628/nistir-7628_vol3.pdf Interagency Report 7628 - Guidelines for Smart Grid Cyber Security: Vol. 3, Supportive Analyses and References] 
+| August 2010 
+| - 
+| In "Chapter 6 Vulnerability Classes - 6.1 Introudction", "... while it was created from many sources of vulnerability information, including... Open Web Application Security Project (OWASP) vulnerabilities", in ""Chapter 6 Vulnerability Classes - 6.3 Platform Software/Firmware Vulnerabilities", "The Common Weakness Enumeration ... and the Vulnerability Categories defined by OWASP ...are two taxonomies which provide descriptions of common errors or oversights that can result in vulnerability instances. Using the CWE and OWASP taxonomies as a guide this subsection describes classes and subclasses of vulnerabilities in platform software and firmware." and "The OWASP names are generally used with the exact or closest CWE-ID(s) match in parentheses", in "6.3.1.1 Code Quality Vulnerability (CWE-398)", "“Poor code quality,” states OWASP, “leads to unpredictable behavior. From a user’s perspective that often manifests itself as poor usability. For an attacker it provides an opportunity to stress the system in unexpected ways.”", in "6.3.1.4 Cryptographic Vulnerability (CWE-310) - Examples", "Testing for SSL-TLS (OWASP-CM-001) (CWE-326)", in "6.3.1.5 Environmental Vulnerability (CWE-2)", "“This category,” states OWASP, “includes everything that is outside of the source code but is still critical to the security of the product that is being created. Because the issues covered by this kingdom are not directly related to source code, we separated it from the rest of the kingdoms.”", in "6.3.1.12 Path Vulnerability (CWE-21)", "“This category [Path Vulnerability],” states OWASP, “is for tagging path issues that allow attackers to access files that are not intended to be accessed. Generally, this is due to dynamically construction of a file path using unvalidated user input.”", in "6.3.1.15 Sensitive Data Protection Vulnerability (CWE-199)", "OWASP describes the sensitive data protection vulnerability as follows..." and "Inappropriate protection of cryptographic keys http://www.owasp.org/index.php/Top_10_2007-Insecure_Cryptographic_Storage", in "6.3.1.23 4.2.1. API Abuse (CWE-227)", "OWASP describes the API abuse vulnerability as follows..." and in "6.6 References", "Open Web Application Security Project, April 2010, http://www.owasp.org/index.php/Category:Vulnerability" and "Open Web Application Security Project, " Testing for business logic (OWASP-BL-001)",August 2010, http://www.owasp.org/index.php/Testing_for_business_logic_%28OWASP-BL-001%29".
+
+Issued by the [http://www.nist.gov/smartgrid/ Smart Grid Interoperability Panel] – Cyber Security Working Group
+|- valign="top"
+| rowspan="5" | [http://www.nsa.gov National Security Agency/Central Security Service] 
+| rowspan="5" | USA 
+| [http://www.nsa.gov/ia/_files/db/OAS-10g-Security-Guide-v1.2.pdf Oracle Application Server on Windows 2003 Security Guide] (I733-032R-2006) 
+| December 2006 
+| - 
+| In "References", "Stock, A., July 2005, A Guide to Building Secure Web Applications and Web Services, 2.0, The Open Web Application Security Project (OWASP).".
+|- valign="top"
+| [http://www.nsa.gov/ia/_files/support/I733-034R-2007.pdf Web Application Security Overview and Web Application Security Vulnerabilities] (I733-034R-2007) 
+| 2007 
+| - 
+| "... One well-respected industry source is the Open Web Application Security Project (OWASP), an open community dedicated to application security. OWASP's extensive library and collection of tools is freely available at http://www.owasp.org. A great place to start is the OWASP Top Ten Project (http://www.owasp.org/index.php/OWASP_Top_Ten_Project). The OWASP document provides a list of critical web application security flaws and detailed suggestions for remediation. See inset box for a brief summary" and "... The Open Web Application Security Project (OWASP), an open community dedicated to application security, has developed a list of the top ten web application vulnerabilities. This list serves to educate managers, developers, and administrators to these most common vulnerabilities in the hopes of improving security. The list is summarized below...".
+|- valign="top"
+| [http://www.nsa.gov/ia/_files/factsheets/SqlInjectionFactSheet.pdf Minimize the Effectiveness of SQL Injection Attacks] (I733-021R-2008) 
+| May 2008 
+| - 
+| In "What can an Application Programmer do?", "A well-respected source of information on web application security, to include SQL injection issues, is the Open Web Application Security Project (OWASP). At a minimum, implement the following OWASP recommendations: ..." and in "Detecting SQL Injection Vulnerabilities and Attacks", "... Information on how to go about testing for SQL injection vulnerabilities can be found on the OWASP website at http://www.owasp.org/index.php/Testing_for_SQL_Injection.". 
+This is one of a series of [http://www.nsa.gov/ia/guidance/security_configuration_guides/fact_sheets.shtml fact sheets] from the NSA - see also SOA/Web Services below. 
+
+|- valign="top"
+| [http://www.nsa.gov/ia/_files/factsheets/SOA_security_vulnerabilities_web.pdf Service Oriented Architecture Security Vulnerabilities Web Services] 
+| November 2008 
+| - 
+| In "References", "OWASP Top 10 2007 – http://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project". 
+This is one of a series of [http://www.nsa.gov/ia/guidance/security_configuration_guides/fact_sheets.shtml fact sheets] from the NSA - see also SQL Injection above. 
+
+|- valign="top"
+| [http://www.nsa.gov/ia/_files/vtechrep/ManageableNetworkPlan.pdf Manageable Network Plan] 
+| 8 July 2009 
+| 1.1 
+| In "Milestone 3: Protect Your Network (Network Architecture) - Consider", "... Do you have custom applications facing the Internet? If so, are they protected and/or are your developers trained in writing secure code? – For guidance on writing secure Web applications, see http://www.owasp.org/index.php/Category:OWASP_Guide_Project – For guidance on testing Web applications, see http://www.owasp.org/index.php/Category:OWASP_Testing_Project ..." and listed again in the "Quick Reference".
+|- valign="top"
+| rowspan="5" | [https://www.pcisecuritystandards.org/ Payment Card Industry Security Standards Council (PCI SSC)] 
+| rowspan="5" | Worldwide 
+| [https://www.pcisecuritystandards.org/security_standards/pci_dss.shtml Data Security Standard] 
+| September 2006 
+| 1.1 
+| In Requirement 6: Develop and maintain secure systems and applications, "6.5 Develop all web applications based on secure coding guidelines such as the Open Web Application Security Project guidelines..." and OWASP Top Ten 2004 listed as "Cover prevention of common coding vulnerabilities in software development processes, to include the following: 6.5.1 Unvalidated input, 6.5.2 Broken access control (for example, malicious use of user IDs), 6.5.3 Broken authentication and session management (use of account credentials and session cookies), 6.5.4 Cross-site scripting (XSS) attacks, 6.5.5 Buffer overflows, 6.5.6 Injection flaws (for example, structured query language (SQL) injection), 6.5.7 Improper error handling, 6.5.8 Insecure storage, 6.5.9 Denial of service, 6.5.10 Insecure configuration management". 
+Superseded by PCI DSS 1.2 (see below). 
+
+|- valign="top"
+| [https://www.pcisecuritystandards.org/pdfs/infosupp_6_6_applicationfirewalls_codereviews.pdf Information Supplement: Requirement 6.6 Code Reviews and Application Firewalls Clarified] 
+| 15 April 2008 
+| 1.1 
+| In "Requirement 6.6 Option 2 – Application Firewalls - Recommended Capabilities", "React appropriately (defined by active policy or rules) to threats against relevant vulnerabilities as identified, at a minimum, in the OWASP Top Ten and/or PCI DSS Requirement 6.5.", and in "Additional Sources of Information", "This list is provided as a starting point for more information on web application security... OWASP Top Ten ... OWASP Countermeasures Reference ... OWASP Application Security FAQ ...". 
+Superseded by v1.2 (see below). 
+
+|- valign="top"
+| [https://www.pcisecuritystandards.org/security_standards/pci_dss.shtml Data Security Standard] 
+| October 2008 
+| 1.2 
+| In "Requirement 6: Develop and maintain secure systems and applications - 6.3.7 Review of custom code..." mention in "6.3.7b ...Code reviews ensure code is developed according to secure coding guidelines such as the Open Web Security Project Guide...". And "6.5 Develop all web applications (internal and external, and including web administrative access to application) based on secure coding guidelines such as the Open Web Application Security Project Guide. Cover prevention of common coding vulnerabilities in software development processes, to include the following: Note: The vulnerabilities listed at 6.5.1 through 6.5.10 were current in the OWASP guide when PCI DSS v1.2 was published. However, if and when the OWASP guide is updated, the current version must be used for these requirements.", specifically "6.5.a Obtain and review software development processes for any web-based applications. Verify that processes require training in secure coding techniques for developers, and are based on guidance such as the OWASP guide ([http://www.owasp.org http://www.owasp.org])." and the OWASP Top Ten 2007 listed as "6.5.1 Cross-site scripting (XSS), 6.5.2 Injection flaws, particularly SQL injection. Also consider LDAP and Xpath injection flaws as well as other injection flaws, 6.5.3 Malicious file execution, 6.5.4 Insecure direct object references, 6.5.5 Cross-site request forgery (CSRF), 6.5.6 Information leakage and improper error handling, 6.5.7 Broken authentication and session management, 6.5.8 Insecure cryptographic storage, 6.5.9 Insecure communications, 6.5.10 Failure to restrict URL access".
+|- valign="top"
+| [https://www.pcisecuritystandards.org/security_standards/docs/information_supplement_6.6.pdf Information Supplement: Application Reviews and Web Application Firewalls Clarified] 
+| October 2008 
+| 1.2 
+| In "Requirement 6.6 Option 2: Web Application Firewalls - Recommended Capabilities", "React appropriately (defined by active policy or rules) to threats against relevant vulnerabilities as identified, at a minimum, in the OWASP Top Ten and/or PCI 
+DSS Requirement 6.5." and in "Additional Sources of Information", "This list is provided as a starting point for more information on web application security. ... OWASP Top Ten ... OWASP Countermeasures Reference ... OWASP Application Security FAQ ...". 
+
+|- valign="top"
+| [https://www.pcisecuritystandards.org/security_standards/pci_dss.shtml Data Security Standard] 
+| October 2010 
+| 2.0 
+| In "Requirement 6: Develop and maintain secure systems and applications - 6.5", "Develop applications based on secure coding guidelines. Prevent common coding vulnerabilities in software development processes, to include the following: ... The vulnerabilities listed at 6.5.1 through 6.5.9 were current with industry best practices when this version of PCI DSS was published. However, as industry best practices for vulnerability management are updated (for example, the OWASP Guide, SANS CWE Top 25, CERT Secure Coding, etc.), the current best practices must be used for these requirements."
+|- valign="top"
+| rowspan="2" | [http://www.safecode.org/ SAFECode] 
+| rowspan="2" | Worldwide 
+| [http://www.safecode.org/publications/SAFECode_Dev_Practices1108.pdf Fundamental Practices for Secure Software Development: A Guide to the Most Effective Secure Development Practices in Use Today]
+| 8 October 2008 
+| 1 
+| Links to "OWASP Top Ten", "OWASP PHP AntiXSS Library", "OWASP Canonicalization, Locale and Unicode", "OWASP Reviewing Code for Logging Issues", and "OWASP Error Handling, Auditing and Logging".
+|- valign="top"
+| [http://www.safecode.org/publications/SAFECode_Dev_Practices0211.pdf Fundamental Practices for Secure Software Development 2nd Edition: A Guide to the Most Effective Secure Development Practices in Use Today] 
+| 8 Feb 2011
+| 2
+| In "Threat Modelling - Threat Library", "Publicly available efforts like CWE (Common Weakness Enumeration—a dictionary of software weakness types), OWASP (Open Web Application Security Project) Top Ten and CAPEC (Common Attack Pattern Enumeration and Classification that describes common methods of exploiting software) can be used to help...", in "Threat Modelling - Resources - References", "OWASP; Open Web Application Security Project; http://www.owasp.org", in "Validate Input and Output to Mitigate Common Vulnerabilities - Resources - Tools/Tutorials", "Data Validation; OWASP; http://www.owasp.org/index.php/Data_Validation" and "Struts; OWASP; http://www.owasp.org/index.php/Struts", in "Use Anti-Cross Site Scripting (XSS) Libraries - Resources - References", "OWASP Top 10 2010, Cross Site Scripting; http://www.owasp.org/index.php/Top_10_2010-A2", in "Use Anti-Cross Site Scripting (XSS) Libraries - Resources - Tools/Tutorials", "OWASP Enterprise Security API; Interface
+Encoder; http://owasp-esapi-java.googlecode.com/svn/trunk_doc/latest/org/owasp/esapi/Encoder.html", "OWASP PHP AntiXSS Library; http://www.
+owasp.org/index.php/Category:OWASP_PHP_AntiXSS_Library_Project", "OWASP Reviewing Code for Cross-site scripting; http://www.owasp.org/index.php/Reviewing_Code_for_Cross-site_scripting" and "OWASP XSS (Cross Site Scripting) Prevention Cheat Sheet; http://www.owasp.org/index.php/XSS_%28Cross_Site_Scripting%29_Prevention_Cheat_Sheet", in "Use Canonical Data Formats - Resources - Tools/Tutorials", "OWASP ESAPI Access Reference Map API; http://owasp-esapi-java.googlecode.com/svn/trunk_doc/latest/org/owasp/esapi/AccessReferenceMap.
+html" and "OWASP ESAPI Access Control API; InterfaceAccess Controller; http://owasp-esapi-java.googlecode.com/svn/trunk_doc/latest/org/owasp/esapi/AccessController.html", in "Avoid String Concatenation for Dynamic SQL Statements - Verification", "OWASP offers pertinent testing advice to uncover SQL injection issues (see Resources).", in "Avoid String Concatenation for Dynamic SQL Statements - Resources - References", "OWASP; SQL Injection; http://www.owasp.org/index.php/SQL_Injection", and in "Avoid String Concatenation for Dynamic SQL Statements - Resources - Tools/Tutorials:", "OWASP; Guide to SQL Injection; http://www.owasp.org/index.php/Guide_to_SQL_Injection" and "OWASP; Testing for SQL Injection;
+http://www.owasp.org/index.php/Testing_for_SQL_Injection_(OWASP-DV-005)".
+|- valign="top"
+| rowspan="3" | [http://www.sans.org SANS Institute] 
+| rowspan="3" | USA 
+| rowspan="3" | [http://www.sans.org/top20/ Top 20] 
+| November 2005 
+| 6 
+| In "C3. PHP-based Applications - C3.6 References", "OWASP Webpage (Contains tools and documents for testing Web Application Vulnerabilities) http://www.owasp.org ...".
+|- valign="top"
+| November 2006 
+| 7 
+| In "C1 Web Applications - C1.3 How to Protect against Web Application Vulnerabilities ", "... From the developer perspective: ... Join secure coding organizations, such as OWASP (see references) to boost skills, and learn about secure coding ... Test your apps using the OWASP Testing Guide with tools like WebScarab, ..." and in "C1 Web Applications - C1.4 References", "OWASP - Open Web Application Security Project http://www.owasp.org ... 
+OWASP Testing Guide http://www.owasp.org/index.php/OWASP_Testing_Guide_v2_Table_of_Contents ... OWASP Guide - a compendium of secure coding http://www.owasp.org/index.php/Category:OWASP_Guide_Project ... OWASP Top 10 - Top 10 web application security weaknesses http://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project". 
+
+|- valign="top"
+| November 2007 
+| 8 
+| In "S1 Web Applications - S1.3 How to Protect against Web Application Vulnerabilities", "... From the developer perspective: ... Join secure coding organizations, such as OWASP (see references) to boost skills, and learn about secure coding ... Test your apps using the OWASP Testing Guide with tools like WebScarab, ..." and in "S1 Web Applications - S1.4 References", "OWASP - Open Web Application Security Project http://www.owasp.org ... OWASP Testing Guide http://www.owasp.org/index.php/OWASP_Testing_Guide_v2_Table_of_Contents ... OWASP Guide - a compendium of secure coding http://www.owasp.org/index.php/Category:OWASP_Guide_Project ... OWASP Top 10 - Top 10 web application security weaknesses http://www.owasp.org/index.php/Top_10_2007".
+|- valign="top"
+| rowspan="2" | [http://www.sharedassessments.org Shared Assessments] 
+| rowspan="2" | Worldwide 
+| rowspan="2" | Agreed Upon Procedures (AUP) 
+| - 
+| 2.0-4.0 
+| OWASP referenced - exact text unknown
+|- valign="top"
+| November 2009 
+| 5.0 
+| In "I. Information Systems Acquisition, Development and Maintenance - I.1 Application Vulnerability Assessments/Ethical Hacking - Objective", "An organization should perform application penetration tests or ethical hacking of proprietary web-facing applications. Industry standards such as OWASP should be utilized as a foundation for detecting vulnerabilities in the applications, and measuring the effectiveness of the application security controls in place." and in the following section "Procedure", the OWASP Top ten 2007 are listed "For the application selected in step b, obtain the most recent ethical hack or application penetration test and inspect for evidence of the following attributes: 1. Cross Site Scripting (XSS) 2. Injection Flaws 3. Malicious File Execution 4. Insecure Direct Object Reference 5. Cross Site Request Forgery (CSRF) 6. Information Leakage and Improper Error Handling 7. Broken Authentication and Session Management 8. Insecure Cryptographic Storage 9. Insecure Communications 10. Failure to Restrict URL Access".
+
+|- valign="top"
+| [http://www.sei.cmu.edu/ Software Engineering Institute (SEI)] 
+| USA
+| [http://www.sei.cmu.edu/reports/11tr005.pdf Network Monitoring for Web-Based Threats] 
+| February 2011 
+| - 
+| In "1 Introduction - 1.1 About Our Approach", "They are broken into subcategories based on the security weakness. This approach is consistent with the one outlined by the Open Web Application Security Project (OWASP) in the Web Application Penetration Testing Guide (footnote: For more information, visit http://www.owasp.org/index.php/Web_Application_Penetration_Testing)." and "These solutions expand on those provided by OWASP. OWASP’s solutions tend to be from an application developer's viewpoint. While these solutions are extremely important...".  In "2.5.3 Virtual Hosts - DNS Zone Transfers", "Figure 2-12 from OWASP".  In "3 Configuration Management Issues", "forced browsing (footnote: “Forced browsing is an attack where the aim is to enumerate and access resources that are not referenced by the application, but are still accessible.” Source: http://www.owasp.org/index.php/Forced_browsing.)".  In "5.1.5 Cross-Site Flashing", "There are many decompilers freely available (a list is maintained at the OWASP Flash Security Project page (footnote: For more information, visit http://www.owasp.org/index.php/Category:OWASP_Flash_Security_Project.)".  In "5.1.7 [XSS] Detection/Prevention Methods", "OWASP has an extremely detailed wiki on XSS prevention and a well reviewed web application security control library called the Enterprise Security API (ESAPI), which is written in a number of languages. (footnotes: For more information, visit http://www.owasp.org/index.php/XSS_%28Cross_Site_Scripting%29_Prevention_Cheat_Sheet and For more information, visit http://www.owasp.org/index.php/ESAPI#tab=Home)".  In "5.5.3 [HTTP response splitting] Detection/Prevention Methods", "There are a number of established methods for accomplishing this in a variety of languages (e.g., OWASP ESAPI) (footnote: For more information, see http://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API.).".  in "References", "[5] OWASP. (2010, Jun.). Testing: Search engine discovery/reconnaissance (OWASP-IG-002). OWASP [Online]. Available: http://www.owasp.org/index.php/Testing:_Search_engine_discovery/reconnaissance_%28OWASP-IG-002%29  [7] OWASP. (2009, Jun.). Testing: Identify application entry points (OWASP-IG-003). OWASP [Online]. Available: http://www.owasp.org/index.php/Testing:_Identify_application_entry_points_%28OWASPIG-003%29 [15] OWASP. (2009, Jun.). Testing for application discovery (OWASP-IG-005): Black box testing and example. OWASP [Online]. Available: http://www.owasp.org/index.php/Testing_for_Application_Discovery_%28OWASP-IG-005%29#Black_Box_testing_and_example  [17] OWASP. (2009, May). Testing for Error Code (OWASP-IG-006). OWASP [Online]. Available: http://www.owasp.org/index.php/Testing_for_Error_Code_%28OWASP-IG-006%29  [18] OWASP. (2010, Mar.). Testing for file extensions handling (OWASP-CM-005). OWASP [Online]. Available: http://www.owasp.org/index.php/Testing_for_file_extensions_handling_%28OWASP-CM-005%29  [19] OWASP. (2010, Mar.). Testing for file extensions handling (OWASP-CM-005): Black box testing and example - forced browsing. OWASP [Online]. Available: http://www.owasp.org/index.php/Testing_for_file_extensions_handling_%28OWASP-CM-005%29#Black_Box_testing_and_example_-_forced_browsing  [20] OWASP. (2010, Mar.). Testing for file extensions handling (OWASP-CM-005): Black box testing and example - file upload. OWASP [Online]. Available: http://www.owasp.org/index.php/Testing_for_file_extensions_handling_%28OWASP-CM-005%29#Black_Box_testing_and_example_-_File_Upload  [21] OWASP. (2010, Mar.). Testing for old, backup and unreferenced files (OWASP-CM-006). OWASP [Online]. Available: http://www.owasp.org/index.php/Testing_for_Old,_Backup_and_Unreferenced_Files_%28OWASP-CM-006%29  [22] OWASP. (2010, Aug.). Testing for HTTP methods and XST (OWASP-CM-008). OWASP [Online]. Available: http://www.owasp.org/index.php/Testing_for_HTTP_Methods_and_XST_%28OWASP-CM-008%29  [23] OWASP. (2010, Aug.). Testing for HTTP methods and XST (OWASP-CM-008): Arbitrary HTTP methods. OWASP [Online]. Available:
+http://www.owasp.org/index.php/Testing_for_HTTP_Methods_and_XST_%28OWASP-CM-008%29#Arbitrary_HTTP_Methods  [25] OWASP. (2010, Mar.). Testing for Path Traversal (OWASP-AZ-001). OWASP [Online]. Available: http://www.owasp.org/index.php/Testing_for_Path_Traversal_%28OWASP-AZ-001%29  [29] OWASP. (2009, Feb.). Testing for privilege escalation (OWASP-AZ-003). OWASP [Online]. Available: http://www.owasp.org/index.php/Testing_for_Privilege_escalation_%28OWASPAZ-003%29  [30] OWASP. (2009, Feb.). Testing for data validation. OWASP [Online]. Available: http://www.owasp.org/index.php/Testing_for_Data_Validation  [36] OWASP. (2010, Jan.). Testing for reflected cross site scripting (OWASP-DV-001). OWASP [Online]. Available: http://www.owasp.org/index.php/Testing_for_Reflected_Cross_site_scripting_%28OWASPDV-001%29  [37] OWASP. (2009, Feb.). Testing for stored cross site scripting (OWASP-DV-002). OWASP [Online]. Available: http://www.owasp.org/index.php/Testing_for_Stored_Cross_site_scripting_%28OWASPDV-002%29  [38] OWASP. (2010, Jul.). Testing for DOM-based cross site scripting (OWASP-DV-003). OWASP [Online]. Available: http://www.owasp.org/index.php/Testing_for_DOMbased_Cross_site_scripting_%28OWASP-DV-003%29  [39] OWASP. (2009, Aug.). Testing for cross site flashing (OWASP-DV-004). OWASP [Online]. Available: http://www.owasp.org/index.php/Testing_for_Cross_site_flashing_%28OWASPDV-004%29  [40] OWASP. (2009, Aug.). Testing for cross site flashing (OWASP-DV-004): Decompilation. OWASP [Online]. Available: http://www.owasp.org/index.php/Testing_for_Cross_site_flashing_%28OWASP-DV-004%29#Decompilation  [41] OWASP. (2009, Aug.). Testing for cross site flashing (OWASP-DV-004): Unsafe methods. OWASP [Online]. Available: http://www.owasp.org/index.php/Testing_for_Cross_site_flashing_%28OWASP-DV-004%29#Unsafe_Methods  [45] OWASP. (2010, Mar.). SQL injection. OWASP [Online]. Available: http://www.owasp.org/index.php/SQL_Injection  [47] OWASP. (2010, Jul.). Testing for SQL server. OWASP [Online]. Available: http://www.owasp.org/index.php/Testing_for_SQL_Server  [48] OWASP. (2009, Sep.). Blind SQL injection. OWASP [Online]. Available: http://www.owasp.org/index.php/Blind_SQL_Injection  [49] OWASP. (2009, Feb.). Testing for Oracle. OWASP [Online]. Available: http://www.owasp.org/index.php/Testing_for_Oracle  [50] OWASP. (2010, Jul.). Testing for MySQL. OWASP [Online]. Available: http://www.owasp.org/index.php/Testing_for_MySQL  [51] OWASP. (2009, Feb.). Testing for MS Access. OWASP [Online]. Available: http://www.owasp.org/index.php/Testing_for_MS_Access  [52] OWASP. (2010, Jul.). OWASP backend security project testing PostgreSQL. OWASP [Online]. Available: http://www.owasp.org/index.php/OWASP_Backend_Security_Project_Testing_PostgreSQL  [53] OWASP. (2010, Apr.). SQL injection prevention cheat sheet. OWASP [Online]. Available: http://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet  [54] OWASP. (2009, Feb.). Testing for SSI injection (OWASP-DV-009). OWASP [Online]. Available: http://www.owasp.org/index.php/Testing_for_SSI_Injection_%28OWASP-DV-009%29  [55] OWASP. (2009, May). Testing for command injection (OWASP-DV-013). OWASP [Online]. Available: http://www.owasp.org/index.php/Testing_for_Command_Injection_%28OWASPDV-013%29  [60] OWASP. (2010, Aug.). Cross-site request forgery (CSRF) prevention cheat sheet. OWASP [Online]. Available: http://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29_Prevention_Cheat_Sheet"
+
+|- valign="top"
+| rowspan="3" | [http://www.tisn.gov.au Trusted Information Sharing Network for Critical Infrastructure Protection (TISN)] 
+| rowspan="3" | Australia 
+| [http://www.dbcde.gov.au/__data/assets/pdf_file/0016/70621/SIFT_Full_Report_020707.pdf Information Security Principles for Enterprise Architecture] 
+| June 2007 
+| - 
+| In "Recommendation 2.6: Implement security based on transparent, trusted and proven solutions", "...Best practice information system development and management processes such as: ... Open Web Application Security Project (OWASP)—an open-source project dedicated to finding and fighting the causes of insecure software. The OWASP Guide provides methodology and processes for..." and in the checklist "Trusted and proven information system development processes such as ITIL, OWASP and CIS (see page 44 for a definition)—are used or considered when developing information systems".
+|- valign="top"
+| [http://www.dbcde.gov.au/__data/assets/pdf_file/0004/88357/Defence-in-full-15-Oct-2008.pdf Defence in Depth] 
+| June 2008 
+| - 
+| In "Risk Analysis methodology - Identify risk", "...After threat classification, threat rating is performed using the DREAD model ... Open Web Application Security Forum (OWASP), Threat Risk Modelling, March 2008, 
+www.owasp.org/index.php/Threat_Risk_Modeling#DREAD", in "Assessing technology risks - Approaches", "Application review—analyse critical applications for compliance with secure application development standards (e.g. OWASP) ... Open Web Application Security Project (OWASP), OWASP Guide 2.1, accessed 2008: www.owasp.org", in "Implementing technology controls - Application (client and server)", "...As the application security space (in particular the web application security) has matured over the past decade, many resources have become available for detailing the breadth of controls available ... Open Web Application Security Project (OWASP), OWASP Guide 2.1, accessed 2008: http://www.owasp.org/" and in "Implementing technology controls - Control analysis - Focus area guideline: Application security - implementation", "Adopt secure application development and review processes ... Best-practice processes/tools (OWASP, OASIS) ...". 
+
+|- valign="top"
+| [http://www.tisn.gov.au/www/tisn/rwpattach.nsf/VAP/(99292794923AE8E7CBABC6FB71541EE1)~SIFT-UAM-CIOCSO-Report-v8+-+15+Oct+2008.pdf/$file/SIFT-UAM-CIOCSO-Report-v8+-+15+Oct+2008.pdf User-access management] 
+| June 2008 
+| - 
+| In "Trends &amp; Emerging Threats - Migration to browser-based web applications", "...Web application vulnerabilities may 
+leave data and applications at risk of unauthorised access or tampering, and allow circumvention of access controls ... Open Web Application Security Project (OWASP), Top 10 2007, 2007, http://www.owasp.org/index.php/Top_10_2007". 
+
+|- valign="top"
+| [http://www.w3.org/ World Wide Web Consortium (W3C)] 
+| Worldwide 
+| [http://www.w3.org/TR/mwabp/ Mobile Web Application Best Practices] 
+| 14 December 2010 
+| Recommendation
+| In "3 Best Practice Statements  - 3.2 Security and privacy", "For example, see OWASP for a good summary of common Web security Best Practices".
+
+|}
+
+=== Important Reports and Other Resources  ===
+
+{| class="prettytable"
+|-
+! Organisation 
+! Scope 
+! Document 
+! Date 
+! Version 
+! Comments
+|- valign="top"
+| 
+| 
+| 
+| 
+| 
+| 
+|- valign="top"
+| [http://www.auscert.org.au/ Australian Computer Emergency Response Team (AusCERT)] 
+| Australia 
+| [http://www.aph.gov.au/House/committee/coms/cybercrime/subs/sub30.pdf Submission to House of Representatives Standing Committee on Communications – Inquiry into Cyber Crime] 
+| 2009 
+| - 
+| In "Goal to prevent cyber attacks from occurring", "At the national level, implement regulations which require 1. any organisation hosting a commercial web site (as opposed to a web page) to adhere to web application security standards, such as those by OWASP..."
+|- valign="top"
+| [http://www.publicsafety.gc.ca/prg/em/ccirc/index-eng.aspx Canadian Cyber Incident Response Centre] 
+| Canada 
+| [http://www.publicsafety.gc.ca/prg/em/ccirc/anre-eng.aspx Security publications] 
+| Ongoing 
+| - 
+| OWASP materials reference e.g. in "[http://www.publicsafety.gc.ca/prg/em/ccirc/2008/in08-002-eng.aspx IN08-002: SQL Injection Attacks]", "... Additional mitigation techniques may be found at Open Web Application Security Project (OWASP) website: http://www.owasp.org/index.php/Preventing_SQL_Injection_in_Java#Defence_Strategy ..."
+|- valign="top"
+| [http://www.certa.ssi.gouv.fr/ Centre d'Expertise Gouvernemental de Réponse et de Traitement des Attaques Informatiques (CERTA)] 
+| France 
+| [http://www.certa.ssi.gouv.fr/site/index_inf.html Notes d'information] 
+| Ongoing 
+| - 
+| OWASP materials reference e.g. in "[http://www.certa.ssi.gouv.fr/site/CERTA-2008-INF-003.pdf CERTA-2008-INF-003 - Les attaques de type 'cross-site request forgery']", "... Documentation ... CSRF Guard&nbsp;: http://www.owasp.org/index.php/Category:OWASP_CSRFGuard_Project" 
+CERTA is part of [http://www.ssi.gouv.fr/ Agence Nationale de la Sécurité des Systèmes d’Information (ANSSI)] in France's [http://www.sgdn.gouv.fr/ Secrétariat Général de la Défense Nationale]. 
+
+|- valign="top"
+| Combined Security Incident Response Team (CSIRTUK) 
+| UK 
+| [http://www.cpni.gov.uk/Products/advisories.aspx CSIRTUK advisories] 
+| Ongoing 
+| - 
+| OWASP designation used in advisory categorisation. 
+CSIRTUK is part of the UK [http://www.cpni.gov.uk/ Centre for the Protection of National Infrastructure]. 
+
+|- valign="top"
+| [http://iac.dtic.mil/iatac/ Information Assurance Technology Analysis Center (IATAC)] and [http://www.thedacs.com/ Data and Analysis Center for Software (DACS)] 
+| USA 
+| [http://iac.dtic.mil/iatac/download/security.pdf Software Security Assurance] State-of-the-Art Report (SOAR) 
+| 31 July 2007 
+| - 
+| In Section 6: Software Assurance Initiatives, Activities, and Organizations, "6.2 Private Sector Initiatives", 6.2.1 OWASP... 6.2.1.1 Tools... WebGoat... WebScarab... 6.2.1.2 Documents and Knowledge Bases... AppSec FAQ... Guide to Building Secure Web Applications... Legal knowledge base... Top Ten Web Application Security Vulnerabilities...".
+|- valign="top"
+| [http://www.us-cert.gov/ National Cyber Security Division] 
+| USA 
+| [http://cwe.mitre.org/ Common Weakness Enumeration] 
+| Ongoing 
+| - 
+| [http://cwe.mitre.org/data/definitions/629.html OWASP Top Ten (2007) view], [http://cwe.mitre.org/data/definitions/711.html OWASP Top Ten (2004) view] and OWASP in [http://cwe.mitre.org/about/sources.html Taxonomies]. 
+The National Cyber Security Division is part of the [http://www.dhs.gov/ U.S. Department of Homeland Security]. 
+
+|- valign="top"
+| [http://www.priv.gc.ca Office of the Privacy Commissioner of Canada] 
+| Canada 
+| [http://www.priv.gc.ca/cf-dc/2009/2009_008_0716_e.cfm Report of Findings into the Complaint Filed by the Canadian Internet Policy and Public Interest Clinic (CIPPIC) against Facebook Inc.] (also in [http://www.priv.gc.ca/cf-dc/2009/2009_008_0716_f.cfm French]) 
+| 16 July 2009 
+| - 
+| In the section "Industry Review" of "Summary of Investigation", OWASP mentioned in paragraph 344 "we learned that an organization known as the Open Web Application Security Project (OWASP) promotes the development of secure applications and has created several guidelines addressing issues of session management... OWASP recommends to website creators that sessions should timeout after 5 minutes for high-value applications, 10 minutes for medium-value applications, and 20 minutes for low-value applications. Although OWASP has not provided actual definitions for high-, medium-, or low-value data, it does cite ... as examples of high-value data and ... as examples of low-value data." and in paragraph 345 "...our Office's review of how various websites manage sessions indicates that the OWASP guidelines are not widely used in the industry..."
+|}
+
+=== Project Requirements  ===
+
+International, national governmental and other significant specification, invitation to tender (ITT) and request for proposal (RFP) documents. 
+
+{| class="prettytable"
+|-
+! Organisation 
+! Scope 
+! Document 
+! Date 
+! Version 
+! Comments
+|- valign="top"
+|
+|
+|
+|
+|
+|
+|- valign="top"
+| Banco Central Do Brasil 
+| Brasil 
+| Processo no: 0701385050 (penetration testing for web applications) 
+| 19 February 2008 
+| - 
+| In paragraph 5.3 "... testar a presença das vulnerabilidades descritas pelo OWASP (http://www.owasp.org/index.php/Category:Vulnerability) que possam ser detectadas através de testes caixa-preta remotos.", in paragraph 5.4.2 "a classificação OWASP da vulnerabilidade, conforma a página http://www.owasp.org/index.php/Category:Vulnerability;" and in paragraph 5.6 "... recomendações do OWASP Testing Guide (http://www.owasp.org/index.php/OWASP_Testing_Guide_v2_Table_of_Contents)."
+|- valign="top"
+| Greek General Secretariat of Information Systems
+| Greece
+| [http://www.gsis.gr/ggps/works/dimdiav/dialeitourg.html Tender]
+| 16 December 2011
+| -
+| On page 18 "all applications that will be delivered must not be vulnerable to the ten most prevalent risks according to the OWASP Top 10 (https://www.owasp.org/index.php/Top_Ten)"
+|}
+
+<br> Return to [[Global Industry Committee]]

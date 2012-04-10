@@ -1,0 +1,115 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+Java packages are not inherently closed; therefore, relying on them for code security is not a good practice.
+
+'''Consequences'''
+
+* Confidentiality: Any data in a Java package can be accessed outside of the Java framework if the package is distributed.
+* Integrity: The data in a Java class can be modified by anyone outside of the Java framework if the packages is distributed.
+
+'''Exposure period'''
+
+Design through Implementation: This flaw is a style issue, so it is important to not allow direct access to variables and to protect objects.
+
+'''Platform'''
+
+* Languages: Java
+* Operating platforms: Any
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Medium
+
+'''Likelihood of exploit'''
+
+Medium
+
+The purpose of package scope is to prevent accidental access. However, this protection provides an ease-of-software-development feature but not a security feature, unless it is sealed.
+
+==Risk Factors==
+
+TBD
+
+
+==Examples==
+
+In Java:
+
+package math;
+
+public class Lebesgue implements Integration{
+
+ public final Static String youAreHidingThisFunction(functionToIntegrate){
+     return ...;
+}
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* Design through Implementation: Data should be private static and final whenever possible. This will assure that your code is protected by instantiating early, preventing access and tampering. 
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Environmental Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

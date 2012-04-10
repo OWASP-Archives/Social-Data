@@ -1,0 +1,37 @@
+{{Template: <includeonly>{{{1}}}</includeonly><noinclude>Release About</noinclude>
+| project_name = OWASP Zed Attack Proxy Project
+| project_home_page = OWASP Zed Attack Proxy Project
+| release_name = ZAP 1.0.0
+| release_date = 15/09/2010
+
+| release_description = 
+
+'''Some of ZAP's features:'''
+
+* Intercepting proxy
+* [http://code.google.com/p/zaproxy/wiki/HelpStartConceptsAscan Automated scanner]
+* [http://code.google.com/p/zaproxy/wiki/HelpStartConceptsPscan Passive scanner]
+* [http://code.google.com/p/zaproxy/wiki/HelpStartConceptsSpider Spider]
+
+'''Some of ZAP's characteristics:'''
+
+* Easy to install (just requires java 1.6)
+* Ease of use a priority
+* [http://code.google.com/p/zaproxy/wiki/HelpIntro Comprehensive help pages]
+* Under active development
+* [http://www.apache.org/licenses/LICENSE-2.0 Open source]
+* Free (no paid for 'Pro' version)
+* Cross platform
+* Involvement actively encouraged 
+
+ZAP is a fork of the well regarded [http://www.parosproxy.org/ Paros Proxy].
+
+| release_license = [http://www.apache.org/licenses/LICENSE-2.0 Apache License 2.0]
+| release_download_link = http://code.google.com/p/zaproxy/downloads/list
+
+| leader_name1 = Psiinon
+| leader_email1 = psiinon@gmail.com
+| leader_username1 = Psiinon
+
+| release_notes = http://www.owasp.org/index.php/Projects/OWASP_Zed_Attack_Proxy_Project/Releases/ZAP_1.0.0/Notes
+}}

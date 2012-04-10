@@ -1,0 +1,28 @@
+[[Image:Evil-stories.gif|right]]
+Introducing security-focused code reviews into Agile software development methodologies such as Scrum is not easy. Like stepping onto a moving treadmill, it can be done, but it has to be done carefully.
+
+Attempting to perform comprehensive code reviews between sprints is one example of how NOT to do it. This is akin to jumping onto a moving treadmill without holding onto the rails first. The point of Scrum is to deliver a small working increment of the software at the end of a sprint. Why should any Scrum team member spend ANY time on fixes for features that are NOT otherwise in a sprint backlog? Spending time making fixes to portions of the code that are neither included nor affected by the sprint backlog simply becomes an impediment.
+
+How then to hold onto the treadmill rails before jumping on? The first step is to hack the product backlog. How does one "hack" the product backlog? One does this by adding user stories. EVIL user stories. User stories are software requirements expressed conversationally by users. For example: "As an employee, I can search for other employees by their last name". What are evil user stories then? These are evil user stories, perhaps even THE evil user stories:
+
+* '''Example #1.''' "As a hacker, I can send bad data in URLs, so I can access data and functions for which I'm not authorized."
+
+* '''Example #2.''' "As a hacker, I can send bad data in the content of requests, so I can access data and functions for which I'm not authorized."
+
+* '''Example #3.''' "As a hacker, I can send bad data in HTTP headers, so I can access data and functions for which I'm not authorized."
+
+* '''Example #4.''' "As a hacker, I can read and even modify all data that is input and output by your application."
+
+The next step is to whip out your permanent marker forever after when the sprint backlog is being penciled in during sprint planning meetings. Authentication, session management, access control, input validation, output encoding/escaping, cryptography, error handling and logging, data protection, communication security, and HTTP security features will need to be included AS APPLICABLE for EVERY single sprint backlog feature, EVERY sprint. 
+
+The last step is to gate the completion of tasks on the sprint backlog with the successful completion of a security-focused code review. Successfully completing a code review means addressing findings from a code review and then passing a re-review. Hopefully the team member will have been mindful of the need to for example perform input validation for form fields. Hopefully the code reviewer will be able to provide guidance how to make fixes, perhaps even assistance. For example, having a code reviewer build out and maintain an enterprise security API in between sprints is one way code reviewers can help speed up fixes during a sprint, by having a toolkit at the ready for team members to use.
+
+[[Image:Secure-scrum.gif]]
+
+For more information about how security features such as input validation should work for EVERY single sprint backlog feature, see: [[ASVS | The ASVS Project]]
+
+For more information about how to build out an enterprise security API, see: [[:Category:OWASP_Enterprise_Security_API | The ESAPI Project]]
+
+[[Category:OWASP Application Security Verification Standard Project]]
+[[Category:OWASP Enterprise Security API]]
+[[Category:How To]]

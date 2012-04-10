@@ -1,0 +1,58 @@
+{{Template:Attack}}
+<br>
+[[Category:OWASP ASDR Project]]
+
+Last revision: '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+==Description==
+
+A Direct Static Code Injection attack consists of injecting code directly onto the resource used by application while processing a user request. This is normally performed by tampering libraries and template files which are created based on user input without proper data sanitization. 
+Upon a user request to the modified resource, the actions defined in it will be executed at server side in the context of web server process.
+
+[[Server-Side Includes (SSI) Injection | Server Side Includes]] is considered a type of direct static code injection. It should not be confused with other types of code injection, like [[Cross-site Scripting (XSS)| XSS]] (“Cross-site scripting” or “HTML injection”) where the code is executed on the client side.
+
+==Risk Factors==
+TBD
+[[Category:FIXME|need content here]]
+
+==Examples==
+
+===Example 1===
+This is a simple example of exploitation of a CGISCRIPT.NET csSearch 2.3 vulnerability, published on Bugtraq ID: 4368.
+By requesting the following URL to the server, it’s possible to execute commands defined on the ‘’’’setup’’’ variable.
+<br>
+ csSearch.cgi?command=savesetup&setup=''PERL_CODE_HERE''
+<br>
+For the classic example, the following command can be used to remove all files from “/” folder:
+csSearch.cgi?command=savesetup&setup=`rm%20-rf%20/`
+
+Note that the above command must be encoded in order to be accepted.
+
+===Example 2===
+This example exploits a vulnerability on Ultimate PHP Board (UPB) 1.9 (CVE-2003-0395), which allows an attacker to execute random php code. This happens because some user variables, like IP address and User-Agent, are stored in a file that is used by the admin_iplog.php page to show user statistics. When an administrator browses this page, the previously injected code by a malicious request is executed. 
+The following example stores a malicious PHP code that will deface the index.html page when an administrator browses admin_iplog.php.
+ GET /board/index.php HTTP/1.0
+ User-Agent: <? system( "echo \'hacked\' > ../index.html" ); ?>
+
+==Related [[Threat Agents]]==
+* [[Internal software developer]]
+
+==Related [[Attacks]]==
+* [[Server-Side Includes (SSI) Injection | Server Side Includes]]
+* [[ Direct Dynamic Code Evaluation ('Eval Injection')]]
+
+==Related [[Vulnerabilities]]==
+* [[:Category:Input Validation Vulnerability]]
+
+==Related [[Controls]]==
+* [[:Category:Input Validation]]
+
+==References==
+* http://www.seclab.tuwien.ac.at/advisories/TUVSA-0510-001.txt
+* http://marc.info/?l=bugtraq&m=105379741528925&w=2
+* http://archives.neohapsis.com/archives/bugtraq/2005-06/0002.html
+
+
+[[Category:Injection]]
+[[Category:Attack]]
+__NOTOC__

@@ -1,0 +1,153 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+{{Template:Fortify}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+If a functions return value is not checked, it could have failed without any warning.
+
+Ignoring a method's return value can cause the program to overlook unexpected states and conditions.
+
+Just about every serious attack on a software system begins with the violation of a programmer's assumptions. After the attack, the programmer's assumptions seem flimsy and poorly founded, but before an attack many programmers would defend their assumptions well past the end of their lunch break.
+
+Two dubious assumptions that are easy to spot in code are "this function call can never fail" and "it doesn't matter if this function call fails". When a programmer ignores the return value from a function, they implicitly state that they are operating under one of these assumptions.
+
+'''Consequences'''
+
+* Integrity: The data which was produced as a result of a function could be in a bad state.
+
+'''Exposure period'''
+
+Implementation: This flaw is a simple logic issue, introduced entirely at implementation time.
+
+'''Platform'''
+
+* Languages: C or C++
+* Operating platforms: Any
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Medium
+
+'''Likelihood of exploit'''
+
+Low
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+===Example 1: In C/C++ ===
+
+<pre>
+malloc(sizeof(int)*4);
+</pre>
+
+===Example 2 ===
+
+Consider the following code:
+
+<pre>
+	char buf[10], cp_buf[10];
+	fgets(buf, 10, stdin);
+	strcpy(cp_buf, buf);
+</pre>
+
+The programmer expects that when fgets() returns, buf will contain a null-terminated string of length 9 or less. But if an I/O error occurs, fgets() will not null-terminate buf. Furthermore, if the end of the file is reached before any characters are read, fgets() returns without writing anything to buf. In both of these situations, fgets() signals that something unusual has happened by returning NULL, but in this code, the warning will not be noticed. The lack of a null terminator in buf can result in a buffer overflow in the subsequent call to strcpy().
+
+=== Example 3 ===
+
+The following code does not check to see if memory allocation succeeded before attempting to use the pointer returned by malloc().
+
+<pre>
+	buf = (char*) malloc(req_size);
+	strncpy(buf, xfer, req_size);
+</pre>
+
+The traditional defense of this coding error is:
+
+''"If my program runs out of memory, it will fail. It doesn't matter whether I handle the error or simply allow the program to die with a segmentation fault when it tries to dereference the null pointer."''
+
+This argument ignores three important considerations:
+# Depending upon the type and size of the application, it may be possible to free memory that is being used elsewhere so that execution can continue. 
+# It is impossible for the program to perform a graceful exit if required. If the program is performing an atomic operation, it can leave the system in an inconsistent state. 
+# The programmer has lost the opportunity to record diagnostic information. Did the call to malloc() fail because req_size was too large or because there were too many requests being handled at the same time? Or was it caused by a memory leak that has built up over time? Without handling the error, there is no way to know. 
+
+* '''In Java:'''
+
+Although some Java members may use return values to state their status, it is preferable to use exceptions.
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* Implementation: Check all functions which return a value
+* Implementation: When designing any function make sure you return a value or throw an exception in case of an error
+* Important and common functions will return some value about the success of its actions. This will alert the program whether or not to handle any errors caused by that function
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:API Abuse]]
+[[Category:Vulnerability]]
+[[Category:C]]
+[[Category:Implementation]]
+[[Category:Code Snippet]]
+[[Category:OWASP_CLASP_Project]]

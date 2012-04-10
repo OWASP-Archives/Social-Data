@@ -1,0 +1,37 @@
+[[Category:OWASP_Sqlibench_Project|Clik here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#SQL_Injector_Benchmarking_Project_.28SQLiBENCH.29|Sqlibench Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#SQL_Injector_Benchmarking_Project_.28SQLiBENCH.29|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+ 
+The project easily met it's %50 percent goals on time and on schedule.  I concur that the documentation was well written.  I actually stepped through procedure and setup the test environment with little diffficulty.  The videos will only add value to this component.
+|-
+
+
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#SQL_Injector_Benchmarking_Project_.28SQLiBENCH.29|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+
+The Project, at the half way point, is on track and on target for completion.  The only element not completed was the vulnerable application for Site Generator.  Since the decision was to not continue that goal the project reverts to 100% completion of the 50% target.
+ |- 
+|-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+
+- It would be nice if the test environment could work through a web application in order to get a true emulation of     typical connectivity that the test tools may be run against.  Perhaps there may be an opportunity to create one or leverage an existing one like Webgoat to create this additional element for the test environment. 
+
+- The matrix is a really nice addition to the project making it easy to locate and cross reference pertinent test information
+
+|}

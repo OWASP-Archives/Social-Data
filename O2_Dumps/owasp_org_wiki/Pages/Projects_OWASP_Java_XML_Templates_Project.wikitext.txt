@@ -1,0 +1,40 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Project About</noinclude>
+| project_name = OWASP Java XML Templates Project
+| project_home_page = OWASP Java XML Templates Project
+
+| project_description =
+JXT is a fast and secure XHTML-compliant template language that runs on a model similar to JSP. JXT provides automatic context-aware encoding of data to make it easy to avoid [http://www.owasp.org/index.php/OWASP_Top_Ten_Project OWASP Top Ten Project] #2 web-application security risks [http://www.owasp.org/index.php/Cross-site_Scripting_%28XSS%29 Cross-site Scripting].
+
+By providing automatic context aware escaping, JXT relieves the developer of having to think through the various contexts and appropriate escaping method required--allowing them to focus on coding the application. It also helps make the application more robust--it is easy to forget an escape after late night coding sessions after long hours. An additional benefit, perhaps not obvious at first, is that the automatic escaping provides for shorter syntax, and thus more readable code.
+
+| project_license = [http://en.wikipedia.org/wiki/BSD_license New BSD]
+
+| leader_name1 = Jeff Ichnowski
+| leader_email1 = jeff.ichnowski@gmail.com
+| leader_username1 = Jeff_Ichnowski
+
+| contributor_name[1-10] = 
+| contributor_email[1-10] = 
+| contributor_username[1-10] = 
+
+| pamphlet_link = 
+
+| presentation_link = 
+
+| mailing_list_name = https://lists.owasp.org/mailman/listinfo/owasp-java-xml-templates
+
+| project_road_map = http://www.owasp.org/index.php/OWASP_Java_XML_Templates_Project/Roadmap
+
+| links_url1 = https://code.google.com/p/owasp-jxt/
+| links_name1 = https://code.google.com/p/owasp-jxt/
+
+| links_url2 = http://www.owasp.org/index.php/OWASP_Java_Encoder_Project
+| links_name2 = OWASP Java Encoder Project
+
+| release_1 = JXT v1.0 
+| release_2 = 
+| release_3 =
+| release_4 =
+<!--- The line below is for GPC usage only. Please do not edit it --->
+| project_about_page = Projects/OWASP Java XML Templates Project
+}}

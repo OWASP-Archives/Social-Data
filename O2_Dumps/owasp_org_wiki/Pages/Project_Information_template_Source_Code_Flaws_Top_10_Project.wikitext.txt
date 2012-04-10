@@ -1,0 +1,58 @@
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Source Code Flaws Top 10 Project'''  
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"| 
+This project is about giving a taxonomy to describe the categories of the most dangerous security flaws you can find during a code review. For dynamic code review (web based application ethical hacking) the original Owasp Top 10 is the must have over each desk, in order to manage all the findings during the reporting phase. With the Source code flaws Top 10, you will have the same document but focused to source code.
+
+I started from venerable Gary McGraw work about the "seven kingdoms" trying to extend it to match the Top 10 schema and to include some ideas that came out to me during code reviews or static analysis.
+
+This project delivery will be a document very similar as outline to Owasp Top 10 most critical vulnerabilities in web applications. This taxonomy will be used in official Owasp Guide for static analysis, the Code review guide leaded by Eoin Keary and it will be used as cookbook list for Owasp Orizon static analysis engine default library. 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Key Project Information'''
+ | style="width:12%; background:#cccccc" align="center"|Licensed under<br>[http://creativecommons.org/licenses/by-sa/3.0/:Creative Commons Attribution ShareAlike 3.0 license]
+ | style="width:12%; background:#cccccc" align="center"|Project Leader<br>[[User:Thesp0nge|'''Paolo Perego''']]
+ | style="width:12%; background:#cccccc" align="center"|Project Contributors<br>[[User:Rba|'''Brad Andrews''']]
+ | style="width:12%; background:#cccccc" align="center"|Mailing List<br>[https://lists.owasp.org/mailman/listinfo/owasp-source-code-flaws-top-10 '''Subscribe here''']<br>[mailto:owasp-source-code-flaws-top-10(at)lists.owasp.org '''Use here''']
+ | style="width:12%; background:#cccccc" align="center"|First Reviewer<br>[[User:name|'''Name''']]
+ | style="width:12%; background:#cccccc" align="center"|Second Reviewer<br>[[User:name|'''Name''']]
+ | style="width:12%; background:#cccccc" align="center"|OWASP Board Member<br>(if applicable)<br>[[User:name|'''Name''']]
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="6" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT MAIN LINKS''' 
+ |-
+ | style="width:100%; background:#cccccc" align="center"|
+[[:OWASP Source Code Flaws Top 10 Project Index|'''Source Code Flaws Top 10 Index''']]
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="6" align="center" style="background:#4058A0; color:white"|<font color="white">'''RELATED PROJECTS''' 
+ |-
+ | style="width:100%; background:#cccccc" align="center"|
+* [[:Category:OWASP Orizon Project|OWASP Orizon Project]]<br>
+* [[:Category:OWASP Code Review_Project|OWASP Code Review Project]]
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="6" align="center" style="background:#4058A0; color:white"|<font color="white">'''SPONSORS & GUIDELINES''' 
+ |-
+ | style="width:50%; background:#cccccc" align="center"|No sponsors yet, drop [mailto:thesp0nge@owasp.org|'''me'''] a line if you want to be the first  
+ | style="width:50%; background:#cccccc" align="center"|[[:Category:OWASP Source Code Flaws Top 10 Project Roadmap|'''Roadmap''']]
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="5" align="center" style="background:#4058A0; color:white"|ASSESSMENT AND REVIEW PROCESS
+ |-
+ | style="width:15%; background:#6C82B5" align="center"|'''Review/Reviewer''' 
+ | style="width:21%; background:#b3b3b3" align="center"|'''Author's Self Evaluation'''<br>(applicable for Alpha Quality & further) 
+ | style="width:21%; background:#b3b3b3" align="center"|'''First Reviewer'''<br>(applicable for Alpha Quality & further)
+ | style="width:21%; background:#b3b3b3" align="center"|'''Second Reviewer'''<br>(applicable for Beta Quality & further)
+ | style="width:22%; background:#b3b3b3" align="center"|'''OWASP Board Member'''<br>(applicable just for Release Quality) 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''First Review''' 
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Not yet''' (To update)<br>---------<br>Which status has been reached?<br>'''Alpha Status''' - (To update)<br>---------<br>[[Project Information:template Source Code Flaws Top 10 Project - First Review - Self Evaluation - A|See&Edit: First Review/SelfEvaluation (A)]]
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Not yet''' (To update)<br>---------<br>Which status has been reached?<br>'''Alpha Status''' - (To update)<br>---------<br>[[Project Information:template Source Code Flaws Top 10 Project - First Review - First Reviewer - B|See&Edit: First Review/1st Reviewer (B)]]
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes/No''' (To update)<br>---------<br>Which status has been reached?<br>'''Alpha Status''' - (To update)<br>---------<br>[[Project Information:template Source Code Flaws Top 10 Project - First Review - Second Reviewer - C|See&Edit: First Review/2nd Reviewer (C)]]
+ | style="width:22%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes/No''' (To update)<br>---------<br>Which status has been reached?<br>'''Alpha Status''' - (To update)<br>---------<br>[[Project Information:template Source Code Flaws Top 10 Project - First Review - OWASP Board Member - D|See/Edit: First Review/Board Member (D)]]
+ |-
+ |}

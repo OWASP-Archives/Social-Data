@@ -1,0 +1,31 @@
+----
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT INFORMATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Wapiti Project'''<br>Web application vulnerability scanner / security auditor 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|
+Wapiti allows to audit the security of web applications in an easy way. It performs  a "black-box" scans acting like a fuzzer, injecting payloads to see if an application is vulnerable. It has two principal parts, a crawler that explores the pages of the application and the attack module that injects the payloads and evaluates their responses. Wapiti is easy to use and it can detect the most common vulnerabilities (XSS, SQL Injection, File Handler Errors...). It provides to the user a complete report (html format) with the found vulnerabilities.
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Key Project Information'''
+ | style="width:14%; background:#cccccc" align="center"|Project Leader<br>[[User:Devloop|'''Nicolas Surribas''']]
+ | style="width:14%; background:#cccccc" align="center"|Project Contibutors<br>[[User:Albertoes|'''Alberto Pastor Nieto''']]<br>[[User:Dpozog|'''David del Pozo González''']]
+ | style="width:14%; background:#cccccc" align="center"|Mailing List<br>[https://lists.owasp.org/mailman/listinfo/owasp-wapiti-project '''Subscribe here''']<br>[mailto:owasp-wapiti-project@lists.owasp.org '''Use here''']
+ | style="width:14%; background:#cccccc" align="center"|License<br>[http://www.gnu.org/copyleft/lesser.html '''GNU Lesser General Public License''']
+ | style="width:14%; background:#cccccc" align="center"|Project Type<br>[[:Category:OWASP_Project#Alpha_Status_Projects|'''Tool''']]
+ | style="width:15%; background:#cccccc" align="center"|Sponsors<br>if any, add link
+ |}
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|Provisory '''[[:Category:OWASP Project Assessment#Alpha Quality Tool Criteria|Apha Quality]]'''<br>(under review)<br>[[:OWASP Wapiti Project - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="center"|
+[http://www.ict-romulus.eu/web/wapiti '''OWASP Wapiti Project''']<br>
+[http://sourceforge.net/projects/wapiti/ '''Project's Sourceforge Repository''']
+ | style="width:29%; background:#cccccc" align="center"|[http://www.ict-romulus.eu '''ICT Romulus Project''']
+ |}
+----

@@ -1,0 +1,35 @@
+{{Template:OWASP Testing Guide v3}}
+
+''' 4.2 Information Gathering '''
+----
+
+The  first phase in security assessment is focused on collecting as much information as possible about a target application.
+Information Gathering is a necessary step of a penetration test.
+
+This task can be carried out in many different ways.
+
+By using public tools (search engines), scanners, sending simple HTTP requests, or specially crafted requests, it is possible to force the application to leak information, e.g., disclosing error messages or revealing the versions and technologies used.<br>
+
+
+[[Testing: Spiders, Robots, and Crawlers  (OWASP-IG-001)|4.2.1 Spiders, Robots and Crawlers (OWASP-IG-001)]]
+
+This phase of the Information Gathering process consists of browsing and capturing resources related to the application being tested. 
+
+[[Testing: Search engine discovery/reconnaissance (OWASP-IG-002)|4.2.2 Search Engine Discovery/Reconnaissance  (OWASP-IG-002)]]<br>
+Search engines, such as Google, can be used to discover issues related to the web application structure or error pages produced by the application that have been publicly exposed.
+
+[[Testing: Identify application entry points (OWASP-IG-003)|4.2.3 Identify application entry points  (OWASP-IG-003)]]<br>
+Enumerating the application and its attack surface is a key precursor before any attack should commence. This section will help you identify and map out every area within the application that should be investigated once your enumeration and mapping phase has been completed. 
+
+[[Testing for Web Application Fingerprint (OWASP-IG-004)|4.2.4 Testing Web Application Fingerprint  (OWASP-IG-004)]]<br>
+Application fingerprint is the first step of the Information Gathering process; knowing the version and type of a running web server allows testers to determine known vulnerabilities and the appropriate exploits to use during testing.
+
+[[Testing for Application Discovery (OWASP-IG-005)|4.2.5 Application Discovery  (OWASP-IG-005)]]<br>
+Application discovery is an activity oriented to the identification of the web applications hosted on a web server/application server.<br>
+This analysis is important because often there is not a direct link connecting the main application backend. Discovery analysis can be useful to reveal details such as web applications used for administrative purposes. In addition, it can reveal old versions of files or artifacts such as undeleted, obsolete scripts, crafted during the test/development phase or as the result of maintenance.
+
+[[Testing for Error Code (OWASP-IG-006)|4.2.6 Analysis of Error Codes  (OWASP-IG-006)]]<br>
+During a penetration test, web applications may divulge information that is not intended to be seen by an end user. Information such as error codes can inform the tester about technologies and products being used by the application.<br>
+In many cases, error codes can be easily invoked without the need for specialist skills or tools, due to bad exception handling design and coding. 
+
+Clearly, focusing only on the web application will not be an exhaustive test. It cannot be as comprehensive as the information possibly gathered by performing a broader infrastructure analysis.

@@ -1,0 +1,276 @@
+{{Chapter Template|chaptername=France|extra=The '''Chapter Leaders''' are [mailto:sebastien.gioria@owasp.org Sebastien Gioria] and [mailto:ludovic.petit@owasp.org Ludovic Petit''']|mailinglistsite=http://lists.owasp.org/mailman/listinfo/owasp-france|emailarchives=http://lists.owasp.org/pipermail/owasp-france}}'''
+<paypal>France Chapter</paypal>
+
+'''The French Chapter is also available on LinkedIn''': [http://www.linkedin.com/groupInvitation?gid=1638517  '''Join us''', it only takes a minute!]
+
+== Contacts et Propositions de Présentations/Contributions ==
+
+*[mailto:sebastien.gioria@owasp.org S&eacute;bastien Gioria] et [mailto:ludovic.petit@owasp.org Ludovic Petit] sont à votre disposition si vous souhaitez des informations sur l'OWASP ainsi que sur la Sécurité des Applications Web.
+
+Entreprises, Individuels, Monde Académique, Sponsors, Supports, tout le monde est bienvenu à l'OWASP.
+
+Pour les Entreprises souhaitant adhérer à l'OWASP, le montant de l'adhésion annuelle de $5000 US (dont 40% est reversé au Chapitre de votre choix) est 100% déductible! 
+
+Les fonds collectés servent à organiser les meetings du Chapitre, mais aussi et surtout à construire et organiser avec vous une approche spécifique en fonction de vos souhaits (sessions de sensibilisation, meetings internes, interventions de Speakers, etc.). Tout cela peut être discuté avec le Chapitre Français et acté conjointement avec vous si vous souhaitez adhérer à l'OWASP. 
+
+N'hésitez pas à nous solliciter si vous souhaitez discuter d'un sujet particulier, ou si vous souhaitez effectuer une présentation lors d'un meeting du Chapitre France.
+
+Amis de la Presse écrite et du Multimédia, n'hésitez pas à faire appel à nous si vous souhaitez notre concours pour vos articles et reportages, vous êtes les bienvenus et nous en serions honorés. Nous avons nous aussi besoin de vous.
+
+Nous restons modestes dans notre approche, mais nous souhaitons vraiment que le Chapitre OWASP France devienne un de vos contacts de référence. '''Ensembles, Chacun fait plus'''!
+
+                                      '''TEAM stands for... Together Each Achieves More!'''
+
+
+= News =
+
+==28 Mars 2012 Meeting du premier trimestre==
+ '''Lieu''' : Groupe Y Audit - 69 Rue de la Boëtie - 75 Paris - Métro Saint Philippe du Roule 
+ '''Horaire''' : Ouverture des portes 17h30 - Début de la présentation 18h
+ '''Présentation''' : "[https://www.owasp.org/images/6/6d/Developer_Top_Ten_Core_Controls_v4.1.pptx Top Ten Web Defenses]"'''
+ '''Résumé''' :  
+Application programmers need to learn to code in a secure fashion if we have any chance of providing organizations with proper defenses in the current threatscape. 
+This talk will discuss the 10 most important security-centric computer programming techniques necessary to build low-risk web-based applications. 
+Access Control is a necessary security control at almost every layer within a web application. 
+This talk will also detail several of the key access control anti-patterns commonly found during website security audits. 
+These access control anti-patterns include hard-coded security policies, lack of horizontal access control, and "fail open" access control mechanisms. 
+In reviewing these and other access control problems, we will discuss and design a positive access control mechanism that is data contextual, activity based, configurable, flexible, and deny-by-default - among other positive design attributes that make up a robust web-based access-control mechanism.
+ '''Speaker''' : Jim Manico 
+Jim Manico is the VP of Security Architecture at WhiteHat Security. Jim has been a web application developer since 1997. 
+He has also been an active member of OWASP since 2008 supporting projects that help developers write secure code.
+ '''Enregistrement en ligne sur''' : http://201203owaspfr.eventbrite.com/
+
+== 7 et 8 Février 2012 - [http://www.microsoft.com/france/mstechdays/ Techdays Microsoft 2012] ==
+
+Sébastien présentera un talk sur [http://www.microsoft.com/france/mstechdays/programmes/parcours.aspx?SessionID=62e02774-6045-4be8-80ff-8332a793ad4f HTML5et la Sécurité]  le 7 Février 2012 à 17h30. 
+Plus d'informations sur la page dédiée aux TechDays Microsoft 2012. ==
+
+== 6 Janvier 2012 - Nouveau Groupe de Travail sur la Sécurité des Web Services au [http://www.clusif.fr CLUSIF]  ==
+
+Dans la continuité du Groupe de Travail sur la Sécurité des Application Web initialement créé en 2009, le CLUSIF a lancé un nouveau groupe de travail autour de la sécurité des WebServices. N'hésitez pas à participer si vous êtes intéressés. Le CLUSIF recherche des utilisateurs pour ce groupe de travail et des personnes en environnements Microsoft pour disposer d'un panel le plus large possible pour ce document
+
+Contact : [mailto:sebastien.gioria@owasp.org Sébastien Gioria]
+
+== 19 Décembre 2011 - Publication du deuxième document du [http://www.clusif.fr CLUSIF]  sur la Sécurité des Applications Web ==
+
+Le CLUSIF a publié son deuxième document sur la [http://www.clusif.fr/fr/production/ouvrages/pdf/CLUSIF-2011-Defense-en-profondeur-des-applications-Web.pdf Défense en profondeur des applications Web]. Ce document fait suite au [http://www.clusif.fr/fr/production/ouvrages/pdf/CLUSIF-2009-Securite-des-applications-Web.pdf premier document publié en 2009] 
+
+== 15 Décembre 2011 Conférence du [http://www.clusif.fr CLUSIF] sur la [http://www.clusif.fr/fr/infos/event/#conf111215  sécurité des applications Web] ==
+
+Le CLUSIF a présenté la conférence Sécurité des Applications Web le jeudi 15 décembre 2011 au cercle National des Armées.
+Le programme était : 
+
+* Mise en place d'une politique de sécurité applicative : retour d'expérience d'un RSSI  par Philippe LARUE - Responsable Sécurité - [http://www.cbp-prevoyance.com/ CBP]
+* Revue de code source, ou test sécurité applicatif, quel est le plus efficient pour évaluer un niveau de sécurité applicatif ?  par Sébastien GIORIA -  Consultant Senior [http://www.groupey.fr Groupe Y] et leader du chapitre Français de [https://www.owasp.org l'OWASP] - OWASP France
+*  Les enjeux réglementaires de la protection des informations en ligne par Garance MATHIAS - Avocat - Cabinet d'Avocats
+
+Les présentations sont disponibles sur le site du [http://www.clusif.fr CLUSIF], les vidéos de l'intervention seront aussi disponible.
+
+== 2 Décembre 2011 - [[OWASP BeNeLux 2011 Conference - University of Luxembourg]] ==
+
+Ludovic had a talk about "[https://www.owasp.org/index.php/BeNeLux_OWASP_Day_2011#tab=Conference.2C_December_2nd WebApp Security and Legal aspects]"  on Dec 2.
+
+*'''Overview'''
+**This presentation aims to be used by anybody willing to spread the voice of OWASP. See this as an Awareness session.
+**Use it and use it again. 
+**Try to open your mind, just met me know if I can help. 
+
+*'''Abstract Title: "[https://www.owasp.org/images/5/55/Do_you..._Legal_-_OWASP_BeNeLux_Day_-_2_Dec_2011.pptx Do you... Legal?]"'''
+**The OWASP core mission is to make application security visible, so that people and organizations can make informed decisions about true application security risks. However, if you do not pay enough attention to many aspects of Legal compliance, you'll see why Web Application Security is somehow linked to Legal and Regulatory aspects as well as... Corporate Responsability, so yours. Who is accountable for what, what about each other's responsibility? Nowadays, the legal constraints oblige us to comply via technical means, whatever the local framework, and this is specially true for Web Application Security, many sensitive informations having to be handled through these web interfaces. A such, what do you think about your Security Policy compliance with your local Legal framework? Compliant? Sure? Really? Interesting isn't it? Let's have a talk about this. 
+
+
+
+=== [[EUROPE - ENISA’s Who-is-Who Directory on Network and Information Security]] ===
+
+We are pleased to announce that OWASP France is part of the [http://www.enisa.europa.eu/publications/studies/who-is-who-directory-2011 ENISA’s Who-is-Who Directory].
+
+The ENISA is the European Network and Information Security Agency.
+[http://www.enisa.europa.eu/publications/studies/who-is-who-directory-2011/at_download/fullReport The ENISA Who-is-Who Directory on Network and Information Security 2011] contains information on NIS stakeholders, such as national and European authorities and NIS organisations, contact details, websites, and areas of responsibilities or activities. 
+This Directory serves as the "yellow pages" of Network and Information Security (NIS) in Europe. As such, it is a useful tool for those working closely with NIS issues in Europe.
+
+
+
+= Appel à contribution OWASP France =
+
+Ici seront relayés les différents appels à contributions du Chapitre (Sponsors, talks, etc.).
+
+
+= Appel à contributions externes =
+
+Ici seront relayés les appels à contributions que nous estimons interessants pour le Chapitre. 
+
+
+
+
+= Meetings 2012 =
+
+== Q1 2012 ==
+ '''Date''' : 28 Mars 2012
+ '''Lieu''' : Groupe Y Audit - 69 Rue de la Boëtie - 75 Paris - Métro Saint Philippe du Roule 
+ '''Horaire''' : Ouverture des portes 17h30 - Début de la présentation 18h
+ '''Présentation''' : Web Application Access Control Design Excellence
+ '''Résumé''' : Access Control is a necessary security control at almost every layer within a web application. 
+                    This talk will discuss several of the key access control anti-patterns commonly found during 
+                     website security audits. These access control anti-patterns include hard-coded security policies, 
+                     lack of horizontal access control, and "fail open" access control mechanisms. In reviewing these
+                     and other access control problems, we will discuss and design a positive access control mechanism 
+                     that is data contextual, activity based, configurable, flexible, and deny-by-default - among other
+                     positive design attributes that make up a robust web-based access-control mechanism.
+ '''Speaker''' : Jim Manico
+ '''Enregistrement en ligne ici''' : http://201203owaspfr.eventbrite.com/
+
+== Q2 2012 ==
+* Date : To be defined
+* Time : To be defined
+* Venue : Groupe Y Audit - 69 Rue de la Boëtie - 75008 Paris
+* Program :
+** Talk 1 : 
+*** Lang : 
+***Speaker bio
+
+** Talk 2 : 
+***Speaker bio
+*** Lang : 
+
+== Q3 2012 ==
+* Date : To be defined
+* Time : To be defined
+* Venue : Groupe Y Audit - 69 Rue de la Boëtie - 75008 Paris
+* Program :
+** Talk 1 : 
+*** Lang : 
+***Speaker bio
+
+** Talk 2 : 
+***Speaker bio
+*** Lang : 
+
+== Q4 2012 ==
+* Date : To be defined
+* Time : To be defined
+* Venue : Groupe Y Audit - 69 Rue de la Boëtie - 75008 Paris
+* Program :
+** Talk 1 : 
+*** Lang : 
+***Speaker bio
+
+** Talk 2 : 
+***Speaker bio
+*** Lang : 
+
+
+
+= 2011 Meetings =
+
+=== [[May 2011 - Paris Meeting]] ===
+
+[Logo to be placed here]
+
+We are honored to welcome '''Jim Manico''' during his European Tour in the Netherlands, Belgium and France.
+
+*'''Overview'''
+**Apart from OWASP's Top 10, most OWASP Projects are not widely used and understood. In most cases this is not due to lack of quality and usefulness of those Document & Tool projects, but due to a lack of understanding of where they fit in an Enterprise's security ecosystem or in the Web Application Development Life-cycle. 
+**This course aims to change that by providing a selection of mature and enterprise ready projects together with practical examples of how to use them. 
+**The course will be very practical where demonstration and hands-on exercises will be provided for the tools covered. 
+**If you are interested in participating in the hands on portion of the course, please bring a laptop. 
+
+*'''Abstract Title: "[https://www.owasp.org/images/f/f4/Future_of_XSS_v4.pptx The Ghost of XSS Past, Present and Future. A Defensive Tale]"'''
+**This talk will discuss the past methods used for XSS defense that were only partially effective. Learning from these lessons, will will also discuss present day defensive methodologies that are effective, but place an undue burden on the developer. We will then finish with a discussion of future XSS defense mythologies that shift the burden of XSS defense from the developer to various frameworks. These include auto-escaping template technologies, browser-based defenses such as Content Security Policy, and Javascript sandboxes such as the Google CAJA project and JSReg. 
+
+*'''Speaker'''
+**'''Jim Manico''' is a managing partner of Infrared Security with over 15 years of professional web development experience. Jim is also the Chair of the OWASP Connections Committee, one of the Project Managers of the OWASP ESAPI Project, a participant and manager of the OWASP Cheatsheet series, the Producer and host of the OWASP Podcast Series, the Manager of the OWASP Java HTML Sanitizer project and the manager of the OWASP Java Encoder project. When not OWASP'ing, Jim lives on of island of Kauai with his lovely wife Tracey.
+
+*'''Date'''
+**May 24, 2011 
+
+*'''Venue'''
+**Paris
+
+*'''Registration'''
+**[http://www.regonline.com/Register/Checkin.aspx?EventID=971375 Click here]
+
+
+== 26 Avril 2011 ==
+
+'''Le 26 Avril 2011 dans les locaux de [http://www.groupey.fr/nos-cabinets-paris.html GROUPE Y] :'''
+
+* 9:00: [https://www.owasp.org/images/2/2f/Agenda_26th_April_2011.pptx Introduction] - '''Ludovic Petit''' & '''Sébastien Gioria'''
+* 9:30: [https://www.owasp.org/images/3/36/OPENSAMM2.pptx OpenSAMM] - '''Antonio Fontes''' (Chapter Leader OWASP Geneva) 
+* 11:00: [https://www.owasp.org/images/c/cf/OWASP_Cloud_Top_10.pptx OWASP Cloud Top 10 Project] - '''Ludovic Petit''' (Chapter Leader OWASP France & OWASP Global Education Committee Member)
+* 11:45: [https://www.owasp.org/images/5/5c/ESAPI_Swingset_talk_at_Paris.ppt OWASP ESAPI] - '''Fabio Cerullo''' (Chapter Leader OWASP Ireland & Global Education Committee)
+* 14:15: [https://www.owasp.org/images/3/38/OWASP_Testing_Guide.pptx OWASP Testing Guide]  - '''Sébastien Gioria''' (French Chapter Leader & OWASP Global Education Committee Member)
+* 15:15: [http://o2platform.com OWASP 02 Platform - Live Session] - '''Dinis Cruz''' (OWASP O2 Project Leader)
+* 16:30: [https://www.owasp.org/images/9/96/OWASP-Paris2011-VV-CodeReview.pdf OWASP Code Review] - '''Victor Vuillard'''
+
+= 2009 Meetings =
+
+'''Le 6 Mai 2009 à 17h30 à [http://www.epitech.eu L'EPITECH] :'''
+
+* 17h30 : Accueil des participants
+* 18h - 18h 15 : [http://www.owasp.org/images/d/dc/OWASP_Paris_Meeting_-_May_2009.pdf Welcome et overview of agenda] '''(Board OWASP France)'''
+* 18h30 - 19h : [http://www.owasp.org/images/6/6b/2009-05-06-OWASPFR-WebServices.pdf Attaques sur les Web Services] - '''Renaud Bidou'''
+* 19h15 - 19h45 : [http://www.owasp.org/images/8/82/2009-05-06-OWASPFR-OpenSAM.pdf Software Security Initiatives in the Real World] - '''Claudio Merloni'''
+* 20h : Close 
+
+A propos des Speakers :
+
+
+'''''Renaud Bidou :''' ''Directeur Technique de DenyAll. Il travaille depuis plus de 10 ans dans la sécurité et a publié de nombreux articles et white-papers touchant à des sujets aussi variés que les dénis de service, les portknockers, les botnets, la mise en place d’un SOC, l’analyse graphique d’attaques ou encore les techniques de contournements.
+
+
+'''''Claudio Merloni : '''''Claudio Merloni est Software Security Consultant chez Fortify Software. Ses expériences dans le domaine de la sécurité embrassent la sécurité applicative, revue de code, architectures sécurisées, analyse des risques, conformité, test de sécurité à niveau réseau, système et applicatif, monitoring, contrôle d'accès. Il a participé a plusieurs conférences, entre lesquelles BlackHat et CONFidence.
+
+
+'''Le Lieu : EPITECH'''
+
+Amphi 2
+
+14-16 rue Voltaire
+
+94276 Kremlin Bicêtre Cedex 
+
+
+''Moyens d'accès Métro''
+* ligne 7 : Porte d'Italie
+
+''Bus''
+* ligne 47, 125, 131, 185 : Roger Salengro
+* ligne 186 : Pierre Brossolette <br/> 
+
+''Voiture''
+* périphérique : sortie Porte d'Italie 
+
+
+
+
+= Translation effort =
+
+* The '''OWASP TOP Ten 2010 in French''' is [http://owasptop10.googlecode.com/files/OWASP%20Top%2010%20-%202010%20French.pdf available]
+* 2010-08-30 : La version française du Top 10 2010 est disponible [http://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project] 
+* 2008-02-15 : Le Top10 2007 est en version Française [https://www.owasp.org/index.php/Image:OWASP_Top_10_2007_-_French.pdf Format PDF], [https://www.owasp.org/index.php/Image:OWASP_Top_10_2007_-_French.doc Format Word]
+* 2007-11-16 : [https://www.owasp.org/images/5/52/Owasp_tryptique.pdf Folio 2 pages Recto/verso] de présentation pour Infosecurity.
+* 2007-02-27 : [[Newsletter_francaise_num%C3%A9ro_1]]
+* 2007-06-20 : Présentation de l'OWASP faite à NY en Juin 2007 [https://www.owasp.org/images/7/71/20070620-FR-OWASP_NY_Keynote.ppt]
+[[Category:Europe]]
+
+
+
+= Old News = 
+
+* 2009-06-09 : [http://www.owasp.org/images/d/d2/20090609-CERT-IST-WAF-v0.1.pdf Intervention sur les WAF] lors du Forum [http://www.cert-ist.com CERT-IST] 
+* 2009-02-03 : L'OWASP France sera présent à [http://www.pci-portal.com/events/event-info/paris PCI Paris]. La présentation est : [https://www.owasp.org/images/f/fb/20090203-OWASP_PCI-Global_2009_Paris_-_v03.ppt l'OWASP et l'exigence 6.5 de PCI-DSS]
+* 2008-11-19 : L'OWASP France sera présent sur  [http://www.infosecurity.com.fr/FR/badge?ref=OWAW Infosecurity France] à Paris :
+[http://www.infosecurity.com.fr/index.php?argRedirect=FR|badge&Lang=FR&ref=OWAW https://www.owasp.org/images/8/88/Infosecurity.gif]
+
+* 2008-07-08 : L'OWASP France a présenté le projet OWASP à l'[http://www.ossir.org OSSIR]. La présentation est disponible sur le site de [https://www.owasp.org/images/9/94/20080708-OWASP_OSSIR.ppt l'OWASP]
+* 2008-02-15 : Le Top10 2007 est en version Francaise
+* 2008-02-11 : Présentation aux [http://www.owasp.org/images/0/09/20080129-OWASP_TechDays_France_.ppt  TechDays 2008 Microsoft ]
+* 2007-11-22 : Présentation a Infosecurity France [http://www.owasp.org/images/8/85/20071122-OWASP_Infosecurity_France.ppt de l'OWASP]
+* 2007-11-07 : Interview dans le  [http://www.journaldunet.com/developpeur/itws/071106-securite-applicative-owasp.shtml Journal du Net]
+* 2007-10-05 : L'OWASP France présentera les enjeux de la sécurité des [http://www.infosecurity.com.fr/?Jpto=116&KM_Session=f345bb91df954e6cbc0148328f109e94&CurrentNode=518&Lang=FR&IdNode=708 Services WEB à Infosecurity France le 22/11/2007]
+* 2006-12-18 : Mise en place de l'association pour supporter le groupe OWASP
+* 2006-12-14 : Le Hub OWASP Viaduc a vu le jour http://www.viadeo.com/hub/affichehub/?hubId=002fj37grgb7o7n
+* 2006-12-13 : Naissance du chapitre Francais de l'OWASP. Une liste de diffusion est disponible.[http://lists.owasp.org/mailman/listinfo/owasp-france Abonnez vous]
+
+
+<br> __NOTOC__ <headertabs />

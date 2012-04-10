@@ -1,0 +1,38 @@
+{{Template: <includeonly>{{{1}}}</includeonly><noinclude>Release About</noinclude>
+| project_name = Owasp Esapi Ruby
+| project_home_page = Projects/Owasp Esapi Ruby
+
+| release_name = Owasp Esapi Ruby v0.30.0
+| release_date = March 2011
+
+| release_description = 
+*The OWASP Esapi Ruby gem will require at least version 1.9.2 of Ruby interpreter to make sure to have full advantages of the newer language APIs. In particular version 1.9.2 introduces radical changes in the following areas:
+**Regular expression engine (to be written)
+**UTF-8 support
+**Unicode support in 1.9.2 is much better and provides better support for character set encoding/decoding
+***All strings have an additional chunk of info attached: Encoding 
+***String#size takes encoding into account – returns the encoded character count
+***You can get the raw datasize
+***Indexed access is by encoded data – characters, not bytes
+***You can change encoding by force but it doesn’t convert the data
+**Dates and Time
+***From “Programming Ruby 1.9“
+***“As of Ruby 1.9.2, the range of dates that can be represented is no longer limited by the under- lying operating system’s time representation (so there’s no year 2038 problem). As a result, the year passed to the methods gm, local, new, mktime, and utc must now include the century—a year of 90 now represents 90 and not 1990.“
+
+| release_license =  [http://en.wikipedia.org/wiki/BSD_license BSD license]
+
+| release_download_link = https://rubygems.org/gems/owasp-esapi-ruby/versions/0.30.0
+ 
+| leader_name1 = Paolo Perego
+| leader_email1 = thesp0nge@owasp.org
+| leader_username1 = thesp0nge
+
+| contributor_name[1-10] = 
+| contributor_email[1-10] = 
+| contributor_username[1-10] =  
+
+| release_notes = https://www.owasp.org/index.php/Projects/Owasp_Esapi_Ruby/GPC/Assessment/Owasp_Esapi_Ruby_v0.30.0/Notes
+
+| links_url[1-10] =
+| links_name[1-10] =
+}}

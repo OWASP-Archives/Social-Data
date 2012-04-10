@@ -1,0 +1,36 @@
+[[Project Information:template Code Crawler|Clik here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#Code_Crawler|CodeCrawler's Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#Code_Crawler|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+The Applicaiton is definitly at least 50% complete. It has come a long way since the original version Alessio and i discussed many months ago. it is a great addition to support the code review guide and of high quality. A comprehensive intalss requirements and useage guide should accompany this tool to encourage use.
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#Code_Crawler|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+XML Driven Code Scan with OWASP Code Review Guide Database (updated) - Nice and extensible. Additional signatures can be added with ease. This is very important.
+
+1.Easy to use UI for a faster and more friendly code review: The tool is now much eaier to navigate and view issues. ease of use is key to the adoption of such a tool to the wider community.
+
+2.HTML Type Reports functionality will generate reports based on easy to build personalised templates.: Works, should me a selection of templates to choose from. Some people would like to simply use the tool and not be worried about customisation.
+
+XSLT Ready to use XSLT templates for a "ready to go" installation.: Works but it is important that clear documentation be delivered along with the tool so that users can start usong the tool in a quick manner.
+ |- 
+|-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions. 
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+Good documentation is required.
+Looking foreward to Visual Studio .NET Solutions scans. A diff solution would be good. Metrics are also useful in an enterprise environment. (See metrics section in new code review guide).
+|}

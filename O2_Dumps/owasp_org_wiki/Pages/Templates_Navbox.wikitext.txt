@@ -1,0 +1,207 @@
+{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=|none=|#default=<nowiki/>
+{{{!}} class="navbox" cellspacing="0" style="{{{bodystyle|}}};{{{style|}}}"
+{{!}}-
+{{!}} style="padding:2px;" {{!}} }}
+{{{!}} cellspacing="0" class="nowraplinks {{#if:{{{title|}}}|{{#switch:{{{state|}}}|plain|off=|#default=collapsible {{#if:{{{state|}}}|{{{state|}}}|autocollapse}}}}}} {{#switch:{{{border|{{{1|}}}}}}|subgroup|child|none=navbox-subgroup" style="width:100%;{{{bodystyle|}}};{{{style|}}}|#default=" style="width:100%;background:transparent;color:inherit}};{{{innerstyle|}}};" <!--
+
+
+---Title and Navbar---
+-->{{#if:{{{title|}}}|<nowiki/>
+{{!}}- {{#if:{{{titlegroup|}}}|<nowiki/>
+{{!}} class="navbox-group" style="{{{basestyle|}}};{{{groupstyle|}}};{{{titlegroupstyle|}}}" {{!}} {{{titlegroup|}}}
+! style="border-left:2px solid #fdfdfd;width:100%;|<nowiki/>
+! style="}}{{{basestyle|}}};{{{titlestyle|}}}" colspan={{#expr:2{{#if:{{{imageleft|}}}|+1}}{{#if:{{{image|}}}|+1}}{{#if:{{{titlegroup|}}}|-1}}}} class="navbox-title" {{!}} {{#if:{{#switch:{{{navbar|}}}|plain|off=1}} {{#if:{{{name|}}}||{{#switch:{{{border|{{{1|}}}}}}|subgroup|child|none=1}}}}| {{#ifeq:{{{navbar|}}}|off|{{#ifeq:{{{state|}}}|plain|<div style="float:right;width:6em;">&nbsp;</div>}}| {{#ifeq:{{{state|}}}|plain||<div style="float:left; width:6em;text-align:left;">&nbsp;</div>}}}}| <div style="float:left; width:6em;text-align:left;"> {{navbar|{{{name}}}|fontstyle={{{basestyle|}}};{{{titlestyle|}}};border:none;|mini=1}} </div>{{#ifeq:{{{state|}}}|plain|<div style="float:right;width:6em;">&nbsp;</div>}}}} <span style="font-size:{{#switch:{{{border|{{{1|}}}}}}|subgroup|child|none=100|#default=110}}%;"> {{{title}}}</span> }}<!--
+
+
+---Above---
+-->{{#if:{{{above|}}}| {{#if:{{{title|}}}|<nowiki/>
+{{!}}- style="height:2px;"
+{{!}} }}
+{{!}}-
+{{!}} class="navbox-abovebelow" style="{{{basestyle|}}};{{{abovestyle|}}}" colspan="{{#expr:2{{#if:{{{imageleft|}}}|+1}}{{#if:{{{image|}}}|+1}}}}" {{!}} {{{above}}} }}<!--
+
+
+
+---Body---
+
+---First group/list and images---
+-->{{#if:{{{list1|}}}|{{#if:{{{title|}}}{{{above|}}}|<nowiki/>
+{{!}}- style="height:2px;"
+{{!}} }}
+{{!}}-<!--
+
+-->{{#if:{{{imageleft|}}}|<nowiki/>
+{{!}} style="width:0%;padding:0px 2px 0px 0px;{{{imageleftstyle|}}}" rowspan={{#expr:1{{#if:{{{list2|}}}|+2}}{{#if:{{{list3|}}}|+2}}{{#if:{{{list4|}}}|+2}}{{#if:{{{list5|}}}|+2}}{{#if:{{{list6|}}}|+2}}{{#if:{{{list7|}}}|+2}}{{#if:{{{list8|}}}|+2}}{{#if:{{{list9|}}}|+2}}{{#if:{{{list10|}}}|+2}}{{#if:{{{list11|}}}|+2}}{{#if:{{{list12|}}}|+2}}{{#if:{{{list13|}}}|+2}}{{#if:{{{list14|}}}|+2}}{{#if:{{{list15|}}}|+2}}{{#if:{{{list16|}}}|+2}}{{#if:{{{list17|}}}|+2}}{{#if:{{{list18|}}}|+2}}{{#if:{{{list19|}}}|+2}}{{#if:{{{list20|}}}|+2}}}} {{!}} {{{imageleft|}}} }}<!--
+
+ -->{{#if:{{{group1|}}}|<nowiki/>
+{{!}} class="navbox-group" style="{{{basestyle|}}};{{{groupstyle|}}};{{{group1style|}}}" {{!}} {{{group1}}}
+{{!}} style="text-align:left;border-left:2px solid #fdfdfd;|<nowiki/>
+{{!}} colspan=2 style="}} width:100%;padding:0px;{{{liststyle|}}};{{{oddstyle|}}};{{{list1style|}}}" class="navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}" {{!}} <div style="padding:{{{list1padding|{{{listpadding|0em 0.25em}}}}}}">{{{list1|}}}</div><!--
+
+-->{{#if:{{{image|}}}|<nowiki/>
+{{!}} style="width:0%;padding:0px 0px 0px 2px;{{{imagestyle|}}}" rowspan={{#expr:1{{#if:{{{list2|}}}|+2}}{{#if:{{{list3|}}}|+2}}{{#if:{{{list4|}}}|+2}}{{#if:{{{list5|}}}|+2}}{{#if:{{{list6|}}}|+2}}{{#if:{{{list7|}}}|+2}}{{#if:{{{list8|}}}|+2}}{{#if:{{{list9|}}}|+2}}{{#if:{{{list10|}}}|+2}}{{#if:{{{list11|}}}|+2}}{{#if:{{{list12|}}}|+2}}{{#if:{{{list13|}}}|+2}}{{#if:{{{list14|}}}|+2}}{{#if:{{{list15|}}}|+2}}{{#if:{{{list16|}}}|+2}}{{#if:{{{list17|}}}|+2}}{{#if:{{{list18|}}}|+2}}{{#if:{{{list19|}}}|+2}}{{#if:{{{list20|}}}|+2}}}} {{!}} {{{image|}}} }} }}<!--
+
+
+---Remaining groups/lists---
+
+-->{{#if:{{{list2|}}}| {{#if:{{{title|}}}{{{above|}}}{{{list1|}}}|<nowiki/>
+{{!}}- style="height:2px"
+{{!}} }}
+{{!}}- {{#if:{{{group2|}}}|<nowiki/>
+{{!}} class="navbox-group" style="{{{basestyle|}}};{{{groupstyle|}}};{{{group2style|}}}" {{!}} {{{group2}}}
+{{!}} style="text-align:left;border-left:2px solid #fdfdfd;|<nowiki/>
+{{!}} colspan=2 style="}} width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list2style|}}}" class="navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}" {{!}} <div style="padding:{{{listpadding|0em 0.25em}}}">{{{list2|}}}</div>}}<!--
+
+-->{{#if:{{{list3|}}}| {{#if:{{{title|}}}{{{above|}}}{{{list2|}}}|<nowiki/>
+{{!}}- style="height:2px"
+{{!}} }}
+{{!}}- {{#if:{{{group3|}}}|<nowiki/>
+{{!}} class="navbox-group" style="{{{basestyle|}}};{{{groupstyle|}}};{{{group3style|}}}" {{!}} {{{group3}}}
+{{!}} style="text-align:left;border-left:2px solid #fdfdfd;|<nowiki/>
+{{!}} colspan=2 style="}} width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list3style|}}}" class="navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}" {{!}} <div style="padding:{{{listpadding|0em 0.25em}}}">{{{list3|}}}</div> }}<!--
+
+-->{{#if:{{{list4|}}}| {{#if:{{{title|}}}{{{above|}}}{{{list3|}}}|<nowiki/>
+{{!}}- style="height:2px"
+{{!}} }}
+{{!}}- {{#if:{{{group4|}}}|<nowiki/>
+{{!}} class="navbox-group" style="{{{basestyle|}}};{{{groupstyle|}}};{{{group4style|}}}" {{!}} {{{group4}}}
+{{!}} style="text-align:left;border-left:2px solid #fdfdfd;|<nowiki/>
+{{!}} colspan=2 style="}} width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list4style|}}}" class="navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}" {{!}} <div style="padding:{{{listpadding|0em 0.25em}}}">{{{list4|}}}</div> }}<!--
+
+-->{{#if:{{{list5|}}}| {{#if:{{{title|}}}{{{above|}}}{{{list4|}}}|<nowiki/>
+{{!}}- style="height:2px"
+{{!}} }}
+{{!}}- {{#if:{{{group5|}}}|<nowiki/>
+{{!}} class="navbox-group" style="{{{basestyle|}}};{{{groupstyle|}}};{{{group5style|}}}" {{!}} {{{group5}}}
+{{!}} style="text-align:left;border-left:2px solid #fdfdfd;|<nowiki/>
+{{!}} colspan=2 style="}} width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list5style|}}}" class="navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}" {{!}} <div style="padding:{{{listpadding|0em 0.25em}}}">{{{list5|}}}</div> }}<!--
+
+-->{{#if:{{{list6|}}}| {{#if:{{{title|}}}{{{above|}}}{{{list5|}}}|<nowiki/>
+{{!}}- style="height:2px"
+{{!}} }}
+{{!}}- {{#if:{{{group6|}}}|<nowiki/>
+{{!}} class="navbox-group" style="{{{basestyle|}}};{{{groupstyle|}}};{{{group6style|}}}" {{!}} {{{group6}}}
+{{!}} style="text-align:left;border-left:2px solid #fdfdfd;|<nowiki/>
+{{!}} colspan=2 style="}} width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list6style|}}}" class="navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}" {{!}} <div style="padding:{{{listpadding|0em 0.25em}}}">{{{list6|}}}</div> }}<!--
+
+-->{{#if:{{{list7|}}}| {{#if:{{{title|}}}{{{above|}}}{{{list6|}}}|<nowiki/>
+{{!}}- style="height:2px"
+{{!}} }}
+{{!}}- {{#if:{{{group7|}}}|<nowiki/>
+{{!}} class="navbox-group" style="{{{basestyle|}}};{{{groupstyle|}}};{{{group7style|}}}" {{!}} {{{group7}}}
+{{!}} style="text-align:left;border-left:2px solid #fdfdfd;|<nowiki/>
+{{!}} colspan=2 style="}} width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list7style|}}}" class="navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}" {{!}} <div style="padding:{{{listpadding|0em 0.25em}}}">{{{list7|}}}</div> }}<!--
+
+-->{{#if:{{{list8|}}}| {{#if:{{{title|}}}{{{above|}}}{{{list7|}}}|<nowiki/>
+{{!}}- style="height:2px"
+{{!}} }}
+{{!}}- {{#if:{{{group8|}}}|<nowiki/>
+{{!}} class="navbox-group" style="{{{basestyle|}}};{{{groupstyle|}}};{{{group8style|}}}" {{!}} {{{group8}}}
+{{!}} style="text-align:left;border-left:2px solid #fdfdfd;|<nowiki/>
+{{!}} colspan=2 style="}} width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list8style|}}}" class="navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}" {{!}} <div style="padding:{{{listpadding|0em 0.25em}}}">{{{list8|}}}</div> }}<!--
+
+-->{{#if:{{{list9|}}}| {{#if:{{{title|}}}{{{above|}}}{{{list8|}}}|<nowiki/>
+{{!}}- style="height:2px"
+{{!}} }}
+{{!}}- {{#if:{{{group9|}}}|<nowiki/>
+{{!}} class="navbox-group" style="{{{basestyle|}}};{{{groupstyle|}}};{{{group9style|}}}" {{!}} {{{group9}}}
+{{!}} style="text-align:left;border-left:2px solid #fdfdfd;|<nowiki/>
+{{!}} colspan=2 style="}} width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list9style|}}}" class="navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}" {{!}} <div style="padding:{{{listpadding|0em 0.25em}}}">{{{list9|}}}</div> }}<!--
+
+-->{{#if:{{{list10|}}}| {{#if:{{{title|}}}{{{above|}}}{{{list9|}}}|<nowiki/>
+{{!}}- style="height:2px"
+{{!}} }}
+{{!}}- {{#if:{{{group10|}}}|<nowiki/>
+{{!}} class="navbox-group" style="{{{basestyle|}}};{{{groupstyle|}}};{{{group10style|}}}" {{!}} {{{group10}}}
+{{!}} style="text-align:left;border-left:2px solid #fdfdfd;|<nowiki/>
+{{!}} colspan=2 style="}} width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list10style|}}}" class="navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}" {{!}} <div style="padding:{{{listpadding|0em 0.25em}}}">{{{list10|}}}</div> }}<!--
+
+-->{{#if:{{{list11|}}}| {{#if:{{{title|}}}{{{above|}}}{{{list10|}}}|<nowiki/>
+{{!}}- style="height:2px"
+{{!}} }}
+{{!}}- {{#if:{{{group11|}}}|<nowiki/>
+{{!}} class="navbox-group" style="{{{basestyle|}}};{{{groupstyle|}}};{{{group11style|}}}" {{!}} {{{group11}}}
+{{!}} style="text-align:left;border-left:2px solid #fdfdfd;|<nowiki/>
+{{!}} colspan=2 style="}} width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list11style|}}}" class="navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}" {{!}} <div style="padding:{{{listpadding|0em 0.25em}}}">{{{list11|}}}</div> }}<!--
+
+-->{{#if:{{{list12|}}}| {{#if:{{{title|}}}{{{above|}}}{{{list11|}}}|<nowiki/>
+{{!}}- style="height:2px"
+{{!}} }}
+{{!}}- {{#if:{{{group12|}}}|<nowiki/>
+{{!}} class="navbox-group" style="{{{basestyle|}}};{{{groupstyle|}}};{{{group12style|}}}" {{!}} {{{group12}}}
+{{!}} style="text-align:left;border-left:2px solid #fdfdfd;|<nowiki/>
+{{!}} colspan=2 style="}} width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list12style|}}}" class="navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}" {{!}} <div style="padding:{{{listpadding|0em 0.25em}}}">{{{list12|}}}</div> }}<!--
+
+-->{{#if:{{{list13|}}}| {{#if:{{{title|}}}{{{above|}}}{{{list12|}}}|<nowiki/>
+{{!}}- style="height:2px"
+{{!}} }}
+{{!}}- {{#if:{{{group13|}}}|<nowiki/>
+{{!}} class="navbox-group" style="{{{basestyle|}}};{{{groupstyle|}}};{{{group13style|}}}" {{!}} {{{group13}}}
+{{!}} style="text-align:left;border-left:2px solid #fdfdfd;|<nowiki/>
+{{!}} colspan=2 style="}} width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list13style|}}}" class="navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}" {{!}} <div style="padding:{{{listpadding|0em 0.25em}}}">{{{list13|}}}</div> }}<!--
+
+-->{{#if:{{{list14|}}}| {{#if:{{{title|}}}{{{above|}}}{{{list13|}}}|<nowiki/>
+{{!}}- style="height:2px"
+{{!}} }}
+{{!}}- {{#if:{{{group14|}}}|<nowiki/>
+{{!}} class="navbox-group" style="{{{basestyle|}}};{{{groupstyle|}}};{{{group14style|}}}" {{!}} {{{group14}}}
+{{!}} style="text-align:left;border-left:2px solid #fdfdfd;|<nowiki/>
+{{!}} colspan=2 style="}} width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list14style|}}}" class="navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}" {{!}} <div style="padding:{{{listpadding|0em 0.25em}}}">{{{list14|}}}</div> }}<!--
+
+-->{{#if:{{{list15|}}}| {{#if:{{{title|}}}{{{above|}}}{{{list14|}}}|<nowiki/>
+{{!}}- style="height:2px"
+{{!}} }}
+{{!}}- {{#if:{{{group15|}}}|<nowiki/>
+{{!}} class="navbox-group" style="{{{basestyle|}}};{{{groupstyle|}}};{{{group15style|}}}" {{!}} {{{group15}}}
+{{!}} style="text-align:left;border-left:2px solid #fdfdfd;|<nowiki/>
+{{!}} colspan=2 style="}} width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list15style|}}}" class="navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}" {{!}} <div style="padding:{{{listpadding|0em 0.25em}}}">{{{list15|}}}</div> }}<!--
+
+-->{{#if:{{{list16|}}}| {{#if:{{{title|}}}{{{above|}}}{{{list15|}}}|<nowiki/>
+{{!}}- style="height:2px"
+{{!}} }}
+{{!}}- {{#if:{{{group16|}}}|<nowiki/>
+{{!}} class="navbox-group" style="{{{basestyle|}}};{{{groupstyle|}}};{{{group16style|}}}" {{!}} {{{group16}}}
+{{!}} style="text-align:left;border-left:2px solid #fdfdfd;|<nowiki/>
+{{!}} colspan=2 style="}} width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list16style|}}}" class="navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}" {{!}} <div style="padding:{{{listpadding|0em 0.25em}}}">{{{list16|}}}</div> }}<!--
+
+-->{{#if:{{{list17|}}}| {{#if:{{{title|}}}{{{above|}}}{{{list16|}}}|<nowiki/>
+{{!}}- style="height:2px"
+{{!}} }}
+{{!}}- {{#if:{{{group17|}}}|<nowiki/>
+{{!}} class="navbox-group" style="{{{basestyle|}}};{{{groupstyle|}}};{{{group17style|}}}" {{!}} {{{group17}}}
+{{!}} style="text-align:left;border-left:2px solid #fdfdfd;|<nowiki/>
+{{!}} colspan=2 style="}} width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list17style|}}}" class="navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}" {{!}} <div style="padding:{{{listpadding|0em 0.25em}}}">{{{list17|}}}</div> }}<!--
+
+-->{{#if:{{{list18|}}}| {{#if:{{{title|}}}{{{above|}}}{{{list17|}}}|<nowiki/>
+{{!}}- style="height:2px"
+{{!}} }}
+{{!}}- {{#if:{{{group18|}}}|<nowiki/>
+{{!}} class="navbox-group" style="{{{basestyle|}}};{{{groupstyle|}}};{{{group18style|}}}" {{!}} {{{group18}}}
+{{!}} style="text-align:left;border-left:2px solid #fdfdfd;|<nowiki/>
+{{!}} colspan=2 style="}} width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list18style|}}}" class="navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}" {{!}} <div style="padding:{{{listpadding|0em 0.25em}}}">{{{list18|}}}</div> }}<!--
+
+-->{{#if:{{{list19|}}}| {{#if:{{{title|}}}{{{above|}}}{{{list18|}}}|<nowiki/>
+{{!}}- style="height:2px"
+{{!}} }}
+{{!}}- {{#if:{{{group19|}}}|<nowiki/>
+{{!}} class="navbox-group" style="{{{basestyle|}}};{{{groupstyle|}}};{{{group19style|}}}" {{!}} {{{group19}}}
+{{!}} style="text-align:left;border-left:2px solid #fdfdfd;|<nowiki/>
+{{!}} colspan=2 style="}} width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list19style|}}}" class="navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}" {{!}} <div style="padding:{{{listpadding|0em 0.25em}}}">{{{list19|}}}</div> }}<!--
+
+-->{{#if:{{{list20|}}}| {{#if:{{{title|}}}{{{above|}}}{{{list19|}}}|<nowiki/>
+{{!}}- style="height:2px"
+{{!}} }}
+{{!}}- {{#if:{{{group20|}}}|<nowiki/>
+{{!}} class="navbox-group" style="{{{basestyle|}}};{{{groupstyle|}}};{{{group20style|}}}" {{!}} {{{group20}}}
+{{!}} style="text-align:left;border-left:2px solid #fdfdfd;|<nowiki/>
+{{!}} colspan=2 style="}} width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list20style|}}}" class="navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}" {{!}} <div style="padding:{{{listpadding|0em 0.25em}}}">{{{list20|}}}</div> }}<!--
+
+---Below---
+-->{{#if:{{{below|}}}|<!--
+ -->{{#if:{{{title|}}}{{{above|}}}{{{list1|}}}{{{list2|}}}{{{list3|}}}|<nowiki/>
+{{!}}- style="height:2px;"
+{{!}} }}
+{{!}}-
+{{!}} class="navbox-abovebelow" style="{{{basestyle|}}};{{{belowstyle|}}}" colspan="{{#expr:2{{#if:{{{imageleft|}}}|+1}}{{#if:{{{image|}}}|+1}}}}" {{!}} {{{below}}} }}
+{{!}}}{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=|none=|#default=<nowiki/>
+{{!}}} }}

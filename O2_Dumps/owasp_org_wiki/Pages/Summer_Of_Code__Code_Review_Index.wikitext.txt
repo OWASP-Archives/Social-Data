@@ -1,0 +1,69 @@
+Methodology<br>
+
+Code Review Introduction<br>
+Steps and Roles<br>
+Code Review Processes<br>
+Transaction Analysis<br>
+How to write an application_security finding<br>
+Applicaiton Threat Modeling<br>
+The Round Trip Code Review<br>
+Code review Metrics<br>
+
+ Crawling Code<br>
+Introduction<br>
+First sweep of the code base<br>
+
+
+ Examples by Vulnerability<br>
+Reviewing Code for Buffer Overruns and Overflows<br>
+Reviewing Code for OS Injection<br>
+Reviewing Code for SQL Injection<br>
+Reviewing Code for Data Validation<br>
+Reviewing code for XSS issues<br>
+Reviewing code for Cross-Site Request Forgery issues<br>
+Reviewing Code for Error Handling<br>
+Reviewing Code for Logging Issues<br>
+Reviewing The Secure Code Environment<br> 
+Reviewing Code for Authorization Issues<br>
+Reviewing Code for Authentication<br>
+Reviewing Code for Session Integrity issues<br>
+Reviewing Cryptographic Code<br>
+Reviewing Code for Race Conditions<br>
+
+ Language specific best practice <br>
+
+Java<br>
+Java gotchas<br>
+Java leading security practice<br>
+
+PHP<br>
+PHP Security Leading Practice<br>
+
+C/C++<br>
+Strings and Integers<br>
+
+MySQL<br>
+Reviewing MySQL Security<br>
+
+ Rich Internet Applications<br>
+Flash Applications<br>
+AJAX Applications<br>
+Web Services<br>
+
+ Example reports <br>
+How to write<br>
+How to determine the risk level of a finding<br>
+Sample form<br>
+
+ Automating Code Reviews<br>
+Preface <br>
+Reasons for using automated tools<br>
+Education and cultural change<br>
+Tool Deployment Model<br>
+Code Auditor Workbench Tool<br>
+The Owasp Orizon Framework<br>
+
+ Ways to achieve secure code on a budget<br>
+The OWASP Enterprise Security API ( ESAPI)<br>
+Resource & Budget<br>
+ References<br>[[Category:OWASP Code Review Project]]

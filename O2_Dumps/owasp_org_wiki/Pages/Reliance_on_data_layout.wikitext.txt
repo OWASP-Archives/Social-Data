@@ -1,0 +1,118 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+Assumptions about protocol data or data stored in memory can be invalid, resulting in using data in ways that were unintended.
+
+'''Consequences'''
+
+Access control (including confidentiality and integrity): Can result in unintended modifications or information leaks of data.
+
+'''Exposure period'''
+
+Design: This problem can arise when a protocol leaves room for interpretation and is implemented by multiple parties that need to interoperate. 
+
+Implementation: This problem can arise by not understanding the subtleties either of writing portable code or of changes between protocol versions.
+
+'''Platform'''
+
+Protocol errors of this nature can happen on any platform. Invalid memory layout assumptions are possible in languages and environments with a single, flat memory space, such as C/C++ and Assembly.
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Medium to High
+
+'''Likelihood of exploit'''
+
+Low
+
+When changing platforms or protocol versions, data may move in unintended ways. For example, some architectures may place local variables ''a ''and ''b'' right next to each other with ''a'' on top; some may place them next to each other with ''b'' on top; and others may add some padding to each. This ensured that each variable is aligned to a proper word size.
+
+In protocol implementations, it is common to offset relative to another field to pick out a specific piece of data. Exceptional conditions - often involving new protocol versions - may add corner cases that lead to the data layout changing in an unusual way. The result can be that an implementation accesses a particular part of a packet, treating data of one type as data of another type.
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+In C:
+
+<pre>void example() {
+  char a;
+  char b;
+  *(&a + 1) = 0;
+}</pre>
+
+Here, ''b'' may not be one byte past ''a''. It may be one byte in front of a. Or, they may have three bytes between them because they get aligned to 32-bit boundaries.
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* Design and Implementation: In flat address space situations, never allow computing memory addresses as offsets from another memory address.
+* Design: Fully specify protocol layout unambiguously, providing a structured grammar (e.g., a compilable yacc grammar).
+* Testing: Test that the implementation properly handles each case in the protocol grammar.
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Environmental Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

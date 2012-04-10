@@ -1,0 +1,48 @@
+== Guideline Document ==
+
+1. Development / Environment Setting
+
+a) Developer Access
+#Jump Server
+##Multi factor Autch
+##VPN/Cert based Authc
+
+2. Architecture
+
+#Tiering
+#Communicaiton 
+##between zones
+##within tiers
+##ACLs
+#AuthC/Identity
+#Encryption
+#Integration
+## Web Services
+##VPN based
+#WAF
+
+3. Deployment and Testing
+#Hardening
+
+4. Operations
+#Patching
+
+== Use Cases ==
+ 
+#Deploying Third Party 
+#Building Your Own Application
+
+
+
+== Target Providers ==
+# Savvis - Shankar
+# Amazon EC2 - Vinay
+# Google Apps - Pankaj
+
+
+
+== Timelines ==
+
+1. Initial Draft from Shankar - Nov 29nd
+
+2. Initial Draft from Vinay - Dec 9th

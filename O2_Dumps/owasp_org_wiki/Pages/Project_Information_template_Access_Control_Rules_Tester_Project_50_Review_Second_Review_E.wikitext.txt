@@ -1,0 +1,26 @@
+[[Project Information:template Access Control Rules Tester Project|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#P022 - OWASP Access Control Rules Tester|OWASP Access Control Rules Tester Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#P022 - OWASP Access Control Rules Tester|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| The project objectives are met. In terms of deliveries, the document and the tool are implemented, however, the tool doesn't have the Site Spider functionality, indeed it depends on third-party spider packages.
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#P022 - OWASP Access Control Rules Tester|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| 1. Research technical report: 100% done<br>2. Access Control Rules Tester (AcCoRuTe) tool: 90% done. Author should correct the site spider description in [https://www.owasp.org/index.php/OWASP_Summer_of_Code_2008_Applications_-_Need_Futher_Clarifications#P022_-_OWASP_Access_Control_Rules_Tester the project deliveries] to reflect the real design and implementation. 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| 1. Need to find a place to display "a common About Box or help menu" as required by [http://www.owasp.org/index.php/Category:OWASP_Project_Assessment OWASP Project Assessment] for Beta Quality OWASP Tools<br>2. Need more description (ideally XSD file) of how to customize WebApplication.xml. This would give other people information to create new tool to build the WebApplication.xml<br>3. Developing Use Cases (or Test Cases?) is not an easy job, it would be nice to include templates or utilities to help building Use Cases
+|}

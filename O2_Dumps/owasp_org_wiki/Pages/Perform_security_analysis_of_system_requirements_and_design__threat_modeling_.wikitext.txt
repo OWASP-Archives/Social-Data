@@ -1,0 +1,148 @@
+{{Template:SecureSoftware}}
+
+==Overview==
+
+Purpose:	
+
+*	Assess likely system risks in a timely and cost-effective manner by analyzing the requirements and design.
+
+*	Identify high-level system threats that are documented neither in requirements nor in supplemental documentation.
+
+*	Identify inadequate or improper security requirements.
+
+* Assess the security impact of non-security requirements.
+
+Role:
+
+* Security Auditor
+
+Frequency:
+
+* As needed; generally, once initial requirements are identified; once when nearing feature complete
+
+
+
+==Develop an understanding of the system ==
+
+Before performing a security analysis, one must understand what is to be built. This task should involve reviewing all existing high-level system documentation. If other documentation such as user manuals and architectural documentation exists, it is recommended to review that material as well.
+
+To facilitate understanding when the auditor is not part of the project team, it is generally best to have a project overview from a person with a good customer-centric perspective on the project - whom we assume is the requirements specifier. 
+
+If feasible, documentation should be reviewed both before and after such a review so that the auditor has as many opportunities to identify apparent constancies as possible. If documentation is only to be read once, it is generally more effective to do so after a personal introduction.
+
+Anything that is unclear or inconsistent should be presented to the requirements specifier and resolved before beginning analysis.
+
+==Determine and validate security-relevant assumptions ==
+
+Systems will be built with assumptions about the attacker and the environment in which the software will be deployed. If the proper CLASP activities have been incorporated into the development process, the following key information should be documented before starting a requirements assessment:
+
+*	A specification of the operational environment;
+
+*	A high-level architectural diagram indicating trust boundaries;
+
+*	A specification of resources and capabilities on those resources; this may be incorporated into the requirements;
+
+*	A specification of system users and a mapping of users to resource capabilities; this also may be incorporated into the requirements;
+
+*	An attack surface specification, to whatever degree elaborated;
+
+*	Data flow diagrams, if available;
+
+*	An attacker profile (again, this may be part of the requirements); and
+
+*	Misuse cases, if any.
+
+With the exception of misuse cases, if the development process does not produce all of these artifacts, the security auditor should do so. Sometimes reviewers will forego data-flow diagrams, because the flow of data is well understood on the basis of the architectural diagram.
+
+If the artifacts have been produced previously, the auditor should validate the security content of these documents, particularly focusing on inconsistencies, technical inaccuracies, and invalid assumptions. Particularly, review should address the question of whether the attacker profile is accurate since many organizations are not attentive enough to insider risks.
+
+Any assumptions that are implicit should be validated and then incorporated into project documentation.
+
+==Review non-security requirements ==
+
+For requirements that are not explicitly aimed at security, determine whether there are any security implications that are not properly addressed in the security requirements. This is best done by tracing resources that are relevant to a requirement through a data-flow diagram of the system and assessing the impact on each security service.
+
+When there are security implications, identify the affected resource(s) and security service(s), and look to see if there is a requirement explicitly addressing the issue.
+
+If you are using a correlation matrix or some similar tool, update it as appropriate after tracing each requirement through the system.
+
+Also, correlate system resources with external dependencies, ensuring that all dependencies are properly listed as a resource. Similarly, perform a correlation analysis with the attack surface, making sure that any system entry points in third-party software are reflected.
+
+==Assess completeness of security requirements ==
+
+Ensure that each resource (or, preferably, capability) has adequate requirements addressing each security service. A best practice here is to create a correlation matrix, where requirements are on one axis and security services on capabilities (or resources) are on another axis. For each security requirement, one notes in the appropriate boxes in the matrix which requirements have an impact.
+
+The matrix should also denote completeness of requirements, particularly whether the security service is adequately addressed. As threats are identified in the system that are not addressed in the requirements by compensating controls, this documents what gaps there are in the requirements.
+
+==Identify threats on assets/capabilities ==
+
+Iterate through the assets and/or capabilities. For each security service on each capability, identify all potential security threats on the capability, documenting each threat uniquely in the threat model.
+
+In an ideal world, one would identify all possible security threats under the assumption of no compensating controls. The purpose is to demonstrate which threats were considered, and which controls mitigate those threats. However, one should not get too specific about threats that are mitigated adequately by compensating controls.
+
+To achieve this balance, one identifies a threat and works to determine whether the threat can be applied to the system (see next subtask). If the auditor determines that the threat cannot be turned into a vulnerability based on controls, avoid going into further detail.
+
+For example, a system may use a provably secure authenticated encryption system in conjunction with AES (e.g., GCM-AES) with packet counters to protect against replay attacks. There are many ways that the confidentiality of this link might be thwartable if this system were not in place. But since the tools are used properly, the only possible threat to confidentiality is breaking AES itself, which is a result of the GCM security proof. Since - assuming that the tools are used correctly - all possible on-the-wire threats are mitigated except for this one, threat analysis should focus on determining whether the tool was used correctly and not on determining what threats might exist if the tool is used incorrectly (or if a different tool is used).
+
+Identifying security threats is a structured activity that requires some creativity since many systems have unique requirements that introduce unique threats. One looks at each security service and ask: "If I were an attacker, how could I possibly try to exploit this security service?". Any answer constitutes a threat.
+
+Many threats are obvious from the security service. For example, confidentiality implemented using encryption has several well-known threats - e.g., breaking the cipher, stealing keying material, or leveraging a protocol fault. However, as a baseline, use a list of well-known basic causes of vulnerabilities as a bare minimum set of threats to address - such as the set provided with CLASP. Be sure to supplement this with your own knowledge of the system.
+
+This question of how to subvert security services on a resource needs to be addressed through the lifetime of the resource, from data creation to long-term storage. Assess the question at each trust boundary, at the input points to the program, and at data storage points.
+
+==Determine level of risk ==
+
+Use threat trees to model the decision-making process of an attacker. Look particularly for ways that multiple conditions can be used together to create additional threats.
+
+This is best done by using attack trees (CLASP Resource A). Attack trees should represent all known risks against a resource (which is the root of the tree), the relationships between multiple risks (particularly, can risks be combined to result in a bigger risk), and then should characterize the likelihood of risk and the impact of risk on the business to make decisions possible.
+
+Risk assessment can be done using a standard risk formula for expected cost analysis, but the data is too complex to gather for most organizations. Most organizations will want to assign relative values to important concerns and use a weighted average to determine a risk level. 
+
+Most of the important concerns going into such an average can be identified using Microsoft's DREAD acronym:
+
+*	Damage potential. If the problem is exploited, what are the consequences?
+
+*	Reproducibility  How often does an attempt to exploit a vulnerability work, if repeated attempts have an associated cost. This is asking: What is the cost to the attacker once he has a working exploit for the problem? In some cases, a vulnerability may only work one time in 10,000, but the attacker can easily automate attempts at a fixed additional cost.
+
+*	Exploitability. What is the cost to develop an exploit for the problem? Usually this should be considered incredibly low, unless there are mitigating circumstances.
+
+*	Affected users. What users are actually affected if an exploit were to be widely available?
+
+* Discoverability. If unpatched, what is the worst-case and expected time frame for an attacker to identify the problem and begin exploiting it (generally assume a well-informed insider risk with access to your internal process in the first case, and a persistent, targeted reverse engineer in the second).
+
+Additionally, proper risk assessment requires an estimation of the following factors:
+
+*	The effectiveness of current compensating controls. If the control is always effective, there is little point in drilling down farther after that fact is well documented.
+
+*	The cost associated with implementing compensating controls - as the cost of remediation - must be balanced against the expected loss.
+
+For existing compensating controls, map them to the specific threat you have identified that they addressed, denoting any shortcomings in the control.
+
+If it is unclear, use data flow diagrams and available resources to determine where the threat is or is not adequately addressed, focused particularly on storage, input points (the attack surface), and trust boundaries (generally, network connections). 
+
+Unfortunately, detailed values for each of these concerns are difficult to attain. Best practice is to assign relative values on a tight scale (for example: 0-10), and assign weights to each of the categories. Particularly, damage potential and affected users should generally be weighted most highly.
+
+For each risk identified in the system, use the present information to make a determination on remediation strategy, based on business risk. At a bare minimum, make a determination such as: "Must fix before deployment"; "Must identify and recommend a compensating control"; "Must document the problem"; or "No action necessary".
+
+==Identify compensating controls ==
+
+For each identified risk with inadequate compensating controls, identify any feasible approaches for mitigating the risk and evaluate their cost and effectiveness. 
+
+==Evaluate findings ==
+
+The auditor should detail methodology and scope, and report on any identified security risks that may not have been adequately addressed in the requirements.
+
+Additionally, for any risks, the auditor should recommend a preferred strategy for implementing compensating controls and should discuss any alternatives that could be considered.
+
+If any conflicts or omissions are brought to light during requirement review, the security auditor should make recommendations that are consistent with project requirements.
+
+The security auditor should be available to support the project by addressing problems adequately.
+
+The project manager is responsible for reviewing the findings, determining whether the assessments are actually correct to the business, and making risk-based decisions based on this information. Generally, for those problems that the project manager chooses to address, the risk should be integrated into the project requirements and tasking.
+
+
+[[Category:Activity]]
+[[Category:CLASP Activity]]
+[[Category:BP2 Perform application assessments]]
+[[Category:OWASP_CLASP_Project]]
+[[Category:Threat Modeling]]

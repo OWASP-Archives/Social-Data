@@ -1,0 +1,337 @@
+Un proyecto de OWASP es una colección de tareas relacionadas que tienen un plan de trabajo definido y miembros de equipo. Los líderes de proyectos de OWASP son responsables de definir la visión y plan de trabajo del proyecto. El líder de proyecto también promueve el proyecto y construye el equipo.
+
+Si le gustaría iniciar un nuevo proyecto por favor revise la guía de [[How to Start an OWASP Project|¿Cómo iniciar un proyecto?]]. Por favor envíe un correo a  [mailto:owasp@owasp.org?subject=New_OWASP_Project_idea owasp@owasp.org] para discutir sus ideas de proyecto y como se adaptan a OWASP. Todos los proyectos de OWASP deben ser libres y abiertos y tener su página principal en el portal de OWASP. Puede leer todos los lineamientos en el [[:Category:OWASP_Project_Assessment | criterio de evaluación de proyectos]].
+
+Cada proyecto tiene un lista de distribución asociada. Puede ver todas las listas, examinar sus archivos y suscribirse a cualquiera de ellas en la página de [http://lists.owasp.org/mailman/listinfo listas de distribución de proyectos OWASP]
+
+== [[:Category:OWASP_Project_Assessment | Proyectos de Calidad de Publicación]] ==
+Los documentos de calidad de publicación son generalmente del nivel de calidad de herramientas o documentos profesionales.
+
+Hemos iniciado el proceso de definir los lineamientos detallados, los cuales indican que será requerido de un proyecto de OWASP para ser clasificado un proyecto de calidad de publicación (vea el [[:Category:OWASP_Project_Assessment | criterio de evaluación de proyectos]]).  Por favor note que los proyectos abajo '''NO''' han sido evaluados bajo este criterio y pueden ser reclasificados una ves que el proceso haya sido completado. También note que solo las descripciones de los proyectos de nivel de publicación han sido traducidas al Español.
+
+<table width="100%" valign="top"><tr><th width="50%">Herramientas</th><th>Documentación</th></tr><tr valign="top"><td>
+
+; [[:Category:OWASP WebGoat Project|OWASP WebGoat]]
+: un ambiente de entrenamiento en línea para "aprender haciendo" sobre seguridad en aplicaciones
+
+; [[:Category:OWASP WebScarab Project|OWASP WebScarab]]
+: una herramienta para realizar todo tipo de pruebas de seguridad en aplicaciones y servicios Web.
+
+</td><td>
+
+; [[:Category:OWASP AppSec FAQ Project|Preguntas frecuentes sobre seguridad en aplicaciones]]
+: Preguntas frecuentes que cubren temas de seguridad
+
+; [[:Category:OWASP Guide Project|Guía de Desarrollo de OWASP]]
+: un documento masivo que cubre todos los aspectos de la seguridad en aplicaciones y servicios Web
+
+; [[:Category:OWASP Legal Project|Proyecto Legal de OWASP]]
+: un proyecto enfocado en contratar sofware seguro
+
+; [[:Category:OWASP Testing Project|Guía de Pruebas de OWASP]]
+: un proyecto enfocado en procedimientos y listas de verificacion para pruebas de seguridad en aplicaciones
+
+; [[:Category:OWASP Top Ten Project|Las 10 mayores vulnerabilidades de OWASP]]
+: una documento informativo que describe las 10 vulnerabilidades mas comúnes en aplicaciones web 
+
+</td></tr></table>
+
+== [[:OWASP Summer of Code 2008|Proyectos de el verano de codificación en progreso]] ==
+Los proyectos bajo esta categoría están en desarrollo. Se espera que el proyecto este terminado para el 15 de septiembre. Despues de que haya terminado la temporada de codificación, todos los proyectos serán movidos a la categoría adecuada (Alfa, Beta o Publicación). Note que los títulos y las descripciones no fueron traducidas por su transitoriedad.
+
+<table width="100%" valign="top"><tr><th width="50%">Herramientas</th><th>Documentación</th></tr><tr valign="top"><td>
+
+; [[:Category:GTK plus GUI for w3af Project|GTK+GUI for w3af Project]]
+: The main objective is to minimize the effort and learning curve of using w3af, providing a very usable graphical interface. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]].
+
+; [[:Category:OWASP Access Control Rules Tester Project|OWASP Access Control Rules Tester Project]]
+: This project is intended to have two deliverables: research technical report (publication ready article) and an Access Control Rules Tester tool. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]].
+
+; [[:Category:OWASP AntiSamy Project .NET|OWASP AntiSamy Project]]
+: An API for validating rich HTML/CSS input from users without exposure to cross-site scripting and phishing attacks. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]].
+
+; [[:Category:OWASP Application Security Tool Benchmarking Environment and Site Generator Refresh Project|OWASP Application Security Tool Benchmarking Environment and Site Generator Refresh Project]]
+: The idea is to split destination web application technology from the three reusable libraries: library of navigational elements, library of vulnerabilities and library of language constructs. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]].
+
+; [[:Category:OWASP Code Crawler|OWASP Code Crawler]]
+: This tool is aimed at assisting code review practitioners. It is a static code review tool which searches for key topics within .NET and J2EE/JAVA code. The aim of the tool is to accompany the OWASP Code review Guide and to implement a total code review solution for "everyone"; Where "everyone" means "more" companies performing secure software activities. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]].
+
+; [[:Category:OWASP Interceptor Project|OWASP Interceptor Project]]
+: A testing tool for XML web service and Ajax interfaces. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]].
+
+; [[:Category:OWASP JSP Testing Tool Project|OWASP JSP Testing Tool Project]]
+: The goal of this project is to create an easy to use, freely available tool that can be used to quickly ascertain the level of protection that each component of a JSP tag library offers. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]].
+
+; [[:Category:OWASP Live CD 2008 Project|OWASP Live CD 2008 Project]]
+: The goal of this project is to take the existing applications and documentation in the current Live CD and add significantly more tools and documentation specifically focused on Web application security. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]].
+
+; [[:Category:OWASP OpenSign Server Project|OWASP OpenSign Server Project]]
+: The purpose of this project would be to build and host a feature-rich server and suite of client utilities with adequate secure hardware to ensure the integrity of code modules. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]].
+
+; [[:Category:OWASP OpenPGP Extensions for HTTP - Enigform and mod openpgp|OWASP OpenPGP Extensions for HTTP - Enigform and mod openpgp]]
+: The goal of this project is to focus on mod_openpgp and Secure Session Management, presenting a working web-site using this new authentication methodology in such a way that it will attract security professionals and web-developers to this new mix of two good'ol protocols: HTTP and OpenPGP. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]].
+
+; [[:Category:OWASP Orizon Project|OWASP Orizon Project]]
+: The goal of this project is to develop an extensible code review engine to be used from source code assessment tools. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]].
+
+; [[:Category:OWASP Python Static Analysis Project|OWASP Python Static Analysis Project]]
+: The aim of this project is to bring this project to at least beta quality to become OWASP open source project: full language support,other Python frameworks support, analysis improvement, reporting capability, documentation, promotion materials: publication-ready article and presentation. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]].
+
+; [[:Category:OWASP Skavenger Project|OWASP Skavenger Project]]
+: This project is a web application security assessment toolkit. It passively analyzes traffic logged by various MITM proxies as well as other sources and helps to identify various kinds of possible vulnerabilities. Skavenger's modular design allows the integration of custom scanning modules without any knowledge about the tool at all. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]].
+
+; [[:Category:OWASP Sqlibench Project|OWASP Sqlibench Project]]
+: This is a benchmarking project of automatic sql injectors related to dumping databases. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]].
+
+; [[:Category:OWASP Teachable Static Analysis Workbench Project|OWASP Teachable Static Analysis Workbench Project]]
+: This project is intended to have two deliverables: research technical report (publication ready article) and a workbench prototype. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]].
+
+; [[:Category:OWASP WeBekci Project|OWASP WeBekci Project]]
+: OWASP WeBekci is a web based ModSecurity 2.x management tool. WeBekci is written in PHP, Its backend is powered by MySQL and the frontend by XAJAX framework. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]].
+
+</td><td>
+
+; [[:Category:OWASP ASDR Project | OWASP ASDR Project]]
+: The ASDR is a reference volume that contains basic information about all the foundational topics in application security. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]]. 
+
+; [[:Category:OWASP Application Security Verification Standard Project | OWASP Application Security Verification Standard Project]]
+: This is a new project created to define an evaluation framework that may be used to conduct OWASP Application Security Verification Standard certifications. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]]. 
+
+; [[:Category:OWASP AppSensor Project|OWASP AppSensor Project]]
+: A framework for detecting and responding to attacks from within the application. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]]. 
+
+; [[:Category:OWASP Backend Security Project|OWASP Backend Security Project]]
+: This is a new project created to improve and to collect the existant information about the backend security. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]]. 
+
+; [[:Category:OWASP Book Cover & Sleeve Design|OWASP Book Cover & Sleeve Design]]
+: This is a project of corporate design to develop a scalable book cover series strategy and a Book Sleeve. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]]. 
+
+; [[Classic_ASP_Security_Project |OWASP Classic ASP Security Project]]
+: It aims in creating a secure framework for Classic ASP application by complementing existing OWASP projects with documentation for this particular technology and the creation of security libraries. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]].
+
+; [[:Category:OWASP Code Review Project|OWASP Code Review Project]]
+: A project to capture best practices for reviewing code. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]].
+
+; [[:OWASP Corporate Application Security Rating Guide|OWASP Corporate Application Security Rating Guide]]
+: This project will organize and structure publicly available data that large companies will share of the lessons learned about how to organize an application security initiative, best practices for training and testing, and more. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]].
+
+; [[:Category:OWASP Education Project|OWASP Education Project]]
+: A project to build educational tracks and modules for different audiences. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]].
+ 
+; [[:Category:OWASP Individual and Corporate Member Packs plus Conference Attendee Packs Brief|OWASP Individual and Corporate Member Packs/Conference Attendee Packs Brief]]
+: This is a project of corporate design to develop an Individual/Member Pack. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]]. 
+
+; [[OWASP_Internationalization | OWASP Internationalization Project]]
+: General guidelines to start a new translation project for OWASP site and projects. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]].
+
+; [[:Category:OWASP .NET Project|OWASP .NET Project]]
+: The purpose of the this project is to provide a central repository of information and tools for software professionals that use the Microsoft .NET Framework for web applications and services. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]].
+
+; [[:Category:OWASP Positive Security Project | OWASP Positive Security Project]]
+: This project will be used to learn how companies are working to create a positive security approach on their own resources and use this knowledge to create a set of control, marketing and awareness tools that will be available to promote and construct a positive approach to security worldwide. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]].  
+
+; [[:Category:OWASP Ruby on Rails Security Guide V2 | OWASP Ruby on Rails Security Guide V2]]
+: [[:Category:OWASP Web Application Security Put Into Practice | The last security guide for Rails]] was a great success, with a lot of more secure web applications and continued awareness in the community of security issues. The Ruby on Rails Security Project  is the one and only source of information about Rails security topics. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]]. 
+
+; [[:Category:OWASP Securing WebGoat using ModSecurity Project |OWASP Securing WebGoat using ModSecurity Project]]
+: The purpose of this project is to create custom Modsecurity rulesets that will protect WebGoat 5.2 from as many of its vulnerabilities as possible (the goal is 90%) without changing one line of source code. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]]. 
+
+; [[:Category:OWASP Source Code Review OWASP Projects Project | OWASP Source Code Review OWASP-Projects Project]]
+: The objectives of this project are: 1. Develop and document a workflow for open source projects to incorporate static analysis into the Software Development Life Cycle (SDLC); 2. Apply the above workflow as a required step for OWASP projects; 3. Aid in auditing select open source projects to create a baseline for comparing security amongst open source projects. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]]. 
+
+; [[OWASP_Spanish | OWASP Spanish Project]]
+: First translation effort to make OWASP site and project completely available in Spanish language. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]]. 
+
+; [[:Category:OWASP Testing Project|OWASP Testing Guide]]
+: A project focused on application security testing procedures and checklists. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]]. 
+
+</td></tr></table>
+
+== [[:Category:OWASP_Project_Assessment | Proyectos en estado Beta]] ==
+Los proyectos de calidad Beta estan completos y listos para usarse con su documentación. Note que los títulos y las descripciones no fueron traducidas por el momento.
+
+Hemos iniciado el proceso de definir los lineamientos detallados, los cuales indican que será requerido de un proyecto de OWASP para ser clasificado un proyecto de calidad de publicación (vea el [[:Category:OWASP_Project_Assessment | criterio de evaluación de proyectos]]).  Por favor note que los proyectos abajo '''NO''' han sido evaluados bajo este criterio y pueden ser reclasificados una ves que el proceso haya sido completado. 
+
+<table width="100%" valign="top"><tr><th width="50%">Herramientas</th><th>Documetación</th></tr><tr valign="top"><td>
+
+; [[:Category:OWASP AntiSamy Project|OWASP AntiSamy Project]]
+: an API for validating rich HTML/CSS input from users without exposure to cross-site scripting and phishing attacks
+
+; [[:Category:OWASP CSRFGuard Project|OWASP CSRFGuard Project]]
+: a J2EE filter that implements a unique request token to mitigate CSRF attacks
+
+; [[:Category:OWASP DirBuster Project|OWASP DirBuster Project]]
+:DirBuster is a multi threaded java application designed to brute force directories and files names on web/application servers.
+
+; [[:Category:OWASP Encoding Project|OWASP Encoding Project]]
+: a project focused on the development of encoding best practices for web applications.
+
+; [[:Category:OWASP Enterprise Security API|OWASP Enterprise Security API (ESAPI) Project]]
+: a free and open collection of all the security methods that a developer needs to build a secure web application.
+
+; [[:Category:OWASP LAPSE Project|OWASP LAPSE Project]]
+: an Eclipse-based source-code static analysis tool for Java
+
+; [[:Category:OWASP LiveCD Education Project|OWASP Live CD Education Project]]
+: an educational supplement project containing tutorials, challenges and videos detailing the use of tools contained within the OWASP LiveCD - LabRat. This project was sponsored by [[OWASP Spring Of Code 2007|OWASP Spring Of Code 2007]] and [http://www.securitydistro.com/ Security Distro]
+
+; [[:Category:OWASP Live CD Project|OWASP Live CD 2007 Project]]
+: a CD containing ready to use versions of application security analysis and testing tools. This project was sponsored by [[OWASP Spring Of Code 2007|OWASP Spring Of Code 2007]] 
+
+; [[:Category:OWASP .NET Project|OWASP .NET Research]]
+: a project focused on helping .NET developers build secure applications
+
+; [[:Category:OWASP Pantera Web Assessment Studio Project|OWASP Pantera Web Assessment Studio Project]]
+: a project focused on combining automated capabilities with complete manual testing to get the best results
+
+; [[ORG_%28Owasp_Report_Generator%29|OWASP Report Generator]]
+: a project giving security professionals a way to report and keep track of their projects
+
+; [[Owasp_SiteGenerator|OWASP Site Generator]]
+: a project allowing users to create dynamic sites for use in training, web application scanner testing, etc...
+
+; [[:Category:OWASP SQLiX Project|OWASP SQLiX Project]]
+: a project focused on the development of SQLiX, a full perl-based SQL scanner
+
+; [[OWASP_Tiger|OWASP Tiger]]
+: OWASP Tiger is a Windows application originally intended to be used for automating the process of testing various known ASP.NET security issues in hosted environments. However, it is much more versatile than that: it can help you construct and send a HTTP requests, receive and analyze the responses, match them against a set of conditions to produce alerts, notifications that something is wrong with the application(s) or service(s) being tested.
+
+; [[:Category:OWASP WeBekci Project|OWASP WeBekci Project]]
+: OWASP WeBekci is a web based ModSecurity 2.x management tool. WeBekci is written in PHP, Its backend is powered by MySQL and the frontend by XAJAX framework.
+
+; [[:Category:OWASP WSFuzzer Project|OWASP WSFuzzer Project]]
+: a project focused on the development of WSFuzzer, a full python-based Web Services SOAP fuzzer
+
+</td><td>
+
+; [[:Category:OWASP CLASP Project|OWASP CLASP Project]]
+: a project focused on defining process elements that reinforce application security
+
+; [[:Category:OWASP Code Review Project|OWASP Code Review Project]]
+: A project to capture best practices for reviewing code. This project is being sponsored by [[OWASP Summer of Code 2008|OWASP Summer of Code]].
+
+; [[:Category:OWASP Tools Project|OWASP Tools Project]]
+: The OWASP Tools Project's goal is to provide unbiased, practical information and guidance about application security tools.
+
+</td></tr></table>
+
+== [[:Category:OWASP_Project_Assessment | Proyectos en estado Alfa]] ==
+Los proyectos de calidad Alfa generalmente son usables pero les puede faltas documentacion o revisiones de calidad.
+
+Hemos iniciado el proceso de definir los lineamientos detallados, los cuales indican que será requerido de un proyecto de OWASP para ser clasificado un proyecto de calidad de publicación (vea el [[:Category:OWASP_Project_Assessment | criterio de evaluación de proyectos]]).  Por favor note que los proyectos abajo '''NO''' han sido evaluados bajo este criterio y pueden ser reclasificados una ves que el proceso haya sido completado. También note que solo las descripciones de los proyectosde nivel de publicación han sido traducidas al Español.
+
+<table width="100%" valign="top"><tr><th width="50%">Herramientas</th><th>Documentación</th></tr><tr valign="top"><td>
+
+; [[:Category:OWASP CSRFTester Project|OWASP CSRFTester Project]]
+: gives developers the ability to test their applications for CSRF flaws
+
+; [[:Category:OWASP EnDe|OWASP EnDe Project]]
+: This tool is an encoder, decoder, converter, transformer, calculator, for various codings used in the wild wide web.
+
+; [[:Category:OWASP Google Hacking Project|OWASP Google Hacking Project]]
+: Google SOAP Search API with Perl
+
+; [[:Category:OWASP Insecure Web App Project|OWASP Insecure Web App Project]]
+: a web application that includes common web application vulnerabilities
+
+; [[:Category:OWASP JBroFuzz|OWASP JBroFuzz Project]]
+: a fuzzer application, supporting a number of automated security checks including basic cross site scripting checks (XSS) as well as basic SQL injection testing. This project was sponsored by [[OWASP Spring Of Code 2007|OWASP Spring Of Code 2007]] 
+
+; [[:Category:OWASP NetBouncer Project|OWASP NetBouncer Project]]
+: is secure by default centralised input/output validation library which combines security rules and business rules as well as escaping in the output level. 
+
+; [[:Category:OWASP Open Review Project|OWASP Open Review Project (ORPRO)]]
+: a project to openly check open source libraries and software that are vital to most commercial and non-commercial apps around.
+
+; [[:Category:OWASP PHP AntiXSS Library Project|OWASP PHP AntiXSS Library Project]]
+: reduce cross-site scripting vulnerabilities by encoding your output
+
+; [[:Category:OWASP Sprajax Project|OWASP Sprajax Project]]
+: an open source black box security scanner used to assess the security of AJAX-enabled applications
+
+; [[:Category:OWASP Stinger Project|OWASP Stinger Project]]
+: a project focus on the development of a centralized input validation mechanism which can be easily applied to existing or developmental applications
+
+; [[:Category:OWASP_Web_2.0_Project|OWASP Web 2.0 Project]]
+: A place for advanced research of security in the Web 2.0 world 
+
+</td><td>
+
+; [[:Category:OWASP AIR Security Project|OWASP AIR Security Project]]
+: investigating the security of AIR applications
+
+; [[:Category:OWASP AJAX Security Project|OWASP AJAX Security Guide]]
+: investigating the security of AJAX enabled applications
+
+; [[:Category:OWASP Application Security Assessment Standards Project|OWASP Application Security Assessment Standards Project]]
+: establish a set of standards defining baseline approaches to conducting differing types/levels of application security assessment
+
+; [[:Category:OWASP Application Security Requirements Project|OWASP Application Security Requirements]]
+
+; [[:Category:OWASP Application Security Metrics Project|OWASP Application Security Metrics Project]]
+: identify and provide a set of application security metrics that have been found by contributors to be effective in measuring application security  
+
+; [[:Category:OWASP Career Development Project|OWASP Career Development Project]]
+: The OWASP Career Development project is focused on helping application security professionals understand the job market, roles, career paths, and skills to work in the field.
+
+; [[:Category:OWASP Certification Criteria Project|OWASP Certification Criteria Project]]
+
+; [[:Category:OWASP Certification Project|OWASP Certification Project]]
+: our challenge is to create a plan for certification: a set of OWASP Certification for Developers and Testers. 
+
+; [[:Category:OWASP Communications Project|OWASP Communications Project]]
+
+; [[:Category:OWASP Flash Security Project|OWASP Flash Security Project]]
+: investigating the security of Flash applications
+
+; [[:Category:OWASP Honeycomb Project|OWASP Honeycomb Project]]
+: a comprehensive and integrated guide to the fundamental building blocks of application security
+
+; [[:Category:OWASP Java Project|OWASP Java Project]]
+: a project focused on helping Java and J2EE developers build secure applications
+
+; [[:Category:OWASP Logging Project|OWASP Logging Guide]]
+: a project to define best practices for logging and log management
+
+; [[:Category:OWASP PHP Project|OWASP PHP Project]]
+: a project focused on helping PHP developers build secure applications
+
+; [[:Category:OWASP SASAP Project|OWASP Scholastic Application Security Assessment Project]]
+: a project that is intended to be the first step towards integrating security requirements in academic course curriculum
+
+; [[:Category:OWASP Validation Project|OWASP Validation Project]]
+: a project that provides guidance and tools related to validation
+
+; [[:Category:OWASP WASS Project|OWASP WASS Guide]]
+: a standards project to develop more concrete criteria for secure applications
+
+; [[:Category:OWASP Web Application Security Put Into Practice|OWASP Web Application Security Put Into Practice]]
+: real-world web application security for Ruby on Rails, Apache and MySQL
+
+; [[:Category:OWASP XML Security Gateway Evaluation Criteria Project|OWASP XML Security Gateway Evaluation Criteria]]
+: a project to define evaluation criteria for XML Security Gateways
+
+; [[:Category:OWASP on the Move Project|OWASP on The Move Project]]
+: a project to match offer and demand regarding OWASP (related) presentations by speakers on web application security events or chapter meetings.
+
+; [[:Category:OWASP Fuzzing Code Database|OWASP Fuzzing Code Database]]
+: a project to collect, share and compose statements used as code injections like SQL, SSI, XSS, Formatstring and as well directory traversal statements. 
+
+</td></tr></table>
+
+== Proyectos Inactivos ==
+El criterio esta siendo desarrollado aun.
+
+<table width="100%" valign="top"><tr><th width="50%">Tools</th><th>Documentation</th></tr><tr valign="top"><td>
+
+; [[:Category:OWASP CAL9000 Project|OWASP CAL9000 Project]]
+: a JavaScript based web application security testing suite
+
+</td><td>
+
+; 
+: 
+  
+</td></tr></table>
+
+{{PutInCategory}}

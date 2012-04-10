@@ -1,0 +1,84 @@
+==Directions==
+Copy and paste this code into the '''[[Software Security Assessment Tool Review]]''' project page.
+==Appendix A-'''ENTER THE NEXT SEQUENTIAL NUMBER FOR YOUR NEW TOOL''': '''ENTER THE NEW TOOL TITLE'''==
+{| width="80%" border="2" cellspacing="2" cellpadding="2"
+|+ '''APPENDIX A: TOOL MATRIX TEMPLATE'''
+|- valign="top"
+| width="40%" style="background: #FFCC99" | '''Product'''
+| width="40%" style="background: #FFCC99"  | 
+|- valign="top"
+| style="background: #FFCC99"  | '''Description'''
+| style="background: #FFCC99"  | 
+|- valign="top"
+| style="background: #FFCC99" | '''URL'''
+| style="background: #FFCC99" | 
+|- valign="top"
+| style="background: #CCFFFF" | '''Supported Languages'''
+| style="background: #CCFFFF" | 
+|- valign="top"
+| style="background: #CCFFFF" | '''Supported Platforms Where Tool Runs'''
+| style="background: #CCFFFF" | 
+|- valign="top"
+| style="background: #CCFFFF" | '''Supported Platform Where Target Resides'''
+| style="background: #CCFFFF" |
+|- valign="top"
+| style="background: #CCFFFF" | '''Supported Compilers '''
+| style="background: #CCFFFF" | 
+|- valign="top"
+| style="background: #CCFFFF" | '''Can Tool be used Remotely?'''
+| style="background: #CCFFFF" | 
+|- valign="top"
+| style="background: #CCFFFF" | '''Finds or Checks for: (Tool Category)'''
+| style="background: #CCFFFF" | 
+|- valign="top"
+| style="background: #CCFFFF" | '''Lifecycle Position(s)'''
+| style="background: #CCFFFF" | 
+|- valign="top"
+| style="background: #CCFFFF" | '''Scalability (Ability to scan up to 1,000,000 LOC?)'''
+| style="background: #CCFFFF" | 
+|- valign="top"
+| style="background: #CCFFFF" | '''Ability to Identify Comments in Code'''
+| style="background: #CCFFFF" | 
+|- valign="top"
+| style="background: #CCFFFF" | '''Ability to Discover Debug Code'''
+| style="background: #CCFFFF" | 
+|- valign="top"
+| style="background: #CCFFFF" | '''Ability to Discover Unused Code'''
+| style="background: #CCFFFF" | 
+|- valign="top"
+| style="background: #CCFFFF" | '''Tool uses CWE Definitions of Vulnerabilities'''
+| style="background: #CCFFFF" | 
+|- valign="top"
+| style="background: #CCFFFF" | '''Frequency of Rule Base Updates by Tool Provider '''
+| style="background: #CCFFFF" |
+|- valign="top"
+| style="background: #CCFFFF" | '''Ability of Testers to Modify Existing Rule Bases '''
+| style="background: #CCFFFF" | 
+|- valign="top"
+| style="background: #CCFFFF" | '''Ability of Testers to Add New Rule Bases'''
+| style="background: #CCFFFF" | 
+|- valign="top"
+| style="background: #CCFFFF" | '''Ability to provide suggestions for mitigating vulnerabilities (Remediation). If able, is it Active or Passive?'''
+| style="background: #CCFFFF" | 
+|- valign="top"
+| style="background: #CCFFFF" | '''Cost (Hourly/ Flat Fee) [AVAILABILITY]'''
+| style="background: #CCFFFF" | 
+|- valign="top"
+| style="background: #FFFF99" | '''Licensing'''
+| style="background: #FFFF99" |
+|- valign="top"
+| style="background: #FFFF99" | '''Vendor Technical Support'''
+| style="background: #FFFF99" |
+|- valign="top"
+| style="background: #FFFF99" | '''Vendor Services / Professional services support'''
+| style="background: #FFFF99" | 
+|- valign="top"
+| style="background: #FFFF99" | '''Required training or experience level to operate'''
+| style="background: #FFFF99" | 
+|- valign="top"
+| style="background: #FFFF99" | '''Vendor provided (or 3rd party provided) training available'''
+| style="background: #FFFF99" | 
+|- valign="top"
+| style="background: #FFFF99" | '''Comments'''
+| style="background: #FFFF99" |
+|}

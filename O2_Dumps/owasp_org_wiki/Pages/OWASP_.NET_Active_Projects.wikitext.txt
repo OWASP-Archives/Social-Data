@@ -1,0 +1,42 @@
+===OWASP Projects===
+'''Note:''' 
+The following releases are available on the [https://sourceforge.net/project/showfiles.php?group_id=64424&package_id=105632 dotNET section] of the [https://sourceforge.net/projects/owasp/ SourceForge OWASP Project pages]
+<br />
+
+* [[Owasp SiteGenerator]] (sponsored by Foundstone)
+* [[Owasp Report Generator]]
+* [[ANBS]] (Asp.Net Baseline Security) - includes the tools [[SAM'SHE]] (Security Analyzer for Microsoft's Shared Hosting Environments) and [[Online IIS Metabase Explorer]]
+* [[ASP.NET Reflector]]
+* [[ANSA]] (Asp.Net Security Analyzer) - first tool developed by Dinis Cruz that hilights the security problems of Full Trust Asp.Net code (contains Proof of Concept tests (i.e. exploits))
+* [[DefApp]] - Partial port of ModSecurity to the .Net Platform 
+* [[Owasp FOSBBWAS (code name Beretta)]]
+* [[.Net Assembly Analyzer]]
+* [[OWASP_Tiger|OWASP Tiger]]
+* [[.Net CSRF Guard]]
+<br />
+
+The following OWASP projects are hosted on other project hosting sites:
+
+* [http://code.google.com/p/owasp-esapi-dotnet/ OWASP ESAPI .NET]
+<br />
+===Active Project Workspaces===
+*FXCop Ruleset
+*Sprajax
+*CSSpider
+
+===Related Open Source Projects===
+* [[Hacme Bank]] (Foundstone tool)
+* [[.NetMon]] (Foundstone tool)
+* [[Validator.NET]] (Foundstone tool)
+<br />
+
+===Source Code Repositories===
+Any repository that allows public access and has terms of service that holds no claim on the content that our members upload is generally o.k.  The following repos are popular among the members:
+
+*[http://www.codeplex.com/Project/ProjectDirectory.aspx?ProjectSearchText=owasp OWASP @ Codeplex]
+*[http://code.google.com/p/owasp-code-central/ OWASP @ Google Code]
+*[http://sourceforge.net/projects/owasp/ OWASP @ SourceForge]
+<br />
+
+===Starting your own .NET Project===
+If you're interested in starting your own project, please read [https://www.owasp.org/index.php/How_to_Start_an_OWASP_Project How to Start an OWASP Project].  Remember to add the tag: <nowiki>[[Category:OWASP .NET Project]]</nowiki> to the end of new projects so that they're properly categorized.

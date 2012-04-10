@@ -1,0 +1,20 @@
+= Module Description =
+This module explains Cross Site Scripting (XSS) as part of the [[:Category:OWASP Education Project|Education Project]].
+
+= Target audience =
+Novice. HTML and javascript knowledge is a prerequisite.
+
+= Presentation =
+The presentation can be found in [[:Image:Module Cross Site Scripting (XSS).ppt|Cross Site Scripting (XSS)]].
+
+= Resources =
+== OWASP pointers ==
+* OWASP Top 10 on [[Top 10 2007-Cross Site Scripting|Cross site scripting]]
+* OWASP Testing Guide on [[Testing for Cross site scripting|Cross site scripting]]
+* OWASP Guide on [[Interpreter_Injection#User_Agent_Injection|User Agent Injection]]
+* OWASP Article on [[Cross Site Scripting]]
+
+== External pointers ==
+* Book [http://www.amazon.com/Cross-Site-Scripting-Attacks-Exploits/dp/1597491543 Cross Site Scripting Attacks: Xss Exploits and Defense]
+
+[[Category:OWASP Education Modules]]

@@ -1,0 +1,97 @@
+{{Template:SecureSoftware}}
+{{Template:Vulnerability}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+The use of Non-cryptographic Pseudo-Random Number Generators (PRNGs) as a source for security can be very dangerous, since they are predictable. 
+
+'''Consequences'''
+
+* Authentication: Potentially a weak source of random numbers could weaken the encryption method used for authentication of users. In this case, a password could potentially be discovered.
+
+'''Exposure period'''
+
+* Design through Implementation: It is important to realize that if one is utilizing randomness for important security, one should use the best random numbers available.
+
+'''Platform'''
+
+* Languages: All languages.
+* Operating platforms: All platforms.
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood of exploit'''
+
+Medium
+
+Often a pseudo-random number generator (PRNG) is not designed for cryptography. Sometimes a mediocre source of randomness is sufficient or preferable for algorithms which use random numbers. Weak generators generally take less processing power and/or do not use the precious, finite, entropy sources on a system. 
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+In C\C++:
+
+<pre>
+srand(time())
+int randNum = rand();
+</pre>
+
+In Java:
+
+<pre>
+Random r = new Random();
+</pre>
+
+For a given seed, these "random number" generators will produce a reliable stream of numbers. Therefore, if an attacker knows the seed or can guess it easily, he will be able to reliably guess your random numbers.
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* Design through Implementation: Use functions or hardware which use a hardware-based random number generation for all crypto. This is the recommended solution. Use CryptGenRandom on Windows, or hw_rand() on Linux.
+
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Cryptographic Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

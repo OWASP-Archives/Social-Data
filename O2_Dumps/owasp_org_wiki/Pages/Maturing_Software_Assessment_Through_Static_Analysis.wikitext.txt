@@ -1,0 +1,18 @@
+==The Presentation: "Maturing Software Assessment Through Static Analysis"==
+
+'''Presentation Abstract'''
+
+Organizations have struggled to understand the place of dynamic security testing techniques and their penetration testing tool use has suffered setbacks as a result. Likewise, as these same organizations turn to static analysis tools they find themselves struggling to decide who should run the tool and what kinds of vulnerabilities the tool will find for them. Finally, organizations lament the lack of depth or scale associated with their manual security analyses. This presentation will show how recent approaches to holistic application assessment at Cigital have overcome the limitations of existing tools by combining industry-best scanning tools and open source technologies for continuous integration. This combination, in turn, has the security benefit of scanning tools to be seen more closely to when vulnerabilities are introduced (and can be fixed) and allows them to be applied more frequently.
+
+'''Prerequisites'''
+
+A working understanding of common security vulnerabilities and experience using vulnerability scanning tools (preferably static analysis tools) will help.
+
+Download: [[Media:Maturing_Assessment_through_SA.ppt‎| Maturing Assessment through SA.ppt]]
+
+==The Speaker: John Steven==
+John Steven is the Senior Director, Advanced Technology Consulting at Cigital, Inc.  His experience includes research in static code analysis and hands-on architecture and implementation of high-performance, scalable Java EE systems. John has provided security consulting services to a broad variety of commercial clients including two of the largest trading platforms in the world and has advised America’s largest internet provider in the Midwest on security and forensics.  John led the development of Cigital’s architectural analysis methodology and its approach to deploying enterprise software security frameworks. He has demonstrated success in building Cigital’s intellectual property for providing cutting-edge security.  He brings this experience and a track record of effective strategic innovation to clients seeking to change, whether to adopt more cutting-edge approaches, or to solidify ROI.  John currently chairs the SD Best Practices security track and co-edits the building security in department of IEEE’s Security and Privacy magazine. John has served on numerous conference panels regarding software security, wireless security and Java EE system development.  He holds a B.S. in Computer Engineering and an M.S. in Computer Science from Case Western Reserve University.
+
+
+
+[[OWASP_Software_Assurance_Day_DC_2009#Agenda and Presentations:_13_March_2009|back to Presentation Agenda]]

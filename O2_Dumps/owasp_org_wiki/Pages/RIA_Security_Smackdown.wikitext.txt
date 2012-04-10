@@ -1,0 +1,146 @@
+Notes from the OWASP Washington chapter meeting where we discussed:
+
+* Java Applet - very old technology, runs in sandbox
+* Flash 7 - old flash movie environment
+* JFX (Sun Java) - New scripting language compiles to bytecode, runs via Java Web Start
+* Silverlight (Microsoft) - .NET Applets that run inside the browser, no privileged code
+* Google Gears - local storage component with JavaScript API (Same Origin all the way down)
+* AIR (Adobe - formerly Apollo) - VM that runs Flash, Shockwave movies, ActionScript, JavaScript, FLV
+
+==Threat Agents to Consider==
+
+* Threat from external attackers against your desktop application
+* Threat from an attacker against back end systems
+* Threat from malicious developers
+
+==References==
+
+AIR - http://www.flashsec.org, http://www.wisec.it/en/Docs/flash_App_testing_Owasp07.swf
+
+==Results==
+
+Key
+* (Y) - Allowed by RIA framework
+* (LF) - Limited by framework (a built in limitation or control)
+* (LSO) - Limited by same origin policy (special built in policy)
+* (LD) - Limited by developer (specified in a policy file like security.policy, jnlp, or crossdomain.xml)
+* (LU) - Limited by user (specified in a policy file)
+* (N) - Denied by RIA framework
+
+{|class="wikitable sortable" style="text-align:left;" width="100%"
+|-
+! RIA Framework
+! width="10%" | Java Applet
+! width="10%" | Adobe Flash
+! width="10%" | Google Gears
+! width="10%" | Java FX (JFX)
+! width="10%" | MS Silverlight
+! width="10%" | Adobe AIR
+|- 
+| '''Persistence''' - Does the RIA framework allow data to be persisted in the client?
+| N
+| LF
+| LSO
+| LD
+| LU
+| Y
+|- 
+| '''Sharing''' - Does the RIA framework allow uploading data?
+| LSO
+| LSO
+| Y
+| LD
+| LSO
+| Y
+|- 
+| '''Exchange''' - Does the RIA framework use data formats that scramble data and code (HTML, JSON)
+| N
+| N
+| ?
+| LD
+| Y (XAML and PE)
+| Y
+|- 
+| '''Pipes''' - Does the RIA framework allow multiple RIAs to communicate with each other on the client?
+| Y (LiveConnect)
+| N
+| N
+| ?
+| N
+| Y
+|- 
+| '''Files''' - Does the RIA framework have access to the local file system?
+| N
+| N
+| N
+| LD
+| LU (IsoStore)
+| Y
+|- 
+| '''Sockets''' - Does the RIA framework have access to local network sockets?
+| LSO
+| LSO
+| LSO
+| LD
+| N (yet)
+| Y
+|- 
+| '''Windows''' - Does the RIA framework have the ability to create windows?
+| LF
+| N
+| N
+| LD
+| N
+| Y
+|- 
+| '''Devices''' - Does the RIA framework have the ability to access local cameras and microphones?
+| N
+| LF
+| N
+| LD
+| N
+| Y
+|- 
+| '''Native''' - Does the RIA framework have access to local native code or executables?
+| N
+| N
+| N
+| LD
+| N
+| Y
+|- 
+| '''DOM''' - Does the RIA framework have access to the DOM?
+| Y
+| Y
+| Y
+| ?
+| Y
+| Y
+|- 
+| '''Controls''' - Does the RIA framework have access to other components within the DOM?
+| N
+| Y
+| LSO
+| LD
+| ?
+| Y
+|- 
+| '''Self-Modify''' - Can an RIA modify the RIA framework?
+| N
+| N
+| ?
+| LD
+| N
+| Y
+|- 
+| '''DNS Pinning''' - Does the RIA framework protect against DNS pinning?
+| N
+| N
+| N
+| LD
+| N
+| N
+|}
+
+
+__NOTOC__

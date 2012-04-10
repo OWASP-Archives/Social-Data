@@ -1,0 +1,148 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+Cloneable classes are effectively open classes since data cannot be hidden in them. 
+
+'''Consequences'''
+
+* Confidentiality: A class which can be cloned can be produced without executing the constructor.
+
+'''Exposure period'''
+
+* Implementation: This is a style issue which needs to be adopted throughout the implementation of each class.
+
+'''Platform'''
+
+* Languages: Java
+* Operating platforms: Any
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Medium
+
+'''Likelihood of exploit'''
+
+Medium
+
+Classes which do no explicitly deny cloning can be cloned by any other class without running the constructor. This is, of course, dangerous since numerous checks and security aspects of an object are often taken care of in the constructor.
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+<pre>
+public class CloneClient
+{
+        public CloneClient()
+//throws java.lang.CloneNotSupportedException
+        {
+                Teacher t1 = new Teacher("guddu","22,nagar road");
+    //...// Due some stuff to remove the teacher.
+                Teacher t2 = (Teacher)t1.clone();
+                                System.out.println(t2.name);
+       }
+        public static void main(String args[])
+        {
+                new CloneClient();
+        }
+}
+
+class Teacher implements Cloneable
+{
+        public Object clone() {
+                try { return super.clone();
+                } catch (java.lang.CloneNotSupportedException e) {
+                    throw new RuntimeException(e.toString());
+                }
+        }
+        public String name;
+        public String clas;
+        public Teacher(String name,String clas)
+        {
+                this.name = name;
+                this.clas = clas;
+
+        }
+}
+</pre>
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+*	Implementation: Make classes uncloneable by defining a clone function like:
+
+<pre>
+public final void clone() throws java.lang.CloneNotSupportedException {
+     throw new java.lang.CloneNotSupportedException();
+} 
+</pre>
+
+*	Implementation: If you do make your classes cloneable, ensure that your clone method is final and throw super.clone().
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Environmental Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

@@ -1,0 +1,17 @@
+{{Stub}}
+
+= Overview<br> =
+
+The secure flag is an option that can be set by the application server when sending a new cookie to the user within an HTTP&nbsp;Response. The purpose of the secure flag is to prevent cookies from being observed by unauthorized parties due to the transmission of a the cookie in clear text.<br>
+
+To accomplish this goal, browsers which support the secure flag will only send cookies with the secure flag when the request is going to a HTTPS page. Said in another way, the browser will not send a cookie with the secure flag set over an unencrypted HTTP&nbsp;request.<br>
+
+By setting the secure flag, the browser will prevent the transmission of a cookie over an unencrypted channel.<br>
+
+= Setting the Secure Flag<br> =
+
+= Testing for the Secure Flag<br> =
+
+= Related Articles<br> =
+
+[http://www.owasp.org/index.php/Testing_for_cookies_attributes_(OWASP-SM-002) Testing for Cookie Attributes]<br>

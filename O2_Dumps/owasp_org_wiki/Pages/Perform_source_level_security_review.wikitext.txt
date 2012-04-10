@@ -1,0 +1,72 @@
+{{Template:SecureSoftware}}
+
+==Overview==
+
+Purpose:	
+
+* Find security vulnerabilities introduced into implementation.
+
+Role:
+
+* Security Auditor
+
+Frequency:
+
+* Incrementally, at the end of each implementation iteration.
+
+
+
+==Scope the engagement ==
+
+It is rarely possible to look at each line of code in a system, particularly if someone needs to understand its relationship with every other line. Therefore, it is important to collect as much information as feasible about the system architecture and overall development process in order to help scope out the areas that merit the most attention.
+
+The auditor should always start by collecting the most recent documentation for the system - including requirements, architecture, API docs, and user manuals. If previous steps in the process were followed, the material needed to scope a source-level security review should have already been produced and would be included in this material. The auditor should ensure that all documentation seems to be present and should work to collect anything that is not. While the auditor can perform an initial sanity check of the material collected, this check should not be the initial focus since much of the auditing work will involve performing such validation.
+
+The auditor should be collecting the following material (and generally producing it if it does not exist):
+
+* System requirements and specification. An auditor is expected to identify places where security requirements are violated and to make recommendations for remediating risks.
+
+* A threat profile for the system. Possible threats: governments, employees, etc., and the associated capabilities they are assumed to have.
+
+* Any previous assessments, including architectural assessments.
+
+The data one should be capturing in the scoping of the engagement is collected in the assessment worksheet in CLASP Resource F.
+
+If the auditor did not produce the threat profile - or if the threat profile is not current -, one should perform an incremental assessment, focusing on changes and shortcomings in the original.
+
+==Run automated analysis tools ==
+
+Automated analysis may be incorporated into the build process, in which case the auditor can use results from a current analysis, instead of running an additional analysis.
+
+==Evaluate tool results ==
+
+For each potential risk identified by the tool, assess whether the risk is relevant to the development effort. Risks that are not relevant should be marked as not relevant for one of the following reasons:
+
+*	The risk is mitigated by an existing or recommended compensating control that is not within the scope of analysis for the tool.
+
+*	The risk is not in the threat profile for the program. For example, attacks that require local user access to the same machine running the software may have already been deemed outside the scope of consideration.
+
+*	The risk is a false positive in the analysis itself.
+
+Evaluating the results requires tool-dependent processes. Determining absolutely whether a tool result is a real vulnerability or a false positive is often not necessary, as it often involves attempting to craft an exploit. Instead, the investigator should deem it a likely risk in the case of those risks that the investigator cannot rule out as a risk based on examining the tool output and the code.
+
+For those risks that are relevant, determine impact and recommend remediation strategies in the same manner as performing an architectural analysis, documenting results in an implementation security review report.
+
+==Identify additional risks ==
+
+Analysis tools are not capable of finding all security risks in software. Many classes of risk can be identified in an architectural analysis that is not conclusively controlled. Additionally, some classes of risk may not be considered in an architectural analysis because they are artifacts of implementation error.
+
+Compose a list of possible risks by reviewing both those risks identified in the architectural analysis and a database of common risks. See the CLASP Vulnerability database in the section CLASP Vulnerability View.
+
+For each potential risk, identify system resources that might be susceptible to the risk. Follow execution through the code from any relevant input points to the data resource, looking at each appropriate point whether there is a likely instantiation of the risk. 
+
+As with examining tool output, the investigator should not look to prove risk beyond a doubt. Identifying likely risks is sufficient, where a likely risk is one that the auditor cannot rule out on the basis of a detailed manual analysis of the code.
+
+Determine the impact of likely risks that are identified and recommend remediation strategies in the same manner as if performing an architectural analysis, documenting results in an implementation security review report.
+
+
+[[Category:Activity]]
+[[Category:CLASP Activity]]
+[[Category:BP2 Perform application assessments]]
+[[Category:OWASP_CLASP_Project]]
+[[Category:Code review]]

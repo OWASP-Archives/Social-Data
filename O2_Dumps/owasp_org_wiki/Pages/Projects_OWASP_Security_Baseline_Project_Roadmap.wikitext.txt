@@ -1,0 +1,20 @@
+'''Short term goal''': 
+* Establish an OWASP community which actively test/baseline/benchmark security of enterprise solutions
+Medium-long term goals: establish OWASP as an independent party for testing (eventually certifying) security of enterprise solutions.
+
+<br>
+Based on comprehensive assessment I've done on products/services pertaining to anti-spam/anti-virus email security (as part of 'Testing the Enterprise Security Infrastructure' personal  project ), I plan to start with a testing methodology suitable for this class of enterprise security products/services.
+
+'''Alpha:'''
+* Establish the testing methodology for for enterprise anti-spam/anti-virus email security solutions mapping to OWASP Top 10 (test plan, techniques, tools);
+* Establish the disclosure policy.
+
+'''Beta:'''
+* Have the testing methodology published; draft and publish the OWASP Security Baseline for at least one representative product/service (planning to use work I did on assessing Symantec Brightmail Gateway/IBM Provential Network Mail Security System/Google Message Security - to be decided);
+* Gather community support on such initiatives.
+
+'''Stable:'''
+* Testing methodology for enterprise anti-spam/anti-virus email security solutions published, some representative products/services baselined;
+* Have the framework in pace for baselining other classes of products/services;
+* Reach out for individual/group contributions from IT professionals looking to increase the IS awareness, those looking to test their skills on enterprise products, security professionals, security researchers, academia, etc;
+* Coordinate such efforts and publish community-validated results.

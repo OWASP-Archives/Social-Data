@@ -1,0 +1,100 @@
+{{Social Media Links}}
+<paypal>OWASP Portuguese Language Project</paypal>
+
+= Home =
+
+==Projeto OWASP em Língua Portuguesa==
+
+O objetivo desse projeto é coordenar os esforços de tradução e produção de documentos em língua portuguesa no âmbito do OWASP. Desta forma, é possível facilitar a participação e evitar duplicações de esforços na tradução dos mesmos documentos.
+
+<br>
+
+{| width="100%"
+|-
+! width="50%" | 
+! width="50%" | 
+|- valign="top"
+| 
+== Quer ajudar?  ==
+
+[[Image:Asvs-waiting.JPG]]
+
+# Inscreva-se na lista de emails do projeto
+# Verifique na próxima aba a lista de traduções em andamento
+# Escolha uma tradução (em andamento ou nova) e envie email para a lista contendo:
+## seu nome
+## tradução escolhida
+# Caso seja uma nova tradução, informe também se gostaria de ter a ajuda de outros voluntários
+# Mantenha a lista informada do andamento do seu esforço
+
+|
+== Resultados  ==
+
+[[Image:Asvs-satellite.jpg]]'''Documentos disponíveis''' 
+
+* [[OWASP Brasil Manifesto]]
+* Melhores Práticas de Programação Segura OWASP - Guia de Referência Rápida ([https://www.owasp.org/index.php/File:OWASP_SCP_v1.3_pt-PT.pdf PT_PT] | [https://www.owasp.org/index.php/File:OWASP_SCP_v1.3_pt-BR.pdf PT_BR])
+
+|}
+
+
+=Esforcos em andamento=
+
+==CLASP==
+==Top Ten==
+==Top Ten for Java EE==
+==SAMM==
+
+Precisa de voluntários para tradução e revisão.
+
+==ASVS==
+
+Precisa de voluntários para revisão e formatação do documento final.
+
+=Summit 2011=
+
+== Decisoes da Sessao de Trabalho ocorrida no OWASP Summit 2011  ==
+
+=== Uniformização  ===
+
+será necessário um esforço para uniformizar a linguagem utilizada nas traduções. Com base na experiência obtida pelo projeto de tradução para a língua espanhola, foi definido que a primeira iniciativa neste sentido será a compilação de um glossário, com uma lista de palavras e expressões mais problemáticas e as traduções recomendadas. 
+
+=== Definição de prioridades  ===
+
+dada a grande quantidade de material disponibilizado pelo OWASP, é necessário priorizar os esforços de tradução. No Summit, ficaram escolhidos os seguintes documentos como tendo prioridade para tradução: 
+
+*Top 10 
+*OpenSAMM (já existe uma tradução parcial) 
+*Apresentações sobre o que é e como funciona o OWASP
+
+Os documentos abaixo já tem uma tradução disponível e são prioridade para revisão: 
+
+*OWASP Quick Reference 
+*ASVS
+
+=== Coordenação  ===
+
+o esforço deve ser coordenado para ser efetivo. O grupo deliberou o seguinte método de trabalho: 
+
+*cada tradução terá um coordenador, responsável pela alocação de nacos de tradução, o controle da evolução da tradução, definição de prazos e a substituição de tradutores, quando necessário. 
+*cada tradução deverá divulgar na wiki as informações necessárias para que se acompanhe a sua evolução.
+
+=== Processo  ===
+
+O macroprocesso de tradução ficou definido como: 
+
+#cada tradução será dividida em nacos, que podem ser páginas, capítulos, partes, etc. 
+#o coordenador aloca os nacos aos tradutores e mantém um controle da alocação e dos prazos na wiki 
+#o coordenador deve sempre verificar o andamento da tradução e o cumprimento dos prazos acordados 
+#o coordenador pode manter uma lista de espera de tradutores que possam ser acionados caso seja necessário 
+#todo naco traduzido deve ser revisado, preferencialmente por pessoa oriunda de país diferente do país de origem do tradutor 
+#o documento completo dever ser novamente revisado, com o objetivo de uniformização do discurso.<br>
+
+
+=Project About=
+
+{{:Projects/OWASP Portuguese Language Project | Project About}} 
+
+__NOTOC__ <headertabs /> <BR>
+
+[[Category:OWASP_Project|Portuguese Language Project]] [[Category:OWASP_Document]] [[Category:OWASP_Alpha_Quality_Document|OWASP Alpha Quality Document]]

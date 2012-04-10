@@ -1,0 +1,13 @@
+== Possible Enhancements == 
+
+* Make ESAPI factory class (i.e. ESAPI.java) data driven so that you don't have to change code to select your company's implementation of the ESAPI interfaces
+
+* Move "admin" like functions to a separate API to keep the base API very simple
+
+* Create a command line interface to facilitate integration with other environments
+
+* Make ESAPI configs work on either a "per-app" or "global" basis.  Probably use a global set that can be overridden by individual applications.
+
+
+Two strawman ideas on how the API can be designed and some of the implications to start a discussion.
+[[Image:API_Design.docx|Two strawman ideas on how the API can be designed and some of the implications to start a discussion.]]

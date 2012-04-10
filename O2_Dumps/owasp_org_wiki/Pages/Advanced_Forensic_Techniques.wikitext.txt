@@ -1,0 +1,111 @@
+= '''Advanced Forensics Techniques''' =
+
+Course: Advanced Forensics Techniques<br>Course ID: SB1DAFT<br>Instructor: Dr. Chandrasekar Umapathy<br>CPE Credits: 7 CPE’s<br>Duration: 1 Day<br>Date: November 19th, 2009 (9 AM – 6 PM)<br>
+
+'''Who should attend?'''<br>• General IT security specialists and administrators<br>• IT security specialists who are interested in learning core concepts of Forensics specifically<br>• Security officers for organisations and companies<br>• Law Enforcement agencies<br>• Incident Response Team members
+
+'''Class Pre-requisite:'''<br>• This class is for anyone who wants to begin with Forensics.
+
+'''Class Requirement:'''<br>• Students to carry their laptop with at least Windows XP professional SP2.<br>• Students should have Administrative access / Privileges on the laptop for installing software.<br>• USB or CD/DVDROM device (N.B for bootable software).<br>• Wireless Enabled<br>• Required tools would be distributed during the session
+
+
+
+'''Course Description:'''
+
+This course covers the fundamental steps of the in-depth computer forensic methodology so that each student will have the complete qualifications to work as a computer forensic investigator in the field helping solve and fight crime. 
+
+'''Module 1 - Computer Forensic Investigative Theory'''<br>
+- History of Digital Forensics<br>
+- Digital Evidence<br>
+- Three Main Aspects to Digital Evidence Reconstruction<br>
+- Attack Guidelines for the Recovery of Digital Data<br>
+- Classification<br>
+- Reconstruction<br>
+- Demo - TimeStomping<br>
+- Behavioral evidence analysis (BEA)<br>
+- Equivocal forensic analysis (EFA)<br>
+- Victimology<br>
+- Demo - Following the Clues from an Email Header<br> 
+
+'''Module 2 - Computer Forensic Processing Techniques'''<br>
+- Goal of Digital Evidence Processing<br>
+- Demo - Logical Review with FTK<br>
+- Duplication<br>
+- Documenting and Identifying<br>
+- Disassembling the Device<br>
+- Disconnecting the Device<br>
+- Document the Boot Sequence<br>
+- Removing and Attaching the Storage Device to Duplicated System<br>
+- Circumstances Preventing the Removal of Storage Devices<br>
+- Write Protection via Hardware/Software<br>
+- Geometry of a Storage Device<br>
+- Host Protected Area (HPA)<br>
+- Tools for Duplicating Evidence to Examiner's Storage Device<br>
+- Demo - Hashing and Duplicating a Drive<br>
+- Preparing Duplication for Evidence Examination<br>
+- Recording the Logical Drive Structure<br>
+- Logical Processes<br>
+- Known Files<br>
+- Reference Lists<br>
+- Verify that File Headers Match Extensions<br>
+- Demo - Introduction to FTK<br>
+- Regular Expressions<br>
+- Demo - Using Regular Expressions<br>
+- File Signatures<br>
+- Demo - Hex Workshop Analysis of Graphic Files<br>
+- Module 2 Review <br>
+
+'''Module 3 - Crypto and Password Recovery'''<br>
+- Background<br>
+- Demo - Stegonography<br>
+- History<br>
+- Concepts 1<br>
+- Demo - Cracking a Windows Hashed Password<br>
+- Concepts 2<br>
+- File Protection<br>
+- Options 1<br>
+- Demo - Recovering Passwords from a Zip File<br>
+- Options 2<br>
+- Rainbow Tables<br>
+- Demo - Brute Force/Dictionary Cracks with Lophtcrack<br>
+- Demo - Password Cracking with Rainbow Tables<br>
+- Module 3 Review <br>
+
+'''Module 4 - Specialized Artifact Recovery'''<br>
+- Overview<br>
+- Exam Preparation Stage<br>
+- Windows File Date/Time Stamps<br>
+- File Signatures<br>
+- Image File Databases<br>
+- Demo - Thumbs.DB<br>
+- The Windows OS<br>
+- Windows Operating Environment<br>
+- Windows Registry<br>
+- Windows Registry Hives 1<br>
+- Demo - Registry Overview<br>
+- Windows Registry Hives 2<br>
+- Windows NT/2000/XP Registry<br>
+- Windows Registry ID Numbers<br>
+- Windows Alternate Data Streams<br>
+- Demo - Alternate Data Streams<br>
+- Windows Unique ID Numbers<br>
+- Other ID<br>
+- Historical Files 1<br>
+- Demo - Real Index.dat<br>
+- Historical Files 2<br>
+- Demo - Review of Event Viewer<br>
+- Historical Files 3<br>
+- Demo - Historical Entries in the Registry<br>
+- Historical Files 4<br>
+- Windows Recycle Bin<br>
+- Demo - INFO Files<br>
+- Outlook E-Mail<br>
+- Outlook 2k/Workgroup E-Mail<br>
+- Outlook Express 4/5/6<br>
+- Web E-Mail<br>
+
+'''Exercises'''
+
+Two cases modeled after real-world examples will be presented to the students. Students will work in a group to investigate and analyze evidence related to a computer crime and present their findings to the class.
+
+=  =

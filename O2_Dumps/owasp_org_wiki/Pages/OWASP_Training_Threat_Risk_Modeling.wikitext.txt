@@ -1,0 +1,28 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>OWASP Training Modules</noinclude>
+| Module_designation = [[:Threat Risk Modeling|Threat Risk Modeling]]
+| Module_Overview_Goal = When you start a web application design, it is essential to apply threat risk modeling; otherwise you will squander resources, time, and money on useless controls that fail to focus on the real risks.
+
+The method used to assess risk is not nearly as important as actually performing a structured threat risk modeling. Microsoft notes that the single most important factor in their security improvement program was the corporate adoption of threat risk modeling.  
+
+
+| Content = &nbsp;
+* Performing threat risk modeling using the Microsoft Threat Modeling Process<br>
+* Identify Security Objectives<br>
+* Application Overview<br>
+* Decompose Application<br>
+* Identify Threats<br>
+* STRIDE<br>
+* DREAD<br>
+* Alternative Threat Modeling Systems<br>
+
+&nbsp;
+| Material = 
+* [http://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project OWASP Application Security Verification Standard Project (ASVS)]
+* [http://www.owasp.org/index.php/Category:OWASP_Guide_Project OWASP Testing Guide V 3.0 - PDF]
+* [http://www.owasp.org/index.php/File:OWASP-BeNeLux_2010_ThreatModeling.pdf Threat Modelling Dec'10] 
+
+}}
+
+
+
+[[Category:OWASP_Training|Training]]

@@ -1,0 +1,38 @@
+----
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT INFORMATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP ModSecurity Core Rule Set Project'''
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|
+The purpose of this project is the documentation and development of the ModSecurity Core Rule Set.  Unlike intrusion detection and prevention systems, which rely on signature specific to known vulnerabilities, the Core Rules are based on generic rules in order to provide protection from zero day and unknown vulnerabilities often found in web applications, which are in most cases custom coded.
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|
+'''Key Project Information'''
+ | style="width:14%; background:#cccccc" align="center"|
+Project Leader<br>[[user:rcbarnett|'''Ryan Barnett''']]
+ | style="width:15%; background:#cccccc" align="center"|
+Project Contibutors<br>'''Brian Rectanus'''<br>(add account link, please)
+ | style="width:12%; background:#cccccc" align="center"|
+Mailing List<br>[https://lists.owasp.org/mailman/listinfo/owasp-modsecurity-core-rule-set '''Subscribe here''']<br>[mailto:owasp-modsecurity-core-rule-set@lists.owasp.org '''Use here''']
+ | style="width:15%; background:#cccccc" align="center"|
+License<br>[http://www.gnu.org/licenses/gpl-3.0.html '''GNU General Public License''']
+ | style="width:14%; background:#cccccc" align="center"|
+Project Type<br>[[:Category:OWASP_Project#Alpha_Status_Projects|'''Document''']]
+ | style="width:15%; background:#cccccc" align="center"|Sponsor<br>[http://www.breach.com/resources/breach-security-labs/index.html https://www.owasp.org/images/5/56/BreachSecurityLabs.jpg]
+ |}
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|
+'''[[:Category:OWASP Project Assessment#Alpha Quality Documentation Criteria|Apha Quality]]'''<br>[[:OWASP ModSecurity Core Rule Set Project - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="center"|
+add here.
+ | style="width:29%; background:#cccccc" align="center"|
+[http://www.modsecurity.org/projects/rules/index.html ModSecurity-Open Source Web Application Firewall]<br>[[:Category:OWASP Securing WebGoat using ModSecurity Project|OWASP Securing WebGoat using ModSecurity]]
+ |}
+----

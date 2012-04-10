@@ -1,0 +1,60 @@
+{{Template:SecureSoftware}}
+
+==Overview==
+
+
+Purpose:	
+
+* Automate implementation-level security analysis and metrics collection.
+
+Role:
+
+* Integrator
+
+Frequency:
+
+* As required
+
+
+
+==Select analysis technology or technologies ==
+
+There are a number of analysis technologies that could be integrated into the development process. One broad way to categorize them is dividing them into two classes:
+
+*''	 Dynamic analysis tools'', which require running the program in order to perform an analysis, often in its full operational context for maximum effectiveness; and
+
+*''	Static analysis tools'', which analyze the program entirely without running the program.
+
+Generally, dynamic analysis tools are better suited to be run manually as part of the quality assurance process, as they require running many tests to exercise the code thoroughly, and often those tests must be driven by a human. 
+
+There are several available static analysis tools. 
+
+==Determine analysis integration point ==
+
+Source code analysis can be integrated into source management as part of the check-in process, as part of the build process, or independently. CLASP recommends integrating it into check-in and into build, using efficient but less accurate technology to avoid most problems early, and deeper analysis on occasional builds to identify more complex problems.
+
+Integration at check-in can be used to prevent check-in of code into a primary branch that does not meet coding standards or to assign potential new security defects to committers. The first goal is not well suited to legacy software applications, unless a baseline of tool output is used for comparison. The second goal also requires baseline output used for comparison that is updated incrementally. 
+
+Deep analysis can be done as a result of check-in, but frequent deep analysis is not necessary. Developers should get more immediate feedback; security auditors should get more detailed feedback, but not as frequently as with every check-in. 
+
+==Integrate analysis technology ==
+
+Analysis technology should be integrated into the source management process in an automated way if possible. If the technology does not support such integration out-of-the-box, one could consider building integration. Otherwise, it must be performed manually, which will generally rule out per-check-in analysis.
+
+Integrating analysis technology should involve the following:
+
+*	Producing a version of the source to be tested which is suitable for input into the analysis tool. Most analysis tools will require the code to compile as well as instructions for turning the code into an actual executable, even though the executable is not run.
+
+*	Performing the analysis.
+
+*	Eliminating results that have been previously reported by the tool and have yet to be resolved.
+
+*	Presenting any new results or the lack of results to the appropriate parties - usually the developer or the security auditor. This may occur through a common interface, such as a bug tracking system. Potential problems should go through a single process for reported security problems.
+
+*	Storing information about the analysis for use in future analyses, and also store any metrics collection.
+
+
+[[Category:Activity]]
+[[Category:CLASP Activity]]
+[[Category:BP4 Implement secure development practices]]
+[[Category:OWASP_CLASP_Project]]

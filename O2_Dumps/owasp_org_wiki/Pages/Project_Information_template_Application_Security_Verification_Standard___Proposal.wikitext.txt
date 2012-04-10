@@ -1,0 +1,33 @@
+----
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT INFORMATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Application Security Verification Standard Project''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|
+The primary aim of the OWASP Application Security Verification Standard (ASVS) Project is to normalize the range in the coverage and level of rigor available in the market when it comes to performing application security verification using a commercially-workable open standard. This standard can be used to establish a level of confidence in the security of web applications and web services.
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Key Project Information'''
+ | style="width:12%; background:#cccccc" align="center"|Licensed under<br>[[:OWASP Licenses|'''Choose here & replace link with license name''']]
+ | style="width:12%; background:#cccccc" align="center"|Project Leader<br>[[User:Mike.boberski|'''Mike Boberski''']]
+ | style="width:12%; background:#cccccc" align="center"|Project Contributors<br>[[User:Jeff Williams|'''Jeff Williams''']]<br>[[User:Wichers|'''Dave Wichers''']]
+ | style="width:12%; background:#cccccc" align="center"|Mailing List<br>[https://lists.owasp.org/mailman/listinfo/owasp-application-security-verification-standard '''Subscribe here''']<br>[mailto:Owasp-Application-Security-Verification-Standard(at)lists.owasp.org '''Use here''']
+ | style="width:12%; background:#cccccc" align="center"|Reviewers<br>[[User:Jeff Williams|'''Jeff Williams]]'''<br>[[User:Pparrend|'''Pierre Parrend''']]
+ | style="width:12%; background:#cccccc" align="center"|Roadmap<br>[[OWASP Summer of Code 2008 Applications#OWASP Application Security Verification Standard|'''Please see here'''.]]
+ | style="width:13%; background:#cccccc" align="center"|Sponsors<br>[[:OWASP Summer of Code 2008|'''OWASP SoC 08''']]<br>[http://www.aspectsecurity.com/ '''Aspect Security''']<br>[http://www.boozallen.com/ '''Booz Allen Hamilton''']
+ |}
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:27%; background:#cccccc" align="center"|'''Alpha'''<br>[[:Project Information:template Application Security Verification Standard - Proposal - Assessment Frame|Please see here for complete information.]]
+ | style="width:48%; background:#cccccc" align="center"|
+About OWASP ASVS: [https://www.owasp.org/images/5/52/About_OWASP_ASVS_Web_Edition.ppt Powerpoint].<br>
+OWASP ASVS - Web Application Edition: [[:Image:OWASP ASVS Web Edition 2008 Beta.doc|Word]] and [[:Image:OWASP ASVS Web Edition 2008 Beta.pdf|PDF]] files.
+ | style="width:25%; background:#cccccc" align="center"|If any add link
+ |}
+
+----

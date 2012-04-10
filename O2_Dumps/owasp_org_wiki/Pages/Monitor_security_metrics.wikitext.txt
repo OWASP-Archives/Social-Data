@@ -1,0 +1,104 @@
+{{Template:SecureSoftware}}
+
+==Overview==
+
+Purpose:	
+
+* Gauge the likely security posture of the ongoing development effort.
+
+*	Enforce accountability for inadequate security. 
+
+Role:
+
+*Project Manager
+
+Frequency:
+
+*Ongoing
+
+
+
+==Identify metrics to collect ==
+
+There is a wealth of metrics about a program that can offer insight into the likely security posture of an application. However, the goal of metrics collection goes beyond simply determining likely security posture; it also aims at identifying specific areas in a system that should be targets for improvement. 
+
+Metrics are also important for enforcing accountability - i.e., they should be used to measure the quality of work done by teams or individual project members. The information can be used to determine, for example, which projects need expert attention, which project members require additional training, or who deserves special recognition for a job well done.
+
+One disadvantage of using metrics for accountability is that, when creating your own metric, it can take time to build confidence in a set of them. Generally, one proposes a metric and then examines its value over a number of projects over a period of time before building confidence that, for example, .4 instead of .5 is just as bad as .6 is just as good. 
+
+That does not make metrics useless. If the metric always satisfies the property that adding more risk to the program moves the metric in the proper direction, then it is useful, because a bar can be set for team members to cross, based on instinct, and refined over time, if necessary. One need not worry about the exact meaning of the number, just one's position relative to some baseline.
+
+As a part of identifying metrics for monitoring teams and individuals, one must clearly define the range of artifacts across which the metrics will be collected. For example, if individual developers are responsible for individual modules, then it is suitable to collect metrics on a per-module level. However, if multiple developers can work on the same module, either they need to be accountable as a team, or metrics need to be collected - for example, based on check-ins into a version control system. 
+
+The range of metrics one can collect is vast and is easy to tailor to the special needs of your organization. Standard complexity metrics such as McCabe metrics are a useful foundation because security errors become more likely as a system or component gets more complex. 
+
+One of the key requirements for choosing a metric is that it be easy to collect. Generally, it is preferable if the metric is fully automatable; otherwise, the odds that your team will collect the metric on a regular basis will decrease dramatically.
+
+There are metrics tailored specifically to security. For example, here are some basic metrics that can be used across a standard development organization:
+
+*	Worksheet-based metrics.'' '''Simple questionnaires - such as the system assessment worksheet in CLASP Resource F - can give you a good indication of your organizational health and can be a useful metric for evaluating third-party components that you want to integrate into your organization or product. Questions on that worksheet can be divided into three groups: "critical," "important," and "useful"; then a simple metric can be based on this grouping. For example, it is useful enough to simply say that, if any critical questions are not answered to satisfaction, the result is a "0". 
+
+The value of worksheet-based metrics depends on the worksheet and the ease of collecting the data on the worksheet. Generally, this approach works well for evaluating the overall security posture of a development effort but is too costly for measuring at any finer level of detail.
+
+*	Attack surface measurement. The attack surface of an application is the number of potential entry points for an attack. The simplest attack surface metric is to count the number of data inputs to the program or system - including sockets, registry lookups, ACLs, and so on. A more sophisticated metric would be to weight each of the entry points based on the level of risk associated with them. For example, one could assign a weight of 1.0 to an externally visible network port where the code supporting the port is written in C, 0.8 for any externally visible port in any other language, and then assign lesser ratings for ports visible inside a firewall, and small weightings for those things accessible only from the local machine. Choosing good weights requires sufficient data and a regression analysis, but it is reasonable to take a best guess.
+
+Attack surface is a complex topic, but a useful tool. See CLASP Resource A for a detailed discussion on the topic.
+
+Metrics based on attack surface can be applied to designs, individual executables, or whole systems. They are well suited for evaluating architects and designers (and possibly system integrators) and can be used to determine whether an implementation matches a design.
+
+Even with a weighted average, there is no threshold at which an attack surface should be considered unacceptable. In all cases, the attack surface should be kept down to the minimum feasible size, which will vary based on other requirements. Therefore, the weighted average may not be useful within all organizations.
+
+*	Coding guideline adherence measurement. Organizations should have secure programming guidelines that implementers are expected to follow. Often, they simply describe APIs to avoid. To turn this into a metric, one can weight guidelines based on the risk associated with it or organizational importance, and then count the occurrences of each call. If more detailed analysis tools are available, it is reasonable to lower the weighting of those constructs that are used in a safe manner - perhaps to 0.
+
+While high-quality static analysis tools are desirable here, simple lexical scanners such as RATS are more than acceptable and sometimes even preferable.
+
+*	Reported defect rates. If your testing organization incorporates security tests into its workflow, one can measure the number of defects that could potentially have a security impact on a per-developer basis. The defects can be weighted, based on their potential severity. 
+
+*	Input validation thoroughness measurement. It is easy to build a metrics collection strategy based on program features to avoid. Yet there are many things that developers should be doing, and it is useful to measure those as well. One basic secure programming principle is that all data from untrusted sources should go through an input validation routine. A simple metric is to look at each entry point and determine whether input validation is always being performed for that input. 
+
+If your team uses a set of abstractions for input validation, a high-level check is straightforward. More accurate checks would follow every data flow through the program.
+
+Another factor that can complicate collection is that there can be different input validation strategies - as discussed extensively in CLASP Resource B. Implementations can be judged for quality, based on the exact approach of your team.
+
+*	Security test coverage measurement. It can be difficult to evaluate the quality of testing organizations, particularly in matters of security. Specifically, does a lack of defects mean the testers are not doing their jobs, or does it mean that the rest of the team is doing theirs?
+
+Testing organizations will sometimes use the concept of "coverage" as a foundation for metrics. For example, in the general testing world, one may strive to test every statement in the program (i.e., 100% statement coverage), but may settle for a bit less than that. To get more accurate, one may try to test each conditional in the program twice, once when the result is true and once when it is false; this is called branch coverage.
+
+Directly moving traditional coverage metrics to the security realm is not optimal, because it is rarely appropriate to have directed security tests for every line of code. A more appropriate metric would be coverage of the set of resources the program has or accesses which need to be protected. Another reasonable metric is coverage of an entire attack surface. A more detailed metric would combine the two: For every entry point to the program, perform an attainability analysis for each resource and then take all remaining pairs of entry point and resource and check for coverage of those.
+
+==Identify how metrics will be used ==
+
+This task often goes hand-in-hand with choosing metrics, since choice of metric will often be driven by the purpose. Generally, the goal will be to measure progress of either a project, a team working on the project, or a team member working on a team.
+
+Besides simply identifying each metric and how one intends to apply it, one should consider how to use historical metrics data. For example, one can easily track security-related defects per developer over the lifetime of the project, but it is more useful to look at trends to track the progress of developers over time.
+
+For each metric identified, it is recommended to ask: "What does this mean to my organization right now?" and "What are the long-term implications of this result?". That is, it is recommended to draw two baselines around a metric: an absolute baseline that identifies whether the current result is acceptable or not, and a relative baseline that examines the metric relative to previous collections. Identified baselines should be specific enough that they can be used for accountability purposes.
+
+Additionally, one should identify how often each metric will be collected and examined. One can then evaluate the effectiveness of the metrics collection process by monitoring how well the schedule is being maintained.
+
+==Institute data collection and reporting strategy ==
+
+A data reporting strategy takes the output of data collection and then produces reports in an appropriate format for team consumption. This should be done when selecting metrics and should result in system test requirements that can be used by those people chosen to implement the strategy.
+
+Implementing a data collection strategy generally involves: choosing tools to perform collection; identifying the team member best suited to automate the collection (to whatever degree possible); identifying the team member best suited to perform any collection actions that can not be automated; identifying the way data will be communicated with the manager (for example, through a third-party product, or simply through XML files); and then doing all the work to put the strategy in place.
+
+Data collection strategies are often built around the available tools. The most coarse tools are simple pattern matchers - yet tools like this can still be remarkably effective. When using such tools, there are multiple levels at which one can collect data. For example, one can check individual changes by scanning the incremental change as stored in your code repository (i.e., scan the "diffs" for each check-in), or one can check an entire revision, comparing the results to the output from the last revision.
+
+More sophisticated tools will generally impose requirements on how you collect data. For example, analysis tools that perform sophisticated control and data flow analysis will not be able to work on incremental program changes, instead requiring the entire program.
+
+Where in the lifecycle you collect metrics is also tool-dependent. For example, many per-system metrics can be collected using dynamic testing tools - such as network scanners and application sandboxes, which are applied while the system is running. Code coverage tools also require running the program and therefore must be collected during testing (or, occasionally, deployment). 
+
+But static code scanners can produce metrics and can be run either at check-in time or during nightly builds. Tools like RATS that perform only the most lightweight of analysis may produce less accurate results than a true static analysis tool but have the advantage that they can operate over a patch or "diff" - as opposed to requiring the entire program. This makes assigning problems to team members much simpler.
+
+==Periodically collect and evaluate metrics  ==
+
+Periodically review the output of metrics collection processes (whether automated or manual). Act on the report, as appropriate to your organization. In order to maintain high security awareness, it can be useful to review metrics results in group meetings.
+
+If it becomes clear - in the course of reviewing data produced by metrics - that those metrics do not adequately capture data needed to evaluate the project, teams or team members, use this information to iterate on the metrics collection process.
+
+
+[[Category:Activity]]
+[[Category:CLASP Activity]]
+[[Category:BP6 Define and monitor metrics]]
+[[Category:OWASP CLASP Project]]
+[[Category:OWASP Metrics Project]]

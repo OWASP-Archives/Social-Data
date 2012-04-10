@@ -1,0 +1,176 @@
+== Medlemsmøter ==
+==== Medlemsmøte: 30. November kl 18:30 -  ====
+'''Ansvarlig:''' Erlend Oftedal ,
+'''Sponsor:''' TBA,
+'''Adresse:''' Hackeriet at Hausmannsgate 34, Oslo, 
+'''Påmelding:''' [http://www.meetup.com/hackeriet/events/39973222/ Påmelding via hackeriets side på meetup.com]
+
+'''Agenda:''' Shodan
+
+'''Felles medlemsmøte med [http://www.meetup.com/hackeriet/ Hackeriet]!'''
+{|
+|'''"Let me Shodan that for you..."''', Eireann Leverett<br>
+Workshops are fun. Let's have one.<br>
+<p>
+Bring your laptop and willingness to write ten simple lines of code in
+Perl, Python, or Ruby. Even if you can't code, come by and learn to use
+Shodan the computer search engine through the web interface. While the
+speaker will share a tiny bit of what he did with this tool, the focus
+will be on what you could be using it for...this is a interactive
+workshop, not a boring seminar. </p>
+<p>
+Keywords for interest: banner grabbing, network scanning, application
+deployment profiling, security research, geolocation, security
+visualisation, network exploration, open source intelligence, fun.
+</p>
+<p>
+Eireann Leverett spent six months working with 'Shodan the computer
+search engine'. It's an under-rated tool that was developed by John
+Matherly. John has given you a surprisingly big gift, why not learn to use it?
+</p>
+|}
+
+==== Medlemsmøte: Torsdag 27. oktober kl 17:00 - 19:00  ====
+'''Ansvarlig:''' Erlend Oftedal, tel: 98219335,
+'''Sponsor:''' Universitetet i Oslo,
+'''Adresse:''' [http://maps.google.com/maps?q=Forskningsveien+3B,+0373+Oslo,+Norway&hl=en&ll=59.944545,10.712292&spn=0.008931,0.033023&sll=37.0625,-95.677068&sspn=57.030354,135.263672&vpsrc=6&hnear=Forskningsveien+3B,+Ris,+0373+Oslo,+Norway&t=m&z=16 Universitetet i Oslo Forskningsveien 3B], 
+'''Påmelding:''' [http://doodle.com/epsggsvu78q4r46h Påmelding]
+
+'''Agenda:'''
+{| 
+|'''17:00-17:15''' 
+| Next Generation Clickjacking demo - Geir Harald Hansen 
+|-
+|'''17:15-17:45''' 
+| Erfaringer som pentestere. 2 spennende demoer til slutt om det blir tid. Stikkord: Brute-forcing og Burp Suite - Asbjørn Reglund Thorsen
+|-
+| '''17:45-18:15'''
+| Pause m pizza
+|-
+|'''18:15-19:00''' 
+| AppSensor - Jøran Lillesand
+Hvordan kan man gjøre applikasjonen selv i stand til å skjønne når den er under angrep? Og hva kan den gjøre med det?
+|}
+
+
+
+==== Medlemsmøte: Tirsdag 21. juni kl 17:00 - 19:00  ====
+'''Ansvarlig:''' Erlend Oftedal, tel: 98219335, 
+'''Sponsor:''' BEKK,
+'''Adresse:''' Akershusstranda 21, Vippetangen [http://www.bekk.no/Kontakt/ Kart]  , 
+
+Agenda:
+{| 
+|'''17:00-17:45''' 
+| Utvalgte tema fra OWASP AppSecEU 
+|-
+| '''17:45-18:15'''
+| Pause m pizza
+|-
+|'''18:15-19:00''' 
+| "Endpoint security & mobility" - Carsten Maartmann-Moe
+"An adversary's physical access to a mobile device often makes existing security controls fail - why? This speaking session will demonstrate creative methods to exploit endpoints - that is, mobile units. It will include hands-on demonstrations of coldboot attacks, hacking through FireWire and how to locate encryption keys in mobile device RAM. Potential countermeasures are outlined, and we'll focus on why end point security is important - and difficult." 
+|}
+
+
+
+
+==== Generalforsamling: Torsdag 12. mai kl 17:00 - 17:15  ====
+
+[[Norway/Generalforsamling 2011]]
+
+Ansvarlig: Kåre Presttun, tel: 4100 4908, 
+Sponsor: mnemonic as ,
+Adresse: Wergelandsveien 25, [http://maps.google.com/maps?q=wergelandsveien+25,+oslo&oe=utf-&um=1&ie=UTF-8 Kart her], og [http://doodle.com/5nz7vu8uvqhsmxwp Meld på her]
+
+Agenda:
+* Godkjenning av innkalling
+* [[Årsberetning 2010/2011]]
+* Eventuelt
+* Valg
+
+==== Medlemsmøte: Torsdag 12. mai kl 17:15 - 19:15  ====
+
+Ansvarlig: Kåre Presttun, tel: 4100 4908, 
+Sponsor: mnemonic as ,
+Adresse: Wergelandsveien 25
+
+Slides:
+[[Media:The_image_that_called_me.pdf]]
+[[Media:Locking_the_throneroom.pdf]]
+
+
+
+Agenda: 
+{|
+|17.15 - 18.00
+|'''The Image that called me - Security impact of Scalable Vector Graphics on the WWW''' - Mario Heiderich
+
+Scalable Vector Graphics are about to conquer the web. Unlike most of their raster based companions from the GIF, PNG and JPEG
+family, their vector based structure allows to display them on many different devices with various screen sizes without losing
+visual information. The open XML based SVG sources permit addition of meta data, helping even the visually impaired and blind
+to get the most out of these images. Additional modules, such as animations, events, SVG fonts, several scripting APIs and
+inclusion of hyper-links, other images and documents and even arbitrary content from cross-domain sources make SVG the perfect
+image format for the future WWW. 
+
+Nevertheless, a powerful standard such as SVG certainly poses a lot of risks. This presentation provides a close look at SVG
+from a security perspective. How can attackers abuse this mighty image format, which ways exist to execute script code and
+worse, and what should web developers and browser vendors consider when dealing with SVG. How will HTML5 change the way to
+work with SVGs and why does it matter for security professionals to know about things like SVG Tiny, in-line SVG, SVGz and
+other acronyms from a world where imaging and scripting collide? Besides many examples of malicious SVGs the talk will shed
+light on a novel filtering tool capable of filtering and sanitizing SVG images without loss of important content.
+|-
+|18.00 - 18.30 
+| Mat 
+|-
+|18.30 - 19.15 
+|'''Locking the Throne Room - ECMA Script 5, a frozen DOM and the eradication of XSS''' - Mario Heiderich
+
+Cross Site Scripting has been a topic in countless presentations over the last decade. That easy to grasp but hard to solve
+problem has been shaking the web and caused major trouble on hundreds to thousands of high traffic and commercial and well as
+governmental websites. Mitigation techniques have been developed and discussed in depth - starting with restrictive content
+filters, educational programs and trainings, programmer's best practices and guidelines, proxy filters and many more. Still
+XSS remains a major problem far from being solved. The multilayer model on which the web relies causes too much reciprocity to
+find an easy cure - and the DOM as the actually affected layer is still lying unprotected open for the attacker.
+
+This presentation introduces and discusses a novel approach of encountering XSS and similar attack techniques by making use of
+several new features included in the ECMA Script 5 specification draft. It will be shown how to create a simple JavaScript to
+seal important DOM properties, and take away the attackers ability to read and modify sensitive data in a tamper resistant and
+light-weighted way - without being "too loud". Modern browsers, such as Chrome 8 and Firefox 4, for the first time provide the
+possibility of creating and using client side IDS/IPS systems, written in JavaScript and running without special execution
+privileges. The presentation will show how these work, what the implications are, and what the future of XSS mitigation and
+eradication might look like.
+|}
+'''Speaker:'''
+'''Mario Heiderich''' works as a researcher for the Ruhr-University in Bochum, Germany as well as Microsoft, Redmond and currently
+focuses on HTML5, SVG security and security implications of the ES5 specification draft while finishing his PhD thesis. Mario
+invoked the HTML5 security cheat-sheet and maintains the PHPIDS filter rules. In his spare time he delivers trainings and
+security consultancy for larger German and international companies. He is also one of the co-authors of Web Application
+Obfuscation: '-/WAFs..Evasion..Filters/
+
+==== Medlemsmøte tirsdag 22. mars kl 16:00 --> ====
+
+Ansvarlig: Kåre Presttun,<br> 
+Sponsor: [https://wiki.cantara.no/display/PE/Communities+in+action+2011 Communities in Action 2011],<br>
+Adresse: Radisson Blu Hotel, Holbergsgt. 30, [http://www.radissonblu.no/scandinaviahotell-oslo/beliggenhet Kart her], og [http://doodle.com/h53d9i9m8iuh2mib Meld på her]
+
+Dette møtet er i samarbeid med Communities in Action 2011. OWASP Norway Chapter deltar sammen med javaBin, Kode kata, XP meetup, Framsia, Makers, Cocoaheads, NNUG og Oslo Lean Meetup. Dette er en spennende anledning til å mingle med andre "communities".
+
+Program:
+
+- 16:00 - 17:30 Enkel bevertning<br>
+- 17:30 - 19:30 Parallellsesjoner<br>
+- 20:00 - 21:00 Paneldebatt<br>
+- 21:00 --> Mingling i Skybar<br>
+
+[https://wiki.cantara.no/display/PE/Program+CiA+2011 Detaljert program for CiA 2011 her]
+
+==== Tilbake til [[Norway]] Chapter ====
+
+== Tidligere år ==
+
+=== [[Medlemsmøter 2010]] ===
+=== [[Medlemsmøter 2009]] ===
+=== [[Medlemsmøter 2008]] ===
+
+[[Category:Norway]]

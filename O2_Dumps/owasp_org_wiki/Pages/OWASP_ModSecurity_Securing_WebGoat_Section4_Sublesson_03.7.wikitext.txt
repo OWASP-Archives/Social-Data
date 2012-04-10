@@ -1,0 +1,122 @@
+3. AJAX Security -> 3.7 Silent Transactions Attacks
+
+=== Lesson overview ===
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution === 
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information. 
+
+=== Strategy ===
+
+This WebGoat lesson shows a money transfer page with the user's balance, the recipient's account ID and the amount of money to transfer. The application uses AJAX to submit the transaction. The vulnerability is that malicious code injected into the page can call the AJAX code directly - bypassing client side validation - which results in a silent transaction without the user's authorization.
+
+The attack is simulated by typing 'javascript:submitData(1234556,11000);' into the browser's address bar. The HTTP GET Ajax request looks exactly the same whether it comes from the JavaScript functions as intended or is called directly in the browser.
+
+Normally, the the HTML code calls the 'processData()' function which does authorization and validation, then calls the 'submitData' function. The attack bypasses 'processData()' and calls 'submitData' directly.
+
+The goal of the ModSecurity solution is to notify the user when a silent transaction commences.
+
+=== Implementation === 
+
+The ModSecurity solution is to append JavaScript to the lesson's start page HTTP response body which extends the the 'submitData' function by displaying a confirmation message box to the user. If they push 'Cancel', the transaction will not go through.
+
+Here is the JavaScript code:
+<pre>
+<script language="JavaScript1.2" type="text/javascript">
+var oldsubmitData = submitData;
+
+submitData = function(accountNo, balance) 
+{
+  if (confirm("You sure you want to make this transaction?"))
+  {
+    if (oldsubmitData != null) 
+    {
+      oldsubmitData(accountNo, balance);
+    }
+  }
+  else
+  {
+    alert("Transaction canceled at your request");
+  }
+}
+</script>
+</pre>
+
+ModSecurity appends JavaScript at the very end of the response body after the '</html>' tag. Even though the resulting format does not adhere to the HTML 4.01 and HTML 5 specifications, current Web browsers will accept this format.
+
+Before incorporating the solution into ModSecurity, test it by intercepting the HTTP response in a web proxy, copy and paste the code after the '</html>' tag, then forward the response to the browser.
+
+To build the ModSecurity rule, it is necessary to know the format of the GET request. The AJAX request is of the form:
+<pre>
+GET http://192.168.0.5/WebGoat/attack?Screen=40&menu=400&from=ajax&newAccount=1234556&amount=11000
+</pre>
+
+Because of the way WebGoat it is implemented, for this ModSecurity solution to work the lesson must explicitly be restarted by clicking on the link "Restart this Lesson".
+
+The ModSecurity phase 4 rule that appends the JavaScript to the response body can only be invoked when it comes from the GET request as shown above. To implement this behavior, it is necessary to set a flag - a session variable - in the request. If a GET request is not the lesson restart, the flag is turned off as a safeguard.
+
+The phase 2 request portion of the configuration file 'rulefile_03-7_silent-transaction.conf' is:
+<pre>
+  SecRule &ARGS_GET:Restart "@eq 0" "nolog,skip:4"
+  SecRule &ARGS_GET:amount "!@eq 0" "nolog,skip:3"
+  SecRule &ARGS_GET:newAccount "!@eq 0" "nolog,skip:2"
+
+  SecRule REQUEST_COOKIES:JSESSIONID "!^$" \
+"chain,log,auditlog,pass,msg:'rulefile_03-7_silent-transaction.conf: \ 
+Setting session collection'"
+  SecAction setsid:%{REQUEST_COOKIES.JSESSIONID} 
+  SecAction "log,setvar:session.lesson037=1,msg:'setting session.lesson037=1 \ 
+initially after setsid from rulefile_03-7_silent-transaction.conf',skipAfter:370"
+
+  # if not the GET request that we want, as a safeguard turn the flag off
+  SecAction "log,setvar:session.lesson037=0,msg:'setting session.lesson037=0 \ 
+initially after setsid from rulefile_03-7_silent-transaction.conf'"
+
+  SecAction "t:none,allow:request,id:'370'"
+</pre>
+
+The first 3 rules filters out the AJAX request and allows only the lesson restart. The next 2 rules creates the session collection, and the following rule sets the flag for that session.
+
+The phase 4 response portion of the configuration file 'rulefile_03-7_silent-transaction.conf' is (the JavaScript should be packed on one line):
+<pre>
+  # finished if not 'text/html' 
+  SecRule RESPONSE_CONTENT_TYPE "!^text/html" "phase:4,t:none,allow,nolog"
+
+  SecAction "phase:4,log,initcol:session=%{SESSIONID}, \
+msg:'rulefile_03-7_silent-transaction.conf: getting session.lesson037'"
+
+  # Here check if session variable set; 
+  #   if so, then override 'submitData' function so that user is prompted
+  SecRule SESSION:LESSON037 "@eq 1" "phase:4,t:none,log,auditlog,pass, \ 
+msg:'appending javascript in rulefile_03-7_silent-transaction.conf', \ 
+append:'<script language=\"JavaScript1.2\" type=\"text/javascript\"> \ 
+var oldsubmitData = submitData; submitData = function(accountNo, balance)\
+ {if (confirm(\"You sure you want to make this transaction?\")) \
+{if (oldsubmitData != null) {oldsubmitData(accountNo, balance);}} \
+else{alert(\"Transaction canceled at your request\");}}</script>'"
+</pre>
+
+Since the session collection is accessed in a different phase than it was created, the 'initcol' action must be called to load it.
+
+Also, note that the double quotes in the packed JavaScript function must be escaped with a back slash.
+
+If a silent transaction is attempted, a confirmation message box appears:
+
+[[Image:OWASP_ModSecurity_Securing_WebGoat_JSON_Injection_SS0.jpg]]
+
+
+And after cancelling the transaction:
+
+[[Image:OWASP_ModSecurity_Securing_WebGoat_JSON_Injection_SS1.jpg]]
+
+=== Comments ===
+
+* This lesson demonstrates the use of ModSecurity's session collections.
+
+* This lesson demonstrates ModSecurity's JavaScript injection function, 'append'.  It is useful when the attacker is not the user and acts as a 3rd party and would place malicious code in a page (otherwise, if the attacker was the user, it would simply bypass the new, injected JavaScript).
+
+* 'initcol' has to be used to load and access session collection variables under two scenarios: (1) When the collection is created in an earlier phase; and (2) When the collection is created in a separate ModSecurity configuration file, even if the phase is the same.
+
+* Unfortunately, the way WebGoat is set up, there is no way to distinguish this Sublesson 3.7 from the other Lesson 3's - all are 'menu=400', so this solution cannot be used with any of the other solutions in Lesson 3. There's one caveat: if somehow it can be the last *.conf file in the group and control properly filters down to it, then it can be used with the other Lesson 3 sublessons.

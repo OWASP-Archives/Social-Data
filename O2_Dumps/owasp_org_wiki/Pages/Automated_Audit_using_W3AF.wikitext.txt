@@ -1,0 +1,127 @@
+Last revision (mm/dd/yy): '''02/13/2012'''
+<pre style="color:#088A08">This type of article aims to provide to development team a easy/quick way to
+ perform automated audit tests against their web application projects over implementation phase.</pre>
+
+==Description==
+
+This page have to objective to show a W3AF sample script to automate audit of a web application. 
+
+W3AF is a free and open source Web Application Attack and Audit Framework ([http://w3af.sourceforge.net/ W3AF homepage]).
+
+''This script do not replace a manual audit but can be useful to perform a first validation''.
+
+==Script content==
+
+<pre>
+# -----------------------------------------------------------------------------------------------------------
+#                                              W3AF AUDIT SCRIPT FOR WEB APPLICATION
+# -----------------------------------------------------------------------------------------------------------
+http-settings
+set timeout 60
+back
+plugins
+# Step 1 : Configure DISCOVERY plugins
+discovery serverHeader, dotNetErrors, webSpider
+discovery config serverHeader
+set execOneTime True
+back
+discovery config webSpider
+set onlyForward False
+set followRegex .*
+back
+# Step 2 : Configure AUDIT plugins
+audit LDAPi,eval,frontpage,generic,globalRedirect,phishingVector,responseSplitting,sqli,xpath,xsrf,xss,xst
+audit config xss
+set numberOfChecks 15
+back
+# Step 3 : Configure GREP plugins
+grep error500, domXss, metaTags, dotNetEventValidation, findComments, pathDisclosure, collectCookies, errorPages, httpAuthDetect
+grep config domXss
+set simpleGrep False
+set smartGrep True
+back
+grep config metaTags
+set search404 False
+back
+grep config findComments
+set search404 False
+back
+# Step 4 : Configure OUTPUT plugins
+output htmlFile
+output config htmlFile
+set fileName /tmp/W3afReport.html
+set verbose False
+back
+back
+# Step 5 : Define target URL
+target
+set target PUT_YOUR_SITE_URL_HERE
+back
+# Step 6 : Start audit
+start
+exit
+</pre>
+
+==Script run==
+<pre>
+./w3af_console ­-s MyScript.w3af
+</pre>
+After the script runs, the audit report is available in the location defined in clause "'''set fileName'''" ("'''/tmp/W3afReport.html'''" in the script example).
+
+==Script edition==
+===Highlighter content===
+You can find below a highlighter for Notepad++ in order to help to edit W3AF script (copy/paste content into a file and import it into Notepad++).
+<pre>
+<NotepadPlus>
+    <UserLang name="W3AF" ext="w3af">
+        <Settings>
+            <Global caseIgnored="yes" />
+            <TreatAsSymbol comment="no" commentLine="no" />
+            <Prefix words1="no" words2="no" words3="no" words4="no" />
+        </Settings>
+        <KeywordLists>
+            <Keywords name="Delimiters">000000</Keywords>
+            <Keywords name="Folder+"></Keywords>
+            <Keywords name="Folder-"></Keywords>
+            <Keywords name="Operators"></Keywords>
+            <Keywords name="Comment"> 1 2 0#</Keywords>
+            <Keywords name="Words1">start plugins exploit profiles http&#x00AD;settings misc&#x00AD;settings 
+target back assert help version keys view set</Keywords>
+            <Keywords name="Words2">mangle evasion discovery grep bruteforce audit output</Keywords>
+            <Keywords name="Words3"></Keywords>
+            <Keywords name="Words4"></Keywords>
+        </KeywordLists>
+        <Styles>
+            <WordsStyle name="DEFAULT" styleID="11" fgColor="000000" bgColor="FFFFFF" fontStyle="0" />
+            <WordsStyle name="FOLDEROPEN" styleID="12" fgColor="000000" bgColor="FFFFFF" fontStyle="0" />
+            <WordsStyle name="FOLDERCLOSE" styleID="13" fgColor="000000" bgColor="FFFFFF" fontStyle="0" />
+            <WordsStyle name="KEYWORD1" styleID="5" fgColor="000080" bgColor="FFFFFF" fontStyle="3" />
+            <WordsStyle name="KEYWORD2" styleID="6" fgColor="800040" bgColor="FFFFFF" fontStyle="3" />
+            <WordsStyle name="KEYWORD3" styleID="7" fgColor="000000" bgColor="FFFFFF" fontStyle="0" />
+            <WordsStyle name="KEYWORD4" styleID="8" fgColor="000000" bgColor="FFFFFF" fontStyle="0" />
+            <WordsStyle name="COMMENT" styleID="1" fgColor="000000" bgColor="FFFFFF" fontStyle="0" />
+            <WordsStyle name="COMMENT LINE" styleID="2" fgColor="008040" bgColor="FFFFFF" fontStyle="1" />
+            <WordsStyle name="NUMBER" styleID="4" fgColor="000000" bgColor="FFFFFF" fontStyle="0" />
+            <WordsStyle name="OPERATOR" styleID="10" fgColor="000000" bgColor="FFFFFF" fontStyle="0" />
+            <WordsStyle name="DELIMINER1" styleID="14" fgColor="000000" bgColor="FFFFFF" fontStyle="0" />
+            <WordsStyle name="DELIMINER2" styleID="15" fgColor="000000" bgColor="FFFFFF" fontStyle="0" />
+            <WordsStyle name="DELIMINER3" styleID="16" fgColor="000000" bgColor="FFFFFF" fontStyle="0" />
+        </Styles>
+    </UserLang>
+</NotepadPlus>
+</pre>
+===Highlighter import===
+'''Step 1 : Import file into User-Defined Dialogue'''
+
+[[File:ImportCustomHighlighterIntoNPP.png|bottom]]
+
+
+'''Step 2 : Select W3AF language for a script'''
+
+[[File:NewHighlighterSelection.png|bottom]]
+
+
+[[Category:Code Snippet]]
+[[Category:Automated Audit]]
+[[Category:Externally Linked Page]]
+[[Category:Python]]

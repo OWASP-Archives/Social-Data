@@ -1,0 +1,43 @@
+{{Top_10_2010:TopTemplate|useprev=2010PrevLink|usenext=2010NextLink|prev=A3-Broken Authentication and Session Management|next=A5-Cross-Site Request Forgery (CSRF)}}
+
+{{Top_10_2010:SummaryTableHeaderBeginTemplate}}
+{{Top_10_2010:SummaryTableValue-1-Template|Exploitability|EASY}}
+{{Top_10_2010:SummaryTableValue-2-Template|Prevalence|COMMON}}
+{{Top_10_2010:SummaryTableValue-1-Template|Detectability|EASY}}
+{{Top_10_2010:SummaryTableValue-2-Template|Impact|MODERATE}}
+{{Top_10_2010:SummaryTableHeaderEndTemplate}}
+     <td {{Template:Top 10 2010:SummaryTableRowStyleTemplate}}>Consider the types of users of your system. Do any users have only partial access to certain types of system data?</td>
+     <td {{Template:Top 10 2010:SummaryTableRowStyleTemplate}}>Attacker, who is an authorized system user, simply changes a parameter value that directly refers to a system object to another object the user isn’t authorized for. Is access granted?</td>
+     <td colspan=2  {{Template:Top 10 2010:SummaryTableRowStyleTemplate}}>Applications frequently use the actual name or key of an object when generating web pages. Applications don’t always verify the user is authorized for the target object. This results in an insecure direct object reference flaw. Testers can easily manipulate parameter values to detect such flaws and code analysis quickly shows whether authorization is properly verified.</td>
+     <td {{Template:Top 10 2010:SummaryTableRowStyleTemplate}}>Such flaws can compromise all the data that can be referenced by the parameter. Unless the name space is sparse, it’s easy for an attacker to access all available data of that type.</td>
+     <td {{Template:Top 10 2010:SummaryTableRowStyleTemplate}}>Consider the business value of the exposed data.<br/><br/>Also consider the business impact of public exposure of the vulnerability.</td>
+{{Top_10_2010:SummaryTableEndTemplate}}
+
+{{Top_10_2010:SubsectionAdvancedTemplate|type={{Top_10_2010:StyleTemplate}}|number=1|risk=4}}
+The best way to find out if an application is vulnerable to insecure direct object references is to verify that all object references have appropriate defenses. To achieve this, consider:
+#For '''direct''' references to '''restricted''' resources, the application needs to verify the user is authorized to access the exact resource they have requested.
+#If the reference is an '''indirect''' reference, the mapping to the direct reference must be limited to values authorized for the current user.
+Code review of the application can quickly verify whether either approach is implemented safely. Testing is also effective for identifying direct object references and whether they are safe. Automated tools typically do not look for such flaws because they cannot recognize what requires protection or what is safe or unsafe.
+{{Top_10_2010:SubsectionAdvancedTemplate|type={{Top_10_2010:StyleTemplate}}|number=2|risk=4}}
+Preventing insecure direct object references requires selecting an approach for protecting each user accessible object (e.g., object number, filename):
+# Use per user or session indirect object references. This prevents attackers from directly targeting unauthorized resources. For example, instead of using the resource’s database key, a drop down list of six resources authorized for the current user could use the numbers 1 to 6 to indicate which value the user selected. The application has to map the per-user indirect reference back to the actual database key on the server. OWASP’s [http://owasp-esapi-java.googlecode.com/svn/trunk_doc/latest/org/owasp/esapi/Authenticator.html ESAPI] includes both sequential and random access reference maps that developers can use to eliminate direct object references.
+# Check access. Each use of a direct object reference from an untrusted source must include an access control check to ensure the user is authorized for the requested object.
+{{Top_10_2010:SubsectionAdvancedTemplate|type={{Top_10_2010:StyleTemplate}}|number=3|risk=4}}
+The application uses unverified data in a SQL call that is accessing account information:
+{{Top_10_2010:ExampleBeginTemplate}}String query = "SELECT * FROM accts WHERE account = ?";<br/>    PreparedStatement pstmt = connection.prepareStatement(query , ... );<br/><span style="color:red">pstmt.setString( 1, request.getParameter("acct"));</span><br/>ResultSet results = pstmt.executeQuery();{{Top_10_2010:ExampleEndTemplate}}
+The attacker simply modifies the ‘acct’ parameter in their browser to send whatever account number they want. If not verified, the attacker can access any user’s account, instead of only the intended customer’s account.
+{{Top_10_2010:ExampleBeginTemplate}}<nowiki>http://example.com/app/accountInfo?acct=notmyacct</nowiki>{{Top_10_2010:ExampleEndTemplate}}
+{{Top_10_2010:SubsectionAdvancedTemplate|type={{Top_10_2010:StyleTemplate}}|number=4|risk=4}}
+{{Top_10_2010:SubSubsectionOWASPReferencesTemplate}}
+* [[Top_10_2007-Insecure_Direct_Object_Reference | OWASP Top 10-2007 on Insecure Dir Object References]]
+* [http://owasp-esapi-java.googlecode.com/svn/trunk_doc/latest/org/owasp/esapi/AccessReferenceMap.html ESAPI Access Reference Map]
+* [http://owasp-esapi-java.googlecode.com/svn/trunk_doc/latest/org/owasp/esapi/AccessController.html ESAPI Access Control API] (See isAuthorizedForData(), isAuthorizedForFile(), isAuthorizedForFunction() )
+
+For additional access control requirements, see the [http://www.owasp.org/index.php/ASVS#tab=Downloads ASVS requirements area for Access Control (V4)]
+
+{{Top_10_2010:SubSubsectionExternalReferencesTemplate}}
+* [http://cwe.mitre.org/data/definitions/639.html CWE Entry 639 on Insecure Direct Object References]
+* [http://cwe.mitre.org/data/definitions/22.html CWE Entry 22 on Path Traversal] (which is an example of a Direct Object Reference attack)
+{{Top_10_2010:BottomAdvancedTemplate|type={{Top_10_2010:StyleTemplate}}|useprev=2010PrevLink|usenext=2010NextLink|prev=A3-Broken Authentication and Session Management|next=A5-Cross-Site Request Forgery (CSRF)}}
+
+[[Category:OWASP Top Ten Project]]

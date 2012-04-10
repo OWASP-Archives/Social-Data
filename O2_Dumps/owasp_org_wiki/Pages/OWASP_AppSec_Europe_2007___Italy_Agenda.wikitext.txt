@@ -1,0 +1,107 @@
+== OWASP Milan Training Courses - May 15th 2007 ==
+
+The tutorials and the conference itself were held at the Marriott in Milan.
+
+
+{| style="width:80%" border="0" align="center"
+ ! align="center" style="background:#4058A0; color:white" | T1. Foundations of Web Application Security - One Day Course - Parini Room
+ |-
+ | style="background:#F2F2F2" | This powerful one day course focuses on the most common web application security problems, including the OWASP Top Ten. The course will introduce and demonstrate hacking techniques, illustrating how application vulnerabilities can be exploited so students really understand how to avoid introducing such vulnerabilities into their code. [[6th_OWASP_AppSec_Conference_-_Italy_2007/Training | Read more here!]]
+ |-
+ ! align="center" style="background:#4058A0; color:white" | T2. WebServices and XML Security - One Day Course - Raffaello Room
+ |-
+ | style="background:#F2F2F2" | Many enterprises are currently developing new Web Services and/or adding and acquiring Web Services functionality into existing applications -- now is the time to build security into the system! [[6th_OWASP_AppSec_Conference_-_Italy_2007/Training | Read more here!]]
+ |-
+ ! align="center" style="background:#4058A0; color:white" | T3. Advanced ASP.NET Exploits and Countermeasures - One Day Course - Porta Room
+ |-
+ | style="background:#F2F2F2" | In this one day course you will push ASP.NET to the limit and will be shown how ASP.NET applications and environments can be exploited by skilled attackers. Advanced exploitation techniques will be presented together with low-level technical analysis of the .NET Framework. You will also learn advanced defense techniques such as: Building an ASP.NET Security Protection layer (also called a Web Application Firewall) and Real time patching of vulnerabilities in the target application, the .NET Framework or the CLR. [[6th_OWASP_AppSec_Conference_-_Italy_2007/Training | Read more here!]]
+|}
+
+== 6th OWASP AppSec Conference Schedule - May 16-17 (Milan 2007) ==
+
+{| style="width:80%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white" | Day 1 - May 16, 2007
+ |-
+ | style="width:10%; background:#7B8ABD" | || style="width:40%; background:#BC857A" | Track 1: Manzoni Room
+ | style="width:40%; background:#BCA57A" | Track 2: Parini Room
+ |-
+ | style="width:10%; background:#7B8ABD" | 08:00-09:00 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Registration and Coffee
+ |-
+ | style="width:10%; background:#7B8ABD" | 09:00-09:10 || colspan="2" style="width:80%; background:#F2F2F2" align="left" | Welcome to 6th OWASP AppSec Conference: Dave Wichers, OWASP Conferences Chair
+ |-
+ | style="width:10%; background:#7B8ABD" | 09:10-10:00 || colspan="2" style="width:80%; background:#F2F2F2" align="left" | Keynote: The Benefits of the SDL initiative to Microsoft and its Customers – Alex Lucas, Senior Security Engineer, Microsoft ([http://www.owasp.org/images/c/c9/OWASPAppSec2007Milan_SecurityEngineeringInVista.ppt ppt])
+ |-
+ | style="width:10%; background:#7B8ABD" | 10:00-11:10 || colspan="2" style="width:80%; background:#F2F2F2" align="left" | OWASP 2.0 - Enabling organizations to develop, maintain, and acquire applications they can trust, Dinis Cruz, OWASP Chief Evangelist ([http://www.owasp.org/images/9/92/OWASPAppSec2007Milan_OWASP2.0Keynote.ppt ppt])
+ |-
+ | style="width:10%; background:#7B8ABD" | 11:10-11:30 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Break
+ |-
+ | style="width:10%; background:#7B8ABD" | 11:30-12:30 || style="width:40%; background:#BC857A" align="left" | OWASP CLASP Project, Pravir Chandra, Principal Consultant, Cigital ([http://www.owasp.org/images/0/0e/OWASPAppSec2007Milan_CLASP.ppt ppt])
+ | style="width:40%; background:#BCA57A" align="left" | OWASP PANTERA – Dissecting Web Applications – Simon Roses Femerling – Security Technologist - Microsoft ([http://www.owasp.org/images/0/00/OWASPAppSec2007Milan_Pantera.ppt ppt])
+ |-
+ | style="width:10%; background:#7B8ABD" | 12:30-13:45 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Lunch
+ |-
+ | style="width:10%; background:#7B8ABD" | 13:45-14:20 || style="width:40%; background:#BC857A" align="left" | Update on the OWASP XML Security Gateway evaluation criteria project, Gunnar Peterson, Arctec Group ([http://www.owasp.org/images/a/a9/OWASPAppSec2007Milan_XMLSecurityGatewayEvalCriteria.ppt ppt])
+ | style="width:40%; background:#BCA57A" align="left" | The Dark Side of AJAX, Brian Chess, Chief Scientist, Fortify Software ([http://www.owasp.org/images/2/2b/OWASPAppSec2007Milan_TheDarkSideofAjax.ppt ppt])
+ |-
+ | style="width:10%; background:#7B8ABD" | 14:20-15:00 || style="width:40%; background:#BC857A" align="left" | The SANS Secure Programming Skills Assessement Initiative, Dave Wichers, COO Aspect Security and OWASP Conferences Chair ([http://www.owasp.org/images/8/82/OWASPAppSec2007Milan_SANS_SPSA_Initiative.ppt ppt])
+ | style="width:40%; background:#BCA57A" align="left" | Overtaking Google Desktop - Leveraging XSS into Mayhem, Yair Amit, Sr. Security Researcher, Watchfire ([http://www.owasp.org/images/8/86/OWASPAppSec2007Milan_OvertakingGoogleDesktop.ppt ppt])
+ |-
+ | style="width:10%; background:#7B8ABD" | 15:00-15:20 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Break
+ |-
+ | style="width:10%; background:#7B8ABD" | 15:20-16:30 || style="width:40%; background:#BC857A" align="left" | OWASP WebGoat ([http://www.owasp.org/images/5/55/OWASPAppSec2007Milan_WebGoatv5.ppt ppt]) and WebScarab ([http://www.owasp.org/images/d/d7/OWASPAppSec2007Milan_WebScarabNG.ppt ppt]) – the Autumn of Code 2006 Releases – Dave Wichers, COO, Aspect Security and OWASP Conferences Chair
+ | style="width:40%; background:#BCA57A" align="left" | [http://www.gnucitizen.org/projects/6th-owasp-conference/ Advance Web Hacking Revealed],  Petko D. Petkov (AKA PDP Architect), Senior Security Researcher ([http://www.owasp.org/images/7/71/OWASPAppSec2007Milan_AdvancedWebHacking.ppt ppt])
+ |-
+ | style="width:10%; background:#7B8ABD" | 16:30-16:50 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Break
+ |-
+ | style="width:10%; background:#7B8ABD" | 16:50-18:00 || colspan="2" style="width:40%; background:#F2F2F2" align="left" | Panel: "Public site vulnerability research and disclosure - The XSS elephant, the Tsunami Hacker, the killing of the canaries and the power of legislation" 
+Moderator: Robert Mann, ABN Amro
+
+Panelists: Dinis Cruz, Stefano Di Paola, Petko D. Petkov (AKA PDP Architect), Ofer Shezaf
+ |-
+ | style="width:10%; background:#7B8ABD" | 18:00-19:00 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Chapter Leads Meeting - With Dinis Cruz and Sebastien Deleersnyder
+ |-
+ | style="width:10%; background:#7B8ABD" | 19:00-21:00 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Social Gathering: Dinner and Drinks at Ristorante Why Not?
+ |-
+ | style="width:10%; background:#7B8ABD" | ~01:00-??:?? || colspan="2" style="width:80%; background:#C2C2C2" align="left" | [[OWASP Band | OWASP Band live in Concert]]
+ |-
+ ! colspan="3" align="center" style="background:#4058A0; color:white" | Day 2 - May 17, 2007
+ |-
+ | style="width:10%; background:#7B8ABD" | || style="width:40%; background:#BC857A" | Track 1: Manzoni Room
+ | style="width:40%; background:#BCA57A" | Track 2: Parini Room
+ |-
+ | style="width:10%; background:#7B8ABD" | 08:00-09:00 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Coffee
+ |-
+ | style="width:10%; background:#7B8ABD" | 09:00-09:50 || colspan="2" style="width:80%; background:#F2F2F2" align="left" | Keynote: Raoul Chiesa – CTO, ISECOM - The security level of Web Applications in Italy: data and stats from everyday experiences. ([http://www.owasp.org/images/d/d8/OWASPAppSec2007Milan_OWASPItalyActivities.ppt ppt])
+ |-
+ | style="width:10%; background:#7B8ABD" | 09:50-10:50 || colspan="2" style="width:80%; background:#F2F2F2" align="left" | Protecting Web Applications from Universal PDF XSS: A discussion of how weird the web application security world has become – Ivan Ristic, Chief Evangelist, Breach Security ([http://www.owasp.org/images/c/c2/OWASPAppSec2007Milan_ProtectingWebAppsfromUniversalPDFXSS.ppt ppt])
+ |-
+ | style="width:10%; background:#7B8ABD" | 10:50-11:10 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Break
+ |-
+ | style="width:10%; background:#7B8ABD" | 11:10-11:50 || style="width:40%; background:#BC857A" align="left" | Microsoft ACE Team – Application Security from the Core, Simon Roses Femerling – Security Technologist - Microsoft ([http://www.owasp.org/images/8/8d/OWASPAppSec2007Milan_MS_ACETeamAppSecfromTheCore.ppt ppt])
+ | style="width:40%; background:#BCA57A" align="left" | [http://www.owasp.org/images/d/dd/OWASP6thAppSec_TestingGuidev2_MatteoMeuci.pdf Refereed Paper #1) The OWASP Testing Guide version 2], Matteo Meucci, OWASP Italy ([http://www.owasp.org/images/0/06/OWASPAppSec2007Milan_OWASPTestingGuide2v1.ppt ppt])
+ |-
+ | style="width:10%; background:#7B8ABD" | 11:50-12:30 || style="width:40%; background:#BC857A" align="left" | Making Source Code Analysis Part of the Security Review Process, Brian Chess, Chief Scientist, Fortify Software ([http://www.owasp.org/images/1/1e/OWASPAppSec2007Milan_SecureProgrammingwStaticAnalysis.ppt ppt])
+ | style="width:40%; background:#BCA57A" align="left" | Testing Flash Applications: A new attack vector for XSS and XSFlashing, Stefano di Paola ([http://www.owasp.org/images/8/8c/OWASPAppSec2007Milan_TestingFlashApplications.ppt ppt])
+ |-
+ | style="width:10%; background:#7B8ABD" | 12:30-13:45 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Lunch
+ |-
+ | style="width:10%; background:#7B8ABD" | 13:45-15:10 || style="width:40%; background:#BC857A" align="left" | A whirlwind tour of the OWASP tools and projects, Dinis Cruz, OWASP Chief Evangelist and .Net Project Lead
+ | style="width:40%; background:#BCA57A" align="left" | [http://www.owasp.org/images/3/33/OWASP6thAppSec_SoftwareSecurity-BiggerPicture_RudolphAraujo.pdf Refereed Paper #2) Software Security - The bigger picture], Rudolph Araujo ([http://www.owasp.org/images/0/07/OWASPAppSec2007Milan_SoftwareSecurity.ppt ppt]) (40 min)
+
+&
+
+[http://www.owasp.org/images/0/07/OWASP6thAppSec_ModSecurityCoreRuleSet_OferShezaf.pdf Refereed Paper #3) Generic Detection of Application Layer Attacks: ModSecurity Core Rule Set]<br>Ofer Shezaf, OWASP Israel Chapter Leader, CTO, Breach Security ([http://www.owasp.org/images/2/21/OWASPAppSec2007Milan_ModSecurityCoreRuleSet.ppt ppt]) (40 min)
+ |-
+ | style="width:10%; background:#7B8ABD" | 15:10-15:30 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Break
+ |-
+ | style="width:10%; background:#7B8ABD" | 15:30-16:30 || colspan="2" style="width:40%; background:#F2F2F2" align="left" | Panel: "What is needed to fix web app sec vulnerabilities once and for all?"
+Moderator: Gunnar Peterson – Arctec Group
+
+Panelists: Dave Wichers - Aspect Security, Ivan Ristic - Breach Security, Brian Chess - Fortify Software, Pravir Chandra - Cigital
+ |-
+ | style="width:10%; background:#7B8ABD" | 16:30-17:00 || colspan="2" style="width:40%; background:#F2F2F2" align="left" | Conference Wrap Up - Dave Wichers, OWASP Conferences Chair
+|}
+
+== References ==
+
+All three papers from the Refereed Papers Track can be downloaded as one document [https://www.owasp.org/index.php/Image:ItalyPapers.zip here].

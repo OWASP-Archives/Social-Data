@@ -1,0 +1,15 @@
+= '''Building Advanced Network Security Tools''' =
+
+Course: Building Advanced Network Security Tools<br>Course ID: SB2DNST<br>Instructor: Daniel Mende<br>CPE Credits: 14 CPE’s<br>Duration: 2 Days <br>Date: November 19th - 20th, 2009 (9 AM – 6 PM)<br>
+
+'''Who should attend?'''<br>• Network / system programmers<br>• Network security Professionals<br>• Network security Testers
+
+• Data Centre Infrastructure / Telecom Professionals<br>• Infrastructure Management Professionals <br>• Any individual who may be interested in these topics
+
+'''Class Pre-requisite:'''<br>• Basic C programming knowledge<br>• Basic Python programming knowledge<br>• Some Network knowledge
+
+'''Class Requirement:'''<br>• Students to carry their laptop with at least Windows XP professional SP2 <br>• Students should have Administrative access / Privileges on the laptop for installing software.<br>• USB or CD / DVD ROM device (N.B for bootable software).<br>• Vmvare Installed
+
+• Wireless Enabled<br>• A VMware with all the libs, tools and build environment will be provided before the session.
+
+'''Course Description:'''<br>There are so many Network Security tools around like yersinia, spike, scapy, etc., wouldn't it be nice to build your own tool, customized to your purposes? <br>This 2 day workshop will demonstrates the usage of the most useful tools and test methodologies, but it goes further. If the tools don't fulfill your testing requirements, you will also learn how to build this kind of tools by yourself. Lesson will be taught with real world examples from our network testing experience and in the end you get tools that break a protocol flaw in 120 lines of code.<br>'''''Day One'''''<br>• Why do we want to break networks?<br>• Overview about available Tools<br>• Introduction to the protocol fuzzer spike<br>• Writing yor own spike protocol definitions<br>• Practical fuzzing exercises<br>• Usage of scapy to build your own packets<br>• Visual network discovery with scapy<br>'''''Day Two'''''<br>• Introduction to our MPLS tool suite from the code side<br>• Network programming basics<br>• Getting into the libs (Libpcap, Libdnet)<br>• Useful and mandatory API functions<br>• Building real test tools easily with Libpcap und Libdnet<br>• Exercise: Building a basic protocol cli<br>

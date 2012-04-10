@@ -1,0 +1,214 @@
+{{Chapter Template|chaptername=Phoenix|extra=The chapter leaders are [mailto:pete.roalofs@owasp.org Pete Roalofs] and [mailto:a.wilson82@gmail.com Andrew Wilson]<br>
+
+|mailinglistsite=http://lists.owasp.org/mailman/listinfo/owasp-phoenix|emailarchives=http://lists.owasp.org/pipermail/owasp-phoenix}} 
+
+==  ==
+
+= March No Meeting --<br>  =
+
+
+ 
+
+== Local News  ==
+
+
+
+
+
+
+OWASP Phoenix 2012 Meetings 
+
+Meetings are on the first Tuesday of the month, every month, 6:30 PM - 7:30 PM, for 1 hour. 
+
+Afterward, we'll head to a local watering hole for socializing and fun. 
+
+The meeting are located at: 
+
+University of Advancing Technology 2625 W. BASELINE RD. TEMPE, AZ 85283-1056 <br> 
+
+<br> 
+
+== 2012 Meetings Calendar  ==
+
+This calendar will likely be updated on month to month basis. In absence of a speaker for a monthly meeting we will opt for a short discussion.<br> 
+
+*January - Standard Android and iOS Tools for 2012<br> 
+*Febuary - Sweet Pickles
+*March   - No Meeting
+
+== Resources  ==
+
+'''Archived pages on [[Phoenix/Tools]] and [[Phoenix/ToolsProfile]]''' 
+
+This chapter is dedicated to bringing together local businesses, students, and web and security enthusiasts in order to discuss current events, trends, tools, and offensive/defensive techniques related to web application security. We currently hold meetings every month, typically with one or two speakers at each meeting. 
+
+== What talks would you like to see?  ==
+
+'''Please Update''' <!-- I tried to capture items that people mentioned in the meeting, 
+but please update with anything else you want to see--> 
+
+== Previous Meetings  ==
+
+<br> '''Sweet Pickles''' 
+
+'''Chase Schultz '''<br> 
+
+
+Sweet Pickles is inspired by a talk presented at Blackhat by Marco Salverio about practical pickle exploitation. Sweet pickles aims to address some of the concerns presented by Marco in his Sour Pickles talk. Using strong cryptography methods Sweet Pickles attempts to address the problem of confidentiality and authenticity of a python pickle while in transit. Sweet pickles utilizes Advaced Encryption Standard(AES) and Elliptic Curve Cryptography(ECC) to help secure Python's Serialized Objects(Pickles). Sweet pickles was first presented at the International Cyber Defense Workshop hosted by the Department of Defense by Chase. This presentation will be an elaboration on the research Chase has done on python pickles and his work to secure them.
+
+
+Bio: Chase Schultz is currently a student at the University of Advancing Technology. He is majoring in Network Security and hopes to finish his degree in December of 2021(End of the world and all that aside…) Chase enjoy's application security and hunting bugs in software. He's spent time working for Stach & Liu as a web application penetration tester and also leads the [Buffer]Overflow Club at UAT. He developed Sweet pickles as a project in his free time to address the problems presented at Blackhat 2011 in the Sour Pickles talk. He is fluent in Python, C/C++, Assembly and random shit. Beyond playing with Python, Chase enjoys reverse engineering, and general software exploitation. Also enjoyed are Andre's random cocktails and IPA's. 
+ <br><br>  
+
+
+<br> '''Standard Android and iOS Tools for 2012''' 
+
+'''Andre Gironda'''<br> 
+
+Abstract:<br> This will be a talk that discusses the baseline toolchains around
+Android and iOS applications, whether trying to gain insight into
+in-app activities, OS activities, IPC, as well as standard networking
+protocols for both static and runtime.
+
+
+Bio:<br> Andre Gironda is a mobile application security risk consultant for HP
+Fortify who lives in Tempe, AZ
+<br><br> 
+
+<br> '''Application Security: More Than Just Secure Coding Practices''' 
+
+'''Scott White'''<br> 
+
+Abstract:<br> From a penetration tester's perspective, this presentation will examine a holistic approach to managing application security since attack vectors are not adequately mitigated using secure coding practices and traditional code reviews. 
+
+Bio:<br> Scott is a Senior Information Security Engineer at Diebold, Inc., holding a bachelors degree in computer science, a master's degree in network security, and is well-respected in the information security industry. He manages the global application security process ensuring that new and existing applications conform to industry and secure coding best practices. Additionally, he heads up offensive security efforts within Diebold, continually testing its systems and associates through penetration tests, product reviews, and social engineering exercises. He has held various past positions in support, system administration, web development, penetration testing, and application security for both public and private organizations servicing clients in the government and commercial spaces. His experience includes performing web application security assessments, internal, external, and physical penetration tests, source code reviews, social engineering, and developer training. With over 5 years working directly with information security and over 10 years programming experience, he has a thorough web application security understanding from both developer and attacker viewpoints. He has spoken at Defcon, the world’s largest hacker’s convention, and has also been called on by organizations such as the FBI and Secret Service as a subject matter expert. He is the technical editor for the popular book, "Metasploit The Penetration Tester's Guide".<br><br> 
+
+'''wxFramework''' '''(Web Exploitation Framework)'''<br> 
+
+'''Ken Johnson'''<br> 
+
+The project’s goal is to assist penetration testers in exploiting web application and web service weaknesses. Because exploitation of applications is rarely point and click and usually requires multiple steps, network exploitation frameworks often fall short of the goal. The framework is intended to assist attackers along their exploitation journey. During this talk we will preview the new graphical interface for the first time and demonstrate how it changes or enhances the reasons you may wish to try wXf. 
+
+Bio: 
+
+Ken Johnson is a Senior Application Security Consultant performing source code analysis and web application penetration testing. Ken is the primary developer of the Web Exploitation Framework (wXf) and contributes to various open source application security projects. He has spoken at AppSec DC, OWASP NoVA, Northern Virginia Hackers Association and is a contributor to the Attack Research team.<br> 
+
+<br> '''2011 Appsec Tools State-of-the-Art''' 
+
+'''Andre Gironda''' 
+
+<br> 
+
+Abstract:<br>Every tool you should leverage during an app pen-test or secure code<br>review will be discussed. The two best web proxies, Burp Pro<br>(@portswigger) and Fiddler (@ericlaw) will be demonstrated along with<br>the two best crawlers from @netsparker and WebInspect. The results<br>from @sectooladdict will be discussed and the analysis demonstrated on<br>@owaspbwa. Additional topics will be discussed, such as executive<br>management reporting using dradisframework.org by way of imports from<br>@w3af. There will also be topics for application developers, such as<br>the new OWASP Data Exchange Format Project, as well as using CAT.NET,<br>RIPS, LAPSE+, and Fortify to go from vulnerable sources to runtime<br>analysis to full exploitation. Even esoteric tools from long-ago that<br>have held their value will be discussed and potentially demonstrated<br> 
+
+BIO:<br>Andre works for the HP Application Security Center (ASC) doing<br>application penetration-testing, secure code review, and reverse<br>engineering. He has 9 years of direct experience with application<br>security topics, has been using Burp Suite on pen-tests since early<br>2005, and runs his own tool benchmarks at home in Tempe, AZ.<br> 
+
+<br> 
+
+'''Andrew Wilson &amp; Michael Brooks''' 
+
+'''Traps of Gold'''<br> 
+
+<br>Bio:<br>Michael Brooks is on the Google Security Hall Of Fame. He works for the security company Sitewatch. 
+
+Bio:<br>Andrew Wilson is a Security Consultant at Trustwave. He is a member of Trustwave's SpiderLabs - the advanced security team focused on penetration testing, incident response, and application security. He has over 9 years experience building and securing software for a variety of companies. Andrew specializes in application security assessment, penetration testing, threat modeling and secure development life cycle. <br> <br> 
+
+'''Obfuscating Search Queries with Hayst.ac''' 
+
+'''David Huerta''' 
+
+Hayst.ac, is a browser userscript to obfuscate search queries with machine-generated queries with the goal to be as close to indistinguishable from the human generated ones as possible. This is ultimately to discourage the use of search histories as a source of user profiling. 
+
+Bio:<br>After arriving in Arizona from the posh, cosmopolitan enclave of southeastern Idaho, David founded the DeVry Linux User Group (DeLUG) in 2003, an originally student organization that drew members and activities from the greater West Valley Free software community, including students at GCC and ASU West. He also serves on the board of directors for HeatSync Labs, a hackerspace in Chandler. 
+
+'''OWASP O2 Platform'''<br>'''Dinis Cruz''' 
+
+The O2 Platform is focused on automating application security knowledge and workflows. It is specifically designed for developers and security consultants to be able to perform quick, effective and thorough source code-driven application security reviews (blackbox + whitebox). In addition to the manual findings created/discovered by security consultants, the OWASP O2 Platform allows the easy consumption of results from multiple OWASP projects and commercial scanning tools. This allows security consultants to find, exploit and automate (via Unit Tests) security vulnerabilities usually dismissed by the community as impossible to find/recreate. More importantly, it provides security consultants a mechanism to: (a) "talk" with developers (via UnitTest), (b) give developers a way to replicate + "check if it's fixed" the vulnerabilities reported and (c) engage in a two-way conversion on the best way to fix/remediate those vulnerabilities. For more details see https://www.owasp.org/index.php/OWASP_O2_Platform, to download binary or source goto http://code.google.com/p/o2platform/downloads/list 
+
+Bio<br>Dinis Cruz is a Security Consultant based in London (UK) and specialized in: ASP.NET/J2EE Application Security, Application Security audits and .NET Security Curriculum Development.<br>For the past couple years Dinis has focused on the field of Static Source Code Analysis and Dynamic Website Assessments (aka penetration testing), and is the main developer of the OWASP O2 Platform which is an Open Source project that is focused on 'Automating Security Consultants Knowledge/Workflows' and 'Allowing non-security experts to access and consume Security Knowledge'. Dinis is currently focused on making the O2 Platform the industry standard for consuming, instrumenting and data-sharing between: the multiple WebAppSec tools, the Security consultants and the final users (from management to developers).<br>(https://www.owasp.org/index.php/User:Dinis.cruz) 
+
+<br> 
+
+'''Improving your Fu &nbsp;'''-&nbsp;'''Andrew Wilson''' 
+
+Delivering high quality results is the goal and earmark of any serious security practitioner. Professional penetration testing requires a set of reliable skills that will enable him/her to deliver consistently. Tools simply aren't enough. This talk outlines 10 of the more important disciplines and practices you can do to build or grow that solid foundation. 
+
+Bio:<br> 
+
+<br> '''Exploitation Redux and Bug Bounties &nbsp;-&nbsp;Michael Brooks''' 
+
+Talk covered some of the recent vulnerabilities affecting Google and Mozilla, highlights such exploits as exploitation by email. 
+
+<br>List of bounty winners and a lot of blog links:<br>[http://www.google.com/corporate/halloffame.html http://www.google.com/corporate/halloffame.html]<br>Interesting SMTP based XSS<br>[http://spareclockcycles.org/2010/12/14/gmail-google-chrome-xss-vulnerability/ http://spareclockcycles.org/2010/12/14/gmail-google-chrome-xss-vulnerability/]<br>XSS via event handlers:<br>[http://adblockplus.org/blog/finding-security-issues-in-a-website-or-how-to-get-paid-by-google http://adblockplus.org/blog/finding-security-issues-in-a-website-or-how-to-get-paid-by-google]<br>Good examples of strange XSS:<br>[http://google-gruyere.appspot.com/ http://google-gruyere.appspot.com/]<br>My Exploits (Including the Majordomo 2 Directory Traversal Vulnerability)<br>[http://www.exploit-db.com/author/?a=628 http://www.exploit-db.com/author/?a=628] 
+
+Bio:<br>Michael Brooks is on the Google Security Hall Of Fame. He works for the security company Sitewatch. 
+
+<br> 
+
+'''SharePoint Hacking - Advanced SharePoint Security Tools and Tips &nbsp; &nbsp; &nbsp;-Francis Brown''' 
+
+[http://www.stachliu.com/resources/tools/sharepoint-hacking-diggity-project/ http://www.stachliu.com/resources/tools/sharepoint-hacking-diggity-project/] 
+
+Microsoft SharePoint products and technologies continue to grow in popularity and have become the core foundation upon which many organizations have built their web presence. Unfortunately, guidance concerning common SharePoint security issues tends to be overly complex and often misunderstood. Ultimately this results in insecurely configured and deployed SharePoint instances in production environments. 
+
+This demonstration rich presentation will cover our newly released SharePoint hacking tools and techniques that security professionals can easily use to identify and exploit common insecure configurations in SharePoint applications. Some of the areas we’ll attempt to tackle are:<br>• Identifying vulnerable SharePoint applications using public search engines such as Google and Bing<br>• Gaining unauthorized access to SharePoint administrative web interfaces<br>• Exploiting holes in SharePoint site user permissions and inheritance<br>• Illustrating the dangers of granting excessive access to normal user accounts<br>• Pillaging Active Directory via insecure SharePoint services<br>• Attacking 3rd party plugins/code within SharePoint<br>• And much more… 
+
+Bio: 
+
+<br> '''Appsec Design Reviews Reloaded -&nbsp;Andre Gironda<br>'''The best place to start in the software lifecycle is during the design phase.<br>Workflow tools exist for SDL processes, build servers,<br>penetration-testing activities, and many other application security<br>checkpoints. However, very few tools and techniques exist or are<br>readily available when performing application security design reviews.<br>The full process of application security should be agreed upon during<br>the design phase by the security department and all relevant<br>application development teams. The direction of the projects and the<br>patterns used in the application architectures can also be augmented<br>from an application security perspective.<br>This presentation will provide discussion around how to solve many of<br>these and other challenges in application security. The focus will be<br>on web applications that use common technologies, such as managed code<br>frameworks.<br>Bio:<br>Andre has contributed to many OWASP documents and has been working in<br>the appsec space for almost 5 years. He is a local to the Phoenix area<br>and has presented on application security topics recently at BSides,<br>OWASP, and Toorcon events. 
+
+<br> 
+
+<br> 
+
+'''Professional Burping''' 
+
+Burp suite is by and large considered one of the de-facto tools for testing web applications for security flaws. This talk will cover many of the professional version only features and various advanced usages that can be done to really take advantage of all this tool has to offer. Topics will include a quick review of burp, effectively leveraging professional only tools, deep dive into intruder, and using 3rd party extensions.<br>Andrew Wilson's Bio:<br> 
+
+'''Debugger Basics: Software Cracking and Buffer Overflows'''<br>Finding and exploiting a basic buffer overflow, start to finish including fuzzing to command shell. A small primer before "warez and keygens": bypassing a serial number based registration for software, the most basic form of software cracking. 
+
+Bio: <br>Scott White is a Senior Penetration Tester for SecureState LLC, a pure play information securityassessment company based in Cleveland, Ohio. He is the web application security expert on the Profiling team. His day to day duties include web application security assessments, internal, external, and physical penetration tests, source code reviews, and developer training. Scott holds a bachelors of science in computer science and a master of science in network security. With over 5 years working with security and over 10 years programming experience, he has a thorough web application security understanding from both the developer and attacker viewpoints. He has spoken at Defcon, the world’s largest hacker’s convention held in Las Vegas each year, and has also been called on by organizations such as the FBI and Secret Service as a subject matter expert.<br>Scott White<br>Senior Penetration Tester<br>www.securestate.com<br>http://securestate.blogspot.com 
+
+<br> '''Database Security and Encryption, Adrian Lane''' 
+
+Bio: Adrian is a Security Strategist and brings over 22 years of industry experience to the Securosis team, much of it at the executive level. Adrian specializes in database security, data security, and software development. With experience at Ingres, Oracle, and Unisys, he has extensive experience in the vendor community, but brings a pragmatic perspective to selecting and deploying technologies having worked on "the other side" as CIO in the finance vertical. Prior to joining Securosis, Adrian served as the CTO/VP at companies such as IPLocks, Touchpoint, CPMi and Transactor/Brodia. He has been invited to present at dozens of security conferences, contributed articles to many major publications, and is easily recognizable by his "network hair" and propensity to wear loud colors. Once you get past his windy rants on data security and incessant coffee consumption, he is quite entertaining. Adrian is a Computer Science graduate of the University of California at Berkeley with post-graduate work in operating systems at Stanford University. 
+
+<br> 
+
+'''masSEXploitation, Mike Brooks<br>''' This talk covers the use of chaining vulnerabilities in order to bypass layered security systems. This talk will also cover ways of obtaining wormable remote code execution on a modern LAMP platform. These attacks where developed by me, and they are very new. These attacks are as real as it gets, and the results are making the headlines. 
+
+Bio: I will be giving this talk at this years Defcon and it will 3rd year in a row that I spoken. According to the Department of Homeland Security I have found a vulnerability with a severity metric of 13.5 which makes it into the top 1,000 most dangerous of all time. I am the top answerer of security questions on StackOverflow.com (The Rook). I actively hunt for vulnerabilities on a verity of platforms. I write exploit code and make it public. 
+
+[http://www.exploit-db.com/exploits/16103/ http://www.exploit-db.com/exploits/16103/] (Directory Traversal exploitable via email)<br>[http://www.exploit-db.com/exploits/15838/ http://www.exploit-db.com/exploits/15838/] (Exploit chain:captcha bypass-&gt;sqli(insert)-&gt;persistant xss on front page) 
+
+<br> 
+
+<br>'''Involuntary Case Studies in Data Breaches, Rich Mogull, Securosis''' 
+
+It's absolutely bass ackwards, but while the bad guys constantly share details of their exploits, including techniques, when it comes to real incidents, actual defenders rarely talk about what worked, and what didn't. Our entire industry is built on anecdote and the few tidbits we can glean from press reports. Thus we, as an industry, don't link means and methods to actual security outcomes. Without this information we're like a bunch of blindfolded wannabe ninjas trying to catch rounds from a machine gun with our bare hands. In this session we'll name names as we build in-depth case studies based on publicly available information, some of which isn't overly public. We will combine these with the latest information from breach reports released by incident response companies and the Dataloss Database. The session will build a picture of how real breaches happen, which security controls really work, and which compliance checkboxes are a complete and total waste of time. 
+
+<br> 
+
+'''Application Security Tools<br>''' [http://www.owasp.org/index.php/Image:Scanner-Sparkly.ppt A Scanner Sparkly] - Web Application Proxy Editors and Scanners - Andre Gironda<br> [http://www.owasp.org/index.php/Image:Owasp-lessonslearned.ppt Gray Box Assessment Lessons Learned] - Adam Muntner<br> Risk Assessment Considerations for Web Applications (brief talk+discussion) - Erich Newell 
+
+'''[http://www.owasp.org/index.php/Image:Same-origin.pdf Reflections on Trusting the Same-Origin Policy] â and other web+network trust issues â Andre Gironda'''<br> 
+
+In computing, the same origin policy is an important security measure for client-side scripting (mostly Javascript). It prevents a document or script loaded from one "origin" from getting or setting properties of a document from a different "origin". It was designed to protect browsers from executing code from external websites, which could be malicious. 
+
+XSS and CSRF vulnerabilities exploit trust shared between a user and a website by circumventing the same-domain policy. DNS Pinning didn't pan out exactly right, either. Can client-side scripting allow malicious code to get into your browser history and cache? Can it enumerate what plugins you have installed in your browser, or even programs you have installed to your computer? Can it access and modify files on your local hard drive or other connected filesystems? Can client-side scripts be used to access and control everything you access online? Can it be used to scan and attack your Intranet / local network? Does an attacker have to target you in order to pull off one of these attacks successfully? If I turn off Javascript or use NoScript, am I safe? What other trust relationships does the web application n-Tier model break? 
+
+'''Data@Risk â Protecting Web Applications Throughout the Development Lifecycle from Hackers - Brian Christian'''<br> 
+
+Brian Christian, Co-founder and Application Security Engineer, S.P.I. Dynamics, Inc. discussed what Web application security is and why it is needed throughout the entire development lifecycle. We will discuss common vulnerabilities in the Web application layer and why they are so easily exploited. This session demonstrates how to defend against common attacks at the Web application layer with examples covering Web application hacking methods such as SQL Injection, Blind SQL Injection, Cross-Site Scripting (XSS), Parameter Manipulation, etc. We will also review how compliance and regulatory legislation such as PCI, GLBA, HIPAA, CASB 1386, and Sarbanes-Oxley, etc. specifically relates to and affects Web application security. Additionally, we will examine how security throughout the development lifecycle is essential to the security of Web application code and the protection of proprietary data. 
+
+'''Web Application 0-Day â Jon Rose'''<br> 
+
+Learn about how to identify, exploit, and remediate some of the most common security vulnerabilities in web applications. Weâll be using real-world examples in a dynamic, fun, and open discussion using publicly available source code.<br> 
+
+[http://www.stachliu.com/presentations/webapp0day/index.html Discovering Web Application Vulnerabilities with Google CodeSearch] 
+
+'''Building Application Security into the SDLC - Adam Muntner'''<br> 
+
+Adam will share his experiences about how organizations can integrate application security into all phases of the Software Development Life Cycle, from the creation of functional specifications all the way through deployment, maintenance, and updates. He will explain how to "bake security in" rather than "ice it on." 
+
+[[Category:Arizona]]

@@ -1,0 +1,115 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+
+==Description==
+Java byte code has no notion of an inner class; therefore inner classes provide only a package-level security mechanism. Furthermore, the inner class gets access to the fields of its outer class even if that class is declared private.
+
+'''Consequences'''
+
+*	Confidentiality: "Inner Classes" data confidentiality aspects can often be overcome. 
+
+'''Exposure period'''
+
+Implementation: This is a simple logical flaw created at implementation time.
+
+'''Platform'''
+
+* Languages: Java
+* Operating platforms: Any 
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Medium
+
+'''Likelihood of exploit'''
+
+Medium
+
+A common misconception by Java programmers is that inner classes can only be accessed by outer classes. Inner classes' main function is to reduce the size and complexity of code. This can be trivially broken by injecting byte code into the package. Furthermore, since an inner class has access to all fields in the outer class - even if the outer class is private - potentially access to the outer classes fields could be accidently compromised. 
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+In Java:
+
+<pre>
+private class Secure(){
+   private password="mypassword"
+   public class Insecure(){...}
+}
+</pre>
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* Implementation: Using sealed classes protects object-oriented encapsulation paradigms and therefore protects code from being extended in unforeseen ways. 
+* Implementation: Inner Classes do not provide security. Warning: Never reduce the security of the object from an outer class, going to an inner class. If your outer class is final or private, ensure that your inner class is private as well.
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Environmental Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

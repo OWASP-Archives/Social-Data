@@ -1,0 +1,122 @@
+{{Template:SecureSoftware}}
+{{Template:Vulnerability}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+If one changes security privileges, one should ensure that the change was successful.
+
+'''Consequences'''
+
+* Authorization: If privileges are not dropped, neither are access rights of the user. Often these rights can be prevented from being dropped.
+* Authentication: If privileges are not dropped, in some cases the system may record actions as the user which is being impersonated rather than the impersonator.
+
+'''Exposure period'''
+
+* Implementation: Properly check all return values. 
+
+'''Platform'''
+
+* Language: C, C++, Java, or any language which can make system calls or has its own privilege system.
+* Operating platforms: UNIX, Windows NT, Windows 2000, Windows XP, or any platform which has access control or authentication. 
+
+'''Required resources'''
+
+A process with changed privileges.
+
+'''Severity'''
+
+Very High
+
+'''Likelihood   of exploit'''
+
+Medium
+
+In Microsoft operating environments that have access control, impersonation is used so that access checks can be performed on a client identity by a server with higher privileges. By impersonating the client, the server is restricted to client-level security - although in different threads it may have much higher privileges. 
+
+Code which relies on this for security must ensure that the impersonation succeeded - i.e., that a proper privilege demotion happened.
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+In C/C++
+
+<pre>
+bool DoSecureStuff(HANDLE hPipe){ {
+   bool fDataWritten = false;
+   ImpersonateNamedPipeClient(hPipe);
+   HANDLE hFile = CreateFile(...);
+   /../ RevertToSelf()/../
+}
+</pre>
+
+Since we did not check the return value of ImpersonateNamedPipeClient, we do not know if the call succeeded.
+
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* Implementation: In Windows make sure that the process token has the SeImpersonatePrivilege(Microsoft Server 2003).
+* Implementation: Always check all of your return values.
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:General Logic Error Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

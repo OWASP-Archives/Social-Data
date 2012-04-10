@@ -1,0 +1,112 @@
+1. General -> 1.1 HTTP Basics
+
+=== Lesson overview ===
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution === 
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information. 
+
+=== Strategy ===
+
+This lesson shows the basics of HTTP and the use of a web proxy to examine HTTP traffic.
+
+For a ModSecurity solution to this lesson, relevant ModSecurity configuration basics will be presented along with debugging tips and tricks. Performing this simple WebGoat lesson, one can experiment with the configuration directives, examine the debug log file, and be better prepared to implement the ModSecurity solutions in this project.
+
+<pre>
+SecRuleEngine On
+SecRequestBodyAccess On
+SecResponseBodyAccess On
+</pre>
+The SecRuleEngine and SecRequestBodyAccess are no-brainers but many of this project's solutions require "SecResponseBodyAccess On" in order to use the HTTP request body.
+
+<pre>
+SecDataDir /etc/modsecurity/data
+</pre>
+The directory and file permissions on this directory on non-Windows systems is very important; otherwise several of the project solutions will not work properly. The directory must be writable and a file's owner and group must be the same as the Apache process, which is defined in the Apache configuration file. 
+
+<pre>
+SecContentInjection On
+</pre>
+This directive is essential for the solutions that use JavaScript injection ('prepend' or 'append') into the response body.
+
+<pre>
+SecDefaultAction "log,deny,phase:2,status:501"
+</pre>
+This is an interesting directive. Most of the processing is done in Phase 2 of the Apache cycle (see http://www.apachetutor.org/dev/request and http://stein.cshl.org/~lstein/talks/perl_conference/apache_api/lifecycle.html for more information). It is not necessary to put 'phase:2' in SecRules or SecActions, but at times in this project's solution configuration files it is explicitly stated when Phase 4 processing is also done. One of the biggest beginner mistakes is not to include 'phase:4' in a SecRule or SecAction directive when the Response body is to be processed.
+
+"status:501" is the "Internal Server" error. When you see it while using the project's ModSecurity solution files, it is a bug somewhere; often it is seen when a variable in a Lua script has a nil value instead of an expected string. Check the debug log file when this message appears.
+
+<pre>
+SecAuditEngine
+SecAuditLog
+SecAuditLog2
+SecAuditLogParts
+SecAuditLogRelevantStatus
+SecAuditLogStorageDir
+SecAuditLogType
+</pre>
+In the real world use of ModSecurity, these audit log directives are very important but for this project the audit log file was not looked at once. The debug log cranked up to level 9 is where the action is.
+
+The audit log configuration used for this project is:
+<pre>
+SecAuditEngine RelevantOnly
+SecAuditLogRelevantStatus ^5
+SecAuditLogParts ABIEFHZ
+SecAuditLogType Serial
+SecAuditLog /etc/modsecurity/logs/modsec_audit.log
+</pre>
+
+
+<font><u>Debugging</u></font>
+
+<pre>
+SecDebugLog /etc/modsecurity/logs/modsec_debug.log
+SecDebugLogLevel 9
+</pre>
+Every single bug or unwanted behavior can be discovered by setting the debug log file at Level 9. Instead of guessing what the problem is and messing around with other stuff, set this to 9 and reproduce the problem. If you spend any significant amount of time using ModSecurity, it is best to learn how to read the debug as quickly as possible. The debug file can get large quickly, so go to the step immediately before the problem, then do this from '/etc/modsecurity/logs' (an apology to Windows users):
+<pre>
+echo > modsec_debug.log
+/etc/init.d/apache2 restart #if you made changes to any ModSec config files
+</pre>
+
+Use the 'history' command to make this faster:
+'history -c' to clear before typing in those commands. Then type in the above commands in order. Next time, one only has to type in something like:
+<pre>
+!11
+!12
+</pre>
+over and over and over.
+
+On the first attempt to debug, try command line search like 'grep' or 'findstr' on key words like 'rulefile_' or 'lua' to isolate the problem. There's valuable information not logged from debug messages written by the ModSecurity rule or Lua script creator, so if that fails to find the problem, load the debug file in a text editor (line numbering is an essential feature) and search from there.
+
+As mentioned in several other places in this project, the more unique and consistent user-created debug messages are, the easier it is to pinpoint problems.
+
+
+<font><u>Some tips, learned from bad experiences and long hours</u></font>
+
+ModSecurity session collections and variables: A confusing aspect of ModSecurity persistence is when to use 'initcol' to load session collections and stored variables. It seems that it is not necessary when in the same phase or within the same ruleset file (with more than one phase), but necessary at all other times  [Note: This observation by the project member is presumably wrong; a reviewer stated that “‘initcol’ has to be execuated at least once, anywhere prior to the place where the collection is being used. Phases and rule location do not matter.”]. The debug log explicitly states when a session collection is loaded; a missing 'initcol' will result in a message like 'Variable does not exist'.
+
+Use of 'skip': When there are many ruleset files, using 'skipAfter' can potentially cause a problem if there are duplicate SecActions with the same 'id' number so in some cases it is preferable to use 'skip'. But, during development and debugging, or using 'chain', the 'skip' number can get out of alignment and jump over directives that should be processed. Again, going straight to the debug log set at level 9 and stepping through the expected ModSecurity directives one at a time will save a lot of time.
+
+Use of 'phase:4': Forgetting to use 'phase:4' in a directive when processing the HTTP response body will produce strange results because they will be processed in the default phase which is normally phase 2 the request phase. 
+
+Use of 'allow': Mistakenly using 'allow' instead of 'allow:request' when it is intended to end processing of the request phase results can take eons to discover if one doesn't go straight to the debug log file; very clearly it will state something like "Skipping processing response phase"; the "Starting phase RESPONSE_BODY" message and the expected ModSecurity directives will not appear.
+
+The processing order of ruleset files: Apache processes *.conf files in alphabetical order which is why the initialization file needed by all project lesson solutions is named 'rulefile_00_initialize.conf' and the lesson solutions follow the naming convention of 'rulefile_xx_*.conf' where 'xx' is the lesson number and '*' is a description of the sublesson [Reviewer note: “Explicitly listing the rules will determine the order that they will be processed.”]. Using multiple solution files at the same time may cause unintended results. 
+
+The Apache 'LocationMatch' directive: When processing HTTP requests and WebGoat accesses files and directories outside of the normal '/WebGoat/attack' directory, be careful about the ordering of 'LocationMatch' when multiple ModSecurity configuration files are used. The symptom is that the intended configuration file will not be processed and it will not appear in the debug log file. 
+
+
+<font><u>Lua Debugging</u></font>
+
+A convention has been developed over the time of this project to make debugging Lua scripts as easy as possible.
+<pre>
+  msg0 = "Luascript (activate-request_03-4.lua): "
+  msg1 = string.format("Post parameter: name = %s; value = %s;", parmname, parmvalue)
+  msg2 = msg0 .. msg1
+  m.log(9, msg2)
+</pre>
+
+Note the flexibility that Lua has over ModSecurity when writing error messages to the debug log file.

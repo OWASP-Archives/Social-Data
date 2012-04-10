@@ -1,0 +1,24 @@
+*'''What does security mean?''' The origin of the word "security“ refers to the Latin word securitas (sine cura + tutus); the word in English means also freedom from danger, safeguard, protection, certainty, doubtlessness.
+**Objective security,
+**Subjective security.
+*'''What does security of a web application mean?'''From a web application user´s point of view, the security of web application is a complex of relations constituting the user´s interest protection; i.e. a factual status of how these relations are protected including the admissible amount of threats.
+*'''What is meant by accessibility?''' Accessibility is a state under which an object of usage does not interpose any barriers to the user. Accessibility means without barriers.
+*'''What is the concept of web application security accessibility?''' It is a state under which a complex of relations designed to protect user´s interests is maintained regardless of user´s disabilities, capabilities, knowledge, experience, visualisation capacities.
+*'''Examples of inaccessible security of web applications'''
+'''SCENARIO 1'''<br>
+John is a blind user of online banking. He is transferring money to another account. He is about to transfer an amount of EUR 27 and introduces three zeros by mistake. A verification of data is processed before the final dispatch. In fact, EUR 27 000 is displayed (27 000 consists of a gap between 27 and 000). However, John´s screen reader identifies only EUR 27 because zeros are either ignored or read as zero – zero – zero. John is not aware of the fact that he is making a payment of EUR 27000 instead of 27.<br>
+'''SCENARIO 2'''<br>
+Helen is sightless. During the population census Helen is about to complete a web-based form and finds out that a code provided by the postman is required at the beginning. Yet she does not see the code. Therefore, she asks someone else to read it for her. A form is displayed in a format that screen readers are unable to read. Helen is completely dependent on the help of others.<br>
+'''SCENARIO 3'''<br>
+José is able to communicate in Spanish only. He tips through an online casino. Someone tried to crack his authentication – the hacker introduced an incorrect pass code three times and the account got blocked. José received instruction via e-mail in English how to proceed for unblocking his account. However, José does not understand the English text and has no clue how to react.<br>
+'''SCENARIO 4'''<br>
+Anna is dumb. She has arranged for an electronic health records (online). For security reasons, the access to her electronic health records was blocked. Web-based instructions redirect her to a telephone operator, who is supposed to help her out with unblocking the account. Helen is, though, unable to speak and is dependent on someone else´s help.<br>
+*'''What are the project goals?'''<br>
+The practice points out to the fact that a seemingly secure web application does, in reality, protect interests of only a specific group of users. Interests of a great number of users are protected only partially or by no means. This is why I decided to focus extensively on the issue of web application security accessibility. This topic is conceded as a project within OWASP – a globally renowned organization and community, which I appreciate a lot for its high expertness, positive social respect and for successful free share of voice in the field of concepts regarding security of web applications.<br>
+*During the project we will focus mainly on the following areas:
+** Research and study of web application security accessibility (WASA)
+**WASA situation monitoring
+***WASA user testing
+***WASA legal implementation
+***Discussion with providers of web application security
+**Recommendations for providing an accessible security of web applications

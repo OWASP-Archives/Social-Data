@@ -1,0 +1,319 @@
+__NOTOC__ 
+
+
+
+
+[[Image:Dublin2010.gif]]
+
+<br> 
+
+Welcome to the Irish OWASP Application Security Conference!<br> 
+
+On&nbsp;'''September 17th, 2010''' OWASP held its second Irish Application Security conference in&nbsp;Dublin University, Trinity College, Dublin, Ireland.
+
+==== About  ====
+
+The conference consisted of an intensive day of talks/presentations and discussion with 2 different tracks focusing on the causes and trends in web application insecurity. <br>
+
+Finally six months of work by the OWASP Ireland chapter board paid off:<br>
+
+Many thanks :<br>
+- To every one who attended, helped out, presented, ran about.<br>
+- To Samy Kamkar who came over to enlighten us all about how he'll meet your girlfriend.......<br>
+- To John Viega, Fred Piper and Damian Gordon for their keynotes, they were great and provoked much discussion.<br>
+- To all our local and international speakers who took time (and expense) to come over and present...<br>
+- Also thanks to our sponsors for all assistance.<br>
+
+Colin Watson who attended covered the event very nicely here:<br>
+http://www.clerkendweller.com/2010/9/17/OWASP-AppSec-Ireland-2010--Part-2?utm_source=twitterfeed&utm_medium=twitter<br>
+
+Next stop:<br>
+
+OWASP Europe 2011<br>
+June/July 2011<br>
+Dublin Ireland<br>
+
+Photos and slides of OWASP Ireland 2010 event will be available shortly... stay tuned!
+
+==== Venue  ====
+
+[[Image:AppSecIreland09 Dublin.JPG|www.tcd.ie]] 
+
+Trinity College, Dublin <br>[http://www.tcd.ie/Maps/map.php?q=hamilton+building Map of hamilton Building Location] 
+
+[http://www.tcd.ie/Maps/map.php?q=dining+hall Dining Hall location] 
+
+==== Sponsorship  ====
+
+OWASP is providing sponsors exclusive access to its audience in Dublin, Ireland through a limited number of Expo floor slots, providing a focused setting for potential customers. The conference is expected to draw 150 - 200 technologists who will be looking for ways to spend their remaining 2010 budget and planning for 2010/11. Financial Services, Media, Pharmaceuticals, Government, Healthcare, Technology, and many other verticals will be represented. <br>Sponsorship details are available here:&nbsp; Please review or sponsorship proposal:&nbsp;[http://www.owasp.org/images/c/c8/OWASP_sponsorship_Master.pdf Click_here] 
+<center>
+&nbsp; 
+</center> 
+=== Sponsors  ===
+
+'''Silver Sponsors''' 
+<center>
+[[Image:Cenzic small 2.GIF]] 
+</center><center>
+'''CENZIC''' - Cenzic provides software and SaaS solutions for dynamic, black box testing of Web applications to protect Websites against hacker attacks.Built from the ground up on a completely different technology backbone than its competitors, Cenzic goes beyond signature-based tools to find more "real" vulnerabilities. To request a free demo please visit http://www.cenzic.com <br> 
+
+<br> 
+</center><center>[[Image:Veracode logo 2color small.JPG]]</center><center>
+'''Veracode''' is the world’s leader in cloud-based application risk management. With patented binary code analysis, dynamic Web assessments, and partner or Veracode-delivered manual penetration testing, combined with developer e-learning and access to open source security ratings, Veracode SecurityReview® allows customers to independently verify application security in both internally developed applications and third-party software without requiring source code or expensive tools. Veracode provides the most simple, complete and accurate way to implement security best practices, reduce operational cost and comply with internal security policies or external standards such as OWASP Top 10, CWE/SANS Top 25 and PCI. Veracode works with global organizations across multiple vertical industries including Barclays PLC, California Public Employees’ Retirement System (CalPERS), Computershare, and the Federal Aviation Administration (FAA). For more information, visit www.veracode.com http://www.veracode.com/ 
+</center> 
+<br><br> 
+<center>[[Image:FORTIFY LOGO MED.jpg]]</center><center>
+'''Fortify® Software''' is the leader in the emerging category of Software Security Assurance (SSA). Fortify's SSA products and services protect companies from the threats posed by security flaws in business-critical software applications and result in applications that are inherently more secure and impervious to attack. Our solutions help identify and resolve critical application vulnerabilities in less time and at lower cost. http://www.fortify.com 
+</center> 
+<br><br> 
+<center>[[Image:IBM logo blue high res - small.jpg]]</center><center>
+IBM Rational® offers Web site security, Web site compliance, and application security solutions for the most comprehensive approach to assessing vulnerabilities in networked applications and critical Web sites. IBM Rational AppScan® and IBM Rational Policy Tester®, Web site security, compliance, and application security solutions, can help you avoid these risks. Our solutions automate application and content analysis. They help you identify vulnerabilities, assess compliance requirements, and improve the accuracy and reliability of online systems. 
+IBM home page: www.ibm.com/ie</center> 
+=== Supported by  ===
+<center>
+[[Image:Irisss small.jpg]] [[Image:IISF.jpg]] [[Image:Iia-logo-small.jpg]][[Image:DG horiz col.gif]] 
+</center> 
+
+
+==== Agenda  ====
+
+The agenda follows the successful OWASP conference two tracks format, with opening keynotes and presentations in the main auditorium, split tracks in the middle of the day, and closing pannel discussions back in the main auditorium both days. 
+
+{| class="FCK__ShowTableBorders" style="width: 80%" align="center" border="0"
+|-
+! align="center" colspan="3" | [http://www.tcd.ie/Maps/map.php?q=hamilton+building Hamilton Building, TCD] - September 17, 2010
+|-
+| style="background: #7b8abd; width: 10%" | 
+| style="background: #bc857a; width: 40%" | Track 1: Synge Theatre 
+| style="background: #bca57a; width: 40%" | Track 2: Salmon Theatre
+|-
+| style="background: #7b8abd; width: 10%" | 08:00-09:00 
+| style="background: #c2c2c2; width: 80%" align="left" colspan="2" | Registration and Coffee
+|-
+| style="background: #7b8abd; width: 10%" | 09:00 - 09:10 
+| style="background: #f2f2f2; width: 80%" align="center" colspan="2" | Welcome to OWASP Ireland 2010 Conference 
+'''''[[User:EoinKeary|Eoin Keary]], [http://ie.linkedin.com/in/fcerullo Fabio Cerullo] &amp; Rahim Jina'''&nbsp;<br>'''OWASP Ireland Board''''' <br>'''Location: Joly Theatre''' 
+
+|-
+| style="background: #7b8abd; width: 10%" | 09:15 - 10:00 
+| style="background: #f2f2f2; width: 80%" align="center" colspan="2" | '''Keynote: "Application Security in the Real World"''' - Considerations for AppSec in non-security companies. 
+'''''[[John Viega|John Viega&nbsp;]]&nbsp;'''''Executive Vice President, Perimeter E-Security 
+
+'''Location: Joly Theatre''' 
+
+|-
+| style="background: #7b8abd; width: 10%" | 10:10 - 10:30 
+| style="background: #f2f2f2; width: 80%" align="center" colspan="2" | 
+OWASP "State of the Nation" 
+
+[[User:EoinKeary|'''Eoin Keary''']]&amp;&nbsp;[[User:Dinis.cruz|'''Dinis Cruz''']] 
+
+<sub>''OWASP Global board members''</sub> 
+
+|-
+| style="background: #7b8abd; width: 10%" | 10:30 - 10:50 
+| style="background: #c2c2c2; width: 80%" align="left" colspan="2" | Break - Expo
+|-
+| style="background: #7b8abd; width: 10%" | 11:00 -&nbsp;11:35 
+| style="background: #bc857a; width: 40%" align="left" | 
+"Testing the Enterprise E-mail Security - from Software to Cloud-based Services"<br>[[User:Dr. Marian Ventuneac|'''Dr. Marian Ventuneac''']] 
+
+| style="background: #bca57a; width: 40%" align="left" | 
+"Counter Intelligence as Defense: Integrating predictive and proactive attack knowledge as a wall of defense" 
+
+<br>[[User:FredDonovan|'''Fred Donovan''']] 
+
+|-
+| style="background: #7b8abd; width: 10%" | 11:40 - 12:15 
+| style="background: #bc857a; width: 40%" align="left" | 
+"The Evolution of Security Testing: Testing the Resiliency of Security"<br> 
+
+[[David Stubley|'''David Stubley''']] (GIAC) 
+
+| style="background: #bca57a; width: 40%" align="left" | 
+[[Path to a Secure Application|"Path to a Secure Application"]] <br>[[User:RyanBerg|'''Ryan Berg''']] IBM 
+
+|-
+| style="background: #7b8abd; width: 10%" | 12:20 - 13:00 
+| style="background: #bc857a; width: 40%" align="left" | 
+"Smart Phones with Dumb Apps" 
+
+[[Dan Cornell|'''Dan Cornell''']]&nbsp; Principal of [http://www.denimgroup.com Denim Group], Ltd. 
+
+| style="background: #bca57a; width: 40%" align="left" | 
+"Technology and Business Risk Management: How Application Security Fits In! 
+
+[[User:Peter Perfetti|'''Peter Perfetti''']] 
+
+|-
+| style="background: #7b8abd; width: 10%" | 13:00 - 13:45 
+| style="background: #c2c2c2; width: 80%" align="left" colspan="2" | Lunch - [http://www.tcd.ie/Maps/map.php?q=dining+hall TCD Dining Hall], buffet Lunch
+|-
+| style="background: #7b8abd; width: 10%" | 13:50 - 14:30 
+| style="background: #c2c2c2; width: 80%" align="center" colspan="2" | '''Keynote: "The changing face of cryptography"''' 
+'''''[[User:Professor Fred Piper|Professor Fred Piper]]'''''<i>, BSc, PhD (London), ARCS, DIC, CEng, CMath, FIEE, FIMA, BCS, CISSP, CISM.</i> <br> 
+
+'''Location: Joly Theatre''' 
+
+|-
+| style="background: #7b8abd; width: 10%" | 14:35 - 15:10 
+| style="background: #bc857a; width: 40%" align="left" | 
+"Application Security Scoreboard in the Sky" 
+
+[[Tyler shields|'''Tyler Shields''']](Veracode) 
+
+| style="background: #bca57a; width: 40%" align="left" | 
+"Using the OWASP O2 Platform to consume OWASP projects" 
+
+[http://uk.linkedin.com/pub/dinis-cruz/5/742/233 '''Dinis Cruz'''] 
+
+|-
+| style="background: #7b8abd; width: 10%" | 15:15 - 15:50 
+| style="background: #bc857a; width: 40%" align="left" | 
+"Microsoft's Security Development Lifecycle for Agile Development" 
+
+[[Nick Coblentz|'''Nick Coblentz''']]&nbsp;AT&amp;T Consulting 
+
+| style="background: #bca57a; width: 40%" align="left" | 
+[[The Real appsec pentest|"The "Real" Application Security Pentest."]]<br> 
+
+[[Rory Alsop|'''Rory Alsop''']]&amp; [[Rory McCune|'''Rory McCune''']] 
+
+|-
+| style="background: #7b8abd; width: 10%" | 16:00 - 16:40 
+| style="background: #bc857a; width: 40%" align="left" | 
+"How to Defend Fragile Web Applications" 
+
+[[Vinay Bansal, Martin Nystrom|'''Vinay Bansal, Martin Nystrom''']] Cisco systems 
+
+| style="background: #bca57a; width: 40%" align="left" | 
+[[Scareware Traversing the World via Ireland|"Scareware Traversing the World via Ireland"]]<br> 
+
+[[User:Mark Hillick|'''Mark Hillick''']] 
+
+|-
+| style="background: #7b8abd; width: 10%" | 16:50 - 17:50 
+| style="background: #f2f2f2; width: 80%" align="center" colspan="2" | 
+'''Keynote: "Hackers and Hollywood: The Implications of the Popular <br>Media Representation of Computer Hacking"''' 
+
+'''''[[User:Damian Gordon|Damian Gordon]]'''''<i>&nbsp;Phd, School of Computing&nbsp;Dublin Institute of Technology.</i> 
+
+'''''Location: Joly Theatre''''' 
+
+|-
+| style="background: #7b8abd; width: 10%" | 17:50 - 18:00 
+| style="background: #c2c2c2; width: 80%" align="left" colspan="2" | Wrap-Up
+|-
+| style="background: #7b8abd; width: 10%" | 18:00-21:00 
+| style="background: #c2c2c2; width: 80%" align="left" colspan="2" | OWASP Social Gathering
+|}
+
+
+
+==== Training  ====
+
+We intend to hold some application security training on the 16/09/2010 the day prior to the event.<br>This can be booked when booking a ticket to the event.<br> 
+
+== '''Secure Application Development: Writing secure code (and testing it)'''<br>  ==
+
+'''Trainers''': 
+
+[[User:EoinKeary|'''Eoin Keary'''&nbsp;]] Senior Manager, Ernst &amp; Young, OWASP Board Member 
+
+'''Rahim Jina''' Senior Consultant, Ernst &amp;&nbsp;Young, OWASP Ireland chapter board. 
+
+<br> 
+
+'''Abstract'''<br>Writing Secure code is the most effective method to securing your web applications. Writing secure code takes skill and know-how but results in a more stable and robust application and assists in protecting an organisations brand. 
+
+Application security is not commonly a part of many computer science curricula today and most organizations have not focused on instituting a culture that includes application security as a core part of their software development training efforts. This intensive one-day course focuses on the most common web application security problems, including aspects of both the OWASP Top Ten (2010) and the MITRE Top 25.&nbsp; The course will introduce and demonstrate application assessment techniques, illustrating how application vulnerabilities can be exploited so students really understand how to avoid introducing such vulnerabilities in their code. 
+
+This course includes coverage of the following areas: 
+
+*Unvalidated Input 
+*Injection Flaws 
+*Cross-Site Scriping 
+*CSRF 
+*Authentication &amp;&nbsp;Session Management 
+*Access control &amp; Authorisation 
+*Broken Caching 
+*Error Handling &amp;Resource Management 
+*Cryptography 
+*Rich Internet Applications 
+*The Secure SDLC
+
+<br>'''Hands on''' 
+
+To cement the principles discussed, students can participate in a number of hands-on security testing exercises where they attack a live web application (i.e., WebGoat etc) that has been seeded with common web application vulnerabilities. The students will use proxy tools commonly used by the hacker community to complete the exercises. Students need to bring their own windows based laptop to participate in the exercises. 
+
+'''Audience''' 
+
+Developers who want to understand the most common web application security flaws, and how to avoid them and code in a secure manner 
+
+'''Level''' 
+
+Intermediate 
+
+'''Prerequisite''' 
+
+Basic knowledge of a web programming language like Java or .NET recommended but not required. <br> 
+
+Bringing your own windows based laptop is recommended so you can participate in the hands on exercises. 
+
+'''Duration''' 
+
+Full day - 8 Hours<br>
+
+==== Registration  ====
+
+Registration is now '''closed'''
+
+==== Travel  ====
+=== By Air  ===
+
+<br>Fly to Dublin Airport: http://www.dublinairport.com/ <br>A taxi or bus can take you into Dublin city. (€30 - Taxi) (€10 - Bus)<br> 
+
+==== Hotels ====
+'''Recommended Hotel:'''<br> 
+
+A hotel has been block booked in the middle of the city for the OWASP Event in Dublin in September:<br>http://www.owasp.org/index.php?title=OWASP_IRELAND_2010<br> <br>The rooms have been booked for the 16th and 17th September and shall be held for OWASP until September 3rd.<br> <br>Hotel in question is The Morgan Hotel:<br>http://www.themorgan.com/<br> <br>Rate - 150 euro per room per night, bed and breakfast <br> <br>Please quote "Trinity College" and contact hotel reservations 01 6437061 or email reservations@themorgan.com <br> 
+
+<br> 
+
+<br> 
+
+'''Trinity College''': 
+
+Please see here if you wish to stay within the grounds of Trinity College:<br>http://www.owasp.org/images/2/20/TCD_Tariff_2009.pdf 
+
+'''Hotels Surrounding Trinity College:''' 
+
+[http://maps.google.com/maps?near=Dame+Street,+College+Green,+Dublin+2,+Ireland+(Trinity+College+Campus)&geocode=Cfm6cyTmqt_IFev1LQMdLZCg_yFJu3aKhBD7GA&q=hotels&f=l&dq=Trinity+College+loc:+Dublin+Ireland&sll=53.341482,-6.258302&sspn=0.012043,0.037637&ie=UTF8&ei=U6TMSZSzKpSw2QLG_-CUCA&attrid=1036f063d3d0dafc_&ll=53.343711,-6.254568&spn=0.012042,0.037637&z=15 http://maps.google.com/maps?near=Dame+Street,+College+Green,+Dublin+2,+Ireland+(Trinity+College+Campus)&amp;geocode=Cfm6cyTmqt_IFev1LQMdLZCg_yFJu3aKhBD7GA&amp;q=hotels&amp;f=l&amp;dq=Trinity+College+loc:+Dublin+Ireland&amp;sll=53.341482,-6.258302&amp;sspn=0.012043,0.037637&amp;ie=UTF8&amp;ei=U6TMSZSzKpSw2QLG_-CUCA&amp;attrid=1036f063d3d0dafc_&amp;ll=53.343711,-6.254568&amp;spn=0.012042,0.037637&amp;z=15] 
+
+
+==== Raffle  ====
+<br> '''Special RAFFLE:'''<br> The draw for the Visual Studio 2008 Training raffle took place 3rd September 2010 at the New Horizons Ireland offices in central Dublin. 
+
+Alan Deery, Sales Manager at New Horizons Ireland, pulled the winning ticket (http://www.owasp.org/index.php/File:P1050389.JPG) 
+
+And the winner is... Chris Adams, please contact Alan Deery or Fabio Cerullo to provide you further details on how to claim your prize. 
+
+Congratulations to the winner and a big thank you to everyone who took part. 
+
+==== Photos  ====
+
+To be available soon.
+
+
+==== Conference Committee  ====
+
+'''2010 Ireland Planning Committee Chair''': 
+
+Eoin Keary -&nbsp;eoin.keary 'at' owasp.org<br> 
+
+Fabio Cerullo&nbsp; - fcerullo 'at' owasp.org 
+
+Rahim Jina - rahim.jina 'at' owasp.org 
+
+
+<headertabs/>

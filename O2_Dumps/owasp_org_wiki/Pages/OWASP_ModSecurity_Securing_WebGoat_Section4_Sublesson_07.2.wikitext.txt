@@ -1,0 +1,118 @@
+7. Concurrency -> 7.2 Shopping Cart Concurrency Flaw
+
+=== Lesson overview ===
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution === 
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information. 
+
+=== Strategy ===
+
+This WebGoat lesson demonstrates a shopping cart concurrency flaw: there is a window between when the purchase is started and the confirmation, which allows the shopping cart to be updated and get more expensive items for the same price. The user chooses an item, clicks on 'Purchase', opens another window, chooses more expensive items, clicks 'Update Cart', goes back to the original window and clicks 'Confirm', and the user has bought more items but based on the original price.
+
+To solve this lesson, place a lock on the transaction once the purchase is initiated until it is confirmed or canceled. When a buyer has clicked on Purchase, no other transactions (Purchase or Update Cart) are allowed until Confirm or Cancel is pressed.
+
+=== Implementation === 
+
+The relevant data gathered from the web proxy is:
+<pre>
+menu=800
+QTY1=0&QTY2=0&QTY3=0&QTY4=0&SUBMIT=Purchase
+QTY1=0&QTY2=0&QTY3=1&QTY4=0&SUBMIT=Update+Cart
+CC=5321+1337+8888+2007&PAC=111&SUBMIT=Confirm
+CC=5321+1337+8888+2007&PAC=111&SUBMIT=Cancel
+</pre>
+
+The data file, lesson07-2.data, looks like this with initial values:
+<pre>
+Entry{
+  state = "none", 
+  pending = "no", 
+  time = 0
+}
+</pre>
+
+'State' changes when a button is pushed. The original intention was to implement a timeout also, but time did not permit this and, besides, a timeout should already be implemented in the application.
+
+The following is what should happen during different states:
+* When the Purchase button is pushed and pending is "no", set the datafile parameters as such: state = "purchase"; pending = "yes"; time = 0.
+* If the Update Cart button is pushed while pending, return a non-nil error message.
+* If Cancel or Confirm is pushed, set pending to "no".
+* If there is a page request with no POST parameters, reset pending to "no".
+
+Only the HTTP request is being used and the relevant parts of the Lua script, shopping-cart_07-2.lua, is as follows:
+<pre>
+datafile = "/etc/modsecurity/data/lesson07-2.data"	
+retval = nil
+
+function main()
+  local submit_type = m.getvar("ARGS_POST.SUBMIT", "none")
+		
+  function Entry (b) 
+    local state = b.state
+    local pending = b.pending
+    local time = b.time  
+
+    if b.state == "none" then
+      if submit_type == "Purchase" then
+        state = "Purchase"
+        pending = "yes"
+        time = 0
+      end
+    elseif submit_type == "Purchase" then
+      state = "Purchase"
+      pending = "yes"
+      time = 0
+    elseif submit_type == "Update Cart" then
+      state = "Update Cart"
+      time = 0
+      if b.pending == "yes" then  -- error; block this action
+        str1 = string.format("Error: attempt to update cart when purchase is pending;\n")	
+        retval = str1
+      end
+    elseif submit_type == "Cancel" or submit_type == "Confirm" then	
+      state = submit_type
+      pending = "no"
+      time = 0
+    end	
+		
+    -- build the data file - this should all be on one line
+    outstr = string.format("Entry{\n  state = \"%s\",\n  pending = \"%s\",
+      \n  time = %d\n}\n\n", state, pending, time) 
+  end
+	
+  dofile(datafile)
+	
+   -- write back to file
+  local fh2 = io.open(datafile, "w+")
+  fh2:write(outstr)
+  fh2:flush()
+  fh2:close()
+
+  return retval
+end
+</pre>
+
+Here is the ModSecurity rule file, rulefile_07-2_shopping-cart-concurrency.conf:
+<pre>
+  SecRule ARGS:menu "!@eq 800" "phase:2,t:none,skip:2"
+  SecRule &ARGS_POST:SUBMIT "@eq 0" "nolog,skip:1"
+
+  # action is triggered if script returns non-nil value
+  SecRuleScript "/etc/modsecurity/data/shopping-cart_07-2.lua" \ 
+"phase:2,t:none,log,auditlog,deny,severity:3,msg:'Luascript: Concurrency -> \ 
+Shopping Cart: purchase is pending',tag:'CONCURRENCY', \
+redirect:/_error_pages_/lesson07-2.html"
+  SecAction "phase:2,allow:request,t:none,log,auditlog,msg:'Luascript: \ 
+Concurrency -> Shopping Cart: purchase is NOT pending'"
+</pre>
+
+When a transaction is pending, the user will get this message:
+
+[[Image:OWASP_ModSecurity_Securing_WebGoat_Shopping_cart_concurrency_SS0.jpg]]
+
+=== Comments ===
+
+* This lesson solution shows how Lua can be used to handle application state; in this case, a purchase that utilizes a shopping cart.

@@ -1,0 +1,292 @@
+[[Guide Table of Contents|Development Guide Table of Contents]]__TOC__
+
+==Objective ==
+
+To provide secure authentication services to web applications, by:
+
+* Tying a system identity to an individual user by the use of a credential
+
+* Providing reasonable authentication controls as per the application’s risk
+
+* Denying access to attackers who use various methods to attack the authentication system
+
+==Environments Affected ==
+
+All. 
+
+==Relevant COBIT Topics ==
+
+DS5 – All sections should be reviewed. This section covers nearly all COBIT detailed control objectives.
+
+
+==Architectural Goals==
+
+All applications should take into account the following architectural and detailed design goals:
+
+* All applications within your organization SHOULD share a well-debugged and trusted authentication mechanism if possible
+* All secured functions and secured resources SHOULD be protected by a common authentication mechanism within the one application
+* All applications MUST use the lowest possible privilege service account to access back end systems such as directories, web services, database and message queues
+
+* Credentials SHOULD be transmitted only over encrypted links, particularly weak authentication mechanisms such as passwords
+* Credentials MUST be stored after being one-way hashed and salted using acceptable hashing algorithms
+* Credential stores SHOULD implement configurable settings for thresholds, lockouts, password complexity and alerts
+* Credential stores SHOULD be designed to implement several hashing algorithms as these will be replaced soon and as change is inevitable, your application should plan today for this transition
+
+* Applications SHOULD have the facility to alert the user as to failed login attempts and offer to allow them to change their password (if applicable)
+* Applications SHOULD have the facility to notify the user of their last logged in time, and subsequently report a fraudulent login if they disagree with that date and time
+* Authentication and registration processes, particularly login failures, SHOULD provide no information as to if an account exists or password or is wrong. A single error message for the end user covering both scenarios is more than adequate
+* All pages SHOULD have an effective logout button on every single page in a common location
+* Applications SHOULD possess administrative functions to detail and manage never logged in accounts, idle accounts, and accounts that have been administratively- or soft- locked
+* Passwords MUST be easily changed. Applications MAY include password strength indicators or provide a random password generator function
+
+* There SHOULD be a logical difference between administrative lockout and failed login lockout, so that re-enabling all users en masse does not unlock administratively locked users
+
+* Medium value applications SHOULD and High value applications MUST provide a mechanism to re-authenticate or transaction sign high value transactions
+* Applications MUST protect credentials from common authentication attacks as detailed in the Testing Guide. Following the sections in this chapter will produce such an outcome
+
+Things not to do:
+
+* Applications MUST NOT store any secret part of the credential in the clear (passwords or questions and answers if implemented)
+* Applications MUST NOT expose the credential in untrusted locations, such as cookies, headers or hidden fields
+* Applications MUST NOT implement CAPTCHA as there is case law against them with respect to universal access and ineffective
+* Applications MUST NOT implement questions and answers as they are contrary to most privacy regimes and ineffective
+* Applications SHOULD NOT rely on infrastructure authentication, such as REFERER headers or the client's DNS or IP address as these can be faked
+
+==Thresholds Governor==
+
+All authentication systems are designed to be open to anonymous, unauthenticated users. Therefore, they are open to denial of service and brute force attacks. 
+
+Applications implementing their own authentication systems should consider a threshold governor to prevent the over-use of the following paths:
+
+* Account registration processes (if any)
+* Primary authentication path
+* Step up authentication (such as two factor tokens)
+* Password change**
+* Password resets**
+
+(**Low value systems only - Most medium and all high value systems should not be using passwords, and thus do not possess password reset capabilities)
+
+OWASP's ESAPI project contains a reference implementation of a basic threshold governor, which is in turn linked to the intrusion logging mechanism based upon a certain number of failed events being raised in a particular time period. You may wish to use this mechanism in your own code by adopting ESAPI and overriding the necessary classes as you see fit.
+
+===Sequence Diagram===
+
+TBA
+
+===Suggested Timeouts===
+
+The following timeouts are suggested, but any value will do as long as it severely impacts both vertical and horizontal brute force attacks. 
+
+* One failed attempt: At least 5 seconds
+* Two failed attempts: At least 15 seconds
+* Three failed attempts: At least 45 seconds
+
+If there's an obvious brute force attempt (for example, more than 100 attempts per minute), the IP address and/or session should be banned for a period of time, such as 15 minutes. In such cases, error messages should make it clear why this action has been taken. 
+
+===Distributed Brute Force===
+
+If in case of a distributed brute force, the application should monitor the total number of failed authentication attempts per minute, and have a configurable threshold above which the authentication system automatically injects a configurable 45+ second delay between authentication attempts. This will make all but the largest distributed brute force attempt infeasible, even when looking for a single account with a well known password.
+
+==Authenticating Value Transactions with Transaction Signing==
+
+Any system can benefit from the use of transaction signing. Transaction signing requires a user to interact with some out of bound device, such as a two factor token calculator or SMS message to complete a high value transaction. For example, if a bank wishes to establish an online credit card registration process, they could get the user to verify that this transaction is valid by completing a transaction verification. In the case of mobile phones, this could simply include sending a random value to the user's phone or ringing them with a IVR system and digitally read a set of digits to be entered. 
+
+===SMS Based Transaction Signing Sequence Diagram===
+
+For low end through to moderate high value systems, the use of a second factor such as a mobile phone is an excellent low cost alternative to two factor authentication fobs. This mechanism is actually stronger than most two factor authentication fobs as to attack it, the attacker would have to involve individual users to perform the same sort of attacks as they would do today. 
+
+
+There is a single weakness in this model - mobile phone registration and updating. If attackers can register their phone before the real user or update the user's profile to become their number, the attacker can perform high value transactions with impunity. The application MUST enforce that any one number is only linked to a single account, and to ensure that appropriate safeguards are in place, for example if the same number is being used in multiple accounts at different times as these are signs of phishing. 
+
+Physically requiring proof of identity to register or update the mobile phone produces the strongest results.
+
+===Token Based Transaction Signing Sequence Diagram===
+
+For the highest value systems, the use of transaction signing calculators as sold by a number of token manufacturers would be the best alternative. These take a portion of the transaction's details and combine it with a private key signing on the calculator. Attackers would have to get the user to log in, type in the values and then subsequently give them the result before fraud would occur. This is extremely unlikely and is not amenable to widespread phishing attacks.
+
+==Authenticating With Multi-Factor Systems==
+
+TBA
+
+===What is two factor authentication, really?===
+
+Two factor authentication is using more than one of:
+
+* Something you know (account details or passwords)
+* Something you have (tokens or mobile phones)
+* Something you are (biometrics)
+
+to logon or process a transaction. 
+
+If you can create another factor, such as a special token on a particular computer based upon a set of something you know or a single biometric reading, this is effectively single factor authentication. For example, some banks implement a scheme that requires you to type a username, passwords and answer a personal question, and if you get those right, your computer will be marked as a physical factor. It's obvious that this scheme is open to many attacks, but the primary weakness is that the system is not truly a two factor solution as it is based upon a simple set of "something you know" and thus you can make <i>any</i> computer a second factor if you know these details. 
+
+Typical two factor solutions involve registering a hardware device such as a token, phone or biometric device on top of the "something you know". In all cases, the two factors should be used together for best results. 
+
+Lastly, biometric devices are known weak against simple physical attacks, have a known false positive and known false negative authentication rate, thus making them less than desirable as a non-repudiation mechanism. Additionally, biometrics are expensive compared to the cost of phone- and token- based two factor authentication schemes. Until the technology significantly improves, becomes price competitive with cheap phone and tokens, and is relatively universal, biometric devices should not be considered except in highly specialist circumstances.
+
+===Sequence Diagram===
+
+TBA
+
+===Weaknesses===
+
+Simple two factor tokens and one time pads, such as German banking TAN lists, are subject to man in the middle attacks. The attacker will put up a realistic looking login page, and instead of logging in directly, the attacker will use the token or TAN to log in first and perform value transactions such as transferring all the money out from a bank account, and then present an error to the user. Once they log in properly, they will discover their account has been attacked. 
+
+As such, cheap two factor tokens by themselves do not immediately decrease fraud rates. Only transaction signing can do that.
+
+==Single-Sign On (SSO) Authentication==
+
+TBA. Discuss LDAP, AD, TAM, SiteMinder.
+
+===Sequence Diagram===
+
+TBA
+
+==Federated Authentication==
+
+TBA
+
+===Sequence Diagram===
+
+TBA
+
+==Authentication For Low Value Systems==
+
+Low value systems, such as blogs, social networks and so on, should be free to implement weak authentication mechanisms. Given the chance, users should be able to adopt stronger authentication mechanisms if you have them available. 
+
+===Registration===
+
+Self-registration can be problematic, particularly for highly sought after resources such as free mail accounts. 
+
+===Password Sequence Diagram===
+
+TBA
+
+===Logging On Using ESAPI===
+
+<pre>
+try {
+    String username = request.getParameter(username);
+    String password = request.getParameter(password);
+
+    Authenticator instance = ESAPI.authenticator();
+
+    if ( username != null && password != null ) {
+         if ( instance.exists(username) ) {
+
+             User user = instance.getUser(username);
+
+             if ( !instance.verifyPassword(user, password) ) {
+                  // error with no such username or password. ESAPI's verifyPassword() automatically increments threshold counts and triggers the IDS if necessary
+             }
+
+             if ( !instance.getUser(username).isEnabled() ) {
+                  // error with your account is locked or similar
+             }
+
+             accountName = user.getAccountName();
+             lastLoginTime = user.getLastLoginTime();
+             lastFailedLogin = user.getLastFailedLoginTime();
+             failedLoginCount = user.getFailedLoginCount();
+             roles = user.getRoles();
+             lastHost = user.getLastHostAddress();
+         }
+         else {
+                  // error with no such username or password
+         }
+    } else {
+         // error with missing username or password
+    }
+}
+catch ( AuthenticationException e) {
+    // Handle errors appropriately
+}
+
+</pre>
+
+===Registering a User Using ESAPI===
+
+TBA
+
+===Changing a User's attributes Using ESAPI===
+
+TBA
+
+===Deleting a User Using ESAPI===
+
+TBA
+
+===Password Guidelines===
+
+Passwords are intrinsically weak. Therefore, your application should encourage good password practices:
+
+* Credentials should only traverse encrypted links
+* Store the password in a strongly hashed and salted format to prevent rainbow table attacks. 
+* Pass phrases (long passwords over 20 characters in length) should be encouraged
+* Short passwords should be prohibited
+* Do not force folks to change passwords frequently as this results in the users writing the passwords down insecurely
+* Where suitable, try to share the credential with as many low value systems as possible to encourage one single high quality password 
+* Allow expert users to store strong passwords in approved password managers. Encourage them to use unique random passwords for each service
+
+===Lockouts===
+
+Lockouts are counter-productive if implemented badly. 
+
+In general, the threshold governor (see above) should be implemented to prevent any one IP address monopolizing authentication CPU, network, and IO resources. If necessary, such as for compliance with a national security standard, a configurable soft lockout of approximately 15-30 minutes should apply, with an error message stating the reason and when the account will become active again. 
+
+Ensure any lockout mechanism protects against both same username, many passwords and many usernames and same password attacks. This can only be done using the threshold governor approach as shown above. 
+
+===Minimum hash strength===
+
+The minimum hash strength SHOULD be SHA-256 for the next few years. 
+
+Applications MUST be designed to allow selection of multiple algorithms, as the USA's NIST is currently running an hashing algorithm competition, which will choose a successor to SHA-256, SHA-384, and SHA-512. Your application MUST be able to transition to the new hashing algorithm by no later than one year after the new algorithm's release. This doesn't mean that MD5 will be dead at that point, but your application should cope with the idea that insecure algorithms such as MD5 or SHA-1 can be retired at some point.
+
+==Authentication Anti-Patterns==
+
+Do not implement any of these features - they are either dangerous, illegal, ineffective, or all of the above. 
+
+===Default Accounts===
+
+Do not ship your software with any default accounts such as "YourProductName", "sa", "root", "administrator", or any hard coded service accounts. Do not include any screen shots or text in the documentation indicating a preferred username or password for a particular application ID or service. 
+
+===Remember Me===
+
+Implementing remember me functionality can be incredibly hard. Often software will just embed the username and password in headers or cookies, or a hash or crypto blob of the same. Based upon your risk profile, your application:
+
+* High value applications MUST NOT possess remember me functionality.
+* Medium value applications SHOULD NOT contain remember me functionality. If present, the user MUST opt-in to remember me. The system SHOULD strongly warn users that remember me is insecure particularly on public computers
+* Low value applications MAY include an opt-in remember me function. There should be a warning to the user that this option is insecure, particularly on public computers.
+
+ESAPI's reference implementation has basic "remember me" functionality based upon an AES encryption of the username and password, but this is not recommended for medium value systems, and should be used with care on low value systems.
+
+===Hard Coded Credentials===
+
+Do not include any credentials in your source code, including (but not limited to) usernames, passwords, certificates, token IDs, or phone numbers. 
+
+Such constants belong in properly protected properties or configuration files. ESAPI has an encrypted properties mechanism you can use to protect clear text credentials in such files.
+
+===CAPTCHA===
+
+CAPTCHA (Completely automated Turing Tests To Tell Humans and Computers Apart) are illegal in any jurisdiction that prohibits discrimination against disabled citizens. This is essentially the entire world. Although CAPTCHAs seem useful, they are in fact, trivial to break using any of the following methods:
+
+* Optical Character Recognition. Most common CAPTCHAs are solvable using specialist CAPTCHA breaking OCR software.
+* Break a test, get free access to <i>foo</i>, where <i>foo</i> is a desirable resource
+* Pay someone to solve the CAPTCHAs. The current rate at the time of writing is $12 per 500 tests. 
+
+Therefore implementing CAPTCHAs in your software is most likely to be illegal in at least a few countries, and worse - completely ineffective.
+
+===Secret Questions And Answers===
+
+Questions and answers are back door credentials - they equate to the username and password for the user. Often such schemes use "Mother's Maiden Name" or other easily found information. If all systems use the same Q&As, it will be possible to break into many accounts using the same information. 
+
+They are unacceptable for the following reasons:
+
+* Collection of information about people without their explicit consent (such as "Mother's maiden name") is illegal in most privacy regimes. Such collection is subject to privacy laws, review and correction by the subject, and so on. 
+* IT Security Policies and standards such as ISO 27000 prohibit the clear text storage of passwords, but almost all Q&A schemes store both the question and answer in the clear
+* The information in the answers is public for a goodly portion of the users of the Internet, and thus is found using public sources
+
+Secret Questions and Answers have been publicly abused, most notably by the attack on Sarah Palin's e-mail account, exposing her use of her Yahoo free mail account for government business. 
+
+[[Guide Table of Contents|Development Guide Table of Contents]]
+[[Category:OWASP_Guide_Project]]
+[[Category:Authentication]]

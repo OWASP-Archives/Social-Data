@@ -1,0 +1,65 @@
+= OWASP 2006 Annual Report =
+
+===From the Executive Director===
+Welcome to this inaugural Annual Report for OWASP!
+
+2006 has been an exciting time for the web application security. Many organizations have realized just how important web application security is to their bottom line - with the Payments Card Industry (PCI) to name just one mandating code reviews and security assessets of code. 
+
+OWASP is proud to have been on the forefront of the trends over the last six years. 
+
+OWASP is an open project, and thus this should include our financial data and roadmap. 
+
+We have many exciting projects underway, with some huge contributions from the community and security vendors alike. These tools, like LAPSE (a static Java source code checker) and CAL9000 (a Javascript penetration testing tool) are groundbreaking and should be a part of every serious web application security 
+Our tax year is the US financial year, so it may make more sense for the next annual report to be issued after we have filed. 
+
+If you have any queries relating to this annual report, please contact us at owasp@owasp.org
+
+=== Financial Summary ===
+OWASP is a 503(c).1 non-profit organization. We do not have any share holders, so essentially, this information is produced for the benefit of our community and transparency. 
+
+The above figures are of as 31st August 2006, and include most of the projected expenses on the Autumn of Code, but does not include the all the income or expenses from the Seattle conference. 
+
+Please see the Financial Statements section for more detail
+
+=== Operations and significant developments ===
+2006 has been a great year for OWASP. We have many active projects, more local chapters than ever before, greater adoption of our standards and guidelines, and two fantastic conferences. We expect the trend to continue through 2007. 
+
+==== Revenue Streams ====
+OWASP expects to generate income from three major sources: corporate sponsorship, conferences, and membership dues. The major driver for 2006/2007 is to develop a method to allow membership dues to be levied and a portion of that money made available to the relevant local chapters. 
+
+==== Infrastructure ====
+This last six months have been very active on the infrastructure front. We have moved our mail lists in house, set up forums and blogs for our members, and moved our entire content to a Wiki.
+ 
+These moves allow the community to more easily access and work together. In particular, it enables us to host the Autumn of Code, which in turn builds real results for selected OWASP projects.
+
+==== Autumn of Code ====
+We have just commissioned the OWASP Autumn of Code. Dinis Cruz is running with this project, which will for the first time see the funds donated by our corporate sponsors and membership dues being used for OWASP projects directly. At the time of writing, submissions have been accepted and projects are underway.  
+If this project is successful, we will be seeking sponsorship for the Autumn of Code 2007. This will allow organizations to sponsor projects which have been useful for them and in turn allows the organizations to see real improvements.  
+
+==== Top 10 2007 ====
+The Top 10 has been tremendously successful, and is widely adopted as a technical standard. SANS, Payments Card Industry (PCI), and many others have made the Top 10 a core part of their web application security standard.
+
+Much has changed since its release in 2004, it’s time for a refresh. The project is actively working towards a release in early 2007, with a draft expected in early November 2006. 
+
+==== Guide 3.0 ====
+The project is refreshing content from the successful launch of the Guide 2.0 in 2005. There are two new chapters: Ajax Security and State Management along with a raft of new content in each chapter to bring it completely up to date. It is the most comprehensive “how to code securely” tome available for any price.
+
+The Guide 3.0 will be appearing in print sometime in early 2007 through No Starch Press. 
+
+==== Contributions to OWASP ====
+OWASP has been proud to accept many contributions from outside organizations. This demonstrates OWASP’s acceptance by the industry as the preeminent web application security organization. 
+Projects include:
+*CLASP - Comprehensive Lightweight Application Security Project. Donated by Secure Software
+*CAL 9000 - Javascript web application security tester. Donated by Chris Loomis
+*LAPSE - Java code review tool
+*Vulncat - A taxonomy donated by Fortify Software with over 500 entries.
+We have much work to integrate some of these projects into a useable whole that we have created the Honeycomb project. This project should enable several large projects (CLASP, Guide, Vulncat, etc) to share content and methodologies.
+Forward looking statements
+During the next twelve months, a key driver for OWASP is openness and transparency.
+We are seeking more financial individual members, who in return for a GNI indexed membership fee, will receive a proper membership kit for the first time. 
+Once we have a critical mass of financial members, we will be adopting more of the common NetBSD method of open elections to elect OWASP Foundation positions, which have been to date appointments based upon meritocracy. 
+We expect the first AGM and votes to be held sometime in 2007, possibly as early as the OWASP EU conference in May 2007.
+OWASP Seattle		October 16-18 2006
+OWASP Seattle is looking to be an excellent conference with two tracks and a training day. One of the keynote speakers is Michael Howard from Microsoft’s security team and a noted author of several respected books, including Writing Secure Code and Secure Development Lifecycle. 
+OWASP EU 			May 2007	
+The location for this conference has not been set as yet, but a leading contender is Portugal.

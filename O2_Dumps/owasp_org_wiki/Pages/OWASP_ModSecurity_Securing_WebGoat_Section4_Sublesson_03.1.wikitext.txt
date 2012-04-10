@@ -1,0 +1,72 @@
+3. AJAX Security -> 3.1 LAB: DOM-Based cross-site scripting
+
+=== Lesson overview ===
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution === 
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information. 
+
+=== Strategy ===
+
+This WebGoat lesson demonstrates DOM-Based cross-site scripting. The vulnerability in this WebGoat lesson is to enter malicious code in the "Enter your name" text box like:
+<pre>
+<img src=x onerror=;;alert('XSS') />
+</pre>
+
+The source code snippet containing the vulnerability is:
+<pre>
+<script src='javascript/DOMXSS.js' language='JavaScript'></script><script 
+ src='javascript/escape.js' language='JavaScript'></script>
+ <h1 id='greeting'></h1>Enter your name: 
+ <input value='' onKeyUp='displayGreeting(person.value)' name='person' 
+ type='TEXT'><br><br><input name='SUBMIT' type='SUBMIT' 
+ value='Submit Solution'>
+</pre>
+
+The 'displayGreeting' function is in the file 'DOMXSS.js'.
+
+The solution for the lesson is to modify WebGoat's source code and HTML-escape 'person.value' with a function 'escapeHTML' function which is in the file 'escape.js'.
+
+=== Implementation === 
+
+Since this vulnerability is in the JavaScript code, the attack payload stays on the client side and ModSecurity will not see it since it will not be sent to the server.
+
+Instead, our solution will be to replace the 'displayGreeting' function with our own by appending it to the end of the HTML page and calling the 'escapeHTML' function in 'escape.js'. While not practical (an attacker could bypass the new function), replacing an existing JavaScript function with a new one will be demonstrated.
+
+The JavaScript function:
+<pre>
+<script language="JavaScript1.2" type="text/javascript">
+function displayGreeting(name) {
+  if (name != ''){
+    document.getElementById("greeting").innerHTML="Hello, " + escapeHTML(name) + "!";
+  }
+}
+</script>
+</pre>
+
+Before placing the function into a ModSecurity rule, test it by intercepting the HTTP response in a web proxy, copy and paste the code after the </html>, then forward the response to the browser.
+
+A phase 2 rule is not necessary; the function can be placed in every HTML page for this lesson.
+
+The phase 4 rule in 'rulefile_03-1_DOM-based-XSS.conf' is (the JavaScript should be packed on one line):
+<pre>
+  SecRule RESPONSE_CONTENT_TYPE "!^text/html" "phase:4,t:none,allow,nolog"
+
+  # Here check if session variable set; if so, then subst. 'displayGreeting' function
+  SecRule SESSION:LESSON031 "@eq 1" "phase:4,t:none,log,auditlog,pass, 
+    msg:'appending javascript in rulefile_03-1_DOM-based-XSS.conf',  
+    append:'<script language=\"JavaScript1.2\" type=\"text/javascript\"> 
+function displayGreeting(name) {if (name != \"\") 
+{document.getElementById(\"greeting\").innerHTML=\"Hello, \" 
++ escapeHTML(name) + \"!\";}}</script>'"
+</pre>
+
+When malicious input is entered, it is properly escaped and displayed on the HTML page:
+
+[[Image:OWASP_ModSecurity_Securing_WebGoat_DOM_based_XSS_SS1.jpg]]
+
+=== Comments ===
+
+* This lesson demonstrates replacing an existing JavaScript function with a new one.

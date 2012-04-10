@@ -1,0 +1,31 @@
+==Release 1.0.0==
+
+This release provides the following significant additions to the Paros Proxy:
+* Comprehensive help screens
+* Break points to replace Traps
+* A new Reports menu with added functionality
+* Improved History searching
+* A history filter
+* Notes, which can be added to any request
+* Multiple tags
+* Add and edit alerts
+* A new encoder / descoder
+* Passive scanning, which at this release allows tags to be automatically added
+Full details are available [http://code.google.com/p/zaproxy/wiki/HelpReleases1_0_0 here]
+
+==Release 1.1.0==
+
+This release is planned for before the end of 2010 and is likely to include:
+* OWASP rebranding
+* Improvements to the passive and active automated scanners
+* Improvements the Spider
+* The addition a basic port scanner
+* The ability to brute force files and directories (using components from [http://www.owasp.org/index.php/Category:OWASP_DirBuster_Project DirBuster])
+* Further internationalization
+
+==Future releases==
+
+Future releases are likely to include:
+* Further improvements to the passive and active automated scanners
+* Further improvements the Spider
+* Fuzzing (using components from [http://www.owasp.org/index.php/Category:OWASP_JBroFuzz JBroFuzz])

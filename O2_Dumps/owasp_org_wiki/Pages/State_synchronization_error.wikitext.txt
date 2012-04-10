@@ -1,0 +1,155 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+State synchronization refers to a set of flaws involving contradictory states of execution in a process which result in undefined behavior.
+
+'''Consequences'''
+
+* Undefined: Depending on the nature of the state of corruption, any of the listed consequences may result.
+
+'''Exposure period'''
+
+* Design: Design flaws may be to blame for out-of-sync states, but this is the rarest method.
+* Implementation: Most likely, state-synchronization errors occur due to logical flaws and race conditions introduced at implementation time.
+* Run time: Hardware, operating system, or interaction with other programs may lead to this error. 
+
+'''Platform'''
+
+* Languages: All
+* Operating platforms: All
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood of exploit'''
+
+Medium to High
+
+The class of synchronization errors is large and varied, but all rely on the same essential flaw. The state of the system is not what the process expects it to be at a given time. 
+
+Obviously, the range of possible symptoms is enormous, as is the range of possible solutions. The flaws presented in this section are some of the most difficult to diagnose and fix. It is more important to know how to characterize specific flaws than to gain information about them.   
+
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+In C/C++:
+
+<pre>
+static void print(char * string) {
+  char * word;
+  int counter;
+  fflush(stdout);
+  for(word = string; counter = *word++; ) putc(counter, stdout);
+}
+
+int main(void) {
+   pid_t pid;
+   if( (pid = fork()) < 0) exit(-2);
+   else if( pid == 0) print("child");
+   else print("parent\n");
+   exit(0);
+}
+</pre>
+
+In Java:
+
+<pre>
+class read{
+  private int lcount;
+  private int rcount;
+  private int wcount;
+
+  public void getRead(){
+    while ((lcount == -1) || (wcount !=0));
+    lcount++;
+
+  public void getWrite(){
+    while ((lcount == -0);
+    lcount--;
+    lcount=-1;
+
+  public void killLocks(){
+    if (lcount==0) return;
+    else if (lcount == -1) lcount++;
+    else lcount--;
+  }
+}
+</pre>
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* Implementation: Pay attention to asynchronous actions in processes; and make copious use of sanity checks in systems that may be subject to synchronization errors.
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Synchronization and Timing Vulnerability]]
+[[Category:OWASP_CLASP_Project]]
+[[Category:Code Snippet]]
+[[Category:C]]
+[[Category:Java]]

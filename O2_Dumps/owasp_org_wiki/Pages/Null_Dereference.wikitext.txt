@@ -1,0 +1,149 @@
+{{Template:Vulnerability}}
+{{Template:Fortify}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+The program can potentially dereference a null pointer, thereby raising a NullPointerException.
+
+Null pointer errors are usually the result of one or more programmer assumptions being violated.
+
+Most null pointer issues result in general software reliability problems, but if an attacker can intentionally trigger a null pointer dereference, the attacker might be able to use the resulting exception to bypass security logic or to cause the application to reveal debugging information that will be valuable in planning subsequent attacks.
+
+A null-pointer dereference takes place when a pointer with a value of NULL is used as though it pointed to a valid memory area.
+
+'''Consequences'''
+
+* Availability: Null-pointer dereferences invariably result in the failure of the process.
+
+'''Exposure period'''
+
+* Requirements specification: The choice could be made to use a language that is not susceptible to these issues. 
+* Implementation: Proper sanity checks at implementation time can serve to prevent null-pointer dereferences
+
+'''Platform'''
+
+* Languages: C, C++, Assembly
+* Platforms: All
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Medium
+
+'''Likelihood of exploit'''
+
+Medium
+
+Null-pointer dereferences, while common, can generally be found and corrected in a simply way. They will always result in the crash of the process, unless exception handling (on some platforms) in invoked, and even then, little can be done to salvage the process.
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+===Example 1===
+
+In the following code, the programmer assumes that the system always has a property named "cmd" defined. If an attacker can control the program's environment so that "cmd" is not defined, the program throws a null pointer exception when it attempts to call the trim() method.
+
+	String cmd = System.getProperty("cmd");
+	cmd = cmd.trim();
+
+===Example 2===
+
+Null-pointer dereference issues can occur through a number of flaws, including race conditions and simple programming omissions. While there are no complete fixes aside from contentious programming, the following steps will go a long way to ensure that null-pointer dereferences do not occur.
+
+Before using a pointer, ensure that it is not equal to NULL:
+
+<pre>
+if (pointer1 != NULL) {
+  /* make use of pointer1 */
+  /* ... */
+}
+</pre>
+
+When freeing pointers, ensure they are not set to NULL, and be sure to set them to NULL once they are freed:
+
+<pre>
+if (pointer1 != NULL) {
+  free(pointer1);
+  pointer1 = NULL;
+}
+</pre>
+
+If you are working with a multi-threaded or otherwise asynchronous environment, ensure that proper locking APIs are used to lock before the if statement; and unlock when it has finished.
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Miscalculated null termination]]
+* [[State synchronization error]]
+
+==Related [[Controls]]==
+
+* Requirements specification: The choice could be made to use a language that is not susceptible to these issues. 
+* Implementation: If all pointers that could have been modified are sanity-checked previous to use, nearly all null-pointer dereferences can be prevented.
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+Note: A reference to related [http://cwe.mitre.org/ CWE] or [http://capec.mitre.org/ CAPEC] article should be added when exists. Eg:
+
+* [http://cwe.mitre.org/data/definitions/79.html CWE 79].
+* http://www.link1.com
+* [http://www.link2.com Title for the link2]
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Code Quality Vulnerability]]
+[[Category:Java]]
+[[Category:Implementation]]
+[[Category:Vulnerability]]
+[[Category:Range and Type Error Vulnerability]]
+[[Category:OWASP_CLASP_Project]]
+[[Category:Code Snippet]]
+[[Category:C]]

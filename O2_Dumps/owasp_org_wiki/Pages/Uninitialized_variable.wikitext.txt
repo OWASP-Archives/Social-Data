@@ -1,0 +1,71 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Uninitialized Variable]]
+
+==Overview==
+
+Using the value of an unitialized variable is not safe.
+
+==Consequences ==
+
+*	Integrity: Initial variables usually contain junk, which can not be trusted for consistency. This can cause a race condition if a lock variable check passes when it should not.
+
+*	Authorization: Strings which do are not initialized are especially dangerous, since many functions expect a null at the end - and only at the end - of a string. 
+
+==Exposure period ==
+
+*	Implementation: Use of unitialized variables is a logical bug.
+
+*	Requirements specification: The choice could be made to use a language that is not susceptible to these issues.
+
+*	Design: Mitigating technologies such as safe string libraries and container abstractions could be introduced.
+
+==Platform ==
+
+Languages: C/C++
+
+Operating platforms: Any
+
+==Required resources ==
+
+Any
+
+==Severity ==
+
+High
+
+==Likelihood   of exploit ==
+
+High
+
+==Avoidance and mitigation ==
+
+*	Implementation: Assign all variables to an initial variable.
+
+*	Pre-design through Build: Most compilers will complain about the use of unitialized variables if warnings are turned on.
+
+*	Requirements specification: The choice could be made to use a language that is not susceptible to these issues.
+
+*	Design: Mitigating technologies such as safe string libraries and container abstractions could be introduced.
+
+==Discussion ==
+
+Before variables are initialized, they generally contain junk data of what was left in the memory that the variable takes up. This data is very rarely useful, and it is generally advised to pre-initialize variables or set them to their first values early.
+
+If one forget - in the C language - to initialize, for example a char *, many of the simple string libraries may often return incorrect results as they expecting the null termination to be at the end of a string.
+
+==Examples ==
+
+In C\C++, or Java:
+
+<pre>
+int foo;
+void bar(){
+  if (foo==0) /.../
+    /../
+ }
+</pre>
+
+==Related problems ==
+
+Not available.

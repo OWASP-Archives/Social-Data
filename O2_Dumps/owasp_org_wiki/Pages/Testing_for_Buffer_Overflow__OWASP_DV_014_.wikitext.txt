@@ -1,0 +1,30 @@
+{{Template:OWASP Testing Guide v3}}
+
+==Related Security Activities==
+
+===Description of Buffer Overflow===
+
+See the OWASP article on [[Buffer_overflow_attack|Buffer Overflow]] Attacks.
+
+See the OWASP article on [[Buffer_Overflow|Buffer Overflow]] Vulnerabilities.
+
+===How to Avoid Buffer Overflow Vulnerabilities===
+
+See the [[:Category:OWASP Guide Project|OWASP Development Guide]] article on how to [[Buffer_Overflows|Avoid Buffer Overflow]] Vulnerabilities.
+
+===How to Review Code for Buffer Overflow Vulnerabilities===
+
+See the [[:Category:OWASP Code Review Project|OWASP Code Review Guide]] article on how to [[Reviewing_Code_for_Buffer_Overruns_and_Overflows|Review Code for Buffer Overruns and Overflows]] Vulnerabilities.
+
+
+'''What's buffer overflow?'''
+
+To find out more about buffer overflow vulnerabilities, please go to [[Buffer Overflow]] pages.
+
+'''How to test for buffer overflow vulnerabilities?'''
+
+Different types of buffer overflow vulnerabilities have different testing methods. Here are the testing methods for the common types of buffer overflow vulnerabilities.
+
+* [[Testing_for_Heap_Overflow|Testing for heap overflow vulnerability]]
+* [[Testing_for_Stack_Overflow|Testing for stack overflow vulnerability]]
+* [[Testing_for_Format_String|Testing for format string vulnerability]]

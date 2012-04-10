@@ -1,0 +1,134 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+A heap overflow condition is a buffer overflow, where the buffer that can be overwritten is allocated in the heap portion of memory, generally meaning that the buffer was allocated using a routine such as the POSIX malloc() call.
+
+'''Consequences'''
+
+*	Availability: Buffer overflows generally lead to crashes. Other attacks leading to lack of availability are possible, including putting the program into an infinite loop.
+*	Access control (memory and instruction processing): Buffer overflows often can be used to execute arbitrary code, which is usually outside the scope of a program's implicit security policy.
+*	Other: When the consequence is arbitrary code execution, this can often be used to subvert any other security service. 
+
+'''Exposure period'''
+
+*	Requirements specification: The choice could be made to use a language that is not susceptible to these issues.
+*	Design: Mitigating technologies such as safe string libraries and container abstractions could be introduced.
+*	Implementation: Many logic errors can lead to this condition. It can be exacerbated by lack of or misuse of mitigating technologies.
+
+'''Platform'''
+
+*	Languages: C, C++, Fortran, Assembly
+*	Operating platforms: All, although partial preventative measures may be deployed depending on environment.
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Very High
+
+'''Likelihood of exploit'''
+
+*	Availability: Very High
+*	Access control (instruction processing): High
+
+'''Avoidance and mitigation'''
+
+*	Pre-design: Use a language or compiler that performs automatic bounds checking.
+*	Design: Use an abstraction library to abstract away risky APIs. Not a complete solution.
+*	Pre-design through Build: Canary style bounds checking, library changes which ensure the validity of chunk data, and other such fixes are possible, but should not be relied upon.
+*	Operational: Use OS-level preventative functionality. Not a complete solution.
+
+'''Discussion'''
+
+Heap overflows are usually just as dangerous as stack overflows. Besides important user data, heap overflows can be used to overwrite function pointers that may be living in memory, pointing it to the attacker's code.
+
+Even in applications that do not explicitly use function pointers, the run-time will usually leave many in memory. For example, object methods in C++ are generally implemented using function pointers. Even in C programs, there is often a global offset table used by the underlying runtime.
+
+==Risk Factors==
+
+TBD
+
+==Examples ==
+
+While the buffer overflow example above counts as a stack overflow, it is possible to have even simpler, yet still exploitable, stack-based buffer overflows:
+
+<pre>
+#define BUFSIZE 256
+
+int main(int argc, char **argv) {
+  char *buf;
+
+  buf = (char *)malloc(BUFSIZE);
+  strcpy(buf, argv[1]);
+}
+</pre>
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Write-what-where condition]]
+
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:Vulnerability]]
+[[Category:Range and Type Error Vulnerability]]
+[[Category:OWASP_CLASP_Project]]
+[[Category:Code Snippet]]
+[[Category:C]]
+[[Category:OWASP ASDR Project]]

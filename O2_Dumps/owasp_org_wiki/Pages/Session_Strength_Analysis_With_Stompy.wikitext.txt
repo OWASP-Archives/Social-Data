@@ -1,0 +1,12 @@
+'''Description'''
+
+Stompy performs NIST FIPS statistical tests on session generation and checks for correlations between arbitrary bits. A truly random token never exhibits correlation between the stage of one bit and the state of another. In this movie, I'll show you how to download, extract, compile, and run Stompy and analyze session tests for failure or pass.
+
+
+'''Download:'''
+
+http://yehg.net/lab/pr0js/files.php/sessionstrengthanalysiswithstompy.zip
+
+
+
+[[Category:Non-OWASP_Trainings]]

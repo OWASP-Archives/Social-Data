@@ -1,0 +1,138 @@
+==== Project Information ====
+----
+{| style="width:100%" border="0" align="center"
+ | style="width:15%; background:#7B8ABD" align="center"|'''Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Enterprise Security API (ESAPI) Project'''
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|
+Reinventing the wheel when it comes to developing security controls for every web application or web service leads to wasted time and massive security holes. The '''OWASP Enterprise Security API (ESAPI) Toolkits''' help software developers guard against security-related design and implementation flaws. The ESAPI Toolkit architecture is very simple – a collection of classes that encapsulate the key security operations most applications need. ESAPI is designed to make it easy to retrofit security into existing applications, as well as providing a solid foundation for new development. ESAPI comes with an ESAPI filter that minimizes the changes required to your base application. There are ESAPI Toolkits for the following platforms:
+* '''Java EE''' - This version of the ESAPI Toolkit is currently available.
+* '''Classic ASP''' - This version of the ESAPI Toolkit is currently under assessment.
+* '''PHP''' - This version of the ESAPI Toolkit is currently under development.
+* '''.NET''' - This version of the ESAPI Toolkit is currently under development.
+* '''Cold Fusion''' - This version of the ESAPI Toolkit is currently under development.
+* '''Haskel''' - This version of the ESAPI Toolkit is currently under development.
+  |}
+----
+
+==== Java EE ====
+----
+{| style="width:100%" border="0" align="center"
+ | style="width:15%; background:#7B8ABD" align="center"|'''Language'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''Java EE'''
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|
+Reinventing the wheel when it comes to developing security controls for every web application or web service leads to wasted time and massive security holes. The '''OWASP Enterprise Security API (ESAPI) Toolkits''' help software developers guard against security-related design and implementation flaws. The ESAPI Toolkit architecture is very simple – a collection of classes that encapsulate the key security operations most applications need. ESAPI is designed to make it easy to retrofit security into existing applications, as well as providing a solid foundation for new development. ESAPI comes with an ESAPI filter that minimizes the changes required to your base application. There are ESAPI Toolkits for the following platforms:
+* '''Java EE''' - This version of the ESAPI Toolkit is currently available.
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|
+'''Key Information'''
+ | style="width:14%; background:#cccccc" align="center"|
+Project Leader<br>[[:User:Jeff Williams|'''Jeff Williams''']]
+ | style="width:15%; background:#cccccc" align="center"|
+Project Contibutors<br>If any, add here
+ | style="width:10%; background:#cccccc" align="center"|
+Mailing List<br>[https://lists.owasp.org/mailman/listinfo/owasp-esapi '''Subscribe here''']<br>[mailto:owasp-esapi@lists.owasp.org '''Use here''']
+ | style="width:17%; background:#cccccc" align="center"|
+License<br>[http://en.wikipedia.org/wiki/BSD_license '''Berkeley Software Distribution (BSD)''']
+ | style="width:14%; background:#cccccc" align="center"|
+Project Type<br>[[:Category:OWASP_Project#Release Quality Projects|'''Tool''']]
+ | style="width:15%; background:#cccccc" align="center"|
+Sponsors<br><div style="background:#ffffff">[http://www.aspectsecurity.com/ https://www.owasp.org/images/d/d1/Aspect_logo.gif]</div>
+ |}
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|
+Provisory '''[[:Category:OWASP Project Assessment#Release Quality Tool Criteria|Release Quality]]'''<br>(Waiting for Second Reviewer's assessment)<br>[[:OWASP Enterprise Security API Project - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="left"|
+* ESAPI Demo application - [[ESAPI_Swingset|The ESAPI Swingset]]<br>
+* JAVA 1.4 compatible JAR for ESAPI v1.4 - [http://owasp-esapi-java.googlecode.com/files/owasp-esapi-full-java-1.4.jar Complete] & [http://owasp-esapi-java.googlecode.com/files/owasp-esapi-basic-java-1.4.jar Basic] JAR files<br>
+* [http://owasp-esapi-java.googlecode.com/files/owasp-esapi-java-src-1.4.zip Source files for ESAPI v1.4]<br>
+* [http://code.google.com/p/owasp-esapi-java/ ESAPI Google Code repository]<br>
+* [http://owasp-esapi-java.googlecode.com/svn/trunk_doc/index.html ESAPI Javadocs]<br>
+* [https://www.owasp.org/index.php/ESAPI_Javadocs Javadocs' information generation]<br>
+* [http://code.google.com/p/owasp-esapi-java/issues/list Problems with the ESAPI may be reported here]
+ | style="width:29%; background:#cccccc" align="center"|
+[http://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project OWASP Top Ten]<br>[http://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project OWASP ASVS Project]
+ |}
+----
+
+==== Classic ASP ====
+----
+{| style="width:100%" border="0" align="center"
+ | style="width:15%; background:#7B8ABD" align="center"|'''Language'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Classic ASP Security Project''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|This project aims to create a secure framework for Classic ASP application by complementing existing OWASP projects with documentation for this particular technology and the creation of security libraries. More specifically:
+* Creation of a Common Object Repository for ASP applications based on OWASP ESAPI Project including objects and/or references to libraries for security applications all this aligned with OWASP Top10 and OWASP Guide .
+* Create Documentation aligned to OWASP Code Review Project Checklist providing additional technology-specific checks.
+* Addition of expression for Code Review Tool to support Classic ASP applications.
+* Implementation of Version 1 of Stinger for ASP either by using an installable COM library or ISAPI.
+* This same module will compliment the OWASP Validation Documentation Project. 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''key Information'''
+ | style="width:14%; background:#cccccc" align="center"|Project Leader<br>[[User:Jcmax|'''Juan Carlos Calderon''']]
+ | style="width:15%; background:#cccccc" align="center"|Project Contributors<br>(if any)
+ | style="width:10%; background:#cccccc" align="center"|Mailing list<br>[https://lists.owasp.org/mailman/listinfo/owasp-classic-asp-security-project '''Subscribe here''']<br>[mailto:OWASP-Classic-ASP-Security-Project(at)lists.owasp.org '''Use here''']
+ | style="width:17%; background:#cccccc" align="center"|License<br>[http://creativecommons.org/licenses/by-sa/3.0/ '''Creative Commons Attribution Share Alike 3.0''']
+ | style="width:14%; background:#cccccc" align="center"|Project Type<br>[https://www.owasp.org/index.php/Category:OWASP_Project#tab=Alpha_Status_Projects '''Tool''']
+ | style="width:15%; background:#cccccc" align="center"|Sponsors<br>[[OWASP Summer of Code 2008|'''OWASP SoC 08''']]  
+ |}
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|
+Provisory '''[[:Category:OWASP_Project_Assessment#Alpha_Quality_Tool_Criteria|Alpha Quality]]'''<br>[[:OWASP Classic ASP Security Project - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="center"|
+[[:image:OWASP_Classic_ASP_ESAPI.zip|OWASP Classic ASP ESAPI ZIP]]
+ | style="width:29%; background:#cccccc" align="center"|
+[[:Category:OWASP Enterprise Security API|'''OWASP Enterprise Security API''']]
+ |}
+----
+
+==== PHP ====
+----
+{| style="width:100%" border="0" align="center"
+ | style="width:15%; background:#7B8ABD" align="center"|'''Language'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''PHP''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|
+Fill in here.
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''key Information'''
+ | style="width:14%; background:#cccccc" align="center"|Project Leader<br>[[User:Vanderaj|'''Andrew van der Stock''']]
+ | style="width:15%; background:#cccccc" align="center"|Project Contributors<br>(if any)
+ | style="width:10%; background:#cccccc" align="center"|Mailing List<br>[https://lists.owasp.org/mailman/listinfo/owasp-esapi '''Subscribe here''']<br>[mailto:owasp-esapi@lists.owasp.org '''Use here''']
+ | style="width:17%; background:#cccccc" align="center"|License<br>[http://creativecommons.org/licenses/by-sa/3.0/ '''Creative Commons Attribution Share Alike 3.0''']
+ | style="width:14%; background:#cccccc" align="center"|Project Type<br>[https://www.owasp.org/index.php/Category:OWASP_Project#tab=Release_Status_Projects '''Tool''']
+ | style="width:15%; background:#cccccc" align="center"|Sponsors<br>if any  
+ |}
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|
+'''[[:Category:OWASP_Project_Assessment#Alpha_Quality_Tool_Criteria|Alpha Quality]]'''<br>[[:OWASP Enterprise Security API - PHP - Project  - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="center"|
+Fill in here
+ | style="width:29%; background:#cccccc" align="center"|
+If any
+ |}
+----
+==== .NET ==== 
+
+==== Cold Fusion ====
+
+==== Haskel ====
+__NOTOC__
+<headertabs/>

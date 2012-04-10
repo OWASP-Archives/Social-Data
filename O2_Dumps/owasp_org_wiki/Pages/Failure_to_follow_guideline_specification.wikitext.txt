@@ -1,0 +1,581 @@
+{{Template:Vulnerability}}
+{{Template:Fortify}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+===Code Correctness: Call to System.gc()===
+Explicit requests for garbage collection are a bellwether indicating likely performance problems.
+
+At some point in every Java developer's career, a problem surfaces that appears to be so mysterious, impenetrable, and impervious to debugging that there seems to be no alternative but to blame the garbage collector. Especially when the bug is related to time and state, there may be a hint of empirical evidence to support this theory: inserting a call to System.gc() sometimes seems to make the problem go away.
+
+In almost every case we have seen, calling System.gc() is the wrong thing to do. In fact, calling System.gc() can cause performance problems if it is invoked too often.
+
+===Code Correctness: Call to Thread.run()===
+The program calls a thread's run() method instead of calling start().
+
+In most cases a direct call to a Thread object's run() method is a bug. The programmer intended to begin a new thread of control, but accidentally called run() instead of start(), so the run() method will execute in the caller's thread of control.
+
+'''Example'''
+
+The following excerpt from a Java program mistakenly calls run() instead of start().
+
+    Thread thr = new Thread() {
+      public void run() {
+        ...
+      } 
+    };
+    thr.run();
+
+===Code Correctness: Class Does Not Implement Cloneable===
+This class implements a clone() method but does not implement Cloneable.
+
+It appears that the programmer intended for this class to implement the Cloneable interface because it implements a method named clone(). However, the class does not implement the Cloneable interface and the clone() method will not behave correctly.
+
+'''Example'''
+
+Calling clone() for this class will result in a CloneNotSupportedException.
+
+<pre>
+	public class Kibitzer {
+	  public Object clone() throws CloneNotSupportedException {
+		... 
+	  }
+	}
+</pre>
+
+===Code Correctness: Double-Checked Locking===
+Double-checked locking is an incorrect idiom that does not achieve the intended effect. Many talented individuals have spent a great deal of time pondering ways to make double-checked locking work in order to improve performance. None have succeeded.
+
+'''Example'''
+
+At first blush it may seem that the following bit of code achieves thread safety while avoiding unnecessary synchronization.
+
+<pre>
+	if (fitz == null) {
+	  synchronized (this) {
+		if (fitz == null) {
+		  fitz = new Fitzer();
+		}
+	  }
+	}
+	return fitz;
+</pre>
+
+The programmer wants to guarantee that only one Fitzer() object is ever allocated, but does not want to pay the cost of synchronization every time this code is called. This idiom is known as double-checked locking.
+
+Unfortunately, it does not work, and multiple Fitzer() objects can be allocated. See The "Double-Checked Locking is Broken" Declaration for more details [1].
+
+===Code Correctness: Erroneous String Compare===
+Strings should be compared with the equals() method, not == or !=. This program uses == or != to compare two strings for equality, which compares two objects for equality, not their values. Chances are good that the two references will never be equal.
+
+'''Example'''
+
+The following branch will never be taken.
+
+<pre>
+	  if (args[0] == STRING_CONSTANT) {
+		  logger.info("miracle");
+	  }
+
+</pre>
+
+===Code Correctness: Erroneous finalize() Method===
+This finalize() method does not call super.finalize().
+
+The Java Language Specification states that it is a good practice for a finalize() method to call super.finalize(). [2]
+
+The statement above is not completely correct. The Java Language Specification 3.0 section 12.6.1 states: "This should
+always be done, <b>unless it is the programmer's intent to nullify the actions of the finalizer in the superclass.</b>"
+
+'''Example'''
+
+The following method omits the call to super.finalize().
+
+  protected void finalize() {
+                 discardNative();
+  }
+
+===Code Correctness: Misspelled Method Name===
+This looks like an effort to override a common Java method, but it probably does not have the intended effect. This method's name is similar to a common Java method name, but it is either spelled incorrectly or the argument list causes it to not override the intended method.
+
+'''Example'''
+
+The following method is meant to override Object.equals():
+
+<pre>
+	public boolean equals(Object obj1, Object obj2) {
+	  ...
+	}
+</pre>
+
+But since Object.equals() only takes a single argument, the method above is never called.
+
+===Code Correctness: null Argument to equals()===
+The expression obj.equals(null) should always be false.
+
+The program uses the equals() method to compare an object with null. The contract of the equals() method requires this comparison to always return false [3].
+
+===Dead Code: Broken Override===
+
+This method fails to override a similar method in its superclass because their parameter lists do not match. This method declaration looks like an attempt to override a method in a superclass, but the parameter lists do not match, so the superclass method is not overridden.
+
+'''Example'''
+
+The class DeepFoundation is meant to override the method getArea() in its parent class, but the parameter lists are out of sync.
+
+<pre>
+	public class Foundation
+	{
+	  public int getArea() {
+		...
+	  }
+	}
+	
+	class DeepFoundation extends Foundation
+	{
+	  public int getArea(int a) {
+		...
+	  }
+	}
+</pre>
+
+===Dead Code: Expression is Always False===
+This expression will always evaluate to false; the program could be rewritten in a simpler form. The nearby code may be present for debugging purposes, or it may not have been maintained along with the rest of the program. The expression may also be indicative of a bug earlier in the method.
+
+'''Example'''
+
+The following method never sets the variable secondCall after initializing it to false. (The variable firstCall is mistakenly used twice.) The result is that the expression firstCall && secondCall will always evaluate to false, so setUpDualCall() will never be invoked.
+
+<pre>
+	public void setUpCalls() {
+	  boolean firstCall = false;
+	  boolean secondCall = false;
+	
+	  if (fCall > 0) {
+		setUpFCall();
+		firstCall = true;
+	  }
+	  if (sCall > 0) {
+		setUpSCall();
+		firstCall = true;
+	  }
+	
+	  if (firstCall && secondCall) {
+		setUpDualCall();
+	  }
+	}
+</pre>
+
+===Dead Code: Expression is Always True===
+This expression will always evaluate to true; the program could be rewritten in a simpler form. The nearby code may be present for debugging purposes, or it may not have been maintained along with the rest of the program. The expression may also be indicative of a bug earlier in the method.
+
+'''Example'''
+
+The following method never sets the variable secondCall after initializing it to true. (The variable firstCall is mistakenly used twice.) The result is that the expression firstCall || secondCall will always evaluate to true, so setUpForCall() will always be invoked.
+
+<pre>
+	public void setUpCalls() {
+	  boolean firstCall = true;
+	  boolean secondCall = true;
+	
+	  if (fCall < 0) {
+		cancelFCall();
+		firstCall = false;
+	  }
+	  if (sCall < 0) {
+		cancelSCall();
+		firstCall = false;
+	  }
+	
+	  if (firstCall || secondCall) {
+		setUpForCall();
+	  }
+	}
+</pre>
+
+===Dead Code: Unused Field===
+This field is never accessed, except perhaps by dead code. It is likely that the field is simply vestigial, but it is also possible that the unused field points out a bug.
+
+'''Example 1'''
+
+The field named glue is not used in the following class. The author of the class has accidentally put quotes around the field name, transforming it into a string constant.
+
+<pre>
+	public class Dead {
+	
+	  String glue;
+	
+	  public String getGlue() {
+		return "glue";
+	  }
+	
+	}
+</pre>
+
+'''Example 2'''
+
+The field named glue is used in the following class, but only from a method that is never called.
+
+<pre>
+	public class Dead {
+	
+	  String glue;
+	
+	  private String getGlue() {
+		return glue;
+	  }
+	
+	}
+</pre>
+
+===Dead Code: Unused Method===
+This method is never called or is only called from other dead code.
+
+'''Example 1'''
+
+In the following class, the method doWork() can never be called.
+
+<pre>
+	public class Dead {
+	  private void doWork() {
+		System.out.println("doing work");
+	  }
+	  public static void main(String[] args) {
+		System.out.println("running Dead");
+	  }
+	}
+</pre>
+
+'''Example 2'''
+
+In the following class, two private methods call each other, but since neither one is ever invoked from anywhere else, they are both dead code.
+
+<pre>
+	public class DoubleDead {
+	  private void doTweedledee() {
+		doTweedledumb();
+	  }
+	  private void doTweedledumb() {
+		doTweedledee();
+	  }
+	  public static void main(String[] args) {
+		System.out.println("running DoubleDead");
+	  }
+	}
+</pre>
+
+(In this case it is a good thing that the methods are dead: invoking either one would cause an infinite loop.)
+
+===EJB Bad Practices: Use of AWT/Swing===
+The program violates the Enterprise JavaBeans specification by using AWT/Swing.
+
+The Enterprise JavaBeans specification requires that every bean provider follow a set of programming guidelines designed to ensure that the bean will be portable and behave consistently in any EJB container [4].
+
+In this case, the program violates the following EJB guideline:
+
+''"An enterprise bean must not use the AWT functionality to attempt to output information to a display, or to input information from a keyboard."''
+
+A requirement that the specification justifies in the following way:
+
+''"Most servers do not allow direct interaction between an application program and a keyboard/display attached to the server system."''
+
+===EJB Bad Practices: Use of Class Loader===
+The program violates the Enterprise JavaBeans specification by using the class loader.
+
+The Enterprise JavaBeans specification requires that every bean provider follow a set of programming guidelines designed to ensure that the bean will be portable and behave consistently in any EJB container. [4]
+
+In this case, the program violates the following EJB guideline:
+
+''"The enterprise bean must not attempt to create a class loader; obtain the current class loader; set the context class loader; set security manager; create a new security manager; stop the JVM; or change the input, output, and error streams."''
+
+A requirement that the specification justifies in the following way:
+
+''"These functions are reserved for the EJB container. Allowing the enterprise bean to use these functions could compromise security and decrease the container's ability to properly manage the runtime environment."''
+
+===EJB Bad Practices: Use of Sockets===
+The program violates the Enterprise JavaBeans specification by listening on a socket or accepting connections on a socket.
+However it can act as a network socket client.
+
+The Enterprise JavaBeans specification requires that every bean provider follow a set of programming guidelines designed to ensure that the bean will be portable and behave consistently in any EJB container [4].
+
+In this case, the program violates the following EJB guideline:
+
+''"An enterprise bean must not attempt to listen on a socket, accept connections on a socket, or use a socket for multicast."''
+
+A requirement that the specification justifies in the following way:
+
+''"The EJB architecture allows an enterprise bean instance to be a network socket client, but it does not allow it to be a network server. Allowing the instance to become a network server would conflict with the basic function of the enterprise bean – to serve the EJB clients."''
+
+===EJB Bad Practices: Use of Synchronization Primitives===
+The program violates the Enterprise JavaBeans specification by using thread synchronization primitives.
+
+The Enterprise JavaBeans specification requires that every bean provider follow a set of programming guidelines designed to ensure that the bean will be portable and behave consistently in any EJB container [4].
+
+In this case, the program violates the following EJB guideline:
+
+''"An enterprise bean must not use thread synchronization primitives to synchronize execution of multiple instances."''
+ 
+A requirement is that the specification justifies in the following way:
+
+''"This rule is required to ensure consistent runtime semantics because while some EJB containers may use a single JVM to execute all enterprise bean's instances, others may distribute the instances across multiple JVMs."''
+
+===EJB Bad Practices: Use of java.io===
+The program violates the Enterprise JavaBeans specification by using the java.io package.
+
+The Enterprise JavaBeans specification requires that every bean provider follow a set of programming guidelines designed to ensure that the bean will be portable and behave consistently in any EJB container [4].
+
+In this case, the program violates the following EJB guideline:
+
+''"An enterprise bean must not use the java.io package to attempt to access files and directories in the file system."''
+
+A requirement that the specification justifies in the following way:
+
+''"The file system APIs are not well-suited for business components to access data. Business components should use a resource manager API, such as JDBC, to store data."''
+
+===J2EE Bad Practices: JSP Expressions===
+JSP 2.0 introduced a new capability allowing one to use JSP Expressions directly within the template text (i.e. outside of tag libraries or tag files) of a web page. However, improper use of the expressions will leave an application open to [[XSS Attacks]].
+
+'''Consequences'''
+
+* Failing to use JSP Expressions properly will leave an application open to[XSS Attacks.
+
+'''Exposure period'''
+
+This vulnerability has existed since servlet containers and application servers began implementing the JSP 2.0 standard.
+[[Category:FIXME|link not working
+
+http://jcp.org/en/jsr/detail?id=152
+
+]]
+
+'''Platform'''
+
+* Languages: Java/JSP
+
+'''Severity'''
+
+High
+
+'''Likelihood of exploit'''
+
+If a developer uses JSP Expressions to write unsanitized, user-entered data to a page, the likelihood of exploit is very high.
+
+'''Example'''
+
+JSP 2.0 expressions allow developers to expose data and objects stored in application, session, request, or page scope using an Ant-style syntax. It allows you to replace this
+
+<pre>
+<table>
+    <c:forEach var="book" items="${books}">
+        <tr>
+            <td><c:out value="${book.title}"/></td>
+            <td><c:out value="${book.author}"/></td>
+            <td><c:out value="${book.isbn}"/></td>
+        </tr> 
+    </c:forEach>
+</table>
+</pre>
+
+with this
+
+<pre>
+<table>
+    <c:forEach var="book" items="${books}">
+        <tr>
+            <td>${book.title}</td>
+            <td>${book.author}</td>
+            <td>${book.isbn}</td>
+        </tr>
+    </c:forEach>
+</table>
+</pre>
+
+As you can see, the syntax in the second example is more succinct. However, it may also expose a Cross Site Scripting [[XSS Attacks| (XSS)]] vulnerability. The problem that few tutorials mention is that the expression syntax does not escape HTML characters. Therefore, any web application using JSP Expressions to output unsanitized, user-entered data will be vulnerable to Cross Site Scripting (XSS) attacks.
+[[Category:FIXME|link not working
+
+(including [http://java.sun.com/javaee/5/docs/tutorial/doc| Sun's Java EE 5 Tutorial])
+
+]]
+
+The safest cure for this XSS vulnerability leads one right back to the first example. As section 2.2.2 of the JSP 2.0 Specification reads, “In cases where escaping is desired (for example, to help prevent cross-site scripting attacks), the JSTL core tag c:out can be used.”
+
+To be sure your code is not vulnerable to the potential XSS vulnerability described herein, use JSP Expressions only as tag library attribute values and stick to using JSTL‘s c:out tag for writing text to a page. Deciding which instances of template text expression usage are safe and which are not is error prone and the consequences of a mistake are grave.
+
+===J2EE Bad Practices: Sockets===
+Socket-based communication in web applications is prone to error.
+
+The J2EE standard permits the use of sockets only for the purpose of communication with legacy systems when no higher-level protocol is available. Authoring your own communication protocol requires wrestling with difficult security issues, including:
+
+* In-band versus out-of-band signaling 
+* Compatibility between protocol versions 
+* Channel security 
+* Error handling 
+* Network constraints (firewalls) 
+* Session management 
+
+Without significant scrutiny by a security expert, chances are good that a custom communication protocol will suffer from security problems.
+
+Many of the same issues apply to a custom implementation of a standard protocol. While there are usually more resources available that address security concerns related to implementing a standard protocol, these resources are also available to attackers.
+
+'''Example'''
+
+When using URLConnection to one restricted URL resource which is not available (offline) there is posibility that OS will leave those sockets opened (z/OS, Windows). When the system starts a new URLConnection, opened sockets may be reused (including authentication). The URL destination may be reached by the user with lower credentials using previous credentials on that same socket.
+
+URLConnection does not directly support timeout. There is thread scenario possible which is a bit dirty. 
+Solution: Use client socket and set timeout and linger flags.
+
+===J2EE Bad Practices: System.exit()===
+It is never a good idea for a web application to attempt to shut down the application container. A call to System.exit() is probably part of leftover debug code or code imported from a non-J2EE application.
+
+===J2EE Bad Practices: getConnection()===
+The J2EE standard forbids the direct management of connections.
+
+The J2EE standard requires that applications use the container's resource management facilities to obtain connections to resources.
+
+'''Example'''
+
+For example, a J2EE application should obtain a database connection as follows:
+
+  ctx = new InitialContext();
+  datasource = (DataSource)ctx.lookup(DB_DATASRC_REF);
+  conn = datasource.getConnection();
+
+and should avoid obtaining a connection in this way:
+
+  conn = DriverManager.getConnection(CONNECT_STRING);
+
+Every major web application container provides pooled database connection management as part of its resource management framework. Duplicating this functionality in an application is difficult and error prone, which is part of the reason it is forbidden under the J2EE standard.
+
+===Poor Style: Confusing Naming===
+The class contains a field and a method with the same name.
+
+It is confusing to have a member field and a method with the same name. It makes it easy for a programmer to accidentally call the method when attempting to access the field or vice versa.
+
+'''Example'''
+
+<pre>
+public class Totaller {
+	  private int total;
+	  public int total() {
+		...
+	  }
+	}
+</pre>
+
+===Poor Style: Empty Synchronized Block===
+This synchronized block contains no statements; it is unlikely the synchronization achieves the intended effect.
+
+Synchronization in Java can be tricky. An empty synchronized block is often a sign that a programmer is wrestling with synchronization but has not yet achieved the result they intend.
+
+'''Example'''
+
+<pre>
+synchronized(this) { }
+</pre>
+
+===Poor Style: Explicit call to finalize()===
+The finalize() method should only be called by the JVM after the object has been garbage collected.
+
+While the Java Language Specification allows an object's finalize() method to be called from outside the finalizer, doing so is usually a bad idea. For example, calling finalize() explicitly means that finalize() will be called more than once: the first time will be the explicit call and the last time will be the call that is made after the object is garbage collected.
+
+'''Example'''
+
+The following code fragment calls finalize() explicitly:
+
+<pre>
+	// time to clean up
+	widget.finalize();
+
+</pre>
+
+===Poor Style: Identifier Contains Dollar Symbol ($)===
+Using a dollar sign ($) as part of an identifier is not recommended.
+
+Section 3.8 of the Java Language Specification reserves the dollar sign ($) for identifiers that are used only in mechanically generated source code.
+
+'''Example'''
+
+ int un$afe;
+
+==Risk Factors==
+TBD
+
+==Examples==
+TBD
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+* [1] D. Bacon et al. The "Double-Checked Locking is Broken" Declaration. http://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html.
+* [2] J. Gosling, B. Joy, G. Steele, G. Bracha. The Java Language Specification, Second Edition. Addison-Wesley, 2000.
+* [3] Sun JavaDoc for Object. http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Object.html#equals(java.lang.Object)
+* [4] Enterprise JavaBeans 2.1 Specification. Sun Microsystems. http://java.sun.com/products/ejb/docs.html.
+
+
+
+
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:Use of Dangerous API]]
+[[Category:Java]]
+[[Category:Implementation]]
+[[Category:API Abuse]]
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Code Snippet]]
+[[Category:Synchronization and Timing Vulnerability]]
+[[Category:Code Quality Vulnerability]]

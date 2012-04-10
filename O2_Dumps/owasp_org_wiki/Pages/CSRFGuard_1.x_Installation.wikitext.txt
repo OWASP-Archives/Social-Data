@@ -1,0 +1,32 @@
+== Overview ==
+
+The first installment of the OWASP CSRFGuard relies on regular expressions to modify the HTML response. This page details all of the steps necessary to deploy CSRFGuard 1.x in your web application.
+
+== Add OWASP CSRFGuard To ClassPath ==
+
+In order for your web application container to invoke the OWASP CSRFGuard filter, it will need to be accessible in the classpath. We recommend placing the OWASP CSRFGuard filter within the WEB-INF/lib folder of your web application project. If you have multiple projects (ex. an EAR) that make use of the filter, we recommend placing the OWASP CSRFGuard filter in a single library folder that is accessible by your container. For example, if our application container were Tomcat and we had multiple applications making use of OWASP CSRFGuard, we would place the Jar file in the tomcat/common/lib directory. OWASP CSRFGuard can now be utilized by every application deployed by the container.
+
+== Update Deployment Descriptor ==
+
+Java EE filters provide the ability to intercept, view, and modify both the request and associated response for the requesting client. In order for our application to make use of the OWASP CSRFGuard filter, we must modify the application's web.xml file. First we must declare the filter and any initialization parameters that it may accept. Currently, the OWASP CSRFGuard 1.x series only accepts one initialization parameter called 'error-page'. This is the page that the user is redirected to when a CSRF exception is thrown.
+
+ <filter>
+    <filter-name>CSRFGuard</filter-name>
+    <filter-class>org.owasp.csrf.CSRFGuard</filter-class>
+      <init-param>
+        <param-name>error-page</param-name>
+        <param-value>error.jsp</param-value>
+      </init-param>
+ </filter>
+
+After declaring the filter in the descriptor, we must specify what resources this filter should handle. We can instruct the filter to handle requests for entire servlets or specific URL patterns. The following example instructs the OWASP CSRFGuard to handle all requests to the 'ProtectMe' servlet as well as any requests ending in a .jsp:
+
+ <filter-mapping>
+   <filter-name>CSRFGuard</filter-name>
+   <servlet-name>ProtectMe</servlet-name>
+ </filter-mapping>
+ 
+ <filter-mapping>
+   <filter-name>CSRFGuard</filter-name>
+   <url-pattern>*.jsp</url-pattern>
+ </filter-mapping>

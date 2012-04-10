@@ -1,0 +1,22 @@
+ESAPI is very easy to use. This tutorial shows how to get a simple application working with the reference implementation of ESAPI. Please remember that the reference implementation is a simple example. The Authenticator uses a text-based password file. This is to make it easy to test ESAPI without installing a database or directory. Enterprises will want to create their own implementation of the API that works with their identity management solution.
+
+==Step 1: Setting up a resources directory==
+
+Create a directory to hold ESAPI resources. This should be a secure location as it will contain a significant amount of security information. For example, you might create a directory called "C:\resources" (Windows) and use the operating system access control mechanisms (NTFS on Windows) to restrict access.
+
+==Step 2: Setting ESAPI configuration properties==
+If it isn't there already, copy the default [http://owasp-esapi-java.googlecode.com/svn/trunk/resources/ESAPI.properties ESAPI.Properties] file into your resources directory. Edit the MasterPassword property and choose a long, difficult-to-guess string, as the security of your application depends on it.
+
+ MasterPassword=xxxxx
+
+Also copy the [http://owasp-esapi-java.googlecode.com/svn/trunk/resources/antisamy-esapi.xml antisamy.xml] file into your resources directory, which defines the [[antisamy]] policy that you'll use in ESAPI.
+
+==Step 3: Configuring user accounts==
+The simplest way to get started is to create an "admin" account to work with. ESAPI has a command line tool that will create your users.txt file. Type the below, for example (all one line):
+
+ java -Dorg.owasp.esapi.resources="c:\resources"
+ -classpath owasp-esapi-java-1.1.1.jar
+ org.owasp.esapi.Authenticator yourname yourpass admin
+
+==Step 4: Hello, ESAPI!==
+More information about ESAPI functions and its usage is available through the ESAPI's demo application known as ''[http://www.owasp.org/index.php/ESAPI_Swingset THE ESAPI Swingset]''.

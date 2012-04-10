@@ -1,0 +1,723 @@
+= About =
+
+'''OWASP Podcast Series Hosted by Jim Manico'''
+
+* The OWASP foundation presents the OWASP PODCAST SERIES hosted and produced by [mailto:jim@owasp.org Jim Manico].
+* Listen as Jim interviews OWASP volunteers, industry experts and leaders within the field of web application security. 
+* Questions? Comments? Please email [mailto:jim@owasp.org jim@owasp.org]
+* Care to join our email list? Sign up here [https://lists.owasp.org/mailman/listinfo/owasp-podcast https://lists.owasp.org/mailman/listinfo/owasp-podcast]
+* Want to see the process and equipment behind the show? [https://www.owasp.org/index.php/Talk:OWASP_Podcast click here] 
+
+<table border="0"><tr><td>
+[http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=300769012 https://www.owasp.org/download/jmanico/OWASP_Podcast_200x200.jpg]
+</td><td align="center" width="150">
+Subscribe<br/>[http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=300769012 https://www.owasp.org/download/jmanico/itunes.jpg] [https://www.owasp.org/download/jmanico/podcast.xml https://www.owasp.org/images/d/d3/Feed-icon-32x32.png]
+</td>
+</tr>
+</table>
+
+<paypal>OWASP Podcast</paypal>
+
+= Show List =
+
+<table class="wikitable" border="1">
+
+<tr>
+<th>#</th>
+<th>Date</th>
+<th>Actions</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">90</td>
+<td NOWRAP VALIGN="TOP">February 17, 2012</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_90.mp3 Listen Now]</td>
+<td VALIGN="TOP">Raul Siles ([https://www.owasp.org/index.php/Session_Management_Cheat_Sheet Session Management Cheat Sheet] )</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">89</td>
+<td NOWRAP VALIGN="TOP">November 28, 2011</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_89.mp3 Listen Now]</td>
+<td VALIGN="TOP">Jack Mannino and Joey Peloquin (Mobile)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">88</td>
+<td NOWRAP VALIGN="TOP">September 19, 2011</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_88.mp3 Listen Now]</td>
+<td VALIGN="TOP">Jason Li (Global Projects Committee)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">87</td>
+<td NOWRAP VALIGN="TOP">July 20, 2011</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_87.mp3 Listen Now]</td>
+<td VALIGN="TOP">John Heimann (Oracle)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">**</td>
+<td NOWRAP VALIGN="TOP">July 16, 2011</td>
+<td NOWRAP VALIGN="TOP">[http://www.appsecusa.org/owasp_foundation_2011_board_candidate_interviews.mp3 Listen Now] </td>
+<td VALIGN="TOP">Dave Wichers, Sebastien Deleersnyder, Michael Coates, Christian Heinrich ([https://www.owasp.org/index.php/Membership/2011Election 2012 OWASP Election Candidates]) </td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">86</td>
+<td NOWRAP VALIGN="TOP">July 7, 2011</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_86.mp3 Listen Now] | [[OWASP_Podcast/Transcripts/086|Show Transcript]]</td>
+<td VALIGN="TOP">Kevin Mahaffey, Jack Mannino and Chris Wysopal (Mobile Security)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">85</td>
+<td NOWRAP VALIGN="TOP">June 22, 2011</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_85.mp3 Listen Now]</td>
+<td VALIGN="TOP">Ken van Wyk (iGoat)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">84</td>
+<td NOWRAP VALIGN="TOP">May 10, 2011</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_84.mp3 Listen Now]</td>
+<td VALIGN="TOP">Alex Behar (DDoS Mitigation)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">83</td>
+<td NOWRAP VALIGN="TOP">March 19, 2011</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_83.mp3 Listen Now]</td>
+<td VALIGN="TOP">[[User:Owaspdavef|Dave Ferguson]] (Forgot Password)</td>
+</tr>
+
+
+<tr>
+<td NOWRAP VALIGN="TOP">82</td>
+<td NOWRAP VALIGN="TOP">February 7, 2011</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_82.mp3 Listen Now]</td>
+<td VALIGN="TOP">[[User:Wichers|Dave Wichers]] [[OWASP_Board_Meetings | (OWASP Board Member)]]</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">81</td>
+<td NOWRAP VALIGN="TOP">January 8, 2011</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_81.mp3 Listen Now]</td>
+<td VALIGN="TOP">Brian Chess (Non-SaaS Static Analysis)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">80</td>
+<td NOWRAP VALIGN="TOP">December 11, 2010</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_80.mp3 Listen Now]</td>
+<td VALIGN="TOP">Chris Wysopal (SaaS Static Analysis)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">79</td>
+<td NOWRAP VALIGN="TOP">November 27, 2010</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_79.mp3 Listen Now]</td>
+<td VALIGN="TOP">Tony UV (Threat Modeling)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">78</td>
+<td NOWRAP VALIGN="TOP">October 13, 2010</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_78.mp3 Listen Now]</td>
+<td VALIGN="TOP">AppSec Roundtable with Jeff Williams, Andrew van der Stock, Tom Brennan, Samy, Jeremiah Grossman and Jim Manico (Complete Chaos)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">77</td>
+<td NOWRAP VALIGN="TOP">October 13, 2010</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_77.mp3 Listen Now]</td>
+<td VALIGN="TOP">Rafal Los</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">76</td>
+<td NOWRAP VALIGN="TOP">September 22, 2010</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_76.mp3 Listen Now]</td>
+<td VALIGN="TOP">Bill Cheswick (Account Lockout)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">75</td>
+<td NOWRAP VALIGN="TOP">September 15, 2010</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_75.mp3 Listen Now]</td>
+<td VALIGN="TOP">Brandon Sterne (Content Security Policy)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">74</td>
+<td NOWRAP VALIGN="TOP">September 2, 2010</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_74.mp3 Listen Now]</td>
+<td VALIGN="TOP">Eoin Keary (Code Review)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">73</td>
+<td NOWRAP VALIGN="TOP">June 30, 2010</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_73.mp3 Listen Now]</td>
+<td VALIGN="TOP">Jeremiah Grossman and Robert Hansen</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">72</td>
+<td NOWRAP VALIGN="TOP">June 25, 2010</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_72.mp3 Listen Now]</td>
+<td VALIGN="TOP">Interview with Ivan Ristic (WAF)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">71</td>
+<td NOWRAP VALIGN="TOP">April 19, 2010</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_71.mp3 Listen Now]</td>
+<td VALIGN="TOP">[[Top_10_2010|Top Ten]] with Robert Hansen [[Top_10_2010-A10|(Redirects)]]</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">70</td>
+<td NOWRAP VALIGN="TOP">April 19, 2010</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_70.mp3 Listen Now]</td>
+<td VALIGN="TOP">[[Top_10_2010|Top Ten]] with Michael Coates [[Top_10_2010-A9|(TLS)]]</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">69</td>
+<td NOWRAP VALIGN="TOP">April 19, 2010</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_69.mp3 Listen Now]</td>
+<td VALIGN="TOP">[[Top_10_2010|Top Ten]] with Eric Sheridan [[Top_10_2010-A5|(CSRF)]]</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">68</td>
+<td NOWRAP VALIGN="TOP">April 19, 2010</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_68.mp3 Listen Now]</td>
+<td VALIGN="TOP">[[Top_10_2010|Top Ten]] with Kevin Kenan [[Top_10_2010-A7|(Cryptographic Storage)]]</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">67</td>
+<td NOWRAP VALIGN="TOP">April 19, 2010</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_67.mp3 Listen Now] | [[OWASP_Podcast/Transcripts/067|Show Transcript]]</td>
+<td VALIGN="TOP">[[Top_10_2010|Top Ten]] with Jeff Williams [[Top_10_2010-A2|(XSS)]]</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">66</td>
+<td NOWRAP VALIGN="TOP">April 14, 2010</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_66.mp3 Listen Now]</td>
+<td VALIGN="TOP">Interview with Brad Arkin (Adobe)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">65</td>
+<td NOWRAP VALIGN="TOP">April 13, 2010</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_65.mp3 Listen Now]</td>
+<td VALIGN="TOP">AppSec Roundtable with Boaz Gelbord, Dan Cornell, Jeff Williams, Johannes Ullrich and Jim Manico (File Upload)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">64</td>
+<td NOWRAP VALIGN="TOP">March 30, 2010</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_64.mp3 Listen Now]</td>
+<td VALIGN="TOP">Interview with Andy Ellis (Availability)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">63</td>
+<td NOWRAP VALIGN="TOP">March 17, 2010</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_63.mp3 Listen Now]</td>
+<td VALIGN="TOP">Interview with Ed Bellis (eCommerce)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">62</td>
+<td NOWRAP VALIGN="TOP">March 12, 2010</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_62.mp3 Listen Now] | [[Podcast_62|Show Notes]]</td>
+<td VALIGN="TOP">Interview with Amichai Shulman (WAF)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">61</td>
+<td NOWRAP VALIGN="TOP">March 10, 2010</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_61.mp3 Listen Now] | [[Podcast_61|Show Notes]]</td>
+<td VALIGN="TOP">Interview with Richard Bejtlich (Network Monitoring)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">60</td>
+<td NOWRAP VALIGN="TOP">February 5, 2010</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_60.mp3 Listen Now]</td>
+<td VALIGN="TOP">Interview with Jeremiah Grossman and Robert Hansen (Google pays for vulns)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">59</td>
+<td NOWRAP VALIGN="TOP">February 3, 2010</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_59.mp3 Listen Now]</td>
+<td VALIGN="TOP">AppSec Roundtable with Boaz Gelbord, Ben Tomhave, Dan Cornell, Jeff Williams, Andrew van der Stock and Jim Manico (Aurora+)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">58</td>
+<td NOWRAP VALIGN="TOP">February 2, 2010</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_58.mp3 Listen Now]</td>
+<td VALIGN="TOP">Interview with Ron Gula (Web Server Scanning, IDS/IPS)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">57</td>
+<td NOWRAP VALIGN="TOP">December 21, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_57.mp3 Listen Now] | [[Podcast_57|Show Notes]]</td>
+<td VALIGN="TOP">Interview with David Linthicum (Cloud Computing)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">56</td>
+<td NOWRAP VALIGN="TOP">December 7, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_56.mp3 Listen Now] | [[Podcast_56|Show Notes]]</td>
+<td VALIGN="TOP">Interview with Adar Weidman (Regular Expression DOS)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">55</td>
+<td NOWRAP VALIGN="TOP">November 26, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_55.mp3 Listen Now] | [[Podcast_55|Show Notes]]</td>
+<td VALIGN="TOP">AppSec Roundtable with Boaz Gelbord, Jason Lam, Jim Manico and Jeff Williams (AppSec Justification)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">54</td>
+<td NOWRAP VALIGN="TOP">November 24, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_54.mp3 Listen Now]</td>
+<td VALIGN="TOP">Interview with George Hesse (German Chapter Leader)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">53</td>
+<td NOWRAP VALIGN="TOP">November 24, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_53.mp3 Listen Now]</td>
+<td VALIGN="TOP">Interview with Amichai Shulman (WAF)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">52</td>
+<td NOWRAP VALIGN="TOP">November 5, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_52.mp3 Listen Now]</td>
+<td VALIGN="TOP">Sandro Gauci ([http://code.google.com/p/waffit/ wafw00f])</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">51</td>
+<td NOWRAP VALIGN="TOP">October 30, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_51.mp3 Listen Now] | [[OWASP_Podcast/Transcripts/051|Show Transcript]]</td>
+<td VALIGN="TOP">Interview with Michael Coates (Real Time Defenses, [http://www.owasp.org/index.php/Category:OWASP_AppSensor_Project OWASP AppSensor])</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">50</td>
+<td NOWRAP VALIGN="TOP">October 30, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_50.mp3 Listen Now]</td>
+<td VALIGN="TOP">Interview with Eldad Chai (Business Logic Attacks)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">49</td>
+<td NOWRAP VALIGN="TOP">October 30, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_49.mp3 Listen Now]</td>
+<td VALIGN="TOP">Interview with Andre Riancho (OWASP w3af)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">48</td>
+<td NOWRAP VALIGN="TOP">October 30, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_48.mp3 Listen Now]</td>
+<td VALIGN="TOP">Interview with Giorgio Fedon (Browser Security in Banking)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">47</td>
+<td NOWRAP VALIGN="TOP">October 23, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_47.mp3 Listen Now]</td>
+<td VALIGN="TOP">Interview with Erlend Oftedal (Agile)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">46</td>
+<td NOWRAP VALIGN="TOP">October 23, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_46.mp3 Listen Now]</td>
+<td VALIGN="TOP">Interview with Luca Carettoni and Stefano Di Paola (HTTP Parameter Pollution)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">45</td>
+<td NOWRAP VALIGN="TOP">October 16, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_45.mp3 Listen Now] | [[Podcast_45|Show Notes]]</td>
+<td VALIGN="TOP">Interview with Buanzo ([http://www.buanzo.com.ar/pro/eng.html Enigform ])</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">44</td>
+<td NOWRAP VALIGN="TOP">October 8, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_44.mp3 Listen Now] | [[Podcast_44|Show Notes]]</td>
+<td VALIGN="TOP">Interview with Andy Steingruebl (PayPal Secure Development Manager)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">43</td>
+<td NOWRAP VALIGN="TOP">October 2, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_43.mp3 Listen Now] | [[Podcast_43|Show Notes]]</td>
+<td VALIGN="TOP">Interview with Mike Smith (http://www.guerilla-ciso.com/)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">42</td>
+<td NOWRAP VALIGN="TOP">October 1, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_42.mp3 Listen Now] | [[Podcast_42|Show Notes]]</td>
+<td VALIGN="TOP">Roundtable with Matt Fisher, Jim Manico, Dan Philpott, Jack Whitsitt and Doug Wilson (FISMA, US Federal Cybersecurity)</td>
+</tr>
+
+
+<tr>
+<td NOWRAP VALIGN="TOP">41</td>
+<td NOWRAP VALIGN="TOP">September 26, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_41.mp3 Listen Now] | [[Podcast_41|Show Notes]] | [[OWASP_Podcast/Transcripts/041|Show Transcript]]</td>
+<td VALIGN="TOP">Interview with David Rice (Author of Geekonomics)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">40</td>
+<td NOWRAP VALIGN="TOP">September 23, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_40.mp3 Listen Now] | [[Podcast_40|Show Notes]]</td>
+<td VALIGN="TOP">Interview with Rohit Sethi (OWASP J2EE Pattern Project)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">39</td>
+<td NOWRAP VALIGN="TOP">August 25, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_39.mp3 Listen Now] | [[Podcast_39|Show Notes]]</td>
+<td VALIGN="TOP">Interview with Gunnar Peterson (Webservices)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">38</td>
+<td NOWRAP VALIGN="TOP">August 25, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_38.mp3 Listen Now] | [[Podcast_38|Show Notes]]</td>
+<td VALIGN="TOP">Interview with the OWASP Global Education Committee</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">37</td>
+<td NOWRAP VALIGN="TOP">August 22, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_37.mp3 Listen Now] | [[Podcast_37|Show Notes]]</td>
+<td VALIGN="TOP">Interview with Jason Lam and Johannes Ullrich (SANS Institute)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">36</td>
+<td NOWRAP VALIGN="TOP">August 15, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_36.mp3 Listen Now] | [[Podcast_36|Show Notes]]</td>
+<td VALIGN="TOP">May 2009 News Commentary Recorded July 23 with Boaz Gelbord, Andre Gironda, Jason Lam, Jim Manico, Alex Smolen, Ben Tomhave, Andrew van der Stock and Jeff Williams (part 2)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">35</td>
+<td NOWRAP VALIGN="TOP">August 4, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_35.mp3 Listen Now] | [[Podcast_35|Show Notes]]</td>
+<td VALIGN="TOP">Interview with Anton Chuvakin, Ph.D (PCI)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">34</td>
+<td NOWRAP VALIGN="TOP">July 30, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_34.mp3 Listen Now] | [[Podcast_34|Show Notes]]</td>
+<td VALIGN="TOP">Interview with Amichai Shulman (WAF)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">33</td>
+<td NOWRAP VALIGN="TOP">July 25, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_33.mp3 Listen Now] | [[Podcast_33|Show Notes]]</td>
+<td VALIGN="TOP">Interview with Paolo Perego (OWASP Orizon)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">32</td>
+<td NOWRAP VALIGN="TOP">July 21, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_32.mp3 Listen Now] | [[Podcast_32|Show Notes]]</td>
+<td VALIGN="TOP">May 2009 News Commentary Recorded June 11 with Arshan Dabirsiaghi, Boaz Gelbord, Jim Manico, Andrew van der Stock and Jeff Williams (part 1)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">31</td>
+<td NOWRAP VALIGN="TOP">July 4, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_31.mp3 Listen Now] | [[Podcast_31|Show Notes]] | [[OWASP_Podcast/Transcripts/031|Show Transcript]]</td>
+<td VALIGN="TOP">Interview with Mark Curphey (OWASP Founder)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">30</td>
+<td NOWRAP VALIGN="TOP">July 2, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_30.mp3 Listen Now] | [[Podcast_30|Show Notes]]</td>
+<td VALIGN="TOP">Interview with Billy Hoffman and Matt Wood (HP Application Security Research)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">29</td>
+<td NOWRAP VALIGN="TOP">June 30, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_29.mp3 Listen Now] | [[Podcast_29|Show Notes]]</td>
+<td VALIGN="TOP">Interview with Justin Clarke (SQL Injection)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">28</td>
+<td NOWRAP VALIGN="TOP">June 26, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_28.mp3 Listen Now] | [[Podcast_28|Show Notes]]</td>
+<td VALIGN="TOP">Interview with Ross J. Anderson</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">27</td>
+<td NOWRAP VALIGN="TOP">June 26, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_27.mp3 Listen Now] | [[Podcast_27|Show Notes]]</td>
+<td VALIGN="TOP">Interview with Rafal Los (The Skeletor of AppSec)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">26</td>
+<td NOWRAP VALIGN="TOP">June 17, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_26.mp3 Listen Now] | [[Podcast_26|Show Notes]]</td>
+<td VALIGN="TOP">April 2009 News Commentary Recorded May 28 with Tom Brennan, Andre Gironda, Jim Manico, Alex Smolen and Jeff Williams (part 2)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">25</td>
+<td NOWRAP VALIGN="TOP">June 15, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_25.mp3 Listen Now] | [[Podcast_25|Show Notes]]</td>
+<td VALIGN="TOP">Interview with James McGovern</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">24</td>
+<td NOWRAP VALIGN="TOP">June 12, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_24.mp3 Listen Now] | [[Podcast_24|Show Notes]]</td>
+<td VALIGN="TOP">April 2009 News Commentary Recorded May 14 with Andre Gironda, Jim Manico, Alex Smolen and Jeff Williams (part 1)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">23</td>
+<td NOWRAP VALIGN="TOP">June 1, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_23.mp3 Listen Now] | [[Podcast_23|Show Notes]]</td>
+<td VALIGN="TOP">Interview with Dr. Boaz Gelbord</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">22</td>
+<td NOWRAP VALIGN="TOP">May 22, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_22.mp3 Listen Now] | [[Podcast_22|Show Notes]]</td>
+<td VALIGN="TOP">Interview with Dan Cornell (Membership Committee)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">21</td>
+<td NOWRAP VALIGN="TOP">May 20, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_21.ogg Listen Now] | [[Podcast_21|Show Notes]] | [[OWASP_Podcast/Transcripts/021|Show Transcript]]</td>
+<td VALIGN="TOP">Interview with Richard Stallman</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">20</td>
+<td NOWRAP VALIGN="TOP">May 13, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_20.mp3 Listen Now] | [[Podcast_20|Show Notes]]</td>
+<td VALIGN="TOP">Interview with Mike Bailey</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">19</td>
+<td NOWRAP VALIGN="TOP">May 11, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_19.mp3 Listen Now] | [[Podcast_19|Show Notes]]</td>
+<td VALIGN="TOP">March 2009 News Commentary by Arshan Dabirsiaghi, Andre Gironda, Jim Manico and Jeff Williams (part 2)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">18</td>
+<td NOWRAP VALIGN="TOP">April 30, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_18.mp3 Listen Now] | [[Podcast_18|Show Notes]]</td>
+<td VALIGN="TOP">Interview with Jeremiah Grossman</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">17</td>
+<td NOWRAP VALIGN="TOP">April 21, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_17.mp3 Listen Now] | [[Podcast_17|Show Notes]]</td>
+<td VALIGN="TOP">Interview with Robert Hansen</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">16</td>
+<td NOWRAP VALIGN="TOP">April 9, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_16.mp3 Listen Now] | [[Podcast_16|Show Notes]]</td>
+<td VALIGN="TOP">Dave Aitel (Demonstrates Cool)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">15</td>
+<td NOWRAP VALIGN="TOP">April 4, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_15.mp3 Listen Now] | [[Podcast_15|Show Notes]]</td>
+<td VALIGN="TOP">Brian Chess (BSIMM)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">14</td>
+<td NOWRAP VALIGN="TOP">March 25, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_14.mp3 Listen Now] | [[Podcast_14|Show Notes]]</td>
+<td VALIGN="TOP">Pravir Chandra (OWASP SAMM)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">13</td>
+<td NOWRAP VALIGN="TOP">March 23, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_13.mp3 Listen Now] | [[Podcast_13|Show Notes]]</td>
+<td VALIGN="TOP">March 2009 News Commentary by Arshan Dabirsiaghi, Andre Gironda, Jim Manico and Jeff Williams (part 1)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">12</td>
+<td NOWRAP VALIGN="TOP">March 11, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_12.mp3 Listen Now] | [[Podcast_12|Show Notes]]</td>
+<td VALIGN="TOP">Interview with Ryan Barnett (OWASP ModSecurity Core Ruleset)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">11</td>
+<td NOWRAP VALIGN="TOP">March 4, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_11.mp3 Listen Now] | [[Podcast_11|Show Notes]]</td>
+<td VALIGN="TOP">Interview with MITRE (Steve Christey and Bob Martin)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">10</td>
+<td NOWRAP VALIGN="TOP">February 26, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_10.mp3 Listen Now] | [[Podcast_10|Show Notes]] | [[OWASP_Podcast/Transcripts/010|Show Transcript]]</td>
+<td VALIGN="TOP">Interview with Ken van Wyk</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">9</td>
+<td NOWRAP VALIGN="TOP">February 20, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_9.mp3 Listen Now] | [[Podcast_9|Show Notes]]</td>
+<td VALIGN="TOP">February 2009 News Commentary by Arshan Dabirsiaghi, Andre Gironda, Jim Manico and Jeff Williams (part 2)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">8</td>
+<td NOWRAP VALIGN="TOP">February 20, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_8.mp3 Listen Now] | [[Podcast_8|Show Notes]]</td>
+<td VALIGN="TOP">February 2009 News Commentary by Arshan Dabirsiaghi, Andre Gironda, Jim Manico and Jeff Williams (part 1)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">7</td>
+<td NOWRAP VALIGN="TOP">January 30, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_7.mp3 Listen Now] | [[Podcast_7|Show Notes]]</td>
+<td VALIGN="TOP">Interview with Jeff Williams</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">6</td>
+<td NOWRAP VALIGN="TOP">January 24, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_6.mp3 Listen Now] | [[Podcast_6|Show Notes]]</td>
+<td VALIGN="TOP">Roundtable with Andre Gironda, Brian Holyfield, Jim Manico, Marcin Wielgoszewski</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">5</td>
+<td NOWRAP VALIGN="TOP">January 15, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_5.mp3 Listen Now] | [[Podcast_5|Show Notes]]</td>
+<td VALIGN="TOP">Interview with Gary McGraw</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">4</td>
+<td NOWRAP VALIGN="TOP">January 13, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_4.mp3 Listen Now] | [[Podcast_4|Show Notes]]</td>
+<td VALIGN="TOP">Interview with Andrew van der Stock (OWASP Developers Guide)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">3</td>
+<td NOWRAP VALIGN="TOP">December 30, 2009</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_3.mp3 Listen Now] | [[Podcast_3|Show Notes]]</td>
+<td VALIGN="TOP">Interview with Matt Tesauro (OWASP Live CD)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">2</td>
+<td NOWRAP VALIGN="TOP">December 20, 2008</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_2.mp3 Listen Now] | [[Podcast_2|Show Notes]]</td>
+<td VALIGN="TOP">Interview with Stephen Craig Evans (OWASP WebGoat/ModSecurity Project)</td>
+</tr>
+
+<tr>
+<td NOWRAP VALIGN="TOP">1</td>
+<td NOWRAP VALIGN="TOP">November 21, 2008</td>
+<td NOWRAP VALIGN="TOP">[https://www.owasp.org/download/jmanico/owasp_podcast_1.mp3 Listen Now] | [[Podcast_1|Show Notes]]</td>
+<td VALIGN="TOP">News Commentary by Arshan Dabirsiaghi, Jeremiah Grossman, Jim Manico and Jeff Williams</td>
+</tr>
+
+</table>
+
+= Contributors and Sponsors =
+
+'''Host and Executive Producer'''
+* [[User:Jmanico|Jim Manico]]
+
+'''Host and Producer'''
+* Matt Tesauro
+
+'''Mastering, Effects, Audio Tech, Producer'''
+* Kevin Coons from ManaTribe 
+
+'''Artwork'''
+* Larry Casey
+* Gareth Heyes
+
+'''Transcript'''
+* [[User:Zakiakhmad|Zaki Akhmad]]
+
+'''Sponsors'''
+* The OWASP Foundation
+* Music by [http://www.twistedmusic.com/artists/shpongle/ Shpongle] courtesy of [http://www.twistedmusic.com/ Twisted Records]
+
+= Twitter =
+
+[http://twitter.com/owasp_podcast http://twitter.com/owasp_podcast]
+
+<twitter>20208646</twitter>
+
+= Artwork =
+
+<table border="0">
+<tr>
+<td>
+[https://www.owasp.org/download/jmanico/OWASP_Podcast_200x200.jpg https://www.owasp.org/download/jmanico/OWASP_Podcast_200x200.jpg]
+</td>
+<td>
+Larry Casey
+</td>
+</tr>
+<tr>
+<td>
+[https://www.owasp.org/download/jmanico/OWASP_Podcast2_200x200.jpg https://www.owasp.org/download/jmanico/OWASP_Podcast2_200x200.jpg]
+</td>
+<td>
+Gareth Heyes
+</td>
+</tr>
+</table>
+
+__NOTOC__
+<headertabs/>

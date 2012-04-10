@@ -1,0 +1,14 @@
+'''Description'''
+
+See how attacker find flaws in web browser plugins to install malware to your computer. For example, if a plugin has vulnerable readFile/loadFile function, then he can read/load any files from your computer and then send them to his sever. Similarly, for saveFile function, he can overwrite any files on your disk with malicious content.
+Size: 9.38 MB 
+
+
+'''Download:'''
+
+http://yehg.net/lab/pr0js/files.php/discoveringbrowserpluginsvulernerabilities.zip
+
+
+
+
+[[Category:Non-OWASP_Trainings]]

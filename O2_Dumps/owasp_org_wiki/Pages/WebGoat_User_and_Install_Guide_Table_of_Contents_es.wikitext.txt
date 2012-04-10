@@ -1,0 +1,32 @@
+<webgoat/>
+*'''Contenido'''
+*#[[WebGoat User Guide Frontispiece |Prólogo]]
+*#[[WebGoat User Guide Introduction |Presentación]]
+*#*[[WebGoat User Guide Introduction#Overview |Introducción]]
+*#[[WebGoat User Guide Objectives | Objetivos]]
+*#[[Tools required | Herramientas requeridas]]
+*#*[[Tools_required#Application Assessment Proxy | Proxy para pruebas de aplicación]]
+*#*[[Tools_required#Application Spider | "Spider" de aplicación]]
+*# [[Using WebGoat | Usando WebGoat]]
+*# [[WebGoat Installation | Instalación]]
+*#* [[WebGoat Installation#Installing Java and Tomcat|Instalando Java y Tomcat]]
+*#* [[WebGoat Installation#Installing to Windows|Instalación en Windows]]
+*#* [[WebGoat Installation#Installing to Linux|Instalación en Linux]]
+*#* [[WebGoat Installation#Installing to OS X|Instalación en OS X]] (Tiger 10.4+)
+*#* [[WebGoat Installation#Installing on FreeBSD|Instalación en FreeBSD]]
+*#* [[WebGoat Installation#Running | Corriendo WebGoat]]
+*#* [[WebGoat Installation#Building | Construyendo WebGoat]]
+*# [[WebGoat Getting Started |Iniciando]]
+*# [[Lesson Plans | Lecciones]]
+*# [[Basic Operation | Operación Básica]]
+*# [[Proxy Utilization | Utilización de proxy]]
+*# [[Ready to Go! | Listo para iniciar!]]
+*# [[How to write a new WebGoat lesson | Como escribir una lección de WebGoat]]
+*#*[[How to write a new WebGoat lesson#Step 1: Set up the framework|Paso 1: Alistando el marco de trabajo]]
+*#*[[How to write a new WebGoat lesson#Step 2: Implement createContent|Paso 2: Implementando createContent]]
+*#*[[How to write a new WebGoat lesson#Step 3: Implement the other methods|Paso 3: Implementando los otros métodos]]
+*#*[[How to write a new WebGoat lesson#Step 4: Build and test|Paso 4: Construya y pruebe]] <esto debe cambiar en v4>
+*#*[[How to write a new WebGoat lesson#Step 5: Give back to the community|Paso 5: De a la comunidad]]
+
+
+[[Category:OWASP WebGoat Project]]

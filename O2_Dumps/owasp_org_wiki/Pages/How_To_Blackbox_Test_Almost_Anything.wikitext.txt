@@ -1,0 +1,5 @@
+Taking over your iphone with an SMS message. Running code on Oracle server using just a browser. Creating a PDF file that contains a hidden Trojan horse. Causing ATM machines to spit out unlimited cash. These types of security weaknesses are discovered all the time (those are just examples from the last few months), and it seems that just about any device that runs code can be hacked. But how are those hacks discovered? And most importantly: How can we detect weaknesses in our own products and applications so that we can fix them before the "bad guys" get there? Answer: by using the same tools the bad guys do.
+
+This presentation will talk about the performing security testing without needing the source code, whether we are testing software, hardware, appliances or remote services.
+
+We will mainly discuss blackbox testing by "fuzzing" - the technique used by the 'black hat' hackers and is credited for uncovering most of the security holes that are discovered today.

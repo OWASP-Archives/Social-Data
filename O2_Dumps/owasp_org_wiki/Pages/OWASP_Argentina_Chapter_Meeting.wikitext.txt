@@ -1,0 +1,120 @@
+<center>[[File:owasparlogo1.jpg]]    [[File:udem_logo.jpg]]</center>
+
+----
+
+=== Introduccion y Objetivos ===
+La Facultad de Ingeniería junto con OWASP Argentina invitan a participar de la Jornada de Seguridad en aplicaciones WEB “Owasp Argentina Chapter Meeting”, que se realizará el próximo jueves 14 de Octubre en el Aula Magna, Facultad de Ingeniería de la Universidad de la Marina Mercante ubicado en Av. Rivadavia 2258.<br><br>
+
+----
+
+=== Programa del Evento ===
+
+<br>
+<center>
+<table width="80%">
+<tr>
+<td width=4%>18:30h</td><td bgcolor="#BCA57A" width=*><b>Registracion</b></td>
+</tr>
+<tr>
+<td valign=top>18.45h</td><td bgcolor="#eeeeee"><b>Introducción a OWASP</b><br>Martin Tartarelli, Pablo Romanos</td>
+</tr>
+<tr>
+<td valign=top>19.00h</td><td bgcolor="#b9c2dc"><b>Desarrollo de aplicaciones Web: Consejos y experiencias de seguridad</b><br>Hernán Racciatti<br>[[File:Hracciatti_OWASP2010_Web_Application_SecTips.pdf]]</td>
+</tr>
+<tr>
+<td valign=top>19.45h</td><td bgcolor="#eeeeee"><b>¿Vulnerados por infantes 2.0?</b><br>Nahuel Grisolía<br>[[File:Nahuel_VulnsInfantes.pptx]]</td>
+</tr>
+<tr>
+<td valign=top>20.30h</td><td bgcolor="#b9c2dc"><b>Intervalo</b></td>
+</tr>
+<tr>
+<td valign=top>20.45h</td><td bgcolor="#eeeeee"><b>Aplicaciones seguras con presupuestos (muy) limitados</b><br>Patricio Worthalter<br>[[File:Patricio Worthalter_owasp_udemm.ppsx]]</td>
+</tr>
+<tr>
+<td valign=top>21.15h</td><td bgcolor="#b9c2dc"><b>Invitación a Agile Open Security</b><br>Carlos Pantelides<br>[[File:owasp_aos.odp]]</td>
+</tr>
+<tr>
+<td valign=top>21.30h</td><td bgcolor="#eeeeee"><b>Rellenando Oraculos</b><br>Matias Soler, Nicolas Waisman<br></td>
+</tr>
+<tr>
+<td valign=top>22.00h</td><td bgcolor="#BCA57A"><b>Cierre del Evento</b></td>
+</tr>
+<tr>
+</tr>
+</table>
+</center>
+<br>
+
+----
+
+=== Imagenes del Evento ===
+
+----
+<br>
+<center>[[File:owasp_arg_meeting10-3.jpg]]</center> <br>
+<center>[[File:owasp_arg_meeting10-1.jpg]]</center> <br>
+<center>[[File:owasp_arg_meeting10-2.jpg]]</center> <br>
+<center>[[File:owasp_arg_meeting10-4.jpg]]</center> <br>
+<center>[[File:owasp_arg_meeting10-5.jpg]]</center> <br>
+<br>
+----
+
+=== Resumenes ===
+
+'''Desarrollo de aplicaciones Web: Consejos y experiencias de seguridad'''<br>
+Internet ha cambiado definitivamente el modo en el que millones de personas se comportan hoy día. Gran parte de este cambio, se encuentra soportado de uno u otro modo por aplicaciones web específicamente desarrolladas a efectos de presentar al usuario el más variado conjunto de información y permitirle interactuar de modo tal que la misma resulte aun más atractiva. En tal sentido, esta conferencia tiene por objeto presentar al participante, un punto de vista general respecto de la problemática relacionada con la seguridad de las aplicaciones Web y en particular algunos tips relacionados con el desarrollo de las mismas en forma segura.<br>
+
+A lo largo de 40' se tocaran temas tales como: la importancia del rol del desarrollador en las nuevas estrategias de seguridad de la información, la aplicación de procesos SDLC, el valor de la utilización de Modelos de Amenazas en etapas de diseño & testing y la “seguridad” como nueva competencia  a ser requerida a toda persona relacionada con el desarrollo de aplicaciones.<br>
+
+Cada uno de estos temas, sera abordado desde la experiencia de campo y mapeado con algunos de los recursos que OWASP pone a disposición de la comunidad.<br>
+<br>
+
+'''¿Vulnerados por infantes 2.0?'''<br>
+En primer lugar se explicarán conceptos clásicos de un Test de Intrusión y las vulnerabilidades que comúnmente se suelen encontrar. Luego se mostrarán las nuevas tendencias de migrar los sistemas de escritorio a aplicaciones Web y la utilización de frameworks de programación como esquemas de seguridad, entre otros temas relacionados.<br>
+
+Además se describirán las herramientas que se usan en cada fase de un ataque, formas de ocultar la identidad de la persona malintencionada y vectores de ataque poco conocidos.<br>
+
+Se intentará demostrar cómo los ataques de seguridad en infraestructuras conectadas a Internet, pueden provenir de personajes inimputables de la escena amateur, que con mucho tiempo y recursos públicos gratuitos, pueden llevar adelante casi cualquier acción malintencionada. Pudiendo acceder a  información confidencial de una compañía, destruirla o hasta incluso venderla a terceros.<br>
+
+Desmitificando por completo que, hackers experimentados o eruditos en la materia, son los únicos capaces de acceder a información confidencial y provocar pérdidas millonarias para cualquier empresa, negocio u organización.<br>
+<br>
+
+'''Aplicaciones seguras con presupuestos (muy) limitados'''<br>
+Una introducción de como hacer que una aplicación web sea segura cuando el presupuesto es adecuado. Se tocaran los distintos temas y etapas que se deben analizar, desde la formación de grupo de trabajo con miembros especializados (profesionales del análisis, del desarrollo, de la seguridad, etc), el planeamiento realista (plazos, costos, etc), la implementación de sistemas de defensa preactiva y pasiva tradicional (firewalls, IDS,IPS, UTMs, etc), Pruebas de intrusion, auditorias, amenazas y riesgos.<br>
+<br>
+
+'''Rellenando Oraculos'''<br>
+Recientemente dos researchers rompieron un cuarto de internet al presentar una tecnica novedosa que permite desencryptar/encriptar mensajes a traves de Padding Oracles en implementaciones de CBC sin chequeo de integridad, en la web. Esta charla pretende ser un cuaderno de notas sobre nuestra vicisitud desarrollando un exploit confiable.<br>
+<br>
+
+----
+
+=== Registracion ===
+
+La Conferencia es libre y abierta al publico de forma gratuita bajo previa registracion. Para garantízar un evento organizado, los que no esten registrados no se les permitirá el acceso.<br>
+IMPORTANTE: Hay 100 Vacantes, Luego de su inscripción debe esperar la confirmación de la organización.<br><br>
+Para inscribirse: [http://owasparg.eventbrite.com clic aquí.]<br><br>
+
+----
+
+=== Organizacion ===
+<br>
+'''Comite Organizador'''<br>
+Martin Tartarelli, Owasp Argentina<br>
+Andres Riancho, Owasp Argentina<br>
+Pablo Romanos, UdeMM<br>
+<br>
+
+'''Auspician'''
+<br>
+[[File:udem_logo.jpg]]<br>
+
+----
+
+=== Datos de Interes ===
+
+<br>
+'''Fecha''': Jueves 14 de Octubre de 18:30 a 22:00 hs<br>
+'''Lugar''': Universidad de la Marina Mercante, Aula Magna.<br>
+<br>
+----

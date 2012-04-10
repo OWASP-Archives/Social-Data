@@ -1,0 +1,129 @@
+{{template:CandidateForDeletion}}
+ #REDIRECT [[Cross-site_Scripting_(XSS)]]
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+<br>
+
+
+==Related Security Activities==
+
+===Description of Cross-site Scripting Vulnerabilities===
+
+See the OWASP article on [[Cross-site Scripting (XSS)]] Vulnerabilities.
+
+===How to Avoid Cross-site scripting Vulnerabilities===
+
+See the [[:Category:OWASP Guide Project|OWASP Development Guide]] article on [[Phishing|Phishing]].
+
+See the [[:Category:OWASP Guide Project|OWASP Development Guide]] article on [[Data Validation]].
+
+===How to Review Code for Cross-site scripting Vulnerabilities===
+
+See the [[:Category:OWASP Code Review Project|OWASP Code Review Guide]] article on how to Avoid [[Reviewing Code for Cross-site scripting|Reviewing code for Cross-site scripting]] Vulnerabilities.
+
+===How to Test for Cross-site scripting  Vulnerabilities===
+
+See the [[:Category:OWASP Testing Project|OWASP Testing Guide]] article on how to [[Testing for Cross site scripting|Test for Cross site scripting]] Vulnerabilities.
+
+
+
+__NOTOC__
+
+==Description==
+
+[[Cross-site Scripting (XSS)]] attacks have to pass two hurdles. First they must get through the application without being filtered, validated, or encoded in a way that prevents them from executing. Second, they much be carefully crafted so that they seamlessly insert their payload into the HTML document so that it will run when loaded by the browser.
+
+Cross Site Scripting is not just ''<script>alert('XSS');</script>''. Because of JavaScript and HTML flexibility and their interpretation by the web browsers, it's possible to achieve the same goal in many different ways. These attacks extend the basic XSS attacks with a number of alternate encodings to help them pass through the application.
+
+In effect we may try to bypass more or less successful input data filtering methods. Some JavaScript and HTML constructions after encoding are correctly interpreted by some browsers, nonetheless it often varies on the web browser version, and others are not.
+
+If we want to use popular ''<script>'' tags anyway, we may try to bypass filtering replacing given characters with their equivalents:
+
+<pre>
+From To
+<    &amp;lt;
+>    &amp;gt;
+(    &amp;#40;
+)    &amp;#41;
+#    &amp;#35;
+&    &amp;amp;
+"    &amp;quot;
+</pre>
+
+In this case:
+<pre>
+ <script>alert('y0u ar3 0wn3d!');</script>
+</pre>
+would be replaced with:
+<code>
+ &amp;lt;script&amp;gt;alert&amp;#40;'y0u ar3 0wn3d!'&amp;#41;&amp;lt;/script&amp;gt;
+</code>
+In most contexts this encoded string will not execute. However there are some environments, particularly Ajax and XML processing engines, that will automatically decode these encoded characters and allow the attack to execute.
+
+We don't need to do replacement at all, we may get the same effect in many different ways.
+
+==Risk Factors==
+
+
+
+==Examples ==
+
+===XSS using Script in Attributes===
+
+XSS attacks may be conducted without using <script></script> tags.
+Other tags will do exacly the same thing, e.g.:
+<pre>
+<body onload=alert('test1')>
+</pre>
+or other attribites like: onmouseover, onerror.
+
+onmouseover
+<pre>
+<b onmouseover=alert('Wufff!')>click me!</b>
+</prE>
+onerror
+<pre>
+<img src="http://url.to.file.which/not.exist" onerror=alert(document.cookie);>
+</pre>
+
+
+===XSS using Script Via Encoded URI Schemes===
+
+If we need to hide against web application filters we may try to encode string characters, e.g.: a=&#X41 (UTF-8) and use it in
+IMG tag:
+<pre>
+<IMG SRC=j&#X41vascript:alert('test2')>
+</pre>
+There are many different UTF-8 encoding notations what give us even more possibilities.
+
+
+===XSS using code encoding===
+
+We may encode our script in base64 and place it in META tag. This way we get rid of alert() totally. More information about this method can be found in RFC 2397
+<pre>
+<META HTTP-EQUIV="refresh"
+CONTENT="0;url=data:text/html;base64,PHNjcmlwdD5hbGVydCgndGVzdDMnKTwvc2NyaXB0Pg">
+</pre>
+These (just a little modified by me) and others examples can be found on http://ha.ckers.org/xss.html, which is a true encyclopedia of the alternate XSS syntax attack.
+
+
+==Related [[Threat Agents]]==
+* TBD
+
+==Related [[Attacks]]==
+* [[Cross-site Scripting (XSS)]]
+* [[:Category:Injection Attack]]
+* [[Invoking untrusted mobile code]]
+* [[Client-side_Attacks]]
+
+==Related [[Vulnerabilities]]==
+* [[:Category:Input Validation Vulnerability]]
+
+==Related [[Controls]]==
+* [[HTML Entity Encoding]]
+* Use whitelists and if possible specify detailed format of the expected output data.
+
+==References==
+* http://ha.ckers.org/xss.html
+* http://www.businessinfo.co.uk/labs/hackvertor/hackvertor.php

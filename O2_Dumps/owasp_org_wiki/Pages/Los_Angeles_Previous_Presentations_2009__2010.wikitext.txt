@@ -1,0 +1,331 @@
+= &nbsp;Previous Presentations  =
+
+== <span style="display: none" id="1298059442687S">&nbsp;</span>'''Wednesday, January 26, 2011 7:00 PM'''  ==
+
+*'''Evercookie: The Persistent Cookie'''
+
+<br>
+<pre>Meeting Location
+Symantec Corporation&lt;span id="fck_dom_range_temp_1298060072205_918" /&gt;
+900&nbsp;Corporate Pointe
+Culver City, CA&nbsp;90230
+</pre>
+'''<br>Description:<br>'''Evercookie is a JavaScript API that produces extremely persistent cookies in a browser. Its goal is to identify a client even after they have removed standard cookies, Flash cookies Local Shared Objects or LSOs), and others. 
+
+Evercookie accomplishes this by storing the cookie data in several types of storage mechanisms that are available on the local browser. Additionally, if evercookie has found the user has removed any of the types of cookies in question, it recreates them using each mechanism available. 
+
+You can read more about Samy and Evercookie at [http://samy.pl/evercookie '''http://samy.pl/evercookie/'''] 
+
+'''Speaker: <br>'''Samy Kamkar is best known for the Samy worm, the first XSS worm, infecting over one million users on MySpace in less than 24 hours. A co-founder of Fonality, Inc., an IP PBX company, Samy previously led the development of all toplevel domain name server software and systems for Global Domains International (.ws), and worked for Penn State University developing AI-based psychometric personality assessment software. In the past 10 years, Samy has focused on evolutionary and genetic algorithmic software development, Voice over IP software development, automated security and vulnerability research in network security, reverse engineering, and network gaming. When not strapped behind the Matrix, Samy can be found stunt driving, getting involved in local community service projects, and continuing his focus on staying out of jail. <br><br>'''Sponser:<br>'''IBM&nbsp;Rational Software<br>http://www-01.ibm.com/software/rational/<br><br>
+
+== <span style="display: none" id="1298059442687S">&nbsp;</span>'''Wednesday, July 21, 2011 7:00 PM'''<br> ==
+
+*<span style="display: none" id="1281462225310S">&nbsp;</span>'''How I Met Your Girlfriend: Entirely New Classes of Web Attacks'''
+<pre>Meeting Location
+Symantec Corporation
+900 Corporate Pointe
+Culver City, CA 90230</pre>
+Description:<br>This includes using HTML5 client-side XSS (without XSS hitting the server!), and my newly discovered attacks on PHP session hijacking and random numbers (accurately guessing PHP session cookies), browser protocol confusion (turning a browser into an SMTP server), firewall and NAT penetration via Javascript (turning your router against you), remote iPhone Google Maps hijacking (iPhone penetration combined with HTTP man-in-the-middle), extracting extremely accurate geolocation information from a web browser (not using IP geolocation), and more. 
+
+<br>
+
+Speaker: Samy Kamkar is best known for the Samy worm, the first XSS worm, infecting over one million users on MySpace in less than 24 hours. A co-founder of Fonality, Inc., an IP PBX company, Samy previously led the development of all top-level domain name server software and systems for Global Domains International (.ws), and worked for Penn State University developing AI-based psychometric personality assessment software. 
+
+&nbsp;In the past 10 years, Samy has focused on evolutionary and genetic algorithmic software development, Voice over IP software development, automated security and vulnerability research in network security, reverse engineering, and network gaming. When not strapped behind the Matrix, Samy can be found stunt driving, getting involved in local community service projects, and continuing his focus on staying out of jail. 
+
+<br>
+
+<br>Dinner Sponser: Citrix Systems<br>[[Image:Citrix Picture.jpg|80x80px|http://lacitrix.com]]<br>
+
+== &nbsp; Wednesday, June 09, 2010 7:30PM<br> ==
+
+*Security Assertion Markup Language (SAML), Shibboleth Single SignOn System, and Shibboleth's role at University of Southern California
+<pre>Meeting Location
+Symantec Corporation
+900 Corporate Pointe
+Culver City, CA 90230
+</pre>
+Speaker: Brendan Bellina <br>Title: Identity Services Architect and Manager of Enterprise Middleware Identity Management at USC 
+
+&nbsp; 
+
+NOTE: We are having this month meeting on the second Wednesday, instead of the regular third Wednesday, to avoid conflict with ISSA Summit scheduled on June 16. You can still register for the summit at the ISSA LA website (http://www.issa-la.org/Default.aspx?id=1088). <br>
+
+== Wednesday, April 21st, 2010 7:30PM  ==
+
+*The intersection of social and technical attacks in Web 2.0 applications by Mike Bailey and Mike Murray
+
+   Meeting Location
+   Symantec Corporation
+   900 Corporate Pointe
+   Culver City, CA 90230
+
+<br>Topic: The intersection of social and technical attacks in Web 2.0 applications 
+
+Speakers: Mike Bailey and Mike Murray 
+
+Mike Bailey is a senior security researcher at MAD Security and an application security specialist. While his research spans a wide variety of domains, it generally focuses on secure web application development, web application scanning and penetration testing, online privacy issues, network protocols and services, and how to break them. 
+
+Mike has spoken throughout the country at different security conferences and shows, including Blackhat DC, Toorcon, Defcon and others. Aside from coming up with new and interesting ways to break web and client-side applications, he also puts those attacks into practice as a penetration tester. Currently, Mike is studying the intersection of social and technical attacks in Web 2.0 applications. He publishes his research on the MAD Security blog as well as at Skeptikal.org. 
+
+Mike Murray has spent his entire career in information security and currently leads the delivery arm of MAD Security (MADSecInc.com). Mike is a co-founder of InfoSecLeaders.com where he writes and talks about the skills and strategies for building a long-term career in information security. Mike's on security careers have been seen at major conferences like RSA and Defcon. 
+
+== Wednesday, March 17th, 2010 7:30PM  ==
+
+*Mike Schrenk, author of "Webbots, Spiders, and Screen Scrapers"
+
+   Meeting Location
+   Symantec Corporation
+   900 Corporate Pointe
+   Culver City, CA 90230
+
+<br>
+
+BOOK PREVIEW: Webbots, Spiders, and Screen Scrapers SECOND EDITION 
+
+Michael Schrenk will provide a preview of the largely expanded second edition of his book "Webbots, Spiders, and Screen Scrapers". This second edition describes how technologies like JavaScript, AJAX and Flash challenge webbot developers and how those challenges are met. He will also talk about defeating CAPTCHAs, scalability and other related topics. 
+
+Michael Schrenk is a software developer, author and instructor, who specializes in automated web browsing agents known as webbots. Michael uses the Internet in new and innovative (odd?) ways to provide competitive advantages for his clients in The US, Europe and Asia. 
+
+He also helps journalists more effectively use computers to conduct online research through automation and by describing where and how to find otherwise hidden online information. No stranger to Europe--he's lived and worked for clients in Moscow and Madrid, Mike taught at the 2008 European Investigative Journalism Conference (Brussels Belgium), twice in 2009 he lectured at The Center for Investigative Journalism (London England) and later in 2009, he lead several sessions at the VVOJ Journalism conference (Utrecht The Netherlands). 
+
+Last August, Mike made his fourth speaking appearance at the DEFCON computer hacking conference. Mike lives in sunny Las Vegas, Nevada (USA). You can contact him at http://www.schrenk.com or follow him on Twitter [http://twitter.com/mgschrenk @mgschrenk]. 
+
+== &nbsp; Wednesday, February 24th, 2010 7:00PM  ==
+
+*Cloud Computing Security: Raining on the Trendy New Parade
+
+<br>Slides can be found [https://docs.google.com/fileview?id=0By_clZjtpXPwMWM0YWIyZDgtZmRkZC00YTZlLWE1MDEtNmU0N2Y3MzQwMTJh&hl=en here on Google Docs]. 
+
+   Meeting Location
+   AT&amp;T Interactive
+   611 N. Brand Blvd., 5th Floor
+   Glendale, CA
+
+Cloud computing is an unstoppable meme at the CIO level, and will dominate corporate IT planning for the next several years. Although they do offer the promise of cost savings for many organizations, the basic ideas behind abstracting out the corporate datacenter greatly complicates the tasks of securing and auditing these systems. While there has been excellent research into low-level hypervisor and virtualization bugs, there has been little public discussion of the “big picture” problems for cloud computing. These include virtualized network devices, browser same-origin issues, credential management and many interesting legal challenges. 
+
+Our goal with this talk will be to explore the different attack scenarios that exist in the cloud computing world and to provide a comparison between the security models of the leading cloud computing platforms. We will discuss how current attacks against applications and infrastructure are changed with cloud computing, as well as introduce the audience to new types of vulnerabilities that are unique to cloud computing. Attendees will learn how to analyze the threat posed to them by cloud computing platforms as either providers or consumers of software built on these new platforms. Our platforms for discussion include Salesforce.com, Google Apps, Microsoft Office Live, Google AppEngine, Microsoft Azure, Amazon EC2, and Sun. 
+
+<br>Alex Stamos is a founding partner of iSEC Partners, a strategic digital security organization. Alex is an experienced security engineer and consultant specializing in application security and securing large infrastructures, and has taught multiple classes in network and application security. 
+
+He is a leading researcher in the field of web application and web services security and has been a featured speaker at top industry conferences such as Black Hat, CanSecWest, DefCon, SyScan, Microsoft BlueHat and OWASP App Sec. 
+
+He holds a BS in Electrical Engineering and Computer Science from the University of California, Berkeley. 
+
+== &nbsp; Wednesday, January 20th, 2010 7:30PM  ==
+
+*Do VLANs allow for good application security?
+
+    Meeting Location
+    [http://maps.google.com/maps?q=900+Corporate+Pointe,+90230&ie=UTF8&oe=UTF-8&ll=33.988385,-118.387041&spn=0.010284,0.014055&t=h&z=16&iwloc=addr Symantec Corporation]
+    900 Corporate Pointe
+    Culver City, CA 90230
+    Laguna Conference Room
+
+<br>Virtual Local Area Networks (VLANs) are not a new concept, and can help any organization better control network access. I will present some of the previous issues identified, what was the root cause, and how these have been fixed in current technology. In addition we will talk about how this can help to enhance security in your environment, and what controls must be in place in order to implement such an environment. We will also touch on how this can complicate your application environment, but improve overall security. 
+
+I will touch on the controls that need to be reviewed and audited when working with VMware, VLANs, and web applications, to ensure that these networks are secure, and what to look for to potentially pass audit criteria. I will also talk about where and how these controls have been implemented in order to protect thousands of users while accessing one of the most hostile networks in the world. <br><br>
+
+David M. N. Bryan, Senior Security Consultant 
+
+David has over 9+ years of computer security experience including, consulting, engineering and administration. He has performed security assessment projects for health care, nuclear, manufacturing, pharmaceutical, banking and educational sectors. As an active participant in the information security community, he volunteers at DEFCON where he designs and implements the Firewall and Network for what is said to be the most hostile network environment in the world. 
+
+He is also an active participant in the local Minneapolis security groups both as a board member of OWASP MSP and DC612. His roots and experience come from working for a large enterprise banks, designing and managing enterprise security systems. In the more recent years he has been working as an Information Security Consultant to review the security and architecture of information computing environments. 
+
+== &nbsp; Wednesday, December 16th, 2009 7:30PM  ==
+
+*[http://www.owasp.org/images/b/bc/Sutton_-_Pulling_The_Plug-Security_Risks_in_Next_Generation_Offline_Web_Apps_-_OWASP_LA_OC.pdf Pulling the Plug: Security Risks in the Next Generation of Offline Web Applications]
+
+<br>As the line between desktop and web applications becomes increasingly blurry in a web 2.0 world, browser functionality is being pushed well beyond what it was originally intended for. Persistent client side storage has become a requirement for web applications if they are to be available both online and off. This need is being filled by a variety of technologies such as Gears (formerly Google Gears) and the Database Storage &lt;http://webkit.org/blog/126/webkit-does-html5-client-side-database-storage/&gt; functionality included in the emerging HTML 5 &lt;http://dev.w3.org/html5/spec/Overview.html&gt; specification. While all such technologies offer great promise, it is clear that the vast majority of developers simply do not understand their security implications. 
+
+Researching a variety of currently deployed implementations of these technologies has revealed a broad scope of vulnerabilities with frightening implications. Now attackers can target victims not just once, but every time they visit a site as the victim now carries and stores the attack with them. Imagine a scenario whereby updated confidential information is forwarded to an attacker every time a victim interacts with a given web application. The attacker no longer needs to worry about timing their attacks to ensure that the victim is authenticated as the victim attacks himself! Limited storage? Cookies that expire? Not a problem when entire databases are accessible with virtually unlimited storage and an infinite lifespan. Think these attacks are theoretical? Think again. In this talk we dive into these technologies and break down the risk posed by them when not properly understood. We will then detail a variety of real-world vulnerabilities that have been uncovered, including a new class of cross-site scripting and client-side SQL injection. <br><br>
+
+Michael Sutton,Vice President and security research at Zscaler, has spent more than a decade in the security industry conducting leading-edge research, building teams of world-class researchers and educating others on a variety of security topics. As VP of Security Research, Michael heads Zscaler Labs, the research and development arm of the company. Zscaler Labs is responsible for researching emerging topics in web security and developing innovative security controls, which leverage the Zscaler in-the-cloud model. The team is comprised of researchers with a wealth of experience in the security industry. 
+
+Prior to joining Zscaler, Michael was the Security Evangelist for SPI Dynamics where, as an industry expert, he was responsible for researching, publishing and presenting on various security issues. In 2007, SPI Dynamics was acquired by Hewlett-Packard. Previously, Michael was a Research Director at iDefense where he led iDefense Labs, a team responsible for discovering and researching security vulnerabilities in a variety of technologies. iDefense was acquired by VeriSign in 2005. Michael is a frequent speaker at major information security conferences; he is regularly quoted by the media on various information security topics, has authored numerous articles and is the co-author of Fuzzing: Brute Force Vulnerability Discovery, an Addison-Wesley publication. 
+
+<br>
+
+== &nbsp; Wednesday, November 18th, 2009 7:30PM  ==
+
+*[http://www.owasp.org/images/b/bc/Watching_software_run_11.18.09.pptx Watching Software Run with Brian Chess, Fortify Founder and Chief Scientist]
+
+<br>Now more than ever before, computer systems are vulnerable because software is vulnerable. No matter how good programmers get at making secure software, it will never be perfect—we will always have to contend with incomplete or inadequate code. Most efforts at living with bad code have focused on shoring it up from the outside: limiting network access (firewalls) or watching for suspicious behavior (intrusion detection). This talk takes a different perspective: we’ll look at methods for identifying and blunting the effects of software shortcomings from the inside by watching the software run. 
+
+Modern languages like Java and C# are good for more than just programmers. They also provide a wealth of structured information when they execute. We can apply many same techniques developed for outside-in security, but at a finer granularity and with much more context. Along the way there is a lot to talk about: Where web application firewalls excel and where they fall down. Fuzzing vs. static analysis. The disappointments of both aspect oriented programming and building security in. Why nobody uses the Java Security model. Taking your security with you into the cloud. The reason SQL injection won’t go away. Revenge of the reference monitor. Why was Twitter’s security so bad? <br><br>
+
+Brian Chess is a founder of Fortify Software and serves as Fortify's Chief Scientist, where his work focuses on practical methods for creating secure systems. His book, Secure Programming with Static Analysis, shows how static source code analysis is an indispensable tool for getting security right. Brian holds a Ph.D. in computer engineering from the University of California at Santa Cruz, where he studied the application of static analysis to the problem of finding security-relevant defects in source code. Before settling on security, Brian spent a decade in Silicon Valley working at huge companies and small startups. He has done research on a broad set of topics, ranging from integrated circuit design all the way to delivering software as a service. <br><br>
+
+== Wednesday, October 21st, 2009 7:30PM  ==
+
+*[http://www.owasp.org/images/c/ca/ISO27001_OWASPLA_Shankar_10212009.pdf Enabling Compliance Requirements using Information Security Management System (ISMS) Framework (ISO27001)]
+
+<br>Growing threats and complex regulatory requirements emphasize the need for an effective Information Security Management System (ISMS) framework for an organization. Comprehensive and globally accepted standards like ISO27001 can help in protecting information assets and in enabling compliance requirements. ISO27001 provides an Information Security framework based on best practices and controls to ensure the confidentiality, integrity and availability of information assets. This presentation analyzes the possible synergies between the goals of Information Security Management System (ISMS) and the various compliance requirements, thus making the compliance efforts less complex. <br>Following are the key objectives of this presentation&nbsp;: 
+
+*Provide an introduction to ISO27001 and its controls 
+*Discuss the implementation approach for an Information Security Management System (ISMS) framework 
+*Familiarize the audience with some common challenges in implementation 
+*Outline synergy between ISO27001 controls and some compliance requirements( PCI , etc)
+
+<br>Attendees will learn about ISO27001 Information Security Standard, ISMS implementation approach and how ISO27001 can be used in meeting various regulatory/compliance requirements like Sox, PCI etc. It will also help the attendees to improve the information security posture of the organization and provide an effective and efficient approach for handling various information security/compliance audits with less effort. <br><br>
+
+Shankar Subramaniyan has over 11 years of experience as a technology consulting and project management executive in the areas of IT Governance, Risk and Compliance (GRC), Business Continuity Planning and Network Design &amp; Architecture. He has thorough expertise on setting up Information Security Framework and Policies on the basis of industry standards such as ISO 27001. He has worked extensively on industry standards and best practices like BS7799 and ITIL. He also has good understanding and knowledge of various compliance requirements like PCI, Sox etc. Shankar' s experience includes IT audit, SOX remediation, ISMS (ISO27001) implementation, PCI compliance assessment, disaster recovery solution, enterprise risk management, designing IT security architecture and implementing ITIL processes. Shankar has rich experience in handling large projects and managing client relationships across corporate and educational sectors. <br><br>
+
+== Wednesday, September 16th, 2009 7:30PM  ==
+
+*The Rise of Threat Analysis and the Fall of Compliance, Policies, and Standards in mitigating Web Application Security Risks
+
+<br>On August 5th of 2009, Federal prosecutors on Monday charged Albert Gonzales with the largest case of credit and debit card data theft ever in the United States: 130 million credit cards numbers by hacking into the systems of Heartland Payment Systems, the New Jersey-based card processing company, as well as Hannaford Brothers, 7-Eleven and two unnamed national retailers. Using a SQL-injection attack, the hackers installed malware on Hannaford Brothers. Hannaford was PCI compliant at the time they were compromise that lets question the validity of regulatory compliance frameworks, and specifically PCI standards as an effective method to reduce data breaches, identity theft, and the proliferation of credit card fraud. This presentation will further analyze how status quo security standards, such as PCI-DSS, as well as other policies, standards, and guidelines truly affect security risk mitigation efforts against cybercrime based threats. These traditional efforts will be compared to threat modeling workflows in order to demonstrate how real risk is mitigated under each scenario. <br><br>Cases for financial fraud will be anonymously presented to create a business case for application threat modeling as a viable methodology to drive improved application design and security risk mitigation. Threat modeling concepts will be elaborated in order to prove how application architecture walkthroughs via threat modeling improve the mitigation of cybercrime threats. Attacker motives and goals will be presented and incorporated into attack trees and it will show how attack libraries can be used to effectively identify application vulnerabilities and devise countermeasures in web application. <br><br>From the risk analysis perspective, several attacks will be considered and highlighted, particularly attacks that represent a systemic impact to an organization or government (such as for example a distributed denial of service). <br><br>Through the presentation of threat modeling scenarios, analyses and correlations will be drawn from the represented model(s) to attack patterns, associated and discovered security vulnerabilities, data sources, application topologies, and possible roles and permissions associated with the application environment. The purpose of the presentation is to demonstrate how application threat modeling can be used as part of a nouveau age form of security risk mitigation and overall application security. Data flow diagrams and application walkthroughs will enable audience members to witness how application threat modeling is an evolved form of security process engineering for improved application design and overall application security. The presentation will also demonstrate how threat modeling is capable of delivering critical business functions as well as in mitigating current and future cyber attacks, such as distributed denial of service, botnet driven-malware, spear phishing techniques, and more attacks that ultimately lead to identity and credit card fraud. <br><br>From the point of view of current and future cybercrime risk mitigation, several different strategies for application threat modeling will be discussed as related to securing both the web application web and critical financial infrastructures, such as ATMs. Finally some emphasis will be given to countermeasures that provide for incident response, intelligence and forensics capabilities. <br><br>Presentation outline, defining all topics that will be covered: 
+
+*Status quo of regulatory compliance in mitigating risk 
+*Threat modeling techniques for cybercrime threats 
+*Attack tree analysis for attack tree vectors 
+*Threat modeling for multi-channel fraud threat scenarios 
+*Cyber crime threats and application countermeasures via threat modeling 
+*Example of mitigation strategies for cybercrime and application of defense in depth for web applications
+
+<br><br>Any supporting research/tools: 
+
+*Threat models and attack trees 
+*Threat model are produced using the Microsoft™ threat modeling tool 
+*Public available cybercrime data will be presented and correlated
+
+<br><br>
+
+Marco Morana serves as one of the leaders of OWASP (Open Web Application Security Project) organization where he is actively involved in evangelize on web application security through presentations at local chapter meetings in USA as well as internationally. Marco has recently been awarded a contract from Wiley Publishing to co-author a book on Application Threat Modeling. <br><br>Besides being the OWASP Cincinnati chapter lead, Marco is also active contributor to OWASP projects such as the application threat modeling methodology for secure coding guideline and the security testing guide (ver. 2 and 3). Besides contributing to OWASP, Marco works as Technology Information Security Officer for a large financial organization in North America with responsibilities in the definition of the organization web application security standards, management of application security assessments during the SDLC, threat-fraud analysis and training of software developers, project managers and architects on different topics related to application security. <br><br>In the past, Marco served as senior security consultant and independent consultant where his responsibilities included providing software security services for several clients in the financial and banking, telecommunications and commercial sector industry. Besides security consulting, Marco had a career as technologist in the security industry where he contributed to the design business critical security products currently being used by several FORTUNE 500 companies as well by the US Government. <br><br>Marco work on software security is referred in the 2007 State Of the Art report by the Information Assurance Technology Analysis Center (IATAC). Marco received the NASA’s Space Act Award in 1999 for the patenting the S/MIME SEP (Secure Email Plug-in) application. <br><br>Marco research work on application and software security is widely published on several magazines such as In-secure magazine, Secure Enterprise, ISSA Journal and the C/C++ Users journal. Marco’s ideas and strategies for writing secure software are posted on his blog: http://securesoftware.blogspot.com. <br><br>
+
+<br>Tony UcedaVelez has more than 10 years of hands-on security and technology experience and is a vocal advocate of security process engineering – a terminology that describes the design and development of secure processes and controls working symbiotically to a unique business workflow. Tony currenlty serves as Managing Director for an Atlanta based risk advisory firm that focuses on security strategy and delivering effective means for risk mitigation and security process engineering. He has worked and consulted for the Fortune 500, as well as federal agencies in the U.S on the topic of application security and security process engineering. His diverse background in software development, security architecture, and network security, coupled with his expertise in process engineering and security risk management has allowed Tony to be a recognized leader in developing strategic security solutions that are multi-faceted in their approach to addressing enterprise risk. <br><br>In the realm of application security, Tony is a threat modeling evangelist and has provided numerous talks domestically and globally on its many benefits and application. He has served as a guest mentor to teams participating in Kennesaw State University’s annual Cybercrime capture the flag event as well as a Cybercrime speaker for Southern Polytechnic University in Atlanta. He has also served as a guest speaker on the subject of application threat modeling during ISACA’s annual Geek Week event and has also served as a keynote speaker on the subject for ISACA’s Global Symposium web cast series. Additional articles include articles related to CoBIT and the ValIT model (ISACA’s Journal), application threat modeling within the SDLC (InSecureMagazine), and security process engineering for a ROSI (return on security investment) (Journal of Finance). He is currently finalizing a Wiley publishing book on Application Threat Modeling with Marco Morana. <br><br>Prior to VerSprite, Tony served as Sr. Director of Security Risk Management to a Fortune 50 organization where he led security assessments against global application environments. His work encompassed web application security testing, security architecture reviews, and analysis for business logic exploits. He applied effective ways to introduce the subject of application risk to information owners by effectively mapping them to causal factors for business. Previous to this role, he spent more than 5 years in the field of application security across other Fortune 500 organizations within the banking, telecom, and information service industry segments. <br><br>Tony currently leads the OWASP Atlanta Chapter, where he manages monthly workshops and events for the Atlanta web application security community. He also has developed a case study program for the Atlanta chapter in order to develop case studies with local Atlanta companies who are seeking to apply application threat modeling techniques within the SDLC and/ or incorporate the many OWASP produced tools and frameworks. Tony can be reached at tonyuv@versprite.com or tonyuv@owasp.org. <br><br>
+
+== Tuesday, August 25th, 2009 3:00PM  ==
+
+*OWASP Live CD Demo and Q&amp;A with Matt Tessauro
+
+<br>Matt Tesauro will be in visiting our LA chapter and providing a quick demo of [http://www.owasp.org/index.php/Category:OWASP_Live_CD_2008_Project OWASP Live CD] <br><br>Matt Tesauro has worked in web application development and security since 2000. He's worn many different hats, from developer to DBA to sys admin to university lecturer to pen tester. Currently, he's focused on web application security and developing a Secure SDLC for TEA. Outside work, he is the project lead for the OWASP Live CD. <br><br>
+
+== Thursday, August 20th, 2009 7:30PM  ==
+
+*The Software Assurance Maturity Model (SAMM)
+
+<br>[http://www.opensamm.org/ The Software Assurance Maturity Model (SAMM)] is a flexible and prescriptive framework for building security into a software development organization. Covering more than typical SDLC-based models for security, SAMM enables organizations to self-assess their security assurance program and then use recommended roadmaps to improve in a way that's aligned to the specific risks facing the organization. Beyond that, SAMM enables creation of scorecards for an organization's effectiveness at secure software development throughout the typical governance, development, and deployment business functions. Scorecards also enable management within an organization to demonstrate quantitative improvements through iterations of building a security assurance program. This workshop will introduce the SAMM framework and walk through useful activities such as assessing an assurance program, mapping an existing organization to a recommended roadmap, and iteratively building an assurance program. Time allowing, additional case studies will also be discussed. SAMM is an open and free project and has recently been added under the Open Web Application Security Project (OWASP) Foundation. <br><br>
+
+Pravir Chandra is Director of Strategic Services at Fortify Software and works with clients on software security assurance programs. Pravir is recognized for his expertise in software security, code analysis, and his ability to strategically apply technical knowledge. Prior to Fortify, he was a Principal Consultant affiliated with Cigital and led large software security programs at Fortune 500 companies. Pravir Co-Founded Secure Software, Inc. and was Chief Security Architect prior to its acquisition by Fortify. He recently created and led the Open Software Assurance Maturity Model (OpenSAMM) project with the OWASP Foundation, leads the OWASP CLASP project, and also serves as member of the OWASP Global Projects Committee. Pravir is author of the book Network Security with OpenSSL. <br><br>
+
+== Tuesday, July 21st, 2009 7:30PM  ==
+
+*Lock picks, BumpKeys, and Hackers oh my! How secure is your application?
+
+<br>This talk will focus on physical security controls, weaknesses, and counter measures. I will present on what lock picking is, how bump keys work, and ways to subverting electronic locks. We will also go into what are good controls, and what is often overlooked when designing secure environments. Many of the topics covered apply to application security, as the methods for securing these devices is by using obscurity. In the application world with automated tools and scripts, this does not hold water for very long. <br><br>
+
+David M. N. Bryan, NetSPI has 10 years of computer security experience, including consulting, engineering, and administration. He has performed security assessment projects in the healthcare, nuclear, manufacturing, pharmaceutical, banking and educational sectors. <br>As an active participant in the information security community, he volunteers at DEFCON, where he designs and implements the firewall and network for what is said to be the most hostile network environment in the world. This network allows speakers, press, vendors, and others to gain access to the Internet, without being hacked. In his spare time he and his wife run the local DEFCON group, DC612 and participate in the Minneapolis OWASP chapter. <br><br>
+
+== June 24th, 2009 7:30PM  ==
+
+*Information Warfare: Past, Present and Future
+
+<br>Information warfare is the composite use of psychological operations (PYOPS), military deception (MILDEC), operational security (OPSEC), computer network operations (CNO), and electronic warfare (EW) to control and disrupt information flow. Recently, interest in information war technologies, techniques and policy issues have increased, especially in the domain of CNO. Increased scrutiny over network operations is both legitimate and valid, as global commerce and military powers are integrated and dependent on the Internet for critical operations. This presentation will describe the five domains of information warfare, the past use of information warfare in the Gulf war and recent Cyber attacks on the Eastern European countries of Georgia and Estonia. Information will be presented on possible new directions of information warfare. <br><br>Mikhael Felker, CISSP-ISSEP has worked in a variety of roles including instructor, engineer, and researcher. He is currently employed by The Aerospace Corporation in the Information Assurance Technology Department, supporting Information Assurance (IA) for satellite systems. He is also an Instructor within the Computer &amp; Information Systems Division at UCLA Extension, teaching a course in networking. Actively involved in the Los Angeles security community, he is the Education Director for Los Angeles Chapter of Information Systems Security Association (ISSA), member and speaker of Information Systems Audit and Control Association (ISACA), and former Defense Sector Coordinator for InfraGard. Mikhael has published articles in IEEE Security &amp; Privacy, the ISSA Journal, Information Systems Control Journal, and SecurityFocus. He is a recipient of the Scholarship for Service Program (SFS) Fellowship, sponsored by the National Science Foundation and Department of Homeland Security (DHS). Mikhael completed his graduate work at Carnegie Mellon University with a Master's in Information Security Policy &amp; Management and Bachelor's at UCLA in Computer Science. He holds over 10 certifications in IT and Security. <br><br>
+
+== May 20th, 2009  ==
+
+*[http://video.google.com/videoplay?docid=2875886330538461390 Top Ten Web Hacking Techniques of 2008: "What's possible, not probable"]
+
+<br>The polls are closed, votes are in, and we have the winners making up the Top Ten Web Hacking Techniques of 2008! The competition was fierce with the newest and most innovative web hacking techniques to the test. This session will review the top ten hacks from 2008 - what they indicate about the security of the web, what they mean for businesses, and what might be used against us soon down the road. <br><br>Jeremiah Grossman is the founder and CTO of WhiteHat Security. He is considered a world-renowned expert in Web security, is a co- founder of the Web Application Security Consortium, and was named to InfoWorld's Top 25 CTOs for 2007. Grossman is a frequent speaker at industry events including the Black Hat Briefings, RSA, CSI, HiTB, OWASP, ISSA, and a number of large universities. He has authored dozens of articles and white papers; is credited with the discovery of many cutting-edge attack and defensive techniques and is a co-author of XSS Attacks. Grossman is often quoted in the the business and technical press. Prior to WhiteHat, Grossman was an information security officer at Yahoo! <br><br>
+
+== April 15th, 2009  ==
+
+*Cross Site Scripting, Exploits and Defenses<br><br>
+
+For a long time, the impact of XSS vulnerabilities has been grossly underestimated. Recent compromises, such as the pro-Hillary [http://cyberinsecure.com/hacked-obama-site-redirects-visitors-to-clintons-site/ defacement] of Barack Obama's website, and a [http://www.securescience.net/twoubledtwitter.html Viral XSS in Twitter] demonstrated the impact of XSS vulnerabilities to the masses. 
+
+During this presentation, David Campbell will demonstrate exactly how effective XSS vulns can be, and show you what you can do to protect yourself and your sites. 
+
+This presentation was originally delivered to OWASP Colorado in May of 2008, and has been updated for this session. 
+
+[https://www.owasp.org/index.php/Image:DC_ED_OWASP_XSS_MAY2008_v1.0.pdf Slide deck from May '08 talk] <br><br>David Campbell is an infosec veteran, with experience ranging from penetration testing for Fortune 100's to architecting security solutions for large multinational financials to consulting for government agencies. DC is presently chapter leader of OWASP Denver and is Principal Consultant at Electric Alchemy. <br><br>
+
+== March 12th, 2009  ==
+
+*NETWORK SECURITY DINNER WITH ISSA - CISO'S Security Dashboard Panel!!<br><br>
+
+This month will be joining forces with ISSA to create the biggest netowork event for security professionals in Los Angeles for this year. <br><br>Agenda 
+
+*5:30 p.m., Networking and tours of the antivirus facility 
+*6:30 p.m., Dinner 
+*7:30 p.m., CISO Panel
+
+<br>Panelists 
+
+*Robert J. Brown, CISSP, CISO WestCorp Credit Union 
+*Steve Haydostian, CISSP, Former CISO, Healthnet 
+*David Lam, CISSP, CISO, Stephen S. Wise 
+*Edward G. Pagett II, CISSP, CISO, Lender Processing Services, Inc. 
+*Mike O. Villegas, CISA, CISSP, Director of Information Security, Newegg.com
+
+<br>Dinner Fees: 
+
+*ISSA-LA members &amp; OWASP members - Pre-Register and Pay online: $25 
+*ISSA-LA members &amp; OWASP members - Pay at the door: $30 
+*Non-members - Pre-Register and Pay online: $30 
+*Non-members - Pay at the door: $35
+
+<br>''Thanks to David Lam and Stan Stahl for agreeing to have OWASP joining this ISSA LA event!'' 
+
+== February 18th 2009  ==
+
+[https://www.owasp.org/images/5/58/Cloud_Computing_Security.pdf Cloud Computing and Security] <br>The Cloud Computing and Software as a Service models are driving many companies to build innovative, scalable and cost effective alternatives to the traditional IT computing model. Even with the potential cost and scalability benefits of cloud computing, its use by more traditional enterprises has been retarded by the concerns of their professional security and audit staffs. In our experience these concerns are legitimate, and although surveys have shown that security is the #1 factor preventing adoption of cloud computing, there has been very little reliable discussion of the technical security risks inherent in the model and how engineers, sys-admins and architects can deal with these risks. <br><br>In this session, we will explore the widely differing security models of the leading cloud computing providers, including Amazon, Google and Salesforce. We will also reveal the significant differences in operational and application security practices necessary to deal with a cloud computing environment. <br><br>Alex Stamos is a co-founder and Partner at iSEC Partners Inc., a strategic digital security organization. Alex is an experienced security engineer specializing in solving difficult problems in application security and is a leading researcher in the field of web application and mobile security. He has been a featured speaker at top industry conferences such as Black Hat, Web 2.0 Expo, CanSecWest, DefCon, SyScan, SD Best Practices, Microsoft BlueHat and OWASP App Sec. Alex is a contributing author to "Hacking Exposed: Web 2.0" and an author of the upcoming book "Mobile Application Security", both from McGraw-Hill. He holds a BSEE from the University of California, Berkeley. <br><br>
+
+== January 28th 2009  ==
+
+Building Security into the Test Organization <br>The common approach to detecting web security issues is still the regular application of a post-release pen-test or tool based scan. These last minute examinations rarely live up to broader organizational goals; they can be difficult to repeat, measure, or optimize over time. Most of all they're expensive: they find bugs late in the lifecycle. This talk recommends moving security testing responsibility within the test team itself. The approach discussed will work with-or-without the existence of explicit security requirements. See how security testing has been applied at other organizations and how it might be customized for yours. <br><br>Ben Walther firmly believes testers have a wonderfully devious mindset, and has been promoting the idea of "security testing" at Cigital's clients, at OWASP events, and to any friends and relatives who will listen. To this end, with the aid of O'Reilly media, Ben Walther and Paco Hope recently published a book entitled the "Web Security Testing Cookbook." <br><br>
+
+== December 10th 2008  ==
+
+[http://www.owasp.org/images/7/79/OWASP-WASCAppSec2007SanJose_SamyWorm.ppt The MySpace Worm] <br><br>The most virulent worm in the history of the series of tubes known as the Internet. One of the most highly accessed websites ever [see comScore]. One of the most ostentatious hackers alive. Over one million victims. Less than 24 hours. Fueled only by Chipotle burritos. The MySpace Worm. <br><br>Samy will be recapping the story of the development, release and eventual future of the MySpace worm. The 24 hours that led up to over one million friends. The eventual downfall of the MySpace site for several hours. The non-malicious intent and humorous progression of the worm. The t-shirts. The copycats. The behind-the-scenes story of the Secret Service raid at Samy's home and office. The demise of Samy's legal use of computers, community service, restitution, high-risk offender probation, and rehabilitation. And where Samy is today.<br><br>
+
+<br>
+
+Samy Kamkar, software engineer and self-proclaimed playboy, is a meddler in the security and software realms. He is currently the Director of Engineering and co-founder of Fonality, Inc., an IP PBX startup located in Culver City. Previously, Samy led the development of all core top-level domain name server software and systems for Global Domains International (.ws). Prior to that, Samy worked with Penn State University developing psychometric personality assessment software with attention to artificial intelligence and bioinformatics. When not strapped behind the Matrix, Samy can be found performing parkour (free running), practicing urban escape artist maneuvers, or is found getting involved in local community service projects. In the past 10 years, Samy has focused on evolutionary and genetic algorithmic software development, Voice over IP software development, automated security and vulnerability research in the areas of network security, reverse engineering, and network gaming, and continues his focus in staying out of jail.<br><br>
+
+== November 19th 2008  ==
+
+A new web attack vector: [http://www.eweek.com/c/a/Security/Security-Researcher-to-Reveal-New-Web-Attack-Vector/ Script Fragmentation]<br><br>
+
+This presentation will introduce a new web-based attack vector which utilizes client-side scripting to fragment malicious web content.<br>
+
+This involves distributing web exploits in a asynchronous manner to evade signature detection. Similar to TCP fragmentation attacks, which are still an issue in current IDS/IPS products, This attack vector involves sending any web exploit in fragments and uses the already existing components within the web browser to reassemble and execute the exploit.<br>
+
+Our presentation will discuss this attack vector used to evade both gateway and client side detection. We will show several proof of concepts containing common readily available web exploits.<br><br>
+
+Stephan Chenette is a Senior Security Researcher who helps lead Websense Security Labs working on malcode detection techniques. Mr. Chenette specializes in research tools ranging from kernel-land sandboxes, to static analysis scanners. He has released public analyses on various vulnerabilities and malware. Prior to joining Websense, Stephan was a security software engineer for 4 years working in research and product development at eEye Digital Security.<br><br>
+
+== October 29th 2008  ==
+
+Entitlements Management: Security and policies for SOA using XML appliances<br><br>
+
+Loosely coupled Web Services can be insecure as, by their very nature, are exposed to application consumers. Security built into XML appliances alleviates the developer with the burden of coding security and policies into their application, freeing the developer to concentrate on conding business processes. This evenings meeting will discuss SOA security challenges and introduce the Layer7 XML appliance that allows for dynamic policies to be configured on the fly using an intuitive user interface. <br><br>Jonathan Gershater’s career started at 3Com, managing servers and networks. His initial foray into Enterprise Software began in 1999 at enCommerce, which was later acquired by Entrust. He worked at Sun Microsystems from 2005 to 2008 architecting and deploying identity solutions for customers using Sun Java System Identity products. He recently joined Layer 7 Technologies as a senior solution architect. He can be reached at jgershater@layer7tech.com. <br>
+
+== September 17th 2008  ==
+
+The web hacking incident database (WHID) 2007 Report is a Web Application Security Consortium project dedicated to maintaining a list of web applications related security incidents. The database classifies each reported attack by, among other criteria, the method used, the outcome of the attack and the industry and the country of the attacked organization. Based on the database Breach Labs which sponsors WHID issues a periodical report on trends in Web Application Security. 
+
+<br>
+
+By providing answers to questions such as: 
+
+*The drivers behind Web hacking. 
+*The technology hackers use. 
+*The types of organizations attacked most often. 
+*The common outcomes
+
+<br>The presentation will discuss WHID statistics, focusing on rising trends in Web Attacks in the 1st half of 2008. As the WHID enables research into the business model behind hacking, the presentation goes beyond discussing the technical aspects of attacks such as SQL injection crawlers and Web Site herding, to discussing the business model common to all of the attacks: Economy of scale. <br><br>
+
+Ryan C. Barnett is a recognized security thought leader and evangelist who frequently speaks with the media and industry groups. 
+
+<br>He is the director of application security at Breach Security. He is also a faculty member for the SANS Institute, where his duties include instructor/courseware developer for Apache Security/Building a Web Application Firewall Workshop, Top 20 Vulnerabilities Team Member and Local Mentor for the SANS Track 4, "Hacker Techniques, Exploits and Incident Handling" course. He holds six SANS Global Information Assurance Certifications (GIAC): Intrusion Analyst (GCIA), Systems and Network Auditor (GSNA), Forensic Analyst (GCFA), Incident Handler (GCIH), Unix Security Administrator (GCUX) and Security Essentials (GSEC). 
+
+<br>Mr. Barnett also serves as the team lead for the Center for Internet Security Apache Benchmark Project and is a member of the Web Application Security Consortium. His web security book, "Preventing Web Attacks with Apache,” was published by Addison/Wesley in 2006. 
+
+== August 19th 2008  ==
+
+"Don't Write Your Own Security Code" – Application security is arguably the most difficult IT challenge facing organizations today. There are over 600 different categories of vulnerabilities to avoid and they are all tricky. Most of these problems are related to the design, implementation, and use of a relatively small set of security controls. To solve this problem for developers, Jeff created the OWASP ESAPI project – a clean intuitive toolbox of the core security building blocks that every web developer needs. In this talk, Jeff will show you how to create an ESAPI for your organization that will solve the OWASP Top Ten vulnerabilities, increase assurance, and dramatically cut costs all at the same time. 
+
+<br>Jeff Williams is the founder and CEO of Aspect Security, specializing in application security services. Jeff also serves as the volunteer Chair of the Open Web Application Security Project (OWASP). Jeff has made extensive contributions to the application security community through OWASP, including the Top Ten, WebGoat, Stinger, Secure Software Contract Annex, Enterprise Security API, and the local chapters program. Jeff holds advanced degrees in psychology, computer science, and human factors, and graduated cum laude from Georgetown Law.

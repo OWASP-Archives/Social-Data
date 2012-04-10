@@ -1,0 +1,385 @@
+__NOTOC__ 
+
+<!-- [http://froc2010.eventbrite.com/ Registration is NOW OPEN] -->
+FROC2010 was a major success!  The [http://www.surveymonkey.com/sr.aspx?sm=Fn2UBK3eyju0z2k3B8XpvHvs9s_2bdRO1BS428Of_2f9ZA0_3d survey results]are now posted.
+
+'''Looking for the presentations and videos?  They are [http://www.owasp.org/index.php/Front_Range_OWASP_Conference_2010#tab=Agenda here]'''
+
+<br> <!-- Header -->
+====Welcome====  
+[[Image:Froc2010_sm.png|200px]]
+'''Welcome to FROC 2010, the third annual Front Range OWASP Application Security Conference!'''
+
+After successful FROC's in June of 2008, and [http://www.owasp.org/index.php/Front_Range_OWASP_Conference_2009 March of 2009], we are back in Denver, Colorado USA on Wednesday the 2nd of June 2010! 
+
+This year we again present a full day, multi-track event, which will provide valuable information for managers and executives as well as developers and engineers.
+
+In 2009, we attracted a packed venue with our great AppSec speakers, and we hope to achieve the same again in 2010.  This year we are organizing the conference with the support of our colleagues at the [http://www.cloudsecurityalliance.org/ Cloud Security Alliance], and will feature an AppSec track as well as a CloudSec/VirtSec track.
+
+====Registration====
+
+<!-- [http://froc2010.eventbrite.com Registration is now open!] -->
+
+Due to the hard work of our organizers and the gracious support of our sponsors, FROC was a free event in 2008 and 2009.  This year, thanks to the generosity of our [http://www.owasp.org/index.php/Front_Range_OWASP_Conference_2010#tab=Conference_Sponsors sponsors] we are offering tickets to the event on a DONATION basis.  Pay whatever you or your company can afford.
+
+<!-- Click [http://froc2010.eventbrite.com HERE] to register now. -->
+
+====Agenda====
+
+==Agenda and Presentations: 2 June 2010==
+
+The agenda follows the successful OWASP conference multi track format, with opening keynotes and presentations in the main auditorium, split tracks in the middle of the day, and closing panel discussions back in the main auditorium.
+
+{| style="width:80%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#4058A0; color:white" | June 2, 2010
+ |-
+ | style="width:10%; background:#7B8ABD" | 07:30-08:30 || colspan="3" style="width:80%; background:#C2C2C2" align="left" | Registration and Continental Breakfast in the Sponsor Expo Room
+ |-
+ | style="width:10%; background:#7B8ABD" | 08:30-08:35 || colspan="3" style="width:80%; background:#F2F2F2" align="center" | Welcome to FROC 2010 Conference 
+''David Campbell, OWASP Denver''
+ |-
+ | style="width:10%; background:#7B8ABD" | 08:35-09:35 || colspan="3" style="width:80%; background:#F2F2F2" align="center" | Keynote: [[FROC2010_Abstract_Chess|"Watching Software Run: Software Security Beyond Defect Elimination"]]
+''Brian Chess, Fortify Software''
+
+[https://docs.google.com/a/owasp.org/leaf?id=0B_-vbfka88vFNjMxYTcwY2ItNjgxNy00ZjMzLTkwMTUtN2IyMzA4MmE3OWVl&sort=name&layout=list&num=50 Presentation] [http://blip.tv/file/3710067 Video]
+
+<!-- [http://video.google.com/videoplay?docid=2875886330538461390 Video] -->
+ |-
+ | style="width:10%; background:#7B8ABD" | 09:35-10:00 || colspan="3" style="width:80%; background:#F2F2F2" align="center" | OWASP: State of the Union
+''Tom Brennan, OWASP Board - [http://www.owasp.org/index.php/User:Brennan BIO]''
+
+[http://blip.tv/file/3710155 Video]
+ |-
+ | style="width:10%; background:#7B8ABD" | 10:00-10:20 || colspan="3" style="width:80%; background:#F2F2F2" align="center" | Cloud Security Alliance: State of the Union
+''Randy Barr, Cloud Security Alliance''
+
+[http://blip.tv/file/3710535 Video]
+ |-
+ | style="width:10%; background:#7B8ABD" | 10:20-10:30 || colspan="3" style="width:80%; background:#C2C2C2" align="left" | Break - Expo - CTF
+ |-
+ | style="width:10%; background:#7B8ABD" | || style="width:22%; background:#BC857A" | '''AppSec/Technical Track: Room 1'''
+ | style="width:22%; background:#BCA57A" | '''Cloud/Mobile/Emerging Track: Room 2'''
+ | style="width:22%; background:#C6E2FF" | '''Management / Exec Track: Room 3'''
+ |-
+ | style="width:10%; background:#7B8ABD" | 10:30-11:15 || style="width:22%; background:#BC857A" align="left" | "[[FROC2010_Abstract_Grossman|2010: Web Hacking Odyssey - The Top Hacks of the Year]]"
+''Jeremiah Grossman''
+
+[https://docs.google.com/fileview?id=0B_-vbfka88vFZTIwOWY3NjctZTY1OC00YTRjLThjNGUtMDIwZTk3MmVhN2Zi&hl=en Presentation] <!-- [http://blip.tv/file/3711213 Video] --> [https://whitehatsec.market2lead.com/go/whitehatsec/WebEx_odyssey0310 Video] Note the blip version seems broken, so linked to WhiteHatSec webex.
+
+<!-- [http://video.google.com/videoplay?docid=-8396241750899139680 Video] -->
+ | style="width:22%; background:#BCA57A" align="left" | [[FROC2010_Abstract_McClellan|"Building a Secure, Compliant Cloud for the Enterprise"]]
+''Matt Ferrari, Hosting.com''
+
+ | style="width:22%; background:#C6E2FF" align="left" | [[FROC2010_Abstract_Byrne|"Anatomy of a Logic Flaw"]]
+''David Byrne and Charles Henderson, Trustwave''
+
+ |-
+ | style="width:10%; background:#7B8ABD" | 11:15-12:00 || style="width:22%; background:#BC857A" align="left" | "[[FROC2010_Abstract_Zusman|Advanced MITM Techniques for Security Testers]]"
+''Mike Zusman, Raj Umadas and Aaron Rhodes, Intrepidus Group''
+
+[https://docs.google.com/fileview?id=0B_-vbfka88vFMmRlODIyOWItMTQwMS00ZjMzLWFkYWMtYjc4YzZiOGVjY2U1&hl=en Presentation]
+
+<!-- [http://video.google.com/videoplay?docid=-8396241750899139680 Video] -->
+ | style="width:22%; background:#BCA57A" align="left" | [[FROC2010_Abstract_Nickerson|"YOU are the weakest link"]]
+''Chris Nickerson, Lares Consulting''
+
+[https://docs.google.com/fileview?id=0B_-vbfka88vFMWIyNjc2MWUtYjc2NS00MjExLTg3NGYtNWFmN2RjMjFmNTI4&hl=en Presentation]
+
+ | style="width:22%; background:#C6E2FF" align="left" | [[FROC2010_Abstract_Whaley|"Effectively marketing security as a win for both the business and the customer"]]
+''Ben Whaley, Applied Trust Engineering and Jeff Smith, Rally Software''
+
+[https://docs.google.com/present/edit?id=0Af-vbfka88vFZGRrcjYycXZfMzI5Z3c0OWQ2Y2M&hl=en Presentation]
+
+ |-
+ | style="width:10%; background:#7B8ABD" | 12:00-13:00 || colspan="3" style="width:80%; background:#C2C2C2" align="left" | Lunch - Expo - CTF
+ |-
+
+ | style="width:10%; background:#7B8ABD" | 13:00-13:50 || style="width:22%; background:#BC857A" align="left" | "[[FROC2010_Abstract_Wheeler|Vulnerabilities in Secure Code: Now and Beyond]]"
+''Alex Wheeler and Ryan Smith, Accuvant''
+
+[http://blip.tv/file/3713199 Video]
+
+<!-- [http://video.google.com/videoplay?docid=-8396241750899139680 Video] -->
+ | style="width:22%; background:#BCA57A" align="left" | [[FROC2010_Abstract_Roberts|"Real life CSI – Data Mining and Intelligence Gathering for the masses"]]
+''Chris Roberts, Cyopsis''
+
+[https://docs.google.com/fileview?id=0B_-vbfka88vFNWJhN2I3NzMtOTI2Mi00YWEzLWI1YzgtOTlkNTQ4YWU5YTEx&hl=en Presentation]
+
+ | style="width:22%; background:#C6E2FF" align="left" | [[FROC2010_Abstract_Dickson|"The Permanent Campaign: Driving a Secure Software Initiative in the Enterprise"]]
+''John Dickson, Denim Group''
+
+[https://docs.google.com/fileview?id=0B_-vbfka88vFMjk5MDY0MDMtYjdmYy00MWU5LTgyMDQtNTUwZjZmYTM3NjAx&hl=en Presentation]
+
+ |-
+
+ | style="width:10%; background:#7B8ABD" | 13:50-14:40 || style="width:22%; background:#BC857A" align="left" | "[[FROC2010_Abstract_Byrne2|Beware of Serialized GUI Objects Bearing Data]]"
+''David Byrne and Rohini Sulatycki, Trustwave''
+
+[http://blip.tv/file/3713260 Video]
+
+<!-- [http://video.google.com/videoplay?docid=-8396241750899139680 Video] -->
+ | style="width:22%; background:#BCA57A" align="left" | [[FROC2010_Abstract_Zusman2|"What's Old Is New Again: An Overview of Mobile Application Security"]]
+''Zach Lanier and Mike Zusman, Intrepidus Group''
+
+ | style="width:22%; background:#C6E2FF" align="left" | [[FROC2010_Abstract_Goldschmidt|"Fundamental Practices and Tools to implement a security development lifecycle"]]
+''Cassio Goldschmidt, Symantec''
+
+[https://docs.google.com/fileview?id=0B_-vbfka88vFYWY0YzZkZjEtYzc4My00ZTk2LWFmYWQtYjViYTdkZDcxNThm&hl=en Presentation]
+ |-
+
+ | style="width:10%; background:#7B8ABD" | 14:40-15:00 || colspan="3" style="width:80%; background:#C2C2C2" align="left" | BREAK
+ |-
+
+ | style="width:10%; background:#7B8ABD" | 15:00-15:50 || style="width:22%; background:#BC857A" align="left" | "[[FROC2010_Abstract_Schmidt|Solving Real-World Problems with an  Enterprise Security API]]"
+''Chris Schmidt''
+
+[https://docs.google.com/fileview?id=0B_-vbfka88vFNjM5NzZmODQtZTQ1OS00NTYxLWJmOWQtNzE3OWY4OWZkOGMw&hl=en Presentation] [http://blip.tv/file/3713316 Video]
+
+<!-- [http://video.google.com/videoplay?docid=-8396241750899139680 Video] -->
+ | style="width:22%; background:#BCA57A" align="left" | [[FROC2010_Abstract_Tucker|"Cloudy with a chance of hack"]]
+''Lars Ewe, Cenzic''
+
+[https://docs.google.com/present/edit?id=0Af-vbfka88vFZGRrcjYycXZfMjUyZDQ3enN6ZmI&hl=en Presentation]
+
+ | style="width:22%; background:#C6E2FF" align="left" | [[FROC2010_Abstract_Cornell|"Application Security Program Management with Vulnerability Manager"]]
+''Bryan Beverly, Denim Group''
+
+[https://docs.google.com/fileview?id=0B_-vbfka88vFNTY3OGUwMGItMmQyMi00YWRmLWJkMzgtMTZhNDNlZjJiNWJm&hl=en Presentation]
+
+ |-
+ | style="width:10%; background:#7B8ABD" | 15:50-16:30 || colspan="3" style="width:80%; background:#C2C2C2" align="left" | Panel Discussion: Topic: ''"Security successes are like Six legged calves: unnatural, but they happen."''  Moderator: John Dickson, Denim Group.
+Panelists: Randy Barr, CSO @ Qualys. Jeremiah Grossman, CTO @ WhiteHat Security, Chris Nickerson, Principal @ Lares Consulting, Andy Lewis, CSO @ New Frontier Media
+ |-
+
+ |-
+ | style="width:10%; background:#7B8ABD" | 16:30-17:30 || colspan="3" style="width:80%; background:#C2C2C2" align="left" | Wrap up, vendor raffles, CTF awards, FREE BEER!
+ |-
+
+|}
+
+
+====Logistics====
+[[Image:Denver_mountains.JPG]]
+
+This year, the conference will again be held at University of Colorado, Denver.  However, instead of the Tivoli Student Union, this year the event will be hosted at the North Classroom building (Atrium UCD).
+
+[[File:Froc map.GIF|thumb|left]]
+
+[http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=1200+Larimer+Street,+Denver,+CO&sll=37.0625,-95.677068&sspn=37.188995,62.226563&ie=UTF8&hq=&hnear=1200+Larimer+St,+Denver,+Colorado+80204&z=16&iwloc=A Google Map of the Venue: 1200 Larimer St., Denver CO 80204]
+
+=====Accomodation=====
+OWASP has negotiated discounted rates with the uber-pimpin [http://www.hotelteatro.com/ Hotel Teatro].  Rooms under the FROC rate are $159/night and include courtesy Cadillac Escalade transportation to and from Auraria Campus. To reserve a room, contact Hotel Teatro at +1.303.228.1100 and mention FROC or use the [https://reservations.ihotelier.com/crs/g_reservation.cfm?groupID=464765&hotelID=14708 iHotelier.com link here].
+
+=====How to get to the venue?=====
+
+*By taxi: taxi from the airport to venue is about $50 USD
+
+*From hotel: transport from the conference hotel (Hotel Teatro) by limo is free
+
+*By car: there is plenty of parking at the UCD.  Attendees should park at the Tivoli lot (as in past years) and it is a short walk to the North Classroom buildings.  Parking validation will be provided for registered FROC participants.
+
+
+<!-- 
+====Call for Presentations====
+The [[Front_Range_OWASP_Conference_2010_CFP|call for presentations]] closed 31 March 2010.  We are no longer accepting proposals for presentations.  If you have already submitted a presentation you can, however update your abstract or submit additional information to clarify your proposal. -->
+
+<!-- ===[[SnowFROC Tentative Schedule]]=== -->
+
+<!-- 
+====Agenda and Presentations: 5 March 2009====
+
+The agenda follows the successful OWASP conference two tracks format, with opening keynotes and presentations in the main auditorium, split tracks in the middle of the day, and closing panel discussions back in the main auditorium.
+
+{| style="width:80%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white" | March 5, 2009
+ |-
+ | style="width:10%; background:#7B8ABD" | 07:30-08:30 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Registration and Continental Breakfast in the Sponsor Expo Room
+ |-
+ | style="width:10%; background:#7B8ABD" | 08:30-08:35 || colspan="2" style="width:80%; background:#F2F2F2" align="center" | Welcome to SnowFROC AppSec 2009 Conference 
+''David Campbell, OWASP Denver''
+ |-
+ | style="width:10%; background:#7B8ABD" | 08:35-09:45 || colspan="2" style="width:80%; background:#F2F2F2" align="center" | Keynote: [[SnowFROC_Abstract_Grossman|"Top Ten Web Hacking Techniques of 2008: What's possible, not probable"]]
+''Jeremiah Grossman, Whitehat Security''
+
+[http://video.google.com/videoplay?docid=2875886330538461390 Video]
+ |-
+ | style="width:10%; background:#7B8ABD" | 09:45-10:15 || colspan="2" style="width:80%; background:#F2F2F2" align="center" | OWASP State of the Union
+''Tom Brennan, OWASP Board''
+ |-
+ | style="width:10%; background:#7B8ABD" | 10:15-10:30 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Break - Expo - CTF - Beatz by [http://www.dj-jackalope.com/ DJ Jackalope]
+ |-
+ | style="width:10%; background:#7B8ABD" | || style="width:40%; background:#BC857A" | Management / Executive Track: Room 1
+ | style="width:40%; background:#BCA57A" | Deep Technical Track: Room 2
+ |-
+ | style="width:10%; background:#7B8ABD" | 10:30-11:15 || style="width:40%; background:#BC857A" align="left" | "[[sfroc_bellis_abstract|Doing More with Less: Automate or Die]]"
+''Ed Bellis, Orbitz''
+
+[http://video.google.com/videoplay?docid=-8396241750899139680 Video]
+ | style="width:40%; background:#BCA57A" align="left" | [[SnowFROC_Abstract_Zusman|"Poor Man's Guide to Breaking PKI: Why You Don't Need 200 Playstations"]]
+''Mike Zusman, Intrepidus Group''
+
+ |-
+ | style="width:10%; background:#7B8ABD" | 11:15-12:00 || style="width:40%; background:#BC857A" align="left" | [[SnowFROC_Abstract_Paller|"A Legal Minimum Standard of Due Care: The CAG and the Top 25 Most Dangerous Programming Errors"]]
+''Alan Paller, SANS''
+ | style="width:40%; background:#BCA57A" align="left" | [[SnowFROC_Abstract_Stads|"Adobe Flex, AMF 3 and BlazeDS: An Assessment"]] 
+''Kevin Stadmeyer, Trustwave''
+
+[http://video.google.com/videoplay?docid=1629208419122953007 Video]
+ |-
+ | style="width:10%; background:#7B8ABD" | 12:00-13:00 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Lunch - Expo - CTF - Beatz by [http://www.dj-jackalope.com/ DJ Jackalope]
+ |-
+ | style="width:10%; background:#7B8ABD" | || style="width:40%; background:#BC857A" | Management / Executive Track: Room 1
+ | style="width:40%; background:#BCA57A" | Deep Technical Track: Room 2
+ |-
+ | style="width:10%; background:#7B8ABD" | 13:00-13:50 || style="width:40%; background:#BC857A" align="left" | [[SnowFROC_Abstract_Peloquin|"Building an Effective Application Security Program"]]
+''Joey Peloquin, Fishnet Security''
+
+[http://video.google.com/videoplay?docid=-2540122072368010669 Video]
+ | style="width:40%; background:#BCA57A" align="left" | [[SnowFROC_Abstract_Belani|"Bad Cocktail: Spear Phishing + Application Hacks"]]
+''Rohyt Belani, Intrepidus Group''
+
+[http://video.google.com/videoplay?docid=3127205451740977427 Video]
+ |-
+ | style="width:10%; background:#7B8ABD" | 13:50-14:50 || style="width:40%; background:#BC857A" align="left" | [[SnowFROC_Abstract_Byrne|"Automated vs. Manual Security: You can't filter The Stupid"]]
+''David Byrne & Charles Henderson, Trustwave''
+
+[http://video.google.com/videoplay?docid=7611144342490803641 Video]
+ | style="width:40%; background:#BCA57A" align="left" | [[SnowFROC_Abstract_Damele|"SQL injection: Not only AND 1=1"]]
+''Bernardo Damele Assumpcao Guimaraes, Portcullis Computer Security Ltd.''
+
+[http://video.google.com/videoplay?docid=129190988572738701 Video]
+ |-
+ | style="width:10%; background:#7B8ABD" | 14:50-15:00 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | Break - Expo - CTF - Beatz by [http://www.dj-jackalope.com/ DJ Jackalope] 
+|-
+ | style="width:10%; background:#7B8ABD" | 15:00-15:50 || style="width:40%; background:#BC857A" align="left" | [[SnowFROC_Abstract_Neucom|"Security Policy Management: Best Practices for Web Services and Application Security"]]
+''Ray Neucom, IBM''
+
+[http://video.google.com/videoplay?docid=-4972597638535731442 Video]
+ | style="width:40%; background:#BCA57A" align="left" | [[SnowFROC_Cornell_Dickson_Abstract|"Vulnerability Management in an Application Security World"]]
+''Dan Cornell & John Dickson, Denim Group''
+
+[http://video.google.com/videoplay?docid=8588268474844052248 Video]
+ |-
+ | style="width:10%; background:#7B8ABD" | 15:50-16:30 || colspan="2" style="width:40%; background:#F2F2F2" align="left" | Panel: Emerging Threats and Enterprise Countermeasures
+Moderator: John Dickson<br/>
+Panelists: Alan Paller, Joey Peloquin, Rohyt Belani, Ed Bellis, Laz, Ray Neucom
+ |-
+ | style="width:10%; background:#7B8ABD" | 16:30-17:30 || colspan="2" style="width:40%; background:#F2F2F2" align="left" | Conference Wrap Up, CTF Awards & Sponsor Raffles - CTF - Beatz by [http://www.dj-jackalope.com/ DJ Jackalope] 
+ |-
+ | style="width:10%; background:#7B8ABD" | 17:30-21:00 || colspan="2" style="width:80%; background:#C2C2C2" align="left" | OWASP Social Gathering: Dinner and Drinks @ TBD
+ |}
+
+-->
+
+<!-- Back to [https://www.owasp.org/index.php/Front_Range_OWASP_Conference_2009 SnowFROC Home] -->
+
+====Capture the Flag (CTF)====
+
+A capture the flag contest was held, with challenges in the categories of network, forensics, and web applications.   The winner received a new iPad.  Second and third place received an iPod shuffle.
+
+The team that won the contest consisted of four members of the Denver Defcon group, dc303 (http://dc303.org).  This group also plays in the annual Defcon CTF competition (with about 20 other folks from the Denver area).  If you are interested in joining them for future CTF competitions (local and abroad), contact mantis1 at gmail.com.
+
+Second place went to Matthew Rowley (playing on his own)
+
+Final scores:
+{| border="3"
+|Rank||Name||Score||Comments
+|-
+|'''1'''||'''mantis'''||'''4500'''||
+|-
+|'''2'''||'''Matthew Rowley'''||'''2850'''||'''(wuntee)'''
+|-
+|'''3'''||'''jgimer'''||'''2300'''||
+|-
+|4||jsouza||2200||
+|-
+|5||CSURams||1800||
+|-
+|6||quincymagoo||1200||
+|-
+|7||skehoe||700||
+|-
+|8||jtevans||700||
+|-
+|9||igctf||700||
+|-
+|10||kdavis||700||
+|}
+
+
+====Conference Committee====
+
+FROC 2010 Planning Committee Chair: Kathy Thaxton -  kthaxton at owasp dot org
+
+Presentation Selection Committee:
+* Mark Bristow - OWASP Global Conference Committee
+* David Campbell - OWASP Denver
+* Eric Duprey - OWASP Denver
+* Chris Hoff - Cloud Security Alliance
+* Eoin Keary - Chair, OWASP Global Conference Committee
+* Michael Sutton - Cloud Security Alliance
+* Jim Reavis - Cloud Security Alliance
+
+
+Colorado Chapter Hosts:
+* David Campbell - OWASP Denver - dcampbell at owasp dot org
+* Eric Duprey - OWASP Denver - eduprey at owasp dot org
+
+
+Vendor Exhibition POC: Kathy Thaxton - kthaxton at owasp dot org
+
+
+Capture the Flag POC: Eric Duprey - eduprey at owasp dot org
+
+
+====Conference Sponsors====
+
+[[File:Sponsors.PNG]]
+
+The following organizations are proud sponsors of this conference:
+<!-- 
+*Accuvant
+*Breach
+*Business Partner Solutions
+*Denim Group
+*Fishnet Security
+*IBM
+*Imperva
+*Laz
+*Lares
+*Trustwave
+*WhiteHat Security -->
+
+*[http://www.accuvant.com/ Accuvant]
+*[http://www.denimgroup.com/ Denim Group]
+*[http://www.fortify.com/ Fortify Software]
+*[http://www.hosting.com/ Hosting.com]
+*[http://www.whitehatsec.com/home/index.html Whitehat Security]
+
+
+If you are interested in sponsoring next year's Front Range OWASP Conference, please contact Kathy Thaxton at kthaxton at owasp dot org.
+
+Logistics information for sponsors is available [[FROC2010 Sponsor Info|here]]
+
+More information about conference sponsorship is available [[OWASP AppSec Conference Sponsors | here]].
+
+[[Category:OWASP AppSec Conference]]
+
+
+====Twitter Feed====
+{|
+|-
+| style="border: 1px solid rgb(204, 204, 204); width: 100%; font-size: 95%; color: rgb(0, 0, 0); background-color: rgb(236, 236, 236);" | 
+Use the '''[http://search.twitter.com/search?q=%23FROC #FROC]''' hashtag for your tweets (What are [http://hashtags.org/ hashtags]?) 
+
+'''@OWASP303 Twitter Feed ([http://twitter.com/OWASP303 follow us on Twitter!])'''
+<twitter>55021150</twitter> 
+
+| style="width: 110px; font-size: 95%; color: rgb(0, 0, 0);" | 
+|} 
+
+
+<!-- <hr>
+<paypal>Denver</paypal> -->
+
+<headertabs />

@@ -1,0 +1,34 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Project About</noinclude>
+| project_name = OWASP JavaScript Sandboxes
+| project_home_page = OWASP_JavaScript_Sandboxes
+| project_description = To produce a simplified version of Javascript by using regular expressions to remove dangerous functionality and then use Javascript itself to evaluate the results. The goal is to allow normal web users to safely code javascript on a site without exposing sensitive information. This project has three 'sub'-projects: OWSP JSReg + OWASP HTMLReg + OWASP CSSReg.
+| project_license = [http://www.opensource.org/licenses/bsd-license.php New BSD License]
+| leader_name1 = Gareth Heyes
+| leader_email1 = gazheyes@gmail.com
+| leader_username1 = Gareth_Heyes
+| contributor_name1 = Eduardo Vela 
+| contributor_email = 
+| contributor_username1 = 
+| contributor_name2 = Mario Heiderich 
+| contributor_email = 
+| contributor_username1 = 
+| pamphlet_link = 
+| presentation_link =
+| mailing_list_name = https://lists.owasp.org/mailman/listinfo/owasp-jsreg-project
+| project_road_map = http://www.owasp.org/index.php/OWASP_JavaScript_Sandboxes_Roadmap
+| links_url1 = http://www.businessinfo.co.uk/labs/jsreg/jsreg.html 
+| links_name1 = JSReg.*
+| links_url2 = http://code.google.com/p/htmlreg/
+| links_name2 = HTMLReg.*
+| links_url3 = http://code.google.com/p/cssreg/
+| links_name3 = CSSReg.*
+| links_url4 = http://www.thespanner.co.uk/2010/07/30/sandboxed-dom-api/
+| links_name4 = Sandboxed DOM API (1)
+| links_url5 = http://www.businessinfo.co.uk/labs/DomAPI/DomAPI.html
+| links_name5 = Sandboxed DOM API (2)
+| release_1 = 
+| release_2 = 
+| release_3 =
+| release_4 =
+| project_about_page = Projects/JavaScript_Sandboxes
+}}

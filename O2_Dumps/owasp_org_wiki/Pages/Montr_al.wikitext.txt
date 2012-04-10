@@ -1,0 +1,433 @@
+{{Chapter Template|chaptername=Montreal|extra=The chapter leader is [mailto:philippe.gamache(at)owasp.org Philippe Gamache]|mailinglistsite=http://lists.owasp.org/mailman/listinfo/owasp-montreal|emailarchives=http://lists.owasp.org/pipermail/owasp-montreal}} 
+
+ 
+
+<br> 
+
+==== OWASP Montreal News  ====
+
+==== Training ====
+
+'''[https://www.regonline.com/integratingsecuritymontreal REGISTER NOW!]'''
+
+Integrating security in a webapp project: from the idea to going live
+===================================================================
+Concept:
+A 1-day training covering 3 major topics related to integrating security
+in a software development project:
+- good practices and tools at design stage (security requirements,
+secure design, threat modeling)
+- good practices and tools at implementation stage (secure coding
+practices and code review)
+- good practices and tools at verification stage (security validation)
+
+The entire training will follow a red-line based on a real-life HR web
+application project in which we will manage security and privacy
+aspects. Students will cover the entire lifecycle of the application,
+from analysis to deployment, and integrate good practices and tools
+based on OWASP material.
+
+Trainers:
+- Antonio Fontes, Switzerland
+- Philippe Gamache, Canada
+- Sébastien Gioria, France
+
+Course format:
+- The training is composed of three modules, each consisting of three
+45-minutes blocks (total: 9 blocks)
+- Each module includes three blocks: theory, hands-on,
+validation/debriefing.
+
+Schedule:
+- 8:45-9:30, 9:40-10:25, 10:30-11:15 -> "design" module
+- 11:30-12:30 -> lunch
+- 12:45-13:30, 13:35-14:20, 14:25-15:10 -> "implementation" module
+- 15:10-15:40 -> cookie break
+- 15:40-16:25, 16:30-17:15, 17:20-18:05 -> "verification" module
+- 18:10 -> closing session (debriefing/conclusions)
+
+We expect students to arrive around 8am and be able to leave around 6:30/7pm
+
+Pre-requisites (required skills and material):
+- Bring your own laptop (recommended: dual-core system running
+VMWare/Virtualbox)
+- Experience in web application development (hands-on will be in JAVA but
+do not require in-depth knowledge of the language)
+- Understanding of a web application project lifecycle
+- Understanding of well-known web application attacks (Top 10 attacks)
+
+
+
+2011-11-17&nbsp;: Gray areas of the Same Origin Policy -&gt; Philippe Arteau 
+
+2011-09-15&nbsp;: XSS Defense In Depth at Scale! -&gt; Jim Manico, WhiteHat Security 
+
+2011-07-21&nbsp;: VEGA -&gt; David Mirza, Subgraph 
+
+2011-05-19&nbsp;: Hackus 2011 - Démonstration d'attaques Web -&gt; Jérémie Goulet, Jonathan Marcil, Hackus 2011 
+
+2011-03-08&nbsp;: Comment obtenir de l'assurance sécurité tout au long d'un projet de déveleopppement web -&gt; Antonio Fontes, L7 Sécurité 
+
+2011-01-25&nbsp;: OWASP Enterprise Security API -&gt; Philippe Gamache, Parler Haut, Interagir Librement 
+
+2010-12-04&nbsp;: The new chapter leader is Philippe Gamache 
+
+2010-10-25&nbsp;: Tweet My Trojan Please -&gt; Sherif Koussa, Software Secured 
+
+2010-07-13&nbsp;: Le fuzzing et les tests d'intrusions -&gt; Eric Gingras &amp; Sebastien Duquette, Gardien Virtuel 
+
+2010-05-11&nbsp;: Why Implementing Cryptography is Hard 
+
+2010-03-19&nbsp;: Next meetings date are published 
+
+2010-03-10&nbsp;: OWASP Application Security Verification Standard (ASVS) Project -&gt; Sebastien Gioria 
+
+2010-02-02&nbsp;: Authentification forte by Philippe Gamache 
+
+2010-01-21&nbsp;: The Board elected Philippe Gamache as Vice Chapter Leader! 
+
+2010-xx-xx&nbsp;: Look at the tabs, 2 meeting date are scheduled 
+
+2009-11-03&nbsp;: November 3rd 2009, Pravir Chandra present Software Assurance Maturity Model (OpenSAMM) 
+
+2009-09-17&nbsp;: Next meeting on September 17th 2009! 
+
+2009-07-13&nbsp;: We are preparing the next meeting, it will be held on September. 
+
+2009-04-07&nbsp;: Next meeting on April 7th 2009 in Montreal! 
+
+2009-02-25&nbsp;: Already working for the 2nd meeting in 3 months, more details to come on this site. 
+
+2009-02-24&nbsp;: OWASP meeting on February 24th 2009 in Montreal! 
+
+2009-01-20&nbsp;: Board meeting 
+
+2008-12-04&nbsp;: Creation of the chapter board 
+
+2008-11-28&nbsp;: The new chapter leader is Benoit Guerette (benoit.guerette@owasp.org) 
+
+2008-10-14&nbsp;: First meeting preparation. 
+
+2007-10-09&nbsp;: First meeting preparation. (Cancelled) 
+
+2007-08-06&nbsp;: Email list installation. 
+
+2007-07-13&nbsp;: Start-up of the Montreal Chapter. Welcome!
+
+==== Montreal OWASP Board  ====
+
+Scope of the board is to discuss and approve local activities, meetings and plans. 
+
+*In alphabetical order: 
+*Founder and Chapter Leader [mailto:philippe.gamache(at)owasp.org Philippe Gamache] 
+*Board Member [mailto:blondin.philippe(at)gmail.com Philippe Blondin] 
+*Board Member [mailto:sean(at)caedmon.net Sean Coates] 
+*Board Member [mailto:laurent.desaulniers(at)gmail.com Laurent Desaulniers] 
+*Board Member [mailto:jean-marc.robert(at)etsmtl.ca Jean-Marc Robert]
+*Founder and Chapter Leader (2008-2010) [mailto:benoit.guerette(at)owasp.org Benoit Guerette]
+
+<br> 
+
+==== Sept 15th 2011  ====
+
+== OWASP Montreal - September 15th 2011 - XSS Defense In Depth at Scale!  ==
+
+*'''MAIN PRESENTER:''' Jim Manico, WhiteHat Security and OWASP Podcast 
+*'''ABSTRACT:''' This talk will discuss the past methods used for XSS defense that were only partially effective. Learning from these lessons, will will also discuss present day defensive methodologies that are effective, but place an undue burden on the developer. We will then finish with a discussion of future XSS defense mythologies that shift the burden of XSS defense from the developer to various frameworks. These include auto-escaping template technologies, browser-based defenses such as Content Security Policy, and Javascript sandboxes such as the Google CAJA project and JSReg. 
+*'''WHEN:''' September 15th 2011, 18h30 
+*'''WHERE:''' École de technologie supérieure, 1100, rue Notre-Dame ouest, Montréal, Room: '''A-1424''' 
+*'''REGISTRATION:''' '''Registration NOT mandatory.''' 
+*'''SPONSORS:''' This meeting is sponsored by ETS 
+*'''PROGRAM:''' 
+*'''* Please note there is no lunch offered, but prizes will be offered by sponsors'''
+
+     18:30-18:45 Welcome speech by Chapter Leader &amp; sponsors
+    18:45-19:45 Main presentation
+    19:45-20:00 Open discussion
+    20:00-...   End of the meeting at the ETS Pub
+
+[http://www.etsmtl.ca/ [[Image:|ETS.gif]]] 
+
+==== Nov 17th 2011  ====
+
+== OWASP Montreal - November 17th 2011 - Gray areas of the Same Origin Policy  ==
+
+*'''MAIN PRESENTER:''' Philippe Arteau 
+*'''ABSTRACT:''' The Same Origin Policy is a fundamental concept that provide a level of separation between sites. Each components apply this separation differently. This presentation will focus on edge cases that can lead to vulnerabilities. Presentation in French with English Slides. Présentation en français avec diapo en anglais. 
+*'''WHEN:''' November 17th 2011, 18h30 
+*'''WHERE:''' École de technologie supérieure, 1100, rue Notre-Dame ouest, Montréal, Room: '''A-1424''' 
+*'''REGISTRATION:''' '''Registration NOT mandatory.''' 
+*'''SPONSORS:''' This meeting is sponsored by ETS 
+*'''PROGRAM:''' 
+*'''* Please note there is no lunch offered, but prizes will be offered by sponsors'''
+
+     18:30-18:45 Welcome speech by Chapter Leader &amp; sponsors
+    18:45-19:45 Main presentation
+    19:45-20:00 Open discussion
+    20:00-...   End of the meeting at the ETS Pub
+
+[http://www.etsmtl.ca/ [[Image:|ETS.gif]]] 
+
+==== Past mettings  ====
+
+== OWASP Montreal - July 21th 2011 - VEGA  ==
+
+*'''MAIN PRESENTER:''' David Mirza - Subgraph 
+*'''ABSTRACT:''' Vega is an open source platform to test the security of web applications. Vega can help you find and validate SQL Injections, Cross-Site Scripting (XSS), inadvertently disclosed sensitive information, and other vulnerabilities. It 
+*'''WHEN:''' July 21th 2011, 18h30 
+*'''WHERE:''' École de technologie supérieure, 1100, rue Notre-Dame ouest, Montréal, Room: '''A-2330''' 
+*'''REGISTRATION:''' '''Registration NOT mandatory.''' 
+*'''SPONSORS:''' This meeting is sponsored by ETS 
+*'''PROGRAM:''' 
+*'''* Please note there is no lunch offered, but prizes will be offered by sponsors'''
+
+     18:30-18:45 Welcome speech by Chapter Leader &amp; sponsors
+    18:45-19:45 Main presentation
+    19:45-20:00 Open discussion
+    20:00-...   End of the meeting at the ETS Pub
+
+[http://www.subgraph.com/products.html [[Image:|vega_small.png]]] [http://www.subgraph.com/products.html [[Image:|subgraph-logo-black.png]]] [http://www.etsmtl.ca/ [[Image:|ETS.gif]]] 
+
+== OWASP Montreal - May 19th 2011 - Hackus 2011 - Démonstration d'attaques Web  ==
+
+*'''MAIN PRESENTER:''' Jérémie Goulet, Jonathan Marcil 
+*'''ABSTRACT:''' http://hackus.org 
+*'''WHEN:''' May 19th 2011, 18h30 
+*'''WHERE:''' École de technologie supérieure, 1100, rue Notre-Dame ouest, Montréal, Room: '''A-2330''' 
+*'''REGISTRATION:''' '''Registration NOT mandatory.''' 
+*'''SPONSORS:''' This meeting is sponsored by ETS 
+*'''PROGRAM:''' 
+*'''* Please note there is no lunch offered, but prizes will be offered by sponsors'''
+
+     18:30-18:45 Welcome speech by Chapter Leader &amp; sponsors
+    18:45-19:45 Main presentation
+    19:45-20:00 Open discussion
+    20:00-...   End of the meeting at the ETS Pub
+
+== OWASP Montreal - March 8th 2011 - Comment obtenir de l'assurance sécurité tout au long d'un projet de déveleopppement web  ==
+
+*'''MAIN PRESENTER:''' Antonio Fontes 
+*'''ABSTRACT:''' Les tests d'intrusion (penetration tests) réalisés après le déploiement d'une application web amènent souvent leur lot de surprises, révélant l'existence de vulnérabilités tout aussi importantes que coûteuses à corriger. Comment détecter et prévenir l'apparition de ces vulnérabilités plus tôt et tout au long du cycle de développement (SDLC)? Quelles activités peut-on mettre en oeuvre pour maintenir le risque à son niveau le plus bas tout en réduisant les coûts de correction? Quels sont les outils dont dispose le management pour obtenir de l'assurance sécurité dès le lancement d'un projet d'application web? 
+*'''WHEN:''' March 8th 2011, 18h00 
+*'''WHERE:''' École de technologie supérieure, 1100, rue Notre-Dame ouest, Montréal, Room: '''A-1350''' 
+*'''REGISTRATION:''' '''Registration NOT mandatory.''' 
+*'''SPONSORS:''' This meeting is sponsored by ETS, ConFoo, L7 Sécurité and Gardien Virtuel 
+*'''PROGRAM:''' 
+*'''* Please note there is no lunch offered, but prizes will be offered by sponsors'''
+
+     18:00-18:15 Welcome speech by Chapter Leader &amp; sponsors
+    18:15-19:15 Main presentation
+    19:15-19:30 Open discussion
+    19:30-...   End of the meeting at the ETS Pub
+
+[http://www.etsmtl.ca/ [[Image:|ETS.gif]]] [[Image:L7 Sécurité-logo-w-small.jpg|200x54px|L7 Sécurité-logo-w-small.jpg]] [[Image:Gardienvirtuel.jpg|136x55px|Gardienvirtuel.jpg]][[Image:Confoo logo.gif]]] 
+
+<br> 
+
+== OWASP Montreal - January 25th 2011 - OWASP Enterprise Security API  ==
+
+*'''MAIN PRESENTER:''' Philippe Gamache, Parler Haut, Interagir Librement 
+*'''ABSTRACT:''' OWASP Enterprise Security API Toolkits help software developers guard against security-related design and implementation flaws. Because it's an API, it can be easely be add to applications and services to protect themselves from attackers. In this talk, I'll present the project, it's implantation and how to add it to your projects. 
+*'''WHEN:''' January 25th 2011, 18h00 
+*'''WHERE:''' École de technologie supérieure, 1100, rue Notre-Dame ouest, Montréal, Room: '''A-1350''' 
+*'''REGISTRATION:''' '''Registration NOT mandatory.''' 
+*'''SPONSORS:''' This meeting is sponsored by Parler Haut, Interagir Librement and ETS 
+*'''PROGRAM:''' 
+*'''* Please note there is no lunch offered, but prizes will be offered by sponsors'''
+
+     18:00-18:15 Welcome speech by Chapter Leader &amp; sponsors
+    18:15-19:15 Main presentation
+    19:15-19:30 Open discussion
+    19:30-...   End of the meeting at the ETS Pub
+
+[http://www.ph-il.ca [[Image:|Phil_logo-150x30.gif]]] [http://www.etsmtl.ca/ [[Image:|ETS.gif]]] 
+
+== OWASP Montreal - October 25th 2010 - Tweet My Trojan Please  ==
+
+*'''MAIN PRESENTER:''' Sherif Koussa, Software Secured 
+*'''ABSTRACT:''' Social media became part of our day to day activities, sure it made us more social but how safe are we tweeting, facebooking or getting Linked&nbsp;! This presentation will delve into the dark side of the social networks and Privacy Commissioner Report's on Facebook. It will explore some of the recent social media attacks trying to answer the question: Are we safe socializing online? and what can we do about it? 
+*'''WHEN:''' Obtober 25th 2010, 18h00 
+*'''WHERE:''' École de technologie supérieure, 1100, rue Notre-Dame ouest, Montréal, Room: '''A-1340''' 
+*'''REGISTRATION:''' [http://OwaspMontrealOctober.eventbrite.com OwaspMontrealOctober.eventbrite.com] '''Registration is mandatory.''' 
+*'''SPONSORS:''' This meeting is sponsored by Gardien Virtuel and ETS 
+*'''PROGRAM:''' 
+*'''* Please note there is no lunch offered, but prizes will be offered by sponsors'''
+
+     18:00-18:15 Welcome speech by Chapter Leader &amp; sponsors
+    18:15-19:15 Main presentation
+    19:15-19:30 Open discussion
+    19:30-...   End of the meeting at the ETS Pub
+
+== OWASP Montreal - July 13th 2010 - Le fuzzing et les tests d'intrusions  ==
+
+*'''MAIN PRESENTER:''' Eric Gingras &amp; Sebastien Duquette, Gardien Virtuel 
+*'''WHEN:''' July 13th 2010, 18h00 
+*'''WHERE:''' École de technologie supérieure, 1100, rue Notre-Dame ouest, Montréal, Room: A-1424 
+*'''REGISTRATION:''' [http://OwaspMontrealJuly.eventbrite.com OwaspMontrealJuly.eventbrite.com] '''Registration is mandatory.''' 
+*'''SPONSORS:''' This meeting is sponsored by Gardien Virtuel and ETS 
+*'''PROGRAM:''' 
+*'''* Please note there is no lunch offered, but prizes will be offered by sponsors'''
+
+     18:00-18:15 Welcome speech by Chapter Leader &amp; sponsors
+    18:15-19:15 Main presentation
+    19:15-19:30 Open discussion
+    19:30-...   End of the meeting at the ETS Pub
+
+[http://www.gardienvirtuel.com/ [[Image:|LogoGardienVirtuel_150.gif]]] [http://www.etsmtl.ca/ [[Image:|ETS.gif]]] 
+
+== OWASP Montreal - May 11th 2010 - Why Implementing Cryptography is Hard  ==
+
+*'''MAIN PRESENTER:''' David Mirza Ahmad, Founder at Subgraph 
+*'''WHEN:''' May 11th 2010, 18h00 
+*'''WHERE:''' École de technologie supérieure, 1100, rue Notre-Dame ouest, Montréal, Room: A-1424 
+*'''REGISTRATION:''' [http://OwaspMontrealMay.eventbrite.com OwaspMontrealMay.eventbrite.com] '''Registration is mandatory.''' 
+*'''SPONSORS:''' This meeting is sponsored by Gardien Virtuel, Subgraph and ETS 
+*'''PROGRAM:''' 
+*'''* Please note there is no lunch offered, but prizes will be offered by sponsors'''
+
+     18:00-18:15 Welcome speech by Chapter Leader &amp; sponsors
+    18:15-19:45 Main presentation
+    19:45-20:00 Open discussion
+    20:00-...   End of the meeting at the ETS Pub
+
+[http://www.gardienvirtuel.com/ [[Image:|LogoGardienVirtuel_150.gif]]] [http://www.subgraph.com/ [[Image:|Subgraph-logo-black.png]]] [http://www.etsmtl.ca/ [[Image:|ETS.gif]]] 
+
+== OWASP Montreal - March 9th 2010 - OWASP Application Security Verification Standard (ASVS) Project  ==
+
+*'''MAIN PRESENTER:''' Sebastien Gioria, OWASP French Chapter Leader 
+*'''WHEN:''' March 9th 2010, 18h00 
+*'''WHERE:''' École de technologie supérieure, 1100, rue Notre-Dame ouest, Montréal, Room: A-1424 
+*'''REGISTRATION:''' [http://OwaspMontrealMARCH.eventbrite.com OwaspMontrealMarch.eventbrite.com] '''Registration is mandatory.''' 
+*'''SPONSORS:''' This meeting is sponsored by Gardien Virtuel and ETS 
+*'''PROGRAM:''' 
+*'''* Please note there is no lunch offered, but prizes will be offered by sponsors'''
+
+     18:00-18:15 Welcome speech by Chapter Leader &amp; sponsors
+    18:15-19:00 Main presentation
+    19:00-19:15 Open discussion
+    19:15-...   End of the meeting at the ETS Pub
+
+[http://www.gardienvirtuel.com/ [[Image:|LogoGardienVirtuel_150.gif]]] [http://www.etsmtl.ca/ [[Image:|ETS.gif]]] 
+
+== OWASP Montreal - February 2nd 2010 - Authentification forte  ==
+
+*'''MAIN PRESENTER:'''Philippe Gamache, CEO at Parler Haut, Interagir Librement 
+*'''WHEN:''' February 2nd 2010, 18h00 
+*'''WHERE:''' École de technologie supérieure, 1100, rue Notre-Dame ouest, Montréal, Room: A-1424 
+*'''REGISTRATION:''' [http://OwaspMontrealFEBRUARY.eventbrite.com OwaspMontrealFebruary.eventbrite.com] '''Registration is mandatory.''' 
+*'''SPONSORS:''' This meeting is sponsored by Parler Haut, Interagir Librement and ETS. 
+*'''PROGRAM:''' 
+*'''* Please note there is no lunch offered, but prizes will be offered by sponsors'''
+
+     18:00-18:15 Welcome speech by Chapter Leader &amp; sponsors
+    18:15-19:45 Main presentation
+    19:45-20:00 Open discussion
+    20:00-...   End of the meeting at the ETS Pub
+
+This presentation will be in french, with bilingual slides. 
+
+[http://www.ph-il.ca [[Image:|Phil_logo-150x30.gif]]] [http://www.etsmtl.ca/ [[Image:|ETS.gif]]] 
+
+== Meeting on November 3rd 2009 in Montreal (Pravir Chandra present Software Assurance Maturity Model (OpenSAMM))  ==
+
+*'''MAIN PRESENTER:''' '''Pravir Chandra is Director of Strategic Services at Fortify Software''' and works with clients on software security assurance programs. Pravir is recognized for his expertise in software security, code analysis, and his ability to strategically apply technical knowledge. Prior to Fortify, he was a Principal Consultant affiliated with Cigital and led large software security programs at Fortune 500 companies. Pravir Co-Founded Secure Software, Inc. and was Chief Security Architect prior to its acquisition by Fortify. He recently created and led the Open Software Assurance Maturity Model (OpenSAMM) project with the OWASP Foundation, leads the OWASP CLASP project, and also serves as member of the OWASP Global Projects Committee. Pravir is author of the book Network Security with OpenSSL.
+
+*'''SUBJECT: The Software Assurance Maturity Model (SAMM) '''into a software development organization. Covering more than typical SDLC-based models for security, SAMM enables organizations to self-assess their security assurance program and then use recommended roadmaps to improve in a way that's aligned to the specific risks facing the organization. Beyond that, SAMM enables creation of scorecards for an organization's effectiveness at secure software development throughout the typical governance, development, and deployment business functions. Scorecards also enable management within an organization to demonstrate quantitative improvements through iterations of building a security assurance program. This workshop will introduce the SAMM framework and walk through useful activities such as assessing an assurance program, mapping an existing organization to a recommended roadmap, and iteratively building an assurance program. Time allowing, additional case studies will also be discussed. OpenSAMM is an open a free project and has recently been donated to the Open Web Application Security Project (OWASP) Foundation. For more information on OpenSAMM, visit http://www.opensamm.org/
+
+<br> 
+
+*'''WHEN:''' Tuesday, November 3rd 2009, 18h00 
+*'''WHERE:''' École de technologie supérieure, 1100, rue Notre-Dame ouest, Montréal, Room: A-1424 
+*'''REGISTRATION:''' owaspmontreal at gmail.com. '''Registration is mandatory.''' Please include name, company and how many attendees. 
+*'''PROGRAM:''' 
+*'''* Please note there is no lunch offered, but prizes will be offered by all the sponsors, and all attendees get a copy of the SAMM on a USB stick (~90+ page document))'''
+
+     18:00-18:05 Welcome speech by Chapter Leader
+    18:05-18:15 Welcome speech by sponsors
+    18:15-19:15 Main presentation
+    19:15-19:30 Open discussion
+    19:30-...   End of the meeting at the ETS Pub
+
+<br> 
+
+[http://www.fortify.com/ [[Image:|Fortify.jpg]]] [http://www.gardienvirtuel.com/ [[Image:|LogoGardienVirtuel_150.gif]]] [http://www.trendmicro.com/ [[Image:|Trendmicro.gif]]] [http://www.etsmtl.ca/ [[Image:|ETS.gif]]] 
+
+== Meeting on September 17th 2009 in Montreal (Crossing the Border – Javascript Exploits)  ==
+
+*'''MAIN PRESENTER:''' Justin Foster, CISSP - Third Brigade/Trend Micro 
+*'''SUBJECT:''' Crossing the Border – Javascript Exploits JavaScript-based exploits are a serious threat on the Internet today. This talk explores how the countermeasures to deal with script based attacks parallel 2200 years of Chinese border security. The speaker will cover the benefits and drawbacks of current prevention methods and introduce future techniques to keep bad scripts at bay. 
+*'''WHEN:''' Thursday, September 17th 2009, 18h00 
+*'''WHERE:''' École de technologie supérieure, 1100, rue Notre-Dame ouest, Montréal, Room: A-1424 
+*'''REGISTRATION:''' owaspmontreal at gmail.com. '''Registration is mandatory.''' Please include name, company and how many attendees. 
+*'''SPONSORS:''' This meeting is sponsored by Gardien Virtuel and ETS. 
+*'''PROGRAM:''' 
+*'''* Please note there is no lunch offered, but prizes will be offered by Gardien Virtuel (3 security books) and the Chapter will offer some OWASP gears.'''
+
+     18:00-18:05 Welcome speech by Chapter Leader
+    18:05-18:15 Welcome speech by sponsors
+    18:15-19:00 Main presentation
+    19:00-19:15 Open discussion
+    19:15-...   End of the meeting at the ETS Pub
+
+<br> [http://www.gardienvirtuel.com/ [[Image:|LogoGardienVirtuel_150.gif]]] [http://www.etsmtl.ca/ [[Image:|ETS.gif]]] 
+
+<br> 
+
+== April 7th 2009 in Montreal (Introduction to Web Application Hacking LIVE!)  ==
+
+*'''MAIN PRESENTER:''' Rafal Los, Sr. Web Security Specialist at HP '''(Topic: Intro to Web Application Hacking LIVE!)''' 
+*'''BIO:''' Rafal Los is currently a Sr. Security Consultant with Hewlett-Packard’s Application Security Center (ASC). Rafal has over 13 years of experience in network and system design, security policy and process design, risk analysis, penetration testing and consulting. Over the past eight years, he has focused on Information Security and Risk Management, leading security architecture teams and managing successful enterprise security programs for General Electric and other Fortune 100 companies, as well as SMB enterprises. Previously Rafal spent three years in-house with GE Consumer Finance, leading its security programs.
+
+*'''WHEN:''' Tuesday, April 7th 2009, 18h00 
+*'''WHERE:''' CN Building, 935 De la Gauchetière Street West (Downtown), Montreal , Quebec H3B 2M9, Transcontinental room (ground floor) 
+*'''REGISTRATION:''' owaspmontreal at gmail.com. '''Registration is mandatory '''. Please include name, company and how many attendees. 
+*'''SPONSORS:''' This meeting is sponsored by Gardien Virtuel and CN. 
+*'''PROGRAM:'''
+
+      18:00-18:15 '''Food and drinks '''
+     18:15-18:30 Welcome 
+     18:30-20:00 Main presentation
+     20:00-20:30 Open discussion
+
+[http://www.gardienvirtuel.com/ [[Image:|LogoGardienVirtuel_150.gif]]] https://www.owasp.org/images/9/92/Cn_logo.gif 
+
+== First meeting on February 24th 2009 in Montreal (Security Development Lifecycle for IT)  ==
+
+*'''MAIN PRESENTER:''' Rob Labbe, Microsoft '''(Topic: Security Development Lifecycle for IT)'''
+
+*'''WHEN:''' Tuesday, February 24th 2009, 18h00
+
+*'''WHERE:''' 111 Duke 7th floor, Montreal, QC, H3C 2M1 (room 734.1)
+
+*'''REGISTRATION:''' owaspmontreal at gmail.com. Registration is mandatory. Please include name, company and how many attendees.
+
+*'''SPONSORS:''' This meeting is sponsored by Microsoft, CGI.
+
+*'''PROGRAM:'''
+
+      18:00-18:15 Food and drinks
+     18:15-19:00 OWASP Goal and Top Ten 2007 for Managers (by Benoit Guerette)
+     19:00-20:00 Security Development Lifecycle for IT (by Rob Labbe, Microsoft)
+     20:00-20:30 Open discussion
+
+https://www.owasp.org/images/c/c9/Logo_microsoft.jpg https://www.owasp.org/images/5/57/Logo_cgi.jpg 
+
+==== Presentations For Download  ====
+
+[http://www.owasp.org/images/0/0d/20100209mstechdaysowaspasvssgiv01-12657916463819-phpapp02.ppt OWASP ASVS] by Sebastien Gioria (09/03/2010) 
+
+[http://www.ph-il.ca/slides/afup__authetification_forte.pdf Authentification Forte] by Philippe Gamache (02/02/2010) 
+
+[http://www.opensamm.org/downloads/OpenSAMM-1.0.ppt Software Assurance Maturity Model (OpenSAMM)] by Pravir Chandra (03/11/2009) 
+
+[http://www.owasp.org/images/d/de/Owasp-montreal-sept-17h-2009-justin-foster.pdf Crossing the Border – Javascript Exploits] by Justin Foster (17/09/2009) 
+
+[http://www.owasp.org/images/c/c2/ALaughRIAt.pdf A Laugh RIAt] by Rafal Los (07/04/2009) 
+
+[https://www.owasp.org/images/e/eb/OWASP-Montreal-24022009-RobLabbe.pptx Microsoft Security Development Lifecycle for IT] by Rob Labbe (24/02/2009) 
+
+[https://www.owasp.org/images/3/39/OWASP-Montreal-24022009-EN.pdf OWASP Goal and Top Ten 2007 for Managers - French version] by Benoit Guerette (24/02/2009) 
+
+__NOTOC__ <headertabs /> 
+
+[[Category:Canada]]

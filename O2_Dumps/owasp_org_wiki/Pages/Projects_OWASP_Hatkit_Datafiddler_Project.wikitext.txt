@@ -1,0 +1,49 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Project About</noinclude>
+| project_name = OWASP Hatkit Datafiddler Project
+| project_home_page = OWASP Hatkit Datafiddler Project
+
+| project_description =
+*The Datafiddler is a tool for performing advanced analysis of http traffic. It currently consists of two main views, one table-based and one tree-based. These views allow the user to study different aspects of the http traffic, with very high degree of configurability. The tool is also meant to be a framework which can utilize existing tools to analyze traffic post mortem (or real-time).
+*Built in Python/Qt + MongoDB.
+
+
+| project_license = [http://www.gnu.org/licenses/gpl.html GNU General Public License v3]
+
+| leader_name1 = Martin Holst Swende
+| leader_email1 = martin.holst_swende@owasp.org
+| leader_username1 = Martin Holst Swende
+
+| contributor_name[1-10] = 
+| contributor_email[1-10] = 
+| contributor_username[1-10] = 
+
+| pamphlet_link = 
+
+| presentation_link = http://www.slideshare.net/holiman/hatkit-project-datafiddler
+
+| mailing_list_name = https://lists.owasp.org/mailman/listinfo/owasp-hatkit-datafiddler-project
+
+| project_road_map = http://www.owasp.org/index.php/OWASP_Hatkit_Datafiddler_Project/Roadmap
+
+| links_url1 = https://bitbucket.org/holiman/hatkit-datafiddler
+| links_name1 = Project at BitBucket
+
+
+| links_url2 =     https://bitbucket.org/holiman/hatkit-datafiddler/issues?status=new&status=open
+| links_name2 = Issue tracker
+ 
+| links_url3 =   http://www.owasp.org/index.php/OWASP_Hatkit_Proxy_Project
+| links_name3 = OWASP Hatkit Proxy Project
+
+| links_url[4-10] = 
+| links_name[4-10] = 
+
+| release_1 = Hatkit Fiddler v 0.5.0
+
+| release_2 = 
+| release_3 =
+| release_4 =
+<!--- The line below is for GPC usage only. Please do not edit it --->
+| project_about_page = Projects/OWASP Hatkit Datafiddler Project
+
+}}

@@ -1,0 +1,151 @@
+This training event is provided by the [[Greece | OWASP Greek chapter]]
+
+==== Training - May 25th, 2011 ====
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>OWASP Training</noinclude>
+| Course_designation = [[Image:Owasp grece banner.gif]]<br>
+| Course_Overview_Goal 
+=&nbsp;
+*Apart from OWASP's Top 10, most [[:Category:OWASP_Project|OWASP Projects]] are not widely used and understood. In most cases this is not due to lack of quality and usefulness of those Document & Tool projects, but due to a lack of understanding of where they fit in an Enterprise's security ecosystem or in the Web Application Development Life-cycle.
+
+*This course aims to change that by providing a selection of mature and enterprise ready projects together with practical examples of how to use them.
+
+*If you are interested in participating in the hands on portion of the course, please bring a laptop.
+
+*All OWASP Training Material can be downloaded from [http://code.google.com/p/owasp-training/downloads/list here].
+&nbsp;
+| Date = May 25th  
+| Venue = [http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=chandri+1&aq=&sll=37.977492,23.716564&sspn=0.078211,0.136986&ie=UTF8&hq=&hnear=Chandri+1,+Tavros+18346,+Athina,+Greece&t=h&z=16&iwloc=A Αμφιθέατρο Γενικής Γραμματείας Πληροφοριακών Συστημάτων, Χανδρή 1 & Θεσσαλονίκης, Μοσχάτο, Αθήνα]<br>(Σταθμός ΗΣΑΠ Καλλιθέα)<br>[http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=chandri+1&aq=&sll=37.977492,23.716564&sspn=0.078211,0.136986&ie=UTF8&hq=&hnear=Chandri+1,+Tavros+18346,+Athina,+Greece&t=h&z=16&iwloc=A General Secretariat of Information Systems, Chandri 1 & Thessalonikis, Athens] <br>(near Kallithea ISAP station)
+| Price = Free
+| Course_Registration_url = http://www.regonline.com/Register/Checkin.aspx?EventID=967109 
+| Course_Registration_name = Course Registration
+| Modules = 
+
+{{Template:Training_Module_Row_View
+| Time = 09h30 (45m)
+| Module_Name = Guided tour of OWASP Projects
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_Project
+| Trainer = [[user:Dinis.cruz|Dinis Cruz]] 
+| Presentation_Name = Tour of OWASP’s projects
+| Presentation_Link = http://www.owasp.org/index.php/File:OWASP_India_-_Tour_of_OWASP_projects.ppt  
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 10h15 (60m)
+| Module_Name = OWASP Top 10 
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project
+| Trainer = [[User:Conpap|Konstantinos Papapanagiotou]] 
+| Presentation_Name = OWASP Top 10
+| Presentation_Link = http://www.owasp.org/images/c/cb/OWASP_Top_10_-_2010_rc1.pdf  
+}}
+
+{{Template:Training Module Row Break
+| Time = 11h15 (15m)
+| Break_Reason = Coffee Break
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 11h30 (60m)
+| Module_Name = OWASP Secure Coding Practices - Quick Reference Guide
+| Module_Link = http://www.owasp.org/index.php/Projects/OWASP_Secure_Coding_Practices_-_Quick_Reference_Guide
+| Trainer =  [[:User:Justin42|Justin Clarke]] 
+| Presentation_Name = OWASP Secure Coding Practices - Quick Reference Guide
+| Presentation_Link = http://www.owasp.org/images/5/54/Secure_Coding_Practices_Quick_Ref_5.ppt  
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 12h30 (60m)
+| Module_Name = OWASP AppSensor Project
+| Module_Link = http://www.owasp.org/index.php/OWASP_AppSensor_Project 
+| Trainer = [[user:Clerkendweller|Colin Watson]] 
+| Presentation_Name = The AppSensor Project
+| Presentation_Link = http://www.owasp.org/index.php/OWASP/Training/OWASP_AppSensor_Project  
+}}
+
+{{Template:Training Module Row Break
+| Time = 13h30 (60m)
+| Break_Reason = Lunch
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 14h30 (30m)
+| Module_Name = OWASP ESAPI 
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API
+| Trainer =  [[:User:Justin42|Justin Clarke]]
+| Presentation_Name = OWASP ESAPI - PPT File
+| Presentation_Link = http://owasp-esapi-java.googlecode.com/files/OWASP%20ESAPI.ppt 
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 15h00 (30m)
+| Module_Name = OWASP Software Assurance Maturity Model
+| Module_Link = http://www.owasp.org/index.php/Category:Software_Assurance_Maturity_Model
+| Trainer = [[User:Clerkendweller|Colin Watson]]  
+| Presentation_Name = SAMM - PDF File
+| Presentation_Link = https://www.owasp.org/images/1/18/Owasp-training-samm-greece.pdf  
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 15h30 (30m)
+| Module_Name = OWASP Application Security Verification Standard (ASVS) 
+| Module_Link = https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project#tab=Home
+| Trainer =  [[User:Conpap|Konstantinos Papapanagiotou]]   
+| Presentation_Name = About OWASP SVS - PPT File
+| Presentation_Link = http://www.owasp.org/images/7/71/About_OWASP_ASVS.ppt
+}}
+
+{{Template:Training Module Row Break
+| Time = 16h00 (15m)
+| Break_Reason = Coffee Break
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 16h15 (60m)
+| Module_Name = OWASP O2 Platform
+| Module_Link = http://www.owasp.org/index.php/OWASP_O2_Platform
+| Trainer = [[user:Dinis.cruz|Dinis Cruz]] (Project Leader) 
+| Presentation_Name = What is the OWASP O2 Platform
+| Presentation_Link = http://www.o2-ounceopen.com/files-binaries-source-and-demo/old-documents-and-presentations/OWASP_O2_Platform_-_AppSec_Ireland_Sep_2009.pdf 
+}}
+
+}}
+
+==== Sponsors ====
+
+OWASP Training Day Greece Sponsor: [http://www.syntax.gr Syntax IT Inc.]
+
+[http://www.syntax.gr https://www.owasp.org/images/6/68/Syntax.PNG]
+
+Venue Sponsor: [http://www.gsis.gr General Secretariat of Information Systems]
+
+[http://www.gsis.gr https://www.owasp.org/images/d/d5/GGPS.gif]
+
+Supporters:
+
+[http://www.computer-engineers.gr/ https://www.owasp.org/images/6/69/Emppee.gif] [http://www.dotnetzone.gr http://www.dotnetzone.gr/cs/utility/dotnetzone.png] [http://www.linuxinside.gr https://www.owasp.org/images/5/5e/Linuxinside-logo.png]   [http://www.zero.gr https://www.owasp.org/images/f/f1/Zerologo.png] [http://foss.uoa.gr http://foss.uoa.gr/img/gnu_banner.png]
+
+==== Latest News ====
+{{Template:OWASP_Training_News
+| Updates =
+&nbsp;
+* 18th April - Registration has now opened. Hurry up and reserve your place!
+* 13th April  - Course Program finalized.
+* 07th April 2011 - The Course's date has been set up; registration will open very soon.  
+}}
+
+==== OWASP Internals ====
+===== Training Concept =====
+
+We are proposing a Chapters driven model with local Chapter organization in which the courses are free for OWASP members, the contents are OWASP projects focused and the costs are supported by a mix of funding i.e. local chapter budget, external sponsorship, trainers sponsorship i.e. trip and/or accommodation paid by themselves and local chapter members’ sponsorship i.e. taking trainers in as guests.
+
+===== Training Methodologies =====
+* Course Evaluation Form - [http://www.owasp.org/images/6/60/2_Course_Evaluation_Form_%282%29.pdf PDF] and [http://www.owasp.org/images/c/ca/2_Course_Evaluation_Form.doc Word] Files
+
+===== Financials =====
+*All the accommodation, transportation and food graciously sponsored by Syntax. 
+
+
+__NOTOC__
+<headertabs/>
+
+
+[[Category:OWASP_Training|Training]]

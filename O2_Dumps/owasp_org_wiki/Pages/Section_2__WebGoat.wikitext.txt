@@ -1,0 +1,194 @@
+=== Overview ===
+
+From the [http://www.owasp.org/index.php/OWASP_WebGoat_Project WebGoat home page] at OWASP:
+"WebGoat is a deliberately insecure J2EE web application maintained by OWASP designed to teach web application security lessons. In each lesson, users must demonstrate their understanding of a security issue by exploiting a real vulnerability in the WebGoat application. For example, in one of the lessons the user must use SQL injection to steal fake credit card numbers. The application is a realistic teaching environment, providing users with hints and code to further explain the lesson."
+
+WebGoat can be downloaded from http://code.google.com/p/webgoat/downloads/list. It runs within Tomcat and can either be used stand-alone "out-of-the-box" with a version of Tomcat that is packaged with it, or a WebGoat.war file can be dropped onto an existing Tomcat installation.
+
+Explaining WebGoat and the WebGoat lessons in detail is beyond the scope of this document. Each sublesson has a solution - available from the menu at the top of each lesson - that explains the purpose of the lesson. The motivation of the WebGoat solution (which is exploiting the vulnerability) is often accompanied by screenshots of WebGoat and WebScarab, the web proxy that is used in the solutions. If the reader does not wish to go through the WebGoat lessons themselves, the solutions are the "cheat sheets" for WebGoat, and because of that the solutions are provided in this project's documentation as is. If this is insufficient, installing and using WebGoat may be necessary to gain a complete understanding of the lessons.
+
+=== How it works ===
+
+WebGoat users are configured in the tomcat-users.xml configuration file.
+
+Here is the WebGoat login page, which uses Basic Authentication:
+
+[[Image:OWASP_ModSecurity_Securing_WebGoat_Section_2_SS1.jpg]]
+
+
+Next is the entrance/start page; a JSESSIONID cookie is set for the session variable:
+
+[[Image:OWASP_ModSecurity_Securing_WebGoat_Section_2_SS2.jpg]]
+
+
+Here is an overview of the lesson menu on the left side of the page that is used for navigation:
+
+[[Image:OWASP_ModSecurity_Securing_WebGoat_Section_2_SS3.jpg]]
+
+
+Each WebGoat lesson is designated by the 'menu' parameter in the query string. In the screen shot below, the 'screen' parameter will vary but the 'menu' parameter will always be 900 for this lesson. There is no similar way of easily identifying sublessons within a lesson or stages within a sublesson; ths sublesson 'Stored XSS Attacks' will also have 'menu' value of 900, and each of the stages in the 'LAB: Cross-Site Scripting' sublesson will always have 'menu' value of 900:
+
+[[Image:OWASP_ModSecurity_Securing_WebGoat_Section_2_SS4.jpg]]
+
+
+When a WebGoat lesson is completed successfully, there are 3 different areas that denote this:
+
+* A message in red in the body of the HTML page and a green check mark beside the lesson in the menu on the left side:
+
+[[Image:OWASP_ModSecurity_Securing_WebGoat_Section_2_SS5.jpg]]
+
+
+* A report card in Section 18 of WebGoat:
+
+[[Image:OWASP_ModSecurity_Securing_WebGoat_Section_2_SS6.jpg]]
+
+=== Lesson Table Of Contents ===
+
+The WebGoat lessons are structured as main lessons, which are broken up into sub-lessons, and a sublesson may have several stages. For the purpose of this project, a numbering system is introduced to reference them. The unit of measure will be a sublesson. Lessons are too general and the amount of content for each one varies greatly, while using a stage as the unit of measure is too low-level and would be confusing.
+
+The Table of Contents for WebGoat 5.2 beta 1 with the numbering system used for this project is:
+
+1. General
+* 1.1  Http Basics
+* 1.2  HTTP Splitting
+
+2.  Access Control Flaws
+* 2.1  Using an Access Control Matrix
+* 2.2  Bypass a Path Based Access Control Scheme
+* 2.3  LAB: Role Based Access Control
+** Stage 1: Bypass Business Layer Access Control
+** Stage 2: Add Business Layer Access Control
+** Stage 3: Bypass Data Layer Access Control
+** Stage 4: Add Data Layer Access Control
+* 2.4  Remote Admin Access
+
+3.  AJAX Security
+* 3.1  LAB: Client Side Filtering
+* 3.2  LAB: DOM-Based cross-site scripting
+* 3.3  DOM Injection
+* 3.4  Same Origin Policy Protection
+* 3.5  XML Injection
+* 3.6  JSON Injection
+* 3.7  Silent Transactions Attacks	 
+* 3.8  Insecure Client Storage
+* 3.9  Dangerous Use of Eval
+
+4.  Authentication Flaws
+* 4.1  Password Strength
+* 4.2  Forgot Password
+* 4.3  Basic Authentication
+* 4.4  Multi Level Login 1
+* 4.5  Multi Level Login 2
+
+5.  Buffer Overflows
+
+6.  Code Quality 
+* 6.1  Discover Clues in the HTML
+
+7.  Concurrency
+* 7.1  Thread Safety Problem
+* 7.2  Shopping Cart Concurrency Flaw
+
+8.  Cross-Site Scripting (XSS)
+* 8.1  Phishing with XSS
+* 8.2  LAB: Cross Site Scripting
+** Stage 1: Stored XSS
+** Stage 2: Block Stored XSS using Input Validation
+** Stage 3: Stored XSS Revisited
+** Stage 4: Block Stored XSS using Output Encoding
+** Stage 5: Reflected XSS
+** Stage 6: Block Reflected XSS
+* 8.3  Stored XSS Attacks
+* 8.4  Reflected XSS Attacks
+* 8.5  Cross Site Request Forgery (CSRF)
+* 8.6  HTTPOnly Test
+* 8.7  Cross Site Tracing (XST) Attacks
+
+9.  Denial of Service
+* 9.1  Denial of Service from Multiple Logins
+
+10.  Improper Error Handling
+* 10.1  Fail Open Authentication Scheme
+
+11.  Injection Flaws
+* 11.1  Command Injection
+* 11.2  Blind SQL Injection
+* 11.3  Numeric SQL Injection
+* 11.4  Log Spoofing
+* 11.5  XPATH Injection
+* 11.6  String SQL Injection
+* 11.7  LAB: SQL Injection
+** Stage 1: String SQL Injection
+** Stage 2: Parameterized Query #1
+** Stage 3: Numeric SQL Injection
+** Stage 4: Parameterized Query #2
+* 11.8  Database Backdoors
+
+12.  Insecure Communication
+* 12.1  Insecure Login
+
+13.  Insecure Configuration
+* 13.1  Forced Browsing
+
+14.  Insecure Storage
+* 14.1  Encoding Basics
+
+15.  Parameter Tampering
+* 15.1  Exploit Hidden Fields
+* 15.2  Exploit Unchecked Email
+* 15.3  Bypass Client Side JavaScript Validation
+
+16.  Session Management Flaws
+* 16.1  Spoof an Authentication Cookie
+* 16.2  Hijack a Session
+* 16.3  Session Fixation
+
+17.  Web Services
+* 17.1  Create a SOAP Request
+* 17.2  WSDL Scanning
+* 17.3  Web Service SAX Injection
+* 17.4  Web Service SQL Injection
+
+18.  Admin Functions
+* 18.1  Report Card
+
+19.  The Challenge
+* 19.1  The CHALLENGE!
+
+=== Overview of lesson results ===
+
+Following is an overview of the lesson results from May 21 to May 29 using WebGoat 5.2 beta 1. 
+
+The intended behavior of a successfully completed lesson is a green check mark next to the lesson; if absent, at the very least, a message in red appears in the web page with a "Successfully completed..." message. In several cases, it appeared the lesson was completed successfully but not recorded as such. Some lessons did not complete because of a bug or that it was not working according to the solution. One lesson was not implemented. A few lessons required developer versions - source code - in Labs so that the code could be altered; those are not applicable since that's our motive via ModSecurity. A few lessons were not lessons that demonstrated a feature or vulnerability; hence, they are not applicable.
+
+Note: It is duly noted that this version of WebGoat is beta 1; additionally, the inability of the project member to complete some of the WebGoat solutions is in no way a reflection on whether they actually can be completed or not.
+
+Summary by category:
+
+* (a) Not done because not applicable: 2 
+
+18.1, 19.1
+
+* (b) Not done because not implemented: 1
+
+5.0
+
+* (c) Not done because developer version required: 3
+
+2.3, 8.2, 11.7
+
+* (d) Not successful because of bug or not doing correctly with the given solution: 9
+
+3.1, 8.3, 8.5, 11.1, 11.5, 11.8, 16.2, 16.3, 17.4
+
+* (e) Successful but no red "successful" message and/or green check mark: 12
+
+1.1, 1.2, 2.2, 3.7, 4.3, 7.1, 7.2, 9.1, 11.2, 12.1, 14.1, 17.1
+
+* (f) Successful: red "successful" message and/or green check mark: 29
+
+2.1, 2.4, 3.2, 3.3, 3.4, 3.5, 3.6, 3.8, 3.9, 4.1, 4.2, 4.4, 4.5, 6.1, 8.1, 8.4, 8.6, 8.7, 10.1, 11.3, 11.4, 11.6, 13.1, 15.1, 15.2, 15.3, 16.1, 17.2, 17.3
+
+Conclusion: 
+
+Not counting (a) and (b), 53 lessons were attempted and 41 lessons were successfully completed  (some guesswork was involved in arriving at these numbers)

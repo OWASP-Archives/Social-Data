@@ -1,0 +1,11 @@
+This project attempts to present a choice of potential requirements.  Pick what you need, improve what you pick, and don't worry about the rest.
+
+Some of the "requirements" are designed to stimulate questions.  For example, the "compliance with existing contracts" isn't a security requirement per se, but if your organization has a contract in-place dictating certain requirements, you probably ought to figure that out.  The classic example is your company's contract with your Acquiring Bank if you're accepting credit cards.  In addition to being compelled to comply with PCI-DSS standards, you may also be compelled to ask the shopper to identify whether their card is debit or credit etc.  That's not a big security requirement, HOWEVER if you fail to identify that early, what are the odds that you'll shoehorn it in SECURELY at a later time?
+
+Other tips:
+
+# Understanding the requirements is the key to success.  If YOU don't understand them and can't explain WHY they're needed, you're doomed.
+
+# Examples are being collected to help you achieve and communicate understanding.  Look here: [[Useful links to real-world examples of failed web security]]  and if you've got better examples, please add them
+
+# Overall the project is vendor, platform, and language-agnostic.  Some requirements specific to various scenarios are accumulating haphazardly here: [[Other really good requirements that aren't generic enough to be part of the project but that might be what you're looking for in YOUR environment]]

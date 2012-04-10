@@ -1,0 +1,32 @@
+{{Template: <includeonly>{{{1}}}</includeonly><noinclude>Release About</noinclude>
+| project_name = OWASP Zed Attack Proxy Project
+| project_home_page = OWASP Zed Attack Proxy Project
+| release_name = ZAP 1.4.0
+| release_date = 08/04/2012
+
+| release_description = 
+
+'''This release includes the following significant changes:'''
+
+* Plugable extensions: Full extensions can now be plugged into ZAP dynamically with full access to all of ZAPs features.
+* Syntax highlighting in the Response Panel: The HTML panels now support switchable syntax highlighting.
+* fuzzdb integration: The fuzzer now includes fuzzdb (http://code.google.com/p/fuzzdb/) fuzzing files.
+* Parameter analysis: A new Params tab shows a summary of all of the parameters a site has used.
+* Enhanced XSS scanner: The Cross Site Scripting active scanner has been rewritten from scratch to find more potential XSS issues and report fewer false positives.
+* Watcher passive checks ported to ZAP: Different checks have been ported from Watcher to ZAP (thanks to Chris Weber for permission).
+* Tons of bug-fixes and minor improvements.
+
+
+| release_license = [http://www.apache.org/licenses/LICENSE-2.0 Apache License 2.0]
+| release_download_link = http://code.google.com/p/zaproxy/downloads/list
+
+| leader_name1 = Psiinon
+| leader_email1 = psiinon@gmail.com
+| leader_username1 = Psiinon
+
+| leader_name2 = Axel Neumann
+| leader_email2 = a.c.neumann@gmail.com
+| leader_username2 = Axel Neumann
+
+| release_notes = http://code.google.com/p/zaproxy/wiki/HelpReleases1_4_0
+}}

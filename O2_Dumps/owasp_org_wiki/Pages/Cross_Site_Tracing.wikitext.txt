@@ -1,0 +1,42 @@
+{{Template:Attack}}
+<br>
+[[Category:OWASP ASDR Project]]
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+==Description==
+An XST (Cross-Site Tracing) attack involves the use of XSS and the HTTP TRACE function. HTTP TRACE is a default function in many webservers, primarily used for debugging. The client sends an HTTP TRACE with all header information including cookies, and the server simply responds with that same data. If using Javascript or other methods to steal a cookie or other information is disabled through the use of an "httpOnly" cookie or otherwise, an attacker may force the browser to send an HTTP TRACE request and send the server response to another site. "httpOnly" is an extra parameter added to cookies which hides the cookie from the script (supported in most, but not all browsers). For example "javascript:alert(document.cookie)" would not show an httpOnly cookie.
+
+This type of attack can occur when the there is an XSS vulnerability and the server supports HTTP TRACE.
+
+==Risk Factors==
+TBD
+
+==Examples==
+TBD
+
+==Related [[Threat Agents]]==
+* [[Threat Agent 1]]
+* [[Threat Agent 2]]
+TBD
+
+==Related [[Attacks]]==
+* [[Cross-site Scripting (XSS)]]
+
+==Related [[Vulnerabilities]]==
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+TBD
+
+==Related [[Controls]]==
+* [[Input Validation]]
+* [[Output Validation]]
+* [[Canonicalization]]
+
+==References ==
+* Cross-Site Tracing (XST): http://www.cgisecurity.com/whitehat-mirror/WH-WhitePaper_XST_ebook.pdf
+* [[Testing for HTTP Methods and XST (OWASP-CM-008)]]
+
+
+[[Category:Attack]]

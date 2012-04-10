@@ -1,0 +1,235 @@
+{| 
+! width="700" align="center" | 
+! width="500" align="center" | 
+|-
+| align="center"|[[Image:SoC 08 Logo.jpg]]
+| align="left"|
+*'''MAIN LINKS'''   
+* [[OWASP Summer of Code 2008 Press Release|Press Release]]  
+* [http://owaspsoc2008.wordpress.com/ OWASP Summer of Code 2008 Blog] 
+* [[OWASP Request for Proposal List|Request for Proposal List]]
+* [[OWASP Summer of Code 2008 Applications|Applications]] 
+* [[OWASP Summer 0f Code 2008 : Selection|Jury's evaluation/selection of applications]] 
+* [[OWASP Summer of Code 2008 Projects Authors Status Target and Reviewers|Approved projects, authors, status target and reviewers]] 
+* [[OWASP Summer of Code 2008 Projects - Half Term Payments|Half term payments]] 
+* [[OWASP Summer of Code 2008 Projects - Project Completion Payments|Project completion payments]]
+* [[OWASP EU Summit 2008|OWASP EU Summit Portugal 2008]]
+* [http://docs.google.com/Doc?id=dcn8962c_41hjg48kd4 Project's current status]
+  |}
+<br>
+==== Projects ====
+{| class="wikitable" style="text-align:center"
+! width="800" height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''100% Completion Projects'''
+! width="400" align="CENTER" | '''Author'''
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Testing Project|OWASP Testing Guide v3]]'''
+| align="CENTER" | Matteo Meucci 
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Ruby on Rails Security Guide V2|OWASP Ruby on Rails Security Guide v2]]'''
+| align="CENTER" | Heiko Webers
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Live CD 2008 Project|OWASP Live CD 2008 Project]]'''
+| align="CENTER" | Matt Tesauro
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Code Review Project|OWASP Code review guide, V1.1]]'''
+| align="CENTER" | Eoin Keary
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP AntiSamy Project .NET| OWASP AntiSamy .NET]]'''
+| align="CENTER" | Arshan Dabirsiaghi
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP .NET Project#OWASP .NET Project Leader|OWASP .NET Project Leader]]'''
+| align="CENTER" | Mark Roxberry 
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE"|'''[[:Category:OWASP Source Code Review OWASP Projects Project|OWASP Source Code Review OWASP Projects]]'''
+| align="CENTER" | James Walden
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP AppSensor Project|OWASP AppSensor - Detect and Respond to Attacks from Within the Application]]'''
+| align="CENTER" | [mailto:michael.coates(at)aspectsecurity.com Michael Coates]
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Backend Security Project|OWASP Backend Security Project]]'''
+| align="CENTER" | Carlo Pelliccioni
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Securing WebGoat using ModSecurity Project|OWASP Securing WebGoat using ModSecurity]]'''
+| align="CENTER" | Stephen Evans 
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Teachable Static Analysis Workbench Project|OWASP Teachable Static Analysis Workbench]]'''
+| align="CENTER" | [mailto:ddk(at)cs.msu.su Dmitry Kozlov] and Igor Konnov
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Access Control Rules Tester Project|OWASP Access Control Rules Tester]]'''
+| align="CENTER" | Andrew Petukhov
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Skavenger Project|OWASP Skavenger]]'''
+| align="CENTER" | [mailto:mro(at)securenet.de Matthias Rohr]
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP OpenSign Server Project|OWASP Online code signing and integrity verification service for open source community (OpenSign Server)]]'''
+| align="CENTER" | Phil Potisk and Richard Conway
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Code Crawler|OWASP Code Crawler ]]'''
+| align="CENTER" | Alessio Marziali 
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP OpenPGP Extensions for HTTP - Enigform and mod openpgp|OWASP OpenPGP Extensions for HTTP - Enigform and mod_openpgp]]'''
+| align="CENTER" | Arturo 'Buanzo' Busleiman
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Application Security Verification Standard Project|OWASP Application Security Verification Standard]]'''
+| align="CENTER" | Mike Boberski 
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Classic ASP Security Project|OWASP Classic ASP Security Project]]'''
+| align="CENTER" | Juan Carlos Calderon
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP JSP Testing Tool Project|OWASP UI Component Verification Project (a.k.a. OWASP JSP Testing Tool)]]'''
+| align="CENTER" | Jason Li
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Sqlibench Project|OWASP SQL Injector Benchmarking Project (SQLiBENCH)]]'''
+| align="CENTER" | [mailto:urgunb@hotmail.com Bedirhan Urgun] and [mailto:mesut@h-labs.org Mesut Timur]
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:OWASP Spanish|OWASP Spanish Project]]'''
+| align="CENTER" | Juan Carlos Calderon 
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:OWASP Internationalization|OWASP Internationalization Guidelines Project]]'''
+| align="CENTER" | Juan Carlos Calderon 
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:GTK plus GUI for w3af Project|GTK+ GUI for w3af project]]'''
+| align="CENTER" | Facundo Batista
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Book Cover & Sleeve Design|OWASP Book Cover & Sleeve Design]]'''
+| align="CENTER" | LXstudios, [mailto:deb@lxstudios.com Deb Brewer] 
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Individual and Corporate Member Packs plus Conference Attendee Packs Brief|OWASP Individual & Corporate Member Packs, Conference Attendee Packs Brief]]'''
+| align="CENTER" | LXstudios, [mailto:deb@lxstudios.com Deb Brewer] 
+|}
+{| class="wikitable" style="text-align:center"
+! width="800" height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''Projects Above 50% Completion'''
+! width="400" align="CENTER" | '''Author'''
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Orizon Project|OWASP Orizon Project]]'''
+| align="CENTER" | Paolo Perego
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP ASDR Project|OWASP Application Security Desk Reference (ASDR)]]'''
+| align="CENTER" | Leonardo Cavallari Militelli 
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Application Security Tool Benchmarking Environment and Site Generator Refresh Project|OWASP Application Security Tool Benchmarking Environment and Site Generator refresh]]'''
+| align="CENTER" | Dmitry Kozlov
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Education Project|OWASP Education Project]]'''
+| align="CENTER" | Martin Knobloch
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Python Static Analysis Project|OWASP Python Static Analysis]]'''
+| align="CENTER" | Georgy Klimov
+|}
+{| class="wikitable" style="text-align:center"
+! width="800" height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''Projects Below 50% Completion'''
+! width="400" align="CENTER" | '''Author'''
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP WeBekci Project|OWASP WeBekci Project]]'''
+| align="CENTER" | [mailto:bunyamin@owasp.org Bunyamin Demir]
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Positive Security Project|OWASP Positive Security Project]]'''
+| align="CENTER" | Eduardo Vianna de Camargo Neves 
+|}
+{| class="wikitable" style="text-align:center"
+! width="800" height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''Inactive Projects'''
+! width="400" align="CENTER" | '''Author'''
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:OWASP Corporate Application Security Rating Guide|OWASP Corporate Application Security Rating Guide]]'''
+| align="CENTER" | Parvathy Iyer
+|-
+| height="18" bgcolor="#FFFFFF" align="CENTER" valign="MIDDLE" | '''[[:Category:OWASP Interceptor Project|OWASP Interceptor Project - 2008 Update]]'''
+| align="CENTER" | Justin Derry
+|}
+
+==== Historical Information ====
+
+{| 
+! width="200" align="left"|
+! width="1000" align="left"|
+|-
+| align="left"|__TOC__
+| align="left"|
+== Updates ==
+
+''' FEBRUARY  7, 2009''' - '''OWASP SUMMER OF CODE 2008 - CLOSING PROCESS.'''
+
+# Even if the OWASP Summer of Code final deliveries were expected to be ready to be presented in the OWASP Summit i.e. by November, 4th, 2008, it has been agreed that '''all projects totally completed until Monday the 16th March, 2009, can still be paid'''. Please make a last effort and find a couple of cycles to close this matter and allow us to send you off the second part of your much deserved payment.
+# Drum Roll! '''The new season of code is being designed and will be soon launched!'''
+* [[OWASP Summer of Code 2008 Previous Updates|'''Previous Updates''']].
+|}
+
+== Overview ==
+*OWASP is now launching the Summer of Code 2008 (SoC 2008), following the previous  [[OWASP Spring Of Code 2007|OWASP Spring of Code 2007]] (SpoC 07), in which 21 projects were sponsored with a budget of US$117,500, and the [[OWASP Autumn Of Code 2006|OWASP Autumn of Code 2006]] (AoC 06), in which 9 projects were sponsored with a budget  of US$20,000. 
+*The SoC 2008 is an open sponsorship program were participants/developers are paid to work on OWASP (and web security) related projects.
+*The SoC 2008 is also an opportunity for external individual or company sponsors to challenge the participants/developers to work in areas in which they are willing to invest additional funding. 
+*The Open Web Application Security Project (OWASP) is a worldwide free and open community focused on improving the security of application software. Our mission is to make application security "visible," so that people and organizations can make informed decisions about application security risks.
+
+== Who Can Apply? ==
+* The only requirement is that the candidate shows the potential to accomplish the project's objectives/deliveries and the commitment to dedicate the time required to complete it in the appropriate period.
+* Current active OWASP Project Contributors (including Project leaders) are encouraged to apply. 
+* No member of the OWASP board is allowed to apply for a SoC 2008 sponsorship.  
+* There are no any other restrictions on who can apply for a SoC 2008 sponsorship.
+
+== How To Participate (To Developers) ==
+* Ideas to work can be chosen from:
+** Participants/developers’ own interest and choice, as long as the OWASP main objectives are considered; 
+** [[OWASP Request for Proposal List|Projects prioritized]] by the OWASP Board to be done with SoC 2008 funds;
+** [[:Category:OWASP Project|Existing OWASP Projects]]; 
+** Projects directly linked to external [[OWASP Grants|individual or company sponsorship]]. 
+* To submit a project you have to post it on the [[OWASP Summer of Code 2008 Applications|OWASP Summer of Code 2008 Applications Page]]. 
+** Please see [[OWASP Autumn of Code 2006 - Applications|AoC 06]] and [[OWASP Spring Of Code 2007 Applications|SpoC 07]] for contents to be included in the Application
+** Note that no sensitive personal details should be posted in that page, i.e., full name, postal address, email, and so on. 
+* Once your application is published on the WIKI, send an email to [mailto:paulo.coimbra@owasp.org Paulo Coimbra] with the following details:
+** Project name;
+** Contact details, i.e., full name, postal address and email.
+* Both [mailto:paulo.coimbra@owasp.org Paulo Coimbra] and [mailto:Dinis.Cruz@owasp.org Dinis Cruz] can also be contacted for further discussion on issues related to SoC 2008 applications, i.e., project ideas, review of draft applications, etc..
+
+== Schedule ==
+* 3rd March – SoC 2008 season of code is officially launched. Start date for submitting applications.
+* 25th March - Deadline for project applications.
+* 16th April – Publishing of selected applications and start of SoC 2008 projects. 
+* 29th June - Participants to report on project status.
+* 15th September - Project completion. Participants should deliver final project report.
+* The new SoC’s deadline will be the first day of the Summit, that is to say November 4.
+
+== Jury and Selection Criteria ==
+* Jury: OWASP Board Members (Jeff Williams, Dave Wichers, Tom Brennan, Sebastien Deleersnyder and Dinis Cruz).
+
+* There are two methods to select SoC 2008 projects:
+** By direct majority vote (3 out of 5) by the Jury;
+** By selection rating using the criteria defined below. 
+*** Each project will receive a rating from 1 to 5 on the following categories by each Jury. The final result will be the total value.
+**** On the Project:
+***** Complete status - What will be the final Completeness State?
+***** Complexity - What is the project Complexity and Size?
+***** Member Value - How big is the potential added value to Owasp Members?
+***** Brand Value - How big is the potential added value to the Owasp Brand? 
+**** On the Candidate:
+***** Past Work - Value of past contributions to OWASP Projects;
+***** Deliverability - Proven capability to deliver;
+***** Qualitty of Proposal - Global quality of the proposal submited.
+
+== Operational Rules ==
+* Whenever possible the participant should suggest a SoC 2008 Project Reviewer, which will be responsible for reviewing the project’s deliverables and authorize payments. 
+* All and each Project Reviewer suggested by participants has to be confirmed by majority vote of the OWASP Board.
+* Whenever the participants fail to suggest a SoC 2008 Project Reviewer, the OWASP Board, by majority vote, will appoint one. The same will happen whenever the reviewer suggested by the participant does not have the required approval.  
+* Each and every project should have its Project Progress page always completely updated with all information regarding the project status. 
+* The Project Reviewer will provide his assessment twice for each project, respectively with 50% and 100% claimed completion. The Project Reviewer will deliver his evaluation filling in his Project Reviewer Page. 
+* Each new project should obtain Reviewers’ agreement that, at least, a  [[:Category:OWASP Project Assessment|Beta Quality]] stage was achieved.
+* Each project built on previous work done within OWASP ([[:Category:OWASP Project|Existing OWASP Projects]]) should obtain Reviewers’ agreement that a [[:Category:OWASP Project Assessment|Release Quality]] stage was achieved.
+* Projects Final Deliveries will be evaluated by an assigned SoC 2008 Reviewer. However, the Jury will provide final oversight. 
+* Payments will be made, via Pay Pal, in two instalments, respectively 50% halfway and 50% on completion of the project.
+* Basically, if you do not deliver you will NOT be paid.
+
+== General Rules ==
+* By taking part on SoC 2008, the participant will authorize OWASP to host and advertise without any limitations his participation and all related contents including proposal and all deliveries. 
+* All tools, documentation, or any other materials whatsoever, created by the participants within SoC 2008 context must be released under an Open Source Initiative approved license. However, the participant may mirror development on her/his personal infrastructure at her/his option.
+* Participants and OWASP is free to use the results, including code, of the SoC's 2008 code in any way they choose provided it is not in conflict with the license under which the code was developed.
+* OWASP reserves the right, at its sole discretion, to revoke any, and all, privileges associated with participating in this program, and to take any other action it deems appropriate, for no reason or any reason whatsoever. OWASP reserves the right to cancel, terminate or modify the program if it is not capable of completion as planned for any reason.
+* Any situation arising not included in the above mentioned set of rules will be decided according to the discretionary judgement of OWASP Board.
+
+== SoC 2008 Budget ==
+* The initial Budget for SoC 2008 will be US$100,000, and it is funded by OWASP. 
+* In parallel with the Request for Proposals, OWASP is also doing a membership drive where all membership fees committed during that period will be allocated to SoC 2008 projects (the new members have the option to choose which projects they would like to sponsor).
+* The funds available will be allocated to select projects. However, strong proposals will be accepted by majority vote of the OWASP Board before the final project selection. Remaining budget will be allocated to remaining projects.
+* Note: The referred budget allocation is just a guideline and the final values will be adjusted based on the successful proposals.
+
+<headertabs/>
+
+[[Category:OWASP Season of Code]]

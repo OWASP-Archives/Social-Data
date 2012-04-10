@@ -1,0 +1,52 @@
+==Warning==
+
+CSRFGuard is a "reference implementation". Developers are encouraged to leverage more tightly integrated solutions for performance (ex: speed of parsing HTML) and technical (ex: AJAX requests) challenges.
+
+== Overview ==
+
+The core issue with CSRF attacks is that form submission can be imitated with forged requests. The application must be able to differentiate between legal requests and forged requests. Since all headers, cookies, and credentials will be submitted with both legal and forged requests, the only method of truly verifying the integrity of the request is with a uniquely identifiable token in the form of an HTTP parameter. When the user first visits the site, the application will generate and store a ''session specific'' unique request token. This session specific unique request token is then placed in each form and link of the HTML response, ensuring that this value will be submitted with the next request. For each subsequent request, the application must verify the existence of the unique token parameter and compare its value to that of the value stored in the user's session. The security of the approach is based on the fact that this unique token value is specific to a user's session and is ''hard to guess.'' Therefore, it is imperative that this value is large and cryptographically secure.
+
+== Java EE Filters ==
+
+Java EE filters provide the ability to intercept, view, and modify both the request and associated response for the requesting client. Filters are inserted and executed by the Java EE container's deployment descriptor (web.xml) file. For example, if an HTTP request for a JSP page hits our Apache web server, the request is sent to Tomcat for processing. Before Tomcat executes the code inside of the JSP, the request must be passed along a chain of Java EE filters. The following snippet was taken from the [http://www.owasp.org/index.php/CSRFGuard_1.x_Installation OWASP CSRFGuard 1.x installation instructions] as it illustrates how to declare and map a filter to a particular URI-space in web.xml:
+
+ <filter>
+    <filter-name>CSRFGuard</filter-name>
+    <filter-class>org.owasp.csrf.CSRFGuard</filter-class>
+      <init-param>
+        <param-name>error-page</param-name>
+        <param-value>error.jsp</param-value>
+      </init-param>
+ </filter>
+ 
+ <filter-mapping>
+   <filter-name>CSRFGuard</filter-name>
+   <url-pattern>/*</url-pattern>
+ </filter-mapping>
+
+
+Implementing the CSRF Guard as a Java EE Filter gives us the ability to verify the integrity of the request before it ever hits our web application.
+
+== Generating the Unique Request Token: Secure Random ==
+
+When implementing the CSRF Guard, we must ensure that the unique request token is cryptographically strong. After all, our implementation relies on the principle that the unique token is difficult to guess. If the unique request token can be easily guessed then a CSRF attack can be executed.
+
+The following code snippet generates a BASE64 encoded string of 'size' bytes:
+
+    private String generateCSRFToken(int size) throws NoSuchAlgorithmException {
+        SecureRandom sr = null;
+        byte[] random = new byte[size];
+        BASE64Encoder encoder = new BASE64Encoder();
+       
+        sr = SecureRandom.getInstance("SHA1PRNG");
+        sr.nextBytes(random);
+        return encoder.encode(random);
+    }
+
+== Implementation ==
+
+The OWASP CSRF Java EE Filter will attempt to verify the integrity of the request by comparing the unique request token HTTP parameter value with that of the token stored in the session. If the two values do not match, then we assume the request is forged and we invalidate the existing session and redirect the user to an error page. If the parameter value equals the corresponding session attribute value, then we call doChain() and pass the request to the web application. Once the web application is finished processing the request, the filter will search the HTML response for forms and links and insert the appropriate unique token parameter value. Unfortunately, the dependency on an HTML response means that the current filter may not work with some Web 2.0 applications.
+
+== Bypass CSRFGuard With Stored XSS ==
+
+There have been discussions suggesting that the unique request token can be compromised using JavaScript. This attack implies that the application also contains a stored cross-site scripting vulnerability, which is frequently a more severe issue than cross-site request forgery. The first MySpace worm worked in this manner where it used a Cross Site Scripting vulnerability to forge requests to update a user's profile, where the user profile update mechanism was protected with a CSRF defense mechanism similar to what is provided by this filter. If your application contains a stored cross-site scripting vulnerability, then the unique request token can be parsed from the HTML response to successfully forge form submissions.

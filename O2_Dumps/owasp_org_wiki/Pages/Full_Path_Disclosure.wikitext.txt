@@ -1,0 +1,87 @@
+{{Template:Attack}}
+
+Last revision: '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+<br>
+[[Category:OWASP ASDR Project]]
+
+==Description==
+Full Path Disclosure (FPD) vulnerabilities enable the attacker to see the path to the webroot/file.  e.g.: /home/omg/htdocs/file/. 
+Certain vulnerabilities, such as using the load_file() (within a [[SQL Injection]]) query to view the page source, require the attacker to have the full path to the file they wish to view.
+
+==Risk Factors==
+TBD
+
+==Examples==
+
+'''Empty Array'''
+
+If we have a site that uses a method of requesting a page like this:
+<pre>http://site.com/index.php?page=about</pre>
+We can use a method of opening and closing braces that causes the page to output an error.  This method would look like this:
+<pre>http://site.com/index.php?page[]=about</pre>
+This renders the page defunct thus spitting out an error:
+<pre>Warning: opendir(Array): failed to open dir: No such file or directory in /home/omg/htdocs/index.php on line 84
+Warning: pg_num_rows(): supplied argument ... in /usr/home/example/html/pie/index.php on line 131</pre>
+
+'''Null Session Cookie'''
+
+Another popular and very reliable method of producing errors containing a FPD is to give the page a nulled session using Javascript Injections.
+A simple injection using this method would look something like so:
+<pre>javascript:void(document.cookie="PHPSESSID=");</pre>
+By simply setting the PHPSESSID cookie to nothing (null) we get an error.
+<pre>Warning: session_start() [function.session-start]: The session id contains illegal characters, 
+valid characters are a-z, A-Z, 0-9 and '-,' in /home/example/public_html/includes/functions.php on line 2</pre>
+
+This vulnerability is prevented simply by turning error reporting off so your code does not spit out errors.
+<pre>error_reporting(0);</pre>
+Errors can contain useful information for site owner so instead of disabling the error reporting at all, it is possible to only hide errors from output by [http://www.php.net/errorfunc.configuration#ini.display-errors display_errors].
+
+
+'''Direct Access to files that requires preloaded library files'''
+
+Web application developers sometimes fail to add safe checks in files that requires preloaded library/function files.
+This is prone to reveal possible sensitive information when those applications' URLs are directly requested. Sometimes, it's a clue to Local File Inclusion vulnerability.  
+
+Concerning with Mambo CMS, if we access to a direct url, http://site.com/mambo/mambots/editors/mostlyce/jscripts/tiny_mce/plugins/spellchecker/classes/PSpellShell.php, then we gets 
+
+<pre>
+<br />
+<b>Fatal error</b>:  Class 'SpellChecker' not found in <b>/home/victim/public_html/mambo/mambots/editors/mostlyce/jscripts/tiny_mce/plugins/spellchecker/classes/PSpellShell.php</b> on line <b>9</b><br />
+</pre>
+
+
+==Tool==
+
+The above three checks can be done with the aid of [https://code.google.com/p/inspathx/ inspathx] tool.
+
+==Related [[Threat Agents]]==
+* [[internal software developer]]
+
+==Related [[Attacks]]==
+* [[SQL Injection]]
+* [[Relative Path Traversal]]
+
+==Related [[Vulnerabilities]]==
+* None
+
+==Related [[Controls]]==
+* [[Error Handling]]
+* [[Bounds Checking]]
+* [[Safe Libraries]]
+* [[Static Code Analysis]]
+* [[Executable space protection]]
+* [[Address space layout randomization (ASLR)]]
+* [[Stack-smashing Protection (SSP)]]
+
+
+==References==
+* http://www.acunetix.com/vulnerabilities/Full-path-disclosure.htm
+* [http://www.enigmagroup.org/ Articled summarised from Full Path Disclosure article by haZed on EnigmaGroup.org.]
+* [http://yehg.net/lab/pr0js/view.php/path_disclosure_vulnerability.txt Path Disclosure Vulnerability - Is it serious?]
+* [http://yehg.net/lab/pr0js/files.php/inspath.zip inspathx - Internal Path Disclosure Finder]
+
+
+[[Category:Injection]]
+[[Category:Attack]]
+__NOTOC__

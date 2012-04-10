@@ -1,0 +1,91 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+The use of a cryptographic key or password past its expiration date diminishes its safety significantly.
+
+'''Consequences'''
+
+Authentication: The cryptographic key in question may be compromised, providing a malicious user with a method for authenticating as the victim.
+
+'''Exposure period'''
+
+* Design: The handling of key expiration should be considered during the design phase - largely pertaining to user interface design.
+* Run time: Users are largely responsible for the use of old keys.
+
+'''Platform'''
+
+* Languages: All
+* Platforms: All
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Low
+
+'''Likelihood of exploit'''
+
+Low
+
+While the expiration of keys does not necessarily ensure that they are compromised, it is a significant concern that keys which remain in use for prolonged periods of time have a decreasing probability of integrity. 
+
+For this reason, it is important to replace keys within a period of time proportional to their strength.
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+In C/C++:
+
+<pre>
+if (!(cert = SSL_get_peer(certificate(ssl)) || !host)
+  foo=SSL_get_veryify_result(ssl);
+  if ((X509_V_OK==foo) || (X509_V_ERRCERT_NOT_YET_VALID==foo))
+//do stuff 
+</pre>
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Failure to check for certificate expiration]]
+
+
+==Related [[Controls]]==
+
+* Design: Adequate consideration should be put in to the user interface in order to notify users prior to the key's expiration, to explain the importance of new key generation, and to walk users through the process as painlessly as possible.
+* Run time: Users must heed warnings and generate new keys and passwords when they expire.
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Cryptographic Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

@@ -1,0 +1,27 @@
+{{Template: <includeonly>{{{1}}}</includeonly><noinclude>Release About</noinclude>
+| project_name = Passw3rd
+| project_home_page = https://www.owasp.org/index.php/OWASP_Passw3rd_Project
+
+| release_name = passw3rd-0.1.0
+| release_date = Nov 1, 2011
+| release_description = AES 256 by default, support URIs, production level code (hopefully)
+| release_license = MIT
+| release_download_link = https://rubygems.org/gems/passw3rd/versions/0.1.0
+ 
+| leader_name[1] = Neil Matatall
+| leader_email[1] = neil@owasp.org
+| leader_username[1] = nmatatal
+
+| contributor_name[1] = Neil Matatall
+| contributor_email[1] = neil@owasp.org
+| contributor_username[1] =  nmatatal
+
+| contributor_name[2] = Edward Bonver
+| contributor_name[3] = Ben Duoung
+
+
+| release_notes = https://github.com/oreoshake/passw3rd/commit/4ff412fe03c201ca86bb76466a7e095870d19973
+
+| links_url[1] = https://github.com/oreoshake/passw3rd
+| links_name[1] = Github page
+}}

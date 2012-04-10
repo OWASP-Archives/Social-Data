@@ -1,0 +1,37 @@
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Teachable Static Analysis Workbench Project''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="6" style="width:85%; background:#cccccc" align="left"|The research will be intended to answer the following questions:
+* Can we integrate existing open source static analysis tools (OWASP and third-party) to work altogether? We plan analysis to cover the following tools: LAPSE, Orizon, ESAPI, FindBugs.
+* How static analysis workbench can be taught by security analyst?
+* How static analysis workbench can support web-applications built using MVC frameworks? 
+Workbench prototype will be Java-based Eclipse plug-in which aim is to help security analyst/code reviewer validation of web application. At prototype step we suggest to analyze J2EE Web tier applications build on Java Servlets, JSP (without business logic in it) and one MVC framework (Apache Struts). We plan workbench prototype to have the following functionality:
+* Input validation vulnerabilities analysis: identification of web application entry points (aka attack surface in P024), call graph for each entry point (see “Packages -> Classes -> Methods -> callsites” in P023), identification of data validation routines, teachable taint analysis.
+* Authentification and access control analysis: identification of code related to access control and it’s analysis.
+* Pattern-based code analysis.
+* Teachability: analyst indicates security-related code (sources of tainted data, sensitive sinks, input validation and sanitizing functions, access control code, etc.) and workbench automatically recomputes possible vulnerabilities list. The second idea is to spread knowledge gathered from analyst to other web applications. 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Key Project Information'''
+ | style="width:14%; background:#cccccc" align="center"|Project Leader<br>[[:User:Ddk|'''Dmitry Kozlov''']]<br>[mailto:igor.konnov(at)gmail.com '''Igor Konnov''']
+ | style="width:14%; background:#cccccc" align="center"|Project Contributors<br>(if applicable)
+ | style="width:14%; background:#cccccc" align="center"|Mailing List<br>[https://lists.owasp.org/mailman/listinfo/owasp-teachable-static-analysis-workbench '''Subscribe here''']<br>[mailto:owasp-teachable-static-analysis-workbench(at)lists.owasp.org '''Use here''']
+ | style="width:14%; background:#cccccc" align="center"|License<br>[http://www.gnu.org/licenses/old-licenses/gpl-2.0.html '''GNU General Public License v2''']
+| style="width:14%; background:#cccccc" align="center"|Project Type<br>[[:Category:OWASP_Project#Beta_Status_Projects|'''Tool''']]
+ | style="width:15%; background:#cccccc" align="center"|Sponsors<br>[[OWASP Summer of Code 2008|'''OWASP SoC 08''']] 
+ |}
+
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"| '''[[:Category:OWASP_Project_Assessment#Beta_Quality_Tool_Criteria|Beta Quality]]'''<br>[[:Teachable Static Analysis Workbench - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="center"|
+http://code.google.com/p/teachablesa/<br>[https://www.owasp.org/images/6/69/Teachable_static_analysis_workbench.pptx PowerPoint Presentation]
+ | style="width:29%; background:#cccccc" align="center"|
+If any, add link here
+ |}

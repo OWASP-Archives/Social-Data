@@ -1,0 +1,133 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+<br>
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+Unintended information about data gets leaked through observing the timing of events.
+
+'''Consequences'''
+
+*	Confidentiality: Information leakage.
+
+'''Exposure period'''
+
+* Design: Protocols usually have timing difficulties implicit in their design.
+* Implementation: Sometimes a timing covert channel can be dependent on implementation strategy. Example: Using conditionals may leak information, but using table lookup will not.
+
+'''Platform'''
+
+Any
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Medium
+
+'''Likelihood   of exploit'''
+
+Medium
+
+Sometimes simply knowing when data is sent between parties can provide a malicious user with information that should be unauthorized.
+
+Other times, externally monitoring the timing of operations can reveal sensitive data. For example, some cryptographic operations can leak their internal state if the time it takes to perform the operation changes, based on the state. In such cases, it is good to switch algorithms or implementation techniques. It is also reasonable to add artificial stalls to make the operation take the same amount of raw CPU time in all cases.
+
+
+==Risk Factors==
+
+* Talk about the [[OWASP Risk Rating Methodology|factors]] that make this vulnerability likely or unlikely to actually happen
+* Discuss the technical impact of a successful exploit of this vulnerability
+* Consider the likely [business impacts] of a successful attack
+
+
+==Examples==
+In Python:
+
+<pre>
+def validate_password(actual_pw, typed_pw):
+  if len(actual_pw) <> len(typed_pw):
+    return 0
+  for i in len(actual_pw):
+    if actual_pw[i] <> typed_pw[i]:
+    return 0
+  return 1
+</pre>
+
+In this example, the attacker can observe how long an authentication takes when the user types in the correct password. When the attacker tries his own values, he can first try strings of various length. When he finds a string of the right length, the computation will take a bit longer because the ''for'' loop will run at least once.
+
+Additionally, with this code, the attacker can possibly learn one character of the password at a time, because when he guesses the first character right, the computation will take longer than when he guesses wrong. Such an attack can break even the most sophisticated password with a few hundred guesses.
+
+Note that in this example, the actual password must be handled in constant time, as far as the attacker is concerned, even if the actual password is of an unusual length. This is one reason why it is good to use an algorithm that, among other things, stores a seeded cryptographic one-way hash of the password, then compare the hashes, which will always be of the same length.
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Storage covert channel]]
+
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+* Design: Whenever possible, specify implementation strategies that do not introduce time variances in operations.
+* Implementation: Often one can artificially manipulate the time which operations take or - when operations occur - can remove information from the attacker.
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+Note: A reference to related [http://cwe.mitre.org/ CWE] or [http://capec.mitre.org/ CAPEC] article should be added when exists. Eg:
+
+* [http://cwe.mitre.org/data/definitions/79.html CWE 79].
+* http://www.link1.com
+* [http://www.link2.com Title for the link2]
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Synchronization and Timing Vulnerability]]
+[[Category:OWASP_CLASP_Project]]
+[[Category:Code Snippet]]
+[[Category:Python]]

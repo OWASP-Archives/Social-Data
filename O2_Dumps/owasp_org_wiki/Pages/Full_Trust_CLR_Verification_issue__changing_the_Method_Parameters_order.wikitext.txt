@@ -1,0 +1,71 @@
+Compile this:
+
+ using System;
+ using System.Text;
+
+ namespace Owasp
+ {
+    class methodParams
+    {
+        public static void Main()
+        {
+            string sString = "String";
+            StringBuilder sbStringBuilder = new StringBuilder("String Builder");
+            // method1((string)sbStringBuilder, (StringBuilder)sString);  // this will not compile
+            method1(sString, sbStringBuilder);
+            method2(sbStringBuilder, sString);
+        }
+
+        public static void method1(string sString, StringBuilder sbStringBuildert)
+        {
+            Console.WriteLine("method1:    " + sString.ToString() + " ::: " + sbStringBuildert.ToString());
+        }
+
+        public static void method2(StringBuilder sbStringBuilder, string sString)
+        {
+            Console.WriteLine("method2:    " + sString.ToString() + " ::: " + sbStringBuilder.ToString());
+        }
+    }
+ }
+
+ILDASM it and change
+
+    IL_0012:  ldloc.0
+    IL_0013:  ldloc.1
+    IL_0014:  call       void Owasp.methodParams::method1(string,class [mscorlib]System.Text.StringBuilder)
+to
+
+    IL_0012:  ldloc.1
+    IL_0013:  ldloc.0
+    IL_0014:  call       void Owasp.methodParams::method1(string,class [mscorlib]System.Text.StringBuilder)
+
+which changes the order that the parameters are pushed to the stack
+
+ILASM it and confirm in reflector the changes:
+
+ public static void Main()
+ {
+      string text1 = "String";
+      StringBuilder builder1 = new StringBuilder("String Builder");
+      methodParams.method1((string) builder1, (StringBuilder) text1);
+      methodParams.method2(builder1, text1);
+ }
+ 
+Execute it:
+
+ method1:    String Builder ::: String
+ method2:    String ::: String Builder
+
+and confirm that the assembly is correct:
+
+ Z:\peverify _methodParams.exe
+
+ Microsoft (R) .NET Framework PE Verifier.  Version  2.0.50727.42
+ Copyright (c) Microsoft Corporation.  All rights reserved.
+
+ [IL]: Error: [Z:\methodParams\_methodParams.exe : Owasp.methodParams::Main][offset 0x00000014][found ref 'System.Text.StringBuilder'][expected ref 'System.String'] Unexpected type on the stack.
+ [IL]: Error: [Z:\methodParams\_methodParams.exe : Owasp.methodParams::Main][offset 0x00000014][found ref 'System.String'][expected ref 'System.Text.StringBuilder'] Unexpected type on the stack.
+ 2 Errors Verifying _methodParams.exe
+
+
+[[Category:OWASP .NET Project]]

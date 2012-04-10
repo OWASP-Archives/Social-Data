@@ -1,0 +1,61 @@
+== Initial pre-alpha list of OWASP Cloud Top 10 Security Risks  ==
+
+{| cellpadding="2" border="1"
+|-
+| [http://www.owasp.org/index.php/Cloud-10_Accountability_and_Data_Ownership R1 - Accountability and Data Ownership]
+| A traditional data center of an organization is under complete control of that organization. The organization logically and physically protects the data it owns. An organization that chooses to use a public cloud for hosting its business service loses control of its data. This poses critical security risks that the organization needs to carefully consider and mitigate. (Pankaj, Vinay) One must ensure about the guarantee of recovering Data: Once the data entrusted to a third operator, what are the guarantees that you will recover your information? What about the backups performed by the operator of Cloud? (Ludovic)
+|-
+| [http://www.owasp.org/index.php/Cloud-10_User_Identity_Federation R2 - User Identity Federation]
+| It is very important for the enterprises to keep control over user identities as they move services and applications to the different cloud providers. Rather than letting cloud providers create multiple islands of identities that become too complex to manage down the line. Users should be uniquely identifiable with a federated authentication (e.g. SAML) that works across the cloud providers. User experience is enhanced when he/she does not manage multiple userids and credentials. This allows easier back-end data integrations between cloud provides.   (Vinay, Pankaj)
+|-
+| [http://www.owasp.org/index.php/Cloud-10_Regulatory_Compliance R3 - Regulatory Compliance]
+|  - Complex to Demonstrate regulatory compliance. Data that is perceived to be secure in one country may not be perceived secure in another due to different regulatory laws across countries or regions. For eg., European Union has very strict privacy laws and hence data stored in US may not comply with those EU laws. (Shankar, Ove)
+|-
+| [http://www.owasp.org/index.php/Cloud-10_Business_Continuity_and_Resiliency R4 - Business Continuity and Resiliency] 
+| Business Continuity is an activity an IT organization performs to ensure that the business can be conducted in a disaster situation. In case of an organization that uses cloud, the responsibility of business continuity gets delegated to the cloud provider. This creates a risk to the organization of not having appropriate business continuity. (Pankaj, Shankar). About Service Continuity and QoS, one have to ensure about the contractual solutions proposed by the Operator of Cloud, and the Service Level Agreement as well. (Ludovic)
+|-
+| [http://www.owasp.org/index.php/Cloud-10_User_Privacy_and_Secondary_Usage_of_Data R5 - User Privacy and Secondary Usage of Data]
+|  User's personal data gets stored in the cloud as users start using social web sites. Most of the social sites are vague about how they will handle users personal data. Additionally most of the social sites go with the default share all (least restrictive) setup for the user. E.g. via LinkedIn, Twitter, Facebook it is very easy to deduct personal details of the users  (Vinay) - Need to ensure with your cloud providers what data can or cannot be used by them for secondary purposes. It includes data that can be mined directly from user data by providers or indirectly based on user behavior (clicks, incoming outgoing URLs etc.). Many social application providers mine user data for secondary usage e.g. directed advertising. No wonder when many of us use their personal gmail/hotmail or yahoo account to tell a friend your vacation plans and immediately you start seeing advertisements on hotels/flights near your destination.  (Vinay, Ove)
+
+|-
+| [http://www.owasp.org/index.php/Cloud-10_Service_and_Data_Integration R6 - Service and Data Integration] 
+| Organizations must be sure that their proprietary data is adequately protected as it is transferred between the end user and the cloud data center. While interception of data in transit should be of concern to every organization, the risk is much greater for organizations utilizing a cloud computing model, where data is transmitted over the Internet. Unsecured data is susceptible to interception and compromise during transmission. (Shankar, Ove)
+
+|-
+| [http://www.owasp.org/index.php/Cloud-10_Multi_Tenancy_and_Physical_Security R7 - Multi Tenancy and Physical Security] 
+| Multi-tenancy in cloud means sharing of resources and services among multiple clients(CPU, networking, storage/databases, application stack). It increases dependence on logical segregation and other controls to ensure that one tenant deliberately or inadvertently can not interfere with the security ( confidentiality, integrity, availability) of the other tenants. (Vinay, Pankaj)
+
+|-
+| [http://www.owasp.org/index.php/Cloud-10_Incidence_Analysis_and_Forensic_Support R8 - Incidence Analysis and Forensic Support]
+|In the event of a security incident, applications and services hosted at a cloud provider are difficult to investigate as logging may be distributed across multiple hosts and data centers which could be located in various countries and hence governed by different laws. Also, along with log files, data belonging to multiple customers may be co-located on the same hardware and storage devices and hence a concern for law enforcing agencies for forensic recovery.  (Shankar, Ove)
+
+|-
+| [http://www.owasp.org/index.php/Cloud-10_Infrastructure_Security R9 - Infrastructure Security]
+| All infrastructure must be hardened and configured securely, and the hardening/configuration baselines should be based on Industry Best Practices. Applications, systems and networks must be architected and configured with tiering and security zones, and access must be configured to only allow required network and application protocols. Administrative access must be role-based, and granted on a need-to-know basis. Regular risk assessments must be done, preferably by an independent party. A policy and process must be in place for patching/security updates, and can based on risk/threat assessments of new security issues. (Ove, Shankar)
+
+Although the fine details of the items above must be regarded as highly sensitive information, it is reasonable to expect a customer to want to see at least the high-level details. The Provider must be willing to provide this. 
+|-
+| [http://www.owasp.org/index.php/Cloud-10_Nonproduction_Environment_Exposure R10 - Non Production Environment Exposure] 
+| An IT organization that develops software applications internally employs a set of non-production environments for design, development, and test activities. The non-production environments are generally not secured to the same extent as the production environment. If an organization uses a cloud provider for such non-production environment, then there is a high risk of unauthorized access, information modification, and information theft. (Pankaj, Ove)
+|- 
+|}
+
+'''<center>Table 1: Top 10 Cloud - Security Risks</center>'''
+
+== Other OWASP Cloud-10 Candidates  ==
+
+* exposure to non-prod and internal environments 
+*Integration between cloud and internally hosted services 
+*Patching and Vulnerability Management 
+*Lack of Transparency in Internal Security Controls and difficulty/complexity of auditing 
+*Enterprise Intranets exposed directly on Internet (if they move on a Public Cloud)
+
+<br> This needs to be debated and for each of these we may need to add a separate page-holder with the following details. 
+
+*Various Risk Scenarios 
+*Real World Examples 
+*Possible Mitigation and Security Controls 
+*Reference to any related Incident
+
+<br>
+[[Category:OWASP Cloud ‐ 10 Project]]

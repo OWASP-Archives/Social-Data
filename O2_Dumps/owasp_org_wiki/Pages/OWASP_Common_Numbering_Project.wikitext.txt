@@ -1,0 +1,542 @@
+==== Home ====
+<table width="100%" valign="top"><tr><th width="100%"> </th><th> </th></tr><tr valign="top">
+<td>'''Common OWASP Numbering'''
+
+An exciting development, a new numbering scheme that will be common across various OWASP Guides and References is being developed. This  numbering scheme is loosely based on the OWASP ASVS section and detailed requirements numbering. The OWASP ASVS, Guide, and Reference project leads and contributors plan to work together to develop a numbering scheme that facilitates easier mapping between various OWASP Guides and References, and that would allow for a period of transition as the Guides and References are updated to reflect the new numbering scheme. This project will provide a centralized clearinghouse for mapping information. For more information on this project, or if you wish to contribute, please contact [mailto:dave.wichers@owasp.org Dave Wichers].
+
+This common numbering scheme will be of requirements. A mapping of vulnerabilities to this requirements list will most likely be developed after the common requirements list is created. This common numbering scheme is intended to be independent of any particular OWASP project and is not intended to dictate how those projects are developed and organized. Its intent is to be a resource to facilitate cross referencing between related topics and to encourage, but not require, projects like the OWASP Guides to adopt a similar structure. But that decision is up to the respective project leads.
+</td>
+</tr>
+</table>
+
+==== OWASP Common Requirements Numbering Scheme DRAFT====
+<table width="100%" valign="top"><tr><th width="50%"> </th><th> </th></tr><tr valign="top">
+<td>'''Proposed OWASP Common Requirements Numbering Scheme Format:'''
+
+ OCR-AUTHN-01
+ OCR-AUTHN-02
+ OCR-AUTHN-02.01
+ OCR-AUTHN-03
+ OCR-INPVAL-01
+ OCR-INPVAL-02 
+
+Common Requirements Numbering Scheme Proposed Requirement Areas:
+* OCR-AUTHN: Authentication
+* OCR-SESS: Session Management
+* OCR-INPVAL: Input Validation
+* OCR-OUTENC: Output Encoding
+* OCR-AUTHZ: Functional and Data Layer Access Control
+* OCR-BUS: Business Logic
+* OCR-DATAP: Sensitive Data Protection
+* OCR-CRYPST: Cryptographic Storage
+* OCR-COMMS: Communication Security
+* OCR-ERROR: Error Handling
+* OCR-LOG: Logging
+* OCR-DBASE: Secure Database Usage
+* OCR-FILE: Secure File Access
+* OCR-MEM: Memory Management
+* OCR-GEN: General Coding Practices
+* OCR-CONFIG: Secure System Configuration
+* OCR-INTEG: Integrity
+* OCR-AVAIL: Availability
+
+</td>
+<td>'''Reference'''
+*1st Element - Document code (OCR=OWASP Common Requirements Number, ODG=OWASP Development Guide, OTG=OWASP Testing Guide, OCG=OWASP Code Review Guide, others reserved) 
+*2nd Element - Requirement Area (major) 
+*3rd Element - Detailed Requirement Identifier (minor with up to one sublevel (e.g., .01, .02) 
+*4th Element (Optional: DEPRECATED, or # for iterations, or legacy identifiers)<br>
+</td></tr>
+</table>
+
+==== OWASP Common Requirements - DRAFT ====
+
+The following is the first section we have developed of common requirements. It is the section on Authentication (OCR-AUTHN). This is draft, and your feedback is very welcome. Please provide any feedback to [mailto:dave.wichers@owasp.org Dave Wichers]. 
+
+{| class="prettytable"
+|-
+| <center>'''OWASP Common Number'''</center> 
+| <center>'''Common Requirement'''</center> 
+|-
+| align="center" colspan="2" | '''Authentication Requirements'''
+|-
+| OCR-AUTH-01	 
+| All authentication controls operate on a trusted system (e.g., The server).
+|-
+| OCR-AUTH-02	 
+| Authentication is required for all pages and resources, except those specifically intended to be public.
+|-
+| OCR-AUTH-03	
+| The application utilizes standardized, tested, and centralized authentication services.
+|-
+| OCR-AUTH-04	
+| Authentication services utilize a centralized authentication store.
+|-
+| OCR-AUTH-05	
+| All authentication controls fail securely.
+|-
+| OCR-AUTH-06	
+| System configurable password strength requirements are enforced. This includes both minimum length and minimum complexity rules.
+|-
+| OCR-AUTH-07	
+| Disallow account passwords to match any of the last N passwords for that account, where N is a system configurable value. This is done to discourage password re-use.
+|-
+| OCR-AUTH-08	
+| Passwords must be a system configurable minimum age (e.g., one day old) before they can be changed, to prevent attacks on password re-use
+|-
+| OCR-AUTH-09	
+| Password entry fields do not echo the user’s password when it is entered.
+|-
+| OCR-AUTH-10	
+| Autocomplete is disabled for all password entry fields in HTML forms.
+|-
+| OCR-AUTH-11	
+| Passwords are transmitted over an encrypted connection. Temporary passwords associated with email resets may be an exception to this rule.
+|-
+| OCR-AUTH-12	
+| For authentication over HTTP, authentication credentials are transmitted only within the POST body and not in the URL.
+|-
+| OCR-AUTH-13	
+| Authentication controls and application functionality minimize the leakage of user account names.
+|-
+| OCR-AUTH-14	
+| Stored server side passwords are protected using cryptographically strong one-way salted hashes that use salts that are unique per account. (e.g., Do not use the MD5 or SHA-1 algorithms).
+|-
+|OCR-AUTH-15	
+| Use large numbers of hash iterations or password based encryption to make it time consuming to calculate a single hashed password value.
+|-
+| OCR-AUTH-16	
+| Stored passwords and cryptographic keys are readable and writeable only by the application.
+|-
+| OCR-AUTH-17	
+| Brute force protection is provided after a system configurable number of invalid login attempts occur against an account within a configurable period of time (e.g., account is locked, CAPTCHA required, throttling enabled).
+|-
+| OCR-AUTH-18	
+| Implement monitoring to identify attacks against multiple user accounts, utilizing the same password. This attack pattern is used to bypass standard lockouts, when valid user IDs can be harvested or inferred.
+|-
+| OCR-AUTH-19	
+| The date/time of the last successful login is reported to the user after they login, along with the number of failed login attempts since the last successful login.
+|-
+| OCR-AUTH-20	
+| Password changing mechanisms are at least as resistant to attack as the primary authentication mechanism.
+|-
+| OCR-AUTH-21	
+| Passwords are required to be changed before they become older than a system configurable maximum age.
+|-
+| OCR-AUTH-22	
+| Password reset questions support sufficiently random answers. (e.g., "favorite color" is a bad question because red, blue, green, are very common answers. Favorite book is another bad question that generates insufficiently random answers.).
+|-
+| OCR-AUTH-23	
+| For email based resets, only send email to a pre-registered address with a temporary link/password. Reset questions should be asked after the user goes to the temporary page, not before the email is generated.
+|-
+| OCR-AUTH-24	
+| Temporary passwords and links have a short, system configurable, expiration time.
+|-
+| OCR-AUTH-25	
+| Users are required to change temporary passwords as soon as they are used.
+|-
+| OCR-AUTH-26	
+| Users are notified when a password reset occurs on their account.
+|-
+| OCR-AUTH-27	
+| Users must re-authenticate prior to performing security critical operations, such as change password, change email address, change mailing address, change mailing address, view very sensitive data, send funds, etc.
+|-
+| OCR-AUTH-28	
+| All administrative and account management functions are at least as secure as the primary authentication mechanism.
+|-
+| OCR-AUTH-29	
+| Authentication is required for services exposed to external systems that provide sensitive information or functions.
+|-
+| OCR-AUTH-30	
+| All authentication credentials for accessing services external to the application are encrypted and stored in a protected location (e.g., not in source code).
+|-
+| OCR-AUTH-31	
+| Multi-Factor Authentication is used for highly sensitive or high value systems or for specific high value transactions.
+|}
+
+
+{{{#!comment         Lets comment all this other stuff out for now.
+
+==== Mapping to Legacy Testing Guide IDs  ====
+
+Note: This is still a work in progress and is currently incomplete.
+
+{class="prettytable" <-- this needs a pipe character in front of class to work. I had to remove it because it was causing this line to be displayed even though this entire block is commented out.
+|
+| <center>'''Ref. Number'''</center> 
+| <center>'''Test Name'''</center> 
+| <center>'''New Common Ref.'''</center>
+|-
+| align="center" colspan="3" | '''Information Gathering'''
+|-
+| OWASP-IG-001 
+| Spiders, Robots and Crawlers 
+| OWASP-'''&lt;put mapped ASVS&nbsp;4 digit # here&gt;'''-TG-IG-001
+|-
+| OWASP-IG-002 
+| Search Engine Discovery/Reconnaissance 
+| 
+|-
+| OWASP-IG-003 
+| Identify application entry points 
+| 
+|-
+| OWASP-IG-004 
+| Testing for Web Application Fingerprint 
+| 
+|-
+| OWASP-IG-005 
+| Application Discovery 
+| 
+|-
+| OWASP-IG-006 
+| Analysis of Error Codes 
+| 
+|-
+| align="center" colspan="3" | '''Configuration Management Testing'''
+|-
+| OWASP-CM-001 
+| SSL/TLS Testing (SSL Version, Algorithms, Key length, Digital Cert. Validity) 
+| 
+|-
+| OWASP-CM-002 
+| DB Listener Testing 
+| 
+|-
+| OWASP-CM-003 
+| Infrastructure Configuration Management Testing 
+| 
+|-
+| OWASP-CM-004 
+| Application Configuration Management Testing 
+| 
+|-
+| OWASP-CM-005 
+| Testing for File Extensions Handling 
+| 
+|-
+| OWASP-CM-006 
+| Old, backup and unreferenced files 
+| 
+|-
+| OWASP-CM-007 
+| Infrastructure and Application Admin Interfaces 
+| 
+|-
+| OWASP-CM-008 
+| Testing for HTTP Methods and XST 
+| 
+|-
+| align="center" colspan="3" | '''Authentication Testing'''
+|-
+| OWASP-AT-001 
+| Credentials transport over an encrypted channel 
+| 
+|-
+| OWASP-AT-002 
+| Testing for user enumeration 
+| 
+|-
+| OWASP-AT-003 
+| Testing for Guessable (Dictionary) User Account 
+| 
+|-
+| OWASP-AT-004 
+| Brute Force Testing 
+| 
+|-
+| OWASP-AT-005 
+| Testing for bypassing authentication schema 
+| 
+|-
+| OWASP-AT-006 
+| Testing for vulnerable remember password and pwd reset 
+| 
+|-
+| OWASP-AT-007 
+| Testing for Logout and Browser Cache Management 
+| 
+|-
+| OWASP-AT-008 
+| Testing for CAPTCHA 
+| 
+|-
+| OWASP-AT-009 
+| Testing Multiple Factors Authentication 
+| 
+|-
+| OWASP-AT-010 
+| Testing for Race Conditions 
+| 
+|-
+| align="center" colspan="3" | '''Session Management'''
+|-
+| OWASP-SM-001 
+| Testing for Session Management Schema 
+| 
+|-
+| OWASP-SM-002 
+| Testing for Cookies attributes 
+| 
+|-
+| OWASP-SM-003 
+| Testing for Session Fixation 
+| 
+|-
+| OWASP-SM-004 
+| Testing for Exposed Session Variables 
+| 
+|-
+| OWASP-SM-005 
+| Testing for CSRF 
+| 
+|-
+| align="center" colspan="3" | '''Authorization Testing'''
+|-
+| OWASP-AZ-001 
+| Testing for Path Traversal 
+| 
+|-
+| OWASP-AZ-002 
+| Testing for bypassing authorization schema 
+| 
+|-
+| OWASP-AZ-003 
+| Testing for Privilege Escalation 
+| 
+|-
+| align="center" colspan="3" | '''Business logic testing'''
+|-
+| OWASP-BL-001 
+| Testing for business logic 
+| 
+|-
+| align="center" colspan="3" | '''Data Validation Testing'''
+|-
+| OWASP-DV-001 
+| Testing for Reflected Cross Site Scripting 
+| 
+|-
+| OWASP-DV-002 
+| Testing for Stored Cross Site Scripting 
+| 
+|-
+| OWASP-DV-003 
+| Testing for DOM based Cross Site Scripting 
+| 
+|-
+| OWASP-DV-004 
+| Testing for Cross Site Flashing 
+| 
+|-
+| OWASP-DV-005 
+| SQL Injection 
+| 
+|-
+| OWASP-DV-006 
+| LDAP Injection 
+| 
+|-
+| OWASP-DV-007 
+| ORM Injection 
+| 
+|-
+| OWASP-DV-008 
+| XML Injection 
+| 
+|-
+| OWASP-DV-009 
+| SSI Injection 
+| 
+|-
+| OWASP-DV-010 
+| XPath Injection 
+| 
+|-
+| OWASP-DV-011 
+| IMAP/SMTP Injection 
+| 
+|-
+| OWASP-DV-012 
+| Code Injection 
+| 
+|-
+| OWASP-DV-013 
+| OS Commanding 
+| 
+|-
+| OWASP-DV-014 
+| Buffer overflow 
+| 
+|-
+| OWASP-DV-015 
+| Incubated vulnerability Testing 
+| 
+|-
+| OWASP-DV-016 
+| Testing for HTTP Splitting/Smuggling 
+| 
+|-
+| align="center" colspan="3" | '''Denial of Service Testing'''
+|-
+| OWASP-DS-001 
+| Testing for SQL Wildcard Attacks 
+| 
+|-
+| OWASP-DS-002 
+| Locking Customer Accounts 
+| 
+|-
+| OWASP-DS-003 
+| Testing for DoS Buffer Overflows 
+| 
+|-
+| OWASP-DS-004 
+| User Specified Object Allocation 
+| 
+|-
+| OWASP-DS-005 
+| User Input as a Loop Counter 
+| 
+|-
+| OWASP-DS-006 
+| Writing User Provided Data to Disk 
+| 
+|-
+| OWASP-DS-007 
+| Failure to Release Resources 
+| 
+|-
+| OWASP-DS-008 
+| Storing too Much Data in Session 
+| 
+|-
+| align="center" colspan="3" | '''Web Services Testing'''
+|-
+| OWASP-WS-001 
+| WS Information Gathering 
+| 
+|-
+| OWASP-WS-002 
+| Testing WSDL 
+| 
+|-
+| OWASP-WS-003 
+| XML Structural Testing 
+| 
+|-
+| OWASP-WS-004 
+| XML content-level Testing 
+| 
+|-
+| OWASP-WS-005 
+| HTTP GET parameters/REST Testing 
+| 
+|-
+| OWASP-WS-006 
+| Naughty SOAP attachments 
+| 
+|-
+| OWASP-WS-007 
+| Replay Testing 
+| 
+|-
+| align="center" colspan="3" | '''AJAX Testing'''
+|-
+| OWASP-AJ-001 
+| AJAX Vulnerabilities 
+| 
+|-
+| OWASP-AJ-002 
+| AJAX Testing 
+| 
+|}
+
+==== Mapping to Top 10 2010 IDs  ====
+
+Note: This is still a work in progress and is currently incomplete.
+
+{| class="pretty3table"
+|-
+| <center>'''Ref. Number'''</center> 
+| <center>'''Name'''</center> 
+| <center>'''New Common Ref.'''</center>
+|-
+| [[Top_10_2010-A1 | 2010-A1]]
+| Injection 
+| 
+
+OWASP-0705
+
+OWASP-0706 
+
+OWASP-0707 
+
+OWASP-0708 
+
+OWASP-0709 
+
+OWASP-0710 
+
+OWASP-0711 
+
+OWASP-0712 
+
+|-
+| [[Top_10_2010-A2 | 2010-A2]] 
+| Cross Site Scripting (XSS)
+| OWASP-0701 
+OWASP-0702 
+
+OWASP-0703 
+
+OWASP-0704 
+
+|-
+| [[Top_10_2010-A3 | 2010-A3]] 
+| Broken Authentication and Session Management 
+| OWASP-0300 
+OWASP-0400 
+|-
+| [[Top_10_2010-A4 | 2010-A4]] 
+| Insecure Direct Object References 
+| OWASP-0502
+|-
+| [[Top_10_2010-A5 | 2010-A5]] 
+| Cross Site Request Forgery 
+| OWASP-0405
+|-
+| [[Top_10_2010-A6 | 2010-A6]] 
+| Security Misconfiguration 
+| OWASP-0203 
+OWASP-0204 
+|-
+| [[Top_10_2010-A7 | 2010-A7]] 
+| Failure to Restrict URL Access 
+| OWASP-0500
+|-
+| [[Top_10_2010-A8 | 2010-A8]] 
+| Unvalidated Redirects and Forwards 
+| OWASP-0717
+|-
+| [[Top_10_2010-A9 | 2010-A9]] 
+| Insecure Cryptographic Storage 
+| OWASP-0209
+|-
+| [[Top_10_2010-A10 | 2010-A10]] 
+| Insufficient Transport Layer Protection 
+| OWASP-0201
+|}
+
+End commented out section. }}}
+
+==== Project About ====
+{{:Projects/OWASP Common Numbering Project | Project About}}
+
+__NOTOC__ <headertabs />
+
+
+[[Category:OWASP_Document]] 
+[[Category:OWASP_Alpha_Quality_Document]] 
+[[Category:OWASP_Project|Common Numbering Project ]] 
+[[Category:OWASP_Application_Security_Verification_Standard_Project]] [[Category:How_To]]

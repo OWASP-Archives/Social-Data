@@ -1,0 +1,65 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Unsafe Mobile Code]]
+
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+==Description==
+
+The program violates secure coding principles for mobile code by making use of an inner class.
+
+Inner classes quietly introduce several security concerns because of the way they are translated into Java bytecode. In Java source code, it appears that an inner class can be declared to be accessible only by the enclosing class, but Java bytecode has no concept of an inner class, so the compiler must transform an inner class declaration into a peer class with package level access to the original outer class. More insidiously, since an inner class can access private fields in their enclosing class, once an inner class becomes a peer class in bytecode, the compiler converts private fields accessed by the inner class into protected fields.
+
+For more details about mobile code and its security concerns, please see [[:Category:Unsafe Mobile Code]].
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+The following Java Applet code mistakenly makes use of an inner class.
+
+<pre>
+	public final class urlTool extends Applet {
+		private final class urlHelper {
+			...
+		}
+		...
+	}
+</pre>
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+
+==Related [[Controls]]==
+
+* [[Use encapsulation]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+
+__NOTOC__

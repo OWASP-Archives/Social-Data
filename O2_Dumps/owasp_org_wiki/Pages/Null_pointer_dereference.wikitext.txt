@@ -1,0 +1,77 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[::Category:Vulnerability]]
+
+
+
+==Overview==
+
+A null-pointer dereference takes place when a pointer with a value of NULL is used as though it pointed to a valid memory area.
+
+==Consequences ==
+
+*	Availability: Null-pointer dereferences invariably result in the failure of the process.
+
+==Exposure period ==
+
+*	Requirements specification: The choice could be made to use a language that is not susceptible to these issues. 
+
+*	Implementation: Proper sanity checks at implementation time can serve to prevent null-pointer dereferences
+
+==Platform ==
+
+*	Languages: C, C++, Assembly
+
+*	Platforms: All
+
+==Required resources ==
+
+Any
+
+==Severity ==
+
+Medium
+
+==Likelihood   of exploit ==
+
+Medium
+
+==Avoidance and mitigation ==
+
+*	Requirements specification: The choice could be made to use a language that is not susceptible to these issues. 
+
+*	Implementation: If all pointers that could have been modified are sanity-checked previous to use, nearly all null-pointer dereferences can be prevented.
+
+==Discussion ==
+
+Null-pointer dereferences, while common, can generally be found and corrected in a simply way. They will always result in the crash of the process - unless exception handling (on some platforms) in invoked, and even then, little can be done to salvage the process.
+
+==Examples ==
+
+Null-pointer dereference issue can occur through a number of flaws, including race conditions, and simple programming omissions. While there are no complete fixes aside from contentious programming, the following steps will go a long way to ensure that null-pointer dereferences do not occur.
+
+Before using a pointer, ensure that it is not equal to NULL:
+
+<pre>
+if (pointer1 != NULL) {
+  /* make use of pointer1 */
+  /* ... */
+}
+</pre>
+
+When freeing pointers, ensure they are not set to NULL, and be sure to set them to NULL once they are freed:
+
+<pre>
+if (pointer1 != NULL) {
+  free(pointer1);
+  pointer1 = NULL;
+}
+</pre>
+
+If you are working with a multi-threaded or otherwise asynchronous environment, ensure that proper locking APIs are used to lock before the if statement; and unlock when it has finished.
+
+==Related problems ==
+
+*	[[Miscalculated null termination]]
+
+*	[[State synchronization error]]

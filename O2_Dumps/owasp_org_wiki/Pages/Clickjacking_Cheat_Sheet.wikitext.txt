@@ -1,0 +1,23 @@
+= DRAFT CHEAT SHEET - WORK IN PROGRESS =
+
+= Introduction =
+
+This article is focused on providing developer guidance on Clickjack/UI Redress attack prevention. 
+
+= Clickjacking Defenses =
+
+== Frame busting JavaScript ==
+== X-Frame-Options ==
+== NoScript ==
+== IE8 XSS filter ==
+== Restricted frames == 
+== Redefining location ==
+== Clickjacking detection == 
+
+= References =
+
+[https://www.owasp.org/index.php/Clickjacking https://www.owasp.org/index.php/Clickjacking]
+
+{{Cheatsheet_Navigation}}
+
+[[Category:Cheatsheets]]

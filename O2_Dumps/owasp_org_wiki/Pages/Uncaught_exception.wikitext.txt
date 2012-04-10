@@ -1,0 +1,148 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+{{Template:Fortify}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+Ignoring an exception can cause the program to overlook unexpected states and conditions.
+
+When an exception is thrown and not caught, the process has given up an opportunity to decide if a given failure or event is worth a change in execution.
+
+Just about every serious attack on a software system begins with the violation of a programmer's assumptions. After the attack, the programmer's assumptions seem flimsy and poorly founded, but before an attack many programmers would defend their assumptions well past the end of their lunch break.
+
+Two dubious assumptions that are easy to spot in code are "this method call can never fail" and "it doesn't matter if this call fails". When a programmer ignores an exception, they implicitly state that they are operating under one of these assumptions.
+
+'''Consequences'''
+
+Undefined.
+
+'''Exposure period'''
+
+* Requirements specification: The choice could be made to use a language that is resistant to this issues. 
+* Implementation: Many logic errors can lead to this condition. It can be exacerbated by lack, or misuse, of mitigating technologies. Generally this problem is either caused by using a foreign API or an API which the programmer is not familiar with.
+
+'''Platform'''
+
+* Languages: Java, C++, C#, or any language which has exceptions.
+* Operating platforms: Any
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Medium
+
+'''Likelihood   of exploit'''
+
+Medium
+
+
+==Risk Factors==
+TBD
+
+==Examples==
+
+'''In C++:'''
+
+<pre>
+#include <iostream.h>
+#include <new>
+#include <stdlib.h>
+
+int
+main(){
+        char            input[100];
+        int             i, n;
+        long           *l;
+
+        Required resources        cout <<   many numbers do you want to type in? ";
+        cin.getline(input, 100);
+        i = atoi(input);
+        //here we are purposly not checking to see if this call to 
+        //new works
+        //try {
+                l = new long    [i];
+        //}
+
+        //catch (bad_alloc & ba) {
+        //       cout << "Exception:" << endl;
+        //}
+        if (l == NULL)
+                exit(1);
+        for (n = 0; n < i; n++) {
+                cout << "Enter number: ";
+                cin.getline(input, 100);
+                l[n] = atol(input);
+        }
+                cout << "You have entered: ";
+        for (n = 0; n < i; n++)
+                cout << l[n] << ", ";
+        delete[] l;
+        return 0;
+}
+</pre>
+
+In this example, since we do not check if ''new'' throws an exception, we can find strange failures if large values are entered.
+
+'''In Java:'''
+
+The following code excerpt ignores a rarely-thrown exception from doExchange().
+
+<pre>
+	try {
+	  doExchange();
+	}
+	catch (RareException e) {
+	  // this can never happen
+	}
+</pre>
+
+If a RareException were to ever be thrown, the program would continue to execute as though nothing unusual had occurred. The program records no evidence indicating the special situation, potentially frustrating any later attempt to explain the program's behavior.
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+* Requirements Specification: The choice between a language which has named or unnamed exceptions needs to be done. While unnamed exceptions exacerbate the chance of not properly dealing with an exception, named exceptions suffer from the up call version of the weak base class problem.
+* Requirements Specification: A language can be used which requires, at compile time, to catch all serious exceptions. However, one must make sure to use the most current version of the API as new exceptions could be added.
+* Implementation: Catch all relevant exceptions. This is the recommended solution. Ensure that all exceptions are handled in such a way that you can be sure of the state of your system at any given moment.
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD
+
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Error Handling Vulnerability]]
+[[Category:OWASP_CLASP_Project]]
+[[Category:C]]
+[[Category:Java]]
+[[Category:Code Snippet]]
+[[Category:Implementation]]

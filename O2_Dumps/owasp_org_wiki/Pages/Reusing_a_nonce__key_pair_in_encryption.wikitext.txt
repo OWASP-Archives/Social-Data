@@ -1,0 +1,127 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+
+==Description==
+Nonces should be used for the present occasion and only once.
+
+'''Consequences'''
+
+* Authentication: Potentially a replay attack, in which an attacker could send the same data twice, could be crafted if nonces are allowed to be reused. This could allow a user to send a message which masquerades as a valid message from a valid user. 
+
+'''Exposure period'''
+
+* Design: Mitigating technologies such as safe string libraries and container abstractions could be introduced.
+* Implementation: Many traditional techniques can be used to create a new nonce from different sources.
+* Implementation: Reusing nonces nullifies the use of nonces.
+
+'''Platform'''
+
+* Languages: Any
+* Operating platforms: Any
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood of exploit'''
+
+High
+
+Nonces, are often bundled with a key in a communication exchange to produce a new session key for each exchange. 
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+In C/C++:
+
+<pre>
+#include <openssl/sha.h>
+#include <stdio.h>
+#include <string.h>
+#include <memory.h>
+
+int main(){
+  char *paragraph = NULL;
+  char *data = NULL;
+  char *nonce = "bad";
+  char *password = "secret";
+  
+  parsize=strlen(nonce)+strlen(password);
+  paragraph=(char*)malloc(para_size);	
+  strncpy(paragraph,nonce,strlen(nonce));
+  strcpy(paragraph,password,strlen(password));
+  
+  data=(unsigned char*)malloc(20);
+  SHA1((const unsigned char*)paragraph,parsize,(unsigned char*)data);
+
+  free(paragraph);
+  free(data);
+//Do something with data//
+  return 0;
+}
+</pre>
+
+In Java:
+
+<pre>
+String command = new String("some command to execute")
+MessageDigest nonce = MessageDigest.getInstance("SHA");
+nonce.update(String.valueOf("bad nonce");
+byte[] nonce = nonce.digest();
+
+MessageDigest password = MessageDigest.getInstance("SHA");
+password.update(nonce + "secretPassword");
+byte[] digest = password.digest();
+//do somethign with digest//
+</pre>
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* Requirements specification: The choice could be made to use a language that is not susceptible to these issues.
+* Implementation: Refuse to reuse nonce values.
+* Implementation: Use techniques such as requiring incrementing, time based and/or challenge response to assure uniqueness of nonces.
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Cryptographic Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

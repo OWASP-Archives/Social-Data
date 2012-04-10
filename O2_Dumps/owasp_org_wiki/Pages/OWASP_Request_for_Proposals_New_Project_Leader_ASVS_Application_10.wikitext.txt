@@ -1,0 +1,16 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>New Project Leader Applicants</noinclude>
+
+| Applicant_Name = Applicant 10 <!--Please replace 'Applicant 10' by your name (REQUIRED field)-->
+| Applicant_Email = <!--Please replace all this text by your email address (REQUIRED field)-->
+| Applicant_Wiki_Username = <!--Please replace this text by your wiki username (REQUIRED field)-->
+| Curriculum_Vitae_url = <!--Please replace all this text by your CV's web link  (REQUIRED field)-->
+
+| Proposed_Roadmap_url =  <!--Please replace all this text by your Roadmap's web link  (OPTIONAL field - choose between this field and the following one)-->
+
+| Proposed_Roadmap_Text = <!--Please replace all this text with a Roadmap (OPTIONAL field - choose between this field and the previous one)-->
+
+<!--##### Please replace/edit these variables ##### --> 
+| Applicant_name_mask = Application_10 
+| Applicant_home_page = :OWASP_Request_for_Proposals/New_Project_Leader/ASVS/Application_10 
+| Applications_home_page = Seeking_New_Project_Leader_For/ASVS
+}}

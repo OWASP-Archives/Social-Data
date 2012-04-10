@@ -1,0 +1,118 @@
+{{Chapter Template|chaptername=Brazilian|extra=The chapter leader is [mailto:wagner.elias@gmail.com Wagner Elias] |mailinglistsite=http://lists.owasp.org/mailman/listinfo/owasp-brazilian|emailarchives=http://lists.owasp.org/pipermail/owasp-brazilian}}
+
+
+
+
+'''<center><span style="color: rgb(255, 0, 0);">This Chapter is deprecated. Please choose one of the local chapters listed in the following page: [[:Category:Brasil]] </span></center>'''
+
+'''<center><span style="color: rgb(255, 0, 0);">Este capítulo foi desmembrado em capítulos locais. Consulte a lista dos novos capítulos na página: [[:Category:Brasil]] </span></center>'''
+
+== Novidades do Capítulo ==
+
+=== AppSec Brazil 2009 ===
+
+O Chapter Brazil do OWASP estará realizando o primeiro AppSec Brasil, este evento será apoiado pela [http://www.ticontrole.gov.br Comunidade TI-Controle] e pela [http://www.camara.gov.br Câmara dos Deputados]. Saiba mais sobre o evento [http://www.owasp.org/index.php/AppSec_Brasil_2009_(pt-br) aqui].
+
+=== PHP Conference 2008 ===
+
+O Chapter Brazil do OWASP estará no evento PHP Conference Brasil 08, com expectativa de atingir cerca de 1.000 profissionais participantes e será realizado no UNIFIEO, Universidade localizada no Município de Osasco, São Paulo.
+
+O nosso Chapter Leader, Wagner Elias, irá apresentar a palestra “Tratando as vulnerabilidades do Top 10 da OWASP”, no dia 28/11 das 9h00 às 10h30 na sala AT2 - Amarelo. Além disso, ele irá representar o Chapter Brazil do OWASP na solenidade de abertura do evento, que irá ocorrer no dia 29/11. Saiba mais sobre o evento [http://phpconf.com.br/ aqui].
+
+=== OWASP EU Summit 2008 ===
+
+Caros,
+ 
+O OWASP EU Summit 2008 será apresentado em Portugal entre os dias 3 e 7 de novembro de 2008, e como responsável pela formação da grade de treinamentos, gostaria de convidar os interessados em ministrar cursos de IT Security a entrarem em contato comigo para maiores detalhes.
+ 
+Todos os cursos deverão ser apresentados em inglês, são remunerados e incluem a participação do instrutor nas demais seções do EU Summit. 
+ 
+Informações sobre o evento estão disponíveis em: https://www.owasp.org/index.php/OWASP_EU_Summit_2008.
+ 
+Atenciosamente,
+ 
+
+'''Eduardo Vianna de Camargo Neves, CISSP'''
+
+Conviso IT Security, Operations Manager
+
+T. 55 (41) 3075.3080 | M. 55 (41) 9941.0825
+
+eneves (at) conviso.com.br
+
+=== SoC 2008 - Projetos Aprovados ===
+
+Duas propostas submetidas por membros do capítulo foram aprovadas na temporada [[OWASP Summer of Code 2008]]. São elas:
+
+'''[[:Category:OWASP Positive Security Project|Positive Security Project]] - por Eduardo Camargo Neves''': modificar a perspectiva adotada pelas empresas ao se tratar de aplicações por uma abordagem positiva.
+
+
+'''[[OWASP ASDR Project]] -  por [mailto:leonardocavallari(at)gmail.com Leonardo Cavallari]''': visa criar o guia de referência mais completo sobre segurança em aplicações Web, incluindo [[ASDR TOC Principles|Princípios]],[[ASDR TOC Threat Agents|Agentes de ameaças]], [[ASDR TOC Vulnerabilities|Vulnerabilidades]], [[ASDR TOC Attacks|Ataques]], [[ASDR TOC Control|Controles]], [[ASDR TOC Technical Impacts|Impactos Técnicos]] e de [[ASDR TOC Business Impacts|Negócio]].
+
+Estamos precisando de voluntários! Entre em contato com os líderes dos projetos para saber como contribuir!!
+
+=== Tradução da ferramenta WebGoat ===
+O [[OWASP WebGoat Project|WebGoat]], projeto mantido pela OWASP é uma aplicação J2EE elaborada com diversas falhas propositais para ser utilizada como ferramenta de apresendizado.
+[http://softwareseguro.blogspot.com Fabrício Braz] realizou a tradução da ferramenta possibilitando melhor entendimento das lições oferecidas.
+
+Faça o download da versão em português [http://code.google.com/p/webgoat-ptbr/downloads/list aqui].
+
+
+=== Tradução OWASP TOP10 ===
+O Capítulo Brasil, por meio de seus voluntários, concluiu a tradução do OWASP TOP 10 2007, documento que reúne as 10 vulnerabilidades mais críticas em aplicações WEB. [http://www.owasp.org/images/4/42/OWASP_TOP_10_2007_PT-BR.pdf Acesse o documento] e já comece a validar suas aplicações!
+
+Agradeço o comprometimento de todos envolvidos no projeto: [mailto:clebber@gmail.com Cleber Brandão “Clebeer”], [mailto:fabricio.braz@gmail.com Fabricio Ataides Braz], [mailto:deigratia33@gmail.com Marcos Aurélio Rodrigues], [mailto:mykesh@gmail.com Myke Hamada], [mailto:spooker@gmail.com Rodrigo Montoro “Sp0oKer”].
+
+[mailto:leonardocavallari@gmail.com Leonardo Cavallari] - Organizador e Responsável pela tradução
+
+== Eventos ==
+=== Apresentação sobre o OWASP e projeto TOP 10 @ ISSA Day - Capítulo Brasil/SP ===
+Introdução sobre o projeto OWASP e TOP10 apresentado aos participantes do ISSA Day/Brasil em Junho/2008, por Leonardo Cavallari.
+
+Download das apresentações pode ser feito nos links abaixo:
+
+Parte I - [http://www.owasp.org/images/b/b4/OWASP-Intro-2008-pt-br.ppt Introdução OWASP]
+
+Parte II - TOP10 2007 [http://www.owasp.org/images/7/75/OWASP_TOP10_PT-BR.ppt Apresentação] - [http://www.owasp.org/images/4/42/OWASP_TOP_10_2007_PT-BR.pdf Documento]
+
+=== OWASP TOP 10 @ FATEC Sorocaba ===
+No dia 07 de abril às 19:30, Gislaine Lirian Bueno irá apresentar o TOP 10 2007 na FATEC de Sorocaba para os estudantes do curso de Processamento de Dados. A apresentação é aberta ao público, portanto quem estiver pela região ou morar próximo poderá assistir ao evento.
+
+Maiores informações: [http://www.fatecsorocaba.edu.br/contato/contato.asp FATEC Sorocaba]
+
+
+=== OWASP TOP 10 @ FISL ===
+O capítulo Brasil irá fazer uma apresentação no 9º Fórum Internacional de Software Livre - FISL - a ser realizado entre os dias 17 e 19 de abril de 2008. Nesta ocasião o TOP 10 2007, será apresentado pelos membros [mailto:deigratia33@gmail.com Marcos Aurélio Rodrigues] e [mailto:leonardocavallari@gmail.com Leonardo Cavallari].
+
+As inscrições para o FISL podem ser realizadas no [http://fisl.softwarelivre.org/ site].
+Grade do evento pode ser acessada em [http://fisl.softwarelivre.org/9.0/papers/pub/ http://fisl.softwarelivre.org/9.0/papers/pub/].
+
+== Atividades ==
+Estamos recrutando voluntários para participarem das seguintes atividades:
+* Tradução de documentos
+* Apresentação de palestras
+Aos interessados em apresentar palestras ou que possam abrir espaço para alguém apresentar, preencha a tabela abaixo procurando manter os registros de acordo com as datas dos eventos:
+
+{| class="wikitable"
+|-
+! Facilitador
+! Apresentador
+! Assunto
+! Data
+! Local
+|-
+| [mailto:thiagoalz@gmail.com Thiago Lechuga]
+| [mailto:thiagoalz@gmail.com Thiago Lechuga]
+| OWASP TOP 10
+| Definir
+| UNICAMP
+|-
+| [mailto:janotijr@yahoo.com.br Paulo Janoti]
+| [Definir]
+| OWASP TOP 10
+| Definir (Maio)
+| ISTCC-RJ- FAETEC
+|-
+|}
+
+* Desenvolvimento de artigos para revistas e mídias de comunicação

@@ -1,0 +1,64 @@
+{|style="width:100%;margin-top:+.7em;background-color:#ececec;border:1px solid #ccc"
+|style="width:56%;color:#000"|
+{|style="width:280px;border:solid 0px;background:none"
+|-
+|style="width:280px;text-align:center;white-space:nowrap;color:#000" |
+<div style="font-size:162%;border:none;margin: 0;padding:.1em;color:#000">'''Welcome to the OWASP Houston Chapter'''</div>
+<div style="top:+0.2em;font-size: 95%">the free and open application security community</div>
+|}
+
+{|style="width:100%;background:none;margin:-.8em 0 -.7em 0"
+|style="font-size:95%;text-align:left;white-space:nowrap;color:#000"'''·'''}
+
+<!-- Start of left-column -->
+{|style="border-spacing:8px;margin:0px -8px"
+|class="MainPageBG" style="width:50%;border:1px solid #cef2e0;background-color:#f5fffa;vertical-align:top;color:#000"|
+{|width="100%" cellpadding="2" cellspacing="5" style="vertical-align:top;background-color:#f5fffa"
+! <h2 style="margin:0;background-color:#cef2e0;font-family:sans-serif;font-size:120%;font-weight:bold;border:1px solid #a3bfb1;text-align:left;color:#000;padding:0.2em 0.4em;">[[About The Open Web Application Security Project|OWASP Overview]]</h2>
+|-
+|style="color:#000;align:center"|{{OWASP Overview}}
+|-
+! <h2 style="margin:0;background:#cef2e0;font-family:sans-serif;font-size:120%;font-weight:bold;border:1px solid #a3bfb1;text-align:left;color:#000;padding:0.2em 0.4em;">Featured Story</h2>
+|-
+|style="color:#000"|{{Featured article}}
+|-
+! <h2 style="margin:0;background:#cef2e0;font-family:sans-serif;font-size:120%;font-weight:bold;border:1px solid #a3bfb1;text-align:left;color:#000;padding:0.2em 0.4em;">Application Security News [[Application Security News|(add)]]</h2>
+|-
+|style="color:#000"|{{Application Security News}}
+|-
+! <h2 style="margin:0;background:#cef2e0;font-family:sans-serif;font-size:120%;font-weight:bold;border:1px solid #a3bfb1;text-align:left;color:#000;padding:0.2em 0.4em;">OWASP Members</h2>
+|-
+|style="color:#000"|{{OWASP Members}}
+|-
+
+<!--
+! <h2 style="margin:0;background:#cef2e0;font-family:sans-serif;font-size:120%;font-weight:bold;border:1px solid #a3bfb1;text-align:left;color:#000;padding:0.2em 0.4em;">Application Security Event Calendar</h2>
+|-
+|style="color:#000"|{{OWASP Application Security Event Calendar}}
+|-
+-->
+
+|}
+
+<!-- Start of right-column -->
+|class="MainPageBG" style="width:50%;border:1px solid #cedff2;background-color:#f5faff;vertical-align:top"|
+{| width="100%" cellpadding="2" cellspacing="5" style="vertical-align:top;background-color:#f5faff"
+
+<!--   -->
+! <h2 style="margin:0;background-color:#cedff2;font-family:sans-serif;font-size:120%;font-weight:bold;border:1px solid #a3b0bf;text-align:left;color:#000;padding:0.2em 0.4em;">OWASP Conferences</h2>
+|- 
+|style="color:#000"|{{OWASP Conference}}
+|-
+<!--   -->
+
+! <h2 style="margin:0;background-color:#cedff2;font-family:sans-serif;font-size:120%;font-weight:bold;border:1px solid #a3b0bf;text-align:left;color:#000;padding:0.2em 0.4em;">OWASP Community [[OWASP Community|(add)]]</h2>
+|- 
+|style="color:#000"|{{OWASP Community Table}}
+|-
+! <h2 style="margin:0;background:#cedff2;font-family:sans-serif;font-size:120%;font-weight:bold;border:1px solid #a3b0bf;text-align:left;color:#000;padding:0.2em 0.4em;">OWASP News [[OWASP News|(add)]]</h2>
+|- 
+|style="color:#000"|{{OWASP News}}
+|}
+|}
+
+__NOTOC__ __NOEDITSECTION__

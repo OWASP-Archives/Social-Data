@@ -1,0 +1,59 @@
+{{Template:SecureSoftware}}
+
+==Overview==
+
+Purpose:	
+
+* Define system roles and the capabilities/resources that the role can access.
+
+Role:
+
+* Architect
+
+Frequency:
+
+* As necessary; generally, once per iteration.
+
+
+
+==Identify distinct capabilities ==
+
+Intelligent role division requires understanding the things in a system that users may be able to do (capabilities). Even if there is a heavy disposition to use a very limited number of roles, there is much value in identifying possible capabilities, then applying the principle of least privilege by binding capabilities to roles only when necessary. For example, even if the primary role abstraction is "user", it is perfectly valid to restrict sensitive operations to a subset of those users.
+
+Capabilities are interesting operations on resources that should be mediated via an authorization/access control mechanism. For example, the obvious capabilities for a file on a file system are: read, write, execute, create, and delete. However, there are other operations that could be considered "meta-operations" that are often overlooked, particularly: reading and writing file attributes, setting file ownership, and establishing access control policy to any of these operations.
+
+==Map system roles to capabilities ==
+
+Roles are a way of mapping sets of capabilities to classes of users. Traditionally, people have thought of roles only at the highest level, breaking them down into administrator, users and guest, or whatever natural division suits the system. This is a reasonable high-level abstraction, but in many systems it does not serve the principle of least privilege, which states that one should have the minimal privileges necessary, and no more.
+
+On the other end of the spectrum, one can define one role for every set of resource capabilities one might want to allow. But that can quickly get complex if users need to be able to assign capabilities to other users dynamically. As a result, it is usually best to map roles to static sets of capabilities. This should be done by specifying the default set of capabilities for the role as well as the maximum set of capabilities for the role.
+
+In most situations, the system itself is an implicit role (or set of roles) that has all capabilities and mediates access to them - particularly in a client-server application.
+
+Role to capability mappings can be expressed as requirements stating that the given role should have access to a particular set of capabilities. Optionally, role information can be captured in a separate artifact.
+
+==Identify the attacker profile (attacker roles and resources) ==
+
+When defining system requirements, one must have a good model specifying where threats could originate. Particularly, one should attempt to identify potential groups that could be a threat as well as the gross resources one expects them to have.
+
+For example, one should consider acknowledging the following attacker roles in an architecture:
+
+*  Insiders - particularly those who have physical access to the building where critical infrastructure is kept. Most crimes are caused by people with some sort of insider access, including friends, building workers etc. While many insider attacks are due to some form of disgruntlement, more often they are crimes of opportunity.
+
+*  Script Kiddies - are those people who leverage exploits that are easy to find in the underground community. This group generally targets widely deployed software systems, due to the ready availability of exploits and targets. Such systems are often present as components in more complex systems.
+
+*	Competitors- who may have a reasonable budget and may be willing to fund illegal or borderline activity that is unlikely to be traced back to them (e.g., due to outsourcing to Russia).
+
+*	Governments - who are generally extraordinarily well funded.
+
+*	Organized crime - who choose few targets based on financial gain but are well funded.
+
+* Activists - who will target organizations that are particularly unliked. This threat vector is easy to ignore, but could be a source of risk. For example, there are non-traditional activists, such as those that target security companies perceived to be untalented.
+
+An attacker profile should be documented independently but could be incorporated into business requirements.
+
+
+[[Category:Activity]]
+[[Category:CLASP Activity]]
+[[Category:BP3 Capture security requirements]]
+[[Category:OWASP_CLASP_Project]]

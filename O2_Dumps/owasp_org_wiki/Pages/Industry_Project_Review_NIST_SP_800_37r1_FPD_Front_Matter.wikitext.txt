@@ -1,0 +1,327 @@
+{| style="color:black;background:white;width:100%" align="left" border="0"
+| align="left" |
+{| style="color:black;background:white;" align="left" border="0"
+| NIST Special Publication 800-37
+| <font size="+2">'''Guide for Applying the Risk'''</font>
+|-
+| Revision 1
+| <font size="+2">'''Management Framework to'''</font>
+|-
+|
+| <font size="+2">'''Federal Information Systems'''</font>
+|-
+| &nbsp;
+| &nbsp;
+|-
+|
+| <font size="+1">'''''A Security [http://fismapedia.org/index.php?title=Term:Life_Cycle Life Cycle] Approach'''''</font>
+|-
+| &nbsp;
+| &nbsp;
+|-
+| &nbsp;
+| &nbsp;
+|-
+|
+| JOINT TASK FORCE
+|-
+|
+| TRANSFORMATION INITIATIVE
+|-
+| &nbsp;
+| &nbsp;
+|-
+| &nbsp;
+| &nbsp;
+|-
+| &nbsp;
+| &nbsp;
+|-
+| align="center"|<font size="+3">'''I N F O R M A T I O N'''</font>
+| align="center"|<font size="+3">''>'''S E C U R I T Y'''</font>
+|-
+| &nbsp;
+| &nbsp;
+|-
+| &nbsp;
+| &nbsp;
+|-
+|
+| '''FINAL PUBLIC DRAFT'''
+|-
+| &nbsp;
+| &nbsp;
+|-
+| &nbsp;
+| &nbsp;
+|-
+|
+| [http://fismapedia.org/index.php?title=Computer_Security_Division Computer Security Division]
+|-
+|
+| [http://fismapedia.org/index.php?title=Information_Technology_Laboratory Information Technology Laboratory]
+|-
+|
+| [http://fismapedia.org/index.php?title=National_Institute_of_Standards_and_Technology National Institute of Standards and Technology]
+|-
+|
+| Gaithersburg, MD 20899-8930
+|-
+| &nbsp;
+| &nbsp;
+|-
+| &nbsp;
+| &nbsp;
+|-
+|
+| November 2009
+|-
+| &nbsp;
+| &nbsp;
+|-
+| &nbsp;
+| &nbsp;
+|-
+| &nbsp;
+| &nbsp;
+|-
+| &nbsp;
+| &nbsp;
+|-
+|
+| '''U.S. [http://fismapedia.org/index.php?title=Department_of_Commerce Department of Commerce]'''
+|-
+|
+| ''Gary Locke, Secretary''
+|-
+|
+| '''[http://fismapedia.org/index.php?title=National_Institute_of_Standards_and_Technology National Institute of Standards and Technology]'''
+|-
+|
+| ''Patrick D. Gallagher, Director''
+|}
+| valign="top" align="right" |
+{| cellpadding="5" cellspacing="0" align="right"
+| __TOC__
+|}
+|}
+
+
+
+
+
+
+
+<center>
+== Reports on Computer Systems Technology ==
+</center>
+
+The Information Technology Laboratory ([http://fismapedia.org/index.php?title=Term:ITL ITL]) at the [http://fismapedia.org/index.php?title=National_Institute_of_Standards_and_Technology National Institute of Standards and Technology] (NIST) promotes the U.S. economy and public welfare by providing technical leadership for the nation's measurement and standards infrastructure. [http://fismapedia.org/index.php?title=Term:ITL ITL] develops tests, test methods, [http://fismapedia.org/index.php?title=Term:Reference_Data reference data], proof of concept implementations, and technical analyses to advance the development and productive use of information technology. ITL's responsibilities include the development of management, administrative, technical, and physical standards and guidelines for the cost-effective security and privacy of other than [http://fismapedia.org/index.php?title=Term:National_Security-Related_Information national security-related information] in federal information systems. The Special Publication 800-series reports on ITL's research, guidelines, and outreach efforts in information system security, and its collaborative activities with industry, government, and academic organizations.
+
+
+
+<center>
+==Authority==
+</center>
+
+This publication has been developed by NIST to further its statutory responsibilities under the [http://fismapedia.org/index.php?title=Doc:Federal_Information_Security_Management_Act Federal Information Security Management Act] (FISMA), Public Law ([http://fismapedia.org/index.php?title=AnA:P.L. P.L.]) 107-347. NIST is responsible for developing information security standards and guidelines, including minimum requirements for federal information systems, but such standards and guidelines shall not apply to [http://fismapedia.org/index.php?title=Term:National_Security_Systems national security systems] without the express approval of appropriate federal officials exercising policy authority over such systems. This guideline is consistent with the requirements of the [http://fismapedia.org/index.php?title=Office_of_Management_and_Budget Office of Management and Budget] (OMB) [http://fismapedia.org/index.php?title=Doc:Circular_A-130 Circular A-130], Section 8b(3), Securing Agency Information Systems, as analyzed in [http://fismapedia.org/index.php?title=Doc:Circular_A-130 Circular A-130], Appendix IV: Analysis of Key Sections. Supplemental information is provided in [http://fismapedia.org/index.php?title=Doc:Circular_A-130 Circular A-130], Appendix III.
+
+Nothing in this publication should be taken to contradict the standards and guidelines made mandatory and binding on federal agencies by the [http://fismapedia.org/index.php?title=Secretary_of_Commerce Secretary of Commerce] under statutory authority. Nor should these guidelines be interpreted as altering or superseding the existing authorities of the [http://fismapedia.org/index.php?title=Secretary_of_Commerce Secretary of Commerce], Director of the OMB, or any other federal official. This publication may be used by nongovernmental organizations on a voluntary basis and is not subject to copyright in the [http://fismapedia.org/index.php?title=Term:United_States United States]. Attribution would, however, be appreciated by NIST.
+
+
+<center>NIST [http://fismapedia.org/index.php?title=Doc:Special_Publication_800-37 Special Publication 800-37], Revision 1, 88 pages</center>
+
+<center>'''(November 2009)'''</center>
+
+
+{{GIC-NISTSP80037r1FPDGreyBoxNoTitle
+| Text=Certain commercial entities, equipment, or materials may be identified in this document in order to describe an experimental procedure or concept adequately. Such identification is not intended to imply [http://fismapedia.org/index.php?title=Term:Recommendation recommendation] or [http://fismapedia.org/index.php?title=Term:Endorsement endorsement] by NIST, nor is it intended to imply that the entities, materials, or equipment are necessarily the best available for the purpose.
+There may be [http://fismapedia.org/index.php?title=Term:References references] in this publication to other publications currently under development by NIST in accordance with its assigned statutory responsibilities. The information in this publication, including concepts and methodologies, may be used by federal agencies even before the completion of such companion publications. Thus, until each publication is completed, current requirements, guidelines, and procedures, where they exist, remain operative. For planning and transition purposes, federal agencies may wish to closely follow the development of these new publications by NIST.
+Organizations are encouraged to review all draft publications during public comment periods and provide feedback to NIST. All NIST publications, other than the ones noted above, are available at http://csrc.nist.gov/publications.
+}}
+
+
+
+<center>'''Public comment period: November 17 through December 31, 2009'''</center>
+
+<center>National Institute of Standards and Technology</center>
+
+<center>Attn: [http://fismapedia.org/index.php?title=Term:Computer_Security Computer Security] Division, Information Technology Laboratory</center>
+
+<center>100 Bureau Drive (Mail Stop 8930) Gaithersburg, MD 20899-8930</center>
+
+<center>Electronic mail: [http://fismapedia.org/index.php?title=AnA:SEC sec]-cert@nist.gov</center>
+
+
+
+<center>
+== Compliance with NIST Standards and Guidelines ==
+</center>
+
+In accordance with the provisions of FISMA,<ref>The [http://fismapedia.org/index.php?title=Doc:E-Government_Act E-Government Act] ([http://fismapedia.org/index.php?title=Doc:P.L._107-347 P.L. 107-347]) recognizes the importance of information security to the economic and [http://fismapedia.org/index.php?title=Term:National_Security national security] interests of the [http://fismapedia.org/index.php?title=Term:United_States United States]. Title III of the [http://fismapedia.org/index.php?title=Doc:E-Government_Act E-Government Act], entitled the [http://fismapedia.org/index.php?title=Doc:Federal_Information_Security_Management_Act Federal Information Security Management Act] (FISMA), emphasizes the need for organizations to develop, document, and implement an organization-wide program to provide security for the information systems that support its operations and assets.</ref> the [http://fismapedia.org/index.php?title=Secretary_of_Commerce Secretary of Commerce] shall, on the basis of standards and guidelines developed by NIST, prescribe standards and guidelines pertaining to federal information systems. The Secretary shall make standards compulsory and binding to the extent determined necessary by the Secretary to improve the efficiency of operation or security of federal information systems. Standards prescribed shall include information security standards that provide minimum information [http://fismapedia.org/index.php?title=Term:Security_Requirements security requirements] and are otherwise necessary to improve the security of federal information and information systems.
+
+*    [http://fismapedia.org/index.php?title=Term:Federal_Information_Processing_Standards Federal Information Processing Standards] (FIPS) are approved by the [http://fismapedia.org/index.php?title=Secretary_of_Commerce Secretary of Commerce] and issued by NIST in accordance with FISMA. FIPS are compulsory and binding for federal agencies.<ref>The term agency is used in this publication in lieu of the more general term organization only in those circumstances where its usage is directly related to other source documents such as federal legislation or policy.</ref> FISMA requires that federal agencies comply with these standards, and therefore, agencies may not waive their use.
+*    Special Publications (SPs) are developed and issued by NIST as recommendations and guidance documents. For other than [http://fismapedia.org/index.php?title=Term:National_Security national security] programs and systems, federal agencies must follow those NIST Special Publications mandated in a [http://fismapedia.org/index.php?title=Term:Federal_Information_Processing_Standard Federal Information Processing Standard]. [http://fismapedia.org/index.php?title=Doc:FIPS_200 FIPS 200] mandates the use of [http://fismapedia.org/index.php?title=Doc:Special_Publication_800-53 Special Publication 800-53], as amended. In addition, OMB policies (including OMB [http://fismapedia.org/index.php?title=Term:Reporting Reporting] Instructions for FISMA and Agency Privacy Management) state that for other than [http://fismapedia.org/index.php?title=Term:National_Security national security] programs and systems, federal agencies must follow certain specific NIST Special Publications.<ref>While federal agencies are required to follow certain specific NIST Special Publications in accordance with OMB policy, there is flexibility in how agencies apply the guidance. Federal agencies should apply the security concepts and principles articulated in the NIST Special Publications in accordance with and in the context of the agency's missions, business functions, and environment of operation. Consequently, the application of NIST guidance by federal agencies can result in different security solutions that are equally acceptable, compliant with the guidance, and meet the OMB definition of [http://fismapedia.org/index.php?title=Term:Adequate_Security adequate security] for federal information systems. When assessing [http://fismapedia.org/index.php?title=Term:Federal_Agency federal agency] compliance with NIST Special Publications, Inspectors General, evaluators, auditors, and assessors should consider the intent of the security concepts and principles articulated within the specific guidance document and how the agency applied the guidance in the context of its mission/business responsibilities, [http://fismapedia.org/index.php?title=Term:Operational_Environment operational environment], and unique organizational conditions.</ref>
+*    Other security-related publications, including interagency reports (NISTIRs) and [http://fismapedia.org/index.php?title=Term:ITL ITL] Bulletins, provide technical and other information about NIST's activities. These publications are mandatory only when specified by OMB.
+*    Compliance schedules for NIST security standards and guidelines are established by OMB.
+
+
+
+<center>
+== Acknowledgements ==
+</center>
+
+This publication was developed by the Joint Task Force Transformation Initiative Interagency Working Group with representatives from the Civil, Defense, and [http://fismapedia.org/index.php?title=Term:Intelligence Intelligence] Communities in an ongoing effort to produce a unified information security framework for the federal government— including a consistent process for selecting and specifying safeguards and countermeasures (i.e., [http://fismapedia.org/index.php?title=Term:Security_Controls security controls]) for federal information systems. The Project Leader, [http://fismapedia.org/index.php?title=AnA:RON Ron] Ross, from the [http://fismapedia.org/index.php?title=National_Institute_of_Standards_and_Technology National Institute of Standards and Technology], wishes to acknowledge and thank the senior leadership team from the U.S. Departments of Commerce and Defense, the Office of the Director of [http://fismapedia.org/index.php?title=Term:National_Intelligence National Intelligence], the Committee on [http://fismapedia.org/index.php?title=Term:National_Security_Systems National Security Systems], and the members of the interagency working group whose dedicated efforts contributed significantly to the publication. The senior leadership team, working group members, and their organizational affiliations include:
+
+{| border="0" width="80%" align="center"
+| width="50%" | '''''U.S. Department of Defense'''''
+| width="50%" | '''''Office of the Director of National Intelligence'''''
+|-
+| Cheryl J. Roby
+''Assistant Secretary of Defense''
+''DOD [http://fismapedia.org/index.php?title=Term:Chief_Information_Officer Chief Information Officer] (Acting)''
+| Honorable Priscilla Guthrie
+''Intelligence Community''
+''Chief Information Officer''
+|-
+| Gus Guissanie
+''Deputy Assistant Secretary of Defense''
+for Cyber, Identity, and [http://fismapedia.org/index.php?title=Term:Information_Assurance Information Assurance] (Acting)
+| Sherrill Nicely
+''Deputy [http://fismapedia.org/index.php?title=Term:Intelligence Intelligence] Community''
+''Chief Information Officer''
+|-
+| Dominic Cussatt
+''Senior Policy Advisor, ODASD (CIIA)''
+| Mark J. Morrison
+''Deputy Associate Director of National''
+''Intelligence for [http://fismapedia.org/index.php?title=AnA:IC IC] Information Assurance''
+|-
+| [http://fismapedia.org/index.php?title=AnA:DON Don] Jones
+''Senior Policy Advisor, ODASD (CIIA)''
+| Roger Caslow
+''Lead, C&A Transformation''
+|-
+| '''''National Institute of Standards and Technology'''''
+| '''''Committee on [http://fismapedia.org/index.php?title=Term:National_Security National Security] Systems'''''
+|-
+| Cita M.Furlani
+''Director, Information Technology Laboratory''
+| Cheryl J.Roby
+''Chairman, Committee on [http://fismapedia.org/index.php?title=Term:National_Security_Systems National Security Systems] (Acting)''
+|-
+| William C. Barker
+''Chief, [http://fismapedia.org/index.php?title=Term:Computer_Security Computer Security] Division''
+| Eustace D. King
+''CNSS Subcommittee Co-Chairman ([http://fismapedia.org/index.php?title=AnA:DOD DOD])''
+|-
+| [http://fismapedia.org/index.php?title=AnA:RON Ron] Ross
+''FISMA Implementation Project Leader''
+| William Hunteman
+''CNSS Subcommittee Co-Chairman ([http://fismapedia.org/index.php?title=AnA:DOE DOE])''
+|}
+
+<center>'''''Joint Task Force Transformation Initiative Interagency Working Group'''''</center>
+
+{| border="0" width="80%" align="center"
+| width="25%" | [http://fismapedia.org/index.php?title=AnA:RON Ron] Ross
+| width="25%" | Gary Stoneburner
+| width="25%" | Dominic Cussatt
+| width="25%" | Kelley Dempsey
+|-
+| ''NIST, [http://fismapedia.org/index.php?title=AnA:JTF JTF] Leader''
+| ''Johns Hopkins APL''
+| ''Department of Defense''
+| ''NIST''
+|-
+| &nbsp;
+| &nbsp;
+| &nbsp;
+| &nbsp;
+|-
+| Marianne Swanson
+| Jennifer Fabius Greene
+| Dorian Pappas
+| Arnold Johnson
+|-
+| ''NIST''
+| ''MITRE Corporation''
+| ''National Security Agency''
+| ''NIST''
+|-
+| &nbsp;
+| &nbsp;
+| &nbsp;
+| &nbsp;
+|-
+| Stuart Katzke
+| Glenda Turner
+| Peter Gouldmann
+| Christian Enloe
+|-
+| ''Booz Allen Hamilton''
+| ''MITRE Corporation''
+| ''Department of State''
+| ''NIST''
+|-
+| &nbsp;
+| &nbsp;
+| &nbsp;
+| &nbsp;
+|-
+|
+| Peter Williams
+| George Rogers
+|
+|-
+|
+| ''Booz Allen Hamilton''
+| ''BAE Systems, Inc''
+|
+|}
+
+
+
+
+In addition to the above acknowledgments, a special note of thanks goes to Peggy Himes and Elizabeth Lennon for their superb technical editing and administrative support. The authors also wish to recognize Marshall Abrams, Richard Graubart, Esten Porter, Karen Quigg, John Gilligan, John Streufert, and Beckie Bolten for their exceptional contributions in helping to improve the content of the publication. And finally, the authors gratefully acknowledge and appreciate the significant contributions from individuals and organizations in the public and private sectors, both nationally and internationally, whose thoughtful and constructive comments improved the overall quality and usefulness of this publication.
+
+
+{{GIC-NISTSP80037r1FPDGreyBoxSubtitled
+| Title=DEVELOPING COMMON INFORMATION SECURITY FOUNDATIONS
+| Subtitle=COLLABORATION AMONG PUBLIC AND PRIVATE SECTOR ENTITIES
+| Text=In developing standards and guidelines required by FISMA, NIST consults with other federal agencies and offices as well as the private sector to improve information security, avoid unnecessary and costly duplication of effort, and ensure that NIST publications are complementary with the standards and guidelines employed for the protection of [http://fismapedia.org/index.php?title=Term:National_Security_Systems national security systems]. In addition to its comprehensive public review and vetting process, NIST is collaborating with the Office of the Director of [http://fismapedia.org/index.php?title=Term:National_Intelligence National Intelligence] ([http://fismapedia.org/index.php?title=AnA:ODNI ODNI]), the [http://fismapedia.org/index.php?title=Department_of_Defense Department of Defense] ([http://fismapedia.org/index.php?title=AnA:DOD DOD]), and the Committee on [http://fismapedia.org/index.php?title=Term:National_Security_Systems National Security Systems] ([http://fismapedia.org/index.php?title=AnA:CNSS CNSS]) to establish a common foundation for information security across the federal government. A common foundation for information security will provide the [http://fismapedia.org/index.php?title=Term:Intelligence Intelligence], Defense, and Civil sectors of the federal government and their support contractors, more uniform and consistent ways to manage the risk to organizational operations and assets, individuals, other organizations, and the Nation that results from the operation and use of information systems. A common foundation for information security will also provide a strong basis for reciprocal [http://fismapedia.org/index.php?title=Term:Acceptance acceptance] of [http://fismapedia.org/index.php?title=Term:Security_Authorization security authorization] decisions and facilitate [http://fismapedia.org/index.php?title=Term:Information_Sharing information sharing]. NIST is also working with public and private sector entities to establish specific mappings and relationships between the security standards and guidelines developed by NIST and the [http://fismapedia.org/index.php?title=Term:International_Organization_for_Standardization International Organization for Standardization] and [http://fismapedia.org/index.php?title=Term:International_Electrotechnical_Commission International Electrotechnical Commission] ([http://fismapedia.org/index.php?title=AnA:ISO/IEC ISO/IEC]) 27001, Information Security Management System ([http://fismapedia.org/index.php?title=AnA:ISMS ISMS]).
+}}
+
+
+
+<center>
+== Notes to Reviewers ==
+</center>
+
+NIST [http://fismapedia.org/index.php?title=Doc:Special_Publication_800-37 Special Publication 800-37], Revision 1, represents the second in a series of publications being developed by the Joint Task Force Transformation Initiative. For the past three years, NIST has been working in partnership with the Office of the Director of [http://fismapedia.org/index.php?title=Term:National_Intelligence National Intelligence] ([http://fismapedia.org/index.php?title=AnA:ODNI ODNI]), the [http://fismapedia.org/index.php?title=Department_of_Defense Department of Defense] ([http://fismapedia.org/index.php?title=AnA:DOD DOD]), and the Committee on [http://fismapedia.org/index.php?title=Term:National_Security_Systems National Security Systems] ([http://fismapedia.org/index.php?title=AnA:CNSS CNSS]) to develop a common information security framework for the federal government and its support contractors. The initial publication produced by the task force, [http://fismapedia.org/index.php?title=Doc:NIST_Special_Publication_800-53 NIST Special Publication 800-53], Revision 3, was historic in nature—in that it created a unified security control catalog reflecting the information [http://fismapedia.org/index.php?title=Term:Security_Requirements security requirements] of both the [http://fismapedia.org/index.php?title=Term:National_Security national security] community and the nonnational security community. [http://fismapedia.org/index.php?title=Doc:NIST_Special_Publication_800-37 NIST Special Publication 800-37], Revision 1, continues the transformation by significantly changing the traditional process employed by the federal government to certify and accredit federal information systems. The revised process provides greater emphasis on: (i) building information security capabilities into information systems through the application of state-of-the-practice management, operational, and [http://fismapedia.org/index.php?title=Term:Technical_Security technical security] controls; (ii) maintaining awareness of the security state of information systems on an ongoing basis though enhanced monitoring processes; and (iii) understanding and accepting the risk to organizational operations and assets, individuals, other organizations, and the Nation arising from the use of information systems.
+
+The most significant change in the Final Public Draft of [http://fismapedia.org/index.php?title=Doc:Special_Publication_800-37 Special Publication 800-37], Revision 1, is the full transformation of the [http://fismapedia.org/index.php?title=Term:Certification_and_Accreditation Certification and Accreditation] (C&A) process into the six-step [http://fismapedia.org/index.php?title=Term:Risk_Management Risk Management] Framework ([http://fismapedia.org/index.php?title=AnA:RMF RMF]). The revised [http://fismapedia.org/index.php?title=AnA:RMF RMF]-based process has the following characteristics:
+
+*    Integrates information security more closely into the [http://fismapedia.org/index.php?title=Term:Enterprise_Architecture enterprise architecture] and [http://fismapedia.org/index.php?title=Term:System_Development_Life_Cycle system development life cycle];
+*    Provides equal emphasis on the selection, implementation, [http://fismapedia.org/index.php?title=Term:Assessment assessment], and monitoring of [http://fismapedia.org/index.php?title=Term:Security_Controls security controls], and the authorization of information systems;
+*    Establishes responsibility and [http://fismapedia.org/index.php?title=Term:Accountability accountability] for [http://fismapedia.org/index.php?title=Term:Security_Controls security controls] deployed within organizational information systems and inherited by those systems (i.e., common controls);
+*    Links [http://fismapedia.org/index.php?title=Term:Risk_Management risk management] processes at the information [http://fismapedia.org/index.php?title=Term:System_Level system level] to [http://fismapedia.org/index.php?title=Term:Risk_Management risk management] processes at the organization-level through a [http://fismapedia.org/index.php?title=Term:Risk_Executive_(Function) risk executive (function)];
+*    Promotes the concept of near [http://fismapedia.org/index.php?title=Term:Real-Time real-time] [http://fismapedia.org/index.php?title=Term:Risk_Management risk management] and ongoing information system authorization through the implementation of robust continuous monitoring processes; and
+*    Encourages the use of automation and automated support tools to provide senior leaders the necessary information to take credible, risk-based decisions with regard to the organizational information systems supporting their core missions and business functions.
+
+The [http://fismapedia.org/index.php?title=Term:Risk_Management risk management] process described in this publication changes the traditional focus from the stovepipe, organization-centric, static-based approaches to C&A and provides the capability to more effectively manage [http://fismapedia.org/index.php?title=Term:Information_System-related_Security_Risks information system-related security risks] in highly dynamic environments of complex and sophisticated cyber threats, ever increasing system vulnerabilities, and rapidly changing missions.
+
+We have worked diligently to review and adjudicate the over five hundred comments received during the initial public review process. Your feedback to us, as always, is important. We appreciate each and every contribution from our reviewers. The very insightful comments from both the public and private sectors continue to help shape our publications and ensure that they meet the needs of our customers.
+
+-- RON ROSS
+:FISMA IMPLEMENTATION PROJECT LEADER
+
+==Footnotes==
+<references />
+
+
+== Sources ==
+
+* [http://csrc.nist.gov/publications/drafts/800-37-Rev1/SP800-37-rev1-FPD.pdf NIST SP 800-37 Rev. 1 DRAFT Guide for Applying the Risk Management Framework to Federal Information Systems: A Security Life Cycle Approach]
+
+[[Category:GIC-NISTSP80037r1FPD]]

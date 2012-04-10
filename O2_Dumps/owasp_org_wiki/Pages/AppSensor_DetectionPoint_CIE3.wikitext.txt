@@ -1,0 +1,11 @@
+Here is some sample code that can be used to detect CIE3.  If you know that a null byte is never acceptable in your app, you could put this in a filter, and call it for all incoming data (request headers, cookie data, request parameters, etc) 
+
+<pre>
+String myInputParameter = ...;
+
+//the execution of this line will create an exception if an attack is found 
+boolean isParamSafe = AttackDetectorUtils.verifyNullByteDoesNotExist(myInputParameter); 
+if (! isParamSafe) {
+    notify user ...&nbsp;???
+}
+</pre>

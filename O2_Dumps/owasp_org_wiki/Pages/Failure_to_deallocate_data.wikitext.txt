@@ -1,0 +1,135 @@
+{{Template:SecureSoftware}}
+{{Template:Vulnerability}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+If memory is allocated and not freed the process could continue to consume more and more memory and eventually crash. 
+
+'''Consequences'''
+
+* Availability: If an attacker can find the memory leak, an attacker may be able to cause the application to leak quickly and therefore cause the application to crash.
+
+'''Exposure period'''
+
+* Requirements specification: The choice could be made to use a language that is not susceptible to these issues.
+* Implementation: Many logic errors can lead to this condition. It can be exacerbated by lack of or misuse of mitigating technologies.
+
+'''Platform'''
+
+* Languages: C, C++, Fortran, Assembly
+* Operating platforms: All, although partial preventative measures may be deployed depending on environment.
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Medium
+
+'''Likelihood   of exploit'''
+
+Medium
+
+If a memory leak exists within a program, the longer a program runs, the more it encounters the leak scenario and the larger its memory footprint will become. An attacker could potentially discover that the leak locally or remotely can cause the leak condition rapidly so that the program crashes. 
+
+
+==Risk Factors==
+
+* Talk about the [[OWASP Risk Rating Methodology|factors]] that make this vulnerability likely or unlikely to actually happen
+* Discuss the technical impact of a successful exploit of this vulnerability
+* Consider the likely [business impacts] of a successful attack
+
+
+==Examples==
+
+In C:
+
+<pre>
+bar connection(){
+  foo = malloc(1024);
+  return foo;
+}
+endConnection(bar foo){
+  free(foo);
+}
+int main() {
+  while(1)
+    //thread 1 
+    //On a connection
+    foo=connection();
+
+    //thread 2
+    //When the connection ends
+    endConnection(foo)
+  }
+}
+</pre>
+
+Here the problem is that every time a connection is made, more memory is allocated. So if one just opened up more and more connections, eventually the machine would run out of memory.
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+*  Pre-design: Use a language or compiler that performs automatic bounds checking.
+* Design: Use an abstraction library to abstract away risky APIs. Not a complete solution.
+* Pre-design through Build: The Boehm-Demers-Weiser Garbage Collector or valgrind can be used to detect leaks in code. This is not a complete solution as it is not 100% effective. 
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:General Logic Error Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

@@ -1,0 +1,27 @@
+[[Project Information:template Live CD 2008 Project|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications#OWASP Live CD 2008 Project|OWASP Live CD 2008 Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#OWASP Live CD 2008 Project|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|Project deliverables are: move LiveCD to SLAX; update toolset, including documentation. Status is that LiveCD has been moved to SLAX (Beta LiveCD has been provided - it boots and passes basic functionality tests). Updated toolset on the Beta CD is currently under detailed test. Further documentation and tool iteration remain. 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#OWASP Live CD 2008 Project|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| Percentage completion status: move LiveCD to SLAX - 100% complete; update toolset, including documentation: 60% complete. 
+ |- 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| Note: developer is ahead of schedule - has significantly passed the 50% completion point. Remaining work includes: further needs analysis of additional tool needs based on the testing methodology the LiveCD is to support; the addition of updated OWASP-specific test documentation, and the possible addition of a few high-quality tools (pending outcome of the needs analysis). 
+|}

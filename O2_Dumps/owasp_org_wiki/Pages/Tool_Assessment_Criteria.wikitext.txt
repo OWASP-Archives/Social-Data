@@ -1,0 +1,64 @@
+[[Category:OWASP Project Assessment]]
+
+This page is maintained by the [[Global Projects Committee]] to help assist Project Leaders with information about successfully running an OWASP Project. It will be updated from time to time, and changes will be discussed and announced on the OWASP-Leaders list.
+
+====Alpha Release Tool Criteria====
+
+<!--<small>[[Blank Alpha Release Tool Example]]</small>-->
+
+Pre-Assessment Checklist:
+# Is this release associated with a project containing at least the [[Assessing_Project_Health#Project_Wiki_Page_Minimal_Content|Project Wiki Page Minimum Content]]  information?
+# Is your tool licensed under an open source license?  (see Project Licensing section of the [http://www.owasp.org/index.php/Guidelines_for_OWASP_Projects Guidelines for OWASP Projects])
+# Is the source code and any documentation available in an online project repository? (e.g. Google Code or Sourceforge site) 
+# Is there working code?
+# <strike>Is there a roadmap for this project release which will take it from Alpha to Stable release?</strike>
+
+====Beta Release Tool Criteria====
+
+<!--<small>[[Blank Beta Release Tool Example]]</small>-->
+
+Pre-Assessment Checklist:
+# Are the Alpha pre-assessment items complete?
+# Is there an installer or stand-alone executable?
+# Is there user documentation on the OWASP project wiki page?
+# Is there an "About box" or similar help item which lists:
+## Project Release Name
+## Short Description
+## Project Release Lead and contact information (e.g. email address)
+## Project Release Contributors (if any)
+## Project Release License
+## Project Release Sponsors (if any)
+## Release status and date assessed as Month-Year e.g. March 2009
+## Link to OWASP Project Page 
+# Is there documentation on how to build the tool from source including obtaining the source from the code repository?
+# Is the tool documentation stored in the same repository as the source code? 
+
+
+Reviewer Action Items:
+# Is an installer for the tool available and easy to use? How close does it reach the goal of a fully automated installer?
+# Is the end user documentation complete, relevant and presented on the OWASP wiki page? 
+# Does the tool have an “About box” or similar help item which allows the end user to get an overview of the state of this tool? Is this information readily available and easy to find?
+# Does the documentation on building the source provide the necessary information and detail to allow someone to build the tool? Is there sufficient detail and information for the target user? Is there any domain specific knowledge that is assumed and not provided?
+# Is the tool's documentation available with the source code and would it readily discoverable by a new user of the tool?
+
+====Stable Release Tool Criteria====
+
+<!--<small>[[Blank Stable Release Tool Example]]</small>-->
+
+Pre-Assessment Checklist:
+# Are the Alpha and Beta pre-assessment items complete?
+# Does the tool include documentation built into the tool? 
+# Does the tool include build scripts to automate builds?
+# Is there a publicly accessible bug tracking system?
+# Have any existing limitations of the tool been documented?
+
+Reviewer Action Items:
+# Have all the Beta Reviewer Action Items been completed?  These will need to be completed if they have not already occurred during a previous assessment.
+# Does the tool substantially address the application security issues it was created to solve?
+# Is the tool reasonably easy to use?
+# Does the documentation meet the needs of the tool users and is easily found?
+# Do the build scripts work as expected? Can you build the tool? The goal is a “One-click” build.
+# Is the bug tracking system usable? Is it hosted at the same place as the source code? (e.g. Google Code, Sourceforge)
+# Have you noted any limitations of the tool that are not already documented by the project lead.
+# Would you consider using this tool in your day to day work assuming your professional work includes a reason to use this tool?  Why or why not?
+# What, if anything, is missing which would make this a more useful tool?  Is what is missing critical enough to keep the release at a beta quality?

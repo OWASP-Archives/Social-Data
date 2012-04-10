@@ -1,0 +1,74 @@
+{{Template:SecureSoftware}}
+
+==Overview==
+
+Purpose:	
+
+*Ensure project members consider security to be an important project goal through training and accountability.
+
+*Ensure project members have enough exposure to security to deal with it effectively.
+
+Role:
+
+*[[Project Manager|Project Manager]]
+
+Frequency:
+
+*Ongoing
+
+
+==Provide security training to all team members ==
+
+Before team members can reasonably be held accountable for security issues, you must ensure they have had adequate exposure to those issues. Additionally, even those members of the team that do not directly deal with security issues should be aware of the project's security practices. 
+
+This is best done with a training program. Everyone on the team should receive training introducing them to basic security concepts and secure development process that is used within the organization. 
+
+Additionally, people within the organization should receive training targeted to their role. For example, Developers should receive detailed training on common basic causes and mitigation techniques, particularly as they relate to the development and deployment environment. Additionally, both developers and testers should receive training for automation tools that they should use in the course of doing their jobs.
+
+==Promote awareness of the local security setting ==
+
+Everyone on a development project should be familiar with the security requirements of the system, including the basic threat model. When such documents are produced, they should be distributed and presented to team members, and you should solicit and encourage feedback from all parties on the team.
+
+When other security-relevant documentation is produced - e.g., as code analysis results - that documentation should be made available to the team, even if not every member is required to review it.
+
+Additionally, you should ensure that security implications are considered whenever a new requirement emerges. It is a best practice to explicitly address at the end of any technical meeting whether there are security ramifications.
+
+Finally, we recommend promoting a culture where your team is externally security aware. Watch security news sources and/or article aggregators for security-relevant news that is related to your project at the end of any technical meeting - or appoint a designee to do this. Forward to your team anything that seems relevant to your project. This includes not only flaws in products you use on your project, but also interesting news, flaws, or other results that you feel will maintain awareness and/or further educate your team.
+
+==Institute accountability for security issues ==
+
+Traditional accountability within development organizations is based primarily on schedule and quality. Security should be treated in much the same way as any other quality consideration.
+
+First, the team should be given security goals. It is reasonable to expect that a team member will not be responsible for introducing "standard" risks into the system, without documenting and escalating those risks before introducing them. This recognizes that security is not a "black-and-white" issue - i.e., there will always be some security risk in the system. It also helps ensure that development team members will consider and document any risks that are considered acceptable.
+
+When the project manager becomes aware of a new security risk that was not caught before introducing it into the system, it is important that he not decide arbitrarily whether or not the risk should have been identified in advance. Instead, we recommend having in place a list of risks that can be used as a baseline. For example, developers should be given a list of coding security standards - such as the list in CLASP Resource E - that they are periodically assessed against. All members of the team should also be held accountable on the basis of a database of basic causes of vulnerabilities.
+
+Note that sometimes security accountability may affect schedule accountability - i.e., finding a security issue that requires remediation can have a negative impact on schedule. We recommend that, whenever the decision is made to remediate a security risk in a way that will impact schedule, the accountability for the schedule slip should be tied to the accountability for the security problem.
+
+Additionally, it is the responsibility of the project manager to ensure adoption of security activities into the development lifecycle and ensure that they are given the desired level of attention. Team members must, again, be accountable for performing these activities to a satisfactory level.
+
+==Appoint a project security officer ==
+
+An excellent way to increase security awareness throughout the development lifecycle is to designate a team member as the project security officer, particularly someone who is enthusiastic about security. 
+
+The role of this person (or persons) can vary depending on the development organization but should encompass at least the first two of the following duties:
+
+*	Serve as a repository of security expertise for other project members.
+
+*	Take into account security concerns through the SDLC - such as during design meetings.
+
+*	Review work of other team members, as if an external security auditor, performing security assessments when appropriate.
+
+Generally, independent auditors are far more effective than internal auditors, regardless of the level of security expertise, even if independent auditors are still inside the same company. Ultimately, more review is also preferable as a defense-in-depth measure.
+
+==Institute rewards for handling of security issues ==
+
+Accountability is a necessity for raising security awareness, but another highly effective way is to institute reward programs for doing a job well done with regard to security. For example, it is recommended to reward someone for following security guidelines consistently over a period of time - particularly if the result is that no incidents are associated with that person.
+
+Additionally, if team members identify important security risks that were not found in the course of standard auditing practices, these insights should be rewarded.
+
+
+[[Category:Activity]]
+[[Category:CLASP Activity]]
+[[Category:BP1 Institute awareness programs]]
+[[Category:OWASP_CLASP_Project]]

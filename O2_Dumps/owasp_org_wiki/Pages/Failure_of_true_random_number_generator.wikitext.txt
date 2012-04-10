@@ -1,0 +1,123 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+[[category:FIXME: can this be combined with the Insufficient Entropy article?]]
+
+==Description==
+
+True random number generators generally have a limited source of entropy and therefore can fail or block.
+
+'''Consequences'''
+
+* Availability: A program may crash or block if it runs out of random numbers.
+
+'''Exposure period'''
+
+* Requirements specification: Choose an operating system which is aggressive and effective at generating true random numbers.
+* Implementation: This type of failure is a logical flaw which can be exacerbated by a lack of or the misuse of mitigating technologies.
+
+'''Platform'''
+
+* Languages: Any
+* Operating platforms: Any
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Medium
+
+'''Likelihood of exploit'''
+
+Low to Medium
+
+The rate at which true random numbers can be generated is limited. It is important that one uses them only when they are needed for security.
+
+
+==Risk Factors==
+
+TBA
+
+==Examples==
+
+In C:
+
+<pre>
+while (1){
+  if (connection){
+    if (hwRandom()){
+      //use the random bytes
+    }
+    else (hwRandom()) {
+      //cancel the program
+  } 
+}
+</pre>
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* Implementation: Rather than failing on a lack of random numbers, it is often preferable to wait for more numbers to be created.
+
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Environmental Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

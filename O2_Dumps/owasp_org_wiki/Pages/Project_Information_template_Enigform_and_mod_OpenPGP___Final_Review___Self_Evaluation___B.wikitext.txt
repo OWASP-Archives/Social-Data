@@ -1,0 +1,55 @@
+[[Project Information:template Enigform and mod OpenPGP|Clik here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''FINAL REVIEW''' 
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART I''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#OpenPGP Extensions for HTTP - Enigform and mod_openpgp|OWASP OpenPGP Extensions for HTTP - Enigform and mod_openpgp Project's Deliveries & Objectives]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#OpenPGP Extensions for HTTP - Enigform and mod_openpgp|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|I was able to implement a Wordpress plugin that enables Enigform-based login to Wordpress's admin/user area. The plugin is currently offered by wordpress.org. This plugin was also implemented in my own wordpress blog, becoming the Demo Site. As a demonstration of keyring-sharing and mod_openpgp multi-virtualhost integration, the Testing Site maotest.buanzo.org shares this same keyring. I've written the Definitive Enigform Guide and published it at wiki.buanzo.org. It contains detailed instructions for implementing the wordpress plugin, INCLUDING Enigform client and server setup, troubleshooting, and links to other useful resources. An unplanned feature was added: Server Signature Verification in Secure Login. Enigform Plugin 0.8.2.8 is now available in addons.mozilla.org. Mod_openpgp 0.5.0 was announced in freshmeat.net. A Debian package for mod_openpgp is in the works, but I consider the Guide to be the best procedure to follow.
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#OpenPGP Extensions for HTTP - Enigform and mod_openpgp|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|100%
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|Mark mentioned a Session Hijacking test suite should be used. I'd like to do that in the next 15 days if possible.
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART II''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Assessment Criteria
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[:Category:OWASP Project Assessment|OWASP Project Assessment Criteria]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Alpha Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|I don't use sourceforge nor googlecode. I use mozdev.org, wordpress.org and svn.buanzo.org.
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Beta Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|The easy-to-use installer might not be quite possible. I discussed this in owasp-leaders, but the CLIENT side is quite simple (create pgp keyring [lots of GUI tools for this], then install enigform as a common firefox addon). The wordpress plugin is compliant with wordpress.org's best practices. Mod_openpgp is difficult, but easier than, say, OpenSSL.
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+3. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Release Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|not applicable
+ |-  
+ | style="width:25%; background:#7B8ABD" align="center"|
+4. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|I'm pleased with the current help and support from the Reviewers and OWASP Community. THANKS.
+|}

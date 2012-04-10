@@ -1,0 +1,23 @@
+{{Template: <includeonly>{{{1}}}</includeonly><noinclude>Release About</noinclude>
+| project_name = OWASP CSRF Tester Project
+| project_home_page = :Category:OWASP CSRFTester Project
+
+| release_name = CSRFTester 1.0
+| release_date = Nov, 2009
+| release_description = Java based desktop application that facilitates a pen-testers ability to generate HTML based CSRF attacks. 
+| release_license =  [http://www.gnu.org/licenses/old-licenses/gpl-2.0.htmll GNU GPL v2]
+| release_download_link = https://www.owasp.org/index.php/Projects/OWASP_CSRF_Tester_Project/Releases/CSRFTester_1.0/Downloads
+ 
+| leader_name1 = Eric Sheridan
+| leader_email1 = eric.sheridan@owasp.org
+| leader_username1 = Esheridan
+
+| contributor_name[1-10] = 
+| contributor_email[1-10] = 
+| contributor_username[1-10] =  
+
+| release_notes = http://www.owasp.org/index.php/CSRFTester_Usage
+
+| links_url[1-10] =
+| links_name[1-10] =
+}}

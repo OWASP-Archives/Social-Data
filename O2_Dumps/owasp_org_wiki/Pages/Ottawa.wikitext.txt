@@ -1,0 +1,136 @@
+{{Chapter Template|chaptername=Ottawa|extra=The chapter's president is [mailto:sherif.koussa@gmail.com Sherif Koussa] 
+
+ 
+<b>Follow us on  [http://twitter.com/#!/owasp_ottawa Twitter]</b><br>
+
+<paypal>Ottawa</paypal> 
+
+|mailinglistsite=http://lists.owasp.org/mailman/listinfo/owasp-ottawa|emailarchives=http://lists.owasp.org/mailman/listinfo/owasp-ottawa}} 
+
+<br>
+
+{| width="900" border="0" align="left" cellpadding="1" cellspacing="1"
+|-
+| [[Image:2keys (big).jpg|200x100px|2keys%20(big).jpg|link=http://www.2keys.ca]] 
+| [[Image:SS_logo.png|300x150px|SS_logo.png|link=http://softwaresecured.com]]
+|
+|}
+
+<br>
+
+
+
+
+
+
+<br>
+==Your Local Chapter==
+Hi Ottawa, welcome to your local OWASP chapter! We are a place to come and meet local developers and information security professionals, share ideas, and learn. We try to hold a meeting at least once every two months in the downtown core. We provide a mix of infosec rockstar talks, hands on training sessions, and special interest discussion groups. We are always looking for new ideas for events so let us know if you have an idea. Email one of us: [mailto:sherif.koussa@owasp.org Sherif], [mailto:sergei.frankoff@owasp.org Sergei], [mailto:mike.sues@owasp.org Mike] or tweet at us [http://twitter.com/#!/owasp_ottawa owasp_ottawa].
+
+Hope to see you at a meeting soon.
+
+<br>
+==Countermeasure 2012==
+{| width="900" border="0" align="left" cellpadding="1" cellspacing="1"
+|-
+| [[Image:cm_logo.png|300x150px|cm_logo.png|link=http://www.countermeasure2012.com]] 
+| OWASP Ottawa is proud to support the upcoming Countermeasure 2012 computer security conference right here in our home town. Check out their [http://www.countermeasure2012.com/ website] for more information and contact us with your OWASP membership number to receive a <b>10%</b> discount. To get your discount code either sign up for our [http://lists.owasp.org/mailman/listinfo/owasp-ottawa mailing list] or contact one of the chapter affiliates directly with your OWASP membership number:  [mailto:sherif.koussa@owasp.org Sherif], [mailto:sergei.frankoff@owasp.org Sergei], [mailto:mike.sues@owasp.org Mike]. See you there!
+|
+|}
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+= Upcoming  Event Ideas =
+We are always looking for ideas for upcoming meetings. If you have a speaker you would like to see, a tutorial you would like to participate in, or just some ideas for discussion topics let us know. We maintain a list of your ideas here. To add to the list you can edit it directly, send one of us an e-mail ([mailto:sherif.koussa@owasp.org Sherif], [mailto:sergei.frankoff@owasp.org Sergei]), or tweet it at our [http://twitter.com/#!/owasp_ottawa Twitter account].
+<br>
+*<del>N00bs Night: Understanding and Exploiting the OWASP Top 10 (Top 10 discussion, live exploit demos, test lab to practice your skills)</del> 
+*Web Application Forensics
+*xPath Injection (SQL/CSS etc get lots of press but I’d like to hear more about this)
+*HTML5 - What's new for security specially for Offline Applications
+*Web 2.0 Security Evolution - How security challenges are changing with technology evolultion
+*ASP.NET MVC Security for WebForms Developers
+*Hack proofing your web application by using reverse engineering
+*Using Windows Communication Foundation (WCF) Securely in your applications
+
+= Past Meetings =
+==== December 12, 2011  ====
+'''Location:''' Bell Canada - 160 Elgin St, Ottawa <br> <br> 
+
+'''Title:''' n00bs night out...exploiting the owasp top 10
+
+Hey Ottawa, come join us for a FREE night of web application hacking. We have tutorials explaining how to exploit the OWASP Top 10 web application vulnerabilities and hands on labs to practice your skills. Bring your laptop and a copy of the Backtrack 5 LiveCD (or VM) http://www.backtrack-linux.org/downloads/
+
+'''Who:''' all skill levels are welcome (especially n00bs)
+
+'''When:''' December 12 from 6:00pm - 9:00pm (open at 5:30)
+
+'''RSVP:''' http://n00bs-night.eventbrite.com/
+
+==== September 27th, 2011  ====
+
+'''Location''': Shopify - 61a York St (Above Tucker's Marketplace) 
+
+'''Speaker Notes:''' [https://www.owasp.org/images/a/a2/OWASP_Sep_2011_Hacking_Silverlight.ppt Download Here] 
+
+'''Microsoft Silverlight Security - A Hacker's Perspective''' 
+
+'''Abstract''' 
+
+It’s not news for anyone how the internet has revolutionized all aspects of our lives. In the past few years there has been unprecedented growth in web applications and their user base. One of the core technologies driving this widespread phenomenon is Rich Internet Applications (RIAs) because it offers the same level of responsiveness &amp; interactivity on web that is available to desktop applications. Microsoft offered its vision of RIA through Silverlight - a framework that allows web applications running in a browser to behave more like desktop applications. 
+
+One of the major enhancements in Silverlight was the incorporation of mini-CLR engine, that on one hand, adds amazing capabilities for web developers but, on the other hand, also broadens the surface area of attack by opening previously nonexistent entry points into web applications. In this presentation Angelo &amp; Kamran will demonstrate how modern hackers can use reverse engineering techniques to take advantage of weak security implementation. They will also show some effective ways of defending against these types of attacks. 
+
+'''Speakers:''' 
+
+Angelo Chan is an experienced versatile software developer who has developed applications, middleware and low-level software for various platforms. With an initial background in Telecom, Angelo has since worked with different technologies and has discovered a passion for .NET. His interests include virtual machines, operating systems, network/application reverse engineering and security. Angelo can be reached at Angelo@WindowsDebugging.com 
+
+Kamran Bilgrami is a seasoned software developer with proven track record of transforming complex business problems into viable technical solution. He has been instrumental in orchestrating highly available, performance centric, fault-tolerant real-time systems in a wide variety of industries including Telecom, Security and Human/Health Services. His areas of expertise include .NET, CLR Internals, Patterns and Security. Kamran can be reached at Kamran@WindowsDebugging.com 
+
+<br> 
+
+==== May, Thursday 12th 2011  ====
+
+'''Location:''' Bell - 160 Elgin St, Ottawa <br> <br> '''Session 1 - Chris Pierre: Beyond Facebook: How Hackers Might Obtain Information Individual for Social Engineering attacks''' <br> As the old saying goes “Know your enemy as you know yourself.” This discussion will examine several sources of publicly available information which an attacker might use to gain background information on a target for the purposes of a social engineering attack. The talk is expected to be interactive, lively and will provoke a discussion on how these systems and processes can be hardened against this type of attack. <br> 
+
+<br> '''About The Speaker''' 
+
+Chris Pierre BA, CFE, CISSP is an Ottawa-based forensic investigation professional. Having worked with several forensic firms prior to starting Evince Services, Inc., he has experience in many types of engagements in both the private &amp; public sectors &amp; specializes in investigations involving the internet. Forensic engagements have included information leaks, general corporate fraud investigations, investor fraud, intellectual property cases, administrative/internal investigations, background investigations, grants &amp; contributions fraud, corruption investigations &amp; the provision of training on the use of the Internet as an investigative tool. Preventative engagements have included training, background due diligence &amp; compliance consulting. 
+
+Chris is an instructor at Algonquin College, the Canadian Police College, Past-President of the Ottawa Chapter of the High Tech Crime Investigators Association (HTCIA) &amp; a member of the Ottawa Chapter of the Association of Certified Fraud Examiners. <br> <br> '''Session 2: - David Mirza Ahmed: Introducing Vega, a New Open Source Web Vulnerability Scanner''' 
+
+David will be presenting Vega, a new free and open source vulnerability scanner for web applications developed by Subgraph, his Montreal-based security startup. Vega allows anyone to scan their web applications for vulnerabilities such as cross-site scripting or SQL injection. Written in Java, Vega is cross-platform. It's also extensible, with a built-in Javascript interpreter and API for custom module development. Vega also includes an intercepting proxy for manual inspection of possible vulnerabilities and penetration testing. 
+
+<br> '''About The Speaker''' David has over 10 years in the information security business. He started his professional experience as a founding member of Security Focus, which was acquired by Symantec in 2002. David also moderated the Bugtraq mailing list, a historically important forum for discussion of security vulnerabilities, for over four years. He has spoken at Black Hat, Can Sec West, AusCERT and numerous other security conferences, as well as made contributions to books, magazines and other publications. David also participated in a NIAC working group on behalf of Symantec to develop the first version of the CVSS (Common Vulnerability Scoring System) model and was an editor for IEEE Security &amp; Privacy. His current obsession is building Subgraph, his information security startup in Montréal. <br> 
+
+==== March, Thursday 10th 2011  ====
+
+Speaker: Shan Gu - Accenture - Large enterprises are increasing their adoption of SOA at a rapid rate as interoperability standards and vendor product implementations mature and stabilize. However, moving enterprises into a loosely coupled IT paradigm introduces challenges around security and compliance. How do we address accountability, confidentiality, integrity, and trust in a large loosely couple ecosystem where consumers and providers don’t always maintain a permanent or stateful relationship? There are standards of course that help integrators and Architects design systems to communicate with each other in a secure manner, however these standards, when interpreted in their purest sense are complex and expensive to implement/maintain in large organizations. And systems that are operationally complex in terms of security are ironically the least secure. 
+
+About The Speaker Shan Gu - Manager in the Security Technologies Practice at Accenture Shan is a Security Architect from Accenture who specializes in Identity and Access Management and SOA Security. He has worked with clients in both the Public and Private sectors and in various industries spanning from Health, to Transport, to Financial Services. Shan has spent his recent years focused on helping clients adopt SOA within the enterprise and to do it in a secure and cost effective manner. Shan is a graduate from Carleton University’s Systems and Computer Engineering program, with a B.Eng and a Minor in Business. 
+
+==== More Previous Meetings  ====
+
+*September 10th, 2009 - Justin Foster - '''Speaker Notes:''' [http://www.developingsecurity.com/weblog/2009/09/crossing-the-border-javascript-exploits.html Download Here] 
+*April 6th, 2009 - Rafal Los - '''Speaker Notes:''' [http://www.owasp.org/images/3/3a/A_Laugh_RIAt2.zip Download Here] 
+*July 16th, 2008 - John Linehan - '''Speaker Notes:''' [https://www.owasp.org/index.php/Image:John_Linehan_OWASP_Dist.pdf Download Here] 
+*[[November 28th, 2007 - Eric Klien - Make my day]]
+
+= Chapter Leadership  =
+
+Chapter President: [mailto:sherif.koussa@owasp.org Sherif Koussa]&nbsp;
+Chapter Committee: [mailto:sergei.frankoff@owasp.org Sergei Frankoff] and [mailto:mike.sues@owasp.org Mike Sues]&nbsp;
+
+
+<br>
+<br>
+__NOTOC__ <headertabs /> 
+
+[[Category:Canada]]

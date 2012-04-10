@@ -1,0 +1,60 @@
+<div style="font-size:7pt;text-align:right"><b>OWASP does not recommend or endorse ads | [https://www.owasp.org/index.php/Advertising Sign up for Banner Ads in 2012]</b></div>
+<div align="right"> <owaspbanner/></div><br>
+<!-- Header -->
+
+{|style="width:100%;background-color:#C4D7ED;border:1px solid #183152"
+|style="width:56%;color:#000"|
+
+{|style="width:280px;border:solid 0px;background:none"
+|-
+|style="width:280px;text-align:center;color:#000" |
+<IfLanguage Is="en">
+<div style="font-size:162%;border:none;margin: 0;color:#000">'''Welcome to [[About The Open Web Application Security Project|OWASP]]'''</div><div style="top:+0.2em;font-size: 95%">the free and open application security community</div>
+</IfLanguage>
+<IfLanguage Is="es">
+<div style="font-size:162%;border:none;margin: 0;color:#000">'''Bienvenido a [[About The Open Web Application Security Project/es|OWASP]]'''</div><div style="top:+0.2em;font-size: 95%">la comunidad libre y abierta sobre seguridad en aplicaciones</div>
+</IfLanguage>
+|}
+
+<!-- Special Links -->
+|style="width:110px;font-size:95%;color:#000"|
+*[[:Category:OWASP Top Ten Project|Top Ten]]
+*[https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project ZAP]
+*[[:Category:OWASP WebScarab Project|WebScarab]]
+|style="width:110px;font-size:95%"|
+*[[:Category:OWASP_Enterprise_Security_API|ESAPI]]
+*[[:Category:OWASP_Application_Security_Verification_Standard_Project |ASVS]]
+*[[:Category:OWASP_AntiSamy_Project|AntiSamy]]
+|style="width:180px;font-size:95%"|
+*[[:Category:OWASP Guide Project|Development Guide]]
+*[[:Category:OWASP Code Review Project|Code Review Guide]]
+*[[:Category:OWASP Testing Project|Testing Guide]]
+|style="width:110px;font-size:95%"|
+*[[:Category:Software_Assurance_Maturity_Model|SAMM]]
+*[[:Category:OWASP Legal Project|Contracting]]
+*'''[[:Category:OWASP_Project|More...]]'''
+
+|} <!-- End Banner -->
+
+{|style="width:100%;background:none;"
+|style="font-size:95%;text-align:left;color:#000"|[[About The Open Web Application Security Project|About]] '''·'''  [[Searching|Searching]] '''·''' [[Tutorial|Editing]] '''·''' [[How to add a new article|New Article]]  '''·'''  [[OWASP Categories]]
+|style="font-size:95%;padding:10px 0;margin:0px;text-align:right;color:#000"|  [[Special:Statistics|Statistics]]  '''·'''  [https://www.owasp.org/index.php?title=Special:Recentchanges&limit=100&hidebots=0 Recent Changes]
+|}
+
+<!-- Main Content -->
+{|style="width:100%;border-spacing:8px;margin:0px -8px"
+
+<!-- Start of left-column -->
+|class="MainPageBG" style="width:50%;border:1px solid #cedff2;background-color:#f5faff;vertical-align:top"|{{Main Left Panel}}
+
+<!-- Start of right-column -->
+|class="MainPageBG" style="width:50%;border:1px solid #cedff2;background-color:#f5faff;vertical-align:top"|{{Main Right Panel}}
+
+<!-- End of Main Content -->
+|}
+
+<!-- Member Area -->
+
+{{Template:OWASP Members Horizontal}}
+
+__NOTOC__ __NOEDITSECTION__

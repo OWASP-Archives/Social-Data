@@ -1,0 +1,35 @@
+==Getting started in application security==
+
+Application security is simply everything involved in developing, maintaining, and purchasing applications that your organization can trust. However, application security is inextricably tied into almost every aspect of your organizations' information technology, and can be maddeningly difficult to tackle. This "Getting Started" page is intended to provide a roadmap of the various topics in application security and where OWASP materials can help you and your organization master them. As the saying goes, when it comes to application security, there are really two types of organization - those who don't know their code is insecure, and those that do.
+
+==Searching for application security information==
+
+We are working hard to organize the world's application security information. But it's fair to say we have a very long way to go. There is a [[Special:Search|simple search engine]] built into the OWASP site, but it's not that great. 
+
+That's why we set up a [http://www.owasp.org/google/results.html custom Google search engine] that indexes not only OWASP, but dozens of websites. We've tagged the sites as being commercial, open-source, products, services, etc... so that you can filter the information about application security.
+
+As a last resort, you can also just [[Special:Allpages|get a list]] of all the pages if you know a word in the title.
+
+==Why is application security so hard?==
+
+If you haven't read it lately, check out Fred Brooks' great article, "[http://virtualschool.edu/mon/SoftwareEngineering/BrooksNoSilverBullet.html No Silver Bullet]". In it, Brooks discusses both "accidental" and "essential" difficulties of producing software. We created the accidental difficulties ourselves, by making our languages, compilers, and environments more difficult than they need to be. But the essential difficulties are fundamental problems that will always be with us. Brooks considers four inherent properties of software that help explain the difficulty of software security - complexity, conformity, changeability, and invisibility.
+
+==If you're wondering if your code has vulnerabilities...==
+
+If you're wondering whether your software really has application security weaknesses, then the best thing to do is to find out. You can do this in a number of ways, but the simplest is to do an [[CLASP_Best_Practices#Perform_application_assessments|application assessment]] of a few of your applications. The review should analyze all the major security areas by using a combination of [[Vulnerability Scanning|vulnerability scanning]], [[:Category:OWASP Code Review Project|code review]], [[:Category:OWASP Testing Project|penetration testing]], and [[Perform source-level security review|static analysis]]. Then based on some actual results, which should verify areas that are well designed and built as well as identify weaknesses, you can make an informed decision about how to proceed.
+
+==If you already know your code is vulnerable...==
+
+If you've already come to the conclusion that your project or organization is not producing secure code, then you should consider what [[:Category:Activity|organizational improvements]] are most likely to improve your ability. One popular place to start is [[CLASP_Best_Practices#Institute_awareness_programs|instituting an awareness program]] for developers and managers, as it is relatively inexpensive and has immediate effects. However, you may want to consider doing an [[:Category:OWASP CLASP Project|application security capability appraisal]] of your organization to find out what changes are likely to be the most effective. Also, you might consider defining a risk model, creating organization roles and teams, establishing standards or coding guidelines, or introducing some security activities into your software development lifecycle before doing the training.
+
+==About threats, vulnerabilities, and countermeasures==
+
+A good way to start learning about application security is by understanding software [[:Category:Principle|principles]], [[:Category:Threat Agent|threats]], [[:Category:Attack|attack]], [[:Category:Vulnerability|vulnerabilities]], and [[:Category:Countermeasure|countermeasures]]. A good overview of the most critical of these is the [[OWASP_Top_Ten_Project|OWASP Top Ten]] awareness document. This is a short paper that describes the most critical vulnerabilities, how to find them, and what to do to protect against them in your application.
+
+Another great way to learn about application security is to study some real vulnerabilities and learn how they work. OWASP has developed [[:Category:OWASP_WebGoat_Project|WebGoat]] to provide hands-on examples of application security to learn from. WebGoat is a full J2EE application and training environment that contains real vulnerabilities to experiment with and learn from. [[:Category:OWASP_WebScarab_Project|WebScarab]] is a powerful web application penetration testing tool that you can use to test applications. For further reference, you can read all about each of the [[:Category:Vulnerability|vulnerabilities]] on the OWASP website to learn more.
+
+==What are the root causes of application vulnerabilities?==
+
+Once you've learned about risk model, you should think about how those problems come into existence. Every application security problem has a root cause somewhere in the organization. It may be that the project didn't have the right [[:Category:Activity|activities]] in their development process, or it may be that the developers didn't have the right training, or it might even be that the team didn't have the right tools for the job. But every vulnerability is a reason to investigate, find out why it happened, and make some organizational changes. You can find more information about improving your capability in the [[:Category:OWASP CLASP Project|OWASP CLASP Project]].
+
+__NOTOC__

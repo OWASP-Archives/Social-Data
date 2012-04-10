@@ -1,0 +1,132 @@
+==Status==
+Released 14/1/2008
+
+==Overview==
+
+In a Java EE application, all user input comes from the HttpServletRequest object. Using the methods in that class, such as getParameter, getCookie, or getHeader, your application can get "raw" information directly from the user's browser.  Everything from the user in the HttpServletRequest should be considered "tainted" and in need of validation and encoding before use.
+
+So it would be nice if we could add validation to the HttpServletRequest object itself, rather than making separate calls to validation and encoding logic. This way, developers would get some validation by default.  This article presents an approach to building validation into the HttpServletRequest object so that it is mandatory for developers to use the validated data.
+
+Most projects have an "allow everything" approach to validation.  What we want is a [[Positive security model]] that denies everything that's not explicitly allowed.  So using this approach, you can start your project with a very restrictive set of allowed characters, and expand that only as necessary.
+
+==Approach==
+
+We're going to use a Java EE filter to wrap all incoming requests with a new class that extends HttpServletRequestWrapper, a utility class designed for just this type of application. Then all we have to do is override the specific methods that get user data and replace them with calls that do validation before returning data.
+
+The first thing to do is to create the ValidatingHttpRequest. Note that this class calls a new custom method named "validate" that throws a ValidationException if anything goes wrong.  You can do a lot in the validate method, including encoding the input before it is returned to the application.
+
+    public class ValidatingHttpRequest extends HttpServletRequestWrapper {
+        
+        public ValidatingHttpRequest(HttpServletRequest request) {
+                super(request);
+        }
+        
+        public String getParameter(String name) {
+                HttpServletRequest req = (HttpServletRequest) super.getRequest();
+                return validate( name, req.getParameter( name ) );
+        }
+        
+        // Danger - you can optionally allow getting the raw parameter
+        public String getRawParameter( String name ) {
+                HttpServletRequest req = (HttpServletRequest) super.getRequest();
+                return req.getParameter( name );
+        }
+        
+        ... follow this pattern for getHeader(), getCookie(), etc...  
+        ... specifically don´t forget getParameterValues() as this is used by frameworks like Struts to get the parameter values     
+        ... Struts2 uses getParameterMap() to get the parameter values. Below is the sample way how to validate that.
+
+
+        public Map<String, String[]> getParameterMap() {
+
+		Map<String, String[]> map = super.getParameterMap();
+
+		Iterator iterator = map.keySet().iterator();
+
+    	        Map<String, String[]> newMap = new LinkedHashMap<String, String[]>();
+    	
+    	        while (iterator.hasNext()) {
+    	               String key = iterator.next().toString();
+    	  
+    	               String []values = map.get(key);
+    	               String []newValues = new String[values.length];
+    	   
+    	               for(int i = 0; i < values.length; i++){
+    		             newValues[i] = validate(key, values[i]); // Apply validation logic to the value
+    	               }
+    	   
+    	       newMap.put(key, newValues);
+    	    }
+    	    return newMap;
+        }
+
+        // This is a VERY restrictive pattern alphanumeric < 20 chars
+        // It's easy to make this a parameter for the filter and configure in web.xml
+        private Pattern pattern = Pattern.compile("^[a-zA-Z0-9]{0,20}$");
+        
+        private String validate( String name, String input ) throws ValidationException {
+                // important - always canonicalize before validating
+                String canonical = canonicalize( input );
+   
+                // check to see if input matches whitelist character set
+                if ( !pattern.matcher( canonical ).matches() ) {
+                        throw new ValidationException( "Improper format in " + name + " field";
+                }
+   
+                // you could html entity encode input, but it's probably better to do this before output
+                // canonical = HTMLEntityEncode( canonical );
+   
+                return canonical;
+        }
+        
+        // Simplifies input to its simplest form to make encoding tricks more difficult
+        private String canonicalize( String input ) {
+                String canonical = sun.text.Normalizer.normalize( input, Normalizer.DECOMP, 0 );
+                return canonical;
+        }
+        //--[[User:A.in.the.k|A.in.the.k]] 08:57, 19 March 2009 (UTC) for correct implementation see http://www.owasp.org/index.php/How_to_perform_HTML_entity_encoding_in_Java
+        // Return HTML Entity code equivalents for any special characters
+        public static String HTMLEntityEncode( String input ) {
+                StringBuffer sb = new StringBuffer();
+                for ( int i = 0; i < input.length(); ++i ) {
+                        char ch = input.charAt( i );
+                        if ( ch>='a' && ch<='z' || ch>='A' && ch<='Z' || ch>='0' && ch<='9' ) {
+                                sb.append( ch );
+                        } else {
+                                sb.append( "&#" + (int)ch + ";" );
+                        }
+                }
+                return sb.toString();
+        }
+        
+    }
+
+Then all we have to do is make sure that all the requests in our application get wrapped in our new wrapper.  It's easy to implement with a Java EE filter.
+
+    public class ValidationFilter implements Filter {
+        public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) {
+                chain.doFilter(new ValidatingHttpRequest( (HttpServletRequest)request ), response);
+        }
+    }
+
+To add the filter to our application, all we have to do is put these classes on our application's classpath and then set up the filter in web.xml.
+
+   <filter>
+      <filter-name>ValidationFilter</filter-name>
+      <filter-class>ValidationFilter</filter-class>
+   </filter>
+        
+   <filter-mapping>
+      <filter-name>ValidationFilter</filter-name>
+      <url-pattern>/*</url-pattern>
+   </filter-mapping>
+
+Now all requests will go through the filter, get validated, and throw an exception if there's a problem. You'll want to set up a handler for ValidationExceptions, so that they get handled properly.  If ValidationException extends SecurityException, and you've set up a handler for SecurityException that logs out users who try to hack, you'll be well on your way to a secure application.
+
+==Limitations==
+A limitation of this particular example is that all HTTP requests are validated according to the same validation pattern.  A more sophisticated approach would allow developers to specify different validation patters for different types of data.
+
+[[Category:How To]]
+[[Category:OWASP Java Project]]
+[[Category:OWASP Validation Project]]
+[[Category:Java]]

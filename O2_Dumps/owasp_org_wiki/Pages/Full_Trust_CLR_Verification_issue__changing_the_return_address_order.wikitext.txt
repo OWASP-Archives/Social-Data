@@ -1,0 +1,153 @@
+This is a similar issue to [[Full Trust CLR Verification issue: changing the Method Parameters order]]
+
+The problem here is that the CLR doesn't check (when the verifier is disabled) if the parameters returned are correct (i.e. if the Type of the variable being allocated and the Type of methods's return parameter are the same)
+
+
+== Proof of Concept ==
+
+ using System;
+ using System.Text;
+ namespace Owasp
+ {
+    class ClrVerification_returnParams
+    {
+        public static void Main()
+        {
+            Console.WriteLine("\n\nCLR Verification - Return Parameters\n\n");
+            string strReturnedString = returnStringOrStringBuilder();
+            object objReturnedString = returnStringOrStringBuilder();
+            Console.WriteLine("strReturnedString: Contents = {0} | Type = {1}", strReturnedString, strReturnedString.GetType());
+            Console.WriteLine("objReturnedString: Contents = {0} | Type = {1}", objReturnedString, objReturnedString.GetType());
+        }
+        private static string returnStringOrStringBuilder()
+        {
+            string strString = "This is a string";
+            StringBuilder sbStringBuilder = new StringBuilder("This is a StringBuilder");
+            return strString;
+        }
+    }
+ }
+
+after csc typeSafety_returnParams.cs the execution of typeSafety_returnParams.exe returns
+
+ CLR Verification - Return Parameters
+ .
+ strReturnedString: Contents = This is a string | Type = System.String
+ objReturnedString: Contents = This is a string | Type = System.String
+
+Now, manipulating the MSIL directly make the following changes (for this one I used a custom version of ILIDE which has a great GUI  for editing MSIL)
+
+'''From'''
+
+ .method private hidebysig static string 
+          returnStringOrStringBuilder() cil managed
+  {
+    // Code size       24 (0x18)
+    .maxstack  2
+    .locals init (string V_0,
+             class [mscorlib]System.Text.StringBuilder V_1,
+             string V_2)
+    IL_0000:  nop
+    IL_0001:  ldstr      "This is a string"
+    IL_0006:  stloc.0
+    IL_0007:  ldstr      "This is a StringBuilder"
+    IL_000c:  newobj     instance void [mscorlib]System.Text.StringBuilder::.ctor(string)
+    IL_0011:  stloc.1
+    IL_0012:  ldloc.0
+ '''    IL_0013:  stloc.2'''
+    IL_0014:  br.s       IL_0016
+    IL_0016:  ldloc.2
+    IL_0017:  ret
+  } // end of method ClrVerification_returnParams::returnStringOrStringBuilder
+
+
+'''To''' (Changes are highlighted)
+
+ .method private hidebysig static string 
+          returnStringOrStringBuilder() cil managed
+  {
+    // Code size       24 (0x18)
+    .maxstack  2
+    .locals init (string V_0,
+             class [mscorlib]System.Text.StringBuilder V_1,
+             string V_2)
+    IL_0000:  nop
+    IL_0001:  ldstr      "This is a string"
+    IL_0006:  stloc.0
+    IL_0007:  ldstr      "This is a StringBuilder"
+    IL_000c:  newobj     instance void [mscorlib]System.Text.StringBuilder::.ctor(string)
+    IL_0011:  stloc.1
+    IL_0012:  ldloc.0
+    IL_0013:  stloc.2
+    IL_0014:  br.s       IL_0016
+ '''    IL_0016:  ldloc.1'''
+    IL_0017:  ret
+  } // end of method ClrVerification_returnParams::returnStringOrStringBuilder
+
+
+and now executing typeSafety_returnParams.exe results in 
+
+ CLR Verification - Return Parameters
+ .
+ strReturnedString: Contents = This is a StringBuilder | Type = System.Text.StringBuilder
+ objReturnedString: Contents = This is a StringBuilder | Type = System.Text.StringBuilder
+
+which is breaking type safety since strReturnedString should be a string
+
+
+== Peverify Result ==
+
+ Microsoft (R) .NET Framework PE Verifier.  Version  2.0.50727.42
+ Copyright (c) Microsoft Corporation.  All rights reserved.
+ [IL]: Error: [F:\_Research\_typeSafety\TypeVerification - Return Parameters\typeSafety_returnParams.exe : 
+ Owasp.ClrVerification_returnParams::returnStringOrStringBuilder][offset 0x00000017][found ref 'System.Text.StringBuilder']
+ [expected  ref 'System.String'] Unexpected type on the stack.
+ 1 Error Verifying typeSafety_returnParams.exe
+
+
+== Reflector Result ==
+
+This one is actually interresting since Refector gets it wrong when convering the MSIL into C# (note the boxing into string (from buildee1) that doesn't exist
+
+ private static string returnStringOrStringBuilder()
+ {
+       string text1 = "This is a string";
+       StringBuilder builder1 = new StringBuilder("This is a StringBuilder");
+       string text2 = text1;
+       return (string) builder1;
+ }
+
+The MSIL is equal to the one above
+
+ .method private hidebysig static string returnStringOrStringBuilder() cil managed
+ {
+      .maxstack 2
+      .locals init (
+            [0] string text1,
+            [1] [mscorlib]System.Text.StringBuilder builder1,
+            [2] string text2)
+      L_0000: nop 
+      L_0001: ldstr "This is a string"
+      L_0006: stloc.0 
+      L_0007: ldstr "This is a StringBuilder"
+      L_000c: newobj instance void [mscorlib]System.Text.StringBuilder::.ctor(string)
+      L_0011: stloc.1 
+      L_0012: ldloc.0 
+      L_0013: stloc.2 
+      L_0014: br.s L_0016
+      L_0016: ldloc.1 
+      L_0017: ret 
+ }
+
+
+And, if you try to complile it an error will be thrown since you can't convert a StringBuilder into a String
+
+csc typeSafety_returnParams.cs
+ Microsoft (R) Visual C# 2005 Compiler version 8.00.50727.42
+ for Microsoft (R) Windows (R) 2005 Framework version 2.0.50727
+ Copyright (C) Microsoft Corporation 2001-2005. All rights reserved. 
+ .
+ typeSafety_returnParams.cs(29,20): error CS0030: Cannot convert type 'System.Text.StringBuilder' to 'string'
+
+
+[[Category:OWASP .NET Project]]

@@ -1,0 +1,56 @@
+{{Top_10_2007:TopTemplate|usenext=NextLink|next=-Autenticación y Gestión de Sesiones disfuncional|useprev=PrevLink|prev=-Vulnerabilidades de Falsificación de Petición en Sitios Cruzados (CSRF)|usemain=MainLink|main=}}
+
+
+Las aplicaciones pueden revelar, involuntariamente, información sobre su configuración, su funcionamiento interno, o pueden violar la privacidad a través de una variedad de problemas. También pueden revelar su estado interno dependiendo de cuánto tardan en procesar ciertas operaciones u ofreciendo diferentes respuestas a diferentes entradas, como, por ejemplo, mostrando el mismo mensaje de error con distintos números de error. Las aplicaciones Web suelen revelar información sobre su estado interno a través de mensajes de error detallados o de depuración. Esta información, a menudo, puede ser utilizada para lanzar, o incluso automatizar, ataques muy potentes.
+
+==Entornos Afectados==
+
+Todos los entornos de aplicaciones Web son vulnerables a la revelación de información y la gestión de errores incorrecta.
+
+==Vulnerabilidad==
+
+Las aplicaciones generan, frecuentemente, mensajes de error y los muestran a los usuarios. Muchas veces estos mensajes de error son bastante útiles para los atacantes, ya que revelan detalles de implementación o información que es útil para explotar una vulnerabilidad. Existen algunos ejemplos frecuentes:
+
+* Gestión de errores detallada, donde la inducción de un error muestra demasiada información, como trazas de la pila, sentencias SQL erróneas u otra información de depuración.
+* Funciones que producen diferentes resultados a partir de diferentes entradas. Por ejemplo, introducir el mismo usuario con distintas contraseñas a una función de ''conexión'' debería producir el mismo texto de usuario inexistente y contraseña errónea. Sin embargo, muchos sistemas producen códigos de error diferentes.
+
+==Verificando la seguridad==
+
+El objetivo consiste en verificar que la aplicación no revela información a través de los mensajes de error o por otros medios.
+
+Enfoques automáticos: las herramientas de rastreo de vulnerabilidades suelen provocar la generación de mensajes de error. Herramientas de análisis estadístico pueden buscar la utilización de APIs que revelen información, pero no son capaces de verificar el significado de tales mensajes.
+
+Enfoques manuales: una revisión del código puede localizar gestiones de error incorrectas y otros patrones que revelan información, pero requiere bastante tiempo. Las pruebas permiten generar mensajes de error, pero determinar qué tipos de error se han validado no es trivial.
+
+==Protección==
+
+Los desarrolladores deberían usar herramientas como WebScarab, de OWASP, para intentar hacer que sus aplicaciones generen errores. Las aplicaciones que no han sido probadas de esta manera generarán salidas de errores inesperadas con toda probabilidad. Las aplicaciones deberían, también, incluir una arquitectura de gestión de errores estándar para prevenir revelar información no deseada a los atacantes.
+
+Prevenir la revelación de información requiere disciplina. Las siguientes prácticas han demostrado su eficacia:
+
+* '''Garantizar que todo el equipo de desarrollo de software comparte un enfoque común a la gestión de errores'''
+* '''Deshabilitar o limitar la gestión de errores detallada'''. En concreto, no mostrar información de depuración a los usuarios finales, trazas de la pila o información sobre rutas
+* '''Garantizar que los caminos seguros que tienen múltiples resultados devuelvan mensajes de error idénticos o similares''' en, prácticamente, el mismo tiempo. Si esto no es posible, considerar imponer un tiempo de espera aleatorio para todas las transacciones para ocultar este detalle al atacante.
+* Varios niveles pueden devolver mensajes de excepciones o errores graves, tales como la capa de la base de datos, el servidor Web subyacente (IIS, Apache, etc.). Es vital que '''los errores de todos los niveles estén controlados y configurados convenientemente para evitar que los intrusos exploten los mensajes de error.'''
+* Hay que tener en cuenta que los entornos más comunes devuelven diferentes códigos de error HTTP, dependiendo de si el error se produce en el código personalizado o en el código del ''marco de trabajo''. '''Vale la pena crear un gestor de errores predeterminado que devuelva un mensaje de error 'esterilizado' apropiadamente para la mayoría de usuarios en producción y para todos los diferentes tipos de error.'''
+* Aunque es seguridad a través de la oscuridad, decidir anular el gestor de errores predeterminado para que siempre devuelva pantallas de error "200" (OK) reduce la habilidad de las herramientas automáticas de rastreo para determinar cuándo ocurre un error serio. Se trata de "seguridad a través de la oscuridad", pero puede proporcionar una capa extra de defensa.
+* Algunas organizaciones grandes han decidido incluir códigos de error aleatorios / únicos entre todas sus aplicaciones. Esto puede ayudar al CAU (Centro de Atención al Usuario) a encontrar la solución correcta a un error particular, pero también puede ayudar a los atacantes a determinar exactamente qué ruta de la aplicación falla.
+
+==Ejemplos==
+
+* [http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4899 http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4899] 
+* [http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-3389 http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-3389] 
+* [http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0580 http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0580] 
+
+== Artículos Relacionados==
+* [[Error Handling|Manejo de Errores]]
+* [[:Category:Sensitive Data Protection Vulnerability|Vulnerabilidad de protección de datos]]
+
+==Referencias==
+
+* CWE: CWE-200 (Information Leak), CWE-203 (Discrepancy Information Leak), CWE-215 (Information Leak Through Debug Information), CWE-209 (Error Message Information Leak), others.
+* WASC Threat Classification: [http://www.webappsec.org/projects/threat/classes/information_leakage.shtml http://www.webappsec.org/projects/threat/classes/information_leakage.shtml] 
+* OWASP, [http://www.owasp.org/index.php/Error_Handling http://www.owasp.org/index.php/Error_Handling] 
+* OWASP, [http://www.owasp.org/index.php/Category:Sensitive_Data_Protection_Vulnerability http://www.owasp.org/index.php/Category:Sensitive_Data_Protection_Vulnerability] 
+
+{{Top_10_2007:BottomTemplate|usenext=NextLink|next=-Autenticación y Gestión de Sesiones disfuncional|useprev=PrevLink|prev=-Vulnerabilidades de Falsificación de Petición en Sitios Cruzados (CSRF)|usemain=MainLink|main=}}

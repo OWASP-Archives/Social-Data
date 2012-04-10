@@ -1,0 +1,15 @@
+With nearly 20,000 downloads since its first release in May 2009, Watcher has been providing value to the security and developer communities.  I’d like to attract one or two contributors and move forward with features that will keep Watcher useful during penetration testing and security assessments.  Part of Watcher’s attraction now is that it’s super simple to use which should remain a highlight.  
+
+'''Road map includes:'''
+* Results presented in a tree view and list view (toggled);
+* Sample projects for extending and building new checks (Developer outreach);
+* Better exported HTML reporting;
+* Adding certainty levels (e.g. flag if this finding requires manual verification);
+* Adding new checks that can be performed passively;
+* Adding support for known authentication cookies (Google, Live, Facebook, etc.) to make better decisions around severity;
+* Integrated Flash analysis using third-party tools;
+* Integrated Javascript analysis using third-party tools (e.g. Yacsa, JSLint);
+* Integrated Silverlight analysis;
+* False positive reduction in all checks;
+* Automated js regex analysis for client-side DoS (e.g. Bryan Sullivan’s analyser);
+* User video tutorials.

@@ -1,0 +1,52 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Project About</noinclude>
+| project_name = OWASP Alchemist Project
+| project_home_page =:OWASP Alchemist Project
+
+| project_description =
+
+Alchemist enables a software development team in realization of highly secure and defensible application with built-in defenses/controls against security‐related design, coding and implementation flaws. 
+
+Alchemist is focused to present this solution by architecting a real-life high stakes application with security built into it right from the inception, step-by-step as it falls under an SDLC. The current exercise is targeted at demonstrating this on a J2EE based web application that is developed using Spring framework. Spring framework was chosen due to its widespread adoption in the financial products. However, it is important note that Alchemist is not limited to J2EE or more specifically Spring framework. The idea is to demonstrate the upper spectrum of security practices that are often neglected or are done in bits and pieces by picking a well known widely adopted technology. Since the emphasis is on security architecture and defensibility, the future road-map is to demonstrate the same for applications built using other leading programming languages and frameworks. 
+
+Although this project is more than useful for existing/already developed applications, Alchemist is not the ideal solution to retrofit security into existing applications. It is aimed at offering more to applications that are at least in development, most in design phase. Allowing for language-specific differences, Alchemist builds this application with a strong foundation of security architecture that covers following main practices:
+
+*Security Requirements
+*Threat Risk Modeling
+*Use and Abuse Cases
+*Secure Coding Guideline
+
+| project_license = [http://www.gnu.org/licenses/#GPL GNU General Public License]
+
+| leader_name1 = Naveen Rudrappa
+| leader_email1 = naveen.rudrappa@owasp.org
+| leader_username1 = Naveen Rudrappa
+
+| leader_name2 = Chandrakanth Reddy Narreddy
+| leader_email2 = chandra.kanth@hotmail.com
+| leader_username2 = Chandrakanth Reddy Narreddy
+
+| leader_name3 = Bishan Singh
+| leader_email3 = Bishan.Singh@owasp.org
+| leader_username3 = Bishan Singh
+
+| contributor_name[1-10] = 
+| contributor_email[1-10] = 
+| contributor_username[1-10] = 
+
+| pamphlet_link = http://www.owasp.org/images/8/85/ALCHEMIST_-_PROJECT_CHARTER_v0_2.pdf
+
+| presentation_link =
+
+| mailing_list_name = https://lists.owasp.org/mailman/listinfo/owasp-alchemist-project
+
+| project_road_map = http://www.owasp.org/images/8/85/ALCHEMIST_-_PROJECT_CHARTER_v0_2.pdf 
+
+| links_url[1-10] = 
+| links_name[1-10] = 
+| release_1 = Alchemist Secure J2EE Spring v1.0
+| release_2 = 
+| release_3 =
+| release_4 =
+<!--- The line below is for GPC usage only. Please do not edit it --->
+| project_about_page = Projects/OWASP Alchemist Project
+}}

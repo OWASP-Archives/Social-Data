@@ -1,0 +1,493 @@
+==== Welcome ====
+
+{{Chapter Template|chaptername=Poland|extra=The original Polish Chapter was founded in June 2007 by Andrzej Targosz and Robert Pajak. The chapter leader is [mailto:wojciech.dworakowski@owasp.org Wojciech Dworakowski] (since 2011). Acting Chapter Board members are (since 2011): [mailto:michal.kurek@owasp.org Michal Kurek], [mailto:marek.zmyslowski@owasp.org Marek Zmyslowski], [mailto:tomasz.polanski@owasp.org Tomasz Polanski], [mailto:mateusz.olejarka@owasp.org Mateusz Olejarka], [mailto:pawel.krawczyk@hush.com Pawel Krawczyk].<br><br>
+
+If you have any questions about previous activities (2009-2011) do not hesitate to contact [mailto:przemyslaw.skowron@owasp.org Przemyslaw Skowron]<br>
+If you have any questions about previous activities (2007-2009) do not hesitate to contact [mailto:andrzej.targosz@proidea.org.pl Andrzej Targosz]<br>
+<paypal>Poland</paypal>
+|mailinglistsite=http://lists.owasp.org/mailman/listinfo/owasp-poland|emailarchives=http://lists.owasp.org/pipermail/owasp-poland}}
+
+==Chapter Supporters==
+OWASP Poland thanks its Chapter Supporters:<br>
+[[Image:Logo_securing-150px.png |upright=0.5| link=http://www.securing.pl]] - Gold Chapter Supporter.<br>
+If your company wishes to support our chapter, please contact [mailto:wojciech.dworakowski@owasp.org Wojciech Dworakowski] (terms and conditions: https://www.owasp.org/index.php/Membership).<br>
+
+=Current events=
+
+== 21. March 2012==
+Zapraszamy wszystkich zainteresowanych na spotkanie OWASP Poland Local Chapter, poświęcone tematyce bezpieczeństwa aplikacji webowych.
+===Czas===
+21 marca 2012, 18.00 - 20.00
+
+===Miejsce===
+[http://www.kpt.krakow.pl Krakowski Park Techniologiczny] (Al. Jana Pawła II 41 L), sala konferencyjna na III piętrze. 
+
+Lokalizacja na [http://maps.google.pl/maps?vpsrc=6&ie=UTF8&ll=50.078137,19.994615&spn=0.005749,0.013937&t=w&z=17&iwloc=A&q=Krakowski+Park+Technologiczny+Sp.+z+o.o.&cid=4800256453671308201 mapie]. Dojazd liniami: 4, 10, 15,40 - przystanek "AWF".
+
+Wstęp wolny. Prosimy o [http://owasp-poland-2012-03-21.eventbrite.com/lista potwierdzenie uczestnictwa.]
+
+===Streaming===
+Tak jak poprzednim razem będzie możliwość zdalnego uczestnictwa za pomocą GoToMeeting (Meeting ID: 759-783-526): [https://www3.gotomeeting.com/join/759783526 link]
+
+Uwaga: Wymagana instalacja oprogramowania GoToMeeting. Ilość uczestników on-line jest ograniczona (25 połączeń).
+
+===Agenda===
+
+
+====Analiza statyczna języka PHP====
+Mateusz Kocielski, LogicalTrust <br>
+18.00 - 19.15 
+
+''Abstrakt:''
+
+Analiza statyczna jest jedną z metod wyszukiwania błędów oraz poprawiania jakości oprogramowania. <br>
+Zaczynając od historii i podstaw teoretycznych, a kończąc na praktycznych aspektach i zero dayach, <br>
+dowiemy się jak wykorzystać wszystkie jej dobrodziejstwa na przykładzie języka php. <br>
+Wykład przeznaczony jest dla wszystkich, którzy mają jakikolwiek związek z wytwarzania oprogramowania.<br>
+
+* 19.15 - 19.30 Przerwa / networking
+
+
+====Web Application Firewall 101====
+Przemysław Skowron<br>
+19.30 - 20.00 
+
+''Abstrakt'': 
+
+Web Application Firewall to kolejna (czasem jedyna!) warstwa <br>
+bezpieczeństwa w środowisku pracy aplikacji webowych. Pozwala na <br>
+monitoring i ochronę aplikacji. Może służyć jako "Strażak" w czasie<br>
+pożaru i często stosowany jest tylko do tego. W "kwadrans" postaram <br>
+się przybliżyć: czym jest WAF, w jakich architekturach możemy go<br>
+wdrożyć, jakie mamy WAFy na rynku, jak wybrać ten najlepszy dla nas, w<br>
+jakich trybach działa, w oparciu o co może reagować, jak się ma WAF do<br>
+OWASP Top10 i czym jest OWASP CRS.
+
+===Meeting Supporter===
+Sponsorem spotkania jest firma [[Image:Logicaltrust-logo.png| upright=0.5| link=http://logicaltrust.net]].
+
+==CONFidence 2012==
+
+===PL===
+
+CONFidence jest corocznie odbywającą się konferencją o tematyce
+bezpieczeństwa IT. Tegoroczna, dziesiąta edycja odbędzie się 23 – 24 maja w
+Krakowie. Najlepsi prelegenci, najnowsze zagadnienia, nowinki z branży,
+luźna atmosfera i oczywiście, magiczny klimat Krakowa są odpowiedzią na
+pytanie, dlaczego powinieneś być w tym roku z nami! CONFidence jest miejscem
+spotkań społeczności hackerów zarówno z Polski, jak i całej Europy.
+
+CONFidence jest dwudniową konferencją połączona z warsztatami technicznymi,
+ale całe spotkanie jest czymś więcej! CONFidence to nie tylko najlepsi
+prelegenci, aktualne tematy i szkolenia, ale co ważniejsze, wyjątkowe
+konkursy, szalone imprezy integracyjne oraz czas i miejsce na spotkanie
+społeczności. CONFidence stwarza idealną okazję do rozmowy w luźnej
+atmosferze, więc nie pozostaje nic innego jak tylko hackować!
+
+W tym roku oprócz standardowej części technicznej planujemy zaaranżować
+wyjątkową grę o nazwie „SpyGames”. Ochotnicy będą uczestniczyć w prawdziwym
+szpiegowskim zadaniu, które będzie łączyć w sobie akcję z filmu o Jamesie
+Bondzie oraz polot i fantazję „Matrixa”. Prześlizgiwanie się między
+czujnikami, lockpicking oraz ratowanie więźnia z bunkra to tylko namiastka
+tego, co czeka uczestników. A to wszystko w industrialnych wnętrzach starej
+przepompowni wody w Bielanach w Krakowie. Podejmiesz z nami wyzwanie?
+
+Kod rabatowy dla osób rejestraujących się via OWASP: 2012-owasp
+15% zniżki na opłatę konferencyjną.
+
+===ENG===
+
+CONFidence is an annual IT security conference that will take place on
+23-24th May, 2012 in Krakow, Poland for the 10th time! The best speakers,
+latest issues, laid-back atmosphere and Krakow crazy night life – that is
+why CONFidence has become a meeting point of hackers’ community in Europe.
+
+The core of CONFidence is a two-day conference with workshops, but the whole
+event is so much more. CONFidence offers not only the best speakers, current
+topics and top trainings, but (even more importantly) great parties, cool
+contests, crazy social events and a time and space to meet community members
+face-to-face, talk, drink and hack.
+
+Thi year, apart from the technical part we are planning to deploy a special
+SpyGames game where attendees will participate in real spy contests
+including sneaking past sensors, lockpicking, and will have to rescue a
+prisoner from a bunker.
+
+15% discount, when registering via OWASP, use this code during registration: 2012-owasp 
+
+
+[http://2012.confidence.org.pl/?utm_source=owasp&utm_medium=banner&utm_campaign=mediapartners Więcej na stronie konferencji.]
+
+=Partners=
+
+Meeting(s): [[Image:ISSA_Poland.jpg  |center|upright=0.5  | ISSA Poland]]
+
+Sponsor of OWASP Krakow meetings: [[Image:Logo.gif |center|upright=0.5 | Krakowski Park Technologiczny]]
+
+= Past Events =
+
+==2012==
+
+==SEMAFOR 2012==
+
+We have the pleasure to inform You that on February 23-24, 2012, the SEMAFOR (Security, Management, Audit Forum) conference will take place in Warsaw. The conference is held by ISSA Poland, ISACA Warsaw Chapter and the Computerworld with active support of OWASP Poland. OWASP members have 10% of discount for this event.
+
+For more information about SEMAFOR 2012, please visit: https://issa.org.pl/semafor-2012.html
+
+
+==18. January 2012==
+
+We're meeting in Krakow on 18. January 2012 in [http://www.kpt.krakow.pl/en Krakow Technology Park (Czyżyny)] (Al. Jana Pawła II 41 L) at '''6pm''', conference hall on 3rd floor. This meeting is organized jointly by ISSA Poland. Please confirm Your attendance [http://www.eventbrite.com/event/2726383687 here.]
+
+===Agenda:===
+* OWASP news.
+* [http://prezi.com/awm8psp-i1ok/no-mans-land/ No Man's Land - Vulnerabilities in J2EE frameworks and libraries] - Sławomir Jasek, SecuRing.
+* [[Media:Defending_ASP.Net_Apps_against_XSS.pdf| Defending ASP.Net apps against XSS.]] - Mateusz Olejarka, VSoft S.A.
+* [http://prezi.com/zn6ixh6n4obl/bad-coding-with-ruby-on-rails/ Bad coding with Ruby on Rails] - Paweł Krawczyk, AON.
+
+===Streszczenia:===
+
+
+====Ziemia niczyja - czyli podatności we frameworkach i bibliotekach J2EE.====
+Sławomir Jasek (SecuRing)
+
+
+Podatności obecne w aplikacjach mogą wynikać z błędów popełnionych
+przez programistów, ale także ze słabości istniejących w zastosowanych
+frameworkach i bibliotekach. 
+
+Z mojego doświadczenia wynika, że ten
+drugi aspekt jest często pomijany przy projektowaniu bezpieczeństwa
+aplikacji a także w trakcie utrzymania aplikacji 
+(uaktualniane jest
+oprogramowanie serwerowe ale nie biblioteki wchodzące w skład
+aplikacji).
+
+Prezentacja ma na celu naświetlenie tego problemu przez pokazanie
+przykładów ciekawych, 
+a jednocześnie łatwych do przeoczenia
+podatności, występujących w popularnych bibliotekach/frameworkach J2EE
+takich jak Struts, Spring MVC.
+
+====Obrona aplikacji webowej ASP.Net: XSS====
+'''Mateusz Olejarka (VSoft)'''
+
+Prezentacja ma celu zarysować dość szeroką tematykę zwiazaną z XSS'em. Na początku pojawi się kilka pojęć i faktów dotyczących XSS, 
+w głównej części omówimy 
+
+sobie możliwości jakie mamy, aby zabezpieczyć naszą aplikację, m.in: mechanizm Request Validation, HttpUtility, AntiXSS.
+
+====Popularne błędy w aplikacjach Ruby on Rails====
+Paweł Krawczyk (IPSec.pl)
+
+
+Ruby on Rails uchodzi za framework ułatwiający pisanie bezpiecznych
+aplikacji - i takim jest w istocie. 
+
+Nie znaczy to jednak, że samo RoR
+w magiczny sposób naprawi dziury wynikające z braku dbałości o
+bezpieczeństwo. 
+
+W prezentacji pokażę typowe błędy popełniane przez
+programistów RoR oraz narzędzia, które umożliwiają wyłapanie
+większości z nich w półautomatyczny sposób.
+
+==2011==
+
+==15. December 2011==
+Zaproszenie na kolejne spotkanie OWASP w Warszawie / Invitation for
+the next OWASP meeting in Warsaw<br/>
+
+Tym razem prezentacje beda w języku angielskim / This time the
+presentations will be in English<br/>
+
+
+Data i miejsce spotkania / Date and place of the meeting:<br/>
+
+15 grudzien 2011 / 15 December 2011
+Ernst & Young
+Rondo ONZ 1, Warszawa
+Sala: 14-40 (piętro 14)
+18:00-20:00
+
+<br/>
+Prosba o potwierdzenie uczestnictwa do: Michal.Kurek@owasp.org /
+Please confirm your attendance to: Michal.Kurek@owasp.org<br/><br/>
+
+'''Agenda''':
+
+* 18:00 - 18:15 - Otwarcie spotkania, aktualnosci OWASP Polska / Meeting Opening, OWASP Poland News
+* 18:15 - 19:00 - [http://www.slideshare.net/bezpiecznik/1112-agile-approach-to-pci-dss-development-10600190 "The agile approach to PCI DSS implementation in SDLC area"] - Jakub Syta, IMMUSEC
+* 19:00 - 19:45 - [http://blog.c22.cc/2011/11/18/deepsec-ground-beef-cutting-devouring-and-digesting-the-legs-off-a-browser/ "Ground BeEF: Cutting, devouring and digesting the legs off a browser"] - Michele Orru' a.k.a. antisnatchor, Royal Bank of Scotland
+* 19:45 - 20:00 - Kwestie dodatkowe, zamkniecie spotkania / Additional Topics, Meeting Closure
+<br/>
+
+Więcej informacji o prelegentach / More information about the presenters:
+<br/><br/>
+'''Jakub Syta''', IMMUSEC
+<br/><br/>
+Ekspert w zarzadzaniu bezpieczenstwem informacji i ciagloscia
+dzialania, zdobyl doswiadczenie w szeregu zagadnien z zakresu ochrony
+fizycznej oraz przeciwdzialania naduzyciom. Ostatnie lata spedzil
+kierujac dzialem bezpieczenstwa w jednym z najwiekszych swiatowych
+bankow bedac odpowiedzialnym za dostarczanie uslug bezpieczenstwa dla
+kilku krajow. Od 2010 jest wspolnikiem w spolce doradczej IMMUSEC.
+Prelegent na krajowych i miedzynarodowych konferencjach, doswiadczony
+wykladowca. Ekspert w Podkomitecie ds. ISMS przy KT 182 w Polskim
+Komitecie Normalizacyjnym, byly czlonek zarzadu ISACA Polska,
+doktorant na Wydziale Zarzadzania Politechniki Warszawskiej. Jest
+audytorem wiodacym ISO 27001 i ISO 9001, legitymuje sie certyfikatami
+takimi jak CISA, CISSP, CRICS, ITIL Foundation.
+<br/>
+
+'''Michele Orru'''', Royal Bank of Scotland
+<br/>
+Michele Orru' a.k.a. antisnatchor is an IT and ITalian security guy
+who works as a Penetration Tester for The Royal Bank of Scotland Group
+in Warsaw, Poland. He mainly focus his research on web application
+security. Besides his nasty passion about black, gray, white hat
+hacking and BeEF (being an active committer since the Ruby port
+started), he enjoys to leave alone his Mac while fishing on salted
+water and preys for Kubrick resurrection.<br/>
+
+==23. November 2011 - Cracow==
+We're meeting in Krakow on 23. November 2011 in [http://www.kpt.krakow.pl/en Krakow Technology Park (Czyżyny)] (Al. Jana Pawła II 41 L) at '''6pm''', conference hall on 3rd floor. This meeting is organized jointly by ISSA Poland.
+
+Agenda:
+* [[Media:OWASP_News_20111123.pdf| OWASP News]]
+* [http://www.securitum.pl/dh/owasp_krakow_112011.pdf Selected vulnerabilities in web management consoles of network devices] - Michał Sajdak, Securitum
+* [[Media:OWASP_ESAPI_and_AppSensor_-_intro.pdf |Groundbreaking OWASP tools for developers. Brief introduction to OWASP ESAPI and AppSensor]]- Wojciech Dworakowski, SecuRing
+* [http://prezi.com/zeuz-3td6iqe/couchdb-security/ CouchDB security] - Paweł Krawczyk
+
+<br/>
+Meeting supporter for this event is [[Image:Securitum.gif| http://www.securitum.pl ]], which will provide delicious cupcakes and coffee :).
+
+
+==3 rd SASMA & LIQUIDNEXXUS Business Security Conference==
+On 17. November 2011- Warsaw during 3 rd SASMA & LIQUIDNEXXUS Business Security Conference Mateusz Olejarka will be speaking about Application Security Threats and OWASP TOP 10.
+
+More details [http://www.sas-ma.org/pl_3-rd-sasma-liquidnexxus-business-security-conference,263.html here.] <br/>
+
+==OWASP & ISACA Katowice Chapter-in-formation==
+
+On 20. October in Cracow University of Economics during ISACA Katowice Chapter-in-formation meeting Wojciech Dworakowski will be speaking about OWASP and Web Application Security. <br>
+More information: http://isaca.katowice.pl/spotkania.html
+
+==OWASP Poland Partnership during Secure 2011==
+
+Secure 2011 is international conference on telecommunications and IT security organized by CERT Poland on 24-26 October 2011 in Warsaw.
+
+More information: http://secure.edu.pl/
+
+===27. September 2011 - Warsaw===
+We're meeting in Warsaw on 27. September 2011 in Ernst & Young (Rondo ONZ 1, Warszawa, room 14-40, floor 14). Please confirm your attendance by sending email to  Michal.Kurek@owasp.org as amount of places is limited. Agenda:
+
+* 18:00 - 18:15 - Otwarcie spotkania, aktualności OWASP Polska
+
+* 18:15 - 19:00 - '''"Bezpieczeństwo aplikacji mobilnych"''' - Aleksander Ludynia, Ernst & Young<blockquote>Aleksander jest Konsultantem w Dziale Zarządzania Ryzykiem Informatycznym w Ernst & Young odpowiedzialnym za realizację projektów związanych z bezpieczeństwem systemów informatycznych. Specjalizuje się w testach penetracyjnych aplikacji internetowych oraz przeglądach bezpieczeństwa.<br/>Abstrakt: Skala i charakter wykorzystania aplikacji mobilnych zmieniają się w bardzo dynamicznym tempie. Równolegle rozwija się działalność przestępców komputerowych, prowadzących różnego rodzaju ataki, których celem są urządzenia przenośne. Podczas prezentacji zostanie omówiona sytuacja na rynku aplikacji mobilnych, a także zagrożenia związane z ich wykorzystaniem. Ponadto, omówione zostaną podstawowe techniki wykorzystywane podczas testów penetracyjnych tego typu aplikacji. Prezentacja będzie wstępem do szerszej dyskusji dotyczącej zagadnieńzwiązanych z bezpieczeństwem aplikacji mobilnych.</blockquote>
+
+* 19:00 - 19:45 - '''"Zarządzanie sesją w aplikacjach internetowych"''' - Sławomir Rozbicki, PKO BP<blockquote>Sławek jest specjalistą w zespole Bezpieczeństwa Internetowego i Telekomunikacyjnego Banku PKO BP. Do jego obowiązków należy głównie wykonywanie testów penetracyjnych aplikacji internetowych, infrastruktury teleinformatycznej oraz bieżący monitoring incydentów bezpieczeństwa.<br/>Abstrakt: Mechanizmy zarządzania sesją aplikacji internetowych mają znaczący wpływ na ich bezpieczeństwo. Pomimo to niedocenianie ryzyka związanego z ich nieprawidłową implementacją wydaje się być częstą praktyką. Zawarte w prezentacji materiały mają za zadanie zwrócić uwagę na podstawowe wektory ataku oraz ułatwić ocenę podatności poszczególnych elementów sesji na ataki. Przedstawione przykłady pokazują jak nawet najsilniejsze mechanizmy uwierzytelnienia mogą zostać ominięte, w przypadku wykorzystania słabości związanych z nieprawidłową obsługą sesji.</blockquote>
+
+* 19:45 - 20:00 - Kwestie dodatkowe, zamknięcie spotkania
+
+* '''Download :'''
+** [[Media:OWASP_News_20110927.pdf | OWASP News]]
+** [[Media:OWASP 2011 - Aleksander Ludynia - Bezpieczenstwo aplikacji mobilnych.pdf | Aleksander Ludynia - Bezpieczenstwo aplikacji mobilnych]]
+** [[Media:OWASP 2011 - Slawomir Rozbicki - Session Managemnt.pdf | Slawomir Rozbicki - Session Management]]
+
+===14. September 2011 - Krakow===
+We're meeting in Krakow on 14. September 2011 in [http://www.kpt.krakow.pl/en Krakow Technology Park (Czyżyny)] (Al. Jana Pawła II 41 L) at '''6pm''', conference hall on 3rd floor. Note '''date change to 14. September''' (previously announced date was 13. September).
+
+Google Maps [http://maps.google.pl/maps?daddr=50.078184,19.994881&hl=pl&sll=50.078171,19.994903&sspn=0.005735,0.013937&vpsrc=0&gl=pl&mra=mift&mrsp=1&sz=17&t=h&z=17 link].
+
+Agenda:
+
+*OWASP news
+*'''Uczący się firewall webowy''' - nowy polski projekt (Marek Zachara, AGH). Streszczenie: 
+<blockquote>
+Inteligentne systemy, analizujące i dopasowujące się do wzorców zachowań użytkowników zdobywają kolejne pola zastosowań. W trakcie wykładu zostanie zaprezentowane wykorzystanie takich metod do tworzenia samo-uczącego się firewalla aplikacyjnego (ang. Learning Web Application Firewall). LWAF potrafi (na podstawie analizy ruchu) stworzyć oczekiwane wzorce przychodzących danych - a co za tym idzie, zidentyfikować nietypowe zachowania użytkowników - i ochronić w ten sposób aplikację przed próbami ataku. Wyniki działania takiego firewall-a, a także podstawowa analiza teoretyczna zostanie zaprezentowana na bazie przygotowanej przez autorów implementacji tej techniki w formie modułu do serwera Apache.</blockquote>
+Download paper: [http://marek.zachara.name/marek/publ/2011_ares.pdf Learning Web Application Firewall - Beneﬁts and Caveats], slides: [[File:LWAF.pptx]] 
+<blockquote>
+Intelligent systems that process and analyze patterns in human behavior have been gaining traction in various fields of use. During the lecture, we will present a Learning Application Firewall (LWAF) which utilizes such methods to analyze the traffic patterns, constructs expected data patterns and can protect the application from harmful attack attempts. Resluts from experiments, as well as theoretical background will be presented based on the reference implementation of the LWAF as Apache module, prepared by the authors</blockquote>
+
+*'''HTML5 - Something wicked this way comes''' ([http://blog.kotowicz.net/ Krzysztof Kotowicz], SecuRing) Streszczenie: 
+<blockquote>HTML5 to ulubieniec współczesnych przeglądarek i webdeveloperów, ale może zostać również wykorzystany w złych celach.
+ Przedstawimy najnowsze metody ataków na aplikacje internetowe z wykorzystaniem HTML5 oraz różnych technik UI redressing, a także sposoby ukrycia ataku w mechanizmach gry online. Zobaczycie demonstracje rzeczywistych ataków na popularne serwisy internetowe z wykorzystaniem opisanych metod.</blockquote> Download: [[File:Html5-something wicked this way comes owasp.pdf]]
+
+<blockquote>
+ HTML5 is a favorite of modern browsers and web developers. Likewise, it can used for evil purposes. We will cover new attacks on web applications, which use HTML5 and UI redressing techniques and ways to cover it up in an online game logic. We shall see the demos of real attacks on popular web sites which includes described methods.</blockquote>
+
+Generally - all lectures are in Polish. If you would like to attend and do not know Polish, please contact meeting coordinator.
+
+This meeting is organized jointly by ISSA Poland. Questions or issues? Contact meeting coordinator Wojtek Dworakowski +48-506-184550.
+
+If you would like to make a presentation, or have any questions about the Poland Chapter, send an email to Chapter Leader or any Chapter Board member.
+
+===30. June 2011 - Warsaw, ISSA InfoTRAMS===
+All OWASP Poland, ISSA Poland and CISSP holders are entitled to free entry to [https://issa.org.pl/infotrams/fusion-tematyczny-bazy-danych-kariera-warszawa.html InfoTRAMS] conference that will be held at TPSA conference venue Twarda street 18 in Warsaw.
+
+===23. May 2011 - Krakow===
+23. May 2011 in [http://www.kpt.krakow.pl/en Krakow Technology Park (Czyżyny)] at 6pm, conference hall on 3rd floor. 
+
+Two research topics were presented (both in '''Polish'''):
+
+*OWASP news, KPT introduction
+*Minerva - automatic vulnerability scanning (Mateusz Kocielski)
+*[http://www.slideshare.net/kravietz/why-care-about-application-security Why care about application security?] (Paweł Krawczyk)
+
+===OWASP Partnership during CONFidence 2011===
+CONFidence is an annual IT security conference that will take place on 24-25th May, 2011 in Krakow, Poland for the 9th time!
+
+More information: http://2011.confidence.org.pl/
+
+===OWASP Partnership during Banking Forum 11-12th May 2011===
+Banking Forum is a major event organized for managers of polish financial institutions.
+
+OWASP Poland Chapter was Partnership of this event and our representatives took part in panel discussions about security of financial applications and security in software development lifecycle.
+
+===On 24th March 2011 - Krakow===
+6:15pm - 6:30pm ... "OWASP News" - Przemyslaw Skowron, OWASP Leader<br>
+6:30pm - 7:00pm ... "Source Code Scanners" - Pawel Krawczyk http://www.slideshare.net/kravietz/source-code-scanners<br>
+7:00pm - 8:00pm ... "Penetration testing - panel discussion"<br>
+
+===On 27th January 2011 - Warsaw===
+6:00pm - 6:40pm ... "OWASP News" - Przemyslaw Skowron, OWASP Leader<br>
+6:45pm - 7:20pm ... [[Media:OWASP_2011_-_Michał_Kurek_-_Cross-Site_Scripting.pdf|"Cross-Site Scripting"]] - Michal Kurek, Ernst&Young <br>
+7:25pm - 8:00pm ... "Phishing" - Tomasz Sawiak, Safe Computing<br>
+
+===On 20th January 2011 - Krakow===
+6:15pm - 6:25pm ... "OWASP News" - Przemysław Skowron, OWASP Leader<br>
+6:30pm - 7:10pm ... "Advanced Data mining" - Jakub Kaluzny<br>
+7:15pm - 8:00pm ... "OWASP ASVS - panel discussion" - Wojciech Dworakowski, Securing<br>
+
+==2010==
+
+===OWASP Partnership during seminar InfoTRAMS - Privacy at work===
+
+9th of December 2010 there will be interesting meetings in Warsaw where OWASP Poland Chapter decided to be Partnership.<br>
+
+More information: http://issa.org.pl/2010-12-09/prywatno%C5%9B%C4%87-w-pracy-infotrams-warszawa.html
+
+===OWASP Poland Partnership during Secure 2010===
+
+25-27th of October 2010 there will be interesting meetings in Warsaw where OWASP Poland Chapter decided to be Partnership.<br>
+
+[[Image:Secure2010.jpg | |center |Secure 2010]]
+
+More information: http://secure.edu.pl/
+
+===OWASP Partnership during seminar InfoTRAMS - Cloud computing===
+
+30th of June 2010 there will be interesting meetings in Warsaw where OWASP Poland Chapter decided to be Partnership.<br>
+
+More information: http://www.issa.org.pl/content/view/129/1/
+
+===On 10th June 2010===
+6:00pm - 6:15pm ... "OWASP News" - Przemyslaw Skowron /PL/ - [[Media:OWASP_20100610_PSkowron_OWASP_News.pdf | Slides]]<br>
+6:15pm - 7:10pm ... "Creating, obfuscating and analysis of JavaScript-based malware." - Krzysztof Kotowicz /PL/ - [[Media:OWASP_20100610_KKotowicz_Analysis_of_Javascript-based_malware.pdf | Slides]] | [http://www.varlog.pl/2010/06/czerwcowe-spotkanie-owasp-video/ Video]<br>
+7:15pm - 8:00pm ... "Network Forensic: what captured packets say" - Paweł Goleń /PL/ - [[Media:OWASP_20100610_PGolen_Network_Forensic.pdf | Slides]] | [http://www.varlog.pl/2010/06/czerwcowe-spotkanie-owasp-video/ Video]<br>
+
+===OWASP Partnership during KrakSpot Tech #1===
+
+8th of June 2010 there will be interesting meetings in Krakow where OWASP Poland Chapter decided to be Partnership.<br>
+
+More information: http://krakspot.pl/2010/05/29/krakspot-tech-agenda/
+
+===OWASP Partnership during CONFidence 2010===
+
+25-26th of May 2010 there will be interesting meetings in Krakow where OWASP Poland Chapter decided to be Partnership.<br>
+
+More information: http://2010.confidence.org.pl/
+
+===On 13th May 2010===
+6:05pm - 7:00pm ... "Drive-by download attacks" - Filip Palian /PL/ - [[Media:OWASP_20100513_FPalian_Drive-by_download.ppt | Slides]] | [http://www.varlog.pl/2010/06/majowe-spotkanie-owasp-video/ Video]<br>
+7:05pm - 7:50pm ... "Detection and analysis of malicious web sites" - Łukasz Juszczyk /PL/ - [[Media:OWASP_20100513_LJuszczyk_Detection_and_analysis_malicious.pdf | Slides]] | [[Media:OWASP_20100513_LJuszczyk_m.pdf | Extra#1]] | [[Media:OWASP_20100513_LJuszczyk_jsunpack.pdf | Extra#2]] | [http://www.varlog.pl/2010/06/majowe-spotkanie-owasp-video/ Video]<br>
+
+===OWASP Partnership during SEConference 2010===
+
+9-10th of April 2010 there will be interesting meetings in Krakow where OWASP Poland Chapter decided to be Partnership.<br>
+
+During meetings there will be a few talks dedicated the OWASP Projects.<br>
+More information: http://www.2k10.seconference.pl/docs/
+
+===On 17th March 2010===
+6.10pm - 6.50pm ... "Workshop: CISSP - Telecommunications and Network Security" - Julia Juraszek, ISSA Polska, Polkomtel S.A.<br>
+7.00pm - 7.40pm ... "OWASP - Incident handling: Web Application Attacks" - Przemyslaw Skowron, OWASP Poland /PL/ - [[Media:OWASP_20100317-PSkowron-Incident_Handling.pdf | Slides]]<br>
+
+===On 10th March 2010===
+5:00pm - 5:05pm ... "OWASP News" - Przemyslaw Skowron /PL/ - [[Media:OWASP_20100310-PSkowron-OWASP_News.ppt | Slides]]<br>
+5:05pm - 6:10pm ... "SQL Injection: complete walktrough (not only) for PHP developers" - Krzysztof Kotowicz /PL/ - [[Media:OWASP_20100310_KKotowicz_SQL_Injection.ppt | Slides]] | [http://www.varlog.pl/2010/03/marcowe-spotkanie-owasp-php-video/ Video]<br>
+6:15pm - 7:20pm ... "Secure PHP framework" - Łukasz Pilorz /PL/ - [[Media:OWASP_20100310_LPilorz_Secure_PHP_Framework.pdf | Slides]] | [http://www.varlog.pl/2010/03/marcowe-spotkanie-owasp-php-video/ Video]<br>
+
+===OWASP Poland Partnership during SEMAFOR 2010===
+
+26-27th of January 2010 there will be interesting meetings in Warsaw where OWASP Poland Chapter decided to be Partnership.<br>
+
+[[Image:Semafor2010.jpg | SEMAFOR 2010]]
+
+During meetings there will be a few talks dedicated the OWASP Projects.<br>
+More information: http://konferencje.computerworld.pl/konferencje/semafor2010/zagadnienia.html
+
+===On 14th January 2010===
+6:20pm - 6:30pm ... "OWASP News" - Przemyslaw Skowron<br>
+6:30pm - 7:15pm ... "Fuzzing" - Piotr Laskawiec /PL/ - [[Media:OWASP_20100114_PLaskawiec_Fuzzing.pdf | Slides]], /EN/ - [[Media:OWASP_20100114_PLaskawiec_Fuzzing-en.pdf | Slides]]<br>
+7:15pm - 8:00pm ... "Security in Software Development Life Cycle" - Wojtek Dworakowski /PL/ - [[Media:OWASP_20100114_WDworakowski_Security_in_SDLC.pptx‎ | Slides]]<br>
+
+==2009==
+
+===On 10th December 2009===
+6:30pm - 6:45pm ... "OWASP News" - Andrzej Targosz, Przemyslaw Skowron<br>
+6:50pm - 7:25pm ... "OWASP Top 10 2010" - Przemyslaw Skowron /PL/ - [http://www.slideshare.net/thinksecure/owasp-top10-2010-rc1-pl OWASP_Top10_2010-RC1-PL] by Michał Wiczyński<br>
+7:30pm - 8:10pm ... "Real Life Information Security" - Pawel Krawczyk /EN/ - [[Media:OWASP_20091217_PKrawczyk_Real_World_Security.ppt‎ | Slides]]<br>
+
+===On 12th February 2009===
+6:00pm - 6:30pm ... "OWASP News" - Andrzej Targosz<br>
+6:30pm - 7:30pm ... "Blind SQL Injections" - Jacek Wlodarczyk /PL/ - [[Media:OWASP_20090212_JW_Blind_SQLi.ppt | Slides]]<br>
+7:30pm - 9:30pm ... OWASP UNConference<br>
+
+==2008==
+
+===On 11th December 2008===
+6:00pm - 7:00pm ... "Hack tool Firefox" - Filip Palian<br>
+7:00pm - 8:15pm ... "OWASP where we were, where we are now, and where we are going..." - Andrzej Targosz<br>
+
+===On 23th October 2008===
+6:15pm - 7:10pm ... "Wargame @ Confidence/OWASP EU 2008 vs. OWASP Testing Guide" - Przemysław Skowron /PL/ - [[Media:OWASP_20081023-prezentacja.pdf | Slides]] , [[Media:OWASP_20081023-mind_mapa.pdf | MindMap]]<br>
+7:15pm - 8:10pm ... "Intrusion detection for web applications" - Łukasz Pilorz /EN/ - [[Media:OWASP_WebIDS_pub.pdf | Slides]]<br>
+8:15pm - 9:10pm ... "Session management for Web Application" - Paweł Goleń /PL/ - [[Media:Owasp_prezentacja.pdf | Slides]]<br>
+
+===On 25th April 2008===
+5:15pm - 5:30pm ... "OWASP News" - Andrzej Targosz<br>
+5:30pm - 5:45pm ... "Short introduction to WarGame - CONFidence & OWASP EU" - Przemyslaw 'rezos' Skowron<br>
+5:45pm - 6:45pm ... "Introduction to Web Applications Security" - Filip Palian<br>
+
+===OWASP Partnership during QAFA and TMS===
+7-8th of April 2008 there will be two interesting meetings in Krakow where OWASP Poland Chapter decided to be Partnership:<br>
+- TMS - "Test Management Summit"<br>
+- QAFA - "Quality for Financial Applications"<br>
+During meetings there will be special talk about OWASP Testing metodology.<br>
+http://www.bettersoftware.eu/archive/QAFA-TMS/
+
+==2007==
+
+===On 06th September 2007===
+6:00pm - 7:00pm ... "OWASP" - Robert 'shadow' Pajak<br>
+7:00pm - 8:00pm ... "OWASP SPoC" - Przemyslaw 'rezos' Skowron<br>
+8:00pm - 9:00pm ... "Penetration tests OWASP in practice" - Jarek Sajko<br>
+
+===Presentation===
+* Presentation: OWASP Intro By Robert 'Shadow' Pajak - [[Media:OWASP_about.pdf | Slides]]
+* Presentation: OWASP SPoC By Przemyslaw 'rezos' Skowron - [[Media:OWASP_Day_Poland_rezos.pdf | Slides]]
+* Presentation: Penetration tests OWASP in practice By Jarek Sajko - [[Media:OWASP_practice.pdf | Slides]]
+
+===On 19th April 2007===
+5:30pm - 6:30pm ... "Application security testing - attack trends" - Przemyslaw Skowron<br>
+6:30pm - 7:30pm ... Auditor work standards<br>
+7:30pm - 7:45pm ... OWASP Inauguration
+
+You could join free, registration not required. Please invite all friends interested in security.
+
+[[Category:OWASP Chapter]]
+[[Category:Europe]]
+
+__NOTOC__ <headertabs />

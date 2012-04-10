@@ -1,0 +1,92 @@
+{{Template:SecureSoftware}}
+
+==Overview==
+
+Purpose:	
+
+*	Communicate effectively with outside security researchers when security issues are identified in released software, facilitating more effective prevention technologies.
+
+*	Communicate effectively with customers when security issues are identified in released software.
+
+Role:
+
+* Project Manager
+
+Frequency:
+
+* As needed.
+
+Many security researchers find security problems in software products, often by intentional investigation. Except in a very few cases, researchers will release information about the security vulnerability publicly, usually to either the BUGTRAQ mailing lists or the Full Disclosure mailing list.
+
+Most security researchers act responsibly in that they attempt to give the software vendor adequate time to address the issue before publicly disclosing information. This activity addresses how to interface with responsible security researchers.
+
+Industry best-practice guidance for responsible security vulnerability research can be found at: http://www.whitehats.ca/main/about_us/policies/draft-christey-wysopal-vuln-disclosure-00.txt
+
+==Provide means of communication for security issues ==
+
+If reasonable, the communication mechanism should be published on the vendor web site in a security area devoted to the product since this is where researchers will first look.
+
+Otherwise, vendors should be prepared to handle security alerts at the following standard addresses:
+
+*	security@
+
+*	secalert@
+
+*	contact@
+
+*	support@
+
+*	sales@
+
+*	info@
+
+*	The listed domain contact information.
+
+A researcher attempting to be responsible may still not be well informed, and so may only try one of these addresses. Some researchers will only attempt communication until they successfully send the vendor an E-mail that does not bounce. Sometimes that E-mail will be sent to a high-volume alias or to an individual who receives a high volume of E-mail, such as the CEO or CTO.
+
+A central security response alias should be established, such as security@ or secalert@ and published on the web site if possible. Additionally, owners of various E-mail addresses that might receive security alerts should be notified of the central alias and be asked to forward any relevant communication.
+
+==Acknowledge receipt of vulnerability disclosures ==
+
+On receipt of the vulnerability disclosure, respond with acknowledgement of receipt, as well as a reasonable timetable for addressing the vulnerability. This should never take more than a calendar week from receipt and should generally be handled as quickly as possible.
+
+The time line should indicate at a bare minimum when the vendor expects to be able to provide remediation for the problem, if validated. Responsible security researchers often will inform the vendor that they will go public if the time frame given is seen as an attempt to keep the information from the public. Generally, target 30 days, but let the researcher know that you may require 30 to 60 days more if circumstances warrant. Also, inform him that you expect the researcher to act responsibly by not disclosing before you can ready a remediation strategy for customers (as long as you act in a reasonable time frame), and show that you are doing so in such a way that the researcher can determine good faith. 
+
+Good faith is best shown by providing weekly status updates, which should be offered in the acknowledgement E-mail.
+
+If the vulnerability is found in a version of the software that is no longer supported, this should be communicated. However, you should attempt to ascertain whether the vulnerability affects supported versions of the software, and this fact should also be communicated to the researcher.
+
+The process and policies for security disclosure should be communicated clearly to the researcher, either by E-mail or by publishing it on the web, in which case the web page should be referenced in the E-mail.
+
+==Address the issue internally ==
+
+The reported vulnerability should be entered into the process for dealing with reported security issues. Communication information for the researcher should be passed along, in case further contact is necessary to better understand the report.
+
+The researcher should be given the opportunity to test any remediation strategies implemented before they are distributed publicly. The researcher will generally make an effort to determine whether the vulnerability has been addressed adequately. In cases where it is not addressed adequately, the researcher should give the vendor additional time to address the problem, if required.
+
+==Communicate relevant information to the researcher ==
+
+As the issue is internally addressed, the vendor should provide the researcher with the following information on update, as the information becomes available:
+
+*	Whether the vulnerability has been reproduced.
+
+*	Timing and distribution mechanism for any patches or fixed releases.
+
+*	Workarounds to the problem for those that will be unwilling or unable to patch in a timely fashion.
+
+Additionally, if a longer resolution period is necessary, then this should be communicated to the researcher. If the time frame is already 45 days from report, the researcher will be unlikely to grant an extension unless the vendor can clearly demonstrate to the researcher that the problem requires extensive changes, usually as the result of a fundamental design change. The vendor will also likely need to show that there are no adequate mitigating controls, which will generally require demonstrating why the researcher's proposed workarounds are inadequate.
+
+==Provide a security advisory and customer access to remediation ==
+
+The vendor should provide its own security advisory of the issue, but may also choose only to endorse the researcher's advisory, after assuring that it contains adequate information for customers to protect themselves.
+
+If the advisory only points to compensating controls, not an actual fix, it should provide a time line and distribution information for a permanent fix.
+
+The advisory should also present an overview of the problem, denoting what resources are at risk, as well as information on how to assess whether an installation is at risk.
+
+
+
+[[Category:Activity]]
+[[Category:CLASP Activity]]
+[[Category:BP5 Build vulnerability remediation procedures]]
+[[Category:OWASP_CLASP_Project]]

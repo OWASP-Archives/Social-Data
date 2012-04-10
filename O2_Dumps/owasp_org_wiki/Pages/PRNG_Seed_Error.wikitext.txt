@@ -1,0 +1,65 @@
+{{Template:Stub}}
+{{Template:Vulnerability}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+The incorrect use of a seed by a Psuedo Random Number Generator. A seed error is usually brought on through the erroneous generation or application of a seed state.
+
+[[Category:FIXME| link not working
+
+http://cve.mitre.org/docs/plover/SECTION.9.20.html#RAND.SEED
+
+]]
+
+==Risk Factors==
+
+TBD
+
+
+==Examples==
+TBD
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+The application of a seed state that is known to an attacker can lead to a permanent compromise attack [http://www.schneier.com/paper-prngs.html].
+
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+Note: A reference to related [http://cwe.mitre.org/ CWE] or [http://capec.mitre.org/ CAPEC] article should be added when exists. Eg:
+
+* [http://cwe.mitre.org/data/definitions/79.html CWE 79].
+* http://www.link1.com
+* [http://www.link2.com Title for the link2]
+
+
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Cryptographic Vulnerability]]
+[[Category:Vulnerability]]

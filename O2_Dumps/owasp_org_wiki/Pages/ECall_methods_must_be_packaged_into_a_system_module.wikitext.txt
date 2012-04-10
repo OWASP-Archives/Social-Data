@@ -1,0 +1,20 @@
+This code
+
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static IntPtr GetFunctionPointer_();
+
+        public static void Main()
+        {
+            Console.WriteLine("\n\n---------------\n\n");
+            GetFunctionPointer_();
+        }
+
+will compile OK but throw this error:
+
+    Unhandled Exception: System.Security.SecurityException: ECall methods must be packaged into a system module.
+
+Note: changing the MSIL to GetFunctionPointer(); so  that we are calling the correct internal function name GetFunctionPointer() (versus GetFunctionPointer_()), throws the same error ( GetFunctionPointer() will not compile). Executing from Partial trust throws the same error since Peverify finds no issues with it.
+
+This makes sense since if this was possible, there would be dozens of ways to bypass the CLR Security Measures
+
+[[Category:OWASP .NET Project]]

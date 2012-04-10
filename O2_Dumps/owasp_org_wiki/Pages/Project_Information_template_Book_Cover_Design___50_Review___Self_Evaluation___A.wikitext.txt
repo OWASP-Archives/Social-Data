@@ -1,0 +1,49 @@
+[[Project Information:template Book Cover Design|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications#OWASP Book Cover & Sleeve Design|OWASP Book Cover & Sleeve Design Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#OWASP Book Cover & Sleeve Design|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+Hello OWASP!
+I hope this email finds you all well. Thank you for your patience in regards to receiving this latest round of creative. We have been working hard to design and develop the system so it achieves all of our objectives. Attached are 3 new system concepts for your review. I am very pleased to present this latest round.
+<br>
+Objectives with this latest creative:
+<br>
+Continue to brand the 3 stages of content, (Alpha/Beta/Release) by showing the evolution of an insect. We once thought we could have crawling, walking or flying to denote the different levels of content, but from a scalable perspective, over time as we publish more books we would be working with too many pictures of insects. Unfortunately we had to abandon that idea. To simplify, the concept is simply to choose one insect per book ‘Title’, and throughout the lifespan of that Title (such as the WebGoat) - the picture of the insect ‘evolves’ in a graphic way. Most of this image manipulation is done in Photoshop. Attached are a few different concepts to show evolution of the insect image. 
+Show the viewer the lifecycle/lifespan of a Title. In the upper the upper right hand corner you will see a icon system. This system shows the viewer how many other versions of that particular Title exist. ie: if a book has made it to the “Release” stage, the “Release” book cover will show the viewer the other two cover designs for that Title (Alpha and Beta). We are also showing a simpler rendition of this concept with “A”, “B” and “R” in white boxes. I think this solution works well, too. 
+Determine the function of the insect. Through many rounds of designs and concepts, my recommendation is to have one insect per book Title. Each time a new book Title is released, we would research a new insect and layout the new cover. 
+Simplify the design. Our goal in this last round was to simplify the design/structure so that it would be more intuitive/easy to replicate and scale. 
+Determine the function of color. This was a tough one as the system needs to be scalable, we had to be careful not to introduce too much color too soon (again as the book Titles grow in numbers and we produce more books we do not want to be overwhelmed with lots of colors) - To simplify, we could either:<br>
+* A: have one color PER TITLE  (R2) --- each book title would have it’s own color 
+* B: have one color PER CONTENT LEVEL PER YEAR (R3) --- all Alpha books created in 08 would be yellow, all Beta books in 08 would be red, etc.
+<br>
+* The easiest way for me to receive comments is over email, so if you can reply back to all, it would help me a great deal.
+<br>
+* Please note: Some of the reviewers have requested that we design the back and spine of the books. We will start the creative on these items once a cover has been chosen. The covers are functionally-rich, so it’s important that the designs are signed off on before we enter a new phase. 
+<br>
+Thank you for your time and attention to this project! I hope you all have restful weekends – I look forward to hearing back from you as soon as you can.
+<br>
+Best regards,
+Deb
+
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#OWASP Book Cover & Sleeve Design|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+ |- 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+|}

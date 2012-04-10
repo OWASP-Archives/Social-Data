@@ -1,0 +1,31 @@
+16. Session Management Flaws -> 16.1 Hijack a Session
+
+(This sublesson was not formally solved by the project)
+
+=== Lesson overview ===
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution === 
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information. 
+
+=== Strategy ===
+
+This WebGoat lesson teaches how to hijack another user's session using brute force attacks. The vulnerability is that the session ID is not complex and random enough; the exploit is complex and is done by using WebScarab and another tool called Crowbar.
+
+Session Management Flaws are one of the few areas where a WAF will not be of much help. 
+
+The only action that can be taken is a reactive one instead of a preventative action: issue an alarm in the event of irregularities (e.g. a changing IP) or terminate a session with changing IP. Besides that, a ModSecurity solution is not possible for this lesson.
+
+=== Implementation === 
+
+None
+
+=== Reviewer comments ===
+
+You had listed this as a Lesson where Mod (WAF) can’t really help however two practical solutions are possible:
+
+1. Anti-automation rules – in order to gather a large enough collection of SessionIDs to analyze their entropy, most attackers will use automation such as with the Session Collector plugin of WebScarab.  When these tools run, they will send a large number of requests that will go over a ModSecurity set threshold of request/time and then you can block them.  This is not a direct mitigation for the weak SessionIDs but may tactically help to identify people conducting this type of analysis.
+
+2. The critical point in identifying Session Hijacking attacks is to bind the client IP (and possibly other browser data) to the SessionID when the webapp hands it out in the Set-Cookie response header.  If this is done, you can then identify when someone guesses a SessionID and adds it to their browser as the REMOTE_ADDR variable data will not match what ModSecurity saved in the setsid Session collection when the app handed it out.

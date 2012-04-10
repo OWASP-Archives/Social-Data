@@ -1,0 +1,16 @@
+LDAP encoding does utilize the '/' character to encoder special characters. Unfortunately, it's not quite that simple. In Java, how this is done depends at least in part on whether you are using JNDI or the Mozilla LDAP SDK. 
+
+OWASP ESAPI is going to have to do this in our own encoder without relying on JNDI or Mozilla specific classes (e.g., shouldn't use JNDI's Composite class as shown in the example).
+
+Also, I don't recall if all of these cases cited in the above URL, i.e.,
+# A space or "#" character occurring at the beginning of the string
+# A space character occurring at the end of the string
+# One of the characters ",", "+", """, "\", "<", ">" or ";"
+
+...all apply to the Mozilla LDAP SDK. (Specifically, I don't recall anything about either "<" or ">" being special there.)  But the bottom line is, I wouldn't assume that it uses the exact same parsing rules, so that needs to be checked. The Mozilla LDAP SDK may automatically quote some of these things in its parser, so quoting them again could cause problems in that then end up in some directory being incorrectly doubly-encoded.
+
+Because X.509 certificates use X.500 but LDAP can store certificates, sometimes '/' also needs to be considered special (especially in the context of DNs) because '/' is an X.500 delimiter that mod_ssl (and others?) sometimes use for the subject DNs of client certificates. (The '/' character is used instead of ',' in X.500.)
+
+Finally, the first two bullets shown about don't apply unequivocally.
+
+Specifically, I think they only apply if the "output" representation were to be encoded in LDIF (LDAP Data Interchange Format), where leading and trailing spaces may be misinterpreted by other parsers (and especially the JNDI LDAP parser) and a leading # could be interpreted as a comment. (Likewise, I would think that for a similar reason you would want to disallow EOL terminators such as \r and \n, especially in the context of LDAP injection.)  However, it is important to note that in some contexts you want to allow leading space or '#' or a trailing space, and that would be in the case of passwords.

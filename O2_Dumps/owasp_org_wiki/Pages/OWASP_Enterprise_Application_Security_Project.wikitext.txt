@@ -1,0 +1,243 @@
+==== Main  ====
+
+== Objective  ==
+
+The OWASP Enterprise Application Security Project (OWASP-EAS) exists to provide guidance to people involved in the procurement, design, implementation or sign-off of large scale (ie 'Enterprise') applications. 
+
+== Project purpose  ==
+
+Enterprise applications security is one of the major topics in overall security area because those applications controls money and resources and every security violation can result a significant money loss. Purpose of this project is to aware people about enterprise application security problems and create a guidelines and tools for enterprise application security assessment. 
+
+== Our Subprojects  ==
+
+Here are our primary goals: 
+
+1 Aware people about enterprise applicatio security vulnerabilities by making an Annual statistics of enterprise business application security vulnerabilities. 
+
+Subproject [[Enterprise Business Application Vulnerability Statistics 2009]] 
+
+[[Projects/OWASP Enterprise Application Security Project|Statistics]] 
+
+2 Help companies to begin assessment of enterprise applicatios by creating a 
+
+Subproject [[Enterprise Business Application Security Implementation Assessment Guide]] 
+
+3 Help software companies to improve security of their solutions by creating a 
+
+Subproject [[Enterprise Business Application Security Vulnerability Testing Guide v1]] 
+
+4 Develop a free tools for Enterprise business applicatioons assessment 
+
+Subproject [[Enterprise Business Application Security Software]] 
+
+<br>
+
+== Project Roadmap  ==
+
+Have a look at the [[OWASP Enterprise Application Security Project/Roadmp]] 
+
+==== Statistics  ====
+
+== Objective  ==
+
+This document is the first statistics report which will be repeated annually with showing tendencies and changes in Enterprise Business Application Security area. 
+
+== Purpose  ==
+
+This document we will show a result of statistical research in the Business Application security area made by DSECRG and OWASP-EAS project. The purpose of this document is to raise awareness about Enterprise Business Application security by showing the current number of vulnerabilities found in those applications, how critical are those and what tendences we see. 
+
+== Intro  ==
+
+Business applications like ERP, CRM, SRM and others are one of the major topics within the field of computer security as these applications store business data and any vulnerability in these applications will cause a significant monetary loss. Nonetheless people still don’t pay much attention to Enterprise Business Application area as we see during our and our collegues research and audit data. Business applications are very large and complex systems that consists of different components such as Database server, Front-end, Web server, Application server and other parts. Also those systems lay on different Hardware and software that can have their own vulnerabilities. Overall security of Enterprise Business Application consists of different layers such as: • Network architecture security • Os security • Database security • Application security • Front-end security 
+
+Every described layer may have their own vulnerabilities that can give attacker full access to business data even if other layers are fully secured. In this document all the popular applications from described levels and their vulnerabilities vill be shown. The purpose of this document to Increase awareness of Business Application security. 
+
+== Links  ==
+
+[http://dsecrg.com Business applications vulnerability statistics 2009 and future trends] - Presentation by Dmitry Evdokimov and Dmityy Chastuhin 
+
+[http://www.sdn.sap.com/irj/sdn/index?rid=/webcontent/uuid/c05604f6-4eb3-2d10-eea7-ceb666083a6a SAP SDN page with latest vulnerabilities] 
+
+[http://www.oracle.com/security/critical-patch-update.html Oracle Secalert CPU page with latest vulnerabilities] 
+
+Annual report comming soon... 
+
+== Authors  ==
+
+Alexander Polyakov (DSecRG) Dmitriy Chastuhin (DSecRG) Dmitriy Evdokimov (DSecRG) 
+
+<br>
+
+== Contributors  ==
+
+Leodid Kats (dsec.ru) Olga Yurova (dsec.ru) 
+
+==== Development guides  ====
+
+== Objective  ==
+
+This document we will describe different areas of programm vulnerabilities that can be found in Enterprise Business applications and ERP systems. 
+
+== Purpose  ==
+
+The purpose of this document to Increase awareness for Developers of Enterprise business application software. Here we will collect top software vulnerabilities in server site and frontend side that can exist in Business applications. 
+
+== Intro  ==
+
+There are many different languages and technologies that can be used for developing business applications and writing a costom code. Here we will try to categorize it firstly by dividing into Server and Client site. Top 10 list of vulnerabilities for both areas will be shown. 
+
+<br>
+
+== Main  ==
+
+Crosslinks to CWE SANS OWASP and risks with descriptions will be added soon. 
+
+[[Image:Dev1.png|484x290px]] <br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+== Top 10 Server vulnerabilities (EASAD) ==
+
+<br>1 XSS<br>2 Improper Access Control <br>3 Information disclosure <br>4 Command/code injection in proprietary language<br>5 SQL Injection <br>6 Missing Encryption of Sensitive Data<br>7 Buffer overflows <br>8 Path traversal<br>9 CSRF <br>10 Use of a Broken or Risky Cryptographic Algorithm<br>
+
+== Top 10 Frontend vulnerabilities (EASFD) ==
+
+1 Buffer overflows (ActiveX )<br>2 Exposed Dangerous Method or Function (ActiveX)<br>3 Insecure scripting server access <br>4 File handling Frontend vulnerabilities<br>5 Use of a Broken or Risky Cryptographic Algorithm<br>6 Cleartext Storage of Sensitive Information<br>7 Use of Hard-coded Password<br>8 Lack of integrity checking for front-end application<br>9 Cleartext Transmission of Sensitive Information<br>10 Vulnerable remote services<br>
+
+<br>
+
+== Links  ==
+
+cooming soon 
+
+<br>
+
+== Authors  ==
+
+Alexander Polyakov (DSecRG) Mikhail Markevich Dmitriy Evdokimov (DSecRG) Alexey Sintsov (DSecRG) 
+
+<br>
+
+== Contributors  ==
+
+==== Implementation guides  ====
+
+== Objective  ==
+
+This document we will describe different areas of Secure implementation of g Enterprise Business Applications and ERP systems. Here we will mainly focus on security architecture and configuration threads because pragramm errors are well described in "Software vulnerabilities" topic 
+
+== Purpose  ==
+
+The purpose of this document to Increase awareness for Administrators of Business Application security and help them to start a beginning self-assessment of their systems and find a most critical violations. 
+
+== Intro  ==
+
+Enterprise Business Applications (Like ERP - is any software system that has been designed to support and automate the business process of medium and large business) are very large systems that consists of different components such as database server, Front-end, Web server, Application server and other parts. Also those systems lay on different Hardware and software that can have their own vulnerabilities. Every described layer may have their own vulnerabilities and misconfigurations that can give attacker full access to business data even if other layers are fully secured. 
+
+ All information was collected and catecorized during our big practice of security assessing Popular business applications Like in SAP ERP, Oracle E-Business Suite, Oracle Peoplesoft, JD-Edwards and other less known or custom applications. 
+
+<br>
+
+== Main  ==
+
+Overall security of Enterprise Business Application consists of different layers such as: • Network architecture security • Os security • Database security • Application security • Front-end security In this document we will Describe top 10 violations on every layer of Enterprise Business Application that can be easily assessed and mitigated. 
+
+<br>
+
+[[Image:Dev2.png]] 
+
+== Top 10 Network/Architecture issues  ==
+
+1 Lack of proper network filtration between EA and Corporate network<br>2 Lack or vulnerable encryption between corp net and EA Network<br>3 Lack of separation between Test Dev and Prod system<br>4 Lack of encryption inside EA Network<br>5 Insecure trusted realations between components<br>6 Insecure configured Internet facing applicatins <br>7 Vulnerable / default configured Routers<br>8 lack of frontend access filtration<br>9 Lack or misconfigured monitoring IDS/IPS<br>10 Insecure/unappropriate wireless comunications<br>
+
+== Top 10 OS issues  ==
+
+1 Unnecessary Enabled services<br>2 Missing 3rd party software patches<br>3 Insecure trust relations<br>4 Universal OS passwords<br>5 Missing OS patches<br>6 Lack or misconfigured network acess control<br>7 Lack or misconfigured monitoring<br>8 Insecure internal acces control <br>9 Unencrypted remote access <br>10 Lack of password lockout/complexiry checks<br>
+
+== Top 10 Database issues  ==
+
+1 Default passwords for DB access<br>2 Lack of DB patch management<br>3 unnecessary Enabled DB features <br>4 lack of password lockout/complexiry checks<br>5 Unencrypted sensitive data transport / data<br>6 Lack or misconfigured network acess control<br>7 Extensive user and group privileges<br>8 lack or misconfigured audit<br>9 Insecure trust relations<br>10 Open additional interfaces<br>
+
+== Top 10 Application issues  ==
+
+1 Lack of patch management<br>2 Default Passwords for application access<br>3 SOD conficts<br>4 Unnecessary Enabled Application features <br>5 Open Remote mngmt interfaces<br>6 lack of password lockout/complexity checks<br>7 Insecure options <br>8 Unecrypted cominications<br>9 Insecure trust relations<br>10 Guest access<br>
+
+== Top 10 Frontend issues  ==
+
+1 Vulnerable Frontend applications<br>2 Lack of server trust check<br>3 Lack of encryption<br>4 Aotocomplete browser <br>5 Insecure Browser scripting options<br>6 Insecure configuration <br>7 Insecure sortware distribution service<br>8 Lack of AV software<br>9 Password storing in configuration file<br>10 Sensitive information storage<br>
+
+== Links  ==
+
+[http://dsecrg.com ERP Security:Myths Problems Solutions] - by Alexander Polyakov and Ilya Medvedovskiy 
+
+<br>
+
+== Authors  ==
+
+Alexander Polyakov (DSecRG)
+
+&nbsp;
+
+Mikhail Markevich 
+
+<br>
+
+== Contributors  ==
+
+==== Software  ====
+
+== Objective  ==
+
+Here will be given information on a tools and services that can be used for assessment of business applications 
+
+== Purpose  ==
+
+The purpose of this area is to provide free and commercial tools that can help companies to assess security of their business applications. 
+
+<br>
+
+== Intro  ==
+
+== Main  ==
+
+Currently we are on the beta testing stage of free online service that cen be used to assess security of SAP Frontend. 
+
+<br>[http://erpscan.com You can help us to test ERPSCAN Online] 
+
+== Links  ==
+
+[http://erpscan.com] - by DSECRG 
+
+<br>
+
+== Authors  ==
+
+Alexander Polyakov (DSecRG) 
+
+Alexey Sintsov (DSecRG) 
+
+Dmitriy Evdokimov (DSecRG) Dmitriy Chastuhin (DSecRG) 
+
+<br>
+
+==== Project About  ====
+
+{{:Projects/OWASP Enterprise Application Security Project | Project About}} 
+
+<br>
+
+__NOTOC__ <headertabs />
+
+[[Category:OWASP_Project|Enterprise Application Security Project]] [[Category:OWASP_Document]] [[Category:OWASP_Alpha_Quality_Document]]

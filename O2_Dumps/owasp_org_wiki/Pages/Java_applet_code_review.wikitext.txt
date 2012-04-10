@@ -1,0 +1,34 @@
+'''Attackers Reverse Engineer Client'''
+
+#[[All clients can be reverse engineered, monitored, and modified]]
+#[[All encryption keys and mechanisms are not secrets]]
+#[[All intellectual property (algorithms, data) is disclosed]]
+
+'''Attackers Create Malicious Client, Server, or Proxy'''
+
+#[[Tamper with requests and responses]]
+#[[Spoof a legitimate client or server application]]
+
+'''Attackers Target Rich Client Application Itself'''
+
+#[[Clients can be abused - especially if they are "listening"]]
+#[[All forms of input corruption (injection, overflow, etc.) can be used]]
+#[[Spoofed server can be set up]]
+
+'''Attackers Target Server Application Vulnerabilities'''
+
+#All typical server application issues are possible. See [[Java_server_%28J2EE%29_code_review]]
+
+'''Client Security Considerations'''
+
+#[[Mutual authentication over SSL]]
+#[[Access control is not possible on client]]
+#[[Input validation]]
+#[[Interpreter use]]
+#[[Error handling and logging]]
+#[[Intrusion detection]]
+#[[Encryption]]
+#[[Protecting information is not possible on client]]
+#[[For secure communications]]
+#[[For secure storage]]
+#[[Jar Signing]]

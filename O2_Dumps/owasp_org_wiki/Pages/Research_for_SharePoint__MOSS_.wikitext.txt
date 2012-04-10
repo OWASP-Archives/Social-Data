@@ -1,0 +1,82 @@
+This page contains research notes on Microsoft's SharePoint MOSS and WSS
+
+== Resources==
+
+==== Microsoft resources====
+* [http://office.microsoft.com/download/afile.aspx?AssetID=AM102437421033 Security Architecture for SharePoint Products and Technologies] (Word Doc)
+* [http://sharepoint.microsoft.com SharePoint Community Portal]
+* [http://technet.microsoft.com/en-us/library/cc262619.aspx Downloadable book: Security for Office SharePoint Server 2007] - [http://go.microsoft.com/fwlink/?LinkID=94375 link to 277 page Doc file]
+* [http://blogs.msdn.com/arpans/archive/2008/05/09/sharepoint-end-user-security.aspx SharePoint End User Security]
+
+==== Other Resources and Documentation====
+* [http://www.finalcandidate.com/en/tandp/Pages/SharePointSecurityConcepts.aspx SharePoint Security Concepts] - contains a number of other links to more material
+* [http://blogs.gartner.com/neil_macdonald/2009/02/25/sharepoint-security-best-practices/ SharePoint Security Best Practices] - $995 Gartner report 
+* [http://sharepointmagazine.net/technical/administration/microsoft-office-sharepoint-server-2007-security-model Microsoft Office SharePoint Server 2007 Security Model]
+* [http://www.cmswire.com/cms/enterprise-cms/sharepoint-security-concerns-simply-a-lack-of-governance-003551.php SharePoint Security Concerns Simply a Lack of Governance?]
+* [http://www.cmswire.com/cms/enterprise-cms/governance-key-for-sharepoint-implementations-003123.php Governance Key for SharePoint Implementations]
+
+==== Presentations ====
+* HackCon 2011 - Oslo, Norway - February 16, 2011 : [http://www.stachliu.com/wp-content/uploads/2011/03/HackCon%202011%20-%20SharePoint%20Security%20-%20Feb2011.pdf SharePoint Security: Advanced SharePoint Security Tips and Tools]
+* OWASP Houston Chapter - August 12, 2009 :  [http://owasp.icrew.org/downloads/OWASP_ShohnTrojacek.pdf SharePoint Auditing and Penetration Testing] Presentation by:  Shohn Trojacek
+* from Denim group:
+** [http://www.denimgroup.com/media/pdfs/DenimGroup_SecuringSharePoint_TASSCCTEC2009_20090326.pdf Securing SharePoint (PDF Format)] - TASSCC Technology Education Conference in Austin, March 26, 2009
+** [http://www.denimgroup.com/media/pdfs/DenimGroup_SecuringSharePoint_TRISC_20090324.pdf Securing Sharepoint (PDF Format)] - Texas Regional Infrastructure Security Conference (TRISC) in Austin, March 24, 2009
+** [http://sp.meetdux.com/archive/2009/07/08/a-primer-to-sharepoint-security.aspx A Primer to SharePoint Security] - video
+
+==== Other interesting resources====
+* [http://www.indeed.com.au/jobs?q=Moss+Security&l= MOSS Security jobs (in Australia)]
+* [http://www.cmswire.com/news/topic/sharepoint Articles on CMSWire about SharePoint]
+
+==== Other Blogs and Articles ====
+* [http://www.darkreading.com/security/app-security/showArticle.jhtml?articleID=212903345 Microsoft SharePoint: A Weak Link In Enterprise Security?] - Dark Reading
+
+==== Security related technical articles ====
+* [http://www.sharepointsecurity.com/sharepoint/sharepoint-security/how-to-programmatically-disable-code-access-security/ How to Programmatically Disable Code Access Security]
+
+
+== Published Security issues ==
+
+=== SharePoint related vulnerabilities and its status ===
+* {Note: Add MSRC case}
+* http://milw0rm.com/exploits/8704 & http://milw0rm.com/sploits/2009-IIS-Advisory.pdf
+
+
+== MOSS Security related WebParts, Tools  & services ==
+
+==== Open Source ====
+* From CodePlex (see more on this search for [http://www.codeplex.com/site/search?ProjectSearchText=Sharepoint%20Security SharePoint Security]
+** [http://securitytemplates.codeplex.com/ SharePoint Security Templates] (CodePlex)
+** [http://spsecurity.codeplex.com/ SharePoint Security Configuration Feature]
+** [http://accesschecker.codeplex.com Sharepoint Access Checker Web Part]
+** [http://sitesecuritymgmt.codeplex.com/ Site Security Management Utility]
+** [http://cryptocollaboration.codeplex.com/ CryptoCollaboration For SharePoint]
+
+==== Commercially Supported ====
+* [http://www.sharepointsecurity.com ARB Security Solutions (www.sharepointsecurity.com)]
+* [http://www.surety.com/Offerings/AbsoluteProof/For-MS-SharePoint.aspx AbsoluteProof for MS SharePoint] - related article [http://www.cmswire.com/cms/enterprise-cms/surety-releases-absoluteproof-for-sharepoint-002471.php Surety Releases AbsoluteProof for SharePoint]
+* [http://www.avepoint.com/assets/pdf/Social_Security_Administration_Case_Study.pdf Sharepoint case study (marketing doc)]
+
+== Dangerous MOSS APIs ==
+
+Map the security implications of MOSS APIs, for example:
+*  which APIs (if badly used)are vulnerable to: XSS, CSRF, SQL Injection
+* configuration settings that have security implications
+
+
+== SharePoint Hacking ==
+==== SharePoint Hacking Tools ====
+* [http://www.stachliu.com/resources/tools/sharepoint-hacking-diggity-project/ Stach & Liu's SharePoint Hacking Diggity Project] - SharePoint hacking tools project page.  Currently includes such hacking tools as:
+** [http://www.stachliu.com/resources/tools/sharepoint-hacking-diggity-project/#SharePoint%20-%20GoogleDiggity%20Dictionary%20File SharePoint – GoogleDiggity Dictionary File] - New GoogleDiggity input dictionary file containing 118 queries that allow users to uncover SharePoint specific vulnerabilities exposed via the Google search engine. This dictionary helps assessors locate exposures of common SharePoint administrative pages, web services, and site galleries that an organization typically would not want to be made available to the public, let alone indexed by Google.
+** [http://www.stachliu.com/resources/tools/sharepoint-hacking-diggity-project/#SharePointURLBrute SharePointURLBrute] - SharePointURLBrute is a new SharePoint hacking utility developed to help assessors quickly test user access to 99 common SharePoint administrative pages (e.g. “Add Users” page -> /_layouts/aclinv.aspx) by automating forceful browsing attacks.
+** [http://www.stachliu.com/resources/tools/sharepoint-hacking-diggity-project/#SharePoint%20UserDispEnum SharePoint UserDispEnum] - UserDispEnum is a new SharePoint user enumeration tool that exploits insecure access controls to the /_layouts/UserDisp.aspx?ID=1 page. This utility cycles through the integer ID values from 1 onward to identify valid users, account names, and other related profile information that can be easily extracted from the SharePoint user profiles.
+** [http://www.stachliu.com/resources/tools/sharepoint-hacking-diggity-project/#SharePoint%20DLP%20Tools SharePoint DLP Tools] - COMING SOON – Stach & Liu data loss prevention (DLP) tools for Microsoft SharePoint. SharePoint DLP Tools utilize administrative web services to help automate the searching of SharePoint files and lists for SSNs, credit card numbers, passwords, and other common information disclosures.
+
+
+==== SharePoint Hacking Presentations ====
+* [http://www.youtube.com/watch?v=DYudvh9cfZM hak5 - Episode 407 - Toorcon 2008: Robin Wood, Dan Griffin] - see 11:10 minute mark in video for interview with Dan Griffin about SharePoint Hacking.
+
+
+== WebParts Security ==
+
+* Security ratings & mappings of MOSS Deployed Web Parts
+* Security ratings & mappings of 3rd Part Web Parts

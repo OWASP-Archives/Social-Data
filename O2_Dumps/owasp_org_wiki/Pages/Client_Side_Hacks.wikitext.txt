@@ -1,0 +1,9 @@
+Client-side threats can be devastating to any organization. These attacks include browser-specific vulnerabilities, different kinds of cross-side scripting (XSS) attacks, persistent and non-persistent DOM-based attacks, and cross site request forgeries (CSRF).
+
+This talk will cover all the above attack methodologies and more(Providing working Demos). A brand new assault technique called ClickJacking will be highlighted, which was discovered by Jeremiah Grossman and Robert 'Rsnake' Hansen.
+
+ClickJacking is especially lethal when used with XSS attacks, and we will demonstrate two ways in which this method can be used. Discussion will alsi include how clickjacking can be used in Worm style attacks, and discuss the popular Twitter attack.
+
+Demos on how clickjacking was used to exploit an adobe vulnerability, and gain access to users web cams.
+
+Finally, discussion on how to defend yourself as vigilantly as possible against all these attacks and how popular scanners do (or do not) pick up these specific kinds of threats in websites.

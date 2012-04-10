@@ -1,0 +1,55 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Failure to follow guideline/specification]]
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+==Description==
+
+This class implements a clone() method but does not implement Cloneable.
+
+It appears that the programmer intended for this class to implement the Cloneable interface because it implements a method named clone(). However, the class does not implement the Cloneable interface and the clone() method will not behave correctly.
+
+
+==Risk Factors==
+TBD
+
+==Examples==
+
+Calling clone() for this class will result in a CloneNotSupportedException.
+
+<pre>
+	public class Kibitzer {
+	  public Object clone() throws CloneNotSupportedException {
+		... 
+	  }
+	}
+</pre>
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD

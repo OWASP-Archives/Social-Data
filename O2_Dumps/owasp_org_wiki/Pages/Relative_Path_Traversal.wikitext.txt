@@ -1,0 +1,68 @@
+{{Template:Attack}}
+
+<br>
+[[Category:OWASP ASDR Project]]
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+==Overview==
+This attack is a variant of Path Traversal and can be exploited when the application accepts the use of relative traversal sequences such as "../".
+
+==Related Security Activities==
+
+===How to Avoid Path Traversal Vulnerabilities===
+
+See the [[:Category:OWASP Guide Project|OWASP Guide]] article on how to [[File_System#Path_traversal|Avoid Path Traversal ]] Vulnerabilities.
+
+
+===How to Test for Path Traversal  Vulnerabilities===
+
+See the [[:Category:OWASP Testing Project|OWASP Testing Guide]] article on how to [[Testing for Path Traversal   (OWASP-AZ-001) |Test for Path Traversal ]] Vulnerabilities.
+
+
+More detailed information can be found on [[Path_Traversal]]
+
+== Description==
+TBD
+
+==Examples ==
+
+The following URLs are vulnerable to this attack:
+
+ <nowiki> http://some_site.com.br/get-files.jsp?file=report.pdf  </nowiki>
+ <nowiki> http://some_site.com.br/get-page.php?home=aaa.html  </nowiki>
+ <nowiki> http://some_site.com.br/some-page.asp?page=index.html  </nowiki>
+
+A simple way to execute this attack is like this:
+
+ <nowiki> http://some_site.com.br/get-files?file=../../../../some dir/some file  </nowiki>
+ <nowiki> http://some_site.com.br/../../../../etc/shadow  </nowiki>
+ <nowiki> http://some_site.com.br/get-files?file=../../../../etc/passwd </nowiki>
+
+==Risk Factors==
+TBD
+
+
+==Related [[Threat Agents]]==
+* [[: Category: Information Disclosure]]
+[[Category:FIXME|this link doesn't exist, add the category or change this link?]]
+
+==Related [[Attacks]]==
+* [[Path Manipulation]]
+* [[ Path Traversal]]
+* [[ Resource Injection]]
+
+==Related [[Vulnerabilities]]==
+* [[:Category:Input Validation Vulnerability]]
+
+==Related [[Controls]]==
+* [[:Category:Input Validation]]
+
+==References==
+TBD
+
+[[Category: Resource Manipulation]]
+
+[[Category: Attack]]

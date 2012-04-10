@@ -1,0 +1,50 @@
+[[OWASP Code Review Guide Table of Contents]]__TOC__
+
+'''Flash player assigns SWF files to sandboxes based on their origin'''
+
+'''Internet SWF files sandboxed based on origin domains'''
+'''Domain:'''
+- Any two SWF files can interact together within the same sandbox. 
+- Explicit permission is required to interact with objects in other sandboxes.
+
+'''Local'''
+
+'''local-with-filesystem (default)'''
+- The file system can read from local files only
+
+'''local-with-networking'''
+- Interact with other local-with-networking SWF files
+
+'''local-trusted'''
+- Can read from Local files, communicate to any server and access any SWF file.
+
+
+“The sandbox defines a limited space in which a Macromedia Flash movie
+running within the Macromedia Flash Player is allowed to operate. Its primary
+purpose is to ensure the integrity and security of the client’s machine, and as
+well as security of any Macromedia Flash movies running in the player.”
+
+
+Cross Domain Permissions:
+A Macromedia Flash movie playing on a web browser is not allowed access that is outside the exact domain from which is originated.
+This is defined in the cross-domain policy file crossdomain.xml.
+Policy files are used by Flash to permit Flash to load data from servers other than its native domain.
+If a SWF file wishes to communicate with remote servers it must be granted explicit permission:
+
+ <cross-domain-policy> 
+     <allow-access-from domain="example.domain.com"/>
+ </cross-domain-policy>
+
+The API call System.security.loadPolicyFile(url) loads a cross domain policy from a specified URL which may be different from the crossdomain.xml file
+
+
+'''Accessing JavaScript:'''
+
+A parameter called allowScriptAccess governs if the Flash object has access to external scripts
+It can have three possible values: '''never, same domain, always'''
+
+  <object id="flash007"> 
+    <param name=movie value="bigmovie.swf">
+    <embed AllowScriptAccess="'''always'''" name='flash007' src="bigmovie.swf"  type="application/x-shockwave-flash"> 
+   </embed>
+  </object>

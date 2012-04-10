@@ -1,0 +1,70 @@
+{{Template:Control}}
+
+Often, we need to pass information from one page to another.  The data can be passed with POSTs or GETs from a <Form>, or as key/value pairs in a URL that the user clicks on.
+
+This section talks about how to protect the data that we are transferring from tampering.  A few methods can be implemented. 
+
+The most straight forward method is to check the input for validity.  If we expect the input data to contain only numbers, then we can check the input to verify that it contains only numeric data.  While these validity checks are good for preventing unexpected program behavior, (i.e. a database query fails because it was expecting the id variable to be an integer) it does not protect against tampering.
+
+==Hashing sensitive data==
+
+Hashing algorithims provide a simple way to detect tampering.  For instance, when passing an id variable from page to page as a user is browsing, the program may expect that this id stays constant.  By computing and sending a hash of the data, each successive page can verify, with a high certanty, that the value of the id variable has not been altered:
+
+<pre>
+$secret = 'MySecretWords';
+$id = 12345;
+$hash = md5($secret . $id);
+</pre>
+
+After hashing the id value with the secret, we get a hash value.  This will be passed, along with the id value, to the next page for processing:
+
+''http://www.example.com/view_profile?id=12345&hash=d6b0ab7f1c8ab8f514db9a6d85de160a ''
+
+In view_profile.php, we can detect tampering with the id value by re-hashing and comparing to the hash value from the previous page:
+
+<pre>
+$secret = 'MySecretWords';
+$id = $_REQUEST["id"]; //in this case the value is 12345
+if (md5($secret . $id) == $_REQUEST["hash"]) {
+  //no tampering detected, proceed with other processing
+} else {
+  //tampering of data detected
+}
+</pre>
+
+There is a disadvantage to using the hashing method discussed above; the value of id is visible to potentially malicious users.  However, as long as the secret and the process for generating the hash (in this case, md5 is the hash algorithm, and the value hashed is the concatenation of $secret and $id) are unknown, malicious users will not be able to tamper with the id variable passed to the page.
+
+==Encrypting sensitive data==
+
+Next, we will discuss how we can use symmetric keys to protect sensitive data and at the same time do not reveal the actual data value.
+
+The concept is very similar to hashing the value, but now instead we will use a symmetric key to encrypt and decrypt the data.
+
+
+<pre>
+$key = “This encrypting key should be long and complex.”;
+$encrypted_data = mcrypt_ecb (MCRYPT_3DES, $key, “12345”, MCRYPT_ENCRYPT);  //encrypt using triple DES
+$id = urlencode(base64_encode($encrypted_data));
+</pre>
+
+The id will be base64 encoded and then urlencoded into ''Doj2VqhSe4k%3D ''so we will have the url as
+
+''http://www.example.com/view_profile?id=Doj2VqhSe4k%3D ''
+
+(For perl programmer, you can use Digest::MD5 and Crypt::CBC to archive the same output)
+
+To decrypt the information we received we will do the following:
+
+<pre>
+$id = $_REQUEST["id"]);
+$url_id = base64_decode(urldecode($id));
+
+$decrypted_data = mcrypt_decrypt(MCRYPT_BLOWFISH,$key,$url_id, MCRYPT_MODE_CBC, $iv);
+</pre>
+
+The idea here is to url decode the input id value and follow by base64_decode it and then use back the same algorithm to get the actual data, which is ''12345'' in this case. 
+
+This same idea can be used on session id to make sure the session id is not tampered with. One caveat to take note is encrypting and decrypting all data send and receive will possibly consume lot of cpu power, so make sure your system is properly size up.
+
+[[Category:Cryptographic Control]]
+[[Category: Control]]

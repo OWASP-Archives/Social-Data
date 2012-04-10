@@ -1,0 +1,66 @@
+= Idea  =
+
+Idea is to have software enumerated via favicon.ico. How to do that? Take hash (in our case MD5) of favicon.ico and compare it against the known database. This article is description of building the MD5 database of most popular/frequent favicon.ico. 
+
+Vlatko Kosturjak wrote .nse script for nmap to perform enumeration of software via favicon.ico. He has noticed that there is very small database of existing MD5 fingerprints of favicon.ico and also most of the current md5 fingerprinting implementations have only web server enumeration, so he has added also some popular CMS, wikis, etc. He added some of them manually, but it's boring process. Fyodor suggested that we should do internet wide scan (nmap -iR 0) and gather the statistics and MD5 fingerprints of most usual favicons.ico and document them. 
+
+= Problem  =
+
+So, we have started the adventure of getting the statistics of MD5 fingerprints of most usual favicons.ico. We have faced problems how to enumerate http(s) hosts on Internet. We recognized two types of http servers which I want to cover. First type is http servers on network devices and appliances and the second type is normal web servers with virtual hosts support. 
+
+First type is more or less straightforward to cover (with nmap -p80,443 -iR). But the second type is problematic. Because there is no straight way (ignore services like mynetworkneighborhood or live.msn.com, they only know what they crawled) of knowing all virtual hosts from the IP address you have (so you cannot do nmap -iR stuff). 
+
+One of the ideas was to extract all links from wikipedia. From our viewpoint, Wikipedia is not good source. They started to remove http:// references from the usual articles and only top 5 (or some other number) links they put on External references in articles. Vlatko did small research and I found out that the best source for this would be Open Directory Project (DMOZ). It's interesting that DMOZ have XML files of their whole directory located available for download. They even have nice format to do so (XML). 
+
+= Solution  =
+
+Note that we did not want to do only DMOZ gathering or only nmap -iR gathering. With only DMOZ favicon gathering, we would lose favicons from network and appliance as usually they are not entered into DMOZ. And with only nmap -iR gathering, we would lose virtual hosts as there is no easy way of enumerating of all virtual hosts behind specific IP. So, we're doing it both because we want to cover all possible cases. 
+
+== Solution of gathering via nmap -iR  ==
+
+This solution gathers all favicons from port 80 as example. 
+
+Gather the data using modified version of favicon.nse: 
+<pre>nmap -v -sT -iR 0 -p80 -n -PN --script=http-favicon-get.nse -oN nmap-p80-ir-favicon </pre>
+Extract only MD5 and IP from nmap output: 
+<pre>grep -i "http-favicon.*Unknown" nmap-p80-ir-favicon | awk -F':' '{print $4,",",$2; } &gt; content-p80.md5.url 
+</pre>
+Display sorted list of most frequent MD5 and last IP: 
+<pre>./get-favicon-md5-count.pl &lt; content-p80.md5.url | sort -r -n | less </pre>
+...and that's it. But if you're brave enough, you can do it all at once (note that -iR number then must be specified): 
+<pre>nmap -v -sT -iR 100000 -p80 -n -PN --script=http-favicon-get.nse | grep -i "http-favicon.*Unknown" | awk -F':' '{print $4,",",$ 2; } | ./get-favicon-md5-count.pl | sort -r -n | less 
+</pre> 
+== Solution of gathering via DMOZ  ==
+
+Grab the XML file from DMOZ, extract URLs, make them unique and store them in content.url (URL per line): 
+<pre>wget -o /dev/null -O - http://rdf.dmoz.org/rdf/content.rdf.u8.gz | gunzip -dc | ./dmoz-extract-urls.pl -b -f - | sort | uniq &gt; content.url </pre>
+For each URL get MD5 of favicon (if found) and write it to content.md5.url: 
+<pre>./get-favicon-md5.rb &lt; content.url &gt; content.md5.url 
+</pre>
+Note that perl equivalent of this script did not work due to broken threads in Perl(even in Perl 5.10) and I need threads for this badly (performance!). 
+
+Display sorted list of most frequent MD5 and last URL: 
+<pre>./get-favicon-md5-count.pl &lt; content.md5.url | sort -r -n | less </pre>
+...and that's it. But if you're brave enough, you can do it all at once: 
+<pre>wget -o /dev/null -O - http://rdf.dmoz.org/rdf/content.rdf.u8.gz | gunzip -dc | ./dmoz-extract-urls.pl -b -f - | sort | uniq | ./get-favicon-md5.rb | ./get-favicon-md5-count.pl | sort -r -n | less </pre> 
+
+== Notes  ==
+
+We have limited gathering scripts to fetch only favicon.ico from server root (i.e. /favicon.ico). So scripts will not parse HTML directives in order to find location of favicon. Reason is: simplicity. 
+
+= Results =
+
+[[OWASP_favicon_database]] -favicon database in wiki format, '''feel free to contribute'''
+
+= Download  =
+
+All scripts are available from GitHub:
+
+<pre>git clone http://github.com/kost/owasp-favicon-crawl.git</pre>
+
+= Related  =
+
+Original scripts and files can be found at [http://kost.com.hr/favicon.php http://kost.com.hr/favicon.php].
+
+
+[[Category:OWASP_Favicon_Database_Project]]

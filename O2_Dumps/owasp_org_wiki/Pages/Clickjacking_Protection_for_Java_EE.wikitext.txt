@@ -1,0 +1,161 @@
+==Status==
+
+Released Feb 6, 2009
+
+==How to Stop ClickJacking==
+
+This article shows how to prevent the IE8+ users of your Java EE application from getting clickjacked.
+
+[[Clickjacking]] is an attack that tricks users by showing them an innocuous page but including the real controls from sensitive pages. These controls are disguised through the use of background frames that mask off everything except the control, so that the user can't tell that they are actually clicking on a sensitive function in some other website.
+
+How can web applications protect their users from this attack?  The typical defense to clickjacking is to prevent your pages from being framed. The typical approach to this is to include a "framebreaker" script in every page that ensures that the content is not framed. Here's an example of such a script.
+
+<pre>
+&lt;script>if (top != self) top.location=location</script>
+</pre>
+
+ * NOTE: this framebreaker is pretty simple. A better framebreaker will hide the entire page
+ and only redisplay if page is not being framed. An even better framebreaker than that will
+ not cause any change in the page-load experience. More to come soon!
+
+However, there's an alternative approach that may be simpler to implement. Microsoft has now included a [http://blogs.msdn.com/ie/archive/2009/01/27/ie8-security-part-vii-clickjacking-defenses.aspx defense] in IE8 that allows developers to specify that pages should not be framed. They use a new (nonstandard) X-FRAME-OPTIONS header to mark responses that shouldn't be framed. There are two options with X-FRAME-OPTIONS. The first is DENY, which prevents everyone from framing the content. The other option is SAMEORIGIN, which only allows the current site to frame the content. Currently this works in IE8, Firefox, Safari, Opera and Chrome.
+
+
+==Approach==
+
+We'd like to add the X-FRAME-OPTIONS header to any pages that shouldn't be framed. So we could go into every servlet and JSP and add one of the two following lines of code:
+
+  // to prevent all framing of this content
+  response.addHeader( "X-FRAME-OPTIONS", "DENY" );
+  
+  // to allow framing of this content only by this site
+  response.addHeader( "X-FRAME-OPTIONS", "SAMEORIGIN" );
+
+However, this seems a bit intrusive and a lot of work.  In this article, we'll implement a simple JavaEE filter to add the X-FRAME-OPTIONS header to some or all parts of your application.
+
+==Download==
+
+The source code and the compiled class file are in a single zip file.
+
+'''[https://www.owasp.org/images/1/15/ClickjackFilter.zip DOWNLOAD]'''
+
+==Setup==
+
+The first step is to add the filter to our application. All we have to do is put the ClickjackFilter class on our application's classpath, probably by putting it in the classes folder in WEB-INF. The class file should be in a folder structure that matches the package (org -> owasp -> filters -> ClickjackFilter).  You can extract the class file from the zip file.
+
+Then we just have to add the following filter definition and mapping to our web.xml. You should paste this in right above your servlet definitions. You should set up the mapping so it applies to '''any''' page that shouldn't be framed. Using /* will apply it to everything.
+
+<pre>
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4"
+    xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+    <display-name>OWASP ClickjackFilter</display-name>
+    <filter>
+        <filter-name>ClickjackFilterDeny</filter-name>
+        <filter-class>org.owasp.filters.ClickjackFilter</filter-class>
+        <init-param>
+            <param-name>mode</param-name>
+            <param-value>DENY</param-value>
+        </init-param>
+    </filter>
+    
+    <filter>
+        <filter-name>ClickjackFilterSameOrigin</filter-name>
+        <filter-class>org.owasp.filters.ClickjackFilter</filter-class>
+        <init-param>
+            <param-name>mode</param-name>
+            <param-value>SAMEORIGIN</param-value>
+        </init-param>
+    </filter>
+    
+    <!--  use the Deny version to prevent anyone, including yourself, from framing the page -->
+    <filter-mapping> 
+        <filter-name>ClickjackFilterDeny</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+    <!-- use the SameOrigin version to allow your application to frame, but nobody else
+    <filter-mapping> 
+        <filter-name>ClickjackFilterSameOrigin</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    -->
+    
+</web-app>
+</pre>
+
+
+==Source Code==
+
+<pre>
+/**
+ *  Software published by the Open Web Application Security Project (http://www.owasp.org)
+ *  This software is licensed under the new BSD license.
+ *
+ * @author     Jeff Williams <a href="http://www.aspectsecurity.com">Aspect Security</a>
+ * @created    February 6, 2009
+ */
+
+package org.owasp.filters;
+import java.io.IOException;
+
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletResponse;
+
+public class ClickjackFilter implements Filter 
+{
+
+    private String mode = "DENY";
+    	
+    /**
+     * Add X-FRAME-OPTIONS response header to tell IE8 (and any other browsers who
+     * decide to implement) not to display this content in a frame. For details, please
+     * refer to http://blogs.msdn.com/sdl/archive/2009/02/05/clickjacking-defense-in-ie8.aspx.
+     */
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+        HttpServletResponse res = (HttpServletResponse)response;
+        chain.doFilter(request, response);
+        res.addHeader("X-FRAME-OPTIONS", mode );			
+    }
+    
+    public void destroy() {
+    }
+    
+    public void init(FilterConfig filterConfig) {
+        String configMode = filterConfig.getInitParameter("mode");
+        if ( configMode != null ) {
+            mode = configMode;
+        }
+    }
+    
+}
+
+</pre>
+
+==Compile==
+
+There are not many dependencies here, just the standard Java EE environment. You can compile with:
+
+  javac -classpath servlet-api.jar -d . *.java
+
+Then just copy the 'org' folder that gets created to the WEB-INF/classes folder in your application. You could also jar it up and put it in the lib directory.
+
+==Testing==
+
+First, you'll need IE8 RC1+. I downloaded a free VHD of IE8 beta from [http://www.microsoft.com/downloads/details.aspx?FamilyId=21EABB90-958F-4B64-B5F1-73D0A413C8EF&displaylang=en Microsoft] and then did a Windows Update to IE8 RC1. You'll need to install the free [http://www.microsoft.com/windows/products/winfamily/virtualpc/default.mspx VirtualPC] to run this.
+
+There's a very simple test case in the WebContent directory of the zip file. It has one page with the text "unframeable content" and another page that opens the first page in a frame. When you set the filter to DENY in web.xml, the page shows an error message that the content cannot be viewed in a frame.  When you set it to SAMEORIGIN, the content is allowed.
+
+You may want to check out the [http://evil.hackademix.net/frameopts/ demo] page that Giorgio Maone put together.
+
+[[Category:How To]]
+[[Category:OWASP Java Project]]
+[[Category:Countermeasure]]
+[[Category: Control]]

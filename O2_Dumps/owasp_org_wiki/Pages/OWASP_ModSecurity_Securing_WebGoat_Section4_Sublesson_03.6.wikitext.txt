@@ -1,0 +1,83 @@
+3. AJAX Security -> 3.6 JSON Injection
+
+=== Lesson overview ===
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution === 
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information. 
+
+=== Strategy ===
+
+This WebGoat lesson, a schedule and airfare for a roundtrip flight from Boston (BOS) to Seattle (SEA) is requested; the AJAX HTTP response is intercepted, the fare of the higher priced flight in the JSON array is lowered from $600 to $100, and the flight is bought at the lower price.
+
+=== Implementation === 
+
+The ModSecurity solution will be to persist the actual prices coming from the AJAX request and compare the price of the flight chosen by the user; if they are not the same, the request is blocked.
+
+A snippet of the source code will look like:
+<pre>
+"flights": [
+{"stops": "0", "transit" : "N/A", "price": "$600"},
+{"stops": "2", "transit" : "Newark,Chicago", "price": "$300"} 
+]
+</pre>
+
+Start the lesson with an empty 'lesson03-6.data' file; once populated it will have the format of:
+<pre>
+Entry{
+  radioindex = 0,
+  price = 600
+}
+
+Entry{
+  radioindex = 1,
+  price = 300
+}
+</pre>
+
+First, we start with the response body because we persist the flights here.
+
+The phase 4 response portion of the configuration file 'rulefile_03-6_json-injection.conf' is:
+<pre>
+   SecRuleScript "/etc/modsecurity/data/flights-response_03-6.lua" \ 
+"phase:4,t:none,log,auditlog,allow,msg:'Luascript: AJAX Security -> \
+3.6 JSON Injection: in RESPONSE; writing flight prices to file'"
+</pre>
+
+Refer to the Lua script 'flights-response_03-6.lua'. The steps are:
+* read the response body into a buffer
+* extract the information from each flight from the buffer (array index and price) and write to the data file 
+
+After the price is manipulated and when the purchase is made, the POST parameters are:
+<pre>
+travelFrom=BOS&travelTo=SEA&radio0=on&SUBMIT=Submit&price2Submit=%24100
+</pre>
+
+In this example, zero from 'radio0' has to be extracted to get the correct index in the array; then obtain the price from 'price2Submit'.
+
+The phase 2 request portion of the configuration file 'rulefile_03-6_json-injection.conf' is:
+<pre>
+  SecRule ARGS:menu "!@eq 400" "phase:2,t:none,skip:4"
+  SecRule &ARGS_POST:SUBMIT "@eq 0" "nolog,skip:3"
+  SecRule &ARGS_POST:price2Submit "@eq 0" "nolog,skip:2"
+
+  # action is triggered if script returns non-nil value
+  SecRuleScript "/etc/modsecurity/data/flights-request_03-6.lua" \ 
+"phase:2,t:none,log,auditlog,deny,severity:3,msg:'Luascript: AJAX Security \ 
+-> 3.6 JSON Injection: An illegal attempt was made to alter the flight price',\ 
+tag:'INJECTION_ATTACK',redirect:/_error_pages_/lesson03-6.html"
+  SecAction "phase:2,allow:request,t:none,log,auditlog,msg:'Luascript: AJAX Security \ 
+-> 3.6 JSON Injection: no illegal attempts made to alter the flight price'"
+</pre>
+
+Refer to the Lua script 'flights-request_03-6.lua'. The steps are:
+* retrieve the POST parameters
+* loop through each argument; extract the radio parameter index (e.g. zero from 'radio0') that is on plus the price parameter value
+* loop through the data file until arriving at the correct index
+* compare the prices and return an error message if they are not equal
+
+=== Comments ===
+
+* This lessons shows how to use a 'do' loop in Lua and retrieve POST parameter names and values

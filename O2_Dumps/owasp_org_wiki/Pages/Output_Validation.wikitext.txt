@@ -1,0 +1,32 @@
+{{Template:Stub}}
+
+{{Template:Control}}
+
+==Description==
+
+Output validation refers to the process of validating the output of a process before it is sent to some recepient. For example, if you search your output for credit card numbers and replace them with asterisks (*), you have validated the output before sending it.  You might also validate the output for common attacks, such as [[Cross-site Scripting (XSS)]] and [[SQL Injection]] before sending it.
+
+NOTE: See [[HTML Entity Encoding]] which is a sort of output validation.
+
+==Examples ==
+
+==Related Threats==
+
+==Related Attacks==
+* [[SQL Injection]]
+* [[Code Injection]]
+* [[XPATH Injection]]
+* [[Interpreter Injection]]
+* [[Comment Injection Attack]]
+* [[Argument Injection or Modification]]
+* [[Cross-site Scripting (XSS)]]
+* [[Cross Site History Manipulation (XSHM)]]
+* [[Regular expression Denial of Service - ReDoS]]
+* [[Cross Site Tracing]]
+
+==Related Vulnerabilities==
+
+==Related Countermeasures==
+
+
+[[Category: Control]]

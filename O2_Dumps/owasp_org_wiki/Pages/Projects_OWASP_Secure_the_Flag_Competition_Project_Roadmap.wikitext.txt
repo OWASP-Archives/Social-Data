@@ -1,0 +1,9 @@
+* Jan 1st 2011 - Establish STF Scenario Development Team
+* Jan 15th 2011 - Define Web Server Requirements (languages, web-servers, app engines, pre-installed libraries, etc)
+* Feb 1st 2011 - Identify server solution (assume cloud, could be local VMs)
+* Feb 28th 2011 - Develop build scripts (include zeroize script, if DB struct is modified, must be able to zeroize)
+* March 31st 2011 - Develop Scenario
+* March 15th 2011 - Develop attacker point system
+* April 1st 2011 - Develop Rule System (be sure to include VM snapshots rqd)
+* May 1st 2011 - Develop Pitch Slides
+* May 1st 2011 - Develop Slick Sheet

@@ -1,0 +1,49 @@
+Last revision (mm/dd/yy): '''02/19/2012'''
+<pre style="color:#088A08">This type of article aims to provide to development team a easy/quick way 
+to perform automated audit tests against their web application projects over implementation phase.</pre>
+
+== Description ==
+
+This page have to objective to show a WAPITI sample command line to automate audit of a web application. 
+
+WAPITI is a free and open source tools to audit the security of your web applications ([http://www.ict-romulus.eu/web/wapiti/ WAPITI homepage]).
+
+<pre style="color:red">
+The tools seems to be not updated since 2009 (according to last release and last SVN commit) but it can be used with others 
+automated audit tools in order to have differents feedback on audited application security level.
+</pre>
+
+''This command line do not replace a manual audit but can be useful to perform a first validation''.
+
+== Command line ==
+
+<pre>python wapiti.py http://mysite.com -n 10 -b folder -u -v 1 -f html -o /tmp/scan_report</pre>
+
+'''Options used:'''
+* -n: Define a limit of urls to read with the same pattern (prevent endless loops), here limit to 10.
+* -b: Set the scope of the scan, here we analyse all the links to the pages which are in the same domain as the URL passed.
+* -u: Use color to highlight vulnerables parameters in output.
+* -v: Define verbosity level, here we print each url.
+* -f: Define report type, here we choose HTML format.
+* -o: Define report destination, in our case it must be a directory because we choose HTML format.
+
+'''Attack modules used by WAPITI:'''
+* ''backup'': This module search backup of scripts on the server.
+* ''blindsql'': Time-based blind sql scanner.
+* ''crlf'': Search for CR/LF injection in HTTP headers.
+* ''exec'': Module used to detect command execution vulnerabilities.
+* ''file'': Search for include()/fread() and other file handling vulns.
+* ''htaccess'': Try to bypass weak htaccess configurations.
+* ''nikto'': Use a Nikto database to search for potentially dangerous files.
+* ''permanentxss'': Look for permanent XSS.
+* ''sql'': Standard error-based SQL injection scanner.
+* ''xss'': Module for XSS detection.
+
+== Report ==
+
+A sample HTML report is available [http://www.ict-romulus.eu/web/wapiti/wiki/-/wiki/Main/Wapiti%20HTML%20Report here].
+
+[[Category:Code Snippet]]
+[[Category:Automated Audit]]
+[[Category:Externally Linked Page]]
+[[Category:Python]]

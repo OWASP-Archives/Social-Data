@@ -1,0 +1,273 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+An integer overflow condition exists when an integer, which has not been properly sanity checked, is used in the determination of an offset or size for memory allocation, copying, concatenation, or similarly. If the integer in question is incremented past the maximum possible value, it may wrap to become a very small, or negative number, therefore providing a very incorrect value.
+
+'''Consequences'''
+
+* Availability: Integer overflows generally lead to undefined behavior and therefore crashes. In the case of overflows involving loop index variables, the likelihood of infinite loops is also high.
+* Integrity: If the value in question is important to data (as opposed to flow), simple data corruption has occurred. Also, if the integer overflow has resulted in a buffer overflow condition, data corruption will most likely take place.
+* Access control (instruction processing): Integer overflows can sometimes trigger buffer overflows which can be used to execute arbitrary code. This is usually outside the scope of a program's implicit security policy.
+
+'''Exposure period'''
+
+* Requirements specification: The choice could be made to use a language that is not susceptible to these issues.
+* Design: Mitigating technologies such as safe string libraries and container abstractions could be introduced. (This will only prevent the transition from integer overflow to buffer overflow, and only in some cases.)
+* Implementation: Many logic errors can lead to this condition. It can be exacerbated by lack of or misuse of mitigating technologies.
+
+'''Platform'''
+
+* Languages: C, C++, Fortran, Assembly
+* Operating platforms: All
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood of exploit'''
+
+Medium
+
+Integer overflows are for the most part only problematic in that they lead to issues of availability. Common instances of this can be found when primitives subject to overflow are used as a loop index variable.
+
+In some situations, however, it is possible that an integer overflow may lead to an exploitable buffer overflow condition. In these circumstances, it may be possible for the attacker to control the size of the buffer as well as the execution of the program. 
+
+Recently, a number of integer overflow-based, buffer-overflow conditions have surfaced in prominent software packages. Due to this fact, the relatively difficult to exploit condition is now more well known and therefore more likely to be attacked. The best strategy for mitigation includes: a multi-level strategy including the strict definition of proper behavior (to restrict scale, and therefore prevent integer overflows long before they occur); frequent sanity checks; preferably at the object level; and standard buffer overflow mitigation techniques.
+
+Not accounting for integer overflow can result in logic errors or buffer overflow.
+
+Integer overflow errors occur when a program fails to account for the fact that an arithmetic operation can result in a quantity either greater than a data type's maximum value or less than its minimum value. These errors often cause problems in memory allocation functions, where user input intersects with an implicit conversion between signed and unsigned values. If an attacker can cause the program to under-allocate memory or interpret a signed value as an unsigned value in a memory operation, the program may be vulnerable to a buffer overflow.
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+===Example 1===
+
+Integer overflows can be complicated and difficult to detect. The following example is an attempt to show how an integer overflow may lead to undefined looping behavior:
+
+<pre>
+short int bytesRec = 0;
+char buf[SOMEBIGNUM];
+
+while(bytesRec < MAXGET) {
+  bytesRec += getFromInput(buf+bytesRec);
+}
+</pre>
+
+In the above case, it is entirely possible that bytesRec may overflow, continuously creating a lower number than MAXGET and also overwriting the first MAXGET-1 bytes of buf.
+
+===Example 2===
+
+The following code excerpt from OpenSSH 3.3 demonstrates a classic case of integer overflow:
+
+<pre>
+	nresp = packet_get_int();
+	if (nresp > 0) {
+	 response = xmalloc(nresp*sizeof(char*));
+	 for (i = 0; i < nresp; i++)
+	  response[i] = packet_get_string(NULL);
+	}
+</pre>
+
+If nresp has the value 1073741824 and sizeof(char*) has its typical value of 4, then the result of the operation nresp*sizeof(char*) overflows, and the argument to xmalloc() will be 0. Most malloc() implementations will happily allocate a 0-byte buffer, causing the subsequent loop iterations to overflow the heap buffer response.
+
+===Example 3===
+
+This example processes user input comprised of a series of variable-length structures. The first 2 bytes of input dictate the size of the structure to be processed.
+
+<pre>
+	 char* processNext(char* strm) {
+	 char buf[512];
+	 short len = *(short*) strm;
+	 strm += sizeof(len);
+	 if (len <= 512) {
+	  memcpy(buf, strm, len);
+	  process(buf);
+	  return strm + len;
+	 } else {
+	  return -1;
+	 }
+	}
+</pre>
+
+The programmer has set an upper bound on the structure size: if it is larger than 512, the input will not be processed. The problem is that len is a signed integer, so the check against the maximum structure length is done with signed integers, but len is converted to an unsigned integer for the call to memcpy(). If len is negative, then it will appear that the structure has an appropriate size (the if branch will be taken), but the amount of memory copied by memcpy() will be quite large, and the attacker will be able to overflow the stack with data in strm.
+
+===Example 4 (addition)===
+ 
+<pre>
+rezos@bezel ~/labs/integer $ cat add.c
+#include <stdio.h>
+#include <limits.h>
+
+int main(void)
+{
+ int a;
+
+//  a=2147483647;
+ a=INT_MAX;
+
+ printf("int a (INT_MAX) = %d (0x%x), int a (INT_MAX) + 1 = %d (0x%x)\n", a,a,a+1,a+1);
+
+ return 0;
+}
+
+rezos@bezel ~/labs/integer $ ./add
+int a (INT_MAX) = 2147483647 (0x7fffffff), int a (INT_MAX) + 1 = -2147483648 (0x80000000)
+</pre>
+By adding 1 to the biggest possible signed (+ or -) integer value we overwrite the sign bit.
+In short, by adding two positive numbers we get one big negative number.
+
+
+===Example 5 (multiplication)===
+<pre>
+rezos@bezel ~/labs/integer $ cat multiplication.c
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
+
+int main(int argc, char **argv)
+{
+ int i, j, z=0x00000001;
+ char *tab;
+
+ if(argc<2) _exit(1);
+
+ i=atoi(argv[1]);
+
+ if(i>0) {
+   tab = malloc(i * sizeof(char *));
+   if(tab == NULL) _exit(2);
+ }
+
+ for(j=0; j<i; j++)
+   tab[j]=z++;
+
+ for(j=0; j<i; j++)
+   printf("tab[j]=0x%x\n", tab[j]);
+
+ return 0;
+}
+
+rezos@bezel ~/labs/integer $ ./multiplication 1073741824
+Segmentation fault
+</pre>
+The program should write a "z" value into the array of pointers and then print it out.
+With a specially selected array size (number of its elements) it's possible to use an
+integer overflow error to overflow the array "tab".
+
+The example below explains why it happens.
+<pre>
+rezos@bezel ~/labs/integer $ cat multi.c
+#include <stdio.h>
+
+int main(void)
+{
+ printf ("1073741824 *4 = %d\n", 1073741824 * 4);
+ return 0;
+}
+</pre>
+In this program we multiply 1073741824 * 4 because  sizeof(char *) will return 4.
+<pre>
+rezos@bezel ~/labs/integer $ gcc -ggdb multi.c -o multi
+multi.c: In function 'main':
+multi.c:6: warning: integer overflow in expression
+</pre>
+The compiler warns us that the program contains an expression which causes an
+integer overflow. To make sure what the result of the multiplication will be:
+<pre>
+rezos@bezel ~/labs/integer $ ./multi
+1073741824 *4 = 0
+</pre>
+malloc(0) (in the main example) will allocate memory with size 0 correctly(poprawnie)/successfully(z powodzeniem),
+and that will allow for overwriting memory segments on the heap.
+
+Memory allocation with a negative value may cause allocation of very small or very big
+memory segments depending on the implementation of the *alloc() functions. Integer overflow
+errors may also lead to the situation where condition statements, which are supposed to check buffers'
+boundaries, are omitted.
+
+Integer overflow errors are not always a threat themselves. However they provide the
+possibility to overwrite or to read memory content beyond boudries of the buffers, for example
+during buffer indexing.
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Buffer Overflow]] (and related vulnerabilities): [[Integer overflow]] problems are often exploited only by creating buffer overflow conditions to take advantage of.
+
+==Related [[Controls]]==
+
+* Pre-design: Use a language or compiler that performs automatic bounds checking.
+* Design: Use of sanity checks and assertions at the object level. Ensure that all protocols are strictly defined, such that all out of bounds behavior can be identified simply.
+* Pre-design through Build: Canary style bounds checking, library changes which ensure the validity of chunk data, and other such fixes are possible but should not be relied upon.
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+Note: A reference to related [http://cwe.mitre.org/ CWE] or [http://capec.mitre.org/ CAPEC] article should be added when exists. Eg:
+
+* [http://cwe.mitre.org/data/definitions/79.html CWE 79].
+* http://www.link1.com
+* [http://www.link2.com Title for the link2]
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Range and Type Error Vulnerability]]
+[[Category:OWASP_CLASP_Project]]
+[[Category:Code Snippet]]
+[[Category:C]]
+[[Category:Implementation]]
+[[Category:Externally Linked Page]]

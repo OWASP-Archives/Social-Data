@@ -1,0 +1,97 @@
+= Main =
+
+<b>Welcome to the OWASP Java Encoder Project</b>
+
+<i>Contextual Output Encoding</i> is a computer programming technique necessary to stop [[https://www.owasp.org/index.php/Abridged_XSS_Prevention_Cheat_Sheet Cross Site Scripting]]. This project is a Java 1.5 simple-to-use drop-in high-performance encoder class with little baggage. 
+
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Project About</noinclude>
+
+| project_name = OWASP Java Encoder Project
+| project_info = '''Welcome to the OWASP Java Encoder Project'''
+| project_home_page = OWASP Java Encoder Project
+
+| project_description = 
+*This project is a simple-to-use drop-in encoder class with little baggage.
+*No third party libraries or configuration necessary.
+*This code was designed for high-availability/high-performance encoding functionality.
+*The key motivation for the separate project was:
+# Simple drop-in encoding functionality
+# Redesigned for performance
+# More complete API (uri and uri component encoding, etc) in some regards.
+*This is a Java 1.5 project.
+
+| project_license = [http://www.opensource.org/licenses/bsd-license.php New BSD License]
+
+| leader_name1 = Jeff Ichnowski
+| leader_email1 = jeff.ichnowski@gmail.com
+| leader_username1 = Jeff_Ichnowski
+
+| contributor_name1 = Jim Manico
+| contributor_email1 = jim.manico@owasp.org
+| contributor_username1 = Jmanico
+
+| pamphlet_link = 
+
+| presentation_link =
+
+| mailing_list_name = https://lists.owasp.org/mailman/listinfo/owasp-java-encoder-project
+
+| project_road_map = 
+
+| links_url1 = http://code.google.com/p/owasp-java-encoder/
+| links_name1 = http://code.google.com/p/owasp-java-encoder/
+
+| links_url2 = 
+| links_name2 = 
+
+| release_1 = http://code.google.com/p/owasp-java-encoder/
+| release_2 = 
+| release_3 =
+| release_4 =
+<!--- The line below is for GPC usage only. Please do not edit it --->
+| project_about_page = Projects/OWASP Java Encoder Project
+}}
+
+= Use the Java Encoder Project =
+
+The general API pattern to utilize the Java Encoder Project is
+<b>"Encode.forContextName(untrustedData)"</b>, where "ContextName" is the
+name of the target context and "untrustedData" in untrusted user input.
+
+== For example, to use in a JSP ==
+
+<b><input type="text" name="data" value="<%=
+Encode.forHtmlAttribute(dataValue) %>" /></b>
+
+<b><textarea name="text"><%= Encode.forHtmlContent(textValue) %>" /></b>
+
+Generally <b>Encode.forHtml(...)</b> is safe but slightly less efficient for
+the above two contexts (since it encodes more characters than
+necessary).
+
+== For JavaScript string data ==
+
+<b><button onclick="alert('<%= Encode.forJavaScriptAttribute(alertMsg)
+%>');">click me</button></b>
+
+<b>
+<script type="text/javascript">
+var msg = "<%= Encode.forJavaScriptBlock(message) %>";
+alert(msg);
+</script>
+</b>
+
+Again generally Encode.forJavaScript is safe for the above two
+context, but slightly less efficient since it encodes more characters.
+
+== Other Contexts ==
+
+Other contexts can be found in the org.owasp.Encode class methods,
+including CSS strings, CSS urls, XML contexts, URIs and URI
+components. 
+
+= Build the Java Encoder Project =
+
+<b>checkout and run "mvn package" (using maven 2.0 or 3.0)</b>
+
+__NOTOC__ <headertabs />

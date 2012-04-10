@@ -1,0 +1,580 @@
+=Introduction=
+{| cellpadding="2" style="border: 1px solid darkgray;"
+! width="800" |
+|- border="0" align="center"
+| [[File:Logo_latamtour.jpg]]
+|}
+
+
+===LATAM Tour Objective===
+
+The OWASP Latam Tour objective is to raise awareness about application security in the Latin America region, so that people and organizations can make informed decisions about true application security risks. Everyone is free to participate in OWASP and all of our materials are available under a free and open software license.
+
+We are proposing a chapters training driven model in which the courses are free for OWASP members and students, the contents are OWASP projects focused and the costs are supported by a mix of funding i.e. local chapter budget, external sponsorship, trainers sponsorship i.e. trip and/or accommodation paid by themselves and local chapter members’ sponsorship i.e. taking trainers in as guests.
+
+===SPECIAL OFFER===
+
+*As part of the OWASP Latam Tour, you could become an OWASP Member by ONLY paying 20 U$D (normal price is 50 U$D). Show your support and become an OWASP member today! Please ask your Local Chapter Leader for information on how to avail this special offer.
+
+===PRIZES===
+
+*There are going to be raffles among attendees for free tickets to OWASP AppSec Latam 2011 conference next October in Porto Alegre, special prize giveaways, t-shirts, pens and a great environment for networking with peers.
+
+===QUESTIONS===
+
+*If you have any questions about the Latam Tour, please send an email to [[User:Fabio.e.cerullo|Fabio Cerullo]] (fcerullo@owasp.org)
+
+<br>
+
+<div align="center">
+{| cellpadding="2" style="border: 1px solid darkgray;"
+! width="500" |
+|- border="0" align="center"
+| [[File:Logo_sponsors.jpg]]
+|}
+</div>
+
+=Buenos Aires (Argentina)=
+
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>OWASP Training ESP</noinclude>
+| Course_designation = [[Image:argentina_banner.png]]
+| Course_Overview_Goal 
+=&nbsp;
+*Aparte del OWASP Top 10, la mayoría de los [[:Category:OWASP_Project|Proyectos OWASP]] no son ampliamente utilizados en los ambientes corporativos. En la mayoría de los casos esto no es debido a una falta de calidad en los proyectos o la documentación disponible, sino mas bien por desconocer donde se ubicaran en un Ecosistema de Seguridad de Aplicaciones empresarial.
+
+* Este curso tiene como objetivo cambiar esta situación proporcionando una explicación sobre los proyectos OWASP mas maduros y listos para ser utilizados en el ambito empresarial. 
+
+*Todos los materiales de entrenamiento OWASP pueden ser obtenidos en la siguiente [http://code.google.com/p/owasp-training/downloads/list dirección].
+&nbsp;
+| Date = July, 19th 2011 - 18:30hs
+| Venue = Aula Magna - [http://www.udemm.edu.ar Universidad de la Marina Mercante (UdeMM)] ubicado en Av. Rivadavia 2258, Ciudad Autónoma de Buenos Aires, Capital Federal, Argentina.
+| Price = Free
+| Course_Registration_url = http://www.regonline.com/trainingdayargentina
+| Course_Registration_name = Curso OWASP (Registrese ahora!)
+| Modules = 
+
+{{Template:Training Module Row Break
+| Time = 18h20
+| Break_Reason = Inicio y Presentacion del evento
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 18h30 (45m)
+| Module_Name = OWASP Top 10 and Monster Mitigations
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_Project
+| Trainer = Cristian Borghello 
+| Presentation_Name = Presentación PPT
+| Presentation_Link =  https://www.owasp.org/images/4/42/Monster-Mitigation-Segu-Info.pdf
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 19h15 (30m)
+| Module_Name = OWASP Mantra - Security Framework
+| Module_Link = https://www.owasp.org/index.php/OWASP_Mantra_-_Security_Framework
+| Trainer = [[User:Maximiliano Soler|Maximiliano Soler]]
+| Presentation_Name = Presentación PPT
+| Presentation_Link = https://www.owasp.org/images/d/dc/OWASP-Mantra_BAires-Argentina.ppt
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 19h45 (45m)
+| Module_Name = OWASP ESAPI Swingset
+| Module_Link = https://www.owasp.org/index.php/ESAPI_Swingset
+| Trainer = [[User:Fabio.e.cerullo|Fabio Cerullo]] 
+| Presentation_Name = Presentación PPT
+| Presentation_Link = https://www.owasp.org/images/2/25/Esapi_swingset_spanish.ppt
+}}
+
+{{Template:Training Module Row Break
+| Time = 20h30 (30m)
+| Break_Reason = Coffee Break
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 21h00 (30m)
+| Module_Name = OWASP WebGoat & Webscarab
+| Module_Link = https://www.owasp.org/index.php/Category:OWASP_WebGoat_Project
+| Trainer = [[User:Fabio.e.cerullo|Fabio Cerullo]] 
+| Presentation_Name = Presentación PPT
+| Presentation_Link = https://www.owasp.org/images/7/79/OWASP_WebGoat_Webscarab_spanish.ppt
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 21h30 (30m)
+| Module_Name = OWASP Manifesto for Governments
+| Module_Link = https://www.owasp.org/index.php/OWASP_Brasil_Manifesto/en
+| Trainer = [[User:Sapao|Lucas Ferreira]]
+| Presentation_Name = Presentación PPT
+| Presentation_Link = https://www.owasp.org/images/5/51/Manifesto.para.gobiernos.pdf
+}}
+
+{{Template:Training Module Row Break
+| Time = 22h00
+| Break_Reason = Finalizacion del evento
+}}
+}} 
+
+=Montevideo (Uruguay)=
+
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>OWASP Training ESP</noinclude>
+| Course_designation = [[Image:uruguay_banner.png]]
+| Course_Overview_Goal 
+=&nbsp;
+*Aparte del OWASP Top 10, la mayoria de los [[:Category:OWASP_Project|Proyectos OWASP]] no son ampliamente utilizados en los ambientes corporativos. En la mayoria de los casos esto no es debido a una falta de calidad en los proyectos o la documentacion disponible, sino mas bien por desconocer donde se ubicarian en un Ecosistema de Seguridad de Aplicaciones empresarial.
+
+* Este curso tiene como objetivo cambiar esta situación proporcionando una explicación sobre los proyectos OWASP mas maduros y listos para ser utilizados en el ambito empresarial. 
+
+*Todos los materiales de entrenamiento OWASP pueden ser obtenidos en la siguiente [http://code.google.com/p/owasp-training/downloads/list dirección].
+&nbsp;
+| Date = Jul, 26th, 2011
+| Venue = Auditorio de la Universidad ORT (Cuareim 1451) 
+[http://maps.google.com/maps?q=1451+Cuareim,+Montevideo,+Uruguay&hl=en&ll=-34.895822,-56.191528&spn=0.00836,0.017917&sll=37.0625,-95.677068&sspn=33.077336,73.388672&z=16 Ver Mapa]
+| Price = Free
+| Course_Registration_url = http://www.regonline.com/trainingdayuruguay
+| Course_Registration_name = Curso OWASP (Registrese ahora!)
+| Modules = 
+
+{{Template:Training_Module_Row_View
+| Time = 19h00 (45m)
+| Module_Name = Para que me sirven las OWASP Tools?
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_Project
+| Trainer = [[User:Mateo Martínez|Mateo Martínez]] 
+| Presentation_Name = Presentación PPT
+| Presentation_Link =  
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 19h45 (25m)
+| Module_Name = OWASP WebGoat Project
+| Module_Link = https://www.owasp.org/index.php/Category:OWASP_WebGoat_Project
+| Trainer = [[User:Fabio.e.cerullo|Fabio Cerullo]] 
+| Presentation_Name = Presentación PPT
+| Presentation_Link = http://www.owasp.org/images/5/55/OWASP_WebGoat.ppt
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 20h10 (20m)
+| Module_Name = OWASP WebScarab Project
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_WebScarab_Project
+| Trainer = [[User:Fabio.e.cerullo|Fabio Cerullo]] 
+| Presentation_Name = Presentación PDF
+| Presentation_Link = https://www.owasp.org/images/d/d8/Owasp-training-2010-webscarab-slides.pdf
+}}
+
+{{Template:Training Module Row Break
+| Time = 20h30 (15m)
+| Break_Reason = Coffee Break
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 20h45 (45m)
+| Module_Name = OWASP PCI
+| Module_Link = https://www.owasp.org/index.php/Key_Project_Information:OWASP_PCI_Project
+| Trainer = [[User:Mauro Flores|Mauro Flores]]
+| Presentation_Name = Presentación PPT
+| Presentation_Link = 
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 21h30 (30m)
+| Module_Name = OWASP ESAPI Swingset
+| Module_Link = https://www.owasp.org/index.php/ESAPI_Swingset#tab=Project_About_-_Swingset_Interactive
+| Trainer = [[User:Fabio.e.cerullo|Fabio Cerullo]]
+| Presentation_Name = Presentación PPT
+| Presentation_Link = 
+}}
+}} 
+
+= São Paulo (Brasil) =
+
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>OWASP Training PTBR</noinclude>
+| Course_designation = [[Image:Owasp_saopaulo.gif]]
+| Course_Overview_Goal 
+=&nbsp;
+* Além do OWASP Top 10, a maioria dos [[:Category:OWASP_Project|Projetos OWASP]] não são amplamente utilizados nos ambientes corporativos. Na maioria dos casos isso não é devido a falta de qualidade nos projetos ou documentação disponível, mas sim aonde se encaixariam em um Ecosistema de Segurança de Aplicações empresarial. 
+
+* Este curso tem como objetivo mudar essa situação proporcionando uma explicação sobre os projetos mais maduros do OWASP.
+
+* Se você tem interesse em participar da parte 'hands-on' do curso, por favor traga um laptop.
+
+* Todos os Materiais de Treinamento do OWASP podem ser baixados [http://code.google.com/p/owasp-training/downloads/list aqui].
+&nbsp;
+| Date = 06 de Agosto de 2011
+| Venue = Auditório Bandtec <br> Faculdade Bandeirantes de Tecnologia <br> [http://maps.google.com.br/maps/place?cid=7587330875443382079&q=bandtec&hl=pt-BR&cd=1&cad=src:ppiwlink&ei=XJYlTt79JYugzATylsGWCA&dtab=2 Ver mapa]
+| Price = Free
+| Course_Registration_url = http://www.regonline.com/trainingdaybrazil
+| Course_Registration_name = Curso OWASP - Clique para registrar-se!
+| Modules = 
+
+{{Template:Training_Module_Row_View
+| Time = 09:00 - 09:45
+| Module_Name = Guided tour of OWASP Projects
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_Project
+| Trainer = [[User:Fabio.e.cerullo|Fabio Cerullo]] 
+| Presentation_Name = Tour of OWASP’s projects
+| Presentation_Link = http://www.owasp.org/index.php/File:OWASP_India_-_Tour_of_OWASP_projects.ppt  
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 09:45 - 10:30
+| Module_Name = OWASP Top 10 
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project
+| Trainer = [[User:Leonardo Francisco Buonsanti de Andrade|Leonardo Buonsanti]]
+| Presentation_Name = OWASP Top 10
+| Presentation_Link = http://www.owasp.org/images/c/cb/OWASP_Top_10_-_2010_rc1.pdf  
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 10:30 - 11:15
+| Module_Name = O ensino de desenvolvimento de software orientado à segurança nos cursos de graduação em tecnologia
+| Module_Link = 
+| Trainer = André da Costa Silva
+| Presentation_Name = 
+| Presentation_Link = 
+}}
+
+{{Template:Training Module Row Break
+| Time = 11:15 - 11:30
+| Break_Reason = Coffee Break
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 11:30 - 12:15
+| Module_Name = CAPTCHA Analysis
+| Module_Link = https://www.owasp.org/index.php/Projects/OWASP_LAPSE_Project
+| Trainer = [[User:Ulisses Castro|Ulisses Castro]]
+| Presentation_Name = CAPTCHA Analysis - OWASP Tools and Techniques
+| Presentation_Link = https://www.owasp.org/images/b/b7/CAPTCHA_Analysis.ppt
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 10:30 - 11:15
+| Module_Name = LAPSE+
+| Module_Link = https://www.owasp.org/index.php/Projects/OWASP_LAPSE_Project
+| Trainer = [[User:Bruno Motta Rego|Bruno Motta Rego]]
+| Presentation_Name = Code Analysis with LAPSE+
+| Presentation_Link = https://www.owasp.org/images/c/c8/Code_analysis_lapse.ppt
+}}
+
+{{Template:Training Module Row Break
+| Time = 13:00 - 14:00
+| Break_Reason = Almoço
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 14:00 - 14h20
+| Module_Name = OWASP WebGoat Project
+| Module_Link = https://www.owasp.org/index.php/Category:OWASP_WebGoat_Project
+| Trainer = [[User:Fabio.e.cerullo|Fabio Cerullo]] 
+| Presentation_Name = PPT Presentation
+| Presentation_Link = http://www.owasp.org/images/5/55/OWASP_WebGoat.ppt
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 14:20 - 14:45
+| Module_Name = OWASP WebScarab Project
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_WebScarab_Project
+| Trainer = [[User:Fabio.e.cerullo|Fabio Cerullo]] 
+| Presentation_Name = PPT Presentation
+| Presentation_Link = http://www.owasp.org/index.php/File:Owasp-training-2010-webscarab-2.ppt
+}}
+
+
+{{Template:Training_Module_Row_View
+| Time = 14:45 - 15:30
+| Module_Name = OWASP ESAPI Swingset
+| Module_Link = https://www.owasp.org/index.php/ESAPI_Swingset#tab=Project_About_-_Swingset_Interactive
+| Trainer = [[User:Fabio.e.cerullo|Fabio Cerullo]]
+| Presentation_Name = Presentación PPT
+| Presentation_Link = 
+}}
+
+{{Template:Training Module Row Break
+| Time = 15:30 - 16:00
+| Break_Reason = Encerramento
+}}
+}}  
+
+= Santiago (Chile) =
+
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>OWASP Training ESP</noinclude>
+| Course_designation = [[Image:chile_banner.jpg]]
+| Course_Overview_Goal 
+=&nbsp;
+*Aparte del OWASP Top 10, la mayoria de los [[:Category:OWASP_Project|Proyectos OWASP]] no son ampliamente utilizados en los ambientes corporativos. En la mayoria de los casos esto no es debido a una falta de calidad en los proyectos o la documentacion disponible, sino mas bien por desconocer donde se ubicarian en un Ecosistema de Seguridad de Aplicaciones empresarial.
+
+* Este curso tiene como objetivo cambiar esta situación proporcionando una explicación sobre los proyectos OWASP mas maduros y listos para ser utilizados en el ambito empresarial. 
+
+&nbsp;
+| Date = 9 de Agosto de 2011
+| Venue = DUOC-UC sede Alonso Ovalle, Alonso de Ovalle 1586 (Metro Moneda).
+| Price = Free
+| Course_Registration_url = http://www.regonline.com/trainingdaychile
+| Course_Registration_name = Curso OWASP (Registrese ahora!)
+| Modules = 
+
+{{Template:Training Module Row Break
+| Time = 9h00 (30m)
+| Break_Reason = Registracion al evento
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 9h30 (20m)
+| Module_Name = Palabras de bienvenida
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_Project
+| Trainer = [[User:Carlos Allendes|Carlos Allendes]]
+| Presentation_Name = Presentación PPT
+| Presentation_Link =  
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 10h00 (40m)
+| Module_Name = Seguridad en el acceso a datos
+| Module_Link = 
+| Trainer = David Sutherland, Socio Consultor Datactiva Ltda 
+| Presentation_Name = Presentación PPT
+| Presentation_Link = 
+}}
+
+{{Template:Training Module Row Break
+| Time = 10h50 (20m)
+| Break_Reason = Coffee Break
+}}
+
+
+{{Template:Training_Module_Row_View
+| Time = 11h10 (40m)
+| Module_Name = OWASP TOP10 como base para Inspección de Código
+| Module_Link = https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project
+| Trainer = Katherine Andrade, CodeReview Specialist, TestGroup S.A.
+| Presentation_Name = Presentación PDF
+| Presentation_Link = 
+}}
+
+
+{{Template:Training_Module_Row_View
+| Time = 12h00 (60m)
+| Module_Name = Modelo Madurez para Desarrollo Seguro de Software (SAMM)
+| Module_Link = https://www.owasp.org/index.php/Category:Software_Assurance_Maturity_Model
+| Trainer = [[User:Fabio.e.cerullo|Fabio Cerullo]]
+| Presentation_Name = Presentación PDF
+| Presentation_Link = 
+}}
+
+
+{{Template:Training Module Row Break
+| Time = 13h00 (10m)
+| Break_Reason = Cierre del evento
+}}
+
+}} 
+
+
+= Lima (Peru) =
+
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>OWASP Training ESP</noinclude>
+| Course_designation = [[Image:peru_banner.png]]
+| Course_Overview_Goal 
+=&nbsp;
+*Aparte del OWASP Top 10, la mayoria de los [[:Category:OWASP_Project|Proyectos OWASP]] no son ampliamente utilizados en los ambientes corporativos. En la mayoria de los casos esto no es debido a una falta de calidad en los proyectos o la documentacion disponible, sino mas bien por desconocer donde se ubicarian en un Ecosistema de Seguridad de Aplicaciones empresarial.
+
+* Este curso tiene como objetivo cambiar esta situación proporcionando una explicación sobre los proyectos OWASP mas maduros y listos para ser utilizados en el ambito empresarial. 
+
+*Todos los materiales de entrenamiento OWASP pueden ser obtenidos en la siguiente [http://code.google.com/p/owasp-training/downloads/list dirección].
+&nbsp;
+| Date = 13 de Agosto
+| Venue = ISIL - Campus San Isidro
+Av. Salaverry 2625 – San Isidro (Frente al Hotel Meliá)
+Auditorio – Pabellón “A”, 4to piso
+http://www.isil.edu.pe
+| Price = Free
+| Course_Registration_url = http://www.regonline.com/trainingdayperu
+| Course_Registration_name = Evento OWASP (Registrese al evento Aqui!)
+| Modules = 
+
+{{Template:Training Module Row Break
+| Time = 09:00am (60m)
+| Break_Reason = Registro del Evento 
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 10:00 am (30 min)
+| Module_Name = Presentacion y palabras de Bienvenida 
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_Project
+| Trainer = [[User:John.Vargas|John Vargas]]
+| Presentation_Name = Que es OWASP?
+| Presentation_Link = http://www.owasp.org/index.php/File:OWASP_India_-_Tour_of_OWASP_projects.ppt  
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 10:30AM (60min)
+| Module_Name = OWASP Top 10
+| Module_Link = https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project
+| Trainer =  [[User:Fabio.e.cerullo|Fabio Cerullo]] 
+| Presentation_Name = OWASP TOP 10 (Presentacion Via Skype)
+| Presentation_Link = http://www.owasp.org/index.php/File:OWASP_India_-_Tour_of_OWASP_projects.ppt  
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 11:30 am (30)
+| Module_Name = Google Hacking
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_Project
+| Trainer = [[User:John.Vargas|John Vargas]]
+| Presentation_Name = Google Hacking
+| Presentation_Link = 
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 12:00 am (60m)
+| Module_Name = Presentacion de la Herramienta: SQLinJeymei
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project
+| Trainer = [[User:Ricardo Supo Picón|Ricardo Supo]]
+| Presentation_Name = SQLinJeymei Tool
+| Presentation_Link = http://www.owasp.org/images/c/cb/OWASP_Top_10_-_2010_rc1.pdf  
+}}
+
+
+{{Template:Training_Module_Row_View
+| Time = 01:00pm (40m)
+| Module_Name = OWASP Testing Guide
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_Testing_Project
+| Trainer = [[User:Mauricio Velazco|Mauricio Velazco]] 
+| Presentation_Name = Testing Guide Overview - PPT File
+| Presentation_Link = http://www.owasp.org/images/2/2c/OWASP_EU_Summit_2008_OWASP_Testing_Guide_v3.ppt  
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 01:40m (40m)
+| Module_Name = Usando técnicas Man in the Middle para la Seguridad Web
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_WebScarab_Project
+| Trainer = Juan Pablo Quiñe
+| Presentation_Name = Usando técnicas Man in the Middle para la Seguridad Web
+| Presentation_Link = 
+}}
+
+{{Template:Training_Module_Row_View
+| Time = 02:20 pm (40m)
+| Module_Name = 2011 CWE/SANS Top 25 Monster Mitigations y OWASP Top 10 2010
+| Module_Link = https://www.owasp.org/index.php/Key_Project_Information:OWASP_PCI_Project
+| Trainer = Andres Morales
+| Presentation_Name = 2011 CWE/SANS Top 25 Monster Mitigations y OWASP Top 10 2010
+| Presentation_Link = 
+}}
+
+
+{{Template:Training_Module_Row_View
+| Time = 03:00 (60m)
+| Module_Name = OWASP WebGoat Project
+| Module_Link = http://www.owasp.org/index.php/Category:OWASP_WebGoat_Project
+| Trainer = Rolando Antón
+| Presentation_Name = WebGoat v5 Presentation
+| Presentation_Link = http://www.owasp.org/images/5/55/OWASP_WebGoat.ppt  
+}}
+{{Template:Training Module Row Break
+| Time = 04:00 (10m)
+| Break_Reason = Cierre del evento
+}}
+}}
+
+<br> 
+
+= Sponsorship =
+<br>
+
+<div align="center">
+{| cellpadding="2" style="border: 1px solid darkgray;"
+! width="500" |
+|- border="0" align="center"
+| [[File:Logo_sponsors.jpg]]
+|}
+</div>
+
+<br>
+*'''The current sponsorship packages are:'''
+
+- Bronze: Company logo displayed in Latam Tour wiki page & acknowledgments during the whole tour = 500 usd
+
+- Silver: Bronze + Pens or Notepads co-branded with company & OWASP logo = 1000 usd
+
+- Gold: Bronze + become an official supporter of a Latam Chapter for a year (*) = 2000 usd
+
+
+= Media =
+
+<!---{{Template:OWASP Training Pictures }} 
+
+{{Template:OWASP_Training_Pictures_View 
+| Media_File1 = {{#ev:youtube|sfrbbPgpJa4}}
+| Media_File2 = {{#ev:youtube|dPWHwMoSPr8}} 
+}} 
+
+{{Template:OWASP_Training_Pictures_View 
+| Media_File1 = {{#ev:youtube|BljnX2k-54A}}
+| Media_File2 = [[Image:P1020048.JPG|425px]] 
+}} 
+
+{{Template:OWASP_Training_Pictures_View 
+| Media_File1 = [[Image:P1010998.JPG|425px]]
+| Media_File2 = [[Image:P1020083.JPG|425px]]
+}} 
+
+{{Template:OWASP_Training_Pictures_View 
+| Media_File1 = [[Image:P1020010.JPG|425px]]
+| Media_File2 = [[Image:P1020052.JPG|425px]]
+}} 
+
+{{Template:OWASP_Training_Pictures_View 
+| Media_File1 = [[Image:P1020079.JPG|425px]]
+| Media_File2 = [[Image:P1020005.JPG|425px]]
+}} 
+
+{{Template:OWASP_Training_Pictures_View 
+| Media_File1 = [[Image:P1020041.JPG|425px]]
+| Media_File2 = [[Image:P1020009.JPG|425px]]
+}} 
+
+|} --->
+
+{{#widget:Picasa
+|user=fcerullo
+|album=OWASPLatamTour
+|width=300
+|height=200
+|captions=1
+|autoplay=1
+|interval=5
+}}
+
+[https://picasaweb.google.com/fcerullo/OWASPLatamTour?authuser=0&feat=directlink Check out the pictures clicking HERE]
+
+<br> 
+
+= Team  =
+
+'''Latam Tour Team'''
+
+'''Chapter Leaders'''
+
+*[[User:Tartamar|Martin Tartarelli]] (Argentina)<br>
+*[[User:Mateo Martínez|Mateo Martínez]] (Uruguay)<br>
+*[[User:Leonardo Francisco Buonsanti de Andrade|Leonardo Buonsanti]] (Brazil)<br>
+*[[User:John.Vargas|John Vargas]] (Peru)<br>
+*[[User:Ricardo Supo Picón|Ricardo Supo]] (Peru)<br>
+
+'''Operations'''
+
+*[[User:Kate Hartmann|Kate Hartmann]]<br>
+*[[User:Paulo Coimbra|Paulo Coimbra]]<br>
+*[[User:Fabio.e.cerullo|Fabio Cerullo]]<br>
+
+
+==== Internals  ====
+
+*Course Evaluation Form - [http://www.owasp.org/images/6/60/2_Course_Evaluation_Form_%282%29.pdf PDF] and [http://www.owasp.org/images/c/ca/2_Course_Evaluation_Form.doc Word] Files
+
+
+<br> 
+
+__NOTOC__ <headertabs /> 
+
+[[Category:OWASP_Training|Training]]

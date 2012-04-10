@@ -1,0 +1,87 @@
+{{Template:SecureSoftware}}
+
+==Overview==
+
+Purpose:	
+
+*	Harden application design by applying security design principles.
+
+* Identify security risks in third-party components.
+
+Role:
+
+* Designer
+
+Frequency:
+
+* As necessary; at least once per iteration.
+
+
+
+==Refine existing application security profile ==
+
+This activity is performed on an existing design. If it follows other CLASP activities, the team will have done the following before this point:
+
+*	Identified resources in the system and capabilities on those resources;
+
+*	Identified roles in the system;
+
+*	Identified trust boundaries; and
+
+*	Identified requirements for providing security services on a resource-by-resource basis, throughout the lifetime of the resource.
+
+Often, all of this information will be identified in the requirements. If any of the information is not present, it should be produced at this time.
+
+If the information does exist, it should be updated to account for additional detail and refinements that have since been added to the architecture.
+
+At the end of this subtask, one should understand the security needs for each role resource in the system, throughout the complete lifetime of the application, including security requirements for data links and long-term data storage.
+
+==Determine implementation strategy for security services ==
+
+Security requirements should specify what needs to be done in relation to core security services. The purpose of design is to elaborate on how those requirements will be met.
+
+Identify solutions for meeting security requirements at each identified point in the design by adhering to the following principles:
+
+*	Look for third-party solutions, starting the search with a preference for well-vetted off-the-shelf solutions to untrusted solutions or in-house solutions. For example, when cryptography is viewed as a solution to a problem, look first to see if there are recent standards from well-regarded standards bodies that address the problem. 
+
+For example, the recent trend for standards by organizations such as the IETF, IEEE, ITU, and NIST is to adopt well-vetted research ideas into standards, then bring in external security review. Do enough diligence to build confidence that the research community is not worried about the standard. If no good standard exists, try to leverage software that has a clear lineage from peer-reviewed academic research and avoid designing your own solutions without the guidance of a well-respected cryptographer.
+
+*	When considering off-the-shelf technologies, perform a risk assessment of the technology before designing it into the system, as discussed in the next activity. When choosing to integrate the technology, go back and integrate additional security requirements into the product requirements as appropriate.
+
+*	Design appropriate validation mechanisms - input validation, authentication, and authorization - wherever data can enter a system or cross a trust boundary. For example, in a multi-tier system with a firewall, it is insufficient to perform either input validation or authentication on data of external origin, because insiders behind the firewall would be able to inject data without being validated. 
+
+A more reasonable solution is to validate on every architectural tier and to pass credentials securely between architectural components.
+
+*	Ensure that identified solutions address risks to the desired degree. For example, input validation routines that only perform basic pattern matching and do not perform syntactic validation can often be circumvented. See the discussion in CLASP Resource B on input validation.
+
+*	Prefer the simplest solution that meets requirements. Complex solutions tend to both have additional inherent risks and be harder to analyze.
+
+*	When multiple security solutions are necessary to better alleviate risks - i.e., a single solution is left with risk that still needs to be mitigated using another solution - be sure that, if there is an instance of a risk that one of the solutions can address, the risk does get addressed. For example, if using multiple authentication factors such as passwords and smart cards, a user should need to validate using both technologies, instead of simply one.
+
+If this "defense-in-depth" strategy is taken, the attacker has to thwart both authentication mechanisms. Otherwise, the system is only as good as the weaker of the two mechanisms - the "weakest-link" principle.
+
+*	Look for ways to minimize exposure if defenses are somehow compromised: e.g., fine-grained access control, trusted systems, or operational controls such as backups, firewalls, and the like.
+
+==Build hardened protocol specifications ==
+
+While it is desirable to use high-level protocols for security such as SSL/TLS, most applications will ultimately define their own semantics and thus their own protocols when communicating. 
+
+No matter how simple, protocols that are developed in-house should be well-specified so that they can be analyzed. They should always be rigid in what they accept. This means that the method for performing input validation should be apparent in the protocol specification. 
+
+A cryptographer should analyze any system containing new protocols for secure communication or identity establishment authored by the development organization. Protocols should also be as simple as feasible so as to be as easy to analyze as is feasible.
+
+One should also specify what happens on error conditions. Generally, when errors are not related to well-known classes of accidental user error, it is best to fail safely and reset, even if there is minimal lack of availability created, because secure recovery from unexpected and infrequent classes of errors is generally quite difficult to perform.
+
+==Design hardened interfaces ==
+
+API interfaces themselves define protocols, and should be treated in the same way, with well-defined specifications, including specifications defining valid input. Note that - as discussed in the Input Validation concept - checking the range of each parameter in isolation is not always a sufficient specification. Be thorough in defining under which circumstances data is semantically valid. For example, if the first parameter affects what values are valid for the second parameter, this should be noted in a specification.
+
+APIs should also come with well-specified error handling mechanisms. Callers should be forced to deal with unusual conditions when they occur. Particularly, do not specify use of error codes that a developer will often ignore. Instead, specify use of an exception that - if all else fails - will be caught at the top level; in this case, the program should fail securely and reset.
+
+Additionally, one should focus on exporting a few simple APIs, which will minimize the attack surface.
+
+
+[[Category:Activity]]
+[[Category:CLASP Activity]]
+[[Category:BP4 Implement secure development practices]]
+[[Category:OWASP_CLASP_Project]]

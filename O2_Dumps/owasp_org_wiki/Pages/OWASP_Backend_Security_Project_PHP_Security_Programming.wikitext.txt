@@ -1,0 +1,912 @@
+= Overview =
+
+PHP developer should be aware of threats that can be exposed on vulnerable PHP code. This article is going to address two of those threats in the following sections:
+* SQL Injection 
+* LDAP Injection
+
+Since both of them are well known attacks vectors the article purpose is to show some valid techniques to defend against them such as:
+* Escaping Quotes on both input parameters and HTTP Request Header
+* Usage of Prepared Statements to query backend DBMS
+* Data Validation
+* Safe error handling
+
+Recent research activities have shown that is possible to detect intrusion attempts from a WEB Application by embedding an ''Application Layer IDS'' inside the application. 
+
+== SQL Injection ==
+
+Here follows a typical Login Form where users credentials are stored on a Backend DBMS. To successfull validate user credentials an authenticated connection to Backend DBMS is needed. Application developer decided to store the Database Connection String parameters in a ''.inc'' file as shown in the example:
+
+ '''auth.php'''<nowiki>
+
+<?php
+include('./db.inc');
+
+function sAuthenticateUser($username, $password){
+  $authenticatedUserName="";
+  if ($link = iMysqlConnect()) {
+
+    $query  = "SELECT username FROM users";
+    $query .=                " WHERE username = '".$username."'";
+    $query .=                " AND   password = md5('".$password."')";
+    $result = mysql_query($query);
+
+    if ($result) {
+      if ($row = mysql_fetch_row($result)) {
+         $authenticatedUserName =  $row[0];
+      }
+    }
+  }
+
+  return $authenticatedUserName;
+
+}
+
+if ($sUserName = sAuthenticateUser($_POST["username"], 
+				   $_POST["password"])) {
+
+  /* successfull authentication code goes here */
+   ...
+   ...
+ } else {
+
+  /* unsuccessfull authentication code goes here */
+   ...
+   ...
+ }
+
+?>
+</nowiki>
+
+ '''db.inc'''<nowiki>
+
+<?php
+
+define('DB_HOST',     "localhost");
+define('DB_USERNAME', "user");
+define('DB_PASSWORD', "password");
+define('DB_DATABASE', "owasp");
+
+
+function iMysqlConnect(){
+  $link = mysql_connect(DB_HOST,
+  	  DB_USERNAME,
+			DB_PASSWORD);
+
+  if ($link && mysql_select_db(DB_DATABASE))
+    return $link;
+  return FALSE;
+}
+
+?></nowiki>
+
+'''Vulnerability'''
+
+* ''SQL Injection''
+*: by using some inference techniques it's possible to enumerate a backend Database or interact with underlying operating system
+
+* ''Authentication Bypass''
+*: by exploiting a SQL Injection vulnerability Authentication an evil user can bypass authentication by supplying :
+*:: <nowiki>username ' OR 1=1 #</nowiki>
+*:: <nowiki>password </nowiki>''anything''
+
+* ''Information Disclosure''
+*: ''db.inc'' contents could be retrieved by an evil user
+
+'''Remediation'''
+* ''Make .inc unavailable to remote user''
+*: It's possible to avoid ''.inc'' file retrieval from a remote user as shown
+* ''Escaping Quotes''
+*: when evil users supplies <nowiki>username ' OR 1=1 # </nowiki> quotes should be escaped in such in <nowiki>username \' OR 1=1 # </nowiki>
+* ''Prepared Statements''
+*: Prepared Statements prevents SQL Injection attacks by giving to the backend DBMS an execution plan of a query where parameters are replaced by variables. Variables will be instantiated with values and query will be executed.
+* ''Data Validation''
+*: Input parameters should be validated in both data type and value.
+* ''Embedd an Application Layer IDS''
+*: PHPIDS it's a promising Open Source Project well mantainedmaintained and with interesting features. An optimazedoptimized RegExp engine can be embedded in everyyour PHP code to analyze input parameter in order to determine if itther contains a known attack vector. Benchmark performed by project developers shows that there is no performance loss at all. 
+
+There are many way to protect every PHP Code against SQL Injection Attack vectors. Which one is better to use it depends on the context but, by the way as stated in the Security in Depth it would be great to use all of them.
+
+== LDAP Injection ==
+
+Here follows a typical Login Form where users credentials are stored on a Backend LDAP Directory. To successful validate user credentials an authenticated connection to Backend DBMS is needed. Application developer decided to store the LDAP Connection String parameters in a .inc file as shown in the example: 
+
+ '''ldap.inc:'''
+ <nowiki>
+<?php
+  define(LDAP_DIRECTORY_ADMIN , "cn=admin,dc=domain,dc=com");
+  define(LDAP_DIRECTORY_PASS  , "pw$d0");
+  define(LDAP_USER_BASEDN     , "ou=Users,dc=domain, dc=com");
+?>
+</nowiki>
+
+ '''auth.php:'''
+ <nowiki>
+include('ldap.inc');
+
+function authLdap($sUsername, $sPassword) {
+  $ldap_ch=ldap_connect("localhost"); 
+
+  if (!$ldap_ch) {
+    return FALSE;
+  }
+
+  $bind = ldap_bind($ldap_ch, LDAP_DIRECTORY_ADMIN, LDAP_DIRECTORY_PASS);
+
+  if (!$bind) {
+    return FALSE;
+  }
+
+  $sSearchFilter = "(&(uid=$sUsername)(userPassword=$sPassword))";
+  $result = ldap_search($ldap_ch, " dc=domain,dc=com", $sSearchFilter);
+
+  if (!$result) {
+    return FALSE;
+  }
+  
+  $info = ldap_get_entries($ldap_ch, $result);
+
+  if (!($info) || ($info["count"] == 0)) {
+    return FALSE;
+  }
+
+  return TRUE;
+
+}
+
+$sUsername = $_GET['username'];
+$sPassword = $_GET['password'];
+
+$bIsAuth=authLdap($sUsername, $sPassword);
+
+if (! $bIsAuth ) {
+   /* Unauthorized access, handle exception */
+   ...
+   ...
+} 
+
+/* User has been succesfull authenticated */
+
+</nowiki>
+
+'''Vulnerability'''
+
+* ''Authentication Bypass''
+*: by exploiting a LDAP Injection vulnerability evil user can bypass authentication by supplying username ''*'' and password ''*''
+
+* ''Information Disclosure''
+*: ''ldap.inc'' contents could be retrieved by an evil user
+
+'''Remediation'''
+* ''Make .inc unavailable to remote user''
+*: It's possible to avoid ''.inc'' file retrieval from a remote user as shown 
+
+* ''Authenticate Users through LDAP Bind''
+*: Since LDAP define a BIND method which requires a valid user credential is it possible to use ''ldap_bind()'' rather than setting up a complex machinery with ''ldap_search()'' 
+
+* ''Data Validation''
+*: Input parameters should be validated in both data type and value.
+
+* ''Embed an Application Layer IDS''
+*: PHPIDS it's a promising Open Source Project well mantainedmaintained and with interesting features. An optimazedoptimized RegExp engine can be embedded in everyyour PHP code to analyze input parameter in order to determine if itther contains a known attack vector. Benchmark performed by project developers shows that there is no performance loss at all. 
+
+As you can see there are many way to protect your PHP Code against LDAP Injection Attack vectors. Which one to use is up to you by the way as stated in the Security in Depth it would be great to use all of them.
+
+= Description =
+
+This section will address development methodologies to prevents attacks such as:
+* SQL Injection
+* LDAP Injection
+
+== PHP preventing SQL Injection ==
+
+PHP Applications interact with Backend DBMS by using the old connectors style (eg: mysql_connect(), mysql_query(), pg_connect() and so on) or the recent ''Portable Data Objects Layer'', form here on referred as ''PDO''. PDO has been introduced in PHP starting from 5.1, it represents an ''Abstract Database Layer'' lying between PHP and Backend DBMS. It means that it's possible to back-point an existing application to use a different DBMS by just changing a connection string. To this aim it adopts a modular architecture with low-level driver to handle different DBMS. Please note that at the moment of writing it's ''Oracle Drive'' is marked as experimental, so it's not well supported.
+Different techniques to prevents SQL Injection in PHP will be shown in the following sections. Since every Backend DBMS shall require authentication to PHP Code let's start by showing how to safely store such a credentials. 
+ 
+=== DBMS authentication credentials ===
+
+Developers should be very careful on how, and subsequently where, store authentication credentials to authenticate against backend DBMS before start to query. It's typical to put such credentials in a ''.inc'' file (by using some ''define'') to subsequently include credentials from a PHP Code. Such a ''.inc'' file if left world wide readable by both local users and web server ''uid'' can be easily retrieved by an evil user. There are some techniques used to prevent these kinds of ''Information Disclousure'':
+
+* Configure Front-End Apache WEB Server to deny serving request to ''.inc'' files 
+ <nowiki>
+     <Files ~ “\.inc$”>
+        Order allow,deny
+        Deny from all
+     </Files>
+</nowiki>
+:''requires user intervention on Apache configuration!''
+
+* Adding a security token check from ''.inc'' 
+ <nowiki>
+<?php
+
+if (defined('SECURITY_INCLUDE_TOKEN') && SECURITY_INCLUDE_TOKEN != 'WfY56#!5150'){
+     define ('DBMS_CONNECTION_STRING','mysql://owaspuser:owasppassword@localhost:3306');
+     ....
+}
+</nowiki>
+
+<nowiki>
+<?php
+/* Define a security token to access DBMS_CONNECTION_STRING */
+define('SECURITY_INCLUDE_TOKEN', 'WfY56#!5150');
+include 'dbms_handler.php';
+..
+?>
+</nowiki>
+
+* configuring ''php_ini'' settings in apache to set some default values to mysql_connect()
+
+ '''/etc/apache2/sites-enabled/000-owasp''' <nowiki>
+
+<VirtualHost *>
+     DocumentRoot /var/www/apache2/
+     php_value mysql.default_host 127.0.0.1
+     php_value mysql.default_user owaspuser
+     php_value mysql.default_password owasppassword
+     ....
+     ....
+     ....
+</VirtualHost>
+</nowiki>
+*: some DBMS doesn't allow to retrieve connection parameters from apache config file
+
+ '''dbmshandler.php''' <nowiki>
+
+<?php
+    function iMySQLConnect() {
+        return mysql_connect();
+
+    }
+?> </nowiki>
+: ''at the moment it only works when backend Database Engine is MySQL''
+
+* using Apache SetEnv 
+
+ '''/etc/apache2/sites-enabled/000-owasp''' <nowiki>
+
+<VirtualHost *>
+     DocumentRoot /var/www/apache2/
+     SetEnv DBHOST "127.0.0.1"
+     SetEnv DBUSER "owaspuser"
+     SetEnv DBPASS "owasppassword"
+   
+     ....
+     ....
+     ....
+</VirtualHost>
+</nowiki>
+
+ '''dbmshandler.php''' <nowiki>
+
+<?php
+    function iMySQLConnect() {
+        return mysql_connect(getenv("DBHOST"),
+                             getenv("DBUSER"),
+                             getenv("DBPASS"));
+    }
+?>
+
+</nowiki>
+: ''requires user intervention on Apache configuration''
+
+'''Example using PDO MySQL driver:'''
+
+ '''/etc/apache2/sites-enabled/000-owasp''' <nowiki>
+
+<VirtualHost *>
+     DocumentRoot /var/www/apache2/
+     SetEnv PDO_DSN "mysql:host=localhost;dbname=owasp"
+     SetEnv PDO_USER "owaspuser"
+     SetEnv PDO_PASS "owasppassword"
+   
+     ....
+     ....
+     ....
+</VirtualHost>
+</nowiki>
+
+ '''dbmshandler.php''' <nowiki>
+
+<?php
+function SQLConnect() {
+    $oPdo = NULL;
+    try {
+            $oPdo = new PDO(getenv("PDO_DSN"),
+                            getenv("PDO_USER"),
+                            getenv("PDO_PASS"));
+
+            /* Throws an exception when subsequent errors occour */
+            $oPdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            /* handle PDO connection success */
+               ...
+               ...
+            return $oPdo;
+   } catch (PDOException $e) {
+            /* handle PDO connection error */
+               ...
+               ...
+           return NULL;
+   }
+} 
+?>
+
+</nowiki>
+
+=== Escaping Quotes ===
+
+As shown on the previous sections quotes shall be escaped in some way. PHP usually comes with ''magic_quotes_gpc'' configuration directive. It is aim is to escape quotes from HTTP Request by examining both GET/POST data and Cookie value and replacing every ''single quotes'' with ''\'''. The truth is that any other data contained into the HTTP Request Header is not escaped.
+
+Let's say a PHP Application access to the User-Agent Header to perform a statistic on the browser used by users to navigate sites. Since ''magic_quotes_gpc'' doesn't escape for example a header value, it is possible to create a custom HTTP Request containing evil characters to SQL Inject remote PHP Code. Last but not least it isn't portable on every DBMS as well. For example Microsoft SQL Server use a different Quote Escape. 
+
+Due to the above issues it's usage is strongly discouraged. Since it's enabled on WEB Server developers should:
+* check if enabled
+* if so: request shall be rollbacked to it's original
+
+<nowiki>
+function magic_strip_slashes() {
+    if (get_magic_quotes()) {
+
+       // GET
+       if (is_array($_GET)) {
+           foreach ($_GET as $key => $value) {
+               $_GET[$key] = stripslashes($value);
+           }
+       }
+
+       // POST
+       if (is_array($_POST)) {
+           foreach ($_GET as $key => $value) {
+               $_POST[$key] = stripslashes($value);
+           }
+       }
+
+       // COOKIE
+       if (is_array($_COOKIE)) {
+           foreach ($_GET as $key => $value) {
+               $_COOKIE[$key] = stripslashes($value);
+           }
+       }
+    }
+}
+</nowiki>
+
+Quote Escaping shall be performed with DBMS related functions such as:
+* MySQL: ''mysql_real_escape_string''
+* PostgreSQL: ''pg_escape_string''
+ 
+ <nowiki>
+function sEscapeString($sDatabase, $sQuery) {
+    $sResult=NULL;
+ 
+    switch ($sDatabase) {
+    case "mysql":
+        $sResult = mysql_real_escape_string($sQuery);
+        break;
+  
+    case "postgresql":
+        $sResult = pg_escape_string($sQuery);
+        break;
+
+    case "mssql":
+        $sResult = str_replace("'", "''",$sQuery);
+        break;
+
+    case "oracle":
+        $sResult = str_replace("'", "''",$sQuery);
+        break;
+    }
+
+    return $sResult;
+}
+}
+</nowiki>
+
+Since both Oracle and Microsoft SQL Server connectors doesn't have a real ''escape_string'' function software developer can create his own escaping functions or use ''addslasshes()''.
+
+With properly quotes escaping it is possible to prevent Authentication Bypass vulnerability in Example 1:
+
+ '''auth.php'''<nowiki>
+
+<?php
+include('./dbmshandler.php);
+
+function sAuthenticateUser($username, $password){
+  $authenticatedUserName="";
+  if ($link = iMysqlConnect()) {
+
+    $query  = "SELECT username FROM users";
+    $query .=                " WHERE username = '".$username."'";
+    $query .=                " AND   password = md5('".$password."')";
+
+    /* escape quotes */
+    $result = sEscapeString("mysql", $query);
+
+    if ($result) {
+      if ($row = mysql_fetch_row($result)) {
+         $authenticatedUserName =  $row[0];
+      }
+    }
+  }
+
+  return $authenticatedUserName;
+}
+
+/* start by rollback magic_quotes_gpc action (if any) */
+
+magic_strip_slashes();
+
+
+if ($sUserName = sAuthenticateUser($_POST["username"], 
+                                   $_POST["password"])) {
+
+  /* successfull authentication code goes here */
+   ...
+   ...
+ } else {
+
+  /* unsuccessfull authentication code goes here */
+   ...
+   ...
+ }
+
+</nowiki>
+
+PHP Portable Data Objects implements a quote() method on PDO class but not all underlying PDO Drivers implements this method. On the other side ''PDO::query()'' method by default escape quotes on SQL query string as shown in following example.
+
+'''Example using PDO MySQL driver:'''
+
+ '''auth.php'''<nowiki>
+
+<?php
+include('./dbmshandler.php');
+
+function sAuthenticateUser($username, $password){
+  $authenticatedUserName=NULL;
+  if ($oPdo = SQLConnect()) {
+
+    $query  = "SELECT username FROM users";
+    $query .=                " WHERE username = '".$username."'";
+    $query .=                " AND   password = md5('".$password."')";
+
+    try {
+         $row = $oPdo->query($query)->fetch();
+         if ($row) {
+              return $row['username'];
+         } 
+    } catch (PDOException e) {
+         /* handle execption and SQL Injection Attempt */
+         ....
+         ....
+         return NULL;
+    }    
+}
+
+/* start by rollback magic_quotes_gpc action (if any) */
+
+magic_strip_slashes();
+
+if ($sUserName = sAuthenticateUser($_POST["username"], 
+                                   $_POST["password"])) {
+
+  /* successfull authentication code goes here */
+   ...
+   ...
+} else {
+
+  /* unsuccessfull authentication code goes here */
+   ...
+   ...
+}
+
+</nowiki>
+
+Escaping Quotes is not enough to prevent SQL Injection Attacks. Even if it works well on login forms it doesn't give a complete security defence against SQL Injection Attacks since Quote Escape functions can still be evaded by encoding chars to their ASCII decimal value. Further defence are needed:
+* Prepared Statements
+* Data Validation
+
+=== Prepared Statements ===
+
+Prepared Statements is the ability to preparse and generate an execution plan for SQL Queries. Such an execution plan will be instantiated with typed parameters. If supplied parameters are of incorrect type or contains a nested query the execution of plan will fails. This prevents an evil user to successfully inject SQL Statements on Backend DBMS.
+
+ <nowiki>
+<?php
+function getBookByID($id) {
+    $aBook = NULL;
+    $link = mysqli_connect();
+
+    $stmt = $link->stmt_init();
+    if ($stmt->prepare("SELECT * FROM books WHERE ID =?")) {
+        $stmt->bind_param("i",$id);
+        $stmt->execute();
+        
+        /* Retrieves book entry and fill $aBook array */
+        ...
+        ...
+
+        /* Free prepared statement allocated resources */
+        $stmt->close();
+    }
+
+    return $aBook;
+
+} 
+
+/* MAIN */
+
+/* Cast GET 'id' variable to integer */
+$iID = (int)$_GET['id'];
+
+$aBookEntry = getBookByID($iID);
+
+if ($aBookEntry) {
+    /* Display retrieved book entry */
+    ...
+    ...
+}
+
+?>
+</nowiki>
+
+PHP Portable Data Objects emulate prepared statements for drivers with no native support. Here follows an example of prepared statements usage with PHP PDO
+
+'''Example using PDO:'''
+ <nowiki>
+<?php
+include('./dbmshandler.php');
+
+function getBookByID($id) {
+    $aBook = NULL;
+    $oPdo = SQLConnect();
+
+    if ($oPdo) {
+        $stmt = $oPdo->prepare("SELECT * FROM books WHERE ID =?");
+        $stmt->bindParam(1, $id, PDO::PARAM_INT);
+        if ($smmt->execute()) {
+            $aBook = $stmt->fetch(PDO::FETCH_ASSOC);
+        }
+    }
+
+    return $aBook;
+
+} 
+</nowiki>
+
+Prepared statements represent a valid defence against SQL Injection attacks. But it's still not enough since they allow an evil user to inject session variable such as ''@@version'':
+* <nowiki>http://www.example.com/news.php?id=@@version</nowiki>
+
+Data Validation techniques helps developers to prevents SQL Injection Attacks when properly used.
+
+=== Data Validation ===
+
+Modern WEB Applications are supposed to interact with users through input data. Input data can be supplied through a HTML Form and WEB Application retrieves such a data through a GET/POST variable. Input data can contain malicious values to exploit some
+security flaws in WEB Applications. As a general rule data validation should be performed on both input and output values, since they both depends on each other. data should be rejected unless it matches a criteria. Developers should define a restricted range for valid data and reject everything else. Such criteria will include:
+* Data Type 
+* Data Length;
+* Data Value 
+
+A typical Data Validation workflow will be:
+* Get the data to be validated
+* Check if it should be a numerical or string 
+* Look at it's size in byte to avoid errors when database table columns has some constraint in value size
+* Check if data contains a valid value (EMail, phone number, date, and so on).
+
+PHP can help developers with :
+* casting operators
+* regexp functions
+
+'''Numeric Data'''
+
+Every input data is a string by default. If is needed to validate a numeric value an operator should be casted operator. Casting an input data to ''int'' ensure that:
+
+* if data is numeric you get its value
+* if data doesn't contains a number casting will returns 0
+* if data includes a number casting will returns its numeric portion
+
+'''Example'''
+
+  <nowiki>
+ ...
+    $iId = (int)$_GET['id'];
+    if ( $iId != $_GET['id']) {
+      /* User supplied data is not numeric, handle exception */
+      ...
+      return;
+    } 
+
+    if ($iId > MAX_ID_VALUE || $iId < MIN_ID_VALUE) {
+      /* User supplied data is numerica but it doesn't contains an allowed value, handle exception */
+
+    }
+
+    /* $iId is safe */
+
+    
+</nowiki>
+
+''' String Data'''
+
+Strings data validation is a bit trickier since it can contain malicious values. It means that it should be validated
+on what data is supposed to include. Data can contains:
+* EMail Address
+* Phone Number
+* URL
+* Name
+* Date
+
+and so on.
+
+WEB Developers should match Input Data against a Regular Expression to match what Data is supposed to include.
+Here follows some examples.
+
+'''Example: Validating an Email Address'''
+
+  <nowiki>
+    ...
+    $sEmail = $_POST['email'];
+    if (! preg_match("/^[\w-]+(?:\.[\w-]+)*@(?:[\w-]+\.)+[a-zA-Z]{2,7}$/", $sEmail)) {
+      /* User supplied data is not a valid email address,  handle exception */
+      ...
+      return;
+    }
+
+    /* $sEmail is safe, check len */
+
+    if (strlen($sEmail) > MAX_EMAIL_LEN) {
+       /* User supplied data is to big for backend database, handle exception */
+      ...
+      return;
+    }
+
+</nowiki>
+
+'''Example: Validating an Italian Phone Number '''
+  <nowiki>
+    ...
+    $sPhoneNumber = $_POST['phonenumber'];
+
+    if (! preg_match(, "/[0-9]+[-\/ ]?[0-9]+$/", $sPhoneNumber)) {
+      /* User supplied data is not a phone number,  handle exception */
+      ...
+      return;
+    }
+
+    /* $sPhoneNumber is safe, check len */
+
+    if (strlen($sPhoneNumber) > MAX_PHONENUMBER_LEN) {
+       /* User supplied data is to big for backend database, handle exception */
+      ...
+      return;
+    }
+
+</nowiki>
+
+Not wanting to get frustrated with all those regexp it is possible to take into account to use one of the following PHP Filters:
+* OWASP PHP Filters
+*: OWASP PHP Filters project allow programmers an easy way to perform data validation. Even if project is quite old and not 
+   well maintained it's still well working and defines a valid approach to perform Data Validation.
+* PHP Data Filtering
+*: Available from PHP installation
+
+=== Logging Errors ===
+
+Malicious users typically attempt to exploit SQL Injection Vulnerabilities by looking at some Error Codes on dynamic pages.
+When PHP fails to query Backend Database an error message will be returned to users if error are not handled on a safe way.
+WEB Developers incorrectly debug SQL Errors by displaying some kind of error message on WEB Page when a query fails. This approach should not be considered safe since Errors should never be displayed to users.
+
+Users should also never deduce that something wrong happens otherwise it could be considered a flaw to further more exploits a vulnerability.
+
+  <nowiki>
+  function unavailable_resource_handler() {
+     /* Handle an 'Unavailable Resource' event without supplying further information to user 
+      *
+      * Example:
+      *    die('Resource not available');
+      *      
+      *
+      */
+     ..
+     ..
+
+  }
+
+  function sql_error_handler ($sQuery, $sMsg) {
+     /* Log failed SQL Query statement */
+     error_log ($sQuery, 3, "/var/log/site/sqlquery_error.log");
+     
+     /* Log error message */
+     error_log ($sMsg, 3, "/var/log/site/site_error.log");
+
+     /* Notify user that resource is unavailable */
+     unavailable_resource_handler();
+  }
+
+</nowiki>
+
+Before of applying an Error Log Handler, such as the above, be sure to audit every function return values to avoid error propagation.
+
+== PHP preventing LDAP Injection ==
+
+=== LDAP Authentication  ===
+
+As previously states LDAP Authentication in PHP should be handled with ''ldap_bind()'' function in such a way:
+
+  <nowiki>    
+function authLdap($sUsername, $sPassword) {
+  $ldap_ch=ldap_connect("ldap://localhost"); 
+  
+  if ($ldap_ch) {
+
+    $ldap_user = "uid=$sUsername, ou=Utenti, dc=domain, dc= com";
+    $ldap_password = $sPassword;
+
+    $bind = @ldap_bind($ldap_ch, $ldap_user, $ldap_password);
+    
+    return $bind;
+    
+  }
+
+  return FALSE;
+
+}
+
+$sUsername = $_GET['username'];
+$sPassword = $_GET['password'];
+
+$bIsAuth=authLdap($sUsername, $sPassword);
+
+if (! $bIsAuth ) {
+   /* Unauthorized access, handle exception */
+   ...
+   ...
+} 
+
+/* User has been succesfull authenticated */
+
+
+</nowiki>
+
+=== LDAP Authentication Credentials ===
+
+The first good practice is not to query a Directory Server with an ''anonymous bind''. Doing so it is needed a safe way to store LDAP Bind access credentials. The same techniques of previous section shall be used as well.
+
+=== Data Validation ===
+
+Data Validation occurs on the same way as in PHP Preventing SQL Injection. Here follows previous LDAP Login Form example with data validation, where both ''username'' and ''password'' are allowed to contains only alpha numeric values.
+
+  <nowiki>
+$sUsername = $_GET['username'];
+$sPassword = $_GET['password'];
+
+if (! preg_match("/[a-zA-Z0-9]+$/", $username) {
+   /* username doesn't contains valid characters, handle exception */
+   ..
+   ..
+   return;
+}
+
+if (! preg_match("/[a-zA-Z0-9]+$/", $password) {
+   /* password doesn't contains valid characters, handle exception */
+   ..
+   ..
+   return;
+}
+
+
+
+
+$bIsAuth=authLdap($sUsername, $sPassword);
+
+if (! $bIsAuth ) {
+   /* Unauthorized access, handle exception */
+   ...
+   ...
+} 
+
+/* User has been succesfull authenticated */
+
+
+</nowiki>
+
+=== Logging Errors ===
+
+As in PHP Preventing SQL Injection let's to define a safe way to handle LDAP Errors. As previously stated incorrect error handling may raise ''Information Disclosure'' vulnerality and a malicious user may furthermore exploit this vulnerability to perform some kind of attack.
+
+  <nowiki>
+  function unavailable_resource_handler() {
+     /* Handle an 'Unavailable Resource' event without supplying further information to user 
+      *
+      * Example:
+      *    die('Resource not available');
+      *      
+      *
+      */
+     ..
+     ..
+
+  }
+
+  function ldap_error_handler ($sQuery, $sMsg) {
+     /* Log failed LDAP Query statement */
+     error_log ($sQuery, 3, "/var/log/site/ldapquery_error.log");
+     
+     /* Log error message */
+     error_log ($sMsg, 3, "/var/log/site/site_error.log");
+
+     /* Notify user that resource is unavailable */
+     unavailable_resource_handler();
+  }
+
+</nowiki>
+
+== Detecting Intrusions from WEBAPP ==
+
+PHPIDS (PHP-Intrusion Detection System) is a well maintained and fast security layer for PHP based web application. It allows to embed a WEB Application IDS into a PHP WEB Application. It performs a transparent Input Data Validation on each HTTP Request to look forward for Malicious Input. It means that Developer shouldn't explicitly analyze and thrust Input Data. PHP IDS will automatically look for exploit attempts. PHPIDS simply recognizes when an attacker tries to break your WEB Application and let you decide how to reacts. 
+
+To install PHPIDS:
+* download and unpack in your application or include folder.
+* open phpids/lib/IDS/Config/Config.ini file and edit the following element to reflect PHPIDS complete installation path:
+*: filter_path
+*: tmp_path
+*: path in both Logging and Caching section
+
+Here is a typical usage of PHPIDS:
+
+'''init_ids.php'''
+  <nowiki>
+<?php
+    
+set_include_path(get_include_path() . PATH_SEPARATOR . './lib/');
+require_once 'IDS/Init.php';
+
+function phpIDSInit() {
+    $request = array( 
+   	              'REQUEST' => $_REQUEST,   
+                      'GET'     => $_GET,
+                      'POST'    => $_POST, 
+                      'COOKIE'  => $_COOKIE
+                    );
+
+  $init = IDS_Init::init('./lib/IDS/Config/Config.ini');
+  $ids = new IDS_Monitor($request, $init);
+  
+  return $ids->run();
+
+}
+
+?>
+</nowiki>
+
+'''main.php'''
+  <nowiki>
+<?php
+  
+   require_once './init_ids.php';
+   $sIDSAlert = phpIDSInit();
+
+   if ($sIDSAlert) {
+       /* PHPIDS raise an alert, handle exception */
+       ....
+       ....
+       die()
+   }
+
+/* PHPIDS determined that request is safe */
+...
+...
+
+
+?>
+
+</nowiki>
+
+= References =
+
+* OWASP : "OWASP Guide Project" - http://www.owasp.org/index.php/OWASP_Guide_Project
+* OWASP : "OWASP PHP Filters" - http://www.owasp.org/index.php/OWASP_PHP_Filters
+* OWASP : "OWASP PHP Project" - http://www.owasp.org/index.php/Category:OWASP_PHP_Project
+* OWASP :  "PHP Top 5 - http://www.owasp.org/index.php/PHP_Top_5"
+* PHP : "MySQL Improved Extension" - http://it2.php.net/manual/en/book.mysqli.php
+* PHP : "Data Filtering" - http://it.php.net/manual/en/book.filter.php
+* Ilia Alshanetsky : "architect's Guide to PHP Security" - http://dev.mysql.com/tech-resources/articles/guide-to-php-security-ch3.pdf
+* PHPIDS : http://php-ids.org/

@@ -1,0 +1,41 @@
+----
+
+{| border="0" align="center" style="width: 100%;"
+|-
+! align="center" style="background: rgb(64, 88, 160) none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: white;" colspan="8" | <font color="white">'''PROJECT INFORMATION'''</font>
+|-
+| align="center" style="background: rgb(123, 138, 189) none repeat scroll 0% 0%; width: 15%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" | '''Project Name''' 
+| align="left" style="background: rgb(204, 204, 204) none repeat scroll 0% 0%; width: 85%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" colspan="7" | <font color="black">'''OWASP Testing Guide V3.0 Project'''</font>
+|-
+| align="center" style="background: rgb(123, 138, 189) none repeat scroll 0% 0%; width: 15%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" | '''Short Project Description''' 
+| align="left" style="background: rgb(204, 204, 204) none repeat scroll 0% 0%; width: 85%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" colspan="7" | The OWASP Testing Guide includes a "best practice" penetration testing framework which users can implement in their own organizations and a "low level" penetration testing guide that describes techniques for testing most common web application and web service security issues.<br> 
+OWASP Testing Guide v3 is a 349 page book; we have split the set of active tests in 9 sub-categories for a total of 66 controls to test during the Web Application Testing activity. 
+
+|-
+| align="center" style="background: rgb(123, 138, 189) none repeat scroll 0% 0%; width: 15%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" | '''Key Project Information''' 
+| align="center" style="background: rgb(204, 204, 204) none repeat scroll 0% 0%; width: 14%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" | Project Leader<br>[[User:Mmeucci|'''Matteo Meucci''']] 
+| align="center" style="background: rgb(204, 204, 204) none repeat scroll 0% 0%; width: 15%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" | Project Contibutors<br>[[:OWASP Testing Guide Contributors|'''See here''']] 
+| align="center" style="background: rgb(204, 204, 204) none repeat scroll 0% 0%; width: 10%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" | Mailing List<br>[https://lists.owasp.org/mailman/listinfo/owasp-testing '''Subscribe here''']<br>[mailto:owasp-testing(at)lists.owasp.org '''Use here'''] 
+| align="center" style="background: rgb(204, 204, 204) none repeat scroll 0% 0%; width: 17%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" | License<br>[http://creativecommons.org/licenses/by-sa/3.0/ '''Creative Commons Attribution Share Alike 3.0'''] 
+| align="center" style="background: rgb(204, 204, 204) none repeat scroll 0% 0%; width: 14%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" | Project Type<br>[[:Category:OWASP Project#Release_Quality_Projects|'''Documentation''']] 
+| align="center" style="background: rgb(204, 204, 204) none repeat scroll 0% 0%; width: 15%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" | Sponsors<br>[[OWASP Summer of Code 2008|'''OWASP SoC 08''']]
+|}
+
+{| border="0" align="center" style="width: 100%;"
+|-
+! align="center" style="background: rgb(123, 138, 189) none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: white;" | <font color="black">'''Release Status'''</font> 
+! align="center" style="background: rgb(123, 138, 189) none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: white;" | <font color="black">'''Main Links'''</font> 
+! align="center" style="background: rgb(123, 138, 189) none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: white;" | <font color="black">'''Related Projects'''</font>
+|-
+| align="center" style="background: rgb(204, 204, 204) none repeat scroll 0% 0%; width: 29%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" | '''[[:Category:OWASP Project Assessment#Release_Quality_Documentation_Criteria|Release Quality]]'''<br>[[:OWASP Testing Guide 3.0 - Assessment Frame|Please see here for complete information.]] 
+| align="center" style="background: rgb(204, 204, 204) none repeat scroll 0% 0%; width: 42%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" | 
+OWASP Testing Guide V 3.0 - [https://www.owasp.org/images/4/4d/OWASP_Testing_Guide_V3.doc Word] &amp; [https://www.owasp.org/images/8/89/OWASP_Testing_Guide_V3.pdf PDF] Files - NEW RELEASE!!!
+
+Spanish Version in [http://www.owasp.org/images/d/d7/Gu%C3%ADa_de_pruebas_de_OWASP_ver_3.0.zip Word] &amp; [http://www.owasp.org/images/8/80/Gu%C3%ADa_de_pruebas_de_OWASP_ver_3.0.pdf PDF]<br> Chinese Version in [http://www.owasp.org/images/0/06/OWASP%E6%B5%8B%E8%AF%95%E6%8C%87%E5%8D%97%28%E4%B8%AD%E6%96%87%EF%BC%89.pdf PDF]<br>About OWASP Testing Guide V 3.0: [http://www.owasp.org/images/2/2c/OWASP_EU_Summit_2008_OWASP_Testing_Guide_v3.ppt PowerPoint]<br>[[:OWASP Testing Guide v3 Table of Contents|OWASP Testing Guide v3 Table of Contents]] 
+
+| align="center" style="background: rgb(204, 204, 204) none repeat scroll 0% 0%; width: 29%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" | 
+[[:Image:OWASP Testing Guide v2 pdf.zip|OWASP Testing V 2.0]]<br>[[:Category:OWASP Guide Project|OWASP Development Guide Project]]<br>[[:Category:OWASP Code Review Project|OWASP Code Review Project]]<br>[[:Category:OWASP ASDR Project|OWASP ASDR Project]] 
+
+|}
+
+----

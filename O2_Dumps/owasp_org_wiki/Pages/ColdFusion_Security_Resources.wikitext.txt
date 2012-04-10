@@ -1,0 +1,74 @@
+== Overview ==
+The ColdFusion Security Resources project is an organized index of all the ColdFusion security resources on the Internet that would be useful to ColdFusion developers.<br>
+
+== Goals ==
+The Security Resources projects aims to enable developers to easily find ColdFusion tools and resources regardless of whether they were developed by Adobe, OWASP or the ColdFusion development community.<br>
+<br>
+
+==Videos==
+[http://www.youtube.com/watch?v=lKri4nnVzA0 DeConstructing ColdFusion] This BlackHat 2010 video is a presentation by Chris Eng and Brandon Creighton from Veracode.<br>
+[http://tv.adobe.com/watch/max-2010-develop/securing-coldfusion-applications/ Securing ColdFusion Applications] Jason Dean and Peleus Uhley present at Adobe Max 2010 on how to create secure ColdFusion applications.<br>
+[http://cfmumbojumbo.com/cf/index.cfm/cfconferences/cfunited-2010/pete-freitag-secure-cfml/ Writing Secure CFML] Pete Freitag's presentation from CFUnited 2010.<br>
+[http://experts.adobeconnect.com/p63949927/ Security: Hiding Information from Individuals Not Authorized to See It] Jim Harris present at the ColdFusion Meetup on March 17, 2011.<br>
+[http://experts.adobeconnect.com/p25976495/ Security: Washing Your Incoming Data using ColdFusion] Jim Harris presents at the ColdFusion Meetup on March 10, 2011. <br>
+[http://experts.adobeconnect.com/p22718297/ Security: Practical ColdFusion Security] Justin McLean presents at the ColdFusion Meetup on February 24, 2011. <br>
+[http://experts.na3.acrobat.com/p87014288/ Application Security: Beyond SQL Injection] Jason Dean presents at the ColdFusion Meetup on January 22, 2009.<br>
+[http://experts.na3.acrobat.com/p41776204/ Security Countermeasures for ColdFusion Programmers] Jim Harris presents at the ColdFusion Meeting on January 8, 2009<br>
+[http://www.carehart.org/ugtv/list.cfm?search=security UGTV search] Many ColdFusion security topics can be found by searching UGTV for the word security.<br>
+<br>
+
+==White Papers/Presentations==
+[http://www.petefreitag.com/presentations/cfobjective/2011/maximum-security-cfml.pdf Maximum Security CFML] Pete Freitag's presentation from the CFObjective 2011 conference.<br>
+[https://media.blackhat.com/bh-us-10/presentations/Eng_Creighton/BlackHat-USA-2010-Eng-Creighton-Deconstructing-ColdFusion-slides.pdf Deconstructing ColdFusion] The slides from Chris Eng's and Brandon Creighton's presentation at BlackHat 2010.<br>
+[http://foundeo.com/security/presentations/cfunited-writing-secure-cfml-2010.pdf Writing Secure CFML] Pete Freitag's slides from his CFUnited 2010 presentation.<br>
+[http://foundeo.com/security/presentations/cfunited-coldfusion-lockdown-2010.pdf ColdFusion Lockdown] Pete Freitag's slides from his CFUnited 2010 presentation on locking down ColdFusion.<br>
+[http://cfunited.com/2009/files/presentations/254_ShlomyGantz_August2009_HackProofingColdFusion.pdf Hack Proofing ColdFusion] Shlomy Gantz's presentation from CFUnited 2009.<br>
+
+<br>
+
+==Articles==
+[http://www.adobe.com/devnet/coldfusion/articles/coldfusion-securing-apps.html Securing your applications using HttpOnly cookies with ColdFusion] An Adobe Developer Connection article by Pete Freitag detailing how to implement HttpOnly cookies in ColdFusion.<br>
+[http://www.12robots.com/index.cfm/Security Jason Dean's blog] Jason Dean frequently blogs on ColdFusion application security topics. This is a collection of his blogs.<br>
+[http://www.petefreitag.com/tag/security Pete Freitag's blog] Pete Freitag frequently blogs on ColdFusion application security topics. This is a collection of his blogs.<br>
+
+<br>
+
+==References==
+[http://www.adobe.com/devnet/coldfusion/security.html ColdFusion Security] The Adobe Developer Center's section on ColdFusion Security.<br>
+[http://www.adobe.com/products/coldfusion/whitepapers/pdf/91025512_cf9_lockdownguide_wp_ue.pdf ColdFusion 9 Lockdown Guide] The Adobe server lockdown guide for ColdFusion 9.<br>
+[http://www.adobe.com/support/security/#coldfusion ColdFusion Security Updates] The section of the Adobe Security page that lists current ColdFusion security patches.<br>
+[http://help.adobe.com/en_US/ColdFusion/9.0/Developing/index.html ColdFusion 9 Developer Guide] Adobe's official documentation for ColdFusion 9 developers.<br>
+
+<br>
+
+==OWASP Resources==
+[http://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API#tab=ColdFusion.2FCFML OWASP ESAPI - ColdFusion] The OWASP ESAPI project's ColdFusion distribution.<br>
+[http://www.petefreitag.com/item/788.cfm Leveraging the ESAPI library in ColdFusion] Pete Freitag's blog on using the OWASP ESAPI library included in ColdFusion.<br>
+[http://code.google.com/p/owasp-esapi-java/ OWASP ESAPI - Java] The OWASP ESAPI project's Java distribution.<br>
+[http://www.owasp.org/index.php/Guide_Table_of_Contents OWASP Developer Guide] Many sections throughout the developer guide contain specific ColdFusion guidance.<br>
+[http://www.petefreitag.com/item/760.cfm Using AntiSamy with ColdFusion] Pete Freitag's blog on using the OWASP Anti-Samy library with ColdFusion.<br>
+
+<br>
+
+==Tools==
+[https://www.veracode.com/press-releases/veracode-unveils-the-most-complete-cloud-based-application-security-testing-service-for-software-dev-3.html Veracode] Veracode is a commercial security testing company whose flagship product can test ColdFusion applications.<br>
+[http://hackmycf.com/ Hack My CF] An online tool that specializes in hacking ColdFusion servers.<br>
+[http://foundeo.com/security/ FuseGuard] A commercial web application firewall for ColdFusion servers.<br>
+
+<br>
+
+==Security Libraries==
+
+[http://www.oracle.com/technetwork/java/javase/downloads/index.html Java Cryptography Extension] It is possible to get stronger cryptography out of ColdFusion by updating the Java Policy files as described [http://www.danielgaspar.com/blog/2011/01/coldfusion-strong-encryption-256bit-and-higher/ here]. Ensure that you are adhering to your local government requirements.<br>
+
+[http://tokenizer.riaforge.org/ Tokenizer] Tokenizer encapsulates all the heavy lifting of creating, expiring, checking and removing a unique token from Forms on your site to combat CSRF.
+
+[https://github.com/anthony-id/cfWSAuthenticator cfWSAuthenticator] A ColdFusion CFC to add WS-Security to SOAP requests.
+
+[https://github.com/anthony-id/cfSAML cfSAML] ColdFusion object to create SAML packets as an Identity Provider.
+
+<br>
+
+==Project Contributors==
+
+The ColdFusion Security Resources section is run by [http://www.owasp.org/index.php/User:Puhley Peleus Uhley]<br>

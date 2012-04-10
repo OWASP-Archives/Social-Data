@@ -1,0 +1,23 @@
+== Overview ==
+
+The purpose of this article is to maintain the desired change requests for the upcoming CSRFTester releases. If there is a particular feature that you would like to see implemented, please feel free to add it to the appropriate sections below.
+
+== Planned Changes ==
+
+The following is a list of changes that are tentatively scheduled for the CSRFTester 1.2 release:
+
+:# Rebuild the project in NetBeans and create jUnit test cases where applicable
+:# Fix an off-by-one bug as noted by Jason Axley
+:# Handle ASP.NET pages that have an input type with the name submit as noted by Jason Axley
+
+== Deferred Changes ==
+
+The following is a list of changes that were suggested but not implemented:
+
+TBD
+
+== Changes Under Consideration ==
+
+The following is a list of change requests that are still under consideration:
+
+:# Port CSRFTester as a WebScarab plugin

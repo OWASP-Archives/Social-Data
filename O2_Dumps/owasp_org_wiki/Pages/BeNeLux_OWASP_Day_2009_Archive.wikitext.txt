@@ -1,0 +1,163 @@
+__NOTOC__ 
+<center>[http://www.owasp.org/index.php/BeNeLux_OWASP_Day_2009#tab=Registration http://www.owasp.org/images/thumb/7/72/Banner_bnl_2009.JPG/800px-Banner_bnl_2009.JPG]</center>
+<br> <!-- Header --> 
+
+==== Welcome ====
+
+<br> 
+
+<center>
+'''BeNeLux OWASP Day 2009 Archive''' 
+
+The largest BeNeLux OWASP event on record has come to an end. 
+
+We had a great day (December 2nd 2009), stuffed with presentations and the OWASP Live CD / WebGoat workshop.
+
+All the presentations are available for download in the [http://www.owasp.org/index.php/BeNeLux_OWASP_Day_2009#Agenda Agenda] tab.
+
+'''[http://blog.rootshell.be/ /dev/random]''' covered the event in his blog post "'''[http://blog.rootshell.be/2009/12/03/owasp-benelux-day-2009/ OWASP Benelux Day 2009]'''"
+
+Photo of the workshop action (thank you Martijn Duijm), lot's of laptops glowing up!
+
+[[Image:Bnl09 webgoat live cd workshop in action.JPG|400px]] 
+
+
+See you next year!
+
+</center>
+The speakers were: 
+
+*'''Prof. Dr. Ir. Bart Preneel''', Professor at Computer Security and Industrial Cryptography research group, University of Leuven 
+*'''Colin Watson''', Technical Director and principal consultant at Watson Hall and Global Industry Committee Member at OWASP Foundation 
+*'''Eoin Keary''', Attack and Penetration team senior manager for EMEIA at Ernst &amp; Young and OWASP Code Review Guide Author and Lead 
+*'''Sebastien Deleersnyder''', Lead Application Security at Telindus, Belgacom ICT and OWASP Foundation Board Member 
+*'''Bart De Win''', Principal Consultant at Ascure and OWASP Belgium Board Member 
+*'''Martin Knobloch''', Software Architect at Sogeti Nederland, Global Education Committee Member at OWASP Foundation and Netherlands Board Member 
+*'''Florence Mottay''', Managing Principal Citigal 
+*'''Migchiel de Jong''', Software Security Engineer at Fortify 
+*'''Noa Bar-Yosef''', senior security researcher with the Imperva Application Defense Center 
+*'''Erwin Geirnaert''', Partner &amp; Co-founder at ZION SECURITY and OWASP Belgium Board Member 
+*'''Sandro Gauci''', Chief Consultant and Founder of EnableSecurity
+
+==== Agenda ====
+
+{| border="0" align="center" style="width: 80%;"
+|-
+! align="center" colspan="3" | '''College De Valck''' - December 2, 2009
+|-
+| style="background: rgb(123, 138, 189) none repeat scroll 0% 0%; width: 15%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | 12:00 - 12:30 
+| align="left" colspan="2" style="background: rgb(194, 194, 194) none repeat scroll 0% 0%; width: 75%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | Registration
+|-
+| style="background: rgb(123, 138, 189) none repeat scroll 0% 0%; width: 15%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | 12:30 - 15:30 
+| align="center" colspan="2" style="background: rgb(242, 242, 242) none repeat scroll 0% 0%; width: 75%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | OWASP Live CD - WebGoat workshop 
+'''Erwin Geirnaert &amp; Martin Knobloch''' 
+
+|-
+| style="background: rgb(123, 138, 189) none repeat scroll 0% 0%; width: 15%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | 15:30 - 16:00 
+| align="left" colspan="2" style="background: rgb(194, 194, 194) none repeat scroll 0% 0%; width: 75%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | Break and Welcome 
+([[:File:BNL09 Welcome v1.ppt|PPT]]|[[:File:BNL09 Welcome v1.pdf|PDF]])
+|-
+| style="background: rgb(123, 138, 189) none repeat scroll 0% 0%; width: 15%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | 16:00 - 16:35 
+| align="center" colspan="2" style="background: rgb(242, 242, 242) none repeat scroll 0% 0%; width: 75%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | [[BeNeLux09 - Hybrid Analysis 2.0 - A demonstration of precision results correlation for improved software security testing|Hybrid Analysis 2.0 - A demonstration of precision results correlation for improved software security testing]] ([[:File:BNL09 owasp-benelux-mdj.ppt|PPT]]|[[:File:BNL09 owasp-benelux-mdj.pdf|PDF]])
+'''Migchiel de Jong''' 
+
+|-
+| style="background: rgb(123, 138, 189) none repeat scroll 0% 0%; width: 15%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | 16:35 - 17:10 
+| align="center" colspan="2" style="background: rgb(242, 242, 242) none repeat scroll 0% 0%; width: 75%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | [[BeNeLux09 - Secure development (for a secure planet).|Secure development (for a secure planet).]] ([[:File:BNL09 OWASP SecurityBelgium Eoin.pptx|PPT]]|[[:File:BNL09 OWASP SecurityBelgium Eoin.pdf|PDF]])
+'''Eoin Keary''' '' 
+
+|-
+| style="background: rgb(123, 138, 189) none repeat scroll 0% 0%; width: 15%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | 17:10 - 17:45 
+| align="center" colspan="2" style="background: rgb(242, 242, 242) none repeat scroll 0% 0%; width: 75%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | SDLC pannel ([[:File:BNL09 OWASP-SDLC Panel BNL09 v3.ppt|PPT]]|[[:File:BNL09 OWASP-SDLC Panel BNL09 v3.pdf|PDF]])
+'''Migchiel de Jong (Fortify), Bart De Win (Ascure), Florence Mottay (Cigital), moderator: Sebastien Deleersnyder (OWASP Foundation)'''
+
+|-
+| style="background: rgb(123, 138, 189) none repeat scroll 0% 0%; width: 15%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | 17:45 - 18:25 
+| align="left" colspan="2" style="background: rgb(194, 194, 194) none repeat scroll 0% 0%; width: 75%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | Dinner (Sandwiches)<br>
+|-
+| style="background: rgb(123, 138, 189) none repeat scroll 0% 0%; width: 15%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | 18:25 - 19:00 
+| align="center" colspan="2" style="background: rgb(242, 242, 242) none repeat scroll 0% 0%; width: 75%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | [[SHA-3 Competition: The Quest for Long-Term Security in Cryptographic Hashing]] ([[:File:Bnl09 preneel owasp benelux09.pdf|PDF]])
+'''Bart Preneel''' 
+
+|-
+| style="background: rgb(123, 138, 189) none repeat scroll 0% 0%; width: 15%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | 19:00 - 19:35 
+| align="center" colspan="2" style="background: rgb(242, 242, 242) none repeat scroll 0% 0%; width: 75%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | [[WAF and Business Logic Attacks]] ([[:File:BNL09 OWASP Benelux 2009, Business Logic Attacks - v2.pptx|PPT]]|[[:File:BNL09 OWASP Benelux 2009, Business Logic Attacks - v2.pdf|PDF]])
+'''Noa Bar-Yosef'
+
+|-
+| style="background: rgb(123, 138, 189) none repeat scroll 0% 0%; width: 15%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | 19:35 - 20:10 
+| align="center" colspan="2" style="background: rgb(242, 242, 242) none repeat scroll 0% 0%; width: 75%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | [[Compliance driven vulnerabilities]] ([[:File:BNL09 owasp benelux 2009 colin watson 1.pdf|PDF]])
+'''Colin Watson''' 
+
+|-
+| style="background: rgb(123, 138, 189) none repeat scroll 0% 0%; width: 15%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | 20:10 - 20:40 
+| align="left" colspan="2" style="background: rgb(194, 194, 194) none repeat scroll 0% 0%; width: 75%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | Break
+|-
+| style="background: rgb(123, 138, 189) none repeat scroll 0% 0%; width: 15%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | 20:40 - 21:15 
+| align="center" colspan="2" style="background: rgb(242, 242, 242) none repeat scroll 0% 0%; width: 75%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | [[The OWASP Top 10 is dead, long live the OWASP Top 10 !]] ([[:File:BNL09 BeNeLux2009 - OWASP Top 10 - 2010 rc1.pptx|PPT]]|[[:File:BNL09 BeNeLux2009 - OWASP Top 10 - 2010 rc1.pdf|PDF]])
+'''Sebastien Deleersnyder''' 
+
+|-
+| style="background: rgb(123, 138, 189) none repeat scroll 0% 0%; width: 15%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | 21:15 - 21:50 
+| align="center" colspan="2" style="background: rgb(242, 242, 242) none repeat scroll 0% 0%; width: 75%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" | [[BeNeLux09 - Web Application Firewalls: Detection, Bypassing and Exploitation|Web Application Firewalls: Detection, Bypassing and Exploitation]] ([[:File:BNL09 Web Application Firewalls- Detection, Bypassing and Exploitation.pdf|PDF]])
+'''Sandro Gauci'''  
+
+|}
+
+==== Registration  ====
+
+Participation is free. 
+
+Hint: membership is only $50! Check out the [[Membership]] page to find out more.<br> 
+
+Registration is closed.
+
+==== Venue  ====
+
+[[Image:Mapcollegedevalk.JPG|right]] 
+
+The symposium will be held in the city of Leuven.<br> The city is located about 30 km from Brussels Airport (BRU).<br> From the airport, there are direct [http://www.b-rail.be/main/E/index.php trains] to Leuven. <br> 
+
+'''Venue: College De Valck''' <br> Tiensestraat 41<br> 3000 LEUVEN <br> Belgium<br> Details http://www.kuleuven.be/lokalen/50074663.htm)<br> 
+Nearest Parking is the [http://www.mypark.be/NL/tout_sur_nos_parkings/leuven_ladeuze/leuven_ladeuze.php Parking Ladeuze].
+
+<br> '''Hotels nearby''':<br> La Royale<br> http://www.lodge-hotels.be/lodge/enghotelleuven.html<br> Hotel Ibis<br> http://www.accorhotels.com/gb/hotel-1457-ibis-leuven-centrum/index.shtml<br> Holiday Inn (right accross the venue)<br> http://www.holidayinn-leuven.com<br> New Damshire<br> http://www.hotelnewdamshire.be<br> Single room: 110 EUR/night<br> 
+
+<br> 
+
+==== Organisation  ====
+
+The BeNeLux Day 2009 Program Committee: 
+
+*Bart De Win / Sebastien Deleersnyder ([[Belgium|OWASP Belgium]]) 
+*Ferdinand Vroom / Martin Knobloch ([[Netherlands|OWASP Netherlands]]) 
+*Jocelyn Aubert ([[Luxembourg|OWASP Luxembourg]])
+
+==== Sponsorship ====
+
+{{MemberLinks|link=http://www.ascure.com|logo=Ascure_Logo.jpg}} {{MemberLinks|link=http://www.imperva.com|logo=Imperva_2color_RGB.jpg}} [http://www.fortify.com https://www.owasp.org/images/a/ac/Fortify.jpg]
+
+Contact seba &lt;at&gt; owasp.org for sponsorship 
+
+<paypal>BeNeLux OWASP Day 2009</paypal> 
+
+==== After Party ====
+For you who can not get enough of Leuven, a gathering is suggested after the conference in the Pub "[http://www.ronblacks.be/ Ron Blacks]".<br>
+Location (5 min walk from the venue):<br>
+Mgr. Ladeuzeplein, 31<br>
+3000 Leuven<br>
+URL: [http://www.ronblacks.be/index.php/contact http://www.ronblacks.be/index.php/contact]
+
+<headertabs /> 
+<center>Made possible by our [http://www.owasp.org/index.php/BeNeLux_OWASP_Day_2009#tab=Sponsorship sponsors]:<br> 
+{{MemberLinks|link=http://www.ascure.com|logo=Ascure_Logo.jpg}}{{MemberLinks|link=http://www.imperva.com|logo=Imperva_2color_RGB.jpg}} [http://www.fortify.com http://www.owasp.org/images/a/ac/Fortify.jpg] <br><br> Supported by:<br> {{MemberLinks|link=http://www.isc2.org|logo=Isc2logo.gif}} 
+[[Image:BnlSpiral.png|160px|link=http://www.spiral.lu/]] 
+[http://www.issa-be.org/ http://www.owasp.org/images/d/da/Issa_belgium.jpg] 
+[http://distrinet.cs.kuleuven.be/ http://www.owasp.org/images/e/e1/BNLDistrinet.png] 
+[[Image:ISACA-be logo.gif|link=http://www.isaca.be]] 
+[[Image:Belgium-L-sec.jpg|link=http://www.l-sec.be]] 
+[[Image:Bnl09-Brucon.JPG|160px|link=http://www.brucon.org]]
+
+<br> 
+</center> 
+[[Category:OWASP_AppSec_Conference]] [[Category:OWASP_BeNeLux_Archives]]

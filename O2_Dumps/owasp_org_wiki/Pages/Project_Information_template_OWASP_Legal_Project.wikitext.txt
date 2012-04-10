@@ -1,0 +1,32 @@
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT INFORMATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Legal Project''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|
+[[Image:Legal-bannerbug.JPG|200px|right]]The OWASP Legal Project's '''Secure Software Development Contract Annex (Contract Annex)''' helps software developers and their clients negotiate and capture important contractual terms and conditions related to the security of the software to be developed or delivered. Most contracts are silent on these issues, and the parties frequently have dramatically different views on what has actually been agreed to. Clearly articulating these terms is the best way to ensure that both parties can make informed decisions about how to proceed. There are currently versions in English.
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Key Project Information'''
+ | style="width:14%; background:#cccccc" align="center"|Project Leader<br>[[User:Jeff Williams|'''Jeff Williams''']]
+ | style="width:15%; background:#cccccc" align="center"|Project Contributors<br>[[User:Mike.boberski|'''Mike Boberski''']]
+ | style="width:11%; background:#cccccc" align="center"|Mailing List<br>[https://lists.owasp.org/mailman/listinfo/owasp-legal '''Subscribe here''']<br>[mailto:owasp-legal(at)lists.owasp.org '''Use here''']
+ | style="width:16%; background:#cccccc" align="center"|Licensed under<br>[http://creativecommons.org/licenses/by-sa/3.0/ '''Creative Commons Attribution ShareAlike 3.0''']
+ | style="width:14%; background:#cccccc" align="center"| Project Type<br>[[:Category:OWASP_Project#Release_Status_Projects|'''Documentation''']]
+ | style="width:15%; background:#cccccc" align="center"|Sponsors<br>[http://www.aspectsecurity.com/ '''Aspect Security''']
+ |}
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|'''Current version:''' [[:Category:OWASP_Project_Assessment#Release_Quality_Documentation_Criteria|'''Release''']]
+ | style="width:42%; background:#cccccc" align="center"|
+'''Download free''': [http://www.owasp.org/index.php/Image:OWASP_Secure_Software_Contract_Annex.doc '''Contract Annex''']<br>
+ | style="width:29%; background:#cccccc" align="center"|[http://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project OWASP Top Ten]<br>[http://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project OWASP ASVS Project]
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Latest Project News''' 
+ | colspan="7" style="width:85%; background:#FFDF80" align="left"|
+*'''New Announcement:''' [http://www.owasp.org/index.php/ASVS OWASP Application Security Verification Standard (ASVS)] has been integrated into the OWASP Secure Software Development Contract Annex
+ |}

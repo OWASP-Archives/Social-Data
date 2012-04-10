@@ -1,0 +1,85 @@
+{{Template:Stub}}
+
+<br>
+
+== Description ==
+
+HTTP Strict Transport Security (HSTS) is an opt-in security enhancement that is specified by a web application through the use of a special response header. Once a supported browser receives this header that browser will prevent any communications from being sent over HTTP to the specified domain and will instead send all communications over HTTPS. It also prevents HTTPS click through prompts on browsers.
+
+<br>
+
+== Examples  ==
+
+Example of the HTTP strict transport security header 
+
+  Strict-Transport-Security: max-age=60000
+
+If all subdomains are HTTPS to then the following header is applicable:
+
+  Strict-Transport-Security: max-age=60000; includeSubDomains
+
+== Browser Support ==
+
+{| width="400" cellspacing="1" cellpadding="1" border="1"
+|-
+| '''Browser'''<br>
+| '''Lowest Version Supported'''<br>
+|-
+| Internet Explorer <br>
+| no support<br>
+|-
+| Firefox<br>
+| 4<br>
+|-
+| Opera<br>
+| ??<br>
+|-
+| Safari<br>
+| ??<br>
+|-
+| Chrome<br>
+| 4.0.211.0<br>
+|}
+
+<br>
+
+== Server Side ==
+
+The web server side needs to inject the HSTS header. 
+
+For HTTP sites on the same domain it is [http://tools.ietf.org/html/draft-ietf-websec-strict-transport-sec#section-6.1 not recommended] to add a HSTS header but to do a permanent redirect (301 status code) to the HTTPS site.
+ 
+An Apache HTTPd example that will permanently redirect a URL to the identical URL with a HTTPS scheme, is as follows:
+
+ <VirtualHost *:80>
+        ServerAlias *
+        RewriteEngine On
+        RewriteRule ^(.*)$ https://%{HTTP_HOST}$1 [redirect=301]
+ </VirtualHost>
+
+On the HTTPS site configuration the following is needed to add the header as [http://tools.ietf.org/html/draft-ietf-websec-strict-transport-sec#section-6.1 recommended by the standard]:
+        Header set Strict-Transport-Security "max-age=16070400; includeSubDomains"
+
+The following links show how to do set response headers in other web servers:
+* [http://technet.microsoft.com/en-us/library/cc753133(WS.10).aspx IIS]
+* [http://wiki.nginx.org/HttpHeadersModule NGINX]
+* [http://redmine.lighttpd.net/wiki/lighttpd/Docs:ModSetEnv#Options Lighttpd]
+* [http://httpd.apache.org/docs/2.2/mod/mod_headers.html HTTPd]
+
+== Links ==
+
+[http://tools.ietf.org/html/draft-ietf-websec-strict-transport-sec HSTS Spec]
+
+[http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security Wikipedia.org entry]
+
+[https://developer.mozilla.org/en/Security/HTTP_Strict_Transport_Security MDN Docs for HSTS]
+
+[https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet OWASP TLS Protection Cheat Sheet]
+
+[https://developer.mozilla.org/en/Security/HTTP_Strict_Transport_Security Firefox STS Support]
+
+[http://lists.w3.org/Archives/Public/public-webapps/2009JulSep/1148.html Google Chrome STS Support]
+
+
+
+[[Category:Control|Control]]

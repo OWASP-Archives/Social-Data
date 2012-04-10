@@ -1,0 +1,34 @@
+==Motivation==
+
+Manual source code reviews can be decadent and luxurious. They’ll produce thick reports of sage advice, secure development recommendations, and the organization gets to stretch out their SDLC roadmap as far as they like. The code review process is a bit like the old joke of asking a fat guy what they want to eat at a buffet. Everything.
+
+If [[Web Application Scanning]] can be considered a key *part* of a well balanced breakfast, then manual source code reviews are like having a big piece of chocolate cake after a good dinner. Everybody loves them, but it’s vital to understand the drawbacks. Testing methodologies, pen-testing, static analysis, and architecture review all have a time and place, but when and in what moderation is the key.
+
+The challenge for manual source code reviews are their high time/dollar requirements, lack of repeatability, and that the results are unlikely to surpass that of web application scanning. Meaning, it’s doubtful they’ll identify serious vulnerabilities a quality black box analysis won’t and that an attacker will likely exploit. This is not to say that code reviews are useless, instead they compliment other faster and more efficient ways of reducing risk in an overall web security program.
+
+Some organizations prioritize activities based upon annual source code reviews when application code is updated monthly. Often this leads to focusing on areas of limited immediate benefit and false expectations of security improvement.
+
+A reasonable strategy is to employ manual source code reviews after the basic blocking and tackling assessment work has eliminated the most commonly exploited vulnerabilities. A web security program that takes its lead from code reviews risks allocating resources towards activities resulting in poor website security improvement and questionable business ROI.
+
+==List==
+
+Here is a preliminary list (please update) of items that manual source code reviews cannot find
+
+* Logic flaws spanning multiple disparate websites
+* Trust boundaries and business relationships between multiple disparate websites
+* Web server misconfiguration and well-known vulnerabilities
+* Insecure intermediary devices including proxies, caching servers, and load balancers
+* True website exploitability in consideration of other web security safeguards
+* Files and directories containing sensitive information
+* Timing-based attacks
+* Sensitive information contained in web page comments and image files
+* Active default test accounts
+* The ability to use test credit card numbers
+* Sensitive information cached by web crawlers (Google Hacking)
+* Insecure third-party libraries where source code is unavailable
+* Identification and tracking input and output points throughout the entire system
+* The impact of mitigating business controls
+* The impact of RIA such as flash, active X, java, etc on the overall environment
+* The risk of web page widgets called in by third-parties
+
+and more…

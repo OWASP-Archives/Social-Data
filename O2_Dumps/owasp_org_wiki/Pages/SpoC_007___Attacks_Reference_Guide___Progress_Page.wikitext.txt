@@ -1,0 +1,206 @@
+[http://www.owasp.org/index.php/SpoC_007_-_Attacks_Reference_Guide Back to Attacks Reference Guide Main Page] 
+
+[http://www.owasp.org/index.php/SpoC_007_-_Refresh_Attacks_list Back to Refresh Attacks List Main Page]
+
+
+The Attack reference guide is being developed by [[SpoC_007_-_Attacks_Reference_Guide |NSRAV Security R&D]] and [[SpoC_007_-_Refresh_Attacks_list |Przemyslaw 'Rezos' Skowron]]. In order to avoid work superposition, the project was divided in 3 phases comprising the following activities:
+
+# Attack list revision and description (60% of the project)
+# Attacks categorization (20% of the project)
+# Research and describe new attacks (20% of the project)
+
+Total project status: '''100% Done!'''
+
+== CheckPoints and Decision ==
+
+===Phase 1 - 100% DONE ===
+* Attack List Revision: '''Done!'''
+Total number of items on the Attack Guide: '''91'''!
+
+We noticed that Attack reference guide was previously defined based on [http://cwe.mitre.org/ CWE - Common Weakness Enumeration], which defines global software weakness and threats. In order to develop the Attack reference guide focused on Web application attacks, we reviewed the list and marked some items to be removed from the list. The contents of generic or redundant items were used in descriptions of some items and marked to be removed too.
+
+Items considered to removal from the attack list: '''30 items''', as follows:
+
+**[[API_Abuse]]
+**[[Cross_Site_Scripting]]
+**[[Cross-Site_Scripting]]
+**[[CSRF]]
+**[[Internal_software_developer]]
+**[[Interpreter_Injection]]
+**[[Link_Following]]
+**[[Log_forging]]
+**[[Logic/time_bomb]]
+**[[Macro_symbol]]
+**[[Network_amplification]]
+**[[One-Click_Attack]]
+**[[OS_Injection]]
+**[[OS_Command_Injection]]
+**[[PRNG_permanent_compromise_attack]]
+**[[Reviewing_Code_for_OS_Injection]]
+**[[Script_in_IMG_tags]]
+**[[Sniffing_application_traffic_attack]]
+**[[Template:Attack]]
+**[[Unquoted_Search_Path_or_Element]]
+**[[Web_problems]]
+**[[Wildcard_or_Matching_Element]]
+**[[Windows_::DATA_alternate_data_stream]]
+**[[Windows_hard_link]]
+**[[Windows_MS-DOS_device_names]]
+**[[Windows_Path_Link_problems]]
+**[[Windows_Shortcut_Following_%28.LNK%29]]
+**[[Windows_Virtual_File_problems]]
+**[[XSS_Attacks]]
+**[[XSRF]]
+
+* Attacks Description: '''61 of 61 items done'''!
+
+===Phase 2 - DONE! ===
+The attacks categorization was based on [http://capec.mitre.org Common Attack Pattern Enumeration and Classification - CAPEC], since it is maintained by a respected entity and wide enough to fit all web application attacks. 
+
+The categories defined are:
+* [[:Category:Abuse of Functionality]]
+* [[:Category:Spoofing]]
+* [[:Category:Probabilistic Techniques]]
+* [[:Category:Exploitation of Authentication]]
+* [[:Category:Resource Depletion]]
+* Exploitation of Privilege/Trust
+* [[:Category:Injection]] (Injecting Control Plane content through the Data Plane)
+* [[:Category:Data_Structure_Attacks]]
+* Data Leakage Attacks
+* [[:Category:Resource Manipulation]]
+* [[:Category:Protocol Manipulation]]
+* Time and State Attacks
+
+It was also defined the threats categorization based on [http://wasc.ptsecurity.ru/wasc/index.php?title=TCv2 WASC Threat Classification v2], under development.
+
+===Phase 3 - 100% DONE ===
+Research and Description of new attacks:
+
+** Block Access to Libraries - add as a example of [[Setting_Manipulation]]
+** [[Buffer_Overflow_via_Environment_Variables]]
+** [[Cross_Frame_Scripting]]
+** [[Denial_of_Service]] - The DoS items previously described were extracted from [[Testing_for_Denial_of_Service]] section of [[OWASP_Testing_Guide]].
+** [[Embedding_Null_Code]]
+** [[Man-in-the-browser_attack]]
+** [[Manipulating_User_Permission_Identifier]]
+** [[Overflow_Binary_Resource_File]]
+** [[Session_Prediction]]
+
+=== Work Done ===
+Note: this links were inserted here by Dinis Cruz from OWASP-NSRAV.zip file
+
+Note2: Other items inserted and sorted by name by Leonardo Cavallari (NSRAV).
+
+* [[Direct_Dynamic_Code_Evaluation_%28%27Eval_Injection%27%29]] - ([http://www.owasp.org/index.php?title=Direct_Dynamic_Code_Evaluation_%28%27Eval_Injection%27%29&diff=23056&oldid=6053 diff] , [http://www.owasp.org/index.php?title=Direct_Dynamic_Code_Evaluation_%28%27Eval_Injection%27%29&action=history history])
+
+* [[Direct_Static_Code_Injection]] - ([http://www.owasp.org/index.php?title=Direct_Static_Code_Injection&diff=23057&oldid=5711 diff] , [http://www.owasp.org/index.php?title=Direct_Static_Code_Injection&action=history history])
+
+* [[Double_Encoding]] - ([http://www.owasp.org/index.php?title=Double_Encoding&diff=23058&oldid=5740 diff] , [http://www.owasp.org/index.php?title=Double_Encoding&action=history history])
+
+* [[Forced_browsing]] - ([http://www.owasp.org/index.php?title=Forced_browsing&diff=23060&oldid=19889 diff] , [http://www.owasp.org/index.php?title=Forced_browsing&action=history history])
+
+* [[Format_string_attack]] - ([http://www.owasp.org/index.php?title=Format_string_attack&diff=23065&oldid=7393 diff] , [http://www.owasp.org/index.php?title=Format_string_attack&action=history history])
+
+* [[HTTP_Response_Splitting]] - ([http://www.owasp.org/index.php?title=HTTP_Response_Splitting&diff=23117&oldid=7948 diff] , [http://www.owasp.org/index.php?title=HTTP_Response_Splitting&action=history history])
+
+* [[HTTP_Request_Smuggling]] - ([http://www.owasp.org/index.php?title=HTTP_Request_Smuggling&diff=23118&oldid=5802 diff], [http://www.owasp.org/index.php?title=HTTP_Request_Smuggling&action=history history])
+
+* [[LDAP_injection]] - ([http://www.owasp.org/index.php?title=LDAP_injection&diff=23067&oldid=10830 diff] , [http://www.owasp.org/index.php?title=LDAP_injection&action=history history])
+
+* [[Man-in-the-middle_attack]] - ([http://www.owasp.org/index.php?title=Man-in-the-middle_attack&diff=23075&oldid=18290 diff] , [http://www.owasp.org/index.php?title=Man-in-the-middle_attack&action=history history])
+
+* [[Mobile_code:_invoking_untrusted_mobile_code]] - ([http://www.owasp.org/index.php?title=Mobile_code%3A_invoking_untrusted_mobile_code&diff=23077&oldid=6035 diff] , [http://www.owasp.org/index.php?title=Mobile_code:_invoking_untrusted_mobile_code&action=history history history])
+
+* [[Mobile_code:_non-final_public_field]] - ([http://www.owasp.org/index.php?title=Mobile_code%3A_non-final_public_field&diff=23079&oldid=6036 diff] , [http://www.owasp.org/index.php?title=Mobile_code:_non-final_public_field&action=history history])
+
+* [[Mobile_code:_object_hijack]] - ([http://www.owasp.org/index.php?title=Mobile_code%3A_object_hijack&diff=23082&oldid=6040 diff] , [http://www.owasp.org/index.php?title=Mobile_code:_object_hijack&action=history history])
+
+* [[Network_Eavesdropping]] - ([http://www.owasp.org/index.php?title=Network_Eavesdropping&diff=23146&oldid=7395 diff] , [http://www.owasp.org/index.php?title=Network_Eavesdropping&action=history history])
+
+* [[Parameter_Delimiter]] - ([http://www.owasp.org/index.php?title=Parameter_Delimiter&diff=23084&oldid=6190 diff] , [http://www.owasp.org/index.php?title=Parameter_Delimiter&action=history history])
+	
+* [[Path_Manipulation]] - ([http://www.owasp.org/index.php?title=Path_Manipulation&diff=23059&oldid=7983 diff] , [http://www.owasp.org/index.php?title=Path_Manipulation&action=history history])
+
+* [[Path_Traversal]] - ([http://www.owasp.org/index.php?title=Path_Traversal&diff=23066&oldid=18282 diff] , [http://www.owasp.org/index.php?title=Path_Traversal&action=history history])
+
+* [[Relative_Path_Traversal]] - ([http://www.owasp.org/index.php?title=Relative_Path_Traversal&diff=23071&oldid=6423 diff] , [http://www.owasp.org/index.php?title=Relative_Path_Traversal&action=history history])
+
+* [[Repudiation_Attack]] - ([http://www.owasp.org/index.php?title=Repudiation_Attack&diff=23076&oldid=7397 diff] , [http://www.owasp.org/index.php?title=Repudiation_Attack&action=history history])
+
+* [[Resource_Injection]] - ([http://www.owasp.org/index.php?title=Resource_Injection&diff=23078&oldid=7980 diff] , [http://www.owasp.org/index.php/Resource_Injection&action=history history])
+
+* [[Server-Side_Includes_%28SSI%29_Injection]] - ([http://www.owasp.org/index.php?title=Server-Side_Includes_%28SSI%29_Injection&diff=23081&oldid=18278 diff] , [http://www.owasp.org/index.php?title=Server-Side_Includes_%28SSI%29_Injection&action=history history])
+
+* [[Session_fixation]] - ([http://www.owasp.org/index.php?title=Session_fixation&diff=23144&oldid=7391 diff] , [http://www.owasp.org/index.php?title=Session_fixation&action=history history])
+
+* [[Session_hijacking_attack]] - ([http://www.owasp.org/index.php?title=Session_hijacking_attack&diff=23086&oldid=6467 diff] , [http://www.owasp.org/index.php?title=Session_hijacking_attack&action=history history])
+
+* [[Setting_Manipulation]] - ([http://www.owasp.org/index.php?title=Setting_Manipulation&diff=23088&oldid=7984 diff] , [http://www.owasp.org/index.php?title=Setting_Manipulation&action=history history])
+
+* [[Special_Element_Injection]] - ([http://www.owasp.org/index.php?title=Special_Element_Injection&diff=23089&oldid=6447 diff] , [http://www.owasp.org/index.php?title=Special_Element_Injection&action=history history])
+
+* [[Spyware]] - ([http://www.owasp.org/index.php?title=Spyware&diff=23090&oldid=6448 diff] , [http://www.owasp.org/index.php?title=Spyware&action=history history])
+
+* [[SQL_Injection]] - ([http://www.owasp.org/index.php?title=SQL_Injection&diff=23119&oldid=21964 diff] , [http://www.owasp.org/index.php?title=SQL_Injection&action=history history])
+
+* [[Traffic_flood]] - ([http://www.owasp.org/index.php?title=Traffic_flood&diff=23109&oldid=7392 diff] , [http://www.owasp.org/index.php?title=Traffic_flood&action=history history])
+
+* [[Trojan_Horse]] - ([http://www.owasp.org/index.php?title=Trojan_Horse&diff=23093&oldid=7078 diff] , [http://www.owasp.org/index.php?title=Trojan_Horse&action=history history])
+
+* [[Unicode_Encoding]] - ([http://www.owasp.org/index.php?title=Unicode_Encoding&diff=23094&oldid=7943 diff] , [http://www.owasp.org/index.php?title=Unicode_Encoding&action=history history])
+
+* [[Web_Parameter_Tampering]] - ([http://www.owasp.org/index.php?title=Web_Parameter_Tampering&diff=23104&oldid=6831 diff] , [http://www.owasp.org/index.php?title=Web_Parameter_Tampering&action=history history])
+
+
+'''New items'''
+** [[Denial_of_Service]]
+** [[Embedding_Null_Code]]
+** [[Man-in-the-browser_attack]]
+** [[Manipulating_User_Permission_Identifier]]
+** [[Session_Prediction]]
+
+
+by Przemyslaw 'rezos' Skowron (20071025 - part I - first 50%])
+
+* [[Absolute_Path_Traversal]] - ([http://www.owasp.org/index.php?title=Absolute_Path_Traversal&diff=22637&oldid=14001 diff] , [http://www.owasp.org/index.php?title=Absolute_Path_Traversal&action=history history])
+
+* [[Argument_Injection_or_Modification]] - ([http://www.owasp.org/index.php?title=Argument_Injection_or_Modification&diff=22638&oldid=5186 diff] , [http://www.owasp.org/index.php?title=Argument_Injection_or_Modification&action=history history])
+
+* [[Brute_force_attack]] - ([http://www.owasp.org/index.php?title=Brute_force_attack&diff=22641&oldid=13966 diff] , [http://www.owasp.org/index.php?title=Brute_force_attack&action=history history])
+
+* [[Buffer_overflow_attack]] - ([http://www.owasp.org/index.php?title=Buffer_overflow_attack&diff=22642&oldid=7390 diff] , [http://www.owasp.org/index.php?title=Buffer_overflow_attack&action=history history])
+
+* [[Cache_Poisoning]] - ([http://www.owasp.org/index.php?title=Cache_Poisoning&diff=22647&oldid=13172 diff] , [http://www.owasp.org/index.php?title=Cache_Poisoning&action=history history])
+
+* [[Code_Injection]] - ([http://www.owasp.org/index.php?title=Code_Injection&diff=22651&oldid=7913 diff] , [http://www.owasp.org/index.php?title=Code_Injection&action=history history])
+
+* [[Command_Injection]] - ([http://www.owasp.org/index.php?title=Command_Injection&diff=22654&oldid=16438 diff] , [http://www.owasp.org/index.php?title=Command_Injection&action=history history])
+
+* [[Cross-Site_Request_Forgery]] - ([http://www.owasp.org/index.php?title=Cross-Site_Request_Forgery&diff=22643&oldid=19627 diff] , [http://www.owasp.org/index.php?title=Cross-Site_Request_Forgery&action=history history])
+
+* [[Cross-User_Defacement]] - ([http://www.owasp.org/index.php?title=Cross-User_Defacement&diff=22658&oldid=7949 diff] , [http://www.owasp.org/index.php?title=Cross-User_Defacement&action=history history])
+
+* [[Cross-site-scripting]] - ([http://www.owasp.org/index.php?title=Cross-site-scripting&diff=22660&oldid=21443 diff] , [http://www.owasp.org/index.php?title=Cross-site-scripting&action=history history])
+
+* [[Integer_Overflows/Underflows]] - ([http://www.owasp.org/index.php?title=Integer_Overflows%2FUnderflows&diff=22661&oldid=7380 diff] , [http://www.owasp.org/index.php?title=Integer_Overflows/Underflows&action=history history])
+
+* [[XSS_in_error_pages]] - ([http://www.owasp.org/index.php?title=XSS_in_error_pages&diff=22662&oldid=6850 diff] , [http://www.owasp.org/index.php?title=XSS_in_error_pages&action=history history])
+
+by Przemyslaw 'rezos' Skowron (20071104 - part II - second 50%])
+
+* [[Account_lockout_attack]] - ([http://www.owasp.org/index.php?title=Account_lockout_attack&diff=22954&oldid=6117 diff] , [http://www.owasp.org/index.php?title=Account_lockout_attack&action=history history])
+* [[Alternate_XSS_Syntax]] - ([http://www.owasp.org/index.php?title=Alternate_XSS_Syntax&diff=22956&oldid=16480 diff], [http://www.owasp.org/index.php?title=Alternate_XSS_Syntax&action=history history])
+* [[Asymmetric_resource_consumption_%28amplification%29]] - ([http://www.owasp.org/index.php?title=Asymmetric_resource_consumption_%28amplification%29&diff=22957&oldid=5188 diff], [http://www.owasp.org/index.php?title=Asymmetric_resource_consumption_%28amplification%29&action=history history])
+* [[Blind_SQL_Injection]] - ([http://www.owasp.org/index.php?title=Blind_SQL_Injection&diff=22959&oldid=14497 diff], [http://www.owasp.org/index.php?title=Blind_SQL_Injection&action=history history])
+* [[Blind_XPath_Injection]] - ([http://www.owasp.org/index.php?title=Blind_XPath_Injection&diff=22960&oldid=9579 diff], [http://www.owasp.org/index.php?title=Blind_XPath_Injection&action=history history])
+* [[Comment_Element]] - ([http://www.owasp.org/index.php?title=Comment_Element&diff=22961&oldid=5325 diff], [http://www.owasp.org/index.php?title=Comment_Element&action=history history])
+* [[Cryptanalysis]] - ([http://www.owasp.org/index.php?title=Cryptanalysis&diff=22962&oldid=7389 diff], [http://www.owasp.org/index.php?title=Cryptanalysis&action=history history])
+* [[Custom_Special_Character_Injection]] - ([http://www.owasp.org/index.php?title=Custom_Special_Character_Injection&diff=22963&oldid=5357 diff], [http://www.owasp.org/index.php?title=Custom_Special_Character_Injection&action=history history])
+* [[XPATH_Injection]] - ([http://www.owasp.org/index.php?title=XPATH_Injection&diff=22965&oldid=21461 diff], [http://www.owasp.org/index.php?title=XPATH_Injection&action=history history])
+* [[XSS_using_Script_Via_Encoded_URI_Schemes]] - ([http://www.owasp.org/index.php?title=XSS_using_Script_Via_Encoded_URI_Schemes&diff=22936&oldid=6851 diff], [http://www.owasp.org/index.php?title=XSS_using_Script_Via_Encoded_URI_Schemes&action=history history])
+* [[XSS_using_Script_in_Attributes ]] - ([http://www.owasp.org/index.php?title=XSS_using_Script_in_Attributes&diff=22937&oldid=6852 diff], [http://www.owasp.org/index.php?title=XSS_using_Script_in_Attributes&action=history history])
+
+NEW ITEMS - 20071104 (by Przemyslaw 'rezos' Skowron):
+* [[Overflow_Binary_Resource_File]] - ([INITIAL VERSION diff] , [http://www.owasp.org/index.php?title=Overflow_Binary_Resource_File&action=history history])
+* [[Cross_Frame_Scripting]] - ([INITIAL VERSION diff] , [http://www.owasp.org/index.php?title=Cross_Frame_Scripting&action=history history])
+* [[Buffer_Overflow_via_Environment_Variables]] - ([INITIAL VERSION diff] , [http://www.owasp.org/index.php?title=Buffer_Overflow_via_Environment_Variables&action=history history])

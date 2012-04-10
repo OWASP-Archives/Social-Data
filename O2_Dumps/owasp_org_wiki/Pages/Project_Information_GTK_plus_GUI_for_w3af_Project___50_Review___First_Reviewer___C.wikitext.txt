@@ -1,0 +1,70 @@
+[[Project Information:template GTK plus GUI for w3af Project|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#GTK+ GUI for w3af project|GTK + GUI for w3af Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#GTK+ GUI for w3af project|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+Facundo has been working hard on the [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#GTK+ GUI for w3af project|'''previously specified tasks''']]. After a carefull examination, I can say that he is on schedule, mostly because he has chosen to solve the hardest tasks earlier and his excellent programming skills. A detailed progress can be seen in the [http://sourceforge.net/pm/task.php?group_id=170274&set=custom&group_project_id=56282&_assigned_to=0&_status=100&SUBMIT=Browse   w3af sourceforge project page].
+
+The tasks that have been finished by him in this first phase are:
+
+- '''#(Sourceforge task number)        (Description)'''
+
+- #148110	Manually send a request and analyze the response
+
+- #148111	Manually create a fuzzed requests based on tokens
+
+- #148113	Embebed tool to encode/decode URL/Base64 and to hash sha1/md5
+
+- #148224	Resend request
+
+- #148114	HTTP response side by side content compare
+
+
+He has also fixed some bugs that the w3af users found on the code he was working at, which is great for us.
+
+
+The things that he still needs to work at are:
+
+- '''#(Sourceforge task number)        (Description)'''
+
+- #148109	Local proxy to trap and modify requests and responses
+
+- #148112	Reload a plugin after its edited from within the GUI
+
+- Meetings with a usability expert that the w3af team leader has already contacted and worked with.
+
+- Wizard to perform a vulnerability assessment.
+
+- Graphical display of site map and vulnerabilities. 
+
+- Kill all pending bugs and make a stable release.
+
+- Users guide for the pyGTK user interface.
+
+- Help system for the GUI itself
+
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#GTK+ GUI for w3af project|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+I think that Facundo has done at least 60% of the work. 
+
+ |- 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+Not much to say here, Facundo is a knowledgable developer that is doing a great work.
+|}

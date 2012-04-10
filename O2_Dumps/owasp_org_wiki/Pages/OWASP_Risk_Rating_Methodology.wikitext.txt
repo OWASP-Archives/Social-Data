@@ -1,0 +1,320 @@
+{{Template:OWASP Testing Guide v3}}
+
+
+==The OWASP Risk Rating Methodology== 
+
+Discovering vulnerabilities is important, but just as important is being able to estimate the associated risk to the business. Early in the lifecycle, you may identify security concerns in the architecture or design by using [[threat modeling]].  Later, you may find security issues using [[code review]] or [[penetration testing]].  Or you may not discover a problem until the application is in production and is actually compromised.
+
+By following the approach here, you'll be able to estimate the severity of all of these risks to your business, and make an informed decision about what to do about them. Having a system in place for rating risks will save time and eliminate arguing about priorities. This system will help to ensure that you don't get distracted by minor risks while ignoring more serious risks that are less well understood.
+
+Ideally, there would be a universal risk rating system that would accurately estimate all risks for all organizations. But a vulnerability that is critical to one organization may not be very important to another. So a basic framework is presented here that you ''should customize'' for your organization.
+
+The authors have tried hard to make this model simple enough to use, while keeping enough detail for accurate risk estimates to be made. Please reference the section below on customization for more information about tailoring the model for use in your organization.
+
+==Approach==
+
+There are many different approaches to risk analysis. See the reference section below for some of the most common ones. The OWASP approach presented here is based on these standard methodologies and is customized for application security.
+
+Let's start with the standard risk model:
+
+       '''Risk = Likelihood * Impact'''
+
+In the sections below, we break down the factors that make up "likelihood" and "impact" for application security and show how to combine them to determine the overall severity for the risk.
+
+* [[#Step 1: Identifying a Risk]]
+* [[#Step 2: Factors for Estimating Likelihood]]
+* [[#Step 3: Factors for Estimating Impact]]
+* [[#Step 4: Determining Severity of the Risk]]
+* [[#Step 5: Deciding What to Fix]]
+* [[#Step 6: Customizing Your Risk Rating Model]]
+
+==Step 1: Identifying a Risk==
+
+The first step is to identify a security risk that needs to be rated. You'll need to gather information about the [[threat agent]] involved, the [[attack]] they're using, the [[vulnerability]] involved, and the [[impact]] of a successful exploit on your business. There may be multiple possible groups of attackers, or even multiple possible business impacts.  In general, it's best to err on the side of caution by using the worst-case option, as that will result in the highest overall risk.
+
+==Step 2: Factors for Estimating Likelihood==
+
+Once you've identified a potential risk, and want to figure out how serious it is, the first step is to estimate the "likelihood". At the highest level, this is a rough measure of how likely this particular vulnerability is to be uncovered and exploited by an attacker. We do not need to be over-precise in this estimate. Generally, identifying whether the likelihood is low, medium, or high is sufficient.
+
+There are a number of factors that can help us figure this out. The first set of factors are related to the [[threat agent]] involved. The goal is to estimate the likelihood of a successful attack from a group of possible attackers. Note that there may be multiple threat agents that can exploit a particular vulnerability, so it's usually best to use the worst-case scenario. For example, an insider may be a much more likely attacker than an anonymous outsider - but it depends on a number of factors.
+
+Note that each factor has a set of options, and each option has a likelihood rating from 0 to 9 associated with it. We'll use these numbers later to estimate the overall likelihood.
+
+===[[Threat Agent]] Factors===
+
+The first set of factors are related to the [[threat agent]] involved. The goal here is to estimate the likelihood of a successful attack by this group of threat agents. Use the worst-case threat agent.
+
+; Skill level
+: How technically skilled is this group of threat agents? No technical skills (1), some technical skills (3), advanced computer user (4), network and programming skills (6), security penetration skills (9)
+
+; Motive
+: How motivated is this group of threat agents to find and exploit this vulnerability? Low or no reward (1), possible reward (4), high reward (9)
+
+; Opportunity
+: What resources and opportunity are required for this group of threat agents to find and exploit this vulnerability? full access or expensive resources required (0), special access or resources required (4), some access or resources required (7), no access or resources required (9)
+
+; Size
+: How large is this group of threat agents? Developers (2), system administrators (2), intranet users (4), partners (5), authenticated users (6), anonymous Internet users (9)
+
+===[[Vulnerability]] Factors===
+
+The next set of factors are related to the [[vulnerability]] involved. The goal here is to estimate the likelihood of the particular vulnerability involved being discovered and exploited. Assume the threat agent selected above.
+
+; Ease of discovery
+: How easy is it for this group of threat agents to discover this vulnerability? Practically impossible (1), difficult (3), easy (7), automated tools available (9)
+
+; Ease of exploit
+: How easy is it for this group of threat agents to actually exploit this vulnerability? Theoretical (1), difficult (3), easy (5), automated tools available (9)
+
+; Awareness
+: How well known is this vulnerability to this group of threat agents? Unknown (1), hidden (4), obvious (6), public knowledge (9)
+
+; Intrusion detection
+: How likely is an exploit to be detected? Active detection in application (1), logged and reviewed (3), logged without review (8), not logged (9)
+
+==Step 3: Factors for Estimating Impact==
+
+When considering the impact of a successful attack, it's important to realize that there are two kinds of impacts. The first is the "technical impact" on the application, the data it uses, and the functions it provides.  The other is the "business impact" on the business and company operating the application.
+
+Ultimately, the business impact is more important. However, you may not have access to all the information required to figure out the business consequences of a successful exploit. In this case, providing as much detail about the technical risk will enable the appropriate business representative to make a decision about the business risk.
+
+Again, each factor has a set of options, and each option has an impact rating from 0 to 9 associated with it. We'll use these numbers later to estimate the overall impact.
+
+
+===Technical Impact Factors===
+
+Technical impact can be broken down into factors aligned with the traditional security areas of concern: confidentiality, integrity, availability, and accountability. The goal is to estimate the magnitude of the impact on the system if the vulnerability were to be exploited.
+
+
+; Loss of confidentiality
+: How much data could be disclosed and how sensitive is it? Minimal non-sensitive data disclosed (2), minimal critical data disclosed (6), extensive non-sensitive data disclosed (6), extensive critical data disclosed (7), all data disclosed (9)
+
+; Loss of integrity
+: How much data could be corrupted and how damaged is it? Minimal slightly corrupt data (1), minimal seriously corrupt data (3), extensive slightly corrupt data (5), extensive seriously corrupt data (7), all data totally corrupt (9)
+
+; Loss of availability
+: How much service could be lost and how vital is it? Minimal secondary services interrupted (1), minimal primary services interrupted (5), extensive secondary services interrupted (5), extensive primary services interrupted (7), all services completely lost (9)
+
+; Loss of accountability
+: Are the threat agents' actions traceable to an individual? Fully traceable (1), possibly traceable (7), completely anonymous (9)
+
+===Business Impact Factors===
+
+The business impact stems from the technical impact, but requires a deep understanding of what is important to the company running the application. In general, you should be aiming to support your risks with business impact, particularly if your audience is executive level. The business risk is what justifies investment in fixing security problems.
+
+Many companies have an asset classification guide and/or a business impact reference to help formalize what is important to their business. These standards can help you focus on what's truly important for security. If these aren't available, then talk with people who understand the business to get their take on what's important.
+
+The factors below are common areas for many businesses, but this area is even more unique to a company than the factors related to threat agent, vulnerability, and technical impact.
+
+; Financial damage
+: How much financial damage will result from an exploit? Less than the cost to fix the vulnerability (1), minor effect on annual profit (3), significant effect on annual profit (7), bankruptcy (9)
+
+; Reputation damage
+: Would an exploit result in reputation damage that would harm the business? Minimal damage (1), Loss of major accounts (4), loss of goodwill (5), brand damage (9)
+
+; Non-compliance
+: How much exposure does non-compliance introduce? Minor violation (2), clear violation (5), high profile violation (7)
+
+; Privacy violation
+: How much personally identifiable information could be disclosed? One individual (3), hundreds of people (5), thousands of people (7), millions of people (9)
+
+==Step 4: Determining the Severity of the Risk== 
+
+In this step we're going to put together the likelihood estimate and the impact estimate to calculate an overall severity for this risk.  All you need to do here is figure out whether the likelihood is LOW, MEDIUM, or HIGH and then do the same for impact. We'll just split our 0 to 9 scale into three parts.
+
+<table border="1" width="40%" align="center">
+<tr>
+<td align="center" colspan="2"><b>Likelihood and Impact Levels</b></td>
+</tr>
+<tr>
+<td align="center" width="50%">0 to &lt;3</td>
+<td align="center" width="50%" bgcolor="lightgreen">LOW</td>
+</tr>
+<tr>
+<td align="center">3 to &lt;6</td>
+<td align="center" bgcolor="yellow">MEDIUM</td>
+</tr>
+<tr>
+<td align="center">6 to 9</td>
+<td align="center" bgcolor="red">HIGH</td>
+</tr>
+</table>
+
+
+===Informal Method===
+
+In many environments, there is nothing wrong with "eyeballing" the factors and simply capturing the answers. You should think through the factors and identify the key "driving" factors that are controlling the result. You may discover that your initial impression was wrong by considering aspects of the risk that weren't obvious.
+
+===Repeatable Method===
+
+If you need to defend your ratings or make them repeatable, then you may want to go through a more formal process of rating the factors and calculating the result. Remember that there is quite a lot of uncertainty in these estimates, and that these factors are intended to help you arrive at a sensible result. This process can be supported by automated tools to make the calculation easier. 
+
+The first step is to select one of the options associated with each factor and enter the associated number in the table. Then you simply take the average of the scores to calculate the overall likelihood. For example:
+
+<table border="1" align="center">
+<tr>
+<td colspan="4" align="center"><b>Threat agent factors</b></td>
+<td></td>
+<td  colspan="4" align="center"><b>Vulnerability factors</b></td>
+</tr>
+<tr>
+<td align="center" width="10%">Skill level</td>
+<td align="center" width="10%">Motive</td>
+<td align="center" width="10%">Opportunity</td>
+<td align="center" width="10%">Size</td>
+<td align="center" width="2%"></td>
+<td align="center" width="10%">Ease of discovery</td>
+<td align="center" width="10%">Ease of exploit</td>
+<td align="center" width="10%">Awareness</td>
+<td align="center" width="10%">Intrusion detection</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">2</td>
+<td align="center">7</td>
+<td align="center">1</td>
+<td align="center"></td>
+<td align="center">3</td>
+<td align="center">6</td>
+<td align="center">9</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td colspan="9" align="center" bgcolor="lightblue">Overall likelihood=4.375 (MEDIUM)</td>
+</tr>
+</table>
+
+
+Next, we need to figure out the overall impact. The process is similar here. In many cases the answer will be obvious, but you can make an estimate based on the factors, or you can average the scores for each of the factors. Again, less than 3 is LOW, 3 to less than 6 is MEDIUM, and 6 to 9 is HIGH.  For example:
+
+
+<table border="1" align="center">
+<tr>
+<td colspan="4" align="center"><b>Technical Impact</b></td>
+<td></td>
+<td  colspan="4" align="center"><b>Business Impact</b></td>
+</tr>
+<tr>
+<td align="center" width="10%">Loss of confidentiality</td>
+<td align="center" width="10%">Loss of integrity</td>
+<td align="center" width="10%">Loss of availability</td>
+<td align="center" width="10%">Loss of accountability</td>
+<td align="center" width="2%"></td>
+<td align="center" width="10%">Financial damage</td>
+<td align="center" width="10%">Reputation damage</td>
+<td align="center" width="10%">Non-compliance</td>
+<td align="center" width="10%">Privacy violation</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="center">7</td>
+<td align="center">5</td>
+<td align="center">8</td>
+<td align="center"></td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">1</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td colspan="4" align="center" bgcolor="lightblue">Overall technical impact=7.25 (HIGH)</td>
+<td></td>
+<td colspan="4" align="center" bgcolor="lightblue">Overall business impact=2.25 (LOW)</td>
+</tr>
+</table>
+
+===Determining Severity===
+
+However we arrived at the likelihood and impact estimates, we can now combine them to get a final severity rating for this risk. Note that if you have good business impact information, you should use that instead of the technical impact information.  But if you have no information about the business, then technical impact is the next best thing.
+
+
+<table border="1" align="center">
+<tr>
+<td align="center" colspan="5"><b>Overall Risk Severity</b></td>
+</tr>
+<tr>
+<td align="center" width="15%" rowspan="4"><b>Impact</b></td>
+<td align="center" width="15%">HIGH</td>
+<td align="center" width="15%" bgcolor="orange">Medium</td>
+<td align="center" width="15%" bgcolor="red">High</td>
+<td align="center" width="15%" bgcolor="pink">Critical</td>
+</tr>
+<tr>
+<td align="center">MEDIUM</td>
+<td align="center" bgcolor="yellow">Low</td>
+<td align="center" bgcolor="orange">Medium</td>
+<td align="center" bgcolor="red">High</td>
+</tr>
+<tr>
+<td align="center">LOW</td>
+<td align="center" bgcolor="lightgreen">Note</td>
+<td align="center" bgcolor="yellow">Low</td>
+<td align="center" bgcolor="orange">Medium</td>
+</tr>
+<tr>
+<td align="center">&nbsp;</td>
+<td align="center">LOW</td>
+<td align="center">MEDIUM</td>
+<td align="center">HIGH</td>
+</tr>
+<tr>
+<td align="center">&nbsp;</td>
+<td align="center" colspan="4"><b>Likelihood</b></td>
+</tr>
+</table>
+
+
+
+In the example above, the likelihood is MEDIUM, and the technical impact is HIGH, so from a purely technical perspective, it appears that the overall severity is HIGH.  However, note that the business impact is actually LOW, so the overall severity is best described as LOW as well. This is why understanding the business context of the vulnerabilities you are evaluating is so critical to making good risk decisions. Failure to understand this context can lead to the lack of trust between the business and security teams that is present in many organizations.
+
+==Step 5: Deciding What to Fix==
+
+After you've classified the risks to your application, you'll have a prioritized list of what to fix. As a general rule, you should fix the most severe risks first. It simply doesn't help your overall risk profile to fix less important risks, even if they're easy or cheap to fix.
+
+Remember, not all risks are worth fixing, and some loss is not only expected, but justifiable based upon the cost of fixing the issue. For example, if it would cost $100,000 to implement controls to stem $2,000 of fraud per year, it would take 50 years return on investment to stamp out the loss. But remember there may be reputation damage from the fraud that could cost the organization much more.
+
+
+
+==Step 6: Customizing Your Risk Rating Model==
+
+Having a risk ranking framework that's customizable for a business is critical for adoption.  A tailored model is much more likely to produce results that match people's perceptions about what is a serious risk. You can waste lots of time arguing about the risk ratings if they're not supported by a model like this. There are several ways to tailor this model for your organization.
+
+===Adding factors===
+
+You can choose different factors that better represent what's important for your organization. For example, a military application might add impact factors related to loss of human life or classified information. You might also add likelihood factors, such as the window of opportunity for an attacker or encryption algorithm strength.
+
+===Customizing options===
+
+There are some sample options associated with each factor, but the model will be much more effective if you customize these options to your business. For example, use the names of the different teams and your names for different classifications of information. You can also change the scores associated with the options. The best way to identify the right scores is to compare the ratings produced by the model with ratings produced by a team of experts. You can tune the model by carefully adjusting the scores to match.
+
+===Weighting factors===
+
+The model above assumes that all the factors are equally important. You can weight the factors to emphasize the factors that are more significant for your business. This makes the model a bit more complex, as you'll need to use a weighted average. But otherwise everything works the same. Again, you can tune the model by matching it against risk ratings you agree are accurate.
+
+==References==
+
+* NIST 800-30 Risk Management Guide for Information Technology Systems [http://csrc.nist.gov/publications/nistpubs/800-30/sp800-30.pdf]
+
+* AS/NZS 4360 Risk Management [http://www.saiglobal.com/shop/script/Details.asp?docn=AS564557616854]
+
+* Industry standard vulnerability severity and risk rankings (CVSS) [http://www.first.org/cvss/]
+
+* Security-enhancing process models (CLASP) [http://www.owasp.org/index.php/Category:OWASP_CLASP_Project]
+
+* Microsoft Web Application Security Frame [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnpag2/html/TMWA.asp]
+
+* Security In The Software Lifecycle from DHS [https://buildsecurityin.us-cert.gov/daisy/bsi/87/version/12/part/4/data/Draft+Security+in+the+Software+Lifcycle+v1.2.pdf?branch=main&language=default]
+
+* [[Threat_Risk_Modeling|Threat Risk Modeling]]
+
+* Pratical Threat Analysis [http://www.ptatechnologies.com/]
+
+* A Platform for Risk Analysis of Security Critical Systems [http://www2.nr.no/coras/]
+
+* Model-driven Development and Analysis of Secure Information Systems [http://heim.ifi.uio.no/~ketils/securis/the-securis-technical-description.htm]
+
+* Value Driven Security Threat Modeling Based on Attack Path Analysis[http://sunset.usc.edu/events/2006/CSSE_Convocation/publications/ChenValueBasedSecurityThreatModel.pdf]
+
+== Project Sponsors ==
+
+This project is sponsored by {{MemberLinks|link=http://www.aspectsecurity.com|logo=Aspect_logo_owasp.jpg}}

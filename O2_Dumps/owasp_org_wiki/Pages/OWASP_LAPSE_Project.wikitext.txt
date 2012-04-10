@@ -1,0 +1,63 @@
+==== Main  ====
+'''LAPSE+: The Security Scanner for Java EE Applications'''
+
+== News ==
+* 4/15/2011 - [http://evalues.es/index.php/es/owasp-lapse-project.html LAPSE+] released.
+* 8/23/2006 - [http://suif.stanford.edu/~livshits/work/lapse/download.html LAPSE 2.5.5] released.
+* 8/22/2006 - OWASP LAPSE Project Created.
+
+== Overview ==
+[[Image:LapseLogo.png|300px|left]]
+'''OWASP LAPSE Project''' is an initiative to make available to developers and auditors a tool for detecting vulnerabilities in Java EE Applications. The project aims to put at their disposal a tool based on the static analysis of code, due to the importance and difficulty of this type of analysis to detect security flaws in Java EE Applications. The difficulty of this analysis increases when they face applications consisting of thousands of lines of code or having a complex structure with many Java classes. Hence, OWASP LAPSE Project offers a tool that helps the developer and auditor to carry out the static analysis of code in the most effective and efficient way. The tool that is provided and gives the name to the project is LAPSE+.
+
+'''LAPSE+''' is a security scanner for detecting vulnerabilities of untrusted data injection in Java EE Applications. It has been developed as a plugin for Eclipse Java Development Environment, working specifically with Eclipse Helios and Java 1.6 or higher. LAPSE+ is based on the GPL software LAPSE, developed by [http://suif.stanford.edu/~livshits/ Benjamin Livshits] as part of the [http://suif.stanford.edu/~livshits/work/griffin/ Griffin Software Security Project]. This new release of the plugin developed by [http://www.evalues.es/index.php/en.html Evalues Lab] of [http://www.uc3m.es Universidad Carlos III de Madrid] provides more features to analyze the propagation of the malicious data through the application and includes the identification of new vulnerabilities.
+
+'''LAPSE+''' is based on the static analysis of code to detect the source and the sink of a vulnerability. The source of a vulnerability refers to the injection of untrusted data, e.g. in the parameters of an HTTP request or a Cookie. The sink of a vulnerability refers to the process of data modification to manipulate the behaviour of the application, such as a servlet response or a HTML page. The vulnerability sources can lead to sinks by simple assignments, method calls or parameters passing. When it is possible to reach a vulnerability sink from a vulnerability source then we have a vulnerability in our application.
+
+[[Image:LapsePlusScreenshot.png|thumb|300px|right|LAPSE+ in action (click to see a bigger image)]]
+
+'''The vulnerabilities detected by LAPSE+''' are related to the injection of untrusted data to manipulate the behavior of the application. This type of vulnerabilities are the most common in web applications. The vulnerability categories detected by LAPSE+ are enumerated below:
+
+* Parameter Tampering.
+* URL Tampering.
+* Header Manipulation.
+* Cookie Poisoning.
+* SQL Injection.
+* Cross-site Scripting (XSS).
+* HTTP Response Splitting.
+* Command Injection.
+* Path Traversal.
+* XPath Injection.
+* XML Injection.
+* LDAP Injection.
+
+'''Three steps are needed in LAPSE+''' for the detection of this kind of vulnerabilities:
+
+* '''Vulnerability Source.''' The first step involves the detection of the points of code that can be source of an attack of untrusted data injection.
+* '''Vulnerability Sink.''' After detecting the points of code that can be target of data injection, LAPSE+ identifies the points that can propagate the attack and manipulate the behaviour of the application.
+* '''Provenance Tracker.''' Finally, we check if it is ''possible to reach a Vulnerability Source from a Vulnerability Sink'' performing the backward propagation through the different assignations. If this occurs, ''we have a security vulnerability'' in our code.
+
+----
+'''Question:''' ''What should you do to avoid these vulnerabilities in your code?'' - ''How do we protect Web applications from exploits?''
+
+'''Answer:''' ''The proper way to deal with these types of attacks is by '''sanitizing the tainted input.''' Please refer to the [http://www.owasp.org/index.php/OWASP_Guide_Project#tab=Home OWASP Guide] to find out more about Web Application Security.''
+
+LAPSE+ is inspired by existing lightweight security auditing tools such as [http://www.dwheeler.com/flawfinder/ FlawFinder]. Unlike this tool, however, LAPSE+ addresses vulnerabilities in Web Applications. LAPSE+ is not intended as a comprehensive solution for Web Application Security, but rather as an aid in the code review process. Those looking for more comprehensive tools are encouraged to look at some of the tools produced by Fortify or Ounce Labs.
+
+== Download ==
+
+LAPSE+ can be downloaded at http://evalues.es/index.php/es/owasp-lapse-project.html
+
+== Feedback and Participation: ==
+
+We hope you find the OWASP LAPSE Project useful. Please contribute to the Project by volunteering for one of the Tasks, sending your comments, questions, and suggestions to owasp@owasp.org.  To join the OWASP LAPSE Project mailing list or view the archives, please visit the [https://lists.owasp.org/mailman/listinfo/owasp-lapse subscription page.]
+
+==== Project About ====
+{{:Projects/OWASP LAPSE Project | Project About}}
+
+[[Category:OWASP Project|LAPSE Project]]
+[[Category:OWASP Download]]
+[[Category:OWASP Tool]]
+
+
+__NOTOC__ <headertabs />

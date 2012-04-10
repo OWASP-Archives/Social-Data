@@ -1,0 +1,65 @@
+This page documents the completion of the [[OWASP Autumn Of Code 2006 ]] projects (see the 9 sponsored projects in [[OWASP Autumn of Code 2006 - Selection]])
+
+== Project Completion Report ==
+{| class="wikitable" style="text-align:center"
+|+ OWASP Autumn of Code 2006 Results
+! bgcolor="#FFFFFF" align="LEFT" valign="MIDDLE" | '''Proposal ID'''
+! bgcolor="#FFFFFF" align="LEFT" valign="MIDDLE" | '''Project'''
+! align="LEFT" | '''Review by Project Leader'''
+! align="CENTER" | '''Delivered on project requirements'''
+! align="CENTER" | '''Authorized for Final Payment'''
+|-
+! height="18" bgcolor="#FFFFFF" align="LEFT" valign="MIDDLE" | AoC 13 Rogan
+! bgcolor="#FFFFFF" align="LEFT" valign="MIDDLE" | ([[OWASP_Autumn_of_Code_2006_-_Projects:_WebScarab_NG|WebScarab NG]])
+| align="CENTER" | A working beta version is now available for WebScarad which implements a complete new user interface and is much more usable and practical (although still doesn't have all features from the current version)
+! align="CENTER" | Yes
+! align="CENTER" | Yes
+|-
+! height="18" bgcolor="#FFFFFF" align="LEFT" valign="MIDDLE" | AoC 04 Joshua
+! bgcolor="#FFFFFF" align="LEFT" valign="MIDDLE" | ([[OWASP_Autumn_of_Code_2006_-_Projects:_Live_CD|Live CD]])
+| align="CENTER" | The Live CD is a valuable addition to the OWASP collection, since it allows the easy access, use and testing of several OWASP tools and documents
+! align="CENTER" | Yes
+! align="CENTER" | Yes
+|-
+! height="18" bgcolor="#FFFFFF" align="LEFT" valign="MIDDLE" | AoC 17 Chris
+! bgcolor="#FFFFFF" align="LEFT" valign="MIDDLE" | ([[OWASP_Autumn_of_Code_2006_-_Projects:_CAL9000|CAL9000]])
+| align="CENTER" | A new version of CAP 9000 is now released containing several new features and with extended support for more browsers
+! align="CENTER" | Yes
+! align="CENTER" | Yes
+|-http://www.owasp.org/index.php?title=OWASP_Autumn_of_Code_2006_-_Project_Completion&action=edit&section=1
+! height="18" bgcolor="#FFFFFF" align="LEFT" valign="MIDDLE" | AoC 09 Mike
+! bgcolor="#FFFFFF" align="LEFT" valign="MIDDLE" | ([[OWASP_Autumn_of_Code_2006_-_Projects:_SiteGenerator_and_ORG|SiteGenerator and ORG]])
+| align="CENTER" | Both [[OWASP Report Generator]](ORG) and [[OWASP Site Generator]] (OSG) receive large number of enhancements. In ORG tons of small/medium bugs were fixed and several new major features where added (in addition to an update to .NET 2.0). In OSG, HttpModule was re-implemented to use TCP, several nasty bugs were fixed and new OSG vulnerabilities where added.
+! align="CENTER" | Yes
+! align="CENTER" | Yes
+|-
+! height="18" bgcolor="#FFFFFF" align="LEFT" valign="MIDDLE" | AoC 21 Simon
+! bgcolor="#FFFFFF" align="LEFT" valign="MIDDLE" | ([[OWASP_Autumn_of_Code_2006_-_Projects:_Pantera|Pantera]]) 
+| align="CENTER" | Simon delivered a new version of Pantera which contains several new features and is more optimized
+! align="CENTER" | Yes
+! align="CENTER" | Yes
+|-
+! height="18" bgcolor="#FFFFFF" align="LEFT" valign="MIDDLE" | AoC 24 Sherif
+! bgcolor="#FFFFFF" align="LEFT" valign="MIDDLE" | ([[OWASP_Autumn_of_Code_2006_-_Projects:_Web_Goat|Web Goat]])
+| align="CENTER" | 12 new lessons where added to WebGoat (for example: DOM/XML Injection, JSON Injection, Cross-Site Request Forgery , HTTP Splitting, etc..)
+! align="CENTER" | Yes
+! align="CENTER" | Yes
+|-
+! height="18" bgcolor="#FFFFFF" align="LEFT" valign="MIDDLE" | AoC 26 Matteo
+! bgcolor="#FFFFFF" align="LEFT" valign="MIDDLE" | ([[OWASP_Autumn_of_Code_2006_-_Projects:_Testing_Guide|Testing Guide]])
+| align="CENTER" | The previous Guide was greatly enhanced where large portions were re-writen and new material added. This Guide is an important addition to the OWASP catalogue.
+! align="CENTER" | Yes
+! align="CENTER" | Yes
+|-
+! height="18" bgcolor="#FFFFFF" align="LEFT" valign="MIDDLE" | AoC 18 Boris
+! bgcolor="#FFFFFF" align="LEFT" valign="MIDDLE" | ([[OWASP_Autumn_of_Code_2006_-_Projects:_Owasp_.Net_Tools|Owasp .Net Tools]])
+| align="CENTER" | The OWASP .Net tools SAM'SHE and ANSA are in integrated into a new client server architecture which contains a 'built from scratch' client application which 'consumes' the results from the .Net tests. This new tools (called OWASP Tiger) could be the beginning of a standard vulnerability collector.
+! align="CENTER" | Yes
+! align="CENTER" | Yes
+|-
+! height="18" bgcolor="#FFFFFF" align="LEFT" valign="MIDDLE" | AoC 07 Aaron
+! bgcolor="#FFFFFF" align="LEFT" valign="MIDDLE" | ([[OWASP_Autumn_of_Code_2006_-_Projects:_Website_and_Branding|Owasp Website]])
+| align="CENTER" | Multiple sections of OWASP.org website where re-organized (for example the Projects Page), the OWASP newsletter was created and several pages received improvements in their layout
+! align="CENTER" | Yes
+! align="CENTER" | Yes
+|-}

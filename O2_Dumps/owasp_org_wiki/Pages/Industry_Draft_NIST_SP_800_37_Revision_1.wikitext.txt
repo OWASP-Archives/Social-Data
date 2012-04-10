@@ -1,0 +1,36 @@
+{{IndustryProject
+| ActivityName=NIST SP 800-37 Revision 1 Final Public Draft
+| ActivityDescription=NIST SP 800-37 Revision 1 Final Public Draft: Guide for Applying the Risk Management Framework to Federal Information Systems: A Security Life Cycle Approach
+| RelatedProjects=[[:Industry:Draft_NIST_SP_800-53_Revision_3|NIST SP 800-53 Revision 3 Review]]
+| PrimaryContact=[mailto:danphilpott(at)gmail.com Dan Philpott]
+| SecondaryContact=[mailto:rex.booth(at)gt.com Rex Booth]
+| MailingList=[http://groups.google.com/group/owasp-gic-review-nist-sp-800-37r1 OWASP GIC Review NIST SP 800-37r1]
+| ActivityObjectives=
+* Review Final Public Draft of NIST SP 800-37 Revision 1 - in particular issues affecting web application security
+* Where appropriate, draft a response for submission
+* Submit the response as an official OWASP statement
+| ActivityDeadlines=
+* December 1st, 2009 - Announce project, open enrollment
+* December 3rd, 2009 - Close enrollment
+* December 23rd, 2009 - Complete final draft response 
+* December 24th, 2009 - Submit to NIST 
+* December 31st, 2009 - Comment period ends
+* February, 2010 - Anticipated final publication
+| ActivityStatus=
+* In Progress
+| ActivityResources=
+* [http://csrc.nist.gov/publications/PubsDrafts.html#SP-800-37-Rev.%201 Request for comments, November 17th, 2009]
+* [http://csrc.nist.gov/publications/drafts/800-37-Rev1/SP800-37-rev1-FPD.pdf NIST SP 800-37 Revision 1 FPD] (PDF)
+* [[:Category:GIC-NISTSP80037r1FPD|NIST SP 800-37 Revision 1 FPD Review Work Area]]
+* Submit comments to sec-cert(at)nist.gov
+| ReviewPlan=Review of the document shall be conducted primarily via the OWASP wiki.  NIST SP 800-37 Revision 1 FPD has been converted to wiki format, broken into separate articles by Chapter/Appendix and had the text linked to the FISMApedia.org glossary.  Participants are requested to review the document text and comment in the appropriate section of the discussion page.  Please sign your contributions and comment on the contributions of each other as needed.
+The primary access point for the document is [[:Category:GIC-NISTSP80037r1FPD|NIST SP 800-37 Revision 1 FPD Table of Contents/Category Entry]].  This contains a linked Table of Contents and all pages categorized as [[:Category:GIC-NISTSP80037r1FPD|Category:GIC-NISTSP80037r1FPD]].
+| Stage1Activities=All participants perform a high-level, document-wide review to develop familiarity with the documents. Reviewers should focus on gaining an understanding of the document layout and basic understanding of the Risk Management Framework. Focus is on gaining an understanding of the document.
+| Stage1Results=Keep notes general and impressionistic. Note sections that may merit further investigation and any initial impressions you have on strengths and weaknesses.  Please do not comment on other contributors work, consider this a brainstorming period.
+| Stage2Activities=Participants will be asked to perform a focused review on sections identified in Stage 1.  These "targeted sections" may be divided among project participants depending on project population and the number of target sections. Impressions on strengths and weakness of the process will be expanded on by their contributors.  Participants are encouraged to comment on each others comments.
+| Stage2Results=Each participant should develop a detailed set of comments for their assigned sections.
+| Stage3Activities=Participants will revise comments as needed and project management will consolidate and format comments for submission to NIST. 
+| Stage3Results=A final list of comments for submission to NIST. 
+| FinalVersion=
+| IdentifiedSections=
+}}

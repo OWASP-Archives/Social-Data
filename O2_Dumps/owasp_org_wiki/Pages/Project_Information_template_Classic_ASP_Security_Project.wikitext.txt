@@ -1,0 +1,44 @@
+----
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Classic ASP Security Project''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|This project aims to create a secure framework for Classic ASP application by complementing existing OWASP projects with documentation for this particular technology and the creation of security libraries. More specifically:
+* Creation of a Common Object Repository for ASP applications based on OWASP ESAPI Project including objects and/or references to libraries for security applications all this aligned with OWASP Top10 and OWASP Guide .
+* Create Documentation aligned to OWASP Code Review Project Checklist providing additional technology-specific checks.
+* Addition of expression for Code Review Tool to support Classic ASP applications.
+* Implementation of Version 1 of Stinger for ASP either by using an installable COM library or ISAPI.
+* This same module will compliment the OWASP Validation Documentation Project. 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project key Information'''
+ | style="width:14%; background:#cccccc" align="center"|Project Leader<br>[[User:Jcmax|'''Juan Carlos Calderon''']]
+ | style="width:15%; background:#cccccc" align="center"|Project Contributors<br>(if any)
+ | style="width:10%; background:#cccccc" align="center"|Mailing list<br>[https://lists.owasp.org/mailman/listinfo/owasp-classic-asp-security-project '''Subscribe here''']<br>[mailto:OWASP-Classic-ASP-Security-Project(at)lists.owasp.org '''Use here''']
+ | style="width:17%; background:#cccccc" align="center"|License<br>[http://creativecommons.org/licenses/by-sa/3.0/ '''Creative Commons Attribution Share Alike 3.0''']
+ | style="width:14%; background:#cccccc" align="center"|Project Type<br>[https://www.owasp.org/index.php/Category:OWASP_Project#tab=Alpha_Status_Projects '''Tool''']
+ | style="width:15%; background:#cccccc" align="center"|Sponsors<br>[[OWASP Summer of Code 2008|'''OWASP SoC 08''']]  
+ |}
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|
+'''[[:Category:OWASP_Project_Assessment#Alpha_Quality_Tool_Criteria|Alpha Quality]]'''<br>[[:OWASP Classic ASP Security Project - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="center"|
+[[:image:OWASP_Classic_ASP_ESAPI.zip|OWASP Classic ASP ESAPI ZIP]]<br>
+[[:image:Default.zip|OWASP Classic ASP Default.asp ZIP]]<br>
+[http://code.google.com/p/owasp-esapi-classicasp/ OWASP Classic ASP ESAPI - Google Code Repository]<br>
+[[:image:StingerASP1.0.zip|StingerASP1.0.zip]]<br>
+[http://code.google.com/p/owasp-stinger-classic-asp/ OWASP Stinger 1.0 for Classic ASP - Google Code Repository]<br>
+
+ | style="width:29%; background:#cccccc" align="center"|
+[[:Category:OWASP Enterprise Security API|'''OWASP Enterprise Security API''']]<br>
+[[OWASP_Stinger_Version_1 | '''OWASP Stinger Version 1.0''']]
+ |}
+----
+
+[[Category:OWASP Enterprise Security API]]

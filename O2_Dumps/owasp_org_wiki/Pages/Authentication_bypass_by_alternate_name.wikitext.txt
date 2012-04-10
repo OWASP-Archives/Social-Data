@@ -1,0 +1,48 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[::Category:Authentication Vulnerability]]
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+==Description==
+
+Resource has multiple names and not all names are enforcing authentication when being accessed.
+
+
+==Risk Factors==
+TBD
+
+
+==Examples==
+TBD
+
+CAN-2003-0317
+
+==Related [[Attacks]]==
+TBD
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+* [[Alternative Encoding]]
+
+
+==Related [[Controls]]==
+TBD
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+TBD
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD
+
+
+__NOTOC__

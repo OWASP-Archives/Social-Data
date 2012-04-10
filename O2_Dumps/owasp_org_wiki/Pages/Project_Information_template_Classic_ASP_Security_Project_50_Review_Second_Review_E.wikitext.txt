@@ -1,0 +1,38 @@
+[[Project Information:template Classic ASP Security Project|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications#OWASP Classic ASP Security Project|OWASP Classic ASP Security Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#OWASP Classic ASP Security Project|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+Creation of a Common Object Repository - progress on this front is evident even though the task is not complete as of yet. A current estimate of the progress is presented in section 2 below
+<br>Create Documentation - complete
+<br>Addition of expression for Code Review Tool to support Classic ASP applications - complete
+<br>Implementation of Version 1 of Stinger for ASP either by using an installable COM library or ISAPI - not complete yet even though evidence of a compiled DLL has been provided by the developer, so there is some movement on this front
+<br>This same module will compliment the OWASP Validation Documentation Project - not complete yet
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"|
+
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#OWASP Classic ASP Security Project|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+Creation of a Common Object Repository - 50% - 60%
+<br>Create Documentation - 100%
+<br>Addition of expression for Code Review Tool to support Classic ASP applications - 100%
+<br>Implementation of Version 1 of Stinger for ASP either by using an installable COM library or ISAPI - 0%
+<br>This same module will compliment the OWASP Validation Documentation Project - 0%
+ |- 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+The progress on this project is positive and developments look on track towards completion. The only suggestion would be to maintain the current momentum.
+|}

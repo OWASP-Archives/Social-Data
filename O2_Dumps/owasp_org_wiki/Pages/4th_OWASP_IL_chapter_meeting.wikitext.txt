@@ -1,0 +1,19 @@
+[[Category:Israel]]
+== at Breach Security, July 26th 2006 ==
+
+The 4th OWASP IL meeting was held on July 26th 2006 at [http://www.breach.com Breach Security] offices with the following presentations:
+ 
+<big>'''[[Media:OWASP_IL_0706_Comsec_ShayZ_Crypto_1_0_2.pdf|Exposing cryptography for software developers]]'''</big>
+
+'''Shai Zalalichin, Head of AppSec group, [http://www.comsec.co.il Comsec]'''
+
+Encryption is a very important tool in the application security tool chest, but is also a very complex technology. The presentation will explore common pitfalls & countermeasures that every developer should follow when writing crypto-aware applications.
+
+The presentation was originally given at OWASP Europe conference in May.
+
+<big>'''[[Media:OWASP_IL_Preventing_spoofing_phishing_and_spam.pdf|Preventing Spoofing, Phishing and Spamming by Secure Usability and Cryptography]]'''</big>
+
+'''[http://www.cs.biu.ac.il/~herzbea/ Prof. Amir Herzberg], dept. of computer science, Bar-Ilan University, Israel'''   
+
+Spoofing, Phishing and spamming are of the worst security problems in the Internet. Amir will present vulnerabilities in the current email and web systems, causing the proliferation of such attacks.   Amir will then discuss some recent proposals made by him as well as others to improve security against these threats. Some solutions involve secure usability,
+some use (simple) cryptographic protocols, while others involve both areas.

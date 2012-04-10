@@ -1,0 +1,57 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Failure to follow guideline/specification]]
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+==Description==
+This expression will always evaluate to true; the program could be rewritten in a simpler form. The nearby code may be present for debugging purposes, or it may not have been maintained along with the rest of the program. The expression may also be indicative of a bug earlier in the method.
+
+
+==Risk Factors==
+TBD
+
+==Examples==
+The following method never sets the variable secondCall after initializing it to true. (The variable firstCall is mistakenly used twice.) The result is that the expression firstCall || secondCall will always evaluate to true, so setUpForCall() will always be invoked.
+
+<pre>
+	public void setUpCalls() {
+	  boolean firstCall = true;
+	  boolean secondCall = true;
+	
+	  if (fCall < 0) {
+		cancelFCall();
+		firstCall = false;
+	  }
+	  if (sCall < 0) {
+		cancelSCall();
+		firstCall = false;
+	  }
+	
+	  if (firstCall || secondCall) {
+		setUpForCall();
+	  }
+	}
+</pre>
+
+==Related [[Attacks]]==
+* [[Attack 1]]
+* [[Attack 2]]
+
+==Related [[Vulnerabilities]]==
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+* [[Control 1]]
+* [[Control 2]]
+
+==Related [[Technical Impacts]]==
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD

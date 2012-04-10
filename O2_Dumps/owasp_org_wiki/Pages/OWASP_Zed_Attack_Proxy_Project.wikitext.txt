@@ -1,0 +1,154 @@
+{{OWASP Builders}}
+{{OWASP Breakers}}
+= Main =
+{{Social Media Links}}
+[[Image:ZAP-ScreenShotAddAlert.png|thumb|300px|right|ZAP Add Alert Screen Shot]]
+[[Image:ZAP-ScreenShotHelp.png|thumb|300px|right|ZAP Help Screen Shot]]
+[[Image:ZAP-ScreenShotHistoryFilter.png|thumb|300px|right|ZAP History Filter Screen Shot]]
+[[Image:ZAP-ScreenShotSearchTab.png|thumb|300px|right|ZAP Search Tab Screen Shot]]
+
+The Zed Attack Proxy (ZAP) is an easy to use integrated penetration testing tool for finding vulnerabilities in web applications. 
+
+It is designed to be used by people with a wide range of security experience and as such is ideal for developers and functional testers who are new to penetration testing. 
+
+ZAP provides automated scanners as well as a set of tools that allow you to find security vulnerabilities manually.
+
+===OWASP ZAP is also the [http://holisticinfosec.blogspot.com/2012/02/2011-toolsmith-tool-of-year-owasp-zap.html Toolsmith Tool of the Year for 2011!]===
+
+'''Are you a student? Would you like to get paid to work on ZAP or other OWASP projects over the summer?'''
+
+'''OWASP is taking part in the Google Summer of Code: https://www.owasp.org/index.php/GSoC2012_Ideas and ZAP is one of the projects you can work on! '''
+
+[[Image:ZAP-Download.png |
+link=http://code.google.com/p/zaproxy/downloads/list]]
+
+'''The current version of ZAP is [http://code.google.com/p/zaproxy/wiki/HelpReleases1_4_0 1.4.0].'''
+
+Want a very quick introduction? See the [http://www.owasp.org/images/e/e3/OWASP_ZAP_Flyer.pdf project pamphlet].
+
+For a slightly longer introduction see the [http://www.owasp.org/images/c/c8/Conference_Style_slides_for_ZAP.ppt project presentation].
+
+For video introductions to ZAP see the links on the [https://code.google.com/p/zaproxy/wiki/Videos wiki videos page].
+
+'''For more details about ZAP, including the full user guide, see the [https://code.google.com/p/zaproxy/wiki/Introduction wiki].'''
+
+<paypal>Zed Attack Proxy</paypal>
+
+'''Some of ZAP's features:'''
+
+* [http://code.google.com/p/zaproxy/wiki/HelpStartConceptsIntercept Intercepting Proxy]
+* [http://code.google.com/p/zaproxy/wiki/HelpStartConceptsAscan Automated scanner]
+* [http://code.google.com/p/zaproxy/wiki/HelpStartConceptsPscan Passive scanner]
+* [http://code.google.com/p/zaproxy/wiki/HelpStartConceptsBruteforce Brute Force scanner]
+* [http://code.google.com/p/zaproxy/wiki/HelpStartConceptsSpider Spider]
+* [http://code.google.com/p/zaproxy/wiki/HelpStartConceptsFuzz Fuzzer]
+* [http://code.google.com/p/zaproxy/wiki/HelpStartConceptsPortscan Port scanner]
+* [http://code.google.com/p/zaproxy/wiki/HelpUiDialogsOptionsDynsslcert Dynamic SSL certificates]
+* [http://code.google.com/p/zaproxy/wiki/HelpStartConceptsApi API]
+* [http://code.google.com/p/zaproxy/wiki/HelpUiDialogsBeanshell Beanshell integration]
+
+'''Some of ZAP's characteristics:'''
+
+* Easy to install (just requires java 1.6)
+* Ease of use a priority
+* [http://code.google.com/p/zaproxy/wiki/HelpIntro Comprehensive help pages]
+* Fully internationalized
+* Under active development
+* [http://www.apache.org/licenses/LICENSE-2.0 Open source]
+* Free (no paid for 'Pro' version)
+* Cross platform
+* Involvement actively encouraged 
+
+'''It supports the following languages:'''
+
+* English
+* Brazilian Portuguese
+* Chinese
+* Danish
+* French
+* German
+* Greek
+* Indonesian
+* Japanese
+* Persian
+* Polish
+* Spanish 
+
+ZAP is a fork of the well regarded [http://www.parosproxy.org/ Paros Proxy].
+
+= Roadmap =
+
+Details of previous releases can be found [http://code.google.com/p/zaproxy/wiki/HelpReleasesReleases here]
+
+==Release 1.4.0==
+Version [http://code.google.com/p/zaproxy/wiki/HelpReleases1_4_0 1_4_0] has just been released.
+
+Compared to previous releases, the 1.4.0 release adds the following main features:
+* Support for ZAP-Extensions (Plugable extensions)
+* Syntax highlighting in the Response Panel
+* fuzzdb integration
+* Parameter analysis
+* Enhanced XSS scanner
+* Tons of bug-fixes and minor improvements
+
+
+==Future Releases==
+
+Future releases are likely to include:
+* Fuzzing analysis
+* API extensions
+* Enhancements and fixes logged on the [https://code.google.com/p/zaproxy/issues/list issues page]
+
+= Get Involved =
+
+Involvement in the development of ZAP is actively encouraged!
+
+You do not have to be a security expert in order to contribute.
+
+Some of the ways you can help:
+
+==Feature Requests==
+
+Please raise new feature requests as enhancement requests here: http://code.google.com/p/zaproxy/issues/list
+
+If there are existing requests you are also interested in then please 'star' them - that way we can see which features people are most interested in and can prioritize them accordingly. 
+
+==Feedback==
+
+Please use the [http://groups.google.com/group/zaproxy-develop zaproxy-develop Google Group] for feedback:
+* What do like?
+* What don't you like?
+* What features could be made easier to use?
+* How could the help pages be improved? 
+
+==Log issues==
+
+Have you had a problem using ZAP?
+
+If so and its not already been logged then please [http://code.google.com/p/zaproxy/issues/list report it]
+
+==Localization==
+
+Are you fluent in another language? Can you help translate ZAP into that language?
+
+If so then please get in touch.
+
+==Development==
+
+If you fancy having a go at adding functionality to ZAP then please get in touch via the [http://groups.google.com/group/zaproxy-develop zaproxy-develop Google Group].
+
+Again, you do not have to be a security expert to contribute code - working on ZAP could be great way to learn more about web application security!
+
+If you actively contribute to ZAP then you will be invited to join the project. 
+
+
+<!---- = Project About = 
+{{:GPC_Project_Details/OWASP_ZAP | OWASP Project Identification Tab}} --->
+
+= Project About =
+{{:Projects/OWASP Zed Attack Proxy Project | Project About}}
+
+
+__NOTOC__ <headertabs />
+
+[[Category:OWASP_Project|Zed Attack Proxy Project]] [[Category:OWASP_Tool]] [[Category:OWASP_Release_Quality_Tool|OWASP Release Quality Tool]] [[Category:OWASP_Download]]

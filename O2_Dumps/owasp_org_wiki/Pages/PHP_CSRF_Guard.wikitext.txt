@@ -1,0 +1,47 @@
+==PHP CSRF Guard==
+
+If you need to protect against CSRF attacks in your code, this little helper can reduce the risk. 
+
+===Architectural Issues===
+
+The main issue with CSRF is the lack of "authentication" of a privileged function. Therefore, in combination with this helper, you should:
+
+* Low value: Consider asking the user (on a new page / form) to re-authenticate using their password to confirm the action 
+* Medium value: Consider the use of second-factor authentication, such as sending the user an e-mail or SMS message with a random token which they must enter
+* High value: disconnected calculator transaction signing the transaction
+
+===Using this code===
+
+* Download the code (see [https://www.owasp.org/index.php/Category:OWASP_CSRFGuard_Project OWASP CSRFGuard Project page] for github details)
+* Include it within your project
+* Use the object to create a hidden field Inside your forms, like this:
+
+ ?&gt;
+ &lt;form ... &gt;
+   &lt;input ...&gt;
+   &lt;?php echo $cg; ?&gt;
+ &lt;/form&gt;
+ &lt;/code&gt;
+
+When you take the form submission, assert the form's validity:
+
+ try
+ {
+     $cg->isValid();
+     // your code here
+ }
+ catch (TokenException $e)
+ {
+   // handle exception 
+ }
+ catch (// your exceptions here)
+
+===Caveats on use===
+
+This code is object-orientated. It relies upon PHP 5 only features, and throws a custom exception type. You should familiarize yourself with this coding style if you are still practicing function based PHP coding. It's not hard - see above. 
+
+The code is PHP 5 only as this is the safest and most secure version of PHP available today. Your apps should be using PHP 5.2 or later to ensure that your application is running on a secure foundation. 
+
+===LIcense===
+
+To allow widespread adoption, this code is licensed under the Creative Commons Share Alike 2.5 License. This allows you to use this in commercial and non-commercial applications alike. This license is GPL friendly.

@@ -1,0 +1,24 @@
+[note the following entries were posted by Richard in the previous Owasp .Net blogs]
+
+
+== Where we're at with ID cards ==
+
+ID cards have ben successfully rolled out in a variety of countries not least the European success story Belgium. So what's the beef? Why is it taking the UK policy makers to decide what to do when their are a variety of successful models to adhere to. Too many chiefs! A variety of inputs and policies have been based loosely on preventing terrorism rather than on commerce. Why is this? It comes from misunderstanding the technologies, maybe too many politicians are driven by science-fiction rather than the solid reality of cost, phasing, testing incremental cycles. Anyway, the conversations are ongoing! I'm probably going to a meeting to diccuss this on the 14th February with policy makers so I'll write up some info thereafter. I think with the UK we're driven by the idea that the scale of this thing is going to be immense - like anything we'd probably pick a small city and trial (the congestion charge was a prime example of this) and see where it gets us. In any case at least the ball is still rolling - my thoughts are that we should focus on the least ambitious v1 and minimise the ridiculous cost to the public for something that the majority of them don't want because along with newer UK ideas of people tracking through CCTV it really does feel like big brother. This doesn't have to be the case and it certainly shouldn't be the sales message! Sell the card for what it is, not a rag-tag series of impracticalities which will probably turn out to be relatively ineffective against a global wave of identity fraud and terrorism. Just as people like to have a single set of credentials (i.e. single-sign in) many people will also get used to the idea of carrying a single card which can be used to transaction items for multiple vendors.
+
+
+== Token.NET ==
+
+I've just released Token.NET today using sourceforge. It's quite an ambitious project so anybody interested in helping please get in touch with me at techierebel@yahoo.co.uk
+
+
+== Smart card/token crypto library ==
+
+I'm tired of not having a standard wrapper for using cryptography against particular tokens. I'm going to be open sourcing Token.NET which is a wrapped implementation of PKCS#11. Most of the code I've written over the last couple of years has done much of this inline using interop so I'm going to be releasing a Managed library now. The 0.1 beta release will be on sourceforge by mid-January. This is a call to anybody that wants to get involved from the outset, please contact me at [mailto:techierebel@yahoo.co.uk techierebel@yahoo.co.uk] especially if you have C++ and smart card development experience (inevitably I'd like to wrap up PC/SC APIs and use ASN1 structures defined in the PKCS#15 spec). Anyway, the first release will only allow the first active device to be used (subseuqnet releases will allow collections of active devices to be used on the same machine). It will allow for 1024 bit key pair generation, signing, verifying and retrieving token information. All of this will be in the release notes though :)
+
+
+== Support for PKCS#7 (CMS) ==
+
+The next generation of cryptographic packaging in the .NET 2.0 framework is far more extensive than it used to be. There is full support for PKCS#7 (CMS) structures which are being used to encapsulate signed and encrypted content throughout the digital identity world. This structure is already prolific through S/MIME but it will be used pretty much all over the place in the digital passports, ID card world. Microsoft support for PKCS#7 is not new - the Crypto API provided a modicum of support which was not exposed (even through a managed interop layer) in the 1.1 Framework. The CryptoAPI PKCS#7 was flaky to say the least and generally you would resort to using OpenSSL in lieu. The new .NET API is a great boon for encapsulating digital identity in .NET. The main classes are CmsSigner, CmsRecipient and EnvelopedCms which allow signed, non-signed and encrypted data to be packaged. I've tested this now with OpenSSL and don't appear to have any interoperability issues. Another good thing here is that ASN1 has been exposed (not completely but allowing tag verification) so it would be possible to create more complex proprietary structures encapsulating new OIDs and content information.
+
+
+[[Category:OWASP .NET Project]]

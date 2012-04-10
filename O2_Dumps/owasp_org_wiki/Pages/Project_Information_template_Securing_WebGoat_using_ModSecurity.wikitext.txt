@@ -1,0 +1,33 @@
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Securing WebGoat using ModSecurity Project''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|The purpose of this project is to create custom Modsecurity rulesets that, in addition to the Core Set, will protect WebGoat 5.1 from as many of its vulnerabilities as possible (the goal is 90%) without changing one line of source code. To ensure that it will be a complete 'no touch' on WebGoat and its environment, ModSecurity will be configured on Apache server as a remote proxy server. For those vulnerabilities that cannot be prevented (partially or not at all), I will document my efforts in attempting to protect them. Business logic vulnerabilities will be particularly challenging to solve.
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project key Information'''
+ | style="width:14%; background:#cccccc" align="center"|Project Leader<br>[[User:Stephen Evans|'''Stephen Craig Evans''']]
+ | style="width:15%; background:#cccccc" align="center"|Project Contributors<br>(if applicable)
+ | style="width:10%; background:#cccccc" align="center"|Mailing List<br>[https://lists.owasp.org/mailman/listinfo/owasp-webgoat-using-modsecurity '''Subscribe here''']<br>[mailto:Owasp-WebGoat-using-ModSecurity(at)lists.owasp.org '''Use here''']
+| style="width:17%; background:#cccccc" align="center"|License<br>[http://creativecommons.org/licenses/by-sa/3.0/ '''Creative Commons Attribution Share Alike 3.0''']
+ | style="width:14%; background:#cccccc" align="center"|Project Type<br>[[:Category:OWASP_Project#Beta Status Projects|'''Documentation''']]
+ | style="width:15%; background:#cccccc" align="center"|Sponsors<br>[[OWASP Summer of Code 2008|'''OWASP SoC 08''']]  
+ |}
+
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|
+'''[[:Category:OWASP_Project_Assessment#Beta_Quality_Documentation_Criteria|Beta Quality]]'''<br>[[:OWASP Securing WebGoat using ModSecurity Project - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="center"|
+* [[:OWASP Securing WebGoat using ModSecurity Project|Main project page]]
+* [[:OWASP ModSecurity Securing WebGoat Section4 Sublesson 04.2|Section 4, Mitigating the WebGoat lessons]] 
+* [https://www.owasp.org/index.php/Appendix_D:_Additional_important_stuff Project wiki available as Word doc]
+*(If appropriate, links to be added)
+ | style="width:29%; background:#cccccc" align="center"|
+[[:Category:OWASP WebGoat Project|OWASP WebGoat Project]]
+ |}

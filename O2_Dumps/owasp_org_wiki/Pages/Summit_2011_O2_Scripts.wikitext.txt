@@ -1,0 +1,55 @@
+Here are a number of helpful scripts that use the APIs developed (in O2) to help with MediaWiiki edits
+
+===Create list of users with their edit page===
+<pre>
+//panel.clear();
+var topPanel = panel.clear().add_Panel();
+
+var textArea = topPanel.add_TextArea();
+var useCache = true;
+var summitApi = new API_OWASP_Summit_2011();
+
+var attendeePages = summitApi.attendees_SeekingFunds(useCache);
+var text = "";
+foreach(var attendeePage in attendeePages)
+{
+	var attendee =  summitApi.getAttendee(attendeePage);
+	if (attendee.Name.valid()) 
+	{  
+		var attendeeData = "    *  {0} \t\t http://www.owasp.org/index.php?title={1}&action=edit".format(attendee.Name,attendeePage.removeFirstChar()); 
+	
+		text+=attendeeData.line();
+	}
+}
+textArea.set_Text(text);
+
+return "done";
+//O2File:API_OWASP_Summit_2011.cs  
+//O2Ref:O2_Misc_Microsoft_MPL_Libs.dll
+</pre>
+
+===Create email (or name) list of all attendess that need funds===
+<pre>
+//panel.clear();
+var topPanel = panel.clear().add_Panel();
+
+var textArea = topPanel.add_TextArea();
+var useCache = true;
+var summitApi = new API_OWASP_Summit_2011();
+
+var attendeePages = summitApi.attendees_SeekingFunds(useCache);
+var text = "";
+foreach(var attendeePage in attendeePages)
+{
+	var attendee =  summitApi.getAttendee(attendeePage);
+	if (attendee.Name.valid() && attendee.Email.valid()) 	
+		//text += "{0} , ".format(attendee.Email);	  // Creates list of emails
+		text += "{0} , ".format(attendee.Name);	     // Creates list of names
+		
+}
+textArea.set_Text(text);
+
+return "done";
+//O2File:API_OWASP_Summit_2011.cs  
+//O2Ref:O2_Misc_Microsoft_MPL_Libs.dll
+</pre>

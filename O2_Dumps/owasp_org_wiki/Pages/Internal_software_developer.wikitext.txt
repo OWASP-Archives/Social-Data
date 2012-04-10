@@ -1,0 +1,40 @@
+{{Template:Threat}}
+<br>
+[[Category:OWASP ASDR Project]]
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+==Description==
+
+Internal software developers are members of the software development team with access to change the software and some aspects of the software configuration. In many organizations, these developers will have the ability to modify any part of the software baseline. Some organizations have strict controls about what internal software developers are allowed to access in production, but others are more lax, allowing developers to make production changes.
+
+A malicious developer is one of the most difficult threats to deal with, as it is extremely difficult to identify malicious code. A talented attacker will make attacks look exactly like an inadvertent error for plausible deniability. In addition, malicious code may be obfuscated to prevent easy detection. Some techniques include spreading an attack throughout a software baseline, using inheritance and class loading tricks to hide calls, and even formatting tricks.
+
+Because internal software developers may have more access to production systems and more knowledge of other internal systems, they are more dangerous than outsourced software developers. However, because their actions can be tracked more closely and their job is on the line, many organizations trust them more than external developers.
+
+==Risk Factors==
+
+* Talk about the [[OWASP Risk Rating Methodology|factors]] that make this threat agent likely or unlikely to attack
+* Be sure to discuss the size, motivation, capabilities, and opportunity of this threat agent
+
+==Examples==
+
+* Java software developer
+* SQL developer
+* Mainframe developer
+
+==Related [[Threat Agent|Threat Agents]]==
+
+* [[Contractors]]
+
+==Related [[Attacks]]==
+
+* [[Logic/time bomb]]
+* [[Backdoor attack]]
+* [[Salami attack]]
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+[[Category:Intranet attacker]]

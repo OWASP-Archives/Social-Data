@@ -1,0 +1,35 @@
+{{Chapter Template|chaptername=Mexico City|extra=El lider del pítulo es [mailto:victor@sm4rt.com Victor Chapela]|mailinglistsite=http://lists.owasp.org/mailman/listinfo/owasp-mexicocity|emailarchives=http://lists.owasp.org/pipermail/owasp-mexicocity}}
+
+<paypal>Mexico City/es</paypal>
+
+== Noticias Locales ==
+
+ '''OWASP se muda a el portal MediaWiki - 11:22, 20 May0 2006 (EDT)'''
+
+OWASP se complace en anunciar OWASP 2.0!
+
+OWASP 2.0 utiliza el portal MediaWiki para administrar y proveer la mas reciente information relacionada con OWASP. Disfrutelo!
+
+<IfLanguage Is="es">
+esto es español
+</IfLanguage>
+
+<IfLanguage Is="en">
+this is English
+</IfLanguage>
+
+<IfLanguage> 
+    <@en>Text in English '''wikimedia formating is supported'''</@en>
+    <@es>Texto en Español '''el formateo de Wikimedia esta soportado'''</@es>
+  </IfLanguage> 
+
+<multilang>
+  @de|Deutsche Version
+  @en|English version
+  @es|Version en Español
+  @fr|Version franÃ§aise
+  </multilang>
+
+
+__NOTOC__
+[[Category:Mexico]]

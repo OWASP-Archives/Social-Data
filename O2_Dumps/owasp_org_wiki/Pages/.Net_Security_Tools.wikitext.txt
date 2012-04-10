@@ -1,0 +1,14 @@
+* New Network Proxy Tool http://www.bindshell.net/echomirage
+**''Echo Mirage is a generic network proxy. It uses DLL injection and function hooking to redirect network related function calls so that data transmitted and received by local applications can be observed and modified. Think of it as Odysseus (or Burp, if you prefer) that will proxy anything... Windows encryption and OpenSSL functions are also hooked so that plain textof data being sent and received over an encrypted session is also available. It tries to be smart with the OpenSSL calls by monitoring ssl_set_fd() and ssl_connect() to determine when SSL is in use on a particular socket.  When SSL is in use the encrypted stream is ignored and only the unencrypted data is processed.  This doesn't work for the windows SSL stuff because that functions in an entirely different way... Traffic can be intercepted in real-time, or manipulated with regular expressions and action scripts. Not all of the Winsock calls are currently hooked.  Data passing through RecvFrom, SendTo, WSAConnect, WSASend, WSASendTo and WSARecvFrom is not yet processed.  If someone can point out an application that uses any of these calls I'll put them in...''
+
+* Firefox Plugins
+**[https://addons.mozilla.org/firefox/125/ SwitchProxy]
+**[http://livehttpheaders.mozdev.org/ Live Http Headers]
+**[https://addons.mozilla.org/firefox/966/ Tamper data]
+**[https://addons.mozilla.org/firefox/573/ Add N Edit Cookies]
+
+* [http://www.aisto.com/incoming/Reflector/AddIns/ Reflector Addins]  [[Category:FIXME|link not working]]
+**[http://www.jasonbock.net/JB/CodeFileGenerator.aspx Reflector.FileGenerator] - ''This add-in can be used to dump the disassembler output to files for any Reflector supported language.''
+**[http://weblogs.asp.net/kdente/articles/438539.aspx Reflector.OpenRunningAssembly]
+
+[[Category:OWASP .NET Project]]

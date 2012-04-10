@@ -1,0 +1,57 @@
+{{Template:Vulnerability}}
+{{Template:Fortify}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+The _alloca() function can throw a stack overflow exception, potentially causing the program to crash. The _alloca() function allocates memory on the stack. If an allocation request is too large for the available stack space, _alloca() throws an exception. If the exception is not caught, the program will crash, potentially enabling a denial of service attack.
+
+_alloca() has been deprecated as of Microsoft Visual Studio 2005®. It has been replaced with the more secure _alloca_s().
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+TBD
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Error Handling Vulnerability]]
+[[Category:Use of Dangerous API]]
+[[Category:C]]
+[[Category:Implementation]]
+[[Category:API Abuse]]
+[[Category:Vulnerability]]

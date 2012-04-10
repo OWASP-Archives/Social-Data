@@ -1,0 +1,32 @@
+----
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Application Security Desk Reference (ASDR) Project''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|This project is helpful as basic reference material when performing such activities as threat modeling, security architecture review, security testing, code review, and metrics. We intend to encourage understanding and consistency when discussing these basic foundational elements of application security. Security only works if people can make informed decisions about risk. The ASDR provides that basic information to help ensure all stakeholders are involved.
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project key Information'''
+ | style="width:14%; background:#cccccc" align="center"|Project Leader<br>[[User:Leocavallari|'''Leonardo Cavallari Militelli''']]   
+ | style="width:15%; background:#cccccc" align="center"|Project Contributors<br>(if any)
+ | style="width:10%; background:#cccccc" align="center"|Mailing List<br>[https://lists.owasp.org/mailman/listinfo/owasp-asdr-project '''Subscribe here''']
+| style="width:17%; background:#cccccc" align="center"|License<br>[http://creativecommons.org/licenses/by-sa/3.0/ '''Creative Commons Attribution Share Alike 3.0''']
+ | style="width:14%; background:#cccccc" align="center"|Project Type<br>[[:Category:OWASP_Project#Alpha Status Projects|'''Documentation''']]
+ | style="width:15%; background:#cccccc" align="center"|Sponsors<br>[[OWASP Summer of Code 2008|'''OWASP SoC 08''']]<br>[http://www.ibliss.com.br  '''iBLISS Segurança&Inteligência''']  
+ |}
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|
+'''[[:Category:OWASP_Project_Assessment#Alpha_Quality_Documentation_Criteria|Alpha Quality]]'''<br>[[:OWASP ASDR Project - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="center"|
+[[:OWASP ASDR Workplan|OWASP ASDR Workplan]]<br>
+[[:OWASP Honeycomb Project Roadmap|Old Honeycomb Roadmap]]<br>
+ | style="width:29%; background:#cccccc" align="center"|
+[[:Category:OWASP Honeycomb Project|OWASP Honeycomb Project]]<br>[http://cve.mitre.org/cwe/about/index.html Common Weakness Enumeration (CWE)]<br>[http://samate.nist.gov/index.php/Main_Page Software Assurance Metrics and Tool Evaluation (SAMATE)]  
+ |}
+----

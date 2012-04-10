@@ -1,0 +1,45 @@
+==Summary==
+Developers are responsible for creating secure, trustworthy web applications and services.  This section is to provide tools and guidance for the .NET Developer.
+
+==Areas of Concern==
+* [[Secure Development Lifecycle]]
+** Overview
+** Checklists
+** Tools
+
+* [[.NET Secure Coding | .NET Secure Coding]]
+** Partial Trust
+** Cross Platform
+
+* [[.NET CIA | Confidentiality, Integrity and Availability in Practice]]
+** Cryptography
+** Debugging and Instrumentation
+** Adaptive Web Applications and failing gracefully
+
+* [[.NET Security Features | .NET Security Features (by Version)]]
+** Authentication Best Practices
+** Authorization
+** Security Demands
+
+* [[.NET Unit and Integration Testing | Unit and Integration Testing]]
+** Test First (TDD) and Design Patterns
+** Fuzzing
+
+* .NET Web Technologies
+** [[ASP.NET_WebForms | ASP.NET WebForms]]
+** [[ASP.NET_MVC | ASP.NET Model View Controller]]
+** [[SilverLight | Silverlight]]
+** [[WSS | SharePoint (WSS)]]
+** [[WCF Security Best Practices | Windows Communications Foundation Security Best Practices]]
+
+==Articles & Projects==
+[http://msdn.microsoft.com/security/bb896640.aspx "How Do I?" Microsoft Security Videos]
+
+==Community Contributions==
+[http://keepitlocked.net/archive/2008/04/11/developing-asp-net-in-partial-trust.aspx Developing ASP.NET in Partial Trust]
+
+==References==
+[http://go.microsoft.com/?linkid=8685076 Microsoft Security Development Lifecycle 3.2]
+
+==Tools==
+[[Source_Code_Analysis_Tools | Source Code Analysis Tools]]

@@ -1,0 +1,110 @@
+1) create a file called TypeConfusion_II.cs and compile it using csc
+
+using System;
+
+ namespace Owasp
+ {
+    class TypeConfusion_II
+    {
+        struct MyPoint
+        {
+            public int x,y;
+            private int iPrivate;
+
+            public void setValueOfPrivateVar()
+            {
+                iPrivate = 10;
+            }
+            public void writeValueOfPrivateVar()
+            {
+                Console.WriteLine("iPrivate = " + iPrivate.ToString());
+            }
+        }   
+        struct MyPoint1
+        {
+            public int x,y;
+            public int iPrivate;
+        }
+        public static void Main()
+        {       
+            Console.WriteLine("\n\nType Confusion II\n\n");
+            MyPoint mp = new MyPoint();
+            mp.setValueOfPrivateVar();
+            mp.x = 1;
+            mp.y = 2;
+            mp.y = 99;
+            Console.WriteLine(mp.x.ToString());
+            Console.WriteLine(mp.y.ToString());
+            mp.writeValueOfPrivateVar();
+        }
+    }
+ }
+
+2) execute it:
+
+
+Type Confusion II
+
+ 1
+ 99
+ iPrivate = 10
+
+3) ILDASM it:
+
+ ildasm TypeConfusion_II.exe /out:_TypeConf_II.il
+
+4) and make the following change
+
+ // replace
+ //      IL_002d:  stfld      int32 Owasp.stackTest/MyPoint::y
+ // with
+      IL_002d:  stfld      int32 Owasp.stackTest/MyPoint1::iPrivate
+
+5) ILASM it
+
+ ilasm _TypeConf_II.il
+
+6) and execute _TypeConf_II.exe
+
+ Type Confusion II
+
+ 1
+ 2
+ iPrivate = 99
+
+7) open _TypeConf_II.exe in reflector
+
+ public static void Main()
+ {
+      Console.WriteLine("\n\nType Confusion II\n\n");
+      stackTest.MyPoint point1 = new stackTest.MyPoint();
+      point1.setValueOfPrivateVar();
+      point1.x = 1;
+      point1.y = 2;
+      point1.iPrivate = 0x63;
+      Console.WriteLine(point1.x.ToString());
+      Console.WriteLine(point1.y.ToString());
+      point1.writeValueOfPrivateVar();
+ }
+ 
+8) and note that point1.iPrivate (using reflector's name) is being allocated the value of 0x63 (i.e. 99), but point1 is of type MyPoint , and MyPoint.iPrivate is a private field:
+
+ [StructLayout(LayoutKind.Sequential)]
+ private struct MyPoint
+ {
+      public int x;
+      public int y;
+      private int iPrivate;
+      public void setValueOfPrivateVar();
+      public void writeValueOfPrivateVar();
+ }
+ 
+9) PeVerify _TypeConf_II.exe throws this error:
+
+ [IL]: Error: [_typeconf_ii.exe : Owasp.stackTest::Main] [offset 0x0000002D] [opcode stfld] [found address of value class 'MyPoint'] [expected address of value class 'MyPoint1'] Unexpected type on the stack.
+ 1 Errors Verifying _TypeConf_II.EXE
+
+10) and as expected running _TypeConf_II.exe from a Partially Trusted environment also doesn't work
+
+
+[[Category:OWASP .NET Project]]

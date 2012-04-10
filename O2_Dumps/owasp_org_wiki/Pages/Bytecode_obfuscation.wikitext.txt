@@ -1,0 +1,127 @@
+==Status==
+Released: 14/1/2008
+==Author==
+Pierre Parrend
+
+== Principles ==
+
+
+Java is a language where the source code is quite intuitive to read. And in many cases, the compiled bytecode can also be reversed (or decompiled) into source code.  This presents problems for projects that require confidentiality of the source code.  This article provides an introduction to protecting bytecode through obfuscation.
+
+=== How to recover Source Code from Bytecode? ===
+
+There are a number of freely available Java decompilers that all provide similar functionality, including:
+
+* Recover source code from Java bytecode,
+* Retrieve names of local Variables and parameters,
+* Retrieve comments and JavaDoc
+
+Popular decompilers include:
+* [http://www.kpdus.com/jad.html JAD (JAva Decompiler)] - a little dated now and does not support Java 5.0 
+* [http://jode.sourceforge.net Jode] - Written entirely in Java and provides a Swing GUI
+* [http://jreversepro.blogspot.com/ jReversePro] - 100% Java, also slightly dated
+
+=== How to prevent Java code from being Reverse-engineered ? ===
+
+Several actions can be taken for preventing reverse-engineering :
+
+* Code Obfuscation. This is done mainly through variable renaming; see next paragraph for more precisions,
+* Suppression of End Of Line Characters. This makes the code difficult to parse,
+* Use of anonymous classes for handling events. This seems not to be handled by many Decompiler; however, JAD copes pretty well with this.
+* Class file encryption. This implies some overhead for uncyphering at runtime. Several tools are available:: [http://www.cinnabarsystems.com/canner.html Canner], by Cinnabar Systems, or  [http://www.jbitsoftware.com/JBit/do/displayPage?targetPageId=products.jlockinfo JLock by JSoft]. They are available for evaluation, and the first is proposed currently for Windows Platforms only.
+* Replacing the method names with certain characters e.g '/' or '.' in the class header causes the popular decompilation tools such as JAD to dump the source code which is incomprehensible (you cannot determine the control flow from the source).
+<b>Note:</b> Beware of 100% Java solutions using encryption to protect class files as these are more than likely snake oil.  Since the JVM has to read unencrypted class files at some point, even if the class files are encrypted on the disk, they will have to be decrypted before being passed to the JVM.  An attacker could modify the local JVM to simply write the class files to disk in their unencrypted form at this point.  (See: [http://www.javaworld.com/javaworld/javaqa/2003-05/01-qa-0509-jcrypt.html?page=2 Javaworld article]).<br>
+<b>Conjecture:</b> It's is very easy to circumvent these methods to reveal bytecode using a Java profiler.
+
+=== What obfuscation tools are available ? ===
+
+A lot of tools exist for Java code Obfuscation. You can find extensive lists under following URLs, or simply type 'obfuscator' in your favorite search engine :
+
+* http://directory.google.com/Top/Computers/Programming/Languages/Java/Development_Tools/Obfuscators/
+* http://proguard.sourceforge.net/alternatives.html
+
+Among those projects, some are open source project, and therefore more suitable for research - but also for enterprises who wish to control the programs they use (without any warranty):
+
+* [http://www.zelix.com/klassmaster/ KlassMaster], shrinks and obfuscates both code and string constants. It can also translate stack traces back to readable form if you save the obfuscation log.
+* [http://proguard.sourceforge.net/ Proguard] is a shrinker (make code more compact), and optimizer and obfuscator.
+* [http://jode.sourceforge.net/ Jode] is a decompiler, an optimizer and an obfuscator. It contains facilities for cleaning logging statements,,
+* [http://jarg.sourceforge.net/ Jarg],
+* [http://sourceforge.net/projects/javaguard/ Javaguard], which is a simple obfuscator, without many documentation,
+* [http://www.geocities.com/CapeCanaveral/Hall/2334/Programs/cafebabe.html CafeBabe], which allows precise view of Bytecode files and single file obfuscation; a good tool for teaching ByteCode Structure, more than a production tool. 
+
+== Using Proguard ==
+
+The following section provides a short tutorial for using [http://proguard.sourceforge.net/ Proguard].
+
+First, download the code under [http://sourceforge.net/project/showfiles.php?group_id=54750 following url ] and unzip it.
+
+For this tutorial, we use the [http://www.rzo.free.fr/applis/fr.inria.ares.sfelixutils-0.1.jar fr.inria.ares.sfelixutils-0.1.jar package].
+
+Go to the main directory of Proguard. For lauching it, you can use following script with given parameters :
+
+       java -jar lib/proguard.jar @config-genericFrame.pro
+
+config-genericFrame.pro is the option file
+(do not forget to adapt the libraryjars parameter to your own system) :
+
+ -obfuscationdictionary ./examples/dictionaries/compact.txt
+ -libraryjars /usr/java/j2sdk1.4.2_10/jre/lib/rt.jar
+ -injars fr.inria.ares.sfelixutils-0.1.jar
+ -outjar fr.inria.ares.sfelixutils-0.1-obs.jar
+ -dontshrink
+ -dontoptimize
+ -keep public class proguard.ProGuard {
+ public static void main(java.lang.String[]);
+ }
+
+Remark that the 'keep' option is mandatory, we use this default class for not keep anything out.
+
+The example dictionnary (here compact.txt) is given with the code.
+
+The output is stored in the package 'genericFrameOut.jar'.
+
+You can observe the modifications implied by obfuscation with following commands :
+
+ jar xvf genericFrameOut.jar
+ cd genericFrame/pub/gui/
+ jad c.class
+ more c.jad more c.jad
+
+Remark than Strings are kept unmodified. If you want you code to be hard to read, do not forget to remove any debugging and logging comments. Jode has some facilities for making this easier.
+
+== Using CafeBabe ==
+
+CafeBabe is a convenient tool for teaching structure of ByteCode files. You can [http://www.geocities.com/CapeCanaveral/Hall/2334/programs.html download it at this URL].
+
+ Unzip it and execute following command :
+ java -classpath CafeBabe.jar org.javalobby.apps.cafebabe.CafeBabe
+
+Have a look at some class from the original genericFrame.jar package.
+
+Then obfuscate it, and compare both - original and modified class :
+
+* with the CafeBabe viewer,
+* after decompiling it with JAD.
+
+What conclusion can you draw of it ?
+
+== Using Jode ==
+
+Jode is to be found [http://jode.sourceforge.net/ here] with instructions on how to use the decompiler and obfuscator functions [http://jode.sourceforge.net/usage.html here].
+
+== Links ==
+
+* [http://directory.google.com/Top/Computers/Programming/Languages/Java/Development_Tools/Obfuscators/  Obfuscator list, by Google]
+* [http://proguard.sourceforge.net/alternatives.html alternatives proposed by proguard]
+* [http://www.geocities.com/CapeCanaveral/Hall/2334/Programs/cafebabe.html CafeBabe]
+* [http://www.cinnabarsystems.com/canner.html Canner]
+* [http://www.kpdus.com/jad.html JAD (JAva Decompiler)] [[Category:FIXME|check link]]
+* [http://jarg.sourceforge.net/ Jarg]
+* [http://sourceforge.net/projects/javaguard/ Javaguard]
+* [http://www.jbitsoftware.com/JBit/do/displayPage?targetPageId=products.jlockinfo JLock by JSoft]
+* [http://jode.sourceforge.net/ Jode]
+* [http://proguard.sourceforge.net/ Proguard]
+
+[[Category:OWASP Java Project]]
+[[Category:How To]]
+[[Category: Control]]

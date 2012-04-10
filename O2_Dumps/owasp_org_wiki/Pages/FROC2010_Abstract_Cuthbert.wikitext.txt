@@ -1,0 +1,14 @@
+==The Presentation: "Assessing Financial Applications"==
+
+Attackers will go to extraordinary lengths to compromise a financial application; the spoils are just too irresistible. So unsurprisingly these applications have higher requirements for data confidentiality, transaction integrity and service availability than many other web applications.
+
+On a whole, financial applications don't suffer from the usual low-hanging fruit often found in other web applications. This talk will go through some of the common issues discovered by myself over a period of 3 years looking at large-scale financial applications.
+
+It will discuss technical issues associated with common programming languages and API’s that present a security threat, and how to mitigate the associated risks.
+
+
+==The Speaker: Daniel Cuthbert==
+
+
+
+[http://www.owasp.org/index.php/Front_Range_OWASP_Conference_2010#tab=Agenda Back to Conference Agenda]

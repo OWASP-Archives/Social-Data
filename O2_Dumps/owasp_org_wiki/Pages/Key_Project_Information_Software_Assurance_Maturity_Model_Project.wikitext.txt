@@ -1,0 +1,39 @@
+----
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT INFORMATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''Software Assurance Maturity Model (SAMM) Project'''
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|
+The Software Assurance Maturity Model (SAMM) project is committed to building a usable framework to help organizations formulate and implement a strategy for application security that's tailored to the specific business risks facing the organization. The goal is to create well-defined and measurable goals that can be used by small, medium,and large sized organizations in any line of business that involves software development.
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|
+'''Key Project Information'''
+ | style="width:14%; background:#cccccc" align="center"|
+Project Leader<br>[[User:Pravir Chandra|'''Pravir Chandra''']]
+ | style="width:15%; background:#cccccc" align="center"|
+Project Contibutors<br>[[:OWASP Software Assurance Maturity Model Project - Contributors|'''See here''']]
+ | style="width:10%; background:#cccccc" align="center"|
+Mailing List<br>[https://lists.owasp.org/mailman/listinfo/samm '''Subscribe here''']<br>[mailto:samm@lists.owasp.org '''Use here''']
+ | style="width:17%; background:#cccccc" align="center"|
+License<br>[http://creativecommons.org/licenses/by-sa/3.0/ '''Creative Commons Attribution Share Alike 3.0''']
+ | style="width:14%; background:#cccccc" align="center"|
+Project Type<br>[http://www.owasp.org/index.php/Category:OWASP_Project#tab=Alpha_Status_Projects '''Documentation''']
+ | style="width:15%; background:#cccccc" align="center"|
+Sponsors<br>[http://www.fortify.com/ '''Fortify''']<br>[http://cognostic.us/ '''Cognosticus''']
+ |}
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|
+[[:Category:OWASP Project Assessment#Alpha Quality Documentation Criteria|'''Alpha Quality''']]<br>[[:OWASP Software Assurance Maturity Model Project - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="center"|
+* [http://www.opensamm.org/ '''OpenSAMM''']
+ | style="width:29%; background:#cccccc" align="center"|
+*  [[:Category:OWASP CLASP Project|'''OWASP CLASP Project''']]
+ |}
+----

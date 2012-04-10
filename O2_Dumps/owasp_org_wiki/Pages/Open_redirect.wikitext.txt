@@ -1,0 +1,89 @@
+{{Template:Stub}}
+{{Template:Vulnerability}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+An open redirect is an application that takes a parameter and redirects a user to the parameter value without any validation. This vulnerability is used in phishing attacks to get users to visit malicious sites without realizing it.
+
+'''Consequences'''
+
+[[Phishing]]
+
+'''Platform'''
+All web platforms affected
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+http://www.vulnerable.com?redirect=http://www.attacker.com
+
+The phishing use can be more complex, using complex encoding:
+
+Real redirect: http://www.vulnerable.com/redirect.asp?=http://www.links.com
+
+Faked link: http://www.vulnerable.com/security/advisory/23423487829/../../../redirect.asp%3F%3Dhttp%3A//www.facked.com/advisory/system_failure/password_recovery_system
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Open forward]]
+
+==Related [[Controls]]==
+
+* To avoid the open redirect vulnerability, parameters of the application script/program must be validated before sending 302 HTTP code (redirect) to the client browser.
+
+The server must have a relation of the authorized redirections (i.e. in a database).
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]

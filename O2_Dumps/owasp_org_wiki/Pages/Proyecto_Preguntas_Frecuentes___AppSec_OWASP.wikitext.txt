@@ -1,0 +1,42 @@
+=Introducción=
+
+==De qué se tratan estas preguntas frecuentes (FAQ)?== 
+
+Esta lista de preguntas frecuentes, responde a algunas de las preguntas que los desarrolladoras tienen sobre seguridad en aplicaciones. Este FAQ no es especifica a una plataforma o lenguage. Trata las amenazas comunes a las aplicaciones web y son aplicables a cualquier plataforma.
+
+==Cuáles son esas amenazas comunes a las aplicaciones Web?==
+
+Cuando se desarrolla una aplicacion, la mayoria de nosotros estan enfocadas en la funcionalidad mas que en la seguridad. Los Atacantes toman ventaja de esto explotando la aplicacion en inumerables maneras. Algunas de las amenazas comunes a las aplicaciones son la inyección SQL, cross site scripting, manipulacion de variables y la explotación de caracteristicas importantes como el de restablecer password.  Hay secciones separadas en este FAQ contestando las preguntas comunes en estas amenazas.
+
+==Quién Desarrollo este FAQ?== 
+
+This FAQ is an evolving document with contributions from the security community. Sangita Pakala and her team from [http://www.paladion.net/ Paladion Networks] developed the first version of the FAQ and maintain this page. 
+
+==Quién Tradujo este FAQ?==
+
+Juan Carlos Calderon y Alberto Peña
+
+==Cómo puedo contribuir a esta lista?==
+
+Necesitamos su retroalimentacion y contribuciones para mejorar la lista. Nos gustaria escuchar de usted sobre:
+
+*Nuevas preguntas para agregar a la lista
+*Mejores respuestas para las preguntas existentes
+*Nuevas ligas a los documentos/herramientas
+*Sugerencias para mejorar la lista
+
+puede enviar sus contribuciones a [mailto:appsecfaq@owasp.org appsecfaq@owasp.org]
+
+=Contenido=
+
+Puede encontrar la lista completa [[OWASP AppSec FAQ | aqui]] para ver todos los detalles.
+
+=Descargas=
+La lista de preguntas frecuentes de OWASP puede bajarse como [http://www.owasp.org/docroot/owasp/misc/Preguntas_Frecuentes_sobre_Seguridad_en_Aplicaciones_Web(OWASP_FAQ).doc Word](en Inglés) y [http://www.owasp.org/docroot/owasp/misc/OWASP_FAQ_Ver3.pdf PDF] (En Ingles).
+
+'''Nuevo''' La lenguage en español de la lista esta disponible en [http://www.owasp.org/docroot/owasp/misc/Preguntas_Frecuentes_sobre_Seguridad_en_Aplicaciones_Web(OWASP_FAQ).doc Word] y [http://www.owasp.org/docroot/owasp/misc/Preguntas_Frecuentes_sobre_Seguridad_en_Aplicaciones_Web(OWASP_FAQ).pdf PDF]. Muchas gracias a Juan Carlos Calderón y Alberto Peña por su fantastico trabajo de traducción.
+
+=Plan=
+[[OWASP AppSec FAQ Project Roadmap]]
+
+[[Category:OWASP Project]]

@@ -1,0 +1,142 @@
+==  OWASP Newsletter #16 (02-May-2008) ==
+Welcome to the 16th edition of the OWASP Newsletter, featuring OWASP at the Secure360 Conference, the OWASP Internship, and the release of OWASP's Top 10 in Portuguese.
+
+I would like to congratulate the OWASP Spain chapter for receiving one of the most prestigious awards of the security sector in Spain, for their activity and dissemination of security in applications and Web services in our country!  This award, given by the SIC magazine (www.revistasic.com) in its nineteenth congress called "Securmática" (www.securmatica.com), involves the recognition of the effort they are making from Spain to publicize the objectives and projects the OWASP. 
+
+As always, if you have any content to add to the next edition, please feel free to add it directly to its WIKI page [[OWASP Newsletter 17]].
+
+Alison McNamee
+OWASP Operations Director
+Tel: 301-575-0197
+eMail: Alison.mcnamee@owasp.org
+
+== Featured Item: OWASP at Secure360 Conference==
+
+The OWASP Minneapolis St Paul chapter will be at the Secure360 conference in Minneapolis May 13th-14th. We will be giving a full session where we will talk about OWASP, demo projects, resources and even have our own informational booth thanks to our local sponsors!
+
+http://www.secure360.org
+
+==Featured Item: OWASP Internship==
+
+Are you a college student looking for a summer internship in the application security industry? If so, then OWASP is the place for you! We are currently looking to fill two internship positions for this summer. These are paid internships. [http://www.owasp.org/index.php/OWASP_Internship_2008 Click Here] for more info!
+
+==Featured Item: Top 10 in Portuguese==
+
+The OWASP Top 10 is now available in Portuguese!  To download the Portuguese version, please [http://www.owasp.org/images/4/42/OWASP_TOP_10_2007_PT-BR.pdf Click Here]
+
+
+
+== Latest additions to the WIKI ==
+
+
+==== New Pages====
+
+*[[OWASP_Writing_Style]]
+*[[AppSecEU08_The_Dynamic_Taint_Propagation_Finding_Vulnerabilities_Without_Attacking]]
+*[[ASP.NET_Request_Validation]]
+*[[OWASP_Israel_2008_Conference]]
+*[[OWASP_Orizon_Project_XML]]
+*[[OWASP_Spanish]]
+*[[OWASP_Internationalization]]
+*[[Belgium_Previous_Events_2008]]
+*[[AppSecEU08_Evaluation_Criteria_for_Web_Application_Firewalls]]
+*[[CSRFGuard_2.2_Configuration_Manual]]
+*[[AppSecEU08_The_OWASP_ORIZON_project]]
+*[[Education_Track:_OWASP_Capture_the_flag_application]]
+*[[Education_Track:_OWASP_Boot_Camp]]
+*[[AppSecEU08_Threat_Modeling_for_Application_Designers_and_Architects]]
+*[[.NET_Incident_Response]]
+*[[.Net_Project_Wishlist]]
+*[[.NET_Penetration_Testing]]
+*[[CSRFGuard_2.2_ChangeLog]]
+*[[CSRFGuard_2.2_Installation]]
+*[[AppSecEU08_Exploiting_Online_Games]]
+*[[AppSecEU08_Software_Security_State_of_the_Practice_2008]]
+*[[OWASP_Internship_2008]]
+*[[AppSecEU08_Scanstud_-_Evaluating_static_analysis_tools]]
+*[[How_to_Start_an_OWASP_Project]]
+*[[AppSecEU08_Best_Practices_Guide_Web_Application_Firewalls]]
+*[[.NET_Security_for_Developers]]
+*[[.NET_Security_for_IT_Professional]]
+*[[OWASP_Board_Meetings_April_Agenda]]
+*[[AppSecEU08_Dirk_De_Maeyer]]
+*[[AppSecEU08_How_Data_Privacy_affects_Applications_and_Databases]]
+*[[AppSecEU08_The_Web_Hacking_Incidents_Database_Project]]
+*[[.NET_Security_for_Architects]]
+
+====New Chapter Pages====
+
+*[[Norway]]
+*[[China-Mainland]]
+
+====Updated Pages====
+
+*[[OWASP_Summer_of_Code_2008]]
+*[[AppSecEU08_The_OWASP_Anti-Samy_project]]
+*[[ASP.NET_Request_Validation]]
+*[[OWASP_Israel_2007_Conference]]
+*[[Project_Information:template]]
+*[[OWASP_Testing_Guide_v3_Table_of_Contents]]
+*[[OWASP_Testing_Project_v3_Roadmap]]
+*[[Code_Review_Introduction]]
+*[[.NET_Project_ReOrg_Alpha]]
+*[[Testing_for_Cross_site_scripting]]
+*[[Front_Range_Web_Application_Security_Summit_Planning_Page]]
+*[[CSRFGuard_2.2_Configuration_Manual]]
+*[[OWASP_Testing_Guide_v3_Startup]]
+*[[OWASP_AppSec_Europe_2008_-_Belgium]]
+*[[What_are_web_applications%3F]]
+*[[OWASP_Summer_of_Code_2008_Applications_-_Need_Futher_Clarifications]]
+*[[OWASP_Summer_of_Code_2008_Applications]]
+*[[OWASP_Backend_Security_Project]]
+*[[Sponsored_Projects]]
+*[[Man-in-the-middle_attack]]
+*[[Password_length_%26_complexity]]
+*[[AppSecEU08_Trends_in_Web_Hacking_Incidents:_What%27s_hot_for_2008]]
+*[[OWASP_Summer_of_Code_2008_Applications_-_for_majority_vote]]
+
+====Updated chapter pages:====
+
+*[[Denver]]
+*[[Suncoast]]
+*[[Israel]]
+*[[Sweden]]
+*[[London]]
+*[[Sydney]]
+*[[Austin]]
+*[[Mexico_City/es]]
+*[[Boulder]]
+*[[Rochester]]
+*[[Ireland]]
+*[[Helsinki]]
+*[[Virginia_%28Northern_Virginia%29]]
+*[[Montr%C3%A9al]]
+*[[Switzerland]]
+*[[Italy_OWASP_Day_2]]
+*[[Spain]]
+*[[Brazilian]]
+*[[Sacramento]]
+*[[Belgium]]
+*[[NYNJMetro]]
+*[[Boulderchaptermeetings2007.html]]
+*[[Minneapolis_St_Paul]]
+
+==== New Documents & Presentations from chapters==== 
+
+
+For a complete list of chapter presentations see [[OWASP_Education_Presentation|the online table of presentations]].
+
+== OWASP references in the Media==
+
+*[http://blog.modsecurity.org/2008/04/great-talks-at.html Great talks at OWASP AppSec Europe 2008 in Belgium]
+*[http://infosec4all.com/2008/04/28/sql-injection-attacks-summary-and-recommendations/ SQL injection attacks summary and recommendations]
+*[http://blogs.computerworld.com/can_we_please_stop_cross_site_scripting_attacks Can we please stop cross site scripting attacks?]
+*[http://i8jesus.com/?p=19 AntiSamy 1.1.1 released today!]
+*[http://blogs.computerworld.com/can_we_please_stop_cross_site_scripting_attacks Can We Please Stop Cross Site Scripting Attacks]
+*[http://www.disenchant.ch/blog/global-owasp-week-2008-switzerland/122 Global OWASP Week 2008-Switzerland]
+*[http://cleartext.wordpress.com/2008/04/10/rocky-mountain-high/ Rocky Mountain High]
+*[http://cincinnatirecruiter.wordpress.com/2008/04/11/the-new-face-of-cybercrime/ The new face of cybercrime]
+
+=='''[https://www.owasp.org/index.php/Template:Application_Security_News Application Security News Feed]'''==
+
+{{Application Security News}}

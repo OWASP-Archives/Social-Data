@@ -1,0 +1,71 @@
+[http://msdn.microsoft.com/library/default.asp?url=/library/en-us/csref/html/vclrfreadonlypg.asp From MSDN] "...The readonly keyword is a modifier that you can use on fields. When a field declaration includes a readonly modifier, assignments to the fields introduced by the declaration can only occur as part of the declaration or in a constructor in the same class...." (see also [http://www.winterdom.com/cppclifaq/archives/000418.html What's the equivalent of C#'s "readonly" in C++/CLI?] , [http://weblogs.asp.net/psteele/archive/2004/01/27/63416.aspx C#'s const vs. readonly] and [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/csspec/html/vclrfcsharpspec_10_4_2.asp 10.4.2 Readonly fields])
+
+As with my previous finding ([[Possible Type Confusion issue in .Net 1.1 (only works in Full Trust)]]) this feature is not enforeced in Full Trust environments, only in partial trust (when type safety verification occours)
+
+To test this:
+
+1) compile this sample
+
+ using System;
+
+ namespace Owasp
+ {
+    class ReadOnlyTest
+    {
+        public static void Main()
+        {
+            Console.WriteLine("ReadOnly test\n\n");
+            readOnly ro = new readOnly();
+            Console.WriteLine(ro.sReadOnly);    
+            ro.sReadWrite = "changed";
+            Console.WriteLine(ro.sReadOnly);
+        }
+    }
+    class readOnly
+    {
+        public readonly string sReadOnly;
+        public string sReadWrite;
+        public readOnly()
+        {
+            sReadOnly = "Read Only String";
+        }   
+    }
+ }
+
+2) ILDASM it with
+
+ ildasm readOnly.exe /out:_readOnly.il
+
+3) Edit the IL code in Notepad replacing
+
+      IL_001c:  ldstr      "changed"
+      IL_0021:  stfld      string Owasp.readOnly::sReadWrite
+
+ with      
+      IL_001c:  ldstr      "changed"
+      IL_0021:  stfld      string Owasp.readOnly::sReadOnly
+
+4) ILASM it with
+
+ ilasm _readonly.il
+
+5) execute _readonly.exe and you should get this result
+
+ ReadOnly test
+
+
+ Read Only String
+ changed
+
+6) now change to a partial trust environment (for example a mapped network drive to the same folder (in my case the z:\ drive is mapped to \\127.0.0.1\{folder name} ) and note that when executing _readonly.exe you will get the following JIT exception:
+
+Z:\readOnlytest>_readOnly.EXE
+
+ Unhandled Exception: System.Security.VerificationException: Operation could deabilize the runtime.   at Owasp.ReadOnlyTest.Main()
+
+7) this shows that in partial trust the verification occours and in Full Trust it doesn't
+
+8) you can also use PeVerify to get more details about the problems with _readOnly.exe
+
+
+[[Category:OWASP .NET Project]]

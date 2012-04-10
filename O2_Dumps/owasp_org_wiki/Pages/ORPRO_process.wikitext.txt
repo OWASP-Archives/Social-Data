@@ -1,0 +1,36 @@
+[[Image:ORPRO_process_detail_2.jpg]]
+
+* '''Project intake'''
+** ''PIN.01: Communication with open source project.'' Proposals for open source projects to be reviewed can be sent to one of the ORPRO project leads. Alternatively, the project actively approach open source projects. The open source project must provide at least one primary contact.
+** ''PIN.02: Check entry criteria.'' The open source project will be checked against entry criteria. Entry criteria are:
+*** it must be widely used 
+*** its license must allow independent security review
+*** the open source project team should be in a position to remediate security defects that are discovered
+*** the programming language must be supported by ORPRO's automated source code scanners and manual review team
+** ''PIN.03: Risk assessment.'' Before conducting manual reviews we perform a risk assessment on the open source software. The steps taken are:
+*** based on typical business use, conduct a business impact assessment (BIA): determine the maximum business impact of loss of confidentiality, loss of integrity and unavailability of the software under review;
+*** using the results of the BIA, conduct a threat assessment. The results are
+**** critical information assets processed by the software under review;
+**** main threats for the software under review;
+**** prioritized list of source code to be reviewed, highest risk first. In its simplest forms, the list might be based on source code files or directories. In many cases, other ways to address this may be more appropriate: examples are high risk use cases, API calls, and interfaces;
+** ''PIN.04: Assemble team.'' The project leads assigns a review project lead and the lead can additionally assemble a team of reviewers. Reviewers may be involved with architecture review, automated scanning, and/or manual review. 
+* '''Architecture review'''
+** ''ARR.01: Obtain architecture information.'' If available, request architecture document from Open Source Project. Otherwise assess architecture based on the source code.
+** ''ARR.02: Review architecture.'' Review architecture for security defects.
+** ''ARR.03: Document results.'' Architecture defects are documented and disclosed to the open source project. In case of serious flaws, the Open Review may end with an advise at this stage and will not continue with code review.
+* '''Review'''
+** '''Automated code review'''
+*** ''ACR.01: Configure tooling.'' Assuming the project uses a platform supported by [http://owasp.fortify.com/ owasp.fortify.com], the source code is run through automated analysis.
+*** ''ACR.02: Run tool on project.'' For more information on this process, see the [http://www.owasp.org/index.php/Category:OWASP_Open_Review_Project_owasp.fortify.com_FAQ OWASP Open Review owasp.fortify.com FAQ]
+*** ''ACR.03: Review findings.'' Defects discovered are manually reviewed.
+*** ''ACR.04: Document results.'' Defects are communicated to the owners of the open source project for remediation.
+** '''Manual code review'''
+*** ''MCR.01: Configure tooling.'' For collaborating on manual reviews ORPRO will be setting up tooling. The tooling needs to be configured for the software under review.
+*** ''MCR.02: Perform manual review.'' The manual review is being performed under supervision of the review project lead. The review project lead assigns source code to individual reviewers. The results from PI.03 (Risk assessment) have specified the prioritization of the reviews to be performed. 
+*** ''MCR.03: Document results.'' Identified defects are documented and reported to the owners of the open source project for remediation.
+* '''Reporting'''
+** ''REP.01: Report issues to project.'' Either reviewers or the open source project leaders responsibly disclose the identified security issues. 
+** ''REP.02: Final report at OWASP site.'' After finishing a review and having responsibly disclosed security defects ORPRO will document the results on the OWASP site for educational purposes. Apart from the defects being documented details should be made available on the coverage of automated and manual review and the specific defects found by either method.
+
+
+The ORPRO project is a relatively new effort and it is expected that these processes will develop and change over time to accommodate new situations as they arise.

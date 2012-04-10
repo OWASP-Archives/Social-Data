@@ -1,0 +1,20 @@
+==== Main ====
+While there are extensive resources on the Internet about secure architecture and security practices that when implemented effectively across an SDLC produce highly secure and defensible applications. One must acknowledge that their adoption has challenged project teams, one constraint being lack of reference implementations that demonstrate effective realization of highly secure and defensible applications. 
+
+Alchemist aims to bridge this gap. Alchemist is a free, open source, enterprise web application security resource that enables software development teams build high secure and defensible applications. Alchemist is structured for easier adoption and learning for software architects and programmers, allowing them to implement strong security practices into their applications. 
+
+The focus is to achieve this objective by architecting and developing a highly secure and defensible enterprise web application. The outcome of this exercise is targeted as a reference implementation for development houses. The overall  objective is to leverage secure architecture and practices to showcase secure application development implementations with leading technologies and frameworks. In its first exercise, Alchemist proposes to demonstrate a secure J2EE web application that is developed using Spring framework.
+
+OWASP lists a number of common application security [[:Category:Vulnerability|vulnerabilities]]. These apply to most of the programming languages and platforms. The notable exception being [[Buffer Overflow|buffer overflow]] and related issues that do not apply to J2EE. .Net and the likes. Alchemist is designed to demonstrate effective mitigation of most of these issues in its reference implementations.
+
+More details on the project, including the high level road-map can be found in the Project About tab. If you'd like to contribute join the [https://lists.owasp.org/mailman/listinfo/owasp-alchemist-project mailing list] and share your ideas and suggestions on the ongoing progress, and of course your proposal for contribution for the ongoing work or work for other programming languages. 
+
+==== Project About ====
+{{:Projects/OWASP_Alchemist_Project | Project About}}
+
+__NOTOC__
+<headertabs/>
+
+[[Category:OWASP Project|Alchemist Project]]
+[[Category:OWASP Tool]]
+[[Category:OWASP Alpha Quality Tool]]

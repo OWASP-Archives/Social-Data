@@ -1,0 +1,150 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+If integrity check values or "checksums" are omitted from a protocol, there is no way of determining if data has been corrupted in transmission.
+
+'''Consequences'''
+
+* Integrity: Data that is parsed and used may be corrupted.
+* Non-repudiation: Without a checksum it is impossible to determine if any changes have been made to the data after it was sent.
+
+'''Exposure period'''
+
+* Design: Checksums are an aspect of protocol design and should be handled there.
+* Implementation: Checksums must be properly created and added to the messages in the correct manner to ensure that they are correct when sent.
+
+'''Platform'''
+
+* Languages: All
+* Platforms: All
+
+'''Required resources'''
+
+Network proximity: Some ability to inject messages into a stream, or otherwise corrupt network traffic, would be required to capitalize on this flaw.
+
+'''Severity'''
+
+High
+
+'''Likelihood of exploit'''
+
+Medium
+
+The failure to include checksum functionality in a protocol removes the first application-level check of data that can be used. The end-to-end philosophy of checks states that integrity checks should be performed at the lowest level that they can be completely implemented. Excluding further sanity checks and input validation performed by applications, the protocol's checksum is the most important level of checksum, since it can be performed more completely than at any previous level and takes into account entire messages, as opposed to single packets. 
+
+Failure to add this functionality to a protocol specification, or in the implementation of that protocol, needlessly ignores a simple solution for a very significant problem and should never be skipped.
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+
+In C/C++:
+
+<pre>
+int r,s;
+struct hostent *h;
+struct sockaddr_in rserv,lserv;
+h=gethostbyname("127.0.0.1");
+rserv.sin_family=h->h_addrtype;
+memcpy((char *) &rserv.sin_addr.s_addr, h->h_addr_list[0]
+  ,h->h_length);
+rserv.sin_port= htons(1008);
+s = socket(AF_INET,SOCK_DGRAM,0);
+
+lserv.sin_family = AF_INET;
+lserv.sin_addr.s_addr = htonl(INADDR_ANY);
+lserv.sin_port = htons(0);
+
+r = bind(s, (struct sockaddr *) &lserv,sizeof(lserv));
+sendto(s,important_data,strlen(improtant_data)+1,0
+   ,(struct sockaddr *) &rserv, sizeof(rserv));
+</pre>
+
+In Java:
+
+<pre>
+while(true) {
+  DatagramPacket rp=new DatagramPacket(rData,rData.length);
+         
+  outSock.receive(rp);
+  String in = new String(p.getData(),0, rp.getLength());
+  InetAddress IPAddress = rp.getAddress();
+  int port = rp.getPort();
+          
+    out = secret.getBytes();
+    DatagramPacket sp =new DatagramPacket(out,out.length,
+      IPAddress, port);
+    outSock.send(sp);
+  }  
+}
+</pre>
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Failure to check integrity check value]]
+
+
+==Related [[Controls]]==
+
+* Design: Add an appropriately sized checksum to the protocol, ensuring that data received may be simply validated before it is parsed and used.
+* Implementation: Ensure that the checksums present in the protocol design are properly implemented and added to each message before it is sent. 
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Protocol Errors]]
+[[Category:OWASP_CLASP_Project]]

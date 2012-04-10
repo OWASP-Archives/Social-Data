@@ -1,0 +1,175 @@
+==Authentication in IIS==
+
+We often think about security measures as ways of protecting resources by preventing access to them. The need for authentication arises because, in the real world, keeping people out of protected areas is only half the battle. Authentication is about letting certain people (or processes) in, while keeping everyone else out. In practice, this usually means some people are going to have to be given secrets (passwords) that will form part of the credentials they need to present in order to gain access to protected resources. But since, as the old saying goes, the best way to keep a secret is not to, the distribution and exchange of access-providing secrets inevitably raises the level of risk to a secure system. A major goal of authentication, from a security point of view, is minimizing that risk - especially when users are being authenticated remotely, over publicly-accessible networks. Authentication is the process of poking minimally risky holes in one's security.
+
+In this column I will look at the typical spectrum of authentication methods used in IIS. It is a subject on which you can find plenty synopses online, and a lot of detailed documentation on implementing the specific methods, but not much in between. Without drowning you in implementation details, I will try to go into enough depth to provide a solid understanding of the various options, with special emphasis on the security implications of each.
+
+Note: Not every possible option will be covered here, only the most commonly used ones. If there is reader interest, future columns may investigate less-commonplace choices such as client certificate mapping, .NET passport, and options requiring third-party integration like Fortezza and RADIUS.
+
+==Anonymous Authentication==
+
+In one sense, anonymous authentication is effectively no authentication at all, since the user is not asked to supply any credentials before being served the requested resource. However, it is worth remembering that, from the Web server's (or the operating system's) perspective, even an anonymous Web site user is logged into a site using a specific set of credentials.
+
+Users who access a site anonymously are logged in using the Anonymous account (by default called IUSR_MACHINENAME although this can, and as a security precaution probably should be renamed). This account requires the ''Log on Locally'' right in order to function properly, and by default is part of both the Guests and Everyone groups. When you disable anonymous access to a resource (or a whole site) users must be authenticated in the standard sense -- meaning they must provide security credentials such as username and password in order to gain access to the resource.
+
+==Basic Authentication==
+
+IIS Basic authentication as an implementation of the basic authentication scheme found in section 11 of the [http://www.w3.org/Protocols/rfc1945/rfc1945 HTTP 1.0 specification.]
+
+As the specification makes clear, this method is, in and of itself, non-secure. The reason is that Basic authentication assumes a trusted connection between client and server. Thus, the username and password are transmitted in clear text. More specifically, they are transmitted using Base64 encoding, which is trivially easy to decode. This makes Basic authentication the wrong choice to use over a public network on its own.
+
+When combined, however, with the robust transaction security provided by Secure Sockets Layer (SSL), Basic authentication is often the best alternative. One reason is the relative absence of client-side compatibility issues. Basic Authentication is a long-standing standard supported by nearly all browsers. It also imposes no special requirements on the server side -- users can authenticate against any NT domain, or even against accounts on the local machine. With SSL to shelter the security credentials while they are in transmission, you have an authentication solution that is both highly secure and quite flexible.
+
+===Basic authentication example===
+
+Basic authentication is a simple challenge/response model. The following listing shows the essential components of an entire Basic authentication transaction at the HTTP layer -- essentially this is what you would see if you were watching the exchange of data between client and server using a network sniffer like Microsoft's Network Monitor (keep in mind though that this exchange would be sheltered by end-to-end encryption if SSL were being used). In the first frame, the browser requests a resource -- in this case, the homepage of a Web site called "host."
+
+ Get / HTTP/1.1
+ Host: host 
+
+The server then responds with its challenge: an access denied message containing the WWW-Authenticate header, which informs the client of the type of authentication available, and the "realm" to which clients who successfully authenticate will have access. (In the Windows implementation, the idea of "realms" has been largely superceded by the NT domain, but a default realm is included for informational reasons anyway.)
+
+ HTTP/1.1 401 Access Denied
+ WWW-Authenticate: Basic realm="192.168.1.1" 
+
+On the client, the user sees (on first request and in the default mode) a dialog requesting her credentials. She types in her user name and password and the Base64 encoded version of these credentials is sent back to the server in the Authorization header, along with a token indicating that the offered authentication scheme -- Basic -- has been accepted by the client.
+
+ Get / HTTP/1.1
+ Host: host
+ Authorization: Basic dGVzdDp0ZXN0
+
+Finally, the server, having gotten the all-clear from the password store (probably a Windows Domain Controller) serves the requested resource.
+
+ HTTP/1.1 200 OK
+
+==Digest Authentication==
+
+The Digest authentication option was added in Windows 2000 and IIS 5.0. Like Basic authentication, this is an implementation of a technique suggested by Web standards, namely [http://www.ietf.org/rfc/rfc2069.txt RFC 2069} (superceded by [ftp://ftp.ietf.org/rfc/rfc2617.txt RFC 2617]).
+
+Digest authentication also uses a challenge/response model, but it is much more secure than Basic authentication (when used without SSL). It achieves this greater security not by encrypting the secret (the password) before sending it, but rather by following a different design pattern -- one that does not require the client to transmit the password over the wire at all.
+
+Instead of sending the password itself, the client transmits a one-way message digest (a checksum) of the user's password, using (by default) the MD5 algorithm. The server then fetches the password for that user from a Windows 2000 Domain Controller, reruns the checksum algorithm on it, and compares the two digests. If they match, the server knows that the client knows the correct password, even though the password itself was never sent. (If you have ever wondered what the default ISAPI filter "md5filt" that is installed with IIS 5.0 is used for, now you know.
+
+To make the exchange even more secure, the password checksum is computed with a value passed to the client by the server, called a nonce. Because it is recomputed each time a 401 challenge is issued, the nonce makes the Digest challenge much more robust than the one issued in Basic authentication. Constantly changing nonce's help deter replay attacks, since the checksum of the client's password will be different for each logon.
+
+While the encryption used in calculating the checksums isn't as strong as what is used in SSL, the point is not to encrypt the entire transmission, but rather to use encryption to avoid transmitting the secret in the first place. While not as strong a challenge/response paradigm as Kerberos (see below), Digest authentication has the advantage of working across firewalls and proxies. This is only true of Integrated Windows authentication in the case of (Point to Point Tunneling Protocol) PPTP connections.
+
+A major weakness, however, is that passwords must be stored in a reversibly encrypted form, so that the authenticating server (IIS in this case) can access them and run them through the checksum algorithm. Although it is trivial to configure Active Directory to store individual user accounts in "encrypted clear text" form, this setting compromises the stronger default configuration under which those passwords are stored as (non-reversible) hashes. In other words, the price paid here for keeping the password out of the transmission is storing it in a more vulnerable form on the backend.
+
+Digest authentication requires Internet Explorer 5.0 and later clients, plus as mentioned Active Directory (Windows 2000) domain accounts on a Primary Domain Controller configured for digest authentication. Here is the relevant [http://support.microsoft.com/default.aspx?scid=http://support.microsoft.com:80/support/kb/articles/q222/0/28.asp&NoWebContent=1 Knowledge Base article] from Microsoft.
+
+===Digest authentication example===
+
+Here are the essentials of a Digest authentication transaction.
+
+ Get / HTTP/1.1
+ Host: host 
+
+After the initial request by the client the server issues the following challenge.
+
+ HTTP/1.1 401 Access Denied
+ WWW-Authenticate: Digest qop="auth", realm="host", nonce="2bd66743fd60d0a94782802000000568aeb718920e1494a50e65be582dcf"
+
+The WWW-Authenticate header in this example obviously contains much more information than in the Basic authentication case. In addition to specifying the Digest scheme and realm, it provides the unique nonce to be used by the client in computing its request digest. The qop parameter lets the server announce the "quality of protection" that must be applied to the message digest.
+
+ GET / HTTP/1.1
+ Host: host
+ Authorization: Digest username="authtest", realm="host", qop="auth" algorithm="MD5", uri="/", nonce="2bd66743fd60d0a947828020000005 68aeb718920e1494a50e65be582dcf", nc=00000001, cnonce="6012f 8c9164809aa4bd43a9d6bf9f006", response="30d83bc31f870a4e85a 927ffc48fef1b" 
+
+The client's response to the server's challenge is still more complex. First, the username is passed in the clear so that the server can look up the appropriate password. After some additional informational parameters, the nonce is returned unchanged, so that the server can use it in computing its own version of the digest. The "nc" and "cnonce" parameters are required because the server sent the quality of protection (qop) directive in the challenge. The "nc" parameter provides a count of the number of requests the client has sent using this nonce -- duplicate counts indicate an attempted replay attack. The "cnonce" parameter is effectively a client-side nonce. This unique value was used by the client, along with the server's nonce, in calculating the request digest, and it must be used by the server as well. Requiring the use of a client-side nonce adds a measure of mutual authentication and message integrity checking. Finally, the request digest itself (the checksum of the nonce and the user's password) is passed as a 32 character quoted string in the "response" parameter.
+
+ HTTP/1.1 200 OK
+
+==Integrated Windows Authentication==
+
+Integrated Windows authentication -- NT Challenge/Response in NT and IIS 4.0 -- has changed over the years as the underlying authentication mechanism for Windows domains has changed from LANMAN (NT LAN Manager) to NTLM (versions 1 and 2) to Kerberos. What has remained the same is the core idea of integrating the process of authenticating on the Web server with the standard domain authentication mechanism. When Windows clients (essentially, the required version of IE) can be presumed, and when passage through firewalls and proxies are not a concern, this authentication method has always provided significant efficiencies in terms of user account and password management.
+
+Integrated Windows authentication is the most complex IIS authentication topic because it incorporates so many different elements, including quite varying levels of security depending on OS version, type of domain and configuration. It's strengths and weaknesses, advantages and limitations, are largely those of Windows domain authentication itself.
+
+In Windows 2000 domains, Integrated Windows authentication comes in two flavors: NTLM version 2 or Kerberos 5.0. NTLM is a holdover from NT 4.0, in which version 1 was the default authentication mechanism (the stronger version 2 became available with NT Service Pack 4). Just as Windows 2000 still allows for the use of the NTLM, so NT 4.0 also supported the earlier LANMAN mechanism, and for the same reason -- backwards compatibility with Windows clients that could not support the newer standard.
+
+This evolutionary approach to upgrading Windows authentication has always proved something of an Achilles' heel from a security point of view, since the presence of the older authentication mechanism as an option weakens the security posture of the newer, more secure mechanism. (See the Multiple Methods and Negotiation section below.)
+
+===NTLM===
+
+The NTLM version of Integrated Windows authentication is similar to Digest authentication in that it is a challenge/response mechanism where the challenge is a nonce provided by the server to the client. A major difference is that it does not require passwords to be stored in reversibly encrypted form in the Active Directory on the Domain Controller. This as a significant server-side security advantage over Digest authentication.
+
+This is accomplished because the client, instead of creating a digest directly from the user's password and the nonce, first creates (but does not store) a hash of that password that is identical to the NTLM hash of the password that is stored in Active Directory on the Domain Controller. The client then uses the password hash and the nonce to build the digest response. Thus the server side of the transaction does not need access to the client's original (clear text) password in order to recompute the digest and verify that the client has knowledge of the password.
+
+Integrated Windows authentication will also work with much older versions of IE (as old as 3.01). However, unlike Digest authentication, NTLM is not firewall or proxy friendly (a culprit here is need for multiple round trips over an open connection), nor does it support delegation of security credentials, once established, to other servers such as SQL (double-hop impersonations).
+
+===Integrated Windows authentication example (NTLM)===
+
+Here is a trace of the essentials of an Integrated Windows authentication session using NTLM.
+
+ GET / HTTP/1.1
+ Host: host 
+
+ HTTP/1.1 401 Access Denied
+ WWW-Authenticate: Negotiate
+ WWW-Authenticate: NTLM 
+
+After the client's initial request for a protected resource, the server responds much as it would for Basic authentication (except that a second WWW-Authenticate header is sent to indicate that the method can be negotiated up to Kerberos by a Kerberos compliant Windows client).
+
+ GET / HTTP/1.1
+ Host: host
+ Authorization: NTLM TlRMTVNTUAABAAAAB4IAoAAAAAAAAAAAAAAAAAAAAAB= 
+
+In the Authorization header sent with the client's second request, accepting the offer to use NTLM, the parameter is a so-called Type 1 message, containing a Base64 encoded series of flags indicating the authentication options supported by the client. This is the real beginning of the NTLM specific exchange and, from now on, the HTTP connection must remain open for the authentication process to complete successfully.
+
+ HTTP/1.1 401 Access Denied
+ WWW-Authenticate: NTLM TlRMTVNTUAACAAAADAAMADAAAAAFgoGgCY6qiih5j bAAAAAAAAAAAH4AfgA8AAAAUABPAFIAVAA4ADAAAgAMAFAATwBSAFQA OAAwAAEACgBKAEwASQBNAEEABAAkAHAAbwByAHQAOAAwAHMAbwBmA HQAdwBhAHIAZQAuAGMAbwBtAAMAMABqAGwAaQBtAGEALgBwAG8AcgB0 ADgAMABzAG8AZgB0AHcAYQByAGUALgBjAG8AbQAAAAAA 
+
+This server's second 401 message is a distinguishing feature of NTLM authentication, relative to the other methods we have looked at. The WWW-Authenticate header includes another Base64 encoded message, this one called a Type 2. It completes the negotiation of the authentication options between server and client and also provides the actual challenge (the nonce) to the client.
+
+ GET / HTTP/1.1
+ Host: host
+ Authorization: NTLM TlRMTVNTUAADAAAAGAAYAGIAAAAYABgAegAAAAwADAB AAAAACgAKAEwAAAAMAAwAVgAAAAAAAACSAAAABYKAoFAATwBSAFQAO AAwAGoAbABpAG0AYQBFAFIATgBFAFMAVACZTd1Br98zFkTowoPysC5ysMaXqb qycwRldOKyZJbCIZLxCfcZe3ZHiYQmG97jr89= 
+
+The client's third request contains a new Authorization header with a Type 3 message that answers the server's challenge and proves that the client has knowledge of the correct password.
+
+ HTTP/1.1 200 OK
+
+===Kerberos===
+
+Kerberos is a Key Distribution Center mechanism that incorporates the Needham-Schroeder challenge/response protocol, Denning-Sacco timestamp nonces, and a Ticket-Granting Service for single sign on. Another words, it is quite a complex and subtle mechanism, in comparison to past versions of Windows authentication -- too complex to describe in detail here. Generally speaking, it is far more secure than the NTLM mechanism it is meant to replace. The idea of using Kerberos for Internet negotiation of keys was specified in [http://www.faqs.org/rfcs/rfc3129.html RFC 3129].
+
+The core idea in Kerberos is the use of a Key Distribution Center (or KDC -- a role played by the Domain Controller in the Windows implementation) to provide shared temporary secrets ("tickets" in Kerberos-speak) for clients and servers to use in mutual authentication. The KDC maintains a set of master keys corresponding to valid users and servers, which it uses to encrypt these shared temporary secrets. Overlaid on this KDC system is an elaborate set of refinements: challenge/response patterns to combat forgery, timestamps in place of conventional nonces to combat replay attacks, and a ticket granting service to issue Ticket Granting Tickets (TGT) so that users do not have to keep logging in order to use different services within a single session.
+
+Its significantly greater algorithmic sophistication gives Kerberos an inherent security advantage over the NTLM version of Integrated Windows authentication. In addition Kerberos has a practical advantage over NTLM in that it allows delegation of security credentials for distributed application environments. In other words a user's authenticated identity can be passed to another server, hence another application tier (such as a database server). It also authenticates the server being connected to, as well as the client.
+
+It also requires rough synchronization of all clocks on systems throughout the domain, or the timestamps that are an essential part of Kerberos' defense against the reuse of cracked session keys in replay attacks won't work. As a result, users won't be able to authenticate even though their credentials are otherwise valid. Or, worse, a server's time service could be compromised to facilitate an attack with expired tickets.
+
+Although Kerberos is default authentication scheme for Windows 2000, XP and 2003, there are many cases of Windows Integrated Authentication in which older, and weaker authentication schemes will end up being used in preference to Kerberos. The authentication routine will negotiate down to NTLM for other clients in a Windows 2000 domain, or for Windows 2000 or later clients when authenticating on NT 4.0, or for those same clients when not part of the domain. You can disable the older authentication schemes, but at the cost of backwards compatibility for scenarios like these.
+
+One final client-side compatibility consideration: IE 6.0 on Windows 2000 will not, by default, accept the "Negotiate" challenge and use Kerberos, but will instead take the NTLM option. This is because the "Enable Integrated Windows Authentication" option is not selected by default. Here is the [http://support.microsoft.com/default.aspx?scid=http://support.microsoft.com:80/support/kb/articles/Q299/8/38.ASP&NoWebContent=1 Knowledge Base article] on how to configure IE on Windows 2000 to use Kerberos when the server offers it.
+
+Note: There is no point in showing you a second HTTP trace of the Windows Integrated authentication logon using Kerberos instead of NTML. This is because most of what distinguishes Kerberos from NTLM would not appear in such a trace -- the only differences you could see would be the lengths of the encoded strings and the presence of "Negotiate" rather than "NTLM" in front of them.
+
+==Multiple Methods and Negotiation==
+
+The idea of negotiating the authentication mechanism to be used is not a Microsoft invention, but is inherent in the way HTTP-based authentication was envisioned in the RFCs cited above. The IIS and Windows environments provide such a wide range of authentication options among which negotiation can happen that it is important to be aware of this process in some detail.
+
+First, it is possible to select several of the authentication methods covered here, and rely on the users' browsers to negotiate the most secure available method. This has the advantage of greater client-side interoperability (non-IE and older IE browsers are given alternatives). However, this essentially means that the level of overall security is that of the weakest link. This danger is repeated if you enable only Windows Integrated Authentication, since by default it makes two authentication methods available (NTLM and Kerberos in Windows 2000 domains) and allows downlevel negotiation to determine that the weaker of the two will be used.
+
+As mentioned above, this is part of a long-term problem with Windows authentication caused by the evolutionary effort to improve authentication security while maintaining backwards compatibility with earlier, less-secure methods. For example, the NT 4.0 SAM database stores not one but two hashes of the user's password -- one in the relatively secure NTLM hash and one in the much less secure LANMAN hash. This gives a cracker a great shortcut -- first crack the case-insensitive LANMAN password, and then compute the possible NTLM hashes by trying out the various possible combinations of upper and lower case.
+
+In the case of NT 4.0, the weak link can be eliminated by disabling the LANMAN (or LM) authentication, using the procedure described in this [http://support.microsoft.com/default.aspx?scid=kb;en-us;Q147706&sd=tech Knowledge Base article]. For domains having only Windows 2000 Domain Controllers, and only Kerberos-capable clients, it is also possible to insure that Kerberos is the only authentication option made available through Integrated Windows authentication. To do this, you can either unbind the File and Printer Sharing for Microsoft Networks from the Windows 2000 Domain Controller's network transport, or else set up an IPSec filter to restrict or block access to these same services.
+
+==Multiple Methods and Negotiation==
+
+The idea of negotiating the authentication mechanism to be used is not a Microsoft invention, but is inherent in the way HTTP-based authentication was envisioned in the RFCs cited above. The IIS and Windows environments provide such a wide range of authentication options among which negotiation can happen that it is important to be aware of this process in some detail.
+
+First, it is possible to select several of the authentication methods covered here, and rely on the users' browsers to negotiate the most secure available method. This has the advantage of greater client-side interoperability (non-IE and older IE browsers are given alternatives). However, this essentially means that the level of overall security is that of the weakest link. This danger is repeated if you enable only Windows Integrated Authentication, since by default it makes two authentication methods available (NTLM and Kerberos in Windows 2000 domains) and allows downlevel negotiation to determine that the weaker of the two will be used.
+
+As mentioned above, this is part of a long-term problem with Windows authentication caused by the evolutionary effort to improve authentication security while maintaining backwards compatibility with earlier, less-secure methods. For example, the NT 4.0 SAM database stores not one but two hashes of the user's password -- one in the relatively secure NTLM hash and one in the much less secure LANMAN hash. This gives a cracker a great shortcut -- first crack the case-insensitive LANMAN password, and then compute the possible NTLM hashes by trying out the various possible combinations of upper and lower case.
+
+In the case of NT 4.0, the weak link can be eliminated by disabling the LANMAN (or LM) authentication, using the procedure described in this [http://support.microsoft.com/default.aspx?scid=kb;en-us;Q147706&sd=tech Knowledge Base article]. For domains having only Windows 2000 Domain Controllers, and only Kerberos-capable clients, it is also possible to insure that Kerberos is the only authentication option made available through Integrated Windows authentication. To do this, you can either unbind the File and Printer Sharing for Microsoft Networks from the Windows 2000 Domain Controller's network transport, or else set up an IPSec filter to restrict or block access to these same services.
+
+==Recommendations==
+
+As is probably obvious by now, the choice of the appropriate authentication method depends on a variety of factors: the composition of your user base (especially with respect to the browsers that need to be supported, and whether users are behind a firewall on a trusted network, or out on the public Internet, or both), the backend system against which users must authenticate, and the degree of security required. Given the relative vulnerability of the other alternatives, the best choices from a security point of view will usually be either Basic authentication over SSL (when maximum flexibility in serving a wide range of clients is the priority) and the Kerberos-only version of Integrated Windows authentication (when centralized user account management is the priority).
+
+[[Category:OWASP Columns]]
+[[Category:OWASP_Guide_Project]]
+[[Category:Authentication]]

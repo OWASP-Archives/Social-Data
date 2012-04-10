@@ -1,0 +1,54 @@
+{| style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="6" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Application Security Requirements Project''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="6" style="width:85%; background:#cccccc" align="left"| 
+* The intent of this project is to assemble a useful base of generic/common web application security requirements that could be used in most projects.
+* The product of this project is intended to help all involved in web application security, whether it is project management, risk assessment, software development, testing, etc.
+* The ''reason d'etre'' of this project is that, whilst security requirements are sometimes well captured and clearly defined, there are other times when they are not, for any number of reasons.
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Email Contacts'''
+ | style="width:14%; background:#cccccc" align="center"|Project Leader<br>NONE
+ | style="width:14%; background:#cccccc" align="center"|Project Contributors<br>(if applicable)<br>[mailto:to(at)change '''Name&Email''']
+ | style="width:14%; background:#cccccc" align="center"|[https://lists.owasp.org/mailman/listinfo/owasp-appsec-requirements '''Mailing List/Subscribe''']<br>[mailto:owasp-appsec-requirements(at)lists.owasp.org '''Mailing List/Use''']
+ | style="width:14%; background:#cccccc" align="center"|First Reviewer<br>[mailto:jmcgovern(at)virtusa.com '''James McGovern''']<br>
+ | style="width:14%; background:#cccccc" align="center"|Second Reviewer<br>[mailto:name(at)name '''Name''']
+ | style="width:15%; background:#cccccc" align="center"|OWASP Board Member<br>(if applicable)<br>[mailto:name(at)name '''Name&Email''']
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="6" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT MAIN LINKS''' 
+ |-
+ | style="width:100%; background:#cccccc" align="center"|
+Repository on "Google Code" [http://code.google.com/] 
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="6" align="center" style="background:#4058A0; color:white"|<font color="white">'''RELATED PROJECTS''' 
+ |-
+ | style="width:100%; background:#cccccc" align="center"|[[OWASP Secure Software Contract Annex]]
+* 
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="6" align="center" style="background:#4058A0; color:white"|<font color="white">'''SPONSORS & GUIDELINES''' 
+ |-
+ | style="width:50%; background:#cccccc" align="center"|Sponsor name, if applicable  
+ | style="width:50%; background:#cccccc" align="center"|[[:Category:OWASP Application Security Requirements Project RoadMap|'''Project Guidelines/Roadmap''']]
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="5" align="center" style="background:#4058A0; color:white"|ASSESSMENT AND REVIEW PROCESS
+ |-
+ | style="width:15%; background:#6C82B5" align="center"|'''Review/Reviewer''' 
+ | style="width:21%; background:#b3b3b3" align="center"|'''Author's Self Evaluation'''<br>(applicable for Alpha Quality & further) 
+ | style="width:21%; background:#b3b3b3" align="center"|'''First Reviewer'''<br>(applicable for Alpha Quality & further)
+ | style="width:21%; background:#b3b3b3" align="center"|'''Second Reviewer'''<br>(applicable for Beta Quality & further)
+ | style="width:22%; background:#b3b3b3" align="center"|'''OWASP Board Member'''<br>(applicable just for Release Quality) 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''First Review''' 
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Not yet''' (To update)<br>---------<br>Which status has been reached?<br>'''Alpha Status''' - (To update)<br>---------<br>[[Project Information:template Application Security Requirements Project - First Review - Self Evaluation - A|See&Edit: First Review/SelfEvaluation (A)]]
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Not yet''' (To update)<br>---------<br>Which status has been reached?<br>'''Alpha Status''' - (To update)<br>---------<br>[[Project Information:template Application Security Requirements Project - First Review - First Reviewer - B|See&Edit: First Review/1st Reviewer (B)]]
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes/No''' (To update)<br>---------<br>Which status has been reached?<br>'''Alpha Status''' - (To update)<br>---------<br>[[Project Information:template Application Security Requirements Project - First Review - Second Reviewer - C|See&Edit: First Review/2nd Reviewer (C)]]
+ | style="width:22%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes/No''' (To update)<br>---------<br>Which status has been reached?<br>'''Alpha Status''' - (To update)<br>---------<br>[[Project Information:template Application Security Requirements Project - First Review - OWASP Board Member - D|See/Edit: First Review/Board Member (D)]]
+ |-
+ |}

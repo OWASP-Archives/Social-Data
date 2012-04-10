@@ -1,0 +1,73 @@
+{{Chapter Template|chaptername=Japan|extra=Welcome to OWASP Japan Local Chapter page/OWASP Japanローカルチャプターのホームページへようこそ。
+<paypal>Japan</paypal>
+|mailinglistsite=http://lists.owasp.org/mailman/listinfo/owasp-japan|emailarchives=http://lists.owasp.org/pipermail/owasp-japan}}
+
+== Chapter Meetings / チャプターミーティング  ==
+=== 2012/3/27 19:00-  OWASP JAPAN 1st Local Chapter Meeting (at 日本橋公会堂セミナールーム)===
+* Registration :[http://atnd.org/events/26267 http://atnd.org/events/26267]
+
+We would like to have a chapter meeting every 3 months. If you would like to speak at a chapter meeting, please read and agree to the [http://www.owasp.org/index.php/Speaker_Agreement speaker agreement] and contact [mailto:info@owasp.jp us].<br>
+We are looking for good locations, so please contact us if you can provide us with a location. We are also currently looking for people to help with English to Japanese (or vice versa) translations and projects (see below).
+
+<b>Schedule</b>
+<table border="1">
+<tr><td> 18:00</td><td></td><td>  会場入り </td><td></td></tr>
+<tr><td> 18:30 – 19:00</td><td></td><td> Open/受付 </td><td></td></tr>
+<tr><td> 19:00 – 19:10</td><td> Benny Ketelslegers </td><td> OWASP/OWASP Japanについて</td><td></td></tr> 
+<tr><td> 19:10 – 20:20</td><td></td><td>  OWASP Japan・Advisory・その他有志による持ち込みプレゼンテーション (5〜10min x 6〜8 person) </td><td></td></tr>
+<tr><td></td><td> Yoshinori Takesako</td><td> 脆弱なWebサーバを作ってみた（仮） </td><td></td></tr>
+<tr><td> </td><td>Yosuke Hasegawa</td><td>  Introduction of CSP </td><td>[http://utf-8.jp/public/20120327/owaspj-csp.pptx presentation]<br>[http://vimeo.com/39340317 video]</td></tr>
+<tr><td> </td><td>Hiroshi Tokumaru</td><td> ここが変だよ、グローバルスタンダードの脆弱性対策～入力値の考え方～ </td><td>[http://www.slideshare.net/ockeghem/owasp-japan20120327 presentation]</td></tr>
+<tr><td> </td><td>Yoshitaka Kato</td><td> バイナリパッチによるAndroidアプリの改ざんとセキュリティチェックのバイパス </td><td></td></tr>
+<tr><td> </td><td>Isaac Dawson</td><td>Broken Logic: The Test Site Fallacy </td><td>[[Media:owasp-broken-logic.pptx]] <br>[http://vimeo.com/39378272 video]</td></tr>
+<tr><td> </td><td>Yusuke Gunji</td><td> ぼくらのすすむみち featuring Rakuten-CERT </td><td></td></tr>
+<tr><td> </td><td>Sen Ueno </td><td> Japan ChapterからWebアプリケーションセキュリティ要件定義書の提案</td><td>[http://vimeo.com/39354702 video]</td></tr> 
+<tr><td> 20:20 – 20:30</td><td> Riotaro OKADA </td><td> 今後の活動について(お楽しみコーナー付き(仮)) 〜 Closing</td><td></td></tr>
+<tr><td> 20:30</td><td>  *</td><td> 懇親タイム </td><td></td></tr>
+<tr><td> </td><td>*</td><td>dismiss/解散 </td><td></td></tr>
+</table>
+===Video archive /　ビデオアーカイブ===
+Recordings are available at http://vimeo.com/owaspjapan (録音はご利用いただけます)
+<br><br>
+== Chapter team / チャプターの体制==
+* OWASP Japan chapter leaders/coordinators 
+** [[User:Benny_Ketelslegers|Benny Ketelslegers]]
+** [[User:Riotaro_OKADA|Riotaro OKADA]]
+** [[User:Sen_UENO|Sen UENO]] 
+
+* Advisory board members
+** Dracea Robert
+** Hiroshi Tokumaru
+** Isaac Dawson 
+** Kana Shinoda
+** Tokuji Akamine
+** Yoshinari Fukumoto
+** Yoshinori Takesako
+** Yosuke Hasegawa
+** Yukihiro Nowatari
+** Yusuke Gunji
+(ABC order)
+
+== Projects ==
+==== Translation projects / 翻訳プロジェクト ====
+
+# [https://www.owasp.org/index.php/Speaker_Agreement/jp Speaker agreement 日本語] (Project leader: [[User:Benny_Ketelslegers|Benny Ketelslegers]])
+# [http://owasptop10.googlecode.com/files/OWASP%20Top%2010%20-%202010%20Japanese-A4.pdf OWASP Top 10 (日本語）(pdf)<b> Completed</b>]
+# .. (Project leader: ?)
+
+== Contacts / Social media / コンタクトできるメディア==
+[https://www.facebook.com/owaspjapan '''Join the local Japan chapter Facebook Page'''] 
+
+[http://www.twitter.com/owaspjapan '''Follow our twitter OWASP Japan''']
+
+[http://www.linkedin.com/groups?gid=4198569 '''Join the OWASP Japan Linkedin Group''']
+
+アナウンスは[http://lists.owasp.org/mailman/listinfo/owasp-japan メーリングリスト]に参加し、確認してください。
+
+For all new or existing members, please free to contribute to OWASP Japan Chapter. We welcome everyone to join our chapter. If have any questions or feedback, don't hesitate to contact [mailto:info@owasp.jp OWASP Japan chapter]. Everyone is welcome to join us at our chapter meetings.
+
+
+If you want to help, you can request an owasp wiki account [https://www.owasp.org/index.php/Special:RequestAccount here]
+
+[[Category:Japan]]
+[[Category:OWASP Chapter]]

@@ -1,0 +1,267 @@
+= Keynote =
+=== Composite Applications Over Hybrid Clouds – Enterprise Security Challenges of the IT Supply Chain  ===
+
+'''''[http://www.ca.com/us/about-us/Innovation/ca-labs/people/ethan-hadar.aspx Dr. Ethan Hadar], Senior Vice President Corporate Technical Strategy, CA''''' 
+
+Cloud Computing offerings range at several levels. Infrastructure, Platform, Business and Software services are consumed according to a pay per use “as a Service” manner, implementing the parts of a service supply chain. The services range from dedicated single SaaS applications such as sales force, or using an isolated utility computing such as accessing an IaaS virtual image on Amazon or Rackspace, or composing your own application on PaaS platform such as Azure or Force.com. All these offerings enable to create compound solutions over hybrid clouds, in which the parts of the integrated composite applications are provided from several different vendors and suppliers with different quality attributes, including application security.  The provider of the composite application is responsible for the overall quality levels, and is expected to verify the security quality levels of each sub-element, as well as be able to verify and prove its existence to the composite applications consumers. 
+
+Or is it not the case?
+
+The programmable web creates many challenges.  Even if the author of the composite applications detects application security issues within the supply chain, can a remedy and a change occur? Is the author even allowed to try and verify (hack) the provided public services, in order to verify its own obligations, and by that, exposing the provider to other opportunistic hackers?
+
+Consequently, there are many challenges:   what are the potential breaches in a supply chain? Can a chain reaction of hacking occur? What does “secure enough” supply chain means? At what level (IaaS, PaaS, BSaaS, SaaS) should we test the sub-services? Are we allowed to? What happens if we find an issue? How do we wrap security fences on top of a non-secured sub-services? What are the sub-contracted obligations that may be solved legally or financial wise? If a change occurs, what are the implications to the running connected systems? Should the sub-provider quality levels affect the consumer, or can the consumer impose security requirements on the provider? If there is a remedy plan, how can it be executed and verified, who will pay for the expenses? Who will manage the hardening project?
+
+In this keynote, we will present the environment and its challenges, highlighting potential solutions, dilemmas or directions, all in order to generate an open Q&A discussion with the forum.
+
+<br>
+<u>Speaker Bio</u> 
+
+[http://www.ca.com/us/about-us/Innovation/ca-labs/people/ethan-hadar.aspx Dr. Ethan Hadar] is a Distinguished Engineer and Senior Vice President at CA Technologies, responsible for the Corporate Technical Strategy, as well as for leading CA Technologies Israel Research & Development. His responsibility includes defining and communicating, collaboratively with the Chief Technology Officer, the company's technical strategy according to the corporate goals and business strategy, while focusing on identifying breakthrough innovation.
+
+Jointly with CA Technologies Chief Technology Officer and CA Labs Director, Ethan is engaged with the company’s lead strategists, architects, customers, researchers and visionary leaders to form strategic technological and innovative directions. Across the hybrid domains of physical, virtual and cloud computing, and within the realm of emerging technologies, Ethan forms integrated technological approaches aimed at advancing the corporate strategic technological capabilities.
+
+Ethan has numerous patents and publications, and regularly presents at conferences as a thought leader, author, keynote and chair. Prior to this role, Ethan was a Senior Vice President for Corporate Reference Architecture, and Senior Vice President for Research at CA Labs. Ethan has served as a member of the faculty at the Netanya Academic College and as adjunct faculty at the Technion, Israel Institute of Technology.
+
+<br> 
+
+= Track A =
+=== Finding Security in Misery of Others  ===
+
+'''''Amichai Shulman, CTO, Imperva'''''
+
+We frequently read about different security incidents, including data breaches, attacks and other hacks. The details of these incidents enable us to learn from others. However, most of the news reports regarding security breaches are vague and nebulous. This session will explain how to "Read between the Lines" of press reports on security breaches. The presentation will demonstrate, using past security incident reports, how to understand the attack methods, the compromised services, and the different applied security policies at the attack location. The session will also describe mitigation techniques that might have been helpful in a specific incident. Examples breaches will focus on hacking techniques that span search engines, SQL injection and data theft.
+
+This "Behind the Scenes" perspective, will illustrate the important failure points, how to find information regarding the detection process, and analyze the effectiveness of the audit trail in the incident. Finally, the presenter will suggest some preventive measures to avoid similar breaches. The attendees will learn how to diagnose the attack scenario in order to apply and test the correct security controls in their system to prevent a similar mishap at their site.
+
+<br>
+<u>Speaker Bio</u> 
+
+Amichai Shulman is Co-Founder and CTO of Imperva, where he heads the Application Defense Center (ADC), Imperva's internationally recognized research organization focused on security and compliance. Shulman regularly lectures at trade conferences and delivers monthly eSeminars. The press draws on Shulman's expertise to comment on breaking news, including security breaches, mitigation techniques, and related technologies. Under his direction, the ADC has been credited with the discovery of serious vulnerabilities in commercial Web application and database products, including Oracle, IBM, and Microsoft. Shulman has appeared on CNN, in the New York Times, USA Today, Washington Post, BBC and Sydney Morning Herald. Prior to Imperva, Shulman was founder and CTO of Edvice Security Services Ltd., a consulting group that provided application and database security services to major financial institutions, including Web and database penetration testing and security strategy, design and implementation. Shulman served in the Israel Defense Forces, where he led a team that identified new computer attack and defense techniques. He has B.Sc and Masters Degrees in Computer Science from the Technion, Israel Institute of Technology
+
+<br> 
+
+=== Building an Effective SDLC Program - Case Study  ===
+
+'''''Guy Bejerano, CSO, Liveperson''''' 
+
+'''''Ofer Maor, CTO, Seeker Security''''' 
+
+This talk will present tools for security managers and experts on how to build an effective SDLC program. The talk will be presented as a dialogue between a SaaS provider building such a program and a security expert offering solutions, using real-world cases. The talk will take the audience, in 45 mintues, through the entire process of identifying relevant methods and implementing them effectivly to creat a successful SDLC. 
+
+Guy Bejerano, CSO of LivePerson (NASDAQ:LPSN) will present the challenges facing a CSO of a Cloud vendor attempting to build such a program, and how they were resolved. This will be emphasized by showing a case study of LivePerson with real world examples. Ofer Maor, CTO of Seeker Security, will represent the plethora of product and service solutions, based on many years of experience as an application security expert. 
+
+<br>
+<u>Speaker Bio</u> 
+
+Ofer Maor has over fifteen years of experience in information security and application security, and is a pioneer in the application security field. He has been involved in leading research initiatives, has published numerous papers, appears regularly at leading conferences and is considered a leading authority by his peers. He also currently serves as the Chairman of OWASP Israel and a member of the OWASP Global Membership Committee. 
+
+In his role as Founder and Chief Technology Officer of Seeker Security (formerly Hacktics®), Mr. Maor has helped creating a world-class leading professional services group, which was acquired by Ernst&Young to become a security excellence center, and is now leading Seeker, a new generation of automatic application security testing solution. 
+
+Before founding Hacktics, Mr. Maor led Imperva's Application Defense Center, a research group focused on application security services and education, where he advanced research activities and was responsible for all the application security services conducted by the company. He was previously a Senior Security Consultant at eDvice, an application security consulting firm, and served for three years as an Information Security Officer in the Israeli Defense Forces.
+
+<br> 
+
+Guy Bejerano, CSO of LivePerson (NASDAQ:LPSN), has 18 years of deep domain expertise in operational, application and network security, specializing in building security programs for global companies and cloud services. 
+
+Throughout his vast experience, he has led the Information Security branch and operations of the Israeli Air-Force, establishing their penetration testing unit. Guy has spent the last 4 years with LivePerson, leading the security of one of the world's largest cloud platforms and providing security for more than 1 billion web visits across the internet each month. 
+
+With expertise in real-time, network and application security, LivePerson is the preferred cloud vendor for many financial services, Telco and Hi-Tech organizations including Hewlett-Packard, IBM, Microsoft, Verizon, and PNC.
+
+<br>
+
+=== All Your Mobile Applications Are Belong to Us  ===
+
+'''''Itzik Kotler, CTO, Security Art'''''
+
+Mobile applications are quickly becoming a necessity for companies looking to expand their service offerings and reach new customers. But, depending on who is doing the talking, applications like Mobile banking are either the best aid to productivity since the invention of the wheel, or the First Horseman of the impending apocalypse. In this presentation, we will discuss and demonstrate flaws at both the application and OS layer, and present the results of a self conducted security survey of 200 applications (top applications, form each category) from Israel iTunes store.
+
+<br>
+<u>Speaker Bio</u> 
+
+Itzik Kotler serves as Security Art's Chief Technology Officer and brings more than ten years of technical experience in the software, telecommunications and security industries. Early in his career, Itzik worked at several start-up companies as a Security Researcher and Software Engineer. Prior to joining Security Art, Itzik worked for Radware (NASDQ: RDWR), where he managed the Security Operation Center (SOC), a vulnerability research center that develops update signatures and new techniques to defend known and undisclosed application vulnerabilities. Itzik has published several security research articles, and is a frequent speaker at industry events including Black Hat USA, Hack In The Box, RSA Europe Conference, DEF CON and Hackito Ergo Sum.
+
+<br> 
+
+=== CMS and Other Giants – The Nightmare of AppSec Testing  ===
+
+'''''Irene Abezgauz, Product Manager, Seeker Security'''''
+
+Large, established web applications are often in the news these days after being hacked. The CISOs in charge of these applications test their security routinely, so how did this happen?
+
+Content Management Systems, CRMs, Portals and other applications that have grown to enormous proportions over time are a challenge to application security testing. This is caused by the sheer amount of components, URLs, parameters and data flow, not to mention frequent changes, trust in 3rd party components and new code introduced without anybody’s knowledge! 
+
+Focusing on real world technical examples and newly discovered vulnerabilities, we will present the challenges of testing very large applications, and explain how even trivial vulnerabilities can often get overlooked. 
+
+<br>
+<u>Speaker Bio</u> 
+
+Irene Abezgauz has seven years of experience in information and application security, focusing on application security penetration testing and research. She is the Product Manager of Seeker™, the new generation of automatic application security testing, as well as leading research activities in the company. She has discovered and published numerous vulnerabilities in products of leading vendors.
+
+In her previous position, Ms. Abezgauz was a technical project manager for the professional services group of the company, which was later sold to Ernst&Young to become a security excellence center. Prior to joining Hacktics she was a Security Consultant for KPMG, and a Security Researcher for Skybox Security. She holds a B.A. degree (cum laude) in Computer Science and Business Management.
+
+<br> 
+
+=== When Crypto Goes Wrong  ===
+
+'''''Erez Metula, Founder, AppSec Labs '''''
+
+Cryptography, when implemented properly, can solve many day-to-day security tasks such as confidentially, integrity, authentication, secure random number generation, and so on. But the problem is, too many things can go wrong…
+
+In this presentation we'll examine some of the most common mistakes developers tend to do when dealing with crypto. During the presentation we'll examine the influence of mistakes such as failure to verify a certificate, replay attacks, client side encryption, crypto DoS, and so on.
+
+In other words, we'll see how attackers can break crypto based mechanisms deployed in applications without breaking the crypto itself – but just going around them.
+
+<br>
+<u>Speaker Bio</u> 
+
+Erez Metula is a world renowned application security expert, spending most of his time finding software vulnerabilities and teaching developers how they should avoid them. Erez has an extensive hands-on experience performing security assessments, code reviews and secure development trainings for worldwide organizations, and had previously talked at international security conferences such as BlackHat, Defcon, OWASP, RSA, SOURCE, CanSecWest and more. His latest research on Managed Code Rootkits, presented at major conferences throughout the world, was published recently as a book by Syngress publishing. He is the founder of AppSec Labs, where he works as an independent consultant focusing on advanced application security topics.
+
+<br> 
+
+=== Security Testing of RESTful Services ===
+
+'''''Ofer Shezaf, Head of AppSec Research, HP'''''
+
+'''''Eyal Fingold, Senior Security Developer, HP'''''
+
+RESTful services have become popular for emerging platforms. Less resource intensive and simpler than traditional web services, RESTful services are a particularly good fit for low footprint mobile and tablet applications, as well as for web 2.0 sites offering an interface for 3rd party developers.
+
+Upon first glance, RESTful services seem very different than web services and suspiciously similar to regular web technology. This similarity leads to the common belief that securing RESTful services is similar to securing regular web applications. However, RESTful services hide the same complexities of web services, albeit with a much lower level of formal documentation.
+
+The presentation will provide an overview of RESTful services, development frameworks using RESTful services, and the formal methods to document them, including WADL and WSDL 2.0. The speaker will discuss complexities in protecting RESTful services, and describe variants of common attack vectors that are specific to REST services,for example, embedding attack vectors in the URL and permutation of HTTP verbs. We conclude the with a discussion of the challenges of testing RESTful services for security issues and describe innovative ideas for discovering the RESTful service attack surface using black-box penetration testing, and a hybrid method often called grey-box testing to enhance this discovery.
+
+<br> 
+<u>Speaker Bio</u> 
+
+Ofer Shezaf is an internationally recognized application security expert. He is currently serving as a lead security researcher and architect at HP Fortify. Ofer is an OWASP (Open Web Application Security Project) leader and the founder of the OWASP Israeli chapter as well as a WASC (Web Application Security Consortium) officer. Some of the open source and industry projects Ofer has led are the ModSecurity core rule set, WASC web hacking incident database and the Web Application Firewall Evaluation criteria project.
+
+Eyal Fingold is a Senior Developer and Security Expert at HP Fortify. He Has over a decade of experience in consulting and integration of information security and application security from the health, telecom and mainly the government sector. Prior to that he a CISO at IDF(2003-2005)  &  minister of foreign affairs (2005-2007). Eyal has a BSc in Information Systems Engineering from the Technion and an MBA from Tel Aviv University.
+
+<br>
+
+=== The Bank Job  II===
+
+'''''Adi Sharabani, Cross-Rational Security Strategy and Architecture, IBM'''''
+
+In preceding chapters, we demonstrated a full life hacking activity in which hacker utilized XSS vulnerability to gain full controlled over our poor victim. Since then, technology has changed and our victim is mostly using their mobile device to connect to the internet.
+
+In this presentation we further discuss Same Origin Policy, demonstrate new techniques to overcome these restrictions, and perform a real life hacking activity to own our victims' mobile apps, connecting to the internet, and performing actions on their behalf. We will build a step-by-step working exploit code in an online banking service to hijack user sessions, transfer money and cover our traces.
+
+As always, the money will be shared among the audience :) The presentation does not require any prior knowledge, but it is also aimed for technical people.
+
+<br> 
+<u>Speaker Bio</u> 
+
+Adi Sharabani is in charge of the cross-Rational security strategy to improve the security of all Rational products. As part of his role, Adi is responsible for leading, designing and deploying overall security processes within the development groups of Rational. Previous to his current role, Adi used to head the IBM Rational Application Security Research, responsible for product and industry research activities that pertain to Web application security. Adi joined IBM through the acquisition of Watchfire, a market leader in web application security testing which is the origin of the AppScan product suite. Adi is also recognized as an IBM Master Inventor, in charge of many of the IBM inventions and patents in the field of web application security. Adi participates in various public boards such as OWASP IL, IBM Security Architecture board, and his works have been presented in many known conferences such as OWASP, BlackHat, RSA, Innovate and more. Adi’s presentations and keynotes are constantly being ranked as best presentations of most conferences he presents at. In addition to his roles at IBM, Adi also acts a high-school teacher, where he is proud to educate future generations.
+
+<br>
+
+
+= Track B =
+=== Temporal Session Race Conditions  ===
+
+'''''Shay Chen, CTO, Hacktics Advanced Security Center, Ernst & Young'''''
+
+The ones you trust most will always be the worst – anonymous weirdo, Myspace.
+
+Temporary session values were never considered a potential attack vector, especially if their lifespan was limited to a single method… but now this theoretical attack becomes a reality. 
+
+The session memory is used by applications to store various values, which are used in turn to enforce security restrictions or share information between multiple entry points. Some of these values are temporary; their lifespan often limited to the execution context of a single page or method, which uses these values to store information for its own calculations, and then disposes of them. 
+
+Using these values to perform any sort of attack is a process that was considered nearly impossible, purely theoretical, and very hard to reproduce. However, using a new technique, which combines nearly four different application level attacks, this potential can become a reality – an exposure that can be reproduced in a reliable and repeatable manner.
+
+<br>
+<u>Speaker Bio</u> 
+
+Shay Chen is the CTO of Hacktics Advanced Security Center (HASC), the security excellence center of Ernst & Young. In his current position in HASC, Shay is in charge of research, training, optimization, quality assurance and the constant improvement of HASC security services. He has over ten years in information technology and security, including a strong background in software development. Shay is an experienced speaker, and regularly instructs a wide variety of security related courses. Before moving into the information security field, he was involved in various software development projects in ERP, mobile & enterprise environments.
+
+<br> 
+
+=== Space-Time Tradeoffs in Software-Based Deep Packet Inspection  ===
+
+'''''Yotam Harchol, IDC''''' 
+
+Deep Packet Inspection (DPI) lies at the core of contemporary Network Intrusion Detection Systems (NIDS). DPI aims to identify various malware by inspecting both the header and the payload of each packet and comparing it to a known set of patterns. DPI is often performed on the critical path of the packet processing, thus the overall performance of the security tools is dominated by the speed of DPI.
+
+The Aho-Corasick (AC) algorithm is the de-facto standard for pattern matching in NIDS. Basically, the AC algorithm constructs a Deterministic Finite Automaton (DFA) for detecting all occurrences of a given set of patterns by processing the input in a single pass. The input is inspected symbol by symbol, such that each symbol results in a state transition. Thus, in principle, the AC algorithm has deterministic performance, which does not depend on specific input and therefore is not vulnerable to algorithmic complexity attacks, making it very attractive.
+
+In this talk I will show that, when implementing the AC algorithm in software, this property does not hold, due to the fact that contemporary pattern sets induce very large DFAs that cannot be stored entirely in cache. We propose a novel technique to compress the representation of the AC automaton, so it can fit in modern cache. We compare both the performance and the memory footprint of our technique to previously-proposed implementation, under various settings and pattern sets. Our results reveal the space-time tradeoffs of DPI. Specifically, we show that our compression technique reduces the memory footprint of the best prior-art algorithm by approximately 60%, while achieving comparable throughput.
+
+''Joint work with Anat Bremler-Barr (IDC) and David Hay (HUJI).''
+
+''This work was presented in IEEE International Conference on High Speed Switching and Routing (HPSR), July 2011, Cartagena, Spain.''
+
+<br>
+<u>Speaker Bio</u> 
+
+Yotam Harchol is a graduate student at the Hebrew University of Jerusalem. Currently he works with Dr. Anat Bremler-Barr (IDC) and Dr. David Hay (HUJI) on network algorithms and security, deep packet inspection and high performance computing. He received his bachelor degree in Computer Science from IDC Herzliya.
+
+<br> 
+
+=== Glass Box Testing - Think Inside the Box  ===
+
+'''''Omri Weisman, Manager, Security Research Group, IBM'''''
+
+Automatically scanning for web application security vulnerabilities is traditionally performed either using a white box approach or using a black box approach. Each of the two approaches has its pros and cons. An exciting new technology called glass box is emerging as a way to enjoy the benefits of both approaches and beyond. Glass box technology allows observing the behavior of the application from within while scanning the application, providing the missing bridge between black box and white box. Research shows that this approach can greatly augment key aspects of black box scanning such as the logical coverage of scanned applications, as well as the detection of previously undetected security issues. This lecture presents some of the most painful challenges automated tools are facing nowadays as well as innovative approaches for solving them.
+
+<br>
+<u>Speaker Bio</u> 
+
+Omri Weisman is the manager of the security research group at IBM. Omri has vast experience in application security, leading teams developing application security solutions for nearly 10 years, and has 20 patents listed on his name. 
+
+<br> 
+
+===Agile + SDL – Concepts and Misconceptions===
+
+'''''Avi Douglen, Independent Security Architect & Developer'''''
+
+'''''Nir Bregman, Senior Project Manager, HP Software'''''
+
+Agile methodologies are growing in popularity as a way to make the development cycle more efficient and robust, by creating a lightweight lifecycle to ensure quick, adaptive development. Meanwhile organizations are using holistic Secure Development Lifecycle (SDL) to ensure that their applications are in fact secure, from the very beginning throughout every phase of development.  
+
+Trying to merge lightweight Agile development with a heavyweight, Waterfall-like SDL process is doomed to failure – or is it? We will describe common misconceptions with regards both to Agile and SDL, how to overcome them and some tools to build a more secure, Agile lifecycle.
+
+<br>
+<u>Speaker Bio</u> 
+
+Avi Douglen, CISSP, is an independent security architect and developer, and provides freelance consulting expertise to high-level clients. Avi has over a dozen years experience in designing, developing and testing secure applications, and leading development teams in building secure products. He has worked with many different types of development organizations of all sizes, and implemented a secure development lifecycle in many of them. Currently Avi is busy with research and development about identity and access management.
+
+Nir Bregman is a senior project manager at HP Software where he led projects including HP Quality Center and HP WebInpsect. Nir is a guru of agile development methodologies and successfully introduced them in many HP Software development teams. Nir lives in Tel-Aviv with his wife and 1 year old son and is an enthusiastic motorcycle rider, despite domestic opposition.
+
+<br> 
+
+=== Advanced Techniques & Tools for Testing Binary Protocols  ===
+
+'''''Chilik Tamir, Information Security Architect, AppSec Labs'''''
+
+In the following presentation we will discuss our latest research in the topic of practical testing of binary protocols, including flex, java serialization etc. 
+
+In our presentation you will learn how to perform security analysis on any binary protocol. You will learn how to extend your manual binary protocol testing methodologies into semi or fully automatic tests. You will be exposed to our latest research in know-how of targeted security testing methodology of binary protocols, protocol analysis automation and on-the-fly manipulation of binary protocols.
+
+The product of our research will be discussed in this presentation with POC and technical examples of re-channeling binary communication, decoding of binary communication, manipulation of binary protocols, tampering with thin-client (evil client) and presentation of tools that were written to automate the process of binary protocol security testing.
+
+<br>
+<u>Speaker Bio</u> 
+
+Chilik is an Information security architect at Appsec-labs. With nearly a decade of practical hands-on innovative security research and exploitation, Chilik is always into security research development and testing. In his vast security experience Chilik had led major cooperatives with development security efforts throughout product life cycle. Among of his expertise are secure design, development, research and testing of new cutting-edge technologies.
+
+In his latest research Chilik has developed a new approach in attacking binary protocols and has written a proprietary tool to automate the process.
+
+<br> 
+
+=== Hey, What’s your App doing on my (Smart)Phone?  ===
+
+'''''Shay Zalalichin, CTO, Comsec Consulting'''''
+
+Smartphones have come a long way since they were only “smart” telephone devices capable of sending text and allowing email and Internet access. Nowadays, smartphones serve a key role in our personal and business life by providing a strong platform for fast information access,  location based experience, unlimited communication channels and a strong applications and games platform to just name a few.
+
+But as everything in life, that’s comes with a price …
+
+In this presentation we will introduce the major developments smartphones went through and the security and privacy challenges they introduce. Since it’s an OWASP Conf, this presentation will focus on Secure Application Development aspects in Android based platforms covering smartphone Security Model, Sandboxing capabilities and best practices in Secure Mobile Application Development. If time will allow we will conclude with a demo of a malicious App that exploits 0-Day introduced by researches in last Blackhat/Defcon conference.
+
+<br>
+<u>Speaker Bio</u> 
+
+Shay Zalalichin, CTO and Technical Division Manager, is an expert in all areas of application and infrastructure security, and cryptography, including crypto-protocol design, proper algorithm usage, security protocol review, and implementation. With a background in software engineering, and studies towards a Master’s Degree in Computer Science with a focus on security and cryptography, Shay has extensive experience with many diverse technologies, environments, tools, and coding languages in all aspects of security and on all technological levels. As a CISSP, QSA, and PA-QSA, Mr. Zalalichin has led and managed intricate and large-scale security and PCI projects across sectors and around the world. In addition, Shay has presented many times over at prestigious international events in the area of security, from the RSA Conference through CSI. 
+
+As the CTO, and an application and infrastructure security specialist, Shay is the foremost authority for all of the technical aspects at Comsec. Within the framework of his position he has conducted highly-technical services, audits, and assessments, across all market sectors.

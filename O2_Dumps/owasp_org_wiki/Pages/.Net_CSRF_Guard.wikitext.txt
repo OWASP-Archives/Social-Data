@@ -1,0 +1,260 @@
+This page, like the tool, is a work in progress.  Questions?  Contact Jason Axley ([[User:Jaxley|Jaxley]]) or use the Talk page.
+
+== Problem Overview ==
+
+A realization that I just had today was that it seems that the root cause of CSRF is cookie-based session IDs that get auto-sent by the browser with each request.  What CSRFGuard (Java and this .Net version) therefore try to do is to allow one to continue using Cookie-based sessions by layering on top of this yet another session token that ''isn't'' sent in a cookie to essentially attempt to authenticate the HTML page contents and links as belonging to a legitimate session.  
+
+=== ASP.Net specific concerns ===
+
+CSRF can actually be prevented in .Net already -- but you have to be using ViewState.  In fact, ViewState prevents many other attacks as a happy coincidence, such as several data input validation attacks for non-text-form fields.  
+
+There are problems with relying on ViewState however:
+* Developers can disable ViewState per-page or on an entire ASP.Net application.  They can also forget to enable it on a key page.  Knowing you have protection becomes a laborious code-and-configuration-review-problem.
+* ViewState can result in hugely bloated page content if it is not cared for properly during development
+* Developers can inadvertently divulge sensitive date in ViewState that may go unnoticed since ViewState is Base64-encoded in the page content
+
+There are also those out there who think that ASP.Net is immune to CSRF already, probably because ViewState is enabled by default so if you try CSRF attacks without knowing this key fact, you may be lulled into a false sense of security (or at least may not appreciate ''why'' CSRF doesn't work in a default setup).  You can try it yourself easily enough (and I will probably include a demo of ViewState CSRF protection in my sample test web application when the code is released).  
+
+Try to submit a CSRF form post to a page with ViewState enabled without the viewstate data.  Notice that it does not work.  Now, edit the Web.config and add:
+
+ <pages enableViewState="false" />
+
+You will find that you can now CSRF attack to your heart's content.  Although, even with viewstate enabled, an attacker can still attack you by precomputing the viewstate, if it is the same for multiple users.  This can be the case even if viewstate MAC is enabled.
+
+The simple solution, but one that is somewhat brittle since it is so easy for developers to forget and hard to know where it is missing, is to add a [http://www.vikramlakhotia.com/Using_the_ViewStateUserKey_to_prevent_one_click_attack_on_the_site.aspx ViewStateUserKey].
+
+In a shared OnInit() or Page_Init() method, add this code:
+
+<code>
+ void Page_Init(object sender, EventArgs e)
+ {
+     ViewStateUserKey = Session.SessionID;
+ }
+</code>
+
+If you are concerned about load-balanced pages not being able to validate ViewState since they won't all have the same session ID, you can also set it to some internal unique per-user key instead.
+
+However, there are [http://keepitlocked.net/archive/2008/05/29/viewstateuserkey-doesn-t-prevent-cross-site-request-forgery.aspx limitations] on this mechanism.  Such as, ViewState MACs are only checked on POSTback, so any other application requests not using postbacks will happily allow CSRF.  Which is why CSRF Guard for .Net is needed!
+
+== CSRFGuard Threat Model ==
+
+This will be a threat model of how CSRF can be implemented and how CSRFGuard mitigates each item (or not)
+
+TODO
+
+== How CSRFGuard works ==
+
+=== Incoming Requests:  Protection against CSRF ===
+
+CSRFGuard is an httpModule, which allow you lots of power to oversee ASP.Net application requests and responses.  This could have been an ISAPI filter, but httpModules are able to be written in managed code and have more deployment flexibility.
+
+The module hooks the AcquireRequestState event and calls on the CSRFGuard object to check the contents of the request for whether to even bother validating the request.  There are several cases (many configurable) where it makes sense to skip the request (meaning that it doesn't or culdn't represent a CSRF attack risk)
+* If your application URLs are all Idempotent, then accessing a URL without parameters probably cannot result in a CSRF attack.  Therefore, you can optionally ignore checking for CSRF on URLs that do not have any URL parameters. (see the [http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html HTTP 1.1 RFC 2616])
+* URL is requesting static data and is not executing code (no CSRF possible).  e.g. html files or css or javascript.
+* URL is excluded in the configuration from CSRF checking (optional)
+* If there is not a CSRFGuard Session Token in the user's ASP.Net session, then this is the first request and we should not consider it an attack ;-)
+
+If it determines that the request needs checking, then it compares the passed CSRFGuard Session Token to the one stored in the user's ASP.Net session.  If they do not match, or if the token is not present, then we've got a CSRF attempt.
+
+When a CSRF attempt is detected, the Module then decides what to do about it (it takes Action), based entirely on the configuration.  It is up to you what Action you want taken when an attack is detected.  There are the following available CSRFHandlers:
+* KillSession -- kill the ASP.Net session
+* LogEvent -- log an event wherever you want with log4net.
+* PrintError -- optionally, print HTML error text to the screen
+* RedirectToUrl -- redirect somewhere else, such as an error page or 404 page.
+
+Custom CSRFHandlers are also allowed as "plugins" if you like.  All are configurable and can be chained together to execute one after another to result in complex actions.
+
+=== Outgoing Responses:  Page Rewriting (ResponseFilters) ===
+
+The module also hooks the ReleaseRequestState event and provides a custom Request Filter that interrogates the outgoing HTML so that we can inject our CSRFGuard Session Token wherever it is needed.
+
+There are multiple options for how to inject the tokens that are configurable depending on your needs.  These are called ResponseFilters
+* HTMLParserFilter (TODO)
+* JavascriptFilter -- injects javascript code into every page that does all of the work of rewriting URLs and FORMS to pass the CSRF tokens
+* RegexFilter -- uses regular expressions and sets of rules to rewrite URLs in the page itself.  Ignores javascript URLs and to prevent leakage of the CSRF tokens to attackers, enforces a same-origin policy on the URLs so that only URLs falling within your application URL or IP address will be rewritten.
+
+== Implementation Approach ==
+
+This project takes an analagous approach to the J2EE CSRF Guard J2EE Filter in the ASP.Net world:  an ASP.Net HTTP Module / Filter.
+
+=== Design Goals ===
+* Threat-modeled design and implementation
+* Fully test-driven (will be using nunit2)
+** And very high code coverage for unit tests (using ncover)
+* Automated build (will be using nant)
+* Highly configurable
+** Allow for flexibility to support all different kinds of applications.
+* Highly modular code
+** Bulk of the decision-making is done automagically in objects who can then be interrogated for access decisions
+** Small classes and methods for clarity and avoiding overly-complex code.
+** Ease potential rolling multiple utilities like this into a single uber-HTTP-Module framework later '''(need to check out status of the mod_security port to .Net)'''
+* No tight coupling to the application required (but may be useful to support for optimizing performance or integration)
+* Allow non-security code to be overridden by another implementation (e.g. use your own Logger class, use your own Config file class, support additional response mechanisms, etc.)
+* Ability to run in a [[.Net_Full_Trust|partial trust]] environment (hat tip to [[User:Dinis.cruz]])
+* Ability to optimize the configuration to just where you most expect to have CSRF vulnerabilities (e.g. avoid work for no security gain)
+* Not just a straight code port from J2EE version
+
+=== Differences between this and the J2EE version (to be resolved) ===
+
+<blockquote>
+TODO
+</blockquote>
+
+== Implementation ==
+
+[http://code.google.com/p/owasp-code-central/source/checkout Source Code] hosted at Google Code
+
+The CSRFGuardModule is just a shell for hooking the CSRFGuard module in via an httpModule declaration.
+
+<code>
+            context.AcquireRequestState += new EventHandler(HandleRequest);
+            context.ReleaseRequestState += new EventHandler(FilterHTMLResponse);
+</code>
+
+FilterHTMLResponse determines which ResponseFilter to use from the configuration and then passes control to that filter to do its rewriting.  The ResponseFilters all inherit from the same base class that simplifies each ResponseFilter by avoiding having to re-implement the Stream methods.
+
+The CSRFGuard object is the guts that does everything.  It does this completely driven by the configuration so all methods are private.  As a caller, you only get some read-only properties to see what is going on.
+
+<code>
+ public class CSRFGuard {
+        // read-write
+        public String CsrfTokenValue
+        public String CsrfTokenName
+        // read-only
+        public bool SkipDetect
+        public bool AttackDetected
+        public HttpResponse Response
+        public HttpSessionState ClientSession
+ }
+</code>
+
+The CSRFGuard code is at a high level very, very simple (by design):
+
+<code>
+            SetupCSRFTokenNameAndValue();
+
+            // do we need to do anything?  Configure the object options.
+            SetupSkipDetect();
+
+            // Check for CSRF and store the results in object properties for later retrieval
+            if (!SkipDetect)
+            {
+                DetectCSRFAttempt();
+            }
+
+            // take action
+            if (AttackDetected)
+            {
+                HandleCSRFAttempt();
+            }
+</code>
+
+HandleCSRFAttempt() is the most complicated, but is still fairly simple.  It again, determines what to do from the configuration and then executes the configured CSRFHandlers in order as a chain.
+
+Insert UML / Class diags and discussion of design
+
+== Configurable Options ==
+TODO
+
+== Installation instructions ==
+Site-wide (protect all web applications running on IIS)
+
+TODO
+# Copy these files to this location
+# Add this to machine.config to load the module
+
+Per-application (protect each application individually)
+
+Suppose your web application root directory (where you find web.config) is:
+
+C:\inetpub\wwwroot\MyWebApp
+
+# Create the directory C:\inetpub\wwwroot\MyWebApp\bin\CSRFGuard
+# Copy these files to this directory:
+** CSRFGuard.dll
+** CSRFGuard.config
+** CSRFGuard.pdb (if you want debugging symbols)
+# Copy these files to the web application root directory:
+** CSRFGuardLoggerConfig.log4net
+** log4net.dll
+
+Add the following text to the web.config file in the <system.web> section or into the existing <httpModules> section, if there is one already
+
+<code>
+ <!-- load the CSRFGuard http Module -->
+ <httpModules>
+    <add type="org.owasp.csrfguard.CSRFGuardModule, CSRFGuard" name="CSRFGuardModule"/>
+ </httpModules>
+</code>
+
+Changing the web.config will cause the app pool to reset so you will then be able to test the application to see that it has embedded the CSRF token!
+
+# Advanced configuration
+** If you want to point to a specific 404 error page, edit CSRFGuard.config and change the existing path
+** If you want to change the error message that gets printed on error by the PrintError handler, you can edit this configuration item as well.
+** If you want to change the order that the CSRFHandlers load, or add/remove other handlers, change these values.
+** Change what gets logged where by editing the CSRFGuardLoggerConfig.log4net file and using a different appender, change the debug level, etc.  You can change where the logs go (default is c:\logs\csrfguardlog.txt using the file appender)
+
+== Related work ==
+
+* [[PHP CSRF Guard]]
+* [[CSRF Guard|J2EE CSRF Guard]]
+* [http://www.thespanner.co.uk/2007/10/19/jsck/ Javascript Cross Site Request Forgery Protection Kit]
+* [[ESAPI|OWASP Enterprise Security API]]
+
+== Completed ==
+* Tokens are only added if URLs match a same-origin policy (avoids leaking the token information outside the app)
+* CSRFGuard module that is able to detect CSRF attacks.
+* Filters to inject the tokens
+** RegExFilter
+* CSRFHandlers to handle CSRF attacks
+** LogEvent (logs with log4net)
+** KillSession (kills the asp.net session)
+** RedirectToURL (with optional parameters to denote the error info or message type)
+** PrintError configurable message to screen instead of the response text
+* Configurable options:
+** extensionWhitelistPattern (file extensions to ignore when adding tokens to URLs -- files that would not be usable for CSRF attacks)
+** useRandomCSRFTokenName (ability to generate a random token name instead of a static one)
+** skipDetectOnParameterlessURLRequests (if there are no POST or HTTP parameters, there may not be a CSRF attack.  Allow this to be set for apps where GETs are idempotent)
+** ResponseFilter (change which response filter to use at runtime in the configuration)
+* logging with log4net
+* Configurable evasive actions (CSRFHandlers)
+** Make the actions chainable and atomic and configuration-driven so you can execute them one after another to make complex interactions
+* Extensible CSRFHandler plugin loading
+* Got the code into source control
+* config file supports complex data types, such as an arraylist, for lists of data.
+* Can build .net 1.1 or 2.0 assemblies for either setup.
+* Have a demonstration web app for testing.  Will be used for functional tests using WatiN.
+* 17 unit tests thus far.
+* Ability to debug nunit tests from Visual C# express.
+* Data input validation on CSRF tokens
+* Javascript filter (does not honor same-origin policy -- using same javascript as the Java project CSRFGuard)
+* Build both .net 1.1 and 2.0 assemblies for support of either deployment.
+* Relative URL whitelisting (skipDetectForTheseURLs)
+* Ran FxCop 1.36beta2 on the code and fixed the warnings (minor naming standard issues for the most part)
+
+== TODO ==
+
+* Check out J2EE CSRF Guard 2.0 features and nomenclature for possible alignment
+** Actually, the current development version of CSRFGuard for .Net already implements many of the requirements that I had shared with the Java team.
+* Investigate threats of bad applications that leak ASP.Net session info from HTTPS to HTTP.  This module right now is implicitly assuming that the session is trustworthy which it would be nice if we could have some programmatic basis for believing this.
+* Write nunit test cases for everything
+* Loads of error handling to be production-ready.
+* Secure Coding:
+** Data input canonicalization
+* Features:
+** Filters
+*** HTMLParser filter
+* Need MSI installer
+* Need to test out Machine.config deployment
+* Watir functional tests.
+
+=== Future ===
+* Investigate an option for an application to provide its own web control (hidden) that you could override with the value from session instead of replacing the form tags with regex.
+** Or, an option that would involve tightly coupling the app and the module -- the module could stick the token in session and the app could put it in the pages; then the module would only need to validate the data coming back and not do any rewriting.
+
+<!-- categories -->
+[[Category:OWASP_CSRFGuard_Project]]
+[[Category:OWASP_Validation_Project]]
+[[Category:OWASP_.NET_Project]]
+[[Category: Control]]

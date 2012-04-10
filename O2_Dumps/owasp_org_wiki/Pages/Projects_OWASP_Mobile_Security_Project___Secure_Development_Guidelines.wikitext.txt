@@ -1,0 +1,33 @@
+== Mobile Secure Development Guidelines Objective==
+The OWASP/ENISA Mobile Secure Development Guidelines will be living, open source documents, that provide knowledge and guidance for developers for creating secure mobile
+applications.
+
+==Target audience==
+The output will be:
+* A main document aimed at developers and software architects
+* A CIO/CSO/CEO/CTO-level [[document motivating the use of the guidlines]].
+
+==Main document skeleton==
+Who we are, who wrote it, where an online version can be found, how people can contribute.
+
+===Executive summary===
+Why this document. A convincing argument to c-level for why they should give priority to security in mobile dev projects. FUD goes here.
+
+===Architecture and design principles===
+Starting from a risk-based approach; Starting from ENISA/OWASP/Veracode top ten risks (extended, modified) (for example see the Veracode top ten risks and eventual OWASP top 10 risks), we state architecture and design principles, that address these risks.
+
+* [[https://www.owasp.org/index.php/Projects/OWASP_Mobile_Security_Project_-_Top_Ten_Mobile_Controls Mobile controls and design principles]] and examples of what they mean for secure
+mobile/smartphone applications,- e.g. minimal disclosure, minimal on-device storage,
+don’t allow untrusted update of add-ons, do not allow access to sensor data from other
+applications, authenticate backend.
+(Target date - End-of-June)
+
+===Coding techniques===
+* [[Code level controls]] (based on the principles) - What to look for in the code. E.g. checklist
+for persistent storage code, identifier schemes, authentication mechanisms, etc...
+(Target date for first draft - Mid-Sept)
+* [[Platform-specific how-to’s]] and how not to’s, common errors and vulnerabilities, sample
+code (on how to implement common control), how not-to app (mobile version of
+WebGoat).
+(Target date for first draft - End of October)
+* Optionally (stage 2) - open source libraries - mobile version of ESAPI

@@ -1,0 +1,177 @@
+[[Guide Table of Contents|Development Guide Table of Contents]]
+
+__TOC__
+
+In the early days of the web, web sites consisted of static pages, which severely limited interaction with the user. In the early 1990’s, this limitation was removed when web servers were modified to allow communication with server-side custom scripts. No longer were applications just static brochure-ware, edited only by those who knew the arcane mysteries of HTML; with this single change, normal users could interact with the application for the first time.
+
+[[Image:What are web applications.JPG]]
+
+This is a huge and fundamental step towards the web as we know it today. Without interactivity, there would be no e-commerce (such as Amazon), no web e-mail (Hotmail or Gmail), no Internet Banking, no blogs, no online share trading, and no web forums or communities like Orkut or Friendster. The static Internet would have been vastly different to today. 
+
+The trend towards increased interactivity has continued apace, with the advent of “Web 2.0”, a term that encompasses many existing technologies, but heavily features highly interactive, user centric, web-aware applications. 
+
+==Technologies ==
+
+Initially, it was quite difficult to write sophisticated applications. The first generation web applications were primitive, usually little more than form submissions and search applications. Even these basic applications took quite a great deal of skill to craft. 
+
+Over time, the arcane knowledge required to write applications has been reduced. Today, it is relatively easy to write sophisticated applications with modern platforms and simpler languages, like PHP or VB.NET. 
+
+However, this push to make applications as easy to write as possible has a downside – many entry-level programmers are completely unaware of the security implications of their code. This is discussed further in the “Security Principles” chapter.
+
+Let’s look at the various generations of web application technology. 
+
+==First generation – CGI ==
+
+Common Gateway Interface (CGI) reigned supreme from approximately 1993 through to the late 1990’s when scripting languages took over in a big way.
+
+CGI works by encapsulating user supplied data in environment variables. These are inherited by the custom-written scripts or programs, usually developed in Perl or C. The custom programs process the supplied user data, and send fully formed HTML to the “standard out” (stdout), which is captured by the web server and passed back to the user. 
+
+Examples of complex CGI include Hotmail, which was essentially Perl scripts running on top of FreeBSD boxes and Slashdot, again a large Perl script running under Linux
+
+As few sites today write new CGI applications, the techniques to secure CGI applications are not discussed within the Development Guide. However, many of the techniques discussed can be used with few or no changes.
+
+==Filters ==
+
+Filters can be used to control access to a web site, implement a different web application framework (such as Perl, PHP, or ASP), or to provide a security check. 
+Because filters live within the execution context of the web server itself, they can be high performance. Typical examples of a filter interface include Apache web server modules, SunONE’s NSAPI, and Microsoft’s ISAPI. Filters can be written in C/C++ in order to integrate with the web/app server at a low-level. However, more recently, filters are being implemented in higher level languages, using interfaces like the J2EE filter API.
+
+==Scripting ==
+
+CGI’s lack of session management and authorization controls hampered the development of commercially useful web applications. 
+
+Web developers turned to scripting languages, such as PHP and Ruby to solve these problems. Scripting languages run script code within the web server without being compiled.
+<!-- because the scripts are not compiled, they are more quickly developed and implemented. 
+dkaplan: this is what this line used to say.  This is a very controversial statement and an argument that is still raging today.  Due to a lack of scientific evidence, this can not be proven so I removed it.  --> 
+
+Unlike low-level languages where programmers have to deal with memory allocation themselves, scripting languages deal with memory management internally. This allows them to avoid, most of the time, problems such as buffer overflows and resource leaks and thus, programmers who use them can at least avoid some security related issues common in low-level languages. However, they are not without flaws:
+
+* Most scripting languages aren’t strongly typed and do not promote good programming practices
+
+* Scripting languages are generally optimized for particular types of data manipulation. Often programmers choose the wrong language to solve the right problem, resulting in poor application performance that is sometimes blamed on the language itself.
+
+* It’s difficult (but not impossible) to write multi-tier large scale applications in scripting languages, because often the presentation, application and data tiers reside on the same machine, thus limiting scalability and security
+
+* Most scripting languages do not natively support remote method or web service calls, which makes it difficult to communicate with application servers and external web services. 
+
+Despite their disadvantages, many large and useful applications have been written with scripting languages, such as eGroupWare (egroupware.org), which is written in PHP. Too, many older Internet banking sites are written in ASP. 
+
+Scripting frameworks include ASP, Perl, ColdFusion, and PHP. However, many of these would be considered interpreted hybrids now, particularly later versions of PHP and ColdFusion, which pre-tokenize and optimize scripts.
+
+==Web application frameworks – J2EE and ASP.NET ==
+
+As scripting languages reached the boundaries of performance and scalability, many larger vendors jumped on Sun’s J2EE web development platform. There are many J2EE implementations, including Tomcat from the Apache Foundation, JBoss and Glassfish. 
+<!-- dkaplan: I would remove Tomcat from this list.  It is not a complete J2EE implementation, it is only a webserver.  -->
+
+J2EE:
+
+* Uses the Java language to produce applications which run nearly as quickly as C++ based ones, and that do not easily suffer from buffer overflows and memory leaks
+
+* Allowed large distributed applications to run acceptably for the first time
+
+* Possesses good session and authorization controls
+
+* Enabled relatively transparent multi-tier applications via various remote component invocation mechanisms, and 
+
+* Is strongly typed to prevent many common security and programming issues before the program even runs
+
+J2EE’s downside is that it has a steep learning curve which  makes it difficult for web designers and entry-level programmers to use it to write applications. While certain graphical development tools make it somewhat easier to program with J2EE, a scripting language like PHP is still much easier to use.
+
+When Microsoft updated their ASP technology to ASP.NET. which mimics the J2EE framework in many ways, they offered several improvements on the development process. For example, .NET: 
+
+* Makes it easy for entry level programmers and web designers to whip up smaller applications 
+
+* Allows large distributed applications 
+
+* Offers good session and authorization controls
+
+* Allows programmers to use their favorite language, which is compiled to native code for excellent performance (near C++ speeds), along with buffer overflow and resource garbage collection 
+
+* Permits transparent communication with remote and external components
+
+* Is strongly typed to prevent many common security and programming issues before the program even runs
+
+The choice of J2EE or ASP.NET frameworks is largely dependent upon platform. There is little reason to choose one over the other from a security perspective.
+
+Applications targeting J2EE theoretically can run with few (if any) changes between any of the major vendors and on many platforms from Linux, to AIX, MacOS X, or Windows. (While in practice, some tweaking is required, complete re-writes are not required. )
+
+# ''ASP.NET is primarily available for Microsoft Windows. The Mono project (http://www.go-mono.com/) can run ASP.NET applications on many platforms including Solaris, Netware, and Linux. ''
+
+==Small to medium scale applications ==
+
+Most applications are either small or medium scale. The usual architecture is a simple linear procedural script. This is the most common form of coding for ASP, ColdFusion and PHP scripts, but rarer (but not impossible) for ASP.NET and J2EE applications. 
+
+The reason for this architecture is that it is easy to write, and few skills are required to maintain the code. For smaller applications, any perceived performance benefit from moving to a more scalable architecture will never be recovered in the development time for those applications. For example, if it takes an additional three weeks of developer time to re-factor the scripts into an MVC approach, the three weeks will never be recovered (or noticed by end users) from the improvements in scalability.
+[[Category:FIXME|MVC is defined in the next paragraph. Need to move the definition here, or have it elsewhere and have this text link to it]]
+
+It is typical to find many security issues in such applications, including dynamic database queries constructed from insufficiently validated data input, poor error handling, and weak authorization controls. 
+
+This Development Guide provides advice throughout to help improve the security of these applications.
+
+==Large scale applications ==
+
+Larger applications need a different architecture than that of a simple survey or feedback form. As applications get larger, it becomes ever more difficult to implement and maintain features and to keep scalability high. Using scalable application architectures becomes a necessity rather than a luxury when an application needs more than about three database tables or presents more than approximately 20 - 50 functions to a user.
+
+Scalable application architecture is often divided into tiers, and if design patterns are used, often broken down into re-usable chunks using specific guidelines to enforce modularity, interface requirements, and object re-use. Breaking the application into tiers allows the application to be distributed to various servers, thus improving the scalability of the application at the expense of complexity. 
+
+One of the most common web application architectures is model-view-controller (MVC).  <!-- dkaplan: I removed the following detail because it doesn't add any important details and IMO makes it harder to understand:  which implements the Smalltalk 80 application architecture.-->  The main concept of MVC is to keep the code that displays content (the view) completely separate from the data and business logic (the model).  The controller exists to handle user input.   Let's use an order form as an example to solidify these terms.  The HTML of the form, its layout and anything you *see* that is not data should be generated by the view.  You type your information into the form and click the "purchase" button.  Behind the scenes, the controller receives this information and passes it on to the model.  The model either accepts the data or rejects it (if, for example, you forgot to enter your name).  If the data is accepted, the controller forwards you to the next view (perhaps a view that says you successfully ordered the product).  If the data is rejected, the controller may forward you back to the order form view with error messages on the page saying you need to enter your name.
+
+MVC is typical of most Apache Foundation Jakarta Struts applications, and the code-behind ASP.NET can be considered a partial implementation of this approach. For PHP, the WACT project (http://wact.sourceforge.net) aims to implement the MVC paradigm in a PHP friendly fashion.
+
+==View ==
+
+The front-end rendering code, often called the presentation tier, should aim to produce the HTML output for the user with little to no application logic.
+
+As many applications will be internationalized (i.e. contain no localized strings or culture information in the presentation layer), they must use calls into the model (application logic) to obtain the data required to render useful information to the user in their preferred language and culture, script direction, and units.
+
+All user input is directed back to controllers in the application logic.
+
+==Controller ==
+
+The controller (or application logic) takes input from the users and gates it through various workflows that call on the application’s model objects to retrieve, process, or store the data. 
+
+Well written controllers centrally server-side validate input data against common security issues before passing the data to the model for processing, and ensure that output is safe or in a ready form for safe output by the view code.
+
+As the application is likely to be internationalized and accessible, the data needs to be in the local language and culture. For example, dates cannot only be in different orders, but an entirely different calendar could be in use. Applications need to be flexible about presenting and storing data. Simply displaying “7/4/2005” is ambiguous to anyone outside a few countries. 
+
+==Model ==
+
+Models encapsulate functionality, such as “Account” or “User”. A good model should be transparent to the caller, and provide a method to deal with high-level business processes rather than a thin shim to the data store. For example, a good model will allow pseudo code such as this to exist in the controller:
+
+<pre>
+oAccount->TransferFunds(fromAcct, ToAcct, Amount)
+</pre>
+
+rather than writing it such as this:
+
+<pre>
+if ( oAccount->isMyAcct(fromAcct) &&
+     amount < oAccount->getMaxTransferLimit() &&
+     oAccount->getBalance(fromAcct) > amount &&
+     oAccount->ToAccountExists(ToAcct) )
+then
+     if oAccount->withdraw(fromAcct, Amount) == OK 
+     then oAccount->deposit(ToAcct, Amount)
+     end if
+end if
+</pre>
+
+The idea is to encapsulate the actual dirty work into the model code, rather than exposing primitives. If the controller and model are on different machines, the performance difference will be staggering, so it is important for the model to be useful at a high level. 
+
+The model is responsible for checking data against business rules, and any residual risks unique to the data store in use. For example, if a model stores data in a flat file, the code needs to check for OS injection commands if the flat files are named by the user. If the model stores data in an interpreted language, such as SQL, then the model is responsible for preventing SQL injection. If it uses a message queue interface to a mainframe, the message queue data format (typically XML) needs to be well formed and compliant with a DTD. 
+
+The contract between the controller and the model needs to be carefully considered to ensure that data is strongly typed, with reasonable structure (syntax), and appropriate length, while allowing flexibility to allow for internationalization and future needs.
+
+Calls by the model to the data store should be through the most secure method possible. Often the weakest possibility is dynamic queries, where a string is built up from unverified user input. This leads directly to SQL injection and is frowned upon. For more information, see the Interpreter Injections chapter. 
+
+The best performance and highest security is often obtained through parameterized stored procedures, followed by parameterized queries (also known as prepared statements) with strong typing of the parameters and schema. The major reason for using stored procedures is to minimize network traffic for a multi-stage transaction or to remove security sensitive information from traversing the network. 
+
+Stored procedures are not always a good idea – they tie you to a particular database vendor and many implementations are not fast for numeric computation. If you use the 80/20 rule for optimization and move the slow and high-risk transactions to stored procedures, the wins can be worthwhile from a security and performance perspective.
+
+==Conclusion ==
+
+Web applications can be written in many different ways, and in many different languages. Although the Development Guide concentrates upon three common choices for its examples (PHP, J2EE and ASP.NET), the Development Guide can be used with any web application technology.
+
+
+[[Guide Table of Contents|Development Guide Table of Contents]]
+
+[[Category:OWASP_Guide_Project]]

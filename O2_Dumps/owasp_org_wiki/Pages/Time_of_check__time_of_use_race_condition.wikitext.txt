@@ -1,0 +1,98 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Race Conditions]]
+
+__TOC__
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+
+==Description==
+
+Time-of-check, time-of-use race conditions occur when between the time in which a given resource is checked, and the time that resource is used, a change occurs in the resource to invalidate the results of the check.
+
+'''Consequences'''
+
+* Access control: The attacker can gain access to otherwise unauthorized resources.
+* Authorization: race conditions such as this kind may be employed to gain read or write access to resources which are not normally readable or writable by the user in question.
+* Integrity: The resource in question, or other resources (through the corrupted one), may be changed in undesirable ways by a malicious user.
+* Accountability: If a file or other resource is written in this method, as opposed to in a valid way, logging of the activity may not occur.
+* Non-repudiation: In some cases it may be possible to delete files a malicious user might not otherwise have access to, such as log files.
+
+'''Exposure period'''
+
+* Design: Strong locking methods may be designed to protect against this flaw.
+* Implementation: Use of system APIs may prevent check, use race conditions.
+
+'''Platform'''
+
+* Languages: Any
+* Platforms: All
+
+'''Required resources'''
+
+* Some access to the resource in question
+
+'''Severity'''
+
+Medium
+
+'''Likelihood of exploit'''
+
+Low to Medium
+
+Time-of-check, time-of-use race conditions occur when a resource is checked for a particular value, that value is changed, then the resource is used, based on the assumption that the value is still the same as it was at check time.
+
+This is a broad category of race condition encompassing binding flaws, locking race conditions, and others.
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+In C/C++:
+
+<pre>
+struct stat *sb;
+..
+lstat("...",sb);
+// it has not been updated since the last time it was read
+printf("stated file\n");
+if (sb->st_mtimespec==...)
+  print("Now updating things\n");
+  updateThings();
+}
+</pre>
+
+Potentially the file could have been updated between the time of the check and the lstat, especially since the printf has latency.
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[State synchronization error]]
+
+
+==Related [[Controls]]==
+
+* Design: Ensure that some environmental locking mechanism can be used to protect resources effectively.
+* Implementation: Ensure that locking occurs before the check, as opposed to afterwards, such that the resource, as checked, is the same as it is when in use.
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD

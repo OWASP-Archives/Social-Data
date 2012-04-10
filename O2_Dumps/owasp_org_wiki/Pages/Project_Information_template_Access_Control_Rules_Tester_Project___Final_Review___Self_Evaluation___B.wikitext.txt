@@ -1,0 +1,90 @@
+[[Project Information:template Access Control Rules Tester Project|Clik here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''FINAL REVIEW''' 
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART I''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#P022 - OWASP Access Control Rules Tester|OWASP Access Control Rules Tester Project's Deliveries & Objectives]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#P022 - OWASP Access Control Rules Tester|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+'''The following project deliviries were expected:'''
+
+The research will be intended to answer the following questions: 
+* Is there a reasonable classification of business logic vulnerabilities?
+* Is it possible to generalize some cases into methodology or even an algorithm for an automated tool?
+* Is it possible to build precise access control matrix for a web application and how?
+
+Access Control Rules Tester (AcCoRuTe) tool will be Java-based application. As proposed in P022, AcCoRuTe will have the following functionality:
+* Site spider. Basic features: Javascript (and AJAX) is interpreted by Rhino in order to get more site links; forms are filled in by operator. 
+* Sitemap generator. Sitemap is presented to operator; he can make it more precise/complete. 
+* Sitemaps analyzer. This component intersects different sitemaps in order to determine possible flaws. The result is test case, which verifies, whether vulnerability really exists or not.
+
+The following objectives were reached:
+* A survey of web application vulnerability taxonomies was undertaken. As a result a new taxonomy was proposed. Appropriate definition of business logic was selected and the developed taxonomy was projected to the selected definition. 
+* Then, the classes of business logic vulnerabilites were defined and reasoning about their automated detection was given. One of these classes was "Authorization problems", which was subject to further research.
+* The model of web application was introduced and broken access control was expressed in terms of this model. Finally, the method for detecting such broken access control was introduced.
+
+As for the tool that was intended to support the developed method automation the following objectives were reached:
+* A combination of EXISTING tools was chosen that is able to perform the Sitemap generation according to the developed method. Thus, the Spider module WAS NOT developed: it saved time and effort, and another Spider-clone with the same functionality was not set free. However, AJAX and Javascript web application still require manual navigation. The development of fully-enabled Javascript spider appeared to be a significant work. 
+
+An important note should be stated: the initial P022 proposal did not contain the option to develop a Spider. 
+The chosen combination of tools is WebScarab and the Burp Suite. The browser uses Burp Proxy, which launches Burp Spider that crawls web application through WebScarab Proxy. The recorded by WebScarab proxy sessions are the input data to the developed analyzer.
+
+* The Sitemap generator is a CLI-tool that indeed generates sitemap, but instead of presenting it to the operator, it analyzes it and generates ''Access Control Tests'' that are presentd to the operator. The sitemaps can be viewed in the previous stage during the crawling phase both in Burp Suite on in WebScarab.
+* The ''Access Control Test'' is designed to unveil one of possible inconsistencies that the tool detected during Sitemap analysis. It contains HTTP-requests that should be submitted in order to prove particular broken access control issue. This could be done both manually or automatically, by AcCoRuTe. In latter case an HTML report will be generated that lists all proved broken access control issues from the supplied Access Control Test.
+* The assessment of the developed tool was undertaken to check, how it performs. The HacMe Bank v2 was used as the target Web Aplication. The tool was able to identify ALL broken access control issues. The total time to setup the target web application, to prepare the testcases, to run AcCoRuTe and to survey its report took approx. four hours. 2 hours took web application setup and surveing of its functionality, 1 hour took navigation of web application in order to build appropriate Sitemaps and 1 hour took the AcCoRute operation and its results validation.
+
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications - Need Futher Clarifications#P022 - OWASP Access Control Rules Tester|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+Please, check the previous section for details.
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+The HacMe Bank v2 was used as the target Web Aplication during the AcCoRute testing. I do realize that it is a test application and is not large enough. So, I'd very very gratefull if anybody could point me to interesting CVE entries that contain broken access control. The vulnerable versions of course should be accessible through developers SVN or something...
+ |- 
+ | style="width:25%; background:white" align="center"|'''PART II''' 
+ | colspan="2" style="width:75%; background:white" align="left"|
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Assessment Criteria
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[:Category:OWASP Project Assessment|OWASP Project Assessment Criteria]]
+ |-
+ | style="width:25%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Alpha Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| The '''Alpha Quality''' status is reached. 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+2. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Beta Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| The '''Beta Quality''' status will be reached shortly. The follwong criteria are yet to be met:
+* Include user documentation in Project's OWASP Wiki page(s)
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+3. Having into consideration the [[:Category:OWASP Project Assessment|OWASP Project Assessment Methodology]] which criteria, if any, haven’t been fulfilled in terms of '''Release Quality''' status?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+The follwong criteria of Release quality are not met:
+* Include user documentation in Project's OWASP Wiki page(s)
+* Be reasonably easy to use. This requires the future users of AcCoRuTe to submit their remarks and proposals.
+* Include online documention built into tool (based on required user documentation).
+* Be run through Fortify Software's open source review (if appropriate) and FindBugs.
+ |-  
+ | style="width:25%; background:#7B8ABD" align="center"|
+4. What kind of help is required either from the Reviewers or from the OWASP Community?
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| Critisism, remarks and proposals.
+|}

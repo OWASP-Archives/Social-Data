@@ -1,0 +1,53 @@
+{{Top_10_2010:TopTemplate|useprev=2010PrevLink|prev=A2-Cross-Site Scripting (XSS)|usenext=2010NextLink|next=A4-Insecure Direct Object References}}
+
+{{Top_10_2010:SummaryTableHeaderBeginTemplate}}
+{{Top_10_2010:SummaryTableValue-2-Template|Exploitability|AVERAGE}}
+{{Top_10_2010:SummaryTableValue-2-Template|Prevalence|COMMON}}
+{{Top_10_2010:SummaryTableValue-2-Template|Detectability|AVERAGE}}
+{{Top_10_2010:SummaryTableValue-1-Template|Impact|SEVERE}}
+{{Top_10_2010:SummaryTableHeaderEndTemplate}}
+     <td {{Template:Top 10 2010:SummaryTableRowStyleTemplate}}>Consider anonymous external attackers, as well as users with their own accounts, who may attempt to steal accounts from others. Also consider insiders wanting to disguise their actions.</td>
+     <td {{Template:Top 10 2010:SummaryTableRowStyleTemplate}}>Attacker uses leaks or flaws in the authentication or session management functions (e.g., exposed accounts, passwords, session IDs) to impersonate users.</td>
+     <td colspan=2  {{Template:Top 10 2010:SummaryTableRowStyleTemplate}}>Developers frequently build custom authentication and session management schemes, but building these correctly is hard. As a result, these custom schemes frequently have flaws in areas such as logout, password management, timeouts, remember me, secret question, account update, etc. Finding such flaws can sometimes be difficult, as each implementation is unique.</td>
+     <td {{Template:Top 10 2010:SummaryTableRowStyleTemplate}}>Such flaws may allow some or even all accounts to be attacked. Once successful, the attacker can do anything the victim could do. Privileged accounts are frequently targeted.</td>
+     <td {{Template:Top 10 2010:SummaryTableRowStyleTemplate}}>Consider the business value of the affected data or application functions.<br/><br/>Also consider the business impact of public exposure of the vulnerability.</td>
+{{Top_10_2010:SummaryTableEndTemplate}}
+
+{{Top_10_2010:SubsectionAdvancedTemplate|type={{Top_10_2010:StyleTemplate}}|number=1|risk=3}}
+The primary assets to protect are credentials and session IDs.
+# Are credentials always protected when stored using hashing or encryption? [[Top_10_2010-A7 | See A7]].
+# Can credentials be guessed or overwritten through weak account management functions (e.g., account creation, change password, recover password, weak session IDs)?
+# Are session IDs exposed in the URL (e.g., URL rewriting)?
+# Are session IDs vulnerable to session fixation attacks?
+# Do session IDs timeout and can users log out?
+# Are session IDs rotated after successful login?
+# Are passwords, session IDs, and other credentials sent only over TLS connections? [[Top_10_2010-A9 | See A9]].
+See the [http://www.owasp.org/index.php/ASVS#tab=Downloads ASVS] requirement areas V2 and V3 for more details.
+{{Top_10_2010:SubsectionAdvancedTemplate|type={{Top_10_2010:StyleTemplate}}|number=2|risk=3}}
+The primary recommendation for an organization is to make available to developers:
+# A single set of strong authentication and session management controls. Such controls should strive to:
+## meet all the authentication and session management requirements defined in OWASP’s [http://www.owasp.org/index.php/ASVS#tab=Downloads Application Security Verification Standard] (ASVS) areas V2 (Authentication) and V3 (Session Management).
+## have a simple interface for developers. Consider the [http://owasp-esapi-java.googlecode.com/svn/trunk_doc/latest/org/owasp/esapi/Authenticator.html ESAPI Authenticator and User APIs] as good examples to emulate, use, or build upon.
+# Strong efforts should also be made to avoid XSS flaws which can be used to steal session IDs. [[Top_10_2010-A2 | See A2]].
+{{Top_10_2010:SubsectionAdvancedTemplate|type={{Top_10_2010:StyleTemplate}}|number=3|risk=3}}
+<u>Scenario #1</u>: Airline reservations application supports URL rewriting, putting session IDs in the URL:
+{{Top_10_2010:ExampleBeginTemplate}}<nowiki>http://example.com/sale/saleitems</nowiki>;<span style="color:red;"><br/>jsessionid=2P0OC2JDPXM0OQSNDLPSKHCJUN2JV</span><br/>?dest=Hawaii{{Top_10_2010:ExampleEndTemplate}}
+An authenticated user of the site wants to let his friends know about the sale. He e-mails the above link without knowing he is also giving away his session ID. When his friends use the link they will use his session and credit card.
+
+<u>Scenario #2</u>: Application’s timeouts aren’t set properly. User uses a public computer to access site. Instead of selecting “logout” the user simply closes the browser tab and walks away. Attacker uses the same browser an hour later, and that browser is still authenticated.
+
+<u>Scenario #3</u>: Insider or external attacker gains access to the system’s password database. User passwords are not encrypted, exposing every users’ password to the attacker.
+
+{{Top_10_2010:SubsectionAdvancedTemplate|type={{Top_10_2010:StyleTemplate}}|number=4|risk=3}}
+{{Top_10_2010:SubSubsectionOWASPReferencesTemplate}}
+For a more complete set of requirements and problems to avoid in this area, see the [http://www.owasp.org/index.php/ASVS#tab=Downloads ASVS requirements areas for Authentication (V2) and Session Management (V3)]
+* [[Authentication_Cheat_Sheet | OWASP Authentication Cheat Sheet]]
+* [http://owasp-esapi-java.googlecode.com/svn/trunk_doc/latest/org/owasp/esapi/Authenticator.html ESAPI Authenticator API]
+* [http://owasp-esapi-java.googlecode.com/svn/trunk_doc/latest/org/owasp/esapi/User.html ESAPI User API]
+* [[Guide_to_Authentication | OWASP Development Guide: Chapter on Authentication]]
+* [[Testing_for_authentication | OWASP Testing Guide: Chapter on Authentication]]
+{{Top_10_2010:SubSubsectionExternalReferencesTemplate}}
+* [http://cwe.mitre.org/data/definitions/287.html CWE Entry 287 on Improper Authentication]
+{{Top_10_2010:BottomAdvancedTemplate|type={{Top_10_2010:StyleTemplate}}|useprev=2010PrevLink|prev=A2-Cross-Site Scripting (XSS)|usenext=2010NextLink|next=A4-Insecure Direct Object References}}
+
+[[Category:OWASP Top Ten Project]]

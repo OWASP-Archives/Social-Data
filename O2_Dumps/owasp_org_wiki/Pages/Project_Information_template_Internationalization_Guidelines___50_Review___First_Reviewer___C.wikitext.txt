@@ -1,0 +1,43 @@
+[[Project Information:template Internationalization Guidelines|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications#Internationalization Guidelines and OWASP-Spanish Project|OWASP Internationalization Guidelines Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#Internationalization Guidelines and OWASP-Spanish Project|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"| 
+# Team up with Larry Casey to implement Multi language support in OWASP.org Mediawiki. The action plan has been agreed and only some minor changes are required to owasp.org production site in order to reflect changes.
+# General Guidelines on minimum/recommended requirements to start a new language translation for OWASP Document and Site Pages. This has been developed by Juan Carlos and is currently used by all the translators.
+# General Guidelines on minimum/recommended requirements to implement internationalization and localization (i18n) on OWASP Software. This effort has just started and is currently in progress by one of the members of the spanish chapter.
+# Create a Communication strategy to help and keep track on new pages or changes in significant pages so all the translations are in sync. Unfortunately this hasn't been started yet and Juan Carlos is looking for someone to take the challenge.
+
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#Internationalization Guidelines and OWASP-Spanish Project|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+# Multi language support in OWASP.org Mediawiki. Percentage completed: 90% - only the implementation is missing.
+# General Guidelines to start a translation for OWASP Document and Site Pages. Percentage completed: 95% - pages guidelines are not published yet given task 1 has not been completed)
+# General Guidelines on minimum/recommended requirements to implement internationalization and localization (i18n) on OWASP Software.	Percentage completed: 5% - just started
+# Create a Communication strategy to help and keep track on new pages or changes in significant pages so all the translations are in sync. Percentage completed: 0% - looking for some volunteer/s.
+
+ |- General Guidelines on minimum/recommended requirements to start a new language translation for OWASP Document and Site Pages
+ |-
+
+
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+In order to complete the project, Larry needs to help Juan Carlos making the changes in OWASP.org site so contents could be uploaded  to the production instance.<br />
+Once this is done, the reviewers will start verifying the contents published.<br />
+As an overall score the project is currently at 50-60% completed. 
+|}

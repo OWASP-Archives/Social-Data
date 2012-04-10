@@ -1,0 +1,26 @@
+{{Template: <includeonly>{{{1}}}</includeonly><noinclude>Release About</noinclude>
+| project_name = OWASP ESAPI Swingset Interactive Project
+| project_home_page = ESAPI Swingset
+| release_name = ESAPI Swingset Interactive
+| release_license = [http://en.wikipedia.org/wiki/BSD_license BSD license]
+| release_date = July, 2nd 2010
+| release_description = 
+*This is a customised version of the OWASP SwingSet Application.
+*In addition to demonstrating the features of the ESAPI library, we felt it would be useful for developers to work out labs where they are presented with common security vulnerabilities and use ESAPI resolve the issues. We tried to cover as many of the OWASP Top 10 as possible in the labs and changed the grouping of the chapters to map to ASVS verification requirements. We were conscious of the fact that the OWASP Web Goat application already demonstrates the OWASP Top 10 vulnerabilities, but felt that this version of SwingSet could offer developers a chance to learn how to code to prevent these vulnerabilities while using ESAPI. 
+*Would be very interested to hear any feedback.
+
+| release_download_link = http://code.google.com/p/owasp-esapi-swingset-interactive/
+
+| leader_name1 = Cathal Courtney
+| leader_email1 = cathal.p.courtney@aib.ie
+| leader_username1 = Cathal Courtney 
+
+| leader_name2 = Fabio Cerullo
+| leader_email2 = fcerullo@owasp.org
+| leader_username2 = Fabio.e.cerullo
+ 
+| release_notes = http://code.google.com/p/swingset-demo/w/list
+
+| links_url1 = 
+| links_name1 = 
+}}

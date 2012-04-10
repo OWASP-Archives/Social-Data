@@ -1,0 +1,131 @@
+{{Template:SecureSoftware}}
+{{Template:Vulnerability}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+Failing to drop privileges when it is reasonable to do so results in a lengthened time during which exploitation may result in unnecessarily negative consequences.
+
+'''Consequences'''
+
+* Access control: An attacker may be able to access resources with the elevated privilege that he should not have been able to access. This is particularly likely in conjunction with another flaw - e.g., a buffer overflow.
+
+'''Exposure period'''
+
+*	Design: Privilege separation decisions should be made and enforced at the architectural design phase of development.
+
+'''Platform'''
+
+* Languages: Any
+* Platforms: All
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood   of exploit'''
+
+Undefined.
+
+The failure to drop system privileges when it is reasonable to do so is not a vulnerability by itself. It does, however, serve to significantly increase the Severity of other vulnerabilities. According to the principle of least privilege, access should be allowed only when it is absolutely necessary to the function of a given system, and only for the minimal necessary amount of time.
+
+Any further allowance of privilege widens the window of time during which a successful exploitation of the system will provide an attacker with that same privilege. 
+
+If at all possible, limit the allowance of system privilege to small, simple sections of code that may be called atomically. 
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+In C/C++:
+
+<pre>
+//Do some important stuff
+
+//Drop privileges (inspired by the book "The Art of Software Security Assessment")
+
+/* 1. drop group privileges */
+if (setgid(getgid()!=0)) /* getgid() returns the real group id (gid of the calling user) */
+{
+  /* error handling: unable to lose group privileges */
+}
+
+/* 2. drop supplemental group ids */
+#ifdef HAVE_SETGROUPS
+if (setgroups(0,NULL)!=0)
+{
+  /* error handling: Unable to clean supplemental group id list */
+}
+#endif
+
+/* 3. drop user privileges */
+if (setuid(getuid()!=0) /* getuid() returns the real user id (uid of the calling user) */
+{
+  /* error handling: Unable to drop user privileges */
+}
+
+// Do some non privileged stuff.
+</pre>
+
+In Java:
+
+<pre>
+method() {
+  AccessController.doPrivileged(new PrivilegedAction() {
+      public Object run() {
+      //Insert all code here
+      }
+        });
+}
+</pre>
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* All problems with the consequence of "Access control."
+
+
+==Related [[Controls]]==
+
+* Design: Ensure that appropriate compartmentalization is built into the system design and that the compartmentalization serves to allow for and further reinforce privilege separation functionality. Architects and designers should rely on the principle of least privilege to decide when it is appropriate to use and to drop system privileges.
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+Note: A reference to related [http://cwe.mitre.org/ CWE] or [http://capec.mitre.org/ CAPEC] article should be added when exists. Eg:
+
+* [http://cwe.mitre.org/data/definitions/79.html CWE 79].
+* http://www.link1.com
+* [http://www.link2.com Title for the link2]
+
+
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Synchronization and Timing Vulnerability]]
+[[Category:OWASP_CLASP_Project]]
+[[Category: Authentication Vulnerability]]

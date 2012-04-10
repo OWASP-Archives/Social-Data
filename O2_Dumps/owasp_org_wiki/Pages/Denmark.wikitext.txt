@@ -1,0 +1,386 @@
+{{Chapter Template|chaptername=Denmark|extra=The chapter leader is [mailto:um@fortconsult.net Ulf Munkedal]|mailinglistsite=http://lists.owasp.org/mailman/listinfo/owasp-denmark|emailarchives=http://lists.owasp.org/pipermail/owasp-denmark}} 
+
+<paypal>Denmark</paypal> 
+
+== Editing OWASP pages  ==
+
+As discussed on our first meeting, www.owasp.dk now points to this site. However, when entering the site using this URL, you can't edit the page if you have configured your browser to not accept 3rd party cookies. Instead, enter the site using [http://www.owasp.org/index.php/Denmark this] link. 
+
+== Local News  ==
+
+A general presentation of OWASP and the danish chapter, please open [https://docs.google.com/present/edit?id=0AemnFEYZb4AxZDM2a3B6N18zNmR3Y3N6ZmZ0&hl=da this]. 
+
+====Meeting in OWASP-DK on March 12th 2012 at 1700 ====
+Tidspunkt: 12. marts 2012 kl 1700. Sæt kryds i kalenderen allerede nu! :)
+
+Sted: Hos Deloitte, Weidekampsgade 6, 2300 København S. Spørg efter Klaus Agnoletti i receptionen
+
+Program:
+
+17.00: Mingle og netværk.
+
+17.30: Velkommen til - præsentation af OWASP.DK
+
+17.35: Jim Manico holder foredrag på engelsk.
+
+Title: Web Application Access Control Design Excellence
+
+Abstract: Access Control is a necessary security control at almost every layer within a web application. This talk will discuss several of the key access control anti-patterns commonly found during website security audits. These access control anti-patterns include hard-coded security policies, lack of horizontal access control, and "fail open" access control mechanisms. In reviewing these and other access control problems, we will discuss and design a positive access control mechanism that is data contextual, activity based, configurable, flexible, and deny-by-default - among other positive design attributes that make up a robust web-based access-control mechanism.
+
+Efter Jims indlæg er der fri debat.
+
+Vi håber at kunne servere lidt at drikke og spise.
+
+====Meeting in OWASP-DK 6/10 2010 at 17.00 ====
+Tidspunkt: Onsdag d. 6/10 kl. 17. 
+
+Sted: Hos Deloitte, Weidekampsgade 6, 2300 København S. Spørg efter Klaus Agnoletti i receptionen 
+
+Program: 
+
+17.00 : Mingle og netværk. 
+
+17.30 : Velkommen til - Præsentation af OWASP-DK.
+
+17.35 : Samy Kamkar : "How I met your girlfriend"
+
+Det er lykkedes os at få en af talerne fra dette års Blackhat og DefCon i USA til Danmark for at holde sit indlæg om avancerede Cross Site Scripting angreb. Se mere om Samy og hans indlæg på http://samy.pl/bh10/
+
+Efter Samys indlæg er der fri debat.
+
+Deloitte er vært med kaffe, the, vand, frugt og sandwiches.
+
+
+Tilmelding: Af hensyn til forplejningen bedes du sende en mail til Louise Lykke Larsen på lolarsen@deloitte.dk seneste dagen før.
+
+
+
+Kommer du i bil, kan du parkere i Deloittes parkeringskælder – kør blot ned af rampen og ring på klokken så lukker receptionen dig ind.
+
+==== Upcoming meetings in OWASP-DK in 2011 ====
+
+As usual we'll decide the location of the meetings from time to time. A mail will be sent to the list as soon as the location is known.
+
+<br> Meetings in 2011 will be on the following dates and locations: 
+
+18/5 at PwC
+
+31/8
+
+<br> 
+
+The OWASP-DK meeting the 18th of May will be held at PwC, during the meeting we’ll arrange sandwiches, coffee, fruit etc. 
+
+<br> 
+
+The address is: 
+
+PwC 
+
+Strandvejen 44 
+
+2900 Hellerup
+
+<br>
+
+If you want to join the meeting, please send a mail to Johan at jkt@pwc.dk. 
+
+<br>
+
+Send out a mail to the list asap if you want to be a part of arranging meetings and raise your hand at the next meeting (at the right time).
+
+==== Presentations from previous OWASP meetings ====
+
+===== 17/6 2010 =====
+
+[http://www.owasp.org/images/a/a7/Kurser_og_certificeringer.pdf Rasmus Petersens presentation on Courses and certifications] 
+
+[http://www.owasp.org/images/f/f8/Emil-gurevitch-practical-crypto-attacks-part-1.pdf Emil Gurevitch's presentation on Practical Crypto Attacks (Part 1)]
+
+===== 11/11 2009 =====
+
+[http://www.owasp.org/images/d/de/Surveillance_and_logging_based_on_Amazon.pdf Søren Maigaards presentation on surveillance and logging based on Amazon] 
+
+[http://www.owasp.org/images/c/c7/Cloud_Computing_in_Copenhagen_municipality.ppt Simon Kaastrup-Olesen and Kasper Pedersens presentation on Cloud Computing in Copenhagen municipality] 
+
+===== 19/8 2009 =====
+
+[https://docs.google.com/present/edit?id=0AemnFEYZb4AxZDM2a3B6N18yNTN6bjY3OGRx&hl=da Klaus Agnolettis presentation on introduction to Cloud Computing] 
+
+[http://www.owasp.org/images/4/45/Ctf1-ejepsen.zip Erling Jepsens OWASP-DK CTF #1 winner entry] 
+
+===== 13/5 2009 =====
+
+[http://www.owasp.org/images/3/3e/FlashSecurity.pdf Mihai Corlans presentation on Flash Security] 
+
+[http://www.owasp.org/images/8/8e/Hotm2.pdf Rasmus Petersens presentation on Hack of the Month - opgave 2] 
+
+[http://www.owasp.org/images/7/78/Owasp_dk_ctf1.pdf Joe and Rasmus Petersens presentation on Introduction to OWASP-DK CTF #1] 
+
+===== 24/2 2009 =====
+
+[http://www.owasp.org/images/a/ac/SilverlightSecurity.pdf Rene Løhdes slides on Silverlight security] 
+
+[http://www.owasp.org/images/b/b9/JavaFX.pdf Thorbiörn Fritzons slides on JavaFX security] 
+
+===== 3/12 2008 =====
+
+[https://www.owasp.org/images/0/0e/Webscarab-intro-screen.pdf Henrik Kramshøjs presentation on using Webscarab] 
+
+[https://www.owasp.org/images/5/58/Testing_Flash_Applications.pdf Martin Clausens presentation on Flash security] 
+
+[https://www.owasp.org/images/5/59/NemLog-in.pdf Thomas Gundels presentation on Nem Login]
+
+== Older news  ==
+
+===Meeting in OWASP-DK 17/6 2010 at 17.00===
+
+Tidspunkt: Torsdag d. 17/6 kl. 17. 
+
+Sted: Hos Deloitte, Weidekampsgade 6, 2300 København S. Spørg efter Klaus Agnoletti. 
+
+Program: 
+
+17.00 : Velkommen til. Mingle og netværk. 
+
+17.30 : Angreb på "hjemmelavede" krypto løsninger af Emil Gurevitch 
+
+18.00 : Case: XSS i Google Search API og sikring mod dette i Perl af Jonas B. Nielsen (was canceled but will be held later)
+
+18.30 : Videreuddannelse og certificeringer af Rasmus Petersen 
+
+Som du kan se, er listen over talere ret kort så vi vil meget gerne have flere talere på. så hvis du sidder og ved noget spændende om et eller andet der har noget med sikkerhed at gøre, eller har hørt om noget spændende for nyligt til en konference i udlandet, så kom da endeligt og fortæl om det. OWASP-DK er i høj grad afhængig af folks eget initiativ. Hvis du vil være med i det fine selskab af talere så send en mail til kagnoletti at deloitte prik dk. 
+
+Tilmelding Send en mail senest 16. juni til Louise på lolarsen@deloitte.dk (men gerne med det samme). 
+
+
+
+=== Meeting in OWASP-DK 14/12 2009 at 17.00 ===
+
+Der inviteres til årets sidste OWASP møde! Kom og vær med. 
+
+Tema: Ny OWASP Top10 release candidate 1 - hvad synes vi egentlig om den? 
+
+Tidspunkt: Mandag 14. december 2009 kl. 17. 
+
+Sted: Hos Deloitte, Weidekampsgade 6, 2300 København S. Spørg efter Klaus Agnoletti. 
+
+Program: 
+
+17.00&nbsp;: Velkommen til. Mingle og netværk. 
+
+17.30&nbsp;: Kort gennemgang af OWASP Top 10 2010 rc1 med fokus på det der er nyt (Ulf Munkedal). 
+
+18.15&nbsp;: Benstræk og kort spisepause. 
+
+18.30&nbsp;: Diskussion (fælles feedback sendes ind til Owasp arbejdsgruppen), fx: (Moderator: Ulf Munkedal. Vi skal have mindst en referent til at skrive et engelsk referat da vi kun har indtil udgangen af december til at indsende vores kommentarer) 
+
+- Er det de rigtige risici, der står på listen? Er det det her, som vi ser hos kunder/i virksomheder? 
+
+- Er listen i rigtig rækkefølge? Læg mærke til, at den nu er risikobaseret. 
+
+- Er listen formuleret så man kan forstå den? Fungerer den for pentestere og PCI-auditors? Forstår ikke-konsulenter den? 
+
+- Hvordan vil vi gå ud med listen i OWASP Danmark? Listen i sig selv gør jo ikke nogen glade. Hvordan bruger vi den til at gøre verden lidt bedre? 
+
+- Skal vi oversætte den til dansk når den er endeligt klar? (fx to personer pr. punkt). 
+
+20.00&nbsp;: Andet? Fx: 
+
+- Et kig frem mod 2010 (fx konferencen i Stockholm i Juni) 
+
+- Den nye TLS sårbarhed (som jeg kan forstå ikke blev drøftet på sidste Owasp møde?) 
+
+20.30&nbsp;: Julehygge! Rygterne vil vide, at Klaus/Deloitte disker op med lidt godter.&nbsp;:) 
+
+Vil du hjælpe? Vi skal finde mindst en "frivillig", der kan skrive et kort engelsk referat af vores feedback, som vi kan sende til Top 10 projekt gruppen. 
+
+Tilmelding Send en mail senest 10. december til Louise på lolarsen@deloitte.dk (men gerne med det samme). 
+
+Links (godt til forberedelse inden mødet): 
+
+http://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project 
+
+Og Dave's presentation fra DC: 
+
+http://www.owasp.org/images/a/a1/AppSec_DC_2009_-_OWASP_Top_10_-_2010_rc1.pptx 
+
+Vel mødt! 
+
+--Ulf Munkedal 22:19, 2 December 2009 (UTC) 
+
+<br>
+
+=== Meeting in OWASP-DK 11/11 2009 at 17.30 ===
+
+17:30 Welcome - and OWASP basics by Klaus Agnoletti, Deloitte. 
+
+17:35 Overvågning og logning i Cloud Computing by eSec 
+
+18:05 Overvågning og logning i Cloud Computing based on Amazon by Inspekt Security 
+
+18:35 Break 
+
+19:00 Cloud Computing i Københavns Kommune by Simon Kaastrup-Olesen and Kasper Pedersen, Københavns Kommune 
+
+19:30 Awareness virker ikke by Carsten Jørgensen, Devoteam 
+
+19:45 PwC: Awareness 
+
+20:30 What is a web application firewall? (WAF) - including demonstration by Jacob Gercke and Srebrenko Sehic, Armorlogic 
+
+21.00 Let's hit a bar 
+
+<br> The meeting will be held at DKUUG, Symbion, Fruebjergvej 3, København Ø. 
+
+In order for DKUUG to know how many people will attend the meeting, you need to register at tilmeld@dkuug.dk no later than 10/11 2009. 
+
+DKUUG will serve sandwiches, coffee, tea and water. 
+
+=== Meeting in OWASP-DK 19/8 2009 at 17.30 ===
+
+The Agenda for the meeting is: 
+
+17.30 Welcome - and OWASP basics by Klaus Agnoletti, Deloitte. 
+
+17.45 Presentation: Cloud Computing Basics by Klaus Agnoletti, Deloitte 
+
+18.15 Break 
+
+18.45 Presentation: The future of Cloud computing by Carsten Jørgensen, Devoteam 
+
+19.15 Presentation: Salesforce.com and security by Salesforce.com. 
+
+20.15 Break 
+
+20.30 OWASP-DK CTF #1 by Joe and Rasmus Petersen 
+
+20.55 Next Meeting and Wrap-up. 
+
+21.00 Let's hit a bar! 
+
+<br> 
+
+During the meeting we’ll arrange sandwiches, coffee, fruit etc. 
+
+The address is: 
+
+Deloitte 
+
+Weidekampsgade 6 
+
+2300 København S 
+
+=== Meeting in OWASP-DK 13/5 2009 at 17.30 ===
+
+The agenda for the meeting is: 
+
+<br> 
+
+17.30 Welcome by Rasmus Petersen 
+
+17.45 Presentation: Flash security by Mihai Corlan from Adobe 
+
+18.30 Break 
+
+18.40 Presentation: Facebook API by Martin Clausen 
+
+19.10 Break 
+
+19.20 Presentation: Hack of the Month - opgave 2 by Rasmus Petersen 
+
+19.50 Break 
+
+20.00 Presentation: Introduction to OWASP-DK CTF #1 by Joe og Rasmus Petersen 
+
+20.30 Evaluation and discussion regarding the next meeting 
+
+<br> 
+
+If you want to join the meeting, please send a mail to Rasmus at rpe@pwc.dk. 
+
+<br> 
+
+During the meeting we’ll arrange sandwiches, coffee, fruit etc. 
+
+<br> 
+
+The address is: 
+
+PricewaterhouseCoopers 
+
+Strandvejen 44 
+
+2900 Hellerup 
+
+=== Meeting in OWASP-DK 24/2 2009 at 17.30 ===
+
+This will be a meeting where we talk about Rich Internet Application (RIA) technologies. We have arranged a talk from both Microsoft and Sun. Not surprisingly, the talks will be focused on the security side of the technologies. 
+
+Lined up for you we have&nbsp;: 
+
+*René Løhde from Microsoft who'll talk about Silverlight. Here is a short description from René in danish&nbsp;:
+
+"Silverlight Security model I .Net er Code Access Security alfa og omega for sikkerhed. I Silverlight og CoreCLR er transparency den vigtigste del af sikkerhedsmodellen og derfor er det vigtigt at vide hvilke restriktioner transparent code er underlagt. I denne session kigges på CoreCLR og de sikkerhedrelaterede aspekter af RIA applikationer med Silverlight. Der kigges blandt andet på Silverlight applikationer under full trust og Silverlight sandbox.” 
+
+<br> 
+
+*Thorbiörn Fritzon from Sun who'll talk to us about JavaFX. Here is an abstract from Thorbiörn on his talk:
+
+"JavaFX and the power of Java. This talk gives an overview of JavaFX, the new Rich Internet Application (RIA) environment for the Java™ platform and the capabilities that it can harness due to the fact that it runs on the complete Java™ platform. The talk will be an introduction to JavaFX and related technologies with a special focus on what Rich Internet Applications require from a security standpoint." 
+
+René and Thorbiörn will both talk for about an hour. After the talks we'll have an open discussion about RIA technologies and security in general. 
+
+This also means that we'll change the program so that there won't be time for any shorts talks about interesting projects this time around due to the fantastic chance that Sun and MS has given us by showing up and talking to us. 
+
+If you want to join the meeting, please send a mail to Louise at lolarsen@deloitte.dk. 
+
+During the meeting we’ll arrange sandwiches, coffee, fruit etc. 
+
+The address is: 
+
+Deloitte 
+
+Weidekampsgade 6 
+
+2300 København S 
+
+<br> It's possible to park in the basement of the Deloitte building. Just drive down the ramp and press the button to talk to our reception. 
+
+=== Medlemsmøde i OWASP-DK - kl 17.30, 3. december 2008  ===
+
+==== Dagsorden  ====
+
+===== Del I - Velkomst og oplæg  =====
+
+17.30 Velkomst v. Klaus Agnoletti 
+
+17.40 Oplæg - Webscarab intro v. Henrik Kramshøj 
+
+18.05 Oplæg - Hacking flash med Webscarab v. Martin Clausen 
+
+18.30 Oplæg - Nem Login v. Thomas Gundel 
+
+18.55 Oplæg - Web Application Attack and Audit Framework v. Robert Larsen 
+
+19.20 Pause og sandwiches 
+
+===== Del II - OWASP  =====
+
+19.30 Intro til den globale OWASP forening v. Niels Bach 
+
+19.40 Præsentation af DK Chapter nu og i fremtiden v. Ulf Munkedal 
+
+20.00 Evaluering og aftale om næste mødeaktivitet 
+
+Vi forventer at mødet slutter senest 20.30. 
+
+<br> Adresse: 
+
+Deloitte 
+
+Weidekampsgade 6 
+
+2300 København S
+
+[[Category:Europe]]

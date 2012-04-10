@@ -1,0 +1,149 @@
+==== Main  ====
+
+== About ==
+The [http://owaspa.org '''OWASP Academy Portal'''] is to be the single access point to the categorized OWASP educational Material.
+
+On the OWASP Academy Portal, all OWASP internal and donated training material can be accessed. <br>
+Those training material is reviewed and approved by the OWASP Academy Portal Project members <br>
+in order to set and maintain an OWASP-worthy training quality. <br>
+The Global Education Committee is guiding and enabling the efforts of the Academy Portal.
+
+== News ==
+
+As announced during the OWASP Germany Day:<br>
+'''Free OWASP challenges available via [https://www.hacking-lab.com/events/registerform.html?eventid=245&uk=DMWRE8y9MLAboLXpRzpgCmwd64sEugqf Hacking-Lab]'''
+
+
+
+
+
+==== Project About ====
+{{:Projects/OWASP Academy Portal Project | Project About}}
+
+==== Road map & progress ====
+
+==== Meeting notes ====
+
+== Notes 2011-10-27 ==
+timelines agreed between Ivan Buetler & Martin Knobloch
+*31.10.2011 
+** OWASP is sending Academy Portal preinformation to Hackign-Lab (including logos) (Martin Knobloch)
+*04.11.2011 
+**Hacking-Lab is creating it's own OWASP page on www.hacking-lab.com based on the information sent on 31.10.2011 (Ivan Bütler)
+*07.11.2011 
+**Academy Portal is ready to use. The portal has all core features implemented. (Martin Knobloch)
+* 8.11.2011 
+** Hacking-Lab is announcing Academy Portal and OWASP Germany to its 4200 users (Ivan Bütler)
+* 12.11.2011 
+** Testrun with FREE OWASP TOP 10 training in the Netherland by Martin (classroom) (Martin Knobloch)
+* 13.11.2011 
+** Last change requests to Hacking-Lab (Martin Knobloch)
+*17.11.2011 
+**Martin is giving a talk from 12:00 – 12:45 with the title "OWASP Global Education Committee" (Martin Knobloch)
+*17.11.2011 
+**Official announcement of Academy Portal using the OWASP mailing list.(Martin Knobloch /Kate Hartmann)
+*17.11.2011 
+**Official announcement of Academy Portal by Hacking-lab
+
+== Notes 2011-04-04 ==
+ 
+We affirmed that the Creative Commons license will be used for all content on the acadamies portal.
+
+Ricardo pointed out that we need a formal definition of the academy, primarily to enable the best used of time resources. <br> As things are now, given a free hour to contribute to the project, most of that hour is spent trying to find the best direction to proceed.  To that end, we discussed needing an environment for asynch conversation, and using google docs for shared document creation.
+* Requirements:  https://www.owasp.org/index.php/OWASP_Academy_Portal_Project/Requirements
+* Requirements Discussion: https://www.owasp.org/index.php/Talk:OWASP_Academy_Portal_Project/Requirements
+
+We had four participants in the conference call.  Would another time work better for those who did not attend?
+
+The project is at staging.owaspa.org(/moodle)
+
+== Notes 2011-03-21 ==
+ 
+*Status development
+**not much happened yet
+**there was a designer working on a template
+**Staging URL: [http://staging.owaspa.org/ http://staging.owaspa.org/] Note: if you want a test account please contact me at ricardo.melo@dri.pt
+**Staging URL for Moodle: [http://staging.owaspa.org/moodle http://staging.owaspa.org/moodle] Note: if you want a test account please contact me at ricardo.melo@dri.pt
+
+*Status training material
+**Carlos Serrao [https://lists.owasp.org/pipermail/owasp-academies/2011-January/000054.html modules]
+
+TODO's
+*material
+**upload material on the OWASP Academy wiki 
+*development
+** moodle/drupal
+
+
+
+== Kick-Off notes January 2011 ==
+Each block should take up as time and present as much content  as necessary and should list how long it typically 
+
+Each block should record the following  metadata as applicable:
+*Subject:
+*Categories:
+*Keywords:
+*Description:
+*Learning Outcomes:
+*Requirements/Pre-req to understand:
+*Theatrical/Practical
+*Incl. Hands-on labs 
+*Contains a link to a lab if applicable
+*Should be self-contained
+*Should handle a single subject
+*Target audience: 
+*Ability level: 100|200|300|400
+*Lab links:
+*Outside links:
+*Text books
+ 
+Rough guide to presentation time:
+*Effort
+*Corresponding OWASP effort 
+ 
+ 
+Some ideas for blocks:
+ 
+*Overview and Introduction 
+*Justifying  where
+*Java Platform Security
+*.NET Framework 3.5/4 security
+*XSS
+*Integer Overflows 
+*Mobile Code
+*Security Development Lifecycle
+*Web Application Risks and Threats (OWASP Top 10)
+*Countermeasures
+*Threat Modelling
+*Secure Coding Practices
+*Testing and Verification
+*Static Code Analysis 
+
+Proposed block contents for the O(w)ASP Academy Portal
+
+==== Design ====
+This should be the portal design: 
+[[:Image:owaspa.pdf|OWASPA design]]
+
+==== Sponsors ====
+The Academy-Portal is sponsored by [Hacking-Lab https://www.hacking-lab] <br>
+and [Security Innovation http://www.securityinnovation.com]
+----
+[[Image:hacking-lab-logo.png|200px]] <br>
+'''Hacking-Lab''' is supporting the OWASP mission and made their online training environment available for  OWASP on free-to-use basis!<br>
+The Hacking-Lab is not just a common "hackme" environment. The solutions of the labs are evaluated by teachers. <br>
+It's not enough just to hack, explain what and how you have it done to score the max points! <br>
+[[Media:LOI_Hacking-Labs.pdf | Agreement with Hacking-Lab]]
+
+----
+
+[[Image:SI Logo Stacked Application Security.png|200px]] <br>
+'''Security Innovation''' is supporting the OWASP mission and made their online education management system, Team Mentor, available for  OWASP on free-to-use basis!<br>
+[http://owasp.securityinnovation.com OWASP Team Mentor]
+
+[[Media:LOI_Security_Innovation.pdf | Agreement with Security Innovation]]
+
+__NOTOC__ <headertabs />
+
+
+[[Category:OWASP_Project|Academy Portal Project]] [[Category:OWASP_Tool]] [[Category:OWASP_Alpha_Quality_Tool|OWASP Alpha Quality Document]]

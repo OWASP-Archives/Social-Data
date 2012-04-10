@@ -1,0 +1,130 @@
+{{Chapter Template|chaptername=London|extra=The chapter leader is Justin Clarke (justin.clarke [at] owasp.org) since January 2009, with Tobias Gondrom (tobias.gondrom [at] owasp.org), Dennis Groves (dennis.groves [at] owasp.org), and Chris Lamont-Smith (chris.lamont-smith [at] owasp.org) constituting the London Chapter Board|mailinglistsite=http://lists.owasp.org/mailman/listinfo/owasp-london|emailarchives=http://lists.owasp.org/pipermail/owasp-london}}
+
+== Next Meeting/Event(s)  ==
+
+=== Thursday, May 10th 2012  (Joint OWASP/ISSA Application Security One-Day Conference) ===
+
+'''Location''': Bletchley Park, Sherwood Drive, Milton Keynes, MK3 6EB
+
+'''Time''': 10:00am - 4:30pm
+
+We're finalising details for a joint OWASP/ISSA one day AppSec event in place of our next regular Central London chapter meeting. This will be free for OWASP or ISSA Members. More details to follow shortly.
+
+====RSVP====
+Details coming
+
+== Future Events ==
+
+=== Thursday, July 12th 2012  (Central London) ===
+
+'''Location''': To be confirmed
+
+=== Thursday, September 13th 2012  (Central London) ===
+
+'''Location''': To be confirmed
+
+=== Thursday, November 8th 2012  (Central London) ===
+
+'''Location''': To be confirmed
+
+== Past Events ==
+
+=== Thursday, March 29th 2012 (Central London) ===
+
+'''Location''': Morgan Stanley, 25 Cabot Square, Canary Wharf, London E14 4QA
+
+====Talks====
+*'''Top 10 Web Defences - Jim Manico''' ([[Media:Developer Top Ten Core Controls v4.2.pptx|PPTX]])
+*:We cannot hack or firewall our way secure. Application programmers need to learn to code in a secure fashion if we have any chance of providing organisations with proper defences in the current threatscape. This talk will discuss the 10 most important security-centric computer programming techniques necessary to build low-risk web based applications.
+*'''IronWASP - Manish Saindane''' ([[Media:IronWASP.pptx|PPTX]])
+*:IronWASP (Iron Web application Advanced Security testing Platform) is an open source system for web application vulnerability testing. It is designed to be customizable to the extent where users can create their own custom security scanners using it. Though an advanced user with Python/Ruby scripting expertise would be able to make full use of the platform, a lot of the tool's features are simple enough to be used by absolute beginners.
+
+====Speakers====
+Jim Manico, Manish Saindane
+
+=== Thursday, March 8th 2012, 18:30-21:00 (Royal Holloway) ===
+
+==== Location ====
+
+:Royal Holloway University of London, Bourne Lecture Theatre 2, Egham Hill, Egham, TW20 0EX
+
+==== Talks ====
+
+*''Implementing cryptography: good theory vs. bad practice - Viet Pham ([[https://www.owasp.org/images/c/c5/OwaspTalkMarch.pdf PDF]])
+:Abstract: Cryptography is being widely implemented in software to provide security features. The main reason is that, many cryptographic mechanisms are mathematically proven secure, or trusted secure given some mathematical reasoning. However, to take full advantages of these mechanisms, they must be implemented strictly according to the theoretical models, e.g., several cryptographic mechanisms must be used together, in a specific manner to provide a desired security goal. However, without strong cryptographic background, many software developers tend to deviate from these models, thus making their own security software a gold mine for attackers. This talk gives examples to show why such situations exist, where do they spread, and how bad they may turn into.
+
+*''Securing the SSL channel against man-in-the-middle attacks: Future technologies - HTTP Strict Transport Security and and Pinning of Certs - Tobias Gondrom ([[http://www.gondrom.org/owasp/presentations/OWASP_defending-MITMA_RHUL.pdf PDF]])
+:"In the recent months major trusted CAs providing trusted certificates for SSL/TLS in browser scenarios were compromised (e.g. seen in the Diginotar breach) and based on the current trust models (trusting all registered CAs equally for all domains) exposed vital web applications to the risk of man-in-the-middle attacks. Several approaches are currently discussed to mitigate this risk. The most advanced and closest to final adoption being the technologies discussed by the browser vendors at the recent IETF meeting in November in Taipei: HSTS and pinning of certificates. To better protect content providers against the distribution of bogus certificates, an HTTP header extension containing a fingerprint of their certificates linked to a domain address has been defined. This approach, which has been partly tested in Chrome, and already helped identify and protect to some extend Google's web application in the recent Diginotar compromise. Chrome users were able to detect the bogus DigiNotar certificates because Chrome had embedded the hashes of valid Google certificates. Back in July, the hacked DigiNotar certificate authority (CA), which has since gone out of business, was used to issue more than five hundred bogus certificates for companies including Google and various intelligence services."
+
+==== Speakers ====
+
+Tobias Gondrom, Viet Pham
+
+=== Thursday, February 2nd 2012 ,18:30-21:00 ===
+
+'''Location''': Royal Holloway University of London, Bourne Lecture Theatre 2, Egham Hill, Egham, TW20 0EX
+
+'''Speakers''': Sarah Baso, Dinis Cruz, Dennis Groves
+
+*''Security as Pollution (lessons learned)'' - Dinis Cruz
+*:Based on David Rice's "Upon the Threshold of Opportunity" presentation at the OWASP AppSec USA 2010
+
+*''Making Security Invisible by Becoming the Developer's Best Friends'' - Dinis Cruz
+*:Based on Dinis' presentation at OWASP AppSec Brazil 2011
+
+*''How to get a job in AppSec by Hacking and fixing TeamMentor'' - Dinis Cruz and Dennis Groves
+*:This is for students and developers who want to get into the application security space and need to have/show real-world experience.
+
+*''What's Happening on OWASP Today'' - Sarah Baso
+*:This is an overview of the multiple activities that are currently happening around the world at OWASP presented by one of OWASP's employees currently focused on logistics, community and empowerment
+
+=== Thursday, September 8th 2011 ===
+
+'''Location''': Royal Holloway University of London, Bourne Lecture Theatre 2, Egham Hill, Egham, TW20 0EX
+
+'''Speaker''': Daniel Cuthbert ([http://prezi.com/ylfkkek0vb-r/all-aboard-the-lulz-boat/ deck])
+
+'''Title''': Doing it for the Lulz: Why Lulzsec has shown us to be an
+ineffective industry.
+
+=== Friday, June 3rd 2011 ===
+
+'''Location''': Royal Holloway University of London, Room BLT2, Egham Hill, Egham, TW20 0EX
+
+*'''Wordpress Security - Steve Lord''' ([[Media:Wordpress-security-ext.pdf|PDF]])
+*:Wordpress is one if the most popular blogging systems in the world but is routinely used to shoehorn complex sites into a blog shaped box, often because of it's flexibility and ease of use. In this talk, Mandalorian's Steve Lord discusses common Wordpress security snafus and how to avoid them.
+
+=== Thursday, April 14th 2011 ===
+
+'''Location''': Charterhouse Bar, 38 Charterhouse Street, Smithfield, London EC1M 6JH
+
+*'''Wordpress Security - Steve Lord''' ([[Media:Wordpress-security-ext.pdf|PDF]])
+*:Wordpress is one if the most popular blogging systems in the world but is routinely used to shoehorn complex sites into a blog shaped box, often because of it's flexibility and ease of use. In this talk, Mandalorian's Steve Lord discusses common Wordpress security snafus and how to avoid them.
+
+*'''Outcomes from the recent OWASP Summit in Portugal - London based attendees of the Summit'''
+*:Discussion of what came out of the recent OWASP Summit, "OWASP 4.0" and what is changing in the OWASP world now and in the near future
+
+=== Thursday, February 17th 2011 ===
+
+'''Location''': ThoughtWorks, Berkshire House, 168-173 High Holborn, City of London WC1V 7AA
+
+A special meeting event, in conjunction with [http://londongeeknights.wetpaint.com London Geek Nights] on SSL usage and dangers. An opportunity to get some of the developer and security communities together to talk more pragmatically on this very key topic.
+
+== Archived Events ==
+
+For events before 2011, see [[Archived OWASP London Events]]
+
+== Other Activities ==
+
+*'''February 2010 - Personal Information Online COP'''
+The [[Leeds UK]], London and [[Scotland]] Chapters [http://www.owasp.org/index.php/Industry:Personal_Information_Online_Code_of_Practice joint response] to the UK Information Commissioner's Office draft Personal Information Online Code of Practice.
+
+*'''March 2009 - Entry for Nominet Best Practice Challenge 2009'''
+Open Web Application Security Project was nominated by OWASP London for the Best Security Initiative Award ([[Image:Nominet_best_practice_challenge_2009_owasp_entry.pdf]]) in the [http://www.nominet.org.uk/about/bestpracticechallenge/ Nominet Best Practice Challenge 2009].  Short-listed June 2009. Announcement due 2 July 2009.
+
+*'''16th October 2008 - COI Browser Standards for Public Websites'''
+
+The London and [[Scotland]] Chapters joint response to the Central Office of Information draft document on [http://www.coi.gov.uk/guidance.php?page=200 browser standards for public websites] (version 0.13) ([[Image:OWASP-COI-Browser-Standards.pdf]]).
+
+[[Category:United Kingdom]]
+[[Category:Europe]]

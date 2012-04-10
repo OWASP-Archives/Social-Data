@@ -1,0 +1,4 @@
+'''Tiny coding errors, big losses: real stories of website 0wnage, Fyodor Yarochkin (Security Consultant, Guard-Info) (50 min)'''
+
+
+In Web application security, breaches are not always caused by complicated and hard-to-understand vulnerabilities. Sometimes tiny, simple, and even funny mistakes, or error in application logic, can lead to disastrous breaches. The speaker will use real-world case studies to review these coding mistakes. He will first show how these vulnerabilities become visible to an outside attacker, and then how the attackers will conduct a breach. He will then show how the vulnerabilities were fixed... improperly. These were all real cases. He will show how these seemingly okay vulnerabilities either have not really fixed the problem, or led to new vulnerabilities. Each type of vulnerability will be discussed under the context of OWASP Top 10.

@@ -1,0 +1,31 @@
+== Overview ==
+
+The purpose of this article is to reference those iterations of CSRFGuard that are no longer officially supported and managed by the development team.
+
+== Version 1 ==
+
+[http://www.owasp.org/index.php/Image:CSRF_Guard.zip Click here] to download the latest version of the OWASP CSRFGuard 1.x series '''(Recommended)'''.
+
+== Version 2 ==
+
+[http://www.owasp.org/index.php/Image:OWASP-CSRFGuard-2.0.jar Click here] to download the latest OWASP CSRFGuard 2.0 binary.
+
+[http://www.owasp.org/index.php/Image:OWASP_CSRFGuard-2.0-src.zip Click here] to download the latest OWASP CSRFGuard 2.0 source, binary, and sample configuration files '''(Recommended)'''.
+
+[http://www.owasp.org/images/c/c9/CSRF_DangerDetectionDefenses.ppt Click here] to download the author's presentation at the 2007 OWASP conference in San Jose about the dangers of CSRF and a brief description of both CSRF Guard and CSRF Tester.
+
+== Version 2.2 Beta ==
+
+[http://www.owasp.org/index.php/Image:OWASP-CSRFGuard-2.2-dist.jar Click here] to download the latest OWASP CSRFGuard 2.2 binary.
+
+[http://www.owasp.org/index.php/Image:OWASP-CSRFGuard-2.2-src.zip Click here] to download the latest OWASP CSRFGuard 2.2 bundle which consists of source, binary, and sample configuration files. This includes the CSRFGuard properties file, ant build/deploy script, as well as the JSP tag definition '''(Recommended)'''.
+
+[http://www.owasp.org/index.php/Image:OWASP-CSRFGuard-TestApp-2.2-src.zip Click here] to download a sample web application that makes use of OWASP CSRFGuard 2.2. This version comes with the CSRFGuard binary in WEB-INF/lib but it is not guaranteed to be the latest version. Replace it with the download above. The WebContent folder contains several JSP files that were used during testing. One file, "tags.jsp", shows how to use the custom JSP tag to insert the token.
+
+[http://www.owasp.org/index.php/CSRFGuard_2.2_ChangeLog Click here] for a detailed change list of the latest version.
+
+[http://www.owasp.org/index.php/CSRFGuard_2.2_Configuration_Manual Click here] for the OWASP CSRFGuard configuration manual.
+ 
+[http://www.owasp.org/index.php/CSRFGuard_2.2_Installation Click here] for OWASP CSRFGuard installation instructions.
+
+[http://www.owasp.org/index.php/CSRFGuard_2.2_Tag_Usage Click here] for OWASP CSRFGuard tag library usage instructions.

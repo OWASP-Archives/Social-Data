@@ -1,0 +1,170 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+Resource exhaustion is a simple denial of service condition which occurs when the resources necessary to perform an action are entirely consumed, therefore preventing that action from taking place.
+
+'''Consequences'''
+
+* Availability: The most common result of resource exhaustion is denial-of-service.
+* Access control: In some cases it may be possible to force a system to "fail open" in the event of resource exhaustion.
+
+'''Exposure period'''
+
+* Design: Issues in system architecture and protocol design may make systems more subject to resource-exhaustion attacks.
+* Implementation: Lack of low level consideration often contributes to the problem.
+
+'''Platform'''
+
+* Languages: All
+* Platforms: All
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+Low to medium
+
+'''Likelihood of exploit'''
+
+Very high
+
+Resource exhaustion issues are generally understood but are far more difficult to successfully prevent. Resources can be exploited simply by ensuring that the target machine must do much more work and consume more resources in order to service a request than the attacker must do to initiate a request. 
+
+Prevention of these attacks requires either that the target system:
+
+* either recognizes the attack and denies that user further access for a given amount of time;
+* or uniformly throttles all requests in order to make it more difficult to consume resources more quickly than they can again be freed. 
+
+The first of these solutions is an issue in itself though, since it may allow attackers to prevent the use of the system by a particular valid user. If the attacker impersonates the valid user, he may be able to prevent the user from accessing the server in question. 
+
+The second solution is simply difficult to effectively institute - and even when properly done, it does not provide a full solution. It simply makes the attack require more resources on the part of the attacker.
+
+The final concern that must be discussed about issues of resource exhaustion is that of systems which "fail open." This means that in the event of resource consumption, the system fails in such a way that the state of the system - and possibly the security functionality of the system - is compromised. A prime example of this can be found in old switches that were vulnerable to "macof" attacks (so named for a tool developed by Dugsong). These attacks flooded a switch with random IP and MAC address combinations, therefore exhausting the switch's cache, which held the information of which port corresponded to which MAC addresses. Once this cache was exhausted, the switch would fail in an insecure way and would begin to act simply as a hub, broadcasting all traffic on all ports and allowing for basic sniffing attacks.
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+
+In Java:
+
+<pre>
+class Worker implements Executor {
+ ...
+  public void execute(Runnable r) {
+  try {
+   ...
+  }
+  catch (InterruptedException ie) { // postpone response
+   Thread.currentThread().interrupt();
+  }
+ }
+
+ public Worker(Channel ch, int nworkers) { 
+  ... 
+  }
+
+ protected void activate() {
+  Runnable loop = new Runnable() {
+   public void run() {
+    try {
+     for (;;) {
+      Runnable r = ...
+      r.run();
+     }
+    }
+    catch (InterruptedException ie) {...}
+   }
+  };
+  new Thread(loop).start();
+ }
+</pre>
+
+In C/C++:  
+
+<pre>
+int main(int argc, char *argv[]) {
+  sock=socket(AF_INET, SOCK_STREAM, 0);
+  while (1) {    
+    newsock=accept(sock, ...);
+    printf("A connection has been accepted\n");
+    pid = fork();
+  }
+</pre>
+
+There are no limits to runnables/forks. Potentially an attacker could cause resource problems very quickly.
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* Design: Design throttling mechanisms into the system architecture.
+* Design: Ensure that protocols have specific limits of scale placed on them.
+* Implementation: Ensure that all failures in resource allocation place the system into a safe posture.
+* Implementation: Fail safely when a resource exhaustion occurs.
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Environmental Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

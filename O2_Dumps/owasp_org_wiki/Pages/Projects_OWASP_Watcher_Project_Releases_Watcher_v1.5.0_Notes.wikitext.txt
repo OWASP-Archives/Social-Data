@@ -1,0 +1,55 @@
+*'''CHANGELOG'''<br>
++++ major new feature,<br>
++ minor new feature,<br>
+(*) changed feature,<br>
+% improved performance or quality,<br>
+! fixed minor bug,<br>
+!!! fixed major bug,<br>
+
+*'''RELEASES'''
+
+'''v1.5.0 - 2010-11-17'''<br>
++++ Added a button to process sessions offline. Now a user can load a .SAZ (session archive) file and process the data offline in Fiddler/Watcher.<br>
+% Fixed the ProgressDialog control to move incrementally.<br>
+
+'''v1.4.1 - 2010-11-09'''<br>
+(*) Exporting results now includes all results rather than just those selected.<br>
+(*) XML report now includes metadata about Watcher version and configuration.<br>
+% Check for 'Charset not UTF-8' improvements.<br>
+
+'''v1.4.0 - 2010-04-24'''<br>
+Attempts have been made at noise-reduction, see below.<br>
+Wiki has been updated with more check descriptions, all linked to from inside Watcher.<br>
++++ Check descriptions all improved and updated with recommendations and external references.<br>
++ New check for javascript document.domain lowering.<br>
+(*) IMPORTANT: All cookie checks now perform noise filtering by default, with no option to change.<br>
+(*) New installations now come with a few noisy checks disabled by default.<br>
+(*) New installations now come with some check configs enabled by default to reduce noise.<br>
+! Fixed bug in loosely scoped domain where it wasn't defaulting to origin when one's not specified.<br>
+! Fixed bug where check configurations weren't saving.<br>
+! Assorted bug fixes.<br>
+
+'''v1.3.0 - 2010-02-25'''<br>
++++ .NET Framework 3.5 is now required.<br>
++++ Optional plugin (separate download) to export results to Team Foundation Server (TFS).<br>
++ New (BETA) check for ASP.NET VIEWSTATE tampering vulnerability. (thanks to Bryan Sullivan for suggestions)<br>
++ New (BETA) check for JavaServer Faces ViewState tampering vulnerability. (thanks to David Byrne for ideas)<br>
++ New check for Silverlight EnableHtmlAccess.<br>
++ Export results to HTML report.<br>
++ If no origin domain is specified, each response domain will be treated as the origin, enabling better cross-domain analysis.<br>
++ Added compliance mappings for Microsoft SDL.<br>
+! Assorted bug fixes throughout check library.<br>
+
+'''v1.2.2 - 2009-07-24'''<br>
++ User-Agent now sends version information during update check for tracking purposes.<br>
++ Added Windows 7 support to installer.<br>
+! Fixed the configuration page so checking and unchecking immediately affect what checks are run on a request.<br>
+! Checks that maintain URL caches weren't clearing when the results list was cleared.<br>
+(*) Changed the 'Charset not UTF-8' check to ignore a missing meta tag charset when Content-Type header is defined (thanks Dave Wichers for reporting).<br>
+(*) Moved the check configuration to a tab of its own.<br>
+% Updates to the UI look and feel.<br>
+% Moved check configurations to their own page in UI.<br>
+
+'''v1.2.1 - 2009-07-12'''<br>
+!!! Fixed issue where response payloads greater than 200K caused the entire
+session to be ignored.<br>

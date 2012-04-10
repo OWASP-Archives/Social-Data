@@ -1,0 +1,49 @@
+{| style="width:100%" border="0" align="center"
+ ! colspan="7" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="6" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Live CD 2007 Project''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="6" style="width:85%; background:#cccccc" align="left"|
+* The OWASP Live CD (LabRat) is a bootable CD akin to knoppix but dedicated to Application Security. It shall serve as a vehicle and distrubition medium for OWASP tools and guides.  
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Email Contacts'''
+ | style="width:14%; background:#cccccc" align="center"|Project Leader<br>[mailto:josh(at)packetfocus.com '''Joshua Perrymon''']
+ | style="width:14%; background:#cccccc" align="center"|Project Contributors<br>[mailto:bcausey(at)zerodayconsulting.com '''Brad Causey''']
+ | style="width:14%; background:#cccccc" align="center"|[http://lists.owasp.org/mailman/listinfo/owasp-livecd '''Project Mailing List''']
+ | style="width:14%; background:#cccccc" align="center"|First Reviewer<br>[mailto:eoin.keary(at)owasp.org '''Eoin Keary''']
+ | style="width:14%; background:#cccccc" align="center"|Second Reviewer<br>[mailto:name@name '''Name&Email?''']
+ | style="width:15%; background:#cccccc" align="center"|OWASP Board Member<br>[mailto:name(at)name '''Name&Email?''']
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="6" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT MAIN LINKS''' 
+ |-
+ | style="width:100%; background:#cccccc" align="center"|
+*The BETA version v.10 is now available to download. It can be found on the PacketFocus website http://www.packetfocus.com/hackos/AOC_Labrat-ALPHA-0010.iso
+The current version is about 800mb and contains 100's of linux applications. Most of these unneeded software will be removed from the next release to minimize .iso size.
+* [http://www.owasp.org/index.php/SpoC_007_-_OWASP_LiveCD_Project OWASP Spring of Code Project]
+* (If appropriate, links to be added)
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="6" align="center" style="background:#4058A0; color:white"|<font color="white">'''RELATED PROJECTS''' 
+ |-
+ | style="width:100%; background:#cccccc" align="center"|
+[[:Category:OWASP Live CD 2008 Project|OWASP Live CD 2008 Project]]
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="6" align="center" style="background:#4058A0; color:white"|<font color="white">'''SPONSORS & GUIDELINES''' 
+ |-
+ | style="width:50%; background:#cccccc" align="center"|[[Image:SpoC 07 Logo Small.jpg]] [http://www.packetfocus.com https://www.owasp.org/images/2/2a/LabRat_CD_Cover_logo_small.PNG][http://www.ritsgroup.com https://www.owasp.org/images/4/4b/Rits_logo_small.GIF]
+ | style="width:50%; background:#cccccc" align="center"|[[:Category:OWASP Live CD 2007 Project RoadMap|'''Guidelines/Roadmap''']]
+ |}
+{| style="width:100%" border="0" align="center"
+ ! colspan="5" align="center" style="background:#4058A0; color:white"|ASSESSMENT AND REVIEW PROCESS
+  |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Review Process''' 
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes/No''' (To update)<br>---------<br>Which status has been reached?<br>'''Beta''' - (To update)<br>---------<br>[[Project Information:template Live CD 2007 Project - Final Review - Self Evaluation - B|See&Edit: Final Review/SelfEvaluation (A)]]
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes/No''' (To update)<br>---------<br>Which status has been reached?<br>'''Beta''' - (To update)<br>---------<br>[[Project Information:template Live CD 2007 Project - Final Review - First Reviewer - D|See&Edit: Final Review/1st Reviewer (B)]]
+ | style="width:21%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes/No''' (To update)<br>---------<br>Which status has been reached?<br>'''Beta''' - (To update)<br>---------<br>[[Project Information:template Live CD 2007 Project - Final Review - Second Reviewer - F|See&Edit: Final Review/2nd Reviewer (C)]]
+ | style="width:22%; background:#C2C2C2" align="center"|Objectives & Deliveries reached?<br>'''Yes/No''' (To update)<br>---------<br>Which status has been reached?<br>'''Beta''' - (To update)<br>---------<br>[[Project Information:template Live CD 2007 Project - Final Review - OWASP Board Member - G|See/Edit: Final Review/Board Member (D)]]
+ |-
+ |}

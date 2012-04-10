@@ -1,0 +1,288 @@
+This document is a proposed Application Security Guide For Chief Information Security Officers (CISOs). It is work in progress towards the project's overall goals to: 
+
+#Make OWASP projects visible to Chief Information Security Officers (CISO) 
+#Target CISO role and responsibility in budgeting, planning and managing risks of application security programs 
+#Map specific CISO application security needs highlighted by the OWASP industry survey with specific OWASP projects that can address these needs.
+
+The aim of this guide is to provide business cases for application security by providing methods to quantify application security investments such as cost-benefit analysis and Return Of Security Investment (ROSI) as justification for application security as a "capital" investment rather than an operating expense. Furthermore, we would like to help CISOs to establish an application security program that target specific SDLC activities that both reduce the residual risks to the business and the security costs on managing such risks. 
+
+This&nbsp;guide is articulated in four parts: 
+
+*Part I of the guide will provide CISOs with business cases &amp; risk-cost&nbsp;criteria for application security spending 
+*Part II provides guidance to CISO in the selection of application security issues to target spending 
+*Part III help CISOs on the selection of where in the SDLC to target spending 
+*Part IV provides CISOs with metrics and measurements for managing application security risks &amp; security spending
+
+This project is being developed by the OWASP Global Industry Committee in parallel with the&nbsp;CISO Survey project. <br>The objective is to run these projects in synch and use the results of the&nbsp;CISO survey to tailor the guide to the specific CISOs needs&nbsp;by highlighting which OWASP projects/resources address these needs. <br>The draft of the current guide is included herein: 
+
+__TOC__ 
+
+<br>
+
+= Part I: Business Case &amp; Risk-Cost Criteria for Application Security Spending  =
+
+== Introduction  ==
+
+In the digital era, global organizations serve an increasing number of customers through online web and mobile software applications. These are feature-rich applications allowing customers and citizens to open accounts, pay bills, apply for loans, book resources and services, transfer funds, view account information, download statements etc. This online experience is convenient for individuals: it allows them to perform the same transactions as being at the branch/office/outlet, but with the added convenience of conducting transactions remotely from their home computer or mobile phone. 
+
+At the same time this convenience comes at a price to the organizations involved, since online commerce sites have become the target of an increased number of cyber attacks. The goal of these attacks is the unauthorized acquisition of sensitive data that includes personal data, passwords, account data, credit and ATM card data and, last but not least, alteration of on-line financial transactions such as transfers of money to commit fraud. Verizon’s 2011 data breach investigations report (Ref [1]) identifies hacking and malware as the most prominent types of attack, yielding stolen passwords and credentials, and thus posing a major threat to any organization that trades online. 
+
+To cope with this increase in hacking and malware attacks, Chief Information Security Officers (CISOs) are called to roll out security measures to avoid, mitigate and reduce the risks. Investments in application security have been a growing proportion of overall information security and information technology budgets, the 2009 OWASP Security Spending Benchmarks Project Report (Ref[26]) for example, states "Despite the economic downturn, over a quarter of respondents expect Web application security spending to increase in 2009 and 36% expect it to remain flat".&nbsp;Nevertheless, making the business case for increasing the budget on application security today still represents a challenge, especially when competing with the same budget allocated for application development of new features, used to retain and attract new customers as well as expand the service uptake or profitability. Ultimately, in today’s economic climate and in a scenario of slow growth in business investments including the company’s built-in software (Ref [2]), it is increasingly important for CISOs to articulate the "business case" for investment in application security. 
+Since it also appears to be a disconnect between organization's perceived threats (application security threats are greatest) yet spending on network security is still much higher (Ref[27]) we would like to shed some light on the business impact of application vulnerability exploits and how much these might costs to organizations. 
+
+== Application Security Budget Allocation  ==
+
+Typically, additional budget allocation for application security includes the development of new countermeasures at the application layer for mitigating risks of hacking and malware, and limiting the likelihood of future data breach incidents. This increased spending in risk mitigation measures add on to other operational security costs such as cost for governance and to comply with industry specific security standards such as protection of personal data/personally identifiable information, or in the case of the U.S. banking sector, the 2011 addendum to Federal Financial Institutions Examination Council (FFIEC) guidelines for online authentication (Ref [3]). CISOs can build a business case for additional budget for application security today for different reasons; some directly tailored to the specific company risk culture or appetite for risk; others tailored to application security needs identified in application security surveys such as [https://www.surveymonkey.com/s/SCJBX7R OWASP Application Security Survey]. Specifically, (TBC based by the OWASP CISO survey) the most business cases for budget increases in application security spending today need to satisfy, at minimum, the following requirements: 
+
+#Mitigation of new hacking and malware threats targeting web sites and if already being data breached, implementation of countermeasures to prevent other similar data breaches-incidents to occur 
+#Meeting of industry specific compliance requirements for web applications (e.g. FFIEC, PCI-DSS)
+
+Nevertheless, assuming the business case is made for points 1 and 2 above, CISOs today still have the difficult task to justify “how much” money should the company spend for application security and “where” to spend it. Regarding the how much, it boils down to how much is needed to mitigate the risks or to reduce the residual risk to an acceptable value for the business. Both for real risks (e.g. incidents) and for compliance risks (e.g. unlawful non-compliance), the question for CISOs is also what is the most efficient way to spend the application security budget today and which application security process, activity tools yields “more bang for the money”. Regarding the "where" it comes down to balance correctly different application security and risk domains - to name the most important ones: governance, risk management, identity management and access control, network security and infrastructure, detection and incident management and last but not least the security of applications and software development projects. Since as a discipline application security encompasses all these domains, it is important to consider all of them and look at the application security investment from different perspectives. 
+
+From the perspective of "governance", allocation of application security budget might represent an opportunity to move on from compliance to risk mitigation. Sites that carry out payment transactions with credit cards at the level of "merchant" for example, are subject to compliance with the PCI-DSS (Ref [4]). PCI-DSS has provisions for the development and maintenance of secure systems and applications (requirement # 6), for testing security systems and processes (requirement # 11) and for the testing of web applications for common vulnerabilities (requirement #11.3.2) such as those defined in the OWASP Top Ten (Ref [5]). The need of compliance with the PCI-DSS requirements can be a reason to justify an additional investment in technology and services for security testing: examples include source code security reviews with SAST (Static Analysis Security Testing) assessment/tools and application security reviews with DAST (Dynamic Analysis Security Testing) assessments/tools. Another important factor for the “where” is to adopt the “executive perspective” in IT investment for technology. 
+
+Today, senior management often follow the recommendations of the trusted analyst sources such as Gartner and Forrester when making investments in application security technology. For example, a few years ago Gartner (Ref[6]) predicted that investment in firewalls, IDS, VPN and access controls were no longer sufficient to protect applications and that these required separate and specific security measures, and in particular security testing for vulnerabilities and the integration of security processes with the software development lifecycle (SDLC). This prompted several companies including financial services organizations today to invest in SAST and DAST processes and tools (cite OWASP survey question on which activities are being rolled out) 
+
+== Quantification  ==
+
+From the perspective of the “how much needs to be spent in application security”, senior management need to know how much, of the overall security budget should be spent to make sure a security breach that hit the company will not re-occur. For example, assume an online banking site becomes a victim of a SQL injection vulnerability exploitation, the question is, specifically how much money should be spent in SQL injection countermeasures to prevent this incident happening again. To answer these questions, application security investment criteria need to be adopted, so that for example, budget allocated for application security can effectively mitigate malware and business-specific threats and to prevent similar incidents from occurring.
+
+Application security investment criteria can only be useful if based upon objective and not subjective considerations, such as using quantitative evaluations of the costs that the organization incurred because of security breaches exploiting web application vulnerabilities. These criteria must be able to determine security costs in terms of potential losses due to accidents and attacks, and compare this with the cost of the investment in the security of applications. 
+
+An increase in application security spending can be triggered when an organization has a security incident (use survey again), since this shifts senior management's perception of risk. The problem is that when CISOs need to decide how much money to spend in application security, the approach most often followed is to apply common sense based upon perception of risk. In the case of a possible loss for data breach incident, application security spending matching all of the costs of the data breach is not always justifiable. The question therefore is still how much should be spent, if not 100% it is the 50%, 25% or 10% of possible monetary losses? What about non-monetary losses? In addition, if allocating a budget of 25% of the estimated potential losses due to data breaches is justifiable, how much of this 25% should be allocated in secure software development/engineering or application security testing for vulnerabilities? Part III of the guide will specifically address this question. From the perspective of deciding "how much money to budget for application security" the following criteria can be used: 
+
+#Estimate of the impact of the costs incurred in the event of an security incident 
+#Quantitative risk calculation of the annual cost for losses due to a security incident 
+#Optimization of the security costs in relation to cost of incidents and cost of security measures 
+#The return of security investment
+
+We shall now consider each of these. 
+
+=== Impact  ===
+
+There are two important factors to determine the risk of a security incident: these are the negative impact caused by the security incident and the likelihood (probability) of the incident. To obtain an estimate of the impact of the costs incurred in the event of a security incident, the key factor is the ability to ascertain the costs incurred due to the security incident. Examples of negative impacts to an organization because of a security incident might include: 
+
+#reputational loss such as, in the case of publicly traded company, a drop in stock price as consequence of announced security breach (Ref[20]); 
+#loss of revenue such as in the case of denial of service to a site that sells services or goods to customers (Ref[21]); 
+#loss of data that is considered an asset for the company such as customer confidential data (Ref[22]), Personal Identifiable Information (PII) (Ref[23]), authentication data (Ref[24]) and trading secrets/intellectual property data (Ref[25])
+
+In the case of a security incident that caused a loss of sensitive customer data such as personal identifiable information, debit and credit card data, the costs incurred by the organization that suffered the loss include several operational costs also referred as failure costs. In the case of a financial services company, these are the costs for changing account numbers, remission costs for issuance of new credit and debit cards, liability costs because of fraud committed by the fraudster using the stolen data such as for illicit payment transactions and withdrawal of money from ATMs. Often times, the determination of such “failure” costs is not directly quantifiable by an organization, such as when this monetary loss is not directly caused by a security incident, hence ought to be estimated as a possible impact. In this case, CISOs can use statistical data to determine the possible liability costs to the company in case of data loss incident. By using reported statistical data from data loss incidents, it is possible to estimate the costs incurred by companies to repair the damage caused by security incident that resulted in losses of customer sensitive data or identity loss. 
+
+Appendix I-A contains a detailed discussion on the value of data and the impact of a security incident. The value of data will be different for each organization, but values in the range of $500 to $2,000 per record seem to be common. 
+
+      Data value: $500 to $2,000 per record
+
+We will use this range for the remaining discussion, but each CISO needs to come up with some valuation of their own that can then be used to calculate the impact of a data loss. 
+
+One of the challenges of the calculation of the burden to the company because of a potential data loss is to get an accurate estimate of the amount of the loss x victim and of the probability or likelihood of such loss occurring. 
+
+Statistical data about reported data loss incidents to breach notification letters sent to various jurisdictions in the United States collected by the Open Security Foundation's (OSF) DataLossDB (Ref [9]) show that the percentage of 2010 data loss incidents breaching a web interface is 9% and the percentage that reported as being an hack is 12%, fraud 10% and virus 2%. The highest reported incident by breach type is stolen laptop with 13% 
+
+The data from OSF DataLossDB related to web as type of breach differ from the statistics of the Verizon’s 2011 data breach investigations report (Ref[1]) where hacking (e.g. brute force, credential guessing) and malware (e.g. backdoors, keyloggers/form grabbers, spyware) represent the majority of threats for security breaches (50% and 49% respectively) and attacks against web applications represent 22% of all attack vectors and 38% as percent of records being breached. 
+
+These differences might be explained by the fact that the Verizon study is based upon a subset of data from the U.S Secret Service and does not includes for example cases related to theft and fraud that are instead counted on the overall OSF DataLoss DB statistical data. Furthermore, according to the Verizon report;" the scope of the survey was narrowed to only those involving confirmed organizational data breaches". In the case of OSF, survey data include data breaches covered by U.S State data breach notification law such as when resulting in disclosure of customer's Personal Identifiable Information (PII) and reported by organizations with notification letters sent to various jurisdictions in the United States. 
+
+=== Annualized Loss  ===
+
+Besides calculation of liability costs, quantitative risk analysis can be used to estimate the spending for application security measures on the yearly basis such as by calculating the impact of a security incident on an annual basis. Quantitative risks can be calculated by the assessment of the Single Loss Expectancy (SLE) or probability of a loss as a result of a security incident and the Annual Rate of Occurrence (ARO) or the annual frequency of the security incident. By using quantitative risk analysis, CISOs can estimate the amount that a given organization managing a web application should spend on application security measures to mitigate the risk of a data loss due to the exploitation of an application vulnerability. 
+
+The SLE can be calculated with the following formula: 
+
+      SLE = AV x EF
+
+Where, AV is the Asset Value (AV) and EF is the Exposure Factor (EF). The EF represents the percentage of the asset loss because of the realization of a threat or an incident. In the case of the 2003 FTC data this represents the amount of the population that suffered identity fraud and is 4.6% 
+
+Assuming the AV of 1 million accounts of $ 655,000,000 and an exposure factor of 4.6% the SLE is $ 30,130,000 Assuming a frequency of 1 attack every 5 years such as in the case of TJX Inc (discovered in mid-December 2006) the ARO is 20% hence the estimated annual loss or Annual Loss Expectancy (ALE) can be calculated using the formula: 
+
+      ALE = ARO x SLO 
+
+The calculated Annual Loss Expectancy (ALE) for data loss incident is therefore $ 6,026,000/year over 10 years. 
+
+=== Spend Optimization  ===
+
+Now the question is if, using quantitative risk analysis leads to an estimate to the optimal investment for application security measures. The honest answer is, not necessarily. The correct answer is to use cost vs. benefit analysis to determine the optimal value. By comparing the costs of security incidents against the cost of security measures it is possible to determine when this maximizes the benefit, that is, the overall security of the application. In case of software security costs for example, the cost due to software security failures including security incidents decrease as the company spends more money in security measures as shown in (FIG 1). The optimal investment in the security measures is the one that maximizes the security of the application and minimizes both the cost of security measures and of the cost incurred because of security incidents. According to an analytical study of costs vs. benefits of security (Ref [15]) the optimal investment is when the cost of security measures is approximately 37% of the estimated losses. For our example, assuming the total estimated losses of $ 6,026,000/year due to data loss incidents, the optimal expense for security measures, using this empirical value from the study, is $ 2,229,620/year. 
+
+[[Image:Securitycosts.jpg]]<br>''Figure 1: Cost of Investment in software security measures against failure costs due to incidents that exploit software vulnerabilities. At the point (A) to the costs due to software security failures exceed of several order of magnitude the expenditure in countermeasures and the assurance on the security of the software is very low, on the contrary in (B) the costs of security measures outweigh the costs due to the software failures, the software can be considered very secure but too much money is spent for software security assurance. In point (C) the cost of losses is nearly two times larger costs of security measures while in point (D) the costs due to incidents is equal to the cost of the security measures. The optimal value for spending of security measures is the one that minimizes both the cost of incidents and security measures and maximizes the benefit or the security of the software.'' 
+
+=== Return on Security Investment  ===
+
+Finally, it is important to determine the most efficient way to spend the application security budget from a perspective of this being an investment. If the CISO considers application security spending as an investment rather than an expense, for example, the budget can be justifiable as additional savings the company gets because of the investment in security. The factor to calculate the savings in terms of investment in security is the Return on Security Investment (ROSI). The ROSI can also help to determine if the investment in countermeasures to thwart hacking and malware attacks is justifiable: if the ROSI is not positive, the investment is not justifiable while if it is null, it does not yield any savings or investment returns. 
+
+There are several empirical formulas to calculate ROSI; one is to factor of the savings for the data losses avoided over the total cost of the countermeasures. Assuming the Total Cost of Ownership (TCO) (Ref [16]) for the cost of countermeasure is $ 2,229,620 (previously calculated as optimal value of expense in countermeasures x year) that include development costs and acquisition of the new technologies, processes, tools as well as operating and maintenance costs it is possible to calculate the savings. ROSI can be calculated using the following empirical formula (Ref [17]): 
+
+       ROSI= [(ALE x&nbsp;% of effective risk mitigation) - cost of countermeasures]/cost of countermeasures
+
+With this ROSI formula, assuming that the ALE is $ 6,026,000 and that the effectiveness of the mitigation is 75% (assume for example, in the case of a SQL injection, risk mitigation as defense in depth such as different layer of mitigation that include use of prepared statements/stored procedures in source code as well as filtering of malicious characters at the web server and application server), the cost of countermeasure is $ 2,229,620, the ROSI to the company is 102% per year. Since there is return of investment, the spending in countermeassures is worth it and will make the company save money. The best use of ROSI (Ref[17]) is to compare alternative investments in security countermeasures such as to decide whether to invest in the development of a new countermeasure or extending the capabilities of an existing one. 
+
+As a comparative measurement for example, ROSI can be used by CISOs to determine which software security is more efficient or yields the organization the higher savings and returns on the investment. According to research of Soo Hoo (IBM) (Ref [18]) on ROSI of the various activities of software security in software development cycle, the maximum return of investment (21%) or a savings of $ 210,000 on an investment of a $ 1 Million Secure Software Development Lifecycle (S-SDLC) program for example is obtained when the investment is in activities that aim to identify and remedy security defects during the design phase such as threat modeling. The return of investment is 15% when the defects are identified and remedied during implementation (code) such as with source code analysis and of only 12% when these are identified and remedied during the testing-validation phase such as with ethical hacking/pen tests. The best investment in application security is therefore in activities that aim to identify defects as early as during the design phase of the SDLC, in essence, the more CISOs think about investing in software security engineering programs especially threat modeling/architectural risk analysis, the more they'll save on the costs of implementing and fixing security issues later in the SDLC such as during the validation phase or when the application is already in production in response to security incidents. 
+
+== Conclusion  ==
+
+Finally, it is important to notice that the criteria dealt with herein are based upon empirical formulas and are as good as the data used. The more accurate is the data the more accurate are the risk and cost estimates. Nevertheless, when these risk-cost criteria are used consistently and based upon quantitative risk decisions and objective security cost considerations, can be used by information risk management decision makers such as CISOs to decide if the investment in application security is financially justifiable from risk and business impact perspective. Since investment in security has to be justified in business terms, these risk-cost criteria can be used for business cases as well as to decide how much to spend and where to spend in application security measures. 
+
+== References  ==
+
+Ref [1]: Verizon 2011 Data Breach Investigation Report: http://www.verizonbusiness.com/resources/reports/rp_data-breach-investigations-report-2011_en_xg.pdf 
+
+Ref [2]: US Q2 2011 GDP Report Is Bad News for the US Tech Sector, But With Some Silver Linings: http://blogs.forrester.com/andrew_bartels/11-07-29-us_q2_2011_gdp_report_is_bad_news_for_the_us_tech_sector_but_with_some_silver_linings 
+
+Ref [3]: Supplement to Authentication in an Internet Banking Environment: http://www.fdic.gov/news/news/press/2011/pr11111a.pdf 
+
+Ref [4] PCI-DSS: https://www.pcisecuritystandards.org/security_standards/index.php 
+
+Ref [5] OWASP Top Ten: https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project 
+
+Ref [6] Gartner teleconference on application security, Joseph Feiman, VP and Gartner Fellow [http://www.gartner.com/it/content/760400/760421/ks_sd_oct.pdf http://www.gartner.com/it/content/760400/760421/ks_sd_oct.pdf] 
+
+Ref [7] Identity Theft Survey Report, Federal Trade Commission,September, 2003: http://www.ftc.gov/os/2003/09/synovatereport.pdf 
+
+Ref [8] Dan E Geer Economics and Strategies of Data Security: http://www.verdasys.com/thoughtleadership/ 
+
+Ref [9] Data Loss Database: http://datalossdb.org/ 
+
+Ref [10] WHID, Web Hacking Incident Database: http://projects.webappsec.org/w/page/13246995/Web-Hacking-Incident-Database 
+
+Ref [11] Imperva's Web Application Attack Report: http://www.imperva.com/docs/HII_Web_Application_Attack_Report_Ed1.pdf 
+
+Ref [12] Albert Gonzalez data breach indictment: http://www.wired.com/images_blogs/threatlevel/2009/08/gonzalez.pdf 
+
+Ref [13] First Annual Cost of Cyber Crime Study Benchmark Study of U.S. Companies, Sponsored by ArcSight Independently conducted by Ponemon Institute LLC, July 2010: http://www.arcsight.com/collateral/whitepapers/Ponemon_Cost_of_Cyber_Crime_study_2010.pdf 
+
+Ref [14] 2010 Annual Study: U.S. Cost of a Data Breach: http://www.symantec.com/content/en/us/about/media/pdfs/symantec_ponemon_data_breach_costs_report.pdf?om_ext_cid=biz_socmed_twitter_facebook_marketwire_linkedin_2011Mar_worldwide_costofdatabreach 
+
+Ref [15] Gordon, L.A. and Loeb, M.P. “The economics of information security investment”, ACM Transactions on Information and Systems Security, Vol.5, No.4, pp.438-457, 2002. 
+
+Ref [16] Total Cost of Ownership: http://en.wikipedia.org/wiki/Total_cost_of_ownership 
+
+Ref [17] Wes SonnenReich, Return of Security Investment, Practical Quantitative Model: http://www.infosecwriters.com/text_resources/pdf/ROSI-Practical_Model.pdf 
+
+Ref [18] Tangible ROI through Secure Software Engineering: http://www.mudynamics.com/assets/files/Tangible%20ROI%20Secure%20SW%20Engineering.pdf 
+
+Ref [19] The Privacy Dividend: the business case for investing in proactive privacy protection, Information Commissioner's Office, UK, 2009: http://www.ico.gov.uk/news/current_topics/privacy_dividend.aspx 
+
+Ref[20] Share prices and data breaches: http://www.securityninja.co.uk/data-loss/share-prices-and-data-breaches/ 
+
+Ref[21] A commissioned study conducted by Forrester Consulting on behalf of VeriSign: DDoS: A Threat You Can’t Afford To Ignore: http://www.verisigninc.com/assets/whitepaper-ddos-threat-forrester.pdf 
+
+Ref[22] Sony data breach could be most expensive ever: http://www.csmonitor.com/Business/2011/0503/Sony-data-breach-could-be-most-expensive-ever 
+
+Ref[23] Health Net discloses loss of data to 1.9 million customers: http://www.computerworld.com/s/article/9214600/Health_Net_discloses_loss_of_data_to_1.9_million_customers 
+
+Ref[24] EMC spends $66 million to clean up RSA SecureID mess: http://www.infosecurity-us.com/view/19826/emc-spends-66-million-to-clean-up-rsa-secureid-mess/
+
+Ref[25] Dmitri Alperovitch, Vice President, Threat Research, McAfee, Revealed: Operation Shady RAT: http://www.mcafee.com/us/resources/white-papers/wp-operation-shady-rat.pdf
+
+Ref[26] OWASP Security Spending Benchmarks Project Report: https://www.owasp.org/images/b/b2/OWASP_SSB_Project_Report_March_2009.pdf
+
+Ref[27] The Security Threat/Budget Paradox: http://www.verizonbusiness.com/Thinkforward/blog/?postid=164
+
+== About OWASP  ==
+
+''Short piece about OWASP and including links to Projects, ASVS, SAMM, Commercial Code of Conduct, Citations,&nbsp;???'' 
+
+== Appendix I-A: Value of Data &amp; Cost of an Incident  ==
+
+''The discussion of various information sources, which gives a single illustrative value for the main text'' 
+
+=== Value of Information  ===
+
+The selection of security measures must consider the value of asset being protected. Like personal data, all types of data can have value determined from a number of different perspectives. While it may be most common the look at the value of data by its value as an asset to the organization or the cost of an incident, these are neither always the most appropriate nor greatest valuations to consider. For example, a report looking at the value of personal data (personally identifiable information) suggests four perspectives from which personal information draws its privacy value (Ref 19). These are: 
+
+*its value as an asset used within the organization’s operations; 
+*its value to the individual to whom it relates; 
+*its value to other parties who might want to use the information, whether for legitimate or improper purposes; 
+*its societal value as interpreted by regulators and other groups.
+
+The value to the subject of the data, to other parties or to society may be more appropriate for some organizations than others. The report (ref 19) also examines the wider consequences of not protecting (personal) data and the benefits of protection. It describes how incidents involving personal data that lead to financial fraud can have much larger impacts on individuals, but that financial effects are not the only impact. The report provides methods of calculation, and provides examples where the value of an individual's personal data record could be in the £500-£1,100 (approximately $800-$1,800) in 2008. 
+
+=== Data Breaches and Monetary Losses  ===
+
+Regarding the monetary loss per victim, exact figures vary depending on the factors that are considered to calculate them depending by the type of industry and the type of attack causing the data loss incident. According to a July 2010 study conducted by Ponemon Institute (Ref[13]) on 45 organizations of different industry sectors about the costs of cyber attacks, the costs of web-based attacks is 17% of the annualized cyber attack costs. This cost varies accross different industry sectors with the higher costs for defense, energy and financial services ($16.31 million, $15.63 million and $12.37 million respectively) than organization in retails, services and education. 
+
+Also according to the 2011 Ponemon Institute annual survey of data loss costs for U.S. companies (Ref[14]), the average cost per compromised record in 2010 was $214 up 5% from 2009. According to this survey, the communication sector bear the highest cost of $380 per customer record with financial services the second highest cost of $353 followed by healthcare with $345, media, at $131, education at $112 and the public sector at $81. 
+
+The security company Symantec, which sponsored the report, developed with Ponemon Institute a [http://databreachcalculator.com.sapin.arvixe.com/ data breach risk calculator] that can be used to calculate the likelihood of data breach in the next 12 months, as well as to calculate the the average cost per breach and average cost per lost record. 
+
+The Ponemon institute direct costs estimates, are also used for estimating the direct cost of data breach incidents collected by OSF DataLossDB (Ref[9]). 2009 direct cost figures of $60.00/record are multiplied by the number of records reported by each incident to obtain the monetary loss estimate. It is assumed that direct costs are suffered by the breached organizations while this is not always true such as in the case of credit card number breaches where the direct costs can often be suffered by banks and card issuers. Futhermore, estimate costs does not include indirect costs (e.g. time, effort and other organizational resources spent) as well as opportunity costs (e.g. the cost resulting from lost business opportunities because of reputational damage). 
+
+According to (Ref [8]) another possible ways to make a risk management decision on whether to mitigate a potential loss is to determine if the company will be legally liable for that data loss. By using the definition of legal liability from a U.S. liability case law, given as Probability (P) of the loss, (L) the amount of the Loss, then there is liability whenever the cost of adequate precautions or the Burden (B) to the company is: 
+
+       B &lt; P x L
+
+By applying this formula to 2003 data from the the Federal Trade Commission (FTC) for example (Ref [7]), the probability of the loss is 4.6% as the amount of the population that suffered identity fraud while the amount of the loss x victim can be calculated by factoring how much money was spent to recover from the loss considering the time spent was 300 million hours at the hourly wages of $ 5.25/hr plus out of pocket expenses of $ 5 billion: 
+
+      L = [Time Spent x Recover From Loss x Hourly Wage + Out Of Pocket Expenses]/Number of Victims
+
+With this formula for calculating the amount of loss due to an identity fraud incident, based upon 2003 FTC data, the loss per customer/victim is approximately $ 655 dollars and the burden imposed to the company is $ 30.11 per customer/victim per incident. 
+
+The risk management decision is then to decide to whether it is possible to protect a customer for $ 30.11 per customer per annum. If it is, according to (Ref [8]) then liability is found and there is liability risk for the company. This calculation can be useful to determine the potential liability risk in case of data loss incidents, for example by applying the FTC figures to the TJX Inc. incident of 2007 where it was initially announced the exposure of confidential information of 45,700,000 customers, the exposure to the incident for the victims involved could be calculated as: 
+
+     Cost exposure to the incident = Number of victims exposed by the incident x loss per victim
+
+With this formula using TJX Inc data or number of victims affected and by applying the loss per victim using FTC data, the cost of the incident that represents the loss potential is $ 30 Billion. By factoring this with the probability of the incident occurring, then it is possible to determine how much money should be spend in security measures. In the case of TJX Inc incident for example, assuming a 1 in 1000 chance of occurrence a $ 30 Million security program for TJX Inc would have been justifiable. 
+
+=== Summary  ===
+
+We can see that there are different ways to determine the value of information and the that some of these are purely based on the costs relating to data breaches. But overall, the references suggest that typically individual's data can be valued in the range $500 to $2,000 per record. 
+
+<br>
+
+== Appendix I-B: Calculation Sheets  ==
+
+''Some grids for CISOs to enter their own numbers and calculations'' 
+
+== Appendix I-C: Online Calculator  ==
+
+''Eoin's online calculator URL and instructions'' 
+
+= Part II: Selection of Application Security Issues to Target Spending  =
+
+''This part will help CISOs identify and select which issues (e.g. vulnerabilities) should be targeted by the budget calculated in Part 1.'' 
+
+''Following text extracted from impact discussion of part I, but figures and references not updated/re-ordered yet'' 
+
+To estimate the probability of an attack against a web site will cause a data loss by exploiting a specific application vulnerability, we would need to identify sources of attacks that correlate data from different type of publicly disclosed incidents (e.g. data loss, denial of service, defacement etc) with sources of monitored attacks seeking to exploit specific web application vulnerabilities. To estimate the probability of a specific web application vulnerability exploit, we can refer to data reports from the Web Hacking Incident Database (WHID) (Ref [10]). The WHID is a Web Application Security Consortium (WASC) project to provide statistical analysis information of web application security incidents collected from public sources. in 2010 WHID categorized 222 incidents and observed that 33% of the incidents aimed to take down web sites (e.g. with Denial of Service), 15% aimed to deface web sites and 13% to steal information. Among the overall type of attacks the ones that sought to exploit application vulnerabilities such as SQL injection were 21%. 
+
+By using 2010 WHID data of reported incident and analysis, the overall probability of an attack aimed to steal information by exploiting of a SQL injection vulnerability is therefore 13&nbsp;% x 21&nbsp;% = 2.7%. Since SQL injection was also reported to be used for defacement, this ought to be considered as rough estimate. 
+
+In another survey of malicious web attack traffic observed over a period of six months, December 2010 through May 2011 from the security company Imperva (Ref [11]), SQL injection was identified in 23% of the attacks as third most prevalent after cross site scripting, the second most prevalent in 36% of the attacks and directory traversal as the most prevalent in 37% of all the attacks. 
+
+By comparing WHID and Imperva web attack surveys, an order of magnitude of 21-23% for attacks exploting SQL injection vulnerability seems an acceptable rough estimate. 
+
+By assuming the the cost of data loss of security incident for a financial organization of $355/record (Ponemon Institute 2010 data), and that the probability that such incident exploits a SQL injection vulnerability is 2.7% (WHID 2010 data), the 2010 liability for a company's web site such as online banking for a data loss of 1 million records is thus $ 9,585,000. With this figures a 2010 budget of $9 Million spent by a financial organization for application security measures specifically focused to prevent risks of data losses due to SQL injection attacks would have been justifiable. 
+
+Assuming that I will spend as much in security measures, this is the maximum amount estimated for expenses in security measures to thwart SQL injection attacks that includes acquisition of technology for secure software development, documentation, standards, processes, tools as well costs for the recruitment of qualified personnel and secure coding training expecially for web developers. Normally this dollar figure ought to be considered a maximum value since assumes for example a total loss of the customer data. 
+
+It is important to notice that injection vulnerabilities are considered by OWASP (Ref [5]) (2010 A1-Injection) the most critical web application security risks for opportunistic vulnerability exploits. OWASP rates the risk of data injection, including SQL injection vulnerability, as severe since "can result in data loss or corruption, lack of accountability, or denial of access and sometimes lead to complete host takeover". The business impact that we calculated as liability for a medium size financial services company (1 million registered online banking users) assumes that the value of the data assets can be stolen by a threat agent to cause tangible harm to the company. 
+
+Historically, SQL injection attacks have been of high impact and in the United States, have been associated with the largest data breach incidents ever committed and prosecuted. In the August 2009 U.S. indictment case (Ref[12]) against Albert Gonzalez (also indicted in May 2009 in Massachusetts for the TJX Inc breach) and other two Russian hackers, SQL injection attacks were used to break into 7-Eleven network in August 2007 resulting in the theft of credit card data. Allegedly, the same kind of attack was also used to infiltrate Hannaford Brothers in November 2007 which resulted in 4.2 million debit and credit card numbers being stolen and to steal 130 million credit card numbers from Heartland Payment Systems on December 2007. In 2010, Albert Gonzalez was found guilty and sentenced to serve 20 years in federal prison while Heartland paid about $ 140 million in fines and settlements because of the security breach. 
+
+= Part III: Selection of Where in the SDLC to Target Spending  =
+
+''This part will help CISOs determine where it is most cost effective to target the issues identified in Part 2. For example how to divide budgets across software security activities such as secure code training, secure code reviews, secure verification/test and issue and risk management". The results of the CISO survey will be used to determine where money is spent and in which activities to determine if application security money is spent effectively (e.g. focus on security build in activities vs security bolt-on security activities). The results of the CISO survey will also be used to identify if standard application security controls are used to highlight which OWASP objects are most useful (e.g. SAMM, ESAPI, CLASP, Security Development, Coding and Testing Guides) "''
+
+Ref [?] Software Assurance Maturity Models (SAMM), OWASP, http://www.opensamm.org/ and BSIMM 
+
+Ref [?] S-SDLC processes: MS-SDL, OWASP-CLASP, Cigital-TP 
+
+Ref [?] ESAPI 
+
+Ref[?] OWASP-CLASP 
+
+Ref[?] OWASP- Development Guide 
+
+Ref[?] OWASP- Coding Guide 
+
+Ref[?] OWASP- Testing Guide 
+
+Ref [?] Security and the Software Development Lifecycle: Secure at the Source, Aberdeen Group, 2011 http://www.aberdeen.com/Aberdeen-Library/6983/RA-software-development-lifecycle.aspx 
+
+Ref [?] State of Application Security - Immature Practices Fuel Inefficiencies, But Positive ROI Is Attainable, Forrester Consulting, 2011 http://www.microsoft.com/downloads/en/details.aspx?FamilyID=813810f9-2a8e-4cbf-bd8f-1b0aca7af61d&amp;displaylang=en 
+
+= Part IV: Metrics For Managing Risks &amp;&nbsp;Application Security Spending  =
+
+''This part will help CISOs to measure and manage application security costs using cost and risk metrics. The focus will be on metrics used by CISO to report appsec to management (from CISO Survey), this metrics might include for example the percentage of application portfolio regularly assessed in appsec verification program, the percentage of internal apps vs. external apps covered, the risk of these apps and the type of security assessments performed and when in the SDLC are performed'' 
+
+<br>{{Template:Stub}} 
+
+[[Category:OWASP_Application_Security_Guide_For_CISO_Project]]

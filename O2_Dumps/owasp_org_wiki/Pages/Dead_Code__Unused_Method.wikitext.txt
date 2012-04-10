@@ -1,0 +1,85 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Failure to follow guideline/specification]]
+
+
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+
+==Description==
+
+This method is never called or is only called from other dead code.
+
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+
+===Example 1===
+
+In the following class, the method doWork() can never be called.
+
+<pre>
+	public class Dead {
+	  private void doWork() {
+		System.out.println("doing work");
+	  }
+	  public static void main(String[] args) {
+		System.out.println("running Dead");
+	  }
+	}
+</pre>
+
+===Example 2===
+
+In the following class, two private methods call each other, but since neither one is ever invoked from anywhere else, they are both dead code.
+
+<pre>
+	public class DoubleDead {
+	  private void doTweedledee() {
+		doTweedledumb();
+	  }
+	  private void doTweedledumb() {
+		doTweedledee();
+	  }
+	  public static void main(String[] args) {
+		System.out.println("running DoubleDead");
+	  }
+	}
+</pre>
+
+(In this case it is a good thing that the methods are dead: invoking either one would cause an infinite loop.)
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD

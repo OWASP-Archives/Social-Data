@@ -1,0 +1,171 @@
+{{Template:Vulnerability}}
+{{Template:Fortify}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+Allowing an attacker to control a function's format string may result in a buffer overflow.
+
+Format string vulnerabilities occur when:
+
+# Data enters the application from an untrusted source. 
+# The data is passed as the format string argument to a function like sprintf(), FormatMessageW(), or syslog(). 
+
+Format string problems occur when a user has the ability to control or write completely the format string used to format data in the printf style family of C/C++ functions.
+
+'''Consequences'''
+
+* Confidentially: Format string problems allow for information disclosure which can severely simplify exploitation of the program.
+* Access Control: Format string problems can result in the execution of arbitrary code.
+
+'''Exposure period'''
+
+* Requirements specification: A language might be chosen that is not subject to this issue.
+* Implementation: Format string problems are largely introduced at implementation time.
+* Build: Several format string problems are discovered by compilers
+
+'''Platform'''
+
+* Language: C, C++, Assembly
+* Platform: Any
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood   of exploit'''
+
+Very High
+
+Format string problems are a classic C/C++ issue that are now rare due to the ease of discovery. The reason format string vulnerabilities can be exploited is due to the %n operator. The %n operator will write the number of characters, which have been printed by the format string therefore far, to the memory pointed to by its argument. 
+
+Through skilled creation of a format string, a malicious user may use values on the stack to create a write-what-where condition. Once this is achieved, he can execute arbitrary code. 
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+===Example 1===
+
+The following code copies a command line argument into a buffer using snprintf().
+
+<pre>
+	int main(int argc, char **argv){
+		char buf[128];
+		...
+		snprintf(buf,128,argv[1]);
+	}
+</pre>
+
+This code allows an attacker to view the contents of the stack and write to the stack using a command line argument containing a sequence of formatting directives. The attacker can read from the stack by providing more formatting directives, such as %x, than the function takes as arguments to be formatted. (In this example, the function takes no arguments to be formatted.) By using the %n formatting directive, the attacker can write to the stack, causing snprintf() to write the number of bytes output thus far to the specified argument (rather than reading a value from the argument, which is the intended behavior). A sophisticated version of this attack will use four staggered writes to completely control the value of a pointer on the stack.
+
+===Example 2===
+
+Certain implementations make more advanced attacks even easier by providing format directives that control the location in memory to read from or write to. An example of these directives is shown in the following code, written for glibc:
+
+<pre>
+	printf("%d %d %1$d %1$d\n", 5, 9);
+</pre>
+
+This code produces the following output:
+
+<pre>
+	5 9 5 5
+</pre>
+
+It is also possible to use half-writes (%hn) to accurately control arbitrary DWORDS in memory, which greatly reduces the complexity needed to execute an attack that would otherwise require four staggered writes, such as the one mentioned in Example 1.
+
+===Example 3===
+
+Simple format string vulnerabilities often result from seemingly innocuous shortcuts. The use of some such shortcuts is so ingrained that programmers might not even realize that the function they are using expects a format string argument.
+
+For example, the syslog() function is sometimes used as follows:
+
+<pre>	...
+	syslog(LOG_ERR, cmdBuf);
+	...
+</pre>
+
+Because the second parameter to syslog() is a format string, any formatting directives included in cmdBuf are interpreted as described in Example 1.
+
+The following code shows a correct usage of syslog():
+
+<pre>
+	...
+	syslog(LOG_ERR, "%s", cmdBuf);
+	...
+</pre>
+
+===Example 4===
+
+The following example is exploitable, due to the printf() call in the printWrapper() function. Note: The stack buffer was added to make exploitation more simple.
+
+<pre>
+#include <stdio.h>
+
+void printWrapper(char *string) {   
+  printf(string);
+}
+
+int main(int argc, char **argv) {   
+  char buf[5012];    
+  memcpy(buf, argv[1], 5012);    
+  printWrapper(argv[1]);    
+  return (0);
+}
+</pre>
+
+
+==Related [[Attacks]]==
+
+* [[Format String Attack]]
+* [[:Category:Injection Attack]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Buffer Overflow]]
+* [[Injection problem]]
+* [[Write-what-where]]
+
+
+
+==Related [[Controls]]==
+
+* [[:Category:Input Validation]]
+* Requirements specification: Choose a language which is not subject to this flaw.
+* Implementation: Ensure that all format string functions are passed a static string which cannot be controlled by the user, and that the proper number of arguments are always sent to that function as well. If at all possible, do not use the %n operator in format strings.
+* Build: Heed the warnings of compilers and linkers, since they may alert you to improper usage.
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Input Validation Vulnerability]]
+[[Category:Use of Dangerious API]]
+[[Category:C]]
+[[Category:Code Snippet]]
+[[Category:Implementation]]
+[[Category:Vulnerability]]
+[[Category:Range and Type Error Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

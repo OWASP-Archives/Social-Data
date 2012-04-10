@@ -1,0 +1,44 @@
+The following list represents the current O2 supported technologies and how they can be consumed by multiple O2 Modules.
+
+Note that adding support for a new technology , tool or framework is usually quite an easy task (since there are numerous O2 APIs that can be easily reused or modified). 
+
+If you have a particular need please send a request to the [https://lists.owasp.org/mailman/listinfo/owasp-o2-platform O2 mailing list]
+
+=== Findings Creation ===
+
+*'''Open Source or Free Tools'''
+**  O2 Tool CSharpScripts  - [http://deploy.o2-ounceopen.com/O2_Tool_CSharpScripts download]
+** [[OWASP O2 Platform/Microsoft/CAT.NET|Microsoft CAT.NET]]  v1.0 (not the latest release) 
+** FindBugs - [http://findbugs.sourceforge.net/downloads.html download] , [[OWASP_O2_Platform/Docs/O2Findings_Schema/O2AssesmentLoad_FindBugs|see XSD and O2 object model]]
+** OWASP CodeCrawler - [[:Category:OWASP_Code_Crawler|download]] , [[OWASP_O2_Platform/Docs/O2Findings_Schema/O2AssesmentLoad_CodeCrawler|see XSD and O2 object model]]
+** WebScarab logs (original version, not the NG one) - [[:Category:OWASP_WebScarab_Project#Download|download]] , [[OWASP_O2_Platform/Docs/O2Findings_Schema/O2AssesmentLoad_WebScarab|see XSD and O2 object model]]
+
+*'''Require Paid-for license'''
+** Ounce 6.x (now called IBM AppScan Source Edition) - [[OWASP_O2_Platform/Docs/O2Findings_Schema/O2AssessmentLoad_OunceV6|see XSD and O2 object mode]]
+** Ounce 7.x (now called IBM AppScan Source Edition) - [[OWASP_O2_Platform/Docs/O2Findings_Schema/O2AssessmentLoad_OunceV6_1|see XSD and O2 object mode]] 
+** IBM AppScan developer Edition  -  [[OWASP_O2_Platform/Docs/O2Findings_Schema/O2AssesmentLoad_AppScanDE|see XSD and O2 object mode]]
+** Fortify (very basic support) - [[OWASP_O2_Platform/Docs/O2Findings_Schema/O2AssesmentLoad_Fortify|see XSD and O2 object mode]]
+
+=== Cir Creation ===
+
+*'''Open Source or Free Tools'''
+**Using O2 Modules
+*** .NET Framework Assemblies (*.dll , *.exe)
+*** Java class files (*.class, *.jar. *.war)
+
+*'''Requiring Paid-for license'''
+** Ounce 6.x (now called IBM AppScan Source Edition)
+*** .NET, Java, C/C++, VB6, ASP Classic and (under internal beta at the moment) PHP
+
+=== Trigger Scans ===
+*'''Open Source or Free Tools'''
+** CAT.NET v1.0 (have not tested the latest release)
+*'''Requiring Paid-for license'''
+** Ounce 6.x (now called IBM AppScan Source Edition)
+
+=== Framework Support===
+* [[OWASP_O2_Platform/Spring_Framework/MVC|Spring Framework (MVC)]]
+* Struts
+
+
+{{:OWASP_O2_Platform/WIKI/bottom}}

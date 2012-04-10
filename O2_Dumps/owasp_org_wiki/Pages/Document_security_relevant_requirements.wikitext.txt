@@ -1,0 +1,129 @@
+{{Template:SecureSoftware}}
+
+==Overview==
+
+Purpose:	
+
+* Document business-level and functional requirements for security.
+
+Role:
+
+* Requirements Specifier
+
+Frequency:
+
+* As necessary; generally, once per iteration.
+
+In this activity, we describe how to take a resource-centric approach to deriving requirements. This approach results in much better coverage of security requirements than do ad-hoc or technology-driven methods. For example, many businesses will quickly derive the business requirement "Use SSL for security," without truly understanding what requirements they are addressing. For example, is SSL providing entity authentication, and if so, what is getting authenticated, and with what level of confidence? Many organizations overlook this, and use SSL in a default mode that provides no concrete authentication.
+
+All requirements (not simply security requirements) should be SMART+ requirements - i.e., they should follow a few basic properties:
+
+*	Specific. There should be as detailed as necessary so that there are no ambiguities in the requirement. This requires consistent terminology between requirements. 
+
+*	Measurable. It should be possible to determine whether the requirement has been met, through analysis, testing, or both.
+
+*	Appropriate. Requirements should be validated, thereby ensuring that they not only derive from a real need or demand but also that different requirements would not be more appropriate.
+
+*	Reasonable. While the mechanism or mechanisms for implementing a requirement need not be solidified, one should conduct some validation to determine whether meeting the requirement is physically possible, and possible given other likely project constraints.
+
+*	Traceable. Requirements should also be isolated to make them easy to track/validate throughout the development lifecycle.
+
+SMART requirements were originally defined by Mannion and Keepence. We have modified the acronym. The original "A" was "Attainable", meaning physically possible, whereas "Reasonable" was specific to project constraints. We have combined these two requirements since their separation is somewhat arbitrary and since we believe there should be a focus on appropriateness. Due to this change, we distinguish our refinement as SMART+ requirements.
+
+The original paper on SMART requirements is good elaboration on these principles. See http://www.win.tue.nl/~wstomv/edu/2ip30/references/smart-requirements.pdf.
+
+==Document explicit business requirements ==
+
+Security requirements should be reflected in both business and functional requirements. Generally, business requirements will focus on demands from the customer and demands that are internal to the organization. As a result, business requirements may be somewhat unstructured. 
+
+A starting point for internally driven requirements can be taken from a global security policy, if present. Be aware that individual projects may have specific requirements that are not covered by the global policy or are in conflict with it.
+
+Since customers often are not adequately security-aware, one should not expect to derive an exemplary set of security requirements through customer interaction. It is recommended to explicitly bring up issues that may become important with system users after deployment, particularly:
+
+*	Preferred authentication solutions;
+
+*	Preferred confidentiality solutions for network traffic;
+
+*	Preferred confidentiality solutions for long-term storage of key data; and
+
+*	Privacy concerns (particularly for personal data).
+
+==Develop functional security requirements ==
+
+Functional security requirements should show how the basic security services are addressed for each resource in the system, and preferably on each capability on each resource. This generally calls for abstraction to make the process manageable. Security requirements should be, wherever possible, abstracted into broad classes, and then those classes can be applied to all appropriate resources/capabilities. If there are still resources or capabilities that do not map to the abstractions, they can be handled individually.
+
+For example, end-user data that is generally considered highly sensitive can often be placed into a "User-Confidential" class, whereas public data could be placed into a "User-Public" class. Requirements in the first class would tend to focus on circumstances in which access to that data can be granted to other entities.
+
+Classes can be applied either to data resources or to individual capabilities by specifying a requirement that the specific resource or capability should be handled in accordance with the security policy of the particular protection class. When applied to data resources, requirements should be specified in the abstracted class for any possible capability, even if some data elements will not have the capability.
+
+Whereas most data resources will lump into a few reasonable abstractions, it is often the case that other system resources such as the network, local memories, and processors do not conform to user data requirements.
+
+For each identified category, specify protection requirements on any resource in that category, relative to the basic security services:
+
+* [[Access Control]] (authorization): What privileges on data should be granted to the various roles at various times in the life of the resource, and what mechanisms should be in place to enforce the policy. This is also known as access control and is the most fundamental security service. Many other traditional security services (authentication, integrity, and confidentiality) support authorization in some way.
+
+*	Consider here resources outside the scope of your system that are in the operating environment which need to be protected - such as administrative privileges on a host machine.
+
+* [[Authentication]] and [[integrity]]: How is identity determined for the sake of access to the resource, and must the resource be strongly bound to an identity? For example, on communication channels, do individual messages need to have their origin identified, or can data be anonymous?
+
+Generally, requirements should specify necessary authentication factors and methods for each endpoint on a communication channel and should denote any dependencies, such as out-of-band authentication channels - which should be treated as a separate system resource.
+
+Integrity is usually handled as a subset of data origin authentication. For example, when new data arrives over a communication channel, one wants to ensure that the data arrived unaltered (whether accidentally or maliciously). If the data changes on the wire (whether by accident or malice), then the data origin has changed. Therefore, if we validate the origin of the data, we will determine the integrity of the data as well.
+
+This illustrates that authentication - if it is necessary in a system - must be an ongoing service. An initial authentication is used to establish identity, but that identity needs to be reaffirmed with each message.
+
+Identity is the basis for access control decisions. A failure in authentication can lead to establishing an improper identity, which can lead to a violation of access control policy.
+
+* [[Confidentiality]] (including [[privacy]]): Confidentiality mechanisms such as encryption are generally used to enforce authorization. When a resource is exposed to a user, what exactly is exposed: the actual resource or some transformation? Requirements should address what confidentiality mechanism is required and should identify how to establish confidentiality - usually requiring identity establishment.
+
+*  [[Availability]]: Requirements should focus on how available a resource should be for authorized users.
+
+* [[Accountability]] (including [[non-repudiation]]): What kind of audit records need to be kept to support independent review of access to resources/uses of capabilities - i.e., what logging is necessary? Remember that log files are also a data resource that need to be specified and protected.
+
+After building a set of abstractions and mapping it to resources, one needs to ensure that all resources (and preferably capabilities) have adequate coverage for security requirements. This generally entails walking through each resource identified in the system and attempting to determine whether there are special requirements relative to each of the core security services.
+
+The output should not only consist of security requirements, but also documentation of what threats were considered. Considered threats should be documented on a per-resource - or per-capability - basis and should address each security service. These should be cataloged in the threat model.
+
+==Explicitly label requirements that denote dependencies ==
+
+All external dependencies should be captured in requirements to whatever degree reasonable. All third-party components used should be specified. Any required functionality in the operational environment specification should be specified. 
+
+Any requirements denoting external dependencies should be explicitly labeled as such in order to facilitate subsequent analysis.
+
+==Determine risk mitigations (compensating controls) for each resource ==
+
+At the business requirement level, one generally identifies what resources need to be protected - i.e., what risks on individual resources need to be addressed - and may document customer-driven technology decisions for ways to mitigate risks on those resources.
+
+Functional requirements should specify what mechanisms should be put in place to provide security services on resources. Such mechanisms address particular risks. A requirements specifier should not worry about determining specific risks. This means that the requirements specifier should not spend too much time identifying how particular services might be compromised. Instead, he should prefer specifying general mechanisms that assume any method of compromise.
+
+While this may not address all risks, it shifts the need for security expertise into the analysis process (usually, architectural analysis). Of course, as risks that are more granular are identified, requirements and mitigations should be updated.
+
+Functional security requirements should focus on how potential security risks are to be addressed in a system. As with business requirements, functional security requirements can be derived in a structured way from either a set of resources (including those that are not explicitly data resources, such as the CPU) or, preferably, a set of capabilities defined over a set of resources. 
+
+Risks on capabilities differ throughout the lifetime of a system, and when specifying functional requirements for protecting data, one should explicitly consider this. If and when data-flow diagrams are available for the system, one should trace each resource through the diagram, assessing risk relative to each core security service at each step, particularly assessing whether currently identified controls are valid at each trust level.
+
+It can be useful to carefully consider data flow through the system as opposed to just data considered statically. Realistically, requirements on that data can change, depending on the subsystem in which the data is passing - particularly as the data passes through system trust boundaries.
+
+Particularly, one should realize that data belonging to one user could often have accidental (unauthorized) flows to other users in the system and to people with insider access to the system. Seek to protect data as soon as feasible and for as long as possible - particularly, while data is in storage.
+
+For each resource capability tracked through the system, identify on trust boundaries what risks could be considered (iterating through the basic security services), then identify solutions for addressing those risks. If an action is to be taken as part of the system being built, document it as a functional requirement, mapping it explicitly to the capability, resource, and any relevant business requirements.
+
+If no protection is to be implemented in the context of the system, the risk should be documented for the benefit of the end user. Additionally, when feasible, one should recommend compensating controls - mitigation techniques that can be implemented by the customer. Similarly, even when risks are addressed internal to the system, there will generally be lesser lingering risks, and these too should be documented in an operational security guide. See the activity on ''Building operational security guide'' for more detail.
+
+One should iterate on security requirements as new risks are presented - such as through risk analysis.
+
+==Resolve deficiencies and conflicts between requirement sets  ==
+
+Many systems will have multiple levels of requirements, all of which will address security. For example, a project may have a set of business requirements, a set of functional requirements, and a set of global requirements that are effectively requirements for the project - particularly if they are not directly incorporated into either of the other artifacts.
+
+One should map each set of requirements to the others in order to determine omissions and conflicts. For example, one can annotate a copy of global requirements, specifying which business or functional requirements map to each global requirement by iterating through the business or functional requirements that are security-relevant.
+
+Conflicts, when noticed, should be resolved as appropriate. If a global requirement is to be exempted, an organization should have an approval process involving the owner of the global requirements and resulting in explicit sign-off. Otherwise, conflicts should be resolved by mutual agreement of appropriate contributors.
+
+When business requirements fail to address a global requirement, or functional requirements fail to elaborate on business requirements adequately, create a new requirement as appropriate.
+
+
+[[Category:Activity]]
+[[Category:CLASP Activity]]
+[[Category:BP3 Capture security requirements]]
+[[Category:OWASP_CLASP_Project]]

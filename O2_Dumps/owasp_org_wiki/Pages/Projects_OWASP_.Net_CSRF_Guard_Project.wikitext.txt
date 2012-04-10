@@ -1,0 +1,46 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Project About</noinclude>
+
+| project_name = OWASP .Net CSRF Guard Project 
+
+| project_home_page = .Net CSRF Guard
+
+| project_description = It seems that the root cause of CSRF is cookie-based session IDs that get auto-sent by the browser with each request. What CSRFGuard (Java and this .Net version) therefore try to do is to allow one to continue using Cookie-based sessions by layering on top of this yet another session token that isn't sent in a cookie to essentially attempt to authenticate the HTML page contents and links as belonging to a legitimate session. 
+
+| project_license = [http://www.gnu.org/licenses/lgpl.html GNU Lesser GPL]
+
+| leader_name1 = Jason Axley
+| leader_email1 = jason@axley.net
+| leader_username1 = Jaxley
+
+| contributor_name1 =
+| contributor_email1 = 
+| contributor_username1 = 
+
+| contributor_name2 =
+| contributor_email2 = 
+| contributor_username2 = 
+
+| pamphlet_link = 
+
+| presentation_link =
+
+| mailing_list_name = 
+
+| project_road_map = https://www.owasp.org/index.php/.Net_CSRF_Guard/Roadmap
+
+| links_url1 = http://code.google.com/p/owasp-code-central/
+| links_name1 = Source Code Repository 
+ 
+| links_url2 = 
+| links_name2 = 
+
+| links_url[3-10] = 
+| links_name[3-10] = 
+
+| release_1 = 
+| release_2 = 
+| release_3 =
+| release_4 =
+<!--- The line below is for GPC usage only. Please do not edit it --->
+| project_about_page = Projects/OWASP_.Net_CSRF_Guard_Project
+}}

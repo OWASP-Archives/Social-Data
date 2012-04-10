@@ -1,0 +1,72 @@
+{{Template:OWASP Testing Guide v3}}
+
+== Brief Summary ==
+This section describes how to test the robots.txt file.
+
+== Description of the Issue == 
+Web spiders/robots/crawlers retrieve a web page and then recursively traverse hyperlinks to retrieve further web content. Their accepted behavior is specified by the ''Robots Exclusion Protocol'' of the robots.txt file in the web root directory [1].
+
+As an example, the robots.txt file from http://www.google.com/robots.txt taken on 24 August 2008 is quoted below:
+<pre>
+User-agent: *
+Allow: /searchhistory/
+Disallow: /news?output=xhtml&
+Allow: /news?output=xhtml
+Disallow: /search
+Disallow: /groups
+Disallow: /images
+...
+</pre>
+
+The ''User-Agent'' directive refers to the specific web spider/robot/crawler.  For example the ''User-Agent: Googlebot'' refers to the ''GoogleBot'' crawler while ''User-Agent: *'' in the example above applies to all web spiders/robots/crawlers [2] as quoted below:
+<pre>
+User-agent: *
+</pre>
+
+The ''Disallow'' directive specifies which resources are prohibited by spiders/robots/crawlers. In the example above, directories such as the following are prohibited:
+<pre>
+... 
+Disallow: /search
+Disallow: /groups
+Disallow: /images
+...
+</pre>
+Web spiders/robots/crawlers can intentionally ignore the ''Disallow'' directives specified in a  robots.txt file [3].  Hence, robots.txt should not be considered as a mechanism to enforce restrictions on how web content is accessed, stored, or republished by third parties. 
+<br>
+
+== Black Box testing and example ==
+'''wget'''<br>
+The robots.txt file is retrieved from the web root directory of the web server.
+
+For example, to retrieve the robots.txt from www.google.com using ''wget'':
+<pre>
+$ wget http://www.google.com/robots.txt
+--23:59:24-- http://www.google.com/robots.txt
+           => 'robots.txt'
+Resolving www.google.com... 74.125.19.103, 74.125.19.104, 74.125.19.147, ...
+Connecting to www.google.com|74.125.19.103|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/plain]
+
+    [ <=>                                 ] 3,425        --.--K/s
+
+23:59:26 (13.67MB/s) - 'robots.txt' saved [3425]
+</pre>
+'''Analyze robots.txt using Google Webmaster Tools'''<br>
+Google provides an "Analyze robots.txt" function as part of its "Google Webmaster Tools", which can assist with testing [4] and the procedure is as follows:
+
+1. Sign into Google Webmaster Tools with your Google Account.<br>
+2. On the Dashboard, click the URL for the site you want.<br>
+3. Click Tools, and then click Analyze robots.txt.<br>
+
+== Gray Box testing and example == 
+The process is the same as Black Box testing above.
+<br><br>
+
+== References ==
+'''Whitepapers'''<br>
+* [1] "The Web Robots Pages" - http://www.robotstxt.org/
+* [2] "How do I block or allow Googlebot?" - http://www.google.com/support/webmasters/bin/answer.py?answer=40364&query=googlebot&topic=&type=
+* [3] "(ISC)2 Blog: The Attack of the Spiders from the Clouds" - http://blog.isc2.org/isc2_blog/2008/07/the-attack-of-t.html
+* [4] "How do I check that my robots.txt file is working as expected?" - http://www.google.com/support/webmasters/bin/answer.py?answer=35237
+<br>

@@ -1,0 +1,107 @@
+{| align="right" class="wikitable"
+|-
+! OWASP .NET Quick Reference
+|- 
+| 
+*[[OWASP Code Review Project]]<br />
+*[[OWASP Testing Guide]]<br />
+|-
+|}
+==OWASP .NET Recommended Resources==
+
+
+===Areas of Concern===
+
+*Getting Started
+
+*Tutorials
+
+*Best Practices
+
+*OWASP Guidance and Tools
+
+===Blogs & People===
+
+===== OWASP =====
+[https://lists.owasp.org/pipermail/owasp-phoenix/2009-May/000079.html OWASP-Phoenix List Reply regarding GSSP .NET Cert] from [http://twitter.com/atdre Dre]
+
+==== General ====
+[http://securitybuddha.com/ Mark Curphrey's Blog]
+
+[http://blogs.msdn.com/michael_howard/default.aspx Michael Howard's Blog]
+
+[http://blogs.msdn.com/jmeier/archive/tags/Security+Development/default.aspx J.D. Meier's Blog]
+
+[http://www.leastprivilege.com Dominick Baier's Blog]
+
+[http://blogs.msdn.com/shawnfa/default.aspx Shawn Farkas' Blog]
+
+[http://blogs.msdn.com/ace_team/ Microsoft's ACE Team]
+
+===Advisories, Articles & Projects===
+
+[http://msdn.microsoft.com/en-us/library/ms978357.aspx Security and Operational Guidance for .NET Applications]
+
+[http://msdn2.microsoft.com/en-us/library/yedba920.aspx ASP.NET Security Architecture]
+
+[http://msdn.microsoft.com/en-us/library/ms998404.aspx patterns & practices Security Engineering Index]
+
+[http://msdn.microsoft.com/en-us/library/ms998408.aspx patterns & practices Security Guidance for Applications Index]
+
+[http://msdn.microsoft.com/en-us/library/ms954725.aspx patterns & practices Security Guidance for .NET Framework 2.0]
+
+[http://msdn.microsoft.com/en-us/library/ms978378.aspx Authentication in ASP.NET: .NET Security Guidance]
+
+[http://msdn2.microsoft.com/en-us/library/ms998404.aspx Security Engineering]
+
+[http://www.developer.com/design/article.php/3607471 Solutions to SOA Security]
+
+[http://en.wikipedia.org/wiki/WS-%2A Web Service Specifications]
+
+[http://www.codeplex.com/WCFSecurity Security Guidance for Windows Communication Foundation]
+
+[http://www.microsoft.com/technet/security/advisory/954462.mspx Microsoft Security Advisory (954462) (SQL Injection Advisory)]
+
+===Online References, Training===
+
+[http://msdn2.microsoft.com/en-us/practices/default.aspx Patterns and Practices]
+
+[http://channel9.msdn.com/wiki/default.aspx/SecurityWiki.HomePage Patterns and Practices Security Wiki]
+
+[http://msdn.microsoft.com/en-us/security/default.aspx MSDN Security Developer Center]
+
+[http://blogs.technet.com/feliciano_intini/pages/microsoft-blogs-and-web-resources-about-security.aspx Microsoft Security Resources]
+
+[http://www.pluralsight.com/main/olt/Module.aspx?a=keith-brown&n=aspdotnet-security&cn=aspdotnet-fundamentals ASP.NET Security Webcasts - Kieth Brown]
+
+[http://www.troyhunt.com/2010/05/owasp-top-10-for-net-developers-part-1.html OWASP Top 10 for .NET developers - Troy Hunt]
+
+===Books and Publications===
+
+[http://www.microsoft.com/mspress/books/5957.aspx Writing Secure Code], Michael Howard and David LeBlanc
+
+[http://www.microsoft.com/downloads/details.aspx?familyid=2412c443-27f6-4aac-9883-f55ba5b01814&displaylang=en&Hash=4fZb2FzZ7%2bmaj0VqoUbFZzzw0WW5%2bxWjK3XBVit5eX%2b%2bB90vmLtZlAstlNg9cRu6Pg%2b50DNCMhGT6ADei7DgFg%3d%3d Microsoft Security Development Lifecycle 3.2]
+
+[http://msdn.microsoft.com/en-us/library/aa302415.aspx Building Secure ASP.NET Applications: Authentication, Authorization, and Secure Communication], J.D. Meier, Alex Mackman, Michael Dunner, and Srinath Vasireddy
+
+[http://msdn.microsoft.com/en-us/library/ms994921.aspx Improving Web Application Security: Threats and Countermeasures], J.D. Meier, Alex Mackman, Michael Dunner, Srinath Vasireddy, Ray Escamilla and Anandha Murukan
+
+[http://msdn.microsoft.com/en-gb/security/aa473878.aspx Developer Highway Code], Microsoft Corp, United Kingdom
+
+===Tools===
+
+[http://www.microsoft.com/downloads/details.aspx?familyid=59888078-9daf-4e96-b7d1-944703479451&displaylang=en Microsoft Threat Analysis & Modeling v2.1.2]
+
+[http://www.codeplex.com/guidanceExplorer Patterns and Practices Guidance Explorer]
+
+[http://blogs.msdn.com/alikl/archive/2007/03/26/security-net-code-inspection-using-outlook-2007.aspx Security Code Review Checklist Generator]
+
+[http://msdn.microsoft.com/en-us/security/aa973814.aspx Anti-Cross Site Scripting]
+
+[http://learn.iis.net/page.aspx/473/using-urlscan URLScan]
+
+[http://support.microsoft.com/kb/954476 Microsoft Source Code Analyzer]
+
+[http://www.communities.hp.com/securitysoftware/blogs/spilabs/archive/2008/06/23/finding-sql-injection-with-scrawlr.aspx Scrawlr]
+
+[http://support.microsoft.com/kb/954476 MS Source Code Analyser for SQL Injection]

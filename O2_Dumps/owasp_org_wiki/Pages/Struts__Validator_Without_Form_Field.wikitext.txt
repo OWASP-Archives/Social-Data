@@ -1,0 +1,92 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Improper Data Validation]]
+
+
+
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+
+==Description==
+
+Validation fields that do not appear in forms they are associated with indicate that the validation logic is out of date.
+
+It is easy for developers to forget to update validation logic when they make changes to an ActionForm class. One indication that validation logic is not being properly maintained is inconsistencies between the action form and the validation form.
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+===Example 1===
+ 
+An action form with two fields.
+
+<pre>
+		public class DateRangeForm extends ValidatorForm {
+		String startDate, endDate;
+		public void setStartDate(String startDate) {
+			this.startDate = startDate;
+		}
+		public void setEndDate(String endDate) {
+			this.endDate = endDate;
+		}
+	}
+</pre>
+
+Example 1 shows an action form that has two fields, startDate and endDate.
+
+===Example 2=== 
+
+A validation form with a third field.
+
+<pre>
+	<form name="DateRangeForm">
+		<field property="startDate" depends="date">
+			<arg0 key="start.date"/>
+		</field>
+		<field property="endDate" depends="date">
+			 <arg0 key="end.date"/>
+		</field>
+		<field property="scale" depends="integer">
+			 <arg0 key="range.scale"/>
+		</field>
+	</form>
+</pre>
+
+Example 2 lists a validation form for the action form. The validation form lists a third field: scale. The presence of the third field suggests that DateRangeForm was modified without taking validation into account.
+
+It is critically important that validation logic be maintained and kept in sync with the rest of the application. Unchecked input is the root cause of some of today's worst and most common software security problems. Cross-site scripting, SQL injection, and process control vulnerabilities all stem from incomplete or absent input validation. Although J2EE applications are not generally susceptible to memory corruption attacks, if a J2EE application interfaces with native code that does not perform array bounds checking, an attacker may be able to use an input validation mistake in the J2EE application to launch a buffer overflow attack.
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[:Category:Input Validation]]
+
+
+==References==
+TBD
+
+
+__NOTOC__

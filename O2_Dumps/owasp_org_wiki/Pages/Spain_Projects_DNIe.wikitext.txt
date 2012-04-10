@@ -1,0 +1,65 @@
+== OWASP DNIe ==
+
+El objetivo del proyecto OWASP DNIe es evaluar y mejorar la seguridad de las aplicaciones web que hacen uso del DNI electrónico (DNIe), documento nacional de identidad (DNI) electrónico en España, para la autenticación de usuarios, así como la posterior gestión de sesiones y controles de acceso, y para los procesos de creación y verificación de firma.
+
+Dentro de las aplicaciones web que hacen un uso intensivo del DNIe para la identificador de usuarios, ciudadanos con identificación oficial en España, se encuentran tanto servicios proporcionados por la administración pública española y sus diferentes organismos (AAPP), como servicios y aplicaciones web de empresas y organizaciones privadas, donde destacan especialmente (pero no únicamente) los servicios de banca electrónica o servicios básicos (suministro de agua, electricidad, telecomunicaciones, etc).
+
+El proyecto OWASP DNIe está compuesto por diferentes subproyectos o actividades cuyos objetivos principales (propuestos inicialmente) son identificar las tecnologías y los mecanismos más comúnmente utilizados en las aplicaciones web para interactuar con el DNIe, evaluar las vulnerabilidades más comunes en aplicaciones web que utilizan el DNIe para la autenticación de usuarios (incluyendo vulnerabilidades en la autenticación, gestión de sesiones y control de acceso de la aplicación web), evaluar las vulnerabilidades más comunes asociadas a los componentes cliente (applets Java y controles ActiveX) utilizados por las aplicaciones web que hacen uso del DNIe para la autenticación de usuarios y para la creación y verificación de firmas electrónicas ([http://www.dnielectronico.es/Preguntas_Frecuentes/auten_firm_elec/index.html avanzadas y reconocidas]), la creación y difusión de herramientas que faciliten la realización de auditorías, pruebas de intrusión y análisis de seguridad de aplicaciones web basadas en el DNIe, así como la publicación de una serie de mejores prácticas y recomendaciones de seguridad para el diseño y creación de aplicaciones web basadas en el DNIe.
+
+== Subproyectos (o Actividades) ==
+
+Los diferentes subproyectos o actividades se irán abordando en etapas independientes durante el 2011 y 2012, comenzando con la primera de las actividades (o subproyectos) del proyecto OWASP DNIe:
+
+=== '''DNIe-1''': Identificación de los mecanismos y tecnologías de utilización y gestión del DNIe en aplicaciones web ===
+
+* '''Fecha de inicio''': Junio 2011
+
+* '''Descripción''': El propósito del primer subproyecto de OWASP DNIe, "Identificación de los mecanismos y tecnologías de utilización y gestión del DNIe en aplicaciones web" (DNIe-1), es recabar información de las tecnologías y mecanismos empleados para la creación de aplicaciones web basadas en el DNIe, a través de los responsables y/o personal involucrado en el diseño y programación de aplicaciones web basadas en el DNIe en España (jefes de proyecto, desarrolladores, arquitectos, administradores, consultores, profesionales de seguridad, etc). 
+
+* '''Objetivo''': El objetivo principal es identificar los entornos y tecnologías más comúnmente empleados para la gestión del DNIe en aplicaciones web y recopilar estadísticas y detalles sobre éstos. Esta información permitirá a la comunidad española de seguridad y de desarrollo de aplicaciones web conocer las diferentes alternativas tecnológicas disponibles y qué están siendo empleadas actualmente en entornos reales. 
+
+* '''Más información en DNIe-1: https://www.owasp.org/index.php/Spain/Projects/DNIe-1 '''
+
+* '''Resultados''' (2011-12-09 - limitados): https://www.owasp.org/index.php/Spain/Projects/DNIe-1
+
+
+=== '''DNIe-2''': Vulnerabilidades de seguridad en aplicaciones web basadas en el DNIe ===
+
+* '''Fecha de inicio''': Febrero 2012
+
+* '''Descripción''': El propósito del segundo subproyecto de OWASP DNIe, "Vulnerabilidades de seguridad en aplicaciones web basadas en el DNIe" (DNIe-2), es proporcionar información y detalles técnicos de las vulnerabilidades más comunes en aplicaciones web que utilizan el DNIe para la autenticación de usuarios, incluyendo vulnerabilidades en la autenticación, la gestión de sesiones y los controles de acceso de la aplicación web.
+
+* '''Objetivo''': El objetivo principal es reflejar las vulnerabilidades más comunes en aplicaciones web que hacen uso del DNIe. El análisis se centra en vulnerabilidades de las aplicaciones web en tres áreas diferenciadas: autentificación, gestión de sesiones y controles de acceso, junto a su interacción con el protocolo HTTPS (SSL/TLS). Esta información permitirá a la comunidad española de seguridad y desarrollo de aplicaciones web conocer las vulnerabilidades y errores de seguridad presentes actualmente en entornos reales, y así poder evitarlas mediante la aplicación de las recomendaciones y mejores prácticas asociadas (qué serán detalladas en una actividad futura). 
+
+* '''Más información en DNIe-2: https://www.owasp.org/index.php/Spain/Projects/DNIe-2 '''
+
+* '''Resultados''': <no publicados>
+
+
+=== '''DNIe-3''': Vulnerabilidades de seguridad en los componentes cliente de las aplicaciones web basadas en el DNIe ===
+
+* '''Fecha de inicio''': Febrero 2012
+
+* '''Descripción''': El propósito del tercer subproyecto de OWASP DNIe, "Vulnerabilidades de seguridad en los componentes cliente de las aplicaciones web basadas en el DNIe" (DNIe-3), es proporcionar información y detalles técnicos de las vulnerabilidades más comunes en los componentes cliente (applets Java y controles ActiveX) de las aplicaciones web que utilizan el DNIe para la autenticación de usuarios, y para los procesos de creación y verificación de firmas.
+
+* '''Objetivo''': El objetivo principal es reflejar las vulnerabilidades más comunes en los componentes cliente de las aplicaciones web que hacen uso del DNIe. El análisis se centra en todo tipo de vulnerabilidades en los componentes cliente (applets Java y controles ActiveX) de las aplicaciones web en dos áreas diferenciadas: vulnerabilidades que afectan a la interacción del componente cliente con la propia aplicación web y su funcionamiento, y vulnerabilidades adicionales del componente cliente que reducen la seguridad del dispositivo del usuario dónde han sido instalados. Esta información permitirá a la comunidad española de seguridad y desarrollo de aplicaciones web conocer las vulnerabilidades y errores de seguridad presentes actualmente en componentes cliente disponibles en entornos reales, y así poder evitarlas mediante la aplicación de las recomendaciones y mejores prácticas asociadas (qué serán detalladas en una actividad futura). 
+
+* '''Más información en DNIe-3: https://www.owasp.org/index.php/Spain/Projects/DNIe-3 '''
+
+* '''Resultados''': <no publicados>
+
+== Actividades futuras ==
+
+=== '''DNIe-4''': Herramientas para la realización de auditorías de seguridad y pruebas de intrusión en aplicaciones web basadas en el DNIe ===
+
+=== '''DNIe-5''': Recomendaciones y mejores prácticas frente a las vulnerabilidades de seguridad de las aplicaciones web basadas en el DNIe ===
+
+=== '''DNIe-6''': Recomendaciones y mejores prácticas frente a las vulnerabilidades de seguridad de los componentes cliente de las aplicaciones web basadas en el DNI ===
+
+== Miembros ==
+
+El proyecto OWASP DNIe ha sido creado en Junio de 2011 por el capítulo español de OWASP (https://www.owasp.org/index.php/Spain) y es liderado por Raul Siles, Fundador y Analista de Seguridad de Taddong (http://www.taddong.com).
+
+Cada una de las actividades o subproyectos de OWASP DNIe es liderada por diferentes investigadores:
+* [https://www.owasp.org/index.php/Spain/Projects/DNIe-1 DNIe-1] y [https://www.owasp.org/index.php/Spain/Projects/DNIe-2 DNIe-2]: Raul Siles (raul.siles -AT- gmail.com)
+* [https://www.owasp.org/index.php/Spain/Projects/DNIe-3 DNIe-3]: José A. Guasch (jaguasch -AT- gmail.com)

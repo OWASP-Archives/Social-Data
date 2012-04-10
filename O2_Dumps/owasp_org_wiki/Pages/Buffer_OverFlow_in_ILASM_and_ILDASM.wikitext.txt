@@ -1,0 +1,255 @@
+See Below in this post
+
+* To MSRC: Buffer OverFlow in ILASM and ILDASM - The entire email conversation with MSRC (secure@microsoft.com) going from the inital response to the final answer where they will not treat this as a vulnerability and will not issue a security advisory for it (the solution will be included in the next Service Pack)
+* ILDASM Exception Creator- little tool created by Kerem to create .Net assemblies that crash ILDASM
+* ILDAM vulnerability ShellCode development - more code snippets and comments (now releated to trying to inject a shellcode into the vulnerable process)
+
+The bottom line is that this is a real issue in 1.1 and 1.0 (2.0 seems to mitigate them), Microsoft has acknowlege the problem but will not release a patch any time soon.
+
+So be careful when you ILDASM something.
+
+I also think that this issue needs further research since when we were testing the Overflows we were finding them in several places in ILASM and ILDASM (which means that there are probably many more variations still to be discovered/mapped)
+
+
+== To MSRC: Buffer OverFlow in ILASM and ILDASM ==
+'''First email'''
+
+[sent to secure@microsoft.com on 30th november 2003]
+
+Dear MSRC,
+
+A buffer overflow occurs in ILASM if a *.il file contains a call to a function of +/- 64k size. For example:
+
+Call AAAAAAAAAAAAAAAAAAA .... (+/- 64k) AAAAA();
+
+or
+
+call instance void [System.Windows.Forms]System.Windows.Forms.Form::AAAAAAAAAAAAAAAAAAA .... (+/- 64k) AAAAA();
+
+(see ILASM overflow 1.gif and ILASM overflow 2.gif)
+
+To test this issue, on the command line, assemble the provided IilasmPoc.il file using ILASM and an exception will occur.
+
+This issue has been confirm in the .Net framework 1.1. In 2.0 this seems to be fixed since no exception is thrown
+
+Buffer Overflow In ILDASM
+
+To test this issue,on the command line, disassemble the provided IldasmPoc.dll using ILDASM and an exception will occur. Which causes a heap overflow.
+
+This issue has been confirmed in the .Net framework 1.1. In v2.0.an exception is thrown but it doesn't initially seem to be exploitable
+
+The Exception on the ILDASM 1.1 is an 'Unhanded Exception which occurs at 0x7c92142e (ntdll.dll) in ildasm.exe: 0xC0000005: Access violation reading location 0x41414141 (see ILDASM2.PNG).
+
+The debug result of the application shows that the exception is occurring in calloc.c source code of the ntdll.dll in windows xp service pack 2 debug symbols provided code block.
+
+The Actual section of the exception is given below.
+
+pvReturn = HeapAlloc(_crtheap, HEAP_ZERO_MEMORY, size);
+if (pvReturn == NULL)
+cmp dword ptr [pvReturn],ebx
+jne $L19640+1 (7C3423B6h)
+pvReturn = HeapAlloc(_crtheap, HEAP_ZERO_MEMORY, size);
+push esi
+push 8
+push dword ptr [__crtheap (7C38C944h)]
+call dword ptr [__imp__HeapAlloc@12 (7C37A07Ch)]
+mov dword ptr [pvReturn],eax <-- The Exception Occurs Here
+
+ILDASM Proof of Concept generator (see ILDASM_PoC folder)
+
+To help with the debugging of this issue we created a simple PoC which generates a 74,3 kilobytes static method using Emit Namespaces inside the MyDynamicAsm.dll,
+
+The CLR doesn't seem to be affected by this issue since the method can be called and executed using reflection. Note that it can't be called directly from c# (due to size restrictions on the vs.net compilers).
+
+Ironically this method could be used as a protection for ildasm usage against compiled assemblies.
+
+Credits
+
+Original discovery: Dinis Cruz
+Further research, PoC and Documentation: Dinis Cruz and Kerem Kusmezer
+
+
+Dinis Cruz
+Owasp .Net Project Leader
+www.owasp.net
+
+----
+
+
+'''final response: Its a vulnerability in 1.1, but no Security Patch will be released '''
+
+
+From: "Microsoft Security Response Center" <secure@microsoft.com>
+Sent: 08 December 2005 11:32
+
+Hi Dinis,
+
+Great timing on your response, I have just received the feedback from
+the product team overnight.
+
+The outcome from the investigation is as follows:
+
+1. The ILDASM and ILASM tools are provided as part of the .Net Framework
+tools, SDK provided for developers and only for developers (no direct
+end user threat vectors - not installed by default etc).
+
+2. As with any development tool being used by developers that accept
+input, the developer must ensure that what they are using to compile/
+assemble/ open is considered trusted. This is equivalent to breaking Law
+1 on http://www.microsoft.com/technet/archive/community/columns/security/essays/10imlaws.mspx
+
+3. This issue has been fixed with Visual Studio 2005/ .Net Framework 2.0
+- I have asked that this issue be fixed in any update shipped for the
+.Net 1.1, 1.0 SDK. (We would not issue a security bulletin for this).
+
+Can you please let me know when you will post the message Owasp
+community, I would like to give a heads up to our Sec PR team to ensure
+the understand the underlying issue.
+
+Thanks for not issuing the technical details, greatly appreciated, I
+think the message you post would be important to re-emphasize that
+developers who take un-trusted input for anything they build/
+compile...whatever is extremely risky - this is one example of where
+that risk is realized.
+
+Cheers
+Scott D.
+
+----
+
+
+'''Re: final response: Its a vulnerability in 1.1, but no Security Patch will be released'''
+
+From: "Microsoft Security Response Center" <secure@microsoft.com>
+Sent: 08 December 2005 16:37
+
+Hi Dinis,
+
+I wanted to clarify something in my previous email, the assembler
+portion of this issue (ILASM) is included with the .Net framework, the
+disassembler is not, its part of the SDK.
+
+This implies that we will need to fix the ILASM issue in the next .Net
+Framework 1.0/1.1 Service Pack.
+
+Either way in all cases having developers ensure they are use trusted
+input to compiling is the best way to mitigate this issue.
+
+Please let me know your thoughts on this issue, and I apologize for
+providing confusing information in the previous email.
+
+Cheers
+Scott D.
+
+
+----
+
+From: Dinis Cruz [mailto:dinis@ddplus.net]
+Sent: Tuesday, December 13, 2005 6:58 PM
+To: Microsoft Security Response Center
+Subject: Re: Buffer OverFlow in ILASM and ILDASM [6296sd]
+
+Hi Scott
+
+Do you have an idea of when this Service Pack will be released?
+
+Dinis Dinis Cruz
+Owasp .Net Project Leader
+www.owasp.net
+
+
+----
+
+from: "Microsoft Security Response Center" <secure@microsoft.com>
+Sent: Wednesday, December 14, 2005 11:34 AM
+To: "Dinis Cruz" <dinis@ddplus.net>
+Subject: RE: Buffer OverFlow in ILASM and ILDASM [6296sd]
+
+Hi Dinis,
+
+I have some feedback from the product group that a SP for 1.1 of the
+framework will likely be next year sometime.
+
+At a guess this may be later on in the year, I have seen no firm plans
+as of yet. I have also seen no discussion on an SP for 1.0. at this
+stage.
+
+Fairly loose dates I know and I apologize, I wish I could provide you
+with more specific timelines but at this stage that is all we are aware
+off.
+
+Cheers
+Scott D.
+
+
+== ILDASM Exception Creator ==
+
+'''''Kerem wrote:'''''
+
+
+If you try to dissassembly the attached dll using the ildasm you will get an exception on the ildasm. Which causes a heap overflow.
+
+The sample code generates the static method using Emit Namespaces inside the MyDynamicAsm.dll, which name is 74,3 kilobytes.
+
+The method can be called using reflection and can be executed. But it can't be called directly from c# , it can be called only through the use of reflection.
+
+Actualy this method can be used as a protection for ildasm usage against the compiled assemblies.
+
+The Exception on the ILDASM is
+
+Unhandled exception at 0x7c92142e (ntdll.dll) in ildasm.exe: 0xC0000005: Access violation reading location 0x41414141.
+
+The debug result of the application shows that the exception is occurring
+
+in calloc.c source code of the ntdll.dll in windows xp service pack 2 debug symbols provided code block.
+
+The Actualy section of the exception is given below.
+
+ 120: pvReturn = HeapAlloc(_crtheap, HEAP_ZERO_MEMORY, size);
+ 119:                 if (pvReturn == NULL)
+ 7C342396 39 5D E4          cmp         dword ptr [pvReturn],ebx
+ 7C342399 75 1B             jne         $L19640+1 (7C3423B6h)
+    120:                     pvReturn = HeapAlloc(_crtheap, HEAP_ZERO_MEMORY, size);
+ 7C34239B 56                push        esi 
+ 7C34239C 6A 08             push        8   
+ 7C34239E FF 35 44 C9 38 7C push        dword ptr [__crtheap (7C38C944h)]
+ 7C3423A4 FF 15 7C A0 37 7C call        dword ptr [__imp__HeapAlloc@12 (7C37A07Ch)]
+ 7C3423AA 89 45 E4          mov         dword ptr [pvReturn],eax <-- The Exception Occurs Here
+
+ 
+
+Which causes a heap exception.
+ 
+here [[Image:ILHacking2.zip.ppt]] is the PoC of the vulnerability with the screen shots.
+
+
+
+'''Dinis Wrote'''
+
+Nice one Kerem
+
+Can you post here the entire stack trace? (so that we can see who made the call to calloc.c). Also to do is to find where the vulnerable function is (i.e. the one that processes the method name)
+
+note: can you convert the images to gifs and also post them here
+
+Dinis Cruz
+
+'''Kerem Wrote'''
+
+in [[Image:ILASMBufferOverflow.zip.ppt]] you will find the final documentation for the bug.
+ 
+I am still working on the IL.Emit Stuff To Call The Long Methods inside the assembly without the use of reflection.
+ 
+Sincerely Yours
+ 
+Izzet Kerem Kusmezer
+
+== ILDAM vulnerability ShellCode development ==
+* Dinis: ''Kerem, can you upload to this thread a file with the exact size that triggers the Overflow (i.e ending in BCDE)''
+* Kerem: Here you go [[Image:Finalmagical_zip.ppt]]
+
+
+* See [[Image:ILDASM_BO_ShellCode.zip.ppt]] zip for a series of test projects and two files ILASM_BO_Tests.sxw and ILDASM_BO_Tests.sxw which contain some notes I was doing while I had a quick look at this issue.
+
+
+[[Category:OWASP .NET Project]]

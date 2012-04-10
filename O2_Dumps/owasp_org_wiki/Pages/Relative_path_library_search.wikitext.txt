@@ -1,0 +1,113 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+'''Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+
+==Description==
+
+Certain functions perform automatic path searching. The method and results of this path searching may not be as expected. Example: WinExec will use the space character as a delimiter, finding "C:\Program.exe" as an acceptable result for a search for "C:\Program Files\Foo\Bar.exe".
+
+'''Consequences'''
+
+* Authorization: There is the potential for arbitrary code execution with privileges of the vulnerable program.
+
+'''Exposure period'''
+
+* Implementation: This flaw is a simple logic issue, introduced entirely at implementation time.
+
+'''Platform'''
+
+* Languages: Any
+* Operating platforms: Any
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood of exploit'''
+
+High
+
+If a malicious individual has access to the file system, it is possible to elevate privileges by inserting such a file as "C:\Program.exe" to be run by a privileged program making use of WinExec.
+
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+In C\C++:
+
+<pre>
+UINT errCode = WinExec(
+  "C:\\Program Files\\Foo\\Bar",
+  SW_SHOW
+);
+</pre>
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+==Related [[Controls]]==
+
+* Implementation: Use other functions which require explicit paths. Making use of any of the other readily available functions which require explicit paths is a safe way to avoid this problem. 
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Environmental Vulnerability]]
+[[Category:OWASP_CLASP_Project]]

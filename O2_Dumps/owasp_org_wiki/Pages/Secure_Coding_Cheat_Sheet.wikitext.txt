@@ -1,0 +1,151 @@
+= DRAFT CHEAT SHEET - WORK IN PROGRESS =
+= Introduction =
+The goal of this document is to create high level guideline for secure coding practices. The goal is to keep the overall size of the document condensed and easy to digest.  Individuals seeking addition information on the specific areas should refer to the included links to learn more.
+
+= How To Use This Document =
+The information listed below are generally acceptable secure coding practices; however, it is recommend that organizations consider this a base template and update individual sections with secure coding recommendations specific to the organization's policies and risk tolerance. 
+= Authentication=
+== Password Complexity ==
+Applications should have a password complexity requirement of:
+* Passwords must be 8 characters or greater
+* Passwords must require 3 of the following 4 character types [upper case letters, lower case letters, numbers, special characters]
+== Password Rotation ==
+Password rotation should be required for privileged accounts within applications at a frequency of every 90 days
+== Online Password Guessing  ==
+Applications must defend against online password guessing attempts by one of the following methods:
+* Account Lockout - Lock account after 5 failed password attempts
+* Temporary Account Lockout- Temporarily lock account after 5 failed password attempts
+* Anti-automation Captcha - Require a captcha to be successfully completed after 5 failed password attempts
+[https://www.owasp.org/index.php/Blocking_Brute_Force_Attacks Additional Reading]
+
+== Password Reset Functions ==
+== Email Verification Functions ==
+If the application requires verification of ownership of an email address then observe the following
+* Email verification links should only satisfy the requirement of verify email address ownership and should not provide the user with an authenticated session (e.g. the user must still authenticate as normal to access the application).
+* Email verification codes must expire after the first use or expire after 8 hours if not used. 
+== Password Storage ==
+* Passwords should be stored in a format, such as Bcrypt, that is resistant to high speed offline brute force attacks
+* Password storage using hashing algorithms plus a per user salt are good, but not sufficient.
+
+= Session Management =
+== Session ID Length ==
+* Session tokens should be 128-bit or greater 
+== Session ID Creation ==
+* The session tokens should be handled by the web server if possible or generated via a cryptographically secure random number generator. 
+== Inactivity Time Out ==
+* Authenticated sessions should timeout after determined period of inactivity - 15 minutes is recommended. 
+== Secure Flag ==
+* The "Secure" flag should be set during every set-cookie. This will instruct the browser to never send the cookie over HTTP. The purpose of this flag is to prevent the accidental exposure of a cookie value if a user follows an HTTP link. 
+== HTTP-Only Flag ==
+* The "HTTP-Only" flag should be set to disable malicious script access to the cookie values, such as the session ID
+== Logout ==
+* Upon logout the session ID should be invalidated on the server side and deleted on the client via expiring and overwriting the value. 
+= Access Control =
+== Presentation Layer ==
+* It is recommended to not display links or functionality that is not accessible to a user. The purpose is to minimize unnecessary access controls messages and minimize privileged information from being unnecessarily provided to users. 
+== Business Layer ==
+* Ensure that an access control verification is performed before an action is executed within the system. A user could craft a custom GET or POST message to attempt to execute unauthorized functionality.
+== Data Layer ==
+* Ensure that an access control verification is performed to check that the user is authorized to act upon the target data. Do not assume that a user authorized to perform action X is able to necessarily perform this action on all data sets. 
+
+= Input Validation =
+== Goal of Input Validation ==
+Input validation is performed to minimize malformed data from entering the system. Input Validation is NOT the primary method of preventing XSS, SQL Injection. These are covered in output encoding below. 
+
+Input Validation Must Be:
+* Applied to all user controlled data
+* Define the types of characters that can be accepted (often U+0020 to U+007E, though most special characters could be removed and control characters are almost never needed)
+* Defines a minimum and maximum length for the data (e.g. {1,25} ) 
+== Client Side vs Server Side Validation ==
+Be aware that any JavaScript input validation performed on the client can be bypassed by an attacker that disables JavaScript or uses a Web Proxy. Ensure that any input validation performed on the client is also performed on the server.
+== Positive Approach ==
+The variations of attacks are enormous. Use regular expressions to define what is good and then deny the input if anything else is received. In other words, we want to use the approach "Accept Known Good" instead of "Reject Known Bad"
+
+ Example A field accepts a username. A good regex would be to verify 
+ that the data consists of the following [0-9a-zA-Z]{3,10}. The data 
+ is rejected if it doesn't match.  
+
+ A bad approach would be to build a list of malicious strings and then 
+ just verify that the username does not contain the bad string. This 
+ approach begs the question, did you think of all possible bad strings?
+
+== Robust Use of Input Validation ==
+All data received from the user should be treated as malicious and verified before using within the application. This includes the following
+* Form data
+* URL parameters
+* Hidden fields
+* Cookie data
+* HTTP Headers
+* Essentially anything in the HTTP request 
+
+== Validating Rich User Content ==
+It is very difficult to validate rich content submitted by a user. Consider more formal approaches such as [http://htmlpurifier.org/ HTML Purifier (PHP)],  [http://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project AntiSamy] or [http://github.com/jsocol/bleach/ bleach (Python)]
+== File Upload ==
+
+= Output Encoding =
+== Preventing XSS and Content Security Policy ==
+* All user data controlled must be encoded when returned in the html page to prevent the execution of malicious data (e.g. XSS). For example &lt;script&gt; would be returned as &amp;lt;script&amp;gt;
+* The type of encoding is specific to the context of the page where the user controlled data is inserted. For example, HTML entity encoding is appropriate for data placed into the HTML body. However, user data placed into a script would need JavaScript specific output encoding 
+
+Detailed information on XSS prevention here: [http://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet OWASP XSS Prevention Cheat Sheet]
+== Preventing SQL Injection ==
+* It's not realistic to always know if a piece of data is user controlled, therefore parameterized queries should be used whenever a method/function accepts data and uses this data as part of the SQL statement. 
+* String concatenation to build any part of a SQL statement with user controlled data creates a SQL injection vulnerability.
+* Parameterized queries are a guaranteed approach to prevent SQL injection.
+
+Further Reading: [http://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet SQL Injection Prevention Cheat Sheet]
+== Preventing OS Injection ==
+* Avoid sending user controlled data to the OS as much as possible
+* Ensure that a robust escaping routine is in place to prevent the user from adding additional characters that can be executed by the OS ( e.g. user appends | to the malicious data and then executes another OS command). Remember to use a positive approach when constructing escaping routinges. Example 
+
+Further Reading: [http://www.owasp.org/index.php/Reviewing_Code_for_OS_Injection Reviewing Code for OS Injection]
+== Preventing XML Injection ==
+* In addition to the existing input validation, define a positive approach which escapes/encodes characters that can be interpreted as xml. At a minimum this includes the following: < > " ' & 
+* If accepting raw XML then more robust validation is necessary. This can be complex. Please contact the infrastructure security team for additional discussion 
+= Cross Domain Request Forgery =
+== Preventing CSRF ==
+* Any state changing operation requires a secure random token (e.g CSRF token) to prevent against CSRF attacks
+* Characteristics of a CSRF Token
+** Unique per user & per user session
+** Tied to a single user session
+** Large random value
+** Generated by a cryptographically secure random number generator 
+* The CSRF token is added as a hidden field for forms or within the URL if the state changing operation occurs via a GET
+* The server rejects the requested action if the CSRF token fails validation 
+== Preventing Malicious Site Framing (ClickJacking) ==
+Set the x-frame-options header for all responses containing HTML content. The possible values are "DENY" or "SAMEORIGIN".
+
+    DENY will block any site (regardless of domain) from framing the content.
+    SAMEORIGIN will block all sites from framing the content, except sites within the same domain.
+
+The "DENY" setting is recommended unless a specific need has been identified for framing.
+
+= Secure Transmission =
+== When To Use SSL/TLS ==
+* All points from the login page to the logout page must be served over HTTPS.
+* Ensure that the page where a user completes the login form is accessed over HTTPS. This is in addition to POST'ing the form over HTTPS.
+* All authenticated pages must be served over HTTPS. This includes css, scripts, images. Failure to do so creates a vector for man in the middle attack and also causes the browser to display a mixed SSL warning message. 
+== Implement HTTP Strict Transport Security (HSTS)==
+* Applications that are served exclusively over HTTPS should utilize HSTS to instruct compatible browsers to not allow HTTP connections to the domain
+= File Uploads = 
+==Upload Verification==
+*Use input validation to ensure the uploaded filename uses an expected extension type 
+*Ensure the uploaded file is not larger than a defined maximum file size
+==Upload Storage==
+*Use a new filename to store the file on the OS. Do not use any user controlled text for this filename or for the temporary filename. 
+*Store all user uploaded files on a separate domain (e.g. mozillafiles.net vs mozilla.org). Archives should be analyzed for malicious content (anti-malware, static analysis, etc)
+==Public Serving of Uploaded Content==
+*Ensure the image is served with the correct content-type (e.g. image/jpeg, application/x-xpinstall)
+==Beware of "special" files==
+* The upload feature should be using a whitelist approach to only allow specific file types and extensions. However, it is important to be aware of the following file types that, if allowed, could result in security vulnerabilities.
+*"crossdomain.xml" allows cross-domain data loading in Flash, Java and Silverlight.  If permitted on sites with authentication this can permit cross-domain data theft and CSRF attacks.  Note this can get pretty complicated depending on the specific plugin version in question, so its best to just prohibit files named "crossdomain.xml" or "clientaccesspolicy.xml".
+*".htaccess" and ".htpasswd" provides server configuration options on a per-directory basis, and should not be permitted.  See http://en.wikipedia.org/wiki/Htaccess
+==Upload Verification==
+*Use image rewriting libraries to verify the image is valid and to strip away extraneous content. 
+*Set the extension of the stored image to be a valid image extension based on the detected content type of the image from image processing (e.g. do not just trust the header from the upload). 
+*Ensure the detected content type of the image is within a list of defined image types (jpg, png, etc)
+== References ==
+
+{{Cheatsheet_Navigation}}
+
+[[Category:Cheatsheets]]

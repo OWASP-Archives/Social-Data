@@ -1,0 +1,38 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Project About</noinclude>
+| project_name = OWASP Application Security Program for Manager 
+| project_home_page = :OWASP Application Security Program for Manager
+| project_description =
+*Create an OWASP Roadmap for the world wide Companies Type 
+*In 9 years of activities OWASP has become the standard for Web Application Security. We are full of projects that are fantastic resources for developers and testers. 
+*OWASP SAMM and ASVS address many security management issues.
+*What I see is missing now is a kind of guideline the managers should follow to adhere to the OWASP standards. I see that every security manager has different idea about the secure dev and testing (when and how to perform it).
+*This project wants to address the Security Manager point of view and tell him what he should do to implement an efficient Application Security Program.
+*In this project we will show all the OWASP Guides and tools and will tell why,how and when to use that. We can do that in function of the size of the organization, management roles and objectives. The idea is for example for a Bank Company,OWASP says to perform a OWASP SAMM assessment every year, to per perform Code Review and WAPT to all critical new software, testing every 3 months, etc..  Every activities is linked to an OWASP resource to use.
+| project_license = [http://creativecommons.org/licenses/by-sa/3.0/ '''Creative Commons Attribution Share Alike 3.0'''] 
+| leader_name1 = Matteo Meucci
+| leader_email1 = matteo.meucci@owasp.org
+| leader_username1 = Mmeucci
+| contributor_name1 = Marco Morana
+| contributor_email1 = marco.morana@owasp.org
+| contributor_username1 = 
+| contributor_name2 = Giorgio Fedon
+| contributor_email2 = giorgio.fedon@gmail.com
+| contributor_username2 = 
+| contributor_name3 = Stefano di Paola
+| contributor_email3 = stefano.dipaola@gmail.com
+| contributor_username3 = 
+| pamphlet_link = 
+| presentation_link =
+| mailing_list_name = https://lists.owasp.org/mailman/listinfo/owasp-application-security-program-for-manager
+| project_road_map = http://www.owasp.org/index.php/OWASP_Application_Security_Program_for_Manager_-_Roadmap
+| links_url[1-10] = 
+| links_name[1-10] = 
+| release_1 = To be created as of yet (15th October 2010)
+| release_2 = 
+| release_3 =
+| release_4 =
+<!--- The line below is for GPC usage only. Please do not edit it --->
+
+| project_about_page = Projects/OWASP_Application_Security_Program_for_Managers
+
+}}

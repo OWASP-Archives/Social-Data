@@ -1,0 +1,130 @@
+__NOTOC__
+
+Return to [[Global Industry Committee]]
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#4058A0; color:white"|<font color="white">'''ACTIVITY IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Activity Name'''
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|<font color="black">'''Draft NIST SP 800-53 Revision 3''' 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| '''Short Description''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|Provide response to "Draft NIST Special Publication 800-53 (Revision 3) Recommended Security Controls for Federal Information Systems and Organizations"
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| '''Related Projects ''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|None
+ |-
+| style="width:25%; background:#7B8ABD" align="center"|'''Email Contacts & Roles'''
+ | style="width:25%; background:#cccccc" align="center"|'''Primary'''<br>[mailto:rex.booth(at)gt.com Rex Booth]
+ | style="width:25%; background:#cccccc" align="center"|'''Secondary'''<br>[mailto:dcampbell(at)owasp.org David Campbell]
+ | style="width:25%; background:#cccccc" align="center"|'''Mailing list'''<br>Please use the [http://lists.owasp.org/mailman/listinfo/global_industry_committee Industry Committee list]
+ |}
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="4" align="center" style="background:#4058A0; color:white"|<font color="white">'''ACTIVITY SPECIFICS''' 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|'''Objectives'''
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* Review Draft SP - in particular issues relating to web application security
+* Where appropriate, draft a response for submission
+* Submit the response as an official OWASP statement
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| '''Deadlines''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* 3 Mar 2009 - Circulate to leaders list for assistance/input
+* 9 Mar 2009 - Initial meeting
+* 26 Mar 2009 - Complete final draft response
+* 27 Mar 2009 - Submit to NIST
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| '''Status''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|
+* Closed
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| '''Resources''' 
+ | colspan="3" style="width:75%; background:#cccccc" align="left"|[http://csrc.nist.gov/publications/PubsDrafts.html Call for responses, 5 Feb 2009]
+
+[http://csrc.nist.gov/publications/drafts/800-53/800-53-rev3-IPD.pdf Full draft text]
+
+[http://csrc.nist.gov/publications/drafts/800-53/800-53-rev3-markup-02-05-2009.pdf Marked up changes]
+
+Submit comments to sec-cert(at)nist.gov 
+ |-
+|}
+
+== Review plan ==
+
+The plan is:
+
+* 3/9: Project kickoff
+* 3/9-3/16: Perform Stage 1 review
+* 3/16: Status meeting
+* 3/16 - 3/23: Perform Stage 2 review
+* 3/23: Status meeting
+* 3/23 - 3/25: Stage 3 activities
+* 3/25: Compile comments
+* 3/26: Submit comments to NIST
+
+Our review is being undertaken in three stages:
+
+===Stage 1===
+
+Activities: All participants perform a high-level, document-wide review to develop a familiarity with the document.  Reviewers should note where rev 3 has introduced changes and where OWASP has the greatest potential for impact.  Comment development is not required for this stage, but are a welcome side-effect.
+
+Results:  By the first status meeting, each participant should have three lists: 1) noted updates within the document 2) areas of the document most closely related to OWASP interests 3) initial draft comments (if appropriate).
+
+===Stage 2===
+
+Activities: Participants will be asked to perform a focused review on the sections of the document identified in Stage 1 as most relevant to OWASP.  These "target sections" may be divided among project participants depending on project population and the number of target sections.
+
+Results: By the second status meeting, each participant should develop a refined and detailed list of comments for their assigned sections.
+
+===Stage 3===
+
+Activities: Participants will revise comments as needed and project management will consolidate and format comments for submission to NIST.
+
+Results: A final list of comments for submission to NIST.
+
+
+== Submission Response ==
+
+''Latest first''
+
+=== Final version ===
+
+TBC
+
+=== Identified Sections ===
+
+The following parts have been identified for review:
+
+(Section # / Page #)
+3.3 / 20, 
+AC-02, 
+AC-03, 
+AC-1 / F-3, 
+AC-11 / F-10, 
+AC-14 / F-11, 
+AC-7 / F-8, 
+AC-9 / F-9, 
+AT-1, 
+AT-3, 
+AU-02, 
+AU-3 / F-21, 
+AU-3 / F-21, 
+CM-7 / F-38, 
+CM-8, 
+I-0 / I-1, 
+MA-1, MA-6, 
+RA-5 / F-83, 
+SC-18 / F-100, 
+SC-2 / F-91, 
+SC-25 / F-103, 
+SC-19, 
+SI-10 / F-114, 
+SI-11 / F-113, 
+SI-12 / F-113, 
+SI-3, 
+SI-3 / F-107
+
+
+Return to [[Global Industry Committee]]

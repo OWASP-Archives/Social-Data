@@ -1,0 +1,177 @@
+{{Template:Vulnerability}} 
+
+Author(s): 
+*[[User:Soroush Dalili|Soroush Dalili]]
+*[[User:OWASP|OWASP]]
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}''' 
+
+[[ASDR TOC Vulnerabilities|Vulnerabilities Table of Contents]] 
+
+== Description  ==
+
+Uploaded files represent a significant risk to applications. The first step in many attacks is to get some code to the system to be attacked. Then the attack only needs to find a way to get the code executed. Using a file upload helps the attacker accomplish the first step. 
+
+The consequences of unrestricted file upload can vary, including complete system takeover, an overloaded file system, forwarding attacks to backend systems, and simple defacement. It depends on what the application does with the uploaded file, including where it is stored. 
+
+There are really two different classes of problems here. The first is with the file metadata, like the path and filename. These are generally provided by the transport, such as HTTP multipart encoding. This data may trick the application into overwriting a critical file or storing the file in a bad location. You must validate the metadata extremely carefully before using it. 
+
+The other class of problem is with the file content. The range of problems here depends entirely on what the file is used for. See the examples below for some ideas about how files might be misused. To protect against this type of attack, you should analyze everything your application does with files and think carefully about what processing and interpreters are involved. 
+
+
+== Risk Factors  ==
+
+*The impact of this vulnerability is high but the likelihood is low. So, the severity of this type of vulnerability is Medium. 
+*The website can be defaced. 
+*The web server can be compromised by uploading and executing a web-shell which can: run a command, browse the system files, browse the local resources, attack to other servers, and exploit the local vulnerabilities, and so on. 
+*This vulnerability can make the website vulnerable to some other types of attacks such as [[Cross-site Scripting (XSS)|XSS]]. 
+*An attacker might be able to put a phishing page into the website. 
+*Local file inclusion vulnerabilities can be exploited by uploading a malicious file into the server. 
+*Local vulnerabilities of real-time monitoring tools such as an antivirus can be exploited by uploading a harmful file. 
+*A malicious file can be uploaded on the server in order to have a chance to be executed by administrator or webmaster later. 
+*The web server might be used as a warez server by a bad guy in order to be host of malwares, illegal software, steganographic objects, and so on.
+
+== Examples  ==
+
+=== Attacks on application platform  ===
+
+*Upload .jsp file into web tree - jsp code executed as web user 
+*Upload .gif to be resized - image library flaw exploited 
+*Upload huge files - file space denial of service 
+*Upload file using malicious path or name - overwrite critical file 
+*Upload file containing personal data - other users access it 
+*Upload file containing "tags" - tags get executed as part of being "included" in a web page
+
+=== Attacks on other systems  ===
+
+*Upload .exe file into web tree - victims download trojaned executable 
+*Upload virus infected file - victims' machines infected 
+*Upload .html file containing script - victim experiences [[Cross-site Scripting (XSS)]]
+
+
+== Weak Protection Methods and Methods of Bypassing  ==
+
+=== Using Black-List for Files’ Extensions  ===
+
+Some web applications still use only a black-list of extensions to prevent from uploading a malicious file. 
+
+*It is possible to bypass this protection by using some extensions which are executable on the server but are not mentioned in the list. (Example: “file.php5”, “file.shtml”, “file.asa”, or “file.cer”) 
+*Sometimes it is possible to bypass this protection by changing some letters of extension to the capital form (example: “file.aSp” or “file.PHp3”). 
+*Using trailing spaces and/or dots at the end of the filename can sometimes cause bypassing the protection. These spaces and/or dots at the end of the filename will be removed when the file wants to be saved on the hard disk automatically. The filename can be sent to the server by using a local proxy or using a simple script (example: “file.asp ... ... . . .. ..”, “file.asp ”, or “file.asp.”).
+*A web-server may use the first extension after the first dot (“.”) in the file name or use a specific priority algorithm to detect the file extension. Therefore, protection can be bypassed by uploading a file with two extensions after the dot character. The first one is forbidden, and the second one is permitted (example: “file.php.jpg”).
+*In case of using IIS6 (or prior versions), it might be possible to bypass this protection by adding a semi-colon after the forbidden extension and before the permitted extension (example: “file.asp;.jpg”).
+*In case of using IIS6 (or prior versions), it might be possible to bypass this protection by putting an executive file such as ASP with another extension in a folder which ends with an executive extension such as “.asp” (example: “folder.asp\file.txt”). Besides, it is possible to create a directory just by using a file uploader and ADS (Alternate Data Stream). In this method, filename should end with “::$Index_Allocation” or “:$I30:$Index_Allocation” to create a directory instead of a file (example:  “newfolder.asp::$Index_Allocation” creates “newfolder.asp” as a new directory).
+*This protection can be completely bypassed by using the most famous control character which is Null character (0x00) after the forbidden extension and before the permitted one. In this method, during the saving process all the strings after the Null character will be discarded. Putting a Null character in the filename can be simply done by using a local proxy or by using a script (example: “file.asp%00.jpg”). Besides, it would be perfect if the Null character is inserted directly by using the Hex view option of a local proxy such as Burpsuite or Webscarab in the right place (without using&nbsp;%). 
+*It is also possible to create a file with a forbidden extension by using NTFS alternate data stream (ADS). In this case, a “:” sign will be inserted after the forbidden extension and before the permitted one. As a result, an empty file with the forbidden extension will be created on the server (example: “file.asp:.jpg”). Attacker can try to edit this file later to execute his/her malicious codes. However, an empty file is not always good for an attacker. So, there is an invented method by the author of this paper in which an attacker can upload a non-empty shell file by using the ADS. In this method, a forbidden file can be uploaded by using this pattern: “file.asp::$data.”.
+*In Windows Servers, it is possible to replace the files by using their short-name (8.3). (example: “web.config” can be replaced by uploading “web~1.con”)
+*Sometimes combination of the above can lead to bypassing the protections.
+
+=== Using White-List for Files’ Extensions  ===
+
+Many web applications use a white-list to accept the files’ extensions. Although using white-list is one of the recommendations, it is not enough on its own. Without having input validation, there is still a chance for an attacker to bypass the protections. 
+
+*the 3rd, 4th, 5th, and 6th methods of last section apply here as well. 
+*The list of permitted extensions should be reviewed as it can contain malicious extension as well. For instance, in case of having “.shtml” in the list, the application can be vulnerable to SSI attacks.
+
+=== Using “Content-Type” from the Header  ===
+
+“Content-Type” entity in the header of the request indicates the Internet media type of the message content . Sometimes web applications use this parameter in order to recognize a file as a good one. For instance, they only accept the files with the “Content-Type” of “text/plain”. 
+
+*It is possible to bypass this protection by changing this parameter in the request header by using a local proxy.
+
+=== Using a File Type Recogniser  ===
+
+Sometimes web applications intentionally or unintentionally use some functions (or APIs) to check the type of the file in order to do further process. For instance, in case of having image resizing, it is probable to have image type recogniser. 
+
+*Sometimes the recognisers just read the few first characters (or header) of the files in order to check them. In this case, an attacker can insert the malicious code after some valid header. 
+*There are always some places in the structure of the files which are for the comments section and have no effect on the main file. And, an attacker can insert malicious codes in these points. 
+*Also, it is not impossible to think about a file modifier (for example an image resizer) which produces malicious codes itself in case of receiving special input.
+
+
+
+== Prevention Methods (Solutions to be more secure) ==
+In order to make a Windows server more secure, it is very important to follow the Microsoft security best practices first. For this purpose, some of the useful links are:
+*IIS 6.0 Security Best Practices[http://technet.microsoft.com/en-us/library/cc782762(WS.10).aspx]
+*Securing Sites with Web Site Permissions[http://technet.microsoft.com/en-us/library/cc756133(WS.10).aspx]
+*IIS 6.0 Operations Guide[http://technet.microsoft.com/en-us/library/cc785089(WS.10).aspx]
+*Improving Web Application Security: Threats and Countermeasures[http://msdn.microsoft.com/en-us/library/ms994921.aspx]
+*Understanding the Built-In User and Group Accounts in IIS 7.0[http://learn.iis.net/page.aspx/140/understanding-the-built-in-user-and-group-accounts-in-iis-70/]
+*IIS Security Checklist[http://windows.stanford.edu/docs/IISsecchecklist.htm]
+And some special recommendations for the developers and webmasters:
+*Never accept a filename and its extension directly without having a white-list filter.
+*It is necessary to have a list of only permitted extensions on the web application. And, file extension can be selected from the list. For instance, it can be a “select case” syntax (in case of having VBScript) to choose the file extension in regard to the real file extension.
+*All the control characters  and Unicode ones should be removed from the filenames and their extensions without any exception. Also, the special characters such as “;”, “:”, “>”, “<”, “/” ,”\”, additional “.”, “*”, “%”, “$”, and so on should be discarded as well. If it is applicable and there is no need to have Unicode characters, it is highly recommended to only accept Alpha-Numeric characters and only 1 dot as an input for the file name and the extension; in which the file name and also the extension should not be empty at all (regular expression: [a-zA-Z0-9]{1,200}\.[a-zA-Z0-9]{1,10}).
+*Limit the filename length. For instance, the maximum length of the name of a file plus its extension should be less than 255 characters (without any directory) in an NTFS partition.
+*It is recommended to use an algorithm to determine the filenames. For instance, a filename can be a MD5 hash of the name of file plus the date of the day.
+*Uploaded directory should not have any “execute” permission.
+*Limit the file size to a maximum value in order to prevent denial of service attacks (on file space or other web application’s functions such as the image resizer).
+*Restrict small size files as they can lead to denial of service attacks. So, the minimum size of files should be considered.
+*Use Cross Site Request Forgery protection methods.
+*Prevent from overwriting a file in case of having the same hash for both.
+*Use a virus scanner on the server (if it is applicable). Or, if the contents of files are not confidential, a free virus scanner website can be used. In this case, file should be stored with a random name and without any extension on the server first, and after the virus checking (uploading to a free virus scanner website and getting back the result), it can be renamed to its specific name and extension.
+*Try to use POST method instead of PUT (or GET!)
+*Log users’ activities. However, the logging mechanism should be secured against log forgery and code injection itself.
+*In case of having compressed file extract functions, contents of the compressed file should be checked one by one as a new file.
+
+
+== Related [[Attacks]]  ==
+
+* [[Path Traversal]]
+* [[Path Manipulation]]
+* [[Relative Path Traversal]]
+* [[Windows_::DATA_alternate_data_stream]]
+
+==Related [[Vulnerabilities]]==
+
+* [[:Category:Input Validation Vulnerability]]
+
+== Related [[Controls]]  ==
+
+* [[:Category:Input Validation]]
+
+== Related [[Threat Agent]]  ==
+
+* [[:Category:External Threat Agent]]
+* [[:Category:Internal Threat Agent]]
+* [[:Category:Internet attacker]]
+* [[:Category:Intranet attacker]]
+
+== Related [[Technical Impacts]]  ==
+
+* [[System Access]]
+* [[Security Bypass]]
+* [[Exposure of system information]]
+* [[Exposure of sensitive information]]
+* [[Client Side Threat]]
+
+== References  ==
+
+*Improve File Uploaders’ Protections – Bypass Methods- Rev. 1.0 http://soroush.secproject.com/blog/2010/03/improve-file-uploaders%e2%80%99-protections-rev-1-0/ 
+*IIS6/ASP & file upload for fun and profit http://blog.48bits.com/2010/09/28/iis6-asp-file-upload-for-fun-and-profit/
+*Secure file upload in PHP web applications http://www.net-security.org/dl/articles/php-file-upload.pdf
+*Potentially Dangerous File Types http://www.windowsitpro.com/Files/18/27072/Webtable_01.pdf
+*Image Upload XSS http://ha.ckers.org/blog/20070603/image-upload-xss/
+*Code Execution Through Filenames in Uploads http://ha.ckers.org/blog/20070620/code-execution-through-filenames-in-uploads/
+*Secure File Upload Check List With PHP http://hungred.com/useful-information/secure-file-upload-check-list-php/
+*NTFS in WikiPedia http://en.wikipedia.org/wiki/NTFS
+*NTFS Streams http://msdn.microsoft.com/en-us/library/ff469210(v=PROT.10).aspx
+*NTFS - Glossary http://inform.pucp.edu.pe/~inf232/Ntfs/ntfs_doc_v0.5/help/glossary.html
+*IIS 6.0 Security Best Practices http://technet.microsoft.com/en-us/library/cc782762(WS.10).aspx
+*Securing Sites with Web Site Permissions http://technet.microsoft.com/en-us/library/cc756133(WS.10).aspx
+*IIS 6.0 Operations Guide http://technet.microsoft.com/en-us/library/cc785089(WS.10).aspx
+*Improving Web Application Security: Threats and Countermeasures http://msdn.microsoft.com/en-us/library/ms994921.aspx
+*Understanding the Built-In User and Group Accounts in IIS 7.0 http://learn.iis.net/page.aspx/140/understanding-the-built-in-user-and-group-accounts-in-iis-70/
+*IIS Security Checklist http://windows.stanford.edu/docs/IISsecchecklist.htm
+*Microsoft IIS ASP Multiple Extensions Security Bypass http://secunia.com/advisories/37831/
+*CVE-2009-4444 http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-4444
+*CVE-2009-4445 http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-4445
+*CVE-2009-1535 http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1535
+
+__NOTOC__
+
+[[Category:OWASP ASDR Project]]
+[[Category:File System]]
+[[Category:Windows]]
+[[Category:Unix]]
+[[Category:Use of Dangerous API]]
+[[Category:Vulnerability]]

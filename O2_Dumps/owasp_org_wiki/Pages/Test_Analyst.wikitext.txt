@@ -1,0 +1,12 @@
+{{Template:SecureSoftware}}
+
+==Role Description==
+In a structured development organization, security should not have a great impact on the overall processes used. The test organization should still be testing to requirements, implementing regression suites, and so on. 
+
+In practice,this will generally require new testing tools that are specifically geared toward security because traditional tools are not good at ferreting out security risks.
+
+Ultimately, beyond tool training and learning about risks well enough to be able to check for them, testing groups do not need to be security experts.
+
+[[Category:Role]]
+[[Category:CLASP Role]]
+[[Category:OWASP CLASP Project]]

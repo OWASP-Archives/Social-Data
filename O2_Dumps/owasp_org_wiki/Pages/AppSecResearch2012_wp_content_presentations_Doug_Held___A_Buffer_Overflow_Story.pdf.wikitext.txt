@@ -1,0 +1,15 @@
+== '''A Buffer Overflow Story: From Responsible Disclosure to Closure'''  ==
+[[File:Douglas_held_20110508_R_centre.jpg‎]]
+<br>Douglas Held <br>Software Security Consultant <br>Fortify Software <br>doug.held@hp.com 
+
+== '''Link to the presentation:''' [[File:A Buffer Overflow Story.pdf]] ==
+
+== '''Abstract:''' ==
+
+The US National Institutes of Science and Technology has been holding a competition to choose a design for the Secure Hash Algorithm, version 3 ("SHA-3"). The primary goal is for the cryptographic community to weed out the less secure algorithms and choose from the remainder. Each submission includes a C reference implementation for demonstrating performance, a factor in the final choice. 
+
+Fortify Software undertook an automated code review of the SHA-3 round 1 contestants' reference implementations, including Ron Rivest's MD6. 
+
+Findings included bugs that could cause crashes, performance or security problems. After a follow up audit and contacting the developers with the findings, Fortify reported summary results on the Fortify blog and on Slashdot.org. According to the blog entry, "This just emphasizes what we already knew about C, even the most careful, security conscious developer messes up memory management." 
+
+The speaker will discuss specific findings, including some very unexpected outcomes, as well as wildly differing perspectives from the developer community. The story underscores the need to continue improving education and processes to further the goal of computing securely.

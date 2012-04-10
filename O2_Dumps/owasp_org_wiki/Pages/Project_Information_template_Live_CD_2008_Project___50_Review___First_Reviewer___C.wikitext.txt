@@ -1,0 +1,50 @@
+[[Project Information:template Live CD 2008 Project|Click here to return to the previous page]].
+
+{| style="width:100%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#4058A0; color:white"|<font color="white">'''50% REVIEW PROCESS''' 
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+Project Deliveries & Objectives  
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+[[OWASP Summer of Code 2008 Applications#OWASP Live CD 2008 Project|OWASP Live CD 2008 Project's Deliveries & Objectives]]
+ |-
+ | style="width:25x%; background:#4058A0" align="center"|<font color="white">'''QUESTIONS''' 
+ | colspan="2" style="width:75%; background:#4058A0" align="left"|<font color="white">'''ANSWERS'''  
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"| 
+1. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#OWASP Live CD 2008 Project|'''the assumed ones''']], please exemplify writing down those of them that haven't been realised.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+The stated goals for this project are:
+#Move from Morphix to SLAX
+#Get SLAX to have an equal number of tools as had existed in the Live CD 2007 (updating tools where necessary)
+#Add OWASP branding to SLAX
+#Add additional, quality tools
+#Document the Live CD, both how it was created and general documentation (e.g. OWASP Testing Guide).<br><br>
+REVIEW
+*No problems have been encountered booting and testing the SLAX Live CD on multiple platforms.
+*Parity of tools between the Live CD 2007 and Live CD 2008 has been accomplished.
+*The look and feel of the Live CD 2008 follows the developers intent of OWASP branding SLAX.
+*In discussions with the developer concerning the tools and documentation to be added to the Live CD 2008, the timeline is aggressive, but reasonable.
+ |- 
+ | style="width:25%; background:#7B8ABD" align="center"| 
+
+2. At what extent have the project deliveries & objectives been accomplished?  Having in consideration [[OWASP Summer of Code 2008 Applications#OWASP Live CD 2008 Project|'''the assumed ones''']], please quantify in terms of percentage.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+REVIEW
+#Move to SLAX = 100%
+#Tool parity with 2007 Live CD = 100%
+#OWASP Branding = 100%<br>
+#Additional Tools
+##Planning = 25%
+##Implementation = 0%
+#Documentation
+##Planning = 25%
+##Implementation = 0%
+ |- 
+ |-
+ | style="width:25%; background:#7B8ABD" align="center"|
+
+3. Please do use the right hand side column to provide advice and make work suggestions.
+ | colspan="2" style="width:75%; background:#cccccc" align="left"|
+Very good initial effort!<br><br>Regarding Metasploit and other popular tools that are not web-centric, I agree with the developer. These tools should be made available, but in a ''MISCELLANEOUS'' or ''OTHER'' sub-menu. While the purpose is not to compete with BackTrack and other penetration testing distributions, some tools are ubiquitous enough to be expected on any pentest platform. The focus is still, as it should be, on web application testing.<br><br>As per our discussions, I concur that the tools listed in the OWASP Testing Guide should receive priority for implementation with additional tools being added on a time/resource/licensing basis.
+|}

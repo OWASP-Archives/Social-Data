@@ -1,0 +1,196 @@
+<!-- komentar --> 
+{{Chapter Template   
+|chaptername=Slovenia
+|extra=The chapter leader is [mailto:stanka@owasp.org Stanka Salamun.]|mailinglistsite=http://lists.owasp.org/mailman/listinfo/owasp-Slovenia
+}}<br> <paypal>Slovenia</paypal><br> 
+
+<br>
+<big>'''Next meeting: TBD, Ljubljana''' </big> <br>
+
+
+
+<br>
+<big>'''Slides from the meeting: Maribor, FERI, Smetanova 17, Mar 29 2012, 16:00''' </big> <br>
+* Jure Škofič: OWASP TOP 10 - Predstavitev največjih tveganj spletnih aplikacij  [[Media:OWASP_Top_10_slo.pdf|(Slides)]]
+
+OWASP TOP 10 Cheat Sheets: https://www.owasp.org/index.php/OWASP_Top_Ten_Cheat_Sheet
+
+
+
+
+
+
+<br>
+<big>'''Slides from the meeting: Ljubljana, Litijska 51, Sep 15 2011, 16:00''' </big> <br>
+
+* Edi Strosar: Enhanced Mitigation Experience Toolkit [[Media:OWASPSLO_Emet.pdf|(Slides)]]
+
+* Tadej Vodopivec: High frequency hacking - some risks of the modern trading practices ) [[Media:OWASPSLO_HFH.pdf|(Slides)]]
+* Damir Savanović: Cloud Security Alliance - Chapter Slovenia [[Media:CSA_Slovenija_OWASP.pdf|(Slides)]]
+
+
+
+<br>
+<br>
+
+
+
+<big>'''Papers from OWASP OTS 2011:'''</big> 
+<br>
+
+[[Media:OWASPSLO_OTS2011.zip|(Papers)]]
+
+
+'''Brezplačne vstopnice za dogodke in več informacij je na voljo na http://owaspslo.eventbrite.com.'''
+
+==== O OWASP  ====
+
+<font color="#0000ff">OWASP (Open Web Application Security Project) je odprta, globalna, brezplačna in neprofitna skupnost, ki se posveča dvigovanju varnostnega nivoja programske opreme.Poslanstvo OWASP je seznanjanje in osveščanje javnosti o pomembnosti aplikacijske varnosti in primernih načinih zavarovanja. Posameznikom in organizacijam želimo omogočiti, da glede dejanskih varnostnih tveganj programske opreme sprejemajo informirane odločitve. <br><br>
+
+Skupnosti OWASP se lahko pridruži kdorkoli. Vsa gradiva so dostopna z uporabo brezplačne licence. Fundacija OWASP zagotavlja razpoložljivost in podporo delovanja s pomočjo posameznikov, organizacij in akademskih institucij. <br></font>
+
+Pridružite se OWASP Slovenia: https://lists.owasp.org/mailman/listinfo/owasp-Slovenia.
+
+
+==== News  ====
+
+.
+
+
+==== Meeting Locations  ====
+
+Free tickets availabe: http://owaspslo.eventbrite.com
+
+
+*L1: Maribor:
+
+'''Location:''' UNIVERSITY OF MARIBOR, Faculty of Electrical Engineering and Computer Science (FERI), Smetanova 16, 2000 Maribor, <br>Classroom G2-P2 BETA (entrance from Koroška cesta) <br>'''When:''' June 16 2010 13:30 <br><br>
+
+*L2: Ljubljana: 
+
+'''Location:''' ComTrade, Litijska 51, Ljubljana, room "Postojnska jama" <br>'''When:''' September 2010 <br>
+
+
+==== Meeting and Slides Archive  ====
+
+<big>'''16. junij 2011, 16:20, MARIBOR, OWASP Slovenia at OTS 2011''' </big> 
+<br>
+
+
+
+Tudi letos smo se pridružili konferenci OTS 2011 (http://www.ots.si), kjer smo poskrbeli za sekcijo "Aplikacijska varnost".
+
+Pripravili smo naslednji program: 
+
+- Stanka Šalamun: '''MASS: RAZJASNIMO ZMEDO VARNOSTI V APLIKACIJAH'''
+
+- Milan Gabor: '''KDAJ STE NAZADNJE SERVISIRALI VAŠE APLIKACIJE?'''
+
+- Grega Prešeren, Mina Žele: '''ZAGOTAVLJANJE VARNOSTI V APLIKACIJAH ZDRAVSTVENEGA INFORMACIJSKEGA SISTEMA'''
+
+
+<br>
+
+
+
+
+
+<big>'''Mar 9 2011, 16:00, Ljubljana, Litijska 51''' </big> <br>
+
+'''mag. Andrej Tomšič:''' Informacijski pooblaščenec: Predstavitev smernic za razvoj informacijskih rešitev z naslovom " Skrb za zasebnost? Pri nas je vgrajena!"
+
+
+Smernice podajajo najpomembnejše zahteve, ki morajo biti upoštevane pri razvoju informacijskih rešitev, ki vključujejo obdelavo osebnih podatkov. Namenjen so vsem tistim, ki se ukvarjajo z razvojem ali naročanjem rešitev na področju informacijsko-komunikacijskih tehnologij, ne glede na to, ali gre za nove proizvode, storitve, sisteme ali posamezne rešitve in aplikacije. Fokus smernic je usmerjen v predstavitev in upoštevanje pristopa t.i. vgrajene zasebnosti (angl. Privacy by Design). [http://www.ip-rs.si/fileadmin/user_upload/Pdf/smernice/Smernice_za_razvoj_informacijskih_resitev.pdf (Smernice)][[Media:ATomsic_OWASP_smernice.pdf|(Slides)]]
+
+
+
+<big>'''Dec 8 2010 (Wednesday), FERI Maribor, Smetanova ulica 17, Maribor, predavalnica G2-P2 DELTA''' </big> <br>
+
+* '''Mitja Kolšek: "Remote Binary Planting - An Overlooked Vulnerability Affair, Slovenian Foreplay"''' [[Media:OWASP_BP_20101208.pdf|(Slides)]]
+Na predavanju bo govora o ranljivosti"Binary Planting", ki je zadnjih nekaj mesecih v centru svetovne strokovne pozornosti, saj strokovnjaki razkrivajo, da je bil  "binary planting" uporabljen pri razširjanju črva Stuxnet, ki že nekaj časa razsaja po jedrskih elektrarnah in industrijskih obratih po svetu. Mitja, eden glavnih igralcev te globalne zgodbe, bo ponovil slovensko predigro  v intimno razumevanje  stare/nove varnostne luknje, s katerim je mariborsko podjetje Acros vznemirilo svetovno strokovno javnost ter odločno zapičilo zastavico v svetovni v zemljevid informacijske varnosti. Predstavljena bo raziskava, ki je osvetlila velikost problematike in opisana tehnična plat ranljivosti, obetamo pa si lahko tudi nekaj zakulisnih informacij in opis zanimive izkušnje, ki se je zgodila po ogromnem odzivu  vseh največjih svetovnih računalniških medijev in javnosti.
+
+
+
+<big>'''Oct 6 2010, 15:00-18:00, Litijska 51, Ljubljana, Slovenia''' </big>
+
+'''* Edvard Šilc: "Telesni skenerji na slovenskih letališčih"'''
+
+Na posebno željo bomo ponovili predavanje "Telesni skenerji na slovenskih letališčih", s katerim je g. Šilc navdušil udeležence junijskega skupnega srečanja OTS 2010 v Mariboru, zato bi izkušnjo želeli deliti tudi s člani OWASP v Ljubljani. Prispevek bo govoril o tem, kako nacionalno varnost kot najvišjo obliko varnosti pogosto zagotavljamo na račun drugih človekovih pravic in da se v tem primeru prevečkrat prilagodijo tudi pravne norme. Na primeru uvajanja telesnih skenerjev na letališčih, ki eksplicitno znižujejo pravico do zasebnosti, bo pokazal na primere, ko brezkompromisno vdiranje v integriteto posameznika le-temu ne zagotavlja večje varnosti.
+
+
+* '''Mitja Kolšek: "Remote Binary Planting - An Overlooked Vulnerability Affair, Slovenian Foreplay"'''
+Stripped Binary Planting slides: [[Media:OWASP_BinaryPlanting_20101006.pdf|(Slides)]]
+
+Predavanje bo predpremiera prve mednarodne predstavitve ranljivosti, imenovane "Binary Planting", pred svetovno javnostjo na pomembni informacijsko varnostni konferenci "Hack In the Box, Kuala Lumpur 2010". Mitja bo odigral slovensko predigro  v razumevanje te stare/nove varnostne luknje, s katerim je mariborsko podjetje Acros v preteklem mesecu dodobra vznemirilo svetovno strokovno javnost ter odločno zapičilo zastavico v svetovni v zemljevid informacijske varnosti. Predstavljena bo raziskava, ki je osvetlila velikost problematike in opisana tehnična plat ranljivosti, obetamo pa si lahko tudi nekaj zakulisnih informacij in opis zanimive izkušnje, ki se je zgodila po ogromnem odzivu  vseh največjih svetovnih računalniških medijev in javnosti.
+
+
+
+
+===June 16th 2010, 16:15, Maribor, OWASP Slovenia at OTS 2010 conference ===
+
+OTS 2010 OWASP papers [[Media:OTS2010-OWASP-clanki.pdf| (Papers)]]
+
+<big><br>'''Agenda: <br>'''</big>
+
+
+* Marko Hölbl: Pasti pri vgradnji kriptografije v aplikacijski svet [[Media:OTS2010-OWASP-MH.pdf| (Slides)]]
+* Milan Gabor: Slovenske spletne aplikacije imajo&nbsp;»TALENT« [[Media:OTS2010-OWASP-MG.pdf| (Slides)]]
+* Jure Škofič: "Race condition" - Ko želva stavi na srečo, zajec pa na "symlink" napad [[Media:OTS2010-OWASP-JS.pdf| (Slides)]]
+* Edvard Šilc: Telesni skenerji na slovenskih letališčih [[Media:OTS2010-OWASP-ES.pdf| (Slides)]]. More about privacy on http://matej.owca.info/.
+
+
+
+
+<br>At the same day OWASP Slovenia members are also '''kindly invited to attend the OTS 2010 from 13.30, with no charge''': at 
+13:30 there will be a very interesting keynote (in English), presented by Robin Wilton, titled "What's the value of your 
+Digital  Identity". At 14:30 there will be a section "Izmenjava, hramba in obdelava podatkov". 
+<hr>
+
+===Feb 25 2010, 16:00, Ljubljana Premiere ===
+<font color="#008000">Drink and snacks were kindly provided by our host, '''HERMES SoftLab'''.</font> 
+<br><big><br>'''Agenda: <br>'''</big>
+ 
+*[[Media:OWASP_Slovenia_introduction_LJ_slides.pdf|Introduction to OWASP (Slides)]]
+*Tadej Vodopivec, HERMES SoftLab: '''Who's drinking, who's paying ...''' for web application security?
+<font color="#0000ff">'''Kdo pije, kdo plača... '''za varnost spletnih aplikacij? </font>[[Media:OWASP_TadejVodopivec_SDL.pdf|(Slides)]] 
+
+<br>On special request we will repeat one of our lectures: 
+*Luka Treiber, ACROS: '''"White Hat" confession: '''How I got that precious file from your computer (demo)
+<font color="#0000ff">'''Izpoved "white hat" hekerja: '''Kako sem dobil tisto dragoceno datoteko z vašega računalnika (demo) [[Media:OWASP_LukaTreiber_Whitehack.pdf|Slides]]</font>
+
+<br>
+<br>
+<hr>
+
+=== Jan 27 2010, 16:00, Maribor, Initial meeting ===
+University of Maribor, FERI (classroom G2-P2 BETA), Smetanova 16, 2000 Maribor 
+
+<font color="#008000">Drink and snacks were kindly provided by '''Laboratorij za podatkovne tehnologije''' from FERI, UM.</font> 
+
+<big><br>'''Agenda:'''</big>
+
+*dr. Mitja Lenič, NKBM: '''The challenges of securing application settings and infrastructure data'''
+
+<font color="#0000ff">Izzivi varovanja aplikacijskih nastavitev in infrastrukturnih podatkov </font>([[Media:OWASP-Lenic-Final.pdf|slides]]) 
+
+<br>
+
+*Luka Treiber, ACROS: '''"White Hat" confession: How I got that precious file from your computer '''(demo)
+
+<font color="#0000ff">Izpoved "white hat" hekerja: Kako sem dobil tisto dragoceno datoteko z vašega računalnika (demo)</font> 
+
+<br>Reviji [http://www.sistem-on.net Sistem] se zahvaljujemo za objavo novice o ustanovitvi OWASP, Chapter Slovenija. 
+
+
+==== How Can You Help?  ====
+
+If you can help and would like to raise the visibility of application security in your company by supporting our 100% volunteer efforts, simply contact Chapter Leader. <br><br>
+
+<br>To be a SPEAKER at a future meeting simply review the speaker agreement and then contact the local chapter leader with details of what OWASP PROJECT, independent research or related software security topic you would like to present on. 
+
+<br>
+
+
+__NOTOC__
+<headertabs/>
+[[Category:Europe]]

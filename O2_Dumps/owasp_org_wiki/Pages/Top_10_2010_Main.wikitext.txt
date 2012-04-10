@@ -1,0 +1,70 @@
+{{Top_10_2010:TopTemplate|usenext=2010NextLink|next=Injection|useprev=2010PrevLink|prev=Introduction}}
+
+{{Top_10_2010:SubsectionColoredTemplate|What Are Application Security Risks?|
+Attackers can potentially use many different paths through your application to do harm to your business or organization. Each of these paths represents a risk that may, or may not, be serious enough to warrant attention.<br>
+[[File:2010-T10-ArchitectureDiagram.png|700px|Click for a larger version of this image.]]<br>
+Sometimes, these paths are trivial to find and exploit and sometimes they are extremely difficult. Similarly, the harm that is caused may range from nothing, all the way through putting you out of business. To determine the risk to your organization, you can evaluate the likelihood associated with each threat agent, attack vector, and security weakness and combine it with an estimate of the technical and business impact to your organization. Together, these factors determine the overall risk.}}
+
+
+{{Top_10_2010:SubsectionColoredTemplate|What's My Risk?|}}
+This update to the OWASP Top 10 focuses on identifying the most serious risks for a broad array of organizations. For each of these risks, we provide generic information about likelihood and technical impact using the following simple ratings scheme, which is based on the OWASP Risk Rating Methodology.
+<center>
+{| style="align:center; text-align:center; border:2px solid #4F81BD;"
+|- style="background-color: #4F81Bd; color: #FFFFFF;;"
+! &nbsp;Threat&nbsp;Agent&nbsp; !! &nbsp;Attack&nbsp;Vector&nbsp; !! &nbsp;Weakness&nbsp;Prevalence&nbsp; !! &nbsp;Weakness&nbsp;Detectability&nbsp; !! &nbsp;Technical&nbsp;Impact&nbsp; !! &nbsp;Business&nbsp;Impact&nbsp;
+|- style="background-color: #FF0000; color: #000000; padding: 2px;"
+| ? || Easy || Widespread || Easy || Severe || ?
+|- style="background-color: #FFB200; color: #000000; padding: 2px;"
+| ? || Average || Common || Average || Moderate || ?
+|- style="background-color: #FFFF00; color:#000000; padding: 2px;"
+| ? || Difficult || Uncommon || Difficult || Minor || ?
+|}
+</center>
+However, only you know the specifics of your environment and your business. For any given application, there may not be a threat agent that can perform the relevant attack, or the technical impact may not make any difference. Therefore, you should evaluate each risk for yourself, focusing on the threat agents, security controls, and business impacts in your enterprise.
+
+Although previous versions of the OWASP Top 10 focused on identifying the most common “vulnerabilities”, they were also designed around risk. The names of the risks in the Top 10 stem from the type of attack, the type of weakness, or the type of impact they cause. We chose the name that is best known and will achieve the highest level of awareness.
+
+{{Top_10_2010:SubsectionColoredTemplate|OWASP Top 10 Application Security Risks - 2010|}}
+
+{| cellspacing="1" cellpadding="1" border="1" width="100%;"
+|<center>[[Top_10_2010-A1|A1-Injection]]</center>
+|Injection flaws, such as SQL, OS, and LDAP injection, occur when untrusted data is sent to an interpreter as part of a command or query. The attacker’s hostile data can trick the interpreter into executing unintended commands or accessing unauthorized data.
+|-
+|<center>[[Top_10_2010-A2|A2-Cross Site Scripting (XSS)]]</center>
+|XSS flaws occur whenever an application takes untrusted data and sends it to a web browser without proper validation and escaping. XSS allows attackers to execute scripts in the victim’s browser which can hijack user sessions, deface web sites, or redirect the user to malicious sites.
+|-
+|<center>[[Top_10_2010-A3|A3-Broken Authentication and Session Management]]</center>
+|Application functions related to authentication and session management are often not implemented correctly, allowing attackers to compromise passwords, keys, session tokens, or exploit other implementation flaws to assume other users’ identities.
+|-
+|<center>[[Top_10_2010-A4|A4-Insecure Direct Object References]]</center>
+|A direct object reference occurs when a developer exposes a reference to an internal implementation object, such as a file, directory, or database key. Without an access control check or other protection, attackers can manipulate these references to access unauthorized data.
+|-
+|<center>[[Top_10_2010-A5|A5-Cross Site Request Forgery (CSRF)]]</center>
+|A CSRF attack forces a logged-on victim’s browser to send a forged HTTP request, including the victim’s session cookie and any other automatically included authentication information, to a vulnerable web application. This allows the attacker to force the victim’s browser to generate requests the vulnerable application thinks are legitimate requests from the victim.
+|-
+|<center>[[Top_10_2010-A6|A6-Security Misconfiguration]]</center>
+|Good security requires having a secure configuration defined and deployed for the application, frameworks, application server, web server, database server, and platform. All these settings should be defined, implemented, and maintained as many are not shipped with secure defaults. This includes keeping all software up to date, including all code libraries used by the application.
+|-
+|<center>[[Top_10_2010-A7|A7-Insecure Cryptographic Storage]]</center>
+|Many web applications do not properly protect sensitive data, such as credit cards, SSNs, and authentication credentials, with appropriate encryption or hashing. Attackers may steal or modify such weakly protected data to conduct identity theft, credit card fraud, or other crimes.
+|-
+|<center>[[Top_10_2010-A8|A8-Failure to Restrict URL Access]]</center>
+|Many web applications check URL access rights before rendering protected links and buttons. However, applications need to perform similar access control checks each time these pages are accessed, or attackers will be able to forge URLs to access these hidden pages anyway.
+|-
+|<center>[[Top_10_2010-A9|A9-Insufficient Transport Layer Protection]]</center>
+|Applications frequently fail to authenticate, encrypt, and protect the confidentiality and integrity of sensitive network traffic. When they do, they sometimes support weak algorithms, use expired or invalid certificates, or do not use them correctly.
+|-
+|<center>[[Top_10_2010-A10|A10-Unvalidated Redirects and Forwards]]</center>
+|Web applications frequently redirect and forward users to other pages and websites, and use untrusted data to determine the destination pages. Without proper validation, attackers can redirect victims to phishing or malware sites, or use forwards to access unauthorized pages.
+|}
+
+{{Top_10_2010:SubsectionReferencesTemplate|Main}}
+{{Top_10_2010:SubSubsectionOWASPReferencesTemplate}}
+* [[OWASP_Risk_Rating_Methodology | OWASP Risk Rating Methodology]]
+* [[Threat_Risk_Modeling | Article on Threat/Risk Modeling]]
+{{Top_10_2010:SubSubsectionExternalReferencesTemplate}}
+*[http://fairwiki.riskmanagementinsight.com/ FAIR Information Risk Framework]
+*[http://msdn.microsoft.com/en-us/library/aa302419.aspx Microsoft Threat Modeling (STRIDE and DREAD)]
+
+{{Top_10_2010:BottomTemplate|usenext=2010NextLink|next=Injection|useprev=2010PrevLink|prev=Introduction|usemain=MainLink|main=-Main}}
+[[Category:OWASP Top Ten Project]]

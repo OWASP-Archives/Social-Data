@@ -1,0 +1,71 @@
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP AppSensor Project - Detect and Respond to Attacks from Within the Application''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|
+
+'''Real Time Application Attack Detection and Response'''
+
+'''Overview'''
+
+Article on why [http://www.owasp.org/index.php/ApplicationLayerIntrustionDetection Application Based Intrusion Detection] is a must for critical applications.
+
+The AppSensor project defines a conceptual framework and methodology that offers prescriptive guidance to implement intrusion detection and automated response into an existing application.  Current efforts are underway to create the AppSensor tool which can be utilized by any existing application interested in adding detection and response capabilities.
+<br><br>
+
+'''Detection'''
+
+AppSensor defines over 50 different [http://www.owasp.org/index.php/AppSensor_DetectionPoints detection points] which can be used to identify a malicious attacker.
+
+'''Response'''
+
+AppSensor provides guidance on how to respond once a malicious attacker has been identified. Possible actions include: logging out the user, locking the account or notifying an administrator.  More than a dozen [http://www.owasp.org/index.php/AppSensor_ResponseActions response actions] are described.
+
+'''Defending the Application'''
+
+An attacker often requires numerous probes and attack attempts in order to locate an exploitable vulnerability within the application. By using AppSensor it is possible to identify and eliminate the threat of an attacker before they are able to successfully identify an exploitable flaw.
+
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project key Information'''
+ | style="width:14%; background:#cccccc" align="center"|Project Leaders:
+[[User:MichaelCoates|'''Michael Coates''']]<br>John Melton<br>Colin Watson
+ | style="width:15%; background:#cccccc" align="center"|Project Contributors:
+Ryan Barnett
+<br>Simon Bennetts
+<br>August Detlefsen
+<br>Dennis Groves
+<br>Randy Janida
+<br>Jim Manico
+<br>Giri Nambari
+<br>Eric Sheridan
+<br>John Stevens
+<br>Kevin Wall
+ | style="width:10%; background:#cccccc" align="center"|Mailing list<br>[https://lists.owasp.org/mailman/listinfo/owasp-appsensor-project '''Subscribe here''']<br>[mailto:OWASP-AppSensor-Project(at)lists.owasp.org '''Use here''']
+| style="width:17%; background:#cccccc" align="center"|License<br>[http://creativecommons.org/licenses/by-sa/3.0/ '''Creative Commons Attribution Share Alike 3.0''']
+ | style="width:14%; background:#cccccc" align="center"|Project Type<br>[[:Category:OWASP_Project#Beta Status Projects|'''Documentation''']]
+| style="width:15%; background:#cccccc" align="center"|Sponsor<br>[[OWASP Summer of Code 2008|'''OWASP SoC 08''']]  
+ |}
+
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|
+'''[[:Category:OWASP_Project_Assessment#Beta_Quality_Documentation_Criteria|Beta Quality]]'''<br>[[:OWASP AppSensor Project - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="left"|
+* '''NEW: AppSensor & ESAPI:''' [http://www.owasp.org/index.php/AppSensor_Developer_Guide Getting Started: AppSensor Developer Guide]
+* '''Download AppSensor Book:''' [https://www.owasp.org/images/2/2f/OWASP_AppSensor_Beta_1.1.pdf PDF] | [https://www.owasp.org/images/b/b0/OWASP_AppSensor_Beta_1.1.doc Word]
+* '''Presentations:''' 
+** [http://www.owasp.org/images/0/06/Defend_Yourself-Integrating_Real_Time_Defenses_into_Online_Applications-Michael_Coates.pdf Defend Yourself: Integrating Real Time Defenses into Online Applications]
+** [http://www.brighttalk.com/webcast/20680 Automated Application Defenses to Thwart Advanced Attackers (Slides & Audio)]
+* '''Diagram:''' [https://www.owasp.org/index.php/File:Appsensor-pid.pdf Understanding AppSensor in the WebApp - Diagram]
+* '''Live Demo:''' [http://www.youtube.com/watch?v=8ItfuwvLxRk Video]
+* '''AppSensor Code:''' [http://code.google.com/p/appsensor/ Google Code]
+ | style="width:29%; background:#cccccc" align="center" |
+* [http://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API ESAPI]
+ |}
+----

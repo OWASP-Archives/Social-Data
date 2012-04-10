@@ -1,0 +1,20 @@
+'''Current Microsoft info about CAS and Full Trust'''
+
+Follwing this comment in What are the 'Real World' security advantages of the .Net Framework and the JVM?
+"... We are still talking about the basics! Microsoft is yet still to publicly acknowledge that is a MASSIVE PROBLEM the fact that 99% of .Net applications are designed for, and executed in Full Trust!.."
+
+
+Here is what is currently publicly published from MS about Full Trust and Partial Trust (and it's dangers):
+* [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnnetsec/html/THCMCh09.asp Chapter 9 – Using Code Access Security with ASP.NET]
+* [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnnetsec/html/seccodeguide.asp Secure Coding Guidelines for the .NET Framework]
+* [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnpag2/html/PAGHT000020.asp How To: Use Medium Trust in ASP.NET 2.0] 
+* [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnpag2/html/paght000017.asp How To: Use Code Access Security in ASP.NET 2.0]
+
+
+See also A Treasure Trove of .NET 2.0 Security Guidance & Documentation from the ThreatsAndCountermeasures Website and the [http://beta.blogs.msdn.com/shawnfa/default.aspx .Net Framwork Blog] (by Shawn Farkas) and the [http://channel9.msdn.com/wiki/default.aspx/SecurityWiki.HomePage patterns & practices Security Wiki]
+
+
+Until this issue is on https://www.microsoft.com/security I still stand by my original quote
+
+
+Originally Posted on 11/3/2005

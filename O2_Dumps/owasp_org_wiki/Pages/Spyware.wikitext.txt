@@ -1,0 +1,52 @@
+{{Template:Attack}}
+<br>
+[[Category:OWASP ASDR Project]]
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+==Description==
+Spyware is a program that captures statistical information from a user's computer and sends it over internet without user acceptance. This information is usually obtained from cookies and the web browser’s history. Spyware can also install other software, display advertisements, or redirect the web browser activity.
+Spyware differs from a virus, worm, and adware in various ways. Spyware does not self-replicate and distribute itself like viruses and worms, and does not necessarily display advertisements like adware. The common characteristics between spyware and viruses, worms, and adware are:
+# exploitation of the infected computer for commercial purposes
+# the display, in some cases, of advertisements
+
+==Risk Factors==
+
+High
+
+Some Spyware is very dificult to remove because it can hide  in Browser Cookies and Offline HTML Content in Temporary files.
+
+==Examples==
+
+<center>
+
+https://www.owasp.org/images/6/68/Figura2.jpg
+
+Figure 1. A lot of toolbars added by spyware, and some working as spyware
+</center>
+
+
+==Related [[Threat Agents]]==
+* [[:Category:Client-side Attacks]]
+[[Category:FIXME|not a threat agent that is currently there]]
+
+==Related [[Attacks]]==
+* [[Trojan Horse]]
+* [[Phishing]]
+* [[:Category:Malicious Code Attack]]
+
+==Related [[Vulnerabilities]]==
+* TBD
+
+==Related [[Controls]]==
+* TBD
+
+==References==
+* http://cwe.mitre.org/data/definitions/506.html -  Malicious
+* http://en.wikipedia.org/wiki/Spyware - Spyware
+
+
+[[Category:Resource Manipulation]]
+
+[[Category:Attack]]

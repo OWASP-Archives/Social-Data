@@ -1,0 +1,42 @@
+----
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT INFORMATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Proxy Project'''
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|
+The OWASP Proxy aims to provide a high quality intercepting proxy library which can be used by developers who require this functionality in their own programs, rather than having to develop it all from scratch.
+
+The library is developed in Java, making it most attractive to Java developers obviously, but also accessible to Python (Jython) and Ruby (JRuby) developers as well.
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|
+'''Key Project Information'''
+ | style="width:14%; background:#cccccc" align="center"|
+Project Leader<br>[[:User:RoganDawes|'''Rogan Dawes''']]
+ | style="width:15%; background:#cccccc" align="center"|
+Project Contibutors<br>[[:User:name|'''Add name''']]
+ | style="width:10%; background:#cccccc" align="center"|
+Mailing List<br>[https://lists.owasp.org/mailman/listinfo/owasp-proxy-project '''Subscribe here''']<br>[mailto:owasp-proxy-project@lists.owasp.org '''Use here''']
+ | style="width:17%; background:#cccccc" align="center"|
+License<br>[http://creativecommons.org/licenses/by-sa/3.0/ '''Creative Commons Attribution Share Alike 3.0''']
+ | style="width:14%; background:#cccccc" align="center"|
+Project Type<br>[[:Category:OWASP_Project#Alpha_Status_Projects|'''Tool''']]
+ | style="width:15%; background:#cccccc" align="center"|
+Sponsors<br>if any, add link
+ |}
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|
+'''[[:Category:OWASP Project Assessment#Alpha Quality Tool Criteria|Alpha Quality]]'''<br>(under review)<br>[[:OWASP Proxy Project - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="center"|
+At the moment there is no packaged version of this library. Development is done in a git repository, located [http://dawes.za.net/gitweb.cgi?p=rogan/owasp-proxy/owasp-proxy.git;a=summary here].<br>An up to date snapshot can be obtained [http://dawes.za.net/gitweb.cgi?p=rogan/owasp-proxy/owasp-proxy.git;a=snapshot;h=HEAD;sf=tgz here].
+ | style="width:29%; background:#cccccc" align="center"|
+*  [[:Category:OWASP WebScarab Project|WebScarab]]
+*  [[:Category:OWASP CSRFTester Project|CSRFTester]]
+ |}
+----

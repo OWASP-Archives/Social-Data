@@ -1,0 +1,21 @@
+The JavaScript eval, setTimeout, and setInterval functions are one of the tricky places to write un-trusted data into. In fact, you should never pass un-trusted data directly to the first parameter of these functions. However, there are times when use eval, setTimeout, or setInterval are needed and it is more straight forward to write the un-trusted data directly into these functions; to do so requires complicated double encoding, etc. and as such <b>should be avoided</b>. However, it is fairly easy to alter the solution as follows:
+
+<b><i>Vulnerable to XSS</i></b><br/>
+<pre>&lt;script type="text/javascript"&gt;
+    eval("doSomething('<%=ESAPI.encoder().encodeForJavaScript(request.getParameter("name"))%>')")
+&lt;/script&gt;</pre>
+
+<b><i>Safe</i></b>
+<pre>&lt;script type="text/javascript"&gt;
+    eval(function () { doSomething('<%=ESAPI.encoder().encodeForJavaScript(request.getParameter("name"))%>');  })
+&lt;/script&gt;</pre>
+
+Why is the first version vulnerable? Because of the way browsers interpret the web page; in the first case we have a string that gets parsed by the &lt;script&gt;'s JavaScript parser which will correctly interpret the JavaScript encoded data and construct a string. This string is then passed to a JavaScript interpreter in the form of the eval function; because the encoded data was already converted to string data (i.e. the encoding was removed) it is still vulnerable to XSS. 
+
+The second example is safe because we are no longer handing an un-trusted string directly to the eval function; but rather we are passing a Closure and the un-trusted data is an argument to the doSomething function. The un-trusted data is not passed through two layers of a JavaScript interpreter as in the first example; as such it is safe. Of course, if this data is then used by the doSomething function in an unsafe manor such as setting the innerHtml property of an element in the DOM; well then there could still be an XSS vulnerability, but it is not directly related to the eval function.
+
+Caveat: The above examples may still be vulnerable if the page is xhtml; see [[DOM based XSS Prevention Cheat Sheet#Encoding Misconceptions]].
+
+= Authors and Primary Editors  =
+
+Jeremy Long - jeremy.long [at] owasp.org

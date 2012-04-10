@@ -1,0 +1,23 @@
+3. AJAX Security -> 3.2 LAB: Client Side Filtering
+
+=== Lesson overview ===
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution === 
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information. 
+
+=== Strategy ===
+
+In this WebGoat lab, an XPath query returns name, salary, and other information about users in XML in a hidden table. The vulnerability is that user information is sent for users not within the scope of the requesting user and client side filtering is relied upon to show only the necessary users. 
+
+The WebGoat solution is to modify the source code and return only the users and their information that is allowed according to the user requesting the information.
+
+This is essentially an information leakage problem that does not need to be exploited (the extra information is always there).
+
+Since ModSecurity cannot alter an HTTP response (intercept, then remove the unnecessary data), there seems to be no ModSecurity solution to this vulnerability.
+
+=== Implementation === 
+
+None

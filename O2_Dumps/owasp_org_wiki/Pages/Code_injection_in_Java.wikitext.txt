@@ -1,0 +1,67 @@
+==Status==
+Review
+
+==Overview==
+
+Code injection simply involves injecting malicious code into an application, which will be executed in the context of the application.  There are a couple ways in which Java code could be injected into an application such as using the scripting API or dynamic JSP includes.  Java provides a scripting API that allows code written in scripting languages to access and control Java objects.  The scripting API comes with built-in support for Javascript using the Mozilla Rhino engine, but other language engines such as JRuby and Jython can be used as well.  If an attacker can control which script file is loaded or part of the script code that is evaluated, then malicious code can be executed.
+
+==Examples ==
+
+===Example 1===
+
+The code below allows a user to inject arbitrary Javascript into Java's script engine.
+
+<pre>
+import javax.script.*;
+
+public class Example1 {
+	public static void main(String[] args) {
+		try {
+			ScriptEngineManager manager = new ScriptEngineManager();
+			ScriptEngine engine = manager.getEngineByName("JavaScript");
+			System.out.println(args[0]);
+			engine.eval("print('"+ args[0] + "')");
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+}
+</pre>
+
+In this case, the attacker decides to inject code that creates a file on the file system.  
+
+hallo'); var fImport = new JavaImporter(java.io.File); with(fImport) { var f = new File('new'); f.createNewFile(); } //
+
+There are two built-in functions that allow Java classes and packages to be brought into the scripting environment: importPacket and importClass.  There is also a class, called JavaImporter, which allows multiple Java packages to be brought into the script code and then can be used to instantiate Java classes.
+
+===Example 2===
+
+The code below allows a user to control which file is loaded into Java's script engine.
+
+<pre>
+import javax.script.*;
+import java.io.*;
+
+public class Example2 {
+	public static void main(String[] args) {
+		try {
+			ScriptEngineManager manager = new ScriptEngineManager();
+			ScriptEngine engine = manager.getEngineByName("JavaScript");
+			engine.eval(new java.io.FileReader("resources/" + args[0] + ".js"));
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+}
+</pre>
+
+It is trivial for a user to load script files from other directories.  For example, inputting ''../uploads/evil''.  The restriction on the filename can be bypassed using a null byte character depending on how the file is opened.
+
+===Example 3===
+
+The code below allows the user to control which JSP is loaded using a dynamic include.  This is similar to the PHP include statement, but doesn't not allow the inclusion of code from other domains.
+
+<pre>
+<% String pageToInclude = getDataFromUntrustedSource(); %>
+<jsp:include page="<%=pageToInclude %>" />
+</pre>

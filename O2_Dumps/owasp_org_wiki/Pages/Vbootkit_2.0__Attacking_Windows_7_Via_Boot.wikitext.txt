@@ -1,0 +1,15 @@
+This talk will introduce a new tool which allows attacks against Windows 7 via boot sectors. In this talk, Vbootkit 2.0 will be demonstrated in action to show how to bypass and circumvent security policies/architecture using customized boot sectors for Windows 7 (x64). The talk will cover:
+
+*Windows 7 Boot architecture
+*Vbootkit 2.0 architecture and inner workings
+*Insight into the Windows 7 minkernel
+
+Demonstration will also include:
+
+*The use of Vbootkit in gaining access to a system without leaving traces
+*Leveraging normal programs to escalate system privileges
+*Remote control windows 7 using ping packets
+*Remote key logger
+*Running unsigned code in kernel
+
+All this is done, without having any footprint on the HDD (everything is in memory). It also remains invisible to all existing anti-virus solutions.

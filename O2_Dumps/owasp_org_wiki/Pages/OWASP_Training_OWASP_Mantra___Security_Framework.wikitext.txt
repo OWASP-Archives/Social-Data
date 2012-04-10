@@ -1,0 +1,30 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>OWASP Training Modules</noinclude>
+| Module_designation = [[:OWASP Mantra - Security Framework|OWASP Mantra - Security Framework]]
+| Module_Overview_Goal = Mantra is a security framework which can be very helpful in performing all the five phases of attacks including reconnaissance, scanning and enumeration, gaining access, escalation of privileges,maintaining access, and covering tracks. Apart from that it also contains a set of tools targeted for web developers and code debuggers which makes it handy for both offensive security and defensive security related tasks.
+| Content = 
+&nbsp;
+Mantra is a collection of hacking tools, add-ons, and scripts based on Firefox.
+
+Right from the beginning, one Firefox and Google Chrome of the attractive features which made both of them outstanding was their expandability by means of installing useful extensions or add-ons. Programmers and developers started coding add-ons which helped to make the online web more easy and functional.
+Naturally, there were add-ons developed for hackers too. Some went out dated, some were very powerful, and some 
+went unnoticed despite their powerful capabilities. We tried to get all the add-ons
+of this type available out there on the internet, installed, analyzed, ranked and after that included them
+on our own security toolkit.
+
+By looking at the total number of exploit getting added to the exploit db, we think that an exploit development framework based on the browser can get very good acceptance from the security and hacking communities and this triggered the making of Mantra.
+
+As of now Mantra is just a security toolkit rather than a full-fledged framework. We think it’s always better to give a choice to the end user rather than providing what we think is the best. So once the community is up and we have a crowd, we will go ahead and finalize the basic criteria for framework the and will work on their behalf.
+
+&nbsp;
+| Material = 
+&nbsp;
+*[https://www.owasp.org/images/e/e4/OWASP_Mantra-An_Introduction.pdf Introduction - PDF]
+*[http://www.getmantra.com/download/index.html OWASP Mantra Security Toolkit - Version Beta 0.61]
+*[http://chmag.in/article/feb2011/mantra-–-free-and-open-source-security-framework Mantra – Free and Open Source Security Framework] 
+
+
+}}
+
+
+
+[[Category:OWASP_Training|Training]]

@@ -1,0 +1,26 @@
+== NEWS! ==
+=== Sept 25th 2008 - NYC CTF may get packaged up ===
+
+There is a Capture-The-Flag (CTF) environment at the [http://www.owasp.org/index.php/OWASP_NYC_AppSec_2008_Conference NYC OWASP Con].  It seems likely that it will be packaged up and distributed.  Stay tuned...
+
+== Link to the Lab Setup Diagrams Andrew found ==
+
+[http://infosecond.wikispaces.com/Lab+Setup+-+Diagram?f=print Diagrams] Andrew shared at the 9/18/2008 bOWASP meeting
+
+== Desired Lab Components ==
+
+ - WLAN WAP and/or big copper switches
+ - host box with loads o' storage capable of running multiple victim VMs; capable of burning VMs to DVD
+ - Proposal: I can provide a machine at the meetings that should work for what we are doing. It has a DVD burner, around a TB in storage space, and is fairly quick.
+             I also have a Linksys wireless router that can be used. I am trying to get my hands on a large switch from our surplus, but haven't had any luck yet.
+             I would be happy to bring it, just let me know.
+             Andrew Riesel
+
+ - Web App Firewall
+ - IPS
+ - CD/DVD copying capability
+
+ - 2-factor auth for any management components; possibly for some of the target apps too...
+ - Hamachi or some sort of VPN so we can stay decentralized...?
+ - Somebody's open-source SEM/SIM to gather events so that the only time WAF/IPS/HIDS/HIPS/Whatever needs to be touched is for config changes
+ - [http://www.owasp.org/index.php/OWASP_NYC_AppSec_2008_Conference NYC OWASP Con's] CTF environment with all of the above

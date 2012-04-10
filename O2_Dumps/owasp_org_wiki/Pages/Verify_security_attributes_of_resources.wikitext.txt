@@ -1,0 +1,45 @@
+{{Template:SecureSoftware}}
+
+==Overview==
+
+Purpose:	
+
+* Confirm that software abides by previously defined security policies.
+
+Role:
+
+Tester
+
+Frequency:
+
+* Once per iteration
+
+
+
+==Check permissions on all static resources ==
+
+Using a standard install on a clean system, inspect the permissions and access controls placed on all resources owned by the system, including files and registry keys. The permissions granted by the system's default install should exactly match those put forth by the resource specifier in the security requirements, or from the global security policy.
+
+If no specific permissions are identified by resources, determine whether roles other than the owning role can access the resource, based on its permissions.
+
+Any deviation from specified or expected behavior should be treated as a defect.
+
+==Profile resource usage in the operational context ==
+
+The requirements, a security profile the or operational security guide should specify what resources the system should be able to access. When performing functional and non-functional testing, use profiling tools to determine whether the software abides by the policy. In particular, look for the following:
+
+*	Access to network resources (local ports and remote addresses) that are - or appear to be - invalid.
+
+*	Access to areas of the local file system outside the specification.
+
+*	Access to other system data resources, including registry keys and inter-process communications.
+
+*	Use of system privileges in situations that are not specified.
+
+Again, any deviation from specified or expected behavior should be treated as a defect.
+
+
+[[Category:Activity]]
+[[Category:CLASP Activity]]
+[[Category:BP2 Perform application assessments]]
+[[Category:OWASP_CLASP_Project]]

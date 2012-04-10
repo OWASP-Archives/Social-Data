@@ -1,0 +1,197 @@
+''Sent to owasp-all mailing list on ?? May 2007'' 
+==  OWASP Newsletter #9 (10-June-2007) ==
+Welcome to the 9th OWASP Newsletter, covering:
+* Final OWASP Top 10 v2007
+* SpoC2007 Selections 
+* AppSec EU Conference in Italy
+* The next Conference in San Jose, CA
+* OWASP on the Move!
+* (non-OWASP) Project: Java Open Review Project 
+And pointers to the latest changes online.
+
+If you have any content to add to the next edition, feel free to add it directly to its WIKI page ([[OWASP Newsletter 10]]).
+
+PS: if all you readers regularly add an item to the Application Security News section on http://www.owasp.org/index.php/Application_Security_News we most certainly become THE central point for the latest AppSec news (just an idea). We could then create a seperate news feed for your favorite aggregator.
+
+Sebastien Deleersnyder
+
+Belgium Chapter Leader
+
+== Featured Item: [[OWASP Top Ten]] final 2007 version ! ==
+Thanks to the hard work of Andrew and all other contributors and reviewers we are proud to present you the 2007 version of the [[OWASP Top 10]]. The OWASP Top Ten represents a broad consensus about what the most critical web application security flaws are. We urge all companies to adopt this awareness document within their organization and start the process of ensuring that their web applications do not contain these flaws.
+
+== Featured Item: SpoC2007 Selections Made ! ==
+OWASP is funding over 25 new application [[OWASP Spring Of Code 2007 Applications|security projects]] this Spring with over $120,000. There are a variety of tools, documents, and other projects in the works. These projects are well underway and are targeted to be complete by the end of July. Congratulations to all the participants - everyone is looking forward to your work!
+
+== Featured Item: [[6th_OWASP_AppSec_Conference_-_Italy_2007|6th OWASP AppSec Conference in Italy May 15-17 was a great success]] ==
+The [[6th_OWASP_AppSec_Conference_-_Italy_2007|6th OWASP AppSec Conference]] was held May 15-17 in Milan, Italy. Microsoft presented on "The Benefits of the SDL initiative to Microsoft and its Customers" and there were expert talks on Web Services Security, Securing AJAX, the Microsoft Secure Development Lifecycle, all the new OWASP projects, and much more.
+
+You can read all the [[6th_OWASP_AppSec_Conference_-_Italy_2007|details]] and then access all the presentations online on the [[6th_OWASP_AppSec_Conference_-_Italy_2007/Agenda | agenda page]].
+
+== Featured Item: [[7th_OWASP_AppSec_Conference_-_San_Jose_2007|Planning for 7th OWASP AppSec Conference in San Jose, CA in Oct. 2007 underway.]] ==
+We are now starting to plan the details for the [[7th_OWASP_AppSec_Conference_-_San_Jose_2007 | 7th OWASP AppSec Conference]] which will be held in Oct 2007 in the San Jose, CA area. This conference will be our biggest ever with two full days of tutorials, two days for the conference (including a new 3rd track on Web Services Security), and a vendor booth area for the first time. Please check back for additional details which should be available soon.
+
+== Featured Item: OWASP on the Move! ==
+Following discussions during the conference in Italy we had the idea of supporting OWASP presenters to spread the word at local chapter meetings and security events.
+
+We have set up a first trial in Belgium where Ivan Ristic and Dinis will be doing presentations June 22nd. F5 Networks has locally sponsored their trip with € 1000. Program on http://www.owasp.org/index.php/Belgium. A first stub is set up at http://www.owasp.org/index.php/OWASP_on_the_Move (WikiMedia Kung-Fu Masters are invited to make the page look better :-)
+
+Helsinki is already looking for OWASP speakers on SDLC, so if you are interested or know someone: contact Mikka!
+
+== Featured (non-OWASP) Project: Security Through Scrutiny: Java Open Review Project ==
+A joint project from the Findbugs group and Fortify Software is examining open source components for security and quality defects. The project, accessible at http://opensource.fortifysoftware.com, allows participants to:
+* submit projects to be scanned with Findbugs and Fortify Source Code Analysis suite 
+* help review potential defects through the online code review interface 
+* keep track of project defects as they are uncovered and fixed by the open source community 
+* receive tips on performing code reviews for security defects
+The project is open to all Java open source projects and any person that wants to contribute, either through code reviews, project submissions, or project feedback. Current projects include: Tomcat, Jforums, Azureus, Nuxeo, Spring, Struts, select OWASP projects, and more! 
+
+People are encouraged to visit the site: http://opensource.fortifysoftware.com for more details or stop by the Fortify/Findbugs demo booth at JavaOne 2007. Project owners that are interested in being featured can email: openaudit <at> fortifysoftware <dot> com 
+
+== Latest additions to the WIKI ==
+
+==== Updated Chapter Pages====
+* [[Greece]]
+* [[Ottawa]]
+* [[Cleveland]]
+* [[Chicago]]
+* [[Sacramento]]
+* [[Bangalore]]
+* [[2nd OWASP IL mini conference]]
+* [[Vancouver]]
+* [[Turkey]]
+* [[Boston]]
+* [[Denver]]
+* [[SoCal]]
+* [[Toronto]]
+* [[Kansas City]]
+* [[New York]]
+* [[New Jersey]]
+* [[NYNJMetro]]
+* [[Helsinki]]
+* [[Belgium]]
+* [[Luxemburg]]
+* [[Houston]]
+* [[Switzerland]]
+* [[Phoenix]]
+* [[Virginia (Northern Virginia)‎]]
+* [[Taiwan]]
+* [[Long Island]]
+* [[Austin]]
+* [[Italy]]
+* [[Minneapolis St Paul]]
+
+====Other pages====
+* [[Session Management]]
+* [[Guide to Authorization]]
+* [[Ajax and Other "Rich" Interface Technologies]]
+* [[Web Services]]
+* [[Buffer Overflows]]
+* [[:Category:OWASP Orizon Project]]
+* [[DN BOFinder]]
+* [[:Category:OWASP .NET Project]]
+* [[:Category:OWASP Guide Project]]
+* [[:Category:OWASP Top Ten Project]]
+* [[:Category:OWASP Chapter]]
+* [[Scripting in WebScarab]]
+* [[Handling E-Commerce Payments]]
+* [[Assume attackers have source code]]
+* [[Member Offers]]
+* [[Data Validation]]
+* [[OWASP Stinger Version 2]]
+* [[:Category:OWASP Tools Project]]
+* [[Java Server Faces]]
+* [[Cross Site Scripting]]
+* [[:Category:OWASP Testing Project]]
+* [[OWASP Education Presentation]]
+* [[Getting Started]]
+* [[Java Security Resources]]
+* [[:Category:OWASP WebGoat Project]]
+* [[How to value the real risk]]
+* [[Failure to verify authorization]]
+* [[Testing for XML Structural  (OWASP-WS-003)|Testing for XML Structural ]]
+* [[Man-in-the-middle attack]]
+* [[Preventing LDAP Injection in Java]]
+* [[Path Traversal]]
+* [[Script in IMG tags]]
+* [[Server-Side Includes (SSI) Injection]]
+* [[6th OWASP AppSec Conference - Italy 2007/Agenda]]
+* [[OWASP News]]
+* [[Membership]]
+* [[OWASP Community 2006]]
+* [[:Category:OWASP Live CD Project]]
+* [[Phoenix/Tools]]
+* [[Phoenix/ToolsProfile]]
+* [[JAAS Tomcat Login Module]]
+* [[:Category:OWASP PHP AntiXSS Library Project]]
+* [[Using password systems]]
+* [[XPATH Injection]]
+* [[OWASP Application Security FAQ]]
+
+====New pages====
+A selection of new pages:
+* [[OWASP on the Move]]
+* [[Universal PDF XSS]]
+* [[Webscarab XSS-CRLF plugin]]
+* [[Escaping the phishing net]]
+* [[Struts]]
+* [[Scripting in WebScarab]]
+* [[:Category:OWASP Certification Criteria Project]]
+* [[:Category:OWASP Application Security Requirements Project]]
+* [[:Category:OWASP Communications Project]]
+* [[OWASP Band]] One of the highlights at the 6th OWASP AppSec Conference in Milan was probably the first concert of the "OWASP Band" which was leaded by Dinis Cruz.
+* [[Anatomy of 2 Web Applications Testing]]
+
+==== New Documents & Presentations from chapters==== 
+For a complete list of chapter presentations see [[OWASP_Education_Presentation|the online table of presentations]].
+
+==== Latest Blog entries==== 
+* [http://blogs.owasp.org/diniscruz/2007/04/19/owasp-evangelism-and-ounce/ OWASP, Evangelism and Ounce]
+* [http://blogs.owasp.org/orizon/2007/04/03/howto-bastion-xssstring/ HOWTO: Bastion XSSString]
+* [http://blogs.owasp.org/orizon/2007/04/03/orizon-v010-b25/ Orizon v.0.10-b25]
+* [http://blogs.owasp.org/orizon/2007/04/03/bastion-contest/ Bastion contest]
+* [http://blogs.owasp.org/orizon/2007/04/02/switching-to-java6/ Switching to Java6?]
+* [http://blogs.owasp.org/orizon/2007/03/31/eu-conf/ Eu conf…]
+
+==== OWASP Community====
+Chapter news: 
+* '''Three new chapters: [[Boulder]], [[‎Calgary]] and [[Pune]]. 
+* '''The [[Belgium]] and [[Luxemburg]] chapter are combined into a new BeLux chapter. 
+* '''Mar 30 - NYC and New Jersey OWASP Chapter Combine:  [https://www.owasp.org/index.php/NYNJMetro/ Over 500 Members combined - NY/NJ Metro]
+Upcoming Chapter meetings:
+* '''June 12 (18:00hr) - [[New Jersey|NY/NJ Metro chapter meeting]]'''
+* '''Jun 5 (18:00h) - [[Melbourne|Melbourne chapter meeting]]'''
+* '''May 29 (9:00h) - [[http://www.owasp.org/index.php/Italy#May_29th.2C_2007_-_Seminar:_.22Software_Security.22 Italy@Firenze Tecnologia]]'''
+* '''May 21 (14:00h) - [[Israel|2nd OWASP Israel mini conference]]'''
+* '''May 15 (18:00h) - [[Rochester|Rochester chapter meeting]]'''
+* '''May 10 (18:00h) - [[Belgium|Belgium chapter meeting]]'''
+* '''May 9 (18:00h) - [[Toronto|Toronto chapter meeting]]'''
+* '''May 8 (18:00h) - [[Virginia (Northern Virginia)|Washington DC (N. VA) chapter meeting]]'''
+* '''May 2 (18:30h) - [[Boston|Boston chapter meeting]]'''
+* '''May 1 (18:00h) - [[Melbourne|Melbourne chapter meeting]]'''
+
+==== Application Security News ==== 
+
+; '''Apr 21 - [http://www.theage.com.au/articles/2007/04/23/1177180548617.html Concurrency and porn]'''
+: "First it was porn, now it's privacy - a technical stuff-up on reality show Big Brother's website is said to have exposed the personal details of fans who signed up for its special features. Following reports that visitors to a pirate Big Brother site were sent to a hardcore porn page, it now seems the names and phone numbers of people who registered for the official site were able to be viewed by others"
+
+; '''Apr 21 - [http://www.enterprisenetworkingplanet.com/netsecur/article.php/3673056 Does first Vista 0day undermine SDL?]'''
+: Ken van Wyk discusses the importance of process for producing secure software, and notes that attacks on Vista may undermine the general support for Microsoft's approach. Check out Michael Howard's [http://www.owasp.org/index.php/Image:OWASPAppSec2006Seattle_SecurityEngineeringInVista.ppt talk] from the last OWASP conference for a great discussion on the success of the SDL.
+
+; '''Apr 19 - [http://www.wired.com/politics/security/commentary/securitymatters/2007/04/securitymatters_0419?currentPage=all Why the software market is full of lemons]'''
+: Bruce Schneier finally chimes in on an [[http://www.aspectsecurity.com/documents/Aspect_HCSS_Unsafe_At_Any_Speed.ppt old OWASP theme]] - the problem of assymetric information between software buyers and sellers. He only talks about security products, but the same problem affects all types of software. Check the [[http://www.owasp.org/index.php/Types_of_application_security_metrics Software Facts Label] which is an idea for actually doing something to change the game.
+
+; '''Apr 10 - [http://www.csoonline.com/alarmed/?source=nlt_csoupdate "There is no hope"]'''
+: Despite all the good stuff at OWASP, Scott Berinato is giving up. "No official announcement is forthcoming, but the Internet is broken and it can't be repaired. Oh, it's still there. You can still use it. Then again, if you went hiking and came across an old, broken-down mine shaft, you could still use that, too."
+
+
+== OWASP references in the Media==
+* [http://myappsecurity.blogspot.com/2007/04/reflection-on-andrew-van-der-stock.html Reflection on Andrew Van Der Stock ]
+* [http://blog.securitymonks.com/?p=32 Security Metrics]
+* [http://sunbeltblog.blogspot.com/2007/04/security-concerns-in-web-20-world.html Security concerns in the Web 2.0 world ]
+* [http://securitybuddha.com/2007/04/25/the-ism-community-revamp/ The ISM Community Revamp]
+* [http://denimgroup.typepad.com/denim_group/2007/04/guy_podjarney_t.html Guy Podjarny to Present at San Antonio OWASP]
+* [http://www.gnucitizen.org/blog/google-ajax-feed-api-dangers/ Google AJAX Feed API Dangers]
+* [http://www.dzone.com/rsslinks/lock_it_down_use_the_revised_owasp_top_ten_to_sec_3.html Lock it down: Use the revised OWASP Top Ten to secure your Web applications - Part 5]
+* [http://radajo.blogspot.com/2007/04/writing-secure-code-root-cause-of.html Writing Secure Code: The Root Cause of the Problem? ]
+* [http://idunno.org/archive/2007/04/16/Scottish-Developers-Security-Day.aspx Scottish Developers Security Day]

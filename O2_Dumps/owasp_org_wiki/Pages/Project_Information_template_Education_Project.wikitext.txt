@@ -1,0 +1,31 @@
+----
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Education Project Project''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|The project will continuously deliver education material about OWASP tooling and documentation. This aims to create an easy entrance towards understanding application security and usage of the OWASP tooling. By creating education documentation papers, screen scrape video courses and setting up an OWASP Boot camp, a controlled education process of a standardized quality can be created continuously. With the setup of a OWASP Boot camp, the OWASP word can be spread in a controlled manner and deliver high quality training., both inside and outside of the OWASP community. The OWASP Education Project will setup and standardize OWASP trainings manuals and materials to ensure a certain level of quality of the trainings. Trainings about the OWASP tooling and projects will have to be reviewed by the Projects. 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Key Project Information'''
+ | style="width:14%; background:#cccccc" align="center"|Project Leader<br>[[User:knoblochmartin|'''Martin Knobloch''']]
+ | style="width:15%; background:#cccccc" align="center"|Project Contributors<br>[[:Category:OWASP Education Project - Contributors|'''See here''']]
+ | style="width:10%; background:#cccccc" align="center"|Mailing List<br>[https://lists.owasp.org/mailman/listinfo/owasp-education '''Subscribe here''']<br>[mailto:owasp-education(at)lists.owasp.org '''Use here''']
+| style="width:17%; background:#cccccc" align="center"|License<br>[http://creativecommons.org/licenses/by-sa/3.0/ '''Creative Commons Attribution Share Alike 3.0''']
+ | style="width:14%; background:#cccccc" align="center"|Project Type<br>[[:Category:OWASP_Project#Beta Status Projects|'''Documentation''']]
+ | style="width:15%; background:#cccccc" align="center"|Sponsors<br>[[OWASP Summer of Code 2008|'''OWASP SoC 08''']] 
+ |}
+
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"| Provisory '''[[:Category:OWASP_Project_Assessment#Beta_Quality_Documentation_Criteria|Beta Quality]]'''<br>[[:OWASP Education Project - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="center"|
+[http://www.owasp.org/index.php/Category:OWASP_Video OWASP Videos]<br>[[OWASP_Education_Presentation|OWASP Education Presentations]]<br>[http://www.owasp.org/index.php/Category:OWASP_WebGoat_Project OWASP WebGoat Project]
+ | style="width:29%; background:#cccccc" align="center"|
+[[:Category:OWASP Live CD Project|OWASP Live CD Project]]<br>[[:Category:OWASP Testing Project|OWASP Testing Guide]]<br>[[:Category:OWASP Guide Project|OWASP Development Guide Project]]<br>[[:Category:OWASP Code Review Project|OWASP Code Review Project]]<br>[[:Category:OWASP ASDR Project|OWASP ASDR Project]]
+ |}
+----

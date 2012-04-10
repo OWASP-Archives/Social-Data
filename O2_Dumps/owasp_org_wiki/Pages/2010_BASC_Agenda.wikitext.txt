@@ -1,0 +1,120 @@
+{{2010_BASC:Header_Template | Agenda}}
+<!-- --------------------------------------------------------------------
+INSTRUCTIONS FOR EDITORS:
+
+Updating this agenda is a 3-step process. First you must convert the existing entries to the
+new format. You can do these one at a time or all at once. Whatever is easiest. Second, you need to
+fill in the data for the presentation. Third, miscellaneous details should be cleaned up.
+
+1) To convert a presentation to the new format:
+  - Most importantly, look at the 10:00 time slot and use it as an example.
+  - Find the time slot you want to modify.
+  - If it already has the Presentation Agenda Template then you are done
+  - Copy: {{2010_BASC:Presentaton_Agenda_Template|TYPE|To Be Determined Presentation|To Be Determined}}
+  - Delete the text that is in the time slot already. This requires great care.
+      You probably want to delete the lines that do not begin with a 
+      pipe (|) or an open curly ({).
+  - Paste the text you copied into that time slot.
+  - Replace the word "TYPE" with either "Presentation" or "Keynote"
+
+2) To fill in the appropriate data:
+  - Go to http://www.owasp.org/index.php/2010_BASC_Presentations and add
+    the presentation's abstract. If you don't have an abstract,
+    insert "Presentation abstract will be available shortly."
+  - Go to http://www.owasp.org/index.php/2010_BASC_Speakers and add the speaker(s) bio.
+    If you don't have bio information, just put the speaker's name into the page and 
+    and make their bio "Speaker information will be available shortly."
+    Until it presents a problem, list multiple speakers as one.
+    For example, "John Boy & Grandpa".
+  - Find the right slot in the table.
+  - Replace the "To Be Determined Presentation" text in the table
+    with the presentation name __EXACTLY__ as it is on the presentation page.
+  - Replace the "To Be Determined" text in the table
+    with the speaker(s) name(s) __EXACTLY__ as it is on the bio page.
+  
+3) Clean up whatever needs cleaning up.
+
+-------------------------------------------------------------------- -->
+{| style="width:80%" border="0" align="center"
+ ! colspan="3" align="center" style="background:#7B8ABD; color:white" |
+
+<h2>Saturday, November 20</h2> 
+ |-
+ | style="width:10%; background:#9BA8CF" align="center" | 8:00-9:00 || colspan="2" style="width:80%; background:#D2D2D2" align="center" | 
+<div>
+<span style="font-size:130%">'''Breakfast and Registration'''</span><br/>
+provided by our Platinum Sponsor
+</div>
+{| border="1"
+| [[File:Rapid7LogoSmall.png|300px|link=http://www.rapid7.com|Rapid7]]
+|}
+|-
+ | style="width:10%; background:#7B8ABD" align="center" | 09:00-09:50 || colspan="2" style="width:80%; background:#B0B0B0;" align="center" | 
+<div style="margin:10px;">
+<span style="font-size: 130%">'''[[2010_BASC_Presentations#Keynote|Keynote: From the Era of Vulnerabiquity to the Rugged Age]]'''</span><br/>
+<span style="font-size: 120%">[[2010_BASC_Speakers#Josh Corman|Josh Corman]]</span><br/>
+</div>
+ |-
+ | style="width:10%; background:#9BA8CF" | || align="center" style="width:30%; background:#CFA49B" | '''Track 1'''<br/>Horace Mann Room
+ | align="center" style="width:30%; background:#DFC799;" | '''Track 2'''<br/>Deborah Sampson / Paul Thomas Room
+|-
+| style="width:10%; background:#7B8ABD" align="center" | 10:00-10:50 || style="width:30%; background:#BC857A" align="center" |  
+{{2010_BASC:Presentaton_Agenda_Template|Presentation|HTML5 Security|Ming Chow}}
+ | style="width:30%; background:#BCA57A" align="center" rowspan="2" | 
+{{2010_BASC:Presentaton_Agenda_Template|Presentation|OWASP Basics 1 and 2|Robert Cheyne}}
+|-
+| style="width:10%; background:#9BA8CF" align="center" | 11:00-11:50 || style="width:30%; background:#CFA49B" align="center" | 
+{{2010_BASC:Presentaton_Agenda_Template|Presentation|A Crumple Zone for Service Oriented Architectures|Andrew Gronosky}}
+|-
+ | style="width:10%; background:#7B8ABD" align="center" | 12:00-13:00 || colspan="2" style="width:80%; background:#F2F2F2" align="center" | 
+<span style="font-size:130%">'''Lunch'''</span><br/>
+provided by our platinum sponsor
+{| border="1"
+|[[File:SI-Banner-238x57.jpg|link=http://www.securityinnovation.com|Security Innovation]]
+|}
+|-
+| style="width:10%; background:#7B8ABD" align="center" | 13:00-13:50 || style="width:30%; background:#BC857A" align="center" | 
+{{2010_BASC:Presentaton_Agenda_Template|Presentation|Hacking SAP BusinessObjects|Joshua Abraham and Will Vandevanter}}
+ | style="width:30%; background:#DFC799" align="center" | 
+{{2010_BASC:Presentaton_Agenda_Template|Presentation|Coffee Shop Warfare:Protecting Yourself in Dark Territory|John Carmichael}}
+|-
+| style="width:10%; background:#7B8ABD" align="center" | 14:00-14:50 || style="width:30%; background:#CFA49B" align="center" | 
+{{2010_BASC:Presentaton_Agenda_Template|Presentation|What's Old Is New Again: An Overview of Mobile Application Security|Zach Lanier}}
+ | style="width:30%; background:#DFC799" align="center" | 
+{{2010_BASC:Presentaton_Agenda_Template|Presentation|Url Enlargement|Dan Crowley}}
+|-
+| style="width:10%; background:#7B8ABD" align="center" | 15:00-15:50 || style="width:30%; background:#BC857A" align="center" | 
+{{2010_BASC:Presentaton_Agenda_Template|Presentation|Business Logic Attacks - BATs and BLBs|Paul Schofield}}
+ | style="width:30%; background:#DFC799" align="center" | 
+{{2010_BASC:Presentaton_Agenda_Template|Presentation|Web Applications and Data Tokenization|Kenny Smith}}
+|-
+| style="width:10%; background:#7B8ABD" align="center" | 16:00-16:50 || style="width:30%; background:#CFA49B" align="center" | 
+{{2010_BASC:Presentaton_Agenda_Template|Presentation|The Exploit Arms Race|Christien Rioux}}
+ | style="width:30%; background:#DFC799" align="center" | 
+{{2010_BASC:Presentaton_Agenda_Template|Presentation|Open SAMM|Shakeel Tufail}}
+|-
+
+|-
+| style="width:10%; background:#7B8ABD" align="center" | 17:00-17:30 || colspan="2" style="width:30%; background:#C2C2C2" align="center" | 
+<span style="font-size:130%">'''Social Time'''</span><br/>
+provided by our platinum sponsor
+{| border="1"
+| [[File:boston-2010-source-277x70.jpg|link=http://www.sourceconference.com|SOURCE]]
+|}
+|-
+| style="width:10%; background:#7B8ABD" align="center" | 17:30-18:30 || colspan="2" style="width:30%; background:#D2D2D2" align="center" | 
+<span style="font-size:130%">'''Expert Panel: Will we ''EVER'' be Secure?'''</span><br>
+''
+Moderator:[http://authorurl.com   Rob Cheyne], CEO, Safelight Security Advisors<br>
+Panelist:[http://authorurl.com Josh Corman], Security Analyst, The 451 Group  <br>
+Panelist:[http://authorurl.com Justin Peavey], CISO, Omgeo <br>
+Panelist:[http://authorurl.com Brian Weekes], Linux Infrastructure Lead, GMO<br>
+Panelist:[http://authorurl.com Adriel DeSautels], CTO, NetRagard<br>
+Panelist:[http://authorurl.com Shakeel Tufail], Security Analyst, Fortify<br>
+
+''<br>
+|-
+| style="width:10%; background:#7B8ABD" align="center" | 18:30-19:00 || colspan="2" style="width:30%; background:#99FF99" align="center" | 
+<span style="font-size:130%">'''Wrap Up'''</span><br>
+|}
+{{2010_BASC:Footer_Template | Agenda}}

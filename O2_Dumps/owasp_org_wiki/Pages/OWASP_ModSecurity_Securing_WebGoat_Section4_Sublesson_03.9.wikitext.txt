@@ -1,0 +1,28 @@
+3. AJAX Security -> 3.9 Insecure Client Storage
+
+(This sublesson was not formally solved by the project)
+
+=== Lesson overview ===
+
+The WebGoat lesson overview is included with the WebGoat lesson solution.
+
+=== Lesson solution === 
+
+Refer to the zip file with the WebGoat lesson solutions. See Appendix A for more information. 
+
+=== Strategy ===
+
+This WebGoat lesson consists of 2 stages:
+:<font><u>Stage 1:</u></font> A decrypted coupon is used to get a discount but the decryption is done in a JavaScript routine; stepping through it with FireBug or IEWatch will give away the decrypted coupon to the user who can then use it to get a discount. ModSecurity cannot provide a solution for this vulnerability; the decrypt function would have to be removed from the source code in order to begin a solution, but ModSecurity cannot alter HTTP response source code.
+:<font><u>Stage 2:</u></font> A shopping cart is displayed: the quantity of each item is editable, but the unit price, the total price of that item, and the grand total is not editable. The exploit is to remove the HttpOnly attribute from the grand total field, then change the price to 0 and make the purchase. In real life, this is not very practical because the back end would calculate the grand total based on unit price and the number of each item.
+
+=== Implementation === 
+
+Intercept the POST request, which looks something like this (lines split for readability):
+<pre>
+PRC1=69.99&QTY1=4&TOT1=279.95&PRC2=27.99&QTY2=0&TOT2=0&PRC3=1599.99&QTY3=2&
+TOT3=3199.98&PRC4=299.99&QTY4=0&TOT4=0&SUBTOT=3479.93&GRANDTOT=3479.93&
+field2=4128+3214+0002+1999&field1=&SUBMIT=Purchase
+</pre>
+
+Then call a Lua script that pulls all of the relevant POST parameters, tallies up from the individual item total what the grand total should be, and then compares it with the grand total that was submitted.

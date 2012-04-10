@@ -1,0 +1,14 @@
+== The presentation  ==
+
+[[Image:Charles_Henderson_2.jpg|200px|thumb|right|Charles Henderson]]Everyone wants to stretch their security budget, and automated application security tools are an appealing choice for doing so. However, manual security testing isn’t going anywhere until the HAL application scanner comes online. This presentation will use often humorous, real-world examples to illustrate the relative strengths and weaknesses of automated solutions and manual techniques.
+
+
+Automated tools have some strengths, namely low incremental cost, detecting simple vulnerabilities, and performing highly repetitive tasks. However, automated solutions are far from perfect. There are entire classes of vulnerabilities that are theoretically impossible for automated software to detect. Examples include complex information leakage, race conditions, logic flaws, design flaws, and multistage process attacks. Beyond that, there are many vulnerabilities that are too complicated or obscure to practically detect with an automated tool.
+
+== The speakers  ==
+David Byrne has worked in information security for almost a decade. Currently, he is a consultant in Trustwave's Application Security group. Before Trustwave, David was the Security Architect at Dish Network. In 2006, he started the Denver chapter of OWASP. In 2008, he released Grendel (grendel-scan.com), an open source web application security scanner. David has presented at a number of security events including DEFCON, Black Hat, Toorcon, FROC, and the Computer Security Institute's annual conference.
+
+
+Charles Henderson has been in the security industry for over 15 years and manages the Application Security Practice at Trustwave. He has specialized in application security testing and application security assessment throughout his career but has also worked in physical security testing and network security testing.
+
+[[Category:OWASP_AppSec_DC_09]] [[Category:OWASP_Conference_Presentations]]

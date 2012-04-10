@@ -1,0 +1,146 @@
+{{Template:SecureSoftware}}
+{{Template:Vulnerability}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+Tempfile creation should be done in a safe way. To be safe, the temp file function should open up the temp file with appropriate access control. The temp file function should also retain this quality, while being resistant to race conditions. 
+
+'''Consequences'''
+
+* Confidentiality: If the temporary file can be read by the attacker, sensitive information may be in that file which could be revealed.
+* Authorization: If that file can be written to by the attacker, the file might be moved into a place to which the attacker does not have access. This will allow the attacker to gain selective resource access-control privileges. 
+
+'''Exposure period'''
+
+* Requirements specification: The choice could be made to use a language or library that is not susceptible to these issues.
+* Implementation: If one must use there own tempfile implementation than many logic errors can lead to this condition. 
+
+'''Platform'''
+
+* Languages: All
+* Operating platforms: This problem exists mainly on older operating systems and should be fixed in newer versions. 
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood   of exploit'''
+
+High
+
+Depending on the data stored in the temporary file, there is the potential for an attacker to gain an additional input vector which is trusted as non-malicious. It may be possible to make arbitrary changes to data structures, user information, or even process ownership.
+
+==Risk Factors==
+
+* Talk about the [[OWASP Risk Rating Methodology|factors]] that make this vulnerability likely or unlikely to actually happen
+* Discuss the technical impact of a successful exploit of this vulnerability
+* Consider the likely [business impacts] of a successful attack
+
+
+==Examples==
+
+In C\C++:
+
+<pre>
+FILE *stream;
+char tempstring[] = "String to be written";
+
+if( (stream = tmpfile()) == NULL ) {
+   perror("Could not open new temporary file\n"); 
+   return (-1);
+}   
+/* write data to tmp file */
+/* ... */
+_rmtmp();
+</pre>
+
+The temp file created in the above code is always readable and writable by all users.
+
+In Java:
+
+<pre>
+try { 
+    File temp = File.createTempFile("pattern", ".suffix");
+    temp.deleteOnExit(); 
+    BufferedWriter out = new BufferedWriter(new FileWriter(temp));
+    out.write("aString"); 
+    out.close(); } 
+catch (IOException e) { } 
+</pre>
+
+This temp file is readable by all users.
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+==Related [[Controls]]==
+
+* Requirements specification: Many contemporary languages have functions which properly handle this condition. Older C temp file functions are especially susceptible.
+* Implementation: Ensure that you use proper file permissions. This can be achieved by using a safe temp file function. Temporary files should be writable and readable only by the process which own the file. 
+* Implementation: Randomize temporary file names. This can also be achieved by using a safe temp-file function. This will ensure that temporary files will not be created in predictable places.
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:General Logic Error Vulnerability]]
+[[Category:OWASP_CLASP_Project]]
+[[Category:File System]]
+[[Category:Code Snippet]]
+[[Category:C]]
+[[Category:Java]]

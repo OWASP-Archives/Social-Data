@@ -1,0 +1,138 @@
+==== Main  ====
+
+At the moment exchanging data between pentest tools it is far too difficult. 
+
+So ... the purpose of this project is to define a simple, open format for exchanging data between pentest tools!
+
+Involvement is encouraged, so if you would like to contribute to this project then please join the [https://lists.owasp.org/mailman/listinfo/owasp-data-exchange-format mailing list] and / or contact one of the project leaders.
+
+Theres also a Google Code project http://code.google.com/p/owasp-def/ which we're using to store things like example formats used by pentest products.
+Contact [[User:Psiinon|Simon]] or [[User:Dinis_Cruz|Dinis]] to get commit access to this project.
+
+=== Requirements  ===
+
+The format must be open, and licensed so that it can be adopted by all products, whether open, closed, free or commercial. 
+
+It must be as simple to adopt as possible, and ideally based on existing open formats. 
+
+==== Roadmap  ====
+
+The high level roadmap is:
+
+# Psiinon to document a strawman proposal
+# All - rip the strawman to pieces and agree an improved format
+# Finalize DEF v1.0
+# Supporting project leaders to adopt the format in their tools
+# Publicize and drive adoption in other tools
+# Learn from our experiences and start on the next version, repeat ;)
+
+==== Strawman  ====
+
+This tab documents a strawman proposal for all concerned to rip to pieces :)
+
+<pre>
+<Session>
+    <!-- Note that most of the elements will probably be optional-->
+    <Session-reference>Product specific reference</Session-reference>
+    <Tool-name>Name of the tool that found the issue</Tool-name>
+    <Tool-version>Version of the tool that found the issue</Tool-version>
+    <Date-time>Date and time the session was started</Date-time>
+    <Summary>A sort (one line) description</Summary>
+    <Description>More detailed description</Description>
+    <Site/>
+    <Issues/>
+    <Pages/>
+    <Ports/>
+</Session>
+
+<Site>
+    <Host>The hostname</Host>
+    <Port>The port</Port>
+</Site>
+
+<Issues>
+    <Issue/> <!-- multiple -->
+</Issues>
+
+<Issue>
+    <Issue-reference>Product specific reference</Issue-reference>
+    <Summary>A sort (one line) description</Summary>
+    <Description>More detailed description</Description>
+    <Further-info>More information about this specific issue</Further-info>
+    <Severity>One of an agreed list of values</Severity>
+    <Confidence>One of an agreed list of values</Confidence>
+    <Background>More info on the type of issue</Background>
+    <Remediation>Advise on how to fix the issue</Remediation>
+    <WASC-classification>WASC classification</WASC-classification>
+    <Reference-URLs/>
+    <Pages/>
+</Issue>
+
+<Pages>
+    <Page/> <!-- multiple -->
+</Pages>
+
+<Page>
+    <Page-reference>Product specific reference</Page-reference>
+    <Method>HTTP method (GET, POST, etc)</Method>
+    <URL>The actual URL</URL>
+    <Parameters/>
+    <Request-response/>
+</Page>
+
+<Ports>
+    <Port/> <!-- multiple -->
+</Ports>
+
+<Port>
+    <Port-number>Port number</Port-number>
+    <Protocol>The protocol</Protocol>
+    <State>The protocol</State>
+    <Service>e.g. http, https, ssh…</Service>
+    <Version>e.g. OpenSSH 43.(protocol 2.0)</Version>
+</Port>
+
+<Parameters>
+    <Parameter>The parameter</Parameter> <!-- multiple -->
+</Parameters>
+
+<Request-response>
+    <Page-reference>Product specific reference</Page-reference>
+    <Request>The base64 encoded request</Request>
+    <Response>The base64 encoded request</Response>
+</Request-response>
+</pre>
+==== Supporting projects  ====
+
+The following project leaders have agreed to support this format and (once it has been agreed) adopt it within their projects.
+
+If you would like your project added to this list then feel free to update it, or contact one of the project leaders to update it for you.
+
+{| border="1" align="left" cellspacing="1" cellpadding="1"
+|-
+! scope="col" | Project 
+! scope="col" | Leader
+|-
+| [http://portswigger.net/burp/ Burp Suite]
+| Dafydd Stuttard (PortSwigger)
+|-
+| [https://www.owasp.org/index.php/OWASP_O2_Platform O2 Platform]
+| [[User:Dinis_Cruz|Dinis Cruz]] 
+|-
+| [https://www.owasp.org/index.php/Category:OWASP_WebScarab_Project WebScarab]
+| [[User:Daniel_Brzozowski|Daniel Brzozowski]] 
+|-
+| [http://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project Zed Attack Proxy]
+| [[User:Psiinon|Simon Bennetts (Psiinon)]]
+|-
+| [http://www.owasp.org/index.php/OWASP_Yasca_Project Yasca]
+| [[User:Scovetta|Michael Scovetta (Scovetta)]]
+|}
+
+==== Project About  ====
+
+{{:Projects/OWASP Data Exchange Format Project | Project About}} 
+
+<br> __NOTOC__ <headertabs /> 
+
+[[Category:OWASP_Project|Data Exchange Format Project]] [[Category:OWASP_Tool]] [[Category:OWASP_Alpha_Quality_Tool]]

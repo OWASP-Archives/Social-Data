@@ -1,0 +1,6 @@
+Basic authentication is an authentication scheme specified in [http://tools.ietf.org/html/rfc1945#section-11.1 RFC 1945] and is supported by all popular browsers.
+
+Basic authentication is not secure and should not be used in applications.
+
+* The username and password are concatenated and sent in an HTTP header on every subsequent request. Compared with session based authentication, this substantially increases the amount of time the credentials are on the wire in plaintext.
+* There is no way for the user to log out. Credentials remain stored in the browser until the browser is closed or the user clears their history.

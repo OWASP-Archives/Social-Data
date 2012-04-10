@@ -1,0 +1,172 @@
+== Top 10 mobile controls and design principles==
+
+'''[[#section control_1|1. Identify and protect sensitive data on the mobile device]]'''
+
+'''Risks:''' Unsafe sensitive data storage, attacks on decommissioned phones unintentional disclosure: Mobile devices (being mobile) have a higher risk of loss or theft. Adequate protection should be built in to minimize the loss of sensitive data on device.
+
+*1.1 In the design phase classify data storage according to sensitivity and apply controls accordingly (e.g. passwords, personal data, location, error logs etc.). Process, store and use data according to its classification. Validate the security of methods applied to sensitive data.
+*1.2 Store sensitive data on the server instead of client-end device. This is based on the assumption that secure network connectivity is always available and that protection mechanisms available to server side storage are superior. The relative security of client vs server-side security also needs to be assessed on a case-by-case basis (see ENISA cloud risk assessment or OWASP Cloud top 10 for decision support). All data transfer should use only secure channels.
+*1.3 If server-side storage and encryption is not a possibility, use file encryption APIs provided by the OS or other trusted source (check first for well-known vulnerabilities). Some platforms provide file encryption API’s which use a private key protected by the device unlock code and deleted on remote kill. If this is available, it should be used as it increases the security of the encryption without creating extra burden for the end-user. It also makes stored data safer in the case of loss or theft. However, it should be born in mind that even when protected by the device unlock key, if data is stored on the device, its security is dependent on the security of the device unlock code if remote deletion of the key is for any reason not possible.
+*1.4 Do not store/cache sensitive data (including keys) unless they are encrypted and if possible stored in a tamper-proof area (see 2).
+*1.5 Consider restricting access to sensitive data based on contextual information such as location (e.g. wallet App not usable outside Europe, car key not usable unless within 100m of car etc...).
+*1.6 Do not store historical GPS/tracking or other sensitive information on the device beyond the period required by the application (see 1.8).
+*1.7 Assume that shared storage is untrusted - information may easily leak in unexpected ways through any shared storage. In particular:
+**Be aware of caches and temporary storage as a possible leakage channel when shared with other apps.
+**Be aware of public shared storage such as address book, media gallery, audio files, as a possible leakage channel. For example storing images with location metadata in the media-gallery allows that information to be shared in unintended ways.
+**Do not store temp/cached data in a world readable directory.
+*1.8 Applications on managed devices should leverage remote wipe and kill switch APIs (OS-level or purpose-built) to remove sensitive information from the device in the event of theft or loss.
+*1.9 Data deletion should be scheduled according to a maximum retention period, (to prevent e.g. data remaining in caches indefinitely).
+*1.10 Bear in mind that there is no known secure deletion procedure for flash memory (unless wiping the entire media). Therefore data encryption is especially important.
+*1.11 Consider the security of the whole data lifecycle in writing your application (collection over the wire, temporary storage, caching, backup, deletion etc...)
+*1.12 Apply the principle of minimal disclosure - only collect and disclose data which is required for business use of the application. Identify in the design phase what data is needed, its sensitivity and whether it is appropriate to collect, store and use each data type.
+*1.13 Use non-persistent identifiers which are not shared with other apps wherever possible - e.g. do not use the device ID number as an identifier unless there is a good reason to do so (e.g. use a randomly generated number). Apply the same principles to app sessions as to http sessions/cookies etc....
+*1.14 Application developers may want to incorporate an application-specific "data kill switch" into their products, to allow the per-app deletion of their application's sensitive data when needed (strong authentication is required to protect misuse of such a feature).
+
+'''2. Handle password credentials securely on the device'''
+
+'''Risks:''' Spyware, Surveillance, Financial malware, UI impersonation User's password credentials if stolen not only provides unauthorized access to the mobile backend service but potentially many other services/accounts used by the user. Since a majority of the users reuse their passwords.
+
+*2.1 Instead of passwords consider using authorization tokens that can be securely stored on the device. Encrypt the tokens while stored on the device and in transit (using https). Tokens can be issued by the backend service after verifying the user credentials initially. The tokens could be time bounded  to the specific service as well as revokable (if possible server side), thereby minimizing the damage in loss scenarios. Use the latest versions of the authorization standards (such as OAuth 2.0). Make sure that these tokens expire after an appropriate (not too long) delay. For sensitive applications, tokens should have shorter lifetimes.
+*2.2 In case passwords need to be stored on the device, leverage the encryption and key-store mechanisms provided by the mobile OS to securely store passwords, password equivalents and authorization tokens. Never store passwords in clear text. Do not store passwords or long term session IDs without appropriate encryption or hashing.
+*2.3 Some devices allow developers to use a Secure Element - sometimes via an SD card module (e.g. http://www.blackberry.com/developers/docs/7.0.0api/net/rim/device/api/io/nfc/se/SecureElement.html ,  http://code.google.com/p/seek-for-android/) - the number of devices offering this functionality is likely to increase. Developers should use such capability to store keys, credentials and other sensitive data.
+*2.4 Provide the ability for the mobile user to change/remove passwords on the device. 
+*2.5 Password credentials should not be copied to backups.
+*2.6 Consider using visual/pattern based passwords to aid usability.
+*2.7 Check the entropy (i.e. randomness) of all passwords.
+*2.8 Ensure passwords and keys are not visible in caches or logs.
+*2.9 SMS is not a secure channel and cannot be relied upon to send sensitive information.
+*2.10 Do not store any passwords or secrets in the application binary. Do not use a generic shared secret for integration to backend (like embedded password in code). Mobile application binaries can be easily downloaded and reverse engineered.
+
+'''3. Ensure sensitive data is protected in transit'''
+
+'''Risks:''' Network spoofing attacks, Surveillance. The majority of the smartphones are capable of using multiple transport carriers including Wifi, provider network (3G, GSM, CDMA and others), bluetooth. Sensitive data passing through insecure channels could be intercepted.
+
+*3.1 Assume that the network layer is not private. Modern network layer attacks can decrypt provider many network encryption protocols at low cost, and there is no guarantee that the wifi network will be appropriately encrypted.
+*3.2 Applications should enforce the use of an end-to-end secure channel (such as SSL/TLS) when sending sensitive information on wire/air. This includes passing user credentials, or other authentication equivalents. In some cases this may mean encrypting all communication.
+*3.3 Enforce strong encryption algorithms and key lengths. Do not allow unsigned certificates and allow only reputable certificate authorities. Do not disable or ignore the SSL chain validation. 
+*3.4 For sensitive data, to reduce the risk of man-in-middle attacks (like SSL proxy, SSL strip), a secure connection should only be established after verifying the identity of the remote end-point (server). This can be achieved by ensuring that SSL is only established with the end points having the trusted certificates in the key chain.
+*3.5 The user interface should make it as easy as possible for the user to find out if a certificate is valid.
+*3.6 SMS, MMS or notifications should not be used to send sensitive data to or from mobile end points.
+
+'''Reference:''' Google vulnerability of Client Login account credentials on unprotected wifi - [http://www.google.com/url?q=http%3A%2F%2Fwww.uni-ulm.de%2Fin%2Fmi%2Fmitarbeiter%2Fkoenings%2Fcatching-authtokens.html&sa=D&sntz=1&usg=AFQjCNGO-Yp1KHqO8USuL0zxL1Lpwq1Usw]
+
+'''4. Implement user authentication/authorization and session management correctly'''
+
+'''Risks:''' Unauthorized individuals may obtain access to sensitive data or systems. This can be done by circumventing authentication systems (logins) or by reusing valid tokens or cookies.
+
+*4.1 Require appropriate strength user authentication to the application. It may be useful to provide feedback on the strength of the password when it is being entered for the first time. The strength of the authentication mechanism used depends on the data being processed by the application and its access to valuable resources (e.g. costing money).
+*4.2 It is important to ensure that the session management is done correctly after the initial authentication. Require authentication credentials or tokens to be passed with any subsequent request (especially those granting privileged access or modification). 
+*4.3 Use high entropy (unpredictable) session identifiers with .
+*4.4 Use context to add security to authentication - e.g. device ID, IP location, etc...
+*4.5 Consider using additional authentication factors for applications giving access to sensitive data or interfaces where possible - e.g. voice, fingerprint (if available), who-you-know, behavioural etc...
+*4.6 Use authentication that ties back to the end user identity (rather than the device identity).
+
+'''Reference:''' Google's ClientLogin implementation 
+[http://www.google.com/url?q=http%3A%2F%2Fwww.uni-ulm.de%2Fin%2Fmi%2Fmitarbeiter%2Fkoenings%2Fcatching-authtokens.html&sa=D&sntz=1&usg=AFQjCNGO-Yp1KHqO8USuL0zxL1Lpwq1Usw]
+
+'''5. Keep the backend APIs (services) and the platform (server) secure''' 
+
+'''Risks:''' Attacks on backend systems, loss of data via cloud storage. Majority of the mobile applications interact with the backend APIs using REST/Web Services or other proprietary protocols. Insecure implementation of backend APIs or services, and not keeping the back-end platform hardened/patched will allow bad guys to directly attack/compromise the back-ends.
+
+*5.1 Carry out a specific check of all data transferred betwen the mobile device and web-server backends and other external interfaces - (e.g. is location or other information transferred within file metadata)
+*5.2 All back-end services (WebServices/REST) for mobile apps should be tested for vulnerabilities periodically e.g. using static code analyzer tools and fuzzing tools for testing and finding security flaws.
+*5.3 Ensure that the back-end platform (server) is running with a hardened configuration with the latest security patches applied to the OS, Web Server and other application components.
+*5.4 Ensure adequate logs are retained on the back-end in order to detect and respond to incidents and perform forensics (within the limits of data protection law).
+*5.6 Employ rate limiting and throttling on a per-user/IP basis (if user identification is available) to reduce the risk from DDoS attack.
+*5.7 Test for DoS vulnerabilities where the server may become overwhelmed by certain resource intensive application calls.
+*5.8 Web Services, REST and APIs can have similar vulnerabilities to Web Applications. Perform testing of the backend Web Service, REST or API to determine vulnerabilities may exist. Perform abuse case testing, in addition to use case testing.
+
+'''Reference:''' [https://www.owasp.org/index.php/Web_Services]
+[http://code.google.com/apis/accounts/docs/AuthForInstalledApps.html]
+
+
+'''6. Perform data integration with third party services/applications securely'''
+
+'''Risks:''' Data Leakage
+
+*6.1 Vet the security/authenticity of any third party code/libraries used in your mobile application (reliable source, supported, no backend Trojans, licensing)
+*6.2 Track all third party frameworks/APIs used in the mobile application for security patches. A corresponding security update must be done for the mobile applications using these third party APIs/frameworks.
+*6.3 Pay particular attention to validating all data received from and sent to  non-trusted third party apps (e.g. check ad network software) before processing in the application. 
+
+'''7. Pay specific attention to the collection and storage of consent for the collection and use of the user’s data'''
+
+'''Risks:''' Unintentional disclosure of personal or private information. In the European Union, it is mandatory to obtain user consent for the collection of personally identifiable information (PII).
+
+*7.1 Create a privacy policy covering the usage of personal data and make it available to the user especially when making consent choices.
+*7.2 Consent may be collected in 3 main ways:
+**At install time
+**At run-time when data is sent
+**Via “opt-out” mechanisms where a default setting is implemented and the user has to turn it off.
+*7.3 Check whether your application is collecting PII - it may not always be obvious - for example do you use persistent identifiers linked to central data stores containing personal information?
+*7.4 Audit communication mechanisms to check for unintended leaks (e.g. image metadata).
+*7.5 Keep a record of consent to the transfer of PII available to the user (consider also the value of keeping server-side records attached to any user data stored).
+*7.6 Check whether your consent collection-mechanism overlaps or conflicts with any other consent-collection within the same stack (e.g. APP-native + webkit HTML)
+
+'''Reference:''' EU Law [http://democrats.energycommerce.house.gov/sites/default/files/image_uploads/Testimony_05.04.11_Spafford.pdf]
+
+'''8. Implement controls to prevent unauthorised access to paid-for resources (wallet, SMS, phone calls etc...)'''
+'''Risks:''' Smartphone apps give programmatic access to premium rate phone calls, SMS, roaming data, NFC payments etc. Apps with privileged access to such API’s should take particular care to prevent abuse given the financial impact of vulnerabilities giving attackers access to the user’s financial resources.
+
+*8.1 Maintain logs of access to paid resources in a non-repudiable format and make them available to the end-user for monitoring (e.g. signed receipt sent to server back-end). Logs should be protected from unauthorised access.
+*8.2 Check for anomalous usage patterns in paid resource usage and require reauthentication. E.g. when significant change in location occurs, user-language changes etc.
+*8.3 Consider using a white-list model by default for paid resource addressing - e.g. address book only unless specifically authorised for phone calls.
+*8.4 Authenticate all API calls to paid resources (e.g. using an app developer certificate).
+*8.5 Ensure that wallet API callbacks do not pass cleartext account/pricing/ billing/item information.
+*8.6 Warn user and obtain consent for any cost implications for app behaviour.
+*8.7 Minimise data transfers using techniques such as fast dormancy (3GPP), caching etc... to minimise signalling load on base stations.
+
+'''Reference:''' Google Wallet Security [http://www.google.com/wallet/how-it-works-security.html]
+
+'''9. Ensure secure distribution/provisioning of mobile applications'''
+
+'''Risks:''' 
+*9.1 Applications must be designed and provisioned to allow updates for security patches, taking into account the requirements for approval by app-stores and the extra delay this may imply.
+*9.2 Provide remote kill functionality 
+*9.3 Feedback channels
+*9.4 Code signing for some mobile platforms implies inherent trust between applications (with same code signatures), installed on the same mobile device. Plan code signing mechanisms properly. //Needs elaboration.
+
+'''10. Carefully check any runtime interpretation of code for errors '''
+
+'''Risks:''' Runtime interpretation of code covers any opportunity an app gives for untrusted parties to provide unverified text or binary which is interpreted as code. For example, extra levels in a game, scripts, interpreted SMS headers. This gives an opportunity for malware to circumvent walled garden controls. Injection attacks leading to Data leakage, Surveillance, Spyware, Diallerware
+
+*10.1 Minimise runtime interpretation and capabilities offered to runtime interpreters.
+*10.2 Run interpreters at minimal privilege levels.
+*10.3 Fuzz test interpreters.
+*10.4 Note that it is not always obvious that your code is interpreting text. Look for any capabilities accessible via user-input data and use of third party API’s - e.g. javascript interpreters.
+*10.5 Define a comprehensive escape syntax as appropriate.
+
+=== Candidates (for consideration) ===
+
+'''A: Some general coding best practices are particularly relevant to mobile coding too'''
+*Input Validation and Output Encoding
+*Minimise lines of code.
+*Use safe languages (e.g. from buffer-overflow).
+*Implement a security report handling point (address) security@example.com 
+*Use static and binary code analyzers to find security flaws.
+*Use safe string functions, avoid buffer and Integer overflow.
+*Run with the minimum privilege required for the application on the operating system. Be aware of privileges granted by default by API's and disable them.
+*Don't authorize code/app to execute with root/sa privilege
+*Always perform testing as a standard as well as a privileged user
+*Avoid opening application specific server sockets (listener ports) on the client device. Use the communication mechanisms provided by the OS.
+*Context aware security: may be able to decrease/increase access based on the context (e.g. location, network) - 
+*Remove all test code before releasing the application
+*Ensure logging is done appropriately but do not record excessive logs, especially including sensitive user information.
+*//What sort of information should be recorded in the logs. (Keep audit data on the server, no user specific data - link to the Apple Issue - Signed Timestamps) 
+
+'''B. Enforce higher security posture on the device for sensitive apps used in an enterprise context:''' // Vinay to check
+*If a sensitive application needs to be provisioned on a device, application can employ enforcement of the certain security posture on the device (such as PIN, remote management/wipe) // Vinay - Still needs to be clarified
+*Enterprise applications can employ this principle of doing a security posture check before deployment of sensitive applications
+*Banking Apps
+*//(Remote Management, PIN enforcement, encryption, application monitoring)
+**Device cert can be used for stronger device identity. // How to make sure that this does not provide linkability between transactions (i.e. using the same cert across different service providers leaks data). I guess zero-knowledge certificates are too far-out for this guidance? Is this a common feature - device-cert - I have not come across it.
+
+'''C. Protect your application from other malicious applications on the device'''
+
+Risk: User's are prone to install applications that look cool (may be malicious) and can transmit data about user (or stored data) for malicious purpose.
+
+*(?? What guidelines could be provided to developers)
+U*ser education on using due diligence while installing third party applications on mobile devices
+
+'''D. Provide or use an existing reporting channel for phishing from apps '''
+
+(e.g. if you are a browser plugin developer). //APWG? Can we recommend one?

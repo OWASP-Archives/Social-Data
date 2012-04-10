@@ -1,0 +1,72 @@
+{{template:CandidateForDeletion}}
+
+ #REDIRECT [[Unsafe Mobile Code]]
+
+
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+
+==Description==
+
+The program violates secure coding principles for mobile code by declaring a finalize()method public.
+
+A program should never call finalize explicitly, except to call super.finalize() inside an implementation of finialize(). In mobile code situations, the otherwise error prone practice of manual garbage collection can become a security threat if an attacker can maliciously invoke one of your finalize() methods because it is declared with public access. If you are using finalize() as it was designed, there is no reason to declare finalize() with anything other than protected access.
+
+For more details about mobile code and its security concerns, please see [[:Category:Unsafe Mobile Code]].
+
+
+
+==Risk Factors==
+
+* Talk about the [[OWASP Risk Rating Methodology|factors]] that make this vulnerability likely or unlikely to actually happen
+* Discuss the technical impact of a successful exploit of this vulnerability
+* Consider the likely [business impacts] of a successful attack
+
+
+==Examples==
+
+The following Java Applet code mistakenly declares a public finalize() method.
+
+<pre>
+	public final class urlTool extends Applet {
+		public void finalize() {
+			...
+		}
+		...
+	}
+
+</pre>
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Vulnerability 1]]
+* [[Vulnerabiltiy 2]]
+
+
+
+==Related [[Controls]]==
+
+* [[Control 1]]
+* [[Control 2]]
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+
+TBD
+
+
+__NOTOC__

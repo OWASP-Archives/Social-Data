@@ -1,0 +1,77 @@
+[[Category:Israel]]
+== Held at the Interdisciplinary Center (IDC) Herzliya, May 21th 2007 , November 13th 2006 ==
+
+OWASP IL and the Interdisciplinary Center Herzliya (IDC) held a half day conference on application security on Nov 13th 2006. The event marked the establishment of a new academic program on information security in the net era at IDC's Efi Arazi School of Computer Science. More than 90! people attended the conference, enjoyed professional catering and heard no less than 7 presentations.
+
+The meeting was sponsored by [[www.breach.com|Breach Security]] and [[www.applicure.com|Applicure Technologies]].
+
+[[Image:Breach_logo.gif]] &nbsp;&nbsp;&nbsp;&nbsp; https://www.owasp.org/images/c/c8/OWAS_IL_Sponsor_Applicure.JPG 
+
+Use the links in the event program to access the presentations themselves:
+
+<big>'''15:00 – 15:10 Introducing the new information security program at the net era at the Efi Arazi School of Computer Science, IDC Herzliya'''</big> 
+
+Dr. Anat Bremler-Barr, Program Academic Director.[[Image:OWASP_IL_IDC.jpg|right]]
+
+ 
+<big>'''15:10 – 15:40 Sophisticated Denial of Service attacks'''</big>
+
+Dr. Anat Bremler-Barr,  Efi Arazi School of Computer Science, IDC Herzliya
+
+In Denial of Service attack, the attackers consume the resources of the victim, a server or a network, causing degradation in performance or even total failure of the victim. The basic DDoS attack is a simple brute force flooding, where the attacker sends as much traffic as he can to consume the network resources. In contrast, the sophisticated DDoS attack aims to hurt the weakest point in the victim's applications by sending specific traffic type that burdens the application the most. In this talk we will cover recent works that show that several common mechanisms are vulnerable to sophisticated DDoS attacks. For example, Crosby and Wallach showed that using bandwidth of less than a typical dialup modem can bring a dedicated Bro server to its knees. We will discuss some basic guidelines of how to design applications to be resilient to sophisticated attacks.
+
+ 
+<big>'''15:40 – 16:00 [[Media:Enterprise_portals_security.pdf|Malicious content in enterprise portals]]'''</big>
+
+Shalom Carmel, A security icon, the world's authority on hacking AS/400 and a BlackHat 2006 speaker
+
+In 2005, enterprise portals rank in the top 10 of CIO technology focus areas in many surveys. The main drivers of the portal business growth are the horizontal portal suites, which provide content management capabilities, application integration tools, and specific solutions for collaboration and knowledge management. This lecture will address the security problems an enterprise may have due to the various content management abilities in a typical Portal implementation, and will focus on cross site scripting attacks.
+
+
+<big>'''16:00 – 16:30 Information Warfare against commercial companies – lessons from dealing with hostile internet entities'''</big>
+
+Ariel Pisetsky, CISO and Infrastructure Manager, NetVision
+
+During the recent war in the north, many information security events where detected in private and government organization. These events, usually no more than web site defacement, provide an opportunity to examine a large scale hostile activity against web sites affiliated with Israel. Commercial companies with no direct relation to the war found themselves under a direct attack or indirectly affected due to attacks on ISPs and the Internet Infrastructure in Israel. 
+
+In the presentation we will discuss what happened during this summer of war, whether it can be classified as information warfare and what are the lessons that can be learnt going forward
+
+ 
+'''16:30 – 16:45 Break, coffee, tea & fruits'''
+
+ 
+<big>'''16:45 – 17:15 [[Media:Secure_coding.pdf|Real vs. Virtual Patching]]'''</big>
+
+Ravid Lazinski, Technical Manager, Applicure Technologies
+
+The penetration team has found a bug. What's next? In order to prevent exploitation, the application has to be patched.
+
+The presentation will discuss the advantage and disadvantages of the two available solutions: patching the application or using an external patching solution in a process called "virtual patching".
+
+ 
+<big>'''17:15 – 17:45 [[Media:The_Core_Rule_Set.pdf|"The Core Rule Set": Generic detection of application layer attacks]]'''</big>
+
+Ofer Shezaf, CTO, Breach Security, OWASP IL chapter Leader, Director, the Web Application Security Consortium
+
+Web Applications are unique, each one having its own vulnerabilities and therefore a positive security model is usually considered the optimal way to protect them. The [http://www.modsecurity.org ModSecurity] open source project has recently released a "core rule set", essentially a set of super signatures that try to provide significant security to custom application without the effort of defining a positive security model.
+
+The lecture will discuss generic application security signatures and rules, how they differ from network centric signatures and their strengths and limitations when dealing with the OWASP top 10 attacks.
+
+ 
+'''17:50 – 18:00 Break'''
+
+
+<big>'''18:00 – 18:30 [[Media:OWASP_10_Most_Common_Backdoors.pdf|The OWASP Top Ten Backdoors]]'''</big>
+
+Yaniv Simsolo, Application Security Consultant, Comsec Consulting
+
+Just as the OWASP Top Ten outlines the top ten mistakes that developers make in applications, the top ten backdoors discuss the features developed on purpose, that do just the same: leave the application vulnerable. Backdoors are more common than developers and system professionals think. Hackers and malicious users can exploit backdoors easily, without leaving any special traces in the system. An SQL interface to an application, providing a lot of flexibility but little security is a good example of such a backdoor.
+
+The presentation will discuss common backdoors found in web applications and how they relate to the OWASP top 10.
+
+
+<big>'''18:30 – 19:15 [[Media:Hacking_The_FrameWork.ppt|Hacking The Framework]]'''</big>
+
+Nimrod Luria, Head Of Consulting Services, 2Bsecure
+
+Modern development environment such as .Net and J2EE promise enhanced security by relying on the framework services rather than good coding. The presentation will demonstrate using real hacking demos the weak points in such frameworks using .Net as an example.

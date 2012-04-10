@@ -1,0 +1,121 @@
+{{Template:SecureSoftware}}
+{{Template:Vulnerability}}
+
+Last revision (mm/dd/yy): '''{{REVISIONMONTH}}/{{REVISIONDAY}}/{{REVISIONYEAR}}'''
+
+[[ASDR_TOC_Vulnerabilities|Vulnerabilities Table of Contents]]
+
+==Description==
+
+Failure to follow the chain of trust when validating a certificate results in the trust of a given resource which has no connection to trusted root-certificate entities. 
+
+'''Consequences'''
+
+* Authentication: Exploitation of this flaw can lead to the trust of data that may have originated with a spoofed source.
+* Accountability: Data, requests, or actions taken by the attacking entity can be carried out as a spoofed benign entity.
+
+'''Exposure period'''
+
+* Design: Proper certificate checking should be included in the system design.
+* Implementation: If use of SSL (or similar) is simply mandated by design and requirements, it is the implementor's job to properly use the API and all its protections.
+
+'''Platform'''
+
+* Languages: All
+* Platforms: All
+
+'''Required resources'''
+
+Minor trust: Users must attempt to interact with the malicious system.
+
+'''Severity'''
+
+Medium
+
+'''Likelihood   of exploit'''
+
+Low
+
+If a system fails to follow the chain of trust of a certificate to a root server, the certificate loses all usefulness as a metric of trust. Essentially, the trust gained from a certificate is derived from a chain of trust - with a reputable trusted entity at the end of that list. The end user must trust that reputable source, and this reputable source must vouch for the resource in question through the medium of the certificate. 
+
+In some cases, this trust traverses several entities who vouch for one another. The entity trusted by the end user is at one end of this trust chain, while the certificate wielding resource is at the other end of the chain.
+
+If the user receives a certificate at the end of one of these trust chains and then proceeds to check only that the first link in the chain, no real trust has been derived, since you must traverse the chain to a trusted source to verify the certificate.
+
+==Risk Factors==
+
+TBD
+
+==Examples==
+
+<pre>
+if (!(cert = SSL_get_peer(certificate(ssl)) || !host)
+  foo=SSL_get_veryify_result(ssl);
+  if ((X509_V_OK==foo) || X509_V_ERR_SELF_SIGNED_CERT_IN_CHAIN==foo))
+//do stuff 
+</pre>
+
+
+
+==Related [[Attacks]]==
+
+* [[Attack 1]]
+* [[Attack 2]]
+
+
+==Related [[Vulnerabilities]]==
+
+* [[Key exchange without entity authentication]]
+* [[Failure to validate host-specific certificate data]]
+* [[Failure to validate certificate expiration]]
+* [[Failure to check for certificate revocation]]
+
+
+==Related [[Controls]]==
+
+* Design: Ensure that proper certificate checking is included in the system design.
+* Implementation: Understand, and properly implement all checks necessary to ensure the integrity of certificate trust integrity. 
+
+
+==Related [[Technical Impacts]]==
+
+* [[Technical Impact 1]]
+* [[Technical Impact 2]]
+
+
+==References==
+TBD
+
+[[Category:FIXME|add links
+
+In addition, one should classify vulnerability based on the following subcategories: Ex:<nowiki>[[Category:Error Handling Vulnerability]]</nowiki>
+
+Availability Vulnerability
+
+Authorization Vulnerability
+
+Authentication Vulnerability
+
+Concurrency Vulnerability
+
+Configuration Vulnerability
+
+Cryptographic Vulnerability
+
+Encoding Vulnerability
+
+Error Handling Vulnerability
+
+Input Validation Vulnerability
+
+Logging and Auditing Vulnerability
+
+Session Management Vulnerability]]
+
+__NOTOC__
+
+
+[[Category:OWASP ASDR Project]]
+[[Category:Vulnerability]]
+[[Category:Protocol Errors]]
+[[Category:OWASP_CLASP_Project]]

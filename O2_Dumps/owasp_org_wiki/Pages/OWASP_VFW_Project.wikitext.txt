@@ -1,0 +1,21 @@
+==== Main  ====
+
+VFW (Varnish FireWall) Project Home Page<br>'''Purpose:''' The purpose of this project is to mitigate web applications threats using Varnish. Varnish (https://www.varnish-cache.org/) is a modern, very flexible and scalable reverse-proxy system which supports VCL, a wonderful domain-specific language to deal with HTTP (to handle headers, routing, rewrite and block requests, etc). Nowadays, many big Internet services are behind Varnish and we can bring some security policies to it. 
+
+'''In another words: '''Varnish as a Web Application Firewall; A kind of mod_security for Varnish; Varnish security filters. 
+
+<br>'''License:''' Apache License 2.0 
+
+<br>'''Project Leader(s):'''  Eduardo S. Scarpellini 
+
+<br>'''Source Code:''' https://github.com/scarpellini/VFW
+
+<br>
+
+==== Project About  ====
+
+{{:Projects/OWASP VFW Project  | Project About}} 
+
+__NOTOC__ <headertabs /> 
+
+[[Category:OWASP_Project|VFW Projectt]] [[Category:OWASP_Tool]] [[Category:OWASP_Alpha_Quality_Tool|OWASP Alpha Quality Tool]]

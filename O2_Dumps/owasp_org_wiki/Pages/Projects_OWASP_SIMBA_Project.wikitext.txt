@@ -1,0 +1,43 @@
+{{Template:<includeonly>{{{1}}}</includeonly><noinclude>Project About</noinclude>
+| project_name = OWASP SIMBA Project
+| project_home_page = OWASP SIMBA Project
+
+| project_description = SIMBA (Security Integration Module for Business Applications) is a User Access Management system that can be integrated with any business application.  The purpose of the project is to secure an application fast and easy.  Because SIMBA itself is generic it can be customized for every project.  Many features are customizable e.g. designing your own authentication chain is easy and fast by using existing or newly created building blocks.  A separate Flex manager application is available to manage the data, view the audit logs and configure parameters.
+With the support of the OWASP (Open Web Application Security Project) community SIMBA is constantly improved so current security vulnerabilities are better supported and proactive work is done against future vulnerabilities.
+SIMBA is not vendor specific, developed in an international community and is supported by all major platforms.
+
+| project_license =  [http://www.apache.org/licenses/LICENSE-2.0 Apache License 2.0]
+
+| leader_name1 = Koen Vanderloock
+| leader_email1 = koen.vanderloock@owasp.org
+| leader_username1 = Koen Vanderloock
+
+| leader_name[2-10] =
+| leader_email[2-10] =
+| leader_username[2-10] = 
+
+| contributor_name[1-10] = 
+| contributor_email[1-10] = 
+| contributor_username[1-10] = 
+
+| pamphlet_link = 
+
+| presentation_link =
+
+| mailing_list_name = https://lists.owasp.org/mailman/listinfo/owasp-simba-project
+
+| project_road_map = https://www.owasp.org/index.php/OWASP_SIMBA_Project/Roadmap
+
+| links_url1 = www.simbasecurity.org
+| links_name1 = www.simbasecurity.org
+
+| links_url[2-10] = 
+| links_name[2-10] = 
+
+| release_1 = 
+| release_2 = 
+| release_3 =
+| release_4 =
+<!--- The line below is for GPC usage only. Please do not edit it --->
+| project_about_page = Projects/OWASP SIMBA Project
+}}

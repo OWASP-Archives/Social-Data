@@ -1,0 +1,123 @@
+In her latest post [http://spaces.msn.com/members/calinoiu/Blog/cns%211pYmj2Kpn4Oz9CW9IKwXQF8A%21142.entry Secure by de...what?] , Nicole Calinoiu talks about the security implications of [http://msdn.microsoft.com/library/en-us/dnsse/html/sseoverview.asp?frame=true#sseover_topic11 User instances]  [[Category:FIXME|link not working]] in the new SQL Server 2005 Express Edition
+
+I need to do some more research on this, so I will not comment on the details, all that I will say is that it is impossible to protect what one doesn't understand, and 'features' like these are what create insecure and exploitable environments (most of the time simply because all parties involved have no idea of the security implications of their actions)
+
+Some quotes:
+
+''“... [http://msdn.microsoft.com/library/en-us/dnsse/html/sseoverview.asp?frame=true#sseover_topic11 User instances] [[Category:FIXME|link not working]] are a new capability of SQL Server 2005 (Express edition only) that are supposedly intended to allow non-admins to attach database files without requiring additional permissions. This actually works just fine and, at first glance, it probably strikes most folks as a lovely least-privilege accomodation. The unfortunate bit that might not be immediately obvious to the casual user is that this is accomplished by granting the connecting user sysadmin privilege over his user instance. This means that every connection to a user instance is a connection running as sysadmin.''
+
+....
+
+''The main reason for this is that a sysadmin login has unlimited control over the SQL Server instance, as well as being able to "climb" out of the SQL Server instance via extended stored procedures (or hosted SQLCLR code, in the case of SQL Server 2005) to affect other machine resources.''
+
+''In other words, code running under a sysadmin login can fully control the SQL Server instance and can do anything on the machine or network that either the login account or the SQL Server service account can do. It's also possible to impersonate other Windows accounts when calling outside SQL Server, so the damage potential isn't necessarily limited by the privileges of the login and service account.''
+
+''... the little voices in my head started evaluating the implementation against SD3+C ("secure by design, secure by default, secure in deployment, and communications") criteria, which is supposed to be an integral part of the Microsoft security development lifecycle. I can't help but feel that some less risky choices might have been made along the way ....''
+
+...
+
+'''''Secure in deployment?'''''
+
+''There's little an administrator or user can do to make user instances more secure if they're enabled. There appears to be no information at all out there about the risks of their use, forget about guidance on "how to use it securely". We'll have to wait to see if updates will be easy to deploy, but updating all user instances on any given machine will certainly pose some potentially interesting challenges.''
+
+...
+
+'''''What about CAS permissions?'''''
+
+''Sorry, but CAS isn't going to help much here if you allow connections to a user instance. Code with any SqlClientPermission can do anything the connecting user is allowed to do via the SQL Server instance. When connecting to a remote instance (or even a local non-user instance), the user's capabilities are usually (or so one would hope!) constrained by their NTFS permissions, SQL Server permissions, and limitations imposed by the configuration of the SQL Server instance. However, running as sysadmin on a user instance, these contraints are mostly absent. If you grant any SqlClientPermission to managed code that permits connection to a user instance, you are effectively granting permission for that code to do anything the user can do. The end result for a malicious application is the same as if you had granted unrestricted CAS permissions (aka "full trust"). In other words, you shouldn't be granting SqlClientPermission that includes the possibility to connect to a user instance to any assembly unless you would happily grant unrestricted permissions as well.''
+
+''This means that granting unrestricted SqlClientPermission to any code (other than as part of a full trust grant)''
+
+....
+
+'''''Wrapping things up...'''''
+
+''In my opinion, SQL Express user instances just plain don't meet the SD3+C bar, and disabling them is probably the best way for most of us to protect ourselves against the risks they introduce. Then again, I am a something of a paranoid nutbag, so your mileage may vary greatly... ;)''
+
+....
+
+“
+
+No Nicole, you are not paranoid at all...
+
+--[[User:Dinis.cruz|Dinis.cruz]] 05:56, 22 July 2006 (EDT)
+
+
+== Dinis Follow up question ==
+
+  	
+Dinis Cruz said:
+[in http://spaces.msn.com/members/calinoiu/blog/cns!1pYmj2Kpn4Oz9CW9IKwXQF8A!142.entry]
+
+Very interesting research.
+
+Regarding creating database instances, what Windows user privileges do I need to have on the host computer to create them? For example can Anonymous users do it? Can normal users do it? (i.e. members of the Users Security group)
+
+Also can this be done remotely? (i.e. from the local network?)
+
+If I understand you correctly you are saying that if I have access to a computer which has the SQL 2k5 EE installed, and I have a valid ('low privileged') user account in that computer I will be able to:
+
+1) Create a database (by copying one that I created in another server)
+2) Using my sysAdmin privileges (in that database) jump out of the CLR and execute unmanaged code in the SQL EE process (btw, do you know if it creates a new process per database?). I am assuming I can jump out of the CLR because you are saying that I can execute Full trust code
+3) Use that 'now compromized' process to attack that computer
+4) In a server hosting multiple databases, where each database has a diferent owner (i.e. Windows account), do you think that the SQL 2k5 EE will be able to sustain an attack from an attacker who has full access to one of those databases? (note that a fully patched SQL Server 2005 was sort of OK in this)
+
+Finally, what use cases could this be exploited? Can you put here some real world scenarios?
+
+Nice work and Research,
+
+Dinis Cruz
+Owasp .Net Project
+www.owasp.net
+
+== Nicole's answer ==
+
+Regarding creating database instances, what Windows user privileges do I need to have on the host computer to create them?"
+
+I haven't dug too deep into the minimal permission set. From casual inspection, it looks like any standard user with an established profile location can create a user instance under normal circumstances. Two areas that might provide some additional potential for abuse are roaming profiles and server-side use (incl. both web hosting and thin client servicing à la Terminal Server or Citrix).
+
+"For example can Anonymous users do it?"
+
+Haven't tried it yet, but my guess would that the lack of a profile would prevent it even if nothing else does.
+
+"Can normal users do it? (i.e. members of the Users Security group)"
+
+Yes.
+
+"Also can this be done remotely? (i.e. from the local network?)"
+
+That depends on what you mean by remotely. It fails when using a remote desktop connection to an XP SP2 machine, but only because of a bug (http://support.microsoft.com/default.aspx?scid=kb;en-us;896613) for which a hotfix is already available.
+
+Otherwise, user instances appear to have been targeted at purely local scenarios, and I have to admit that it never occurred to me to try to connect to a SQL Express instance on another machine with a connection string that specified creation of a user instance. Luckily, SQL Express is configured by default to not allow connections from off the local machine, but that obviously shouldn't be the only protection against remote creation of user instances. It'll take a bit of set-up, but I'll try to see if I can find some time to test this over the holidays.
+
+"If I understand you correctly you are saying that if I have access to a computer which has the SQL 2k5 EE installed, and I have a valid ('low privileged') user account in that computer I will be able to: 1) Create a database (by copying one that I created in another server)"
+
+Yes.
+
+"2) Using my sysAdmin privileges (in that database) jump out of the CLR and execute unmanaged code in the SQL EE process"
+
+Yes.
+
+"(btw, do you know if it creates a new process per database?)."
+
+What do you mean by "process" here? A separate running instance of SQL Express or something else?
+
+"I am assuming I can jump out of the CLR because you are saying that I can execute Full trust code"
+
+Absolutely. However, you don't need the CLR to do this either since you could simply call xp_cmdshell to invoke unmanaged code. Where managed code comes in "handy" here is that it can be packaged within an attached database.
+
+"3) Use that 'now compromized' process to attack that computer"
+
+Once you've connected to a user instance, you'll be able to do anything the connecting user account can do.
+
+"4) In a server hosting multiple databases, where each database has a diferent owner (i.e. Windows account), do you think that the SQL 2k5 EE will be able to sustain an attack from an attacker who has full access to one of those databases?"
+
+If you're thinking of a web hosting scenario, then the user account establishing the user instance connection will effectively be able to run any unmanaged or managed code (promoted to full trust unless the machine-level CAS policy has been altered) it likes, subject only to the constraints imposed by the user account's permissions. This would essentially allow folks to bypass the CAS permission constraints that a hosting provider might try to impose using the ASP.NET trust level. For this reason, I would very strongly recommend against enabling user instances on a shared hosting server.
+
+"Finally, what use cases could this be exploited? Can you put here some real world scenarios?"
+
+The shared web hosting scenario is an obvious problem. However, it's also a potential problem on the client side. For example, if a remotely sourced application (ClickOnce or otherwise) is granted SqlClientPermission with the intent of permitting it to connect to a typical, server-side SQL instance, the application will effectively be granted unrestricted permissions on the client machine if it is running SQL Express with user instances enabled. The core problem here is that the user or admin granting the additional permissions won't be thinking of the local user instance impact when they make the grant. Would you expect an IE-hosted .NET control that's been granted SqlClientPermission in order to connect to a server-hosted db to be able to exploit all of your account's file system permissions?
+
+
+
+[[Category:OWASP .NET Project]]

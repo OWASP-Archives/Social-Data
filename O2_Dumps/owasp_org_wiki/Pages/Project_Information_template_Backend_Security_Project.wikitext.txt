@@ -1,0 +1,35 @@
+----
+{| style="width:100%" border="0" align="center"
+ ! colspan="8" align="center" style="background:#4058A0; color:white"|<font color="white">'''PROJECT IDENTIFICATION''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project Name'''
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|<font color="black">'''OWASP Backend Security Project''' 
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"| '''Short Project Description''' 
+ | colspan="7" style="width:85%; background:#cccccc" align="left"|This project aims to improve and to collect the existent information about the backend security. The project is composed by three sections (security development, security hardening and security testing). The aim is to define the guidelines for the companies and IT professionals working in the security field into processes development and back-end components management/testing in the enterprise architecture.
+ |-
+ | style="width:15%; background:#7B8ABD" align="center"|'''Project key Information'''
+ | style="width:14%; background:#cccccc" align="center"| Project Leader<br>[[User:Carlo.pelliccioni|'''Carlo Pelliccioni''']]
+ | style="width:15%; background:#cccccc" align="center"|Project Contributors<br>[[OWASP Backend Security Project Contributors|'''See here''']]
+ | style="width:10%; background:#cccccc" align="center"|Mailing List<br>[https://lists.owasp.org/mailman/listinfo/owasp-backend-security '''Subscribe here''']<br>[mailto:owasp-backend-security(at)lists.owasp.org '''Use here''']
+ | style="width:17%; background:#cccccc" align="center"|License<br>[http://creativecommons.org/licenses/by-sa/3.0/ '''Creative Commons Attribution Share Alike 3.0''']
+ | style="width:14%; background:#cccccc" align="center"|Project Type<br>[[:Category:OWASP_Project#Beta Status Projects|'''Documentation''']]
+ | style="width:15%; background:#cccccc" align="center"|Sponsors<br>[[OWASP Summer of Code 2008|'''OWASP SoC 08''']]  
+ |}
+{| style="width:100%" border="0" align="center" 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Release Status''' 
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Main Links'''
+ ! align="center" style="background:#7B8ABD; color:white"|<font color="black">'''Related Projects''' 
+ |-
+ | style="width:29%; background:#cccccc" align="center"|
+'''[[:Category:OWASP_Project_Assessment#Beta_Quality_Documentation_Criteria|Beta Quality]]'''<br>[[:OWASP Backend Security Project - Assessment Frame|Please see here for complete information.]]
+ | style="width:42%; background:#cccccc" align="center"|
+* About OWASP Backend Security Project: [https://www.owasp.org/images/2/20/OWASP_EU_Summit_2008_Presentation_Model.ppt PowerPoint]
+* PDF version: [http://www.owasp.org/index.php/Image:OWASP_Backend_Security_Project_1.0beta.pdf OWASP Backend Security Project 1.0 beta.pdf]
+* DOC version: [http://www.owasp.org/index.php/Image:OWASP_Backend_Security_Project_1.0beta.doc OWASP Backend Security Project 1.0 beta.doc]
+* [[OWASP Backend Security Project|OWASP Backend Security Project v1.0]]
+* (If appropriate, more links to be added)
+ | style="width:29%; background:#cccccc" align="center"|
+* (If appropriate, add links) 
+ |}
+----

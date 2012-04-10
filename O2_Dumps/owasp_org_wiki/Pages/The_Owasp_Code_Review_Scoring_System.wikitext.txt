@@ -1,0 +1,16 @@
+{{LinkBar
+  | useprev=PrevLink | prev=The Owasp Code Review Top 9 | lblprev=
+  | usemain=MainLink | main=OWASP Code Review Guide Table of Contents | lblmain=Table of Contents
+  | usenext=NextLink | next=References | lblnext=
+}}
+
+In this section, we will provide some common criteria to evaluate how much a source code matches the key points we set in the the Code review Top 10 section.
+Using these criteria, after a code review a score can be applied to a source in order to answer the question "how much is secure my code?"
+
+{{LinkBar
+  | useprev=PrevLink | prev=The Owasp Code Review Top 9 | lblprev=
+  | usemain=MainLink | main=OWASP Code Review Guide Table of Contents | lblmain=Table of Contents
+  | usenext=NextLink | next=References | lblnext=
+}}
+
+[[Category:OWASP Code Review Project]]

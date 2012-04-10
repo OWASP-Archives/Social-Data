@@ -1,0 +1,487 @@
+= Overview =
+== Installation security ==
+
+This section is useful to understand how the installation could introduce vulnerabilities when it is not made “security oriented”. 
+
+=== Options and products ===
+
+First of all an advanced installation should be performed to custom the installation process to install only the components required by application will connect to database. 
+
+=== Sample schemas === 
+
+The installed schema should be reviewed, especially the sample schemas provided by Oracle base installation, and remove any schema not needed. 
+
+Example SQL to remove a schema: 
+
+   SQL> DROP USER <user_name> CASCADE;
+
+= Description =
+
+=== Initialization parameters ===
+
+This section covers the Oracle Initialization parameters that are relevant for the security. All the following initialization parameters have to be specified for all Oracle instances. 
+
+{| class="wikitable"
+! Parameter name !! Description !! Security value 
+|-
+| REMOTE_OS_AUTHENTICATION || This parameter should be set to FALSE to deny the authentication of remote clients by operating system. || FALSE
+|-
+| REMOTE_LOGIN_PASSWORDFILE || This parameter should be set to NONE, but if this functionality is required set the parameter EXCLUSIVE to make it more secure considering that the password file can be used by only one database. || NONE
+|-
+| RESOURCE_LIMIT || This parameter should be set to TRUE to enforce other parameter about resource limitsuch as idle time limits. The default is FALSE.
+ || TRUE
+|-
+| REMOTE_OS_ROLES || This parameter should be set to FALSE to deny the operating system groups to control Oracle roles. || FALSE  
+|-
+| OS_ROLES || This parameter should be set to FALSE to configure Oracle to identify and manage the roles.
+Default value false.
+ || FALSE  
+|-
+| UTL_FILE_DIR || This parameter should be set to NULL to specify any directories that Oracle should use for PL/SQL file I/O.
+ || NULL 
+|-
+| USER_DUMP_DEST || This parameter should be set to a protect directory considering that is the directory where the server stores debugging trace file of a user process || <Protected Directory>
+|-
+| BACKGROUND_DUMP_DEST || This parameter should be set to a protect directory considering that is the directory where the server writes debugging trace file of background process || <Protected Directory>
+|-
+| CORE_DUMP_DEST || This parameter should be set to a protect directory considering that is the directory where the server dumps core files.|| <Protected Directory>
+|-
+|}
+
+Example SQL for setting the REMOTE_OS_AUTHENTICATION parameter:
+
+   SQL> ALTER SYSTEM SET REMOTE_OS_AUTHENTICATION = FALSE SCOPE=BOTH
+
+Scope:
+* MEMORY: This value changes the instance immediately, but the configuration is lost after a restart. 
+* SPFILE: This value does NOT change the instance immediately, but a restart is necessary to take effect. 
+* BOTH: This value changes the instance immediately as well as the spfile. 
+
+=== Operating system security ===
+
+==== Owner account ====
+
+The Oracle OS installation account, owner of all Oracle application and datafiles, should be used only for the update and the maintenance of the Oracle software and should not be used during the standard DBA activities. The individual DBAs will have to use their assigned OS personal accounts, so the auditing process will be able to actions performed with the correct OS account. The Oracle software installation account will not be a member of the administrative group.
+
+==== Files and directories ====
+
+All files and directories generated during the installation process of Oracle should be restricted to the Oracle software owner and the DBA user group, especially the files listed below: 
+
+{| class="wikitable"
+! File name !! Description 
+|-
+| init.ora and/or init<SID>.ora
+Spfile.ora
+ || The file houses Oracle initialization parameter files. Replace SID with the name of your SID.
+|-
+| orapw<SID> || The file contain SYS password and the password of accounts granted the SYSDBA or SYSOPER role. Replace SID with the name of your SID.
+|-
+| listener.ora || The file houses listener configuration parameters and password.
+|-
+| snmp_rw.ora || The file contains the password for the DBSNMP database account in cleartext.
+|-
+| snmp_ro.ora || The file houses configuration information for the Oracle Intelligent Agent.
+|-
+| sqlnet.ora || The file contains network configuration information for the host database and listener.
+|}
+
+Other accounts should be denied to access except to executables under the “bin” directory although the permission of all files stored in the “bin” directory should be configured in order to be owned by the Oracle software installation account.
+
+=== Patching ===
+The Oracle Database should be kept up to date therefore, periodically, the Oracle Technology Network web site should be checked (http://otn.oracle.com/deploy/security/alerts.htm) to keep up on security alerts issued from Oracle Corporation in regard to all installed components. 
+Sometime, there are public vulnerabilities about Oracle software without a patch so it is a good idea subscribe to the security mailing lists so that it would be possible to catch those new security issues and to find a way to mitigate the risk of a new vulnerability.
+
+== Account management ==
+
+=== Lock and expire unused accounts ===
+
+A number of default database server user accounts are create during the installation process so, if the Database Configuration Assistant is not used, default database user accounts should be all locked and expired. Unlock only those accounts that need to be accessed on a regular basis and assign a strong password to each of these unlocked accounts. 
+
+Example SQL for reviewing the Oracle Default Accounts with status “OPEN”: 
+
+   SQL> SELECT <user_name> FROM dba_users WHERE account_status <> ’OPEN’ ORDER BY <user_name>;
+
+Example SQL for Locking Accounts: 
+
+   SQL> ALTER USER <user_name> ACCOUNT LOCK;
+
+=== Change default password ===
+
+The major weakness concerning the password is that some user default accounts, after the installation, still have a default password associated, the passwords of all default accounts should be reviewed (SYS, SYSTEM, DBSNMP, OUTLN and so on) and changed if necessary.  
+
+=== Enforce password policy ===
+
+The password policy should be enforced by password verification function setting password parameter (list below) and providing password complexity feature like minimum length, password not same as the username, the password contains repeating characters, the password differs from the previous password by at least a certain number of letters. 
+
+Example SQL  for setting a password verification function to a profile:
+
+   SQL> CREATE PROFILE <profile_name> LIMIT PASSWORD_VERIFICATION_FUCTION <function_name>
+
+Example SQL  for assigning profile profile to a user:
+
+   SQL> CREATE USER <user_name> IDENTIFIED BY <password> PROFILE <profile_name>;
+
+=== Privileges and Roles ===
+
+Due to the great number and variety of applications that make use of the database, it’s difficult to define in advance which kind of privilege have to be granted to a user. In order to make this choice, could be a good practice the “principle of least privilege”, that is not providing database users, especially PUBLIC, more privileges than necessary.
+
+The user privileges are split in System Privileges and Object Privileges, you can grant privileges to users explicitly:
+
+ SQL> GRANT <object_privilege> ON <object_name> TO <user_name>;
+ SQL> GRANT <system_privilege> TO <user_name> [WITH ADMIN OPTION];
+
+Where “WITH ADMIN OPTION” means that the new user can grant the same system privilege to another user. 
+
+Also, you can grant privileges to a role (recommended), a group of privileges:
+
+ SQL> GRANT <object_privilege> ON <object_name> TO <role_name>;
+ SQL> GRANT <system_privilege> TO <role_name>;
+
+and then you should grant the role to users:
+
+ SQL> GRANT <role_name> TO <user_name>;
+
+Periodically, is better to review the privileges (system and object) of the all database user. As an example, it is possible to use the following SQL script by executing as a user with the right privileges in order to review the system privilege (only) of specific user:
+
+ set pagesize 0
+ set head off
+ set feed off
+ set linesize 240
+ set trimspool on
+ col ord noprint
+ set echo off
+ accept username prompt' Insert a value for username:'
+ SELECT LPAD(' ', 2*level) || granted_role "USER PRIVS"
+ FROM (
+    SELECT NULL grantee,  username granted_role
+    FROM dba_users
+    WHERE username LIKE UPPER('&&username')
+    UNION
+    SELECT grantee, granted_role
+    FROM dba_role_privs
+    UNION
+    SELECT grantee, privilege
+    FROM dba_sys_privs)
+ START WITH grantee IS NULL
+ CONNECT BY grantee = prior granted_role;
+
+An example of output:
+
+  Insert a value for username: owasp
+  OWASP
+    CONNECT
+      CREATE SESSION
+    RESOURCE
+      CREATE CLUSTER
+      CREATE INDEXTYPE
+      CREATE OPERATOR
+      CREATE PROCEDURE
+      CREATE SEQUENCE
+      CREATE TABLE
+      CREATE TRIGGER
+      CREATE TYPE
+    UNLIMITED TABLESPACE
+
+Afterward revoke the privileges that is not necessary from user:
+
+ SQL> REVOKE <system_privilege> FROM <user_name>;
+ SQL> REVOKE <object_privilege> ON <object_name> FROM <user_name>;
+
+or from role:
+
+ SQL> REVOKE <system_privilege> FROM <role_name>;
+ SQL> REVOKE <object_privilege> ON <object_name> FROM <role_name>;
+
+=== Automated processing database accounts ===
+
+The major weakness using batch jobs is to manage user names and passwords in fact, typically, it connects to databases by using directly the command sqlplus:
+
+       sqlplus -s <user_name>/<password>@<TNS alias> << EOF
+       <SQL statement>
+       EOF
+
+In this way it is possible to see the username and password in clear text by using the command to check the process status, such as “ps” command in a unix environment. 
+To avoid it could be used a standard CONNECT statement within batch jobs, like this: 
+
+       sqlplus /nolog << EOF
+       CONNECT <user_name>/<password>
+       <SQL statement>
+       EOF
+
+IIn this last case it is suggested to save the crypted password in a well protected configuration file and then decrypt them just before execute the CONNECT statement. 
+Another (recommended) possibility is to delegate the password management to a guaranteed third part as Secure External Password Store provided by Oracle Advanced Security component that save the credentials in a secure way. 
+When the clients are configured to use the secure external password store, batch jobs can connect to a database replacing the login credentials with an alias (database connection string) stored into container (named wallet).
+
+To enable clients to use the external password store the first thing to do is to create an Oracle wallet with the autologin feature (access to wallet contents not require a password ) by using the follow command from OS command prompt:
+
+        mkstore -wrl <wallet_location> -create
+
+Then, you should create database connection credentials in the wallet:
+
+        mkstore -wrl <wallet_location> -createCredential <db_connect_string> <user_name> <password>
+
+After the wallet is ready, you should force the client to use the information stored in the “secure password store” to authenticate to databases by configuring sqlnet.ora file. 
+
+Example of entries to add in sqlnet.ora file:
+
+        WALLET_LOCATION =
+        (SOURCE =
+        (METHOD = FILE)
+        (METHOD_DATA =
+        (DIRECTORY = <wallet_location>)
+        )
+        )
+        SQLNET.WALLET_OVERRIDE = TRUE
+
+The same configuration are possible to do by using Oracle Wallet Manager.
+
+Following this way the risk is reduced because passwords are not exposed in the clear-text considering the applications can connect to a database with the following CONNECT statement syntax:
+
+        connect /@<db_connect_string>
+
+where “db_connect_string” is the database connection credential, created before.
+
+== Network security ==
+
+=== Encrypt network logins ===
+
+The password information in a connection request should be encrypted to protect against network eavesdropping. The value of the follow parameter should be review:
+
+   ORA_ENCRYPT_LOGIN (on the client machine)
+   DBLINK_ENCRYPT_LOGIN (on the server machine)
+
+Once these parameters have been set to TRUE, passwords will be encrypted in connection requests.
+Note that on Oracle version 9.02 and later these parameter are not available, in fact it encrypts automatically the password information when transmitting over a network, although the setting or changing of passwords is NOT encrypted when across the network.
+
+=== Protect network communications ===
+
+Consider configuring the Oracle Advanced Security component to use Secure Socket Layer (SSL) encrypting network traffic between clients and databases to avoid network eavesdropping.
+Below, you can see an example of a basic configuration:
+
+==== Server side ====
+
+To enable SSL database connection it would be correct to create an Oracle wallet (with the autologin feature) and generate a certificate request by using Wallet Manager component. Then it should be sent to the Certificate Authority; when the CA trusted and the user certificate is received, these certificate should be imported into the wallet. Then configure the Oracle Advanced Security component by using the Net Manager utility (recommended) or modify the sqlnet.ora and listener.ora file. At the end, the sqlnet.ora and listener.ora files should contain the following entries:
+
+  WALLET_LOCATION = 
+    (SOURCE =
+   	(METHOD = FILE)
+   	(METHOD_DATA =
+   		(DIRECTORY = <wallet_location> )
+         )
+     )
+   SSL_CLIENT_AUTHENTICATION = FALSE
+   SQLNET.AUTHENTICATION_SERVICES= (TCPS)
+
+==== Client side ====
+
+After the wallet is configured, the client should be configured to use SSL connection to connect to databases by configuring sqlnet.ora file. Example of entries to add in sqlnet.ora file: 
+
+  WALLET_LOCATION = 
+    (SOURCE =
+  	(METHOD = FILE)
+  	(METHOD_DATA =
+   		(DIRECTORY = <wallet_location> )
+         )
+    )
+  SSL_SERVER_DN_MATCH = OFF
+  SSL_CLIENT_AUTHENTICATION = FALSE
+  SQLNET.AUTHENTICATION_SERVICES= (TCPS)
+
+Now, a network connection to the SSL listener should be configured by configuring the tnsname.ora file:
+
+  SSL =
+  (DESCRIPTION =
+  (ADDRESS_LIST =
+  (ADDRESS = (PROTOCOL = TCPS)(HOST = <host_name>)(PORT = <port>))
+   )
+   (CONNECT_DATA =
+   (SID = <SID_name>)
+  )
+  )
+
+=== XML database (XDB) protocol server ===
+
+The XML Database (XDB) offers access to the Oracle XML DB resources using the standard Internet protocols FTP, listening on TCP port 2100, and HTTP, listening on TCP port 8080. 
+The Oracle XML DB Protocol Server is a specific type of Oracle shared server dispatcher and is specified in the Oracle database initialization parameter file for startup, so if XDB is not used it should be turned off editing the init<SID>.ora or spfile<SID>.ora (replace SID with the name of your SID) file and remove or comment the follow line: 
+
+  dispatchers="(PROTOCOL=TCP) (SERVICE=<SID>XDB)"
+
+If access via the Internet protocols is required, logging should be enabled by setting the “ftp-log-level” and “http-log-level” parameters to a value of 1 in xdbconfig.xml file.
+
+== Oracle TNS Listener security ==
+
+=== Password ===
+
+A listener password should be set at the end of listener configuration process to avoid from unauthorized start, stop, and configure. The password will be stored in encrypted format within the listener.ora file by using the LSNRCTL utility:
+
+   LSNRCTL> set current_listener <listener_name>
+   LNSRCTL> set password
+   Password: (type "enter" if it is the first time)
+   The command completed successfully
+   LSNRCTL> change_password
+   Old password: (type "enter")
+   New password: <new_password>
+   Reenter new password: <new_password>
+   […]
+   The command completed successfully
+   LSNRCTL> save_config (important to save the configuration)
+   […]
+   Saved LISTENER configuration parameters.
+   Listener Parameter File […]
+   Old Parameter File […]
+   The command completed successfully
+   LSNRCTL> exit
+
+=== Admin restrictions ===
+
+The remote administration of the Oracle listener should be prevented by setting to TRUE the  ADMIN_RESTRICTIONS parameter in the listener.ora file:
+
+   ADMIN_RESTRICTIONS_<listener_name> = TRUE
+
+=== Network address restriction ===
+
+The network address restrictions should be enforced by the Oracle listener to further protect the database from unauthorized remote access, especially when the PLSQL EXTPROC is in use. To enable network address restriction, edit the SQLNET.ORA to add the follow line:
+
+   TCP.VALIDNODE_CHECKING = YES
+
+Then, to define TCP/IP addresses that are allowed to connect to database add the follow line:
+
+   TCP.INVITED_NODES = <list of IP addresses>
+
+At the end, to defines TCP/IP addresses that are refused connections to the database set the follow parameter
+
+   TCP.EXCLUDED_NODES = <list of IP addresses>
+
+=== External procedures ===
+
+The EXTPROC functionality is used by PL/SQL component to make calls to the operating system and to load necessary library to execute external procedure, but if the Oracle Database server is not properly patched it even could allow unauthorized administrative access to the server machine through the Oracle Listener. If the EXTPROC functionality is not required, it has to be disabled by editing the tnsname.ora and listener.ora files and removing the entries regarding this functionality.
+
+Example of entries to remove in tnsname.ora file:
+
+  […]
+     EXTPROC_CONNECTION_DATA =
+     (DESCRIPTION =
+     (ADDRESS_LIST =
+        (ADDRESS = (PROTOCOL = IPC)(KEY = EXTPROC))
+      )
+      (CONNECT_DATA =
+        (SID = PLSExtProc)
+        (PRESENTATION = RO)
+      )
+     )
+  […]
+
+Example of entries to remove in listener.ora file:
+
+  […]
+      (ADDRESS_LIST =
+         (ADDRESS = (PROTOCOL = IPC)(KEY = EXTPROC))
+       )
+  […]
+
+  […]
+     (SID_DESC =
+       (SID_NAME = PLSExtProc)
+       (ORACLE_HOME = […])
+      )
+  […]
+
+After that restart the Oracle Net listener process. 
+Then check if the configuration take effect by using the operation status in LSNRCTL command, and review the configuration if the last command display the follow lines: 
+
+   Listening Endpoints Summary...
+         (DESCRIPTION=(ADDRESS=(PROTOCOL=ipc)(KEY=EXTPROC)))
+         […]
+   Services Summary...
+   Service "PLSExtProc" has 1 instance(s).
+  	 Instance "PLSExtProc", status UNKNOWN, has 1 handler(s) for this service...
+         […]
+
+Otherwise, the configuration is correct!
+
+If, instead, the EXTPROC functionality is required in your environment, configure a Oracle Net Listener for PL/SQL EXTPROC with an IPC (recommended) or TCP protocol address. 
+It is a good idea to enforce the network address restrictions when you use the TCP protocol address.
+
+=== Inbound connection timeout ===
+
+The amount of time the listener waits for a network client to complete the connection request should be manage to prevent a denial of service attack.
+The name of parameter to set to configure inbound connection timeout and the name of the file of configuration, depends on Oracle version.
+
+=== Logging ===
+
+To enable logging on the listener, use Net Manager utility or modify the listener.ora file on server machine.
+At the end, the listener.ora file should contain the follow entries: 
+
+   LOGGING_<listener name> = ON
+   LOG_DIRECTORY_<listener name> = <log directory location>
+   LOG_FILE_<listener name> = <log file name>
+
+== Audit ==
+
+To properly protect database access the auditing of user database activities should be implemented in order to identify any suspicious activity or to check if an user has more privileges than expected.
+
+=== Start Audit Service ===
+
+To start the audit service execute “cataudit.sql” as SYS account. Then, choose if it is wanted to store the audit record to DataBase or Operating System file by setting the parameter “AUDIT_TRAIL” to DB or OS. The database audit trail is a single table named SYS.AUD$, but there are predefined views that help to use the information in this table, while as regard operating system audit trail the audit records are written into the directory that you choose by setting the “AUDIT_FILE_DEST” parameter.
+
+=== Enable Audit ===
+
+Once you start the audit service, it is possible choose to audit the sys operation by setting the AUDIT_SYS_OPERATION to TRUE. So that, Oracle Database audit connections to the database with administrator privileges, database startup and shutdown.
+Then, it is possible enable other options, by using AUDIT SQL statement:
+
+* Statement Auditing.
+* Privilege Auditing.
+* Schema Object Auditing.
+
+An example to audit some activities on table “test” owned by OWASP (Schema Object Auditing):
+
+ SQL> AUDIT INSERT, UPDATE, DELETE ON owasp.test BY ACCESS;
+
+Oracle Database allow to write a single audit record for all SQL statements in the same session, using the “by session” option in the audit SQL command or to write one record for each access, using the “by access” option.
+Then, Oracle Database allows, also, to write the successful executions of statements, using the “whenever successful” option in the audit SQL command or unsuccessful attempts to execute statements, using the “whenever not successful”.
+
+=== Disable Audit ===
+
+To turn off an audit option use the statement “NOAUDIT”, such as:
+
+ SQL> NOAUDIT ALL PRIVILEGES;
+
+=== Check Audit ===
+
+When using the database audit trail use the “SELECT” statement from the follow view to show the enabled audit:
+
+{| class="wikitable"
+! Type of Audit !! View Name 
+|-
+| Default Auditing || ALL_DEF_AUDIT_OPTS
+|-
+|-
+| Statment Auditing || DBA_STMT_AUDIT_OPTS
+|-
+|-
+| Object Auditing || DBA_OBJ_AUDIT_OPTS
+|-
+|-
+| Privilege Auditing || DBA_PRIV_AUDIT_OPT
+|-
+|}
+
+An example:
+
+ SQL> SELECT * FROM DBA_STMT_AUDIT_OPTS;
+
+ USER_NAME                    AUDIT_OPTION                 SUCCESS              FAILURE
+ --------------------         -------------------          ----------           ---------
+ OWASP		              SESSION 		           BY SESSION 	        BY SESSION
+
+= References =
+
+[1] The Oracle Hacker's Handbook: Hacking and Defending Oracle by David Litchfield 
+
+[2] The Database Hacker's Handbook: Defending Database Servers by David Litchfield
+
+[3] Database Security Technical Implementation Guide by DISA for the DOD
+
+[4] Oracle Database Security Guide by Oracle Corporation
+
+[5] Oracle Database Security Checklist by Oracle Corporation
